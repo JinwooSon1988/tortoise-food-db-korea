@@ -1,0 +1,17 @@
+{
+  "storage": "browser localStorage only",
+  "retention_view": "rolling last 7 calendar days",
+  "signals": [
+    "feeding event count",
+    "unique plant count",
+    "plants repeated >=3 times"
+  ],
+  "interpretation": "Repeated use is a diversity signal only, not an automatic hazard or deficiency diagnosis.",
+  "privacy": "No account/backend transmission in this static beta.",
+  "future": [
+    "tortoise profile linkage",
+    "plant-family repetition",
+    "nutrient aggregation when official records are sufficient",
+    "export/import"
+  ]
+}

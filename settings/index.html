@@ -1,0 +1,33 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>데이터 백업·복원 | 거북밥 DB Korea</title><style>body{font-family:system-ui,sans-serif;max-width:760px;margin:auto;padding:20px;line-height:1.6}button,input{font-size:16px;padding:10px;margin:5px}.card{border:1px solid #ccc;border-radius:12px;padding:12px;margin:12px 0}.warn{background:#f5f5f5;padding:12px;border-left:4px solid #777}button,a,select,input{touch-action:manipulation}button{min-height:44px}input,select{max-width:100%;box-sizing:border-box}@media(max-width:520px){body{padding:14px}.card{overflow-wrap:anywhere}}</style><link rel="manifest" href="../manifest.webmanifest"></head><body>
+<p><a href="../index.html">← 거북밥 DB</a> · <a href="../profile/">내 거북들</a> · <a href="../weekly/">7일 식단</a></p>
+<h1>데이터 백업·복원</h1><p class="warn">현재 베타는 서버 계정이 없다. 브라우저를 초기화하거나 기기를 바꾸기 전에 JSON 백업을 저장하면 프로필과 식단 기록을 옮길 수 있다.</p>
+<div class="card"><h2>백업</h2><button id="export">JSON 백업 만들기</button><p id="exp"></p></div>
+<div class="card"><h2>복원</h2><input type="file" id="file" accept="application/json,.json"><button id="import">검증 후 복원</button><p id="imp" aria-live="polite"></p></div>
+<script>
+const SCHEMA='tfd-backup',VERSION=1;
+const KEYS={profiles:'tfd_profiles_v46',active:'tfd_active_profile_v46',weekly:'tfd_weekly_v1'};
+function parse(k,fallback){try{return JSON.parse(localStorage.getItem(k)||JSON.stringify(fallback))}catch(e){return fallback}}
+function validProfile(p){return p&&typeof p.id==='string'&&typeof p.name==='string'&&typeof p.species==='string'&&typeof p.stage==='string'}
+function validEvent(e){return e&&typeof e.date==='string'&&typeof e.food==='string'&&(!e.profile_id||typeof e.profile_id==='string')}
+document.getElementById('export').onclick=()=>{
+ const data={schema:SCHEMA,version:VERSION,exported_at:new Date().toISOString(),profiles:parse(KEYS.profiles,[]),active_profile_id:localStorage.getItem(KEYS.active)||null,weekly:parse(KEYS.weekly,[])};
+ const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='geobukbap-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);
+ document.getElementById('exp').textContent='백업 파일을 만들었다. 이 파일에는 사용자가 입력한 거북 프로필과 식단 기록이 들어 있다.';
+};
+document.getElementById('import').onclick=async()=>{
+ const f=document.getElementById('file').files[0],o=document.getElementById('imp');if(!f){o.textContent='JSON 파일을 선택해야 한다.';return;}
+ try{
+  const d=JSON.parse(await f.text());
+  if(d.schema!==SCHEMA||d.version!==VERSION)throw Error('지원하지 않는 백업 형식/버전');
+  if(!Array.isArray(d.profiles)||!d.profiles.every(validProfile))throw Error('프로필 구조 오류');
+  if(!Array.isArray(d.weekly)||!d.weekly.every(validEvent))throw Error('식단 기록 구조 오류');
+  const ids=new Set(d.profiles.map(p=>p.id));
+  if(d.active_profile_id&&!ids.has(d.active_profile_id))throw Error('현재 프로필 ID가 목록에 없음');
+  if(!confirm('현재 이 브라우저의 프로필과 식단 기록을 백업 파일 내용으로 교체할까요?'))return;
+  localStorage.setItem(KEYS.profiles,JSON.stringify(d.profiles));localStorage.setItem(KEYS.weekly,JSON.stringify(d.weekly));
+  if(d.active_profile_id)localStorage.setItem(KEYS.active,d.active_profile_id);else localStorage.removeItem(KEYS.active);
+  o.textContent='복원 완료: 프로필 '+d.profiles.length+'개 · 식단 기록 '+d.weekly.length+'개';
+ }catch(e){o.textContent='복원하지 않음: '+e.message;}
+};
+</script><script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js'));</script></body></html>

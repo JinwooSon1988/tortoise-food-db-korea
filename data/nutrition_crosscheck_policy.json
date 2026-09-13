@@ -1,0 +1,13 @@
+{
+  "rules": [
+    "Never average conflicting nutrient values from different records or releases.",
+    "FDC ID + food description + data type + preparation must match before comparison.",
+    "If a source mixes Foundation and SR Legacy, keep them as separate records.",
+    "A corroborated record may be displayed as provisional but cannot satisfy official_direct release gate.",
+    "Official dataset extraction supersedes corroboration only when the same record/release is confirmed."
+  ],
+  "current": {
+    "romaine": "3 independent USDA-derived corroborations",
+    "kale": "3 independent USDA-derived corroborations"
+  }
+}

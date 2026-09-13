@@ -1,0 +1,12 @@
+{
+  "flow": [
+    "Naver search post",
+    "plant detail page",
+    "related plant links",
+    "profile search",
+    "feeding log / future return visit"
+  ],
+  "anchor_rule": "Use descriptive Korean anchor text, not '여기 클릭'.",
+  "safety_rule": "Blog wording must mirror the DB public state; never upgrade yellow/U to safe.",
+  "seo_rule": "One canonical plant page per plant_id; aliases point to the same canonical page."
+}

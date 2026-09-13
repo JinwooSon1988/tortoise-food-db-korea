@@ -1,0 +1,47 @@
+[
+  {
+    "id": "guil_1997_wild_edible",
+    "verified": "2026-09-13",
+    "pmid": "9527345",
+    "doi": "10.1023/a:1007988815888",
+    "claim": "16 wild edible species assayed for oxalic acid, nitrate and erucic acid; ranges are explicitly reported.",
+    "scope": "human food chemistry; not Testudo toxicity threshold"
+  },
+  {
+    "id": "plantago_constituents_2017",
+    "verified": "2026-09-13",
+    "pmid": "29028587",
+    "doi": "10.1016/j.biopha.2017.09.152",
+    "claim": "Review documents P. major chemical constituents including flavonoids, alkaloids, terpenoids, phenolic derivatives and iridoid glycosides.",
+    "scope": "phytochemistry review; not feeding safety proof"
+  },
+  {
+    "id": "mediterranean_minerals_2020",
+    "verified": "2026-09-13",
+    "pmid": "33150483",
+    "doi": "10.1007/s12011-020-02467-3",
+    "claim": "Cichorium intybus and Plantago coronopus were among four species analyzed for minerals; nitrate and oxalate were also evaluated.",
+    "scope": "human-food composition and cultivation study; species identity must match"
+  },
+  {
+    "id": "usda_fdc_current",
+    "verified": "2026-09-13",
+    "url": "https://fdc.nal.usda.gov/",
+    "claim": "FoodData Central is USDA food-composition data; Foundation Foods update twice annually.",
+    "scope": "official composition source"
+  },
+  {
+    "id": "usda_foundation_2026_04",
+    "verified": "2026-09-13",
+    "url": "https://fdc.nal.usda.gov/download-datasets/",
+    "claim": "Latest Foundation Foods release listed as April 2026; CSV and JSON downloads available.",
+    "scope": "official dataset release"
+  },
+  {
+    "id": "usda_update_2025_12",
+    "verified": "2026-09-13",
+    "url": "https://fdc.nal.usda.gov/log/",
+    "claim": "December 2025 Foundation update added Radicchio raw and updated total dietary fiber for Cabbage napa leaf raw.",
+    "scope": "official update log"
+  }
+]

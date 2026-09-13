@@ -1,0 +1,25 @@
+{
+  "release": "v5.0-rc1",
+  "result": "PASS",
+  "checks": {
+    "plant_master_unique": true,
+    "static_pages_complete": true,
+    "static_page_count": true,
+    "public_status_ids_valid": true,
+    "core_pages": true,
+    "pwa_files": true,
+    "search_files": true,
+    "profile_helper": true,
+    "identity_warning": true,
+    "no_fake_domain": true,
+    "no_hardcoded_87_score": true,
+    "backup_confirm": true,
+    "weekly_profile_scope": true,
+    "relative_links": true,
+    "required_data": true,
+    "sitemap": true
+  },
+  "broken_relative_links": [],
+  "plant_records": 66,
+  "static_detail_pages": 66
+}

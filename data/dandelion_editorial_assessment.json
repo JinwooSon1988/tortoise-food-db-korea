@@ -1,0 +1,25 @@
+{
+  "plant_id": "dandelion",
+  "taxon_record": "Taraxacum officinale",
+  "target": "Testudo graeca / Mediterranean Testudo; Ibera direct evidence remains limited",
+  "decision": "recommended_as_part_of_varied_diet",
+  "badge": "🟢 혼합급여 적합",
+  "not_decision": [
+    "not an unlimited single staple",
+    "not proof all Korean plants called 민들레 are T. officinale"
+  ],
+  "rationale": [
+    "British Chelonia Group Mediterranean tortoise care explicitly lists dandelion among garden forage foods.",
+    "BCG nutritional guidance describes wild Testudo vegetation as high-fibre/high-calcium and low-fat/protein and recommends varied weeds/flowers/grasses rather than reliance on few foods.",
+    "USDA official SR Legacy record for raw T. officinale leaves supplies traceable nutrient composition including Ca 187 mg and P 66 mg per 100 g (Ca:P 2.83).",
+    "Botanical identity and collection contamination remain separate safety gates."
+  ],
+  "evidence_scope": {
+    "ibera_direct": "limited/not established in current database",
+    "testudo_husbandry": "supportive",
+    "official_nutrition": "USDA SR Legacy FDC 169226",
+    "risk_review": "complete_with_uncertainty"
+  },
+  "editorial_rule": "Recommend within a varied leafy/weed diet; do not assign an evidence-free exact percentage or daily gram dose.",
+  "reviewed_at": "2026-09-13"
+}

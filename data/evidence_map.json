@@ -1,0 +1,38 @@
+[
+  {
+    "plant_id": "mallow",
+    "species_id": "graeca",
+    "evidence_id": "slimani2006",
+    "relationship": "genus_or_species_observed",
+    "observed_taxon": "Malva parviflora",
+    "interpretation": "T. g. graeca 야생 식이에서 주요 식물 중 하나로 확인됨. 국내 '아욱'의 정확한 종 동정이 일치하지 않으므로 국내 아욱 전체를 자동 안전 판정하지 않음.",
+    "grade": "A_direct_observation_identity_mismatch"
+  },
+  {
+    "plant_id": "clover",
+    "species_id": "hermanni",
+    "evidence_id": "hermanni_foraging_italy_2015",
+    "relationship": "genus_observed",
+    "observed_taxon": "Trifolium spp.",
+    "interpretation": "야생 T. hermanni에서 선택된 Fabaceae/Trifolium 기록. 개별 재배종·급여량은 별도 검토.",
+    "grade": "B"
+  },
+  {
+    "plant_id": "alfalfa",
+    "species_id": "hermanni",
+    "evidence_id": "hermanni_foraging_italy_2015",
+    "relationship": "genus_observed",
+    "observed_taxon": "Medicago spp.",
+    "interpretation": "야생 T. hermanni에서 Medicago 선택 기록. 시판 알팔파(M. sativa)의 장기 단독급여를 직접 지지하지 않음.",
+    "grade": "B_indirect_species_match"
+  },
+  {
+    "plant_id": "plantain",
+    "species_id": "hermanni",
+    "evidence_id": "hermanni_foraging_italy_2015",
+    "relationship": "genus_observed",
+    "observed_taxon": "Plantago spp.",
+    "interpretation": "야생 T. hermanni에서 Plantago가 선택 식물군으로 기록됨. 국내 질경이 종별 동정과 급여 역할은 별도 검토.",
+    "grade": "B"
+  }
+]

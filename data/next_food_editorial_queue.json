@@ -1,0 +1,44 @@
+[
+  {
+    "plant_id": "chicory",
+    "ko": "치커리",
+    "identity": "Cichorium intybus candidate; Korean retail cultivar identity confirmation required",
+    "evidence": "peer-reviewed C. intybus mineral/nitrate/oxalate study + general Mediterranean tortoise leafy-diet guidance",
+    "status": "yellow_research_in_progress",
+    "label": "🟡 검증 진행 중",
+    "blockers": [
+      "exact retail botanical identity",
+      "official record-level nutrition",
+      "remaining risk dimensions",
+      "species-specific feeding evidence"
+    ]
+  },
+  {
+    "plant_id": "mallow",
+    "ko": "아욱",
+    "identity": "Korean retail '아욱' must not be auto-equated with Malva parviflora or generic Malva spp.",
+    "evidence": "T. g. graeca field evidence includes Malva; specialist Mediterranean husbandry sources include mallow",
+    "status": "yellow_identity_priority",
+    "label": "🟡 식물동정 우선 검증",
+    "blockers": [
+      "exact Korean retail taxon",
+      "official nutrition",
+      "risk review",
+      "Ibera-direct applicability"
+    ]
+  },
+  {
+    "plant_id": "sowthistle",
+    "ko": "방가지똥",
+    "identity": "Sonchus species distinction required",
+    "evidence": "T. g. graeca field evidence includes Sonchus oleraceus; Mediterranean husbandry guidance includes sow thistle",
+    "status": "yellow_research_in_progress",
+    "label": "🟡 검증 진행 중",
+    "blockers": [
+      "exact Sonchus taxon",
+      "official nutrition",
+      "risk review",
+      "Ibera-direct applicability"
+    ]
+  }
+]

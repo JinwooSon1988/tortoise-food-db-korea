@@ -1,0 +1,51 @@
+[
+  {
+    "id": "ibera",
+    "ko": "이베라 그리스",
+    "scientific": "Testudo graeca ibera",
+    "evidence_group": "mediterranean_testudo",
+    "note": "Ibera-direct evidence is preferred; broader T. graeca/Testudo evidence must be labelled."
+  },
+  {
+    "id": "greek",
+    "ko": "그리스 육지거북",
+    "scientific": "Testudo graeca",
+    "evidence_group": "testudo_graeca",
+    "note": "Subspecies/locality differences may matter."
+  },
+  {
+    "id": "hermanni",
+    "ko": "헤르만 육지거북",
+    "scientific": "Testudo hermanni",
+    "evidence_group": "mediterranean_testudo",
+    "note": "Use T. hermanni evidence when available."
+  },
+  {
+    "id": "marginata",
+    "ko": "마지나타",
+    "scientific": "Testudo marginata",
+    "evidence_group": "mediterranean_testudo",
+    "note": "Do not inherit T. graeca-specific evidence as direct."
+  },
+  {
+    "id": "horsfieldii",
+    "ko": "호스필드",
+    "scientific": "Testudo horsfieldii",
+    "evidence_group": "horsfieldii",
+    "note": "Do not auto-inherit Mediterranean Testudo verdicts."
+  },
+  {
+    "id": "sulcata",
+    "ko": "설카타",
+    "scientific": "Centrochelys sulcata",
+    "evidence_group": "sulcata",
+    "note": "Grass/hay ecology requires separate rules."
+  },
+  {
+    "id": "leopard",
+    "ko": "레오파드",
+    "scientific": "Stigmochelys pardalis",
+    "evidence_group": "leopard",
+    "note": "Do not inherit Sulcata evidence automatically."
+  }
+]

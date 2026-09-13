@@ -1,0 +1,33 @@
+{
+  "version": "2.8-beta",
+  "purpose": "Official K-FIND / USDA record-level staging before production acceptance",
+  "states": [
+    "candidate",
+    "identity_matched",
+    "basis_checked",
+    "nutrients_checked",
+    "accepted",
+    "rejected"
+  ],
+  "required_nutrients": [
+    "water",
+    "protein",
+    "fiber",
+    "calcium",
+    "phosphorus"
+  ],
+  "optional_nutrients": [
+    "potassium",
+    "sodium",
+    "sugars",
+    "energy"
+  ],
+  "rules": [
+    "Record ID and source URL are mandatory.",
+    "Food description and preparation state must match.",
+    "Missing nutrient stays null.",
+    "Ca:P is calculated only from Ca and P in the same accepted record.",
+    "Candidate records never appear as official_direct in public UI.",
+    "A reviewer note is mandatory for accepted or rejected records."
+  ]
+}

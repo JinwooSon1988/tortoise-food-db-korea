@@ -1,0 +1,19 @@
+{
+  "dimensions": [
+    "number_of_unique_plants",
+    "public_verification_state_mix",
+    "links_to_evidence"
+  ],
+  "not_scored": [
+    "overall health score",
+    "exact nutrition completeness",
+    "exact feeding percentage",
+    "exact gram dose"
+  ],
+  "rules": [
+    "A green ingredient does not make the whole meal green.",
+    "Diversity count is descriptive, not proof of nutritional completeness.",
+    "Yellow/U ingredients remain visibly yellow/U in the meal result.",
+    "No exact percentage recommendation is generated without a validated rule."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "exported": [
+    "profiles",
+    "active profile id",
+    "feeding events"
+  ],
+  "not_exported": [
+    "browser history",
+    "device identifiers",
+    "unrelated localStorage"
+  ],
+  "restore": "validate first, then require explicit confirmation before replacement",
+  "server_upload": "none",
+  "format": "JSON UTF-8",
+  "schema_version": 1
+}

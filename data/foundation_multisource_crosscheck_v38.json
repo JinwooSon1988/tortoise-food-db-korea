@@ -1,0 +1,60 @@
+{
+  "romaine": {
+    "fdc_id": "746769",
+    "description": "Lettuce, cos or romaine, raw",
+    "data_type": "Foundation",
+    "per_100g": {
+      "water_g": 94.7,
+      "protein_g": 1.24,
+      "fiber_g": 1.8,
+      "calcium_mg": 35,
+      "phosphorus_mg": 30,
+      "potassium_mg": 253
+    },
+    "ca_p": 1.17,
+    "crosscheck_sources": [
+      {
+        "ref": "USDA-derived NutriDB",
+        "status": "matches core values"
+      },
+      {
+        "ref": "LogixPath Chef FDC lookup",
+        "status": "matches FDC ID, protein, fiber, calcium, potassium"
+      },
+      {
+        "ref": "CalorieInsight USDA Foundation citation",
+        "status": "matches FDC ID and Foundation classification"
+      }
+    ],
+    "acceptance": "corroborated_not_official_direct"
+  },
+  "kale": {
+    "fdc_id": "323505",
+    "description": "Kale, raw",
+    "data_type": "Foundation",
+    "per_100g": {
+      "water_g": 89.6,
+      "protein_g": 2.92,
+      "fiber_g": 4.1,
+      "calcium_mg": 254,
+      "phosphorus_mg": 55,
+      "potassium_mg": 348
+    },
+    "ca_p": 4.62,
+    "crosscheck_sources": [
+      {
+        "ref": "RawPawIQ USDA verification page",
+        "status": "matches FDC ID, Foundation classification and core values"
+      },
+      {
+        "ref": "NutriDB USDA FDC dataset",
+        "status": "matches core values"
+      },
+      {
+        "ref": "GetFoodFacts USDA record",
+        "status": "matches Ca/P and macro values"
+      }
+    ],
+    "acceptance": "corroborated_not_official_direct"
+  }
+}

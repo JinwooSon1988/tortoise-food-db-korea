@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Geobukbap DB local backup",
+  "type": "object",
+  "required": [
+    "schema",
+    "version",
+    "profiles",
+    "weekly"
+  ],
+  "properties": {
+    "schema": {
+      "const": "tfd-backup"
+    },
+    "version": {
+      "const": 1
+    },
+    "active_profile_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "profiles": {
+      "type": "array"
+    },
+    "weekly": {
+      "type": "array"
+    }
+  }
+}

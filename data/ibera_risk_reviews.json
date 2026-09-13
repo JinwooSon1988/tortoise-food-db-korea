@@ -1,0 +1,431 @@
+[
+  {
+    "plant_id": "dandelion",
+    "ko": "민들레",
+    "scientific": "Taraxacum spp.",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "taraxacum_review_2026"
+        ],
+        "note": "Taraxacum 속은 종 다양성과 화학적 차이가 커서 통칭만으로 동일성·안전성을 확정하지 않음."
+      },
+      "oxalate": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "oxalate_food_review_2023",
+          "oxalate_variation_2007"
+        ],
+        "note": "잎채소 옥살레이트는 측정·재배조건 변동이 있어 개별 record 확인 전 정량판정 보류."
+      },
+      "nitrate": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "nitrate_db_2025"
+        ],
+        "note": "질산염은 계절·지역 차이가 있어 일반화 금지."
+      },
+      "goitrogenic_compounds": {
+        "status": "no_reliable_evidence_found",
+        "evidence_ids": [],
+        "note": "현재 연결된 신뢰 가능한 자료에서 이 식물에 대한 Testudo-specific 임상 임계치를 확인하지 못함. '문제 없음'을 의미하지 않음."
+      },
+      "sugar_starch": {
+        "status": "no_reliable_evidence_found",
+        "evidence_ids": [],
+        "note": "현재 연결된 신뢰 가능한 자료에서 이 식물에 대한 Testudo-specific 임상 임계치를 확인하지 못함. '문제 없음'을 의미하지 않음."
+      },
+      "pesticide_foraging": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "bcg_med_food"
+        ],
+        "note": "BCG Mediterranean care guidance warns against poisonous plants and contamination from weed killers/slug pellets when collecting forage."
+      }
+    },
+    "overall": "review_complete_with_uncertainty",
+    "reviewed_at": "2026-09-13"
+  },
+  {
+    "plant_id": "plantain",
+    "ko": "질경이",
+    "scientific": "Plantago spp.",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "plantago_review_2018",
+          "plantago_constituents_2017"
+        ],
+        "note": "P. major 독성 문헌 review 존재. 거북 안전용량 근거로 해석하지 않음."
+      },
+      "oxalate": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "guil_1997_wild_edible",
+          "oxalate_food_review_2023",
+          "oxalate_variation_2007"
+        ],
+        "note": "Plantago major가 포함된 야생식용식물 성분 연구가 있으나, tortoise-specific 안전역은 확립되지 않음."
+      },
+      "nitrate": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "guil_1997_wild_edible",
+          "nitrate_db_2025"
+        ],
+        "note": "질산염은 종·계절·지역·재배조건에 따라 변동 가능. 단일 수치로 안전판정 금지."
+      },
+      "goitrogenic_compounds": {
+        "status": "no_reliable_evidence_found",
+        "evidence_ids": [],
+        "note": "현재 연결된 신뢰 가능한 자료에서 이 식물에 대한 Testudo-specific 임상 임계치를 확인하지 못함. '문제 없음'을 의미하지 않음."
+      },
+      "sugar_starch": {
+        "status": "no_reliable_evidence_found",
+        "evidence_ids": [],
+        "note": "현재 연결된 신뢰 가능한 자료에서 이 식물에 대한 Testudo-specific 임상 임계치를 확인하지 못함. '문제 없음'을 의미하지 않음."
+      },
+      "pesticide_foraging": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "bcg_med_food"
+        ],
+        "note": "BCG Mediterranean care guidance warns against poisonous plants and contamination from weed killers/slug pellets when collecting forage."
+      }
+    },
+    "overall": "review_complete_with_uncertainty",
+    "reviewed_at": "2026-09-13"
+  },
+  {
+    "plant_id": "mallow",
+    "ko": "아욱",
+    "scientific": "Malva spp.",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "clover",
+    "ko": "클로버",
+    "scientific": "Trifolium spp.",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "bcg_med_food"
+        ],
+        "note": "BCG Mediterranean care guidance warns against poisonous plants and contamination from weed killers/slug pellets when collecting forage."
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "alfalfa",
+    "ko": "알팔파",
+    "scientific": "Medicago sativa",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "sowthistle",
+    "ko": "방가지똥",
+    "scientific": "Sonchus spp.",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "bcg_med_food"
+        ],
+        "note": "BCG Mediterranean care guidance warns against poisonous plants and contamination from weed killers/slug pellets when collecting forage."
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "chicory",
+    "ko": "치커리",
+    "scientific": "Cichorium intybus",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "mediterranean_minerals_2020"
+        ],
+        "note": "Cichorium intybus 대상 성분 연구 존재. 국내 판매 치커리의 botanical identity가 일치할 때만 정량 근거 후보로 사용."
+      },
+      "nitrate": {
+        "status": "evidence_found",
+        "evidence_ids": [
+          "mediterranean_minerals_2020"
+        ],
+        "note": "Cichorium intybus 대상 성분 연구 존재. 국내 판매 치커리의 botanical identity가 일치할 때만 정량 근거 후보로 사용."
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "endive",
+    "ko": "엔다이브",
+    "scientific": "Cichorium endivia",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "romaine",
+    "ko": "로메인",
+    "scientific": "Lactuca sativa var. longifolia",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  },
+  {
+    "plant_id": "mulberry",
+    "ko": "뽕잎",
+    "scientific": "Morus spp.",
+    "plant_part": "leaf/above-ground parts unless source specifies otherwise",
+    "reviews": {
+      "known_toxicity": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "oxalate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "nitrate": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "goitrogenic_compounds": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "sugar_starch": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      },
+      "pesticide_foraging": {
+        "status": "not_reviewed",
+        "evidence_ids": [],
+        "note": null
+      }
+    },
+    "overall": "pending",
+    "reviewed_at": null
+  }
+]

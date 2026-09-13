@@ -1,0 +1,13 @@
+{
+  "schema": {
+    "date": "YYYY-MM-DD",
+    "plant_id": "string",
+    "source": "K-FIND|USDA",
+    "query": "string",
+    "result": "matched|no_match|ambiguous|rejected",
+    "record_id": "nullable",
+    "reason": "string"
+  },
+  "entries": [],
+  "rule": "Never overwrite a prior search attempt; append a new entry."
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "plant_id": "dandelion",
+    "current_gate": "official_nutrition",
+    "success_definition": {
+      "source": "K-FIND official record or USDA official record",
+      "record_level_id": true,
+      "source_url_or_dataset_release": true,
+      "raw_state_match": true,
+      "basis_preserved": true,
+      "calcium_and_phosphorus_same_record": true
+    },
+    "on_success": "create nutrition_record -> rerun gate audit -> editorial review",
+    "on_failure": "remain 3/4; record search attempt and reason"
+  },
+  {
+    "plant_id": "plantain",
+    "current_gate": "official_nutrition",
+    "success_definition": {
+      "source": "K-FIND official record or USDA official record",
+      "record_level_id": true,
+      "source_url_or_dataset_release": true,
+      "raw_state_match": true,
+      "basis_preserved": true,
+      "calcium_and_phosphorus_same_record": true
+    },
+    "on_success": "create nutrition_record -> rerun gate audit -> editorial review",
+    "on_failure": "remain 3/4; record search attempt and reason"
+  }
+]

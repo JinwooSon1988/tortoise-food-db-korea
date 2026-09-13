@@ -1,0 +1,41 @@
+{
+  "K-FIND": {
+    "accepted_formats": [
+      "csv",
+      "xlsx-exported-to-csv"
+    ],
+    "required_semantics": [
+      "record_id",
+      "food_name",
+      "preparation",
+      "basis",
+      "calcium",
+      "phosphorus"
+    ],
+    "identity_fields": [
+      "food_name",
+      "food_group",
+      "source_or_producer"
+    ],
+    "notes": "Column names differ by export; map them in kfind_column_map.json before import."
+  },
+  "USDA_Foundation": {
+    "accepted_formats": [
+      "official FoodData Central Foundation Foods CSV"
+    ],
+    "required_files": [
+      "food.csv",
+      "food_nutrient.csv",
+      "nutrient.csv"
+    ],
+    "join_key": "fdc_id",
+    "required_nutrients": [
+      "Water",
+      "Protein",
+      "Fiber, total dietary",
+      "Calcium, Ca",
+      "Phosphorus, P"
+    ],
+    "notes": "Use Foundation record data type explicitly; do not silently substitute SR Legacy."
+  }
+}

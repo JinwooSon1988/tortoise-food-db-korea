@@ -1,0 +1,65 @@
+[
+  {
+    "plant_id": "dandelion",
+    "source": "USDA FoodData Central",
+    "data_type": "SR Legacy",
+    "fdc_id": "169226",
+    "ndb_number": "11207",
+    "food_description": "Dandelion greens, raw",
+    "botanical_name": "Taraxacum officinale",
+    "preparation": "raw",
+    "basis": "100 g edible portion",
+    "retrieved_at": "2026-09-13",
+    "official_evidence": {
+      "usda_ars_sr28_report": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg11.pdf",
+      "note": "USDA ARS SR28 report identifies NDB 11207, Dandelion greens raw, Taraxacum officinale."
+    },
+    "nutrients": {
+      "water": {
+        "value": 85.6,
+        "unit": "g"
+      },
+      "energy": {
+        "value": 45,
+        "unit": "kcal"
+      },
+      "protein": {
+        "value": 2.7,
+        "unit": "g"
+      },
+      "fat": {
+        "value": 0.7,
+        "unit": "g"
+      },
+      "fiber": {
+        "value": 3.5,
+        "unit": "g"
+      },
+      "calcium": {
+        "value": 187,
+        "unit": "mg"
+      },
+      "phosphorus": {
+        "value": 66,
+        "unit": "mg"
+      },
+      "potassium": {
+        "value": 397,
+        "unit": "mg"
+      },
+      "sodium": {
+        "value": 76,
+        "unit": "mg"
+      },
+      "sugars": {
+        "value": 0.71,
+        "unit": "g"
+      }
+    },
+    "derived": {
+      "calcium_phosphorus_ratio": 2.83
+    },
+    "provenance_note": "SR Legacy is an official USDA legacy data type, not Foundation Foods. It is accepted only because the database labels the data type explicitly; it is not presented as a 2026 Foundation record.",
+    "identity_limitation": "Applies to the USDA record identified as Taraxacum officinale. Korean retail/wild plants called 민들레 must not be assumed identical without botanical identity confirmation."
+  }
+]

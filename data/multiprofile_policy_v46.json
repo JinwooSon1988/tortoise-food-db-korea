@@ -1,0 +1,7 @@
+{
+  "stable_id": "UUID when available; fallback timestamp+random",
+  "active_profile": "one active profile ID selects context",
+  "migration": "single v45 profile migrates to v46 array without deleting old data",
+  "weekly_binding": "new feeding events store profile_id; legacy events remain null/unassigned",
+  "safety": "profile selection never fabricates a species-specific verdict"
+}

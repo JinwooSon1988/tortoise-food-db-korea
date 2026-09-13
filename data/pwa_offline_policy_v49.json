@@ -1,0 +1,14 @@
+{
+  "core_cached": [
+    "home",
+    "profile",
+    "today meal",
+    "weekly log",
+    "backup/restore",
+    "search data"
+  ],
+  "detail_pages": "cache-on-visit; unseen detail pages may require network",
+  "offline_user_data": "profiles and feeding logs remain in localStorage",
+  "cache_upgrade": "old tfd-* caches deleted on activation",
+  "installability": "web app manifest + service worker; icons intentionally omitted until branded artwork exists"
+}

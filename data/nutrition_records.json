@@ -1,0 +1,31 @@
+[
+  {
+    "plant_id": "kale",
+    "food_description": "케일, 생것",
+    "basis": "100 g edible portion",
+    "preparation": "raw",
+    "source_provider": "국립농업과학원/농촌진흥청 자료를 인용한 NOFAT 미러",
+    "source_tier": "secondary_mirror_of_official",
+    "source_url": "https://nofat.kr/food/R001207",
+    "source_note": "페이지가 출처를 국립농업과학원 농진청('14), 2022년도라고 명시. 공식 원문 record ID 직접 매핑 전이므로 provisional.",
+    "retrieved_at": "2026-09-12",
+    "values": {
+      "water_g": 89.9,
+      "protein_g": 3.11,
+      "fat_g": 0.24,
+      "fiber_g": 3.2,
+      "calcium_mg": 328.0,
+      "phosphorus_mg": 61.0,
+      "potassium_mg": 594.0,
+      "sodium_mg": 47.0
+    },
+    "derived": {
+      "ca_p_ratio": 5.38
+    },
+    "quality": {
+      "status": "provisional_checked",
+      "official_record_id": null,
+      "warning": "품종·재배조건·분석법에 따라 값이 달라질 수 있으며, 공식 K-FIND/RDA record 직접 매핑 전까지 잠정값으로 표시한다."
+    }
+  }
+]

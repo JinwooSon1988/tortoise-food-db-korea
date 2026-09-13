@@ -1,0 +1,33 @@
+{
+  "provider": "K-FIND 식품영양성분 데이터베이스",
+  "authority": "식품의약품안전처",
+  "data_producers": [
+    "식품의약품안전처",
+    "농촌진흥청",
+    "국립수산과학원"
+  ],
+  "raw_food_target": "원재료성 식품",
+  "normal_basis": "100g where source record states 100g",
+  "fields_needed": [
+    "식품코드",
+    "식품명",
+    "자료생산기관",
+    "데이터구분",
+    "기준량",
+    "수분",
+    "단백질",
+    "식이섬유",
+    "칼슘",
+    "인",
+    "칼륨",
+    "나트륨"
+  ],
+  "hard_rules": [
+    "식품 상세 페이지의 식품코드를 source_record_id로 저장",
+    "생것/말린것/삶은것을 별도 record로 저장",
+    "품목대표와 상용제품을 혼합하지 않음",
+    "식품명만 일치한다고 식물학적 동일성을 확정하지 않음",
+    "100g 기준이 아닌 record는 정규화 전 원값 보존"
+  ],
+  "status": "pipeline_ready"
+}

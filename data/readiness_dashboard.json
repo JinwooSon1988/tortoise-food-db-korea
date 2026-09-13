@@ -1,0 +1,114 @@
+[
+  {
+    "plant_id": "dandelion",
+    "name": "민들레",
+    "gates_complete": 3,
+    "gates_total": 4,
+    "blockers": [
+      "official_nutrition"
+    ],
+    "next_action": "verify official nutrition record"
+  },
+  {
+    "plant_id": "plantain",
+    "name": "질경이",
+    "gates_complete": 3,
+    "gates_total": 4,
+    "blockers": [
+      "official_nutrition"
+    ],
+    "next_action": "verify official nutrition record"
+  },
+  {
+    "plant_id": "mallow",
+    "name": "아욱",
+    "gates_complete": 2,
+    "gates_total": 4,
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "clover",
+    "name": "클로버",
+    "gates_complete": 2,
+    "gates_total": 4,
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "alfalfa",
+    "name": "알팔파",
+    "gates_complete": 2,
+    "gates_total": 4,
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "sowthistle",
+    "name": "방가지똥",
+    "gates_complete": 2,
+    "gates_total": 4,
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "chicory",
+    "name": "치커리",
+    "gates_complete": 1,
+    "gates_total": 4,
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: species_evidence, official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "endive",
+    "name": "엔다이브",
+    "gates_complete": 1,
+    "gates_total": 4,
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: species_evidence, official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "romaine",
+    "name": "로메인",
+    "gates_complete": 1,
+    "gates_total": 4,
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: species_evidence, official_nutrition, risk_review"
+  },
+  {
+    "plant_id": "mulberry",
+    "name": "뽕잎",
+    "gates_complete": 1,
+    "gates_total": 4,
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "next_action": "resolve: species_evidence, official_nutrition, risk_review"
+  }
+]

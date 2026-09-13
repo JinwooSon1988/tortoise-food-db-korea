@@ -1,0 +1,36 @@
+{
+  "stages": [
+    {
+      "id": "raw",
+      "label": "공식 원본",
+      "rule": "원본 파일을 수정하지 않고 보관"
+    },
+    {
+      "id": "candidate",
+      "label": "자동 후보",
+      "rule": "이름/상태/학명 단서로 후보만 생성; production 반영 금지"
+    },
+    {
+      "id": "reviewed",
+      "label": "사람 검토",
+      "rule": "식품명·조리상태·식품코드·기준량 확인"
+    },
+    {
+      "id": "production",
+      "label": "공개 DB",
+      "rule": "audit PASS 항목만 반영"
+    }
+  ],
+  "identity_match": {
+    "exact_korean_name": "candidate_only",
+    "alias_match": "candidate_only",
+    "scientific_match": "strong_candidate",
+    "manual_review_required": true
+  },
+  "never_auto_merge": [
+    "raw vs cooked",
+    "fresh vs dried",
+    "different cultivar/species",
+    "generic common name vs exact taxon"
+  ]
+}

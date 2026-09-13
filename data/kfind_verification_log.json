@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-12",
+  "provider": "K-FIND",
+  "confirmed_interface_facts": [
+    "원재료성 식품 상세 페이지는 식품 및 음식명, 생산기관, 데이터구분, 품목대표/상용제품, 영양성분 함량 기준량을 표시한다.",
+    "상세 페이지 URL의 searchFoodCd 값으로 개별 식품 record를 식별할 수 있다.",
+    "100g 기준 원재료성 식품 record에서 수분·단백질·식이섬유·인·칼륨·칼슘 등 영양값을 제공할 수 있다."
+  ],
+  "search_quality_note": "웹 검색엔진 결과는 목표 채소명과 다른 K-FIND 상세 record를 반환할 수 있으므로, 검색결과 URL만 보고 target 식품 record로 자동 승인하지 않는다.",
+  "release_rule": "페이지 본문의 식품명과 목표 식품명이 일치해야 source_record_id를 승인한다.",
+  "live_web_verification_2026_09_12": {
+    "verified_example": {
+      "record_id": "R106-003000001-0000",
+      "food_name": "가지, 생것",
+      "producer": "국립식량과학원",
+      "data_type": "원재료성 식품",
+      "basis": "100g",
+      "confirmed_fields": [
+        "에너지",
+        "탄수화물",
+        "당류",
+        "지방",
+        "단백질",
+        "수분",
+        "식이섬유",
+        "나트륨"
+      ]
+    },
+    "negative_test": "치커리/로메인/케일/청경채 검색에서 검색엔진이 가지·백미·가공식품 등 무관한 상세 record를 반환함.",
+    "decision": "외부 검색 결과의 URL만으로 target record를 승인하지 않는다."
+  }
+}

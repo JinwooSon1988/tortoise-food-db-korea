@@ -1,0 +1,42 @@
+[
+  {
+    "id": "kfind",
+    "title": "K-FIND 식품영양성분 데이터베이스",
+    "type": "official_nutrition_db",
+    "status": "active",
+    "priority": 1
+  },
+  {
+    "id": "rda",
+    "title": "국가표준식품성분표",
+    "type": "official_nutrition_db",
+    "status": "active",
+    "priority": 1
+  },
+  {
+    "id": "usda_fdc",
+    "title": "USDA FoodData Central",
+    "type": "official_nutrition_db",
+    "status": "active",
+    "priority": 2
+  },
+  {
+    "id": "slimani2006",
+    "title": "Testudo graeca graeca feeding ecology, Morocco",
+    "type": "peer_reviewed",
+    "doi": "10.1016/j.jaridenv.2005.06.010",
+    "priority": 1
+  },
+  {
+    "id": "hermanni_italy_2011",
+    "title": "Seasonal changes in diet of T. h. hermanni, central Italy",
+    "type": "peer_reviewed",
+    "priority": 1
+  },
+  {
+    "id": "horsfieldii_uzbekistan_2011",
+    "title": "Central Asian tortoise feeding in Uzbekistan",
+    "type": "peer_reviewed",
+    "priority": 1
+  }
+]

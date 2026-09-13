@@ -1,0 +1,88 @@
+[
+  {
+    "plant_id": "chicory",
+    "source": "USDA FoodData Central",
+    "fdc_id": "169992",
+    "food_description": "Chicory greens, raw",
+    "data_type": "SR Legacy candidate",
+    "preparation": "raw",
+    "basis": "100 g",
+    "water_g": 92.0,
+    "protein_g": 1.7,
+    "fiber_g": 4.0,
+    "status": "record_id_verified_via_USDA-derived_sources; direct USDA detail still required for production acceptance",
+    "source_refs": [
+      "turn0search4",
+      "turn0search12",
+      "turn0search14"
+    ]
+  },
+  {
+    "plant_id": "romaine",
+    "source": "USDA FoodData Central",
+    "fdc_id": "746769",
+    "food_description": "Lettuce, cos or romaine, raw",
+    "data_type": "Foundation",
+    "preparation": "raw",
+    "basis": "100 g",
+    "protein_g": 1.2,
+    "status": "Foundation record identity corroborated; mineral fields still require official-record extraction",
+    "source_refs": [
+      "turn0search0",
+      "turn0search7"
+    ]
+  },
+  {
+    "plant_id": "romaine",
+    "source": "USDA FoodData Central",
+    "fdc_id": "169247",
+    "ndb_number": "11251",
+    "food_description": "Lettuce, cos or romaine, raw",
+    "data_type": "SR Legacy",
+    "preparation": "raw",
+    "basis": "100 g",
+    "water_g": 94.6,
+    "protein_g": 1.23,
+    "fiber_g": 2.1,
+    "status": "official USDA SR28 report corroborates NDB 11251; mineral extraction pending",
+    "source_refs": [
+      "turn0search48",
+      "turn0search8"
+    ]
+  },
+  {
+    "plant_id": "endive",
+    "source": "USDA FoodData Central",
+    "fdc_id": "168412",
+    "food_description": "Endive, raw",
+    "data_type": "SR Legacy candidate",
+    "preparation": "raw",
+    "basis": "100 g",
+    "water_g": 93.8,
+    "protein_g": 1.25,
+    "fiber_g": 3.1,
+    "status": "record identity corroborated; direct official mineral extraction pending",
+    "source_refs": [
+      "turn0search3",
+      "turn0search10"
+    ]
+  },
+  {
+    "plant_id": "kale",
+    "source": "USDA FoodData Central",
+    "fdc_id": "323505",
+    "food_description": "Kale, raw",
+    "data_type": "Foundation",
+    "preparation": "raw",
+    "basis": "100 g",
+    "water_g": 89.6,
+    "protein_g": 2.92,
+    "fiber_g": 4.1,
+    "status": "Foundation identity corroborated; full mineral extraction pending",
+    "source_refs": [
+      "turn0search2",
+      "turn0search6",
+      "turn0search13"
+    ]
+  }
+]

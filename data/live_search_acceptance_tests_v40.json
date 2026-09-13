@@ -1,0 +1,20 @@
+{
+  "must_suggest": {
+    "민드레": "dandelion",
+    "뽕닢": "mulberry",
+    "질갱이": "plantain"
+  },
+  "must_not_silently_correct": true,
+  "must_not_assert_botanical_identity": true,
+  "nonsense_should_not_suggest": [
+    "가나다라마바사",
+    "ㅋㅋㅋㅋ",
+    "12345"
+  ],
+  "keyboard": [
+    "ArrowDown",
+    "ArrowUp",
+    "Enter",
+    "Escape"
+  ]
+}

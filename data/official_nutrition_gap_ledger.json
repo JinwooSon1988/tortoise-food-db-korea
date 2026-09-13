@@ -1,0 +1,21 @@
+[
+  {
+    "plant_id": "dandelion",
+    "source": "USDA Foundation Foods April 2026",
+    "status": "resolved_with_official_usda_sr_legacy",
+    "action": "Keep data_type label visible; do not call this Foundation Foods.",
+    "record": "FDC 169226 / NDB 11207"
+  },
+  {
+    "plant_id": "plantain",
+    "source": "USDA Foundation Foods April 2026",
+    "status": "no_record_level_match_verified_this_pass",
+    "action": "Plantago herb chemistry papers are not official nutrition records."
+  },
+  {
+    "plant_id": "chicory",
+    "source": "peer-reviewed composition study",
+    "status": "composition_candidate_not_official_record",
+    "action": "Keep official_nutrition pending until K-FIND/USDA record-level match is verified."
+  }
+]

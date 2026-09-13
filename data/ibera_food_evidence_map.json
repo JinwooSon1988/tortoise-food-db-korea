@@ -1,0 +1,72 @@
+[
+  {
+    "plant_id": "dandelion",
+    "evidence_id": "graeca_network_2019",
+    "match": "genus_level",
+    "meaning": "Taraxacum이 T. graeca 야생식이로 보고",
+    "does_not_mean": "한국 민들레 모든 종 동일 판정"
+  },
+  {
+    "plant_id": "dandelion",
+    "evidence_id": "bcg_med_food",
+    "match": "husbandry_common_name",
+    "meaning": "지중해 육지거북 사육 먹이 후보로 전문단체가 제시",
+    "does_not_mean": "종·용량별 직접 임상근거"
+  },
+  {
+    "plant_id": "sowthistle",
+    "evidence_id": "bcg_med_food",
+    "match": "husbandry_common_name",
+    "meaning": "지중해 육지거북 사육 먹이 후보로 전문단체가 제시",
+    "does_not_mean": "종·용량별 직접 임상근거"
+  },
+  {
+    "plant_id": "plantain",
+    "evidence_id": "bcg_med_food",
+    "match": "husbandry_common_name",
+    "meaning": "지중해 육지거북 사육 먹이 후보로 전문단체가 제시",
+    "does_not_mean": "종·용량별 직접 임상근거"
+  },
+  {
+    "plant_id": "clover",
+    "evidence_id": "bcg_med_food",
+    "match": "husbandry_common_name",
+    "meaning": "지중해 육지거북 사육 먹이 후보로 전문단체가 제시",
+    "does_not_mean": "종·용량별 직접 임상근거"
+  },
+  {
+    "plant_id": "alfalfa",
+    "evidence_id": "graeca_network_2019",
+    "match": "exact_scientific_or_genus_context",
+    "meaning": "T. graeca 야생식이 문헌에 보고",
+    "does_not_mean": "이베라 급여빈도 확정"
+  },
+  {
+    "plant_id": "plantain",
+    "evidence_id": "graeca_morocco_1996",
+    "match": "genus_level",
+    "meaning": "Plantago spp.가 T. g. graeca 야생 먹이목록에 포함",
+    "does_not_mean": "이베라 단독주식·급여량·급여빈도 확정"
+  },
+  {
+    "plant_id": "sowthistle",
+    "evidence_id": "graeca_morocco_1996",
+    "match": "species_or_genus_level",
+    "meaning": "Sonchus oleraceus가 T. g. graeca 야생 먹이목록에 포함",
+    "does_not_mean": "이베라 단독주식·급여량·급여빈도 확정"
+  },
+  {
+    "plant_id": "mallow",
+    "evidence_id": "graeca_morocco_1996",
+    "match": "genus_level",
+    "meaning": "Malva spp.가 T. g. graeca 야생 먹이목록에 포함",
+    "does_not_mean": "이베라 단독주식·급여량·급여빈도 확정"
+  },
+  {
+    "plant_id": "alfalfa",
+    "evidence_id": "graeca_morocco_1996",
+    "match": "exact_scientific",
+    "meaning": "Medicago sativa가 재배 먹이목록에 포함",
+    "does_not_mean": "이베라 단독주식·급여량·급여빈도 확정"
+  }
+]

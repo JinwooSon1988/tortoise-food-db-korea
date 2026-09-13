@@ -1,0 +1,92 @@
+[
+  {
+    "plant_id": "dandelion",
+    "display_name": "민들레",
+    "scientific_in_master": "Taraxacum spp.",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "민들레라는 한국어 통칭은 Taraxacum 속의 여러 분류군을 가리킬 수 있으므로 해외 문헌의 Taraxacum spp.와 자동 동일시하지 않는다."
+    ]
+  },
+  {
+    "plant_id": "plantain",
+    "display_name": "질경이",
+    "scientific_in_master": "Plantago spp.",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "질경이는 Plantago 속 수준 자료와 국내 판매/채집 개체의 정확한 종 동정을 구분한다."
+    ]
+  },
+  {
+    "plant_id": "mallow",
+    "display_name": "아욱",
+    "scientific_in_master": "Malva spp.",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "한국의 '아욱' 상품명과 해외 문헌의 Malva spp./Malva parviflora를 자동 동일 종으로 취급하지 않는다."
+    ]
+  },
+  {
+    "plant_id": "clover",
+    "display_name": "클로버",
+    "scientific_in_master": "Trifolium spp.",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "클로버는 Trifolium 속의 여러 종을 포함할 수 있어 종별 identity를 보존한다."
+    ]
+  },
+  {
+    "plant_id": "alfalfa",
+    "display_name": "알팔파",
+    "scientific_in_master": "Medicago sativa",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "판매명·통칭과 학명을 source record 단위로 확인한다."
+    ]
+  },
+  {
+    "plant_id": "sowthistle",
+    "display_name": "방가지똥",
+    "scientific_in_master": "Sonchus spp.",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "방가지똥류는 Sonchus 속 종 구분이 필요하다."
+    ]
+  },
+  {
+    "plant_id": "chicory",
+    "display_name": "치커리",
+    "scientific_in_master": "Cichorium intybus",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "판매명·통칭과 학명을 source record 단위로 확인한다."
+    ]
+  },
+  {
+    "plant_id": "endive",
+    "display_name": "엔다이브",
+    "scientific_in_master": "Cichorium endivia",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "판매명·통칭과 학명을 source record 단위로 확인한다."
+    ]
+  },
+  {
+    "plant_id": "romaine",
+    "display_name": "로메인",
+    "scientific_in_master": "Lactuca sativa var. longifolia",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "판매명·통칭과 학명을 source record 단위로 확인한다."
+    ]
+  },
+  {
+    "plant_id": "mulberry",
+    "display_name": "뽕잎",
+    "scientific_in_master": "Morus spp.",
+    "status": "exact_taxon_required_before_public_final_verdict",
+    "notes": [
+      "뽕잎은 Morus 종/품종과 실제 판매 원료 identity가 확인되어야 한다."
+    ]
+  }
+]

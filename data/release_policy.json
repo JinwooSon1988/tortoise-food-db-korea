@@ -1,0 +1,21 @@
+{
+  "final_verdict_requirements": {
+    "identity": [
+      "verified_name"
+    ],
+    "nutrition": [
+      "official_direct_or_reviewed_equivalent"
+    ],
+    "risk": [
+      "reviewed"
+    ],
+    "species_guidance": [
+      "at_least_one_relevant_evidence"
+    ],
+    "explainability": [
+      "supporting_or_limiting_evidence_present"
+    ]
+  },
+  "fallback": "U",
+  "note": "If any required layer is missing, the public final verdict remains U or a clearly labeled provisional husbandry role."
+}

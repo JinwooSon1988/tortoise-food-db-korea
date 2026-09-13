@@ -1,0 +1,22 @@
+{
+  "retail_term": "질경이",
+  "status": "ambiguous_until_taxon_confirmed",
+  "accepted_candidate_taxa": [
+    {
+      "taxon": "Plantago major",
+      "display": "큰질경이/Plantago major 계열 여부 확인 필요",
+      "auto_merge": false
+    },
+    {
+      "taxon": "Plantago media",
+      "display": "Plantago media 여부 확인 필요",
+      "auto_merge": false
+    },
+    {
+      "taxon": "Plantago spp.",
+      "display": "속 수준 근거만 있는 자료",
+      "auto_merge": false
+    }
+  ],
+  "ui_rule": "When exact taxon is unknown, show genus-level evidence but never attach species-level nutrition automatically."
+}
