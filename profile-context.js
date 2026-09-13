@@ -1,4 +1,18 @@
-window.TFDProfiles={
- all(){try{return JSON.parse(localStorage.getItem('tfd_profiles_v46')||'[]')}catch(e){return[]}},
- active(){const a=this.all(),id=localStorage.getItem('tfd_active_profile_v46');return a.find(x=>x.id===id)||a[0]||null}
-};
+(function(){
+ const SPECIES={
+  ibera:'이베라 그리스',greek:'그리스 육지거북',hermanni:'헤르만 육지거북',marginata:'마지나타',
+  horsfieldii:'호스필드',sulcata:'설카타',leopard:'레오파드'
+ };
+ function normalize(p){
+  if(!p)return null;
+  return Object.assign({},p,{
+   species_name:p.species_name||SPECIES[p.species]||p.species||'',
+   weight_g:p.weight_g!=null?p.weight_g:(p.weight!=null?p.weight:null)
+  });
+ }
+ window.TFDProfiles={
+  all(){try{return JSON.parse(localStorage.getItem('tfd_profiles_v46')||'[]').map(normalize)}catch(e){return[]}},
+  active(){const a=this.all(),id=localStorage.getItem('tfd_active_profile_v46');return a.find(x=>x.id===id)||a[0]||null},
+  normalize
+ };
+})();
