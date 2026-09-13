@@ -1,0 +1,1 @@
+Evidence expansion batch 2 is ready for review. Scope separation between Mediterranean Testudo and general herbivorous-reptile evidence is enforced in the renderer.
