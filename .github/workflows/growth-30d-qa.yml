@@ -1,0 +1,21 @@
+name: Growth 30-day QA
+on:
+  pull_request:
+    paths:
+      - 'growth/**'
+      - 'monthly/**'
+      - 'profile/**'
+      - 'settings/**'
+      - 'sw.js'
+      - 'scripts/audit_growth_30d.py'
+      - '.github/workflows/growth-30d-qa.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/audit_growth_30d.py
