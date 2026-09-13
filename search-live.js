@@ -24,16 +24,20 @@
   const input=document.querySelector('input[type="search"],#searchInput,#search'); if(!input)return;
   const map=await fetch('./data/korean_retail_name_map.json').then(r=>r.json());
   let box=document.getElementById('koSuggestions');if(!box){box=document.createElement('div');box.id='koSuggestions';box.setAttribute('role','listbox');box.setAttribute('aria-live','polite');input.after(box);}
+  let identity=document.getElementById('identityWarning');if(!identity){identity=document.createElement('div');identity.id='identityWarning';identity.setAttribute('role','note');identity.style.cssText='display:none;margin-top:8px;padding:10px 12px;border:1px solid #e2c66f;border-radius:10px;background:#fff7df;font-size:13px;line-height:1.5';box.after(identity);}
   let current=[],active=-1;
   function close(){box.innerHTML='';current=[];active=-1;input.setAttribute('aria-expanded','false');}
-  function choose(x){input.value=x.label;close();input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));}
+  function identityRow(q){const nq=norm(q);if(!nq)return null;return map.find(row=>[...(row.retail_terms||[]),...(row.aliases||[])].some(x=>norm(x)===nq))||null;}
+  function drawIdentity(){const row=identityRow(input.value);if(!row||row.mapping_status!=='name_candidate_only'){identity.style.display='none';identity.textContent='';return;}const specific=row.plant_id==='mallow'?' 특히 “아욱”은 한국 유통명만으로 특정 Malva 종을 확정하지 않는다.':'';identity.innerHTML='<b>식물동정 주의</b><br>이 이름은 검색 후보다. 상품명·통용명 일치만으로 학명을 확정하거나 급여 안전성을 승인하지 않는다.'+specific;identity.style.display='block';}
+  function choose(x){input.value=x.label;close();drawIdentity();input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));}
   function draw(){box.innerHTML=''; if(!current.length){input.setAttribute('aria-expanded','false');return;} input.setAttribute('aria-expanded','true');
    const head=document.createElement('div');head.className='suggest-head';head.textContent='혹시 이것을 찾으셨나요?';box.appendChild(head);
    current.forEach((x,i)=>{const b=document.createElement('button');b.type='button';b.id='koSug'+i;b.setAttribute('role','option');b.textContent=x.label;b.onclick=()=>choose(x);box.appendChild(b);});
    const warn=document.createElement('small');warn.textContent='검색 후보일 뿐 식물종 동정 결과가 아니다.';box.appendChild(warn);
   }
   input.setAttribute('aria-autocomplete','list');input.setAttribute('aria-controls','koSuggestions');input.setAttribute('aria-expanded','false');
-  input.addEventListener('input',()=>{current=candidates(input.value,map).filter(x=>!x.exact);active=-1;draw();});
+  input.addEventListener('input',()=>{current=candidates(input.value,map).filter(x=>!x.exact);active=-1;draw();drawIdentity();});
+  input.addEventListener('change',drawIdentity);
   input.addEventListener('keydown',e=>{const bs=[...box.querySelectorAll('button')];if(e.key==='Escape'){close();return;}if(!bs.length)return;
     if(e.key==='ArrowDown'){e.preventDefault();active=(active+1)%bs.length;bs[active].focus();}
     else if(e.key==='Enter'&&active>=0){e.preventDefault();choose(current[active]);}
