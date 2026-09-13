@@ -1,0 +1,38 @@
+[
+  {
+    "plant_id": "clover",
+    "species_group": "Mediterranean_Testudo",
+    "kind": "limitation",
+    "severity": "moderate",
+    "statement": "White clover is presented by Tortoise Trust as a food to use in moderation because it is comparatively high in protein.",
+    "evidence_id": "tt_mediterranean_food",
+    "public_text": "클로버는 혼합식 일부로 제한해 사용한다. 전문자료 자체가 white clover를 비교적 고단백 식물로 보아 moderation을 권고한다."
+  },
+  {
+    "plant_id": "romaine",
+    "species_group": "Mediterranean_Testudo",
+    "kind": "limitation",
+    "severity": "moderate",
+    "statement": "Tortoise Trust presents romaine/red leaf lettuce only in very limited quantities in Mediterranean tortoise feeding guidance.",
+    "evidence_id": "tt_mediterranean_food",
+    "public_text": "로메인은 마트채소 보조 수준으로 제한한다. 지중해 육지거북 전문자료에서는 very limited quantities로 다룬다."
+  },
+  {
+    "plant_id": "dandelion",
+    "species_group": "Mediterranean_Testudo",
+    "kind": "support",
+    "severity": "none",
+    "statement": "Dandelion is repeatedly listed by specialist Mediterranean tortoise feeding guidance as part of a mixed weed/leaf diet.",
+    "evidence_id": "bcg_mediterranean_care",
+    "public_text": "민들레는 지중해 육지거북의 혼합 야생초 구성 후보로 전문자료에서 반복 제시된다."
+  },
+  {
+    "plant_id": "plantain",
+    "species_group": "Mediterranean_Testudo",
+    "kind": "support",
+    "severity": "none",
+    "statement": "Plantain is listed in specialist Mediterranean tortoise care guidance and has observational support in wild Testudo hermanni foraging data.",
+    "evidence_id": "bcg_mediterranean_care",
+    "public_text": "질경이는 전문 사육자료와 야생 Testudo hermanni 섭식자료 모두에서 연결근거가 있다."
+  }
+]

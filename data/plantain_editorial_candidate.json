@@ -1,0 +1,23 @@
+{
+  "plant_id": "plantain",
+  "candidate_taxa": [
+    "Plantago major",
+    "Plantago media",
+    "Plantago spp."
+  ],
+  "target": "Mediterranean Testudo / Testudo graeca context",
+  "provisional_decision": "supported_mixed_diet_pending_official_nutrition",
+  "badge": "🟡 혼합급여 지지근거 있음 · 영양 record 검증 중",
+  "support": [
+    "British Chelonia Group Mediterranean care guidance lists plantains among suitable garden forage.",
+    "Tortoise Trust plant-food guidance includes Plantago spp. among natural graze candidates.",
+    "T. g. graeca field evidence includes Plantago spp. among observed food plants."
+  ],
+  "limits": [
+    "Plantago spp. field evidence is not Ibera-direct evidence.",
+    "Plantago major/media/species-level identity must not be collapsed into one record.",
+    "No official record-level nutrient dataset has yet passed this database's acceptance gate.",
+    "Wild consumption does not establish an unlimited captive staple or exact feeding percentage."
+  ],
+  "reviewed_at": "2026-09-13"
+}

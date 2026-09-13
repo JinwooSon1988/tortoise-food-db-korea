@@ -1,0 +1,74 @@
+[
+  {
+    "id": "guil_1997_wild_edible",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/9527345/",
+    "citation": "Guil JL, Rodríguez-García I, Torija E. Plant Foods Hum Nutr. 1997;51(2):99-107.",
+    "type": "food_composition_primary",
+    "scope": "16 wild edible plant species, human-food composition",
+    "finding": "Oxalic acid and nitrate varied widely among species; Plantago major had low erucic acid reported (3.45%).",
+    "limitation": "Not a tortoise toxicity study; does not establish a safe tortoise dose."
+  },
+  {
+    "id": "oxalate_food_review_2023",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37685134/",
+    "citation": "Foods. 2023;12(17):3201.",
+    "type": "food_oxalate_review",
+    "scope": "food oxalate",
+    "finding": "Leafy plant foods are important dietary oxalate sources and measured values vary by food and processing.",
+    "limitation": "Human-food review; use for chemistry context, not tortoise clinical thresholds."
+  },
+  {
+    "id": "oxalate_variation_2007",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17604750/",
+    "citation": "Food oxalate: factors affecting measurement, biological variation, and bioavailability.",
+    "type": "measurement_review",
+    "scope": "food oxalate measurement",
+    "finding": "Oxalate values can vary with analytical method, cultivar, harvest time and growing conditions.",
+    "limitation": "Does not provide a universal plant safety cutoff."
+  },
+  {
+    "id": "nitrate_db_2025",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40318878/",
+    "citation": "Am J Clin Nutr. 2025. Nitrate and nitrite food composition database update.",
+    "type": "composition_database_review",
+    "scope": "823 foods, >150,000 nitrate/nitrite values",
+    "finding": "Nitrate/nitrite values show seasonal, geographic and cooking-related variation.",
+    "limitation": "Human food database; not a Testudo toxicity threshold."
+  },
+  {
+    "id": "plantago_review_2018",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29629064/",
+    "citation": "Plantago major in Traditional Persian Medicine and modern phytotherapy: a narrative review.",
+    "type": "plant_review",
+    "scope": "Plantago major phytochemistry/toxicity literature",
+    "finding": "Reviews botanical characterization, phytochemistry, pharmacology and toxicity literature for P. major.",
+    "limitation": "Not tortoise-specific and not equivalent to a feeding recommendation."
+  },
+  {
+    "id": "taraxacum_review_2026",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41554454/",
+    "citation": "Systematic review of Taraxacum chemodiversity, pharmacology and toxicology.",
+    "type": "plant_systematic_review",
+    "scope": "Taraxacum genus, 55 species",
+    "finding": "Documents substantial species-level chemodiversity and differences across Taraxacum.",
+    "limitation": "Supports identity caution; does not prove all Taraxacum taxa interchangeable for tortoise feeding."
+  },
+  {
+    "id": "plantago_constituents_2017",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29028587/",
+    "citation": "Adom MB et al. Biomed Pharmacother. 2017;96:348-360. DOI 10.1016/j.biopha.2017.09.152",
+    "type": "plant_phytochemistry_review",
+    "scope": "Plantago major",
+    "finding": "Reviews chemical constituents including flavonoids, alkaloids, terpenoids, phenolic acid derivatives and iridoid glycosides.",
+    "limitation": "Not tortoise-specific; constituent presence is not a tortoise toxicity threshold."
+  },
+  {
+    "id": "mediterranean_minerals_2020",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33150483/",
+    "citation": "Evaluation of Major Minerals and Trace Elements in Wild and Domesticated Edible Herbs Traditionally Used in the Mediterranean Area. DOI 10.1007/s12011-020-02467-3",
+    "type": "food_composition_primary",
+    "scope": "Cichorium intybus, Plantago coronopus and two other edible herbs",
+    "finding": "Measured major/trace minerals and evaluated nitrate and oxalate under wild and domesticated growing conditions.",
+    "limitation": "Human-food composition study; C. intybus/Plantago coronopus cannot be automatically mapped to every Korean retail chicory/plantain."
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "plant_id": "dandelion",
+    "name": "민들레",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "linked"
+    },
+    "nutrition": {
+      "state": "verified_official_legacy",
+      "record": "USDA FDC 169226"
+    },
+    "risk": {
+      "state": "reviewed"
+    },
+    "public_verdict": "green_mixed_diet",
+    "public_label": "🟢 혼합급여 적합",
+    "verdict_scope": "Mediterranean Testudo husbandry + official T. officinale nutrition; not Ibera-direct dose evidence",
+    "editorial_reviewed_at": "2026-09-13"
+  },
+  {
+    "plant_id": "plantain",
+    "name": "질경이",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "linked"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "reviewed"
+    },
+    "public_verdict": "yellow_supported_pending_nutrition",
+    "public_label": "🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중",
+    "verdict_scope": "Plantago genus / Mediterranean Testudo evidence; exact taxon and official nutrition pending"
+  },
+  {
+    "plant_id": "mallow",
+    "name": "아욱",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "linked"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_identity_priority",
+    "public_label": "🟡 식물동정 우선 검증",
+    "editorial_blockers": [
+      "exact Korean retail taxon",
+      "official nutrition",
+      "risk review",
+      "Ibera-direct applicability"
+    ]
+  },
+  {
+    "plant_id": "clover",
+    "name": "클로버",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "linked"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_review_in_progress",
+    "public_label": "🟡 제한적 혼합급여 근거 · 검증 중",
+    "editorial_blockers": [
+      "exact Trifolium taxon",
+      "official nutrition record",
+      "complete risk review",
+      "Ibera-specific applicability"
+    ],
+    "scope_note": "Existing project evidence flags moderation because clover can be comparatively protein-rich; no exact percentage is assigned."
+  },
+  {
+    "plant_id": "alfalfa",
+    "name": "알팔파",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "linked"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_review_in_progress",
+    "public_label": "🟡 섭식·사육 근거 있음 · 검증 중",
+    "editorial_blockers": [
+      "exact Medicago identity",
+      "official nutrition record",
+      "complete risk review",
+      "Ibera-specific applicability"
+    ],
+    "scope_note": "Medicago species evidence must not be collapsed automatically into M. sativa feeding rules."
+  },
+  {
+    "plant_id": "sowthistle",
+    "name": "방가지똥",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "linked"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_research_in_progress",
+    "public_label": "🟡 검증 진행 중",
+    "editorial_blockers": [
+      "exact Sonchus taxon",
+      "official nutrition",
+      "risk review",
+      "Ibera-direct applicability"
+    ]
+  },
+  {
+    "plant_id": "chicory",
+    "name": "치커리",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "pending"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_research_in_progress",
+    "public_label": "🟡 검증 진행 중",
+    "editorial_blockers": [
+      "exact retail botanical identity",
+      "official record-level nutrition",
+      "remaining risk dimensions",
+      "species-specific feeding evidence"
+    ]
+  },
+  {
+    "plant_id": "endive",
+    "name": "엔다이브",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "pending"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_review_in_progress",
+    "public_label": "🟡 일반 잎채소 근거 · 검증 중",
+    "editorial_blockers": [
+      "retail identity",
+      "official nutrition record",
+      "risk review",
+      "species-specific evidence"
+    ],
+    "scope_note": "General leafy-vegetable guidance is not species-specific evidence."
+  },
+  {
+    "plant_id": "romaine",
+    "name": "로메인",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "pending"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_review_in_progress",
+    "public_label": "🟡 제한적 보조식 근거 · 검증 중",
+    "editorial_blockers": [
+      "official nutrition record",
+      "risk review",
+      "Ibera-specific applicability"
+    ],
+    "scope_note": "Do not promote romaine to staple merely because it is widely available."
+  },
+  {
+    "plant_id": "mulberry",
+    "name": "뽕잎",
+    "identity": {
+      "state": "master_taxon_present",
+      "final_verified": false
+    },
+    "species_evidence": {
+      "state": "pending"
+    },
+    "nutrition": {
+      "state": "pending"
+    },
+    "risk": {
+      "state": "pending"
+    },
+    "public_verdict": "yellow_review_in_progress",
+    "public_label": "🟡 식물동정·근거 검증 중",
+    "editorial_blockers": [
+      "Morus identity",
+      "species feeding evidence",
+      "official/credible leaf nutrition",
+      "risk review"
+    ],
+    "scope_note": "Morus species/cultivar identity and leaf composition cannot be generalized without review."
+  }
+]

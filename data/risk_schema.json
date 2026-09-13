@@ -1,0 +1,10 @@
+{
+  "plant_id": "string",
+  "compound_or_risk": "oxalate|nitrate|goitrogenic_compounds|known_toxin|pesticide_contamination|other",
+  "evidence_id": "string",
+  "finding": "string",
+  "dose_context": "string|null",
+  "applies_to": "exact_species|genus|family|food_general",
+  "review_status": "pending|reviewed",
+  "clinical_interpretation": "Do not infer veterinary diagnosis from composition alone."
+}

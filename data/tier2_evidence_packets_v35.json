@@ -1,0 +1,61 @@
+{
+  "clover": {
+    "label": "🟡 제한적 혼합급여 근거 · 검증 중",
+    "support": "Mediterranean tortoise specialist guidance includes clover among forage candidates.",
+    "restriction": "Existing project evidence flags moderation because clover can be comparatively protein-rich; no exact percentage is assigned.",
+    "identity": "Trifolium species must be preserved rather than treating every clover as identical.",
+    "blockers": [
+      "exact Trifolium taxon",
+      "official nutrition record",
+      "complete risk review",
+      "Ibera-specific applicability"
+    ]
+  },
+  "alfalfa": {
+    "label": "🟡 섭식·사육 근거 있음 · 검증 중",
+    "support": "T. graeca field literature and project evidence include Medicago taxa; alfalfa-specific captive use still requires scope control.",
+    "restriction": "Medicago species evidence must not be collapsed automatically into M. sativa feeding rules.",
+    "identity": "Medicago sativa identity required for an alfalfa nutrient record.",
+    "blockers": [
+      "exact Medicago identity",
+      "official nutrition record",
+      "complete risk review",
+      "Ibera-specific applicability"
+    ]
+  },
+  "endive": {
+    "label": "🟡 일반 잎채소 근거 · 검증 중",
+    "support": "Existing project husbandry layer supports endive only at general/supplement evidence level.",
+    "restriction": "General leafy-vegetable guidance is not species-specific evidence.",
+    "identity": "Retail endive type/cultivar and preparation must match nutrient record.",
+    "blockers": [
+      "retail identity",
+      "official nutrition record",
+      "risk review",
+      "species-specific evidence"
+    ]
+  },
+  "romaine": {
+    "label": "🟡 제한적 보조식 근거 · 검증 중",
+    "support": "Existing specialist guidance in the project supports romaine only in very limited quantities.",
+    "restriction": "Do not promote romaine to staple merely because it is widely available.",
+    "identity": "Lactuca sativa var. longifolia/cos-romaine record must match retail item.",
+    "blockers": [
+      "official nutrition record",
+      "risk review",
+      "Ibera-specific applicability"
+    ]
+  },
+  "mulberry": {
+    "label": "🟡 식물동정·근거 검증 중",
+    "support": "Mulberry leaf is a common keeper question, but the current database does not yet have enough scoped evidence for a green verdict.",
+    "restriction": "Morus species/cultivar identity and leaf composition cannot be generalized without review.",
+    "identity": "Exact Morus species/cultivar required where possible.",
+    "blockers": [
+      "Morus identity",
+      "species feeding evidence",
+      "official/credible leaf nutrition",
+      "risk review"
+    ]
+  }
+}

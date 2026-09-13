@@ -1,0 +1,19 @@
+{
+  "states": [
+    "researching",
+    "identity_review",
+    "nutrition_review",
+    "risk_review",
+    "editorial_review",
+    "published"
+  ],
+  "required_before_published": [
+    "exact plant identity or explicitly bounded taxonomic scope",
+    "species-applicability evidence",
+    "official nutrition record where numeric claims are shown",
+    "risk review",
+    "human-readable rationale",
+    "source links and review date"
+  ],
+  "rule": "automated pipeline may prepare evidence but cannot set published=true"
+}

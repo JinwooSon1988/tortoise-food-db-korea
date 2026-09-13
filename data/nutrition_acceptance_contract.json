@@ -1,0 +1,20 @@
+{
+  "required_for_official_direct": [
+    "plant_id",
+    "source",
+    "source_record_id",
+    "source_url",
+    "food_description",
+    "preparation",
+    "basis",
+    "retrieved_at"
+  ],
+  "nutrient_rules": {
+    "calcium_phosphorus_ratio": "derive only if Ca and P share same record, preparation and basis",
+    "missing": "null, never zero",
+    "raw_cooked_dried": "separate records",
+    "cultivar": "preserve when source specifies it",
+    "edible_portion": "preserve source definition"
+  },
+  "cross_source_rule": "do not combine Ca from one source with P from another to manufacture Ca:P"
+}

@@ -1,0 +1,246 @@
+[
+  {
+    "priority": 1,
+    "plant_id": "dandelion",
+    "kfind_queries": [
+      "민들레 생것",
+      "민들레 잎 생것"
+    ],
+    "usda_queries": [
+      "dandelion greens raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 2,
+    "plant_id": "plantain",
+    "kfind_queries": [
+      "질경이 생것",
+      "질경이 잎 생것"
+    ],
+    "usda_queries": [
+      "Plantago raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 3,
+    "plant_id": "chicory",
+    "kfind_queries": [
+      "치커리 생것",
+      "치커리 잎 생것"
+    ],
+    "usda_queries": [
+      "chicory greens raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 4,
+    "plant_id": "endive",
+    "kfind_queries": [
+      "엔다이브 생것"
+    ],
+    "usda_queries": [
+      "endive raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 5,
+    "plant_id": "romaine",
+    "kfind_queries": [
+      "로메인 상추 생것"
+    ],
+    "usda_queries": [
+      "lettuce cos or romaine raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 6,
+    "plant_id": "kale",
+    "kfind_queries": [
+      "케일 생것"
+    ],
+    "usda_queries": [
+      "kale raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 7,
+    "plant_id": "napa",
+    "kfind_queries": [
+      "배추 생것"
+    ],
+    "usda_queries": [
+      "cabbage napa leaf raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 8,
+    "plant_id": "cabbage",
+    "kfind_queries": [
+      "양배추 생것"
+    ],
+    "usda_queries": [
+      "cabbage raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 9,
+    "plant_id": "spinach",
+    "kfind_queries": [
+      "시금치 생것"
+    ],
+    "usda_queries": [
+      "spinach raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  },
+  {
+    "priority": 10,
+    "plant_id": "watercress",
+    "kfind_queries": [
+      "물냉이 생것",
+      "워터크레스 생것"
+    ],
+    "usda_queries": [
+      "watercress raw"
+    ],
+    "status": "needs_record_level_verification",
+    "accept_only_if": [
+      "food description matches",
+      "preparation matches",
+      "basis preserved",
+      "record ID captured",
+      "source URL captured"
+    ],
+    "reject_if": [
+      "search-result title only",
+      "third-party mirror presented as official",
+      "different botanical taxon",
+      "raw/cooked mismatch"
+    ]
+  }
+]

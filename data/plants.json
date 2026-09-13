@@ -1,0 +1,979 @@
+[
+  {
+    "id": "chicory",
+    "ko": "치커리",
+    "en": "Chicory",
+    "scientific": "Cichorium intybus",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "치커리잎",
+      "chicory"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "romaine",
+    "ko": "로메인",
+    "en": "Romaine lettuce",
+    "scientific": "Lactuca sativa var. longifolia",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "로메인상추",
+      "romaine"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "lettuce",
+    "ko": "상추",
+    "en": "Lettuce",
+    "scientific": "Lactuca sativa",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "적상추",
+      "청상추",
+      "lettuce"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "radicchio",
+    "ko": "라디키오",
+    "en": "Radicchio",
+    "scientific": "Cichorium intybus var. foliosum",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "라디치오",
+      "radicchio"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "endive",
+    "ko": "엔다이브",
+    "en": "Endive",
+    "scientific": "Cichorium endivia",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "앤다이브",
+      "endive"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "dandelion",
+    "ko": "민들레",
+    "en": "Dandelion",
+    "scientific": "Taraxacum spp.",
+    "family": "Asteraceae",
+    "category": "wild",
+    "market": "재배/채집/온라인",
+    "aliases": [
+      "민드레",
+      "dandelion"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "sowthistle",
+    "ko": "방가지똥",
+    "en": "Sow thistle",
+    "scientific": "Sonchus spp.",
+    "family": "Asteraceae",
+    "category": "wild",
+    "market": "채집",
+    "aliases": [
+      "sow thistle"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "kale",
+    "ko": "케일",
+    "en": "Kale",
+    "scientific": "Brassica oleracea var. sabellica",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "kale"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "bokchoy",
+    "ko": "청경채",
+    "en": "Bok choy",
+    "scientific": "Brassica rapa subsp. chinensis",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "청경체",
+      "bok choy"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "mustard",
+    "ko": "갓",
+    "en": "Mustard greens",
+    "scientific": "Brassica juncea",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/시장",
+    "aliases": [
+      "갓잎",
+      "mustard greens"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "turnipgreens",
+    "ko": "순무잎",
+    "en": "Turnip greens",
+    "scientific": "Brassica rapa subsp. rapa",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "시장/재배",
+    "aliases": [
+      "순무 잎",
+      "turnip greens"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "collard",
+    "ko": "콜라드그린",
+    "en": "Collard greens",
+    "scientific": "Brassica oleracea var. viridis",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "온라인/재배",
+    "aliases": [
+      "콜라드",
+      "collard greens"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "cabbage",
+    "ko": "양배추",
+    "en": "Cabbage",
+    "scientific": "Brassica oleracea var. capitata",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "cabbage"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "napa",
+    "ko": "배추",
+    "en": "Napa cabbage",
+    "scientific": "Brassica rapa subsp. pekinensis",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "배추잎",
+      "napa cabbage"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "radishgreens",
+    "ko": "무잎",
+    "en": "Radish greens",
+    "scientific": "Raphanus sativus",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/시장",
+    "aliases": [
+      "무청",
+      "radish greens"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "broccolileaf",
+    "ko": "브로콜리잎",
+    "en": "Broccoli leaves",
+    "scientific": "Brassica oleracea var. italica",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "재배/일부시장",
+    "aliases": [
+      "브로콜리 잎",
+      "broccoli leaves"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "cauliflowerleaf",
+    "ko": "콜리플라워잎",
+    "en": "Cauliflower leaves",
+    "scientific": "Brassica oleracea var. botrytis",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "재배/일부시장",
+    "aliases": [
+      "콜리플라워 잎"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "arugula",
+    "ko": "루꼴라",
+    "en": "Arugula",
+    "scientific": "Eruca vesicaria",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "로켓",
+      "rocket",
+      "arugula"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "plantain",
+    "ko": "질경이",
+    "en": "Plantain",
+    "scientific": "Plantago spp.",
+    "family": "Plantaginaceae",
+    "category": "wild",
+    "market": "재배/채집/온라인",
+    "aliases": [
+      "질갱이",
+      "질경",
+      "plantain"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "mulberry",
+    "ko": "뽕잎",
+    "en": "Mulberry leaf",
+    "scientific": "Morus spp.",
+    "family": "Moraceae",
+    "category": "tree_leaf",
+    "market": "온라인/재배",
+    "aliases": [
+      "뽕닢",
+      "mulberry leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "figleaf",
+    "ko": "무화과잎",
+    "en": "Fig leaf",
+    "scientific": "Ficus carica",
+    "family": "Moraceae",
+    "category": "tree_leaf",
+    "market": "재배",
+    "aliases": [
+      "무화과 잎",
+      "fig leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "mallow",
+    "ko": "아욱",
+    "en": "Mallow",
+    "scientific": "Malva spp.",
+    "family": "Malvaceae",
+    "category": "leafy",
+    "market": "마트/시장",
+    "aliases": [
+      "아옥",
+      "mallow"
+    ],
+    "identity_status": "needs_species_level_mapping",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "hibiscusleaf",
+    "ko": "무궁화잎",
+    "en": "Rose of Sharon leaf",
+    "scientific": "Hibiscus syriacus",
+    "family": "Malvaceae",
+    "category": "tree_leaf",
+    "market": "재배",
+    "aliases": [
+      "무궁화 잎",
+      "hibiscus leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "hibiscusflower",
+    "ko": "무궁화꽃",
+    "en": "Rose of Sharon flower",
+    "scientific": "Hibiscus syriacus",
+    "family": "Malvaceae",
+    "category": "flower",
+    "market": "재배",
+    "aliases": [
+      "무궁화 꽃",
+      "hibiscus flower"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "spinach",
+    "ko": "시금치",
+    "en": "Spinach",
+    "scientific": "Spinacia oleracea",
+    "family": "Amaranthaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "spinach"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "beetgreens",
+    "ko": "비트잎",
+    "en": "Beet greens",
+    "scientific": "Beta vulgaris",
+    "family": "Amaranthaceae",
+    "category": "leafy",
+    "market": "온라인/재배",
+    "aliases": [
+      "비트 잎",
+      "beet greens"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "watercress",
+    "ko": "물냉이",
+    "en": "Watercress",
+    "scientific": "Nasturtium officinale",
+    "family": "Brassicaceae",
+    "category": "leafy",
+    "market": "온라인/일부마트",
+    "aliases": [
+      "워터크레스",
+      "watercress"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "parsley",
+    "ko": "파슬리",
+    "en": "Parsley",
+    "scientific": "Petroselinum crispum",
+    "family": "Apiaceae",
+    "category": "herb",
+    "market": "마트/온라인",
+    "aliases": [
+      "parsley"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "cilantro",
+    "ko": "고수",
+    "en": "Cilantro",
+    "scientific": "Coriandrum sativum",
+    "family": "Apiaceae",
+    "category": "herb",
+    "market": "마트/온라인",
+    "aliases": [
+      "코리앤더",
+      "cilantro",
+      "coriander"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "celeryleaf",
+    "ko": "셀러리잎",
+    "en": "Celery leaf",
+    "scientific": "Apium graveolens",
+    "family": "Apiaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "샐러리잎",
+      "celery leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "carrottop",
+    "ko": "당근잎",
+    "en": "Carrot tops",
+    "scientific": "Daucus carota subsp. sativus",
+    "family": "Apiaceae",
+    "category": "leafy",
+    "market": "재배/일부시장",
+    "aliases": [
+      "당근 잎",
+      "carrot tops"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "basil",
+    "ko": "바질",
+    "en": "Basil",
+    "scientific": "Ocimum basilicum",
+    "family": "Lamiaceae",
+    "category": "herb",
+    "market": "마트/온라인",
+    "aliases": [
+      "basil"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "mint",
+    "ko": "민트",
+    "en": "Mint",
+    "scientific": "Mentha spp.",
+    "family": "Lamiaceae",
+    "category": "herb",
+    "market": "마트/온라인/재배",
+    "aliases": [
+      "박하",
+      "mint"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "perilla",
+    "ko": "깻잎",
+    "en": "Perilla leaf",
+    "scientific": "Perilla frutescens",
+    "family": "Lamiaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "깻닢",
+      "perilla"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "clover",
+    "ko": "클로버",
+    "en": "Clover",
+    "scientific": "Trifolium spp.",
+    "family": "Fabaceae",
+    "category": "wild",
+    "market": "재배/채집",
+    "aliases": [
+      "토끼풀",
+      "clover"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "alfalfa",
+    "ko": "알팔파",
+    "en": "Alfalfa",
+    "scientific": "Medicago sativa",
+    "family": "Fabaceae",
+    "category": "forage",
+    "market": "온라인",
+    "aliases": [
+      "루선",
+      "alfalfa"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "chickweed",
+    "ko": "별꽃",
+    "en": "Chickweed",
+    "scientific": "Stellaria media",
+    "family": "Caryophyllaceae",
+    "category": "wild",
+    "market": "재배/채집",
+    "aliases": [
+      "chickweed"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "sweetpotatoleaf",
+    "ko": "고구마잎",
+    "en": "Sweet potato leaves",
+    "scientific": "Ipomoea batatas",
+    "family": "Convolvulaceae",
+    "category": "leafy",
+    "market": "시장/재배",
+    "aliases": [
+      "고구마 잎",
+      "sweet potato leaves"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "pumpkinleaf",
+    "ko": "호박잎",
+    "en": "Pumpkin leaf",
+    "scientific": "Cucurbita spp.",
+    "family": "Cucurbitaceae",
+    "category": "leafy",
+    "market": "마트/시장",
+    "aliases": [
+      "호박 잎",
+      "pumpkin leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "zucchini",
+    "ko": "애호박",
+    "en": "Korean zucchini",
+    "scientific": "Cucurbita moschata",
+    "family": "Cucurbitaceae",
+    "category": "fruit_veg",
+    "market": "마트/온라인",
+    "aliases": [
+      "주키니",
+      "zucchini"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "cucumber",
+    "ko": "오이",
+    "en": "Cucumber",
+    "scientific": "Cucumis sativus",
+    "family": "Cucurbitaceae",
+    "category": "fruit_veg",
+    "market": "마트/온라인",
+    "aliases": [
+      "cucumber"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "bellpepper",
+    "ko": "파프리카",
+    "en": "Bell pepper",
+    "scientific": "Capsicum annuum",
+    "family": "Solanaceae",
+    "category": "fruit_veg",
+    "market": "마트/온라인",
+    "aliases": [
+      "피망",
+      "bell pepper"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "tomato",
+    "ko": "토마토",
+    "en": "Tomato",
+    "scientific": "Solanum lycopersicum",
+    "family": "Solanaceae",
+    "category": "fruit_veg",
+    "market": "마트/온라인",
+    "aliases": [
+      "tomato"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "grapeleaf",
+    "ko": "포도잎",
+    "en": "Grape leaf",
+    "scientific": "Vitis vinifera",
+    "family": "Vitaceae",
+    "category": "vine_leaf",
+    "market": "재배",
+    "aliases": [
+      "포도 잎",
+      "grape leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "rose",
+    "ko": "장미꽃",
+    "en": "Rose petals",
+    "scientific": "Rosa spp.",
+    "family": "Rosaceae",
+    "category": "flower",
+    "market": "재배",
+    "aliases": [
+      "장미 꽃잎",
+      "rose petals"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "nasturtium",
+    "ko": "한련화",
+    "en": "Nasturtium",
+    "scientific": "Tropaeolum majus",
+    "family": "Tropaeolaceae",
+    "category": "flower",
+    "market": "재배/온라인",
+    "aliases": [
+      "nasturtium"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "pricklypear",
+    "ko": "천년초",
+    "en": "Prickly pear cactus",
+    "scientific": "Opuntia spp.",
+    "family": "Cactaceae",
+    "category": "cactus",
+    "market": "온라인/재배",
+    "aliases": [
+      "백년초",
+      "선인장패드",
+      "prickly pear"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "timothy",
+    "ko": "티모시",
+    "en": "Timothy grass",
+    "scientific": "Phleum pratense",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "온라인",
+    "aliases": [
+      "티모시건초",
+      "timothy"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "orchard",
+    "ko": "오차드그라스",
+    "en": "Orchard grass",
+    "scientific": "Dactylis glomerata",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "온라인",
+    "aliases": [
+      "오처드그라스",
+      "orchard grass"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "ryegrass",
+    "ko": "라이그라스",
+    "en": "Ryegrass",
+    "scientific": "Lolium spp.",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "온라인/재배",
+    "aliases": [
+      "ryegrass"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "wheatgrass",
+    "ko": "밀싹",
+    "en": "Wheatgrass",
+    "scientific": "Triticum aestivum",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "온라인/재배",
+    "aliases": [
+      "밀 새싹",
+      "wheatgrass"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "barleygrass",
+    "ko": "보리싹",
+    "en": "Barley grass",
+    "scientific": "Hordeum vulgare",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "온라인/재배",
+    "aliases": [
+      "보리 새싹",
+      "barley grass"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "oatgrass",
+    "ko": "귀리싹",
+    "en": "Oat grass",
+    "scientific": "Avena sativa",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "온라인/재배",
+    "aliases": [
+      "귀리 새싹",
+      "oat grass"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "cornleaf",
+    "ko": "옥수수잎",
+    "en": "Corn leaf",
+    "scientific": "Zea mays",
+    "family": "Poaceae",
+    "category": "grass",
+    "market": "재배",
+    "aliases": [
+      "옥수수 잎",
+      "corn leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "chrysanthemumleaf",
+    "ko": "쑥갓",
+    "en": "Crown daisy",
+    "scientific": "Glebionis coronaria",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "쑥갓잎",
+      "crown daisy"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "ssuk",
+    "ko": "쑥",
+    "en": "Mugwort",
+    "scientific": "Artemisia princeps",
+    "family": "Asteraceae",
+    "category": "wild",
+    "market": "시장/재배/채집",
+    "aliases": [
+      "참쑥",
+      "mugwort"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "dolnamul",
+    "ko": "돌나물",
+    "en": "Stringy stonecrop",
+    "scientific": "Sedum sarmentosum",
+    "family": "Crassulaceae",
+    "category": "leafy",
+    "market": "마트/시장",
+    "aliases": [
+      "돈나물",
+      "돌나물"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "minari",
+    "ko": "미나리",
+    "en": "Water dropwort",
+    "scientific": "Oenanthe javanica",
+    "family": "Apiaceae",
+    "category": "leafy",
+    "market": "마트/온라인",
+    "aliases": [
+      "water dropwort"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "aehobakleaf",
+    "ko": "애호박잎",
+    "en": "Squash leaf",
+    "scientific": "Cucurbita moschata",
+    "family": "Cucurbitaceae",
+    "category": "leafy",
+    "market": "재배",
+    "aliases": [
+      "호박 어린잎"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "pea_shoot",
+    "ko": "완두순",
+    "en": "Pea shoots",
+    "scientific": "Pisum sativum",
+    "family": "Fabaceae",
+    "category": "sprout",
+    "market": "마트/온라인",
+    "aliases": [
+      "완두싹",
+      "pea shoots"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "sunflowerleaf",
+    "ko": "해바라기잎",
+    "en": "Sunflower leaf",
+    "scientific": "Helianthus annuus",
+    "family": "Asteraceae",
+    "category": "leafy",
+    "market": "재배",
+    "aliases": [
+      "해바라기 잎",
+      "sunflower leaf"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "violet",
+    "ko": "제비꽃",
+    "en": "Violet",
+    "scientific": "Viola spp.",
+    "family": "Violaceae",
+    "category": "wild",
+    "market": "재배/채집",
+    "aliases": [
+      "violet"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "geranium",
+    "ko": "제라늄",
+    "en": "Geranium",
+    "scientific": "Pelargonium spp.",
+    "family": "Geraniaceae",
+    "category": "ornamental",
+    "market": "화원/재배",
+    "aliases": [
+      "pelargonium"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "pansy",
+    "ko": "팬지",
+    "en": "Pansy",
+    "scientific": "Viola × wittrockiana",
+    "family": "Violaceae",
+    "category": "flower",
+    "market": "화원/재배",
+    "aliases": [
+      "pansy"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "marigold",
+    "ko": "메리골드",
+    "en": "Marigold",
+    "scientific": "Tagetes spp.",
+    "family": "Asteraceae",
+    "category": "flower",
+    "market": "화원/재배",
+    "aliases": [
+      "marigold"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "calendula",
+    "ko": "금잔화",
+    "en": "Calendula",
+    "scientific": "Calendula officinalis",
+    "family": "Asteraceae",
+    "category": "flower",
+    "market": "화원/재배",
+    "aliases": [
+      "카렌듈라",
+      "calendula"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  }
+]

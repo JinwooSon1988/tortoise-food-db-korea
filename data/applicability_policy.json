@@ -1,0 +1,16 @@
+{
+  "precedence": [
+    "exact_species",
+    "genus",
+    "husbandry_group",
+    "tortoise_general",
+    "plant_only"
+  ],
+  "rules": [
+    "Sulcata-specific evidence must never be rendered as Leopard-specific evidence.",
+    "Horsfield does not automatically inherit Mediterranean Testudo food verdicts.",
+    "Wild consumption is observational evidence, not captive staple approval.",
+    "Plant nutrient data alone cannot generate a tortoise feeding verdict."
+  ],
+  "fallback": "U"
+}

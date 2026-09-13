@@ -1,0 +1,32 @@
+{
+  "release_order": [
+    {
+      "tier": 1,
+      "foods": [
+        "dandelion",
+        "plantain",
+        "chicory",
+        "mallow",
+        "sowthistle"
+      ],
+      "reason": "high relevance to Korean Testudo keepers + existing evidence base"
+    },
+    {
+      "tier": 2,
+      "foods": [
+        "clover",
+        "alfalfa",
+        "endive",
+        "romaine",
+        "mulberry"
+      ],
+      "reason": "common feeding questions / diet-building value"
+    },
+    {
+      "tier": 3,
+      "foods": "remaining plant master",
+      "reason": "expand after core workflow is proven"
+    }
+  ],
+  "rule": "Do not inflate coverage by assigning green verdicts to weakly reviewed foods."
+}

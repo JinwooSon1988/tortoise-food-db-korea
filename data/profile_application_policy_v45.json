@@ -1,0 +1,16 @@
+{
+  "profile_fields": [
+    "species",
+    "life_stage",
+    "weight_optional",
+    "housing"
+  ],
+  "current_behavior": "Profile context is displayed; verdict changes are allowed only when a species-specific rule/evidence record exists.",
+  "forbidden": [
+    "infer exact grams from weight",
+    "upgrade a generic green verdict to species-direct",
+    "inherit sulcata rules to leopard",
+    "inherit Mediterranean Testudo rules to horsfieldii"
+  ],
+  "storage": "localStorage only"
+}

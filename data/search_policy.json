@@ -1,0 +1,30 @@
+{
+  "silent_autocorrect": false,
+  "suggestion_label": "혹시 이것을 찾으셨나요?",
+  "ambiguous_selection_required": true,
+  "matching_order": [
+    "exact Korean retail term",
+    "exact alias",
+    "scientific name",
+    "English name",
+    "Hangul-jamo fuzzy suggestion"
+  ],
+  "identity_rule": "fuzzy matching chooses a search candidate, never a botanical identity",
+  "examples": [
+    {
+      "input": "민드레",
+      "suggest": "민들레",
+      "action": "user_confirmation"
+    },
+    {
+      "input": "뽕닢",
+      "suggest": "뽕잎",
+      "action": "user_confirmation"
+    },
+    {
+      "input": "질갱이",
+      "suggest": "질경이",
+      "action": "user_confirmation"
+    }
+  ]
+}

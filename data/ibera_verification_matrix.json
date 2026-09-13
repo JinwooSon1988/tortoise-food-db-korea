@@ -1,0 +1,199 @@
+[
+  {
+    "plant_id": "dandelion",
+    "ko": "민들레",
+    "scientific": "Taraxacum spp.",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "yes",
+    "husbandry_evidence": "yes",
+    "official_nutrition_record": "yes",
+    "risk_review": "yes",
+    "final_release": "ready_with_scope",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [],
+    "completion": "4/4",
+    "official_nutrition_record_ref": "USDA FDC 169226 / SR Legacy / raw / 100 g",
+    "public_role": "mixed_diet_component"
+  },
+  {
+    "plant_id": "plantain",
+    "ko": "질경이",
+    "scientific": "Plantago spp.",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "yes",
+    "husbandry_evidence": "yes",
+    "official_nutrition_record": "no",
+    "risk_review": "yes",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "official_nutrition"
+    ],
+    "completion": "3/4"
+  },
+  {
+    "plant_id": "mallow",
+    "ko": "아욱",
+    "scientific": "Malva spp.",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "yes",
+    "husbandry_evidence": "no",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "2/4"
+  },
+  {
+    "plant_id": "clover",
+    "ko": "클로버",
+    "scientific": "Trifolium spp.",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "no",
+    "husbandry_evidence": "yes",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "2/4"
+  },
+  {
+    "plant_id": "alfalfa",
+    "ko": "알팔파",
+    "scientific": "Medicago sativa",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "yes",
+    "husbandry_evidence": "no",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "2/4"
+  },
+  {
+    "plant_id": "sowthistle",
+    "ko": "방가지똥",
+    "scientific": "Sonchus spp.",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "yes",
+    "husbandry_evidence": "yes",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "2/4"
+  },
+  {
+    "plant_id": "chicory",
+    "ko": "치커리",
+    "scientific": "Cichorium intybus",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "no",
+    "husbandry_evidence": "no",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "1/4",
+    "official_nutrition_candidate": "yes",
+    "official_nutrition_candidate_refs": [
+      "169992"
+    ]
+  },
+  {
+    "plant_id": "endive",
+    "ko": "엔다이브",
+    "scientific": "Cichorium endivia",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "no",
+    "husbandry_evidence": "no",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "1/4",
+    "official_nutrition_candidate": "yes",
+    "official_nutrition_candidate_refs": [
+      "168412"
+    ]
+  },
+  {
+    "plant_id": "romaine",
+    "ko": "로메인",
+    "scientific": "Lactuca sativa var. longifolia",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "no",
+    "husbandry_evidence": "no",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "1/4",
+    "official_nutrition_candidate": "yes",
+    "official_nutrition_candidate_refs": [
+      "746769",
+      "169247"
+    ],
+    "nutrition_corroboration": "official_dataset_corroborated",
+    "nutrition_snapshot_ref": "FDC 746769"
+  },
+  {
+    "plant_id": "mulberry",
+    "ko": "뽕잎",
+    "scientific": "Morus spp.",
+    "identity": "scientific_name_present",
+    "ibera_direct_evidence": "no",
+    "graeca_level_evidence": "no",
+    "husbandry_evidence": "no",
+    "official_nutrition_record": "no",
+    "risk_review": "pending",
+    "final_release": "not_ready",
+    "reason": "최종 판정은 identity + species applicability + nutrition + risk review를 모두 검토한 뒤 승인",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "completion": "1/4"
+  }
+]

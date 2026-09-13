@@ -1,0 +1,35 @@
+{
+  "kfind": {
+    "name": "K-FIND 식품영양성분 데이터베이스",
+    "authority": "식품의약품안전처",
+    "url": "https://various.foodsafetykorea.go.kr/nutrient/",
+    "features": [
+      "식품명 검색",
+      "영양성분 검색",
+      "DB 다운로드",
+      "Open API"
+    ],
+    "status": "verified_2026-09-12",
+    "notes": "KFCT는 농촌진흥청 국가표준식품성분표 10.4로 표시됨. K-FIND는 2026-09-09 제74차 업데이트 공지를 표시.",
+    "last_db_update": "2026-09-07",
+    "rda_table_version": "국가표준식품성분표 10.4",
+    "rda_food_count": 3313,
+    "rda_component_count": 132,
+    "download_capability": "Excel download; integrated DB provides 24 standardized nutrients"
+  },
+  "usda_foundation": {
+    "name": "USDA FoodData Central Foundation Foods",
+    "authority": "USDA Agricultural Research Service",
+    "download_url": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-04-30.zip",
+    "release": "2026-04",
+    "status": "verified_download_listing",
+    "notes": "공식 다운로드 페이지에서 April 2026 Foundation Foods CSV/JSON 제공 확인.",
+    "foundation_food_count": 394,
+    "download_formats": [
+      "CSV",
+      "JSON"
+    ],
+    "csv_zip_size": "3.7M",
+    "api_available": true
+  }
+}

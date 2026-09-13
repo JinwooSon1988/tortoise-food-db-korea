@@ -1,0 +1,42 @@
+[
+  {
+    "plant_id": "romaine",
+    "fdc_id": "746769",
+    "data_type": "Foundation",
+    "description": "Lettuce, cos or romaine, raw",
+    "basis": "100 g",
+    "water_g": 94.6,
+    "protein_g": 1.24,
+    "fiber_g": 1.8,
+    "calcium_mg": 35,
+    "phosphorus_mg": 30,
+    "potassium_mg": 253,
+    "derived_ca_p": 1.17,
+    "provenance": "USDA-FDC-derived public record corroboration; official dataset extraction still required for official_direct",
+    "refs": [
+      "turn0search6",
+      "turn0search7",
+      "turn0search9"
+    ]
+  },
+  {
+    "plant_id": "kale",
+    "fdc_id": "323505",
+    "data_type": "Foundation",
+    "description": "Kale, raw",
+    "basis": "100 g",
+    "water_g": 89.6,
+    "protein_g": 2.92,
+    "fiber_g": 4.1,
+    "calcium_mg": 254,
+    "phosphorus_mg": 55,
+    "potassium_mg": 348,
+    "derived_ca_p": 4.62,
+    "provenance": "USDA-FDC-derived public record corroboration; official dataset extraction still required for official_direct",
+    "refs": [
+      "turn0search1",
+      "turn0search2",
+      "turn0search4"
+    ]
+  }
+]

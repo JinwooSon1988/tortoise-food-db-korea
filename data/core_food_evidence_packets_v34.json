@@ -1,0 +1,31 @@
+{
+  "chicory": {
+    "identity": "Cichorium intybus candidate; Korean retail chicory cultivar/taxon confirmation required",
+    "evidence_ids": [
+      "mediterranean_minerals_2020",
+      "bcg_med_food"
+    ],
+    "supported_claim": "C. intybus has peer-reviewed mineral/nitrate/oxalate composition evidence; Mediterranean Testudo guidance supports varied leafy forage.",
+    "forbidden_claim": "Do not infer an Ibera-specific staple recommendation or exact dose from composition data alone.",
+    "next_gate": "official record-level nutrition + remaining risk review"
+  },
+  "mallow": {
+    "identity": "Korean retail 아욱 unresolved against Malva spp./M. parviflora evidence",
+    "evidence_ids": [
+      "graeca_morocco_2006",
+      "bcg_med_food"
+    ],
+    "supported_claim": "Malva occurs in T. graeca field-diet evidence and specialist Mediterranean husbandry guidance.",
+    "forbidden_claim": "Do not claim Korean supermarket 아욱 is Malva parviflora without botanical confirmation.",
+    "next_gate": "Korean retail taxon confirmation"
+  },
+  "sowthistle": {
+    "identity": "Sonchus species confirmation required",
+    "evidence_ids": [
+      "bcg_med_food"
+    ],
+    "supported_claim": "Sow-thistle is included in specialist Mediterranean tortoise forage guidance; project field evidence also records Sonchus oleraceus in T. g. graeca context.",
+    "forbidden_claim": "Do not collapse all Sonchus species into S. oleraceus or infer unlimited feeding.",
+    "next_gate": "exact Sonchus taxon + official nutrition + risk review"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "exact_species_exact_plant": {
+    "rank": 1,
+    "label": "대상종 × 동일 식물 직접"
+  },
+  "same_species_related_plant": {
+    "rank": 2,
+    "label": "대상종 × 근연 식물"
+  },
+  "same_genus_exact_plant": {
+    "rank": 2,
+    "label": "같은 속 거북 × 동일 식물"
+  },
+  "ecological_group_guidance": {
+    "rank": 3,
+    "label": "생태군/전문 사육지침"
+  },
+  "tortoise_general": {
+    "rank": 4,
+    "label": "거북 일반"
+  },
+  "plant_only": {
+    "rank": 5,
+    "label": "식물 영양/독성만"
+  }
+}

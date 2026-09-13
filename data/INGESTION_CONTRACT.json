@@ -1,0 +1,25 @@
+{
+  "required_fields": [
+    "plant_id",
+    "source_provider",
+    "source_record_id",
+    "food_description",
+    "preparation",
+    "basis"
+  ],
+  "accepted_basis": [
+    "per 100 g edible portion"
+  ],
+  "required_nutrients_for_ratio": [
+    "calcium_mg",
+    "phosphorus_mg"
+  ],
+  "normalization_rules": [
+    "raw/cooked/dried records are never merged",
+    "same common name with different scientific identity is never merged",
+    "Ca:P is computed only when both calcium and phosphorus use compatible per-100g basis",
+    "missing values remain null; zero is never substituted",
+    "source record ID and retrieval date are mandatory for official-direct status"
+  ],
+  "release_gate": "official_direct status is rejected if source_record_id is blank"
+}

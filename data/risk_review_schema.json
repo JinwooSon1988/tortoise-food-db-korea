@@ -1,0 +1,41 @@
+{
+  "dimensions": [
+    {
+      "id": "known_toxicity",
+      "question": "해당 식물/부위에 알려진 독성 근거가 있는가?",
+      "rule": "presence alone needs dose/species/context"
+    },
+    {
+      "id": "oxalate",
+      "question": "옥살산/옥살레이트 자료가 있는가?",
+      "rule": "composition is not identical to clinical toxicity"
+    },
+    {
+      "id": "nitrate",
+      "question": "질산염 축적 가능성 자료가 있는가?",
+      "rule": "cultivation and plant part can change level"
+    },
+    {
+      "id": "goitrogenic_compounds",
+      "question": "갑상선 관련 화합물 자료가 있는가?",
+      "rule": "do not convert generic Brassica claims into tortoise toxicity without evidence"
+    },
+    {
+      "id": "sugar_starch",
+      "question": "당/전분이 종의 식이생태와 부합하는가?",
+      "rule": "nutrient context, not poison label"
+    },
+    {
+      "id": "pesticide_foraging",
+      "question": "농약·제초제·오염·오동정 위험이 있는가?",
+      "rule": "wild collection safety is separate from intrinsic plant safety"
+    }
+  ],
+  "status_enum": [
+    "not_reviewed",
+    "evidence_found",
+    "no_reliable_evidence_found",
+    "not_applicable"
+  ],
+  "release_rule": "risk review must be explicit; absence of found evidence is not proof of absence"
+}

@@ -1,0 +1,253 @@
+[
+  {
+    "plant_id": "dandelion",
+    "species_group": "Mediterranean_Testudo",
+    "role": "혼합 야생초 구성 후보",
+    "confidence": "C+",
+    "why": "복수의 지중해 육지거북 전문 사육자료에서 dandelion/Taraxacum을 자연식 혼합 구성으로 반복 제시한다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_mediterranean_care",
+        "label": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
+        "note": "고섬유·저지방·저단백의 잎 중심 식단을 권고하고, 정원에서 dandelion, clover, plantains, sow thistle, chickweed, vetches 등을 채식할 수 있다고 제시한다. 독성식물·제초제·달팽이약 노출을 경고한다."
+      },
+      {
+        "evidence_id": "tt_mediterranean_food",
+        "label": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
+        "note": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."
+      },
+      {
+        "evidence_id": "tt_plantfoods",
+        "label": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
+        "note": "Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "정확한 종/채집 위치를 확인",
+      "농약·제초제·도로변 오염 회피",
+      "한 종류 단독 장기급여를 의미하지 않음"
+    ]
+  },
+  {
+    "plant_id": "plantain",
+    "species_group": "Mediterranean_Testudo",
+    "role": "혼합 야생초 구성 후보",
+    "confidence": "C+",
+    "why": "BCG와 Tortoise Trust가 Plantago를 지중해 육지거북 자연식 후보로 제시하고 T. hermanni 야생섭식 자료에서도 Plantago가 기록된다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_mediterranean_care",
+        "label": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
+        "note": "고섬유·저지방·저단백의 잎 중심 식단을 권고하고, 정원에서 dandelion, clover, plantains, sow thistle, chickweed, vetches 등을 채식할 수 있다고 제시한다. 독성식물·제초제·달팽이약 노출을 경고한다."
+      },
+      {
+        "evidence_id": "tt_plantfoods",
+        "label": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
+        "note": "Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."
+      },
+      {
+        "evidence_id": "hermanni_foraging_italy_2015",
+        "label": "Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.",
+        "note": "예비 결과에서 Fabaceae(Trifolium, Medicago, Vicia), Plantaginaceae(Plantago) 등 여러 과가 선택되었다. 초록/학술대회 자료이므로 근거등급은 정식 동료심사 논문보다 낮게 취급한다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "Plantago spp. 내부 종 차이와 국내 종 동정 확인",
+      "채집 오염 주의",
+      "단독주식 판정 아님"
+    ]
+  },
+  {
+    "plant_id": "sowthistle",
+    "species_group": "Mediterranean_Testudo",
+    "role": "혼합 야생초 구성 후보",
+    "confidence": "C+",
+    "why": "여러 전문 사육자료에서 Sonchus를 반복적으로 자연식 후보로 제시한다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_mediterranean_care",
+        "label": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
+        "note": "고섬유·저지방·저단백의 잎 중심 식단을 권고하고, 정원에서 dandelion, clover, plantains, sow thistle, chickweed, vetches 등을 채식할 수 있다고 제시한다. 독성식물·제초제·달팽이약 노출을 경고한다."
+      },
+      {
+        "evidence_id": "tt_mediterranean_food",
+        "label": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
+        "note": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."
+      },
+      {
+        "evidence_id": "tt_plantfoods",
+        "label": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
+        "note": "Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "Sonchus 종 동정",
+      "채집지역 농약·오염 확인",
+      "단일식 장기급여 권장 아님"
+    ]
+  },
+  {
+    "plant_id": "clover",
+    "species_group": "Mediterranean_Testudo",
+    "role": "혼합식 일부",
+    "confidence": "C",
+    "why": "지중해종에서 섭식/사육 근거가 있으나, 전문자료 자체가 clover를 적정량으로 제한해 사용하도록 주의를 둔다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_mediterranean_care",
+        "label": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
+        "note": "고섬유·저지방·저단백의 잎 중심 식단을 권고하고, 정원에서 dandelion, clover, plantains, sow thistle, chickweed, vetches 등을 채식할 수 있다고 제시한다. 독성식물·제초제·달팽이약 노출을 경고한다."
+      },
+      {
+        "evidence_id": "tt_mediterranean_food",
+        "label": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
+        "note": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."
+      },
+      {
+        "evidence_id": "hermanni_foraging_italy_2015",
+        "label": "Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.",
+        "note": "예비 결과에서 Fabaceae(Trifolium, Medicago, Vicia), Plantaginaceae(Plantago) 등 여러 과가 선택되었다. 초록/학술대회 자료이므로 근거등급은 정식 동료심사 논문보다 낮게 취급한다."
+      }
+    ],
+    "limiting_evidence": [
+      {
+        "evidence_id": "tt_mediterranean_food",
+        "text": "클로버는 혼합식 일부로 제한해 사용한다. 전문자료 자체가 white clover를 비교적 고단백 식물로 보아 moderation을 권고한다."
+      }
+    ],
+    "limits": [
+      "Tortoise Trust는 white clover를 단백질이 비교적 높아 moderation으로 제시",
+      "Trifolium 종별 차이",
+      "단독·고비율 급여 권장 아님"
+    ]
+  },
+  {
+    "plant_id": "romaine",
+    "species_group": "Mediterranean_Testudo",
+    "role": "마트채소 보조",
+    "confidence": "C",
+    "why": "수의학 자료에서는 tortoise vegetable mix 구성 예시로 사용되지만 지중해종 전문자료는 제한적 사용을 권고한다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "tt_mediterranean_food",
+        "label": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
+        "note": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."
+      },
+      {
+        "evidence_id": "merck_tortoise_nutrition_2025",
+        "label": "Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.",
+        "note": "식물성 섬유가 장 생리에 중요하고, romaine/endive/kale 등을 포함한 vegetable mix가 formulated tortoise diet를 보완할 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."
+      }
+    ],
+    "limiting_evidence": [
+      {
+        "evidence_id": "tt_mediterranean_food",
+        "text": "로메인은 마트채소 보조 수준으로 제한한다. 지중해 육지거북 전문자료에서는 very limited quantities로 다룬다."
+      }
+    ],
+    "limits": [
+      "Tortoise Trust는 very limited quantities로 제시",
+      "자연 야생초보다 식단 기반으로 우선하지 않음",
+      "단독 주식 아님"
+    ]
+  },
+  {
+    "plant_id": "endive",
+    "species_group": "Mediterranean_Testudo",
+    "role": "마트채소 보조 후보",
+    "confidence": "C",
+    "why": "Merck 수의학 자료의 tortoise vegetable mix 예시에는 포함되지만, 해당 지중해종 직접 근거는 부족하다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "merck_tortoise_nutrition_2025",
+        "label": "Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.",
+        "note": "식물성 섬유가 장 생리에 중요하고, romaine/endive/kale 등을 포함한 vegetable mix가 formulated tortoise diet를 보완할 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "지중해 Testudo 직접 식물별 근거 부족",
+      "단독 주식 판정 아님"
+    ]
+  },
+  {
+    "plant_id": "kale",
+    "species_group": "Mediterranean_Testudo",
+    "role": "마트채소 보조 후보",
+    "confidence": "C",
+    "why": "Merck 수의학 자료의 tortoise vegetable mix 예시에는 포함된다. 그러나 종별·장기 단독급여 근거로 확대하지 않는다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "merck_tortoise_nutrition_2025",
+        "label": "Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.",
+        "note": "식물성 섬유가 장 생리에 중요하고, romaine/endive/kale 등을 포함한 vegetable mix가 formulated tortoise diet를 보완할 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "지중해 Testudo 직접 식물별 근거 부족",
+      "영양·항영양성분 record-level 검토 진행 중",
+      "단독 주식 판정 아님"
+    ]
+  },
+  {
+    "plant_id": "dandelion",
+    "species_group": "Sulcata",
+    "role": "grass/hay 중심 식단의 보조 야생초",
+    "confidence": "C",
+    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_sulcata_care",
+        "label": "British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.",
+        "note": "grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "설카타는 grass/hay roughage 중심이라는 상위 원칙 유지",
+      "야생초가 grass/hay를 대체한다는 의미 아님"
+    ]
+  },
+  {
+    "plant_id": "plantain",
+    "species_group": "Sulcata",
+    "role": "grass/hay 중심 식단의 보조 야생초",
+    "confidence": "C",
+    "why": "BCG 설카타 사육자료가 plantain을 후보 식물로 제시한다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_sulcata_care",
+        "label": "British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.",
+        "note": "grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "grass/hay 기반 유지",
+      "Plantago 종 동정 필요"
+    ]
+  },
+  {
+    "plant_id": "clover",
+    "species_group": "Sulcata",
+    "role": "grass/hay 중심 식단의 일부",
+    "confidence": "C",
+    "why": "BCG 설카타 자료에 포함되지만 종합 식단에서 roughage가 핵심이다.",
+    "supporting_evidence": [
+      {
+        "evidence_id": "bcg_sulcata_care",
+        "label": "British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.",
+        "note": "grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."
+      }
+    ],
+    "limiting_evidence": [],
+    "limits": [
+      "grass/hay 기반 유지",
+      "고비율 반복 급여 자동 권장하지 않음"
+    ]
+  }
+]

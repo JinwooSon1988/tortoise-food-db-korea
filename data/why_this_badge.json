@@ -1,0 +1,45 @@
+{
+  "dandelion": {
+    "label": "🟢 혼합급여 적합",
+    "reason": "final reviewed",
+    "blockers": []
+  },
+  "plantain": {
+    "label": "🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중",
+    "reason": "Evidence exists but a release gate remains.",
+    "blockers": [
+      "exact Plantago taxon",
+      "official nutrition record"
+    ]
+  },
+  "chicory": {
+    "label": "🟡 검증 진행 중",
+    "reason": "C. intybus has peer-reviewed mineral/nitrate/oxalate composition evidence; Mediterranean Testudo guidance supports varied leafy forage.",
+    "blockers": [
+      "exact retail botanical identity",
+      "official record-level nutrition",
+      "remaining risk dimensions",
+      "species-specific feeding evidence"
+    ]
+  },
+  "mallow": {
+    "label": "🟡 식물동정 우선 검증",
+    "reason": "Malva occurs in T. graeca field-diet evidence and specialist Mediterranean husbandry guidance.",
+    "blockers": [
+      "exact Korean retail taxon",
+      "official nutrition",
+      "risk review",
+      "Ibera-direct applicability"
+    ]
+  },
+  "sowthistle": {
+    "label": "🟡 검증 진행 중",
+    "reason": "Sow-thistle is included in specialist Mediterranean tortoise forage guidance; project field evidence also records Sonchus oleraceus in T. g. graeca context.",
+    "blockers": [
+      "exact Sonchus taxon",
+      "official nutrition",
+      "risk review",
+      "Ibera-direct applicability"
+    ]
+  }
+}

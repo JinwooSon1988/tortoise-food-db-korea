@@ -1,0 +1,112 @@
+[
+  {
+    "id": "graeca_morocco_2006",
+    "taxon": "Testudo graeca graeca",
+    "type": "wild_diet_faecal_analysis",
+    "source": "El Mouden et al. 2006, Journal of Arid Environments 64:422-435",
+    "doi": "10.1016/j.jaridenv.2005.06.010",
+    "finding": "34 plant species identified; five species accounted for ~70% of identified material.",
+    "plants": [
+      {
+        "scientific": "Leontodon saxatilis",
+        "signal": "major_preferred"
+      },
+      {
+        "scientific": "Malva parviflora",
+        "signal": "major_preferred"
+      },
+      {
+        "scientific": "Astragalus cruciatus",
+        "signal": "major_preferred"
+      },
+      {
+        "scientific": "Medicago hispida",
+        "signal": "major_preferred"
+      },
+      {
+        "scientific": "Lotus arenarius",
+        "signal": "major_preferred"
+      }
+    ],
+    "applicability": "T. g. graeca wild population; not direct T. g. ibera captive-feeding evidence",
+    "quality": "peer_reviewed_primary"
+  },
+  {
+    "id": "graeca_network_2019",
+    "taxon": "Testudo graeca",
+    "type": "ecology_background",
+    "source": "Impact of habitat loss on ecological networks... 2019, PMC6894431",
+    "finding": "Background section describes wild-plant diet including Medicago sativa, thistles, Taraxacum and rosemary, citing prior diet literature.",
+    "plants": [
+      {
+        "scientific": "Medicago sativa",
+        "signal": "reported_wild_food"
+      },
+      {
+        "scientific": "Taraxacum",
+        "signal": "reported_wild_food"
+      }
+    ],
+    "applicability": "species-level secondary ecological statement; not Ibera-direct",
+    "quality": "peer_reviewed_secondary_statement"
+  },
+  {
+    "id": "bcg_med_food",
+    "taxon": "Mediterranean Testudo husbandry group",
+    "type": "specialist_husbandry",
+    "source": "British Chelonia Group Mediterranean tortoise caresheet",
+    "finding": "High-fibre, low-fat/protein leafy diet; lists clover, dandelion, plantains and sow thistle among garden forage.",
+    "plants": [
+      {
+        "common": "clover"
+      },
+      {
+        "common": "dandelion"
+      },
+      {
+        "common": "plantain"
+      },
+      {
+        "common": "sowthistle"
+      }
+    ],
+    "applicability": "specialist husbandry guidance; broader than Ibera",
+    "quality": "specialist_organization"
+  },
+  {
+    "id": "graeca_morocco_1996",
+    "taxon": "Testudo graeca graeca",
+    "type": "field_diet_observation",
+    "source": "Bayley & Highfield 1996, Chelonian Conservation and Biology 2(1), T. graeca in Morocco",
+    "finding": "Table of food plants in the Souss Valley includes Plantago spp., Sonchus oleraceus, Malva spp., Leontodon spp., Medicago lupulina and cultivated Medicago sativa among foods.",
+    "plants": [
+      {
+        "scientific": "Plantago spp.",
+        "signal": "observed_food"
+      },
+      {
+        "scientific": "Sonchus oleraceus",
+        "signal": "observed_food"
+      },
+      {
+        "scientific": "Malva spp.",
+        "signal": "observed_food"
+      },
+      {
+        "scientific": "Leontodon spp.",
+        "signal": "observed_food"
+      },
+      {
+        "scientific": "Medicago lupulina",
+        "signal": "observed_food"
+      },
+      {
+        "scientific": "Medicago sativa",
+        "signal": "cultivated_food"
+      }
+    ],
+    "applicability": "T. g. graeca field evidence in Morocco; not direct T. g. ibera evidence",
+    "quality": "primary_field_report",
+    "url": "https://chelonian.org/wp-content/uploads/file/CCB%20Vol%202%20No%201%20%281996%29/Bayley_and_Highfield_1996.pdf"
+  }
+]

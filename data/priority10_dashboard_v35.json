@@ -1,0 +1,112 @@
+[
+  {
+    "plant_id": "dandelion",
+    "name": "민들레",
+    "verification": "4/4",
+    "public_label": "🟢 혼합급여 적합",
+    "blockers": [],
+    "final_release": "ready_with_scope"
+  },
+  {
+    "plant_id": "plantain",
+    "name": "질경이",
+    "verification": "3/4",
+    "public_label": "🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중",
+    "blockers": [
+      "official_nutrition"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "mallow",
+    "name": "아욱",
+    "verification": "2/4",
+    "public_label": "🟡 식물동정 우선 검증",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "clover",
+    "name": "클로버",
+    "verification": "2/4",
+    "public_label": "🟡 제한적 혼합급여 근거 · 검증 중",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "alfalfa",
+    "name": "알팔파",
+    "verification": "2/4",
+    "public_label": "🟡 섭식·사육 근거 있음 · 검증 중",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "sowthistle",
+    "name": "방가지똥",
+    "verification": "2/4",
+    "public_label": "🟡 검증 진행 중",
+    "blockers": [
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "chicory",
+    "name": "치커리",
+    "verification": "1/4",
+    "public_label": "🟡 검증 진행 중",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "endive",
+    "name": "엔다이브",
+    "verification": "1/4",
+    "public_label": "🟡 일반 잎채소 근거 · 검증 중",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "romaine",
+    "name": "로메인",
+    "verification": "1/4",
+    "public_label": "🟡 제한적 보조식 근거 · 검증 중",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  },
+  {
+    "plant_id": "mulberry",
+    "name": "뽕잎",
+    "verification": "1/4",
+    "public_label": "🟡 식물동정·근거 검증 중",
+    "blockers": [
+      "species_evidence",
+      "official_nutrition",
+      "risk_review"
+    ],
+    "final_release": "not_ready"
+  }
+]

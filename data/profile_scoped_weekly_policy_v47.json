@@ -1,0 +1,11 @@
+{
+  "default_scope": "active profile only",
+  "other_scopes": [
+    "all profiles",
+    "legacy/unassigned"
+  ],
+  "event_identity": "stable event_id for new events; legacy events receive local migration IDs on load",
+  "deletion_rule": "delete by event_id, never by filtered-array index",
+  "analytics": "counts and repetition signals operate on the selected scope only",
+  "legacy": "unassigned events remain visible and are never guessed onto a tortoise"
+}
