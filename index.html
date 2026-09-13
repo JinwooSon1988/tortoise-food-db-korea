@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2f6b49">
 <meta name="description" content="한국에서 구할 수 있는 육지거북 먹이를 학명과 근거로 검색하는 데이터베이스. 식물 검색, 거북 프로필, 오늘 식단과 7일 기록을 한곳에서 관리한다.">
+<link rel="canonical" href="https://jinwooson1988.github.io/tortoise-food-db-korea/">
 <link rel="manifest" href="manifest.webmanifest">
 <title>거북밥 DB | 육지거북 먹이 근거 검색</title>
 <style>
@@ -18,7 +19,7 @@
 <header class="top"><div class="brand">🐢 거북밥 DB</div><span class="version">v5.0 Stable</span></header>
 <section class="hero"><h1>이 먹이,<br>내 육지거북에게 줘도 될까?</h1><p>한국 유통명부터 학명·영양자료·육지거북 근거까지 연결해 확인한다.</p></section>
 <section class="card" aria-labelledby="searchTitle">
-<h2 id="searchTitle">먹이 검색</h2><div class="small">채소·야생초 이름을 입력한다. 오타가 있으면 최대 3개의 후보를 제안한다.</div>
+<h2 id="searchTitle">먹이 검색</h2><div class="small">현재 등록된 66종을 검색한다. 오타가 있으면 검증된 한국 유통명 범위에서 후보를 제안한다.</div>
 <div class="searchrow"><input id="searchInput" type="search" placeholder="예: 민들레, 질경이, 치커리" autocomplete="off" aria-label="먹이 이름 검색"><button id="searchBtn" class="primary" type="button">검색</button></div>
 <div id="searchResults" class="results" aria-live="polite"></div>
 <div class="notice">검색 후보는 식물종 동정 결과가 아니다. 같은 한국 이름으로 다른 식물이 유통될 수 있으며, 근거가 부족하면 안전하다고 추정하지 않는다.</div>
@@ -31,13 +32,16 @@
 <script src="./profile-context.js"></script>
 <script src="./search-live.js"></script>
 <script>
-let plantMap=[];
-const input=document.getElementById('searchInput'), results=document.getElementById('searchResults');
+let plantCatalog=[];
+const input=document.getElementById('searchInput'),results=document.getElementById('searchResults');
 function norm(s){return (s||'').trim().replace(/\s+/g,'').toLowerCase()}
-function render(rows){if(!rows.length){results.innerHTML='<div class="empty">일치하는 먹이를 찾지 못했다. 이름을 다시 확인하거나 검색 후보를 선택해 달라.</div>';return}results.innerHTML=rows.slice(0,8).map(r=>'<a class="result" href="./plant/'+encodeURIComponent(r.plant_id)+'/"><strong>'+escapeHtml((r.retail_terms||r.aliases||[r.plant_id])[0])+'</strong><span class="sci">'+escapeHtml(r.master_scientific||'학명 확인 중')+'</span></a>').join('')}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function search(){const q=norm(input.value);if(!q){results.innerHTML='';return}let exact=plantMap.filter(r=>[...(r.aliases||[]),...(r.retail_terms||[]),r.master_scientific||''].some(x=>norm(x).includes(q)));if(!exact.length&&window.TortoiseKoSearch)exact=window.TortoiseKoSearch.candidates(input.value,plantMap).map(c=>plantMap.find(r=>r.plant_id===c.plant_id)).filter(Boolean);render([...new Map(exact.map(x=>[x.plant_id,x])).values()])}
-fetch('./data/korean_retail_name_map.json').then(r=>r.json()).then(d=>plantMap=d).catch(()=>results.innerHTML='<div class="empty">검색 데이터를 불러오지 못했다. 연결 상태를 확인해 달라.</div>');
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(rows){if(!rows.length){results.innerHTML='<div class="empty">일치하는 먹이를 찾지 못했다. 이름을 다시 확인하거나 검색 후보를 선택해 달라.</div>';return}results.innerHTML=rows.slice(0,8).map(r=>'<a class="result" href="./plant/'+encodeURIComponent(r.plant_id)+'/"><strong>'+escapeHtml(r.label)+'</strong><span class="sci">'+escapeHtml(r.scientific||'학명 확인 중')+'</span></a>').join('')}
+function search(){const q=norm(input.value);if(!q){results.innerHTML='';return}let rows=plantCatalog.filter(r=>r.terms.some(x=>norm(x).includes(q)));if(!rows.length&&window.TortoiseKoSearch){const fuzzyMap=plantCatalog.map(r=>({plant_id:r.plant_id,aliases:r.terms}));rows=window.TortoiseKoSearch.candidates(input.value,fuzzyMap).map(c=>plantCatalog.find(r=>r.plant_id===c.plant_id)).filter(Boolean)}render([...new Map(rows.map(x=>[x.plant_id,x])).values()])}
+Promise.all([
+ fetch('./data/plants.json').then(r=>{if(!r.ok)throw new Error();return r.json()}),
+ fetch('./data/korean_retail_name_map.json').then(r=>r.ok?r.json():[]).catch(()=>[])
+]).then(([plants,retail])=>{const extra=new Map(retail.map(r=>[r.plant_id,r]));plantCatalog=plants.map(p=>{const e=extra.get(p.id)||{};const terms=[p.ko,p.en,p.scientific,...(p.aliases||[]),...(e.retail_terms||[]),...(e.aliases||[])].filter(Boolean);return{plant_id:p.id,label:p.ko||p.id,scientific:p.scientific||e.master_scientific||'',terms:[...new Set(terms)]}})}).catch(()=>results.innerHTML='<div class="empty">검색 데이터를 불러오지 못했다. 연결 상태를 확인해 달라.</div>');
 document.getElementById('searchBtn').addEventListener('click',search);input.addEventListener('keydown',e=>{if(e.key==='Enter')search()});input.addEventListener('change',search);
 try{const p=window.TFDProfiles&&window.TFDProfiles.active();if(p){document.getElementById('profileTitle').textContent=(p.name||'현재 거북')+' 프로필 사용 중';const bits=[p.species_name||p.species,p.stage,p.weight_g?`${p.weight_g}g`:null].filter(Boolean);document.getElementById('profileMeta').textContent=bits.join(' · ')||'등록된 프로필을 현재 검색·기록의 기준으로 사용한다.'}}catch(e){}
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
