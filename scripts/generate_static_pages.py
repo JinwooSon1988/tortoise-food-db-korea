@@ -8,6 +8,7 @@ assessments=json.loads((ROOT/"data/assessments.json").read_text(encoding="utf-8"
 retail=json.loads((ROOT/"data/korean_retail_name_map.json").read_text(encoding="utf-8"))
 
 med={a["plant_id"]:a for a in assessments if a.get("species_group")=="Mediterranean_Testudo"}
+general={a["plant_id"]:a for a in assessments if a.get("species_group") in {"Tortoise_general","Herbivorous_reptile_general"}}
 retail_by_id={r["plant_id"]:r for r in retail}
 
 SPECIAL={
@@ -21,6 +22,7 @@ VERDICT_MAP={
     "limited_mixed_diet":("yellow","🟡 제한적 혼합급여 근거"),
     "limited_supplement":("yellow","🟡 제한적 보조식 근거"),
     "supplement_general_evidence":("yellow","🟡 일반 보조식 근거"),
+    "general_reptile_supplement":("yellow","🟡 일반 초식 파충류 보조근거"),
 }
 
 def esc(v):
@@ -30,7 +32,7 @@ def verdict_for(pid):
     if pid in SPECIAL:
         tone,label,summary=SPECIAL[pid]
         return tone,label,summary,med.get(pid)
-    a=med.get(pid)
+    a=med.get(pid) or general.get(pid)
     if not a:
         return "hold","⚪ 판단보류 / 검증 미완료","현재 공개 판정을 내릴 만큼 종별 급여 근거 검토가 완료되지 않았다.",None
     tone,label=VERDICT_MAP.get(a.get("verdict"),("hold","⚪ 판단보류 / 근거 부족"))
@@ -63,11 +65,11 @@ for p in plants:
         "DB의 이름과 학명 표기는 검색 기준이다. 실제 급여할 개체의 식물종과 오염 여부는 별도로 확인해야 한다."
     )
     role_html=f"<div><b>식단 내 역할</b><br>{esc(role)}</div>" if role else "<div><b>식단 내 역할</b><br>아직 공개 권장 역할을 확정하지 않음</div>"
-    evidence_html=(
-        "<div><b>적용 범위</b><br>지중해 Testudo 일반 근거. 이베라 직접 정량근거와 동일하지 않음</div>"
-        if a else
-        "<div><b>적용 범위</b><br>종별 판정 근거 검토 미완료</div>"
-    )
+    if a:
+        scope=(a.get("applicability_note") or ("지중해 Testudo 일반 근거. 이베라 직접 정량근거와 동일하지 않음" if a.get("species_group")=="Mediterranean_Testudo" else "육지거북·초식 파충류 일반 근거. Mediterranean Testudo 직접 판정이 아님"))
+        evidence_html=f"<div><b>적용 범위</b><br>{esc(scope)}</div>"
+    else:
+        evidence_html="<div><b>적용 범위</b><br>종별 판정 근거 검토 미완료</div>"
     doc=f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/plant/{pid}/">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"{esc(title)}","description":"{esc(desc)}"}}</script>
