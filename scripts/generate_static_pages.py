@@ -12,7 +12,7 @@ general={a["plant_id"]:a for a in assessments if a.get("species_group") in {"Tor
 retail_by_id={r["plant_id"]:r for r in retail}
 
 SPECIAL={
-    "dandelion":("green","🟢 혼합급여 적합","지중해 Testudo 사육근거와 공식 민들레 영양자료가 연결되어 있다. 다만 이베라에 대한 정량 급여량을 직접 증명한 자료는 아니다."),
+    "dandelion":("green","🟢 혼합급여 적합","루마니아와 남서부 불가리아의 야생 T. g. ibera에서 Taraxacum 섭식이 직접 관찰되었고 지중해 Testudo 전문 사육근거도 일치한다. 다만 야생 관찰 빈도를 사육 배합률로 환산하지 않는다."),
     "plantain":("yellow","🟡 혼합급여 지지근거 있음","Plantago 속과 지중해 Testudo의 섭식·사육 근거가 있다. 국내 실제 식물의 정확한 종 동정과 공식 영양자료 검증은 별도 확인이 필요하다."),
     "mallow":("hold","⚪ 판단보류 / 종 수준 미확정","한국 유통명 ‘아욱’만으로 특정 Malva 종을 확정하지 않는다. 특히 아욱을 Malva parviflora로 자동 간주하지 않는다."),
 }
