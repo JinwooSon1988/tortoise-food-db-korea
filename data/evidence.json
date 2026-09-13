@@ -1,22 +1,6 @@
 [
-  {
-    "id": "slimani2006",
-    "type": "peer_reviewed",
-    "scope": "species_direct",
-    "taxon": "Testudo graeca graeca",
-    "citation": "Slimani T, El Hassani MS. Feeding ecology of Testudo graeca graeca in an arid and overgrazed zone in Morocco. Journal of Arid Environments. 2006.",
-    "doi": "10.1016/j.jaridenv.2005.06.010",
-    "note": "야생 먹이선택 연구. 특정 식물종 직접 판정에는 원문 식물목록 대조가 필요하다."
-  },
-  {
-    "id": "testudo2018",
-    "type": "peer_reviewed",
-    "scope": "genus_husbandry",
-    "taxon": "Testudo spp.",
-    "citation": "Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity. J Appl Anim Welf Sci. 2018.",
-    "doi": "10.1080/10888705.2018.1453814",
-    "note": "사육환경·식단 구성과 피라미딩의 연관성을 다룬 조사 연구. 개별 식물의 안전성을 직접 증명하지 않는다."
-  },
+  {"id":"slimani2006","type":"peer_reviewed","scope":"species_direct","taxon":"Testudo graeca graeca","citation":"Slimani T, El Hassani MS. Feeding ecology of Testudo graeca graeca in an arid and overgrazed zone in Morocco. Journal of Arid Environments. 2006.","doi":"10.1016/j.jaridenv.2005.06.010","note":"야생 먹이선택 연구. 특정 식물종 직접 판정에는 원문 식물목록 대조가 필요하다."},
+  {"id":"testudo2018","type":"peer_reviewed","scope":"genus_husbandry","taxon":"Testudo spp.","citation":"Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity. J Appl Anim Welf Sci. 2018.","doi":"10.1080/10888705.2018.1453814","note":"사육환경·식단 구성과 피라미딩의 연관성을 다룬 조사 연구. 개별 식물의 안전성을 직접 증명하지 않는다."},
   {"id":"kfind","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"식품의약품안전처 K-FIND 식품영양성분 데이터베이스","note":"국내 유통 식재료 영양성분의 1차 매핑 후보."},
   {"id":"rda","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"농촌진흥청 국가표준식품성분표","note":"원재료성 식품의 영양성분 보완에 사용."},
   {"id":"usda_fdc","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"USDA FoodData Central","note":"국내 자료가 없거나 비교 검증이 필요한 경우 보조 데이터로 사용."},
@@ -30,5 +14,6 @@
   {"id":"tt_plantfoods","type":"specialist_husbandry","scope":"herbivorous_tortoises","taxon":"Herbivorous tortoises, with Mediterranean observations","citation":"Tortoise Trust. Recommended Foods for Herbivorous Tortoises.","url":"https://www.tortoisetrust.org/articles/plantfoods.html","note":"Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."},
   {"id":"merck_tortoise_nutrition_2025","type":"veterinary_manual_peer_reviewed","scope":"tortoise_general","taxon":"Tortoises","citation":"Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.","url":"https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises","note":"식물성 섬유가 장 생리에 중요하고, romaine/green leaf lettuce/endive/kale 등을 포함한 vegetable mix가 tortoise diet의 보완 구성으로 사용될 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."},
   {"id":"merck_reptile_plant_composition","type":"veterinary_manual_table","scope":"nutrition","taxon":"Reptiles","citation":"Merck Veterinary Manual. Composition of Plant Foods That May Be Offered to Reptiles.","url":"https://www.merckvetmanual.com/multimedia/table/composition-of-plant-foods-that-may-be-offered-to-reptiles","note":"endive와 kale 등 식물성 먹이의 조성 및 Ca:P 비교를 제공한다. 영양 조성표 자체는 특정 육지거북 종의 급여 안전성 판정과 동일하지 않다."},
+  {"id":"merck_reptile_home_plant_eaters","type":"veterinary_manual","scope":"herbivorous_reptile_general","taxon":"Plant-eating reptiles","citation":"Merck Veterinary Manual. Providing a Home for a Reptile.","url":"https://www.merckvetmanual.com/all-other-pets/reptiles/providing-a-home-for-a-reptile","note":"plant-eating reptiles에는 calcium-rich plant foods로 cabbage, kale, okra, sprouts, collard greens, bok choy 등을 권장 예시로 제시한다. 이는 지중해 Testudo 직접 급여시험이나 단독 주식 판정이 아니며, 전체 식단 다양성과 종별 요구를 대체하지 않는다."},
   {"id":"bcg_sulcata_care","type":"specialist_husbandry","scope":"species_husbandry","taxon":"Centrochelys sulcata","citation":"British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.","url":"https://archive.britishcheloniagroup.org.uk/caresheets/sulcata","note":"grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."}
 ]
