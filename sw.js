@@ -1,4 +1,4 @@
-const CACHE='tfd-v51-stable-3';
+const CACHE='tfd-v51-stable-4';
 const CORE=['./','./index.html','./offline.html','./manifest.webmanifest','./search-live.js','./profile-context.js',
 './data/plants.json','./data/assessments.json','./data/korean_retail_name_map.json','./profile/','./today/','./meal/','./weekly/','./growth/','./monthly/','./trends/','./settings/'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
