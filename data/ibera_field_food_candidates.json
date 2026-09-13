@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-09-13",
+  "purpose": "T. g. ibera 직접 야생섭식 자료에 등장하지만 한국 유통명/기존 공개 식물 항목으로 자동 승격하면 안 되는 후보를 분리 보관한다.",
+  "rules": [
+    "야생섭식 기록은 사육환경의 권장 배합률과 동일하지 않다.",
+    "속(genus) 수준 관찰은 특정 재배종/상품명으로 자동 매핑하지 않는다.",
+    "한국 일반명과 논문 식물종이 다르면 공개 판정을 승격하지 않는다.",
+    "동일 속이라는 이유만으로 독성·영양·급여 적합성을 전이하지 않는다."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "medicago_sp_ibera",
+      "field_taxon": "Medicago sp.",
+      "korean_candidate_terms": ["알팔파", "자주개자리", "메디카고류"],
+      "direct_ibera_evidence": [
+        {
+          "source": "Iftime & Iftime 2012, Acta Herpetologica 7(1):105-110",
+          "doi": "10.13128/Acta_Herpetol-9800",
+          "observation": "Dobrogea, Romania; wild T. g. ibera; young leaves consumed; frequency Moderate (5-10%)."
+        },
+        {
+          "source": "Naumov et al. 2023, ZooNotes 228:1-4",
+          "observation": "South-western Bulgaria; wild T. g. ibera observed feeding on Medicago sp."
+        }
+      ],
+      "public_mapping_status": "hold_identity_mismatch",
+      "reason": "논문은 Medicago sp. 수준이다. 한국에서 '알팔파'로 판매되는 Medicago sativa와 동일 종이라는 직접 확인이 없으므로 알팔파 판정으로 자동 승격하지 않는다.",
+      "next_required": ["한국 유통 알팔파의 학명 확인", "Medicago sativa 자체의 Testudo/chelonians 급여 근거 검토", "항영양성분·단백질 함량 맥락 검토"]
+    },
+    {
+      "candidate_id": "sedum_rubens_ibera",
+      "field_taxon": "Sedum rubens",
+      "korean_candidate_terms": ["세덤류", "돌나물류"],
+      "direct_ibera_evidence": [
+        {
+          "source": "Naumov et al. 2023, ZooNotes 228:1-4",
+          "observation": "South-western Bulgaria; wild T. g. ibera observed feeding on Sedum rubens."
+        }
+      ],
+      "public_mapping_status": "hold_identity_mismatch",
+      "reason": "한국 식재료 '돌나물'은 일반적으로 Sedum sarmentosum으로 유통되며 Sedum rubens와 다른 종이다. 같은 속이라는 이유로 판정을 전이하지 않는다.",
+      "next_required": ["Sedum sarmentosum 직접 급여/독성 근거 검토", "한국 유통 돌나물 학명 검증", "수산/유기산 등 성분 맥락 검토"]
+    },
+    {
+      "candidate_id": "sedum_album_ibera",
+      "field_taxon": "Sedum album",
+      "korean_candidate_terms": ["세덤류", "돌나물류"],
+      "direct_ibera_evidence": [
+        {
+          "source": "Naumov et al. 2023, ZooNotes 228:1-4",
+          "observation": "South-western Bulgaria; wild T. g. ibera observed feeding on Sedum album."
+        }
+      ],
+      "public_mapping_status": "hold_identity_mismatch",
+      "reason": "Sedum album 관찰은 한국 식용 돌나물(Sedum sarmentosum) 판정으로 치환할 수 없다.",
+      "next_required": ["종 수준 식물동정 유지", "Sedum sarmentosum 별도 검토"]
+    },
+    {
+      "candidate_id": "plantago_direct_ibera_gap",
+      "field_taxon": "Plantago spp.",
+      "korean_candidate_terms": ["질경이"],
+      "direct_ibera_evidence": [],
+      "public_mapping_status": "no_upgrade",
+      "reason": "이번에 확인한 Iftime & Iftime 2012의 25종 목록에는 Plantago가 없고, Naumov et al. 2023의 Plantago lanceolata 관찰은 T. hermanni에 해당한다. 따라서 질경이의 기존 Mediterranean Testudo 근거는 유지하되 '이베라 직접'으로 승격하지 않는다.",
+      "next_required": ["T. g. ibera에서 Plantago 직접 섭식이 명시된 1차 자료 탐색"]
+    }
+  ]
+}
