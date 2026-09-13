@@ -1,0 +1,44 @@
+name: Render plant detail pages
+
+on:
+  pull_request:
+    paths:
+      - 'data/plants.json'
+      - 'data/assessments.json'
+      - 'data/korean_retail_name_map.json'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/audit_verdict_cards.py'
+      - 'plant/**'
+      - '.github/workflows/render-plant-pages.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/plants.json'
+      - 'data/assessments.json'
+      - 'data/korean_retail_name_map.json'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/audit_verdict_cards.py'
+      - 'plant/**'
+      - '.github/workflows/render-plant-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate 66 plant detail pages
+        run: python scripts/generate_static_pages.py
+      - name: Audit structural integrity
+        run: python scripts/audit_plant_integrity.py
+      - name: Audit verdict-card safety invariants
+        run: python scripts/audit_verdict_cards.py
+      - name: Verify committed plant pages match generated output
+        run: git diff --exit-code -- plant/
