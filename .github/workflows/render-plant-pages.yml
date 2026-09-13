@@ -1,29 +1,36 @@
 name: Render plant detail pages
 
 on:
-  push:
-    branches:
-      - main
-      - codex/v50-generate-verdict-cards
+  pull_request:
     paths:
       - 'data/plants.json'
       - 'data/assessments.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/audit_verdict_cards.py'
+      - 'plant/**'
+      - '.github/workflows/render-plant-pages.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/plants.json'
+      - 'data/assessments.json'
+      - 'data/korean_retail_name_map.json'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/audit_verdict_cards.py'
+      - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  render:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -33,33 +40,5 @@ jobs:
         run: python scripts/audit_plant_integrity.py
       - name: Audit verdict-card safety invariants
         run: python scripts/audit_verdict_cards.py
-      - name: Commit generated changes in tiny batches with retry
-        shell: bash
-        run: |
-          mapfile -t files < <(git diff --name-only -- plant/)
-          if [ ${#files[@]} -eq 0 ]; then
-            echo 'Plant pages already up to date.'
-            exit 0
-          fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          batch=0
-          for ((i=0; i<${#files[@]}; i+=2)); do
-            batch=$((batch+1))
-            chunk=("${files[@]:i:2}")
-            git add -- "${chunk[@]}"
-            git commit -m "Build: plant verdict cards tiny batch ${batch} [skip ci]"
-            ok=0
-            for attempt in 1 2 3; do
-              if git push origin HEAD:${{ github.ref_name }}; then
-                ok=1
-                break
-              fi
-              echo "Push attempt ${attempt} failed; retrying..."
-              sleep 3
-            done
-            if [ "$ok" -ne 1 ]; then
-              echo "Failed to push batch ${batch} after 3 attempts"
-              exit 1
-            fi
-          done
+      - name: Verify committed plant pages match generated output
+        run: git diff --exit-code -- plant/
