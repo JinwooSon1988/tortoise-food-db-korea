@@ -17,97 +17,18 @@
     "doi": "10.1080/10888705.2018.1453814",
     "note": "사육환경·식단 구성과 피라미딩의 연관성을 다룬 조사 연구. 개별 식물의 안전성을 직접 증명하지 않는다."
   },
-  {
-    "id": "kfind",
-    "type": "official_database",
-    "scope": "nutrition",
-    "taxon": "food composition",
-    "citation": "식품의약품안전처 K-FIND 식품영양성분 데이터베이스",
-    "note": "국내 유통 식재료 영양성분의 1차 매핑 후보."
-  },
-  {
-    "id": "rda",
-    "type": "official_database",
-    "scope": "nutrition",
-    "taxon": "food composition",
-    "citation": "농촌진흥청 국가표준식품성분표",
-    "note": "원재료성 식품의 영양성분 보완에 사용."
-  },
-  {
-    "id": "usda_fdc",
-    "type": "official_database",
-    "scope": "nutrition",
-    "taxon": "food composition",
-    "citation": "USDA FoodData Central",
-    "note": "국내 자료가 없거나 비교 검증이 필요한 경우 보조 데이터로 사용."
-  },
-  {
-    "id": "hermanni_italy_2011",
-    "type": "peer_reviewed",
-    "scope": "species_direct",
-    "taxon": "Testudo hermanni hermanni",
-    "citation": "Del Vecchio S. et al. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249. 2011.",
-    "note": "중부 이탈리아 야생 개체군은 연구기간에 엄격한 초식성이었고, 봄에는 콩과 잎과 grasses, 가을에는 Ruscus aculeatus 꽃/미숙과 등 계절에 따라 식이가 달라졌다. 개별 한국 식재료의 안전성을 직접 증명하는 자료는 아니다."
-  },
-  {
-    "id": "horsfieldii_uzbekistan_2011",
-    "type": "peer_reviewed",
-    "scope": "species_direct",
-    "taxon": "Testudo horsfieldii (Agrionemys horsfieldii)",
-    "citation": "Bondarenko DA, Peregontsev EA, Neronov VV. Ecological and Geographical Feeding Peculiarities of the Central Asian Tortoise in Desert Landscapes. Russian Journal of Herpetology 18(3). 2011.",
-    "note": "우즈베키스탄 4개 경관에서 17과 43식물종이 식이에 기록됐고, 선택적 섭식이 보고됐다. 지역·계절 의존성이 크므로 국내 재배채소 판정에 그대로 치환하지 않는다."
-  },
-  {
-    "id": "hermanni_foraging_italy_2015",
-    "type": "conference_proceedings",
-    "scope": "species_direct",
-    "taxon": "Testudo hermanni",
-    "citation": "Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.",
-    "note": "예비 결과에서 Fabaceae(Trifolium, Medicago, Vicia), Plantaginaceae(Plantago) 등 여러 과가 선택되었다. 초록/학술대회 자료이므로 근거등급은 정식 동료심사 논문보다 낮게 취급한다."
-  },
-  {
-    "id": "bcg_mediterranean_care",
-    "type": "specialist_husbandry",
-    "scope": "Mediterranean_Testudo",
-    "taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
-    "citation": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
-    "url": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
-    "note": "고섬유·저지방·저단백의 잎 중심 식단을 권고하고, 정원에서 dandelion, clover, plantains, sow thistle, chickweed, vetches 등을 채식할 수 있다고 제시한다. 독성식물·제초제·달팽이약 노출을 경고한다."
-  },
-  {
-    "id": "tt_mediterranean_food",
-    "type": "specialist_husbandry",
-    "scope": "Mediterranean_Testudo",
-    "taxon": "Mediterranean tortoises",
-    "citation": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
-    "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
-    "note": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."
-  },
-  {
-    "id": "tt_plantfoods",
-    "type": "specialist_husbandry",
-    "scope": "herbivorous_tortoises",
-    "taxon": "Herbivorous tortoises, with Mediterranean observations",
-    "citation": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
-    "url": "https://www.tortoisetrust.org/articles/plantfoods.html",
-    "note": "Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."
-  },
-  {
-    "id": "merck_tortoise_nutrition_2025",
-    "type": "veterinary_manual_peer_reviewed",
-    "scope": "tortoise_general",
-    "taxon": "Tortoises",
-    "citation": "Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.",
-    "url": "https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises",
-    "note": "식물성 섬유가 장 생리에 중요하고, romaine/endive/kale 등을 포함한 vegetable mix가 formulated tortoise diet를 보완할 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."
-  },
-  {
-    "id": "bcg_sulcata_care",
-    "type": "specialist_husbandry",
-    "scope": "species_husbandry",
-    "taxon": "Centrochelys sulcata",
-    "citation": "British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.",
-    "url": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
-    "note": "grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."
-  }
+  {"id":"kfind","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"식품의약품안전처 K-FIND 식품영양성분 데이터베이스","note":"국내 유통 식재료 영양성분의 1차 매핑 후보."},
+  {"id":"rda","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"농촌진흥청 국가표준식품성분표","note":"원재료성 식품의 영양성분 보완에 사용."},
+  {"id":"usda_fdc","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"USDA FoodData Central","note":"국내 자료가 없거나 비교 검증이 필요한 경우 보조 데이터로 사용."},
+  {"id":"hermanni_italy_2011","type":"peer_reviewed","scope":"species_direct","taxon":"Testudo hermanni hermanni","citation":"Del Vecchio S. et al. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249. 2011.","note":"중부 이탈리아 야생 개체군의 계절별 식이를 다룬다. 개별 한국 식재료의 안전성을 직접 증명하지 않는다."},
+  {"id":"horsfieldii_uzbekistan_2011","type":"peer_reviewed","scope":"species_direct","taxon":"Testudo horsfieldii (Agrionemys horsfieldii)","citation":"Bondarenko DA, Peregontsev EA, Neronov VV. Ecological and Geographical Feeding Peculiarities of the Central Asian Tortoise in Desert Landscapes. Russian Journal of Herpetology 18(3). 2011.","note":"우즈베키스탄 야생 식이를 다룬다. 지역·계절 의존성이 크므로 국내 재배채소 판정에 그대로 치환하지 않는다."},
+  {"id":"hermanni_foraging_italy_2015","type":"conference_proceedings","scope":"species_direct","taxon":"Testudo hermanni","citation":"Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.","note":"예비 결과에서 Fabaceae와 Plantaginaceae 등이 선택되었다. 학술대회 자료이므로 정식 동료심사 논문보다 낮게 취급한다."},
+  {"id":"bcg_mediterranean_care","type":"specialist_husbandry","scope":"Mediterranean_Testudo","taxon":"Testudo graeca, T. hermanni, T. marginata, T. horsfieldii","citation":"British Chelonia Group. Caresheet for Mediterranean Tortoises.","url":"https://archive.britishcheloniagroup.org.uk/caresheets/caremed","note":"고섬유·저지방·저단백의 잎 중심 식단을 권고한다. 야생초가 부족한 때에는 다양한 greens/salad를 제공하되 채소는 생으로 적정량, 한 종류의 과도한 사용은 피하라고 한다."},
+  {"id":"bcg_chelonian_nutrition","type":"specialist_veterinary_review","scope":"Testudo_general","taxon":"Testudo spp.","citation":"British Chelonia Group. Nutrition and Nutritional Disease in Chelonians.","url":"https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows","note":"야생 Testudo의 고섬유·고칼슘·저지방·저단백 식단을 강조한다. grocery greens는 자연 먹이보다 섬유가 낮을 수 있어 다양성과 전체 식단 맥락이 중요하다고 설명하며 romaine, kale, endive 등을 Ca:P 1:1 이상 예시로 제시한다. 일부 greens의 항영양성분과 과도한 편중을 함께 경고한다."},
+  {"id":"tt_mediterranean_food","type":"specialist_husbandry","scope":"Mediterranean_Testudo","taxon":"Mediterranean tortoises","citation":"Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.","url":"https://www.tortoisetrust.org/articles/basicmedfood.htm","note":"야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."},
+  {"id":"tt_winter_feeding","type":"specialist_husbandry","scope":"Mediterranean_Testudo","taxon":"Mediterranean tortoises","citation":"Tortoise Trust. Winter Feeding.","url":"https://www.tortoisetrust.org/enews2/index.html","note":"겨울철 대체 식재료로 escarole, radicchio, endive, 여러 leaf lettuce, romaine 등을 섞고 순환하되 한 종류에 장기간 의존하지 말라고 권고한다. curly kale/collard 같은 짙은 잎채소는 때때로 소량 추가하는 예시다."},
+  {"id":"tt_plantfoods","type":"specialist_husbandry","scope":"herbivorous_tortoises","taxon":"Herbivorous tortoises, with Mediterranean observations","citation":"Tortoise Trust. Recommended Foods for Herbivorous Tortoises.","url":"https://www.tortoisetrust.org/articles/plantfoods.html","note":"Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."},
+  {"id":"merck_tortoise_nutrition_2025","type":"veterinary_manual_peer_reviewed","scope":"tortoise_general","taxon":"Tortoises","citation":"Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.","url":"https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises","note":"식물성 섬유가 장 생리에 중요하고, romaine/green leaf lettuce/endive/kale 등을 포함한 vegetable mix가 tortoise diet의 보완 구성으로 사용될 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."},
+  {"id":"merck_reptile_plant_composition","type":"veterinary_manual_table","scope":"nutrition","taxon":"Reptiles","citation":"Merck Veterinary Manual. Composition of Plant Foods That May Be Offered to Reptiles.","url":"https://www.merckvetmanual.com/multimedia/table/composition-of-plant-foods-that-may-be-offered-to-reptiles","note":"endive와 kale 등 식물성 먹이의 조성 및 Ca:P 비교를 제공한다. 영양 조성표 자체는 특정 육지거북 종의 급여 안전성 판정과 동일하지 않다."},
+  {"id":"bcg_sulcata_care","type":"specialist_husbandry","scope":"species_husbandry","taxon":"Centrochelys sulcata","citation":"British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.","url":"https://archive.britishcheloniagroup.org.uk/caresheets/sulcata","note":"grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."}
 ]
