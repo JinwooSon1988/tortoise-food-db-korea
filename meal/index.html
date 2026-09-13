@@ -1,91 +1,31 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>오늘 식단 빠른 분석 | 거북밥 DB Korea</title><meta name="description" content="육지거북에게 오늘 줄 식물 조합을 선택하고 각 식물의 공개 검증상태와 다양성을 확인한다.">
-<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:auto;padding:20px;line-height:1.6}select,button{font-size:16px;padding:10px;margin:4px}.card{border:1px solid #ccc;border-radius:12px;padding:12px;margin:10px 0}.warn{background:#f5f5f5;padding:12px;border-left:4px solid #777}button,a,select,input{touch-action:manipulation}button{min-height:44px}input,select{max-width:100%;box-sizing:border-box}@media(max-width:520px){body{padding:14px}.card{overflow-wrap:anywhere}}</style><link rel="manifest" href="../manifest.webmanifest"></head><body>
-<p><a href="../index.html">← 거북밥 DB</a></p><h1>오늘 식단 빠른 분석</h1>
-<p class="warn">이 기능은 ‘완벽한 식단 점수’를 만들지 않는다. 선택한 식물의 현재 검증상태와 구성 다양성을 보여주는 보조도구다.</p>
-<label>식물 선택 <select id="food"><option value="chicory">치커리</option>
-<option value="romaine">로메인</option>
-<option value="lettuce">상추</option>
-<option value="radicchio">라디키오</option>
-<option value="endive">엔다이브</option>
-<option value="dandelion">민들레</option>
-<option value="sowthistle">방가지똥</option>
-<option value="kale">케일</option>
-<option value="bokchoy">청경채</option>
-<option value="mustard">갓</option>
-<option value="turnipgreens">순무잎</option>
-<option value="collard">콜라드그린</option>
-<option value="cabbage">양배추</option>
-<option value="napa">배추</option>
-<option value="radishgreens">무잎</option>
-<option value="broccolileaf">브로콜리잎</option>
-<option value="cauliflowerleaf">콜리플라워잎</option>
-<option value="arugula">루꼴라</option>
-<option value="plantain">질경이</option>
-<option value="mulberry">뽕잎</option>
-<option value="figleaf">무화과잎</option>
-<option value="mallow">아욱</option>
-<option value="hibiscusleaf">무궁화잎</option>
-<option value="hibiscusflower">무궁화꽃</option>
-<option value="spinach">시금치</option>
-<option value="beetgreens">비트잎</option>
-<option value="watercress">물냉이</option>
-<option value="parsley">파슬리</option>
-<option value="cilantro">고수</option>
-<option value="celeryleaf">셀러리잎</option>
-<option value="carrottop">당근잎</option>
-<option value="basil">바질</option>
-<option value="mint">민트</option>
-<option value="perilla">깻잎</option>
-<option value="clover">클로버</option>
-<option value="alfalfa">알팔파</option>
-<option value="chickweed">별꽃</option>
-<option value="sweetpotatoleaf">고구마잎</option>
-<option value="pumpkinleaf">호박잎</option>
-<option value="zucchini">애호박</option>
-<option value="cucumber">오이</option>
-<option value="bellpepper">파프리카</option>
-<option value="tomato">토마토</option>
-<option value="grapeleaf">포도잎</option>
-<option value="rose">장미꽃</option>
-<option value="nasturtium">한련화</option>
-<option value="pricklypear">천년초</option>
-<option value="timothy">티모시</option>
-<option value="orchard">오차드그라스</option>
-<option value="ryegrass">라이그라스</option>
-<option value="wheatgrass">밀싹</option>
-<option value="barleygrass">보리싹</option>
-<option value="oatgrass">귀리싹</option>
-<option value="cornleaf">옥수수잎</option>
-<option value="chrysanthemumleaf">쑥갓</option>
-<option value="ssuk">쑥</option>
-<option value="dolnamul">돌나물</option>
-<option value="minari">미나리</option>
-<option value="aehobakleaf">애호박잎</option>
-<option value="pea_shoot">완두순</option>
-<option value="sunflowerleaf">해바라기잎</option>
-<option value="violet">제비꽃</option>
-<option value="geranium">제라늄</option>
-<option value="pansy">팬지</option>
-<option value="marigold">메리골드</option>
-<option value="calendula">금잔화</option></select></label><button id="add">추가</button><button id="clear">초기화</button>
+<title>오늘 식단 빠른 분석 | 거북밥 DB Korea</title><meta name="description" content="육지거북에게 오늘 줄 식물 조합을 선택하고 검증상태를 확인한 뒤 최근 7일 기록에 저장한다.">
+<style>body{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;max-width:820px;margin:auto;padding:20px;line-height:1.6;color:#17231b;background:#f7f9f6}a{color:inherit}select,button{font-size:16px;padding:10px;margin:4px;border:1px solid #ccd6cd;border-radius:10px;background:#fff}button{min-height:44px;cursor:pointer}.card{background:#fff;border:1px solid #dce4dc;border-radius:14px;padding:14px;margin:12px 0}.warn{background:#fff7df;padding:12px;border:1px solid #ecd48f;border-radius:12px}.small{font-size:13px;color:#647067}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row select{flex:1;min-width:220px}.pill{display:inline-block;border:1px solid #dce4dc;border-radius:999px;padding:4px 8px;margin:2px;font-size:13px;background:#fff}button,a,select,input{touch-action:manipulation}@media(max-width:520px){body{padding:14px}.card{overflow-wrap:anywhere}.row{display:block}.row select,.row button{width:100%;margin:4px 0}}</style><link rel="manifest" href="../manifest.webmanifest"></head><body>
+<p><a href="../index.html">← 거북밥 DB</a> · <a href="../weekly/">최근 7일 기록</a> · <a href="../profile/">내 거북</a></p>
+<h1>오늘 식단 빠른 분석</h1>
+<div id="profileContext" class="card"></div>
+<p class="warn">이 기능은 ‘완벽한 식단 점수’를 만들지 않는다. 선택한 식물의 현재 공개 근거 상태와 구성 다양성을 보여준다. 기록 기능은 선택한 <b>식물 종류</b>만 저장하며 급여량(g)이나 영양적 완전성을 계산하지 않는다.</p>
+<div class="card"><div class="row"><select id="food" aria-label="식물 선택"><option value="">식물 목록 불러오는 중…</option></select><button id="add">추가</button><button id="clear">초기화</button></div></div>
 <div id="result" aria-live="polite"></div>
-<script>
-const PUBLIC={"chicory": "🟡 검증 진행 중", "romaine": "🟡 제한적 보조식 근거 · 검증 중", "lettuce": "U · 검증 미완료", "radicchio": "U · 검증 미완료", "endive": "🟡 일반 잎채소 근거 · 검증 중", "dandelion": "🟢 혼합급여 적합", "sowthistle": "🟡 검증 진행 중", "kale": "U · 검증 미완료", "bokchoy": "U · 검증 미완료", "mustard": "U · 검증 미완료", "turnipgreens": "U · 검증 미완료", "collard": "U · 검증 미완료", "cabbage": "U · 검증 미완료", "napa": "U · 검증 미완료", "radishgreens": "U · 검증 미완료", "broccolileaf": "U · 검증 미완료", "cauliflowerleaf": "U · 검증 미완료", "arugula": "U · 검증 미완료", "plantain": "🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중", "mulberry": "🟡 식물동정·근거 검증 중", "figleaf": "U · 검증 미완료", "mallow": "🟡 식물동정 우선 검증", "hibiscusleaf": "U · 검증 미완료", "hibiscusflower": "U · 검증 미완료", "spinach": "U · 검증 미완료", "beetgreens": "U · 검증 미완료", "watercress": "U · 검증 미완료", "parsley": "U · 검증 미완료", "cilantro": "U · 검증 미완료", "celeryleaf": "U · 검증 미완료", "carrottop": "U · 검증 미완료", "basil": "U · 검증 미완료", "mint": "U · 검증 미완료", "perilla": "U · 검증 미완료", "clover": "🟡 제한적 혼합급여 근거 · 검증 중", "alfalfa": "🟡 섭식·사육 근거 있음 · 검증 중", "chickweed": "U · 검증 미완료", "sweetpotatoleaf": "U · 검증 미완료", "pumpkinleaf": "U · 검증 미완료", "zucchini": "U · 검증 미완료", "cucumber": "U · 검증 미완료", "bellpepper": "U · 검증 미완료", "tomato": "U · 검증 미완료", "grapeleaf": "U · 검증 미완료", "rose": "U · 검증 미완료", "nasturtium": "U · 검증 미완료", "pricklypear": "U · 검증 미완료", "timothy": "U · 검증 미완료", "orchard": "U · 검증 미완료", "ryegrass": "U · 검증 미완료", "wheatgrass": "U · 검증 미완료", "barleygrass": "U · 검증 미완료", "oatgrass": "U · 검증 미완료", "cornleaf": "U · 검증 미완료", "chrysanthemumleaf": "U · 검증 미완료", "ssuk": "U · 검증 미완료", "dolnamul": "U · 검증 미완료", "minari": "U · 검증 미완료", "aehobakleaf": "U · 검증 미완료", "pea_shoot": "U · 검증 미완료", "sunflowerleaf": "U · 검증 미완료", "violet": "U · 검증 미완료", "geranium": "U · 검증 미완료", "pansy": "U · 검증 미완료", "marigold": "U · 검증 미완료", "calendula": "U · 검증 미완료"};
-const NAMES={"chicory": "치커리", "romaine": "로메인", "lettuce": "상추", "radicchio": "라디키오", "endive": "엔다이브", "dandelion": "민들레", "sowthistle": "방가지똥", "kale": "케일", "bokchoy": "청경채", "mustard": "갓", "turnipgreens": "순무잎", "collard": "콜라드그린", "cabbage": "양배추", "napa": "배추", "radishgreens": "무잎", "broccolileaf": "브로콜리잎", "cauliflowerleaf": "콜리플라워잎", "arugula": "루꼴라", "plantain": "질경이", "mulberry": "뽕잎", "figleaf": "무화과잎", "mallow": "아욱", "hibiscusleaf": "무궁화잎", "hibiscusflower": "무궁화꽃", "spinach": "시금치", "beetgreens": "비트잎", "watercress": "물냉이", "parsley": "파슬리", "cilantro": "고수", "celeryleaf": "셀러리잎", "carrottop": "당근잎", "basil": "바질", "mint": "민트", "perilla": "깻잎", "clover": "클로버", "alfalfa": "알팔파", "chickweed": "별꽃", "sweetpotatoleaf": "고구마잎", "pumpkinleaf": "호박잎", "zucchini": "애호박", "cucumber": "오이", "bellpepper": "파프리카", "tomato": "토마토", "grapeleaf": "포도잎", "rose": "장미꽃", "nasturtium": "한련화", "pricklypear": "천년초", "timothy": "티모시", "orchard": "오차드그라스", "ryegrass": "라이그라스", "wheatgrass": "밀싹", "barleygrass": "보리싹", "oatgrass": "귀리싹", "cornleaf": "옥수수잎", "chrysanthemumleaf": "쑥갓", "ssuk": "쑥", "dolnamul": "돌나물", "minari": "미나리", "aehobakleaf": "애호박잎", "pea_shoot": "완두순", "sunflowerleaf": "해바라기잎", "violet": "제비꽃", "geranium": "제라늄", "pansy": "팬지", "marigold": "메리골드", "calendula": "금잔화"};
-let meal=[];
-function render(){
- const el=document.getElementById('result');
- if(!meal.length){el.innerHTML='<p>아직 선택한 식물이 없다.</p>';return;}
- const unique=[...new Set(meal)];
- let green=unique.filter(x=>(PUBLIC[x]||'').includes('🟢')).length;
- let yellow=unique.filter(x=>(PUBLIC[x]||'').includes('🟡')).length;
- let unknown=unique.length-green-yellow;
- el.innerHTML='<h2>선택 '+unique.length+'종</h2>'+unique.map(x=>'<div class="card"><b>'+NAMES[x]+'</b><br>'+PUBLIC[x]+'<br><a href="../plant/'+x+'/">근거·주의사항 보기</a></div>').join('')+
- '<div class="card"><b>구성 요약</b><br>🟢 '+green+'종 · 🟡 '+yellow+'종 · U '+unknown+'종<br>'+
- (unique.length<3?'현재 선택은 종류가 적다. 다만 종수만으로 영양적 완전성을 판정하지 않는다.':'여러 종류가 포함돼 있다. 그러나 다양성 자체가 안전성이나 영양적 완전성을 보장하지 않는다.')+'</div>';
-}
-document.getElementById('add').onclick=()=>{const x=document.getElementById('food').value;if(!meal.includes(x))meal.push(x);render();};
-document.getElementById('clear').onclick=()=>{meal=[];render();};
-render();
-</script><script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js'));</script></body></html>
+<div class="card"><button id="record">오늘 식단에 기록</button> <a href="../weekly/">최근 7일 보기</a><div id="recordStatus" class="small" aria-live="polite"></div></div>
+<script src="../profile-context.js"></script><script>
+const WEEKLY_KEY='tfd_weekly_v1';
+let plants=[],assessments=[],meal=[],names={};
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function localISO(d=new Date()){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`}
+function makeId(){return crypto.randomUUID?crypto.randomUUID():'e-'+Date.now()+'-'+Math.random().toString(36).slice(2)}
+function activeProfile(){return window.TFDProfiles?.active?.()||null}
+function updateProfile(){const p=activeProfile(),el=document.getElementById('profileContext');if(!p){el.innerHTML='<b>현재 거북:</b> 미지정<br><span class="small"><a href="../profile/">내 거북을 등록</a>하면 기록을 개체별로 연결한다. 지금 기록하면 미지정 기록으로 저장된다.</span>';return}const bits=[p.species_name||p.species,p.stage,p.weight_g?`${p.weight_g}g`:null].filter(Boolean);el.innerHTML='<b>현재 거북:</b> '+esc(p.name||'현재 거북')+(bits.length?' · '+bits.map(esc).join(' · '):'')+'<br><span class="small">오늘 기록은 이 개체 ID에 연결된다.</span>'}
+function preferredAssessment(id){return assessments.find(a=>a.plant_id===id&&a.species_group==='Mediterranean_Testudo')||assessments.find(a=>a.plant_id===id&&['Tortoise_general','Herbivorous_reptile_general'].includes(a.species_group))||null}
+function publicStatus(id){const a=preferredAssessment(id);if(!a)return '⚪ 검증 미완료';if(id==='dandelion'&&a.verdict==='supported_mixed_diet')return '🟢 혼합급여 적합';const map={supported_mixed_diet:'🟡 혼합급여 지지근거 있음',limited_mixed_diet:'🟡 제한적 혼합급여 근거',limited_supplement:'🟡 제한적 보조식 근거',supplement_general_evidence:'🟡 일반 보조식 근거',general_reptile_supplement:'🟡 일반 초식 파충류 보조근거'};return map[a.verdict]||'⚪ 판단보류 / 근거 부족'}
+function render(){updateProfile();const el=document.getElementById('result'),unique=[...new Set(meal)];if(!unique.length){el.innerHTML='<p>아직 선택한 식물이 없다.</p>';return}const rows=unique.map(id=>({id,status:publicStatus(id)}));const green=rows.filter(x=>x.status.includes('🟢')).length,yellow=rows.filter(x=>x.status.includes('🟡')).length,hold=unique.length-green-yellow;el.innerHTML='<h2>선택 '+unique.length+'종</h2>'+rows.map(x=>'<div class="card"><b>'+esc(names[x.id]||x.id)+'</b><br>'+esc(x.status)+'<br><a href="../plant/'+encodeURIComponent(x.id)+'/">근거·주의사항 보기</a> <button data-remove="'+esc(x.id)+'">제거</button></div>').join('')+'<div class="card"><b>구성 요약</b><br>🟢 '+green+'종 · 🟡 '+yellow+'종 · ⚪ '+hold+'종<br><span class="small">종수는 다양성 관찰값일 뿐 안전성·영양적 완전성 점수가 아니다.</span></div>';document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{meal=meal.filter(x=>x!==b.dataset.remove);render()})}
+function loadWeekly(){try{const a=JSON.parse(localStorage.getItem(WEEKLY_KEY)||'[]');return Array.isArray(a)?a:[]}catch(e){return[]}}
+function saveWeekly(a){localStorage.setItem(WEEKLY_KEY,JSON.stringify(a))}
+function recordMeal(){const unique=[...new Set(meal)],out=document.getElementById('recordStatus');if(!unique.length){out.textContent='먼저 식물을 1종 이상 선택해야 한다.';return}const date=localISO(),p=activeProfile(),pid=p?p.id:null,a=loadWeekly();let added=0,skipped=0;for(const food of unique){const exists=a.some(x=>x.date===date&&x.food===food&&(x.profile_id||null)===(pid||null));if(exists){skipped++;continue}a.push({event_id:makeId(),date,food,profile_id:pid});added++}saveWeekly(a);out.innerHTML='<span class="pill">'+esc(date)+'</span> '+(p?'<span class="pill">'+esc(p.name||'현재 거북')+'</span> ':'<span class="pill">미지정</span> ')+'<b>'+added+'종 기록</b>'+(skipped?' · 이미 기록된 '+skipped+'종 건너뜀':'')+' · <a href="../weekly/">7일 기록 확인</a>'}
+async function init(){try{const [p,a]=await Promise.all([fetch('../data/plants.json').then(r=>{if(!r.ok)throw new Error('plants');return r.json()}),fetch('../data/assessments.json').then(r=>{if(!r.ok)throw new Error('assessments');return r.json()})]);plants=p.filter(x=>x.id);assessments=Array.isArray(a)?a:[];for(const x of plants)names[x.id]=x.ko||x.id;document.getElementById('food').innerHTML=plants.map(x=>'<option value="'+esc(x.id)+'">'+esc(names[x.id])+'</option>').join('')}catch(e){document.getElementById('food').innerHTML='<option value="">식물 목록을 불러오지 못함</option>'}render()}
+document.getElementById('add').onclick=()=>{const x=document.getElementById('food').value;if(x&&!meal.includes(x))meal.push(x);render()};
+document.getElementById('clear').onclick=()=>{meal=[];document.getElementById('recordStatus').textContent='';render()};
+document.getElementById('record').onclick=recordMeal;
+init();
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));
+</script></body></html>
