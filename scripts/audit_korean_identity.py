@@ -1,6 +1,6 @@
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-files={p:(R/p).read_text(encoding='utf-8') for p in ['plant/mallow/index.html','plant/sowthistle/index.html','plant/clover/index.html','scripts/generate_static_pages.py','docs/EVIDENCE_EXPANSION_7_KOREAN_IDENTITY.md']}
+files={p:(R/p).read_text(encoding='utf-8') for p in ['plant/mallow/index.html','plant/sowthistle/index.html','plant/clover/index.html','docs/EVIDENCE_EXPANSION_7_KOREAN_IDENTITY.md','.github/workflows/render-plant-pages.yml']}
 checks={
  'mallow_exact_korean_identity':'Malva verticillata' in files['plant/mallow/index.html'],
  'mallow_not_auto_parviflora':'Malva parviflora' in files['plant/mallow/index.html'] and ('서로 다른 종' in files['plant/mallow/index.html'] or '직접 적용하지 않는다' in files['plant/mallow/index.html']),
@@ -11,7 +11,7 @@ checks={
  'clover_exact_term_identity':'Trifolium repens' in files['plant/clover/index.html'],
  'clover_generic_warning':'일반명 ‘클로버’' in files['plant/clover/index.html'],
  'clover_genus_evidence_limit':'Trifolium sp.' in files['plant/clover/index.html'] and '종 수준 직접근거로 바꾸지 않는다' in files['plant/clover/index.html'],
- 'generator_persists_overrides':'IDENTITY_OVERRIDE' in files['scripts/generate_static_pages.py'] and 'Malva verticillata L.' in files['scripts/generate_static_pages.py'],
+ 'render_protects_curated_identity_pages':'git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html' in files['.github/workflows/render-plant-pages.yml'],
  'identity_not_safety_rule':'Identity resolution alone never upgrades a feeding verdict' in files['docs/EVIDENCE_EXPANSION_7_KOREAN_IDENTITY.md'],
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
