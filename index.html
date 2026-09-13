@@ -1,222 +1,45 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#2f6b49">
+<meta name="description" content="한국에서 구할 수 있는 육지거북 먹이를 학명과 근거로 검색하는 데이터베이스. 식물 검색, 거북 프로필, 오늘 식단과 7일 기록을 한곳에서 관리한다.">
 <link rel="manifest" href="manifest.webmanifest">
-<title>거북밥 DB Korea v5.0-rc1</title>
+<title>거북밥 DB | 육지거북 먹이 근거 검색</title>
 <style>
-:root{--bg:#f5f7f4;--card:#fff;--text:#18231c;--muted:#647067;--line:#dce4dc;--accent:#2f6b49;--accent2:#eaf4ed;--warn:#fff7df;--danger:#fff0f0}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:var(--text)}
-.wrap{max-width:1040px;margin:auto;padding:16px}.top{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
-.brand{font-size:26px;font-weight:900}.tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:5px 9px;background:#fff}.sub{color:var(--muted);margin:5px 0 14px}
-.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:5px}.tabs button{width:auto;white-space:nowrap}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
-h2{font-size:18px;margin:0 0 12px}.muted,.small{color:var(--muted)}.small{font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px}
-input,select,button,textarea{width:100%;border:1px solid #cfd9d0;border-radius:11px;background:#fff;padding:11px;font-size:15px}
-button{cursor:pointer;font-weight:700}.primary{background:var(--accent);color:#fff;border-color:var(--accent)}.ghost{background:#fff}
-.badge{display:inline-block;border:1px solid #ccd6cd;border-radius:999px;padding:5px 8px;margin:2px;font-size:12px}
-.result{border-top:1px solid var(--line);padding:14px 0}.result:first-child{border-top:0}.name{font-weight:900;font-size:19px}.sci{font-style:italic;color:var(--muted)}
-.callout{padding:10px;border-radius:10px;margin-top:8px;background:var(--accent2);border:1px solid #cde1d2}.warn{background:var(--warn);border-color:#ecd48f}.danger{background:var(--danger);border-color:#efc1c1}
-.row{display:flex;gap:8px;align-items:center}.row>*{flex:1}.hidden{display:none}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.kpi{background:#fafcf9;border:1px solid var(--line);border-radius:12px;padding:12px}.kpi b{font-size:20px;display:block}
-.itemline{padding:8px 0;border-bottom:1px solid #edf1ed}.itemline:last-child{border:0}
-@media(max-width:700px){.grid,.grid3,.kpis{grid-template-columns:1fr}.wrap{padding:11px}.row{flex-direction:column}}
-button,a,select,input{touch-action:manipulation}button{min-height:44px}input,select{max-width:100%;box-sizing:border-box}@media(max-width:520px){body{padding:14px}.card{overflow-wrap:anywhere}}</style>
+:root{--bg:#f4f7f3;--card:#fff;--text:#17231b;--muted:#647067;--line:#dce5dd;--accent:#2f6b49;--soft:#eaf4ed;--warn:#fff7df}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:var(--text);line-height:1.55}a{color:inherit}.wrap{max-width:900px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-size:25px;font-weight:900}.version{font-size:12px;color:var(--muted);border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 9px}.hero{padding:38px 0 22px}.hero h1{font-size:34px;line-height:1.2;margin:0 0 12px;letter-spacing:-1px}.hero p{margin:0;color:var(--muted);font-size:17px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0;box-shadow:0 2px 8px rgba(30,60,40,.035)}h2{font-size:20px;margin:0 0 8px}.small{font-size:13px;color:var(--muted)}.searchrow{display:flex;gap:8px;margin-top:15px}input[type=search]{flex:1;min-width:0;border:2px solid #cbd9ce;border-radius:13px;padding:14px;font-size:17px;outline:none}input[type=search]:focus{border-color:var(--accent)}button,.btn{border:0;border-radius:13px;min-height:48px;padding:12px 17px;font-weight:800;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}.primary{background:var(--accent);color:#fff}.secondary{background:var(--soft);color:#234f35}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.action{border:1px solid var(--line);border-radius:14px;padding:15px;text-decoration:none;background:#fff}.action b{display:block;margin-bottom:3px}.profile{display:flex;justify-content:space-between;align-items:center;gap:12px}.pill{display:inline-block;background:var(--soft);border-radius:999px;padding:5px 9px;font-size:12px;font-weight:700}.notice{background:var(--warn);border:1px solid #ead28b;border-radius:13px;padding:12px 14px;font-size:13px;margin-top:12px}.results{margin-top:10px}.result{display:block;text-decoration:none;border-top:1px solid var(--line);padding:13px 4px}.result:first-child{border-top:0}.result strong{font-size:17px}.result .sci{display:block;color:var(--muted);font-size:13px;font-style:italic}.empty{padding:14px 3px;color:var(--muted)}#koSuggestions{margin-top:6px}#koSuggestions button{width:100%;background:#fff;border:1px solid var(--line);margin:3px 0;text-align:left;justify-content:flex-start}#koSuggestions small{display:block;color:var(--muted);padding:5px}.suggest-head{font-size:13px;font-weight:800;margin-top:8px}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.principle{background:#fafcf9;border:1px solid var(--line);border-radius:13px;padding:13px}.principle b{display:block}.footer{color:var(--muted);font-size:12px;padding:18px 2px 30px}.nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.nav a{font-size:13px;color:var(--muted)}
+@media(max-width:620px){.wrap{padding:14px}.hero{padding:28px 2px 15px}.hero h1{font-size:29px}.searchrow{flex-direction:column}.searchrow button{width:100%}.grid,.principles{grid-template-columns:1fr}.profile{align-items:flex-start;flex-direction:column}.card{padding:17px}}
+</style>
 </head>
-<body><main class="wrap"><div class="callout"><b>v5.0 RC1 통합검수</b><br>66종 상세페이지, 검색, 다개체 프로필, 오늘 식단, 개체별 7일 기록, 백업·복원, PWA를 하나의 릴리스 후보로 통합 검수했다.</div><div class="callout"><b>PWA·오프라인 v4.9</b><br>홈·프로필·오늘 식단·7일 기록·백업 화면을 앱처럼 설치 가능한 PWA 구조로 묶고, 핵심 화면을 오프라인 캐시한다. 방문하지 않은 상세페이지는 연결이 필요하다는 오프라인 안내도 추가했다.</div><div class="callout"><b>백업·복원 v4.8</b><br><a href="./settings/">프로필과 식단 기록을 JSON으로 백업·복원</a>할 수 있게 했다. 복원 파일은 schema/version/기본 구조를 먼저 검사하고, 기존 데이터 교체 전에 사용자 확인을 요구한다.</div><div class="callout"><b>개체별 7일 분석 v4.7</b><br>7일 식단을 ‘현재 거북만 / 모든 거북 / 과거 미지정’으로 분리했다. 삭제도 화면 순번이 아니라 event ID 기준으로 바꿔 다른 개체 기록이 잘못 지워지는 문제를 방지했다.</div><div class="callout"><b>다개체 프로필 v4.6</b><br>한 마리뿐 아니라 여러 육지거북을 등록하고 ‘현재 거북’을 선택할 수 있게 확장했다. 새 7일 식단 기록에는 안정적인 개체 ID가 함께 저장된다.</div><div class="callout"><b>내 거북 프로필 v4.5</b><br><a href="./profile/">종·성장단계·체중·사육방식 프로필</a>을 등록하고 7일 식단 화면과 연결했다. 종별 근거가 없는 경우 프로필 때문에 판정을 임의 변경하지 않는다.</div><div class="callout"><b>7일 식단 기록 v4.4</b><br><a href="./weekly/">최근 7일 식단 기록</a>을 추가했다. 먹인 식물·반복횟수·서로 다른 식물 수를 브라우저에만 저장하고, 반복을 곧바로 위험/결핍으로 진단하지 않는다.</div><div class="callout"><b>오늘 식단 도구 v4.3</b><br>사용자가 실제로 먹이 여러 종을 선택해 현재 검증상태를 한 번에 비교하는 <a href="./meal/">오늘 식단 빠른 분석</a> 페이지를 추가했다. 근거 없는 임의의 종합점수는 만들지 않는다.</div><div class="callout"><b>블로그↔DB 유입루프 v4.2</b><br>66개 식물 상세페이지에 breadcrumb·관련 먹이 5개·프로필 검색 복귀 링크를 넣었다. 네이버 글에서 쓸 수 있는 66종 딥링크 앵커 데이터도 생성했다.</div><div class="callout"><b>전체 식물 SEO 페이지 확장 v4.1</b><br>plant master에 등록된 <strong>66종</strong> 전부에 정적 상세 URL을 생성했다. 검증이 덜 된 식물은 U 상태 그대로 공개해 검색 노출을 위해 판정을 조작하지 않는다.</div><div class="callout"><b>검색 UX 안정화 v4.0</b><br>한글 자모 기반 오타검색, 최대 3개 후보, 키보드 이동/선택, 자동교정 금지, “검색 후보 ≠ 식물종 동정” 경고를 실제 검색 레이어에 적용했다.</div><div class="callout"><b>한글 오타검색 LIVE 연결 v3.9</b><br>민드레→민들레, 뽕닢→뽕잎, 질갱이→질경이처럼 오타 후보를 최대 3개까지 제안한다. 자동교정은 하지 않으며 사용자가 직접 후보를 선택해야 한다.</div><div class="callout"><b>영양값 3중 교차검증 v3.8</b><br>로메인 FDC 746769과 케일 FDC 323505를 각각 3개의 USDA-derived 데이터 표현에서 교차검증했다. 서로 다른 record/release의 값은 평균내지 않는 규칙도 추가했다.</div><div class="callout"><b>Foundation 영양값 교차검증 v3.7</b><br>로메인 FDC 746769은 Ca 35/P 30mg(Ca:P 1.17), 케일 FDC 323505는 Ca 254/P 55mg(Ca:P 4.62)로 교차검증했다. 다만 공식 원자료 직접 추출 전이므로 official_direct 승격은 보류한다.</div><div class="callout"><b>공식 영양 record 후보 확보 v3.6</b><br>로메인 FDC 746769(Foundation), 케일 FDC 323505(Foundation), 치커리 FDC 169992, 엔다이브 FDC 168412를 record-level 후보로 확보했다. 후보 단계에서는 4/4로 승격하지 않는다.</div><div class="callout"><b>우선 10종 검증판 확장 v3.5</b><br>클로버·알팔파·엔다이브·로메인·뽕잎까지 동일한 evidence/release 체계에 편입했다. 이제 우선 10종 전체를 하나의 검증 대시보드에서 추적한다.</div><div class="callout"><b>판정 설명가능성 v3.4</b><br>핵심 5종에 “왜 이 배지인가?” 데이터층을 추가했다. 사용자가 초록·노랑·U 결과만 보는 것이 아니라 근거와 남은 blocker를 바로 확인할 수 있다.</div><div class="callout"><b>핵심 먹이 검증 확장 v3.3</b><br>치커리·아욱·방가지똥을 다음 editorial queue에 올렸다. 아욱은 한국 판매명과 해외 Malva 근거를 자동 동일시하지 않고 식물동정을 최우선 blocker로 둔다.</div><div class="callout"><b>질경이 판정 후보 v3.2</b><br><strong>🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중</strong>. Mediterranean Testudo 관리자료와 Plantago 섭식근거는 있지만, 정확한 Plantago 종과 공식 영양 record가 아직 연결되지 않아 민들레와 같은 초록 판정으로 올리지 않았다.</div><div class="callout"><b>최초 최종판정: 민들레 v3.1</b><br><strong>🟢 혼합급여 적합</strong>으로 editorial review를 통과했다. 단독 주식·무제한 급여 판정이 아니며, 한국의 ‘민들레’가 USDA record의 <i>Taraxacum officinale</i>와 동일한지는 별도 동정이 필요하다.</div><div class="callout"><b>최초 4/4 데이터: 민들레 v3.0</b><br>USDA 공식 SR Legacy record FDC 169226(NDB 11207)을 연결했다. 생것 100g 기준 Ca 187mg, P 66mg, Ca:P 약 2.83이다. SR Legacy임을 명시하며 Foundation 데이터로 둔갑시키지 않는다. 최종 공개 급여판정은 별도 editorial review를 거친다.</div><div class="callout"><b>공식데이터 투입 자동화 v2.9</b><br>공식 record가 확보되면 코드 수정 없이 staging 검증 → nutrition record → gate 재검사로 이어지는 승격 절차를 준비했다. 검증되지 않은 후보는 승격되지 않는다.</div><div class="callout"><b>4/4 직전 데이터 검증 v2.8</b><br>민들레·질경이의 공식 영양 record를 production DB에 바로 넣지 않고 staging → identity → basis → nutrient → 승인 절차를 거치도록 했다.</div><div class="callout"><b>민들레·질경이 위험성 검토 완료 v2.7</b><br>6개 위험성 축을 모두 검토했다. 다만 ‘근거를 찾지 못함’은 ‘안전이 증명됨’이 아니다. 두 식물의 현재 핵심 병목은 공식 영양 record다.</div><div class="callout"><b>출처 재검증 v2.6</b><br>PubMed DOI/PMID와 USDA 2026 Foundation release를 다시 대조했다. 공식 record를 찾지 못한 식물은 빈칸을 억지로 채우지 않고 gap ledger에 남긴다.</div><div class="callout"><b>위험성 문헌 검토 v2.5</b><br>민들레·질경이부터 옥살레이트·질산염·식물 독성 문헌을 연결했다. 사람·가축 대상 화학자료를 이베라의 독성 한계치로 오용하지 않는다.</div><div class="callout"><b>근거를 바로 읽는 상세페이지 v2.4</b><br>식물 상세페이지에서 연구 대상종·근거 수준·무엇을 의미하는지·어디까지 해석하면 안 되는지를 함께 보여준다.</div><div class="callout"><b>검색엔진용 식물 상세페이지</b><br>우선검증 식물 10종은 각각 독립 URL 구조를 갖는다. 검색 결과에서 바로 식물 상세정보로 진입할 수 있도록 준비했다.</div><div class="callout"><b>검색 안전장치 v2.2</b><br>
-오타는 “혹시 이것을 찾으셨나요?” 후보로만 제시한다. 자동으로 다른 식물로 바꾸지 않으며, 통칭이 여러 종을 가리키면 사용자가 후보를 선택해야 한다.
-</div><div class="callout warn"><b>베타 데이터 해석법</b><br>
-‘근거 있음’은 ‘마음껏 급여 가능’이라는 뜻이 아니다. 식물의 정확한 종, 거북 종에 대한 적용성, 영양 record, 위험요소가 모두 검토되기 전에는 U(판정보류)를 유지한다.
-</div>
-<div class="top"><div><div class="brand">거북밥 DB Korea <span class="tag">v5.0-rc1</span></div><div class="sub">근거를 숨기지 않는 한국형 육지거북 먹이 데이터베이스</div><div id="coverageBar" class="small"></div></div><span class="tag">동물복지 우선 · 출처 추적 · 추정 판정 금지</span></div>
-
-<div class="tabs">
-<button onclick="showTab('search')" class="primary">먹이 검색</button>
-<button onclick="showTab('profiles')">내 거북</button>
-<button onclick="showTab('diet')">7일 식단</button>
-<button onclick="showTab('evidence')">근거 DB</button>
-<button onclick="showTab('quality')">검증 현황</button><button onclick="showTab('admin')">데이터 관리</button>
-</div>
-
-<section id="search" class="tab card">
-<h2>식물·채소 검색</h2>
-<input id="q" placeholder="치커리, 민드레, 질갱이, dandelion, Cichorium...">
-<div id="searchMeta" class="small" style="margin-top:8px"></div>
-<div id="results"></div>
+<body>
+<main class="wrap">
+<header class="top"><div class="brand">🐢 거북밥 DB</div><span class="version">v5.0 Stable</span></header>
+<section class="hero"><h1>이 먹이,<br>내 육지거북에게 줘도 될까?</h1><p>한국 유통명부터 학명·영양자료·육지거북 근거까지 연결해 확인한다.</p></section>
+<section class="card" aria-labelledby="searchTitle">
+<h2 id="searchTitle">먹이 검색</h2><div class="small">채소·야생초 이름을 입력한다. 오타가 있으면 최대 3개의 후보를 제안한다.</div>
+<div class="searchrow"><input id="searchInput" type="search" placeholder="예: 민들레, 질경이, 치커리" autocomplete="off" aria-label="먹이 이름 검색"><button id="searchBtn" class="primary" type="button">검색</button></div>
+<div id="searchResults" class="results" aria-live="polite"></div>
+<div class="notice">검색 후보는 식물종 동정 결과가 아니다. 같은 한국 이름으로 다른 식물이 유통될 수 있으며, 근거가 부족하면 안전하다고 추정하지 않는다.</div>
 </section>
-
-<section id="profiles" class="tab card hidden">
-<h2>내 거북 등록</h2>
-<div class="grid">
-<div><label>이름</label><input id="petName" placeholder="예: 콩이"></div>
-<div><label>종</label><select id="species"></select></div>
-<div><label>성장단계</label><select id="stage"><option>헤츨링</option><option>유체</option><option>아성체</option><option>성체</option></select></div>
-<div><label>체중(g)</label><input id="weight" inputmode="decimal" placeholder="선택사항"></div>
-</div>
-<button class="primary" id="addProfile" style="margin-top:10px">개체 추가</button>
-<div id="profileList" style="margin-top:12px"></div>
-</section>
-
-<section id="diet" class="tab card hidden">
-<h2>최근 7일 식단 기록</h2>
-<div class="grid3">
-<div><label>날짜</label><input type="date" id="mealDate"></div>
-<div><label>개체</label><select id="mealPet"></select></div>
-<div><label>식물</label><input id="mealPlant" placeholder="예: 질경이"></div>
-</div>
-<div class="grid" style="margin-top:8px">
-<div><label>대략적 비중(%) · 선택</label><input id="mealPct" inputmode="decimal" placeholder="예: 30"></div>
-<div><label>메모 · 선택</label><input id="mealNote" placeholder="기호도, 잔량 등"></div>
-</div>
-<button class="primary" id="addMeal" style="margin-top:10px">기록 추가</button>
-<div id="dietKpis" class="kpis" style="margin-top:12px"></div>
-<div id="dietInsight"></div>
-<div id="dietList"></div>
-</section>
-
-<section id="evidence" class="tab card hidden">
-<h2>근거 데이터베이스</h2>
-<div class="small">논문·공식 영양 DB·전문자료를 식물 판정과 분리 보관한다. 한 근거가 무엇을 '직접' 지지하는지와 무엇을 지지하지 않는지를 함께 기록한다.</div>
-<div id="evidenceList"></div>
-</section>
-
-
-<section id="quality" class="tab card hidden">
-<h2>데이터 검증 현황</h2>
-<div class="callout"><b>공개 원칙</b><br>식물 마스터 등록 수와 '급여 판정 완료' 수를 분리한다. 공식 영양 record ID가 없거나 독성·종별 근거 검토가 끝나지 않은 식물은 최종 안전 판정으로 승격하지 않는다.</div>
-<div class="kpis" style="margin-top:12px">
-<div class="kpi"><b id="qPlants">—</b><span class="small">식물 마스터</span></div>
-<div class="kpi"><b id="qAssess">—</b><span class="small">설명가능 판정 식물</span></div>
-<div class="kpi"><b id="qNutrition">—</b><span class="small">영양 record</span></div>
-<div class="kpi"><b id="qOfficial">—</b><span class="small">공식 직접 영양 record</span></div>
-</div>
-<div class="callout" style="margin-top:12px"><b>공식 데이터원 상태</b><br>
-K-FIND: 2026-09-07 최종 DB 업데이트 · 국가표준식품성분표 10.4(3,313식품/132성분)<br>
-USDA Foundation Foods: 2026-04 release · CSV/JSON 공식 다운로드 제공<br>
-<span class="small">공식 데이터셋에 식품이 존재하는 것과 우리 DB에서 해당 식품 record가 검증 완료된 것은 별개다.</span></div>
-<div class="callout"><b>이베라 우선 검증</b><br>T. graeca 종 수준 근거와 T. g. ibera 직접근거를 구분한다. 야생섭식 또는 영양성분만으로 권장판정을 만들지 않는다.</div><div class="callout"><b>이베라 연구 연결 v1.7</b><br>
-T. graeca 야생식이 논문과 지중해거북 전문 사육지침을 식물별로 연결했다.<br>
-<span class="small">T. g. graeca 자료는 T. g. ibera 직접근거가 아니므로 별도 계층으로 표시하며, 자동 급여승격에는 사용하지 않는다.</span></div>
-<div class="callout warn" style="margin-top:12px"><b>현재 베타 상태</b><br>공식 record 자동승인은 금지되어 있다. 검색엔진이 다른 식품 상세 페이지를 반환할 수 있으므로 페이지 본문의 식품명까지 일치해야 승인한다.<br><br>공식 K-FIND는 원재료·가공식품·음식의 영양 DB와 다운로드 기능을 제공한다. 그러나 이 빌드에서는 개별 채소의 공식 record ID를 확인하지 않은 상태에서 숫자를 자동 채우지 않는다.</div>
-</section>
-
-<section id="admin" class="tab card hidden">
-<h2>이베라 우선식물 검증 매트릭스</h2>
-<div class="callout"><b>판정 출시 조건</b><br>식물동정 · 종 적용성 · 공식 영양 record · 위험요소 검토가 완료되어야 최종 판정으로 승격한다.<br>
-<span class="small">현재 연구근거가 있어도 나머지 축이 미검증이면 U를 유지한다.</span></div>
-<div id="iberaMatrix" class="small"><table><tr><th>식물</th><th>완료</th><th>현재 차단요소</th></tr><tr><td>민들레</td><td>2/4</td><td>official_nutrition, risk_review</td></tr><tr><td>질경이</td><td>2/4</td><td>official_nutrition, risk_review</td></tr><tr><td>아욱</td><td>2/4</td><td>official_nutrition, risk_review</td></tr><tr><td>클로버</td><td>2/4</td><td>official_nutrition, risk_review</td></tr><tr><td>알팔파</td><td>2/4</td><td>official_nutrition, risk_review</td></tr><tr><td>방가지똥</td><td>2/4</td><td>official_nutrition, risk_review</td></tr><tr><td>치커리</td><td>1/4</td><td>species_evidence, official_nutrition, risk_review</td></tr><tr><td>엔다이브</td><td>1/4</td><td>species_evidence, official_nutrition, risk_review</td></tr><tr><td>로메인</td><td>1/4</td><td>species_evidence, official_nutrition, risk_review</td></tr><tr><td>뽕잎</td><td>1/4</td><td>species_evidence, official_nutrition, risk_review</td></tr></table></div>
-<h2>데이터 관리</h2>
-<div class="callout"><b>공식 DB 대량수집 파이프라인</b><br>
-① 공식 원본 보존 → ② 자동 후보 생성 → ③ 식품명·조리상태·코드 수동 검토 → ④ audit PASS → ⑤ 공개 DB 반영<br>
-<span class="small">이름이 비슷하다는 이유만으로 자동 안전판정하거나 영양 record를 합치지 않는다.</span></div>
-<div class="callout warn">이 기능은 공개 관리자 서버가 아니라 로컬 검수용이다. 사용자 브라우저 데이터만 내보내고 가져온다.</div>
-<div class="grid" style="margin-top:10px">
-<button id="exportData">사용자 데이터 JSON 내보내기</button>
-<label style="display:block"><span class="small">사용자 데이터 JSON 가져오기</span><input id="importData" type="file" accept=".json"></label>
-</div>
-<div class="callout" style="margin-top:12px">
-<b>현재 데이터 품질 정책</b><br>
-식물명 등록 ≠ 먹이 적합 판정. 이름·학명·영양·독성·종별 근거가 서로 연결되기 전에는 '미검토' 상태를 유지한다.
-</div>
-</section>
+<section class="card profile"><div><span class="pill">내 거북</span><h2 id="profileTitle" style="margin-top:8px">프로필을 등록하면 기록을 개체별로 관리할 수 있다</h2><div id="profileMeta" class="small">종·성장단계·체중·사육방식을 저장할 수 있다.</div></div><a class="btn secondary" href="./profile/">프로필 관리</a></section>
+<section class="card"><h2>급여 기록</h2><div class="small">판정과 기록은 분리한다. 반복 횟수만으로 위험이나 결핍을 진단하지 않는다.</div><div class="grid"><a class="action" href="./meal/"><b>🥗 오늘 식단</b><span class="small">여러 먹이의 현재 검증상태를 한 번에 비교</span></a><a class="action" href="./weekly/"><b>📅 7일 기록</b><span class="small">개체별 먹이 기록과 식단 다양성 확인</span></a><a class="action" href="./settings/"><b>💾 백업·복원</b><span class="small">프로필과 기록을 JSON으로 보관</span></a><a class="action" href="./plant/dandelion/"><b>🔎 검증 예시</b><span class="small">민들레 상세페이지에서 근거 구조 확인</span></a></div></section>
+<section class="card"><h2>거북밥 DB의 판정 원칙</h2><div class="principles"><div class="principle"><b>① 식물 자체</b><span class="small">동정·독성·항영양성분</span></div><div class="principle"><b>② 영양자료</b><span class="small">출처·단위·생/조리 상태</span></div><div class="principle"><b>③ 거북 적용성</b><span class="small">정확한 종 근거와 일반 근거를 구분</span></div></div><div class="notice">야생에서 먹었다는 기록 ≠ 무제한 급여 권장. 사람용 영양자료 ≠ 육지거북 독성 한계치. 근거 부족 ≠ 안전.</div></section>
+<footer class="footer">거북밥 DB | Tortoise Food DB Korea<div class="nav"><a href="./profile/">프로필</a><a href="./meal/">오늘 식단</a><a href="./weekly/">7일 기록</a><a href="./settings/">설정·백업</a></div></footer>
 </main>
-
-<script>
-let PLANTS=[],SPECIES=[],EVIDENCE=[],RULES={},EVIDENCE_MAP=[],ASSESSMENTS=[],NUTRITION=[],COVERAGE={},EXPLANATIONS=[]; const $=id=>document.getElementById(id);
-function showTab(id){document.querySelectorAll('.tab').forEach(x=>x.classList.add('hidden'));$(id).classList.remove('hidden')}
-function norm(s){return (s||"").toLowerCase().normalize("NFKC").replace(/\s+/g,"").replace(/[^\p{L}\p{N}]/gu,"")}
-function lev(a,b){a=norm(a);b=norm(b);let m=a.length,n=b.length,d=Array.from({length:m+1},()=>Array(n+1).fill(0));for(let i=0;i<=m;i++)d[i][0]=i;for(let j=0;j<=n;j++)d[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[m][n]}
-function score(p,q){let nq=norm(q),best=99;for(const f of [p.ko,p.en,p.scientific,p.family,...(p.aliases||[])]){let nf=norm(f);if(!nq)continue;if(nf===nq)best=Math.min(best,0);else if(nf.includes(nq)||nq.includes(nf))best=Math.min(best,1);else best=Math.min(best,lev(nf,nq)+2)}return best}
-function currentPet(){let ps=getProfiles();return ps[0]||null}
-function renderPlant(p,scorev){
- let pet=currentPet(); let petTxt=pet?`현재 기본 개체: ${pet.name} · ${speciesName(pet.species)} · ${pet.stage}`:`내 거북이 등록되지 않았다. 종별 개인화 판정은 보류한다.`;
- let ident=p.identity_status==="needs_species_level_mapping"?`<div class="callout warn">⚠️ 한국 유통명과 해외 분류군의 종 수준 매핑을 추가 확인해야 한다.</div>`:`<div class="callout">식물명·학명 마스터 등록 완료. 적합성은 별도 근거 검토 전까지 미확정이다.</div>`;
- let maps=EVIDENCE_MAP.filter(m=>m.plant_id===p.id && (!pet || m.species_id===pet.species || pet.species==="ibera"&&m.species_id==="graeca"));
- let research=maps.length?`<div class="callout"><b>연결된 야생섭식/연구근거 ${maps.length}건</b><br>${maps.map(m=>`${m.observed_taxon}: ${m.interpretation}`).join("<br><br>")}</div>`:"";
- let sp=pet?SPECIES.find(s=>s.id===pet.species):null, group=sp?.assessment_group;
- let scopes=[sp?.id,group,"Testudo_genus","tortoise_general","plant_only"].filter(Boolean);
- let a=null; for(const scope of scopes){a=ASSESSMENTS.find(x=>x.plant_id===p.id && x.species_group===scope);if(a)break;}
- let verdict=a?`<div class="callout ${a.verdict.includes("limited")?"warn":""}"><b>${a.role} · 근거 ${a.confidence}</b><br>${a.why}<br><span class="small">제한: ${a.limits.join(" / ")}</span></div>`:`<div class="callout warn"><b>현재 판정: U · 종합검토 전</b><br>식물별 종합 근거가 연결되기 전에는 보수적으로 미검토 상태를 유지한다.</div>`;
- let ex=a?EXPLANATIONS.find(x=>x.plant_id===p.id && x.species_group===a.species_group):null;
- let explainBlock=ex?`<div class="callout"><b>판정 근거 보기</b><br><span class="small"><b>지지 근거</b><br>${ex.supporting_evidence.map(e=>"• "+e.label).join("<br>")||"—"}<br><br><b>제한 근거</b><br>${ex.limiting_evidence.map(e=>"• "+e.text).join("<br>")||"직접 제한 근거 미등록"}<br><br><b>적용 한계</b><br>${ex.limits.map(x=>"• "+x).join("<br>")}</span></div>`:"";
- let n=NUTRITION.find(x=>x.plant_id===p.id);
- let nutrition=n?`<div class="callout"><b>영양성분 · ${n.basis}</b><br>Ca ${n.values.calcium_mg??"—"} mg · P ${n.values.phosphorus_mg??"—"} mg · Ca:P ${n.derived.ca_p_ratio??"—"}<br>단백질 ${n.values.protein_g??"—"} g · 식이섬유 ${n.values.fiber_g??"—"} g · 수분 ${n.values.water_g??"—"} g<br><span class="small">자료상태: ${n.quality.status} · ${n.source_provider}<br>${n.quality.warning}</span></div>`:`<div class="small" style="margin-top:7px">영양성분: 공식 record 직접 매핑 대기</div>`;
- return `<div class="result"><div class="name">${p.ko}</div><div class="sci">${p.scientific}</div>
- <div class="small">${p.en} · ${p.family} · ${p.category} · 국내 접근성: ${p.market}</div>
- <div>${(p.aliases||[]).map(a=>`<span class="badge">${a}</span>`).join("")}</div>${ident}
- <div class="small" style="margin-top:7px">${petTxt}</div>
- ${research}${nutrition}${verdict}${explainBlock}<div class="small" style="margin-top:7px">※ '지원 근거 있음'은 장기 단독주식 허가가 아니다. 실제 식단은 종별 생태와 전체 구성으로 판단한다.</div></div>`
-}
-function doSearch(){
- let q=$("q").value.trim(); if(!q){$("results").innerHTML="";$("searchMeta").textContent=`등록 식물 ${PLANTS.length}종`;return}
- let arr=PLANTS.map(p=>[score(p,q),p]).sort((a,b)=>a[0]-b[0]).filter(x=>x[0]<=Math.max(5,Math.floor(norm(q).length*.7)+2)).slice(0,12);
- $("searchMeta").textContent=`후보 ${arr.length}건 · 정확하지 않은 철자는 유사 후보를 우선 제시`;
- $("results").innerHTML=arr.length?arr.map(x=>renderPlant(x[1],x[0])).join(""):`<div class="callout warn" style="margin-top:10px">등록된 후보가 없다. 미등록 식물을 임의로 안전하다고 판단하지 않는다.</div>`;
-}
-function uid(){return (crypto&&crypto.randomUUID)?crypto.randomUUID():"pet-"+Date.now()+"-"+Math.random().toString(36).slice(2)}
-function getProfiles(){
- let ps=JSON.parse(localStorage.getItem("tfd_profiles")||"[]"),changed=false;
- ps=ps.map(p=>{if(!p.id){p.id=uid();changed=true}return p});
- if(changed)setProfiles(ps); return ps
-}
-function setProfiles(x){localStorage.setItem("tfd_profiles",JSON.stringify(x))}
-function migrateMeals(){
- let ps=getProfiles(), rows=JSON.parse(localStorage.getItem("tfd_meals_v2")||"[]"),changed=false;
- rows=rows.map(m=>{if(!m.petId && Number.isInteger(m.petIndex) && ps[m.petIndex]){m.petId=ps[m.petIndex].id;delete m.petIndex;changed=true}return m});
- if(changed)setMeals(rows)
-}
-function speciesName(id){let s=SPECIES.find(x=>x.id===id);return s?s.ko:id}
-function renderProfiles(){
- let ps=getProfiles(); $("profileList").innerHTML=ps.length?ps.map((p,i)=>`<div class="itemline"><b>${p.name}</b> · ${speciesName(p.species)} · ${p.stage}${p.weight?` · ${p.weight}g`:""} <button style="width:auto;padding:5px 8px;float:right" onclick="removeProfile(${i})">삭제</button></div>`).join(""):`<div class="small">등록된 개체가 없다.</div>`;
- $("mealPet").innerHTML=ps.map(p=>`<option value="${p.id}">${p.name} · ${speciesName(p.species)}</option>`).join("");
-}
-function removeProfile(i){let ps=getProfiles();let removed=ps[i];ps.splice(i,1);setProfiles(ps);
- if(removed){setMeals(getMeals().filter(m=>m.petId!==removed.id))} renderProfiles();analyzeDiet()}
-function getMeals(){return JSON.parse(localStorage.getItem("tfd_meals_v2")||"[]")}
-function setMeals(x){localStorage.setItem("tfd_meals_v2",JSON.stringify(x))}
-function findPlant(q){return PLANTS.map(p=>[score(p,q),p]).sort((a,b)=>a[0]-b[0])[0]}
-function analyzeDiet(){
- let meals=getMeals(), ps=getProfiles(), petId=$("mealPet").value; let cutoff=new Date();cutoff.setDate(cutoff.getDate()-6);cutoff.setHours(0,0,0,0);
- let rows=meals.filter(m=>m.petId===petId && new Date(m.date+"T00:00:00")>=cutoff);
- let ids=[...new Set(rows.map(r=>r.plantId))], fams=[...new Set(rows.map(r=>PLANTS.find(p=>p.id===r.plantId)?.family).filter(Boolean))];
- let counts={};rows.forEach(r=>counts[r.plantId]=(counts[r.plantId]||0)+1);let repeats=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
- let days=[...new Set(rows.map(r=>r.date))].length;
- $("dietKpis").innerHTML=`<div class="kpi"><b>${rows.length}</b><span class="small">급여 기록</span></div><div class="kpi"><b>${ids.length}</b><span class="small">식물 종류</span></div><div class="kpi"><b>${fams.length}</b><span class="small">식물과 수</span></div><div class="kpi"><b>${days}</b><span class="small">기록 일수</span></div>`;
- let msg=[]; if(rows.length===0)msg.push("최근 7일 기록이 없다.");
- else{
-   if(ids.length<=2)msg.push("식물 종류가 매우 적게 기록되어 있다. 이것만으로 영양 부족을 진단할 수는 없지만, 편중 여부를 확인할 가치가 있다.");
-   if(fams.length===1)msg.push("기록된 식물이 한 식물과에 집중되어 있다. 종별 근거 검토 후 식물과 다양성도 함께 확인한다.");
-   if(repeats[0]&&repeats[0][1]>=Math.max(4,Math.ceil(rows.length*.6)))msg.push(`${PLANTS.find(p=>p.id===repeats[0][0])?.ko||repeats[0][0]} 기록 비중이 높다. 적합성 검토가 완료되기 전에는 반복 급여를 자동 권장하지 않는다.`);
-   if(!msg.length)msg.push("기록상 뚜렷한 단일 식물 편중 신호는 없다. 이것은 식단이 '완벽하다'는 의미가 아니며 종별 영양·독성 근거 검토가 별도로 필요하다.");
- }
- $("dietInsight").innerHTML=msg.map(x=>`<div class="callout warn">${x}</div>`).join("");
- $("dietList").innerHTML=rows.slice().sort((a,b)=>b.date.localeCompare(a.date)).map((r,i)=>{let p=PLANTS.find(x=>x.id===r.plantId);return `<div class="itemline">${r.date} · <b>${p?p.ko:r.plantId}</b>${r.pct?` · ${r.pct}%`:""}${r.note?` · ${r.note}`:""}</div>`}).join("");
-}
-function renderEvidence(){
- $("evidenceList").innerHTML=EVIDENCE.map(e=>`<div class="result"><b>${e.citation}</b><div class="small">${e.type} · ${e.scope} · ${e.taxon}</div>${e.doi?`<div class="small">DOI: ${e.doi}</div>`:""}<div class="callout">${e.note}</div></div>`).join("")
-}
-async function init(){
- [PLANTS,SPECIES,EVIDENCE,RULES,EVIDENCE_MAP,ASSESSMENTS,NUTRITION,COVERAGE,EXPLANATIONS]=await Promise.all(["plants","species","evidence","rules","evidence_map","assessments","nutrition_records","coverage","explanations"].map(x=>fetch(`data/${x}.json`).then(r=>r.json())));
- $("species").innerHTML=SPECIES.map(s=>`<option value="${s.id}">${s.ko}</option>`).join("");
- $("mealDate").value=new Date().toISOString().slice(0,10);
- migrateMeals();$("q").oninput=doSearch;doSearch();renderProfiles();renderEvidence();analyzeDiet();
-$("coverageBar").textContent=`식물 마스터 ${COVERAGE.plant_master_count}종 · 설명가능 판정 ${COVERAGE.plants_with_explainable_assessment}종 · 영양 record ${COVERAGE.plants_with_nutrition_record}종 · 공식 직접 영양매핑 ${COVERAGE.plants_with_official_direct_nutrition_record}종`;
-$("qPlants").textContent=COVERAGE.plant_master_count;$("qAssess").textContent=COVERAGE.plants_with_explainable_assessment;$("qNutrition").textContent=COVERAGE.plants_with_nutrition_record;$("qOfficial").textContent=COVERAGE.plants_with_official_direct_nutrition_record;
- $("addProfile").onclick=()=>{let name=$("petName").value.trim();if(!name)return alert("이름을 입력해 주세요.");let ps=getProfiles();ps.push({id:uid(),name,species:$("species").value,stage:$("stage").value,weight:$("weight").value});setProfiles(ps);$("petName").value="";renderProfiles();analyzeDiet()};
- $("mealPet").onchange=analyzeDiet;
- $("addMeal").onclick=()=>{let ps=getProfiles();if(!ps.length)return alert("먼저 거북을 등록해 주세요.");let ranked=findPlant($("mealPlant").value);if(!ranked||ranked[0]>6)return alert("식물 후보를 찾지 못했습니다. 이름을 확인해 주세요.");let p=ranked[1];let rows=getMeals();rows.push({date:$("mealDate").value,petId:$("mealPet").value,plantId:p.id,pct:$("mealPct").value,note:$("mealNote").value.trim()});setMeals(rows);$("mealPlant").value="";$("mealPct").value="";$("mealNote").value="";analyzeDiet()};
- $("exportData").onclick=()=>{let blob=new Blob([JSON.stringify({profiles:getProfiles(),meals:getMeals()},null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="tortoise-food-db-userdata.json";a.click()};
- $("importData").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let o=JSON.parse(await f.text());if(!Array.isArray(o.profiles)||!Array.isArray(o.meals))throw new Error("schema");
- let cleanP=o.profiles.filter(p=>p&&typeof p.name==="string"&&typeof p.species==="string").map(p=>({...p,id:p.id||uid()}));
- let ids=new Set(cleanP.map(p=>p.id));
- let cleanM=o.meals.filter(m=>m&&typeof m.date==="string"&&typeof m.plantId==="string"&&(m.petId?ids.has(m.petId):Number.isInteger(m.petIndex)));
- setProfiles(cleanP);setMeals(cleanM);migrateMeals();renderProfiles();analyzeDiet();alert(`가져오기 완료 · 개체 ${cleanP.length} · 급여기록 ${cleanM.length}`);}catch(err){alert("올바른 JSON 파일이 아닙니다.")}}
- if("serviceWorker" in navigator)navigator.serviceWorker.register("./sw.js").catch(()=>{});
-}
-init();
-</script><script src="./search-ko.js"></script>
+<script src="./profile-context.js"></script>
 <script src="./search-live.js"></script>
+<script>
+let plantMap=[];
+const input=document.getElementById('searchInput'), results=document.getElementById('searchResults');
+function norm(s){return (s||'').trim().replace(/\s+/g,'').toLowerCase()}
+function render(rows){if(!rows.length){results.innerHTML='<div class="empty">일치하는 먹이를 찾지 못했다. 이름을 다시 확인하거나 검색 후보를 선택해 달라.</div>';return}results.innerHTML=rows.slice(0,8).map(r=>'<a class="result" href="./plant/'+encodeURIComponent(r.plant_id)+'/"><strong>'+escapeHtml((r.retail_terms||r.aliases||[r.plant_id])[0])+'</strong><span class="sci">'+escapeHtml(r.master_scientific||'학명 확인 중')+'</span></a>').join('')}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function search(){const q=norm(input.value);if(!q){results.innerHTML='';return}let exact=plantMap.filter(r=>[...(r.aliases||[]),...(r.retail_terms||[]),r.master_scientific||''].some(x=>norm(x).includes(q)));if(!exact.length&&window.TortoiseKoSearch)exact=window.TortoiseKoSearch.candidates(input.value,plantMap).map(c=>plantMap.find(r=>r.plant_id===c.plant_id)).filter(Boolean);render([...new Map(exact.map(x=>[x.plant_id,x])).values()])}
+fetch('./data/korean_retail_name_map.json').then(r=>r.json()).then(d=>plantMap=d).catch(()=>results.innerHTML='<div class="empty">검색 데이터를 불러오지 못했다. 연결 상태를 확인해 달라.</div>');
+document.getElementById('searchBtn').addEventListener('click',search);input.addEventListener('keydown',e=>{if(e.key==='Enter')search()});input.addEventListener('change',search);
+try{const p=window.TFDProfiles&&window.TFDProfiles.active();if(p){document.getElementById('profileTitle').textContent=(p.name||'현재 거북')+' 프로필 사용 중';const bits=[p.species_name||p.species,p.stage,p.weight_g?`${p.weight_g}g`:null].filter(Boolean);document.getElementById('profileMeta').textContent=bits.join(' · ')||'등록된 프로필을 현재 검색·기록의 기준으로 사용한다.'}}catch(e){}
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
 </body></html>
