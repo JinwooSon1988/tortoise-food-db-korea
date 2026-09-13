@@ -33,15 +33,21 @@ jobs:
         run: python scripts/audit_plant_integrity.py
       - name: Audit verdict-card safety invariants
         run: python scripts/audit_verdict_cards.py
-      - name: Commit generated changes when needed
+      - name: Commit generated changes in small batches
         shell: bash
         run: |
-          if git diff --quiet -- plant/; then
+          mapfile -t files < <(git diff --name-only -- plant/)
+          if [ ${#files[@]} -eq 0 ]; then
             echo 'Plant pages already up to date.'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add plant/
-          git commit -m 'Build: regenerate evidence-aware plant pages'
-          git push origin HEAD:${{ github.ref_name }}
+          batch=0
+          for ((i=0; i<${#files[@]}; i+=8)); do
+            batch=$((batch+1))
+            chunk=("${files[@]:i:8}")
+            git add -- "${chunk[@]}"
+            git commit -m "Build: plant verdict cards batch ${batch} [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          done
