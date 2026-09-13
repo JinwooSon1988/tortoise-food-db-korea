@@ -1,103 +1,23 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>최근 7일 식단 기록 | 거북밥 DB Korea</title>
-<style>body{font-family:system-ui,sans-serif;max-width:800px;margin:auto;padding:20px;line-height:1.55}select,input,button{font-size:16px;padding:9px;margin:4px}.card{border:1px solid #ccc;border-radius:12px;padding:12px;margin:10px 0}.warn{padding:12px;background:#f5f5f5;border-left:4px solid #777}table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #ddd;padding:8px;text-align:left}button,a,select,input{touch-action:manipulation}button{min-height:44px}input,select{max-width:100%;box-sizing:border-box}@media(max-width:520px){body{padding:14px}.card{overflow-wrap:anywhere}}</style><link rel="manifest" href="../manifest.webmanifest"></head><body>
-<p><a href="../index.html">← 거북밥 DB</a> · <a href="../meal/">오늘 식단 분석</a></p><h1>최근 7일 식단 기록</h1><div id="profileContext" class="card"></div><script src="../profile-context.js"></script><script>
-(function(){try{const p=window.TFDProfiles.active();const el=document.getElementById('profileContext');if(!p){el.innerHTML='<a href="../profile/">내 거북을 등록하면 기록을 개체별로 연결할 수 있다.</a>';return;}el.innerHTML='<b>현재 거북:</b> '+p.name+' · '+p.species+' · '+p.stage+'<br><small>새 식단 기록은 이 개체 ID와 함께 저장된다.</small>';}catch(e){}})();
-</script>
-<div class="card"><label>기록 보기 <select id="scope"><option value="active">현재 거북만</option><option value="all">모든 거북</option><option value="unassigned">과거 미지정 기록</option></select></label></div><p class="warn">기록은 이 기기의 브라우저에만 저장한다. 종수·반복횟수는 관찰값이며 영양적 완전성 점수가 아니다.</p>
-<label>날짜 <input type="date" id="date"></label><label>먹이 <select id="food"><option value="chicory">치커리</option>
-<option value="romaine">로메인</option>
-<option value="lettuce">상추</option>
-<option value="radicchio">라디키오</option>
-<option value="endive">엔다이브</option>
-<option value="dandelion">민들레</option>
-<option value="sowthistle">방가지똥</option>
-<option value="kale">케일</option>
-<option value="bokchoy">청경채</option>
-<option value="mustard">갓</option>
-<option value="turnipgreens">순무잎</option>
-<option value="collard">콜라드그린</option>
-<option value="cabbage">양배추</option>
-<option value="napa">배추</option>
-<option value="radishgreens">무잎</option>
-<option value="broccolileaf">브로콜리잎</option>
-<option value="cauliflowerleaf">콜리플라워잎</option>
-<option value="arugula">루꼴라</option>
-<option value="plantain">질경이</option>
-<option value="mulberry">뽕잎</option>
-<option value="figleaf">무화과잎</option>
-<option value="mallow">아욱</option>
-<option value="hibiscusleaf">무궁화잎</option>
-<option value="hibiscusflower">무궁화꽃</option>
-<option value="spinach">시금치</option>
-<option value="beetgreens">비트잎</option>
-<option value="watercress">물냉이</option>
-<option value="parsley">파슬리</option>
-<option value="cilantro">고수</option>
-<option value="celeryleaf">셀러리잎</option>
-<option value="carrottop">당근잎</option>
-<option value="basil">바질</option>
-<option value="mint">민트</option>
-<option value="perilla">깻잎</option>
-<option value="clover">클로버</option>
-<option value="alfalfa">알팔파</option>
-<option value="chickweed">별꽃</option>
-<option value="sweetpotatoleaf">고구마잎</option>
-<option value="pumpkinleaf">호박잎</option>
-<option value="zucchini">애호박</option>
-<option value="cucumber">오이</option>
-<option value="bellpepper">파프리카</option>
-<option value="tomato">토마토</option>
-<option value="grapeleaf">포도잎</option>
-<option value="rose">장미꽃</option>
-<option value="nasturtium">한련화</option>
-<option value="pricklypear">천년초</option>
-<option value="timothy">티모시</option>
-<option value="orchard">오차드그라스</option>
-<option value="ryegrass">라이그라스</option>
-<option value="wheatgrass">밀싹</option>
-<option value="barleygrass">보리싹</option>
-<option value="oatgrass">귀리싹</option>
-<option value="cornleaf">옥수수잎</option>
-<option value="chrysanthemumleaf">쑥갓</option>
-<option value="ssuk">쑥</option>
-<option value="dolnamul">돌나물</option>
-<option value="minari">미나리</option>
-<option value="aehobakleaf">애호박잎</option>
-<option value="pea_shoot">완두순</option>
-<option value="sunflowerleaf">해바라기잎</option>
-<option value="violet">제비꽃</option>
-<option value="geranium">제라늄</option>
-<option value="pansy">팬지</option>
-<option value="marigold">메리골드</option>
-<option value="calendula">금잔화</option></select></label><button id="add">기록 추가</button><button id="wipe">7일 기록 삭제</button>
-<div id="summary" aria-live="polite"></div><div id="rows"></div>
-<script>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>최근 7일 식단 기록 | 거북밥 DB Korea</title><meta name="description" content="육지거북의 최근 7일 먹이 기록을 개체별로 저장하고 식단 다양성을 확인한다."><style>body{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;max-width:820px;margin:auto;padding:20px;line-height:1.55;color:#17231b;background:#f7f9f6}a{color:inherit}select,input,button{font-size:16px;padding:10px;margin:4px 0;border:1px solid #ccd6cd;border-radius:10px;background:#fff}button{min-height:44px;cursor:pointer}.card{background:#fff;border:1px solid #dce4dc;border-radius:14px;padding:14px;margin:12px 0}.warn{padding:12px;background:#fff7df;border:1px solid #ecd48f;border-radius:12px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:end}.row label{flex:1;min-width:180px}.row select,.row input{width:100%;box-sizing:border-box}table{width:100%;border-collapse:collapse;background:#fff}td,th{border-bottom:1px solid #e3e8e3;padding:9px;text-align:left;vertical-align:top}.danger{border-color:#d8a7a7}.small{font-size:13px;color:#647067}.nav{margin-bottom:8px}@media(max-width:620px){body{padding:14px}.row{display:block}table{font-size:14px}td,th{padding:7px 5px}.hide-mobile{display:none}}</style><link rel="manifest" href="../manifest.webmanifest"></head><body><p class="nav"><a href="../index.html">← 거북밥 DB</a> · <a href="../meal/">오늘 식단</a> · <a href="../profile/">내 거북</a></p><h1>최근 7일 식단 기록</h1><div id="profileContext" class="card"></div><div class="card"><label>기록 보기 <select id="scope"><option value="active">현재 거북만</option><option value="all">모든 거북</option><option value="unassigned">과거 미지정 기록</option></select></label></div><p class="warn">기록은 이 기기의 브라우저에만 저장한다. 식물 종수와 반복횟수는 관찰값이며 영양적 완전성 점수가 아니다.</p><div class="card"><div class="row"><label>날짜<input type="date" id="date"></label><label>먹이<select id="food"><option>먹이 목록 불러오는 중…</option></select></label></div><button id="add">기록 추가</button> <button id="wipe" class="danger">현재 보기의 7일 기록 삭제</button></div><div id="summary" aria-live="polite"></div><div id="rows"></div><script src="../profile-context.js"></script><script>
 const KEY='tfd_weekly_v1';
-const NAMES={"chicory": "치커리", "romaine": "로메인", "lettuce": "상추", "radicchio": "라디키오", "endive": "엔다이브", "dandelion": "민들레", "sowthistle": "방가지똥", "kale": "케일", "bokchoy": "청경채", "mustard": "갓", "turnipgreens": "순무잎", "collard": "콜라드그린", "cabbage": "양배추", "napa": "배추", "radishgreens": "무잎", "broccolileaf": "브로콜리잎", "cauliflowerleaf": "콜리플라워잎", "arugula": "루꼴라", "plantain": "질경이", "mulberry": "뽕잎", "figleaf": "무화과잎", "mallow": "아욱", "hibiscusleaf": "무궁화잎", "hibiscusflower": "무궁화꽃", "spinach": "시금치", "beetgreens": "비트잎", "watercress": "물냉이", "parsley": "파슬리", "cilantro": "고수", "celeryleaf": "셀러리잎", "carrottop": "당근잎", "basil": "바질", "mint": "민트", "perilla": "깻잎", "clover": "클로버", "alfalfa": "알팔파", "chickweed": "별꽃", "sweetpotatoleaf": "고구마잎", "pumpkinleaf": "호박잎", "zucchini": "애호박", "cucumber": "오이", "bellpepper": "파프리카", "tomato": "토마토", "grapeleaf": "포도잎", "rose": "장미꽃", "nasturtium": "한련화", "pricklypear": "천년초", "timothy": "티모시", "orchard": "오차드그라스", "ryegrass": "라이그라스", "wheatgrass": "밀싹", "barleygrass": "보리싹", "oatgrass": "귀리싹", "cornleaf": "옥수수잎", "chrysanthemumleaf": "쑥갓", "ssuk": "쑥", "dolnamul": "돌나물", "minari": "미나리", "aehobakleaf": "애호박잎", "pea_shoot": "완두순", "sunflowerleaf": "해바라기잎", "violet": "제비꽃", "geranium": "제라늄", "pansy": "팬지", "marigold": "메리골드", "calendula": "금잔화"};
-const PUBLIC={"chicory": "🟡 검증 진행 중", "romaine": "🟡 제한적 보조식 근거 · 검증 중", "lettuce": "U · 검증 미완료", "radicchio": "U · 검증 미완료", "endive": "🟡 일반 잎채소 근거 · 검증 중", "dandelion": "🟢 혼합급여 적합", "sowthistle": "🟡 검증 진행 중", "kale": "U · 검증 미완료", "bokchoy": "U · 검증 미완료", "mustard": "U · 검증 미완료", "turnipgreens": "U · 검증 미완료", "collard": "U · 검증 미완료", "cabbage": "U · 검증 미완료", "napa": "U · 검증 미완료", "radishgreens": "U · 검증 미완료", "broccolileaf": "U · 검증 미완료", "cauliflowerleaf": "U · 검증 미완료", "arugula": "U · 검증 미완료", "plantain": "🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중", "mulberry": "🟡 식물동정·근거 검증 중", "figleaf": "U · 검증 미완료", "mallow": "🟡 식물동정 우선 검증", "hibiscusleaf": "U · 검증 미완료", "hibiscusflower": "U · 검증 미완료", "spinach": "U · 검증 미완료", "beetgreens": "U · 검증 미완료", "watercress": "U · 검증 미완료", "parsley": "U · 검증 미완료", "cilantro": "U · 검증 미완료", "celeryleaf": "U · 검증 미완료", "carrottop": "U · 검증 미완료", "basil": "U · 검증 미완료", "mint": "U · 검증 미완료", "perilla": "U · 검증 미완료", "clover": "🟡 제한적 혼합급여 근거 · 검증 중", "alfalfa": "🟡 섭식·사육 근거 있음 · 검증 중", "chickweed": "U · 검증 미완료", "sweetpotatoleaf": "U · 검증 미완료", "pumpkinleaf": "U · 검증 미완료", "zucchini": "U · 검증 미완료", "cucumber": "U · 검증 미완료", "bellpepper": "U · 검증 미완료", "tomato": "U · 검증 미완료", "grapeleaf": "U · 검증 미완료", "rose": "U · 검증 미완료", "nasturtium": "U · 검증 미완료", "pricklypear": "U · 검증 미완료", "timothy": "U · 검증 미완료", "orchard": "U · 검증 미완료", "ryegrass": "U · 검증 미완료", "wheatgrass": "U · 검증 미완료", "barleygrass": "U · 검증 미완료", "oatgrass": "U · 검증 미완료", "cornleaf": "U · 검증 미완료", "chrysanthemumleaf": "U · 검증 미완료", "ssuk": "U · 검증 미완료", "dolnamul": "U · 검증 미완료", "minari": "U · 검증 미완료", "aehobakleaf": "U · 검증 미완료", "pea_shoot": "U · 검증 미완료", "sunflowerleaf": "U · 검증 미완료", "violet": "U · 검증 미완료", "geranium": "U · 검증 미완료", "pansy": "U · 검증 미완료", "marigold": "U · 검증 미완료", "calendula": "U · 검증 미완료"};
-function iso(d){return d.toISOString().slice(0,10)}; document.getElementById('date').value=iso(new Date());
-function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]').map(x=>{if(!x.event_id)x.event_id='e-'+x.date+'-'+x.food+'-'+Math.random().toString(36).slice(2);return x})}catch(e){return []}}
-function save(x){localStorage.setItem(KEY,JSON.stringify(x))}
-function cutoff(){let d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-6);return iso(d)}
-function render(){
- let all=load().filter(x=>x.date>=cutoff()).sort((a,b)=>b.date.localeCompare(a.date));
- const p=window.TFDProfiles.active(), scope=document.getElementById('scope').value;
- let shown=all;
- if(scope==='active') shown=p?all.filter(x=>x.profile_id===p.id):[];
- else if(scope==='unassigned') shown=all.filter(x=>!x.profile_id);
- const scoped=shown;
- const counts={};scoped.forEach(x=>counts[x.food]=(counts[x.food]||0)+1);
- const unique=Object.keys(counts); const repeated=Object.entries(counts).filter(([k,v])=>v>=3).sort((a,b)=>b[1]-a[1]);
- document.getElementById('summary').innerHTML='<div class="card"><b>7일 요약</b><br>기록 '+scoped.length+'회 · 서로 다른 식물 '+unique.length+'종'+
- (repeated.length?'<br><b>반복이 많은 식물:</b> '+repeated.map(([k,v])=>NAMES[k]+' '+v+'회').join(', '):'<br>3회 이상 반복된 식물 없음')+
- '<br><small>반복횟수는 위험 판정이 아니라 식단 편중을 살펴보기 위한 신호다.</small></div>';
- document.getElementById('rows').innerHTML=scoped.length?'<table><thead><tr><th>날짜</th><th>먹이</th><th>검증상태</th><th></th></tr></thead><tbody>'+
- scoped.map((x,i)=>'<tr><td>'+x.date+'</td><td><a href="../plant/'+x.food+'/">'+NAMES[x.food]+'</a></td><td>'+PUBLIC[x.food]+'</td><td><button data-e="'+x.event_id+'">삭제</button></td></tr>').join('')+'</tbody></table>':'<p>최근 7일 기록이 없다.</p>';
- [...document.querySelectorAll('[data-e]')].forEach(b=>b.onclick=()=>{let a=load().filter(x=>x.event_id!==b.dataset.e);save(a);render();});
-}
-document.getElementById('add').onclick=()=>{let a=load();const p=window.TFDProfiles.active();a.push({event_id:(crypto.randomUUID?crypto.randomUUID():'e-'+Date.now()+'-'+Math.random().toString(36).slice(2)),date:document.getElementById('date').value,food:document.getElementById('food').value,profile_id:p?p.id:null});save(a);render();};
-document.getElementById('wipe').onclick=()=>{if(confirm('최근 식단 기록을 삭제할까요?')){save([]);render();}};
+const PUBLIC={chicory:'🟡 검증 진행 중',romaine:'🟡 제한적 보조식 근거 · 검증 중',endive:'🟡 일반 잎채소 근거 · 검증 중',dandelion:'🟢 혼합급여 적합',sowthistle:'🟡 검증 진행 중',plantain:'🟡 혼합급여 지지근거 있음 · 공식 영양자료 검증 중',mulberry:'🟡 식물동정·근거 검증 중',mallow:'🟡 식물동정 우선 검증',clover:'🟡 제한적 혼합급여 근거 · 검증 중',alfalfa:'🟡 섭식·사육 근거 있음 · 검증 중'};
+let names={};
+function status(id){return PUBLIC[id]||'U · 검증 미완료'}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function localISO(d=new Date()){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`}
+function cutoff(){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-6);return localISO(d)}
+function makeId(){return crypto.randomUUID?crypto.randomUUID():'e-'+Date.now()+'-'+Math.random().toString(36).slice(2)}
+function load(){try{const a=JSON.parse(localStorage.getItem(KEY)||'[]');let changed=false;for(const x of a){if(!x.event_id){x.event_id=makeId();changed=true}}if(changed)localStorage.setItem(KEY,JSON.stringify(a));return Array.isArray(a)?a:[]}catch(e){return []}}
+function save(a){localStorage.setItem(KEY,JSON.stringify(a))}
+function activeProfile(){return window.TFDProfiles?.active?.()||null}
+function inScope(x,scope,p){if(scope==='all')return true;if(scope==='unassigned')return !x.profile_id;return !!p&&x.profile_id===p.id}
+function updateProfile(){const p=activeProfile(),el=document.getElementById('profileContext');if(!p){el.innerHTML='<a href="../profile/">내 거북을 등록하면 기록을 개체별로 연결할 수 있다.</a>';return}const bits=[p.species_name||p.species,p.stage,p.weight_g?`${p.weight_g}g`:null].filter(Boolean);el.innerHTML='<b>현재 거북:</b> '+esc(p.name||'현재 거북')+(bits.length?' · '+bits.map(esc).join(' · '):'')+'<br><span class="small">새 기록은 이 개체 ID와 함께 저장된다.</span>'}
+function render(){updateProfile();const p=activeProfile(),scope=document.getElementById('scope').value,cut=cutoff();const recent=load().filter(x=>x.date>=cut).sort((a,b)=>b.date.localeCompare(a.date));const shown=recent.filter(x=>inScope(x,scope,p));const counts={};for(const x of shown)counts[x.food]=(counts[x.food]||0)+1;const unique=Object.keys(counts),repeated=Object.entries(counts).filter(([,v])=>v>=3).sort((a,b)=>b[1]-a[1]);document.getElementById('summary').innerHTML='<div class="card"><b>7일 요약</b><br>기록 '+shown.length+'회 · 서로 다른 식물 '+unique.length+'종'+(repeated.length?'<br><b>반복이 많은 식물:</b> '+repeated.map(([k,v])=>esc(names[k]||k)+' '+v+'회').join(', '):'<br>3회 이상 반복된 식물 없음')+'<br><span class="small">반복횟수는 위험 판정이 아니라 식단 편중을 살펴보기 위한 신호다.</span></div>';document.getElementById('rows').innerHTML=shown.length?'<table><thead><tr><th>날짜</th><th>먹이</th><th class="hide-mobile">검증상태</th><th></th></tr></thead><tbody>'+shown.map(x=>'<tr><td>'+esc(x.date)+'</td><td><a href="../plant/'+encodeURIComponent(x.food)+'/">'+esc(names[x.food]||x.food)+'</a></td><td class="hide-mobile">'+esc(status(x.food))+'</td><td><button data-e="'+esc(x.event_id)+'">삭제</button></td></tr>').join('')+'</tbody></table>':'<p>현재 조건의 최근 7일 기록이 없다.</p>';document.querySelectorAll('[data-e]').forEach(b=>b.onclick=()=>{save(load().filter(x=>x.event_id!==b.dataset.e));render()})}
+async function initFoods(){try{const map=await fetch('../data/korean_retail_name_map.json').then(r=>{if(!r.ok)throw new Error();return r.json()});const rows=map.filter(x=>x.plant_id);for(const r of rows)names[r.plant_id]=(r.retail_terms||r.aliases||[r.plant_id])[0];document.getElementById('food').innerHTML=rows.map(r=>'<option value="'+esc(r.plant_id)+'">'+esc(names[r.plant_id])+'</option>').join('')}catch(e){document.getElementById('food').innerHTML='<option value="">먹이 목록을 불러오지 못함</option>'}render()}
+document.getElementById('date').value=localISO();
+document.getElementById('add').onclick=()=>{const date=document.getElementById('date').value,food=document.getElementById('food').value;if(!date||!food)return;const a=load(),p=activeProfile();a.push({event_id:makeId(),date,food,profile_id:p?p.id:null});save(a);render()};
+document.getElementById('wipe').onclick=()=>{const scope=document.getElementById('scope').value,p=activeProfile(),cut=cutoff();let label=scope==='all'?'모든 거북의':scope==='unassigned'?'과거 미지정':'현재 거북의';if(scope==='active'&&!p){alert('현재 선택된 거북이 없다.');return}if(!confirm(label+' 최근 7일 기록만 삭제할까요?'))return;save(load().filter(x=>!(x.date>=cut&&inScope(x,scope,p))));render()};
 document.getElementById('scope').onchange=render;
-render();
-</script><script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js'));</script></body></html>
+initFoods();
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));
+</script></body></html>
