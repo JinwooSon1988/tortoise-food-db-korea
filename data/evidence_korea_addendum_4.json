@@ -1,0 +1,29 @@
+[
+  {
+    "id": "tortoise_table_cat_grass",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Avena sativa; Triticum spp.; Dactylis glomerata; Hordeum spp.; Lolium perenne",
+    "citation": "The Tortoise Table. Cat Grass (Oat Grass, Wheat Grass, Orchard Grass, Barley Grass, Rye Grass).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Grass&x=0&y=0",
+    "note": "Wheat grass, orchard grass, barley grass 등을 Safe to Feed로 분류한다. 일반 육지거북 식물 DB 근거이며 Mediterranean Testudo 종특이 직접시험은 아니다."
+  },
+  {
+    "id": "tortoise_table_timothy",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Phleum pratense",
+    "citation": "The Tortoise Table. Timothy Grass.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=726",
+    "note": "Timothy grass를 Safe to Feed로 분류하며 방목 중 섭식 가능하고 건초도 grazing tortoise에 사용할 수 있다고 설명한다. 마른 종수는 눈·입 상처 가능성 때문에 제거를 권한다."
+  },
+  {
+    "id": "tortoise_trust_mediterranean_grass_context",
+    "type": "specialist_husbandry",
+    "scope": "Mediterranean_Testudo",
+    "taxon": "Mediterranean Testudo including Testudo graeca / T. ibera",
+    "citation": "Tortoise Trust. Feeding Mediterranean Tortoises; Recommended Foods for Herbivorous Tortoises.",
+    "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+    "note": "야생 Mediterranean tortoise 식단이 herbaceous and succulent vegetation에 기반하며 grasses도 포함된다고 설명한다. 다만 grass를 설카타처럼 식단의 절대적 중심으로 해석하지 않고 다양한 weeds·flowers·leaf vegetation과 함께 제공하도록 한다."
+  }
+]

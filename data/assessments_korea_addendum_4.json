@@ -1,0 +1,46 @@
+[
+  {
+    "plant_id": "orchard",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "오차드그라스 혼합식 구성요소",
+    "confidence": "C+",
+    "evidence_ids": ["tortoise_table_cat_grass","tortoise_trust_mediterranean_grass_context"],
+    "limits": ["Dactylis glomerata 자체의 이베라 직접 급여시험은 아님","grass만으로 식단을 구성하지 않음","다양한 광엽 야생초·꽃·잎채소와 혼합","설카타처럼 grass 중심식으로 확대 해석하지 않음"],
+    "why": "전문 육지거북 식물 DB가 orchard grass를 Safe to Feed로 분류하고 Tortoise Trust가 Mediterranean Testudo 자연식에 grasses가 포함된다고 설명하므로 혼합식 구성요소로 제한한다.",
+    "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 식물 DB 근거. 이베라 종특이 급여시험은 아님."
+  },
+  {
+    "plant_id": "timothy",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "티모시 생초·건초 제한적 혼합",
+    "confidence": "C+",
+    "evidence_ids": ["tortoise_table_timothy","tortoise_trust_mediterranean_grass_context"],
+    "limits": ["Phleum pratense 자체의 이베라 직접 급여시험은 아님","마른 종수는 눈·입 손상 가능성이 있어 제거","건초 단독식으로 사용하지 않음","다양한 광엽 먹이와 함께 제공"],
+    "why": "Timothy grass는 전문 식물 DB에서 Safe to Feed이며 Mediterranean tortoise 식단에 grasses가 포함된다는 사육 맥락과 일치한다.",
+    "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 근거."
+  },
+  {
+    "plant_id": "wheatgrass",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "밀싹 혼합식 구성요소",
+    "confidence": "C+",
+    "evidence_ids": ["tortoise_table_cat_grass","tortoise_trust_mediterranean_grass_context"],
+    "limits": ["Triticum aestivum 자체의 이베라 직접 급여시험은 아님","싹·잎을 대상으로 하며 곡립 급여 판정으로 확대하지 않음","grass 단일식 금지","광엽 야생초·꽃과 혼합"],
+    "why": "Wheat grass는 전문 육지거북 식물 DB에서 Safe to Feed로 분류되며 Mediterranean tortoise의 고섬유 초본성 식단 맥락에 부합한다.",
+    "applicability_note": "Mediterranean Testudo 사육 맥락 + Triticum grass 일반 육지거북 근거."
+  },
+  {
+    "plant_id": "barleygrass",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "보리싹 혼합식 구성요소",
+    "confidence": "C+",
+    "evidence_ids": ["tortoise_table_cat_grass","tortoise_trust_mediterranean_grass_context"],
+    "limits": ["Hordeum vulgare 자체의 이베라 직접 급여시험은 아님","싹·잎을 대상으로 하며 보리 곡립 급여 판정이 아님","grass 단일식 금지","광엽 야생초·꽃과 혼합"],
+    "why": "Barley grass는 전문 육지거북 식물 DB에서 Safe to Feed로 분류되며 Mediterranean tortoise의 초본성 고섬유 식단에 제한적으로 포함할 수 있다.",
+    "applicability_note": "Mediterranean Testudo 사육 맥락 + Hordeum grass 일반 육지거북 근거."
+  }
+]
