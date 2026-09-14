@@ -1,11 +1,20 @@
 ﻿plant_id,species_group,verdict,role,confidence,evidence_ids,status,last_reviewed
-dandelion,Mediterranean_Testudo,supported_mixed_diet,혼합 야생초 구성 후보,C+,bcg_mediterranean_care|tt_mediterranean_food|tt_plantfoods,reviewed_guidance,2026-09-12
-plantain,Mediterranean_Testudo,supported_mixed_diet,혼합 야생초 구성 후보,C+,bcg_mediterranean_care|tt_plantfoods|hermanni_foraging_italy_2015,reviewed_guidance,2026-09-12
-sowthistle,Mediterranean_Testudo,supported_mixed_diet,혼합 야생초 구성 후보,C+,bcg_mediterranean_care|tt_mediterranean_food|tt_plantfoods,reviewed_guidance,2026-09-12
-clover,Mediterranean_Testudo,limited_mixed_diet,혼합식 일부,C,bcg_mediterranean_care|tt_mediterranean_food|hermanni_foraging_italy_2015,reviewed_guidance,2026-09-12
-romaine,Mediterranean_Testudo,limited_supplement,마트채소 보조,C,tt_mediterranean_food|merck_tortoise_nutrition_2025,reviewed_guidance,2026-09-12
-endive,Mediterranean_Testudo,supplement_general_evidence,마트채소 보조 후보,C,merck_tortoise_nutrition_2025,reviewed_guidance,2026-09-12
-kale,Mediterranean_Testudo,supplement_general_evidence,마트채소 보조 후보,C,merck_tortoise_nutrition_2025,reviewed_guidance,2026-09-12
-dandelion,African_grazer,supported_mixed_diet,grass/hay 중심 식단의 보조 야생초,C,bcg_sulcata_care,reviewed_guidance,2026-09-12
-plantain,African_grazer,supported_mixed_diet,grass/hay 중심 식단의 보조 야생초,C,bcg_sulcata_care,reviewed_guidance,2026-09-12
-clover,African_grazer,limited_mixed_diet,grass/hay 중심 식단의 일부,C,bcg_sulcata_care,reviewed_guidance,2026-09-12
+dandelion,Mediterranean_Testudo,supported_mixed_diet,혼합 야생초 구성 후보,B+,iftime_ibera_dobrogea_2012|mitrevichin_ibera_bulgaria_2023|bcg_mediterranean_care|tt_mediterranean_food|tt_plantfoods,reviewed_guidance,2026-09-14
+plantain,Mediterranean_Testudo,supported_mixed_diet,혼합 야생초 구성 후보,C+,bcg_mediterranean_care|tt_plantfoods|hermanni_foraging_italy_2015,reviewed_guidance,2026-09-14
+sowthistle,Mediterranean_Testudo,supported_mixed_diet,혼합 야생초 구성 후보,B,iftime_ibera_dobrogea_2012|ibera_eastern_account_2023|bcg_mediterranean_care|tt_mediterranean_food|tt_plantfoods,reviewed_guidance,2026-09-14
+clover,Mediterranean_Testudo,limited_mixed_diet,혼합식 일부,B,iftime_ibera_dobrogea_2012|ibera_eastern_account_2023|bcg_mediterranean_care|tt_mediterranean_food|hermanni_foraging_italy_2015,reviewed_guidance,2026-09-14
+alfalfa,Mediterranean_Testudo,limited_mixed_diet,혼합 야생초·재배초 일부,B-,iftime_ibera_dobrogea_2012|mitrevichin_ibera_bulgaria_2023|ibera_eastern_account_2023|tgraeca_alfalfa_context_2019|rda_alfalfa_identity,reviewed_guidance,2026-09-14
+chicory,Mediterranean_Testudo,limited_mixed_diet,잎·꽃 혼합식 후보,B-,mitrevichin_ibera_bulgaria_2023|tortoise_table_chicory|chicory_foodchem_2021,reviewed_guidance,2026-09-14
+romaine,Mediterranean_Testudo,limited_supplement,마트채소 보조,C+,tt_mediterranean_food|tt_winter_feeding|bcg_chelonian_nutrition|merck_tortoise_nutrition_2025,reviewed_guidance,2026-09-14
+endive,Mediterranean_Testudo,limited_supplement,마트채소 보조,C+,tt_winter_feeding|bcg_chelonian_nutrition|merck_tortoise_nutrition_2025|merck_reptile_plant_composition,reviewed_guidance,2026-09-14
+radicchio,Mediterranean_Testudo,limited_supplement,마트채소 보조·순환,C,tt_winter_feeding,reviewed_guidance,2026-09-14
+kale,Mediterranean_Testudo,limited_supplement,마트채소 보조·소량 순환,C,tt_winter_feeding|bcg_chelonian_nutrition|merck_tortoise_nutrition_2025|merck_reptile_plant_composition,reviewed_guidance,2026-09-14
+dolnamul,Tortoise_general,limited_supplement,다육성 혼합식 보조 후보,C-,mitrevichin_ibera_bulgaria_2023|tortoise_table_sedum|korean_dolnamul_identity,reviewed_with_species_mismatch,2026-09-14
+mulberry,Tortoise_general,supplement_general_evidence,나무잎 혼합식 후보,D+,tortoise_table_mulberry|mulberry_feed_review_2019|mulberry_feed_jfca_2025,reviewed_general_only,2026-09-14
+bokchoy,Herbivorous_reptile_general,general_reptile_supplement,마트채소 보조 후보,D+,merck_reptile_home_plant_eaters,reviewed_general_only,2026-09-14
+collard,Herbivorous_reptile_general,general_reptile_supplement,마트채소 보조 후보,D+,merck_reptile_home_plant_eaters,reviewed_general_only,2026-09-14
+cabbage,Herbivorous_reptile_general,general_reptile_supplement,마트채소 보조 후보,D+,merck_reptile_home_plant_eaters,reviewed_general_only,2026-09-14
+mallow,Mediterranean_Testudo,,국내 아욱 identity 검증 대기,,slimani2006|tt_plantfoods,blocked_identity,2026-09-14
+dandelion,Sulcata,supported_mixed_diet,grass/hay 중심 식단의 보조 야생초,C,bcg_sulcata_care,reviewed_guidance,2026-09-14
+plantain,Sulcata,supported_mixed_diet,grass/hay 중심 식단의 보조 야생초,C,bcg_sulcata_care,reviewed_guidance,2026-09-14
+clover,Sulcata,limited_mixed_diet,grass/hay 중심 식단의 일부,C,bcg_sulcata_care,reviewed_guidance,2026-09-14
