@@ -1,7 +1,9 @@
 from pathlib import Path
+import re
 R=Path(__file__).resolve().parents[1]
 h=(R/'today/index.html').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
+m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
 checks={
  'drawer_present':'판정 근거 펼쳐보기' in h and 'details.evidence' in h,
  'uses_assessment_why':"a.why||'공개 설명 없음'" in h,
@@ -12,7 +14,7 @@ checks={
  'combo_drawer':'evidenceDrawer(r.a)' in h,
  'candidate_drawer':'evidenceDrawer(r.a)' in h,
  'full_detail_link':'전체 상세·출처 보기' in h,
- 'cache_bumped':'tfd-v51-stable-7' in sw,
+ 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=7,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]
