@@ -1,0 +1,13 @@
+[
+  {
+    "plant_id": "basil",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "바질 소량 순환 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_basil"],
+    "limits": ["Feed in Moderation 범위","향신허브를 단독 주식·고비율 반복 급여하지 않음","잎·꽃 판정을 종자나 추출물에 확대하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 Ocimum basilicum을 moderation으로 허용하므로 다양한 식단의 제한적 보조로만 둔다.",
+    "applicability_note": "Ocimum basilicum 일반 육지거북 근거. 이베라 직접 판정이 아님."
+  }
+]
