@@ -1,0 +1,35 @@
+[
+  {
+    "plant_id": "cucumber",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "오이 제한적 수분 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_cucumber"],
+    "limits": ["Feed in Moderation 범위","고섬유 야생초·잎채소 주식을 대체하지 않음","수분 공급을 이유로 고비율 반복 급여하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 오이를 moderation으로 허용하지만 지중해 Testudo의 기본 고섬유 먹이로 볼 근거는 없으므로 제한적 보조로만 둔다.",
+    "applicability_note": "Cucumis sativus 일반 육지거북 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "zucchini",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "애호박 극소량·드문 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_squash_courgette"],
+    "limits": ["한국 master의 Cucurbita moschata는 Squash 근거 범위로 해석","Feed Sparingly 수준으로 제한","과실을 주식·고비율 반복식으로 사용하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB의 Squash 자료가 C. moschata를 포함하며 sparingly로 제한하므로 애호박 과실도 드문 보조 수준으로 둔다.",
+    "applicability_note": "Cucurbita moschata가 포함된 genus/species-list 일반 육지거북 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "bellpepper",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_sweet_pepper"],
+    "limits": ["전문 육지거북 식물 DB의 Do not Feed를 보수적으로 적용","Capsicum annuum 개별 지중해 Testudo 급여시험으로 해석하지 않음","소량 우발 섭취와 계획 급여를 구분","Today 안전 후보에서 제외"],
+    "why": "전문 육지거북 식물 DB가 Sweet/Bell Pepper를 Do not Feed로 분류하므로 계획 급여 후보에서 제외한다.",
+    "applicability_note": "Capsicum spp. 일반 육지거북 비권장 근거. 이베라 직접 독성시험을 의미하지 않는다."
+  }
+]
