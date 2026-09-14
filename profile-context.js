@@ -16,6 +16,13 @@
   normalize
  };
  if(/\/today\/?(?:index\.html)?$/.test(location.pathname)){
+  const h1=document.querySelector('h1');
+  if(h1&&!document.getElementById('todayQuickLink')){
+   const box=document.createElement('div');box.id='todayQuickLink';
+   box.style.cssText='margin:10px 0 14px;padding:12px 14px;border:2px solid #bfd8c6;border-radius:14px;background:#fbfefb';
+   box.innerHTML='<b>빠르게 답만 보고 싶다면</b><br><a href="quick.html" style="display:inline-block;margin-top:7px;padding:10px 13px;border-radius:11px;background:#2f6b49;color:#fff;text-decoration:none;font-weight:800">3초 요약 보기 →</a><div style="margin-top:6px;font-size:12px;color:#657067">기존 공개 판정과 최근 7일 기록으로 상위 후보 3개만 압축한다.</div>';
+   h1.insertAdjacentElement('afterend',box);
+  }
   const s=document.createElement('script');s.src='../source-preview.js';s.defer=true;
   s.onload=()=>{const q=document.createElement('script');q.src='../fresh-primary-mode.js';q.defer=true;q.onload=()=>{const x=document.createElement('script');x.src='../fresh-primary-combo-explain.js';x.defer=true;x.onload=()=>{const c=document.createElement('script');c.src='../candidate-applicability-summary.js';c.defer=true;c.onload=()=>{const m=document.createElement('script');m.src='../candidate-mobile-evidence-summary.js';m.defer=true;m.onload=()=>{const v=document.createElement('script');v.src='../candidate-evidence-compare.js';v.defer=true;v.onload=()=>{const l=document.createElement('script');l.src='../candidate-evidence-lineage.js';l.defer=true;l.onload=()=>{const f=document.createElement('script');f.src='../combo-applicability-context.js';f.defer=true;document.head.appendChild(f)};document.head.appendChild(l)};document.head.appendChild(v)};document.head.appendChild(m)};document.head.appendChild(c)};document.head.appendChild(x)};document.head.appendChild(q)};
   document.head.appendChild(s);
