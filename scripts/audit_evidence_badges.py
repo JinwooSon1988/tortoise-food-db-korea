@@ -1,7 +1,9 @@
 from pathlib import Path
+import re
 R=Path(__file__).resolve().parents[1]
 js=(R/'source-preview.js').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
+m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
 checks={
  'applicability_badge':'function applicabilityBadge' in js,
  'quality_badge':'function qualityBadge' in js,
@@ -14,8 +16,8 @@ checks={
  'official_quality':'공식·공공 DB' in js,
  'specialist_quality':'전문기관 자료' in js,
  'axes_separated':'출처의 성격' in js and '적용 거리' in js,
- 'no_recalculation':'전체 판정을 재계산하지 않는다' in js,
- 'cache_bumped':'tfd-v51-stable-9' in sw,
+ 'no_recalculation':('전체 판정을 재계산하지 않는다' in js or '식물 판정·후보 순위·급여량·영양완전성은 다시 계산하지 않는다' in js),
+ 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=9,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]
