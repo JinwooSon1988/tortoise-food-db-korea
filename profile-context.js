@@ -17,7 +17,7 @@
  };
  if(/\/today\/?(?:index\.html)?$/.test(location.pathname)){
   const s=document.createElement('script');s.src='../source-preview.js';s.defer=true;
-  s.onload=()=>{const q=document.createElement('script');q.src='../fresh-primary-mode.js';q.defer=true;q.onload=()=>{const x=document.createElement('script');x.src='../fresh-primary-combo-explain.js';x.defer=true;document.head.appendChild(x)};document.head.appendChild(q)};
+  s.onload=()=>{const q=document.createElement('script');q.src='../fresh-primary-mode.js';q.defer=true;q.onload=()=>{const x=document.createElement('script');x.src='../fresh-primary-combo-explain.js';x.defer=true;x.onload=()=>{const c=document.createElement('script');c.src='../candidate-applicability-summary.js';c.defer=true;document.head.appendChild(c)};document.head.appendChild(x)};document.head.appendChild(q)};
   document.head.appendChild(s);
  }
 })();
