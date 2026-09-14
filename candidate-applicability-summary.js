@@ -24,6 +24,12 @@
   if(!dbGeneric&&!repGeneric&&sameGenus)return {level:'different_species',label:'같은 속·다른 종 직접근거',text:'논문 기록 '+reported+'와 현재 DB 식물 '+db+'는 같은 속이지만 다른 종이다.'};
   return {level:'mismatch',label:'분류군 직접일치 아님',text:'논문 기록 분류군과 현재 DB 식물의 종 수준 직접 일치를 확인하지 못했다.'};
  }
+ function frequencyContextFor(id){
+  const src=linkedPrimarySource(id);if(!src)return null;
+  const f=frequencyFor(id,src.id);
+  if(!f)return {structured:false,label:'현재 구조화된 식물별 빈도값 없음',taxon:'',note:'직접 섭식근거가 있어도 식물별 정량 빈도가 공개 자료에 없거나 아직 구조화되지 않은 경우 숫자를 만들지 않는다.'};
+  return {structured:true,label:f.label_ko||f.frequency_class||'빈도 등급 등록',taxon:f.taxon_reported||'',note:f.interpretation_note||'야생 관찰 빈도이며 사육 급여비율로 사용하지 않는다.'};
+ }
  function isIberaProfile(){return window.TFDProfiles?.active?.()?.species==='ibera'}
  function allows(label){
   if(state.mode==='all'||!isIberaProfile())return true;
@@ -53,9 +59,10 @@
  function enhance(label){
   const id=plantId(label);if(!id||label.dataset.candidateApplicability==='1')return;
   const a=applicabilityFor(id);if(!a)return;
-  const host=label.querySelector('div');if(!host)return;
+  const f=frequencyContextFor(id),host=label.querySelector('div');if(!host)return;
   const box=document.createElement('div');box.className='candidate-applicability '+a.level;
-  box.innerHTML='<span class="candidate-applicability-label">식물 적용성</span><b>'+esc(a.label)+'</b><div class="small">'+esc(a.text)+'</div><div class="small">이 표시는 근거의 식물 분류군 적용 범위만 설명하며 급여량·배합률·영양완전성·건강효과를 판단하지 않는다.</div>';
+  const freq=f?'<div class="candidate-frequency '+(f.structured?'structured':'missing')+'"><span class="candidate-frequency-label">야생 관찰 빈도 · 급여비율 아님</span><b>'+esc(f.label)+'</b>'+(f.taxon?'<div class="small">논문 기록 분류군: '+esc(f.taxon)+'</div>':'')+'<div class="small">'+esc(f.note)+'</div></div>':'';
+  box.innerHTML='<div class="candidate-applicability-head"><span class="candidate-applicability-label">식물 적용성</span><b>'+esc(a.label)+'</b></div><div class="small">'+esc(a.text)+'</div>'+freq+'<div class="small candidate-context-limit">적용성과 야생 관찰 빈도는 근거 맥락을 설명할 뿐이며 급여량·배합률·영양완전성·건강효과를 판단하지 않는다.</div>';
   const details=label.querySelector('details.evidence');host.insertBefore(box,details||null);label.dataset.candidateApplicability='1';
  }
  function addControls(){
@@ -67,7 +74,7 @@
   ['directCandidateOnly','freshPrimaryOnly'].forEach(id=>{const el=document.getElementById(id);if(el&&!el.dataset.applicabilityBound){el.dataset.applicabilityBound='1';el.addEventListener('change',()=>setTimeout(applyFilter,0))}});
  }
  function enhanceAll(){if(!state.plants.length||!state.assessments.length||!state.evidence.length)return;document.querySelectorAll('#candidates label.candidate').forEach(enhance);addControls();applyFilter()}
- function addStyle(){if(document.getElementById('candidate-applicability-style'))return;const s=document.createElement('style');s.id='candidate-applicability-style';s.textContent='.candidate-applicability{margin:7px 0;padding:7px 8px;border:1px solid #dfe9e1;border-radius:9px;background:#fbfdfb}.candidate-applicability-label{display:inline-block;margin-right:6px;padding:2px 6px;border-radius:999px;background:#eef5ef;font-size:11px;font-weight:700}.candidate-applicability b{font-size:12px}.candidate-applicability.genus,.candidate-applicability.entry_broader,.candidate-applicability.different_species,.candidate-applicability.mismatch,.candidate-applicability.unknown{background:#fffaf2;border-color:#ead8b7}.candidate-applicability.genus .candidate-applicability-label,.candidate-applicability.entry_broader .candidate-applicability-label,.candidate-applicability.different_species .candidate-applicability-label,.candidate-applicability.mismatch .candidate-applicability-label,.candidate-applicability.unknown .candidate-applicability-label{background:#fff0d6}.applicability-filter-controls{margin-top:12px;padding-top:10px;border-top:1px dashed #d7e0d8}.applicability-filter-controls button:disabled{opacity:.45}';document.head.appendChild(s)}
+ function addStyle(){if(document.getElementById('candidate-applicability-style'))return;const s=document.createElement('style');s.id='candidate-applicability-style';s.textContent='.candidate-applicability{margin:7px 0;padding:7px 8px;border:1px solid #dfe9e1;border-radius:9px;background:#fbfdfb}.candidate-applicability-head{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.candidate-applicability-label,.candidate-frequency-label{display:inline-block;margin-right:6px;padding:2px 6px;border-radius:999px;background:#eef5ef;font-size:11px;font-weight:700}.candidate-applicability b,.candidate-frequency b{font-size:12px}.candidate-frequency{margin-top:7px;padding-top:7px;border-top:1px dashed #dfe9e1}.candidate-frequency.missing{color:#6b746d}.candidate-frequency.missing .candidate-frequency-label{background:#f1f1ee}.candidate-context-limit{margin-top:7px;padding-top:7px;border-top:1px dashed #e4e9e4}.candidate-applicability.genus,.candidate-applicability.entry_broader,.candidate-applicability.different_species,.candidate-applicability.mismatch,.candidate-applicability.unknown{background:#fffaf2;border-color:#ead8b7}.candidate-applicability.genus .candidate-applicability-label,.candidate-applicability.entry_broader .candidate-applicability-label,.candidate-applicability.different_species .candidate-applicability-label,.candidate-applicability.mismatch .candidate-applicability-label,.candidate-applicability.unknown .candidate-applicability-label{background:#fff0d6}.applicability-filter-controls{margin-top:12px;padding-top:10px;border-top:1px dashed #d7e0d8}.applicability-filter-controls button:disabled{opacity:.45}';document.head.appendChild(s)}
  addStyle();
  Promise.all([fetch('../data/plants.json').then(r=>r.json()),fetch('../data/assessments.json').then(r=>r.json()),fetch('../data/evidence.json').then(r=>r.json()),fetch('../data/wild_observation_frequency.json').then(r=>r.json())]).then(([p,a,e,f])=>{state.plants=Array.isArray(p)?p:[];state.assessments=Array.isArray(a)?a:[];state.evidence=Array.isArray(e)?e:[];state.frequency=Array.isArray(f)?f:[];enhanceAll()}).catch(()=>{});
  new MutationObserver(()=>setTimeout(enhanceAll,0)).observe(document.body,{childList:true,subtree:true});
