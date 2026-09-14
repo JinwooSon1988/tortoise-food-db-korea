@@ -1,7 +1,9 @@
 from pathlib import Path
+import re
 R=Path(__file__).resolve().parents[1]
 h=(R/'today/index.html').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
+m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
 checks={
  'why_heading':'왜 이 조합인가' in h,
  'explains_evidence':'LABEL[r.a.verdict]' in h,
@@ -12,7 +14,7 @@ checks={
  'keeps_allowed_filter':'const ALLOWED=new Set' in h,
  'keeps_pantry':'tfd_pantry_v1' in h,
  'keeps_meal_handoff':'../meal/?add=' in h,
- 'cache_bumped':'tfd-v51-stable-6' in sw,
+ 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=6,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]
