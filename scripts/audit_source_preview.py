@@ -16,7 +16,7 @@ checks={
  'doi_url_support':'https://doi.org/' in js,
  'pmid_url_support':'pubmed.ncbi.nlm.nih.gov' in js,
  'does_not_infer_missing':('연결된 공개 출처 메타데이터 없음' in js or '현재 필터에 맞는 연결 출처 없음' in js),
- 'no_recalculation_claim':('전체 판정을 재계산하지 않는다' in js or '식물 판정·후보 순위·급여량·영양완전성은 다시 계산하지 않는다' in js),
+ 'no_recalculation_claim':'다시 계산하지 않는다' in js,
  'dynamic_dom_support':'MutationObserver' in js,
  'cache_source_preview':"'./source-preview.js'" in sw,
  'cache_evidence':"'./data/evidence.json'" in sw,
