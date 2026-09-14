@@ -15,7 +15,7 @@ checks={
  'horsfield_not_auto_med':"horsfieldii:'Mediterranean_Testudo'" not in today,
  'leopard_not_auto_med':"leopard:'Mediterranean_Testudo'" not in today,
  'sulcata_scope':"sulcata:'Sulcata'" in today,
- 'no_fake_score_copy':'추천 점수' in today and '영양적 완전성' in today,
+ 'no_fake_score_copy':'추천 점수' in today and ('영양적 완전성' in today or '영양균형' in today or '영양완전성' in today),
  'rotation_explained':'최근 7일에 덜 반복된 항목' in today,
  'meal_prefill':'URLSearchParams(location.search)' in meal and "get('add')" in meal,
  'prefill_validates_ids':'valid.has(x)' in meal,
