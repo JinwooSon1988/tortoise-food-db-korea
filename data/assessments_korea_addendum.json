@@ -1,0 +1,33 @@
+[
+  {
+    "plant_id": "pricklypear",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다육성 수분·섬유 보조 후보",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_opuntia"],
+    "limits": [
+      "Mediterranean Testudo 종특이 직접근거가 아님",
+      "대량 급여 시 완하 작용 가능성이 있어 과급여하지 않음",
+      "가시와 glochid를 안전하게 제거한 식용 가능한 패드만 사용",
+      "국내 천년초 상품이 정확히 어떤 Opuntia 종·부위인지 확인"
+    ],
+    "why": "전문 육지거북 식물 DB가 Opuntia spp.를 급여 가능한 식물로 분류하지만 종특이 직접자료가 아니므로 일반 보조 수준으로 제한한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "sweetpotatoleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_sweetpotato"],
+    "limits": [
+      "잎 자체를 독성으로 단정하지 않음",
+      "전문 식물 DB가 불리한 Ca:P 맥락 때문에 급여 비권장으로 분류",
+      "Mediterranean Testudo 종특이 직접시험은 아님"
+    ],
+    "why": "전문 육지거북 식물 DB가 고구마 잎을 독성 식물로 보지는 않지만 영양비 문제 때문에 급여를 권하지 않는다.",
+    "applicability_note": "일반 육지거북 비권장 근거이며, 안전한 혼합식 후보로 노출하지 않는다."
+  }
+]
