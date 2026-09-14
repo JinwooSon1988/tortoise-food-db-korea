@@ -29,5 +29,21 @@
     ],
     "why": "전문 육지거북 식물 DB가 고구마 잎을 독성 식물로 보지는 않지만 영양비 문제 때문에 급여를 권하지 않는다.",
     "applicability_note": "일반 육지거북 비권장 근거이며, 안전한 혼합식 후보로 노출하지 않는다."
+  },
+  {
+    "plant_id": "pumpkinleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "잎·꽃 소량 보조 후보",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_pumpkin"],
+    "limits": [
+      "Mediterranean Testudo 종특이 직접근거가 아님",
+      "잎은 소량, 꽃은 제한적 혼합 수준으로 해석",
+      "과실 급여 판정으로 확대하지 않음",
+      "국내 호박 품종이 Cucurbita pepo인지 다른 Cucurbita 종인지 확인 필요"
+    ],
+    "why": "전문 육지거북 식물 DB에서 Pumpkin/Cucurbita 잎은 small amounts 또는 sparingly로 급여할 수 있다고 제시하므로 일반 보조식으로 제한한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
   }
 ]
