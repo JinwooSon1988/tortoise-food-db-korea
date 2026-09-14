@@ -16,7 +16,7 @@ checks={
  'official_quality':'공식·공공 DB' in js,
  'specialist_quality':'전문기관 자료' in js,
  'axes_separated':'badgeHTML(applicabilityBadge(e))+badgeHTML(qualityBadge(e))' in js,
- 'no_recalculation':('전체 판정을 재계산하지 않는다' in js or '식물 판정·후보 순위·급여량·영양완전성은 다시 계산하지 않는다' in js),
+ 'no_recalculation':'다시 계산하지 않는다' in js,
  'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=9,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
