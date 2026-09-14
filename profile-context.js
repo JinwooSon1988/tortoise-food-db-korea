@@ -24,8 +24,9 @@
   const main=await nativeFetch(input,init);
   if(!main.ok)return main;
   try{
-   const merged=[...(Array.isArray(await main.clone().json())?await main.clone().json():[])];
-   for(const suffix of ['_korea_addendum.json','_korea_addendum_2.json']){
+   const mainData=await main.clone().json();
+   const merged=[...(Array.isArray(mainData)?mainData:[])];
+   for(const suffix of ['_korea_addendum.json','_korea_addendum_2.json','_korea_addendum_3.json']){
     try{
      const extra=await nativeFetch(baseUrl+kind+suffix,{cache:'no-cache'});
      if(!extra.ok)continue;

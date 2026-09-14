@@ -2,12 +2,12 @@ from pathlib import Path
 import json,sys
 d=Path(__file__).resolve().parents[1]/"data"; errs=[]
 plants={p["id"] for p in json.loads((d/"plants.json").read_text(encoding="utf-8"))}
-evidence_files=["evidence.json","evidence_korea_addendum.json","evidence_korea_addendum_2.json"]
+evidence_files=["evidence.json","evidence_korea_addendum.json","evidence_korea_addendum_2.json","evidence_korea_addendum_3.json"]
 ev=set()
 for fn in evidence_files:
   p=d/fn
   if p.exists(): ev.update(e["id"] for e in json.loads(p.read_text(encoding="utf-8")))
-record_files=["nutrition_records.json","assessments.json","assessments_korea_addendum.json","assessments_korea_addendum_2.json","evidence_map.json","restrictions.json","explanations.json"]
+record_files=["nutrition_records.json","assessments.json","assessments_korea_addendum.json","assessments_korea_addendum_2.json","assessments_korea_addendum_3.json","evidence_map.json","restrictions.json","explanations.json"]
 for fn in record_files:
   p=d/fn
   if not p.exists(): continue
