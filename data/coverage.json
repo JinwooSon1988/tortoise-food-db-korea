@@ -1,12 +1,13 @@
 {
   "plant_master_count": 66,
-  "plants_with_explainable_assessment": 17,
+  "plants_with_explainable_assessment": 19,
   "plants_with_direct_or_observational_evidence_map": 8,
   "plants_with_nutrition_record": 1,
   "plants_with_official_direct_nutrition_record": 0,
   "public_safety_verdict_complete": 0,
   "coverage_note": "Counts describe current structured records, not completed safety verdicts. General reptile or tortoise evidence is not promoted to Mediterranean Testudo direct evidence.",
-  "priority_korea_foods_reviewed": ["chicory","romaine","lettuce","endive","radicchio","kale","rose","dandelion","plantain","sowthistle","clover","alfalfa","dolnamul","mulberry","bokchoy","collard","cabbage"],
+  "priority_korea_foods_reviewed": ["chicory","romaine","lettuce","endive","radicchio","kale","rose","dandelion","plantain","sowthistle","clover","alfalfa","chickweed","dolnamul","mulberry","bokchoy","collard","cabbage","watercress"],
   "identity_blocked_priority": ["mallow"],
+  "pending_external_evidence_ingestion": ["sweetpotatoleaf","pricklypear","pumpkinleaf"],
   "last_updated": "2026-09-14"
 }
