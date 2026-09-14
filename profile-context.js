@@ -15,6 +15,23 @@
   active(){const a=this.all(),id=localStorage.getItem('tfd_active_profile_v46');return a.find(x=>x.id===id)||a[0]||null},
   normalize
  };
+ const nativeFetch=window.fetch.bind(window);
+ window.fetch=async function(input,init){
+  const url=typeof input==='string'?input:(input&&input.url)||'';
+  const baseMatch=url.match(/^(.*\/data\/)(assessments|evidence)\.json(?:[?#].*)?$/);
+  if(!baseMatch)return nativeFetch(input,init);
+  const baseUrl=baseMatch[1],kind=baseMatch[2];
+  const main=await nativeFetch(input,init);
+  if(!main.ok)return main;
+  try{
+   const mainData=await main.clone().json();
+   const extra=await nativeFetch(baseUrl+kind+'_korea_addendum.json',{cache:'no-cache'});
+   if(!extra.ok)return main;
+   const extraData=await extra.json();
+   const merged=[...(Array.isArray(mainData)?mainData:[]),...(Array.isArray(extraData)?extraData:[])];
+   return new Response(JSON.stringify(merged),{status:main.status,statusText:main.statusText,headers:{'Content-Type':'application/json; charset=utf-8'}});
+  }catch(e){return main}
+ };
  if(/\/today\/?(?:index\.html)?$/.test(location.pathname)){
   const h1=document.querySelector('h1');
   if(h1&&!document.getElementById('todayQuickLink')){
