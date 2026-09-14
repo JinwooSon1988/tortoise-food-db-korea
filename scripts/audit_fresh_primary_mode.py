@@ -15,12 +15,13 @@ checks={
  'recent_count_from_rendered_log':'최근 7일' in js and 'recentCount' in js,
  'mutual_exclusion':'directCandidateOnly' in js and 'direct.checked=false' in js,
  'unselect_hidden':'cb.checked=false' in js and "dispatchEvent(new Event('change'" in js,
- 'empty_state':'이베라 1차 직접근거 + 최근 7일 미급여 조건에 맞는 후보가 없다.' in js,
+ 'empty_state':'현재 빠른 선택 조건에 맞는 후보가 없다.' in js and '식물 적용성 필터가 켜져 있다면 그 기준도 함께 적용된다.' in js,
  'no_safety_inference':'위험하거나 부적합하다는 뜻이 아니다' in js,
  'no_nutrition_claim':'급여량·영양완전성·건강효과를 판단하지 않는다' in js,
  'summary_visible_total':'표시 후보 ' in js and '전체 후보 ' in js and '빠른 선택 모드' in js,
+ 'applicability_intersection':'externalAllowed(label)' in js and 'tfd:applicability-filter-changed' in js,
  'cache_file':"'./fresh-primary-mode.js'" in sw,
- 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=13,
+ 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=20,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]
