@@ -13,7 +13,7 @@ checks={
  'source_citation':'e.citation||e.id' in js,
  'source_link':'e.url' in js and 'e.doi' in js and 'e.pmid' in js,
  'missing_not_invented':'연결된 이베라 1차 출처 메타데이터 없음' in js,
- 'wild_not_ratio':'야생 관찰 빈도를 사육 급여비율로 환산하지 않으며' in js,
+ 'wild_not_ratio':('야생 관찰 빈도를 사육 급여비율로 환산하지 않으며' in js) or ('야생 관찰 빈도 분류이며 사육 급여비율이 아니다' in js),
  'no_completeness_claim':'급여량·배합률·영양완전성·건강효과' in js,
  'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=16,
 }
