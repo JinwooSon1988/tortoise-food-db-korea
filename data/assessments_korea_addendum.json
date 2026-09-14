@@ -6,12 +6,7 @@
     "role": "다육성 수분·섬유 보조 후보",
     "confidence": "C-",
     "evidence_ids": ["tortoise_table_opuntia"],
-    "limits": [
-      "Mediterranean Testudo 종특이 직접근거가 아님",
-      "대량 급여 시 완하 작용 가능성이 있어 과급여하지 않음",
-      "가시와 glochid를 안전하게 제거한 식용 가능한 패드만 사용",
-      "국내 천년초 상품이 정확히 어떤 Opuntia 종·부위인지 확인"
-    ],
+    "limits": ["Mediterranean Testudo 종특이 직접근거가 아님","대량 급여 시 완하 작용 가능성이 있어 과급여하지 않음","가시와 glochid를 안전하게 제거한 식용 가능한 패드만 사용","국내 천년초 상품이 정확히 어떤 Opuntia 종·부위인지 확인"],
     "why": "전문 육지거북 식물 DB가 Opuntia spp.를 급여 가능한 식물로 분류하지만 종특이 직접자료가 아니므로 일반 보조 수준으로 제한한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
   },
@@ -22,11 +17,7 @@
     "role": "급여 비권장",
     "confidence": "C-",
     "evidence_ids": ["tortoise_table_sweetpotato"],
-    "limits": [
-      "잎 자체를 독성으로 단정하지 않음",
-      "전문 식물 DB가 불리한 Ca:P 맥락 때문에 급여 비권장으로 분류",
-      "Mediterranean Testudo 종특이 직접시험은 아님"
-    ],
+    "limits": ["잎 자체를 독성으로 단정하지 않음","전문 식물 DB가 불리한 Ca:P 맥락 때문에 급여 비권장으로 분류","Mediterranean Testudo 종특이 직접시험은 아님"],
     "why": "전문 육지거북 식물 DB가 고구마 잎을 독성 식물로 보지는 않지만 영양비 문제 때문에 급여를 권하지 않는다.",
     "applicability_note": "일반 육지거북 비권장 근거이며, 안전한 혼합식 후보로 노출하지 않는다."
   },
@@ -37,13 +28,52 @@
     "role": "잎·꽃 소량 보조 후보",
     "confidence": "C-",
     "evidence_ids": ["tortoise_table_pumpkin"],
-    "limits": [
-      "Mediterranean Testudo 종특이 직접근거가 아님",
-      "잎은 소량, 꽃은 제한적 혼합 수준으로 해석",
-      "과실 급여 판정으로 확대하지 않음",
-      "국내 호박 품종이 Cucurbita pepo인지 다른 Cucurbita 종인지 확인 필요"
-    ],
+    "limits": ["Mediterranean Testudo 종특이 직접근거가 아님","잎은 소량, 꽃은 제한적 혼합 수준으로 해석","과실 급여 판정으로 확대하지 않음","국내 호박 품종이 Cucurbita pepo인지 다른 Cucurbita 종인지 확인 필요"],
     "why": "전문 육지거북 식물 DB에서 Pumpkin/Cucurbita 잎은 small amounts 또는 sparingly로 급여할 수 있다고 제시하므로 일반 보조식으로 제한한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "hibiscusleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "무궁화 잎 혼합식 후보",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_hibiscus_syriacus"],
+    "limits": ["Mediterranean Testudo 종특이 직접근거가 아님","Hibiscus syriacus 식물동정을 확인","Rose of Sharon이라는 영명만으로 Hypericum과 혼동하지 않음","농약·제초제 노출이 없는 잎에 한정"],
+    "why": "전문 육지거북 식물 DB가 Hibiscus syriacus 잎을 급여 가능한 것으로 분류한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "hibiscusflower",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "무궁화 꽃 혼합식 후보",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_hibiscus_syriacus"],
+    "limits": ["Mediterranean Testudo 종특이 직접근거가 아님","Hibiscus syriacus 식물동정을 확인","Rose of Sharon이라는 영명만으로 Hypericum과 혼동하지 않음","농약·제초제 노출이 없는 꽃에 한정"],
+    "why": "전문 육지거북 식물 DB가 Hibiscus syriacus 꽃을 급여 가능한 것으로 분류한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "grapeleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "어린 포도잎 소량 혼합 후보",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_grapevine"],
+    "limits": ["어리고 신선한 잎을 moderation 수준으로 제한","포도 열매 판정으로 확대하지 않음","Mediterranean Testudo 종특이 직접근거가 아님","농약 살포 이력이 있는 포도잎은 급여하지 않음"],
+    "why": "전문 육지거북 식물 DB는 Vitis spp.의 어린 신선한 잎을 moderation으로 급여할 수 있다고 구분한다.",
+    "applicability_note": "잎과 열매를 분리한 일반 육지거북 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "nasturtium",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "한련화 혼합식 일부",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_nasturtium"],
+    "limits": ["Feed in Moderation 범위로 제한","단독 주식 또는 고비율 반복 급여가 아님","Mediterranean Testudo 종특이 직접근거가 아님","Tropaeolum majus 식물동정 확인"],
+    "why": "전문 육지거북 식물 DB가 Tropaeolum majus를 moderation 급여 식물로 분류한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
   }
 ]
