@@ -1,0 +1,40 @@
+(function(){
+ if(!/\/today\/?(?:index\.html)?$/.test(location.pathname)) return;
+ const state={plants:[],assessments:[],evidence:[],frequency:[]};
+ function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+ function plantId(label){const a=label.querySelector('details.evidence a[href*="../plant/"]');if(!a)return'';const m=a.getAttribute('href').match(/\.\.\/plant\/([^/]+)\//);return m?decodeURIComponent(m[1]):''}
+ function plantFor(id){return state.plants.find(p=>p.id===id)||null}
+ function assessmentFor(id){return state.assessments.find(a=>a.plant_id===id&&Array.isArray(a.evidence_ids))||null}
+ function isIberaPrimary(e){return e?.scope==='subspecies_direct_wild_diet'&&/Testudo graeca ibera/i.test(e?.taxon||'')}
+ function linkedPrimarySource(id){const a=assessmentFor(id);if(!a)return null;for(const eid of a.evidence_ids){const e=state.evidence.find(x=>x.id===eid);if(e&&isIberaPrimary(e))return e}return null}
+ function frequencyFor(id,sourceId){return state.frequency.find(x=>x.plant_id===id&&x.source_id===sourceId)||null}
+ function cleanTaxon(s){return String(s||'').replace(/\s+/g,' ').trim().replace(/\.$/,'')}
+ function isGenericTaxon(s){return /\b(?:sp|spp)\.?$/i.test(cleanTaxon(s))}
+ function genusOf(s){return cleanTaxon(s).split(' ')[0]||''}
+ function applicabilityFor(id){
+  const src=linkedPrimarySource(id);if(!src)return null;
+  const p=plantFor(id),f=frequencyFor(id,src.id);
+  if(!f)return {level:'unknown',label:'식물 수준 적용성 확인 필요',text:'이베라 1차 직접근거는 연결되어 있지만, 현재 DB에는 이 출처의 식물 분류군 적용성 값이 구조화되어 있지 않다.'};
+  const db=cleanTaxon(p?.scientific),reported=cleanTaxon(f.taxon_reported);
+  if(!db||!reported)return {level:'unknown',label:'식물 수준 적용성 확인 필요',text:'DB 식물명 또는 논문 기록 분류군 정보가 부족해 종 수준 일치 여부를 판정하지 않는다.'};
+  const dbGeneric=isGenericTaxon(db),repGeneric=isGenericTaxon(reported),sameGenus=genusOf(db).toLowerCase()===genusOf(reported).toLowerCase();
+  if(!dbGeneric&&!repGeneric&&db.toLowerCase()===reported.toLowerCase())return {level:'exact',label:'정확한 종 직접근거',text:'DB 식물 학명과 논문 기록 식물 학명이 일치한다.'};
+  if(repGeneric&&sameGenus)return {level:'genus',label:'속 수준 직접근거',text:'논문은 '+reported+' 수준으로만 기록했다. 현재 DB 식물의 정확한 종이 직접 관찰됐다고 확대하지 않는다.'};
+  if(dbGeneric&&!repGeneric&&sameGenus)return {level:'entry_broader',label:'논문 기록이 DB 항목보다 좁음',text:'논문은 '+reported+'를 기록했지만 DB 항목은 '+db+'처럼 더 넓다. 같은 속 전체로 자동 확대하지 않는다.'};
+  if(!dbGeneric&&!repGeneric&&sameGenus)return {level:'different_species',label:'같은 속·다른 종 직접근거',text:'논문 기록 '+reported+'와 현재 DB 식물 '+db+'는 같은 속이지만 다른 종이다.'};
+  return {level:'mismatch',label:'분류군 직접일치 아님',text:'논문 기록 분류군과 현재 DB 식물의 종 수준 직접 일치를 확인하지 못했다.'};
+ }
+ function enhance(label){
+  const id=plantId(label);if(!id||label.dataset.candidateApplicability==='1')return;
+  const a=applicabilityFor(id);if(!a)return;
+  const host=label.querySelector('div');if(!host)return;
+  const box=document.createElement('div');box.className='candidate-applicability '+a.level;
+  box.innerHTML='<span class="candidate-applicability-label">식물 적용성</span><b>'+esc(a.label)+'</b><div class="small">'+esc(a.text)+'</div><div class="small">이 표시는 근거의 식물 분류군 적용 범위만 설명하며 급여량·배합률·영양완전성·건강효과를 판단하지 않는다.</div>';
+  const details=label.querySelector('details.evidence');host.insertBefore(box,details||null);label.dataset.candidateApplicability='1';
+ }
+ function enhanceAll(){if(!state.plants.length||!state.assessments.length||!state.evidence.length)return;document.querySelectorAll('#candidates label.candidate').forEach(enhance)}
+ function addStyle(){if(document.getElementById('candidate-applicability-style'))return;const s=document.createElement('style');s.id='candidate-applicability-style';s.textContent='.candidate-applicability{margin:7px 0;padding:7px 8px;border:1px solid #dfe9e1;border-radius:9px;background:#fbfdfb}.candidate-applicability-label{display:inline-block;margin-right:6px;padding:2px 6px;border-radius:999px;background:#eef5ef;font-size:11px;font-weight:700}.candidate-applicability b{font-size:12px}.candidate-applicability.genus,.candidate-applicability.entry_broader,.candidate-applicability.different_species,.candidate-applicability.mismatch,.candidate-applicability.unknown{background:#fffaf2;border-color:#ead8b7}.candidate-applicability.genus .candidate-applicability-label,.candidate-applicability.entry_broader .candidate-applicability-label,.candidate-applicability.different_species .candidate-applicability-label,.candidate-applicability.mismatch .candidate-applicability-label,.candidate-applicability.unknown .candidate-applicability-label{background:#fff0d6}';document.head.appendChild(s)}
+ addStyle();
+ Promise.all([fetch('../data/plants.json').then(r=>r.json()),fetch('../data/assessments.json').then(r=>r.json()),fetch('../data/evidence.json').then(r=>r.json()),fetch('../data/wild_observation_frequency.json').then(r=>r.json())]).then(([p,a,e,f])=>{state.plants=Array.isArray(p)?p:[];state.assessments=Array.isArray(a)?a:[];state.evidence=Array.isArray(e)?e:[];state.frequency=Array.isArray(f)?f:[];enhanceAll()}).catch(()=>{});
+ new MutationObserver(enhanceAll).observe(document.body,{childList:true,subtree:true});
+})();
