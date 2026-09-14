@@ -97,5 +97,50 @@
     "citation": "The Tortoise Table. Rocket (Arugula, Rucola, Salad Rocket).",
     "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=175",
     "note": "루꼴라는 독성 식물은 아니지만 Brassicaceae goitrogen 때문에 Feed in Moderation으로 분류하며, 다른 goitrogenic 식물과 합산 편중하지 말라고 설명한다."
+  },
+  {
+    "id": "tortoise_table_spinach",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general_negative",
+    "taxon": "Spinacia oleracea",
+    "citation": "The Tortoise Table. Spinach.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=608",
+    "note": "시금치는 독성 식물은 아니지만 oxalic acid와 calcium oxalate 때문에 칼슘 이용을 방해하고 내부 자극·결석 위험을 높일 수 있어 급여 비권장으로 분류한다. 소량 우발 섭취를 독성사고로 해석하지는 않는다."
+  },
+  {
+    "id": "tortoise_table_beetroot",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Beta vulgaris",
+    "citation": "The Tortoise Table. Beetroot (Beet).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=788",
+    "note": "비트 잎·꽃은 독성은 아니지만 oxalic acid가 높아 아주 소량만 매우 드물게 급여하라고 한다. 급여 전 충분한 수분상태를 강조하며 뿌리는 급여하지 말라고 명시한다."
+  },
+  {
+    "id": "tortoise_table_parsley",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general_negative",
+    "taxon": "Petroselinum crispum",
+    "citation": "The Tortoise Table. Parsley.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=5&plant=355",
+    "note": "파슬리는 독성 식물은 아니지만 이뇨 작용과 높은 oxalate 때문에 탈수·칼슘 이용 방해 가능성을 이유로 급여를 피하라고 한다. 소량 우발 섭취는 큰 문제로 보지 않는다."
+  },
+  {
+    "id": "tortoise_table_coriander",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Coriandrum sativum",
+    "citation": "The Tortoise Table. Coriander (Cilantro).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=c",
+    "note": "고수(Coriandrum sativum)를 Feed in Moderation으로 분류한다. 향신허브를 단독 주식이나 고비율 반복식으로 해석하지 않는다. Mediterranean Testudo 종특이 직접근거는 아니다."
+  },
+  {
+    "id": "tortoise_table_celery",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general_negative",
+    "taxon": "Apium graveolens",
+    "citation": "The Tortoise Table. Celery.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=620",
+    "note": "셀러리 잎은 oxalate가 높고, 전체 식물은 탄수화물·나트륨이 높으며 Ca:P도 불리하다고 설명한다. 독성은 아니지만 급여를 권장하지 않으며 몇 입 우발 섭취는 큰 위해로 보지 않는다."
   }
 ]

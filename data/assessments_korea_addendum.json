@@ -130,5 +130,60 @@
     "limits": ["Feed in Moderation 범위","다른 goitrogenic Brassicaceae와 동시 편중하지 않음","단독 주식·고비율 반복 급여 아님","Mediterranean Testudo 종특이 직접근거가 아님"],
     "why": "전문 육지거북 식물 DB가 루꼴라를 비독성 식물이지만 Brassicaceae goitrogen 때문에 moderation으로 제한한다.",
     "applicability_note": "Eruca spp. 일반 육지거북 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "spinach",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_spinach"],
+    "limits": ["독성 식물로 단정하지 않음","oxalate와 calcium oxalate 때문에 칼슘 이용 저해 및 내부 자극 가능성","소량 우발 섭취와 계획 급여를 구분","Mediterranean Testudo 종특이 직접시험은 아님"],
+    "why": "전문 육지거북 식물 DB가 시금치를 비독성이나 oxalate 부담 때문에 계획 급여 비권장으로 분류한다.",
+    "applicability_note": "일반 육지거북 비권장 근거. 안전한 Today 후보에서 제외한다."
+  },
+  {
+    "plant_id": "beetgreens",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "비트잎 극소량·드문 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_beetroot"],
+    "limits": ["oxalic acid가 높아 아주 소량만 매우 드물게 사용","급여 전 충분한 수분상태를 확보","비트 뿌리는 급여하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB는 비트 잎·꽃을 비독성으로 보지만 높은 oxalate 때문에 Feed Sparingly 수준으로 제한한다.",
+    "applicability_note": "Beta vulgaris 잎 일반 육지거북 근거. 뿌리와 분리한다."
+  },
+  {
+    "plant_id": "parsley",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_parsley"],
+    "limits": ["독성 식물로 단정하지 않음","이뇨 작용으로 과량 시 탈수 우려","높은 oxalate로 칼슘 이용 저해 가능성","소량 우발 섭취는 별개로 취급"],
+    "why": "전문 육지거북 식물 DB는 파슬리를 독성 때문이 아니라 이뇨·oxalate 부담 때문에 계획 급여 비권장으로 분류한다.",
+    "applicability_note": "일반 육지거북 비권장 근거. Today 안전 후보에서 제외한다."
+  },
+  {
+    "plant_id": "cilantro",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "고수 소량 순환 보조",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_coriander"],
+    "limits": ["Feed in Moderation 범위","향신허브 단독 주식·고비율 반복 급여 아님","Mediterranean Testudo 종특이 직접근거가 아님","Coriandrum sativum 식물동정 확인"],
+    "why": "전문 육지거북 식물 DB가 고수를 Feed in Moderation으로 분류하므로 혼합식의 제한적 보조로만 사용한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "celeryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_celery"],
+    "limits": ["독성 식물로 단정하지 않음","잎의 높은 oxalate와 전체 식물의 높은 나트륨·불리한 Ca:P를 고려","몇 입 우발 섭취와 계획 급여를 구분","Mediterranean Testudo 종특이 직접시험은 아님"],
+    "why": "전문 육지거북 식물 DB는 셀러리를 독성 때문이 아니라 oxalate·나트륨·영양비 문제 때문에 급여 비권장으로 분류한다.",
+    "applicability_note": "일반 육지거북 비권장 근거. 안전한 Today 후보에서 제외한다."
   }
 ]
