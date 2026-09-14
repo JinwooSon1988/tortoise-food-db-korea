@@ -12,7 +12,7 @@ checks={
  'three_evidence_axes':'applicability-chip' in js and 'frequency-chip' in js and 'quality-chip' in js,
  'compare_modes':'정확한 종 근거 우선' in js and '빈도 자료 있음 우선' in js and '학술출처 우선' in js,
  'exact_group_only':"r.applicability==='정확한 종 직접근거'?0:1" in js,
- 'frequency_presence_only':'빈도 미구조화' in js and '빈도 미등록' in js and 'High' not in js and 'Moderate' not in js and 'Low' not in js,
+ 'frequency_presence_only':"if(mode==='frequency')return /^빈도 (?:미구조화|미등록)$/.test(r.frequency)?1:0;" in js,
  'stable_existing_order':'key(a)-key(b)||a.index-b.index' in js,
  'does_not_reorder_candidates':'.appendChild(label)' not in js and '.insertBefore(label' not in js and 'sort((a,b)=>key(a)-key(b)||a.index-b.index)' in js,
  'not_recommendation':'먹이 추천 점수나 급여 우선순위가 아니며' in js,
