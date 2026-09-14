@@ -52,5 +52,50 @@
     "citation": "The Tortoise Table. Nasturtium.",
     "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=Nasturtium",
     "note": "Tropaeolum majus를 Feed in Moderation으로 분류한다. 다양한 식단의 일부로만 해석하며 Mediterranean Testudo 종특이 직접근거는 아니다."
+  },
+  {
+    "id": "ucdavis_herbivorous_reptile_greens",
+    "type": "veterinary_school_guidance",
+    "scope": "herbivorous_reptile_general",
+    "taxon": "Herbivorous reptiles",
+    "citation": "UC Davis School of Veterinary Medicine. Nutrition for Herbivorous Reptiles.",
+    "url": "https://healthtopics.vetmed.ucdavis.edu/health-topics/exotics/healthy-shopping-guide-herbivorous-reptiles",
+    "note": "초식성 파충류의 다양한 채소 예시로 mustard greens 등을 제시하고 moderation과 다양성을 강조한다. Mediterranean Testudo 종특이 직접근거가 아니다."
+  },
+  {
+    "id": "tortoise_table_turnip",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Brassica rapa var. rapa",
+    "citation": "The Tortoise Table. Turnip (Turnip Greens).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=823",
+    "note": "순무 잎·꽃은 높은 칼슘과 요오드가 goitrogen 영향을 일부 상쇄하므로 moderation으로 급여 가능하다고 설명한다. 순무 뿌리는 급여하지 말라고 명시한다."
+  },
+  {
+    "id": "tortoise_table_chinese_cabbage",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Brassica rapa chinensis; Brassica rapa pekinensis",
+    "citation": "The Tortoise Table. Chinese Cabbage (Pak Choy, Bok Choy, Napa Cabbage).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=231",
+    "note": "Chinese cabbage류는 goitrogen을 포함하지만 넓고 다양한 식단의 작은 일부로는 급여 가능하며, 여러 goitrogenic 식물을 동시에 쌓지 말라고 안내한다."
+  },
+  {
+    "id": "tortoise_table_radish",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Raphanus sativus",
+    "citation": "The Tortoise Table. Radish; White Radish.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=610",
+    "note": "무·래디시의 잎은 Brassicaceae의 glucosinolate/goitrogen 때문에 moderation으로 제한하고, 뿌리는 급여하지 말라고 한다. 한국 무 계통도 잎은 소량이면 괜찮다는 같은 원칙을 적용한다."
+  },
+  {
+    "id": "tortoise_table_rocket",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Eruca sativa; Eruca vesicaria",
+    "citation": "The Tortoise Table. Rocket (Arugula, Rucola, Salad Rocket).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=175",
+    "note": "루꼴라는 독성 식물은 아니지만 Brassicaceae goitrogen 때문에 Feed in Moderation으로 분류하며, 다른 goitrogenic 식물과 합산 편중하지 말라고 설명한다."
   }
 ]
