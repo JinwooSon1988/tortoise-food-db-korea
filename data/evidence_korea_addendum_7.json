@@ -1,0 +1,29 @@
+[
+  {
+    "id": "tortoise_table_perilla",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Perilla spp.; master taxon Perilla frutescens",
+    "citation": "The Tortoise Table. Perilla (Beefsteak Plant, Purple Mint, Shiso).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=Mint&x=0&y=0",
+    "note": "Perilla를 Do not Feed로 분류한다. 한국 깻잎 master의 Perilla frutescens가 이 속에 포함되므로 계획 급여 후보에서 제외한다. 이 판정은 독성량 임계치를 제시하는 급여시험이 아니다."
+  },
+  {
+    "id": "tortoise_table_squash_cucurbita_moschata",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Cucurbita spp., including Cucurbita moschata",
+    "citation": "The Tortoise Table. Squash.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=Cucurbitaceae&x=0&y=0",
+    "note": "Squash를 Feed Sparingly로 분류하며 Cucurbita moschata를 명시한다. 잎·꽃은 소량 급여 맥락으로 사용하되 과실 판정으로 확대하지 않는다."
+  },
+  {
+    "id": "tortoise_table_chrysanthemum",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Chrysanthemum spp.; master taxon Glebionis coronaria",
+    "citation": "The Tortoise Table. Chrysanthemum.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=94",
+    "note": "대부분의 Chrysanthemum 계열을 Feed in Moderation으로 설명하지만 pyrethrin이 높은 특정 종은 제외한다. 쑥갓 Glebionis coronaria는 과거 Chrysanthemum coronarium으로 취급된 분류학적 연결을 통해 낮은 확신도로만 적용한다."
+  }
+]
