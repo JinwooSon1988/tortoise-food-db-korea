@@ -24,11 +24,15 @@
   const main=await nativeFetch(input,init);
   if(!main.ok)return main;
   try{
-   const mainData=await main.clone().json();
-   const extra=await nativeFetch(baseUrl+kind+'_korea_addendum.json',{cache:'no-cache'});
-   if(!extra.ok)return main;
-   const extraData=await extra.json();
-   const merged=[...(Array.isArray(mainData)?mainData:[]),...(Array.isArray(extraData)?extraData:[])];
+   const merged=[...(Array.isArray(await main.clone().json())?await main.clone().json():[])];
+   for(const suffix of ['_korea_addendum.json','_korea_addendum_2.json']){
+    try{
+     const extra=await nativeFetch(baseUrl+kind+suffix,{cache:'no-cache'});
+     if(!extra.ok)continue;
+     const extraData=await extra.json();
+     if(Array.isArray(extraData))merged.push(...extraData);
+    }catch(e){}
+   }
    return new Response(JSON.stringify(merged),{status:main.status,statusText:main.statusText,headers:{'Content-Type':'application/json; charset=utf-8'}});
   }catch(e){return main}
  };
