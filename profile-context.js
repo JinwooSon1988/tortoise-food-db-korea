@@ -15,4 +15,7 @@
   active(){const a=this.all(),id=localStorage.getItem('tfd_active_profile_v46');return a.find(x=>x.id===id)||a[0]||null},
   normalize
  };
+ if(/\/today\/?(?:index\.html)?$/.test(location.pathname)){
+  const s=document.createElement('script');s.src='../source-preview.js';s.defer=true;document.head.appendChild(s);
+ }
 })();
