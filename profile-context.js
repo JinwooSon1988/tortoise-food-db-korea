@@ -16,6 +16,8 @@
   normalize
  };
  if(/\/today\/?(?:index\.html)?$/.test(location.pathname)){
-  const s=document.createElement('script');s.src='../source-preview.js';s.defer=true;s.onload=()=>{const q=document.createElement('script');q.src='../fresh-primary-mode.js';q.defer=true;document.head.appendChild(q)};document.head.appendChild(s);
+  const s=document.createElement('script');s.src='../source-preview.js';s.defer=true;
+  s.onload=()=>{const q=document.createElement('script');q.src='../fresh-primary-mode.js';q.defer=true;q.onload=()=>{const x=document.createElement('script');x.src='../fresh-primary-combo-explain.js';x.defer=true;document.head.appendChild(x)};document.head.appendChild(q)};
+  document.head.appendChild(s);
  }
 })();

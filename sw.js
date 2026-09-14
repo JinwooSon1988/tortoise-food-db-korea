@@ -1,5 +1,5 @@
-const CACHE='tfd-v51-stable-14';
-const CORE=['./','./index.html','./offline.html','./manifest.webmanifest','./search-live.js','./profile-context.js','./source-preview.js','./fresh-primary-mode.js',
+const CACHE='tfd-v51-stable-15';
+const CORE=['./','./index.html','./offline.html','./manifest.webmanifest','./search-live.js','./profile-context.js','./source-preview.js','./fresh-primary-mode.js','./fresh-primary-combo-explain.js',
 './data/plants.json','./data/assessments.json','./data/evidence.json','./data/korean_retail_name_map.json','./profile/','./today/','./meal/','./weekly/','./growth/','./monthly/','./trends/','./settings/'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
