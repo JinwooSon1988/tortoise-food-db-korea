@@ -75,5 +75,60 @@
     "limits": ["Feed in Moderation 범위로 제한","단독 주식 또는 고비율 반복 급여가 아님","Mediterranean Testudo 종특이 직접근거가 아님","Tropaeolum majus 식물동정 확인"],
     "why": "전문 육지거북 식물 DB가 Tropaeolum majus를 moderation 급여 식물로 분류한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "mustard",
+    "species_group": "Herbivorous_reptile_general",
+    "verdict": "general_reptile_supplement",
+    "role": "갓잎 소량 순환 보조",
+    "confidence": "C-",
+    "evidence_ids": ["ucdavis_herbivorous_reptile_greens"],
+    "limits": ["Mediterranean Testudo 직접근거가 아님","Brassica juncea 개별 급여시험이 아니라 수의대 초식성 파충류 식단 가이드 수준","Brassicaceae 계열을 여러 종류 동시에 겹쳐 고비율 급여하지 않음","국내 갓 품종과 정확한 Brassica juncea 매핑 확인"],
+    "why": "UC Davis 수의대가 초식성 파충류의 다양한 잎채소 예시로 mustard greens를 제시하지만 종특이 근거가 아니므로 일반 보조 수준으로 제한한다.",
+    "applicability_note": "초식성 파충류 일반 수의학 가이드. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "turnipgreens",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "순무잎 소량 혼합 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_turnip"],
+    "limits": ["잎·꽃만 moderation 범위","순무 뿌리는 급여하지 않음","다른 goitrogenic Brassicaceae와 동시 편중하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB는 순무잎의 칼슘·요오드 맥락을 고려해 잎과 꽃을 moderation으로 허용한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 뿌리와 잎 판정을 분리한다."
+  },
+  {
+    "plant_id": "napa",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "배추 소량 순환 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_chinese_cabbage"],
+    "limits": ["넓고 다양한 식단의 작은 일부로 제한","여러 goitrogenic Brassicaceae를 동시에 겹쳐 급여하지 않음","장기 단독·고비율 급여 아님","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB는 Napa/Chinese cabbage를 goitrogen 때문에 moderation으로 제한하되 다양한 식단의 작은 일부로는 허용한다.",
+    "applicability_note": "Brassica rapa pekinensis 일반 육지거북 근거. 이베라 직접 판정이 아님."
+  },
+  {
+    "plant_id": "radishgreens",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "무청 소량 혼합 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_radish"],
+    "limits": ["잎만 moderation 수준","무 뿌리는 급여하지 않음","glucosinolate/goitrogen 계열 식물을 동시에 편중하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB는 Raphanus sativus 잎을 소량이면 괜찮다고 보지만 뿌리는 급여하지 말라고 구분한다.",
+    "applicability_note": "한국 무청을 Raphanus sativus 잎 범위로 해석한 일반 육지거북 근거."
+  },
+  {
+    "plant_id": "arugula",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "루꼴라 소량 순환 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_rocket"],
+    "limits": ["Feed in Moderation 범위","다른 goitrogenic Brassicaceae와 동시 편중하지 않음","단독 주식·고비율 반복 급여 아님","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 루꼴라를 비독성 식물이지만 Brassicaceae goitrogen 때문에 moderation으로 제한한다.",
+    "applicability_note": "Eruca spp. 일반 육지거북 근거. 이베라 직접 판정이 아님."
   }
 ]
