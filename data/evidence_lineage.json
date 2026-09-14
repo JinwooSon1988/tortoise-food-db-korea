@@ -1,0 +1,56 @@
+[
+  {
+    "plant_id": "dandelion",
+    "source_id": "iftime_ibera_dobrogea_2012",
+    "db_taxon": "Taraxacum officinale",
+    "reported_taxa": ["Taraxacum officinale"],
+    "plant_match_level": "exact_species",
+    "observation": "야생 Testudo graeca ibera에서 잎·꽃 섭식이 직접 관찰되었다.",
+    "application_limit": "논문의 Moderate (5–10%)는 야생 관찰 빈도 분류다. 사육환경의 권장 급여비율·일일 급여량으로 환산하지 않는다."
+  },
+  {
+    "plant_id": "sowthistle",
+    "source_id": "iftime_ibera_dobrogea_2012",
+    "db_taxon": "Sonchus oleraceus",
+    "reported_taxa": ["Sonchus sp."],
+    "plant_match_level": "genus_only",
+    "observation": "야생 Testudo graeca ibera에서 Sonchus sp. 잎 섭식이 직접 관찰되었다.",
+    "application_limit": "논문은 Sonchus 속 수준까지만 기록했다. 한국 DB의 S. oleraceus가 정확히 관찰된 종이라고 확대하지 않으며, Low (1–5%)도 사육 급여비율이 아니다."
+  },
+  {
+    "plant_id": "clover",
+    "source_id": "iftime_ibera_dobrogea_2012",
+    "db_taxon": "Trifolium repens",
+    "reported_taxa": ["Trifolium sp."],
+    "plant_match_level": "genus_only",
+    "observation": "야생 Testudo graeca ibera에서 Trifolium sp. 잎·꽃 섭식이 직접 관찰되었다.",
+    "application_limit": "논문은 Trifolium 속 수준까지만 기록했다. DB의 T. repens 정확한 종 직접근거로 승격하지 않으며, High (>10%)도 사육 급여비율이 아니다."
+  },
+  {
+    "plant_id": "alfalfa",
+    "source_id": "iftime_ibera_dobrogea_2012",
+    "db_taxon": "Medicago sativa",
+    "reported_taxa": ["Medicago sp."],
+    "plant_match_level": "genus_only",
+    "observation": "야생 Testudo graeca ibera에서 Medicago sp. 잎 섭식이 직접 관찰되었다.",
+    "application_limit": "논문은 Medicago 속 수준까지만 기록했다. 국내 알팔파 M. sativa의 정확한 종 직접관찰로 확대하지 않으며, Moderate (5–10%)도 사육 급여비율이 아니다."
+  },
+  {
+    "plant_id": "chicory",
+    "source_id": "mitrevichin_ibera_bulgaria_2023",
+    "db_taxon": "Cichorium intybus",
+    "reported_taxa": ["Cichorium intybus"],
+    "plant_match_level": "exact_species",
+    "observation": "남서부 불가리아의 Testudo graeca ibera에서 Cichorium intybus 섭식이 직접 관찰되었다.",
+    "application_limit": "직접 섭식관찰은 있으나 식물별 정량 빈도나 장기 사육 급여량은 제시되지 않았다. 정확한 사육 급여비율을 만들지 않는다."
+  },
+  {
+    "plant_id": "dolnamul",
+    "source_id": "mitrevichin_ibera_bulgaria_2023",
+    "db_taxon": "Sedum sarmentosum",
+    "reported_taxa": ["Sedum rubens", "Sedum album"],
+    "plant_match_level": "congeneric_species",
+    "observation": "남서부 불가리아의 Testudo graeca ibera에서 Sedum rubens와 S. album 섭식이 직접 관찰되었다.",
+    "application_limit": "한국 돌나물 S. sarmentosum과 같은 속이지만 다른 종이다. 이베라 직접근거를 S. sarmentosum의 종 수준 직접근거로 확대하지 않는다."
+  }
+]
