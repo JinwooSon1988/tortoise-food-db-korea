@@ -1,0 +1,24 @@
+name: Dill master accounting
+
+on:
+  pull_request:
+    paths:
+      - 'data/plants.json'
+      - 'data/coverage.json'
+      - 'data/assessments_korea_addendum_10.json'
+      - 'plant/dill/**'
+      - 'scripts/audit_dill_master.py'
+      - '.github/workflows/audit-dill-master.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/audit_dill_master.py

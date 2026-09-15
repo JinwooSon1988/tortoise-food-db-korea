@@ -26,7 +26,7 @@
   try{
    const mainData=await main.clone().json();
    const merged=[...(Array.isArray(mainData)?mainData:[])];
-   for(const suffix of ['_korea_addendum.json','_korea_addendum_2.json','_korea_addendum_3.json','_korea_addendum_4.json','_korea_addendum_5.json','_korea_addendum_6.json','_korea_addendum_7.json','_korea_addendum_8.json','_korea_addendum_9.json']){
+   for(const suffix of ['_korea_addendum.json','_korea_addendum_2.json','_korea_addendum_3.json','_korea_addendum_4.json','_korea_addendum_5.json','_korea_addendum_6.json','_korea_addendum_7.json','_korea_addendum_8.json','_korea_addendum_9.json','_korea_addendum_10.json']){
     try{
      const extra=await nativeFetch(baseUrl+kind+suffix,{cache:'no-cache'});
      if(!extra.ok)continue;
