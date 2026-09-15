@@ -1,6 +1,6 @@
 # Dill master integration packet
 
-Verified candidate: Dill / 딜 (`Anethum graveolens`, Apiaceae), verified 2026-09-15.
+Verified candidate: Dill / 딜 (`Anethum graveolens`, Apiaceae), verified 2026-09-15. Target master count after promotion: 67.
 
 Specialist source: The Tortoise Table, Dill (Dill Weed), current dedicated detail-page verdict **Feed in Moderation**. The entry says there are no known hazards, but suitability evidence is insufficient for unrestricted feeding; it recommends moderation in a varied diet and explicitly says not to feed seeds.
 
