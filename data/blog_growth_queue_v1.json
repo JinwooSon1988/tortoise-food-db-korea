@@ -1,0 +1,16 @@
+{
+  "goal": "Naver search -> evidence article -> canonical plant page -> Today/profile/log return loop",
+  "rules": [
+    "Blog claims must never be stronger than the DB verdict and applicability scope.",
+    "Use a descriptive Korean anchor to the canonical plant page.",
+    "Each article should answer one high-intent feeding question before asking the reader to use the DB.",
+    "Do not convert wild observation frequency or Safe-to-Feed wording into captive feeding percentages."
+  ],
+  "priority_posts": [
+    {"priority":1,"slug":"chicory-vs-chard","title":"육지거북 치커리와 근대, 매일 줘도 될까? 근거 수준부터 다르다","targets":["chicory","chard"],"intent":"마트 채소 비교","cta":"두 식물의 판정 근거를 거북밥에서 각각 확인"},
+    {"priority":2,"slug":"lambs-lettuce","title":"콘샐러드(램스레터스), 육지거북에게 먹여도 될까?","targets":["lambs_lettuce"],"intent":"신규·희소 먹이 검색","cta":"콘샐러드 일반 육지거북 근거와 적용 한계 확인"},
+    {"priority":3,"slug":"dandelion-plantain-mulberry","title":"민들레·질경이·뽕잎 중 육지거북 먹이 근거가 가장 강한 것은?","targets":["dandelion","plantain","mulberry"],"intent":"야생초·건조잎 비교","cta":"개별 근거 페이지 확인 후 오늘 식단 후보 비교"},
+    {"priority":4,"slug":"mallow-identity-warning","title":"아욱은 육지거북 먹이로 안전할까? 이름만 보고 판단하면 안 되는 이유","targets":["mallow"],"intent":"논쟁·오해 교정","cta":"현재 판정 보류와 식물동정 이유 확인"},
+    {"priority":5,"slug":"tortoise-food-search","title":"육지거북 먹이 69종, 이름만 검색하면 근거 수준까지 확인하는 방법","targets":["dandelion","plantain","chicory","romaine","chard","lambs_lettuce"],"intent":"DB 브랜드·도구 유입","cta":"거북밥 검색 -> 프로필 -> 오늘 뭐 먹일까 -> 급여기록"}
+  ]
+}
