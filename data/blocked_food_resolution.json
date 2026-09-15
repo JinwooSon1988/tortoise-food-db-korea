@@ -3,6 +3,8 @@
     "plant_id": "mallow",
     "master_taxon": "Malva spp.",
     "status": "identity_blocked",
+    "reason": "The Tortoise Table lists Malva spp. as Safe to Feed, but the Korean retail name 아욱 is not accepted as proof that a purchased product is Malva spp.",
+    "unlock_condition": "Verify the Korean retail/botanical identity mapping to Malva spp.; then apply only the supported general-tortoise scope without upgrading it to Mediterranean Testudo direct evidence.",
     "evidence_summary": "The Tortoise Table lists Malva spp. as Safe to Feed, but the Korean retail name 아욱 is not accepted here as proof that a purchased product is Malva spp.",
     "resolution": "Keep blocked until Korean retail/botanical identity mapping is verified. If a specimen is confirmed as Malva spp., the general tortoise safety evidence can then be applied without converting it to Mediterranean Testudo direct evidence.",
     "source": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=363"
@@ -11,6 +13,8 @@
     "plant_id": "mint",
     "master_taxon": "Mentha spp.",
     "status": "identity_blocked",
+    "reason": "Mint cannot safely receive one genus-wide verdict: garden mint/spearmint/apple mint and peppermint/pennyroyal do not share one feeding verdict.",
+    "unlock_condition": "Replace the generic Mentha spp. record with species-level identity records before assessment; keep negative taxa separate from species supported as feed.",
     "evidence_summary": "Mint cannot safely receive one genus-wide verdict: garden mint/spearmint/apple mint are listed Safe to Feed, while peppermint and pennyroyal are Do not Feed.",
     "resolution": "Keep the generic Mentha spp. master blocked. Future safe assessments require species-level records such as Mentha spicata or Mentha suaveolens; peppermint and pennyroyal must remain separate negative taxa.",
     "source": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=506"
@@ -19,6 +23,8 @@
     "plant_id": "minari",
     "master_taxon": "Oenanthe javanica",
     "status": "evidence_blocked",
+    "reason": "No sufficiently specific tortoise-feeding evidence has been ingested for Korean minari/Oenanthe javanica; similarly named dropwort taxa cannot be substituted.",
+    "unlock_condition": "Verify exact-taxon Oenanthe javanica feeding or toxicology evidence with applicability suitable for tortoise assessment before assigning a feeding verdict.",
     "evidence_summary": "No sufficiently specific tortoise-feeding evidence has been ingested for Korean minari/Oenanthe javanica. Similar English common names such as dropwort can refer to different genera and must not be substituted.",
     "resolution": "Keep unassessed until exact-taxon feeding or toxicology evidence suitable for tortoise applicability is verified.",
     "source": null
