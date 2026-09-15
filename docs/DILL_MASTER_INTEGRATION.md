@@ -2,7 +2,7 @@
 
 Verified candidate: Dill / 딜 (`Anethum graveolens`, Apiaceae), verified 2026-09-15. Target after promotion: 67 master plants / 64 explainable assessed plants / 2 identity-blocked / 1 evidence-blocked.
 
-Specialist source: The Tortoise Table, Dill (Dill Weed), current dedicated detail-page verdict **Feed in Moderation**. The entry says there are no known hazards, but suitability evidence is insufficient for unrestricted feeding; it recommends moderation in a varied diet and explicitly says not to feed seeds.
+Specialist source: The Tortoise Table, Dill (Dill Weed), current dedicated detail-page verdict **Feed in Moderation**. The entry says there are no known hazards, but suitability evidence is insufficient for unrestricted feeding; it recommends moderation in a varied diet and explicitly says not to feed seeds. This dedicated detail record is authoritative for the staged packet.
 
 Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_packet.json`, and `data/dill_candidate_assessment.json`. The assessment is intentionally marked `staged_not_runtime` and `user_facing: false` until the master/UI release is atomic.
 
