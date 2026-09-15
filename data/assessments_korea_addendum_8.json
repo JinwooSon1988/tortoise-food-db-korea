@@ -1,0 +1,46 @@
+[
+  {
+    "plant_id": "geranium",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제라늄 소량 순환 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_pelargonium"],
+    "limits": ["master taxon은 Pelargonium spp.임","hardy Geranium과 혼동하지 않음","소량·다양한 식단의 일부로만 사용","Mediterranean Testudo 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 Pelargonium을 Feed in Moderation으로 분류하므로 소량 보조로만 둔다.",
+    "applicability_note": "한국에서 흔히 제라늄이라 부르는 Pelargonium spp.에 대한 일반 육지거북 근거다."
+  },
+  {
+    "plant_id": "marigold",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_tagetes"],
+    "limits": ["Tagetes spp.에 한정","식용 가능한 Calendula와 혼동 금지","계획 급여에서 제외","우발적 소량 섭취를 즉시 중독으로 단정하지 않음"],
+    "why": "전문 육지거북 식물 DB가 Tagetes를 Do not Feed로 분류하고 Calendula와 명확히 구분하므로 추천 후보에서 제외한다.",
+    "applicability_note": "master의 메리골드는 Tagetes spp.다. Calendula 판정을 적용하지 않는다."
+  },
+  {
+    "plant_id": "sunflowerleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "해바라기잎 소량 순환 보조",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_sunflower"],
+    "limits": ["Feed in Moderation 범위","잎 master 항목에 보수적으로 적용","고비율·반복 주식으로 사용하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 Helianthus annuus를 Feed in Moderation으로 분류하므로 잎도 낮은 확신도의 소량 보조로만 둔다.",
+    "applicability_note": "Helianthus annuus 일반 육지거북 근거이며 이베라 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "tomato",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C+",
+    "evidence_ids": ["tortoise_table_tomato"],
+    "limits": ["잎과 덜 익은 열매는 급여 금지","익은 열매도 일상 먹이로 추천하지 않음","약 투여 같은 특수 상황 언급을 일반 급여 허용으로 확대하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 토마토 잎·미숙과를 급여 금지하고 익은 열매도 영양구성상 일상 급여를 권장하지 않으므로 전체 master 항목을 추천 후보에서 제외한다.",
+    "applicability_note": "Solanum lycopersicum 일반 육지거북 전문 DB 근거다."
+  }
+]
