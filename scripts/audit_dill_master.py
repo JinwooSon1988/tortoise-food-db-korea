@@ -9,14 +9,16 @@ for p in [DATA/'assessments.json']+sorted(DATA.glob('assessments_korea_addendum*
     ass.extend(json.loads(p.read_text(encoding='utf-8')))
 ids={p['id'] for p in plants}; assessed={a['plant_id'] for a in ass if a.get('plant_id') in ids}
 cov=json.loads((DATA/'coverage.json').read_text(encoding='utf-8'))
-assert len(plants)==67, len(plants)
-assert len(assessed)==64, len(assessed)
-assert cov['master_review_accounting']=={'assessed':64,'identity_blocked':2,'evidence_blocked':1,'total':67}
+# Regression gate: the catalog may grow beyond 67/64, but dill must never regress.
+assert len(plants)>=67, len(plants)
+assert len(assessed)>=64, len(assessed)
+account=cov['master_review_accounting']
+assert account['total']==len(plants)
+assert account['assessed']==len(assessed)
+assert account['total']==account['assessed']+account['identity_blocked']+account['evidence_blocked']
 assert 'dill' in ids and 'dill' in assessed
-# Future candidates may be staged after dill. The dill regression gate only requires
-# that dill itself is no longer pending and remains atomically promoted.
 assert 'dill' not in (cov.get('pending_master_candidates') or [])
 assert (ROOT/'plant/dill/index.html').exists()
 text=(ROOT/'plant/dill/index.html').read_text(encoding='utf-8')
 assert '제한적 보조식 근거' in text and '씨앗' in text
-print('PASS dill master 67 atomic promotion')
+print('PASS dill regression gate; master',len(plants),'assessed',len(assessed))
