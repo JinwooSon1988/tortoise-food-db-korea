@@ -1,0 +1,48 @@
+{
+  "candidate_id": "lambs_lettuce",
+  "ko": "콘샐러드(돌상추·상치아재비)",
+  "en": "Lamb's Lettuce / Corn Salad",
+  "scientific": "Valerianella locusta",
+  "family": "Caprifoliaceae (modern taxonomy; older Korean sources may use Valerianaceae)",
+  "category": "leafy_vegetable",
+  "market": "온라인/수입채소/재배",
+  "aliases": ["콘샐러드", "돌상추", "상치아재비", "램스레터스", "Lamb's lettuce", "Corn salad", "Valerianella locusta"],
+  "proposed_species_group": "Tortoise_general",
+  "proposed_verdict": "supplement_general_evidence",
+  "proposed_role": "다양한 잎채소·야생초 혼합의 보조 구성",
+  "confidence": "C",
+  "source_verdict": "Safe to Feed",
+  "source_taxon_scope": "Valerianella locusta / Valerianella spp. esp. V. locusta",
+  "source_notes": [
+    "The Tortoise Table lists Lamb's Lettuce / Corn Salad as Safe to Feed.",
+    "Its edible-plant guide describes leaves, flowers and stems as edible and calls Corn Salad a good addition to tortoise enclosure and diet.",
+    "Korean official sources independently anchor Valerianella locusta: APQA export-quarantine material uses 돌상추, Korea National Arboretum material uses 상치아재비, and Gangwon agricultural material uses 콘샐러드.",
+    "This is general tortoise guidance, not direct Mediterranean Testudo or Testudo graeca ibera feeding evidence."
+  ],
+  "limits": [
+    "Do not infer a captive feeding percentage or staple ratio from Safe to Feed wording.",
+    "Do not upgrade general tortoise guidance to Mediterranean Testudo direct evidence.",
+    "램스레터스 is retained only as a market/transliterated alias; exact Korean identity is anchored primarily by official names 콘샐러드, 돌상추 and 상치아재비.",
+    "Family naming differs between modern taxonomy and older Valerianaceae usage; this does not change the candidate taxon."
+  ],
+  "evidence_urls": [
+    "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=686",
+    "https://www.thetortoisetable.org.uk/siteassets/files/text/a2787ce72250f95b46a9a0a0734399b5.pdf",
+    "https://www.qia.go.kr/localFile/ExportRequirements_4_20250113.pdf",
+    "https://www.forest.go.kr/newkfsweb/cmm/fms/BoardFileDown.do?atchFileId=FILE_000000000713430&bbsId=&dwldHistYn=&fileSn=0&fn=Invasive+Alien+Plants+in+South+Korea.pdf",
+    "https://www.ares.gangwon.kr/egf/bp/common/front/18175/download"
+  ],
+  "korean_identity_status": "verified_official_multi_source",
+  "korean_identity_anchors": [
+    {"name": "돌상추", "authority": "Animal and Plant Quarantine Agency", "taxon": "Valerianella locusta"},
+    {"name": "상치아재비", "authority": "Korea National Arboretum", "taxon": "Valerianella locusta"},
+    {"name": "콘샐러드", "authority": "Gangwon agricultural extension material", "taxon": "Valerianella locusta"}
+  ],
+  "master_target_count": 69,
+  "assessment_target_count": 66,
+  "blocked_after_promotion": {"identity": 2, "evidence": 1},
+  "accounting_after_promotion": "69 = 66 assessed + 2 identity-blocked + 1 evidence-blocked",
+  "staging_status": "evidence_and_identity_verified_ready_for_atomic_promotion",
+  "published": false,
+  "next_action": "atomic master promotion"
+}
