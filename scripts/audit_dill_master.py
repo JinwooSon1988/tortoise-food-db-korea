@@ -13,7 +13,9 @@ assert len(plants)==67, len(plants)
 assert len(assessed)==64, len(assessed)
 assert cov['master_review_accounting']=={'assessed':64,'identity_blocked':2,'evidence_blocked':1,'total':67}
 assert 'dill' in ids and 'dill' in assessed
-assert not cov.get('pending_master_candidates')
+# Future candidates may be staged after dill. The dill regression gate only requires
+# that dill itself is no longer pending and remains atomically promoted.
+assert 'dill' not in (cov.get('pending_master_candidates') or [])
 assert (ROOT/'plant/dill/index.html').exists()
 text=(ROOT/'plant/dill/index.html').read_text(encoding='utf-8')
 assert '제한적 보조식 근거' in text and '씨앗' in text
