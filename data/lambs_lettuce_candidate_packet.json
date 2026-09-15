@@ -1,0 +1,38 @@
+{
+  "candidate_id": "lambs_lettuce",
+  "ko": "램스레터스(콘샐러드)",
+  "en": "Lamb's Lettuce / Corn Salad",
+  "scientific": "Valerianella locusta",
+  "family": "Caprifoliaceae (modern taxonomy; older sources may use Valerianaceae)",
+  "category": "leafy_vegetable",
+  "market": "온라인/수입채소/재배",
+  "aliases": ["램스레터스", "콘샐러드", "Lamb's lettuce", "Corn salad", "Valerianella locusta"],
+  "proposed_species_group": "Tortoise_general",
+  "proposed_verdict": "supplement_general_evidence",
+  "proposed_role": "다양한 잎채소·야생초 혼합의 보조 구성",
+  "confidence": "C",
+  "source_verdict": "Safe to Feed",
+  "source_taxon_scope": "Valerianella locusta / Valerianella spp. esp. V. locusta",
+  "source_notes": [
+    "The Tortoise Table lists Lamb's Lettuce / Corn Salad as Safe to Feed.",
+    "Its edible-plant guide describes leaves, flowers and stems as edible and calls Corn Salad a good addition to tortoise enclosure and diet.",
+    "This is general tortoise guidance, not direct Mediterranean Testudo or Testudo graeca ibera feeding evidence."
+  ],
+  "limits": [
+    "Do not infer a captive feeding percentage or staple ratio from Safe to Feed wording.",
+    "Do not upgrade general tortoise guidance to Mediterranean Testudo direct evidence.",
+    "Korean retail-name identity remains a labeling issue: 램스레터스/콘샐러드 should be tied to Valerianella locusta before user-facing exact-taxon claims.",
+    "Family naming differs between modern taxonomy and the older Valerianaceae usage in the Tortoise Table guide; this does not change the candidate taxon."
+  ],
+  "evidence_urls": [
+    "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=686",
+    "https://www.thetortoisetable.org.uk/siteassets/files/text/a2787ce72250f95b46a9a0a0734399b5.pdf"
+  ],
+  "master_target_count": 69,
+  "assessment_target_count": 66,
+  "blocked_after_promotion": {"identity": 2, "evidence": 1},
+  "accounting_after_promotion": "69 = 66 assessed + 2 identity-blocked + 1 evidence-blocked",
+  "staging_status": "evidence_verified_identity_label_pending",
+  "published": false,
+  "next_action": "verify Korean market identity naming, then atomic master promotion"
+}
