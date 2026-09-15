@@ -49,6 +49,11 @@ alfalfa = latest("alfalfa", "Mediterranean_Testudo")
 dolnamul = latest("dolnamul", "Tortoise_general")
 alfalfa_limits = lineage_text("alfalfa", "Mediterranean_Testudo", "limits")
 dolnamul_limits = lineage_text("dolnamul", "Tortoise_general", "limits")
+dolnamul_context = " ".join([
+    dolnamul_limits,
+    lineage_text("dolnamul", "Tortoise_general", "why"),
+    lineage_text("dolnamul", "Tortoise_general", "applicability_note"),
+])
 
 checks = {
     "alfalfa_master_identity": P["alfalfa"]["scientific"] == "Medicago sativa",
@@ -59,7 +64,7 @@ checks = {
     "dolnamul_master_identity": P["dolnamul"]["scientific"] == "Sedum sarmentosum",
     "dolnamul_not_mediterranean_direct": not records("dolnamul", "Mediterranean_Testudo"),
     "dolnamul_limited_general": dolnamul["verdict"] == "limited_supplement",
-    "dolnamul_species_gap_visible": "다른 Sedum 종" in dolnamul_limits,
+    "dolnamul_species_gap_visible": ("다른 Sedum 종" in dolnamul_context or "다른 종" in dolnamul_context) and ("일치하지 않음" in dolnamul_context or "종이 일치하지 않음" in dolnamul_context),
     "dolnamul_sedum_acre_warning": "Sedum acre" in dolnamul_limits,
     "tortoise_table_sedum_present": "tortoise_table_sedum" in E,
     "korean_dolnamul_identity_present": E["korean_dolnamul_identity"]["taxon"] == "Sedum sarmentosum",
