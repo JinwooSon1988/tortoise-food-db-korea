@@ -2,7 +2,7 @@
 
 Verified candidate: Dill / 딜 (`Anethum graveolens`, Apiaceae).
 
-Specialist source: The Tortoise Table, Dill (Dill Weed), current detail-page verdict **Feed in Moderation**.
+Specialist source: The Tortoise Table, Dill (Dill Weed), current detail-page verdict **Feed in Moderation**. The dedicated source page says there are no known hazards, but suitability evidence is insufficient for unrestricted feeding; it recommends moderation in a varied diet and explicitly says not to feed seeds.
 
 Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_packet.json`, and `data/dill_candidate_assessment.json`.
 
