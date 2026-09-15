@@ -11,3 +11,5 @@ Release gate: add `dill` to `data/plants.json` only in the same release change t
 Applicability: general-tortoise evidence only; do not promote to Mediterranean Testudo or Ibera direct evidence. Leafy culinary herb only; source explicitly says not to feed seeds. No staple role or captive feeding percentage is implied.
 
 Why staged first: the 66-plant master now has strict complete-review accounting in CI. Dill therefore must enter as an atomic 67th record rather than bypassing the new invariant during a partial update.
+
+Source consistency note: broad Tortoise Table search-result pages can display neighboring verdict labels ambiguously. The dedicated Dill detail page is the authoritative record used here.
