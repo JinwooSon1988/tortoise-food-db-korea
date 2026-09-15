@@ -1,0 +1,44 @@
+name: Promote Lambs Lettuce master 69
+
+on:
+  push:
+    branches: ['feature/lambs-lettuce-master-promotion']
+    paths:
+      - 'scripts/promote_lambs_lettuce_data.py'
+      - 'scripts/audit_lambs_lettuce_master.py'
+      - '.github/workflows/promote-lambs-lettuce-master.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/lambs-lettuce-master-promotion
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Promote and regenerate detail pages
+        run: python scripts/promote_lambs_lettuce_data.py
+      - name: Audit before commit
+        run: |
+          python scripts/audit_lambs_lettuce_master.py
+          python scripts/audit_release.py
+          python scripts/audit_site.py
+          python scripts/audit_plant_integrity.py
+          python scripts/audit_verdict_cards.py
+          python scripts/audit_dill_master.py
+      - name: Commit generated promotion
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/plants.json data/coverage.json data/lambs_lettuce_candidate_packet.json profile-context.js sw.js sitemap.xml plant/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Promote Lambs Lettuce to 69th master food and sync plant pages'
+            git push origin HEAD:feature/lambs-lettuce-master-promotion
+          fi

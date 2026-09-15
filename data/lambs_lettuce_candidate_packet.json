@@ -6,7 +6,15 @@
   "family": "Caprifoliaceae (modern taxonomy; older Korean sources may use Valerianaceae)",
   "category": "leafy_vegetable",
   "market": "온라인/수입채소/재배",
-  "aliases": ["콘샐러드", "돌상추", "상치아재비", "램스레터스", "Lamb's lettuce", "Corn salad", "Valerianella locusta"],
+  "aliases": [
+    "콘샐러드",
+    "돌상추",
+    "상치아재비",
+    "램스레터스",
+    "Lamb's lettuce",
+    "Corn salad",
+    "Valerianella locusta"
+  ],
   "proposed_species_group": "Tortoise_general",
   "proposed_verdict": "supplement_general_evidence",
   "proposed_role": "다양한 잎채소·야생초 혼합의 보조 구성",
@@ -34,15 +42,31 @@
   ],
   "korean_identity_status": "verified_official_multi_source",
   "korean_identity_anchors": [
-    {"name": "돌상추", "authority": "Animal and Plant Quarantine Agency", "taxon": "Valerianella locusta"},
-    {"name": "상치아재비", "authority": "Korea National Arboretum", "taxon": "Valerianella locusta"},
-    {"name": "콘샐러드", "authority": "Gangwon agricultural extension material", "taxon": "Valerianella locusta"}
+    {
+      "name": "돌상추",
+      "authority": "Animal and Plant Quarantine Agency",
+      "taxon": "Valerianella locusta"
+    },
+    {
+      "name": "상치아재비",
+      "authority": "Korea National Arboretum",
+      "taxon": "Valerianella locusta"
+    },
+    {
+      "name": "콘샐러드",
+      "authority": "Gangwon agricultural extension material",
+      "taxon": "Valerianella locusta"
+    }
   ],
   "master_target_count": 69,
   "assessment_target_count": 66,
-  "blocked_after_promotion": {"identity": 2, "evidence": 1},
+  "blocked_after_promotion": {
+    "identity": 2,
+    "evidence": 1
+  },
   "accounting_after_promotion": "69 = 66 assessed + 2 identity-blocked + 1 evidence-blocked",
-  "staging_status": "evidence_and_identity_verified_ready_for_atomic_promotion",
-  "published": false,
-  "next_action": "atomic master promotion"
+  "staging_status": "promoted_runtime",
+  "published": true,
+  "next_action": "complete",
+  "integration_status": "promoted_to_master"
 }

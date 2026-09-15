@@ -1,11 +1,11 @@
 {
-  "plant_master_count": 68,
-  "plants_with_explainable_assessment": 65,
+  "plant_master_count": 69,
+  "plants_with_explainable_assessment": 66,
   "plants_with_direct_or_observational_evidence_map": 8,
   "plants_with_nutrition_record": 1,
   "plants_with_official_direct_nutrition_record": 0,
   "public_safety_verdict_complete": 0,
-  "coverage_note": "65 of 68 master plants have structured assessments. The remaining three are intentionally blocked rather than guessed: mallow and mint require identity refinement, and minari lacks exact-taxon tortoise evidence. General reptile or tortoise evidence is not promoted to Mediterranean Testudo direct evidence.",
+  "coverage_note": "66 of 69 master plants have structured assessments. Mallow and mint remain identity-blocked; minari remains evidence-blocked. General tortoise evidence is not promoted to Mediterranean Testudo direct evidence.",
   "priority_korea_foods_reviewed": [
     "chicory",
     "romaine",
@@ -71,7 +71,8 @@
     "pea_shoot",
     "ssuk",
     "dill",
-    "chard"
+    "chard",
+    "lambs_lettuce"
   ],
   "identity_blocked_priority": [
     "mallow",
@@ -82,15 +83,13 @@
   ],
   "blocked_resolution_file": "blocked_food_resolution.json",
   "master_review_accounting": {
-    "assessed": 65,
+    "assessed": 66,
     "identity_blocked": 2,
     "evidence_blocked": 1,
-    "total": 68
+    "total": 69
   },
   "pending_external_evidence_ingestion": [],
   "pending_master_candidates": [],
-  "next_priority_candidates": [
-    "lambs_lettuce"
-  ],
+  "next_priority_candidates": [],
   "last_updated": "2026-09-16"
 }
