@@ -12,15 +12,7 @@
   "proposed_verdict": "limited_supplement",
   "proposed_role": "딜 잎 소량 순환 보조",
   "confidence": "C",
-  "source": {
-    "title": "The Tortoise Table — Dill (Dill Weed)",
-    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=672",
-    "verdict": "Feed in Moderation"
-  },
-  "critical_limits": [
-    "Do not feed dill seeds.",
-    "General tortoise evidence only; do not promote to Mediterranean Testudo/Ibera direct evidence.",
-    "Do not infer a staple role or feeding percentage from Feed in Moderation."
-  ],
-  "integration_status": "candidate_packet_ready_master_integration_pending"
+  "evidence_id": "tortoise_table_dill",
+  "critical_limits": ["Do not feed dill seeds.", "General tortoise evidence only; do not promote to Mediterranean Testudo/Ibera direct evidence.", "Do not infer a staple role or feeding percentage."],
+  "integration_status": "verified_candidate_master_integration_pending"
 }
