@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/plants.json'
       - 'data/assessments.json'
+      - 'data/assessments_korea_addendum*.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/audit_verdict_cards.py'
@@ -15,6 +16,7 @@ on:
     paths:
       - 'data/plants.json'
       - 'data/assessments.json'
+      - 'data/assessments_korea_addendum*.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/audit_verdict_cards.py'
