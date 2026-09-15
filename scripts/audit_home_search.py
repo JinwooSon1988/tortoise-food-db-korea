@@ -15,7 +15,7 @@ assert len(plants) == 69, len(plants)
 assert "현재 등록된 '+plants.length+'종" in html
 assert "상세 근거 보기 →" in html
 assert "오늘 식단 후보 보기" in html
-assert "적용범위 ·" in html
+assert "<b>적용 범위</b> · " in html
 assert "do_not_feed:'급여 비권장'" in html
 assert "v5.3" in html
 for i in range(1, 13):
