@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/promote_dill_master.py'
       - 'scripts/audit_site.py'
+      - 'scripts/audit_verdict_cards.py'
       - 'data/blocked_food_resolution.json'
       - '.github/workflows/promote-dill-master.yml'
   workflow_dispatch:
