@@ -1,0 +1,30 @@
+[
+  {
+    "id": "tortoise_table_chard",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Beta vulgaris",
+    "title": "The Tortoise Table — Chard (Swiss Chard)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=176",
+    "summary": "Feed Sparingly. The dedicated entry identifies chard as Beta vulgaris and advises only occasional feeding as part of a varied diet because chard is high in oxalic acid. It also advises ensuring the tortoise is fully hydrated before offering it.",
+    "limitations": [
+      "General tortoise specialist guidance, not a Mediterranean Testudo or Ibera direct feeding trial.",
+      "The source identifies the food at Beta vulgaris level; Korean cultivated chard identity is separately anchored to Korean agricultural sources as Beta vulgaris subsp./var. cicla.",
+      "Feed Sparingly does not establish a captive feeding percentage or staple role.",
+      "Hydration advice is retained as source guidance and must not be converted into a medical claim."
+    ]
+  },
+  {
+    "id": "rda_korean_chard_identity",
+    "type": "official_korean_agriculture",
+    "scope": "plant_identity",
+    "taxon": "Beta vulgaris subsp. cicla",
+    "title": "농촌진흥청 농사로 — 근대",
+    "url": "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30603&menuId=PS00087",
+    "summary": "농촌진흥청 농사로는 국내 채소 근대의 학명을 Beta vulgaris subsp. cicla로 제시한다. 국내 유통명 '근대'를 Swiss chard 계통에 연결하는 식물동정 근거로만 사용한다.",
+    "limitations": [
+      "This source establishes Korean crop identity and cultivation context, not tortoise feeding suitability.",
+      "Taxonomic rank/synonym conventions vary among sources; do not treat nomenclatural variation alone as a different food."
+    ]
+  }
+]
