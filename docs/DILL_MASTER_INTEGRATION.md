@@ -17,3 +17,5 @@ Source consistency note: broad Tortoise Table search-result pages can display ne
 Next release action: promote the staged candidate atomically; after that, use the same pipeline to add further Korea-accessible plants in batches rather than inflating the master with unreviewed names.
 
 Expected accounting after atomic promotion: 67 = 64 assessed + 2 identity-blocked + 1 evidence-blocked. The release audit introduced in PR #66 must remain green after this transition. Runtime promotion is explicitly blocked until the master record exists.
+
+This staging PR deliberately does not change `plant_master_count`, runtime assessment count, or user-facing verdicts.
