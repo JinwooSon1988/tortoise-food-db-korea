@@ -22,5 +22,6 @@
   "master_target_count": 67,
   "assessment_target_count": 64,
   "blocked_counts_after_promotion": {"identity": 2, "evidence": 1},
-  "atomic_accounting_check": "67 == 64 + 2 + 1"
+  "atomic_accounting_check": "67 == 64 + 2 + 1",
+  "runtime_promotion_requires_master": true
 }
