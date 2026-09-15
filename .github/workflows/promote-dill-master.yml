@@ -5,6 +5,7 @@ on:
     branches: ['feature/promote-dill-master-67']
     paths:
       - 'scripts/promote_dill_master.py'
+      - 'data/blocked_food_resolution.json'
       - '.github/workflows/promote-dill-master.yml'
   workflow_dispatch:
 
