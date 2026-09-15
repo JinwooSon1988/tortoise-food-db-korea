@@ -24,17 +24,22 @@ jobs:
           python-version: '3.12'
       - name: Promote dill and regenerate detail pages
         run: python scripts/promote_dill_master.py
-      - name: Run release QA
-        run: |
-          python scripts/audit_release.py
-          python scripts/audit_site.py
-          python scripts/audit_plant_integrity.py
-          python scripts/audit_verdict_cards.py
       - name: Commit generated promotion
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/plants.json data/coverage.json profile-context.js sw.js sitemap.xml plant/
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Promote dill to 67th master food and sync plant pages'
-          git push origin HEAD:feature/promote-dill-master-67
+          if ! git diff --cached --quiet; then
+            git commit -m 'Promote dill to 67th master food and sync plant pages'
+            git push origin HEAD:feature/promote-dill-master-67
+          fi
+      - name: Audit atomic accounting
+        run: python scripts/audit_dill_master.py
+      - name: Audit release
+        run: python scripts/audit_release.py
+      - name: Audit site
+        run: python scripts/audit_site.py
+      - name: Audit plant integrity
+        run: python scripts/audit_plant_integrity.py
+      - name: Audit verdict cards
+        run: python scripts/audit_verdict_cards.py
