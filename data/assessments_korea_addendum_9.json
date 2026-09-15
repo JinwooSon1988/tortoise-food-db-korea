@@ -1,0 +1,35 @@
+[
+  {
+    "plant_id": "cornleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "옥수수잎 소량 혼합 보조",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_maize_leaf"],
+    "limits": ["잎만 해당","옥수수 알·이삭·통옥수수 판정으로 확대 금지","단일 주식 또는 고비율 반복식으로 사용하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 Zea mays의 잎은 Safe to Feed로 명시하지만 이삭은 별도로 제외하므로, 잎만 일반 육지거북 보조 후보로 제한한다.",
+    "applicability_note": "Zea mays exact-taxon의 잎 부위 근거이며 이베라 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "pea_shoot",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C",
+    "evidence_ids": ["tortoise_table_pea_shoots"],
+    "limits": ["계획 급여에서 제외","독성 식물로 단정하지 않음","완두콩·완두순 모두 일상 식단에 넣지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 Pisum sativum과 pea shoots를 Do not Feed로 분류하며 고단백·피트산 문제를 이유로 든다.",
+    "applicability_note": "Pisum sativum exact-taxon 일반 육지거북 근거다."
+  },
+  {
+    "plant_id": "ssuk",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C-",
+    "evidence_ids": ["tortoise_table_mugwort"],
+    "limits": ["계획 급여에서 제외","Artemisia princeps exact-species 시험이 아니라 Artemisia spp. 속 수준 판정","다른 쑥속 식물과의 화학적 차이를 동일하다고 단정하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "why": "전문 육지거북 식물 DB가 Mugwort/Artemisia spp.를 Do not Feed로 분류하므로 한국 참쑥도 보수적으로 추천 후보에서 제외한다.",
+    "applicability_note": "한국 master Artemisia princeps에 Artemisia 속 수준 근거를 적용한 낮은 확신도의 일반 육지거북 판정이다."
+  }
+]
