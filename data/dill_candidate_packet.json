@@ -25,5 +25,6 @@
   "atomic_accounting_check": "67 == 64 + 2 + 1",
   "runtime_promotion_requires_master": true,
   "staging_changes_user_facing_verdict": false,
-  "source_detail_page_authoritative": true
+  "source_detail_page_authoritative": true,
+  "promotion_scope_locked": "Tortoise_general"
 }
