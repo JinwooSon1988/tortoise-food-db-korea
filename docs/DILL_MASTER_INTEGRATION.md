@@ -18,4 +18,4 @@ Expected accounting after atomic promotion: 67 = 64 assessed + 2 identity-blocke
 
 This staging change deliberately does not change `plant_master_count`, runtime assessment count, or user-facing verdicts. It is a provenance packet, not a published feeding recommendation. The staged assessment carries source-authority, visibility, species-scope, and plant-part-scope locks so later promotion cannot accidentally widen its applicability.
 
-Staging phase status: complete. Promotion handoff: complete. Next action: atomic master promotion.
+Staging phase status: complete. Promotion handoff: complete. Staging PR: ready. Next action: atomic master promotion.
