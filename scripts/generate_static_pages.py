@@ -1,10 +1,23 @@
 from pathlib import Path
-import json, html
+import json, html, re
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
 plants=json.loads((ROOT/"data/plants.json").read_text(encoding="utf-8"))
-assessments=json.loads((ROOT/"data/assessments.json").read_text(encoding="utf-8"))
+
+def load_series(base_name):
+    base=ROOT/"data"/f"{base_name}.json"
+    merged=json.loads(base.read_text(encoding="utf-8"))
+    files=list((ROOT/"data").glob(f"{base_name}_korea_addendum*.json"))
+    def order(path):
+        m=re.search(r"_(\d+)\.json$",path.name)
+        return int(m.group(1)) if m else 1
+    for path in sorted(files,key=order):
+        extra=json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(extra,list): merged.extend(extra)
+    return merged
+
+assessments=load_series("assessments")
 retail=json.loads((ROOT/"data/korean_retail_name_map.json").read_text(encoding="utf-8"))
 
 med={a["plant_id"]:a for a in assessments if a.get("species_group")=="Mediterranean_Testudo"}
@@ -23,53 +36,36 @@ VERDICT_MAP={
     "limited_supplement":("yellow","🟡 제한적 보조식 근거"),
     "supplement_general_evidence":("yellow","🟡 일반 보조식 근거"),
     "general_reptile_supplement":("yellow","🟡 일반 초식 파충류 보조근거"),
+    "do_not_feed":("hold","🔴 급여 비권장"),
 }
 
-def esc(v):
-    return html.escape(str(v or ""), quote=True)
+def esc(v): return html.escape(str(v or ""),quote=True)
 
 def verdict_for(pid):
     if pid in SPECIAL:
         tone,label,summary=SPECIAL[pid]
-        return tone,label,summary,med.get(pid)
+        return tone,label,summary,med.get(pid) or general.get(pid)
     a=med.get(pid) or general.get(pid)
-    if not a:
-        return "hold","⚪ 판단보류 / 검증 미완료","현재 공개 판정을 내릴 만큼 종별 급여 근거 검토가 완료되지 않았다.",None
+    if not a: return "hold","⚪ 판단보류 / 검증 미완료","현재 공개 판정을 내릴 만큼 종별 급여 근거 검토가 완료되지 않았다.",None
     tone,label=VERDICT_MAP.get(a.get("verdict"),("hold","⚪ 판단보류 / 근거 부족"))
     return tone,label,a.get("why") or "근거 검토 중이다.",a
 
 for p in plants:
-    pid=p["id"]
-    d=ROOT/"plant"/pid
-    d.mkdir(parents=True,exist_ok=True)
-    ko=p.get("ko") or pid
-    sci=p.get("scientific") or "학명 검증 중"
-    title=f"{ko} 육지거북 먹이 판정 | 거북밥 DB Korea"
-    desc=f"{ko}의 육지거북 급여 적합성, 식물동정, 근거와 검증 상태를 확인한다."
-    tone,label,summary,a=verdict_for(pid)
-    r=retail_by_id.get(pid)
-    aliases=[]
-    if r:
-        aliases=list(dict.fromkeys((r.get("retail_terms") or [])+(r.get("aliases") or [])))
-    if not aliases:
-        aliases=[ko]+list(p.get("aliases") or [])[:3]
+    pid=p["id"]; d=ROOT/"plant"/pid; d.mkdir(parents=True,exist_ok=True)
+    ko=p.get("ko") or pid; sci=p.get("scientific") or "학명 검증 중"
+    title=f"{ko} 육지거북 먹이 판정 | 거북밥 DB Korea"; desc=f"{ko}의 육지거북 급여 적합성, 식물동정, 근거와 검증 상태를 확인한다."
+    tone,label,summary,a=verdict_for(pid); r=retail_by_id.get(pid); aliases=[]
+    if r: aliases=list(dict.fromkeys((r.get("retail_terms") or [])+(r.get("aliases") or [])))
+    if not aliases: aliases=[ko]+list(p.get("aliases") or [])[:3]
     identity_warning=(r and r.get("mapping_status")=="name_candidate_only")
-    role=(a or {}).get("role")
-    limits=(a or {}).get("limits") or []
-    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits)
-    if not limits_html:
-        limits_html="<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
-    identity_text=(
-        "한국 유통명은 검색 후보일 뿐 실제 식물의 종 동정 결과가 아니다. 상품·재배품·야생채집물은 별도로 확인해야 한다."
-        if identity_warning else
-        "DB의 이름과 학명 표기는 검색 기준이다. 실제 급여할 개체의 식물종과 오염 여부는 별도로 확인해야 한다."
-    )
+    role=(a or {}).get("role"); limits=(a or {}).get("limits") or []
+    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
+    identity_text="한국 유통명은 검색 후보일 뿐 실제 식물의 종 동정 결과가 아니다. 상품·재배품·야생채집물은 별도로 확인해야 한다." if identity_warning else "DB의 이름과 학명 표기는 검색 기준이다. 실제 급여할 개체의 식물종과 오염 여부는 별도로 확인해야 한다."
     role_html=f"<div><b>식단 내 역할</b><br>{esc(role)}</div>" if role else "<div><b>식단 내 역할</b><br>아직 공개 권장 역할을 확정하지 않음</div>"
     if a:
-        scope=(a.get("applicability_note") or ("지중해 Testudo 일반 근거. 이베라 직접 정량근거와 동일하지 않음" if a.get("species_group")=="Mediterranean_Testudo" else "육지거북·초식 파충류 일반 근거. Mediterranean Testudo 직접 판정이 아님"))
+        scope=a.get("applicability_note") or ("지중해 Testudo 일반 근거. 이베라 직접 정량근거와 동일하지 않음" if a.get("species_group")=="Mediterranean_Testudo" else "육지거북·초식 파충류 일반 근거. Mediterranean Testudo 직접 판정이 아님")
         evidence_html=f"<div><b>적용 범위</b><br>{esc(scope)}</div>"
-    else:
-        evidence_html="<div><b>적용 범위</b><br>종별 판정 근거 검토 미완료</div>"
+    else: evidence_html="<div><b>적용 범위</b><br>종별 판정 근거 검토 미완료</div>"
     doc=f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{SITE_URL}/plant/{pid}/">
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"{esc(title)}","description":"{esc(desc)}"}}</script>
@@ -82,5 +78,4 @@ for p in plants:
 <nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav>
 </body></html>'''
     (d/"index.html").write_text(doc,encoding="utf-8")
-
-print("generated",len(plants),"plant detail pages")
+print("generated",len(plants),"plant detail pages from",len(assessments),"assessments")
