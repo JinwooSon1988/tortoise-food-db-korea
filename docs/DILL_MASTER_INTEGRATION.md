@@ -8,7 +8,7 @@ Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_pa
 
 Release gate: add `dill` to `data/plants.json` only in the same release change that promotes the staged assessment into the runtime assessment set, increments coverage master/assessment counts, generates the static plant detail/search/sitemap entries, updates runtime addendum loading and PWA cache, and passes release/site audits. Never ship a master row without its review state.
 
-Applicability: general-tortoise evidence only; do not promote to Mediterranean Testudo or Ibera direct evidence. Leafy culinary herb only; source explicitly says not to feed seeds. No staple role or captive feeding percentage is implied.
+Applicability: general-tortoise evidence only; do not promote to Mediterranean Testudo or Ibera direct evidence. Leafy culinary herb only; source explicitly says not to feed seeds. No staple role or captive feeding percentage is implied. Promotion scope is locked to `Tortoise_general` unless stronger evidence is added later.
 
 Why staged first: the 66-plant master now has strict complete-review accounting in CI. Dill therefore must enter as an atomic 67th record rather than bypassing the new invariant during a partial update.
 
