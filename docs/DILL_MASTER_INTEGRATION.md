@@ -15,3 +15,5 @@ Why staged first: the 66-plant master now has strict complete-review accounting 
 Source consistency note: broad Tortoise Table search-result pages can display neighboring verdict labels ambiguously. The dedicated Dill detail page is the authoritative record used here. This rule should be reused for future candidate ingestion when a search listing conflicts with the dedicated record.
 
 Next release action: promote the staged candidate atomically; after that, use the same pipeline to add further Korea-accessible plants in batches rather than inflating the master with unreviewed names.
+
+Expected accounting after atomic promotion: 67 = 64 assessed + 2 identity-blocked + 1 evidence-blocked.
