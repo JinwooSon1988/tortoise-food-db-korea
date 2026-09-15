@@ -30,7 +30,7 @@ assert "Low·Moderate·High 및 백분율 구간은 야생 관찰 빈도 분류�
 assert "frequencyHTML(id,e.id)" in js
 
 assert "./data/wild_observation_frequency.json" in sw
-m = re.search(r"const CACHE='tfd-v51-stable-(\d+)'", sw)
+m = re.search(r"const CACHE='tfd-v\d+-stable-(\d+)'", sw)
 assert m and int(m.group(1)) >= 17
 
 print('wild frequency label audit: PASS')
