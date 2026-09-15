@@ -3,6 +3,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 html = (root / 'index.html').read_text(encoding='utf-8')
+search_live = (root / 'search-live.js').read_text(encoding='utf-8')
 plants = json.loads((root / 'data' / 'plants.json').read_text(encoding='utf-8'))
 base = json.loads((root / 'data' / 'assessments.json').read_text(encoding='utf-8'))
 addenda = []
@@ -22,6 +23,10 @@ assert "v5.3" in html
 # contract instead of requiring generated filenames to appear literally in HTML.
 assert "Array.from({length:12}" in html
 assert "assessments_korea_addendum'+(i?'_'+(i+1):'')+'.json'" in html
+# Naver/blog links can land on /?q=<food> and must auto-run the public search.
+assert "new URLSearchParams(location.search).get('q')" in search_live
+assert "deepQuery.slice(0,80)" in search_live
+assert "document.getElementById('searchBtn')?.click()" in search_live
 
 ids = {p['id'] for p in plants}
 assessment_ids = {a['plant_id'] for a in assessments}

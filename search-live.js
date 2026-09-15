@@ -47,6 +47,11 @@
     else if(e.key==='ArrowUp'){e.preventDefault();i=(i-1+bs.length)%bs.length;bs[i].focus();}
     else if(e.key==='Escape'){e.preventDefault();close();input.focus();}
   });
+  const deepQuery=new URLSearchParams(location.search).get('q');
+  if(deepQuery){
+    input.value=deepQuery.slice(0,80);drawIdentity();
+    let tries=0,timer=setInterval(()=>{tries++;const ready=document.getElementById('catalogCount')?.textContent.includes('현재 등록된');if(ready||tries>=20){clearInterval(timer);document.getElementById('searchBtn')?.click();}},100);
+  }
  }
  window.TortoiseKoSearch={candidates,jamo,lev};document.addEventListener('DOMContentLoaded',init);
 })();
