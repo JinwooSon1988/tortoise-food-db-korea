@@ -4,6 +4,8 @@ Verified candidate: Dill / 딜 (`Anethum graveolens`, Apiaceae).
 
 Specialist source: The Tortoise Table, Dill (Dill Weed), current detail-page verdict **Feed in Moderation**.
 
-Integration rule: when `dill` is added to `data/plants.json`, add the evidence and assessment packet in the same change, increment coverage master/assessment counts, generate the static plant detail page/search/sitemap entries, update runtime addendum loading and PWA cache, and require release/site audits to pass. Do not add only a master row.
+Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_packet.json`, and `data/dill_candidate_assessment.json`.
+
+Integration rule: add `dill` to `data/plants.json` only in the same release change that promotes the staged assessment into the runtime assessment set, increments coverage master/assessment counts, generates the static plant detail/search/sitemap entries, updates runtime addendum loading and PWA cache, and passes release/site audits. Never ship a master row without its review state.
 
 Applicability: general-tortoise evidence only; do not promote to Mediterranean Testudo or Ibera direct evidence. Leafy culinary herb only; source explicitly says not to feed seeds. No staple role or captive feeding percentage is implied.
