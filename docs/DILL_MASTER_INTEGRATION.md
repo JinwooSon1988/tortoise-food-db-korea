@@ -8,7 +8,7 @@ Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_pa
 
 Release gate: add `dill` to `data/plants.json` only in the same release change that promotes the staged assessment into the runtime assessment set, increments coverage master/assessment counts, generates the static plant detail/search/sitemap entries, updates runtime addendum loading and PWA cache, and passes release/site audits. Never ship a master row without its review state.
 
-Applicability: general-tortoise evidence only; do not promote to Mediterranean Testudo or Ibera direct evidence. Leafy culinary herb only; source explicitly says not to feed seeds. No staple role or captive feeding percentage is implied. Promotion scope is locked to `Tortoise_general` unless stronger evidence is added later.
+Applicability: general-tortoise evidence only; do not promote to Mediterranean Testudo or Ibera direct evidence. Plant-part scope is the leafy culinary herb; seeds are explicitly excluded. No staple role or captive feeding percentage is implied. Promotion scope is locked to `Tortoise_general` unless stronger evidence is added later.
 
 Why staged first: the 66-plant master now has strict complete-review accounting in CI. Dill therefore must enter as an atomic 67th record rather than bypassing the new invariant during a partial update.
 
@@ -18,4 +18,4 @@ Next release action: promote the staged candidate atomically; after that, use th
 
 Expected accounting after atomic promotion: 67 = 64 assessed + 2 identity-blocked + 1 evidence-blocked. The release audit introduced in PR #66 must remain green after this transition. Runtime promotion is explicitly blocked until the master record exists.
 
-This staging change deliberately does not change `plant_master_count`, runtime assessment count, or user-facing verdicts. It is a provenance packet, not a published feeding recommendation. The staged assessment also carries the source-authority, visibility, and scope-lock flags explicitly so later promotion cannot accidentally widen its applicability.
+This staging change deliberately does not change `plant_master_count`, runtime assessment count, or user-facing verdicts. It is a provenance packet, not a published feeding recommendation. The staged assessment also carries source-authority, visibility, species-scope, and plant-part-scope locks so later promotion cannot accidentally widen its applicability.
