@@ -14,6 +14,7 @@
   "confidence": "C",
   "evidence_id": "tortoise_table_dill",
   "source_verdict_verified": "Feed in Moderation",
+  "source_resolution_rule": "use dedicated plant detail page when broad search-result labels are ambiguous",
   "critical_limits": ["Do not feed dill seeds.", "General tortoise evidence only; do not promote to Mediterranean Testudo/Ibera direct evidence.", "Do not infer a staple role or feeding percentage."],
   "integration_status": "verified_candidate_master_integration_pending",
   "release_gate": "promote only with master row + runtime assessment + coverage + static detail/search/sitemap + cache + passing audits",
