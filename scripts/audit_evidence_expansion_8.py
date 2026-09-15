@@ -1,10 +1,26 @@
 from pathlib import Path
-import json
+import json, re
 
 R = Path(__file__).resolve().parents[1]
-assessments = json.loads((R / "data/assessments.json").read_text(encoding="utf-8"))
-evidence = json.loads((R / "data/evidence.json").read_text(encoding="utf-8"))
-plants = json.loads((R / "data/plants.json").read_text(encoding="utf-8"))
+DATA = R / "data"
+
+# The audited foods moved into Korea assessment addenda as the evidence set expanded.
+# Load the complete runtime assessment set rather than only the original base file.
+def addendum_order(path):
+    m = re.search(r"_(\d+)\.json$", path.name)
+    return int(m.group(1)) if m else 0
+
+assessment_files = [DATA / "assessments.json"] + sorted(
+    DATA.glob("assessments_korea_addendum*.json"), key=addendum_order
+)
+assessments = []
+for path in assessment_files:
+    assessments.extend(json.loads(path.read_text(encoding="utf-8")))
+
+evidence = json.loads((DATA / "evidence.json").read_text(encoding="utf-8"))
+for path in sorted(DATA.glob("evidence_korea_addendum*.json"), key=addendum_order):
+    evidence.extend(json.loads(path.read_text(encoding="utf-8")))
+plants = json.loads((DATA / "plants.json").read_text(encoding="utf-8"))
 
 A = {(x["plant_id"], x["species_group"]): x for x in assessments}
 E = {x["id"]: x for x in evidence}
