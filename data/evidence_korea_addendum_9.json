@@ -1,0 +1,29 @@
+[
+  {
+    "id": "tortoise_table_maize_leaf",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Zea mays",
+    "citation": "The Tortoise Table — Maize (Corn)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=2&plant=625",
+    "note": "Safe to Feed applies to the leaves. The ears/cobs are explicitly excluded because they are too high in phosphorus and protein."
+  },
+  {
+    "id": "tortoise_table_pea_shoots",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general_negative",
+    "taxon": "Pisum sativum",
+    "citation": "The Tortoise Table — Pea (Pea Shoots, Pea Sprouts, Mangetout, Snow Pea, Snap Pea)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=705",
+    "note": "Do not Feed. The source explicitly includes pea shoots and says they are not actually toxic, but are unsuitable because of high protein and phytic-acid concerns."
+  },
+  {
+    "id": "tortoise_table_mugwort",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general_negative",
+    "taxon": "Artemisia spp.",
+    "citation": "The Tortoise Table — Mugwort (Common Wormwood)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=db&searchtxt=",
+    "note": "Do not Feed at Artemisia genus level. Korean master is Artemisia princeps, so applicability is genus-level rather than an exact-species feeding trial."
+  }
+]
