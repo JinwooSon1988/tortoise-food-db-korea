@@ -3,7 +3,7 @@ import json,sys
 from collections import Counter
 
 d=Path(__file__).resolve().parents[1]/"data"; errs=[]
-plants={p["id"] for p in json.loads((d/"plants.json").read_text(encoding="utf-8"))}
+plant_rows=json.loads((d/"plants.json").read_text(encoding="utf-8")); plants={p["id"] for p in plant_rows}
 
 def load(fn):
   return json.loads((d/fn).read_text(encoding="utf-8"))
@@ -51,5 +51,37 @@ coverage=load("coverage.json")
 expected=coverage.get("plants_with_explainable_assessment")
 if expected!=len(assessed_plants): errs.append(f"coverage mismatch: declared {expected}, actual {len(assessed_plants)}")
 if coverage.get("plant_master_count")!=len(plants): errs.append(f"plant master count mismatch: declared {coverage.get('plant_master_count')}, actual {len(plants)}")
+
+# Every master plant must have exactly one review state: assessed, identity-blocked, or evidence-blocked.
+identity_blocked=set(coverage.get("identity_blocked_priority",[]))
+evidence_blocked=set(coverage.get("evidence_blocked_priority",[]))
+for label,ids in (("identity_blocked_priority",identity_blocked),("evidence_blocked_priority",evidence_blocked)):
+  unknown=ids-plants
+  if unknown: errs.append(f"{label}: unknown plants {sorted(unknown)}")
+for pid in sorted((identity_blocked|evidence_blocked)&assessed_plants):
+  errs.append(f"review state conflict: {pid} is both assessed and blocked")
+if identity_blocked&evidence_blocked:
+  errs.append(f"review state conflict: blocked in both categories {sorted(identity_blocked&evidence_blocked)}")
+reviewed=assessed_plants|identity_blocked|evidence_blocked
+missing=plants-reviewed
+if missing: errs.append(f"master plants without review state: {sorted(missing)}")
+if len(reviewed)!=len(plants): errs.append(f"master review accounting mismatch: reviewed {len(reviewed)}, master {len(plants)}")
+
+resolution_path=d/"blocked_food_resolution.json"
+if identity_blocked or evidence_blocked:
+  if not resolution_path.exists(): errs.append("blocked_food_resolution.json missing")
+  else:
+    rows=load("blocked_food_resolution.json"); resolution_ids=[r.get("plant_id") for r in rows]
+    for pid,n in Counter(resolution_ids).items():
+      if n>1: errs.append(f"duplicate blocked resolution {pid} x{n}")
+    expected_blocked=identity_blocked|evidence_blocked
+    actual_blocked=set(resolution_ids)
+    if expected_blocked!=actual_blocked:
+      errs.append(f"blocked resolution mismatch: expected {sorted(expected_blocked)}, actual {sorted(actual_blocked)}")
+    for r in rows:
+      pid=r.get("plant_id"); status=r.get("status")
+      if pid in identity_blocked and status!="identity_blocked": errs.append(f"{pid}: expected identity_blocked resolution")
+      if pid in evidence_blocked and status!="evidence_blocked": errs.append(f"{pid}: expected evidence_blocked resolution")
+      if not r.get("reason") or not r.get("unlock_condition"): errs.append(f"{pid}: blocked resolution needs reason and unlock_condition")
 
 print("PASS" if not errs else "\n".join(errs)); sys.exit(1 if errs else 0)
