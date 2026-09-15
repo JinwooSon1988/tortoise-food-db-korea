@@ -18,4 +18,4 @@ Next release action: promote the staged candidate atomically; after that, use th
 
 Expected accounting after atomic promotion: 67 = 64 assessed + 2 identity-blocked + 1 evidence-blocked. The release audit introduced in PR #66 must remain green after this transition. Runtime promotion is explicitly blocked until the master record exists.
 
-This staging change deliberately does not change `plant_master_count`, runtime assessment count, or user-facing verdicts. It is a provenance packet, not a published feeding recommendation.
+This staging change deliberately does not change `plant_master_count`, runtime assessment count, or user-facing verdicts. It is a provenance packet, not a published feeding recommendation. The staged assessment also carries the source-authority and visibility flags explicitly so later promotion cannot accidentally widen its scope.
