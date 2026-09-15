@@ -4,7 +4,7 @@ Verified candidate: Dill / 딜 (`Anethum graveolens`, Apiaceae), verified 2026-0
 
 Specialist source: The Tortoise Table, Dill (Dill Weed), current dedicated detail-page verdict **Feed in Moderation**. The entry says there are no known hazards, but suitability evidence is insufficient for unrestricted feeding; it recommends moderation in a varied diet and explicitly says not to feed seeds. This dedicated detail record is authoritative for the staged packet.
 
-Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_packet.json`, and `data/dill_candidate_assessment.json`. Candidate and assessment staging are complete and marked ready for atomic promotion, while the assessment remains `staged_not_runtime` and `user_facing: false` until that release.
+Prepared assets: `data/evidence_korea_addendum_10.json`, `data/dill_candidate_packet.json`, and `data/dill_candidate_assessment.json`. Candidate and assessment staging/provenance packets are complete and marked ready for atomic promotion, while the assessment remains `staged_not_runtime` and `user_facing: false` until that release.
 
 Release gate: add `dill` to `data/plants.json` only in the same release change that promotes the staged assessment into the runtime assessment set, increments coverage master/assessment counts, generates the static plant detail/search/sitemap entries, updates runtime addendum loading and PWA cache, and passes release/site audits. Never ship a master row without its review state.
 
