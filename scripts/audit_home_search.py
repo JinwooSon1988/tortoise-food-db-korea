@@ -18,9 +18,10 @@ assert "오늘 식단 후보 보기" in html
 assert "<b>적용 범위</b> · " in html
 assert "do_not_feed:'급여 비권장'" in html
 assert "v5.3" in html
-for i in range(1, 13):
-    name = 'assessments_korea_addendum.json' if i == 1 else f'assessments_korea_addendum_{i}.json'
-    assert name in html, name
+# The home page generates the 12 addendum URLs at runtime. Verify the generator
+# contract instead of requiring generated filenames to appear literally in HTML.
+assert "Array.from({length:12}" in html
+assert "assessments_korea_addendum'+(i?'_'+(i+1):'')+'.json'" in html
 
 ids = {p['id'] for p in plants}
 assessment_ids = {a['plant_id'] for a in assessments}
