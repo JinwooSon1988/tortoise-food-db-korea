@@ -1,0 +1,20 @@
+{
+  "base_url": "https://jinwooson1988.github.io/tortoise-food-db-korea/",
+  "purpose": "네이버 블로그의 고의도 먹이 질문에서 거북밥 검색 판정으로 즉시 연결",
+  "rules": [
+    "검색 딥링크는 ?q=한국어먹이명 형식을 사용한다.",
+    "앵커 문구는 DB 판정보다 강한 급여 승인을 암시하지 않는다.",
+    "상세 학술 근거가 핵심인 문맥에서는 canonical plant page도 함께 사용할 수 있다."
+  ],
+  "links": [
+    {"plant_id":"chicory","anchor":"치커리 육지거북 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=치커리","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/chicory/"},
+    {"plant_id":"chard","anchor":"근대 육지거북 제한적 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=근대","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/chard/"},
+    {"plant_id":"lambs_lettuce","anchor":"콘샐러드 육지거북 일반 보조식 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=콘샐러드","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/lambs_lettuce/"},
+    {"plant_id":"dandelion","anchor":"민들레 육지거북 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=민들레","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/dandelion/"},
+    {"plant_id":"plantain","anchor":"질경이 육지거북 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=질경이","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/plantain/"},
+    {"plant_id":"mulberry","anchor":"뽕잎 육지거북 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=뽕잎","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/mulberry/"},
+    {"plant_id":"mallow","anchor":"아욱 육지거북 판정 보류 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=아욱","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/mallow/"},
+    {"plant_id":"romaine","anchor":"로메인 육지거북 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=로메인","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/romaine/"},
+    {"plant_id":"endive","anchor":"엔다이브 육지거북 급여 근거 바로 확인","search_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/?q=엔다이브","canonical_url":"https://jinwooson1988.github.io/tortoise-food-db-korea/plant/endive/"}
+  ]
+}

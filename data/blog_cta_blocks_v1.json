@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "purpose": "네이버 블로그 본문에 바로 적용할 거북밥 전환 CTA 문구",
+  "blocks": [
+    {
+      "id": "evidence_check",
+      "heading": "거북밥에서 직접 확인하기",
+      "body_template": "글만 보고 끝내지 말고 거북밥에서 ‘{food}’을 검색해 현재 판정, 적용 범위, 제한점을 함께 확인한다.",
+      "anchor_template": "{food} 육지거북 급여 근거 바로 확인",
+      "destination_template": "/?q={food}"
+    },
+    {
+      "id": "today_return",
+      "heading": "그래서 오늘은 뭘 먹일까?",
+      "body_template": "한 가지 먹이의 안전 여부만 확인하는 것보다 최근 급여 반복과 현재 종에 적용되는 근거를 함께 보는 편이 낫다. 거북밥의 오늘 후보에서 다음 식단을 검토한다.",
+      "anchor_template": "오늘 뭐 먹일까?",
+      "destination_template": "/today/"
+    },
+    {
+      "id": "identity_caution",
+      "heading": "이름이 같다고 같은 식물은 아니다",
+      "body_template": "마트명·통용명만으로 학명을 확정할 수 없는 먹이는 거북밥의 식물동정 주의를 먼저 확인한다.",
+      "anchor_template": "{food} 판정·동정 근거 확인",
+      "destination_template": "/?q={food}"
+    }
+  ]
+}
