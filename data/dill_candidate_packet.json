@@ -20,5 +20,6 @@
   "release_gate": "promote only with master row + runtime assessment + coverage + static detail/search/sitemap + cache + passing audits",
   "verified_on": "2026-09-15",
   "master_target_count": 67,
-  "assessment_target_count": 64
+  "assessment_target_count": 64,
+  "blocked_counts_after_promotion": {"identity": 2, "evidence": 1}
 }
