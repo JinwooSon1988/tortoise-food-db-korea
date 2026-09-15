@@ -31,5 +31,6 @@
   "ready_for_atomic_promotion": true,
   "staging_complete": true,
   "provenance_packet_complete": true,
-  "next_action": "atomic_master_promotion"
+  "next_action": "atomic_master_promotion",
+  "handoff_complete": true
 }
