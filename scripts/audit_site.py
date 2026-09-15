@@ -47,10 +47,14 @@ for path in ROOT.rglob("*.json"):
         errors.append(f"{path.relative_to(ROOT)}: invalid JSON: {exc}")
 
 plants = json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8"))
+coverage = json.loads((ROOT / "data/coverage.json").read_text(encoding="utf-8"))
 plant_ids = {plant["id"] for plant in plants}
 page_ids = {path.parent.name for path in ROOT.glob("plant/*/index.html")}
-if len(plants) != 66:
-    errors.append(f"plant master count is {len(plants)}, expected 66")
+expected_master_count = coverage.get("plant_master_count")
+if not isinstance(expected_master_count, int) or expected_master_count < 1:
+    errors.append("coverage.json: plant_master_count must be a positive integer")
+elif len(plants) != expected_master_count:
+    errors.append(f"plant master count is {len(plants)}, coverage declares {expected_master_count}")
 if plant_ids != page_ids:
     errors.append(f"plant page mismatch: missing={sorted(plant_ids-page_ids)}, extra={sorted(page_ids-plant_ids)}")
 
