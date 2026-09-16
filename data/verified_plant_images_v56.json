@@ -13,5 +13,50 @@
       "가능하면 외부 핫링크보다 검증된 파일을 저장해 제공한다."
     ]
   },
-  "images": []
+  "images": [
+    {
+      "plant_id": "chicory",
+      "scientific": "Cichorium intybus",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cichorium%20intybus2.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_intybus2.jpg",
+      "creator": "Panpanchik",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "identity_scope": "exact_species",
+      "verified_at": "2026-09-16"
+    },
+    {
+      "plant_id": "plantain",
+      "scientific": "Plantago major",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Plantago%20major.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Plantago_major.jpg",
+      "creator": "Iorsh",
+      "license": "Public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+      "identity_scope": "exact_species",
+      "verified_at": "2026-09-16"
+    },
+    {
+      "plant_id": "dandelion",
+      "scientific": "Taraxacum officinale",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Taraxacum%20officinale--.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Taraxacum_officinale--.jpg",
+      "creator": "Elekes Andor",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "identity_scope": "exact_species",
+      "verified_at": "2026-09-16"
+    },
+    {
+      "plant_id": "mulberry",
+      "scientific": "Morus alba",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Morus%20alba.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Morus_alba.jpg",
+      "creator": "পাপৰি বৰা",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "identity_scope": "exact_species",
+      "verified_at": "2026-09-16"
+    }
+  ]
 }
