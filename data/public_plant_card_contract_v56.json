@@ -1,0 +1,58 @@
+{
+  "version": "5.6",
+  "purpose": "Public display contract for every food search card and plant detail page.",
+  "identity": {
+    "required": ["ko", "en", "scientific", "family"],
+    "aliases": "Show verified Korean/retail aliases separately; aliases never establish taxonomic identity.",
+    "scientific_name_style": "italic",
+    "identity_warning": "사진과 유통명만으로 식물 종을 확정하지 않는다."
+  },
+  "image": {
+    "required_display_slot": true,
+    "allow_placeholder": true,
+    "placeholder_label": "검증된 이미지 준비 중",
+    "required_metadata_when_present": ["image_url", "source_url", "creator", "license", "license_url", "identity_scope"],
+    "rules": [
+      "Only use images with traceable reuse terms.",
+      "Prefer exact-taxon images from Wikimedia Commons or public institutions.",
+      "Never substitute a genus-level or lookalike image as an exact-species image.",
+      "Image is an identification aid, not a positive plant identification."
+    ]
+  },
+  "feeding_display": {
+    "prominence": "primary_badge",
+    "public_levels": {
+      "supported_mixed_diet": {"label": "혼합식으로 활용 가능", "symbol": "🟢", "meaning": "비교적 직접적인 육지거북/적용군 근거가 있는 혼합식 후보. 단독 주식·무제한 급여를 뜻하지 않는다."},
+      "limited_mixed_diet": {"label": "제한적으로 혼합 급여", "symbol": "🟡", "meaning": "혼합식에 사용할 수 있으나 근거 또는 사용 범위에 제한이 있다."},
+      "limited_supplement": {"label": "가끔 보조적으로 급여", "symbol": "🟠", "meaning": "보조적 사용 범위로 제한한다."},
+      "supplement_general_evidence": {"label": "가끔 보조적으로 급여", "symbol": "🟠", "meaning": "일반 육지거북 수준 근거에 의존하므로 보조적 사용으로 제한한다."},
+      "general_reptile_supplement": {"label": "가끔 보조적으로 급여", "symbol": "🟠", "meaning": "근거 적용성이 낮아 보조적 사용 이상으로 확대하지 않는다."},
+      "do_not_feed": {"label": "급여하지 않음", "symbol": "🔴", "meaning": "현재 판정에서는 급여 대상에서 제외한다."},
+      "blocked_or_unresolved": {"label": "판정 보류", "symbol": "⚪", "meaning": "동정 또는 근거가 해결되지 않아 급여 가능으로 판단하지 않는다."}
+    },
+    "required_context": ["applicability", "evidence_grade", "diet_role", "rationale", "limitations"],
+    "prohibited_inference": [
+      "Do not invent weekly frequency.",
+      "Do not invent diet percentage.",
+      "Safe to Feed does not mean daily, staple, unlimited, or nutritionally complete.",
+      "Wild consumption does not establish captive feeding frequency or percentage.",
+      "Plant nutrient data alone does not establish a tortoise feeding verdict."
+    ]
+  },
+  "display_order": [
+    "image",
+    "ko",
+    "en",
+    "scientific",
+    "family",
+    "aliases",
+    "feeding_level",
+    "diet_role",
+    "applicability",
+    "evidence_grade",
+    "rationale",
+    "limitations",
+    "evidence_detail"
+  ],
+  "scope": "All 69 master foods; identity/evidence-blocked items must remain visibly blocked rather than receiving an inferred feeding level."
+}
