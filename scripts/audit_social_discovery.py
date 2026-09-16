@@ -12,6 +12,7 @@ def audit(path,url,plant=None):
  assert one(text,r'<meta property="og:url" content="([^"]+)">')==url
  title=one(text,r'<title>(.*?)</title>')
  assert one(text,r'<meta property="og:title" content="([^"]+)">')==title
+ # Share-card descriptions may be shorter than the search snippet, but must remain substantive.
  desc=one(text,r'<meta name="description" content="([^"]+)">'); assert len(desc)>=20
  og_desc=one(text,r'<meta property="og:description" content="([^"]+)">'); assert len(og_desc)>=20
  assert one(text,r'<meta name="twitter:title" content="([^"]+)">')==title
