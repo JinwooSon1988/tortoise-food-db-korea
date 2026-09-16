@@ -42,7 +42,7 @@ jobs:
       - name: Generate general plant detail pages
         run: python scripts/generate_static_pages.py
       - name: Restore hand-curated Korean identity pages
-        run: git checkout HEAD -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
+        run: git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
       - name: Add discovery metadata to curated pages
         run: python scripts/patch_curated_social_metadata.py
       - name: Audit structural integrity
@@ -61,6 +61,6 @@ jobs:
       - name: Verify generated pages are current
         run: |
           python scripts/generate_static_pages.py
-          git checkout HEAD -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
+          git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
           python scripts/patch_curated_social_metadata.py
           git diff --exit-code -- plant/
