@@ -9,6 +9,9 @@ on:
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
+      - 'scripts/inject_plant_detail_v56.py'
+      - 'plant-detail-v56.js'
+      - 'plant-detail-v56.css'
       - 'scripts/audit_verdict_cards.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
@@ -21,6 +24,9 @@ on:
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
+      - 'scripts/inject_plant_detail_v56.py'
+      - 'plant-detail-v56.js'
+      - 'plant-detail-v56.css'
       - 'scripts/audit_verdict_cards.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
@@ -45,10 +51,14 @@ jobs:
         run: git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
       - name: Add discovery metadata to curated pages
         run: python scripts/patch_curated_social_metadata.py
+      - name: Apply v5.6 identity and feeding display
+        run: python scripts/inject_plant_detail_v56.py
       - name: Audit structural integrity
         run: python scripts/audit_plant_integrity.py
       - name: Audit verdict-card safety invariants
         run: python scripts/audit_verdict_cards.py
+      - name: Audit v5.6 detail contract
+        run: python scripts/audit_plant_detail_v56.py
       - name: Commit synchronized generated pages
         run: |
           if ! git diff --quiet -- plant/; then
@@ -63,4 +73,5 @@ jobs:
           python scripts/generate_static_pages.py
           git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
           python scripts/patch_curated_social_metadata.py
+          python scripts/inject_plant_detail_v56.py
           git diff --exit-code -- plant/
