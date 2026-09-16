@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 js=(root/'plant-detail-v56.js').read_text(encoding='utf-8')
@@ -7,6 +8,21 @@ pages=list((root/'plant').glob('*/index.html'))
 assert len(pages)==69, len(pages)
 for x in ['국명','영명','학명','과명','적용 대상','근거 등급','판정 보류','급여하지 않음','검증된 이미지 준비 중','사진과 유통명만으로 식물 종을 확정하지 않는다.']:
     assert x in js,x
+assert 'verified_plant_images_v56.json' in js
+assert 'exact_species' in js
+assert '사진만으로 식물 동정 확정 금지' in js
 assert 'glob(\'*/index.html\')' in inj
 assert '@media(max-width:620px)' in css
-print('plant detail v5.6 enhancer audit OK for 69 pages')
+registry=json.loads((root/'data/verified_plant_images_v56.json').read_text(encoding='utf-8'))
+required=set(registry['policy']['required_fields'])
+seen=set()
+for image in registry['images']:
+    assert required <= set(image), (image.get('plant_id'), required-set(image))
+    assert image['plant_id'] not in seen, image['plant_id']
+    seen.add(image['plant_id'])
+    assert image['identity_scope']=='exact_species', image['plant_id']
+    assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'), image['plant_id']
+    assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), image['plant_id']
+    assert image['license'], image['plant_id']
+    assert image['creator'], image['plant_id']
+print(f'plant detail v5.6 enhancer audit OK for 69 pages; {len(seen)} verified images')
