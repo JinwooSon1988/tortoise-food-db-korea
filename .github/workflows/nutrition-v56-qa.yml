@@ -1,0 +1,30 @@
+name: Nutrition v5.6 QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/plant_nutrition_v56.json'
+      - 'data/plants.json'
+      - 'scripts/audit_nutrition_v56.py'
+      - '.github/workflows/nutrition-v56-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/plant_nutrition_v56.json'
+      - 'data/plants.json'
+      - 'scripts/audit_nutrition_v56.py'
+      - '.github/workflows/nutrition-v56-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit nutrition registry
+        run: python scripts/audit_nutrition_v56.py
