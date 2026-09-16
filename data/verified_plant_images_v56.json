@@ -1,0 +1,17 @@
+{
+  "version": "5.6",
+  "status": "verified_only",
+  "policy": {
+    "exact_taxon_required": true,
+    "fallback": "검증된 이미지 준비 중",
+    "required_fields": ["plant_id", "scientific", "image_url", "source_url", "creator", "license", "license_url", "identity_scope", "verified_at"],
+    "rules": [
+      "사진과 유통명만으로 식물 종을 확정하지 않는다.",
+      "속 수준 또는 유사종 이미지를 정확한 종의 대표 이미지로 대체하지 않는다.",
+      "각 이미지의 파일 설명 페이지에서 저작자와 라이선스를 개별 확인한다.",
+      "재사용 시 저작자 표시와 라이선스 링크 등 해당 파일의 조건을 따른다.",
+      "가능하면 외부 핫링크보다 검증된 파일을 저장해 제공한다."
+    ]
+  },
+  "images": []
+}
