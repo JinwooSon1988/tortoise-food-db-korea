@@ -14,15 +14,21 @@ assert '사진만으로 식물 동정 확정 금지' in js
 assert 'glob(\'*/index.html\')' in inj
 assert '@media(max-width:620px)' in css
 registry=json.loads((root/'data/verified_plant_images_v56.json').read_text(encoding='utf-8'))
+plants=json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
+master={p['id']:p for p in plants}
 required=set(registry['policy']['required_fields'])
 seen=set()
 for image in registry['images']:
-    assert required <= set(image), (image.get('plant_id'), required-set(image))
-    assert image['plant_id'] not in seen, image['plant_id']
-    seen.add(image['plant_id'])
-    assert image['identity_scope']=='exact_species', image['plant_id']
-    assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'), image['plant_id']
-    assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), image['plant_id']
-    assert image['license'], image['plant_id']
-    assert image['creator'], image['plant_id']
+    pid=image['plant_id']
+    assert required <= set(image), (pid, required-set(image))
+    assert pid not in seen, pid
+    seen.add(pid)
+    assert pid in master, pid
+    assert image['identity_scope']=='exact_species', pid
+    assert 'spp.' not in master[pid]['scientific'], pid
+    assert image['scientific']==master[pid]['scientific'], (pid,image['scientific'],master[pid]['scientific'])
+    assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'), pid
+    assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), pid
+    assert image['license'], pid
+    assert image['creator'], pid
 print(f'plant detail v5.6 enhancer audit OK for 69 pages; {len(seen)} verified images')
