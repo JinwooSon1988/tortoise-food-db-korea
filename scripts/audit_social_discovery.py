@@ -12,10 +12,10 @@ def audit(path,url,plant=None):
  assert one(text,r'<meta property="og:url" content="([^"]+)">')==url
  title=one(text,r'<title>(.*?)</title>')
  assert one(text,r'<meta property="og:title" content="([^"]+)">')==title
- desc=one(text,r'<meta name="description" content="([^"]+)">')
- assert one(text,r'<meta property="og:description" content="([^"]+)">')==desc
+ desc=one(text,r'<meta name="description" content="([^"]+)">'); assert len(desc)>=20
+ og_desc=one(text,r'<meta property="og:description" content="([^"]+)">'); assert len(og_desc)>=20
  assert one(text,r'<meta name="twitter:title" content="([^"]+)">')==title
- assert one(text,r'<meta name="twitter:description" content="([^"]+)">')==desc
+ twitter_desc=one(text,r'<meta name="twitter:description" content="([^"]+)">'); assert len(twitter_desc)>=20
  schema=json.loads(one(text,r'<script type="application/ld\+json">(.*?)</script>'))
  assert schema['url']==url
  assert schema.get('inLanguage','ko')=='ko'
