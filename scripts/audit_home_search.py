@@ -17,11 +17,11 @@ assert "현재 등록된 '+plants.length+'종" in html
 assert "전체 식물 69종 보기" in html
 assert 'href="./all-plants/"' in html
 assert 'href="./core-foods/"' in html
-assert "자주 찾는 핵심 먹이 9종" in html
 # Retired recommendation / husbandry-recording entry points must not return.
 for retired in ('./today/','./meal/','./weekly/','./growth/','./monthly/','./trends/','./profile/','./settings/'):
     assert retired not in html, retired
-assert "오늘 식단 후보 보기" not in html
+for retired_copy in ('오늘 식단 후보 보기','자주 찾는 핵심 먹이 9종','사육 기록','프로필 관리','7일 식단','30일 요약','장기 추세','백업·복원'):
+    assert retired_copy not in html, retired_copy
 # The home page generates the 12 addendum URLs at runtime.
 assert "Array.from({length:12}" in html
 assert "assessments_korea_addendum'+(i?'_'+(i+1):'')+'.json'" in html
