@@ -1,0 +1,36 @@
+{
+  "schema_version": "5.6",
+  "food_id": "mallow",
+  "question": "Can the Korean cultivated vegetable name 아욱 be mapped to a species-level identity without treating every plant called mallow as interchangeable?",
+  "verified_at": "2026-09-18",
+  "conclusion": {
+    "korean_cultivated_auuk_identity": "Malva verticillata L.",
+    "status": "verified_for_Korean_cultivated_아욱",
+    "generic_mallow_status": "unresolved_without_species_identification",
+    "feeding_verdict_use": false,
+    "reason": "Authoritative Korean agricultural resources consistently map the cultivated vegetable 아욱 to Malva verticillata. This resolves the Korean crop-name identity question, but does not make Malva spp. a species-level identity and does not by itself establish tortoise feeding suitability."
+  },
+  "sources": [
+    {"source_id":"RDA_NONGSARO_AUUK","authority":"Rural Development Administration (농촌진흥청), Nongsaro","url":"https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30631&menuId=PS00087","reported_korean_name":"아욱","reported_scientific_name":"Malva verticillata L.","crop_context":"cultivated vegetable; young leaves and stems harvested","supports":"Species-level identity of the Korean cultivated crop 아욱.","does_not_support":"Tortoise safety, feeding frequency, captive diet role, or identity of every product/weed marketed under a generic mallow name."},
+    {"source_id":"BRIS_AUUK","authority":"BRIS 생명자원정보서비스 / 한국농업기술진흥원 제공 자원정보","url":"https://www.bris.go.kr/portal/book/nativeCropsDetailPopup.do?biorsrcMngNo=MANUIP3300200007&menuId=81","reported_korean_name":"아욱","reported_scientific_name":"Malva verticillata L.","reported_english_name":"Whorled mallow","crop_context":"Korean crop resource; vegetable use","supports":"Independent Korean agricultural-resource corroboration of the crop-name mapping.","does_not_support":"A genus-wide Malva feeding verdict or tortoise-specific safety."},
+    {"source_id":"KEW_POWO_MALVA_VERTICILLATA","authority":"Royal Botanic Gardens, Kew - Plants of the World Online","url":"https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:561971-1","reported_scientific_name":"Malva verticillata L.","taxonomic_status":"accepted species","distribution_context":"native range includes Korea","supports":"International taxonomic backbone for the species name.","does_not_support":"Tortoise feeding suitability."}
+  ],
+  "tortoise_evidence_context": [
+    {"source_id":"slimani2006","taxon":"Testudo graeca graeca","plant":"Malva parviflora","evidence_type":"wild feeding ecology","doi":"10.1016/j.jaridenv.2005.06.010","interpretation":"Direct evidence for another Malva species in another T. graeca subspecies. It is related-species context only and cannot be transferred as exact evidence for M. verticillata."}
+  ],
+  "composition_context": {
+    "rda_candidate_record": {"food_code":"F1230000000a","food_name":"아욱, 생것","reported_scientific_name":"Malva verticillata var. crispa L.","basis":"100 g raw edible portion","water_g":87.4,"protein_g":3.08,"fat_g":0.31,"carbohydrate_g":7.64,"dietary_fiber_g":4.5,"calcium_mg":267,"phosphorus_mg":76,"potassium_mg":426,"derived_ca_p_ratio":3.51,"status":"candidate_pending_official_workbook_reconciliation","note":"Ca:P is calculated from reported Ca and P values and is descriptive only. These values must be reconciled against the official RDA workbook already supplied to the project before canonical nutrition publication.","feeding_verdict_use":false}
+  },
+  "phytochemistry_context": [
+    {"source_id":"BAO_2018_MALVA_VERTICILLATA","title":"Chemical profiling of Malva verticillata L. by UPLC-Q-TOF-MSE and their antioxidant activity in vitro","pmid":"29289893","doi":"10.1016/j.jpba.2017.12.044","plant_parts":["leaves","stems","seeds"],"finding":"Phenolic constituents and antioxidant activity were characterized; leaves had the highest reported total phenolic content among the tested parts.","does_not_support":"Tortoise safety, oxalate burden, nitrate burden, feeding frequency, or captive diet role."},
+    {"source_id":"IBRAHIM_2021_MALVA_VERTICILLATA","title":"Cardioprotective effect of Malva verticillata against doxorubicin-induced toxicity in rats","doi":"10.1186/s40816-021-00265-5","plant_part":"leaf methanolic extract","finding":"Phytochemical screening reported alkaloids, saponins, phenols, flavonoids, ash and tannins in the tested extract.","does_not_support":"Whole-leaf tortoise safety or a captive feeding recommendation; this was an extract study in rats."}
+  ],
+  "hazard_review": {
+    "nitrate_claim_status": "secondary_source_only_not_canonical",
+    "note": "Secondary plant databases repeat a warning that nitrogen-rich cultivation can increase leaf nitrate. No sufficiently direct primary M. verticillata nitrate-risk study for tortoise feeding was verified in this pass, so the claim is not used as a public feeding verdict or quantitative limit.",
+    "oxalate_claim_status": "not_verified_for_exact_species_in_this_pass",
+    "rule": "Do not infer oxalate content from other Malva species or from generic leafy-green assumptions."
+  },
+  "required_database_rule": "If the public entry means Korean cultivated 아욱, its identity may be represented as Malva verticillata L. with the Korean crop sources above. If the entry intentionally means generic mallow/Malva spp., keep it genus-level and identity-blocked for species-specific claims. Do not change the feeding verdict solely from identity, human food composition, extract phytochemistry, or related-species feeding evidence.",
+  "next_required_evidence": ["Exact Malva verticillata feeding or toxicology evidence relevant to chelonians/herbivorous reptiles","Primary exact-species nitrate and oxalate data for edible leaves if available","Official RDA workbook reconciliation for raw 아욱 nutrient values","Migration plan separating Korean cultivated 아욱 from generic Malva spp. without misidentifying existing generic records"]
+}
