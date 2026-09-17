@@ -4,10 +4,11 @@
   "status": "context_only_no_blanket_verdict",
   "reviewed_at": "2026-09-18",
   "conclusion": {
-    "ko": "볏과(Poaceae)를 지중해형 Testudo가 소화하지 못한다거나 일률적으로 급여 금지·제한해야 한다는 주장은 현재 확인한 근거로 지지되지 않는다. 야생 연구에서는 지역·계절에 따라 볏과가 회피되거나 적게 이용되는 개체군도 있지만, 다른 Testudo hermanni 및 Testudo graeca 자료에서는 실제 섭식이 확인된다. 따라서 Poaceae라는 과 수준 정보만으로 개별 식물의 급여 판정을 변경하지 않는다.",
+    "ko": "볏과(Poaceae)를 지중해형 Testudo가 소화하지 못한다거나 일률적으로 급여 금지·제한해야 한다는 주장은 현재 확인한 근거로 지지되지 않는다. 야생 연구에서는 지역·계절에 따라 볏과가 회피되거나 적게 이용되는 개체군도 있지만, 다른 Testudo hermanni 및 Testudo graeca 자료에서는 실제 섭식이 확인된다. 특히 중부 이탈리아 T. h. hermanni에서는 봄철 볏과 섭식이 뚜렷했고, 연구진은 계절 후반 건조한 풀의 낮은 수분함량과 수분·질소 균형을 계절적 감소의 가능한 설명으로 제시했다. 이는 '볏과를 소화하지 못한다'는 주장과 다르다. 따라서 Poaceae라는 과 수준 정보만으로 개별 식물의 급여 판정을 변경하지 않는다.",
     "does_not_support": [
       "Poaceae 전체를 do_not_feed로 분류",
       "지중해형 Testudo는 풀을 소화하지 못한다는 단정",
+      "생초와 성숙·건조초를 동일한 먹이 형태로 취급",
       "야생 섭식 빈도를 사육 급여 비율로 변환",
       "한 지역·한 종의 선택성을 Testudo 전체에 일반화"
     ]
@@ -33,9 +34,23 @@
       "taxon": "Testudo hermanni hermanni",
       "study_type": "wild diet / faecal analysis",
       "location": "central Italy",
-      "supports": "The population consumed grasses in spring; Poaceae taxa reported include Avena barbata, Brachypodium sylvaticum and Catapodium rigidum.",
-      "limitations": "Different Testudo species/subspecies and locality; presence in diet is not a captive feeding recommendation or digestibility trial.",
+      "sample": "49 tortoises with identifiable faecal remains; 28 spring and 21 autumn samples",
+      "supports": "Grasses were a substantial spring component. Poaceae occurred in 32.2% of spring versus 24.0% of autumn samples at family level; Avena barbata leaves occurred in 28.6% of spring versus 4.8% of autumn samples. Reported Poaceae also included Brachypodium sylvaticum and Catapodium rigidum.",
+      "season_form_context": "Authors proposed that the seasonal shift away from Poaceae could reflect lower water content of grasses later in the year and cited negative water/nitrogen balance from dry grasses in arid-environment tortoises. This is a season/hydration hypothesis, not evidence of inability to digest the grass family.",
+      "limitations": "Different Testudo species/subspecies and locality; frequency of occurrence is not diet mass percentage, captive feeding recommendation, or plant-specific digestibility coefficient.",
       "directness": "husbandry_group"
+    },
+    {
+      "id": "clauss_herbivorous_reptiles_2010",
+      "citation": "Clauss M et al. 2010. Herbivorous reptiles and body mass: effects on food intake, digesta retention, digestibility and gut capacity, and a comparison with mammals. Comparative Biochemistry and Physiology A.",
+      "pmid": "20850560",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20850560/",
+      "taxon": "Testudo graeca; Testudo hermanni; other herbivorous tortoises",
+      "study_type": "controlled comparative intake, passage and digestion experiment plus literature synthesis",
+      "sample": "23 tortoises total, including Testudo graeca n=4 and Testudo hermanni n=6",
+      "supports": "Testudo can be studied quantitatively for dry-matter intake, retention and digestibility; across herbivorous reptiles, diet nutrient composition including fibre was relevant to digestive efficiency. The study does not support a categorical claim that Testudo cannot digest Poaceae.",
+      "limitations": "Not a plant-species safety trial and does not provide a Poaceae-vs-dicot digestibility rule for T. g. ibera. Do not convert comparative physiology into a feeding percentage.",
+      "directness": "genus_physiology"
     },
     {
       "id": "meek_hermanni_balkans_2010",
@@ -55,7 +70,7 @@
       "taxon": "Testudo hermanni",
       "study_type": "multi-site vegetation and faecal microhistology",
       "location": "Apulia, Tuscany and Sardinia, Italy",
-      "supports": "Poaceae genera Melica, Stipa and Vulpia occurred among selected/consumed families, while Poaceae as a family also showed a high negative selection index. This illustrates that occurrence and preference are not equivalent.",
+      "supports": "Poaceae genera Melica, Stipa and Vulpia occurred among consumed material, while Poaceae as a family also showed a high negative selection index. This illustrates that occurrence and preference are not equivalent.",
       "limitations": "Conference proceedings/preliminary results; different species from Ibera; no controlled digestibility coefficient.",
       "directness": "husbandry_group"
     },
@@ -94,6 +109,12 @@
       "directness": "specialist_supplementary"
     }
   ],
+  "interpretation_rules": {
+    "fresh_vs_dry": "When a source distinguishes season or plant dryness, retain that distinction. Do not infer that a fresh young grass and a mature/dry grass have identical hydration, fibre/lignification or husbandry implications.",
+    "digestion_vs_selection": "Avoidance or negative selection is not evidence of digestive incapacity. Consumption is not evidence of unlimited suitability.",
+    "frequency_vs_amount": "Faecal frequency of occurrence is not equivalent to percentage by mass or a captive ration.",
+    "taxon_transfer": "T. hermanni evidence is husbandry-group context for T. g. ibera, not exact-subspecies evidence."
+  },
   "database_rule": {
     "tag": "poaceae_context",
     "feeding_verdict_use": false,
