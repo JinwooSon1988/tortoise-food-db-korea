@@ -1,0 +1,43 @@
+{
+  "schema_version": "5.6",
+  "audited_at": "2026-09-17",
+  "source_datasets": [
+    "FoodData Central Foundation Foods JSON 2026-04-30",
+    "FoodData Central SR Legacy Foods JSON 2018-04"
+  ],
+  "policy": {
+    "purpose": "nutrition_identity_mapping_audit",
+    "feeding_verdict_use": false,
+    "rule": "A USDA food-composition record is accepted only when its food identity and edible part are compatible with the master plant identity. Similar names, different plant taxa, or different edible parts are not substituted."
+  },
+  "candidates": [
+    {"plant_id":"radicchio","status":"exact_retail_food_mapping_candidate","fdc_id":2747664,"description":"Radicchio, raw","data_type":"Foundation","dataset_release":"FoodData Central Foundation Foods JSON 2026-04-30","note":"Raw radicchio record; candidate for verified nutrition registry after master-identity and nutrient-field QA."},
+    {"plant_id":"lettuce","status":"hold_variety_scope","fdc_ids":[2346390,2346391],"descriptions":["Lettuce, leaf, red, raw","Lettuce, leaf, green, raw"],"data_type":"Foundation","note":"Master is generic Lactuca sativa; Foundation records distinguish red and green leaf retail foods. Do not collapse varieties without an explicit mapping policy."},
+    {"plant_id":"celeryleaf","status":"hold_edible_part_scope","fdc_id":2346405,"description":"Celery, raw","data_type":"Foundation","note":"USDA record does not establish leaf-only composition required by the master celery-leaf item."},
+    {"plant_id":"radishgreens","status":"reject_edible_part_mismatch","note":"Available radish records found in the supplied datasets do not establish raw radish-leaf/greens composition."},
+    {"plant_id":"cauliflowerleaf","status":"reject_edible_part_mismatch","note":"Raw cauliflower food records do not establish cauliflower-leaf-only composition."},
+    {"plant_id":"dandelion","status":"hold_master_taxon_scope","note":"USDA dandelion greens exist, but master identity is Taraxacum spp.; current integrity policy rejects genus-level nutrition mapping."},
+    {"plant_id":"plantain","status":"reject_taxon_mismatch","note":"USDA food records named plantain refer to Musa fruit, not Plantago spp."},
+    {"plant_id":"mulberry","status":"hold_master_taxon_scope","note":"Master identity is Morus spp.; no exact raw leaf mapping accepted."},
+    {"plant_id":"mallow","status":"blocked_master_identity","note":"Master identity requires species-level mapping; nutrition cannot resolve the identity block."},
+    {"plant_id":"figleaf","status":"reject_edible_part_mismatch","note":"Fig fruit composition is not substituted for Ficus carica leaf composition."},
+    {"plant_id":"hibiscusleaf","status":"reject_edible_part_or_preparation_mismatch","note":"Brewed hibiscus beverage data are not substituted for raw Hibiscus syriacus leaves."},
+    {"plant_id":"hibiscusflower","status":"reject_taxon_or_preparation_mismatch","note":"Brewed hibiscus beverage data do not establish raw Hibiscus syriacus flower composition."}
+  ],
+  "verified_candidate_nutrients": {
+    "radicchio": {
+      "fdc_id": 2747664,
+      "description": "Radicchio, raw",
+      "water_g": 92.8,
+      "protein_g": 1.31,
+      "fat_g": 0.143,
+      "carbohydrate_g": 4.96,
+      "fiber_g": 2.11,
+      "calcium_mg": 30.9,
+      "phosphorus_mg": 35.5,
+      "calcium_phosphorus_ratio": 0.87,
+      "potassium_mg": 335,
+      "vitamin_c_mg": 6.18
+    }
+  }
+}
