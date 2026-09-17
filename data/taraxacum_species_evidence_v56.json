@@ -1,0 +1,87 @@
+{
+  "schema_version": "5.6",
+  "canonical_master": {
+    "id": "dandelion",
+    "scientific_name": "Taraxacum spp.",
+    "identity_scope": "genus",
+    "interpretation": "The canonical master remains genus-level. Species-resolved records must not be silently generalized across Taraxacum."
+  },
+  "records": [
+    {
+      "source_id": "iftime_ibera_dobrogea_2012",
+      "citation": "Iftime A, Iftime O. 2012. Diet of Testudo graeca in Romania.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "tortoise_taxon": "Testudo graeca ibera",
+      "population": "Dobrogea, Romania",
+      "study_type": "long-term field feeding observation",
+      "plant_taxon_reported": "Taraxacum",
+      "plant_resolution": "genus",
+      "plant_part": "young leaves; flowers/inflorescences may be ingested with leaves",
+      "directness": "exact_tortoise_subspecies_genus_plant",
+      "supports": [
+        "Wild T. g. ibera directly consumed Taraxacum material.",
+        "Taraxacum was among frequently consumed young-leaf plant taxa in the observed population."
+      ],
+      "does_not_support": [
+        "Taraxacum officinale exact-species identification",
+        "all Taraxacum species being equivalent",
+        "captive feeding percentage",
+        "daily, unlimited, staple, or nutritionally complete status"
+      ]
+    },
+    {
+      "source_id": "mitrevichin_ibera_bulgaria_2023",
+      "citation": "Mitrevichin Z. 2023. Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria.",
+      "doi": "10.5281/zenodo.12807900",
+      "tortoise_taxon": "Testudo graeca ibera",
+      "population": "south-western Bulgaria",
+      "study_type": "direct field observation",
+      "plant_taxon_reported": "Taraxacum sp.",
+      "plant_resolution": "genus",
+      "directness": "exact_tortoise_subspecies_genus_plant",
+      "supports": ["Independent direct observation of wild T. g. ibera feeding on Taraxacum sp."],
+      "does_not_support": ["exact Taraxacum species", "frequency or diet proportion", "captive feeding schedule"]
+    },
+    {
+      "source_id": "selleri_hermanni_montsant_2008",
+      "citation": "Soler J, Martinez A. Aportaciones al estudio de la alimentacion de Testudo hermanni hermanni en el Parque Natural de la Sierra de Montsant.",
+      "tortoise_taxon": "Testudo hermanni hermanni",
+      "study_type": "field/semi-natural observation report",
+      "plant_taxon_reported": "Taraxacum officinale",
+      "plant_resolution": "species",
+      "directness": "related_testudo_exact_plant_species",
+      "supports": ["Species-resolved T. officinale consumption context in related Mediterranean Testudo."],
+      "does_not_support": ["direct T. g. ibera evidence", "genus-wide Taraxacum safety", "captive feeding frequency"]
+    },
+    {
+      "source_id": "mans_uvb_hermanni_2012",
+      "citation": "Plasma 25-hydroxyvitamin D3 concentrations in Hermann's tortoises exposed to natural sunlight and artificial UV sources. AJVR 2012;73(11):1781.",
+      "doi": "10.2460/ajvr.73.11.1781",
+      "tortoise_taxon": "Testudo hermanni",
+      "study_type": "controlled UV study; diet was background husbandry, not a food-safety trial",
+      "plant_taxon_reported": "Taraxacum officinale",
+      "plant_resolution": "species",
+      "directness": "related_testudo_captive_diet_context",
+      "supports": ["T. officinale was included in a mixed diet used for captive Hermann's tortoises in a veterinary study."],
+      "does_not_support": ["food safety endpoint", "optimal proportion", "direct T. g. ibera recommendation"]
+    },
+    {
+      "source_id": "bielli_hermanni_2015",
+      "citation": "Bielli M, Nardini G, Di Girolamo N, Savarino P. 2015. Hematological values for adult eastern Hermann's tortoise in semi-natural conditions.",
+      "doi": "10.1177/1040638714561251",
+      "tortoise_taxon": "Testudo hermanni boettgeri",
+      "study_type": "clinical reference study; usual diet described as husbandry context",
+      "plant_taxon_reported": "Taraxacum officinale",
+      "plant_resolution": "species",
+      "directness": "related_testudo_husbandry_context",
+      "supports": ["T. officinale occurred in the usual native-wild-plant diet of clinically examined T. h. boettgeri."],
+      "does_not_support": ["causal health benefit", "exact safe dose", "direct T. g. ibera feeding rule"]
+    }
+  ],
+  "canonical_interpretation": {
+    "strongest_direct_evidence": "Two independent field sources directly document Taraxacum at genus level in wild Testudo graeca ibera.",
+    "exact_species_gap": "The exact-Ibera sources do not resolve the consumed dandelion to Taraxacum officinale. Exact T. officinale records located here are from related Testudo or captive husbandry contexts.",
+    "public_verdict_rule": "Do not upgrade the public verdict merely because T. officinale is documented in related Testudo. Preserve the distinction between exact-Ibera genus evidence and related-Testudo exact-species evidence.",
+    "frequency_rule": "Wild preference/frequency wording is descriptive ecology and must not be converted into captive percentages, daily feeding, unlimited feeding, or nutritional completeness."
+  }
+}
