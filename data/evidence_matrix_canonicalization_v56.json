@@ -1,0 +1,27 @@
+{
+  "version": "5.6",
+  "purpose": "Tracks promotion of verified academic plant signals into the canonical evidence matrix without changing public feeding verdicts.",
+  "feeding_verdict_use": false,
+  "canonical_matrix": "data/evidence_matrix_v56.json",
+  "academic_registry": "data/academic_evidence_registry_v56.json",
+  "direct_ibera_promotions": [
+    {"food_id":"chicory","source_id":"mitrevichin_ibera_bulgaria_2023","identity_scope":"exact_species","status":"canonical"},
+    {"food_id":"dandelion","source_id":"iftime_ibera_dobrogea_2012","identity_scope":"genus","status":"canonical"},
+    {"food_id":"sowthistle","source_id":"iftime_ibera_dobrogea_2012","identity_scope":"genus","status":"canonical"},
+    {"food_id":"clover","source_id":"iftime_ibera_dobrogea_2012","identity_scope":"genus","status":"canonical"},
+    {"food_id":"alfalfa","source_id":"iftime_ibera_dobrogea_2012","identity_scope":"genus","status":"canonical"},
+    {"food_id":"alfalfa","source_id":"mitrevichin_ibera_bulgaria_2023","identity_scope":"genus","status":"canonical"}
+  ],
+  "not_promoted": [
+    {"observed_scope":"Rosa spp.","source_id":"iftime_ibera_dobrogea_2012","reason":"No matching canonical food row was verified in the current evidence matrix; do not invent a master identity solely to absorb a study signal."},
+    {"observed_scope":"Sedum rubens / Sedum album","source_id":"mitrevichin_ibera_bulgaria_2023","reason":"Master row is Sedum sarmentosum; related-genus context remains explicitly non-exact."},
+    {"observed_scope":"Malva parviflora","source_id":"elmouden_graeca_morocco_2006","reason":"Evidence is T. g. graeca and the master mallow identity is genus-level/identity-blocked; it remains related-species evidence only."}
+  ],
+  "guardrails": [
+    "Wild occurrence is not a captive diet percentage.",
+    "Genus-level observation is not species-level proof.",
+    "Related Testudo graeca populations are not relabeled as Ibera evidence.",
+    "Clinical association is not causality unless demonstrated.",
+    "Food composition does not set feeding safety, frequency, diet role, or evidence grade."
+  ]
+}
