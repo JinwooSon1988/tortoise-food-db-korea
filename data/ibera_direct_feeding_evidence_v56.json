@@ -1,0 +1,66 @@
+{
+  "version": "5.6",
+  "purpose": "Source-verified direct wild feeding observations for Testudo graeca ibera. This ledger preserves taxon, plant identity scope, plant part, study setting, and inference boundaries before canonical food-level integration.",
+  "feeding_verdict_use": false,
+  "rules": {
+    "wild_occurrence_is_not_captive_percentage": true,
+    "observed_consumption_is_not_unlimited_safety": true,
+    "genus_observation_is_not_exact_species_evidence": true,
+    "plant_part_scope_must_be_preserved": true,
+    "regional_population_scope_must_be_preserved": true
+  },
+  "sources": [
+    {
+      "source_id": "iftime_ibera_dobrogea_2012",
+      "citation": "Iftime A, Iftime O. Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica. 2012;7(1):105-110.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "url": "https://oaj.fupress.net/index.php/ah/article/view/1648",
+      "taxon": "Testudo graeca ibera",
+      "location": "Dobrogea, Romania",
+      "study_period": "2000-2010",
+      "method": "direct wild observation",
+      "sample_context": "more than 500 wild specimens observed from March to October over 10 years",
+      "supports": [
+        "96.5% of observed feeding cases involved plant matter",
+        "25 plant species were recorded as consumed",
+        "young leaves were preferentially ingested for several listed plant groups"
+      ],
+      "does_not_support": [
+        "a captive diet percentage for any individual plant",
+        "daily or unlimited feeding of any observed plant",
+        "exact-species evidence when the source identifies only a genus or family"
+      ]
+    },
+    {
+      "source_id": "mitrevichin_ibera_bulgaria_2023",
+      "citation": "Mitrevichin E, Sakelarieva L, Peshev H, Pulev A. Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes. 2023;228:1-4.",
+      "taxon": "Testudo graeca ibera",
+      "location": "Kresna Gorge and adjacent areas, south-western Bulgaria",
+      "study_period": "2020-2023 active seasons",
+      "method": "direct wild observation; photographs used for food identification when possible",
+      "sample_context": "309 T. graeca observed; 17 registered T. graeca food-consumption cases; plants could not be identified in about half of all feeding observations across both tortoise species",
+      "supports": [
+        "T. graeca feeding observations in this study were exclusively plant-based",
+        "identified T. graeca foods included Cichorium intybus, Sedum rubens, Sedum album, Potentilla sp., Taraxacum sp., and Medicago sp."
+      ],
+      "does_not_support": [
+        "population-wide diet percentages for individual plants",
+        "captive feeding frequency",
+        "using Sedum rubens or Sedum album as exact-species evidence for Sedum sarmentosum",
+        "using Taraxacum sp. or Medicago sp. as exact-species evidence"
+      ]
+    }
+  ],
+  "observations": [
+    {"source_id":"iftime_ibera_dobrogea_2012","plant_id":"dandelion","source_plant":"Taraxacum","identity_scope":"genus","observed_part":"young leaves; flowers/inflorescences also reported with leaves","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"iftime_ibera_dobrogea_2012","plant_id":"sowthistle","source_plant":"Sonchus","identity_scope":"genus","observed_part":"young leaves","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"iftime_ibera_dobrogea_2012","plant_id":"clover","source_plant":"Trifolium","identity_scope":"genus","observed_part":"young leaves; Fabaceae flowers/inflorescences also reported","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"iftime_ibera_dobrogea_2012","plant_id":"alfalfa","source_plant":"Medicago","identity_scope":"genus","observed_part":"young leaves; Fabaceae flowers/inflorescences also reported","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"mitrevichin_ibera_bulgaria_2023","plant_id":"chicory","source_plant":"Cichorium intybus","identity_scope":"exact_species","observed_part":"not resolved in extracted source text","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"mitrevichin_ibera_bulgaria_2023","plant_id":"dandelion","source_plant":"Taraxacum sp.","identity_scope":"genus","observed_part":"not resolved in extracted source text","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"mitrevichin_ibera_bulgaria_2023","plant_id":"alfalfa","source_plant":"Medicago sp.","identity_scope":"genus","observed_part":"not resolved in extracted source text","directness":"exact_subspecies_wild_observation"},
+    {"source_id":"mitrevichin_ibera_bulgaria_2023","plant_id":null,"source_plant":"Sedum rubens","identity_scope":"exact_species_not_in_current_master_mapping","observed_part":"not resolved in extracted source text","directness":"exact_subspecies_wild_observation","mapping_note":"Must not be mapped as exact evidence for current Sedum sarmentosum master."},
+    {"source_id":"mitrevichin_ibera_bulgaria_2023","plant_id":null,"source_plant":"Sedum album","identity_scope":"exact_species_not_in_current_master_mapping","observed_part":"not resolved in extracted source text","directness":"exact_subspecies_wild_observation","mapping_note":"Must not be mapped as exact evidence for current Sedum sarmentosum master."},
+    {"source_id":"mitrevichin_ibera_bulgaria_2023","plant_id":null,"source_plant":"Potentilla sp.","identity_scope":"genus_not_currently_mapped","observed_part":"not resolved in extracted source text","directness":"exact_subspecies_wild_observation"}
+  ]
+}
