@@ -16,61 +16,15 @@
     ]
   },
   "images": [
-    {
-      "plant_id": "chicory",
-      "scientific": "Cichorium intybus",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cichorium%20intybus2.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_intybus2.jpg",
-      "creator": "Panpanchik",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "identity_scope": "exact_species",
-      "verified_at": "2026-09-16"
-    },
-    {
-      "plant_id": "endive",
-      "scientific": "Cichorium endivia",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cichorium%20endivia%20kz04.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_endivia_kz04.jpg",
-      "creator": "Krzysztof Ziarnek, Kenraiz",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "identity_scope": "exact_species",
-      "verified_at": "2026-09-16"
-    },
-    {
-      "plant_id": "watercress",
-      "scientific": "Nasturtium officinale",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nasturtium%20officinale%20sl156.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Nasturtium_officinale_sl156.jpg",
-      "creator": "Stefan.lefnaer",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "identity_scope": "exact_species",
-      "verified_at": "2026-09-16"
-    },
-    {
-      "plant_id": "romaine",
-      "scientific": "Lactuca sativa var. longifolia",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lactuca%20sativa%20var.%20longifolia%20Feria%20%281119657712%29.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Lactuca_sativa_var._longifolia_Feria_(1119657712).jpg",
-      "creator": "Kat",
-      "license": "CC BY 2.0",
-      "license_url": "https://creativecommons.org/licenses/by/2.0/",
-      "identity_scope": "exact_species",
-      "verified_at": "2026-09-16"
-    },
-    {
-      "plant_id": "lambs_lettuce",
-      "scientific": "Valerianella locusta",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Valerianella%20locusta%20sl12.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Valerianella_locusta_sl12.jpg",
-      "creator": "Stefan.lefnaer",
-      "license": "CC BY-SA 4.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "identity_scope": "exact_species",
-      "verified_at": "2026-09-16"
-    }
+    {"plant_id":"chicory","scientific":"Cichorium intybus","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Cichorium%20intybus2.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Cichorium_intybus2.jpg","creator":"Panpanchik","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0/","identity_scope":"exact_species","verified_at":"2026-09-16"},
+    {"plant_id":"endive","scientific":"Cichorium endivia","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Cichorium%20endivia%20kz04.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Cichorium_endivia_kz04.jpg","creator":"Krzysztof Ziarnek, Kenraiz","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0/","identity_scope":"exact_species","verified_at":"2026-09-16"},
+    {"plant_id":"watercress","scientific":"Nasturtium officinale","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Nasturtium%20officinale%20sl156.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Nasturtium_officinale_sl156.jpg","creator":"Stefan.lefnaer","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0/","identity_scope":"exact_species","verified_at":"2026-09-16"},
+    {"plant_id":"romaine","scientific":"Lactuca sativa var. longifolia","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Lactuca%20sativa%20var.%20longifolia%20Feria%20%281119657712%29.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Lactuca_sativa_var._longifolia_Feria_(1119657712).jpg","creator":"Kat","license":"CC BY 2.0","license_url":"https://creativecommons.org/licenses/by/2.0/","identity_scope":"exact_species","verified_at":"2026-09-16"},
+    {"plant_id":"lambs_lettuce","scientific":"Valerianella locusta","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Valerianella%20locusta%20sl12.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Valerianella_locusta_sl12.jpg","creator":"Stefan.lefnaer","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0/","identity_scope":"exact_species","verified_at":"2026-09-16"},
+    {"plant_id":"chard","scientific":"Beta vulgaris","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Swiss%20Chard.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Swiss_Chard.jpg","creator":"Spalding","license":"Public domain (PD-user)","license_url":"https://commons.wikimedia.org/wiki/Template:PD-user","identity_scope":"exact_species","verified_at":"2026-09-17"},
+    {"plant_id":"arugula","scientific":"Eruca vesicaria","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Eruca%20vesicaria.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Eruca_vesicaria.jpg","creator":"Joaquinasad","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0/","identity_scope":"exact_species","verified_at":"2026-09-17"},
+    {"plant_id":"parsley","scientific":"Petroselinum crispum","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Petroselinum%20crispum%20leaves.png","source_url":"https://commons.wikimedia.org/wiki/File:Petroselinum_crispum_leaves.png","creator":"Andrikkos","license":"Public domain (PD-user)","license_url":"https://commons.wikimedia.org/wiki/Template:PD-user","identity_scope":"exact_species","verified_at":"2026-09-17"},
+    {"plant_id":"cilantro","scientific":"Coriandrum sativum","image_url":"https://commons.wikimedia.org/wiki/Special:Redirect/file/Koriander%20%28Coriandrum%20sativum%29%20Bl%C3%A4tter--%20Josef%20Schlaghecken.jpg","source_url":"https://commons.wikimedia.org/wiki/File:Koriander_(Coriandrum_sativum)_Bl%C3%A4tter--_Josef_Schlaghecken.jpg","creator":"Schlaghecken Josef","license":"CC BY-SA 4.0","license_url":"https://creativecommons.org/licenses/by-sa/4.0/","identity_scope":"exact_species","verified_at":"2026-09-17"}
   ],
   "rejected_candidates": [
     {"plant_id":"dandelion","candidate_scientific":"Taraxacum officinale","master_scientific":"Taraxacum spp.","reason":"master taxon is genus-level; exact-species image cannot represent the broader record"},
