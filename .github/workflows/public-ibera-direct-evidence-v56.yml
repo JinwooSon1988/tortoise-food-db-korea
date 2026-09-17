@@ -1,0 +1,36 @@
+name: Public Ibera direct evidence v5.6 QA
+
+on:
+  pull_request:
+    paths:
+      - 'ibera-direct-evidence-v56.js'
+      - 'data/ibera_direct_feeding_evidence_v56.json'
+      - 'scripts/inject_plant_detail_v56.py'
+      - 'scripts/audit_public_ibera_direct_evidence_v56.py'
+      - 'plant/**'
+      - '.github/workflows/public-ibera-direct-evidence-v56.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ibera-direct-evidence-v56.js'
+      - 'data/ibera_direct_feeding_evidence_v56.json'
+      - 'scripts/inject_plant_detail_v56.py'
+      - 'scripts/audit_public_ibera_direct_evidence_v56.py'
+      - 'plant/**'
+      - '.github/workflows/public-ibera-direct-evidence-v56.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Synchronize detail-page enhancer references
+        run: python scripts/inject_plant_detail_v56.py
+      - name: Audit public direct Ibera evidence display
+        run: python scripts/audit_public_ibera_direct_evidence_v56.py

@@ -1,0 +1,10 @@
+{
+  "version":"5.6",
+  "feeding_verdict_use":false,
+  "source":"ibera_direct_feeding_evidence_v56.json",
+  "display_only_when_mapped_plant_id":true,
+  "identity_labels":{"exact_species":"식물 종까지 일치","genus":"속 수준 관찰"},
+  "required_public_caveat":"사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.",
+  "forbidden_inferences":["captive_feeding_percentage","daily_feeding","unlimited_safety","genus_to_exact_species_promotion"],
+  "does_not_change":["feeding_verdict","evidence_grade","feeding_frequency","diet_percentage"]
+}
