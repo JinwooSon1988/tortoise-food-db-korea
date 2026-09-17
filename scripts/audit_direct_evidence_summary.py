@@ -3,7 +3,8 @@ import re
 R=Path(__file__).resolve().parents[1]
 js=(R/'source-preview.js').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
-m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
+# Cache naming changed when the public site was reduced to the evidence-only shell.
+m=re.search(r"const CACHE='tfd-v(\d+)-evidence-only-(\d+)'",sw)
 checks={
  'primary_classifier':'function isIberaPrimary' in js and "subspecies_direct_wild_diet" in js,
  'synthesis_separate':'function isIberaSynthesis' in js and "subspecies_direct_diet_synthesis" in js,
@@ -14,7 +15,7 @@ checks={
  'candidate_scope':"#candidates label.candidate" in js,
  'no_safety_inference':'위험하거나 부적합하다는 뜻이 아니라' in js,
  'primary_filter_semantics':"if(state.mode==='ibera')return isIberaPrimary(e)" in js,
- 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=11,
+ 'cache_current_enough':bool(m) and int(m.group(1))>=56 and int(m.group(2))>=101,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]

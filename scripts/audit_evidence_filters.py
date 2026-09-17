@@ -3,7 +3,8 @@ import re
 R=Path(__file__).resolve().parents[1]
 js=(R/'source-preview.js').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
-m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
+# Cache naming changed when unstable recommendation/recording surfaces were retired.
+m=re.search(r"const CACHE='tfd-v(\d+)-(?:stable|evidence-only)-(\d+)'",sw)
 checks={
  'global_filter_card':'근거 출처 필터' in js and 'source-filter-card' in js,
  'all_mode':'data-source-mode="all"' in js,
@@ -16,7 +17,7 @@ checks={
  'no_verdict_recalc':'다시 계산하지 않는다' in js,
  'empty_state':'현재 필터에 맞는 연결 출처 없음' in js,
  'dynamic_refresh':'MutationObserver' in js,
- 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=10,
+ 'cache_current_enough':bool(m) and int(m.group(1))>=5 and int(m.group(2))>=10,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]

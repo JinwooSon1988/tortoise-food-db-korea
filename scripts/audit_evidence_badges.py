@@ -3,7 +3,7 @@ import re
 R=Path(__file__).resolve().parents[1]
 js=(R/'source-preview.js').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
-m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
+m=re.search(r"const CACHE='tfd-v(\d+)-evidence-only-(\d+)'",sw)
 checks={
  'applicability_badge':'function applicabilityBadge' in js,
  'quality_badge':'function qualityBadge' in js,
@@ -17,7 +17,7 @@ checks={
  'specialist_quality':'전문기관 자료' in js,
  'axes_separated':'badgeHTML(applicabilityBadge(e))+badgeHTML(qualityBadge(e))' in js,
  'no_recalculation':'다시 계산하지 않는다' in js,
- 'cache_current_enough':bool(m) and int(m.group(1))>=51 and int(m.group(2))>=9,
+ 'cache_current_enough':bool(m) and int(m.group(1))>=56 and int(m.group(2))>=101,
 }
 for k,v in checks.items(): print(('PASS' if v else 'FAIL'),k)
 failed=[k for k,v in checks.items() if not v]
