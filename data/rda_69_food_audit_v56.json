@@ -1,0 +1,39 @@
+{
+  "version": "5.6",
+  "source_id": "RDA_NICS_FCDB_10_4",
+  "audit_scope": "69 master foods",
+  "status": "in_progress_source_reconciliation",
+  "feeding_verdict_use": false,
+  "rules": {
+    "allowed_match_status": ["exact", "narrower_taxon_than_master", "nomenclature_review_required", "part_mismatch", "preparation_mismatch", "no_rda_record", "pending_source_reconciliation"],
+    "exact_requires": ["master identity compatible with source scientific identity", "edible part compatible", "preparation compatible"],
+    "dash_rule": "Source '-' or missing values remain null and are never converted to zero.",
+    "scope_rule": "A narrower RDA species must not silently redefine a genus-level master record.",
+    "verdict_rule": "RDA food composition is descriptive and must not determine tortoise safety, feeding frequency, diet percentage, or evidence grade.",
+    "usda_rule": "RDA and USDA provenance streams remain separate."
+  },
+  "verified_operational_records": [
+    {"plant_id":"chicory","rda_food_code":"F178000B140a","match_status":"exact"},
+    {"plant_id":"romaine","rda_food_code":"F1010032490a","match_status":"exact"},
+    {"plant_id":"arugula","rda_food_code":"F2320000000a","match_status":"exact"},
+    {"plant_id":"bokchoy","rda_food_code":"F1750000000a","match_status":"exact"},
+    {"plant_id":"napa","rda_food_code":"F0870000000a","match_status":"exact"},
+    {"plant_id":"cabbage","rda_food_code":"F1290000000a","match_status":"exact"},
+    {"plant_id":"beetgreens","rda_food_code":"F095000B140a","match_status":"exact"},
+    {"plant_id":"parsley","rda_food_code":"F1930000000a","match_status":"exact"},
+    {"plant_id":"cilantro","rda_food_code":"F0170000000a","match_status":"exact"},
+    {"plant_id":"broccolileaf","rda_food_code":"F092000B140a","match_status":"exact","fiber_missing_is_null":true}
+  ],
+  "identity_holds": [
+    {"plant_id":"mallow","master_scientific":"Malva spp.","source_scientific":"Malva verticillata","match_status":"narrower_taxon_than_master","operationalize_as_exact":false},
+    {"plant_id":"dandelion","master_scientific":"Taraxacum spp.","source_scientific":"Taraxacum platycarpum","match_status":"narrower_taxon_than_master","operationalize_as_exact":false},
+    {"plant_id":"kale","master_scientific":"Brassica oleracea var. sabellica","source_scientific":"Brassia oleracea L. var. acephala D","match_status":"nomenclature_review_required","operationalize_as_exact":false}
+  ],
+  "remaining_audit_policy": {
+    "target_total_master_foods": 69,
+    "verified_operational_count": 10,
+    "held_identity_count": 3,
+    "unresolved_count": 56,
+    "note": "The unresolved 56 are deliberately not guessed from Korean common names. Each requires source-code, taxon, edible-part, and preparation reconciliation against the RDA 10.4 workbook."
+  }
+}
