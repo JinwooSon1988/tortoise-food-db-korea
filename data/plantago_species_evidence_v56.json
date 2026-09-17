@@ -1,0 +1,65 @@
+{
+  "schema_version": "5.6",
+  "food_id": "plantain",
+  "canonical_master_taxon": "Plantago spp.",
+  "reviewed_at": "2026-09-18",
+  "purpose": "Keep Plantago evidence species-resolved. Presence of one Plantago species in one tortoise taxon must not be converted into genus-wide safety, captive frequency, or unlimited feeding guidance.",
+  "evidence": [
+    {
+      "source_id": "SLIMANI_EL_MOUDEN_2006_PLANTAGO_AMPLEXICAULIS",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "study_type": "wild feeding ecology",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "population_location": "arid/overgrazed zone, Morocco",
+      "plant_taxon": "Plantago amplexicaulis",
+      "plant_part": "dietary plant fragments / field feeding ecology record",
+      "directness": "related_tortoise_subspecies_exact_plant_species",
+      "supports": "P. amplexicaulis was documented in the diet of wild T. g. graeca in Morocco.",
+      "does_not_support": "Direct T. g. ibera evidence; safety of all Plantago spp.; captive diet percentage, staple status, daily feeding, or unlimited feeding."
+    },
+    {
+      "source_id": "MITREVICHIN_2023_PLANTAGO_LANCEOLATA",
+      "doi": "10.5281/zenodo.12807900",
+      "study_type": "field feeding observations",
+      "population_location": "south-western Bulgaria",
+      "tortoise_taxon": "Testudo hermanni boettgeri",
+      "plant_taxon": "Plantago lanceolata",
+      "directness": "related_Testudo_exact_plant_species",
+      "supports": "P. lanceolata was directly reported among plants consumed by T. h. boettgeri in the Bulgarian field study.",
+      "does_not_support": "P. lanceolata as direct T. g. ibera evidence or genus-wide Plantago safety."
+    },
+    {
+      "source_id": "BALMETA_1998_PLANTAGO_LANCEOLATA",
+      "study_type": "field observation / population study",
+      "tortoise_taxon": "Testudo hermanni hermanni",
+      "population_location": "Serra Balmeta / Albera, Catalonia",
+      "plant_taxon": "Plantago lanceolata",
+      "directness": "related_Testudo_exact_plant_species",
+      "supports": "Independent field observation of T. h. hermanni feeding on P. lanceolata.",
+      "does_not_support": "Direct evidence for T. g. ibera, genus-wide Plantago feeding rules, or captive frequency."
+    },
+    {
+      "source_id": "AJVR_2012_PLANTAGO_LANCEOLATA_CAPTIVE_DIET",
+      "doi": "10.2460/ajvr.73.11.1781",
+      "study_type": "controlled UV exposure study with described captive diet",
+      "tortoise_taxon": "Testudo hermanni",
+      "plant_taxon": "Plantago lanceolata",
+      "plant_part": "offered forage; diet component",
+      "directness": "related_Testudo_husbandry_context_exact_plant_species",
+      "supports": "P. lanceolata was one component of the diet used for Hermann's tortoises during the study.",
+      "does_not_support": "A feeding trial establishing P. lanceolata safety, optimal proportion, or a T. g. ibera recommendation."
+    }
+  ],
+  "search_outcome": {
+    "exact_T_g_ibera_Plantago_species_record": "not_verified_in_this_pass",
+    "exact_T_g_graeca_P_amplexicaulis": "verified",
+    "related_Testudo_P_lanceolata": "verified",
+    "genus_wide_safety": "not_established_by_these_sources"
+  },
+  "canonical_interpretation": {
+    "current_master_identity": "Retain Plantago spp. unless a particular specimen/product is identified to species.",
+    "applicability": "Related T. graeca subspecies plus related Testudo species; no exact T. g. ibera Plantago species record verified in this pass.",
+    "verdict_guardrail": "Do not upgrade the public Plantago master solely because P. amplexicaulis or P. lanceolata appears in another population/species. Do not infer that every Plantago species is interchangeable.",
+    "wild_to_captive_guardrail": "Wild occurrence and captive diet inclusion are descriptive evidence, not a captive percentage or unlimited-feeding prescription."
+  }
+}
