@@ -1,0 +1,54 @@
+{
+  "schema_version": "5.6",
+  "purpose": "Batch-2 evidence queue. Records evidence status without changing public feeding verdicts.",
+  "rules": [
+    "Exact Ibera evidence outranks other Testudo evidence.",
+    "Occurrence is not a captive feeding percentage.",
+    "Clinical case association is not causality unless demonstrated.",
+    "Food composition never determines tortoise safety or frequency.",
+    "Plant part and taxon scope must remain explicit."
+  ],
+  "source_candidates": {
+    "eastern_graeca_account_2023": {
+      "type": "specialist_species_account",
+      "taxon": "Testudo graeca eastern populations including T. g. ibera",
+      "year": 2023,
+      "doi": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "status": "verified_context_source",
+      "use": "Corroborates published eastern T. graeca / Ibera ecology; primary feeding observations remain preferred when available.",
+      "do_not_infer": "Do not convert summarized wild diet observations into captive percentages."
+    },
+    "lactuca_virosa_case_2025": {
+      "type": "clinical_case_report",
+      "taxon": "Testudo graeca",
+      "plant_taxon": "Lactuca virosa",
+      "year": 2025,
+      "pmid": "40470286",
+      "status": "causality_unconfirmed",
+      "use": "Plant-specific clinical warning signal for L. virosa only.",
+      "do_not_infer": "Does not establish toxicity of Lactuca sativa, lettuce cultivars, or the Lactuca genus as a whole; the report did not establish causal toxicant exposure."
+    },
+    "western_graeca_account_2022": {
+      "type": "specialist_species_account",
+      "taxon": "western Testudo graeca populations",
+      "year": 2022,
+      "status": "related_population_context",
+      "use": "Can provide related T. graeca natural-history context such as Opuntia occurrence in diet.",
+      "do_not_infer": "Not direct T. g. ibera evidence."
+    }
+  },
+  "food_audit_queue": [
+    {"food_id":"lettuce","priority":"high","target":"Separate Lactuca sativa husbandry evidence from L. virosa case evidence.","status":"needs_source_mapping"},
+    {"food_id":"romaine","priority":"high","target":"Retain cultivar-level Lactuca sativa identity; do not inherit L. virosa warning.","status":"needs_source_mapping"},
+    {"food_id":"opuntia","priority":"high","target":"Map western T. graeca occurrence only as related-population evidence unless exact Ibera evidence is found.","status":"needs_primary_source_search"},
+    {"food_id":"rose","priority":"medium","target":"Find Testudo-specific evidence beyond specialist husbandry guidance; keep pesticide/ornamental exposure separate from plant taxon evidence.","status":"evidence_gap"},
+    {"food_id":"chickweed","priority":"medium","target":"Search direct Testudo occurrence and verify taxon as Stellaria media before any upgrade.","status":"evidence_gap"},
+    {"food_id":"figleaf","priority":"medium","target":"Search leaf-specific Testudo evidence; fruit observations must not be transferred to leaves.","status":"evidence_gap"},
+    {"food_id":"mulberry","priority":"medium","target":"Search leaf-specific Testudo evidence; do not transfer fruit evidence to leaves.","status":"evidence_gap"},
+    {"food_id":"hibiscusleaf","priority":"medium","target":"Require Hibiscus syriacus leaf-specific evidence or retain general husbandry scope.","status":"evidence_gap"},
+    {"food_id":"hibiscusflower","priority":"medium","target":"Keep flower evidence independent from leaf evidence.","status":"evidence_gap"},
+    {"food_id":"cabbage","priority":"medium","target":"Map composition separately; seek Testudo-specific husbandry evidence without extrapolating from general herbivorous reptiles.","status":"evidence_gap"},
+    {"food_id":"watercress","priority":"medium","target":"Search Testudo-specific use and plant-specific cautions; composition alone cannot decide verdict.","status":"evidence_gap"},
+    {"food_id":"chard","priority":"medium","target":"Separate Beta vulgaris composition from Testudo husbandry evidence and antinutrient context.","status":"evidence_gap"}
+  ]
+}
