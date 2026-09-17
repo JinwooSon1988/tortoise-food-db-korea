@@ -1,0 +1,67 @@
+{
+  "version": "5.6",
+  "purpose": "Authoritative source registry for the 69-food evidence audit. This registry separates food composition, digestive physiology, clinical context and plant-specific feeding evidence; none of these categories may be silently substituted for another.",
+  "verified_at": "2026-09-17",
+  "sources": [
+    {
+      "source_id": "RDA_NICS_FCDB_10_4",
+      "source_type": "official_food_composition_database",
+      "publisher": "Rural Development Administration / National Institute of Crop Science",
+      "title": "National Standard Food Composition Database 10.4",
+      "version": "10.4",
+      "release_date": "2026-04-30",
+      "coverage": {"foods": 3366, "nutrients": 130, "records": 304853},
+      "canonical_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "openapi_guidance_url": "https://www.nics.go.kr/food/kfi/openapi/useNewGuidance",
+      "reuse": "Korea Open Government License Type 1 (attribution) applies to the annually updated database; verify attribution on publication.",
+      "supports": ["Korean food-composition context", "food-code and nutrient-value provenance after exact food/part/preparation reconciliation"],
+      "does_not_support": ["tortoise feeding safety", "feeding frequency", "diet percentage", "plant identity when the food record lacks sufficient taxonomic resolution"],
+      "integration_status": "partial_operational_excel_reconciliation",
+      "operational_registry": "data/rda_food_composition_v56.json",
+      "operational_record_count": 10
+    },
+    {
+      "source_id": "brooks_chelonian_nutrition_2024",
+      "source_type": "clinical_review",
+      "title": "Important Factors in Chelonian Nutrition",
+      "year": 2024,
+      "pmid": "37661549",
+      "doi": "10.1016/j.cvex.2023.07.004",
+      "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/37661549/",
+      "taxon_scope": "Chelonia; includes practical tortoise nutrition context",
+      "supports": ["feeding ecology framework", "digestive physiology context", "growth/body-condition context", "general captive diet framework"],
+      "does_not_support": ["individual plant safety verdict without plant-specific evidence", "exact Ibera diet percentage"]
+    },
+    {
+      "source_id": "clauss_herbivorous_reptiles_2010",
+      "source_type": "controlled_comparative_digestive_physiology",
+      "title": "Herbivorous reptiles and body mass: effects on food intake, digesta retention, digestibility and gut capacity, and a comparison with mammals",
+      "year": 2010,
+      "pmid": "20850560",
+      "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/20850560/",
+      "taxa": ["Testudo graeca", "Testudo hermanni", "Geochelone nigra", "Geochelone sulcata", "Dipsochelys dussumieri"],
+      "sample_context": "23 tortoises in the added experiment, body mass range 0.5-180 kg",
+      "supports": ["food-intake scaling context", "digesta-retention context", "digestibility and gut-capacity context in herbivorous tortoises"],
+      "does_not_support": ["individual plant safety", "wild Ibera plant preference", "captive diet percentages for a specific plant"]
+    },
+    {
+      "source_id": "alsafy_graeca_oropharyngeal_2024",
+      "source_type": "anatomy_histology",
+      "title": "Macroscopic, microscopic, and immunofluorescent characterization of the Greek tortoise (Testudo graeca graeca) oropharyngeal floor with concern to its feed adaptation as a herbivorous land reptile",
+      "year": 2024,
+      "pmid": "38808586",
+      "doi": "10.1002/jemt.24619",
+      "canonical_url": "https://pubmed.ncbi.nlm.nih.gov/38808586/",
+      "taxon_scope": "Testudo graeca graeca",
+      "supports": ["herbivorous feeding-adaptation anatomy context"],
+      "does_not_support": ["individual plant safety", "Ibera-specific feeding choice", "feeding frequency or ratio"]
+    }
+  ],
+  "guardrails": [
+    "Food-composition data are descriptive and must not determine a tortoise feeding verdict.",
+    "A review or physiology study cannot be promoted to plant-specific evidence unless the plant and relevant outcome are directly studied.",
+    "Testudo graeca graeca evidence is not exact-subspecies evidence for Testudo graeca ibera.",
+    "Every future RDA mapping must retain the exact food code, Korean/English food name, edible part, preparation state, source/version and observation date.",
+    "When RDA and USDA both exist, preserve both provenance streams rather than overwriting one with the other."
+  ]
+}
