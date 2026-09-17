@@ -18,7 +18,9 @@ assert "상세 근거 보기 →" in html
 assert "오늘 식단 후보 보기" in html
 assert "<b>적용 범위</b> · " in html
 assert "do_not_feed:'급여 비권장'" in html
-assert "v5.3" in html
+assert "v5.6" in html
+assert 'href="./core-foods/"' in html
+assert "자주 찾는 핵심 먹이 9종" in html
 # The home page generates the 12 addendum URLs at runtime. Verify the generator
 # contract instead of requiring generated filenames to appear literally in HTML.
 assert "Array.from({length:12}" in html
