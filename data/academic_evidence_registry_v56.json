@@ -15,6 +15,32 @@
       "does_not_support": ["plant-specific safety verdict", "exact feeding frequency for a named plant", "exact captive diet percentage for Testudo graeca ibera"]
     },
     {
+      "source_id": "liesegang_hermanni_mineral_digestibility_2007",
+      "pmid": "17988349",
+      "doi": "10.1111/j.1439-0396.2007.00676.x",
+      "title": "Influence of different dietary calcium levels on the digestibility of Ca, Mg and P in Hermann's tortoises (Testudo hermanni)",
+      "publication": "J Anim Physiol Anim Nutr (Berl). 2007;91(11-12):459-464",
+      "study_type": "controlled mineral-digestibility feeding study",
+      "sample": "8 adult Testudo hermanni",
+      "taxon_scope": "Testudo hermanni",
+      "diet_context": "mixed vegetables and herbs with two calcium-carbonate supplementation levels; mineral apparent digestibility measured from faecal collections",
+      "supports": ["Testudo mineral-digestibility physiology", "dietary calcium-level context for Ca and Mg apparent digestibility", "controlled Testudo feeding-study context"],
+      "does_not_support": ["Testudo graeca ibera-specific mineral requirement", "plant-specific safety or suitability", "named-plant feeding frequency", "using a Ca:P ratio from the experimental mixed diet as a universal captive prescription"]
+    },
+    {
+      "source_id": "eatwell_testudo_calcium_phosphorus_2010",
+      "pmid": "20630020",
+      "doi": "10.1111/j.1748-5827.2010.00963.x",
+      "title": "Calcium and phosphorus values and their derivatives in captive tortoises (Testudo species)",
+      "publication": "J Small Anim Pract. 2010;51(9):472-475",
+      "study_type": "clinical blood-chemistry reference study",
+      "sample": "25 clinically healthy captive Testudo tortoises",
+      "taxon_scope": "Testudo hermanni boettgeri, Testudo graeca ibera, Testudo marginata and Testudo horsfieldi; Testudo graeca ibera included but not reported as an isolated feeding cohort",
+      "observation_context": "jugular blood sampled immediately post-hibernation before reproductive activity; total calcium, ionised calcium and phosphorus analysed",
+      "supports": ["Ibera-included Testudo calcium/phosphorus clinical physiology context", "post-hibernation blood-chemistry context", "sex-associated calcium/phosphorus derivative context across the sampled Testudo group"],
+      "does_not_support": ["feeding trial", "plant-specific suitability", "Ibera-specific dietary calcium requirement", "named-plant Ca:P target", "causal inference from food composition to health outcome"]
+    },
+    {
       "source_id": "franz_herbivorous_reptiles_2011",
       "pmid": "20850560",
       "doi": "10.1016/j.cbpa.2010.09.007",
