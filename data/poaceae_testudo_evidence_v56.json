@@ -1,0 +1,102 @@
+{
+  "schema_version": "5.6",
+  "topic": "Poaceae in Testudo and Mediterranean tortoise diets",
+  "status": "evidence_context_not_blanket_verdict",
+  "updated": "2026-09-18",
+  "conclusion": {
+    "supported": "Wild Testudo graeca ibera are documented consuming Poaceae. Poaceae therefore must not be categorically marked unsuitable or indigestible for T. g. ibera solely because they are grasses.",
+    "not_supported": "The reviewed evidence does not support the blanket claim that Mediterranean Testudo cannot digest Poaceae, nor does wild occurrence establish that any grass species is an unlimited captive staple.",
+    "implementation_rule": "Assess grass taxa individually. Separate direct Ibera occurrence, plant identity/part and growth stage, captive digestive physiology, and husbandry guidance. Do not transfer grass-heavy diet rules from non-Testudo grazing tortoises to T. g. ibera without Testudo-specific evidence."
+  },
+  "sources": [
+    {
+      "id": "iftime_ibera_dobrogea_2012",
+      "type": "primary_field_observation",
+      "taxon": "Testudo graeca ibera",
+      "location": "Dobrogea, Romania",
+      "period": "2000-2010",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "url": "https://oaj.fupress.net/index.php/ah/article/view/1648",
+      "supports": [
+        "More than 95% of observed diet was plant matter and 25 plant species were consumed.",
+        "Poaceae were part of the directly observed wild diet; the later eastern T. graeca synthesis reports Dactylis, Dichanthium, Festuca and Poa from this study and lists Poaceae among frequently consumed young plant material."
+      ],
+      "does_not_support": [
+        "A universal captive percentage for grasses.",
+        "Unlimited feeding of every Poaceae species.",
+        "A claim that all grass life stages have equal digestibility or nutritional value."
+      ]
+    },
+    {
+      "id": "eastern_graeca_account_2023",
+      "type": "specialist_species_account",
+      "taxon": "Testudo graeca eastern subspecies clades including T. g. ibera",
+      "year": 2023,
+      "doi": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "url": "https://iucn-tftsg.org/wp-content/uploads/file/Accounts/crm.5.120.eastern.graeca.v1.2023.pdf",
+      "supports": [
+        "Poaceae are included among natural food families for eastern T. graeca.",
+        "The account summarizes the long-term Dobrogea Ibera observations and reports Poaceae among frequently consumed young vegetation.",
+        "Some eastern populations may shift toward Poaceae/cereals as summer vegetation dries, showing strong seasonal context."
+      ],
+      "does_not_support": [
+        "Treating every eastern T. graeca population as ecologically identical.",
+        "Equating seasonal occurrence with optimal captive staple status."
+      ]
+    },
+    {
+      "id": "clauss_herbivorous_reptiles_2010",
+      "type": "comparative_digestive_physiology",
+      "taxa": ["Testudo graeca", "Testudo hermanni", "Geochelone nigra", "G. sulcata", "Dipsochelys dussumieri"],
+      "pmid": "20850560",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20850560/",
+      "supports": [
+        "Tortoise food intake, digesta retention, digestibility and gut capacity can be studied quantitatively and differ with body size and taxon.",
+        "Digestive-physiology claims should be kept separate from plant-occurrence claims."
+      ],
+      "does_not_support": [
+        "A plant-specific safety verdict for Poaceae.",
+        "The claim that T. g. ibera cannot digest grasses."
+      ]
+    },
+    {
+      "id": "bauer_testudo_husbandry_2019",
+      "type": "keeper_survey_association",
+      "taxon": "Testudo spp.",
+      "sample": 1075,
+      "pmid": "29609473",
+      "doi": "10.1080/10888705.2018.1453814",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29609473/",
+      "supports": [
+        "A survey associated a summer diet category described as more than 80% grasses and weeds with husbandry outcomes."
+      ],
+      "does_not_support": [
+        "Separating the effect of Poaceae from weeds because the survey grouped grasses and weeds together.",
+        "Causality for individual plant taxa.",
+        "A universal 80% Poaceae recommendation."
+      ]
+    },
+    {
+      "id": "garden_state_tortoise_testudo_diet_2021",
+      "type": "specialist_husbandry",
+      "author": "Chris Leone",
+      "publisher": "Garden State Tortoise",
+      "year": 2021,
+      "url": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+      "supports": [
+        "Experienced Testudo husbandry context emphasizing low-protein, high-fiber, calcium-rich feeding and dietary diversity."
+      ],
+      "does_not_support": [
+        "Replacing primary field or controlled scientific evidence.",
+        "Assigning a scientific evidence grade by itself."
+      ]
+    }
+  ],
+  "guardrails": [
+    "Do not label Poaceae as indigestible for Mediterranean Testudo without direct digestive evidence supporting that claim.",
+    "Do not infer captive feeding frequency from wild occurrence alone.",
+    "Do not generalize from desert/giant grazing tortoises to Testudo graeca ibera without an explicit applicability step.",
+    "Do not treat the combined survey category 'grasses and weeds' as Poaceae-specific evidence.",
+    "Plant species, part, maturity, fresh/dry state, season and population should be retained whenever the source reports them."
+  ]
+}
