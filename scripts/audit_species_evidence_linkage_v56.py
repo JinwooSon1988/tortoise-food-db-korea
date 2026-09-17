@@ -22,6 +22,16 @@ required_fields = {
     'food_id', 'canonical_taxon', 'asset', 'canonical_matrix_status',
     'strongest_applicability', 'exact_ibera_gap', 'public_detail_rule'
 }
+
+def asset_identity(payload):
+    """Normalize the two v5.6 species-evidence envelopes currently in the repo."""
+    master = payload.get('canonical_master')
+    if isinstance(master, dict):
+        return master.get('id'), master.get('scientific_name'), payload.get('records')
+    # Plantago predates the canonical_master/records envelope. Preserve the
+    # evidence rather than rewriting a research asset merely to satisfy QA.
+    return payload.get('food_id'), payload.get('canonical_master_taxon'), payload.get('evidence')
+
 for item in links:
     food_id = item.get('food_id')
     missing = sorted(required_fields - set(item))
@@ -31,10 +41,10 @@ for item in links:
     asset = ROOT / item['asset']
     assert asset.is_file(), f'{food_id}: linked species evidence asset missing: {item["asset"]}'
     payload = json.loads(asset.read_text(encoding='utf-8'))
-    master = payload.get('canonical_master', {})
-    assert master.get('id') == food_id, f'{food_id}: asset canonical master id mismatch'
-    assert master.get('scientific_name') == item['canonical_taxon'], f'{food_id}: canonical taxon drift between linkage and asset'
-    assert payload.get('records'), f'{food_id}: linked species evidence asset has no records'
+    asset_food_id, asset_taxon, records = asset_identity(payload)
+    assert asset_food_id == food_id, f'{food_id}: asset canonical food id mismatch'
+    assert asset_taxon == item['canonical_taxon'], f'{food_id}: canonical taxon drift between linkage and asset'
+    assert isinstance(records, list) and records, f'{food_id}: linked species evidence asset has no records/evidence'
 
     for text_field in ('strongest_applicability', 'exact_ibera_gap', 'public_detail_rule'):
         value = item.get(text_field)
