@@ -57,6 +57,66 @@
       "supports": ["clinical history reported symptoms following Lactuca virosa ingestion", "FMT case outcome"],
       "does_not_support": ["proven toxic causality", "inference to Lactuca sativa", "inference to the entire Lactuca genus", "population-level risk estimate"],
       "causality_status": "unconfirmed"
+    },
+    {
+      "source_id": "iftime_ibera_dobrogea_2012",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "title": "Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera (Reptilia: Testudines: Testudinidae) in Dobrogea, Romania",
+      "publication": "Acta Herpetologica. 2012;7(1):105-110",
+      "study_type": "long-term direct wild feeding observations",
+      "taxon_scope": "Testudo graeca ibera",
+      "location": "Dobrogea, Romania",
+      "observation_context": "approximately 500 wild individuals over 10 years; March-October field observations",
+      "diet_context": "96.5% of observed feeding cases involved plant matter; 25 plant species were consumed",
+      "plant_signals": [
+        {"master_scope":"Taraxacum spp.","observed_scope":"Taraxacum","part":"young leaves and flowers/inflorescences","frequency_context":"among frequently consumed young leaves"},
+        {"master_scope":"Sonchus spp.","observed_scope":"Sonchus","part":"young leaves","frequency_context":"among frequently consumed young leaves"},
+        {"master_scope":"Trifolium spp.","observed_scope":"Trifolium","part":"young leaves; flowers/inflorescences with leaves","frequency_context":"among frequently consumed young leaves"},
+        {"master_scope":"Medicago spp.","observed_scope":"Medicago","part":"young leaves","frequency_context":"among frequently consumed young leaves"},
+        {"master_scope":"Rosa spp.","observed_scope":"Rosa","part":"plant material","frequency_context":"less commonly consumed than the frequent group"}
+      ],
+      "supports": ["direct Ibera wild occurrence for listed plant genera", "plant-part context where reported", "relative observation-frequency context"],
+      "does_not_support": ["daily or unlimited captive feeding", "exact captive diet percentages for individual plants", "Korean retail plant identity", "nutritional completeness of any single plant"]
+    },
+    {
+      "source_id": "eastern_graeca_account_2023",
+      "doi": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "title": "Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades: Testudo g. armeniaca, Testudo g. buxtoni, Testudo g. ibera, Testudo g. terrestris, Testudo g. zarudnyi)",
+      "publication": "Chelonian Research Monographs. 2023;5:120.1-120.26",
+      "study_type": "specialist species account and literature synthesis",
+      "taxon_scope": "eastern Testudo graeca clades including Testudo graeca ibera",
+      "diet_context": "summarizes eastern-clade herbivory and explicitly summarizes the Dobrogea Ibera observations",
+      "supports": ["higher-level eastern Testudo graeca diet context", "independent synthesis of the Ibera field literature", "family/genus-level natural diet context"],
+      "does_not_support": ["treating all eastern-clade foods as directly observed in Ibera", "exact captive feeding ratios", "individual plant safety verdict without primary evidence"]
+    },
+    {
+      "source_id": "elmouden_graeca_morocco_2006",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "title": "Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco",
+      "publication": "Journal of Arid Environments. 2006;64(3):422-435",
+      "study_type": "wild diet study using faecal analysis and field plant availability",
+      "taxon_scope": "Testudo graeca graeca",
+      "location": "central Jbilets, Morocco",
+      "diet_context": "34 plant species identified; five main species represented about 70% of identified material",
+      "plant_signals": [
+        {"observed_scope":"Malva parviflora","context":"one of five main species; about 15% of identified material"},
+        {"observed_scope":"Medicago hispida","context":"one of five main species"},
+        {"observed_scope":"Leontodon saxatilis","context":"most commonly consumed item in the reported study"}
+      ],
+      "supports": ["direct wild T. g. graeca plant-selection evidence", "comparative Testudo graeca feeding ecology"],
+      "does_not_support": ["Ibera-specific occurrence", "mapping Malva parviflora to Korean Malva verticillata", "captive feeding percentages"]
+    },
+    {
+      "source_id": "algeria_graeca_food_choice_2008",
+      "doi": "10.1080/21564574.2008.9635573",
+      "title": "Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca",
+      "publication": "African Journal of Herpetology. 2008;57(2):103-113",
+      "study_type": "wild diet study using faecal pellets and plant availability",
+      "taxon_scope": "Testudo graeca, Algerian population",
+      "sample": "20 males, 16 females and 8 juveniles; 4422 plant and animal fragments categorized",
+      "diet_context": "13 dicot and 3 monocot species consumed; dicots accounted for over 70% of faecal diet fragments",
+      "supports": ["comparative Testudo graeca wild feeding ecology", "age/sex food-resource overlap context", "vegetative versus reproductive tissue context"],
+      "does_not_support": ["Ibera-specific occurrence", "individual Korean food identity", "exact captive feeding prescription"]
     }
   ]
 }
