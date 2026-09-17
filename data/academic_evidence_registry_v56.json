@@ -1,0 +1,62 @@
+{
+  "version": "5.6",
+  "purpose": "Verified academic evidence anchors with explicit inference boundaries",
+  "feeding_verdict_use": false,
+  "sources": [
+    {
+      "source_id": "brooks_chelonian_nutrition_2024",
+      "pmid": "37661549",
+      "doi": "10.1016/j.cvex.2023.07.004",
+      "title": "Important Factors in Chelonian Nutrition",
+      "publication": "Vet Clin North Am Exot Anim Pract. 2024;27(1):85-100",
+      "study_type": "clinical nutrition review",
+      "taxon_scope": "chelonians including tortoises",
+      "supports": ["general chelonian feeding ecology", "digestive physiology context", "captive diet framework"],
+      "does_not_support": ["plant-specific safety verdict", "exact feeding frequency for a named plant", "exact captive diet percentage for Testudo graeca ibera"]
+    },
+    {
+      "source_id": "franz_herbivorous_reptiles_2011",
+      "pmid": "20850560",
+      "doi": "10.1016/j.cbpa.2010.09.007",
+      "title": "Herbivorous reptiles and body mass: effects on food intake, digesta retention, digestibility and gut capacity, and a comparison with mammals",
+      "publication": "Comp Biochem Physiol A Mol Integr Physiol. 2011;158(1):94-101",
+      "study_type": "comparative controlled digestive-physiology study plus literature data",
+      "taxon_scope": "23 tortoises including Testudo graeca, T. hermanni, Geochelone nigra, G. sulcata, Dipsochelys dussumieri",
+      "supports": ["herbivorous tortoise digestive physiology", "food intake and retention-time context", "diet composition and digestibility context"],
+      "does_not_support": ["individual plant safety", "Ibera-specific wild plant choice", "named-plant captive feeding percentage"]
+    },
+    {
+      "source_id": "bauer_testudo_husbandry_2019",
+      "pmid": "29609473",
+      "doi": "10.1080/10888705.2018.1453814",
+      "title": "Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity",
+      "study_type": "keeper survey",
+      "sample": "1075 respondents",
+      "taxon_scope": "Testudo spp.",
+      "supports": ["survey association between summer diet category and pyramiding", "captivity husbandry context"],
+      "does_not_support": ["causal proof for an individual plant", "individual plant safety", "exact diet prescription for Testudo graeca ibera"]
+    },
+    {
+      "source_id": "alsafy_graeca_oropharyngeal_floor_2024",
+      "pmid": "38808586",
+      "doi": "10.1002/jemt.24619",
+      "title": "Macroscopic, microscopic, and immunofluorescent characterization of the Greek tortoise (Testudo graeca graeca) oropharyngeal floor with concern to its feed adaptation as a herbivorous land reptile",
+      "publication": "Microsc Res Tech. 2024;87(10):2385-2398",
+      "study_type": "anatomy and histology",
+      "taxon_scope": "Testudo graeca graeca",
+      "supports": ["herbivorous feeding-adaptation anatomy"],
+      "does_not_support": ["Ibera-specific diet", "plant-specific suitability", "feeding frequency"]
+    },
+    {
+      "source_id": "lactuca_virosa_fmt_case_2025",
+      "pmid": "40470286",
+      "doi": "10.3389/fvets.2025.1560689",
+      "study_type": "single clinical case report",
+      "taxon_scope": "one Testudo graeca",
+      "plant_scope": "Lactuca virosa only",
+      "supports": ["clinical history reported symptoms following Lactuca virosa ingestion", "FMT case outcome"],
+      "does_not_support": ["proven toxic causality", "inference to Lactuca sativa", "inference to the entire Lactuca genus", "population-level risk estimate"],
+      "causality_status": "unconfirmed"
+    }
+  ]
+}
