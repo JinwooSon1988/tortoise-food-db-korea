@@ -1,0 +1,24 @@
+name: Academic physiology scope v5.6 QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/academic_evidence_registry_v56.json'
+      - 'scripts/audit_academic_physiology_scope_v56.py'
+      - '.github/workflows/academic-physiology-scope-v56.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/academic_evidence_registry_v56.json'
+      - 'scripts/audit_academic_physiology_scope_v56.py'
+      - '.github/workflows/academic-physiology-scope-v56.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/audit_academic_physiology_scope_v56.py
