@@ -6,4 +6,6 @@ Public wording must preserve three boundaries: wild occurrence is not a captive 
 
 The block is shown only when the current `plant_id` has a mapped direct observation. Exact-species and genus-level observations are labeled differently. Unmapped `Sedum rubens`, `Sedum album`, and `Potentilla sp.` remain unmapped and cannot appear as exact evidence for another master plant.
 
+Generated plant pages load the same public evidence enhancer, so source and inference-boundary wording remains consistent across the canonical detail-page set.
+
 This feature does not change feeding verdicts, evidence grades, recommended frequencies, or diet percentages.
