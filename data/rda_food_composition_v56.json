@@ -1,0 +1,131 @@
+{
+  "version": "5.6",
+  "source_id": "RDA_NICS_FCDB_10_4",
+  "source_version": "10.4",
+  "basis": "per 100 g edible portion as reported by the RDA/NICS source workbook",
+  "verified_at": "2026-09-17",
+  "feeding_verdict_use": false,
+  "policy": {
+    "separate_from_usda": true,
+    "missing_value_rule": "A source dash or missing cell remains null and must never be converted to zero.",
+    "identity_rule": "Exact master-taxon matches may be operationalized. Narrower or differently named taxa remain explicitly scoped and cannot silently redefine the master identity.",
+    "interpretation_rule": "Composition is descriptive only and cannot determine tortoise safety, feeding frequency, diet percentage or evidence grade."
+  },
+  "records": [
+    {
+      "plant_id": "chicory",
+      "master_scientific": "Cichorium intybus",
+      "rda_food_code": "F178000B140a",
+      "rda_food_name_ko": "치커리 잎",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 93.4, "fiber_g": 2.3, "calcium_mg": 86, "phosphorus_mg": 31}
+    },
+    {
+      "plant_id": "romaine",
+      "master_scientific": "Lactuca sativa var. longifolia",
+      "rda_food_code": "F1010032490a",
+      "rda_food_name_ko": "녹색 로메인",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 94.1, "fiber_g": 1.9, "calcium_mg": 103, "phosphorus_mg": 30}
+    },
+    {
+      "plant_id": "arugula",
+      "master_scientific": "Eruca vesicaria",
+      "rda_food_code": "F2320000000a",
+      "rda_food_name_ko": "루꼴라",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 90.8, "fiber_g": 1.3, "calcium_mg": 159, "phosphorus_mg": 57}
+    },
+    {
+      "plant_id": "bokchoy",
+      "master_scientific": "Brassica rapa subsp. chinensis",
+      "rda_food_code": "F1750000000a",
+      "rda_food_name_ko": "청경채",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 95.9, "fiber_g": 1.2, "calcium_mg": 87, "phosphorus_mg": 40}
+    },
+    {
+      "plant_id": "napa",
+      "master_scientific": "Brassica rapa subsp. pekinensis",
+      "rda_food_code": "F0870000000a",
+      "rda_food_name_ko": "배추",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 94.7, "fiber_g": 1.3, "calcium_mg": 52, "phosphorus_mg": 41}
+    },
+    {
+      "plant_id": "cabbage",
+      "master_scientific": "Brassica oleracea var. capitata",
+      "rda_food_code": "F1290000000a",
+      "rda_food_name_ko": "양배추",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 91.0, "fiber_g": 2.5, "calcium_mg": 45, "phosphorus_mg": 32}
+    },
+    {
+      "plant_id": "beetgreens",
+      "master_scientific": "Beta vulgaris",
+      "rda_food_code": "F095000B140a",
+      "rda_food_name_ko": "비트잎",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 93.9, "fiber_g": 2.9, "calcium_mg": 79, "phosphorus_mg": 55}
+    },
+    {
+      "plant_id": "parsley",
+      "master_scientific": "Petroselinum crispum",
+      "rda_food_code": "F1930000000a",
+      "rda_food_name_ko": "파슬리",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 92.6, "fiber_g": 2.2, "calcium_mg": 149, "phosphorus_mg": 56}
+    },
+    {
+      "plant_id": "cilantro",
+      "master_scientific": "Coriandrum sativum",
+      "rda_food_code": "F0170000000a",
+      "rda_food_name_ko": "고수",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 91.4, "fiber_g": 2.4, "calcium_mg": 79, "phosphorus_mg": 52}
+    },
+    {
+      "plant_id": "broccolileaf",
+      "master_scientific": "Brassica oleracea var. italica",
+      "rda_food_code": "F092000B140a",
+      "rda_food_name_ko": "브로콜리잎",
+      "identity_match": "exact",
+      "preparation": "raw_or_unspecified_fresh",
+      "values_per_100g": {"water_g": 88.1, "fiber_g": null, "calcium_mg": 173, "phosphorus_mg": 37},
+      "notes": ["RDA total dietary-fiber field is reported as '-' for this record; retained as null, not zero."]
+    }
+  ],
+  "held_identity_examples": [
+    {
+      "plant_id": "mallow",
+      "master_scientific": "Malva spp.",
+      "rda_scientific": "Malva verticillata",
+      "status": "narrower_taxon_than_master",
+      "operationalize_as_exact_master": false
+    },
+    {
+      "plant_id": "dandelion",
+      "master_scientific": "Taraxacum spp.",
+      "rda_scientific": "Taraxacum platycarpum",
+      "status": "narrower_taxon_than_master",
+      "operationalize_as_exact_master": false
+    },
+    {
+      "plant_id": "kale",
+      "master_scientific": "Brassica oleracea var. sabellica",
+      "rda_scientific": "Brassia oleracea L. var. acephala D",
+      "status": "nomenclature_review_required",
+      "operationalize_as_exact_master": false,
+      "notes": ["The source workbook spelling/nomenclature is retained verbatim for audit; do not silently normalize it to the master taxon."]
+    }
+  ]
+}
