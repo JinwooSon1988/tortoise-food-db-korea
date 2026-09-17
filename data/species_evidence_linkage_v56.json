@@ -1,0 +1,65 @@
+{
+  "schema_version": "5.6",
+  "purpose": "Canonical registry connecting species-resolved evidence assets to public master foods without collapsing taxonomic or tortoise-applicability scope.",
+  "reviewed_at": "2026-09-18",
+  "rules": [
+    "A linked evidence asset is supporting detail, not an automatic feeding-verdict upgrade.",
+    "Exact T. g. ibera genus-level observations remain genus-level even when related Testudo evidence resolves an exact plant species.",
+    "Related Testudo exact-species records must not be relabeled as exact T. g. ibera evidence.",
+    "Wild occurrence or preference must not be converted into captive percentages, weekly frequency, daily feeding, staple status, unlimited feeding, or nutritional completeness.",
+    "Public evidence_detail should expose the strongest applicable evidence and the taxonomic/applicability limitation together."
+  ],
+  "links": [
+    {
+      "food_id": "plantain",
+      "canonical_taxon": "Plantago spp.",
+      "asset": "data/plantago_species_evidence_v56.json",
+      "canonical_matrix_status": "summary_only",
+      "strongest_applicability": "related_T_graeca_subspecies_exact_plant_species",
+      "exact_ibera_gap": "No exact T. g. ibera Plantago species record verified in the species-resolution pass.",
+      "public_detail_rule": "Show related T. g. graeca P. amplexicaulis and related Testudo P. lanceolata as supporting evidence only; do not imply genus-wide interchangeability."
+    },
+    {
+      "food_id": "dandelion",
+      "canonical_taxon": "Taraxacum spp.",
+      "asset": "data/taraxacum_species_evidence_v56.json",
+      "canonical_matrix_status": "genus_direct_summary_present",
+      "strongest_applicability": "exact_T_g_ibera_genus",
+      "exact_species_gap": "Exact-Ibera sources report Taraxacum/Taraxacum sp., not T. officinale.",
+      "public_detail_rule": "Lead with repeated exact-Ibera genus evidence; show T. officinale records from related Testudo only as species-resolved context."
+    },
+    {
+      "food_id": "sowthistle",
+      "canonical_taxon": "Sonchus spp.",
+      "asset": "data/sonchus_species_evidence_v56.json",
+      "canonical_matrix_status": "genus_direct_summary_present",
+      "strongest_applicability": "exact_T_g_ibera_genus",
+      "exact_species_gap": "Exact-Ibera evidence remains Sonchus genus-level.",
+      "public_detail_rule": "Keep exact-Ibera Sonchus evidence separate from S. oleraceus records in related Testudo populations."
+    },
+    {
+      "food_id": "clover",
+      "canonical_taxon": "Trifolium spp.",
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "canonical_matrix_status": "genus_direct_summary_present",
+      "strongest_applicability": "exact_T_g_ibera_genus",
+      "exact_species_gap": "Exact-Ibera evidence remains Trifolium genus-level.",
+      "public_detail_rule": "Do not assign T. campestre or T. repens records from related Testudo to T. g. ibera."
+    },
+    {
+      "food_id": "alfalfa",
+      "canonical_taxon": "Medicago sativa",
+      "asset": "data/medicago_species_evidence_v56.json",
+      "canonical_matrix_status": "genus_direct_summary_present",
+      "strongest_applicability": "exact_T_g_ibera_genus_related_Testudo_exact_species",
+      "exact_species_gap": "The direct Ibera observations are Medicago/Medicago sp.; they do not establish M. sativa as the consumed species.",
+      "public_detail_rule": "For the M. sativa master, explicitly distinguish direct Ibera genus context from exact M. sativa evidence in related Testudo; no automatic verdict upgrade."
+    }
+  ],
+  "qa_requirements": {
+    "no_orphan_asset": "Every species-resolved evidence asset listed here must map to an existing canonical food_id.",
+    "no_missing_asset": "Every asset path listed here must exist.",
+    "public_traceability": "Public detail generation should be able to expose asset path/source records and limitations for these foods.",
+    "verdict_independence": "Linkage alone must not mutate feeding_level, diet_role, or evidence_grade."
+  }
+}
