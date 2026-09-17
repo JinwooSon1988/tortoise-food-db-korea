@@ -1,0 +1,68 @@
+{
+  "schema_version":"5.6",
+  "canonical_taxon":"Malva verticillata L.",
+  "korean_context":"cultivated 아욱",
+  "reviewed_at":"2026-09-18",
+  "purpose":"Separate exact-species evidence from related Malva and human-food evidence before any tortoise feeding verdict is considered.",
+  "evidence":[
+    {
+      "source_id":"KOJIMA_2001_MALVA_VERTICILLATA_SENNOSIDES",
+      "citation":"Kojima T, Kishi M, Sekita S, Satake M. Origin of sennosides in health teas including Malva leaves. 2001.",
+      "pmid":"11577394",
+      "doi":"10.3358/shokueishi.42.202",
+      "study_type":"analytical chemistry",
+      "plant_taxon":"Malva verticillata L.",
+      "plant_part":"leaf",
+      "method":"thin-layer chromatography and high-performance liquid chromatography",
+      "result":"Sennosides A and B were not detected in M. verticillata leaves in the study; sennosides in sampled health teas were traced to senna material.",
+      "directness":"exact_plant_species_non_tortoise",
+      "supports":"A narrow negative finding for sennosides A/B in tested M. verticillata leaves.",
+      "does_not_support":"Whole-plant tortoise safety, feeding role, feeding frequency, nitrate safety, oxalate safety, or nutritional completeness."
+    },
+    {
+      "source_id":"BAO_2018_MALVA_VERTICILLATA",
+      "pmid":"29289893",
+      "doi":"10.1016/j.jpba.2017.12.044",
+      "study_type":"chemical profiling and in-vitro antioxidant assay",
+      "plant_taxon":"Malva verticillata L.",
+      "plant_parts":["leaves","stems","seeds"],
+      "result":"Chemical constituents and phenolic content were characterized in extracts; leaves showed the highest reported total phenolic content among tested parts.",
+      "directness":"exact_plant_species_non_tortoise",
+      "supports":"Exact-species phytochemistry context.",
+      "does_not_support":"Tortoise feeding safety, captive diet percentage, oxalate or nitrate burden."
+    },
+    {
+      "source_id":"IBRAHIM_2021_MALVA_VERTICILLATA",
+      "doi":"10.1186/s40816-021-00265-5",
+      "study_type":"rat pharmacology with methanolic leaf extract",
+      "plant_taxon":"Malva verticillata",
+      "plant_part":"leaf extract",
+      "result":"Screening reported alkaloids, saponins, phenols, flavonoids, ash and tannins in the methanolic extract.",
+      "directness":"exact_plant_species_extract_non_tortoise",
+      "supports":"Presence of broad phytochemical classes in the tested extract.",
+      "does_not_support":"Concentration in fresh edible leaves, tortoise toxicity, or feeding recommendation."
+    },
+    {
+      "source_id":"SLIMANI_2006_MALVA_PARVIFLORA",
+      "doi":"10.1016/j.jaridenv.2005.06.010",
+      "study_type":"wild feeding ecology",
+      "tortoise_taxon":"Testudo graeca graeca",
+      "plant_taxon":"Malva parviflora",
+      "directness":"related_plant_species_related_tortoise_subspecies",
+      "supports":"Malva parviflora is documented in a wild T. g. graeca diet in Morocco.",
+      "does_not_support":"Malva verticillata safety or a captive feeding percentage for T. g. ibera."
+    }
+  ],
+  "search_outcome":{
+    "exact_M_verticillata_Testudo_feeding":"not_verified_in_this_pass",
+    "exact_M_verticillata_tortoise_toxicology":"not_verified_in_this_pass",
+    "exact_M_verticillata_primary_oxalate":"not_verified_in_this_pass",
+    "exact_M_verticillata_primary_nitrate":"not_verified_in_this_pass"
+  },
+  "canonical_interpretation":{
+    "identity":"Korean cultivated 아욱 can be mapped to Malva verticillata L. when the crop identity is established.",
+    "feeding_verdict":"Do not unlock or upgrade solely from this evidence set.",
+    "applicability":"plant_only plus related-species feeding context; no verified exact T. g. ibera feeding evidence in this pass.",
+    "public_wording_guardrail":"State what is known and unknown. Do not call it staple, daily food, unlimited food, or unsafe based on the evidence above."
+  }
+}
