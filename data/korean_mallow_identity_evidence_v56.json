@@ -1,0 +1,47 @@
+{
+  "schema_version": "5.6",
+  "food_id": "mallow",
+  "question": "Can the Korean cultivated vegetable name 아욱 be mapped to a species-level identity without treating every plant called mallow as interchangeable?",
+  "verified_at": "2026-09-18",
+  "conclusion": {
+    "korean_cultivated_auuk_identity": "Malva verticillata L.",
+    "status": "verified_for_Korean_cultivated_아욱",
+    "generic_mallow_status": "unresolved_without_species_identification",
+    "feeding_verdict_use": false,
+    "reason": "Authoritative Korean agricultural resources consistently map the cultivated vegetable 아욱 to Malva verticillata. This resolves the Korean crop-name identity question, but does not make Malva spp. a species-level identity and does not by itself establish tortoise feeding suitability."
+  },
+  "sources": [
+    {
+      "source_id": "RDA_NONGSARO_AUUK",
+      "authority": "Rural Development Administration (농촌진흥청), Nongsaro",
+      "url": "https://www.nongsaro.go.kr/portal/ps/psb/psbl/workScheduleDtl.ps?cntntsNo=30631&menuId=PS00087",
+      "reported_korean_name": "아욱",
+      "reported_scientific_name": "Malva verticillata L.",
+      "crop_context": "cultivated vegetable; young leaves and stems harvested",
+      "supports": "Species-level identity of the Korean cultivated crop 아욱.",
+      "does_not_support": "Tortoise safety, feeding frequency, captive diet role, or identity of every product/weed marketed under a generic mallow name."
+    },
+    {
+      "source_id": "BRIS_AUUK",
+      "authority": "BRIS 생명자원정보서비스 / 한국농업기술진흥원 제공 자원정보",
+      "url": "https://www.bris.go.kr/portal/book/nativeCropsDetailPopup.do?biorsrcMngNo=MANUIP3300200007&menuId=81",
+      "reported_korean_name": "아욱",
+      "reported_scientific_name": "Malva verticillata L.",
+      "reported_english_name": "Whorled mallow",
+      "crop_context": "Korean crop resource; vegetable use",
+      "supports": "Independent Korean agricultural-resource corroboration of the crop-name mapping.",
+      "does_not_support": "A genus-wide Malva feeding verdict or tortoise-specific safety."
+    }
+  ],
+  "tortoise_evidence_context": [
+    {
+      "source_id": "slimani2006",
+      "taxon": "Testudo graeca graeca",
+      "plant": "Malva parviflora",
+      "evidence_type": "wild feeding ecology",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "interpretation": "Direct evidence for another Malva species in another T. graeca subspecies. It is related-species context only and cannot be transferred as exact evidence for M. verticillata."
+    }
+  ],
+  "required_database_rule": "If the public entry means Korean cultivated 아욱, its identity may be represented as Malva verticillata L. with the Korean crop sources above. If the entry intentionally means generic mallow/Malva spp., keep it genus-level and identity-blocked for species-specific claims. Do not change the feeding verdict solely from this identity reconciliation."
+}
