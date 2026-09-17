@@ -10,7 +10,8 @@
       "period": "2000-2010; observations March-October",
       "method": "direct observation; >500 wild specimens observed",
       "doi": "10.13128/Acta_Herpetol-9800",
-      "supports": "Direct evidence that wild T. g. ibera consumed reported plant taxa/parts; study reports 96.5% of observed feeding cases involved plant matter and 25 plant species were consumed.",
+      "url": "https://oaj.fupress.net/index.php/ah/article/view/1648",
+      "supports": "Direct evidence that wild T. g. ibera consumed reported plant taxa/parts; study reports over 95% plant matter and 25 plant species consumed.",
       "does_not_support": "Captive diet percentages, unlimited feeding, exact portions, nutritional completeness, or safety of unobserved congeners."
     },
     "mitrevichin_ibera_bulgaria_2023": {
@@ -28,16 +29,28 @@
       "location": "central Jbilets, Morocco",
       "year": 2006,
       "doi": "10.1016/j.jaridenv.2005.06.010",
-      "sample_context": "44 faecal samples; plant availability compared using 43 quadrats",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0140196305001473",
+      "sample_context": "faecal analysis with plant availability comparison",
       "supports": "Direct T. g. graeca feeding ecology. Malva parviflora was among five main plant species; the five together represented about 70% of identified material. The study identified 34 plant species in the diet.",
       "does_not_support": "Exact Ibera evidence, Korean retail-name mapping, captive percentages, or safety of all Malva/Medicago/Astragalus species."
+    },
+    "algeria_graeca_food_choice_2008": {
+      "type": "wild_feeding_ecology_faecal_analysis",
+      "taxon": "Testudo graeca",
+      "location": "Algeria",
+      "year": 2008,
+      "doi": "10.1080/21564574.2008.9635573",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/21564574.2008.9635573",
+      "sample_context": "4422 plant/animal fragments from faecal pellets of 20 males, 16 females and 8 juveniles",
+      "supports": "Broad wild T. graeca feeding ecology; 13 dicot and 3 monocot plant species were consumed and vegetative tissues exceeded reproductive tissues.",
+      "does_not_support": "Exact Ibera evidence or safety/frequency of a Korean retail plant without a taxon-level match."
     }
   },
   "foods": [
     {
       "food_id": "chicory",
       "scientific_name": "Cichorium intybus",
-      "direct_evidence": [{"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","observation":"consumed in the wild"}],
+      "direct_evidence": [{"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","identity_scope":"exact_species","observation":"consumed in the wild"}],
       "audit_interpretation": "Strong direct applicability for occurrence in the natural diet of T. g. ibera. It does not establish daily, unlimited, or sole-staple captive use."
     },
     {
@@ -77,7 +90,48 @@
       "identity_status": "needs_species_level_mapping",
       "direct_evidence": [],
       "related_species_evidence": [{"source_id":"slimani2006","taxon_scope":"T_graeca_graeca","identity_scope":"exact_Malva_parviflora","observation":"Malva parviflora was a major wild diet item; about 15% of identified material in the reported dataset"}],
-      "audit_interpretation": "Useful species-level evidence exists for M. parviflora in T. g. graeca, but it must not unlock the Korean generic 'mallow' entry until species identity is reconciled."
+      "audit_interpretation": "Useful species-level evidence exists for M. parviflora in T. g. graeca, but it must not unlock the Korean generic mallow entry until species identity is reconciled."
+    },
+    {
+      "food_id": "plantain",
+      "scientific_name": "Plantago spp.",
+      "direct_evidence": [],
+      "related_species_evidence": [{"source_id":"slimani2006","taxon_scope":"T_graeca_graeca","identity_scope":"exact_Plantago_amplexicaulis","observation":"Plantago amplexicaulis occurred in the study vegetation and was only rarely recovered as a food item in the reported dataset"}],
+      "audit_interpretation": "Do not upgrade the Plantago master entry from this study. The evidence concerns P. amplexicaulis in T. g. graeca and does not establish broad Plantago safety or preference for Ibera."
+    },
+    {
+      "food_id": "sedum",
+      "scientific_name": "Sedum sarmentosum",
+      "direct_evidence": [],
+      "related_species_evidence": [
+        {"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","identity_scope":"related_Sedum_species","observation":"Sedum rubens consumed"},
+        {"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","identity_scope":"related_Sedum_species","observation":"Sedum album consumed"}
+      ],
+      "audit_interpretation": "Excellent exact-Ibera genus-context evidence, but not an exact S. sarmentosum observation. Keep the Korean 돌나물 identity and feeding verdict dependent on separate exact-species evidence."
+    },
+    {
+      "food_id": "mulberry",
+      "scientific_name": "Morus spp.",
+      "direct_evidence": [],
+      "audit_interpretation": "No direct T. g. ibera Morus evidence was verified in this audit pass. A 2023 Bulgaria report depicts T. hermanni feeding on mulberries, not T. graeca ibera; that observation must not be transferred across species."
+    },
+    {
+      "food_id": "figleaf",
+      "scientific_name": "Ficus carica",
+      "direct_evidence": [],
+      "audit_interpretation": "No exact-Ibera leaf-feeding evidence was verified in this audit pass. Reports of fruit consumption or observations in T. hermanni are not evidence for Ficus carica leaves in T. g. ibera."
+    },
+    {
+      "food_id": "hibiscusleaf",
+      "scientific_name": "Hibiscus syriacus",
+      "direct_evidence": [],
+      "audit_interpretation": "No direct Ibera field evidence verified in this pass; retain specialist/general evidence separately and do not imply a wild-Ibera observation."
+    },
+    {
+      "food_id": "hibiscusflower",
+      "scientific_name": "Hibiscus syriacus",
+      "direct_evidence": [],
+      "audit_interpretation": "No direct Ibera field evidence verified in this pass; flower and leaf evidence must remain part-specific."
     }
   ]
 }
