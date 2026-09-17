@@ -1,0 +1,132 @@
+{
+  "schema_version": "5.6",
+  "plant_master": "Trifolium spp.",
+  "purpose": "Resolve Trifolium feeding evidence by tortoise taxon and plant identification level without converting wild observations into captive feeding prescriptions.",
+  "canonical_interpretation": {
+    "exact_ibera_support": "Direct wild Testudo graeca ibera evidence exists for Trifolium at genus level in Dobrogea, Romania (Iftime & Iftime 2012).",
+    "species_resolution_limit": "The exact-Ibera record does not establish Trifolium repens, T. campestre, or another named Trifolium species as the consumed taxon.",
+    "related_testudo_species_records": "Exact species records include Trifolium campestre in wild Testudo hermanni and Trifolium repens in a semi-natural T. h. boettgeri husbandry context.",
+    "bulgaria_boundary": "Mitrevichin 2023 reported Trifolium sp., including T. campestre, for T. hermanni; the T. graeca ibera observations in that study listed other taxa and must not be relabeled as Trifolium evidence for Ibera.",
+    "verdict_rule": "These records support taxon-resolved evidence context only. They do not by themselves justify genus-wide safety, daily/unlimited feeding, staple status, captive percentages, or a stronger public feeding verdict."
+  },
+  "records": [
+    {
+      "id": "iftime_ibera_trifolium_dobrogea_2012",
+      "citation": "Iftime A, Iftime O. 2012. Testudo graeca ibera feeding ecology in Dobrogea, Romania. Acta Herpetologica.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "study_type": "long-term wild feeding observation",
+      "tortoise_taxon": "Testudo graeca ibera",
+      "population_location": "Dobrogea, Romania",
+      "plant_taxon_reported": "Trifolium",
+      "plant_resolution": "genus",
+      "plant_part_context": "young leaves reported among preferred plant material",
+      "directness": "exact_species_tortoise_direct_wild_observation__plant_genus_only",
+      "supports": [
+        "Wild T. g. ibera directly consumed Trifolium taxon material.",
+        "Trifolium belongs in the exact-Ibera evidence layer at genus resolution."
+      ],
+      "does_not_support": [
+        "Identification as Trifolium repens, Trifolium campestre, or any other exact Trifolium species.",
+        "Captive feeding frequency, percentage, daily use, unlimited use, or staple status."
+      ]
+    },
+    {
+      "id": "mitrevichin_hermanni_trifolium_bulgaria_2023",
+      "citation": "Mitrevichin E. 2023. Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria. ZooNotes 228:1-4.",
+      "doi": "10.5281/zenodo.12807900",
+      "study_type": "wild direct feeding observations",
+      "tortoise_taxon": "Testudo hermanni boettgeri",
+      "population_location": "south-western Bulgaria",
+      "plant_taxon_reported": "Trifolium sp.; includes Trifolium campestre",
+      "plant_resolution": "species present for at least some observations",
+      "directness": "related_testudo_direct_wild_observation",
+      "supports": [
+        "Wild T. hermanni directly consumed Trifolium, including an exact T. campestre record."
+      ],
+      "does_not_support": [
+        "A Trifolium record for the T. graeca ibera individuals in the same paper.",
+        "Exact-Ibera evidence for T. campestre.",
+        "Genus-wide captive safety or feeding frequency."
+      ]
+    },
+    {
+      "id": "del_vecchio_hermanni_trifolium_central_italy_2011",
+      "citation": "Del Vecchio S et al. 2011. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3).",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "study_type": "wild fecal diet analysis",
+      "tortoise_taxon": "Testudo hermanni hermanni",
+      "population_location": "central Italy",
+      "plant_taxon_reported": "Trifolium sp.",
+      "plant_resolution": "genus",
+      "plant_part_reported": "leaves",
+      "directness": "related_testudo_wild_diet_evidence",
+      "supports": [
+        "Trifolium leaf material occurred in wild T. h. hermanni diet samples."
+      ],
+      "does_not_support": [
+        "An exact Trifolium species identity for consumed material.",
+        "Exact-Ibera feeding guidance."
+      ]
+    },
+    {
+      "id": "garraf_hermanni_trifolium_campestre",
+      "citation": "Study of Testudo hermanni diet in Garraf Natural Park, north-eastern Spain; fecal remains analysis.",
+      "study_type": "wild fecal remains analysis",
+      "tortoise_taxon": "Testudo hermanni",
+      "population_location": "Garraf Natural Park, north-eastern Spain",
+      "plant_taxon_reported": "Trifolium campestre",
+      "plant_resolution": "species",
+      "plant_part_reported": "seeds",
+      "directness": "related_testudo_wild_diet_evidence",
+      "supports": [
+        "Exact T. campestre seed material was identified in wild T. hermanni fecal remains."
+      ],
+      "does_not_support": [
+        "Exact-Ibera T. campestre consumption.",
+        "Leaf feeding frequency or captive diet role."
+      ]
+    },
+    {
+      "id": "rouag_algeria_graeca_trifolium_2008",
+      "citation": "Rouag R et al. 2008. Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca. African Journal of Herpetology 57(2).",
+      "doi": "10.1080/21564574.2008.9635573",
+      "study_type": "wild fecal diet analysis",
+      "tortoise_taxon": "Testudo graeca (Algerian population)",
+      "population_location": "Algeria",
+      "plant_taxon_reported": "Trifolium sp.",
+      "plant_resolution": "genus",
+      "directness": "same_species_complex_related_population_wild_diet_evidence",
+      "supports": [
+        "Trifolium was a commonly identified genus in this wild T. graeca population."
+      ],
+      "does_not_support": [
+        "Transfer of reported fragment percentages to captive diets.",
+        "Exact species identity or exact-Ibera population evidence."
+      ]
+    },
+    {
+      "id": "bielli_boettgeri_trifolium_repens_2015",
+      "citation": "Bielli M et al. 2015. Hematological values for adult eastern Hermann's tortoise (Testudo hermanni boettgeri) in semi-natural conditions.",
+      "doi": "10.1177/1040638714561251",
+      "study_type": "clinical reference study with described usual husbandry diet",
+      "tortoise_taxon": "Testudo hermanni boettgeri",
+      "plant_taxon_reported": "Trifolium repens",
+      "plant_resolution": "species",
+      "directness": "related_testudo_husbandry_context",
+      "supports": [
+        "T. repens was part of the described usual wild-plant diet for clinically examined T. h. boettgeri in semi-natural conditions."
+      ],
+      "does_not_support": [
+        "A controlled safety trial of T. repens.",
+        "Exact-Ibera evidence, an optimal inclusion rate, or unlimited feeding."
+      ]
+    }
+  ],
+  "guardrails": [
+    "Do not rewrite the exact-Ibera Trifolium genus record as T. repens or T. campestre.",
+    "Do not transfer T. campestre records from T. hermanni to T. g. ibera as direct evidence.",
+    "Do not transfer T. repens husbandry use in T. h. boettgeri into a controlled safety claim.",
+    "Do not convert wild occurrence, preference, or fecal fragment frequency into captive diet percentages or frequency prescriptions.",
+    "Do not infer all Trifolium species are interchangeable or equally suitable."
+  ]
+}
