@@ -1,0 +1,138 @@
+{
+  "version": "5.6",
+  "plant_master": {
+    "key": "alfalfa",
+    "scientific_name": "Medicago sativa",
+    "evidence_scope_warning": "The public master is an exact species, Medicago sativa, but the strongest direct Testudo graeca ibera field evidence currently resolved here identifies Medicago only to genus. Genus-level Ibera evidence must not be relabeled as exact-species M. sativa evidence."
+  },
+  "records": [
+    {
+      "id": "iftime_ibera_medicago_genus_2012",
+      "tortoise_taxon": "Testudo graeca ibera",
+      "population": "Dobrogea, Romania",
+      "plant_taxon": "Medicago",
+      "plant_resolution": "genus",
+      "plant_part": "young leaves",
+      "context": "wild feeding observation",
+      "directness": "exact_ibera_genus_level",
+      "summary": "Iftime & Iftime reported Medicago among plant taxa consumed by wild T. g. ibera and among the more frequently consumed young-leaf materials during their long-term Dobrogea observations.",
+      "supports": [
+        "Direct wild consumption of Medicago by T. g. ibera",
+        "Genus-level relevance of Medicago to the natural diet of this Ibera population"
+      ],
+      "does_not_support": [
+        "Identification of the consumed Medicago as Medicago sativa",
+        "Safety of every Medicago species",
+        "A captive feeding percentage, frequency, staple status, or unlimited feeding"
+      ],
+      "source": {
+        "authors": "Iftime A, Iftime O",
+        "year": 2012,
+        "title": "Long-term observations on the feeding ecology of Testudo graeca ibera in Dobrogea, Romania",
+        "doi": "10.13128/Acta_Herpetol-9800"
+      }
+    },
+    {
+      "id": "mitrevichin_ibera_medicago_genus_2023",
+      "tortoise_taxon": "Testudo graeca ibera",
+      "population": "south-western Bulgaria",
+      "plant_taxon": "Medicago sp.",
+      "plant_resolution": "genus",
+      "context": "wild feeding observation",
+      "directness": "exact_ibera_genus_level",
+      "summary": "Field observations recorded T. graeca ibera feeding on Medicago sp. in south-western Bulgaria.",
+      "supports": [
+        "Independent direct Ibera observation of Medicago consumption"
+      ],
+      "does_not_support": [
+        "Exact identification as M. sativa, M. lupulina, M. minima, or another Medicago species",
+        "Quantitative captive diet guidance"
+      ],
+      "source": {
+        "year": 2023,
+        "title": "Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country",
+        "doi": "10.5281/zenodo.12807900"
+      }
+    },
+    {
+      "id": "garraf_hermanni_medicago_sativa",
+      "tortoise_taxon": "Testudo hermanni",
+      "population": "Garraf Natural Park, north-eastern Spain",
+      "plant_taxon": "Medicago sativa",
+      "plant_resolution": "species",
+      "plant_part": "fruit remains",
+      "context": "wild diet; macroscopic faecal analysis",
+      "directness": "related_testudo_exact_plant_species",
+      "summary": "A faecal-analysis study of wild T. hermanni at Garraf identified M. sativa remains, alongside several other Medicago species.",
+      "supports": [
+        "Exact-species M. sativa consumption in a related Mediterranean Testudo taxon"
+      ],
+      "does_not_support": [
+        "Exact-Ibera M. sativa consumption",
+        "Whole-genus safety",
+        "Captive feeding frequency or diet proportion"
+      ]
+    },
+    {
+      "id": "garraf_hermanni_other_medicago_species",
+      "tortoise_taxon": "Testudo hermanni",
+      "population": "Garraf Natural Park, north-eastern Spain",
+      "plant_taxa": ["Medicago truncatula", "Medicago minima", "Medicago secundiflora"],
+      "plant_resolution": "species",
+      "context": "wild diet; macroscopic faecal analysis",
+      "directness": "related_testudo_species_context",
+      "summary": "The same Garraf study resolved multiple Medicago species in the wild diet, demonstrating that Mediterranean Testudo use of Medicago is not evidence for only one species and should not be collapsed into M. sativa identity.",
+      "does_not_support": [
+        "Interchangeability of Medicago species",
+        "A genus-wide feeding verdict"
+      ]
+    },
+    {
+      "id": "del_vecchio_hermanni_medicago_lupulina_2011",
+      "tortoise_taxon": "Testudo hermanni hermanni",
+      "population": "central Italy",
+      "plant_taxon": "Medicago lupulina",
+      "plant_resolution": "species",
+      "plant_part": "leaves",
+      "context": "wild diet; faecal analysis",
+      "directness": "related_testudo_exact_plant_species",
+      "summary": "Seasonal diet analysis identified M. lupulina leaves in wild T. h. hermanni faeces; occurrence was higher in spring than autumn in that study.",
+      "supports": [
+        "Exact M. lupulina consumption by a related Mediterranean Testudo taxon"
+      ],
+      "does_not_support": [
+        "Exact-Ibera M. lupulina consumption",
+        "Use of the observed seasonal frequency as a captive feeding schedule"
+      ],
+      "source": {
+        "authors": "Del Vecchio S et al.",
+        "year": 2011,
+        "title": "Seasonal changes in the diet of Testudo hermanni hermanni in central Italy",
+        "doi": "10.1655/HERPETOLOGICA-D-10-00064.1"
+      }
+    },
+    {
+      "id": "montsant_hermanni_medicago_sativa",
+      "tortoise_taxon": "Testudo hermanni hermanni",
+      "population": "Serra de Montsant Natural Park reintroduction project, Catalonia",
+      "plant_taxon": "Medicago sativa",
+      "plant_resolution": "species",
+      "plant_part": "leaves",
+      "context": "field/reintroduction project consumed-plant list",
+      "directness": "related_testudo_exact_plant_species",
+      "summary": "The Montsant reintroduction project listed M. sativa leaves among plants consumed by T. h. hermanni.",
+      "does_not_support": [
+        "Exact-Ibera M. sativa evidence",
+        "Captive staple or unlimited status"
+      ]
+    }
+  ],
+  "interpretation_rules": [
+    "Exact T. g. ibera evidence is currently genus-level Medicago in the resolved field sources and must remain genus-level.",
+    "M. sativa records from T. hermanni or other T. graeca populations may strengthen related-Testudo context but cannot be relabeled as direct exact-Ibera M. sativa evidence.",
+    "Different Medicago species must remain distinct; occurrence of M. lupulina, M. minima, M. truncatula, or M. secundiflora does not establish M. sativa identity or interchangeability.",
+    "Wild occurrence, preference, or faecal frequency is descriptive evidence and must not be converted into captive percentages, daily feeding, unlimited feeding, or staple status.",
+    "No record here alone establishes nutritional completeness or genus-wide safety."
+  ],
+  "verdict_effect": "No automatic public feeding-level upgrade. Preserve current alfalfa verdict unless a separate evidence synthesis explicitly justifies a change."
+}
