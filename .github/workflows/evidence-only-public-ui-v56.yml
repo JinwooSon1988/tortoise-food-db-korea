@@ -1,0 +1,26 @@
+name: Evidence-only public UI v5.6 QA
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'all-plants/**'
+      - 'sw.js'
+      - 'scripts/audit_evidence_only_public_ui_v56.py'
+      - '.github/workflows/evidence-only-public-ui-v56.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'all-plants/**'
+      - 'sw.js'
+      - 'scripts/audit_evidence_only_public_ui_v56.py'
+      - '.github/workflows/evidence-only-public-ui-v56.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/audit_evidence_only_public_ui_v56.py
