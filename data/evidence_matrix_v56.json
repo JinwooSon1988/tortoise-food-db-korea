@@ -1,0 +1,83 @@
+{
+  "schema_version": "5.6",
+  "purpose": "Source-separated audit matrix. Wild feeding observations are descriptive and never converted directly into captive percentages, unlimited feeding, or nutrition completeness claims.",
+  "last_verified_at": "2026-09-17",
+  "source_anchors": {
+    "iftime_ibera_dobrogea_2012": {
+      "type": "direct_wild_feeding_observation",
+      "taxon": "Testudo graeca ibera",
+      "location": "Dobrogea, Romania",
+      "period": "2000-2010; observations March-October",
+      "method": "direct observation; >500 wild specimens observed",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "supports": "Direct evidence that wild T. g. ibera consumed reported plant taxa/parts; study reports 96.5% of observed feeding cases involved plant matter and 25 plant species were consumed.",
+      "does_not_support": "Captive diet percentages, unlimited feeding, exact portions, nutritional completeness, or safety of unobserved congeners."
+    },
+    "mitrevichin_ibera_bulgaria_2023": {
+      "type": "direct_field_observation",
+      "taxon": "Testudo graeca ibera",
+      "location": "south-western Bulgaria",
+      "year": 2023,
+      "doi": "10.5281/zenodo.12807900",
+      "supports": "Direct field observations of T. g. ibera feeding on Cichorium intybus, Taraxacum sp., Medicago sp., Sedum rubens, Sedum album and Potentilla sp.",
+      "does_not_support": "Quantitative captive frequency, exact portion, unlimited feeding, or inference to every species in the same genus."
+    },
+    "slimani2006": {
+      "type": "wild_feeding_ecology_faecal_analysis",
+      "taxon": "Testudo graeca graeca",
+      "location": "central Jbilets, Morocco",
+      "year": 2006,
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "sample_context": "44 faecal samples; plant availability compared using 43 quadrats",
+      "supports": "Direct T. g. graeca feeding ecology. Malva parviflora was among five main plant species; the five together represented about 70% of identified material. The study identified 34 plant species in the diet.",
+      "does_not_support": "Exact Ibera evidence, Korean retail-name mapping, captive percentages, or safety of all Malva/Medicago/Astragalus species."
+    }
+  },
+  "foods": [
+    {
+      "food_id": "chicory",
+      "scientific_name": "Cichorium intybus",
+      "direct_evidence": [{"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","observation":"consumed in the wild"}],
+      "audit_interpretation": "Strong direct applicability for occurrence in the natural diet of T. g. ibera. It does not establish daily, unlimited, or sole-staple captive use."
+    },
+    {
+      "food_id": "dandelion",
+      "scientific_name": "Taraxacum spp.",
+      "direct_evidence": [
+        {"source_id":"iftime_ibera_dobrogea_2012","taxon_scope":"exact_subspecies","identity_scope":"genus","observation":"Taraxacum reported among young leaves for which a feeding predilection was observed"},
+        {"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","identity_scope":"genus","observation":"Taraxacum sp. consumed"}
+      ],
+      "audit_interpretation": "Repeated direct Ibera evidence at Taraxacum genus level; master identity remains genus-level, so no species-specific inference."
+    },
+    {
+      "food_id": "sowthistle",
+      "scientific_name": "Sonchus spp.",
+      "direct_evidence": [{"source_id":"iftime_ibera_dobrogea_2012","taxon_scope":"exact_subspecies","identity_scope":"genus","observation":"Sonchus reported among young leaves for which a feeding predilection was observed"}],
+      "audit_interpretation": "Direct Ibera evidence exists at genus level; this does not identify every Sonchus species as interchangeable."
+    },
+    {
+      "food_id": "clover",
+      "scientific_name": "Trifolium spp.",
+      "direct_evidence": [{"source_id":"iftime_ibera_dobrogea_2012","taxon_scope":"exact_subspecies","identity_scope":"genus","observation":"Trifolium reported among young leaves for which a feeding predilection was observed"}],
+      "audit_interpretation": "Direct Ibera occurrence evidence at genus level; wild preference does not establish a captive feeding ratio."
+    },
+    {
+      "food_id": "alfalfa",
+      "scientific_name": "Medicago sativa",
+      "direct_evidence": [
+        {"source_id":"iftime_ibera_dobrogea_2012","taxon_scope":"exact_subspecies","identity_scope":"genus","observation":"Medicago reported among young leaves for which a feeding predilection was observed"},
+        {"source_id":"mitrevichin_ibera_bulgaria_2023","taxon_scope":"exact_subspecies","identity_scope":"genus","observation":"Medicago sp. consumed"}
+      ],
+      "related_species_evidence": [{"source_id":"slimani2006","taxon_scope":"T_graeca_graeca","identity_scope":"related_Medicago_species","observation":"Medicago hispida was one of five main plant species in the diet"}],
+      "audit_interpretation": "Direct Ibera evidence is Medicago-genus level, not an exact M. sativa observation. Keep exact-species identity and feeding-frequency claims separate."
+    },
+    {
+      "food_id": "mallow",
+      "scientific_name": "Malva spp.",
+      "identity_status": "needs_species_level_mapping",
+      "direct_evidence": [],
+      "related_species_evidence": [{"source_id":"slimani2006","taxon_scope":"T_graeca_graeca","identity_scope":"exact_Malva_parviflora","observation":"Malva parviflora was a major wild diet item; about 15% of identified material in the reported dataset"}],
+      "audit_interpretation": "Useful species-level evidence exists for M. parviflora in T. g. graeca, but it must not unlock the Korean generic 'mallow' entry until species identity is reconciled."
+    }
+  ]
+}
