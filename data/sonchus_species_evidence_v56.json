@@ -1,0 +1,78 @@
+{
+  "schema_version": "5.6",
+  "canonical_master": {
+    "key": "sowthistle",
+    "scientific_name": "Sonchus spp.",
+    "identity_scope": "genus",
+    "public_verdict_change": false
+  },
+  "purpose": "Resolve Sonchus feeding evidence by tortoise taxon and plant taxon without converting wild observations or related-Testudo records into genus-wide captive feeding prescriptions.",
+  "evidence_records": [
+    {
+      "id": "iftime_ibera_dobrogea_2012_sonchus",
+      "citation": "Iftime A, Iftime O. Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica. 2012.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "study_type": "long-term direct wild feeding observation",
+      "tortoise_taxon": "Testudo graeca ibera",
+      "population_location": "Dobrogea, Romania",
+      "study_period": "2000-2010, March-October observations",
+      "plant_taxon": "Sonchus",
+      "plant_taxon_resolution": "genus",
+      "plant_part": "young leaves",
+      "result": "Sonchus was among the plant genera whose young leaves were reported as preferentially/frequently consumed in the observed wild diet.",
+      "directness": "exact_species_tortoise_genus_level_plant",
+      "supports": ["direct wild T. g. ibera consumption of Sonchus at genus resolution"],
+      "does_not_support": ["Sonchus oleraceus identification in this population", "genus-wide safety", "daily feeding", "unlimited feeding", "staple status", "captive feeding percentage", "nutritional completeness"]
+    },
+    {
+      "id": "bayley_highfield_morocco_1996_sonchus_oleraceus",
+      "citation": "Bayley JR, Highfield AC. Observations on ecological changes threatening a population of Testudo graeca graeca in the Souss Valley, southern Morocco. Chelonian Conservation and Biology. 1996.",
+      "study_type": "field ecological/diet observation",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "population_location": "Souss Valley, Morocco",
+      "plant_taxon": "Sonchus oleraceus",
+      "plant_taxon_resolution": "species",
+      "result": "Sonchus oleraceus was listed among wild food plants in the diet table for the observed T. g. graeca population.",
+      "directness": "related_subspecies_exact_plant_species",
+      "supports": ["exact S. oleraceus wild diet record in T. g. graeca"],
+      "does_not_support": ["exact T. g. ibera consumption of S. oleraceus", "all Sonchus species", "captive frequency or percentage", "unlimited/staple status"]
+    },
+    {
+      "id": "del_vecchio_hermanni_2011_sonchus_oleraceus",
+      "citation": "Del Vecchio S, Burke RL, Rugiero L, Capula M, Luiselli L. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica. 2011;67(3):236-249.",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "study_type": "wild diet study",
+      "tortoise_taxon": "Testudo hermanni hermanni",
+      "population_location": "central Italy",
+      "plant_taxon": "Sonchus oleraceus",
+      "plant_taxon_resolution": "species",
+      "result": "S. oleraceus occurred among plant species recorded in the wild diet dataset.",
+      "directness": "related_testudo_exact_plant_species",
+      "supports": ["exact S. oleraceus consumption record in a related Mediterranean Testudo"],
+      "does_not_support": ["exact T. g. ibera species-level record", "genus-wide safety", "captive feeding prescription"]
+    },
+    {
+      "id": "bielli_hermanni_2015_sonchus_oleraceus",
+      "citation": "Bielli M, Nardini G, Di Girolamo N, Savarino P. Hematological values for adult eastern Hermann's tortoise (Testudo hermanni boettgeri) in semi-natural conditions. Journal of Veterinary Diagnostic Investigation. 2015.",
+      "study_type": "veterinary hematology study with husbandry diet description",
+      "tortoise_taxon": "Testudo hermanni boettgeri",
+      "plant_taxon": "Sonchus oleraceus",
+      "plant_taxon_resolution": "species",
+      "result": "S. oleraceus was included among native wild plants forming the animals' usual semi-natural diet.",
+      "directness": "related_testudo_husbandry_context_exact_plant_species",
+      "supports": ["documented inclusion of S. oleraceus in a related Testudo semi-natural diet"],
+      "does_not_support": ["controlled safety trial", "causal health benefit", "optimal amount", "exact T. g. ibera feeding frequency"]
+    }
+  ],
+  "canonical_interpretation": {
+    "strongest_direct_ibera_signal": "Iftime & Iftime 2012 directly documents Sonchus consumption by wild T. g. ibera, but only at genus resolution.",
+    "species_resolution": "S. oleraceus has exact-species records in T. g. graeca and T. hermanni contexts; these cannot be relabeled as an exact-species T. g. ibera record.",
+    "guardrails": [
+      "Do not rewrite Sonchus spp. as Sonchus oleraceus solely from related-population evidence.",
+      "Do not convert wild preference/frequency language into captive percentages, daily use, staple status, or unlimited feeding.",
+      "Do not infer every Sonchus species is equivalent from records for S. oleraceus.",
+      "A husbandry diet description is not a controlled toxicology or nutrition trial."
+    ],
+    "public_verdict_action": "No feeding-level upgrade from this matrix alone. Preserve current canonical assessment unless separate safety/nutrition evidence justifies change."
+  }
+}
