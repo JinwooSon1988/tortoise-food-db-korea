@@ -1,0 +1,102 @@
+{
+  "schema_version": "5.6",
+  "topic": "Poaceae in Mediterranean Testudo diets",
+  "status": "context_only_no_blanket_verdict",
+  "reviewed_at": "2026-09-18",
+  "conclusion": {
+    "ko": "볏과(Poaceae)를 지중해형 Testudo가 소화하지 못한다거나 일률적으로 급여 금지·제한해야 한다는 주장은 현재 확인한 근거로 지지되지 않는다. 야생 연구에서는 지역·계절에 따라 볏과가 회피되거나 적게 이용되는 개체군도 있지만, 다른 Testudo hermanni 및 Testudo graeca 자료에서는 실제 섭식이 확인된다. 따라서 Poaceae라는 과 수준 정보만으로 개별 식물의 급여 판정을 변경하지 않는다.",
+    "does_not_support": [
+      "Poaceae 전체를 do_not_feed로 분류",
+      "지중해형 Testudo는 풀을 소화하지 못한다는 단정",
+      "야생 섭식 빈도를 사육 급여 비율로 변환",
+      "한 지역·한 종의 선택성을 Testudo 전체에 일반화"
+    ]
+  },
+  "evidence": [
+    {
+      "id": "iftime_ibera_dobrogea_2012",
+      "citation": "Iftime A, Iftime O. 2012. Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "url": "https://oaj.fupress.net/index.php/ah/article/view/1648",
+      "taxon": "Testudo graeca ibera",
+      "study_type": "long-term direct wild feeding observations",
+      "location": "Dobrogea, Romania",
+      "supports": "Direct Ibera wild diet evidence; >95% plant matter and 25 plant species. Later species-account synthesis reports Poaceae genera including Dactylis, Dichantium, Festuca and Poa from this dataset.",
+      "limitations": "Wild occurrence does not establish captive staple status, digestibility coefficient, safe percentage, or unlimited feeding.",
+      "directness": "exact_subspecies"
+    },
+    {
+      "id": "del_vecchio_hermanni_italy_2011",
+      "citation": "Del Vecchio S, Burke RL, Rugiero L, Capula M, Luiselli L. 2011. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249.",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "url": "https://iris.unive.it/handle/10278/3682725",
+      "taxon": "Testudo hermanni hermanni",
+      "study_type": "wild diet / faecal analysis",
+      "location": "central Italy",
+      "supports": "The population consumed grasses in spring; Poaceae taxa reported include Avena barbata, Brachypodium sylvaticum and Catapodium rigidum.",
+      "limitations": "Different Testudo species/subspecies and locality; presence in diet is not a captive feeding recommendation or digestibility trial.",
+      "directness": "husbandry_group"
+    },
+    {
+      "id": "meek_hermanni_balkans_2010",
+      "citation": "Meek R. Nutritional selection in Hermann's tortoise, Testudo hermanni, in Montenegro and Croatia.",
+      "url": "https://archive.britishcheloniagroup.org.uk/testudo/v7/v7n2meek",
+      "taxon": "Testudo hermanni",
+      "study_type": "wild nutritional selection observations",
+      "location": "Montenegro and Croatia",
+      "supports": "Poaceae were abundant in the study areas but rarely consumed, showing population-level selection away from grasses despite availability.",
+      "limitations": "Does not demonstrate inability to digest Poaceae; the proposed easier energy assimilation of other plants is an interpretation, not a controlled grass digestibility experiment.",
+      "directness": "husbandry_group"
+    },
+    {
+      "id": "testudo_hermanni_italy_foraging_2015",
+      "citation": "Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVet proceedings, 2015.",
+      "url": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "taxon": "Testudo hermanni",
+      "study_type": "multi-site vegetation and faecal microhistology",
+      "location": "Apulia, Tuscany and Sardinia, Italy",
+      "supports": "Poaceae genera Melica, Stipa and Vulpia occurred among selected/consumed families, while Poaceae as a family also showed a high negative selection index. This illustrates that occurrence and preference are not equivalent.",
+      "limitations": "Conference proceedings/preliminary results; different species from Ibera; no controlled digestibility coefficient.",
+      "directness": "husbandry_group"
+    },
+    {
+      "id": "slimani_graeca_morocco_2006",
+      "citation": "Slimani T, El Hassani MS. 2006. Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. Journal of Arid Environments 64(3):422-435.",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "url": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "taxon": "Testudo graeca graeca",
+      "study_type": "quantitative wild diet / faecal analysis",
+      "location": "central Jbilets, Morocco",
+      "supports": "Strong selective feeding: five principal plant species made up 70% of identified material, with Fabaceae comprising 27%; abundant plants can be actively avoided.",
+      "limitations": "Western T. graeca in an arid overgrazed locality; does not by itself establish a Poaceae digestion rule for T. g. ibera.",
+      "directness": "species"
+    },
+    {
+      "id": "algerian_graeca_food_choice_2008",
+      "citation": "Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca. African Journal of Herpetology 57(2):103-113.",
+      "doi": "10.1080/21564574.2008.9635573",
+      "url": "https://doi.org/10.1080/21564574.2008.9635573",
+      "taxon": "Testudo graeca",
+      "study_type": "wild faecal pellet analysis",
+      "location": "Algeria",
+      "supports": "4422 fragments from 44 tortoises included 13 dicot and three monocot species; dicots accounted for over 70% of diet fragments.",
+      "limitations": "Monocot is broader than Poaceae and this study does not provide a controlled digestibility comparison.",
+      "directness": "species"
+    },
+    {
+      "id": "garden_state_testudo_diet_2021",
+      "citation": "Leone C. 2021. Tortoise Diet (Testudo Species). Garden State Tortoise.",
+      "url": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+      "taxon": "Testudo spp.",
+      "study_type": "specialist husbandry guidance",
+      "supports": "Experienced Testudo husbandry source emphasizing a varied low-protein, high-fiber, calcium-rich diet.",
+      "limitations": "Specialist husbandry source, not peer-reviewed primary evidence. Numerical nutrient targets must not be promoted to species-specific physiological thresholds without primary validation.",
+      "directness": "specialist_supplementary"
+    }
+  ],
+  "database_rule": {
+    "tag": "poaceae_context",
+    "feeding_verdict_use": false,
+    "rule": "Poaceae family membership alone must not raise or lower a plant feeding verdict. Plant-level identity, toxicology, direct feeding evidence, part, maturity/form and taxon applicability remain separate evidence axes."
+  }
+}

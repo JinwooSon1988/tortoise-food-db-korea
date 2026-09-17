@@ -10,8 +10,11 @@ for x in ['국명','영명','학명','과명','적용 대상','근거 등급','�
     assert x in js,x
 assert 'verified_plant_images_v56.json' in js
 assert 'exact_species' in js
-assert '사진만으로 식물 동정 확정 금지' in js
-assert 'glob(\'*/index.html\')' in inj
+# Evidence-only architecture: retired recommendation/recording routes must never
+# be reintroduced into the shared plant-detail enhancer.
+for retired in ['today/','meal/?add=','그래서 오늘 뭐 먹이지?','이 먹이 급여기록에 추가']:
+    assert retired not in js, retired
+assert "glob('*/index.html')" in inj
 assert '@media(max-width:620px)' in css
 registry=json.loads((root/'data/verified_plant_images_v56.json').read_text(encoding='utf-8'))
 plants=json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
@@ -31,4 +34,4 @@ for image in registry['images']:
     assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), pid
     assert image['license'], pid
     assert image['creator'], pid
-print(f'plant detail v5.6 enhancer audit OK for 69 pages; {len(seen)} verified images')
+print(f'plant detail v5.6 evidence-only enhancer audit OK for 69 pages; {len(seen)} verified images')
