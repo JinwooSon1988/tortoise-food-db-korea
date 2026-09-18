@@ -1,31 +1,270 @@
 [
-  {"id":"slimani2006","type":"peer_reviewed","scope":"species_direct","taxon":"Testudo graeca graeca","citation":"Slimani T, El Hassani MS. Feeding ecology of Testudo graeca graeca in an arid and overgrazed zone in Morocco. Journal of Arid Environments. 2006.","doi":"10.1016/j.jaridenv.2005.06.010","note":"야생 먹이선택 연구. Malva parviflora는 분변에서 확인된 5대 주요 식물 중 하나로 약 15%를 차지했으며 높은 선호를 보였다. 그러나 이는 T. g. graeca와 정확히 동정된 M. parviflora에 대한 야생섭식 근거이며, 한국 유통명 '아욱'을 M. parviflora로 자동 매핑하는 근거가 아니다."},
-  {"id":"iftime_ibera_dobrogea_2012","type":"peer_reviewed","scope":"subspecies_direct_wild_diet","taxon":"Testudo graeca ibera","citation":"Iftime A, Iftime O. Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica. 2012;7(1):105-110.","doi":"10.13128/Acta_Herpetol-9800","url":"https://oaj.fupress.net/index.php/ah/article/view/1648","note":"야생 T. g. ibera 직접관찰 연구. 섭식 관찰의 96.5%가 식물성이었고 25종 식물을 기록했다. 표에서 Taraxacum officinale 잎·꽃은 Moderate (5-10%), Sonchus sp. 잎은 Low (1-5%), Trifolium sp. 잎·꽃은 High (>10%), Medicago sp. 잎은 Moderate (5-10%)로 분류되었다. 이 빈도는 야생 관찰 빈도이며 사육환경의 권장 배합률이나 일일 급여량이 아니다."},
-  {"id":"mitrevichin_ibera_bulgaria_2023","type":"field_observation_paper","scope":"subspecies_direct_wild_diet","taxon":"Testudo graeca ibera","citation":"Mitrevichin E, Sakelarieva L, Peshev H, Pulev A. Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes. 2023;228:1-4.","doi":"10.5281/zenodo.12807900","note":"남서부 불가리아의 공존 개체군 현장 관찰에서 T. graeca가 Cichorium intybus, Taraxacum sp., Medicago sp., Potentilla sp., Sedum rubens, S. album을 섭식한 것으로 보고한다. 식물별 정량 빈도나 장기 사육 급여량을 제시하는 연구는 아니다."},
-  {"id":"ibera_eastern_account_2023","type":"specialist_group_species_account","scope":"subspecies_direct_diet_synthesis","taxon":"Testudo graeca ibera and eastern Testudo graeca clades","citation":"Türkozan O, Javanbakht H, Mazanaeva LF, et al. Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades: T. g. armeniaca, T. g. buxtoni, T. g. ibera, T. g. terrestris, T. g. zarudnyi). Chelonian Research Monographs No. 5, Account 120. 2023.","doi":"10.3854/crm.5.120.eastern.graeca.v1.2023","note":"IUCN/SSC Tortoise and Freshwater Turtle Specialist Group 연계 종 계정. 북동 루마니아에서 약 500마리의 야생 T. g. ibera를 10년간 조사한 자료(Iftime & Iftime 2012)를 요약하며 식단의 96.5%가 식물성이었고 Trifolium, Sonchus, Medicago 등의 어린 잎이 자주 섭식된 식물군에 포함되었다고 정리한다. 원자료의 식물별 빈도는 Iftime & Iftime 2012를 우선한다."},
-  {"id":"testudo2018","type":"peer_reviewed","scope":"genus_husbandry","taxon":"Testudo spp.","citation":"Bauer T, Reese S, Koelle P. Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity. J Appl Anim Welf Sci. 2019;22(2):159-170. Epub 2018 Apr 2.","doi":"10.1080/10888705.2018.1453814","pmid":"29609473","note":"1075명 설문 기반 사육환경·식단 연구. 여름 식단에서 grasses/weeds가 80% 이상인 경우를 연구상 최적 식단으로 분류했고, terrarium 사육 및 grasses/weeds가 80% 미만인 식단은 피라미딩 발생 가능성과 연관되었다. 개별 식물의 안전성을 직접 증명하지 않는다."},
-  {"id":"tgraeca_alfalfa_context_2019","type":"peer_reviewed_context","scope":"species_diet_context","taxon":"Testudo graeca","citation":"Benítez-Malvido J, et al. Impact of habitat loss on the diversity and structure of ecological networks between oxyurid nematodes and spur-thighed tortoises (Testudo graeca L.). PeerJ. 2019;7:e8076.","doi":"10.7717/peerj.8076","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6894431/","note":"연구 본문은 T. graeca의 야생 식단 예시로 alfalfa (Medicago sativa)를 언급하면서 기존 식이문헌을 인용한다. 자체 식물별 섭식시험은 아니므로 M. sativa에 대한 이베라 직접근거로 취급하지 않는다."},
-  {"id":"rda_alfalfa_identity","type":"official_agriculture_database","scope":"plant_identity_context","taxon":"Medicago sativa","citation":"농촌진흥청 농사로. 새싹알팔파 / 알팔파 재배·작물 정보.","url":"https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=209500&menuId=PS65142","note":"국내 작물명 새싹알팔파를 Medicago sativa로 표기하며 자주개자리라는 국명을 함께 제시한다. 작물 동정 보조근거이며 육지거북 급여 안전성을 의미하지 않는다."},
-  {"id":"korean_dolnamul_identity","type":"official_biodiversity_agriculture","scope":"plant_identity","taxon":"Sedum sarmentosum","citation":"국가 생물다양성 정보공유체계 / BRIS 생명자원정보서비스. 돌나물 Sedum sarmentosum Bunge.","url":"https://www.bris.go.kr/portal/book/nativeCropsDetailPopup.do?biorsrcMngNo=MANUIP3300200040&menuId=81","note":"국가생물종목록 및 한국농업기술진흥원 제공 자료에서 한국명 돌나물을 Sedum sarmentosum Bunge로 확인한다. 식물동정 근거이며 육지거북 급여 안전성 근거와는 분리한다."},
-  {"id":"tortoise_table_sedum","type":"specialist_plant_database","scope":"tortoise_general","taxon":"Sedum spp.","citation":"The Tortoise Table. Sedum (Stonecrop).","url":"https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=593","note":"대부분의 Sedum은 다양한 육지거북 식단의 일부로 사용할 수 있다고 설명하지만 다육식물의 과량 섭취는 설사를 유발할 수 있어 대량 섭취를 피하라고 한다. Sedum acre는 예외적으로 급여하지 말 것을 경고한다. S. sarmentosum에 대한 종별 Testudo 직접시험은 아니다."},
-  {"id":"kfind","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"식품의약품안전처 K-FIND 식품영양성분 데이터베이스","note":"국내 유통 식재료 영양성분의 1차 매핑 후보."},
-  {"id":"rda","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"농촌진흥청 국가표준식품성분표","note":"원재료성 식품의 영양성분 보완에 사용."},
-  {"id":"usda_fdc","type":"official_database","scope":"nutrition","taxon":"food composition","citation":"USDA FoodData Central","note":"국내 자료가 없거나 비교 검증이 필요한 경우 보조 데이터로 사용."},
-  {"id":"hermanni_italy_2011","type":"peer_reviewed","scope":"species_direct","taxon":"Testudo hermanni hermanni","citation":"Del Vecchio S. et al. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249. 2011.","note":"중부 이탈리아 야생 개체군의 계절별 식이를 다룬다. 개별 한국 식재료의 안전성을 직접 증명하지 않는다."},
-  {"id":"horsfieldii_uzbekistan_2011","type":"peer_reviewed","scope":"species_direct","taxon":"Testudo horsfieldii (Agrionemys horsfieldii)","citation":"Bondarenko DA, Peregontsev EA, Neronov VV. Ecological and Geographical Feeding Peculiarities of the Central Asian Tortoise in Desert Landscapes. Russian Journal of Herpetology 18(3). 2011.","note":"우즈베키스탄 야생 식이를 다룬다. 지역·계절 의존성이 크므로 국내 재배채소 판정에 그대로 치환하지 않는다."},
-  {"id":"hermanni_foraging_italy_2015","type":"conference_proceedings","scope":"species_direct","taxon":"Testudo hermanni","citation":"Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.","note":"예비 결과에서 Fabaceae와 Plantaginaceae 등이 선택되었다. 학술대회 자료이므로 정식 동료심사 논문보다 낮게 취급한다."},
-  {"id":"bcg_mediterranean_care","type":"specialist_husbandry","scope":"Mediterranean_Testudo","taxon":"Testudo graeca, T. hermanni, T. marginata, T. horsfieldii","citation":"British Chelonia Group. Caresheet for Mediterranean Tortoises.","url":"https://archive.britishcheloniagroup.org.uk/caresheets/caremed","note":"고섬유·저지방·저단백의 잎 중심 식단을 권고한다. 야생초가 부족한 때에는 다양한 greens/salad를 제공하되 채소는 생으로 적정량, 한 종류의 과도한 사용은 피하라고 한다."},
-  {"id":"bcg_chelonian_nutrition","type":"specialist_veterinary_review","scope":"Testudo_general","taxon":"Testudo spp.","citation":"British Chelonia Group. Nutrition and Nutritional Disease in Chelonians.","url":"https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows","note":"야생 Testudo의 고섬유·고칼슘·저지방·저단백 식단을 강조한다. grocery greens는 자연 먹이보다 섬유가 낮을 수 있어 다양성과 전체 식단 맥락이 중요하다고 설명하며 romaine, kale, endive 등을 Ca:P 1:1 이상 예시로 제시한다. 일부 greens의 항영양성분과 과도한 편중을 함께 경고한다."},
-  {"id":"tt_mediterranean_food","type":"specialist_husbandry","scope":"Mediterranean_Testudo","taxon":"Mediterranean tortoises","citation":"Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.","url":"https://www.tortoisetrust.org/articles/basicmedfood.htm","note":"야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."},
-  {"id":"tt_winter_feeding","type":"specialist_husbandry","scope":"Mediterranean_Testudo","taxon":"Mediterranean tortoises","citation":"Tortoise Trust. Winter Feeding.","url":"https://www.tortoisetrust.org/enews2/index.html","note":"겨울철 대체 식재료로 escarole, radicchio, endive, 여러 leaf lettuce, romaine 등을 섞고 순환하되 한 종류에 장기간 의존하지 말라고 권고한다. curly kale/collard 같은 짙은 잎채소는 때때로 소량 추가하는 예시다."},
-  {"id":"tt_plantfoods","type":"specialist_husbandry","scope":"herbivorous_tortoises","taxon":"Herbivorous tortoises, with Mediterranean observations","citation":"Tortoise Trust. Recommended Foods for Herbivorous Tortoises.","url":"https://www.tortoisetrust.org/articles/plantfoods.html","note":"Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."},
-  {"id":"tortoise_table_chicory","type":"specialist_plant_database","scope":"tortoise_general","taxon":"Cichorium intybus","citation":"The Tortoise Table. Chicory (Wild Chicory, Common Chicory).","url":"https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=87","note":"치커리를 'Feed in Moderation'으로 분류한다. 잎과 꽃은 다양한 식단의 일부로 사용할 수 있다고 설명하지만 뿌리는 전분·당이 높아 급여하지 말 것을 권한다. 종별 직접 연구가 아니라 전문 식물 DB 지침이다."},
-  {"id":"tortoise_table_mulberry","type":"specialist_plant_database","scope":"tortoise_general","taxon":"Morus spp.","citation":"The Tortoise Table. Mulberry Tree (Mulberry Bush, Paper Mulberry).","url":"https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=257","note":"뽕나무 잎을 더 넓고 다양한 식단의 일부로 급여할 수 있다고 설명한다. 과실은 과일섭식종이 아닌 경우 급여하지 말라고 한다. Mediterranean Testudo 직접 연구가 아니다."},
-  {"id":"merck_tortoise_nutrition_2025","type":"veterinary_manual_peer_reviewed","scope":"tortoise_general","taxon":"Tortoises","citation":"Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.","url":"https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises","note":"식물성 섬유가 장 생리에 중요하고, romaine/green leaf lettuce/endive/kale 등을 포함한 vegetable mix가 tortoise diet의 보완 구성으로 사용될 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."},
-  {"id":"merck_reptile_plant_composition","type":"veterinary_manual_table","scope":"nutrition","taxon":"Reptiles","citation":"Merck Veterinary Manual. Composition of Plant Foods That May Be Offered to Reptiles.","url":"https://www.merckvetmanual.com/multimedia/table/composition-of-plant-foods-that-may-be-offered-to-reptiles","note":"endive와 kale 등 식물성 먹이의 조성 및 Ca:P 비교를 제공한다. 영양 조성표 자체는 특정 육지거북 종의 급여 안전성 판정과 동일하지 않다."},
-  {"id":"merck_reptile_home_plant_eaters","type":"veterinary_manual","scope":"herbivorous_reptile_general","taxon":"Plant-eating reptiles","citation":"Merck Veterinary Manual. Providing a Home for a Reptile.","url":"https://www.merckvetmanual.com/all-other-pets/reptiles/providing-a-home-for-a-reptile","note":"plant-eating reptiles에는 calcium-rich plant foods로 cabbage, kale, okra, sprouts, collard greens, bok choy 등을 권장 예시로 제시한다. 이는 지중해 Testudo 직접 급여시험이나 단독 주식 판정이 아니며, 전체 식단 다양성과 종별 요구를 대체하지 않는다."},
-  {"id":"chicory_foodchem_2021","type":"peer_reviewed_review","scope":"plant_composition_context","taxon":"Cichorium intybus","citation":"Perović J et al. Chicory (Cichorium intybus L.) as a food ingredient – Nutritional composition, bioactivity, safety, and health claims: A review. Food Chemistry. 2021;336:127676.","doi":"10.1016/j.foodchem.2020.127676","note":"치커리의 영양·식물화학·식품 안전성에 대한 사람/사료 맥락의 리뷰다. 육지거북 급여 적합성이나 Testudo 종별 안전성을 직접 증명하지 않는다."},
-  {"id":"mulberry_feed_review_2019","type":"peer_reviewed","scope":"animal_feed_context","taxon":"Morus alba","citation":"Cai M et al. Assessment of mulberry leaf as a potential feed supplement for animal feeding in P.R. China. Asian-Australasian Journal of Animal Sciences. 2019;32(8):1145-1152.","pmid":"30744357","note":"뽕잎의 동물사료 가능성과 단기 독성 지표를 주로 설치류/축산 맥락에서 평가한다. 육지거북 또는 Testudo 직접 자료가 아니므로 급여 안전 판정으로 확대하지 않는다."},
-  {"id":"mulberry_feed_jfca_2025","type":"peer_reviewed","scope":"animal_feed_composition","taxon":"Morus macroura, Morus alba, Morus wittiorum","citation":"Nutritional quality assessment of mulberry leaves from different varieties as an alternative feed in ruminant nutrition. Journal of Food Composition and Analysis. 2025;140:107213.","doi":"10.1016/j.jfca.2025.107213","note":"여러 Morus 종의 영양성분과 사료 품질 차이를 보여준다. 종 간 성분 차이 자체가 확인되므로 한국 유통 '뽕잎'을 종 수준 확인 없이 하나의 고정 영양값으로 취급하지 않는다. 육지거북 급여 적합성 직접 근거는 아니다."},
-  {"id":"bcg_sulcata_care","type":"specialist_husbandry","scope":"species_husbandry","taxon":"Centrochelys sulcata","citation":"British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.","url":"https://archive.britishcheloniagroup.org.uk/caresheets/sulcata","note":"grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."}
+  {
+    "id": "slimani2006",
+    "type": "peer_reviewed",
+    "scope": "species_direct",
+    "taxon": "Testudo graeca graeca",
+    "citation": "Slimani T, El Hassani MS. Feeding ecology of Testudo graeca graeca in an arid and overgrazed zone in Morocco. Journal of Arid Environments. 2006.",
+    "doi": "10.1016/j.jaridenv.2005.06.010",
+    "note": "야생 먹이선택 연구. Malva parviflora는 분변에서 확인된 5대 주요 식물 중 하나로 약 15%를 차지했으며 높은 선호를 보였다. 그러나 이는 T. g. graeca와 정확히 동정된 M. parviflora에 대한 야생섭식 근거이며, 한국 유통명 '아욱'을 M. parviflora로 자동 매핑하는 근거가 아니다."
+  },
+  {
+    "id": "iftime_ibera_dobrogea_2012",
+    "type": "peer_reviewed",
+    "scope": "subspecies_direct_wild_diet",
+    "taxon": "Testudo graeca ibera",
+    "citation": "Iftime A, Iftime O. Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica. 2012;7(1):105-110.",
+    "doi": "10.13128/Acta_Herpetol-9800",
+    "url": "https://oaj.fupress.net/index.php/ah/article/view/1648",
+    "note": "야생 T. g. ibera 직접관찰 연구. 섭식 관찰의 96.5%가 식물성이었고 25종 식물을 기록했다. 표에서 Taraxacum officinale 잎·꽃은 Moderate (5-10%), Sonchus sp. 잎은 Low (1-5%), Trifolium sp. 잎·꽃은 High (>10%), Medicago sp. 잎은 Moderate (5-10%)로 분류되었다. 이 빈도는 야생 관찰 빈도이며 사육환경의 권장 배합률이나 일일 급여량이 아니다."
+  },
+  {
+    "id": "mitrevichin_ibera_bulgaria_2023",
+    "type": "field_observation_paper",
+    "scope": "subspecies_direct_wild_diet",
+    "taxon": "Testudo graeca ibera",
+    "citation": "Mitrevichin E, Sakelarieva L, Peshev H, Pulev A. Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes. 2023;228:1-4.",
+    "doi": "10.5281/zenodo.12807900",
+    "note": "남서부 불가리아의 공존 개체군 현장 관찰에서 T. graeca가 Cichorium intybus, Taraxacum sp., Medicago sp., Potentilla sp., Sedum rubens, S. album을 섭식한 것으로 보고한다. 식물별 정량 빈도나 장기 사육 급여량을 제시하는 연구는 아니다."
+  },
+  {
+    "id": "ibera_eastern_account_2023",
+    "type": "specialist_group_species_account",
+    "scope": "subspecies_direct_diet_synthesis",
+    "taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+    "citation": "Türkozan O, Javanbakht H, Mazanaeva LF, et al. Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades: T. g. armeniaca, T. g. buxtoni, T. g. ibera, T. g. terrestris, T. g. zarudnyi). Chelonian Research Monographs No. 5, Account 120. 2023.",
+    "doi": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+    "note": "IUCN/SSC Tortoise and Freshwater Turtle Specialist Group 연계 종 계정. 북동 루마니아에서 약 500마리의 야생 T. g. ibera를 10년간 조사한 자료(Iftime & Iftime 2012)를 요약하며 식단의 96.5%가 식물성이었고 Trifolium, Sonchus, Medicago 등의 어린 잎이 자주 섭식된 식물군에 포함되었다고 정리한다. 원자료의 식물별 빈도는 Iftime & Iftime 2012를 우선한다."
+  },
+  {
+    "id": "testudo2018",
+    "type": "peer_reviewed",
+    "scope": "genus_husbandry",
+    "taxon": "Testudo spp.",
+    "citation": "Bauer T, Reese S, Koelle P. Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity. J Appl Anim Welf Sci. 2019;22(2):159-170. Epub 2018 Apr 2.",
+    "doi": "10.1080/10888705.2018.1453814",
+    "pmid": "29609473",
+    "note": "1075명 설문 기반 사육환경·식단 연구. 여름 식단에서 grasses/weeds가 80% 이상인 경우를 연구상 최적 식단으로 분류했고, terrarium 사육 및 grasses/weeds가 80% 미만인 식단은 피라미딩 발생 가능성과 연관되었다. 개별 식물의 안전성을 직접 증명하지 않는다."
+  },
+  {
+    "id": "tgraeca_alfalfa_context_2019",
+    "type": "peer_reviewed_context",
+    "scope": "species_diet_context",
+    "taxon": "Testudo graeca",
+    "citation": "Benítez-Malvido J, et al. Impact of habitat loss on the diversity and structure of ecological networks between oxyurid nematodes and spur-thighed tortoises (Testudo graeca L.). PeerJ. 2019;7:e8076.",
+    "doi": "10.7717/peerj.8076",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6894431/",
+    "note": "연구 본문은 T. graeca의 야생 식단 예시로 alfalfa (Medicago sativa)를 언급하면서 기존 식이문헌을 인용한다. 자체 식물별 섭식시험은 아니므로 M. sativa에 대한 이베라 직접근거로 취급하지 않는다."
+  },
+  {
+    "id": "rda_alfalfa_identity",
+    "type": "official_agriculture_database",
+    "scope": "plant_identity_context",
+    "taxon": "Medicago sativa",
+    "citation": "농촌진흥청 농사로. 새싹알팔파 / 알팔파 재배·작물 정보.",
+    "url": "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=209500&menuId=PS65142",
+    "note": "국내 작물명 새싹알팔파를 Medicago sativa로 표기하며 자주개자리라는 국명을 함께 제시한다. 작물 동정 보조근거이며 육지거북 급여 안전성을 의미하지 않는다."
+  },
+  {
+    "id": "korean_dolnamul_identity",
+    "type": "official_biodiversity_agriculture",
+    "scope": "plant_identity",
+    "taxon": "Sedum sarmentosum",
+    "citation": "국가 생물다양성 정보공유체계 / BRIS 생명자원정보서비스. 돌나물 Sedum sarmentosum Bunge.",
+    "url": "https://www.bris.go.kr/portal/book/nativeCropsDetailPopup.do?biorsrcMngNo=MANUIP3300200040&menuId=81",
+    "note": "국가생물종목록 및 한국농업기술진흥원 제공 자료에서 한국명 돌나물을 Sedum sarmentosum Bunge로 확인한다. 식물동정 근거이며 육지거북 급여 안전성 근거와는 분리한다."
+  },
+  {
+    "id": "tortoise_table_sedum",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Sedum spp.",
+    "citation": "The Tortoise Table. Sedum (Stonecrop).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=593",
+    "note": "대부분의 Sedum은 다양한 육지거북 식단의 일부로 사용할 수 있다고 설명하지만 다육식물의 과량 섭취는 설사를 유발할 수 있어 대량 섭취를 피하라고 한다. Sedum acre는 예외적으로 급여하지 말 것을 경고한다. S. sarmentosum에 대한 종별 Testudo 직접시험은 아니다."
+  },
+  {
+    "id": "kfind",
+    "type": "official_database",
+    "scope": "nutrition",
+    "taxon": "food composition",
+    "citation": "식품의약품안전처 K-FIND 식품영양성분 데이터베이스",
+    "note": "국내 유통 식재료 영양성분의 1차 매핑 후보."
+  },
+  {
+    "id": "rda",
+    "type": "official_database",
+    "scope": "nutrition",
+    "taxon": "food composition",
+    "citation": "농촌진흥청 국가표준식품성분표",
+    "note": "원재료성 식품의 영양성분 보완에 사용."
+  },
+  {
+    "id": "usda_fdc",
+    "type": "official_database",
+    "scope": "nutrition",
+    "taxon": "food composition",
+    "citation": "USDA FoodData Central",
+    "note": "국내 자료가 없거나 비교 검증이 필요한 경우 보조 데이터로 사용."
+  },
+  {
+    "id": "hermanni_italy_2011",
+    "type": "peer_reviewed",
+    "scope": "species_direct",
+    "taxon": "Testudo hermanni hermanni",
+    "citation": "Del Vecchio S. et al. Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249. 2011.",
+    "note": "중부 이탈리아 야생 개체군의 계절별 식이를 다룬다. 개별 한국 식재료의 안전성을 직접 증명하지 않는다."
+  },
+  {
+    "id": "horsfieldii_uzbekistan_2011",
+    "type": "peer_reviewed",
+    "scope": "species_direct",
+    "taxon": "Testudo horsfieldii (Agrionemys horsfieldii)",
+    "citation": "Bondarenko DA, Peregontsev EA, Neronov VV. Ecological and Geographical Feeding Peculiarities of the Central Asian Tortoise in Desert Landscapes. Russian Journal of Herpetology 18(3). 2011.",
+    "note": "우즈베키스탄 야생 식이를 다룬다. 지역·계절 의존성이 크므로 국내 재배채소 판정에 그대로 치환하지 않는다."
+  },
+  {
+    "id": "hermanni_foraging_italy_2015",
+    "type": "conference_proceedings",
+    "scope": "species_direct",
+    "taxon": "Testudo hermanni",
+    "citation": "Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.",
+    "note": "예비 결과에서 Fabaceae와 Plantaginaceae 등이 선택되었다. 학술대회 자료이므로 정식 동료심사 논문보다 낮게 취급한다."
+  },
+  {
+    "id": "bcg_mediterranean_care",
+    "type": "specialist_husbandry",
+    "scope": "Mediterranean_Testudo",
+    "taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+    "citation": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
+    "url": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+    "note": "고섬유·저지방·저단백의 잎 중심 식단을 권고한다. 야생초가 부족한 때에는 다양한 greens/salad를 제공하되 채소는 생으로 적정량, 한 종류의 과도한 사용은 피하라고 한다."
+  },
+  {
+    "id": "bcg_chelonian_nutrition",
+    "type": "specialist_veterinary_review",
+    "scope": "Testudo_general",
+    "taxon": "Testudo spp.",
+    "citation": "British Chelonia Group. Nutrition and Nutritional Disease in Chelonians.",
+    "url": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+    "note": "야생 Testudo의 고섬유·고칼슘·저지방·저단백 식단을 강조한다. grocery greens는 자연 먹이보다 섬유가 낮을 수 있어 다양성과 전체 식단 맥락이 중요하다고 설명하며 romaine, kale, endive 등을 Ca:P 1:1 이상 예시로 제시한다. 일부 greens의 항영양성분과 과도한 편중을 함께 경고한다."
+  },
+  {
+    "id": "tt_mediterranean_food",
+    "type": "specialist_husbandry",
+    "scope": "Mediterranean_Testudo",
+    "taxon": "Mediterranean tortoises",
+    "citation": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
+    "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+    "note": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다."
+  },
+  {
+    "id": "tt_winter_feeding",
+    "type": "specialist_husbandry",
+    "scope": "Mediterranean_Testudo",
+    "taxon": "Mediterranean tortoises",
+    "citation": "Tortoise Trust. Winter Feeding.",
+    "url": "https://www.tortoisetrust.org/enews2/index.html",
+    "note": "겨울철 대체 식재료로 escarole, radicchio, endive, 여러 leaf lettuce, romaine 등을 섞고 순환하되 한 종류에 장기간 의존하지 말라고 권고한다. curly kale/collard 같은 짙은 잎채소는 때때로 소량 추가하는 예시다."
+  },
+  {
+    "id": "tt_plantfoods",
+    "type": "specialist_husbandry",
+    "scope": "herbivorous_tortoises",
+    "taxon": "Herbivorous tortoises, with Mediterranean observations",
+    "citation": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
+    "url": "https://www.tortoisetrust.org/articles/plantfoods.html",
+    "note": "Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다."
+  },
+  {
+    "id": "tortoise_table_chicory",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Cichorium intybus",
+    "citation": "The Tortoise Table. Chicory (Wild Chicory, Common Chicory).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=87",
+    "note": "치커리를 'Feed in Moderation'으로 분류한다. 잎과 꽃은 다양한 식단의 일부로 사용할 수 있다고 설명하지만 뿌리는 전분·당이 높아 급여하지 말 것을 권한다. 종별 직접 연구가 아니라 전문 식물 DB 지침이다."
+  },
+  {
+    "id": "tortoise_table_mulberry",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Morus spp.",
+    "citation": "The Tortoise Table. Mulberry Tree (Mulberry Bush, Paper Mulberry).",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=257",
+    "note": "뽕나무 잎을 더 넓고 다양한 식단의 일부로 급여할 수 있다고 설명한다. 과실은 과일섭식종이 아닌 경우 급여하지 말라고 한다. Mediterranean Testudo 직접 연구가 아니다."
+  },
+  {
+    "id": "merck_tortoise_nutrition_2025",
+    "type": "veterinary_manual_peer_reviewed",
+    "scope": "tortoise_general",
+    "taxon": "Tortoises",
+    "citation": "Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.",
+    "url": "https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises",
+    "note": "식물성 섬유가 장 생리에 중요하고, romaine/green leaf lettuce/endive/kale 등을 포함한 vegetable mix가 tortoise diet의 보완 구성으로 사용될 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다."
+  },
+  {
+    "id": "merck_reptile_plant_composition",
+    "type": "veterinary_manual_table",
+    "scope": "nutrition",
+    "taxon": "Reptiles",
+    "citation": "Merck Veterinary Manual. Composition of Plant Foods That May Be Offered to Reptiles.",
+    "url": "https://www.merckvetmanual.com/multimedia/table/composition-of-plant-foods-that-may-be-offered-to-reptiles",
+    "note": "endive와 kale 등 식물성 먹이의 조성 및 Ca:P 비교를 제공한다. 영양 조성표 자체는 특정 육지거북 종의 급여 안전성 판정과 동일하지 않다."
+  },
+  {
+    "id": "merck_reptile_home_plant_eaters",
+    "type": "veterinary_manual",
+    "scope": "herbivorous_reptile_general",
+    "taxon": "Plant-eating reptiles",
+    "citation": "Merck Veterinary Manual. Providing a Home for a Reptile.",
+    "url": "https://www.merckvetmanual.com/all-other-pets/reptiles/providing-a-home-for-a-reptile",
+    "note": "plant-eating reptiles에는 calcium-rich plant foods로 cabbage, kale, okra, sprouts, collard greens, bok choy 등을 권장 예시로 제시한다. 이는 지중해 Testudo 직접 급여시험이나 단독 주식 판정이 아니며, 전체 식단 다양성과 종별 요구를 대체하지 않는다."
+  },
+  {
+    "id": "chicory_foodchem_2021",
+    "type": "peer_reviewed_review",
+    "scope": "plant_composition_context",
+    "taxon": "Cichorium intybus",
+    "citation": "Perović J et al. Chicory (Cichorium intybus L.) as a food ingredient – Nutritional composition, bioactivity, safety, and health claims: A review. Food Chemistry. 2021;336:127676.",
+    "doi": "10.1016/j.foodchem.2020.127676",
+    "note": "치커리의 영양·식물화학·식품 안전성에 대한 사람/사료 맥락의 리뷰다. 육지거북 급여 적합성이나 Testudo 종별 안전성을 직접 증명하지 않는다."
+  },
+  {
+    "id": "mulberry_feed_review_2019",
+    "type": "peer_reviewed",
+    "scope": "animal_feed_context",
+    "taxon": "Morus alba",
+    "citation": "Cai M et al. Assessment of mulberry leaf as a potential feed supplement for animal feeding in P.R. China. Asian-Australasian Journal of Animal Sciences. 2019;32(8):1145-1152.",
+    "pmid": "30744357",
+    "note": "뽕잎의 동물사료 가능성과 단기 독성 지표를 주로 설치류/축산 맥락에서 평가한다. 육지거북 또는 Testudo 직접 자료가 아니므로 급여 안전 판정으로 확대하지 않는다."
+  },
+  {
+    "id": "mulberry_feed_jfca_2025",
+    "type": "peer_reviewed",
+    "scope": "animal_feed_composition",
+    "taxon": "Morus macroura, Morus alba, Morus wittiorum",
+    "citation": "Nutritional quality assessment of mulberry leaves from different varieties as an alternative feed in ruminant nutrition. Journal of Food Composition and Analysis. 2025;140:107213.",
+    "doi": "10.1016/j.jfca.2025.107213",
+    "note": "여러 Morus 종의 영양성분과 사료 품질 차이를 보여준다. 종 간 성분 차이 자체가 확인되므로 한국 유통 '뽕잎'을 종 수준 확인 없이 하나의 고정 영양값으로 취급하지 않는다. 육지거북 급여 적합성 직접 근거는 아니다."
+  },
+  {
+    "id": "bcg_sulcata_care",
+    "type": "specialist_husbandry",
+    "scope": "species_husbandry",
+    "taxon": "Centrochelys sulcata",
+    "citation": "British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.",
+    "url": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+    "note": "grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다."
+  },
+  {
+    "id": "marotti_tagetes_thiophenes_2010",
+    "type": "peer_reviewed_plant_chemistry",
+    "scope": "plant_chemistry_not_tortoise_toxicology",
+    "taxon": "Tagetes spp.",
+    "citation": "Marotti I, Marotti M, Piccaglia R, Nastri A, Grandi S, Dinelli G. Thiophene occurrence in different Tagetes species: agricultural biomasses as sources of biocidal substances. Journal of the Science of Food and Agriculture. 2010;90(7):1210-1217.",
+    "doi": "10.1002/jsfa.3950",
+    "url": "https://doi.org/10.1002/jsfa.3950",
+    "note": "여러 Tagetes 종(T. erecta, T. filifolia, T. lucida, T. minuta, T. patula, T. tenuifolia)의 뿌리·지상부·꽃에서 thiophene 패턴을 분석했다. 논문은 Tagetes thiophene류의 강한 biocidal activity를 기술하며 뿌리에서 가장 높은 다양성과 함량을 보고했다. 이는 독립적인 식물화학적 생물활성 신호이지 Testudo 또는 T. g. ibera의 섭식 독성시험·용량-반응 자료가 아니다."
+  }
 ]
