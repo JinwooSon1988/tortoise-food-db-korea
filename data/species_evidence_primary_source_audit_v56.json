@@ -8,7 +8,8 @@
     "Related Testudo evidence must remain related-taxon evidence and must not be relabeled as exact Testudo graeca ibera evidence.",
     "Genus-level exact-Ibera observations must not be rewritten as exact plant species.",
     "Unverified records remain excluded from public named-record surfacing until the underlying source is checked.",
-    "A stored species-evidence claim that conflicts with the checked primary table is hold_source_conflict and must not be surfaced publicly."
+    "A stored species-evidence claim that conflicts with the checked primary table is hold_source_conflict and must not be surfaced publicly.",
+    "When a source-conflict audit establishes that a stored claim is unsupported by the checked primary table, remove the claim from the evidence asset rather than preserving it as evidence."
   ],
   "records": [
     {
@@ -115,14 +116,6 @@
       "verification": "Muñoz, Soler & Martínez-Silvestre 2009 Table 1 identifies Medicago sativa remains (fruit, leaves and stems) in Testudo hermanni hermanni fecal samples from Montsant. The Montsant reintroduction report also lists M. sativa leaves among consumed plants.",
       "scope": "related Testudo wild/reintroduced-population fecal diet evidence; exact plant species, not exact Ibera or a safety trial",
       "source": "Muñoz A, Soler J, Martínez-Silvestre A. 2009. Aportaciones al estudio de la alimentación de Testudo hermanni hermanni en el Parque Natural de la Sierra de Montsant. Bol. Asoc. Herpetol. Esp. 20:54-56."
-    },
-    {
-      "asset": "data/sonchus_species_evidence_v56.json",
-      "record_id": "del_vecchio_hermanni_2011_sonchus_oleraceus",
-      "status": "hold_source_conflict",
-      "verification": "The accessible primary full-text diet tables for Del Vecchio et al. 2011 list Asteraceae items such as Carduus pycnocephalus, Conyza canadensis, and Hypochaeris achyrophorus, but do not show Sonchus oleraceus. Do not surface this stored record unless a specific primary passage/table is found.",
-      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
-      "scope": "exclude from public named-record surfacing; source conflict requires correction/audit"
     }
   ]
 }
