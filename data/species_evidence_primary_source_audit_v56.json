@@ -1,0 +1,125 @@
+{
+  "schema_version": "5.6",
+  "purpose": "Primary-source verification gate for species-resolved evidence before public evidence_detail surfacing. QA/schema success is not source-truth verification.",
+  "reviewed_at": "2026-09-18",
+  "rules": [
+    "Only records with status verified_primary may be promoted as named supporting records in public evidence_detail.",
+    "A verified occurrence or husbandry diet record is descriptive evidence, not a safety trial or feeding prescription.",
+    "Related Testudo evidence must remain related-taxon evidence and must not be relabeled as exact Testudo graeca ibera evidence.",
+    "Genus-level exact-Ibera observations must not be rewritten as exact plant species.",
+    "Unverified records remain excluded from public named-record surfacing until the underlying source is checked.",
+    "A stored species-evidence claim that conflicts with the checked primary table is hold_source_conflict and must not be surfaced publicly."
+  ],
+  "records": [
+    {
+      "asset": "data/plantago_species_evidence_v56.json",
+      "record_id": "AJVR_2012_PLANTAGO_LANCEOLATA_CAPTIVE_DIET",
+      "status": "verified_primary",
+      "verification": "AJVR 73(11):1781-1786 explicitly states the Hermann's tortoise study diet included ribwort plantain (Plantago lanceolata).",
+      "doi": "10.2460/ajvr.73.11.1781",
+      "scope": "related Testudo husbandry/study diet; not a plant safety trial"
+    },
+    {
+      "asset": "data/plantago_species_evidence_v56.json",
+      "record_id": "MITREVICHIN_2023_PLANTAGO_LANCEOLATA",
+      "status": "verified_primary",
+      "verification": "ZooNotes 228 results explicitly list Plantago lanceolata among plants consumed by wild Testudo hermanni.",
+      "doi": "10.5281/zenodo.12807900",
+      "scope": "related Testudo direct wild observation"
+    },
+    {
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "record_id": "mitrevichin_hermanni_trifolium_bulgaria_2023",
+      "status": "verified_primary",
+      "verification": "ZooNotes 228 explicitly reports Trifolium sp., including Trifolium campestre, for Testudo hermanni.",
+      "doi": "10.5281/zenodo.12807900",
+      "scope": "related Testudo direct wild observation; not Ibera Trifolium species evidence"
+    },
+    {
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "record_id": "del_vecchio_hermanni_trifolium_central_italy_2011",
+      "status": "verified_primary",
+      "verification": "Herpetologica 67(3) Table 1 lists Trifolium sp., leaves, in wild Testudo hermanni hermanni fecal diet data.",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "scope": "related Testudo wild fecal evidence; genus only"
+    },
+    {
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "record_id": "garraf_hermanni_trifolium_campestre",
+      "status": "verified_primary",
+      "verification": "Soler, Martinez-Silvestre & Roca 2012 Table I lists Trifolium campestre seeds, 2 remains (0.56%), from Garraf Testudo hermanni fecal samples.",
+      "source": "Bull. Soc. Herp. Fr. 142-143:79-88 (2012)",
+      "scope": "related Testudo wild fecal evidence; exact plant species"
+    },
+    {
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "record_id": "bielli_boettgeri_trifolium_repens_2015",
+      "status": "verified_primary",
+      "verification": "The paper's husbandry section explicitly includes Trifolium repens in the usual native wild-plant diet.",
+      "doi": "10.1177/1040638714561251",
+      "scope": "related Testudo semi-natural husbandry context; not a controlled safety trial"
+    },
+    {
+      "asset": "data/medicago_species_evidence_v56.json",
+      "record_id": "garraf_hermanni_medicago_sativa",
+      "status": "verified_primary",
+      "verification": "Soler, Martinez-Silvestre & Roca 2012 Table I lists Medicago sativa fruit remains, 2 remains (0.56%), in Garraf Testudo hermanni feces.",
+      "source": "Bull. Soc. Herp. Fr. 142-143:79-88 (2012)",
+      "scope": "related Testudo wild fecal evidence; exact plant species"
+    },
+    {
+      "asset": "data/medicago_species_evidence_v56.json",
+      "record_id": "garraf_hermanni_other_medicago_species",
+      "status": "verified_primary",
+      "verification": "The same Table I separately lists Medicago truncatula, M. minima var. recta, and M. secundiflora remains.",
+      "source": "Bull. Soc. Herp. Fr. 142-143:79-88 (2012)",
+      "scope": "related Testudo species-resolution context; does not establish species interchangeability"
+    },
+    {
+      "asset": "data/medicago_species_evidence_v56.json",
+      "record_id": "del_vecchio_hermanni_medicago_lupulina_2011",
+      "status": "verified_primary",
+      "verification": "Herpetologica 67(3) Table 1 lists Medicago lupulina leaves in wild Testudo hermanni hermanni diet samples.",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "scope": "related Testudo wild fecal evidence"
+    },
+    {
+      "asset": "data/sonchus_species_evidence_v56.json",
+      "record_id": "bielli_hermanni_2015_sonchus_oleraceus",
+      "status": "verified_primary",
+      "verification": "The paper's husbandry section explicitly includes Sonchus oleraceus in the usual native wild-plant diet.",
+      "doi": "10.1177/1040638714561251",
+      "scope": "related Testudo semi-natural husbandry context; not a controlled safety trial"
+    },
+    {
+      "asset": "data/plantago_species_evidence_v56.json",
+      "record_id": "BALMETA_1998_PLANTAGO_LANCEOLATA",
+      "status": "hold_unverified",
+      "verification": "Primary source not yet resolved sufficiently for public named-record surfacing.",
+      "scope": "exclude from public named-record surfacing"
+    },
+    {
+      "asset": "data/sonchus_species_evidence_v56.json",
+      "record_id": "bayley_highfield_morocco_1996_sonchus_oleraceus",
+      "status": "verified_primary",
+      "verification": "Chelonian Conservation and Biology 2(1):36-42 Table 1 explicitly lists Sonchus oleraceus among wild food plants in the Souss Valley T. g. graeca diet.",
+      "scope": "related T. g. graeca field diet record; not exact Ibera or a safety trial",
+      "source": "Bayley JR, Highfield AC. 1996. Chelonian Conservation and Biology 2(1):36-42."
+    },
+    {
+      "asset": "data/medicago_species_evidence_v56.json",
+      "record_id": "montsant_hermanni_medicago_sativa",
+      "status": "hold_unverified",
+      "verification": "The currently stored record lacks a sufficiently resolved primary citation in the asset; do not surface by name until checked.",
+      "scope": "exclude from public named-record surfacing"
+    },
+    {
+      "asset": "data/sonchus_species_evidence_v56.json",
+      "record_id": "del_vecchio_hermanni_2011_sonchus_oleraceus",
+      "status": "hold_source_conflict",
+      "verification": "The accessible primary full-text diet tables for Del Vecchio et al. 2011 list Asteraceae items such as Carduus pycnocephalus, Conyza canadensis, and Hypochaeris achyrophorus, but do not show Sonchus oleraceus. Do not surface this stored record unless a specific primary passage/table is found.",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "scope": "exclude from public named-record surfacing; source conflict requires correction/audit"
+    }
+  ]
+}

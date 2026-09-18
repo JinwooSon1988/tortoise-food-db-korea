@@ -1,0 +1,20 @@
+name: Species evidence primary-source audit v5.6 QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/species_evidence_primary_source_audit_v56.json'
+      - 'data/*_species_evidence_v56.json'
+      - 'scripts/audit_species_evidence_primary_sources_v56.py'
+      - '.github/workflows/species-evidence-primary-source-audit-v56.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit primary-source evidence gate
+        run: python scripts/audit_species_evidence_primary_sources_v56.py
