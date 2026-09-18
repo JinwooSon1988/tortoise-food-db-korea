@@ -39,19 +39,33 @@
       "plant_taxon_reported": "Taraxacum sp.",
       "plant_resolution": "genus",
       "directness": "exact_tortoise_subspecies_genus_plant",
-      "supports": ["Independent direct observation of wild T. g. ibera feeding on Taraxacum sp."],
-      "does_not_support": ["exact Taraxacum species", "frequency or diet proportion", "captive feeding schedule"]
+      "supports": [
+        "Independent direct observation of wild T. g. ibera feeding on Taraxacum sp."
+      ],
+      "does_not_support": [
+        "exact Taraxacum species",
+        "frequency or diet proportion",
+        "captive feeding schedule"
+      ]
     },
     {
       "source_id": "selleri_hermanni_montsant_2008",
-      "citation": "Soler J, Martinez A. Aportaciones al estudio de la alimentacion de Testudo hermanni hermanni en el Parque Natural de la Sierra de Montsant.",
+      "citation": "Muñoz A, Soler J, Martínez-Silvestre A. 2009. Aportaciones al estudio de la alimentación de Testudo hermanni hermanni en el Parque Natural de la Sierra de Montsant. Boletín de la Asociación Herpetológica Española 20:54-58.",
       "tortoise_taxon": "Testudo hermanni hermanni",
-      "study_type": "field/semi-natural observation report",
+      "study_type": "wild/semi-natural feeding context plus fecal-diet study",
       "plant_taxon_reported": "Taraxacum officinale",
       "plant_resolution": "species",
       "directness": "related_testudo_exact_plant_species",
-      "supports": ["Species-resolved T. officinale consumption context in related Mediterranean Testudo."],
-      "does_not_support": ["direct T. g. ibera evidence", "genus-wide Taraxacum safety", "captive feeding frequency"]
+      "supports": [
+        "The 2009 paper explicitly describes direct observations in free and large semi-natural enclosure Hermann's tortoises showing a high tendency to ingest Taraxacum officinale."
+      ],
+      "does_not_support": [
+        "direct T. g. ibera evidence",
+        "genus-wide Taraxacum safety",
+        "captive feeding frequency",
+        "a controlled food-safety endpoint"
+      ],
+      "source_id_note": "Legacy identifier retained for linkage stability; the verified publication is Muñoz, Soler & Martínez-Silvestre 2009, not a 2008 Soler/Martínez paper."
     },
     {
       "source_id": "mans_uvb_hermanni_2012",
@@ -62,8 +76,14 @@
       "plant_taxon_reported": "Taraxacum officinale",
       "plant_resolution": "species",
       "directness": "related_testudo_captive_diet_context",
-      "supports": ["T. officinale was included in a mixed diet used for captive Hermann's tortoises in a veterinary study."],
-      "does_not_support": ["food safety endpoint", "optimal proportion", "direct T. g. ibera recommendation"]
+      "supports": [
+        "T. officinale was included in a mixed diet used for captive Hermann's tortoises in a veterinary study."
+      ],
+      "does_not_support": [
+        "food safety endpoint",
+        "optimal proportion",
+        "direct T. g. ibera recommendation"
+      ]
     },
     {
       "source_id": "bielli_hermanni_2015",
@@ -74,8 +94,14 @@
       "plant_taxon_reported": "Taraxacum officinale",
       "plant_resolution": "species",
       "directness": "related_testudo_husbandry_context",
-      "supports": ["T. officinale occurred in the usual native-wild-plant diet of clinically examined T. h. boettgeri."],
-      "does_not_support": ["causal health benefit", "exact safe dose", "direct T. g. ibera feeding rule"]
+      "supports": [
+        "T. officinale occurred in the usual native-wild-plant diet of clinically examined T. h. boettgeri."
+      ],
+      "does_not_support": [
+        "causal health benefit",
+        "exact safe dose",
+        "direct T. g. ibera feeding rule"
+      ]
     }
   ],
   "canonical_interpretation": {
