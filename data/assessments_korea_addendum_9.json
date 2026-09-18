@@ -13,13 +13,13 @@
   {
     "plant_id": "pea_shoot",
     "species_group": "Tortoise_general",
-    "verdict": "do_not_feed",
-    "role": "급여 비권장",
+    "verdict": "blocked",
+    "role": "판정 보류",
     "confidence": "C",
     "evidence_ids": ["tortoise_table_pea_shoots"],
-    "limits": ["계획 급여에서 제외","독성 식물로 단정하지 않음","완두콩·완두순 모두 일상 식단에 넣지 않음","Mediterranean Testudo 직접근거가 아님"],
-    "why": "전문 육지거북 식물 DB가 Pisum sativum과 pea shoots를 Do not Feed로 분류하며 고단백·피트산 문제를 이유로 든다.",
-    "applicability_note": "Pisum sativum exact-taxon 일반 육지거북 근거다."
+    "limits": ["The Tortoise Table은 Pisum sativum과 pea shoots를 Do not Feed로 분류하지만 독성 식물은 아니라고 명시함","고단백·피트산 및 칼슘 흡수 저해 설명은 전문 DB의 일반 육지거북 기전 설명이며 이베라 직접 위해시험·용량-반응 자료가 아님","안전 또는 권장 급여 판정으로 해석하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "why": "The Tortoise Table은 Pisum sativum과 pea shoots를 Do not Feed로 분류하면서도 실제 독성은 아니라고 명시하고, 고단백·피트산과 칼슘 흡수 저해 가능성을 이유로 든다. 현재 확인된 근거만으로 이 기전 설명을 이베라의 급여 금지 또는 위해 용량으로 확정하지 않는다.",
+    "applicability_note": "Pisum sativum exact-taxon 전문 DB의 비권장 의견은 보존하되, 이베라 직접 위해근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
   },
   {
     "plant_id": "ssuk",
