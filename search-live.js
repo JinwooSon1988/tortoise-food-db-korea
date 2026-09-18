@@ -19,7 +19,7 @@
  const SCOPE={Mediterranean_Testudo:'지중해 Testudo',Tortoise_general:'육지거북 일반',Herbivorous_reptile_general:'초식 파충류 일반',Sulcata:'설카타'};
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  async function enhance(){
-  if(!document.getElementById('v56css')){const l=document.createElement('link');l.id='v56css';l.rel='stylesheet';l.href='./public-plant-card-v56.css';document.head.appendChild(l);}
+  if(!document.getElementById('v56css')){const l=document.createElement('link');l.id='v56css';l.rel='stylesheet';l.href='./public-plant-card-v56.css?v=20260919-3';document.head.appendChild(l);}
   let plants=[],sets=[],imageData={images:[]};try{plants=await fetch('./data/plants.json').then(r=>r.json());imageData=await fetch('./data/verified_plant_images_v56.json').then(r=>r.ok?r.json():{images:[]}).catch(()=>({images:[]}));const urls=['./data/assessments.json',...Array.from({length:12},(_,i)=>'./data/assessments_korea_addendum'+(i?'_'+(i+1):'')+'.json')];sets=(await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():[]).catch(()=>[])))).flat();}catch(e){return;}
   const byKo=new Map(plants.map(p=>[p.ko,p])),am=new Map(),im=new Map((imageData.images||[]).map(x=>[x.plant_id,x]));sets.forEach(a=>{if(!am.has(a.plant_id))am.set(a.plant_id,[]);am.get(a.plant_id).push(a)});
   const best=id=>{const a=am.get(id)||[];return a.find(x=>x.species_group==='Mediterranean_Testudo')||a.find(x=>x.species_group==='Tortoise_general')||a[0]||null};
