@@ -116,6 +116,46 @@
       "verification": "Muñoz, Soler & Martínez-Silvestre 2009 Table 1 identifies Medicago sativa remains (fruit, leaves and stems) in Testudo hermanni hermanni fecal samples from Montsant. The Montsant reintroduction report also lists M. sativa leaves among consumed plants.",
       "scope": "related Testudo wild/reintroduced-population fecal diet evidence; exact plant species, not exact Ibera or a safety trial",
       "source": "Muñoz A, Soler J, Martínez-Silvestre A. 2009. Aportaciones al estudio de la alimentación de Testudo hermanni hermanni en el Parque Natural de la Sierra de Montsant. Bol. Asoc. Herpetol. Esp. 20:54-56."
+    },
+    {
+      "asset": "data/taraxacum_species_evidence_v56.json",
+      "record_id": "iftime_ibera_dobrogea_2012",
+      "status": "verified_primary",
+      "verification": "Acta Herpetologica 7(1):105-110 reports >500 wild T. graeca observed in Dobrogea over 2000-2010 and explicitly states a predilection for young leaves including Taraxacum.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "scope": "exact T. g. ibera field feeding observation; Taraxacum genus resolution; descriptive ecology, not captive prescription"
+    },
+    {
+      "asset": "data/taraxacum_species_evidence_v56.json",
+      "record_id": "mans_uvb_hermanni_2012",
+      "status": "verified_primary",
+      "verification": "AJVR 73(11):1781-1786 Materials and Methods explicitly states the study diet included dandelions (Taraxacum officinale).",
+      "doi": "10.2460/ajvr.73.11.1781",
+      "scope": "related Testudo controlled UV study diet context; exact plant species, not a food-safety trial"
+    },
+    {
+      "asset": "data/taraxacum_species_evidence_v56.json",
+      "record_id": "bielli_hermanni_2015",
+      "status": "verified_primary",
+      "verification": "The paper's husbandry description explicitly lists Taraxacum officinale in the usual native wild-plant diet.",
+      "doi": "10.1177/1040638714561251",
+      "scope": "related Testudo semi-natural husbandry context; exact plant species, not a controlled food-safety trial"
+    },
+    {
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "record_id": "iftime_ibera_trifolium_dobrogea_2012",
+      "status": "verified_primary",
+      "verification": "Acta Herpetologica 7(1):105-110 explicitly includes Trifolium among young leaves for which wild Dobrogea tortoises showed feeding predilection.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "scope": "exact T. g. ibera field feeding observation; Trifolium genus resolution"
+    },
+    {
+      "asset": "data/trifolium_species_evidence_v56.json",
+      "record_id": "rouag_algeria_graeca_trifolium_2008",
+      "status": "verified_primary",
+      "verification": "African Journal of Herpetology 57(2) reports Trifolium sp. as the most common genus identified in fecal fragments, accounting for 12-17% depending on tortoise group.",
+      "doi": "10.1080/21564574.2008.9635573",
+      "scope": "Algerian T. graeca wild fecal evidence; genus-level plant identity; fragment percentage must not be transferred to captive feeding ratios"
     }
   ]
 }
