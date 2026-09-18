@@ -3,7 +3,7 @@ import re
 R=Path(__file__).resolve().parents[1]
 js=(R/'fresh-primary-combo-explain.js').read_text(encoding='utf-8')
 sw=(R/'sw.js').read_text(encoding='utf-8')
-m=re.search(r"const CACHE='tfd-v(\d+)-stable-(\d+)'",sw)
+m=re.search(r"const CACHE='tfd-v(\\d+)-(?:stable-(\\d+)|evidence-only-(\\d+))'",sw)
 checks={
  'reads_db_scientific':'p?.scientific' in js,
  'uses_reported_taxon':'taxon_reported' in js,
