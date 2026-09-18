@@ -156,6 +156,30 @@
       "verification": "African Journal of Herpetology 57(2) reports Trifolium sp. as the most common genus identified in fecal fragments, accounting for 12-17% depending on tortoise group.",
       "doi": "10.1080/21564574.2008.9635573",
       "scope": "Algerian T. graeca wild fecal evidence; genus-level plant identity; fragment percentage must not be transferred to captive feeding ratios"
+    },
+    {
+      "asset": "data/taraxacum_species_evidence_v56.json",
+      "record_id": "mitrevichin_ibera_bulgaria_2023",
+      "status": "verified_primary",
+      "verification": "ZooNotes 228 explicitly lists Taraxacum sp. among plants observed being consumed by Testudo graeca ibera in south-western Bulgaria.",
+      "doi": "10.5281/zenodo.12807900",
+      "scope": "exact T. g. ibera direct field observation; plant identity remains genus-level; no frequency or captive prescription"
+    },
+    {
+      "asset": "data/medicago_species_evidence_v56.json",
+      "record_id": "iftime_ibera_medicago_genus_2012",
+      "status": "verified_primary",
+      "verification": "Acta Herpetologica 7(1):105-110 explicitly includes Medicago among young leaves preferentially consumed by wild Testudo graeca ibera in Dobrogea.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "scope": "exact T. g. ibera field feeding observation; Medicago genus resolution; not exact M. sativa"
+    },
+    {
+      "asset": "data/medicago_species_evidence_v56.json",
+      "record_id": "mitrevichin_ibera_medicago_genus_2023",
+      "status": "verified_primary",
+      "verification": "ZooNotes 228 explicitly lists Medicago sp. among plants observed being consumed by Testudo graeca ibera in south-western Bulgaria.",
+      "doi": "10.5281/zenodo.12807900",
+      "scope": "exact T. g. ibera direct field observation; Medicago genus resolution; not exact M. sativa or quantitative feeding guidance"
     }
   ]
 }
