@@ -1,25 +1,412 @@
 [
-  {"plant_id":"dandelion","species_group":"Mediterranean_Testudo","verdict":"supported_mixed_diet","role":"혼합 야생초 구성 후보","confidence":"B+","evidence_ids":["iftime_ibera_dobrogea_2012","mitrevichin_ibera_bulgaria_2023","bcg_mediterranean_care","tt_mediterranean_food","tt_plantfoods"],"limits":["야생 관찰 빈도는 사육 배합률이 아님","채집 식물의 정확한 종·오염원을 확인","단독 장기급여를 의미하지 않음"],"why":"야생 T. g. ibera 직접관찰과 지중해 Testudo 전문 사육자료가 dandelion을 반복적으로 지지한다.","applicability_note":"이베라 직접 야생섭식 + Mediterranean Testudo 사육근거."},
-  {"plant_id":"plantain","species_group":"Mediterranean_Testudo","verdict":"supported_mixed_diet","role":"혼합 야생초 구성 후보","confidence":"C+","evidence_ids":["bcg_mediterranean_care","tt_plantfoods","hermanni_foraging_italy_2015"],"limits":["Plantago spp. 내부 종 차이 확인","채집 오염 주의","단독주식 판정 아님"],"why":"전문 사육자료와 Testudo 야생섭식 자료가 Plantago를 혼합 자연식 후보로 지지한다."},
-  {"plant_id":"sowthistle","species_group":"Mediterranean_Testudo","verdict":"supported_mixed_diet","role":"혼합 야생초 구성 후보","confidence":"B","evidence_ids":["iftime_ibera_dobrogea_2012","ibera_eastern_account_2023","bcg_mediterranean_care","tt_mediterranean_food","tt_plantfoods"],"limits":["Sonchus 속 수준 직접관찰을 한국 특정 종으로 자동 확장하지 않음","야생 빈도를 급여비율로 환산하지 않음","채집 오염 확인"],"why":"야생 T. g. ibera에서 Sonchus 섭식이 확인되고 전문 사육자료에서도 반복적으로 제시된다.","applicability_note":"이베라 직접 야생섭식 + Mediterranean Testudo 사육근거."},
-  {"plant_id":"clover","species_group":"Mediterranean_Testudo","verdict":"limited_mixed_diet","role":"혼합식 일부","confidence":"B","evidence_ids":["iftime_ibera_dobrogea_2012","ibera_eastern_account_2023","bcg_mediterranean_care","tt_mediterranean_food","hermanni_foraging_italy_2015"],"limits":["Trifolium 종별 차이 확인","야생 빈도를 급여비율로 환산하지 않음","단독·고비율 반복 급여 권장 아님"],"why":"이베라 야생섭식 직접근거가 있으나 전문 사육자료가 white clover를 moderation으로 제한한다."},
-  {"plant_id":"alfalfa","species_group":"Mediterranean_Testudo","verdict":"limited_mixed_diet","role":"혼합 야생초·재배초 일부","confidence":"B-","evidence_ids":["iftime_ibera_dobrogea_2012","mitrevichin_ibera_bulgaria_2023","ibera_eastern_account_2023","tgraeca_alfalfa_context_2019","rda_alfalfa_identity"],"limits":["이베라 직접관찰은 Medicago 속 수준","국내 M. sativa로 자동 종수준 승격하지 않음","야생 빈도를 사육 급여비율로 환산하지 않음"],"why":"서로 다른 지역의 야생 이베라에서 Medicago 섭식이 관찰됐지만 국내 알팔파의 종수준 직접근거는 아니다."},
-  {"plant_id":"dolnamul","species_group":"Tortoise_general","verdict":"limited_supplement","role":"다육성 혼합식 보조 후보","confidence":"C-","evidence_ids":["mitrevichin_ibera_bulgaria_2023","tortoise_table_sedum","korean_dolnamul_identity"],"limits":["이베라 직접 관찰 Sedum 종과 한국 돌나물 S. sarmentosum은 다른 종","과량 섭취 시 묽은 변 가능성","Sedum acre 등 유사종 오동정 주의"],"why":"국내 돌나물 identity는 확인되지만 이베라 직접근거는 다른 Sedum 종이므로 일반 보조근거로 제한한다.","applicability_note":"한국 돌나물 종수준 identity와 이베라 관찰종이 일치하지 않음."},
-  {"plant_id":"romaine","species_group":"Mediterranean_Testudo","verdict":"limited_supplement","role":"마트채소 보조","confidence":"C+","evidence_ids":["tt_mediterranean_food","tt_winter_feeding","bcg_chelonian_nutrition","merck_tortoise_nutrition_2025"],"limits":["전문자료는 very limited quantities 또는 대체 혼합채소 맥락","야생초·고섬유 식물 다양성을 대체하지 않음","단독 장기급여 아님"],"why":"지중해종 전문자료와 수의학 자료가 romaine 사용을 지지하지만 보조적 위치로 제한한다."},
-  {"plant_id":"lettuce","species_group":"Mediterranean_Testudo","verdict":"limited_supplement","role":"마트 잎상추 보조·순환","confidence":"C","evidence_ids":["tt_mediterranean_food","tt_winter_feeding","merck_tortoise_nutrition_2025"],"limits":["근거는 red/green leaf lettuce 등 잎상추 맥락이며 모든 Lactuca 품종을 동일하게 보지 않음","야생초·고섬유 식물 다양성을 대체하지 않음","단독·장기 편중 급여 아님"],"why":"Tortoise Trust는 red leaf 및 여러 leaf lettuce를 Mediterranean tortoise의 대체 혼합채소로 제한적으로 제시하고 Merck도 green leaf lettuce를 tortoise vegetable mix 예시로 제시한다.","applicability_note":"한국 상추 상품은 품종이 다양하므로 Lactuca sativa 일반 수준의 제한적 보조 판정으로만 사용한다."},
-  {"plant_id":"endive","species_group":"Mediterranean_Testudo","verdict":"limited_supplement","role":"마트채소 보조","confidence":"C+","evidence_ids":["tt_winter_feeding","bcg_chelonian_nutrition","merck_tortoise_nutrition_2025","merck_reptile_plant_composition"],"limits":["겨울철·야생초 부족 시 혼합 잎채소 일부","한 종류에 장기간 의존하지 않음","한국 유통 품목과 영양 record 매핑은 별도 검증"],"why":"Mediterranean winter-feeding 지침과 수의학 자료가 endive를 혼합 대체채소로 지지한다."},
-  {"plant_id":"radicchio","species_group":"Mediterranean_Testudo","verdict":"limited_supplement","role":"마트채소 보조·순환","confidence":"C","evidence_ids":["tt_winter_feeding"],"limits":["겨울철 대체 혼합채소 맥락","단독 주식·장기 편중 급여 아님","일반 치커리 전체에 자동 확대하지 않음"],"why":"Tortoise Trust가 radicchio를 Mediterranean tortoise의 순환·혼합 대체 잎채소로 명시한다."},
-  {"plant_id":"kale","species_group":"Mediterranean_Testudo","verdict":"limited_supplement","role":"마트채소 보조·소량 순환","confidence":"C","evidence_ids":["tt_winter_feeding","bcg_chelonian_nutrition","merck_tortoise_nutrition_2025","merck_reptile_plant_composition"],"limits":["소량·순환 예시에 한정","Brassica 계열에 편중하지 않음","단독 주식·고비율 반복 급여 아님"],"why":"복수 전문·수의학 자료가 kale 사용을 지지하지만 지중해 Testudo에서는 소량 순환 보조가 적절하다."},
-  {"plant_id":"chicory","species_group":"Mediterranean_Testudo","verdict":"limited_mixed_diet","role":"잎·꽃 혼합식 후보","confidence":"B-","evidence_ids":["mitrevichin_ibera_bulgaria_2023","tortoise_table_chicory","chicory_foodchem_2021"],"limits":["야생 직접관찰은 정량 사육 급여량을 제시하지 않음","잎·꽃 혼합식 후보로 제한하고 뿌리는 제외","마트 상품 identity 확인 필요"],"why":"남서부 불가리아의 야생 T. g. ibera에서 Cichorium intybus 섭식이 직접 관찰됐고 전문 식물 DB도 제한적 사용을 지지한다.","applicability_note":"이베라 직접 야생섭식 + 육지거북 전문 식물 DB 근거."},
-  {"plant_id":"rose","species_group":"Mediterranean_Testudo","verdict":"limited_supplement","role":"무농약 잎·꽃 혼합 보조","confidence":"C","evidence_ids":["tt_mediterranean_food"],"limits":["화원·절화 장미는 농약·보존제 노출 가능성이 있어 급여 대상으로 보지 않음","정확한 Rosa 품종별 차이를 일반화하지 않음","단독·고비율 반복 급여 아님"],"why":"Tortoise Trust의 Mediterranean feeding guidance가 rose leaves/petals를 다양한 식단의 일부로 제시한다.","applicability_note":"직접 재배하거나 식용·무농약 여부가 확인된 Rosa spp. 잎·꽃에 한정한 보조 판정이다."},
-  {"plant_id":"chickweed","species_group":"Mediterranean_Testudo","verdict":"limited_mixed_diet","role":"혼합 야생초 일부","confidence":"C+","evidence_ids":["bcg_mediterranean_care"],"limits":["BCG는 지중해 육지거북의 정원 forage 후보로 제시하지만 단독 주식 판정은 아님","채집 오염·농약·제초제 노출 확인","Stellaria media와 유사 식물 동정 확인","사포닌 관련 이유로 고비율 반복 급여는 피함"],"why":"British Chelonia Group의 Mediterranean tortoise caresheet가 chickweed를 정원에서 섭식할 수 있는 forage 후보로 명시한다. 전문 식물 DB에서는 사포닌 때문에 moderation을 권고하므로 제한적 혼합식으로 분류한다.","applicability_note":"Mediterranean Testudo 전문 사육근거. 이베라 종수준 직접 야생섭식 근거는 아님."},
-  {"plant_id":"mulberry","species_group":"Tortoise_general","verdict":"supplement_general_evidence","role":"나무잎 혼합식 후보","confidence":"D+","evidence_ids":["tortoise_table_mulberry","mulberry_feed_review_2019","mulberry_feed_jfca_2025"],"limits":["Mediterranean Testudo 직접 연구가 아님","잎 판정이며 과실로 확대하지 않음","Morus 종별 성분 차이","단독·고비율 반복 급여 아님"],"why":"전문 식물 DB는 Morus 잎을 다양한 육지거북 식단 일부로 제시하지만 Testudo 직접자료가 아니므로 일반 보조근거로 유지한다."},
-  {"plant_id":"bokchoy","species_group":"Herbivorous_reptile_general","verdict":"general_reptile_supplement","role":"마트채소 보조 후보","confidence":"D+","evidence_ids":["merck_reptile_home_plant_eaters"],"limits":["지중해 Testudo 직접 근거가 아님","Brassica 계열 편중 금지","야생초 다양성을 대체하지 않음"],"why":"Merck가 plant-eating reptiles의 식물성 먹이 예시로 bok choy를 제시한다."},
-  {"plant_id":"collard","species_group":"Herbivorous_reptile_general","verdict":"general_reptile_supplement","role":"마트채소 보조 후보","confidence":"D+","evidence_ids":["merck_reptile_home_plant_eaters"],"limits":["지중해 Testudo 직접 근거가 아님","Brassica 계열 편중 금지","단독 주식 아님"],"why":"Merck가 plant-eating reptiles의 식물성 먹이 예시로 collard greens를 제시한다."},
-  {"plant_id":"cabbage","species_group":"Herbivorous_reptile_general","verdict":"general_reptile_supplement","role":"마트채소 보조 후보","confidence":"D+","evidence_ids":["merck_reptile_home_plant_eaters"],"limits":["지중해 Testudo 직접 근거가 아님","Brassica 계열 편중 금지","단독 주식 아님"],"why":"Merck가 plant-eating reptiles의 식물성 먹이 예시로 cabbage를 제시한다."},
-  {"plant_id":"dandelion","species_group":"Sulcata","verdict":"supported_mixed_diet","role":"grass/hay 중심 식단의 보조 야생초","confidence":"C","evidence_ids":["bcg_sulcata_care"],"limits":["grass/hay roughage 중심 원칙 유지"],"why":"BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다."},
-  {"plant_id":"plantain","species_group":"Sulcata","verdict":"supported_mixed_diet","role":"grass/hay 중심 식단의 보조 야생초","confidence":"C","evidence_ids":["bcg_sulcata_care"],"limits":["grass/hay 기반 유지","Plantago 종 동정 필요"],"why":"BCG 설카타 사육자료가 plantain을 후보 식물로 제시한다."},
-  {"plant_id":"clover","species_group":"Sulcata","verdict":"limited_mixed_diet","role":"grass/hay 중심 식단의 일부","confidence":"C","evidence_ids":["bcg_sulcata_care"],"limits":["grass/hay 기반 유지","고비율 반복 급여 자동 권장하지 않음"],"why":"BCG 설카타 자료에 포함되지만 roughage가 핵심이다."},
-  {"plant_id":"chickweed","species_group":"Sulcata","verdict":"limited_mixed_diet","role":"grass/hay 중심 식단의 야생초 일부","confidence":"C","evidence_ids":["bcg_sulcata_care"],"limits":["grass/hay roughage 중심 원칙 유지","사포닌 때문에 고비율 반복 급여로 확대하지 않음","채집 오염 확인"],"why":"BCG 설카타 사육자료가 chickweed를 고섬유 야생초 후보 중 하나로 제시한다.","applicability_note":"Sulcata 전문 사육근거이므로 다른 종에 자동 적용하지 않음."},
-  {"plant_id":"watercress","species_group":"Sulcata","verdict":"limited_supplement","role":"grass/hay 중심 식단의 잎채소 보조","confidence":"C-","evidence_ids":["bcg_sulcata_care"],"limits":["grass/hay roughage 중심 원칙 유지","BCG 설카타 자료의 후보 목록 수준이며 단독 주식 판정이 아님","Mediterranean Testudo에 자동 적용하지 않음"],"why":"BCG 설카타 사육자료가 watercress를 식단에 시도할 수 있는 후보 중 하나로 제시한다.","applicability_note":"Sulcata 전문 사육근거에 한정."}
+  {
+    "plant_id": "dandelion",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "supported_mixed_diet",
+    "role": "혼합 야생초 구성 후보",
+    "confidence": "B+",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "mitrevichin_ibera_bulgaria_2023",
+      "bcg_mediterranean_care",
+      "tt_mediterranean_food",
+      "tt_plantfoods"
+    ],
+    "limits": [
+      "야생 관찰 빈도는 사육 배합률이 아님",
+      "채집 식물의 정확한 종·오염원을 확인",
+      "단독 장기급여를 의미하지 않음"
+    ],
+    "why": "야생 T. g. ibera 직접관찰과 지중해 Testudo 전문 사육자료가 dandelion을 반복적으로 지지한다.",
+    "applicability_note": "이베라 직접 야생섭식 + Mediterranean Testudo 사육근거."
+  },
+  {
+    "plant_id": "plantain",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "supported_mixed_diet",
+    "role": "혼합 야생초 구성 후보",
+    "confidence": "C+",
+    "evidence_ids": [
+      "bcg_mediterranean_care",
+      "tt_plantfoods",
+      "hermanni_foraging_italy_2015"
+    ],
+    "limits": [
+      "Plantago spp. 내부 종 차이 확인",
+      "채집 오염 주의",
+      "단독주식 판정 아님"
+    ],
+    "why": "전문 사육자료와 Testudo 야생섭식 자료가 Plantago를 혼합 자연식 후보로 지지한다."
+  },
+  {
+    "plant_id": "sowthistle",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "supported_mixed_diet",
+    "role": "혼합 야생초 구성 후보",
+    "confidence": "B",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "ibera_eastern_account_2023",
+      "bcg_mediterranean_care",
+      "tt_mediterranean_food",
+      "tt_plantfoods"
+    ],
+    "limits": [
+      "Sonchus 속 수준 직접관찰을 한국 특정 종으로 자동 확장하지 않음",
+      "야생 빈도를 급여비율로 환산하지 않음",
+      "채집 오염 확인"
+    ],
+    "why": "야생 T. g. ibera에서 Sonchus 섭식이 확인되고 전문 사육자료에서도 반복적으로 제시된다.",
+    "applicability_note": "이베라 직접 야생섭식 + Mediterranean Testudo 사육근거."
+  },
+  {
+    "plant_id": "clover",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "혼합식 일부",
+    "confidence": "B",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "ibera_eastern_account_2023",
+      "bcg_mediterranean_care",
+      "tt_mediterranean_food",
+      "hermanni_foraging_italy_2015"
+    ],
+    "limits": [
+      "Trifolium 종별 차이 확인",
+      "야생 빈도를 급여비율로 환산하지 않음",
+      "단독·고비율 반복 급여 권장 아님"
+    ],
+    "why": "이베라 야생섭식 직접근거가 있으나 전문 사육자료가 white clover를 moderation으로 제한한다."
+  },
+  {
+    "plant_id": "alfalfa",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "혼합 야생초·재배초 일부",
+    "confidence": "B-",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "mitrevichin_ibera_bulgaria_2023",
+      "ibera_eastern_account_2023",
+      "tgraeca_alfalfa_context_2019",
+      "rda_alfalfa_identity"
+    ],
+    "limits": [
+      "이베라 직접관찰은 Medicago 속 수준",
+      "국내 M. sativa로 자동 종수준 승격하지 않음",
+      "야생 빈도를 사육 급여비율로 환산하지 않음"
+    ],
+    "why": "서로 다른 지역의 야생 이베라에서 Medicago 섭식이 관찰됐지만 국내 알팔파의 종수준 직접근거는 아니다."
+  },
+  {
+    "plant_id": "dolnamul",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다육성 혼합식 보조 후보",
+    "confidence": "C-",
+    "evidence_ids": [
+      "mitrevichin_ibera_bulgaria_2023",
+      "tortoise_table_sedum",
+      "korean_dolnamul_identity"
+    ],
+    "limits": [
+      "이베라 직접 관찰 Sedum 종과 한국 돌나물 S. sarmentosum은 다른 종",
+      "과량 섭취 시 묽은 변 가능성",
+      "Sedum acre 등 유사종 오동정 주의"
+    ],
+    "why": "국내 돌나물 identity는 확인되지만 이베라 직접근거는 다른 Sedum 종이므로 일반 보조근거로 제한한다.",
+    "applicability_note": "한국 돌나물 종수준 identity와 이베라 관찰종이 일치하지 않음."
+  },
+  {
+    "plant_id": "romaine",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "마트채소 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_mediterranean_food",
+      "tt_winter_feeding",
+      "bcg_chelonian_nutrition",
+      "merck_tortoise_nutrition_2025"
+    ],
+    "limits": [
+      "전문자료는 very limited quantities 또는 대체 혼합채소 맥락",
+      "야생초·고섬유 식물 다양성을 대체하지 않음",
+      "단독 장기급여 아님"
+    ],
+    "why": "지중해종 전문자료와 수의학 자료가 romaine 사용을 지지하지만 보조적 위치로 제한한다."
+  },
+  {
+    "plant_id": "lettuce",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "마트 잎상추 보조·순환",
+    "confidence": "C",
+    "evidence_ids": [
+      "tt_mediterranean_food",
+      "tt_winter_feeding",
+      "merck_tortoise_nutrition_2025"
+    ],
+    "limits": [
+      "근거는 red/green leaf lettuce 등 잎상추 맥락이며 모든 Lactuca 품종을 동일하게 보지 않음",
+      "야생초·고섬유 식물 다양성을 대체하지 않음",
+      "단독·장기 편중 급여 아님"
+    ],
+    "why": "Tortoise Trust는 red leaf 및 여러 leaf lettuce를 Mediterranean tortoise의 대체 혼합채소로 제한적으로 제시하고 Merck도 green leaf lettuce를 tortoise vegetable mix 예시로 제시한다.",
+    "applicability_note": "한국 상추 상품은 품종이 다양하므로 Lactuca sativa 일반 수준의 제한적 보조 판정으로만 사용한다."
+  },
+  {
+    "plant_id": "endive",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "마트채소 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_winter_feeding",
+      "bcg_chelonian_nutrition",
+      "merck_tortoise_nutrition_2025",
+      "merck_reptile_plant_composition"
+    ],
+    "limits": [
+      "겨울철·야생초 부족 시 혼합 잎채소 일부",
+      "한 종류에 장기간 의존하지 않음",
+      "한국 유통 품목과 영양 record 매핑은 별도 검증"
+    ],
+    "why": "Mediterranean winter-feeding 지침과 수의학 자료가 endive를 혼합 대체채소로 지지한다."
+  },
+  {
+    "plant_id": "radicchio",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "마트채소 보조·순환",
+    "confidence": "C",
+    "evidence_ids": [
+      "tt_winter_feeding"
+    ],
+    "limits": [
+      "겨울철 대체 혼합채소 맥락",
+      "단독 주식·장기 편중 급여 아님",
+      "일반 치커리 전체에 자동 확대하지 않음"
+    ],
+    "why": "Tortoise Trust가 radicchio를 Mediterranean tortoise의 순환·혼합 대체 잎채소로 명시한다."
+  },
+  {
+    "plant_id": "kale",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "마트채소 보조·소량 순환",
+    "confidence": "C",
+    "evidence_ids": [
+      "tt_winter_feeding",
+      "bcg_chelonian_nutrition",
+      "merck_tortoise_nutrition_2025",
+      "merck_reptile_plant_composition"
+    ],
+    "limits": [
+      "소량·순환 예시에 한정",
+      "Brassica 계열에 편중하지 않음",
+      "단독 주식·고비율 반복 급여 아님"
+    ],
+    "why": "복수 전문·수의학 자료가 kale 사용을 지지하지만 지중해 Testudo에서는 소량 순환 보조가 적절하다."
+  },
+  {
+    "plant_id": "chicory",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "잎·꽃 혼합식 후보",
+    "confidence": "B-",
+    "evidence_ids": [
+      "mitrevichin_ibera_bulgaria_2023",
+      "tortoise_table_chicory",
+      "chicory_foodchem_2021"
+    ],
+    "limits": [
+      "야생 직접관찰은 정량 사육 급여량을 제시하지 않음",
+      "잎·꽃 혼합식 후보로 제한하고 뿌리는 제외",
+      "마트 상품 identity 확인 필요"
+    ],
+    "why": "남서부 불가리아의 야생 T. g. ibera에서 Cichorium intybus 섭식이 직접 관찰됐고 전문 식물 DB도 제한적 사용을 지지한다.",
+    "applicability_note": "이베라 직접 야생섭식 + 육지거북 전문 식물 DB 근거."
+  },
+  {
+    "plant_id": "rose",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "무농약 잎·꽃 혼합 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tt_mediterranean_food"
+    ],
+    "limits": [
+      "화원·절화 장미는 농약·보존제 노출 가능성이 있어 급여 대상으로 보지 않음",
+      "정확한 Rosa 품종별 차이를 일반화하지 않음",
+      "단독·고비율 반복 급여 아님"
+    ],
+    "why": "Tortoise Trust의 Mediterranean feeding guidance가 rose leaves/petals를 다양한 식단의 일부로 제시한다.",
+    "applicability_note": "직접 재배하거나 식용·무농약 여부가 확인된 Rosa spp. 잎·꽃에 한정한 보조 판정이다."
+  },
+  {
+    "plant_id": "chickweed",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "혼합 야생초 일부",
+    "confidence": "C+",
+    "evidence_ids": [
+      "bcg_mediterranean_care"
+    ],
+    "limits": [
+      "BCG는 지중해 육지거북의 정원 forage 후보로 제시하지만 단독 주식 판정은 아님",
+      "채집 오염·농약·제초제 노출 확인",
+      "Stellaria media와 유사 식물 동정 확인",
+      "사포닌 관련 이유로 고비율 반복 급여는 피함"
+    ],
+    "why": "British Chelonia Group의 Mediterranean tortoise caresheet가 chickweed를 정원에서 섭식할 수 있는 forage 후보로 명시한다. 전문 식물 DB에서는 사포닌 때문에 moderation을 권고하므로 제한적 혼합식으로 분류한다.",
+    "applicability_note": "Mediterranean Testudo 전문 사육근거. 이베라 종수준 직접 야생섭식 근거는 아님."
+  },
+  {
+    "plant_id": "mulberry",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "나무잎 혼합식 후보",
+    "confidence": "D+",
+    "evidence_ids": [
+      "tortoise_table_mulberry",
+      "mulberry_feed_review_2019",
+      "mulberry_feed_jfca_2025"
+    ],
+    "limits": [
+      "Mediterranean Testudo 직접 연구가 아님",
+      "잎 판정이며 과실로 확대하지 않음",
+      "Morus 종별 성분 차이",
+      "단독·고비율 반복 급여 아님"
+    ],
+    "why": "전문 식물 DB는 Morus 잎을 다양한 육지거북 식단 일부로 제시하지만 Testudo 직접자료가 아니므로 일반 보조근거로 유지한다."
+  },
+  {
+    "plant_id": "bokchoy",
+    "species_group": "Herbivorous_reptile_general",
+    "verdict": "general_reptile_supplement",
+    "role": "마트채소 보조 후보",
+    "confidence": "D+",
+    "evidence_ids": [
+      "merck_reptile_home_plant_eaters"
+    ],
+    "limits": [
+      "지중해 Testudo 직접 근거가 아님",
+      "Merck의 일반 food-list 예시는 이베라의 급여량·빈도·단독식 안전성을 정하지 않음",
+      "Brassica 계열이라는 이유만으로 별도의 편중 금지 규칙을 추가하지 않음"
+    ],
+    "why": "Merck가 plant-eating reptiles의 식물성 먹이 예시로 bok choy를 제시한다."
+  },
+  {
+    "plant_id": "collard",
+    "species_group": "Herbivorous_reptile_general",
+    "verdict": "general_reptile_supplement",
+    "role": "마트채소 보조 후보",
+    "confidence": "D+",
+    "evidence_ids": [
+      "merck_reptile_home_plant_eaters"
+    ],
+    "limits": [
+      "지중해 Testudo 직접 근거가 아님",
+      "Brassica 계열 편중 금지",
+      "단독 주식 아님"
+    ],
+    "why": "Merck가 plant-eating reptiles의 식물성 먹이 예시로 collard greens를 제시한다."
+  },
+  {
+    "plant_id": "cabbage",
+    "species_group": "Herbivorous_reptile_general",
+    "verdict": "general_reptile_supplement",
+    "role": "마트채소 보조 후보",
+    "confidence": "D+",
+    "evidence_ids": [
+      "merck_reptile_home_plant_eaters"
+    ],
+    "limits": [
+      "지중해 Testudo 직접 근거가 아님",
+      "Brassica 계열 편중 금지",
+      "단독 주식 아님"
+    ],
+    "why": "Merck가 plant-eating reptiles의 식물성 먹이 예시로 cabbage를 제시한다."
+  },
+  {
+    "plant_id": "dandelion",
+    "species_group": "Sulcata",
+    "verdict": "supported_mixed_diet",
+    "role": "grass/hay 중심 식단의 보조 야생초",
+    "confidence": "C",
+    "evidence_ids": [
+      "bcg_sulcata_care"
+    ],
+    "limits": [
+      "grass/hay roughage 중심 원칙 유지"
+    ],
+    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다."
+  },
+  {
+    "plant_id": "plantain",
+    "species_group": "Sulcata",
+    "verdict": "supported_mixed_diet",
+    "role": "grass/hay 중심 식단의 보조 야생초",
+    "confidence": "C",
+    "evidence_ids": [
+      "bcg_sulcata_care"
+    ],
+    "limits": [
+      "grass/hay 기반 유지",
+      "Plantago 종 동정 필요"
+    ],
+    "why": "BCG 설카타 사육자료가 plantain을 후보 식물로 제시한다."
+  },
+  {
+    "plant_id": "clover",
+    "species_group": "Sulcata",
+    "verdict": "limited_mixed_diet",
+    "role": "grass/hay 중심 식단의 일부",
+    "confidence": "C",
+    "evidence_ids": [
+      "bcg_sulcata_care"
+    ],
+    "limits": [
+      "grass/hay 기반 유지",
+      "고비율 반복 급여 자동 권장하지 않음"
+    ],
+    "why": "BCG 설카타 자료에 포함되지만 roughage가 핵심이다."
+  },
+  {
+    "plant_id": "chickweed",
+    "species_group": "Sulcata",
+    "verdict": "limited_mixed_diet",
+    "role": "grass/hay 중심 식단의 야생초 일부",
+    "confidence": "C",
+    "evidence_ids": [
+      "bcg_sulcata_care"
+    ],
+    "limits": [
+      "grass/hay roughage 중심 원칙 유지",
+      "사포닌 때문에 고비율 반복 급여로 확대하지 않음",
+      "채집 오염 확인"
+    ],
+    "why": "BCG 설카타 사육자료가 chickweed를 고섬유 야생초 후보 중 하나로 제시한다.",
+    "applicability_note": "Sulcata 전문 사육근거이므로 다른 종에 자동 적용하지 않음."
+  },
+  {
+    "plant_id": "watercress",
+    "species_group": "Sulcata",
+    "verdict": "limited_supplement",
+    "role": "grass/hay 중심 식단의 잎채소 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "bcg_sulcata_care"
+    ],
+    "limits": [
+      "grass/hay roughage 중심 원칙 유지",
+      "BCG 설카타 자료의 후보 목록 수준이며 단독 주식 판정이 아님",
+      "Mediterranean Testudo에 자동 적용하지 않음"
+    ],
+    "why": "BCG 설카타 사육자료가 watercress를 식단에 시도할 수 있는 후보 중 하나로 제시한다.",
+    "applicability_note": "Sulcata 전문 사육근거에 한정."
+  }
 ]
