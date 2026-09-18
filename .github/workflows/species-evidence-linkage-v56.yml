@@ -1,0 +1,25 @@
+name: Species evidence linkage v5.6 QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/species_evidence_linkage_v56.json'
+      - 'data/*_species_evidence_v56.json'
+      - 'data/evidence_matrix_v56.json'
+      - 'scripts/audit_species_evidence_linkage_v56.py'
+      - '.github/workflows/species-evidence-linkage-v56.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit species evidence linkage
+        run: python scripts/audit_species_evidence_linkage_v56.py
