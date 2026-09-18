@@ -7,12 +7,13 @@
     "A verified occurrence or husbandry diet record is descriptive evidence, not a safety trial or feeding prescription.",
     "Related Testudo evidence must remain related-taxon evidence and must not be relabeled as exact Testudo graeca ibera evidence.",
     "Genus-level exact-Ibera observations must not be rewritten as exact plant species.",
-    "Unverified records remain excluded from public named-record surfacing until the underlying source is checked."
+    "Unverified records remain excluded from public named-record surfacing until the underlying source is checked.",
+    "A stored species-evidence claim that conflicts with the checked primary table is hold_source_conflict and must not be surfaced publicly."
   ],
   "records": [
     {
       "asset": "data/plantago_species_evidence_v56.json",
-      "record_id": "ajvr_2012_plantago_lanceolata",
+      "record_id": "AJVR_2012_PLANTAGO_LANCEOLATA_CAPTIVE_DIET",
       "status": "verified_primary",
       "verification": "AJVR 73(11):1781-1786 explicitly states the Hermann's tortoise study diet included ribwort plantain (Plantago lanceolata).",
       "doi": "10.2460/ajvr.73.11.1781",
@@ -20,7 +21,7 @@
     },
     {
       "asset": "data/plantago_species_evidence_v56.json",
-      "record_id": "mitrevichin_hermanni_plantago_lanceolata_2023",
+      "record_id": "MITREVICHIN_2023_PLANTAGO_LANCEOLATA",
       "status": "verified_primary",
       "verification": "ZooNotes 228 results explicitly list Plantago lanceolata among plants consumed by wild Testudo hermanni.",
       "doi": "10.5281/zenodo.12807900",
@@ -84,7 +85,7 @@
     },
     {
       "asset": "data/sonchus_species_evidence_v56.json",
-      "record_id": "bielli_boettgeri_sonchus_oleraceus_2015",
+      "record_id": "bielli_hermanni_2015_sonchus_oleraceus",
       "status": "verified_primary",
       "verification": "The paper's husbandry section explicitly includes Sonchus oleraceus in the usual native wild-plant diet.",
       "doi": "10.1177/1040638714561251",
@@ -92,17 +93,18 @@
     },
     {
       "asset": "data/plantago_species_evidence_v56.json",
-      "record_id": "balmeta_1998_plantago_lanceolata",
+      "record_id": "BALMETA_1998_PLANTAGO_LANCEOLATA",
       "status": "hold_unverified",
       "verification": "Primary source not yet resolved sufficiently for public named-record surfacing.",
       "scope": "exclude from public named-record surfacing"
     },
     {
       "asset": "data/sonchus_species_evidence_v56.json",
-      "record_id": "bayley_highfield_1996_sonchus_oleraceus",
-      "status": "hold_unverified",
-      "verification": "Primary source not yet resolved sufficiently for public named-record surfacing.",
-      "scope": "exclude from public named-record surfacing"
+      "record_id": "bayley_highfield_morocco_1996_sonchus_oleraceus",
+      "status": "verified_primary",
+      "verification": "Chelonian Conservation and Biology 2(1):36-42 Table 1 explicitly lists Sonchus oleraceus among wild food plants in the Souss Valley T. g. graeca diet.",
+      "scope": "related T. g. graeca field diet record; not exact Ibera or a safety trial",
+      "source": "Bayley JR, Highfield AC. 1996. Chelonian Conservation and Biology 2(1):36-42."
     },
     {
       "asset": "data/medicago_species_evidence_v56.json",
@@ -110,6 +112,14 @@
       "status": "hold_unverified",
       "verification": "The currently stored record lacks a sufficiently resolved primary citation in the asset; do not surface by name until checked.",
       "scope": "exclude from public named-record surfacing"
+    },
+    {
+      "asset": "data/sonchus_species_evidence_v56.json",
+      "record_id": "del_vecchio_hermanni_2011_sonchus_oleraceus",
+      "status": "hold_source_conflict",
+      "verification": "The accessible primary full-text diet tables for Del Vecchio et al. 2011 list Asteraceae items such as Carduus pycnocephalus, Conyza canadensis, and Hypochaeris achyrophorus, but do not show Sonchus oleraceus. Do not surface this stored record unless a specific primary passage/table is found.",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "scope": "exclude from public named-record surfacing; source conflict requires correction/audit"
     }
   ]
 }
