@@ -4,11 +4,22 @@
     "species_group": "Tortoise_general",
     "verdict": "do_not_feed",
     "role": "급여 비권장",
-    "confidence": "C",
-    "evidence_ids": ["tortoise_table_perilla"],
-    "limits": ["계획 급여에서 제외","소량 우발섭취를 즉시 중독으로 단정하지 않음","Perilla spp. 전문 식물 DB 판정이며 이베라 직접 독성시험이 아님"],
-    "why": "전문 육지거북 식물 DB가 Perilla를 Do not Feed로 분류하므로 한국 깻잎을 추천 후보에서 제외한다.",
-    "applicability_note": "Perilla frutescens는 Perilla 속에 포함되며 일반 육지거북 전문 DB 근거다."
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_perilla",
+      "wilson_perilla_ketone_1977",
+      "kerr_perilla_cattle_1986",
+      "nitta_perilla_genotypes_2009"
+    ],
+    "limits": [
+      "한국 식용 깻잎 master는 Perilla frutescens로 식별되는 경우에 한정",
+      "The Tortoise Table의 Do not Feed는 일반 육지거북 전문 DB 근거이며 이베라 직접 독성시험이 아님",
+      "perilla ketone의 폐독성은 포유류·가축에서 입증됐지만 Testudo의 독성 용량이나 감수성으로 환산하지 않음",
+      "Perilla frutescens의 perilla ketone 함량은 유전형에 따라 달라 모든 식용 품종이 동일한 독성 프로파일을 가진다고 단정하지 않음",
+      "우발적 소량 섭취를 즉시 이베라 중독으로 단정하지 않음"
+    ],
+    "why": "The Tortoise Table은 Perilla를 Do not Feed로 분류한다. 독립적인 1차 문헌에서 Perilla frutescens 유래 perilla ketone은 여러 실험동물과 가축에서 강한 폐독성 물질로 확인됐고, 소 급여시험에서도 폐기종·폐부종을 동반한 비정형 간질성 폐렴이 재현됐다. 또한 P. frutescens 5개 유전형 분석에서는 perilla ketone이 일부 유전형에서만 검출돼 품종별 화학형 차이가 확인됐다. 따라서 현재 계획 급여에서는 제외하되, 이 근거를 이베라의 독성 용량이나 모든 식용 깻잎 품종의 동일 위험도로 확대하지 않는다.",
+    "applicability_note": "Perilla frutescens에 대한 식물·포유류 독성 근거와 Perilla spp. 일반 육지거북 전문 DB 판정을 함께 사용한다. Testudo graeca ibera 직접 독성시험은 아니다."
   },
   {
     "plant_id": "aehobakleaf",
@@ -16,8 +27,15 @@
     "verdict": "limited_supplement",
     "role": "애호박 어린잎·꽃 소량 보조",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_squash_cucurbita_moschata"],
-    "limits": ["Feed Sparingly 범위","잎·꽃의 소량 보조로 제한","과실 급여 판정으로 확대하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_squash_cucurbita_moschata"
+    ],
+    "limits": [
+      "Feed Sparingly 범위",
+      "잎·꽃의 소량 보조로 제한",
+      "과실 급여 판정으로 확대하지 않음",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 Cucurbita moschata를 포함한 squash를 sparingly 범위로 다루므로 소량 순환 보조로만 둔다.",
     "applicability_note": "Cucurbita moschata 일반 육지거북 근거. 이베라 직접 급여시험은 아님."
   },
@@ -27,8 +45,15 @@
     "verdict": "limited_supplement",
     "role": "쑥갓 소량 순환 보조",
     "confidence": "C-",
-    "evidence_ids": ["tortoise_table_chrysanthemum"],
-    "limits": ["Glebionis coronaria exact-taxon 직접 항목이 아닌 과거 Chrysanthemum coronarium 분류 연결에 의존","pyrethrin이 높은 Chrysanthemum cinerariifolium·C. coccineum과 혼동 금지","소량·다양한 식단의 일부로만 사용","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_chrysanthemum"
+    ],
+    "limits": [
+      "Glebionis coronaria exact-taxon 직접 항목이 아닌 과거 Chrysanthemum coronarium 분류 연결에 의존",
+      "pyrethrin이 높은 Chrysanthemum cinerariifolium·C. coccineum과 혼동 금지",
+      "소량·다양한 식단의 일부로만 사용",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB는 대부분의 Chrysanthemum 계열을 moderation으로 허용하지만 특정 pyrethrin 종을 제외하므로, 쑥갓은 낮은 확신도의 제한적 보조로만 둔다.",
     "applicability_note": "Glebionis coronaria의 과거명 Chrysanthemum coronarium과의 분류학적 연결을 사용한 일반 육지거북 근거다."
   }
