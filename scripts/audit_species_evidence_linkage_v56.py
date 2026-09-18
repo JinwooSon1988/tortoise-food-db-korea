@@ -20,7 +20,7 @@ assert len(food_ids) == len(set(food_ids)), 'duplicate food_id in species eviden
 
 required_fields = {
     'food_id', 'canonical_taxon', 'asset', 'canonical_matrix_status',
-    'strongest_applicability', 'exact_ibera_gap', 'public_detail_rule'
+    'strongest_applicability', 'public_detail_rule'
 }
 
 def asset_identity(payload):
@@ -69,7 +69,9 @@ for item in links:
     assert asset_taxon == item['canonical_taxon'], f'{food_id}: canonical taxon drift between linkage and asset'
     assert isinstance(records, list) and records, f'{food_id}: linked species evidence asset has no records/evidence'
 
-    for text_field in ('strongest_applicability', 'exact_ibera_gap', 'public_detail_rule'):
+    gap_fields = [key for key in ('exact_ibera_gap', 'exact_species_gap') if item.get(key)]
+    assert len(gap_fields) == 1, f'{food_id}: exactly one evidence-gap field required (exact_ibera_gap or exact_species_gap)'
+    for text_field in ('strongest_applicability', 'public_detail_rule', gap_fields[0]):
         value = item.get(text_field)
         assert isinstance(value, str) and value.strip(), f'{food_id}: {text_field} must be non-empty text'
 
