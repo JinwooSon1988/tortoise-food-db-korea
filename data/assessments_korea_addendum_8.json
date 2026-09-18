@@ -15,10 +15,10 @@
     "species_group": "Tortoise_general",
     "verdict": "do_not_feed",
     "role": "급여 비권장",
-    "confidence": "C",
+    "confidence": "C+",
     "evidence_ids": ["tortoise_table_tagetes"],
-    "limits": ["Tagetes spp.에 한정","식용 가능한 Calendula와 혼동 금지","The Tortoise Table은 뿌리·꽃·잎에 insecticidal substance가 있다고 설명하며 회피를 권고하지만, 이베라 직접 독성시험이나 용량-반응 자료는 아님","우발적 소량 섭취를 즉시 중독으로 단정하지 않음"],
-    "why": "The Tortoise Table은 Tagetes spp.를 Do not Feed로 분류하고 뿌리·꽃·잎에 insecticidal substance가 있다고 설명한다. Tagetes의 thiophene류에 생물활성이 있다는 식물화학 자료는 존재하지만, 이를 이베라의 독성 용량 한계로 환산하지 않는다.",
+    "limits": ["Tagetes spp.에 한정","식용 가능한 Calendula와 혼동 금지","The Tortoise Table의 Do not Feed는 일반 육지거북 전문 DB 근거이며 이베라 직접 독성시험이나 용량-반응 자료는 아님","Tagetes patula의 잎·꽃·뿌리에는 광독성 thiophene 유도체가 보고되어 있어 단순 영양성분 기반 비권장과는 구분함","우발적 소량 섭취를 즉시 이베라 중독으로 단정하지 않음"],
+    "why": "The Tortoise Table은 Tagetes spp.를 Do not Feed로 분류하고 뿌리·꽃·잎의 insecticidal substance를 이유로 회피를 권한다. 별도의 식물독성 자료에서도 Tagetes patula의 잎·꽃·뿌리에 phototoxic thiophene derivatives가 확인된다. 따라서 단순 Ca:P·oxalate 같은 성분 논리만으로 만든 금지와 달리 실제 생물활성 위해 신호가 있어 현재 급여 비권장 판정을 유지한다. 다만 이 자료를 이베라의 독성 용량이나 우발적 소량 섭취의 임상결과로 확대하지 않는다.",
     "applicability_note": "master의 메리골드는 Tagetes spp.다. Calendula 판정을 적용하지 않는다."
   },
   {
