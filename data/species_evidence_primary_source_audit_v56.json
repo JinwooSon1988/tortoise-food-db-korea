@@ -188,6 +188,22 @@
       "verification": "Muñoz, Soler & Martínez-Silvestre 2009 explicitly states that direct observations of free and large-enclosure semi-free Hermann's tortoises showed a high tendency to ingest dandelion (Taraxacum officinale). The legacy record ID is retained only for linkage stability; the citation metadata has been corrected to the 2009 paper.",
       "source": "Muñoz A, Soler J, Martínez-Silvestre A. 2009. Bol. Asoc. Herpetol. Esp. 20:54-58.",
       "scope": "related Testudo direct/semi-natural feeding context; exact T. officinale; not exact Ibera, a safety trial, or a captive frequency prescription"
+    },
+    {
+      "asset": "data/plantago_species_evidence_v56.json",
+      "record_id": "SLIMANI_EL_MOUDEN_2006_PLANTAGO_AMPLEXICAULIS",
+      "status": "verified_primary",
+      "verification": "Slimani & El Hassani 2006 primary diet study identifies Plantago amplexicaulis among plant taxa in wild Testudo graeca graeca diet in Morocco.",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "scope": "related T. g. graeca wild feeding ecology; exact plant species; not exact Ibera, genus-wide Plantago safety, or captive feeding prescription"
+    },
+    {
+      "asset": "data/sonchus_species_evidence_v56.json",
+      "record_id": "iftime_ibera_dobrogea_2012_sonchus",
+      "status": "verified_primary",
+      "verification": "Iftime & Iftime 2012 explicitly includes Sonchus among young leaves preferentially consumed by wild Testudo graeca ibera in Dobrogea.",
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "scope": "exact T. g. ibera direct field observation; Sonchus genus resolution; preference wording is descriptive ecology, not a captive percentage or frequency prescription"
     }
   ]
 }
