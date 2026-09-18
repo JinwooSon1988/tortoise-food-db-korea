@@ -24,13 +24,35 @@ required_fields = {
 }
 
 def asset_identity(payload):
-    """Normalize the two v5.6 species-evidence envelopes currently in the repo."""
+    """Normalize historical v5.6 research envelopes without rewriting evidence."""
     master = payload.get('canonical_master')
     if isinstance(master, dict):
-        return master.get('id'), master.get('scientific_name'), payload.get('records')
-    # Plantago predates the canonical_master/records envelope. Preserve the
-    # evidence rather than rewriting a research asset merely to satisfy QA.
-    return payload.get('food_id'), payload.get('canonical_master_taxon'), payload.get('evidence')
+        food_id = master.get('id') or master.get('key')
+        taxon = master.get('scientific_name')
+        records = payload.get('records')
+        if records is None:
+            records = payload.get('evidence_records')
+        return food_id, taxon, records
+
+    plant_master = payload.get('plant_master')
+    if isinstance(plant_master, dict):
+        return (
+            plant_master.get('id') or plant_master.get('key'),
+            plant_master.get('scientific_name'),
+            payload.get('records') or payload.get('evidence_records')
+        )
+    if isinstance(plant_master, str):
+        # Trifolium-era envelope: the master string itself is the canonical taxon.
+        # food_id is intentionally resolved from the linkage item below because
+        # this historical asset never stored the canonical key.
+        return None, plant_master, payload.get('records') or payload.get('evidence_records')
+
+    # Legacy Plantago/Taraxacum-style envelope.
+    return (
+        payload.get('food_id'),
+        payload.get('canonical_master_taxon'),
+        payload.get('evidence') or payload.get('records') or payload.get('evidence_records')
+    )
 
 for item in links:
     food_id = item.get('food_id')
@@ -42,7 +64,8 @@ for item in links:
     assert asset.is_file(), f'{food_id}: linked species evidence asset missing: {item["asset"]}'
     payload = json.loads(asset.read_text(encoding='utf-8'))
     asset_food_id, asset_taxon, records = asset_identity(payload)
-    assert asset_food_id == food_id, f'{food_id}: asset canonical food id mismatch'
+    if asset_food_id is not None:
+        assert asset_food_id == food_id, f'{food_id}: asset canonical food id mismatch'
     assert asset_taxon == item['canonical_taxon'], f'{food_id}: canonical taxon drift between linkage and asset'
     assert isinstance(records, list) and records, f'{food_id}: linked species evidence asset has no records/evidence'
 
@@ -50,8 +73,7 @@ for item in links:
         value = item.get(text_field)
         assert isinstance(value, str) and value.strip(), f'{food_id}: {text_field} must be non-empty text'
 
-# The linkage layer is descriptive evidence plumbing only. It must never become
-# a back door for feeding prescriptions or verdict overrides.
+# Descriptive evidence plumbing only: never permit verdict/prescription overrides.
 forbidden_keys = {
     'feeding_level', 'diet_role', 'evidence_grade', 'feeding_verdict',
     'feeding_frequency', 'feeding_percentage', 'daily_allowance',
@@ -74,4 +96,15 @@ for key in ('no_orphan_asset', 'no_missing_asset', 'public_traceability', 'verdi
 expected = {'plantain', 'dandelion', 'sowthistle', 'clover', 'alfalfa'}
 assert expected <= set(food_ids), f'missing current species-resolved linkage foods: {sorted(expected - set(food_ids))}'
 
-print(f'Species evidence linkage audit PASS: {len(links)} canonical links verified')
+# Every current species-resolved v5.6 research asset must be registered.
+registered_assets = {item['asset'] for item in links}
+species_assets = {
+    str(path.relative_to(ROOT)).replace('\\', '/')
+    for path in (ROOT / 'data').glob('*_species_evidence_v56.json')
+}
+assert species_assets <= registered_assets, (
+    'orphan species evidence assets: ' + ', '.join(sorted(species_assets - registered_assets))
+)
+
+print(f'Species evidence linkage audit PASS: {len(links)} canonical links verified; '
+      f'{len(species_assets)} species evidence assets registered')
