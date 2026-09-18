@@ -2,13 +2,20 @@
   {
     "plant_id": "broccolileaf",
     "species_group": "Tortoise_general",
-    "verdict": "do_not_feed",
-    "role": "급여 비권장",
+    "verdict": "blocked",
+    "role": "판정 보류",
     "confidence": "C-",
-    "evidence_ids": ["tortoise_table_broccoli"],
-    "limits": ["브로콜리 전체 항목의 전문 식물 DB 비권장 판정을 잎에도 적용한 것으로, 잎 자체의 직접 급여시험은 아님","Brassicaceae/goitrogen 범주만으로 별도의 편중·빈도 규칙을 추가하지 않음","독성 식물로 단정하지 않음","Mediterranean Testudo 종특이 직접시험은 아님"],
-    "why": "전문 육지거북 식물 DB가 Broccoli를 Do not Feed로 분류하므로 브로콜리잎을 계획 급여 후보로 추천하지 않는다.",
-    "applicability_note": "육지거북 일반 비권장 근거. Today 안전 후보에서 제외한다."
+    "evidence_ids": [
+      "tortoise_table_broccoli"
+    ],
+    "limits": [
+      "브로콜리 전체 항목의 전문 식물 DB 비권장 판정을 잎에도 적용한 것으로, 잎 자체의 직접 급여시험은 아님",
+      "Brassicaceae/goitrogen 범주만으로 별도의 편중·빈도 규칙을 추가하지 않음",
+      "독성 식물로 단정하지 않음",
+      "Mediterranean Testudo 종특이 직접시험은 아님"
+    ],
+    "why": "전문 DB는 Broccoli를 비권장하지만 goitrogen 범주만으로 이베라 급여 금지를 확정하지 않는다. 또한 현재 근거는 브로콜리잎 자체의 직접 급여시험이 아니다.",
+    "applicability_note": "전문 육지거북 DB의 비권장 의견은 보존하되, 이베라 직접 근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
   },
   {
     "plant_id": "cauliflowerleaf",
@@ -16,8 +23,15 @@
     "verdict": "do_not_feed",
     "role": "급여 비권장",
     "confidence": "C-",
-    "evidence_ids": ["tortoise_table_cauliflower"],
-    "limits": ["콜리플라워 전문 DB 비권장 조언은 잎에도 적용된다고 명시되어 있으나, 이베라 종특이 직접 급여시험은 아님","Brassicaceae 범주만으로 별도의 편중·빈도 규칙을 추가하지 않음","독성 식물로 단정하지 않음","Mediterranean Testudo 종특이 직접시험은 아님"],
+    "evidence_ids": [
+      "tortoise_table_cauliflower"
+    ],
+    "limits": [
+      "콜리플라워 전문 DB 비권장 조언은 잎에도 적용된다고 명시되어 있으나, 이베라 종특이 직접 급여시험은 아님",
+      "Brassicaceae 범주만으로 별도의 편중·빈도 규칙을 추가하지 않음",
+      "독성 식물로 단정하지 않음",
+      "Mediterranean Testudo 종특이 직접시험은 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 Cauliflower를 Do not Feed로 분류하므로 콜리플라워잎을 계획 급여 후보로 추천하지 않는다.",
     "applicability_note": "육지거북 일반 비권장 근거. Today 안전 후보에서 제외한다."
   },
@@ -27,8 +41,15 @@
     "verdict": "do_not_feed",
     "role": "급여 비권장",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_fig_tree"],
-    "limits": ["식물 자체를 독성으로 단정하지 않음","Ficus 수액의 눈·피부 자극 위험 때문에 잎 취급·급여를 피함","과실의 고당 문제와 잎의 수액 문제를 구분","Mediterranean Testudo 종특이 직접시험은 아님"],
+    "evidence_ids": [
+      "tortoise_table_fig_tree"
+    ],
+    "limits": [
+      "식물 자체를 독성으로 단정하지 않음",
+      "Ficus 수액의 눈·피부 자극 위험 때문에 잎 취급·급여를 피함",
+      "과실의 고당 문제와 잎의 수액 문제를 구분",
+      "Mediterranean Testudo 종특이 직접시험은 아님"
+    ],
     "why": "전문 육지거북 식물 DB는 무화과나무 수액의 강한 자극성 때문에 Fig Tree를 급여 비권장으로 분류한다.",
     "applicability_note": "Ficus carica 일반 육지거북 비권장 근거. Today 안전 후보에서 제외한다."
   },
@@ -38,8 +59,15 @@
     "verdict": "limited_supplement",
     "role": "당근잎 제한적 보조 후보",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_carrot"],
-    "limits": ["전문 DB가 제시한 oxalic acid·potassium·protein 우려와 Feed Sparingly 분류를 기록하되, 이를 더 엄격한 임의 급여량·빈도 규칙으로 확대하지 않음","단독 주식·반복 급여 아님","당근 뿌리 판정과 분리","Mediterranean Testudo 종특이 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_carrot"
+    ],
+    "limits": [
+      "전문 DB가 제시한 oxalic acid·potassium·protein 우려와 Feed Sparingly 분류를 기록하되, 이를 더 엄격한 임의 급여량·빈도 규칙으로 확대하지 않음",
+      "단독 주식·반복 급여 아님",
+      "당근 뿌리 판정과 분리",
+      "Mediterranean Testudo 종특이 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB는 당근잎을 Feed Sparingly로 분류한다. 이 정성 표현을 임의의 급여량·빈도로 환산하지 않는다.",
     "applicability_note": "Daucus carota subsp. sativus 잎 일반 육지거북 근거. 뿌리와 분리한다."
   }
