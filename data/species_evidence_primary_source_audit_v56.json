@@ -94,9 +94,11 @@
     {
       "asset": "data/plantago_species_evidence_v56.json",
       "record_id": "BALMETA_1998_PLANTAGO_LANCEOLATA",
-      "status": "hold_unverified",
-      "verification": "Primary source not yet resolved sufficiently for public named-record surfacing.",
-      "scope": "exclude from public named-record surfacing"
+      "status": "verified_primary",
+      "verification": "Franch & Oller, Serra Balmeta field study (summer 1998; manuscript dated 25 Jan 1999) reports three Testudo hermanni hermanni individuals captured while feeding and explicitly names Plantago lanceolata among the consumed plants.",
+      "scope": "related Testudo direct field feeding observation; small descriptive observation, not a safety trial or frequency prescription",
+      "source": "Franch M, Oller M. Estudi d'una població de tortuga mediterrània (Testudo hermanni hermanni) a la Serra Balmeta (Albera). Field period 13 Jul-21 Sep 1998; manuscript 25 Jan 1999.",
+      "doi": "10.13140/RG.2.1.3418.7680"
     },
     {
       "asset": "data/sonchus_species_evidence_v56.json",
@@ -109,9 +111,10 @@
     {
       "asset": "data/medicago_species_evidence_v56.json",
       "record_id": "montsant_hermanni_medicago_sativa",
-      "status": "hold_unverified",
-      "verification": "The currently stored record lacks a sufficiently resolved primary citation in the asset; do not surface by name until checked.",
-      "scope": "exclude from public named-record surfacing"
+      "status": "verified_primary",
+      "verification": "Muñoz, Soler & Martínez-Silvestre 2009 Table 1 identifies Medicago sativa remains (fruit, leaves and stems) in Testudo hermanni hermanni fecal samples from Montsant. The Montsant reintroduction report also lists M. sativa leaves among consumed plants.",
+      "scope": "related Testudo wild/reintroduced-population fecal diet evidence; exact plant species, not exact Ibera or a safety trial",
+      "source": "Muñoz A, Soler J, Martínez-Silvestre A. 2009. Aportaciones al estudio de la alimentación de Testudo hermanni hermanni en el Parque Natural de la Sierra de Montsant. Bol. Asoc. Herpetol. Esp. 20:54-56."
     },
     {
       "asset": "data/sonchus_species_evidence_v56.json",
