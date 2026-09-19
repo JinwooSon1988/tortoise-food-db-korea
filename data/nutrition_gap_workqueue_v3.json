@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-09-20",
+  "policy": {
+    "promotion_rule": "Only exact food/taxon + edible part + preparation-state official records may be promoted.",
+    "no_inference": true,
+    "feeding_verdict_unchanged": true
+  },
+  "baseline": {
+    "master_foods": 69,
+    "verified_nutrition": 19,
+    "official_record_not_verified": 39,
+    "mapping_hold": 11
+  },
+  "priority_exact_record_search": [
+    {
+      "plant_id": "sowthistle",
+      "ko": "방가지똥",
+      "scientific": "Sonchus spp.",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "carrottop",
+      "ko": "당근잎",
+      "scientific": "Daucus carota subsp. sativus",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "basil",
+      "ko": "바질",
+      "scientific": "Ocimum basilicum",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "mint",
+      "ko": "민트",
+      "scientific": "Mentha spp.",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "perilla",
+      "ko": "깻잎",
+      "scientific": "Perilla frutescens",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "clover",
+      "ko": "클로버",
+      "scientific": "Trifolium spp.",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "alfalfa",
+      "ko": "알팔파",
+      "scientific": "Medicago sativa",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "chickweed",
+      "ko": "별꽃",
+      "scientific": "Stellaria media",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "sweetpotatoleaf",
+      "ko": "고구마잎",
+      "scientific": "Ipomoea batatas",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "zucchini",
+      "ko": "애호박",
+      "scientific": "Cucurbita moschata",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "cucumber",
+      "ko": "오이",
+      "scientific": "Cucumis sativus",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "tomato",
+      "ko": "토마토",
+      "scientific": "Solanum lycopersicum",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "grapeleaf",
+      "ko": "포도잎",
+      "scientific": "Vitis vinifera",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "rose",
+      "ko": "장미꽃",
+      "scientific": "Rosa spp.",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "nasturtium",
+      "ko": "한련화",
+      "scientific": "Tropaeolum majus",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "pricklypear",
+      "ko": "천년초",
+      "scientific": "Opuntia spp.",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "orchard",
+      "ko": "오차드그라스",
+      "scientific": "Dactylis glomerata",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    }
+  ],
+  "identity_or_part_holds": [
+    {
+      "plant_id": "lettuce",
+      "ko": "상추",
+      "scientific": "Lactuca sativa",
+      "reason": "Master is generic Lactuca sativa; Foundation records distinguish red and green leaf retail foods. Do not collapse varieties without an explicit mapping policy."
+    },
+    {
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "scientific": "Taraxacum spp.",
+      "reason": "USDA dandelion greens exist, but master identity is Taraxacum spp.; current integrity policy rejects genus-level nutrition mapping."
+    },
+    {
+      "plant_id": "radishgreens",
+      "ko": "무잎",
+      "scientific": "Raphanus sativus",
+      "reason": "Available radish records found in the supplied datasets do not establish raw radish-leaf/greens composition."
+    },
+    {
+      "plant_id": "cauliflowerleaf",
+      "ko": "콜리플라워잎",
+      "scientific": "Brassica oleracea var. botrytis",
+      "reason": "Raw cauliflower food records do not establish cauliflower-leaf-only composition."
+    },
+    {
+      "plant_id": "plantain",
+      "ko": "질경이",
+      "scientific": "Plantago spp.",
+      "reason": "USDA food records named plantain refer to Musa fruit, not Plantago spp."
+    },
+    {
+      "plant_id": "mulberry",
+      "ko": "뽕잎",
+      "scientific": "Morus spp.",
+      "reason": "Master identity is Morus spp.; no exact raw leaf mapping accepted."
+    },
+    {
+      "plant_id": "figleaf",
+      "ko": "무화과잎",
+      "scientific": "Ficus carica",
+      "reason": "Fig fruit composition is not substituted for Ficus carica leaf composition."
+    },
+    {
+      "plant_id": "mallow",
+      "ko": "아욱",
+      "scientific": "Malva spp.",
+      "reason": "Master identity requires species-level mapping; nutrition cannot resolve the identity block."
+    },
+    {
+      "plant_id": "hibiscusleaf",
+      "ko": "무궁화잎",
+      "scientific": "Hibiscus syriacus",
+      "reason": "Brewed hibiscus beverage data are not substituted for raw Hibiscus syriacus leaves."
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "ko": "무궁화꽃",
+      "scientific": "Hibiscus syriacus",
+      "reason": "Brewed hibiscus beverage data do not establish raw Hibiscus syriacus flower composition."
+    },
+    {
+      "plant_id": "celeryleaf",
+      "ko": "셀러리잎",
+      "scientific": "Apium graveolens",
+      "reason": "USDA record does not establish leaf-only composition required by the master celery-leaf item."
+    }
+  ]
+}
