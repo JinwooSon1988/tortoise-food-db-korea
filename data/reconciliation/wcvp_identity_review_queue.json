@@ -1,0 +1,26 @@
+{
+  "reviewed_at": "2026-09-19",
+  "source_archive": "wcvp_dwca.zip",
+  "scope": "Focused reconciliation audit of exact species names from current curated plants; not a feeding-safety audit.",
+  "findings": [
+    {
+      "plant_id": "pea_shoot",
+      "curated_name": "Pisum sativum",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Lathyrus oleraceus",
+      "action": "identity_review_required",
+      "feeding_assessment_change": "none",
+      "note": "Do not silently rename public record. Review horticultural/food-use nomenclature and regional authorities before identity migration."
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "curated_name": "Valerianella locusta",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Valeriana locusta",
+      "action": "identity_review_required",
+      "feeding_assessment_change": "none",
+      "note": "Do not silently rename public record. Reconcile WCVP treatment against regional/floristic and food-market nomenclature first."
+    }
+  ],
+  "guardrail": "Taxonomic synonym findings never alter feeding verdicts automatically."
+}
