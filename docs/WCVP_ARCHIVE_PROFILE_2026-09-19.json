@@ -1,0 +1,27 @@
+{
+  "archive": "wcvp_dwca.zip",
+  "archive_bytes": 88208088,
+  "members": {
+    "eml.xml": 53920,
+    "meta.xml": 3190,
+    "wcvp_distribution.csv": 64791546,
+    "wcvp_replacementNames.csv": 1858715,
+    "wcvp_taxon.csv": 507635435
+  },
+  "taxon_rows": 1448984,
+  "distribution_rows": 1995338,
+  "replacement_name_rows": 44041,
+  "taxonomic_status_counts": {
+    "Synonym": 880359,
+    "Accepted": 434691,
+    "Illegitimate": 48723,
+    "Invalid": 37317,
+    "Unplaced": 35347,
+    "Artificial Hybrid": 4391,
+    "Provisionally Accepted": 3224,
+    "Orthographic": 2271,
+    "Local Biotype": 1452,
+    "Misapplied": 1209
+  },
+  "interpretation": "Archive profile only. Counts describe WCVP taxonomy records and do not imply feeding suitability."
+}
