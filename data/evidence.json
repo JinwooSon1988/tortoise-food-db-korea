@@ -315,5 +315,36 @@
     "pmid": "3354496",
     "url": "https://pubmed.ncbi.nlm.nih.gov/3354496/",
     "note": "13명의 건강한 성인을 대상으로 한 무작위 교차시험에서 동일한 200 mg Ca 조건의 평균 칼슘 흡수율은 우유 27.6%, 시금치 5.1%였다. 시험 시금치의 oxalate는 칼슘에 대해 약간의 화학량론적 과잉을 보였다. 사람 대상 mineral bioavailability 연구이며 Testudo의 독성·결석 위험·용량-반응을 입증하지 않는다."
+  },
+  {
+    "id": "tortoise_table_parsley",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Petroselinum crispum",
+    "citation": "The Tortoise Table. Parsley.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=355",
+    "note": "Petroselinum crispum을 Do not Feed로 분류한다. 독성 식물은 아니며 한입 정도는 걱정할 필요가 없다고 설명하지만, 이뇨성과 높은 oxalate에 따른 칼슘 흡수 저해 및 잠재적 신장 우려를 이유로 급여를 피하라고 권한다. Testudo graeca ibera 직접 시험은 아니다."
+  },
+  {
+    "id": "chaudhary_parsley_furocoumarin_1986",
+    "type": "peer_reviewed_plant_chemistry",
+    "scope": "plant_photochemistry_not_tortoise_toxicology",
+    "taxon": "Petroselinum crispum",
+    "citation": "Chaudhary SK, Ceska O, Têtu C, Warrington PJ, Ashwood-Smith MJ, Poulton GA. Oxypeucedanin, a Major Furocoumarin in Parsley, Petroselinum crispum. Planta Med. 1986;(6):462-464.",
+    "doi": "10.1055/s-2007-969254",
+    "pmid": "17345409",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17345409/",
+    "note": "신선한 파슬리 잎·뿌리에서 광활성 furanocoumarin을 HPLC와 photobiological assay로 분석했다. oxypeucedanin이 주요 성분(70-100 ppm wet weight)이었고 5-MOP, 8-MOP, psoralen, isopimpinellin, imperatorin도 확인됐다. 접촉성 광피부염 가능성과 관련된 식물화학 자료이며 Testudo 경구독성 시험은 아니다."
+  },
+  {
+    "id": "manderfeld_parsley_furocoumarins_1997",
+    "type": "peer_reviewed_food_chemistry",
+    "scope": "photobiological_assay_not_tortoise_toxicology",
+    "taxon": "Petroselinum crispum",
+    "citation": "Manderfeld MM, Schafer HW, Davidson PM, Zottola EA. Isolation and identification of antimicrobial furocoumarins from parsley. J Food Prot. 1997;60(1):72-77.",
+    "doi": "10.4315/0362-028X-60.1.72",
+    "pmid": "10465045",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/10465045/",
+    "note": "4개 파슬리 품종의 신선·동결건조 잎에서 광활성 furocoumarin을 확인하고 photobiological assay에서 활성을 측정했다. psoralen, 8-MOP, 5-MOP, oxypeucedanin, isopimpinellin 등이 확인됐으며 품종 간 상대 농도 차이도 있었다. 미생물 광생물학 시험이지 육지거북 급여 독성시험은 아니다."
   }
 ]
