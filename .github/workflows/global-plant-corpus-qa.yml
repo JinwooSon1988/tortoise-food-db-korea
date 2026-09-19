@@ -7,7 +7,9 @@ on:
       - "scripts/qa_global_plant_corpus.py"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"
       - "scripts/reconcile_curated_plants_wcvp.py"
       - "scripts/qa_curated_wcvp_reconciliation.py"
-      - "data/reconciliation/**"\n      - "data/staging/**"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"
+      - "data/reconciliation/**"
+      - "scripts/build_curated_identity_graph.py"
+      - "scripts/qa_curated_identity_graph.py"\n      - "data/staging/**"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"
       - ".github/workflows/global-plant-corpus-qa.yml"
   push:
     paths:
@@ -24,3 +26,6 @@ jobs:
           python-version: "3.x"
       - run: python scripts/qa_global_plant_corpus.py\n      - run: python scripts/qa_global_plant_staging.py
       - run: python scripts/qa_curated_wcvp_reconciliation.py
+      - run: python scripts/build_curated_identity_graph.py
+      - run: python scripts/qa_curated_identity_graph.py
+      - run: git diff --exit-code -- data/reconciliation/curated_identity_graph.json
