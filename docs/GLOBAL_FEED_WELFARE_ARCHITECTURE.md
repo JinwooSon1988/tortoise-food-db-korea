@@ -139,3 +139,45 @@ Phase E — vertebrate prey / formulated diets / supplements
 Phase F — 국제 다국어 reptile nutrition evidence platform
 
 확장은 기존 판정의 범위를 넓혀 복사하는 방식이 아니라, animal-food 관계별 근거를 추가하는 방식으로 수행한다.
+
+
+## Global Plant Corpus — worldwide-first collection policy
+
+한국 availability는 수집 범위를 제한하는 조건이 아니라 별도 metadata다. 세계 어느 지역에서든 파충류 먹이와 관련될 가능성이 있는 식물은 우선 canonical identity corpus에 수집하고, 한국에서 현재 구할 수 없다는 이유로 제외하지 않는다.
+
+### Geographic availability layer
+각 식물은 급여 판정과 독립적으로 다음 정보를 가질 수 있다.
+- native_range
+- introduced_range
+- cultivated_regions
+- common_market_regions
+- korea_status: native | naturalized | cultivated | imported | specialty_only | not_confirmed
+- availability_sources
+- availability_observed_at
+
+availability는 safety/evidence verdict를 올리거나 내리지 않는다.
+
+### Global ingestion pipeline
+1. 세계 식물 canonical backbone 확보
+2. accepted scientific name / synonym / family / taxonomic authority 정규화
+3. 국가·지역별 common names 연결
+4. occurrence/cultivation/market availability 연결
+5. reptile/tortoise feeding evidence 탐색
+6. toxicology/anti-nutritional evidence 탐색
+7. nutrition composition 연결
+8. evidence conflict와 identity ambiguity 기록
+9. human review를 거친 assessment 생성
+10. 공개 페이지에는 evidence state와 uncertainty를 함께 표시
+
+### Candidate source families
+- global taxonomy/checklists: Kew POWO, World Flora Online, Catalogue of Life, GBIF
+- regional floras and national biodiversity databases
+- peer-reviewed ecology, veterinary, nutrition and toxicology literature
+- specialist reptile/tortoise husbandry databases and organizations
+- official food-composition/agriculture databases
+- botanical garden, herbarium and invasive-species resources when identity/distribution evidence is needed
+
+### Data asset principle
+원문을 무차별 복제하는 것이 아니라, provenance가 추적되는 구조화된 사실과 근거 관계를 축적한다. 자동 수집 후보와 검증 완료 레코드는 분리하며, 중복·동의어·오동정·상충근거를 검증 엔진이 탐지하도록 한다.
+
+장기 목표는 '한국에서 살 수 있는 식물 DB'가 아니라 전 세계 식물 corpus 위에 reptile-food evidence graph를 얹는 것이다. 한국 availability는 그 graph의 첫 지역화 layer다.
