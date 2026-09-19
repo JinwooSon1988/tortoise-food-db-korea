@@ -55,5 +55,24 @@
     ],
     "why": "The Tortoise Table은 Petroselinum crispum을 Do not Feed로 분류하면서 이 식물이 독성 식물은 아니고 한입 정도를 우려할 필요는 없다고 설명하지만, 이뇨성과 높은 oxalate에 따른 칼슘 이용 저해 가능성을 이유로 계획 급여를 피하도록 권한다. 독립적인 식물화학 연구에서는 신선한 파슬리 잎·뿌리에서 oxypeucedanin을 포함한 여러 광활성 furanocoumarin이 확인됐고, 별도 연구에서도 여러 파슬리 품종의 잎 추출물에서 furocoumarin의 광생물학적 활성이 확인됐다. 따라서 현재 계획 급여 비권장을 유지하되 이 자료를 이베라의 직접 독성·신장손상·광독성 용량으로 확대하지 않는다.",
     "applicability_note": "Petroselinum crispum exact-taxon의 전문 육지거북 DB 권고와 식물화학·광생물학 근거를 함께 사용한다. Testudo graeca ibera 직접 급여·독성시험은 아니다."
+  },
+  {
+    "plant_id": "radishgreens",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "제한적으로 혼합 급여",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_radish",
+      "gamba_radish_systematic_review_2021"
+    ],
+    "limits": [
+      "판정 대상은 Raphanus sativus의 잎(무잎·무청)이며 뿌리·씨앗·새싹 판정으로 확대하지 않음",
+      "The Tortoise Table의 Feed in Moderation은 일반 육지거북 전문 DB 권고이며 Testudo graeca ibera 직접 급여시험이 아님",
+      "Brassicaceae 또는 glucosinolate 함유라는 사실만으로 별도의 고정 급여빈도·비율·동시급여 금지 규칙을 만들지 않음",
+      "식물화학 자료는 성분 존재를 보여줄 뿐 이베라의 갑상선·신장·간 위해 용량을 확립하지 않음"
+    ],
+    "why": "The Tortoise Table은 Raphanus sativus의 잎을 Feed in Moderation으로 분류하고 소량은 괜찮다고 설명한다. Raphanus sativus의 체계적 문헌고찰에서는 잎을 포함한 조직에 glucosinolate와 그 분해산물이 존재함을 확인하지만, 이는 육지거북의 위해 용량이나 고정 급여빈도를 정하는 자료가 아니다. 따라서 무잎은 제한적 혼합 급여로 두되 배추과 전체를 일괄 제한하거나 특정 횟수·비율을 만들지 않는다.",
+    "applicability_note": "Raphanus sativus exact-taxon 전문 육지거북 DB의 잎 권고와 exact-taxon 식물화학 체계적 문헌고찰을 함께 사용한다. Testudo graeca ibera 직접 급여·독성시험은 아니다."
   }
 ]
