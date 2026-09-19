@@ -4,7 +4,10 @@ on:
     paths:
       - "data/global_plant_corpus.json"
       - "data/global_plant_corpus.schema.json"
-      - "scripts/qa_global_plant_corpus.py"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"
+      - "scripts/qa_global_plant_corpus.py"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"
+      - "scripts/reconcile_curated_plants_wcvp.py"
+      - "scripts/qa_curated_wcvp_reconciliation.py"
+      - "data/reconciliation/**"\n      - "data/staging/**"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"
       - ".github/workflows/global-plant-corpus-qa.yml"
   push:
     paths:
@@ -20,3 +23,4 @@ jobs:
         with:
           python-version: "3.x"
       - run: python scripts/qa_global_plant_corpus.py\n      - run: python scripts/qa_global_plant_staging.py
+      - run: python scripts/qa_curated_wcvp_reconciliation.py
