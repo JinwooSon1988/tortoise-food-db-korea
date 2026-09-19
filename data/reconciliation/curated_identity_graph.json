@@ -1,0 +1,2388 @@
+{
+  "schema_version": "1.0",
+  "scope": "taxonomy identity only; never a feeding verdict",
+  "nodes": [
+    {
+      "id": "food:chicory",
+      "type": "food_concept",
+      "ko": "치커리",
+      "en": "Chicory",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:chicory:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cichorium intybus",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:chicory",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:chicory",
+      "submitted_name_id": "name:chicory:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:romaine",
+      "type": "food_concept",
+      "ko": "로메인",
+      "en": "Romaine lettuce",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:romaine:curated",
+      "type": "submitted_botanical_name",
+      "name": "Lactuca sativa var. longifolia",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:romaine",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Lactuca sativa",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:romaine",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:romaine",
+      "submitted_name_id": "name:romaine:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:lettuce",
+      "type": "food_concept",
+      "ko": "상추",
+      "en": "Lettuce",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:lettuce:curated",
+      "type": "submitted_botanical_name",
+      "name": "Lactuca sativa",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:lettuce",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:lettuce",
+      "submitted_name_id": "name:lettuce:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:radicchio",
+      "type": "food_concept",
+      "ko": "라디키오",
+      "en": "Radicchio",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:radicchio:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cichorium intybus var. foliosum",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:radicchio",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Cichorium intybus subsp. intybus",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:radicchio",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:radicchio",
+      "submitted_name_id": "name:radicchio:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:endive",
+      "type": "food_concept",
+      "ko": "엔다이브",
+      "en": "Endive",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:endive:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cichorium endivia",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:endive",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:endive",
+      "submitted_name_id": "name:endive:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:dandelion",
+      "type": "food_concept",
+      "ko": "민들레",
+      "en": "Dandelion",
+      "plant_part_or_form": "wild",
+      "market": "재배/채집/온라인"
+    },
+    {
+      "id": "name:dandelion:curated",
+      "type": "submitted_botanical_name",
+      "name": "Taraxacum spp.",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:dandelion",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:dandelion",
+      "submitted_name_id": "name:dandelion:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:sowthistle",
+      "type": "food_concept",
+      "ko": "방가지똥",
+      "en": "Sow thistle",
+      "plant_part_or_form": "wild",
+      "market": "채집"
+    },
+    {
+      "id": "name:sowthistle:curated",
+      "type": "submitted_botanical_name",
+      "name": "Sonchus spp.",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:sowthistle",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:sowthistle",
+      "submitted_name_id": "name:sowthistle:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:kale",
+      "type": "food_concept",
+      "ko": "케일",
+      "en": "Kale",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:kale:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica oleracea var. sabellica",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:kale",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica oleracea",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:kale",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:kale",
+      "submitted_name_id": "name:kale:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:bokchoy",
+      "type": "food_concept",
+      "ko": "청경채",
+      "en": "Bok choy",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:bokchoy:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica rapa subsp. chinensis",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:bokchoy",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica rapa",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:bokchoy",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:bokchoy",
+      "submitted_name_id": "name:bokchoy:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:mustard",
+      "type": "food_concept",
+      "ko": "갓",
+      "en": "Mustard greens",
+      "plant_part_or_form": "leafy",
+      "market": "마트/시장"
+    },
+    {
+      "id": "name:mustard:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica juncea",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:mustard",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:mustard",
+      "submitted_name_id": "name:mustard:curated",
+      "review_state": "unresolved"
+    },
+    {
+      "id": "food:turnipgreens",
+      "type": "food_concept",
+      "ko": "순무잎",
+      "en": "Turnip greens",
+      "plant_part_or_form": "leafy",
+      "market": "시장/재배"
+    },
+    {
+      "id": "name:turnipgreens:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica rapa subsp. rapa",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:turnipgreens",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:turnipgreens",
+      "submitted_name_id": "name:turnipgreens:curated",
+      "review_state": "unresolved"
+    },
+    {
+      "id": "food:collard",
+      "type": "food_concept",
+      "ko": "콜라드그린",
+      "en": "Collard greens",
+      "plant_part_or_form": "leafy",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:collard:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica oleracea var. viridis",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:collard",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica oleracea",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:collard",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:collard",
+      "submitted_name_id": "name:collard:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:cabbage",
+      "type": "food_concept",
+      "ko": "양배추",
+      "en": "Cabbage",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:cabbage:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica oleracea var. capitata",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:cabbage",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica oleracea",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:cabbage",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:cabbage",
+      "submitted_name_id": "name:cabbage:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:napa",
+      "type": "food_concept",
+      "ko": "배추",
+      "en": "Napa cabbage",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:napa:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica rapa subsp. pekinensis",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:napa",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica rapa",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:napa",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:napa",
+      "submitted_name_id": "name:napa:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:radishgreens",
+      "type": "food_concept",
+      "ko": "무잎",
+      "en": "Radish greens",
+      "plant_part_or_form": "leafy",
+      "market": "마트/시장"
+    },
+    {
+      "id": "name:radishgreens:curated",
+      "type": "submitted_botanical_name",
+      "name": "Raphanus sativus",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:radishgreens",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Raphanus raphanistrum subsp. sativus",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:radishgreens",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:radishgreens",
+      "submitted_name_id": "name:radishgreens:curated",
+      "review_state": "synonym_review"
+    },
+    {
+      "id": "food:broccolileaf",
+      "type": "food_concept",
+      "ko": "브로콜리잎",
+      "en": "Broccoli leaves",
+      "plant_part_or_form": "leafy",
+      "market": "재배/일부시장"
+    },
+    {
+      "id": "name:broccolileaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica oleracea var. italica",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:broccolileaf",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica oleracea",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:broccolileaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:broccolileaf",
+      "submitted_name_id": "name:broccolileaf:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:cauliflowerleaf",
+      "type": "food_concept",
+      "ko": "콜리플라워잎",
+      "en": "Cauliflower leaves",
+      "plant_part_or_form": "leafy",
+      "market": "재배/일부시장"
+    },
+    {
+      "id": "name:cauliflowerleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Brassica oleracea var. botrytis",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:cauliflowerleaf",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Brassica cretica subsp. cretica",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:cauliflowerleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:cauliflowerleaf",
+      "submitted_name_id": "name:cauliflowerleaf:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:arugula",
+      "type": "food_concept",
+      "ko": "루꼴라",
+      "en": "Arugula",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:arugula:curated",
+      "type": "submitted_botanical_name",
+      "name": "Eruca vesicaria",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:arugula",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:arugula",
+      "submitted_name_id": "name:arugula:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:plantain",
+      "type": "food_concept",
+      "ko": "질경이",
+      "en": "Plantain",
+      "plant_part_or_form": "wild",
+      "market": "재배/채집/온라인"
+    },
+    {
+      "id": "name:plantain:curated",
+      "type": "submitted_botanical_name",
+      "name": "Plantago spp.",
+      "family": "Plantaginaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:plantain",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:plantain",
+      "submitted_name_id": "name:plantain:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:mulberry",
+      "type": "food_concept",
+      "ko": "뽕잎",
+      "en": "Mulberry leaf",
+      "plant_part_or_form": "tree_leaf",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:mulberry:curated",
+      "type": "submitted_botanical_name",
+      "name": "Morus spp.",
+      "family": "Moraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:mulberry",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:mulberry",
+      "submitted_name_id": "name:mulberry:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:figleaf",
+      "type": "food_concept",
+      "ko": "무화과잎",
+      "en": "Fig leaf",
+      "plant_part_or_form": "tree_leaf",
+      "market": "재배"
+    },
+    {
+      "id": "name:figleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Ficus carica",
+      "family": "Moraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:figleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:figleaf",
+      "submitted_name_id": "name:figleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:mallow",
+      "type": "food_concept",
+      "ko": "아욱",
+      "en": "Mallow",
+      "plant_part_or_form": "leafy",
+      "market": "마트/시장"
+    },
+    {
+      "id": "name:mallow:curated",
+      "type": "submitted_botanical_name",
+      "name": "Malva spp.",
+      "family": "Malvaceae",
+      "identity_status": "needs_species_level_mapping"
+    },
+    {
+      "id": "reconciliation:mallow",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:mallow",
+      "submitted_name_id": "name:mallow:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:hibiscusleaf",
+      "type": "food_concept",
+      "ko": "무궁화잎",
+      "en": "Rose of Sharon leaf",
+      "plant_part_or_form": "tree_leaf",
+      "market": "재배"
+    },
+    {
+      "id": "name:hibiscusleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Hibiscus syriacus",
+      "family": "Malvaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:hibiscusleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:hibiscusleaf",
+      "submitted_name_id": "name:hibiscusleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:hibiscusflower",
+      "type": "food_concept",
+      "ko": "무궁화꽃",
+      "en": "Rose of Sharon flower",
+      "plant_part_or_form": "flower",
+      "market": "재배"
+    },
+    {
+      "id": "name:hibiscusflower:curated",
+      "type": "submitted_botanical_name",
+      "name": "Hibiscus syriacus",
+      "family": "Malvaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:hibiscusflower",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:hibiscusflower",
+      "submitted_name_id": "name:hibiscusflower:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:spinach",
+      "type": "food_concept",
+      "ko": "시금치",
+      "en": "Spinach",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:spinach:curated",
+      "type": "submitted_botanical_name",
+      "name": "Spinacia oleracea",
+      "family": "Amaranthaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:spinach",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:spinach",
+      "submitted_name_id": "name:spinach:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:beetgreens",
+      "type": "food_concept",
+      "ko": "비트잎",
+      "en": "Beet greens",
+      "plant_part_or_form": "leafy",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:beetgreens:curated",
+      "type": "submitted_botanical_name",
+      "name": "Beta vulgaris",
+      "family": "Amaranthaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:beetgreens",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:beetgreens",
+      "submitted_name_id": "name:beetgreens:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:watercress",
+      "type": "food_concept",
+      "ko": "물냉이",
+      "en": "Watercress",
+      "plant_part_or_form": "leafy",
+      "market": "온라인/일부마트"
+    },
+    {
+      "id": "name:watercress:curated",
+      "type": "submitted_botanical_name",
+      "name": "Nasturtium officinale",
+      "family": "Brassicaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:watercress",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:watercress",
+      "submitted_name_id": "name:watercress:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:parsley",
+      "type": "food_concept",
+      "ko": "파슬리",
+      "en": "Parsley",
+      "plant_part_or_form": "herb",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:parsley:curated",
+      "type": "submitted_botanical_name",
+      "name": "Petroselinum crispum",
+      "family": "Apiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:parsley",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:parsley",
+      "submitted_name_id": "name:parsley:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:cilantro",
+      "type": "food_concept",
+      "ko": "고수",
+      "en": "Cilantro",
+      "plant_part_or_form": "herb",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:cilantro:curated",
+      "type": "submitted_botanical_name",
+      "name": "Coriandrum sativum",
+      "family": "Apiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:cilantro",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:cilantro",
+      "submitted_name_id": "name:cilantro:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:celeryleaf",
+      "type": "food_concept",
+      "ko": "셀러리잎",
+      "en": "Celery leaf",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:celeryleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Apium graveolens",
+      "family": "Apiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:celeryleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:celeryleaf",
+      "submitted_name_id": "name:celeryleaf:curated",
+      "review_state": "exact_accepted_candidate",
+      "name_string_caution": "WCVP archive contains an Accepted record and a separate Misapplied record with the same name string; exact string matching must prefer identity/status-aware reconciliation, not first hit."
+    },
+    {
+      "id": "food:carrottop",
+      "type": "food_concept",
+      "ko": "당근잎",
+      "en": "Carrot tops",
+      "plant_part_or_form": "leafy",
+      "market": "재배/일부시장"
+    },
+    {
+      "id": "name:carrottop:curated",
+      "type": "submitted_botanical_name",
+      "name": "Daucus carota subsp. sativus",
+      "family": "Apiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:carrottop",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:carrottop",
+      "submitted_name_id": "name:carrottop:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:basil",
+      "type": "food_concept",
+      "ko": "바질",
+      "en": "Basil",
+      "plant_part_or_form": "herb",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:basil:curated",
+      "type": "submitted_botanical_name",
+      "name": "Ocimum basilicum",
+      "family": "Lamiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:basil",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:basil",
+      "submitted_name_id": "name:basil:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:mint",
+      "type": "food_concept",
+      "ko": "민트",
+      "en": "Mint",
+      "plant_part_or_form": "herb",
+      "market": "마트/온라인/재배"
+    },
+    {
+      "id": "name:mint:curated",
+      "type": "submitted_botanical_name",
+      "name": "Mentha spp.",
+      "family": "Lamiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:mint",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:mint",
+      "submitted_name_id": "name:mint:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:perilla",
+      "type": "food_concept",
+      "ko": "깻잎",
+      "en": "Perilla leaf",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:perilla:curated",
+      "type": "submitted_botanical_name",
+      "name": "Perilla frutescens",
+      "family": "Lamiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:perilla",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:perilla",
+      "submitted_name_id": "name:perilla:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:clover",
+      "type": "food_concept",
+      "ko": "클로버",
+      "en": "Clover",
+      "plant_part_or_form": "wild",
+      "market": "재배/채집"
+    },
+    {
+      "id": "name:clover:curated",
+      "type": "submitted_botanical_name",
+      "name": "Trifolium spp.",
+      "family": "Fabaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:clover",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:clover",
+      "submitted_name_id": "name:clover:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:alfalfa",
+      "type": "food_concept",
+      "ko": "알팔파",
+      "en": "Alfalfa",
+      "plant_part_or_form": "forage",
+      "market": "온라인"
+    },
+    {
+      "id": "name:alfalfa:curated",
+      "type": "submitted_botanical_name",
+      "name": "Medicago sativa",
+      "family": "Fabaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:alfalfa",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:alfalfa",
+      "submitted_name_id": "name:alfalfa:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:chickweed",
+      "type": "food_concept",
+      "ko": "별꽃",
+      "en": "Chickweed",
+      "plant_part_or_form": "wild",
+      "market": "재배/채집"
+    },
+    {
+      "id": "name:chickweed:curated",
+      "type": "submitted_botanical_name",
+      "name": "Stellaria media",
+      "family": "Caryophyllaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:chickweed",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:chickweed",
+      "submitted_name_id": "name:chickweed:curated",
+      "review_state": "exact_accepted_candidate",
+      "name_string_caution": "WCVP archive contains an Accepted record and a separate Illegitimate record with the same name string."
+    },
+    {
+      "id": "food:sweetpotatoleaf",
+      "type": "food_concept",
+      "ko": "고구마잎",
+      "en": "Sweet potato leaves",
+      "plant_part_or_form": "leafy",
+      "market": "시장/재배"
+    },
+    {
+      "id": "name:sweetpotatoleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Ipomoea batatas",
+      "family": "Convolvulaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:sweetpotatoleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:sweetpotatoleaf",
+      "submitted_name_id": "name:sweetpotatoleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:pumpkinleaf",
+      "type": "food_concept",
+      "ko": "호박잎",
+      "en": "Pumpkin leaf",
+      "plant_part_or_form": "leafy",
+      "market": "마트/시장"
+    },
+    {
+      "id": "name:pumpkinleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cucurbita spp.",
+      "family": "Cucurbitaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:pumpkinleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:pumpkinleaf",
+      "submitted_name_id": "name:pumpkinleaf:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:zucchini",
+      "type": "food_concept",
+      "ko": "애호박",
+      "en": "Korean zucchini",
+      "plant_part_or_form": "fruit_veg",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:zucchini:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cucurbita moschata",
+      "family": "Cucurbitaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:zucchini",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:zucchini",
+      "submitted_name_id": "name:zucchini:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:cucumber",
+      "type": "food_concept",
+      "ko": "오이",
+      "en": "Cucumber",
+      "plant_part_or_form": "fruit_veg",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:cucumber:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cucumis sativus",
+      "family": "Cucurbitaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:cucumber",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:cucumber",
+      "submitted_name_id": "name:cucumber:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:bellpepper",
+      "type": "food_concept",
+      "ko": "파프리카",
+      "en": "Bell pepper",
+      "plant_part_or_form": "fruit_veg",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:bellpepper:curated",
+      "type": "submitted_botanical_name",
+      "name": "Capsicum annuum",
+      "family": "Solanaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:bellpepper",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:bellpepper",
+      "submitted_name_id": "name:bellpepper:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:tomato",
+      "type": "food_concept",
+      "ko": "토마토",
+      "en": "Tomato",
+      "plant_part_or_form": "fruit_veg",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:tomato:curated",
+      "type": "submitted_botanical_name",
+      "name": "Solanum lycopersicum",
+      "family": "Solanaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:tomato",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:tomato",
+      "submitted_name_id": "name:tomato:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:grapeleaf",
+      "type": "food_concept",
+      "ko": "포도잎",
+      "en": "Grape leaf",
+      "plant_part_or_form": "vine_leaf",
+      "market": "재배"
+    },
+    {
+      "id": "name:grapeleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Vitis vinifera",
+      "family": "Vitaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:grapeleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:grapeleaf",
+      "submitted_name_id": "name:grapeleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:rose",
+      "type": "food_concept",
+      "ko": "장미꽃",
+      "en": "Rose petals",
+      "plant_part_or_form": "flower",
+      "market": "재배"
+    },
+    {
+      "id": "name:rose:curated",
+      "type": "submitted_botanical_name",
+      "name": "Rosa spp.",
+      "family": "Rosaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:rose",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:rose",
+      "submitted_name_id": "name:rose:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:nasturtium",
+      "type": "food_concept",
+      "ko": "한련화",
+      "en": "Nasturtium",
+      "plant_part_or_form": "flower",
+      "market": "재배/온라인"
+    },
+    {
+      "id": "name:nasturtium:curated",
+      "type": "submitted_botanical_name",
+      "name": "Tropaeolum majus",
+      "family": "Tropaeolaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:nasturtium",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:nasturtium",
+      "submitted_name_id": "name:nasturtium:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:pricklypear",
+      "type": "food_concept",
+      "ko": "천년초",
+      "en": "Prickly pear cactus",
+      "plant_part_or_form": "cactus",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:pricklypear:curated",
+      "type": "submitted_botanical_name",
+      "name": "Opuntia spp.",
+      "family": "Cactaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:pricklypear",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:pricklypear",
+      "submitted_name_id": "name:pricklypear:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:timothy",
+      "type": "food_concept",
+      "ko": "티모시",
+      "en": "Timothy grass",
+      "plant_part_or_form": "grass",
+      "market": "온라인"
+    },
+    {
+      "id": "name:timothy:curated",
+      "type": "submitted_botanical_name",
+      "name": "Phleum pratense",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:timothy",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:timothy",
+      "submitted_name_id": "name:timothy:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:orchard",
+      "type": "food_concept",
+      "ko": "오차드그라스",
+      "en": "Orchard grass",
+      "plant_part_or_form": "grass",
+      "market": "온라인"
+    },
+    {
+      "id": "name:orchard:curated",
+      "type": "submitted_botanical_name",
+      "name": "Dactylis glomerata",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:orchard",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:orchard",
+      "submitted_name_id": "name:orchard:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:ryegrass",
+      "type": "food_concept",
+      "ko": "라이그라스",
+      "en": "Ryegrass",
+      "plant_part_or_form": "grass",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:ryegrass:curated",
+      "type": "submitted_botanical_name",
+      "name": "Lolium spp.",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:ryegrass",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:ryegrass",
+      "submitted_name_id": "name:ryegrass:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:wheatgrass",
+      "type": "food_concept",
+      "ko": "밀싹",
+      "en": "Wheatgrass",
+      "plant_part_or_form": "grass",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:wheatgrass:curated",
+      "type": "submitted_botanical_name",
+      "name": "Triticum aestivum",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:wheatgrass",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:wheatgrass",
+      "submitted_name_id": "name:wheatgrass:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:barleygrass",
+      "type": "food_concept",
+      "ko": "보리싹",
+      "en": "Barley grass",
+      "plant_part_or_form": "grass",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:barleygrass:curated",
+      "type": "submitted_botanical_name",
+      "name": "Hordeum vulgare",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:barleygrass",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:barleygrass",
+      "submitted_name_id": "name:barleygrass:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:oatgrass",
+      "type": "food_concept",
+      "ko": "귀리싹",
+      "en": "Oat grass",
+      "plant_part_or_form": "grass",
+      "market": "온라인/재배"
+    },
+    {
+      "id": "name:oatgrass:curated",
+      "type": "submitted_botanical_name",
+      "name": "Avena sativa",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:oatgrass",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:oatgrass",
+      "submitted_name_id": "name:oatgrass:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:cornleaf",
+      "type": "food_concept",
+      "ko": "옥수수잎",
+      "en": "Corn leaf",
+      "plant_part_or_form": "grass",
+      "market": "재배"
+    },
+    {
+      "id": "name:cornleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Zea mays",
+      "family": "Poaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:cornleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:cornleaf",
+      "submitted_name_id": "name:cornleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:chrysanthemumleaf",
+      "type": "food_concept",
+      "ko": "쑥갓",
+      "en": "Crown daisy",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:chrysanthemumleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Glebionis coronaria",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:chrysanthemumleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:chrysanthemumleaf",
+      "submitted_name_id": "name:chrysanthemumleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:ssuk",
+      "type": "food_concept",
+      "ko": "쑥",
+      "en": "Mugwort",
+      "plant_part_or_form": "wild",
+      "market": "시장/재배/채집"
+    },
+    {
+      "id": "name:ssuk:curated",
+      "type": "submitted_botanical_name",
+      "name": "Artemisia princeps",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:ssuk",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:ssuk",
+      "submitted_name_id": "name:ssuk:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:dolnamul",
+      "type": "food_concept",
+      "ko": "돌나물",
+      "en": "Stringy stonecrop",
+      "plant_part_or_form": "leafy",
+      "market": "마트/시장"
+    },
+    {
+      "id": "name:dolnamul:curated",
+      "type": "submitted_botanical_name",
+      "name": "Sedum sarmentosum",
+      "family": "Crassulaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:dolnamul",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:dolnamul",
+      "submitted_name_id": "name:dolnamul:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:minari",
+      "type": "food_concept",
+      "ko": "미나리",
+      "en": "Water dropwort",
+      "plant_part_or_form": "leafy",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:minari:curated",
+      "type": "submitted_botanical_name",
+      "name": "Oenanthe javanica",
+      "family": "Apiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:minari",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:minari",
+      "submitted_name_id": "name:minari:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:aehobakleaf",
+      "type": "food_concept",
+      "ko": "애호박잎",
+      "en": "Squash leaf",
+      "plant_part_or_form": "leafy",
+      "market": "재배"
+    },
+    {
+      "id": "name:aehobakleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Cucurbita moschata",
+      "family": "Cucurbitaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:aehobakleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:aehobakleaf",
+      "submitted_name_id": "name:aehobakleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:pea_shoot",
+      "type": "food_concept",
+      "ko": "완두순",
+      "en": "Pea shoots",
+      "plant_part_or_form": "sprout",
+      "market": "마트/온라인"
+    },
+    {
+      "id": "name:pea_shoot:curated",
+      "type": "submitted_botanical_name",
+      "name": "Pisum sativum",
+      "family": "Fabaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:pea_shoot",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Lathyrus oleraceus",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:pea_shoot",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:pea_shoot",
+      "submitted_name_id": "name:pea_shoot:curated",
+      "review_state": "synonym_review"
+    },
+    {
+      "id": "food:sunflowerleaf",
+      "type": "food_concept",
+      "ko": "해바라기잎",
+      "en": "Sunflower leaf",
+      "plant_part_or_form": "leafy",
+      "market": "재배"
+    },
+    {
+      "id": "name:sunflowerleaf:curated",
+      "type": "submitted_botanical_name",
+      "name": "Helianthus annuus",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:sunflowerleaf",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:sunflowerleaf",
+      "submitted_name_id": "name:sunflowerleaf:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:violet",
+      "type": "food_concept",
+      "ko": "제비꽃",
+      "en": "Violet",
+      "plant_part_or_form": "wild",
+      "market": "재배/채집"
+    },
+    {
+      "id": "name:violet:curated",
+      "type": "submitted_botanical_name",
+      "name": "Viola spp.",
+      "family": "Violaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:violet",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:violet",
+      "submitted_name_id": "name:violet:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:geranium",
+      "type": "food_concept",
+      "ko": "제라늄",
+      "en": "Geranium",
+      "plant_part_or_form": "ornamental",
+      "market": "화원/재배"
+    },
+    {
+      "id": "name:geranium:curated",
+      "type": "submitted_botanical_name",
+      "name": "Pelargonium spp.",
+      "family": "Geraniaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:geranium",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:geranium",
+      "submitted_name_id": "name:geranium:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:pansy",
+      "type": "food_concept",
+      "ko": "팬지",
+      "en": "Pansy",
+      "plant_part_or_form": "flower",
+      "market": "화원/재배"
+    },
+    {
+      "id": "name:pansy:curated",
+      "type": "submitted_botanical_name",
+      "name": "Viola × wittrockiana",
+      "family": "Violaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:pansy",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:pansy",
+      "submitted_name_id": "name:pansy:curated",
+      "review_state": "hybrid_review"
+    },
+    {
+      "id": "food:marigold",
+      "type": "food_concept",
+      "ko": "메리골드",
+      "en": "Marigold",
+      "plant_part_or_form": "flower",
+      "market": "화원/재배"
+    },
+    {
+      "id": "name:marigold:curated",
+      "type": "submitted_botanical_name",
+      "name": "Tagetes spp.",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:marigold",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:marigold",
+      "submitted_name_id": "name:marigold:curated",
+      "review_state": "genus_scope"
+    },
+    {
+      "id": "food:calendula",
+      "type": "food_concept",
+      "ko": "금잔화",
+      "en": "Calendula",
+      "plant_part_or_form": "flower",
+      "market": "화원/재배"
+    },
+    {
+      "id": "name:calendula:curated",
+      "type": "submitted_botanical_name",
+      "name": "Calendula officinalis",
+      "family": "Asteraceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:calendula",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:calendula",
+      "submitted_name_id": "name:calendula:curated",
+      "review_state": "exact_accepted_candidate"
+    },
+    {
+      "id": "food:dill",
+      "type": "food_concept",
+      "ko": "딜",
+      "en": "Dill",
+      "plant_part_or_form": "herb",
+      "market": "마트/온라인/재배"
+    },
+    {
+      "id": "name:dill:curated",
+      "type": "submitted_botanical_name",
+      "name": "Anethum graveolens",
+      "family": "Apiaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "reconciliation:dill",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:dill",
+      "submitted_name_id": "name:dill:curated",
+      "review_state": "exact_accepted_candidate",
+      "name_string_caution": "WCVP archive contains an Accepted record and a separate Illegitimate record with the same name string."
+    },
+    {
+      "id": "food:chard",
+      "type": "food_concept",
+      "ko": "근대",
+      "en": "Chard / Swiss Chard",
+      "plant_part_or_form": "leafy",
+      "market": "마트/시장/온라인/재배"
+    },
+    {
+      "id": "name:chard:curated",
+      "type": "submitted_botanical_name",
+      "name": "Beta vulgaris subsp. cicla",
+      "family": "Amaranthaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:chard",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Beta vulgaris subsp. vulgaris",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:chard",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:chard",
+      "submitted_name_id": "name:chard:curated",
+      "review_state": "infraspecific_review"
+    },
+    {
+      "id": "food:lambs_lettuce",
+      "type": "food_concept",
+      "ko": "콘샐러드",
+      "en": "Lamb's Lettuce / Corn Salad",
+      "plant_part_or_form": "leafy",
+      "market": "온라인/수입채소/재배"
+    },
+    {
+      "id": "name:lambs_lettuce:curated",
+      "type": "submitted_botanical_name",
+      "name": "Valerianella locusta",
+      "family": "Caprifoliaceae",
+      "identity_status": "verified_name"
+    },
+    {
+      "id": "wcvp-accepted:lambs_lettuce",
+      "type": "backbone_accepted_name_candidate",
+      "name": "Valeriana locusta",
+      "source_id": "kew_wcvp",
+      "review_required": true
+    },
+    {
+      "id": "reconciliation:lambs_lettuce",
+      "type": "reconciliation_state",
+      "food_concept_id": "food:lambs_lettuce",
+      "submitted_name_id": "name:lambs_lettuce:curated",
+      "review_state": "synonym_review"
+    }
+  ],
+  "edges": [
+    {
+      "from": "food:chicory",
+      "to": "name:chicory:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:chicory:curated",
+      "to": "reconciliation:chicory",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:romaine",
+      "to": "name:romaine:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:romaine:curated",
+      "to": "wcvp-accepted:romaine",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:romaine:curated",
+      "to": "reconciliation:romaine",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:lettuce",
+      "to": "name:lettuce:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:lettuce:curated",
+      "to": "reconciliation:lettuce",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:radicchio",
+      "to": "name:radicchio:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:radicchio:curated",
+      "to": "wcvp-accepted:radicchio",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:radicchio:curated",
+      "to": "reconciliation:radicchio",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:endive",
+      "to": "name:endive:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:endive:curated",
+      "to": "reconciliation:endive",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:dandelion",
+      "to": "name:dandelion:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:dandelion:curated",
+      "to": "reconciliation:dandelion",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:sowthistle",
+      "to": "name:sowthistle:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:sowthistle:curated",
+      "to": "reconciliation:sowthistle",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:kale",
+      "to": "name:kale:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:kale:curated",
+      "to": "wcvp-accepted:kale",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:kale:curated",
+      "to": "reconciliation:kale",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:bokchoy",
+      "to": "name:bokchoy:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:bokchoy:curated",
+      "to": "wcvp-accepted:bokchoy",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:bokchoy:curated",
+      "to": "reconciliation:bokchoy",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:mustard",
+      "to": "name:mustard:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:mustard:curated",
+      "to": "reconciliation:mustard",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:turnipgreens",
+      "to": "name:turnipgreens:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:turnipgreens:curated",
+      "to": "reconciliation:turnipgreens",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:collard",
+      "to": "name:collard:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:collard:curated",
+      "to": "wcvp-accepted:collard",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:collard:curated",
+      "to": "reconciliation:collard",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:cabbage",
+      "to": "name:cabbage:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:cabbage:curated",
+      "to": "wcvp-accepted:cabbage",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:cabbage:curated",
+      "to": "reconciliation:cabbage",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:napa",
+      "to": "name:napa:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:napa:curated",
+      "to": "wcvp-accepted:napa",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:napa:curated",
+      "to": "reconciliation:napa",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:radishgreens",
+      "to": "name:radishgreens:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:radishgreens:curated",
+      "to": "wcvp-accepted:radishgreens",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:radishgreens:curated",
+      "to": "reconciliation:radishgreens",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:broccolileaf",
+      "to": "name:broccolileaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:broccolileaf:curated",
+      "to": "wcvp-accepted:broccolileaf",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:broccolileaf:curated",
+      "to": "reconciliation:broccolileaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:cauliflowerleaf",
+      "to": "name:cauliflowerleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:cauliflowerleaf:curated",
+      "to": "wcvp-accepted:cauliflowerleaf",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:cauliflowerleaf:curated",
+      "to": "reconciliation:cauliflowerleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:arugula",
+      "to": "name:arugula:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:arugula:curated",
+      "to": "reconciliation:arugula",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:plantain",
+      "to": "name:plantain:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:plantain:curated",
+      "to": "reconciliation:plantain",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:mulberry",
+      "to": "name:mulberry:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:mulberry:curated",
+      "to": "reconciliation:mulberry",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:figleaf",
+      "to": "name:figleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:figleaf:curated",
+      "to": "reconciliation:figleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:mallow",
+      "to": "name:mallow:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:mallow:curated",
+      "to": "reconciliation:mallow",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:hibiscusleaf",
+      "to": "name:hibiscusleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:hibiscusleaf:curated",
+      "to": "reconciliation:hibiscusleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:hibiscusflower",
+      "to": "name:hibiscusflower:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:hibiscusflower:curated",
+      "to": "reconciliation:hibiscusflower",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:spinach",
+      "to": "name:spinach:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:spinach:curated",
+      "to": "reconciliation:spinach",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:beetgreens",
+      "to": "name:beetgreens:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:beetgreens:curated",
+      "to": "reconciliation:beetgreens",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:watercress",
+      "to": "name:watercress:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:watercress:curated",
+      "to": "reconciliation:watercress",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:parsley",
+      "to": "name:parsley:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:parsley:curated",
+      "to": "reconciliation:parsley",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:cilantro",
+      "to": "name:cilantro:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:cilantro:curated",
+      "to": "reconciliation:cilantro",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:celeryleaf",
+      "to": "name:celeryleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:celeryleaf:curated",
+      "to": "reconciliation:celeryleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:carrottop",
+      "to": "name:carrottop:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:carrottop:curated",
+      "to": "reconciliation:carrottop",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:basil",
+      "to": "name:basil:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:basil:curated",
+      "to": "reconciliation:basil",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:mint",
+      "to": "name:mint:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:mint:curated",
+      "to": "reconciliation:mint",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:perilla",
+      "to": "name:perilla:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:perilla:curated",
+      "to": "reconciliation:perilla",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:clover",
+      "to": "name:clover:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:clover:curated",
+      "to": "reconciliation:clover",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:alfalfa",
+      "to": "name:alfalfa:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:alfalfa:curated",
+      "to": "reconciliation:alfalfa",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:chickweed",
+      "to": "name:chickweed:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:chickweed:curated",
+      "to": "reconciliation:chickweed",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:sweetpotatoleaf",
+      "to": "name:sweetpotatoleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:sweetpotatoleaf:curated",
+      "to": "reconciliation:sweetpotatoleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:pumpkinleaf",
+      "to": "name:pumpkinleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:pumpkinleaf:curated",
+      "to": "reconciliation:pumpkinleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:zucchini",
+      "to": "name:zucchini:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:zucchini:curated",
+      "to": "reconciliation:zucchini",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:cucumber",
+      "to": "name:cucumber:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:cucumber:curated",
+      "to": "reconciliation:cucumber",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:bellpepper",
+      "to": "name:bellpepper:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:bellpepper:curated",
+      "to": "reconciliation:bellpepper",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:tomato",
+      "to": "name:tomato:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:tomato:curated",
+      "to": "reconciliation:tomato",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:grapeleaf",
+      "to": "name:grapeleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:grapeleaf:curated",
+      "to": "reconciliation:grapeleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:rose",
+      "to": "name:rose:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:rose:curated",
+      "to": "reconciliation:rose",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:nasturtium",
+      "to": "name:nasturtium:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:nasturtium:curated",
+      "to": "reconciliation:nasturtium",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:pricklypear",
+      "to": "name:pricklypear:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:pricklypear:curated",
+      "to": "reconciliation:pricklypear",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:timothy",
+      "to": "name:timothy:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:timothy:curated",
+      "to": "reconciliation:timothy",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:orchard",
+      "to": "name:orchard:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:orchard:curated",
+      "to": "reconciliation:orchard",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:ryegrass",
+      "to": "name:ryegrass:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:ryegrass:curated",
+      "to": "reconciliation:ryegrass",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:wheatgrass",
+      "to": "name:wheatgrass:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:wheatgrass:curated",
+      "to": "reconciliation:wheatgrass",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:barleygrass",
+      "to": "name:barleygrass:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:barleygrass:curated",
+      "to": "reconciliation:barleygrass",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:oatgrass",
+      "to": "name:oatgrass:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:oatgrass:curated",
+      "to": "reconciliation:oatgrass",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:cornleaf",
+      "to": "name:cornleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:cornleaf:curated",
+      "to": "reconciliation:cornleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:chrysanthemumleaf",
+      "to": "name:chrysanthemumleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:chrysanthemumleaf:curated",
+      "to": "reconciliation:chrysanthemumleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:ssuk",
+      "to": "name:ssuk:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:ssuk:curated",
+      "to": "reconciliation:ssuk",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:dolnamul",
+      "to": "name:dolnamul:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:dolnamul:curated",
+      "to": "reconciliation:dolnamul",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:minari",
+      "to": "name:minari:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:minari:curated",
+      "to": "reconciliation:minari",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:aehobakleaf",
+      "to": "name:aehobakleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:aehobakleaf:curated",
+      "to": "reconciliation:aehobakleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:pea_shoot",
+      "to": "name:pea_shoot:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:pea_shoot:curated",
+      "to": "wcvp-accepted:pea_shoot",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:pea_shoot:curated",
+      "to": "reconciliation:pea_shoot",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:sunflowerleaf",
+      "to": "name:sunflowerleaf:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:sunflowerleaf:curated",
+      "to": "reconciliation:sunflowerleaf",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:violet",
+      "to": "name:violet:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:violet:curated",
+      "to": "reconciliation:violet",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:geranium",
+      "to": "name:geranium:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:geranium:curated",
+      "to": "reconciliation:geranium",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:pansy",
+      "to": "name:pansy:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:pansy:curated",
+      "to": "reconciliation:pansy",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:marigold",
+      "to": "name:marigold:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:marigold:curated",
+      "to": "reconciliation:marigold",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:calendula",
+      "to": "name:calendula:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:calendula:curated",
+      "to": "reconciliation:calendula",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:dill",
+      "to": "name:dill:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:dill:curated",
+      "to": "reconciliation:dill",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:chard",
+      "to": "name:chard:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:chard:curated",
+      "to": "wcvp-accepted:chard",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:chard:curated",
+      "to": "reconciliation:chard",
+      "relation": "has_reconciliation_state"
+    },
+    {
+      "from": "food:lambs_lettuce",
+      "to": "name:lambs_lettuce:curated",
+      "relation": "labelled_with"
+    },
+    {
+      "from": "name:lambs_lettuce:curated",
+      "to": "wcvp-accepted:lambs_lettuce",
+      "relation": "backbone_treats_as_synonym_of",
+      "review_required": true
+    },
+    {
+      "from": "name:lambs_lettuce:curated",
+      "to": "reconciliation:lambs_lettuce",
+      "relation": "has_reconciliation_state"
+    }
+  ]
+}

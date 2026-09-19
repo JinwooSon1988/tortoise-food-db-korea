@@ -1,0 +1,109 @@
+{
+  "reviewed_at": "2026-09-19",
+  "source": "user-supplied Kew WCVP DwC-A archive",
+  "method": "Exact scientific-name string audit against wcvp_taxon.csv, followed by acceptednameusageid resolution. This is taxonomy-only and does not change feeding verdicts.",
+  "summary": {
+    "exact_name_strings_tested": 52,
+    "strings_with_at_least_one_wcvp_match": 50,
+    "no_exact_match": 2
+  },
+  "no_exact_match": [
+    "Brassica juncea",
+    "Brassica rapa subsp. rapa"
+  ],
+  "review_cases": [
+    {
+      "curated_name": "Lactuca sativa var. longifolia",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Lactuca sativa",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Cichorium intybus var. foliosum",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Cichorium intybus subsp. intybus",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica oleracea var. sabellica",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica oleracea",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica rapa subsp. chinensis",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica rapa",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica oleracea var. viridis",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica oleracea",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica oleracea var. capitata",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica oleracea",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica rapa subsp. pekinensis",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica rapa",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Raphanus sativus",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Raphanus raphanistrum subsp. sativus",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica oleracea var. italica",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica oleracea",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Brassica oleracea var. botrytis",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Brassica cretica subsp. cretica",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Pisum sativum",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Lathyrus oleraceus",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Beta vulgaris subsp. cicla",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Beta vulgaris subsp. vulgaris",
+      "action": "identity_review_required"
+    },
+    {
+      "curated_name": "Valerianella locusta",
+      "wcvp_status": "Synonym",
+      "wcvp_accepted_name": "Valeriana locusta",
+      "action": "identity_review_required"
+    }
+  ],
+  "homonym_or_name_string_cautions": [
+    {
+      "curated_name": "Apium graveolens",
+      "note": "WCVP archive contains an Accepted record and a separate Misapplied record with the same name string; exact string matching must prefer identity/status-aware reconciliation, not first hit."
+    },
+    {
+      "curated_name": "Stellaria media",
+      "note": "WCVP archive contains an Accepted record and a separate Illegitimate record with the same name string."
+    },
+    {
+      "curated_name": "Anethum graveolens",
+      "note": "WCVP archive contains an Accepted record and a separate Illegitimate record with the same name string."
+    }
+  ],
+  "critical_note": "Backbone taxonomic treatment is not automatically substituted for horticultural/market food identity. Infraspecific cultivated-food concepts require separate review. No feeding assessment changes are authorized by this report."
+}

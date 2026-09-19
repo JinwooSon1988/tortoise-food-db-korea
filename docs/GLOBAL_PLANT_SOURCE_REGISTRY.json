@@ -1,0 +1,52 @@
+{
+  "reviewed_at": "2026-09-19",
+  "policy": "Sources are collection/reconciliation inputs only. Presence in a source never creates a feeding verdict.",
+  "sources": [
+    {
+      "source_id": "kew_wcvp",
+      "name": "Kew World Checklist of Vascular Plants (WCVP)",
+      "role": [
+        "primary_global_vascular_taxonomy",
+        "accepted_name_synonym_reconciliation"
+      ],
+      "access": "bulk_zip_and_dwca",
+      "download_url": "https://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip",
+      "status": "approved_for_candidate_ingest",
+      "notes": "Use source identifiers and preserve version/access date. Regional authorities may annotate or supersede regional occurrence."
+    },
+    {
+      "source_id": "wfo",
+      "name": "World Flora Online Taxonomic Backbone",
+      "role": [
+        "global_crosscheck",
+        "taxonomic_expert_network_updates"
+      ],
+      "access": "static_download",
+      "landing_url": "https://www.worldfloraonline.org/downloadData",
+      "status": "approved_for_crosscheck",
+      "notes": "CC0 static backbone advertised by WFO; preserve release/DOI."
+    },
+    {
+      "source_id": "col",
+      "name": "Catalogue of Life Base Release",
+      "role": [
+        "global_crosscheck",
+        "source_graph"
+      ],
+      "access": "dwca_coldp_api",
+      "landing_url": "https://www.catalogueoflife.org/data/download",
+      "status": "approved_for_crosscheck",
+      "notes": "Prefer Base Release for scrutinized sources; COL warns catalogue remains incomplete and may contain errors."
+    },
+    {
+      "source_id": "gbif_korean_vascular",
+      "name": "GBIF-hosted Korean vascular plant checklists",
+      "role": [
+        "korea_occurrence_and_regional_identity"
+      ],
+      "access": "dataset_specific",
+      "status": "requires_dataset_level_review",
+      "notes": "Review each Korean checklist's publisher, geographic scope, date and licence before promotion."
+    }
+  ]
+}

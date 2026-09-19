@@ -1,0 +1,46 @@
+name: Global plant corpus QA
+on:
+  pull_request:
+    paths:
+      - "data/global_plant_corpus.json"
+      - "data/global_plant_corpus.schema.json"
+      - "data/staging/**"
+      - "data/reconciliation/**"
+      - "scripts/qa_global_plant_corpus.py"
+      - "scripts/qa_global_plant_staging.py"
+      - "scripts/stage_global_plant_candidates.py"
+      - "scripts/reconcile_curated_plants_wcvp.py"
+      - "scripts/qa_curated_wcvp_reconciliation.py"
+      - "scripts/build_curated_identity_graph.py"
+      - "scripts/qa_curated_identity_graph.py"
+      - "scripts/qa_identity_review_queue.py"
+      - ".github/workflows/global-plant-corpus-qa.yml"
+  push:
+    paths:
+      - "data/global_plant_corpus.json"
+      - "data/global_plant_corpus.schema.json"
+      - "data/staging/**"
+      - "data/reconciliation/**"
+      - "scripts/qa_global_plant_corpus.py"
+      - "scripts/qa_global_plant_staging.py"
+      - "scripts/stage_global_plant_candidates.py"
+      - "scripts/reconcile_curated_plants_wcvp.py"
+      - "scripts/qa_curated_wcvp_reconciliation.py"
+      - "scripts/build_curated_identity_graph.py"
+      - "scripts/qa_curated_identity_graph.py"
+      - "scripts/qa_identity_review_queue.py"
+      - ".github/workflows/global-plant-corpus-qa.yml"
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: python scripts/qa_global_plant_corpus.py
+      - run: python scripts/qa_global_plant_staging.py
+      - run: python scripts/qa_curated_wcvp_reconciliation.py
+      - run: python scripts/qa_identity_review_queue.py
+      - run: python scripts/build_curated_identity_graph.py
+      - run: python scripts/qa_curated_identity_graph.py
