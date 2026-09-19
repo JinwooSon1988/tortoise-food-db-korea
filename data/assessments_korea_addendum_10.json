@@ -5,9 +5,35 @@
     "verdict": "limited_supplement",
     "role": "딜 잎·허브 소량 혼합 보조",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_dill"],
-    "limits": ["소량 혼합 보조로만 사용","씨앗은 급여하지 않음","단일 주식 또는 고비율 반복식으로 사용하지 않음","Mediterranean Testudo 또는 이베라 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_dill"
+    ],
+    "limits": [
+      "소량 혼합 보조로만 사용",
+      "씨앗은 급여하지 않음",
+      "단일 주식 또는 고비율 반복식으로 사용하지 않음",
+      "Mediterranean Testudo 또는 이베라 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB의 Anethum graveolens 전용 항목이 Feed in Moderation으로 분류하고 다양한 식단의 일부로만 사용하도록 하며 씨앗은 제외하므로 일반 육지거북의 제한적 보조식으로 판정한다.",
     "applicability_note": "Anethum graveolens exact-taxon 일반 육지거북 근거이며 Mediterranean Testudo·이베라 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "spinach",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "급여 비권장",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_spinach",
+      "heaney_spinach_calcium_1988"
+    ],
+    "limits": [
+      "The Tortoise Table의 Do not Feed는 일반 육지거북 전문 DB 권고이며 이베라 직접 독성시험이 아님",
+      "Spinacia oleracea 자체를 독성 식물이라고 단정하지 않음",
+      "사람 대상 칼슘 흡수시험은 시금치 칼슘의 낮은 생체이용률을 보여주지만 Testudo의 칼슘 흡수율·결석 위험·위해 용량으로 환산하지 않음",
+      "우발적 소량 섭취를 즉시 중독이나 신장결석으로 단정하지 않음"
+    ],
+    "why": "The Tortoise Table은 Spinacia oleracea를 Do not Feed로 분류하면서 시금치 자체가 독성인 것은 아니고 소량이 큰 위해를 일으킬 가능성은 낮다고 설명하지만, 높은 oxalate와 칼슘 이용 저해 가능성을 이유로 계획 급여를 권하지 않는다. 독립적인 사람 대상 무작위 교차시험에서 시금치의 칼슘 흡수율은 평균 5.1%로 우유 27.6%보다 현저히 낮았고 시험 시금치의 oxalate가 칼슘을 사실상 결합할 만큼 존재했다. 따라서 현재 DB에서는 계획 급여 비권장을 유지하되, 이를 이베라의 직접 독성·결석 위험 또는 위해 용량으로 확대하지 않는다.",
+    "applicability_note": "Spinacia oleracea exact-taxon 전문 육지거북 DB 권고와 사람 대상 mineral bioavailability 근거를 함께 사용한다. Testudo graeca ibera 직접 급여·독성시험은 아니다."
   }
 ]
