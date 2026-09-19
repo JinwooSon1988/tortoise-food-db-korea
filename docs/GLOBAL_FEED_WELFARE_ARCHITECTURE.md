@@ -81,3 +81,61 @@ master inventory에 포함됐다는 이유로 급여 가능 판정을 만들지 
 4단계: 영문 UI와 국제 식물명/동의어 검색을 추가해 해외에서도 동일한 evidence graph를 사용.
 
 중요: '모든 식물에 판정'이 목표가 아니라 '모든 식물을 검색할 수 있고, 근거가 있는 것과 없는 것을 정확히 구분'하는 것이 목표다.
+
+
+## Expansion Architecture — Reptile Nutrition Evidence Graph
+
+거북밥 DB의 장기 데이터 모델은 특정 거북 종 또는 식물만을 전제로 하지 않는다. UI 브랜드는 단계적으로 확장하되 source truth는 처음부터 범용 파충류 먹이 evidence graph로 설계한다.
+
+### Animal identity
+- order / family / genus / species / subspecies
+- life_stage / reproductive_state
+- wild_or_captive_context
+- feeding_ecology: herbivorous | omnivorous | insectivorous | carnivorous | opportunistic
+- geographic_population when evidence is population-specific
+
+### Feed identity
+food_domain:
+- plant
+- fungi
+- invertebrate
+- vertebrate_prey
+- formulated_feed
+- supplement
+
+각 food item은 taxonomic identity와 market identity를 분리한다. 식물은 plant_part와 preparation_state, 동물성 먹이는 whole/prey-part, live/frozen/dried 등 상태를 별도 필드로 둔다.
+
+### Evidence relationship
+판정의 기본 단위는 '먹이 자체'가 아니라:
+ANIMAL TAXON × FOOD TAXON/ITEM × PART/STATE × EVIDENCE CONTEXT
+관계다.
+
+같은 민들레라도 Ibera와 green iguana의 근거는 별개이며, 같은 곤충이라도 종·크기·gut-loading·사육조건에 따라 근거를 분리한다.
+
+### Welfare dimensions
+향후 식물성 먹이뿐 아니라 전체 먹이에서 다음 복지축을 평가할 수 있도록 한다.
+- nutritional adequacy
+- dietary diversity
+- fiber/structural properties
+- mineral balance
+- hydration contribution
+- toxicology / anti-nutritional compounds
+- physical feeding hazard
+- contamination / pesticide / pathogen risk
+- prey welfare and humane feeding considerations where relevant
+- behavioral enrichment / natural foraging expression
+- life-stage suitability
+- evidence uncertainty
+
+### Internationalization
+canonical scientific identity를 중심으로 ko/en 및 향후 다국어 common-name layer를 분리한다. 언어가 달라도 같은 evidence record를 공유한다.
+
+### Expansion order
+Phase A — Mediterranean Testudo 식물 먹이 evidence depth
+Phase B — 한국 식물 master inventory + 검색가능 identity index
+Phase C — 다른 초식·잡식 파충류(육지거북, 이구아나류, 유로매스틱스류 등) 식물 evidence
+Phase D — invertebrate feeder evidence
+Phase E — vertebrate prey / formulated diets / supplements
+Phase F — 국제 다국어 reptile nutrition evidence platform
+
+확장은 기존 판정의 범위를 넓혀 복사하는 방식이 아니라, animal-food 관계별 근거를 추가하는 방식으로 수행한다.
