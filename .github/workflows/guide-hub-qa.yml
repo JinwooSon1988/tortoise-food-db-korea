@@ -1,4 +1,7 @@
 name: Guide hub QA
+permissions:
+  contents: write
+
 on:
   pull_request:
   push:
