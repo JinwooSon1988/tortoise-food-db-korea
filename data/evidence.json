@@ -346,5 +346,26 @@
     "pmid": "10465045",
     "url": "https://pubmed.ncbi.nlm.nih.gov/10465045/",
     "note": "4개 파슬리 품종의 신선·동결건조 잎에서 광활성 furocoumarin을 확인하고 photobiological assay에서 활성을 측정했다. psoralen, 8-MOP, 5-MOP, oxypeucedanin, isopimpinellin 등이 확인됐으며 품종 간 상대 농도 차이도 있었다. 미생물 광생물학 시험이지 육지거북 급여 독성시험은 아니다."
+  },
+  {
+    "id": "tortoise_table_radish",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Raphanus sativus",
+    "plant_part": "leaves",
+    "citation": "The Tortoise Table. Radish.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=610",
+    "note": "Raphanus sativus 잎을 Feed in Moderation으로 분류한다. Brassicaceae의 glucosinolates를 이유로 주요 식단으로 많이 급여하지 말라고 설명하면서 소량은 괜찮다고 한다. 뿌리는 별도로 급여하지 말라고 구분한다. Testudo graeca ibera 직접 시험은 아니다."
+  },
+  {
+    "id": "gamba_radish_systematic_review_2021",
+    "type": "peer_reviewed_systematic_review",
+    "scope": "plant_nutrition_phytochemistry_not_tortoise_toxicology",
+    "taxon": "Raphanus sativus",
+    "plant_part": "multiple_including_leaves",
+    "citation": "Gamba M, et al. Nutritional and phytochemical characterization of radish (Raphanus sativus): A systematic review. Trends Food Sci Technol. 2021;113:205-218.",
+    "doi": "10.1016/j.tifs.2021.04.045",
+    "url": "https://doi.org/10.1016/j.tifs.2021.04.045",
+    "note": "63개 문헌을 포함한 Raphanus sativus 체계적 문헌고찰. 영양소와 phytochemical은 주로 뿌리와 잎에서 보고됐으며 glucosinolates 및 분해산물도 확인됐다. 잎은 여러 영양소와 섬유질의 공급원으로 기술된다. 식물화학 자료이며 Testudo의 독성·갑상선·신장·간 위해 용량 또는 급여빈도를 정하지 않는다."
   }
 ]
