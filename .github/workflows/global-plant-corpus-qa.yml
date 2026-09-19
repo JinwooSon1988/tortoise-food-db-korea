@@ -1,0 +1,22 @@
+name: Global plant corpus QA
+on:
+  pull_request:
+    paths:
+      - "data/global_plant_corpus.json"
+      - "data/global_plant_corpus.schema.json"
+      - "scripts/qa_global_plant_corpus.py"
+      - ".github/workflows/global-plant-corpus-qa.yml"
+  push:
+    paths:
+      - "data/global_plant_corpus.json"
+      - "data/global_plant_corpus.schema.json"
+      - "scripts/qa_global_plant_corpus.py"
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: python scripts/qa_global_plant_corpus.py
