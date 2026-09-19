@@ -1,0 +1,42 @@
+name: Guide hub QA
+permissions:
+  contents: write
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/generate_guide_hubs.py
+      - name: Commit synchronized guide hubs on PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          if git diff --quiet -- guides sitemap.xml; then
+            echo "guide hubs already synchronized"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add guides sitemap.xml
+            git commit -m "chore: synchronize generated guide hubs"
+            git pull --rebase origin "${{ github.head_ref }}"
+            git push origin HEAD:"${{ github.head_ref }}"
+          fi
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          root=Path('.')
+          for slug in ('market-foods','wild-plants','caution-foods'):
+              p=root/'guides'/slug/'index.html'
+              assert p.exists(), p
+              s=p.read_text(encoding='utf-8')
+              for x in ('적용 범위:','근거등급:','목록에 포함됐다는 사실 자체가 급여 권장을 뜻하지 않는다','근거 부족을 안전으로 간주하지 않는다'):
+                  assert x in s,(slug,x)
+          print('guide hub QA passed')
+          PY

@@ -1,0 +1,32 @@
+name: Traffic source-truth guard
+on:
+  pull_request:
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Block traffic branches from changing source truth
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          python - <<'PY'
+          import os, subprocess, sys
+          head=os.environ.get("HEAD_REF","")
+          if not head.startswith("traffic-"):
+              print("not a traffic branch; guard not applicable")
+              raise SystemExit(0)
+          base=os.environ["BASE_SHA"]
+          changed=subprocess.check_output(["git","diff","--name-only",base+"...HEAD"],text=True).splitlines()
+          protected_prefixes=("data/evidence","data/assessments")
+          protected_exact={"data/plants.json","data/korean_retail_name_map.json","data/blocked_food_resolution.json","data/plant_nutrition_v56.json"}
+          bad=[p for p in changed if p.startswith(protected_prefixes) or p in protected_exact]
+          if bad:
+              print("Traffic layer must not modify source-truth files:")
+              print("\n".join(bad))
+              sys.exit(1)
+          print("source-truth guard passed")
+          PY
