@@ -295,5 +295,25 @@
     "doi": "10.1016/j.fct.2009.10.009",
     "pmid": "19833165",
     "note": "P. frutescens 5개 유전형의 perilla ketone을 GC/MS로 조사했고 2개 유전형에서 검출했다. 품종·화학형 차이를 보여주므로 모든 식용 깻잎이 동일한 PK 함량을 가진다고 단정할 수 없다. 육지거북 급여시험은 아니다."
+  },
+  {
+    "id": "tortoise_table_spinach",
+    "type": "specialist_plant_database",
+    "scope": "tortoise_general",
+    "taxon": "Spinacia oleracea",
+    "citation": "The Tortoise Table. Spinach.",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=608",
+    "note": "Spinacia oleracea를 Do not Feed로 분류한다. 시금치 자체가 독성인 것은 아니며 소량이 큰 위해를 일으킬 가능성은 낮다고 설명하지만, oxalic acid의 칼슘 결합·이용 저해와 calcium oxalate 관련 우려를 이유로 급여하지 않을 것을 권한다. 전문 DB 지침이며 Testudo graeca ibera 직접 독성시험은 아니다."
+  },
+  {
+    "id": "heaney_spinach_calcium_1988",
+    "type": "peer_reviewed_human_nutrition",
+    "scope": "human_calcium_bioavailability_not_tortoise",
+    "taxon": "Spinacia oleracea",
+    "citation": "Heaney RP, Weaver CM, Recker RR. Calcium absorbability from spinach. American Journal of Clinical Nutrition. 1988;47(4):707-709.",
+    "doi": "10.1093/ajcn/47.4.707",
+    "pmid": "3354496",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/3354496/",
+    "note": "13명의 건강한 성인을 대상으로 한 무작위 교차시험에서 동일한 200 mg Ca 조건의 평균 칼슘 흡수율은 우유 27.6%, 시금치 5.1%였다. 시험 시금치의 oxalate는 칼슘에 대해 약간의 화학량론적 과잉을 보였다. 사람 대상 mineral bioavailability 연구이며 Testudo의 독성·결석 위험·용량-반응을 입증하지 않는다."
   }
 ]
