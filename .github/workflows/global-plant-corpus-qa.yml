@@ -4,7 +4,7 @@ on:
     paths:
       - "data/global_plant_corpus.json"
       - "data/global_plant_corpus.schema.json"
-      - "scripts/qa_global_plant_corpus.py"
+      - "scripts/qa_global_plant_corpus.py"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"\n      - "scripts/qa_global_plant_staging.py"\n      - "scripts/stage_global_plant_candidates.py"\n      - "data/staging/**"
       - ".github/workflows/global-plant-corpus-qa.yml"
   push:
     paths:
@@ -19,4 +19,4 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - run: python scripts/qa_global_plant_corpus.py
+      - run: python scripts/qa_global_plant_corpus.py\n      - run: python scripts/qa_global_plant_staging.py
