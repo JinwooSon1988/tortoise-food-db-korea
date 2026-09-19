@@ -1,0 +1,494 @@
+{
+  "schema_version": "1.0",
+  "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
+  "counts": {
+    "verified_composition": 19,
+    "mapping_hold": 11,
+    "official_record_not_verified": 39
+  },
+  "plants": [
+    {
+      "plant_id": "chicory",
+      "ko": "치커리",
+      "scientific": "Cichorium intybus",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "romaine",
+      "ko": "로메인",
+      "scientific": "Lactuca sativa var. longifolia",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "lettuce",
+      "ko": "상추",
+      "scientific": "Lactuca sativa",
+      "state": "mapping_hold",
+      "reason": "Master is generic Lactuca sativa; Foundation records distinguish red and green leaf retail foods. Do not collapse varieties without an explicit mapping policy."
+    },
+    {
+      "plant_id": "radicchio",
+      "ko": "라디키오",
+      "scientific": "Cichorium intybus var. foliosum",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "endive",
+      "ko": "엔다이브",
+      "scientific": "Cichorium endivia",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "scientific": "Taraxacum spp.",
+      "state": "mapping_hold",
+      "reason": "USDA dandelion greens exist, but master identity is Taraxacum spp.; current integrity policy rejects genus-level nutrition mapping."
+    },
+    {
+      "plant_id": "sowthistle",
+      "ko": "방가지똥",
+      "scientific": "Sonchus spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "kale",
+      "ko": "케일",
+      "scientific": "Brassica oleracea var. sabellica",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "bokchoy",
+      "ko": "청경채",
+      "scientific": "Brassica rapa subsp. chinensis",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "mustard",
+      "ko": "갓",
+      "scientific": "Brassica juncea",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "turnipgreens",
+      "ko": "순무잎",
+      "scientific": "Brassica rapa subsp. rapa",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "collard",
+      "ko": "콜라드그린",
+      "scientific": "Brassica oleracea var. viridis",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "cabbage",
+      "ko": "양배추",
+      "scientific": "Brassica oleracea var. capitata",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "napa",
+      "ko": "배추",
+      "scientific": "Brassica rapa subsp. pekinensis",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "radishgreens",
+      "ko": "무잎",
+      "scientific": "Raphanus sativus",
+      "state": "mapping_hold",
+      "reason": "Available radish records found in the supplied datasets do not establish raw radish-leaf/greens composition."
+    },
+    {
+      "plant_id": "broccolileaf",
+      "ko": "브로콜리잎",
+      "scientific": "Brassica oleracea var. italica",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "cauliflowerleaf",
+      "ko": "콜리플라워잎",
+      "scientific": "Brassica oleracea var. botrytis",
+      "state": "mapping_hold",
+      "reason": "Raw cauliflower food records do not establish cauliflower-leaf-only composition."
+    },
+    {
+      "plant_id": "arugula",
+      "ko": "루꼴라",
+      "scientific": "Eruca vesicaria",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "plantain",
+      "ko": "질경이",
+      "scientific": "Plantago spp.",
+      "state": "mapping_hold",
+      "reason": "USDA food records named plantain refer to Musa fruit, not Plantago spp."
+    },
+    {
+      "plant_id": "mulberry",
+      "ko": "뽕잎",
+      "scientific": "Morus spp.",
+      "state": "mapping_hold",
+      "reason": "Master identity is Morus spp.; no exact raw leaf mapping accepted."
+    },
+    {
+      "plant_id": "figleaf",
+      "ko": "무화과잎",
+      "scientific": "Ficus carica",
+      "state": "mapping_hold",
+      "reason": "Fig fruit composition is not substituted for Ficus carica leaf composition."
+    },
+    {
+      "plant_id": "mallow",
+      "ko": "아욱",
+      "scientific": "Malva spp.",
+      "state": "mapping_hold",
+      "reason": "Master identity requires species-level mapping; nutrition cannot resolve the identity block."
+    },
+    {
+      "plant_id": "hibiscusleaf",
+      "ko": "무궁화잎",
+      "scientific": "Hibiscus syriacus",
+      "state": "mapping_hold",
+      "reason": "Brewed hibiscus beverage data are not substituted for raw Hibiscus syriacus leaves."
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "ko": "무궁화꽃",
+      "scientific": "Hibiscus syriacus",
+      "state": "mapping_hold",
+      "reason": "Brewed hibiscus beverage data do not establish raw Hibiscus syriacus flower composition."
+    },
+    {
+      "plant_id": "spinach",
+      "ko": "시금치",
+      "scientific": "Spinacia oleracea",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "beetgreens",
+      "ko": "비트잎",
+      "scientific": "Beta vulgaris",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "watercress",
+      "ko": "물냉이",
+      "scientific": "Nasturtium officinale",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "parsley",
+      "ko": "파슬리",
+      "scientific": "Petroselinum crispum",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "cilantro",
+      "ko": "고수",
+      "scientific": "Coriandrum sativum",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "celeryleaf",
+      "ko": "셀러리잎",
+      "scientific": "Apium graveolens",
+      "state": "mapping_hold",
+      "reason": "USDA record does not establish leaf-only composition required by the master celery-leaf item."
+    },
+    {
+      "plant_id": "carrottop",
+      "ko": "당근잎",
+      "scientific": "Daucus carota subsp. sativus",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "basil",
+      "ko": "바질",
+      "scientific": "Ocimum basilicum",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "mint",
+      "ko": "민트",
+      "scientific": "Mentha spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "perilla",
+      "ko": "깻잎",
+      "scientific": "Perilla frutescens",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "clover",
+      "ko": "클로버",
+      "scientific": "Trifolium spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "alfalfa",
+      "ko": "알팔파",
+      "scientific": "Medicago sativa",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "chickweed",
+      "ko": "별꽃",
+      "scientific": "Stellaria media",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "sweetpotatoleaf",
+      "ko": "고구마잎",
+      "scientific": "Ipomoea batatas",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "zucchini",
+      "ko": "애호박",
+      "scientific": "Cucurbita moschata",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "cucumber",
+      "ko": "오이",
+      "scientific": "Cucumis sativus",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "tomato",
+      "ko": "토마토",
+      "scientific": "Solanum lycopersicum",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "grapeleaf",
+      "ko": "포도잎",
+      "scientific": "Vitis vinifera",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "rose",
+      "ko": "장미꽃",
+      "scientific": "Rosa spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "nasturtium",
+      "ko": "한련화",
+      "scientific": "Tropaeolum majus",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "pricklypear",
+      "ko": "천년초",
+      "scientific": "Opuntia spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "orchard",
+      "ko": "오차드그라스",
+      "scientific": "Dactylis glomerata",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "ryegrass",
+      "ko": "라이그라스",
+      "scientific": "Lolium spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "wheatgrass",
+      "ko": "밀싹",
+      "scientific": "Triticum aestivum",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "barleygrass",
+      "ko": "보리싹",
+      "scientific": "Hordeum vulgare",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "oatgrass",
+      "ko": "귀리싹",
+      "scientific": "Avena sativa",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "cornleaf",
+      "ko": "옥수수잎",
+      "scientific": "Zea mays",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "chrysanthemumleaf",
+      "ko": "쑥갓",
+      "scientific": "Glebionis coronaria",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "ssuk",
+      "ko": "쑥",
+      "scientific": "Artemisia princeps",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "dolnamul",
+      "ko": "돌나물",
+      "scientific": "Sedum sarmentosum",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "minari",
+      "ko": "미나리",
+      "scientific": "Oenanthe javanica",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "aehobakleaf",
+      "ko": "애호박잎",
+      "scientific": "Cucurbita moschata",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "pea_shoot",
+      "ko": "완두순",
+      "scientific": "Pisum sativum",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "sunflowerleaf",
+      "ko": "해바라기잎",
+      "scientific": "Helianthus annuus",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "violet",
+      "ko": "제비꽃",
+      "scientific": "Viola spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "geranium",
+      "ko": "제라늄",
+      "scientific": "Pelargonium spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "pansy",
+      "ko": "팬지",
+      "scientific": "Viola × wittrockiana",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "marigold",
+      "ko": "메리골드",
+      "scientific": "Tagetes spp.",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "calendula",
+      "ko": "금잔화",
+      "scientific": "Calendula officinalis",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "dill",
+      "ko": "딜",
+      "scientific": "Anethum graveolens",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    },
+    {
+      "plant_id": "chard",
+      "ko": "근대",
+      "scientific": "Beta vulgaris subsp. cicla",
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "ko": "콘샐러드",
+      "scientific": "Valerianella locusta",
+      "state": "official_record_not_verified",
+      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+    }
+  ]
+}
