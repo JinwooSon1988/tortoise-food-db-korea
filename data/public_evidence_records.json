@@ -451,6 +451,86 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=610"
+    },
+    {
+      "id": "tortoise_table_timothy",
+      "plant_ids": [
+        "timothy"
+      ],
+      "source_title": "The Tortoise Table. Timothy Grass (Common Timothy, Common Cat's Tail, Meadow Cat's Tail).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Phleum pratense",
+      "plant_part_state": "young grass; dried hay; dry seed heads distinguished",
+      "directness": "contextual",
+      "supports": "Classifies Timothy Grass as Safe to Feed. It states that grazing tortoises may eat it in an enclosure and that dried Timothy hay can be used for grazing tortoises in winter.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific feeding percentage or fixed frequency. Dry seed heads are not equivalent to the grass or hay; the source advises removing them because they may cause eye or mouth injury.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=726"
+    },
+    {
+      "id": "tortoise_table_cat_grass",
+      "plant_ids": [
+        "oatgrass",
+        "wheatgrass",
+        "orchard",
+        "barleygrass",
+        "ryegrass"
+      ],
+      "source_title": "The Tortoise Table. Cat Grass (Oat Grass, Wheat Grass, Orchard Grass, Barley Grass, Rye Grass).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Avena sativa; Triticum spp.; Dactylis glomerata; Hordeum spp.; Lolium perenne",
+      "plant_part_state": "young grasses; mature seeds explicitly distinguished",
+      "directness": "contextual",
+      "supports": "Classifies this Cat Grass group as Safe to Feed and states that the young grasses can be fed to tortoises.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific diet percentage, fixed frequency or unlimited use. Mature seeds are not equivalent to young grass; the source says not to allow tortoises to eat the seeds because they are too high in protein.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=2&plant=687"
+    },
+    {
+      "id": "tortoise_table_opuntia",
+      "plant_ids": [
+        "pricklypear"
+      ],
+      "source_title": "The Tortoise Table. Opuntia Cactus (Prickly Pear/Nopales).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Opuntia spp.",
+      "plant_part_state": "pads and fruit",
+      "directness": "contextual",
+      "supports": "Classifies Opuntia as Safe to Feed and includes both pads and fruit; it also notes that large quantities may have a laxative effect.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency or unlimited use. The source itself cautions against overfeeding because of the possible laxative effect.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=262"
+    },
+    {
+      "id": "tortoise_table_sweetpotato",
+      "plant_ids": [
+        "sweetpotatoleaf"
+      ],
+      "source_title": "The Tortoise Table. Sweet Potato.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Ipomoea batatas",
+      "plant_part_state": "leaves and tuber distinguished",
+      "directness": "contextual",
+      "supports": "Classifies Sweet Potato as Do not Feed. It distinguishes the starchy tuber from the leaves and states that the leaves are not toxic as such but are not recommended because of an unfavorable calcium-to-phosphorus ratio.",
+      "does_not_support": "Does not demonstrate direct toxicity of sweet-potato leaves in Testudo graeca ibera, nor does it justify treating accidental nibbling as poisoning. It does not establish equivalence between leaves and tuber.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=740"
     }
   ]
 }
