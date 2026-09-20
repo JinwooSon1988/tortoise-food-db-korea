@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "public_counter_enabled": false,
+  "endpoint": null,
+  "labels": {"today": "TODAY", "total": "TOTAL"},
+  "privacy": {
+    "store_raw_ip": false,
+    "cookie_required": false,
+    "note": "Public counter remains hidden until a real analytics backend is configured. Never fabricate visitor totals."
+  }
+}
