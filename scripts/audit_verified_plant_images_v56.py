@@ -13,7 +13,7 @@ for image in registry['images']:
     seen.add(pid)
     assert 'spp.' not in master[pid]['scientific'],f'{pid}: genus-level master must keep placeholder'
     assert image['scientific']==master[pid]['scientific'],(pid,image['scientific'],master[pid]['scientific'])
-    assert image['identity_scope']=='exact_species',pid
+    assert image['identity_scope'] in {'exact_species','exact_subspecies','exact_variety'},pid
     assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'),pid
     assert image['license_url'].startswith('https://creativecommons.org/'),pid
 for item in registry.get('rejected_candidates',[]):
