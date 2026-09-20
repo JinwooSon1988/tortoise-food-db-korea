@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Public evidence records for traceable reptile feeding conclusions.",
+  "categorical_only": true,
+  "rules": {
+    "wild_observation_rule": "Observed wild ingestion is occurrence evidence, not a captive feeding prescription.",
+    "specialist_database_rule": "A specialist Safe to Feed classification does not by itself establish staple, unlimited, frequency, or percentage guidance.",
+    "directness_rule": "Evidence directness is categorical and must not be converted into an arbitrary numeric score.",
+    "limitation_rule": "Every public evidence record must state what the source does not support or what limits its application."
+  },
+  "record_fields": {
+    "id": "stable evidence record id",
+    "plant_ids": "master plant ids to which the record is relevant",
+    "source_title": "human-readable source title",
+    "source_type": "academic_study | specialist_plant_database | specialist_husbandry_source | official_composition_database | other",
+    "animal_taxon": "taxon/population actually covered by the source",
+    "applicability": "exact_taxon | species | mediterranean_testudo | tortoise_general | herbivorous_reptile_general | composition_only",
+    "plant_taxon": "plant taxon actually supported",
+    "plant_part_state": "leaf/flower/whole aerial parts/etc plus fresh/dried state when known",
+    "directness": "direct | related_taxon | contextual | composition_only",
+    "supports": "claims the source supports",
+    "does_not_support": "claims not established by the source",
+    "year": "publication/update year when known",
+    "doi": "DOI when present",
+    "pmid": "PMID when present",
+    "url": "source URL"
+  }
+}
