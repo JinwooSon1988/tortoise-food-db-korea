@@ -356,6 +356,101 @@
       "doi": null,
       "pmid": null,
       "url": null
+    },
+    {
+      "id": "tortoise_table_sedum",
+      "plant_ids": [
+        "dolnamul"
+      ],
+      "source_title": "The Tortoise Table. Sedum (Stonecrop).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Sedum spp.",
+      "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
+      "directness": "contextual",
+      "supports": "대부분의 Sedum은 다양한 육지거북 식단의 일부로 사용할 수 있다고 설명하지만 다육식물의 과량 섭취는 설사를 유발할 수 있어 대량 섭취를 피하라고 한다. Sedum acre는 예외적으로 급여하지 말 것을 경고한다. S. sarmentosum에 대한 종별 Testudo 직접시험은 아니다.",
+      "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=593"
+    },
+    {
+      "id": "tortoise_table_chicory",
+      "plant_ids": [
+        "chicory"
+      ],
+      "source_title": "The Tortoise Table. Chicory (Wild Chicory, Common Chicory).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Cichorium intybus",
+      "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
+      "directness": "contextual",
+      "supports": "치커리를 'Feed in Moderation'으로 분류한다. 잎과 꽃은 다양한 식단의 일부로 사용할 수 있다고 설명하지만 뿌리는 전분·당이 높아 급여하지 말 것을 권한다. 종별 직접 연구가 아니라 전문 식물 DB 지침이다.",
+      "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=87"
+    },
+    {
+      "id": "tortoise_table_spinach",
+      "plant_ids": [
+        "spinach"
+      ],
+      "source_title": "The Tortoise Table. Spinach.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Spinacia oleracea",
+      "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
+      "directness": "contextual",
+      "supports": "Spinacia oleracea를 Do not Feed로 분류한다. 시금치 자체가 독성인 것은 아니며 소량이 큰 위해를 일으킬 가능성은 낮다고 설명하지만, oxalic acid의 칼슘 결합·이용 저해와 calcium oxalate 관련 우려를 이유로 급여하지 않을 것을 권한다. 전문 DB 지침이며 Testudo graeca ibera 직접 독성시험은 아니다.",
+      "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=608"
+    },
+    {
+      "id": "tortoise_table_parsley",
+      "plant_ids": [
+        "parsley"
+      ],
+      "source_title": "The Tortoise Table. Parsley.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Petroselinum crispum",
+      "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
+      "directness": "contextual",
+      "supports": "Petroselinum crispum을 Do not Feed로 분류한다. 독성 식물은 아니며 한입 정도는 걱정할 필요가 없다고 설명하지만, 이뇨성과 높은 oxalate에 따른 칼슘 흡수 저해 및 잠재적 신장 우려를 이유로 급여를 피하라고 권한다. Testudo graeca ibera 직접 시험은 아니다.",
+      "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=355"
+    },
+    {
+      "id": "tortoise_table_radish",
+      "plant_ids": [
+        "radishgreens"
+      ],
+      "source_title": "The Tortoise Table. Radish.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Raphanus sativus",
+      "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
+      "directness": "contextual",
+      "supports": "Raphanus sativus 잎을 Feed in Moderation으로 분류한다. Brassicaceae의 glucosinolates를 이유로 주요 식단으로 많이 급여하지 말라고 설명하면서 소량은 괜찮다고 한다. 뿌리는 별도로 급여하지 말라고 구분한다. Testudo graeca ibera 직접 시험은 아니다.",
+      "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=610"
     }
   ]
 }
