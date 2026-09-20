@@ -531,6 +531,28 @@
       "calcium_phosphorus_ratio": 3.15,
       "potassium_mg": 738,
       "vitamin_c_mg": 85
+    },
+    {
+      "plant_id": "grapeleaf",
+      "food_description": "Grape leaves, raw",
+      "source_name": "USDA FoodData Central",
+      "source_id": "FDC 168575",
+      "source_url": "https://fdc.nal.usda.gov/food-details/168575/nutrients",
+      "data_type": "SR Legacy",
+      "dataset_release": "FoodData Central SR Legacy Foods JSON 2018-04",
+      "verification_status": "verified",
+      "verified_at": "2026-09-20",
+      "basis": "per 100 g raw edible portion",
+      "water_g": 73.3,
+      "protein_g": 5.6,
+      "fat_g": 2.12,
+      "carbohydrate_g": 17.3,
+      "fiber_g": 11,
+      "calcium_mg": 363,
+      "phosphorus_mg": 91,
+      "calcium_phosphorus_ratio": 3.99,
+      "potassium_mg": 272,
+      "vitamin_c_mg": 11.1
     }
   ]
 }
