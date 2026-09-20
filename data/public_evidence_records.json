@@ -687,6 +687,63 @@
       "doi": "10.1016/j.tifs.2021.04.045",
       "pmid": null,
       "url": "https://doi.org/10.1016/j.tifs.2021.04.045"
+    },
+    {
+      "id": "chicory_foodchem_2021",
+      "plant_ids": [
+        "chicory"
+      ],
+      "source_title": "Perović J et al. Chicory (Cichorium intybus L.) as a food ingredient – Nutritional composition, bioactivity, safety, and health claims: A review. Food Chemistry. 2021;336:127676.",
+      "source_type": "peer_reviewed_review",
+      "animal_taxon": "Cichorium intybus",
+      "applicability": "composition_only",
+      "plant_taxon": "Cichorium intybus",
+      "plant_part_state": "As specified in the source; composition/toxicology findings must not be generalized across untested plant parts or animal taxa.",
+      "directness": "composition_only",
+      "supports": "치커리의 영양·식물화학·식품 안전성에 대한 사람/사료 맥락의 리뷰다. 육지거북 급여 적합성이나 Testudo 종별 안전성을 직접 증명하지 않는다.",
+      "does_not_support": "This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.",
+      "year": null,
+      "doi": "10.1016/j.foodchem.2020.127676",
+      "pmid": null,
+      "url": "https://doi.org/10.1016/j.foodchem.2020.127676"
+    },
+    {
+      "id": "mulberry_feed_review_2019",
+      "plant_ids": [
+        "mulberry"
+      ],
+      "source_title": "Cai M et al. Assessment of mulberry leaf as a potential feed supplement for animal feeding in P.R. China. Asian-Australasian Journal of Animal Sciences. 2019;32(8):1145-1152.",
+      "source_type": "peer_reviewed",
+      "animal_taxon": "Morus alba",
+      "applicability": "composition_only",
+      "plant_taxon": "Morus alba",
+      "plant_part_state": "As specified in the source; composition/toxicology findings must not be generalized across untested plant parts or animal taxa.",
+      "directness": "composition_only",
+      "supports": "뽕잎의 동물사료 가능성과 단기 독성 지표를 주로 설치류/축산 맥락에서 평가한다. 육지거북 또는 Testudo 직접 자료가 아니므로 급여 안전 판정으로 확대하지 않는다.",
+      "does_not_support": "This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.",
+      "year": null,
+      "doi": null,
+      "pmid": "30744357",
+      "url": null
+    },
+    {
+      "id": "wilson_perilla_ketone_1977",
+      "plant_ids": [
+        "perilla"
+      ],
+      "source_title": "Wilson BJ, Garst JE, Linnabary RD, Channell RB. Perilla ketone: a potent lung toxin from the mint plant, Perilla frutescens Britton. Science. 1977;197(4303):573-574.",
+      "source_type": "peer_reviewed_toxicology",
+      "animal_taxon": "Perilla frutescens / perilla ketone",
+      "applicability": "composition_only",
+      "plant_taxon": "Perilla frutescens / perilla ketone",
+      "plant_part_state": "As specified in the source; composition/toxicology findings must not be generalized across untested plant parts or animal taxa.",
+      "directness": "composition_only",
+      "supports": "P. frutescens 정유에서 분리한 perilla ketone을 실험동물·가축의 강한 폐부종 유발 물질로 보고한다. Testudo 또는 이베라 독성시험이 아니므로 육지거북 용량·감수성으로 환산하지 않는다.",
+      "does_not_support": "This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.",
+      "year": null,
+      "doi": "10.1126/science.877573",
+      "pmid": "877573",
+      "url": "https://doi.org/10.1126/science.877573"
     }
   ]
 }
