@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
-    "verified_composition": 21,
+    "verified_composition": 23,
     "mapping_hold": 11,
-    "official_record_not_verified": 37
+    "official_record_not_verified": 35
   },
   "plants": [
     {
@@ -229,7 +229,8 @@
       "ko": "바질",
       "scientific": "Ocimum basilicum",
       "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "reason": "USDA FoodData Central의 Basil, fresh (FDC 172232)를 현재 바질 항목의 생잎 식용부위와 직접 대응해 검증했다.",
+      "status": "verified_composition"
     },
     {
       "plant_id": "mint",
@@ -271,7 +272,8 @@
       "ko": "고구마잎",
       "scientific": "Ipomoea batatas",
       "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "reason": "USDA FoodData Central의 Sweet potato leaves, raw (FDC 169303)를 현재 고구마잎 항목의 생잎 식용부위와 직접 대응해 검증했다.",
+      "status": "verified_composition"
     },
     {
       "plant_id": "pumpkinleaf",
