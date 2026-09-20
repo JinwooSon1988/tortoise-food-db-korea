@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
-    "verified_composition": 25,
+    "verified_composition": 26,
     "mapping_hold": 13,
-    "official_record_not_verified": 31
+    "official_record_not_verified": 30
   },
   "plants": [
     {
@@ -308,8 +308,8 @@
       "plant_id": "tomato",
       "ko": "토마토",
       "scientific": "Solanum lycopersicum",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "verified_composition",
+      "reason": "검증된 공식 식품성분 record가 공개 영양표에 연결되어 있다."
     },
     {
       "plant_id": "grapeleaf",
