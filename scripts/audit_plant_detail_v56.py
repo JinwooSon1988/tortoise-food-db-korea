@@ -27,7 +27,7 @@ for image in registry['images']:
     assert pid not in seen, pid
     seen.add(pid)
     assert pid in master, pid
-    assert image['identity_scope']=='exact_species', pid
+    assert image['identity_scope'] in {'exact_species','exact_subspecies','exact_variety'}, pid
     assert 'spp.' not in master[pid]['scientific'], pid
     assert image['scientific']==master[pid]['scientific'], (pid,image['scientific'],master[pid]['scientific'])
     assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'), pid
