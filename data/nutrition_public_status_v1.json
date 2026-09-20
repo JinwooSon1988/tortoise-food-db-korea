@@ -3,8 +3,8 @@
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
     "verified_composition": 26,
-    "mapping_hold": 15,
-    "official_record_not_verified": 28
+    "mapping_hold": 21,
+    "official_record_not_verified": 22
   },
   "plants": [
     {
@@ -336,8 +336,8 @@
       "plant_id": "pricklypear",
       "ko": "천년초",
       "scientific": "Opuntia spp.",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA SR Legacy FDC 167750은 Opuntia spp.의 raw fruit(prickly pear fruit) record다. 현재 master는 선인장 급여 개념으로 fruit/pad가 분리되지 않아 부위를 확정하기 전 대입하지 않는다."
     },
     {
       "plant_id": "timothy",
@@ -364,29 +364,29 @@
       "plant_id": "wheatgrass",
       "ko": "밀싹",
       "scientific": "Triticum aestivum",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA SR Legacy의 Triticum aestivum records는 wheat grain/seed 중심이며 현재 master는 wheatgrass/young shoot이므로 대입하지 않는다."
     },
     {
       "plant_id": "barleygrass",
       "ko": "보리싹",
       "scientific": "Hordeum vulgare",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA SR Legacy FDC 170283은 Hordeum vulgare hulled barley grain이며 현재 master는 barley grass/young shoot이므로 대입하지 않는다."
     },
     {
       "plant_id": "oatgrass",
       "ko": "귀리싹",
       "scientific": "Avena sativa",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA SR Legacy FDC 169705는 Avena sativa oats/grain record이며 현재 master는 oat grass/young shoot이므로 대입하지 않는다."
     },
     {
       "plant_id": "cornleaf",
       "ko": "옥수수잎",
       "scientific": "Zea mays",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA SR Legacy의 Zea mays records는 sweet corn/corn grain이며 현재 master는 corn leaf이므로 대입하지 않는다."
     },
     {
       "plant_id": "chrysanthemumleaf",
@@ -434,8 +434,8 @@
       "plant_id": "sunflowerleaf",
       "ko": "해바라기잎",
       "scientific": "Helianthus annuus",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA SR Legacy FDC 170562는 Helianthus annuus의 dried seed kernel record다. 현재 master는 sunflower leaf이므로 부위·상태 불일치로 대입하지 않는다."
     },
     {
       "plant_id": "violet",
