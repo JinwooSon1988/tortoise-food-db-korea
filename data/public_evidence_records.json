@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "id": "iftime_ibera_dobrogea_2012",
+      "plant_ids": [
+        "dandelion",
+        "sowthistle",
+        "clover",
+        "alfalfa"
+      ],
+      "source_title": "Diet and feeding ecology of Testudo graeca ibera in Dobrogea",
+      "source_type": "academic_study",
+      "animal_taxon": "Testudo graeca ibera",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+      "plant_part_state": "young plant material; exact part varies by observation",
+      "directness": "direct",
+      "supports": "Wild T. g. ibera were documented consuming plant taxa including Taraxacum, Sonchus, Trifolium and Medicago.",
+      "does_not_support": "Does not establish captive diet percentages, feeding frequency, unlimited use, or equivalence between every species in those genera.",
+      "year": 2012,
+      "doi": "10.13128/Acta_Herpetol-9800",
+      "pmid": null,
+      "url": "https://doi.org/10.13128/Acta_Herpetol-9800"
+    },
+    {
+      "id": "mitrevichin_ibera_bulgaria_2023",
+      "plant_ids": [
+        "dandelion",
+        "alfalfa",
+        "chicory",
+        "dolnamul"
+      ],
+      "source_title": "Field observations of Testudo graeca ibera feeding in Bulgaria",
+      "source_type": "academic_study",
+      "animal_taxon": "Testudo graeca ibera",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+      "plant_part_state": "wild plant material; non-quantitative observations",
+      "directness": "direct",
+      "supports": "Documents wild Ibera feeding observations involving the listed plant genera.",
+      "does_not_support": "Non-quantitative observations do not establish captive diet ratios, feeding frequency, or species-level equivalence for Korean plants within the same genus.",
+      "year": 2023,
+      "doi": "10.5281/zenodo.12807900",
+      "pmid": null,
+      "url": "https://doi.org/10.5281/zenodo.12807900"
+    },
+    {
+      "id": "tortoise_table_grapevine",
+      "plant_ids": [
+        "grapeleaf"
+      ],
+      "source_title": "The Tortoise Table — Grape Vine",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Vitis spp.",
+      "plant_part_state": "young fresh leaves",
+      "directness": "contextual",
+      "supports": "Classifies grape vine leaves as Feed in Moderation and specifically permits young fresh leaves in moderation.",
+      "does_not_support": "Does not establish Mediterranean Testudo-specific dose, feeding frequency, diet percentage, unlimited use, or equivalence of the fruit with the leaves.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=138"
+    },
+    {
+      "id": "tortoise_table_hibiscus_syriacus",
+      "plant_ids": [
+        "hibiscusleaf",
+        "hibiscusflower"
+      ],
+      "source_title": "The Tortoise Table — Hibiscus (Rose of Sharon)",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Hibiscus syriacus & spp.",
+      "plant_part_state": "leaves and flowers",
+      "directness": "contextual",
+      "supports": "Classifies Hibiscus (Rose of Sharon) as Safe to Feed and discusses both flowers and leaves.",
+      "does_not_support": "Does not establish a staple percentage, unlimited feeding, Mediterranean Testudo-specific dose, or safety of similarly named Hypericum species.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=237"
+    },
+    {
+      "id": "tortoise_table_mulberry",
+      "plant_ids": [
+        "mulberry"
+      ],
+      "source_title": "The Tortoise Table — Mulberry Tree",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Morus spp.; Broussonetia papyrifera",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Classifies the entry as Safe to Feed and states that mulberry leaves may be used as part of a wider varied diet.",
+      "does_not_support": "Does not establish a Mediterranean Testudo-specific percentage or unlimited use; the entry distinguishes leaves from fruit and also spans more than one plant taxon.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=257"
+    },
+    {
+      "id": "tortoise_table_nasturtium",
+      "plant_ids": [
+        "nasturtium"
+      ],
+      "source_title": "The Tortoise Table — Nasturtium",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Tropaeolum majus",
+      "plant_part_state": "plant; exact part not specified in entry",
+      "directness": "contextual",
+      "supports": "Classifies Tropaeolum majus as Feed in Moderation.",
+      "does_not_support": "Does not establish Mediterranean Testudo-specific dose, exact feeding frequency, diet percentage, or unlimited use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=258"
+    }
+  ]
+}
