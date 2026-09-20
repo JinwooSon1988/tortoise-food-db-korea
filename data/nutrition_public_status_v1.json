@@ -3,8 +3,8 @@
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
     "verified_composition": 26,
-    "mapping_hold": 14,
-    "official_record_not_verified": 29
+    "mapping_hold": 15,
+    "official_record_not_verified": 28
   },
   "plants": [
     {
@@ -427,8 +427,8 @@
       "plant_id": "pea_shoot",
       "ko": "완두순",
       "scientific": "Pisum sativum",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA의 pea 관련 record는 완두 종자·성숙 pea 또는 별도 가공상태 중심이며 현재 master는 '완두순 / Pea shoots / Pisum sativum'이다. shoot 부위 exact record가 확인되지 않아 대체하지 않는다."
     },
     {
       "plant_id": "sunflowerleaf",
