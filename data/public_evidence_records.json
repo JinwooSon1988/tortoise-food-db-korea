@@ -531,6 +531,162 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=740"
+    },
+    {
+      "id": "rda_alfalfa_identity",
+      "plant_ids": [
+        "alfalfa"
+      ],
+      "source_title": "농촌진흥청 농사로. 새싹알팔파 / 알팔파 재배·작물 정보.",
+      "source_type": "official_agriculture_database",
+      "animal_taxon": "Medicago sativa",
+      "applicability": "composition_only",
+      "plant_taxon": "Medicago sativa",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "contextual",
+      "supports": "국내 작물명 새싹알팔파를 Medicago sativa로 표기하며 자주개자리라는 국명을 함께 제시한다. 작물 동정 보조근거이며 육지거북 급여 안전성을 의미하지 않는다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=209500&menuId=PS65142"
+    },
+    {
+      "id": "korean_dolnamul_identity",
+      "plant_ids": [
+        "dolnamul"
+      ],
+      "source_title": "국가 생물다양성 정보공유체계 / BRIS 생명자원정보서비스. 돌나물 Sedum sarmentosum Bunge.",
+      "source_type": "official_biodiversity_agriculture",
+      "animal_taxon": "Sedum sarmentosum",
+      "applicability": "composition_only",
+      "plant_taxon": "Sedum sarmentosum",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "contextual",
+      "supports": "국가생물종목록 및 한국농업기술진흥원 제공 자료에서 한국명 돌나물을 Sedum sarmentosum Bunge로 확인한다. 식물동정 근거이며 육지거북 급여 안전성 근거와는 분리한다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.bris.go.kr/portal/book/nativeCropsDetailPopup.do?biorsrcMngNo=MANUIP3300200040&menuId=81"
+    },
+    {
+      "id": "bcg_sulcata_care",
+      "plant_ids": [
+        "dandelion",
+        "plantain",
+        "clover",
+        "chickweed",
+        "watercress"
+      ],
+      "source_title": "British Chelonia Group. Sulcata / African Giant Spurred Tortoise caresheet.",
+      "source_type": "specialist_husbandry",
+      "animal_taxon": "Centrochelys sulcata",
+      "applicability": "herbivorous_reptile_general",
+      "plant_taxon": "Centrochelys sulcata",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "related_taxon",
+      "supports": "grass/hay roughage를 강조하며 dandelion, plantain, clover, sow thistle, watercress, wild mallow, chickweed 등을 고섬유 식단 후보로 제시한다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata"
+    },
+    {
+      "id": "marotti_tagetes_thiophenes_2010",
+      "plant_ids": [
+        "marigold"
+      ],
+      "source_title": "Marotti I, Marotti M, Piccaglia R, Nastri A, Grandi S, Dinelli G. Thiophene occurrence in different Tagetes species: agricultural biomasses as sources of biocidal substances. Journal of the Science of Food and Agriculture. 2010;90(7):1210-1217.",
+      "source_type": "peer_reviewed_plant_chemistry",
+      "animal_taxon": "Tagetes spp.",
+      "applicability": "composition_only",
+      "plant_taxon": "Tagetes spp.",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "composition_only",
+      "supports": "여러 Tagetes 종(T. erecta, T. filifolia, T. lucida, T. minuta, T. patula, T. tenuifolia)의 뿌리·지상부·꽃에서 thiophene 패턴을 분석했다. 논문은 Tagetes thiophene류의 강한 biocidal activity를 기술하며 뿌리에서 가장 높은 다양성과 함량을 보고했다. 이는 독립적인 식물화학적 생물활성 신호이지 Testudo 또는 T. g. ibera의 섭식 독성시험·용량-반응 자료가 아니다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": "10.1002/jsfa.3950",
+      "pmid": null,
+      "url": "https://doi.org/10.1002/jsfa.3950"
+    },
+    {
+      "id": "heaney_spinach_calcium_1988",
+      "plant_ids": [
+        "spinach"
+      ],
+      "source_title": "Heaney RP, Weaver CM, Recker RR. Calcium absorbability from spinach. American Journal of Clinical Nutrition. 1988;47(4):707-709.",
+      "source_type": "peer_reviewed_human_nutrition",
+      "animal_taxon": "Spinacia oleracea",
+      "applicability": "composition_only",
+      "plant_taxon": "Spinacia oleracea",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "composition_only",
+      "supports": "13명의 건강한 성인을 대상으로 한 무작위 교차시험에서 동일한 200 mg Ca 조건의 평균 칼슘 흡수율은 우유 27.6%, 시금치 5.1%였다. 시험 시금치의 oxalate는 칼슘에 대해 약간의 화학량론적 과잉을 보였다. 사람 대상 mineral bioavailability 연구이며 Testudo의 독성·결석 위험·용량-반응을 입증하지 않는다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": "10.1093/ajcn/47.4.707",
+      "pmid": "3354496",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3354496/"
+    },
+    {
+      "id": "chaudhary_parsley_furocoumarin_1986",
+      "plant_ids": [
+        "parsley"
+      ],
+      "source_title": "Chaudhary SK, Ceska O, Têtu C, Warrington PJ, Ashwood-Smith MJ, Poulton GA. Oxypeucedanin, a Major Furocoumarin in Parsley, Petroselinum crispum. Planta Med. 1986;(6):462-464.",
+      "source_type": "peer_reviewed_plant_chemistry",
+      "animal_taxon": "Petroselinum crispum",
+      "applicability": "composition_only",
+      "plant_taxon": "Petroselinum crispum",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "composition_only",
+      "supports": "신선한 파슬리 잎·뿌리에서 광활성 furanocoumarin을 HPLC와 photobiological assay로 분석했다. oxypeucedanin이 주요 성분(70-100 ppm wet weight)이었고 5-MOP, 8-MOP, psoralen, isopimpinellin, imperatorin도 확인됐다. 접촉성 광피부염 가능성과 관련된 식물화학 자료이며 Testudo 경구독성 시험은 아니다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": "10.1055/s-2007-969254",
+      "pmid": "17345409",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17345409/"
+    },
+    {
+      "id": "manderfeld_parsley_furocoumarins_1997",
+      "plant_ids": [
+        "parsley"
+      ],
+      "source_title": "Manderfeld MM, Schafer HW, Davidson PM, Zottola EA. Isolation and identification of antimicrobial furocoumarins from parsley. J Food Prot. 1997;60(1):72-77.",
+      "source_type": "peer_reviewed_food_chemistry",
+      "animal_taxon": "Petroselinum crispum",
+      "applicability": "composition_only",
+      "plant_taxon": "Petroselinum crispum",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "composition_only",
+      "supports": "4개 파슬리 품종의 신선·동결건조 잎에서 광활성 furocoumarin을 확인하고 photobiological assay에서 활성을 측정했다. psoralen, 8-MOP, 5-MOP, oxypeucedanin, isopimpinellin 등이 확인됐으며 품종 간 상대 농도 차이도 있었다. 미생물 광생물학 시험이지 육지거북 급여 독성시험은 아니다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": "10.4315/0362-028X-60.1.72",
+      "pmid": "10465045",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10465045/"
+    },
+    {
+      "id": "gamba_radish_systematic_review_2021",
+      "plant_ids": [
+        "radishgreens"
+      ],
+      "source_title": "Gamba M, et al. Nutritional and phytochemical characterization of radish (Raphanus sativus): A systematic review. Trends Food Sci Technol. 2021;113:205-218.",
+      "source_type": "peer_reviewed_systematic_review",
+      "animal_taxon": "Raphanus sativus",
+      "applicability": "composition_only",
+      "plant_taxon": "Raphanus sativus",
+      "plant_part_state": "As specified in the cited source and evidence note; plant parts must not be silently generalized.",
+      "directness": "composition_only",
+      "supports": "63개 문헌을 포함한 Raphanus sativus 체계적 문헌고찰. 영양소와 phytochemical은 주로 뿌리와 잎에서 보고됐으며 glucosinolates 및 분해산물도 확인됐다. 잎은 여러 영양소와 섬유질의 공급원으로 기술된다. 식물화학 자료이며 Testudo의 독성·갑상선·신장·간 위해 용량 또는 급여빈도를 정하지 않는다.",
+      "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.",
+      "year": null,
+      "doi": "10.1016/j.tifs.2021.04.045",
+      "pmid": null,
+      "url": "https://doi.org/10.1016/j.tifs.2021.04.045"
     }
   ]
 }
