@@ -13,7 +13,7 @@ FORBIDDEN_KEYS = {
     'safe', 'safety', 'recommendation', 'recommended_ratio', 'diet_ratio'
 }
 NUMERIC_SUFFIXES = ('_g', '_mg', '_mcg')
-DATA_TYPES = {'SR Legacy', 'Foundation'}
+DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB'}
 VERIFICATION_STATUSES = {'source_listed', 'verified'}
 
 
@@ -50,14 +50,26 @@ def main():
             if re.search(r'\bspp\.?$', sci, re.I): errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})')
             if any(x in status for x in ('blocked','unverified','needs_')): errors.append(f'{tag}: unresolved master identity_status={status}')
 
-        if n.get('source_name') != 'USDA FoodData Central': errors.append(f'{tag}: source_name must be USDA FoodData Central')
-        m = re.fullmatch(r'FDC\s+(\d+)', str(n.get('source_id') or ''))
-        if not m: errors.append(f'{tag}: invalid source_id format')
-        try:
-            u = urlparse(str(n.get('source_url') or ''))
-            if u.scheme != 'https' or u.hostname != 'fdc.nal.usda.gov': errors.append(f'{tag}: source_url must use https://fdc.nal.usda.gov')
-            if m and f'/food-details/{m.group(1)}/' not in u.path: errors.append(f'{tag}: source URL FDC id does not match source_id')
-        except Exception: errors.append(f'{tag}: invalid source_url')
+        source_name = n.get('source_name')
+        source_id = str(n.get('source_id') or '')
+        source_url = str(n.get('source_url') or '')
+        m = None
+        if source_name == 'USDA FoodData Central':
+            m = re.fullmatch(r'FDC\s+(\d+)', source_id)
+            if not m: errors.append(f'{tag}: invalid USDA source_id format')
+            try:
+                u = urlparse(source_url)
+                if u.scheme != 'https' or u.hostname != 'fdc.nal.usda.gov': errors.append(f'{tag}: USDA source_url must use https://fdc.nal.usda.gov')
+                if m and f'/food-details/{m.group(1)}/' not in u.path: errors.append(f'{tag}: source URL FDC id does not match source_id')
+            except Exception: errors.append(f'{tag}: invalid USDA source_url')
+        elif source_name == 'Korean Standard Food Composition Database (RDA)':
+            if not re.fullmatch(r'F[0-9A-Za-z]+', source_id): errors.append(f'{tag}: invalid RDA food code format')
+            try:
+                u = urlparse(source_url)
+                if u.scheme != 'https' or u.hostname not in {'www.nics.go.kr','koreanfood.rda.go.kr'}: errors.append(f'{tag}: RDA source_url must use an official RDA/NICS host')
+            except Exception: errors.append(f'{tag}: invalid RDA source_url')
+        else:
+            errors.append(f'{tag}: unsupported official nutrition source_name')
 
         if n.get('data_type') not in DATA_TYPES: errors.append(f'{tag}: data_type must be one of {sorted(DATA_TYPES)}')
         verification = n.get('verification_status')
