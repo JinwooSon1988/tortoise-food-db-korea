@@ -3,8 +3,8 @@
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
     "verified_composition": 26,
-    "mapping_hold": 13,
-    "official_record_not_verified": 30
+    "mapping_hold": 14,
+    "official_record_not_verified": 29
   },
   "plants": [
     {
@@ -301,8 +301,8 @@
       "plant_id": "bellpepper",
       "ko": "파프리카",
       "scientific": "Capsicum annuum",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA Foundation에는 green/yellow/red/orange bell pepper raw가 각각 별도 record로 존재하지만, 현재 master '파프리카 / Bell pepper / Capsicum annuum'는 색·성숙단계를 특정하지 않는다. 한 색의 조성을 전체 파프리카 대표값으로 대체하지 않는다."
     },
     {
       "plant_id": "tomato",
