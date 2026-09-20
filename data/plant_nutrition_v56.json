@@ -440,6 +440,29 @@
       "phosphorus_mg": 83,
       "calcium_phosphorus_ratio": 3.57,
       "potassium_mg": 421
+    },
+    {
+      "plant_id": "cucumber",
+      "food_description": "Cucumber, with peel, raw",
+      "source_name": "USDA FoodData Central",
+      "source_id": "FDC 168409",
+      "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients",
+      "data_type": "SR Legacy",
+      "dataset_release": "USDA FoodData Central SR Legacy",
+      "verification_status": "verified",
+      "verified_at": "2026-09-20",
+      "basis": "per 100 g raw edible portion",
+      "water_g": 95.23,
+      "protein_g": 0.65,
+      "fat_g": 0.11,
+      "carbohydrate_g": 3.63,
+      "fiber_g": 0.5,
+      "calcium_mg": 16,
+      "phosphorus_mg": 24,
+      "calcium_phosphorus_ratio": 0.67,
+      "potassium_mg": 147,
+      "vitamin_c_mg": 2.8,
+      "note": "Exact raw cucumber fruit with peel record. Descriptive human-food composition only; does not determine tortoise feeding verdict."
     }
   ]
 }
