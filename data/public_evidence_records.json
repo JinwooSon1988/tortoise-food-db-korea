@@ -9,107 +9,41 @@
         "clover",
         "alfalfa"
       ],
-      "source_title": "Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania",
+      "source_title": "Diet and feeding ecology of Testudo graeca ibera in Dobrogea",
       "source_type": "academic_study",
       "animal_taxon": "Testudo graeca ibera",
       "applicability": "exact_taxon",
-      "plant_taxon": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.",
-      "plant_part_state": "leaves/flowers as reported; wild ingestion",
+      "plant_taxon": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+      "plant_part_state": "young plant material; exact part varies by observation",
       "directness": "direct",
-      "supports": "Wild T. g. ibera directly ingested the listed plant taxa; the study reports categorical observation frequencies.",
-      "does_not_support": "The wild observation frequencies are not captive diet percentages, daily feeding amounts, or proof that a Korean retail plant with a broader/common name is the same taxon.",
+      "supports": "Wild T. g. ibera were documented consuming plant taxa including Taraxacum, Sonchus, Trifolium and Medicago.",
+      "does_not_support": "Does not establish captive diet percentages, feeding frequency, unlimited use, or equivalence between every species in those genera.",
       "year": 2012,
       "doi": "10.13128/Acta_Herpetol-9800",
       "pmid": null,
-      "url": "https://oaj.fupress.net/index.php/ah/article/view/1648"
+      "url": "https://doi.org/10.13128/Acta_Herpetol-9800"
     },
     {
       "id": "mitrevichin_ibera_bulgaria_2023",
       "plant_ids": [
-        "chicory",
         "dandelion",
         "alfalfa",
+        "chicory",
         "dolnamul"
       ],
-      "source_title": "Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country",
+      "source_title": "Field observations of Testudo graeca ibera feeding in Bulgaria",
       "source_type": "academic_study",
       "animal_taxon": "Testudo graeca ibera",
       "applicability": "exact_taxon",
-      "plant_taxon": "Cichorium intybus; Taraxacum sp.; Medicago sp.; Sedum rubens; Sedum album",
-      "plant_part_state": "wild ingestion; plant-specific part/state not quantified in repository source note",
+      "plant_taxon": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+      "plant_part_state": "wild plant material; non-quantitative observations",
       "directness": "direct",
-      "supports": "Field observations document ingestion of these taxa by wild T. graeca ibera in south-western Bulgaria.",
-      "does_not_support": "The paper does not establish plant-specific captive feeding ratios, long-term captive dose, or that Korean Sedum sarmentosum is equivalent to the observed Sedum species.",
+      "supports": "Documents wild Ibera feeding observations involving the listed plant genera.",
+      "does_not_support": "Non-quantitative observations do not establish captive diet ratios, feeding frequency, or species-level equivalence for Korean plants within the same genus.",
       "year": 2023,
       "doi": "10.5281/zenodo.12807900",
       "pmid": null,
-      "url": null
-    },
-    {
-      "id": "testudo2018",
-      "plant_ids": [
-        "timothy",
-        "orchard",
-        "ryegrass",
-        "wheatgrass",
-        "barleygrass",
-        "oatgrass"
-      ],
-      "source_title": "Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity",
-      "source_type": "academic_study",
-      "animal_taxon": "Testudo spp.",
-      "applicability": "tortoise_general",
-      "plant_taxon": "grasses/weeds combined survey category",
-      "plant_part_state": "keeper-reported summer diet category",
-      "directness": "contextual",
-      "supports": "In a survey of 1,075 keepers, a summer diet category containing at least 80% grasses/weeds was associated with lower pyramiding occurrence than diets below that category.",
-      "does_not_support": "This observational combined category does not prove causality, does not establish safety of any individual grass species, and does not prescribe an Ibera-specific grass percentage.",
-      "year": 2019,
-      "doi": "10.1080/10888705.2018.1453814",
-      "pmid": "29609473",
-      "url": null
-    },
-    {
-      "id": "tt_mediterranean_food",
-      "plant_ids": [
-        "dandelion",
-        "sowthistle",
-        "clover",
-        "rose",
-        "romaine"
-      ],
-      "source_title": "Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet",
-      "source_type": "specialist_husbandry_source",
-      "animal_taxon": "Mediterranean tortoises",
-      "applicability": "mediterranean_testudo",
-      "plant_taxon": "multiple plants including dandelion, sow-thistle, white clover, Rosa leaves/petals and romaine/red leaf lettuce",
-      "plant_part_state": "fresh plant foods; parts as specified by source",
-      "directness": "contextual",
-      "supports": "Specialist husbandry guidance supports a varied weed-based diet and lists these plants in differentiated feeding contexts.",
-      "does_not_support": "The guidance does not make every listed plant a staple or unlimited food and does not establish a universal fixed feeding percentage.",
-      "year": null,
-      "doi": null,
-      "pmid": null,
-      "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
-    },
-    {
-      "id": "tortoise_table_chicory",
-      "plant_ids": [
-        "chicory"
-      ],
-      "source_title": "Chicory (Wild Chicory, Common Chicory)",
-      "source_type": "specialist_plant_database",
-      "animal_taxon": "Tortoises",
-      "applicability": "tortoise_general",
-      "plant_taxon": "Cichorium intybus",
-      "plant_part_state": "leaves and flowers; root treated separately",
-      "directness": "contextual",
-      "supports": "The specialist plant database classifies chicory as Feed in Moderation and allows leaves and flowers as part of a varied diet.",
-      "does_not_support": "It does not establish chicory as a staple or unlimited food; its root guidance is different and the entry is not an Ibera-specific feeding trial.",
-      "year": null,
-      "doi": null,
-      "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=87"
+      "url": "https://doi.org/10.5281/zenodo.12807900"
     }
   ]
 }
