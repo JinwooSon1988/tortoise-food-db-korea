@@ -1,0 +1,27 @@
+name: Public content coverage QA
+on:
+  pull_request:
+    paths:
+      - 'data/plants.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/public_content_coverage.json'
+      - 'scripts/qa_public_content_coverage.py'
+      - '.github/workflows/public-content-coverage-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/plants.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/public_content_coverage.json'
+      - 'scripts/qa_public_content_coverage.py'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.x'}
+      - run: python scripts/qa_public_content_coverage.py
+      - run: git diff --exit-code -- data/public_content_coverage.json
