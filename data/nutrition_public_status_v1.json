@@ -3,8 +3,8 @@
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
     "verified_composition": 23,
-    "mapping_hold": 11,
-    "official_record_not_verified": 35
+    "mapping_hold": 13,
+    "official_record_not_verified": 33
   },
   "plants": [
     {
@@ -257,8 +257,8 @@
       "plant_id": "alfalfa",
       "ko": "알팔파",
       "scientific": "Medicago sativa",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA alfalfa food records identified in review are sprouted seeds; the master Medicago sativa plant concept does not establish sprout-only composition as equivalent to leaves/forage. Do not substitute across plant part/preparation state."
     },
     {
       "plant_id": "chickweed",
@@ -286,8 +286,8 @@
       "plant_id": "zucchini",
       "ko": "애호박",
       "scientific": "Cucurbita moschata",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "Master is Korean zucchini/애호박 with scientific identity Cucurbita moschata. USDA zucchini records refer to summer squash/zucchini and are not accepted as an exact taxon/food-concept match; do not substitute them."
     },
     {
       "plant_id": "cucumber",
