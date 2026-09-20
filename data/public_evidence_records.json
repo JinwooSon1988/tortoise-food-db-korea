@@ -121,6 +121,241 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=258"
+    },
+    {
+      "id": "bcg_mediterranean_care",
+      "plant_ids": [
+        "dandelion",
+        "plantain",
+        "sowthistle",
+        "clover",
+        "chickweed"
+      ],
+      "source_title": "British Chelonia Group. Caresheet for Mediterranean Tortoises.",
+      "source_type": "specialist_husbandry",
+      "animal_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+      "applicability": "Mediterranean_Testudo",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "고섬유·저지방·저단백의 잎 중심 식단을 권고한다. 야생초가 부족한 때에는 다양한 greens/salad를 제공하되 채소는 생으로 적정량, 한 종류의 과도한 사용은 피하라고 한다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed"
+    },
+    {
+      "id": "bcg_chelonian_nutrition",
+      "plant_ids": [
+        "romaine",
+        "endive",
+        "kale"
+      ],
+      "source_title": "British Chelonia Group. Nutrition and Nutritional Disease in Chelonians.",
+      "source_type": "specialist_veterinary_review",
+      "animal_taxon": "Testudo spp.",
+      "applicability": "Testudo_general",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "야생 Testudo의 고섬유·고칼슘·저지방·저단백 식단을 강조한다. grocery greens는 자연 먹이보다 섬유가 낮을 수 있어 다양성과 전체 식단 맥락이 중요하다고 설명하며 romaine, kale, endive 등을 Ca:P 1:1 이상 예시로 제시한다. 일부 greens의 항영양성분과 과도한 편중을 함께 경고한다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows"
+    },
+    {
+      "id": "tt_mediterranean_food",
+      "plant_ids": [
+        "dandelion",
+        "sowthistle",
+        "clover",
+        "romaine",
+        "lettuce",
+        "rose"
+      ],
+      "source_title": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
+      "source_type": "specialist_husbandry",
+      "animal_taxon": "Mediterranean tortoises",
+      "applicability": "Mediterranean_Testudo",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "야생초 혼합을 기본으로 하고 dandelion, sow-thistle, white clover(단백질이 높아 moderate), rose leaves/petals, romaine/red leaf lettuce(very limited)를 예시한다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+    },
+    {
+      "id": "tt_winter_feeding",
+      "plant_ids": [
+        "romaine",
+        "lettuce",
+        "endive",
+        "radicchio",
+        "kale"
+      ],
+      "source_title": "Tortoise Trust. Winter Feeding.",
+      "source_type": "specialist_husbandry",
+      "animal_taxon": "Mediterranean tortoises",
+      "applicability": "Mediterranean_Testudo",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "겨울철 대체 식재료로 escarole, radicchio, endive, 여러 leaf lettuce, romaine 등을 섞고 순환하되 한 종류에 장기간 의존하지 말라고 권고한다. curly kale/collard 같은 짙은 잎채소는 때때로 소량 추가하는 예시다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.tortoisetrust.org/enews2/index.html"
+    },
+    {
+      "id": "tt_plantfoods",
+      "plant_ids": [
+        "dandelion",
+        "plantain",
+        "sowthistle"
+      ],
+      "source_title": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
+      "source_type": "specialist_husbandry",
+      "animal_taxon": "Herbivorous tortoises, with Mediterranean observations",
+      "applicability": "herbivorous_tortoises",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "Dandelion, Sonchus, Plantago, Trifolium, Malva 등을 고섬유 자연식의 기반 후보로 열거하나 종별 요구가 다름을 명시한다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.tortoisetrust.org/articles/plantfoods.html"
+    },
+    {
+      "id": "merck_tortoise_nutrition_2025",
+      "plant_ids": [
+        "romaine",
+        "lettuce",
+        "endive",
+        "kale"
+      ],
+      "source_title": "Merck Veterinary Manual. Nutrition in Tortoises. Full review Sept 2025.",
+      "source_type": "veterinary_manual_peer_reviewed",
+      "animal_taxon": "Tortoises",
+      "applicability": "tortoise_general",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "식물성 섬유가 장 생리에 중요하고, romaine/green leaf lettuce/endive/kale 등을 포함한 vegetable mix가 tortoise diet의 보완 구성으로 사용될 수 있다고 설명한다. 특정 지중해종의 단독 주식 안전성을 의미하지 않는다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises"
+    },
+    {
+      "id": "merck_reptile_plant_composition",
+      "plant_ids": [
+        "endive",
+        "kale"
+      ],
+      "source_title": "Merck Veterinary Manual. Composition of Plant Foods That May Be Offered to Reptiles.",
+      "source_type": "veterinary_manual_table",
+      "animal_taxon": "Reptiles",
+      "applicability": "nutrition",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "endive와 kale 등 식물성 먹이의 조성 및 Ca:P 비교를 제공한다. 영양 조성표 자체는 특정 육지거북 종의 급여 안전성 판정과 동일하지 않다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.merckvetmanual.com/multimedia/table/composition-of-plant-foods-that-may-be-offered-to-reptiles"
+    },
+    {
+      "id": "merck_reptile_home_plant_eaters",
+      "plant_ids": [
+        "bokchoy",
+        "collard",
+        "cabbage"
+      ],
+      "source_title": "Merck Veterinary Manual. Providing a Home for a Reptile.",
+      "source_type": "veterinary_manual",
+      "animal_taxon": "Plant-eating reptiles",
+      "applicability": "herbivorous_reptile_general",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "plant-eating reptiles에는 calcium-rich plant foods로 cabbage, kale, okra, sprouts, collard greens, bok choy 등을 권장 예시로 제시한다. 이는 지중해 Testudo 직접 급여시험이나 단독 주식 판정이 아니며, 전체 식단 다양성과 종별 요구를 대체하지 않는다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.merckvetmanual.com/all-other-pets/reptiles/providing-a-home-for-a-reptile"
+    },
+    {
+      "id": "ibera_eastern_account_2023",
+      "plant_ids": [
+        "sowthistle",
+        "clover",
+        "alfalfa"
+      ],
+      "source_title": "Türkozan O, Javanbakht H, Mazanaeva LF, et al. Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades: T. g. armeniaca, T. g. buxtoni, T. g. ibera, T. g. terrestris, T. g. zarudnyi). Chelonian Research Monographs No. 5, Account 120. 2023.",
+      "source_type": "specialist_group_species_account",
+      "animal_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+      "applicability": "subspecies_direct_diet_synthesis",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "direct",
+      "supports": "IUCN/SSC Tortoise and Freshwater Turtle Specialist Group 연계 종 계정. 북동 루마니아에서 약 500마리의 야생 T. g. ibera를 10년간 조사한 자료(Iftime & Iftime 2012)를 요약하며 식단의 96.5%가 식물성이었고 Trifolium, Sonchus, Medicago 등의 어린 잎이 자주 섭식된 식물군에 포함되었다고 정리한다. 원자료의 식물별 빈도는 Iftime & Iftime 2012를 우선한다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "pmid": null,
+      "url": "https://doi.org/10.3854/crm.5.120.eastern.graeca.v1.2023"
+    },
+    {
+      "id": "tgraeca_alfalfa_context_2019",
+      "plant_ids": [
+        "alfalfa"
+      ],
+      "source_title": "Benítez-Malvido J, et al. Impact of habitat loss on the diversity and structure of ecological networks between oxyurid nematodes and spur-thighed tortoises (Testudo graeca L.). PeerJ. 2019;7:e8076.",
+      "source_type": "peer_reviewed_context",
+      "animal_taxon": "Testudo graeca",
+      "applicability": "species_diet_context",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "contextual",
+      "supports": "연구 본문은 T. graeca의 야생 식단 예시로 alfalfa (Medicago sativa)를 언급하면서 기존 식이문헌을 인용한다. 자체 식물별 섭식시험은 아니므로 M. sativa에 대한 이베라 직접근거로 취급하지 않는다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": "10.7717/peerj.8076",
+      "pmid": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6894431/"
+    },
+    {
+      "id": "hermanni_foraging_italy_2015",
+      "plant_ids": [
+        "plantain",
+        "clover"
+      ],
+      "source_title": "Foraging ecology and vegetation characteristic of sites inhabited by wild populations of Testudo hermanni in Italy. SISVET proceedings. 2015.",
+      "source_type": "conference_proceedings",
+      "animal_taxon": "Testudo hermanni",
+      "applicability": "species_direct",
+      "plant_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "plant_part_state": "As described by the source; do not generalize beyond the cited note",
+      "directness": "direct",
+      "supports": "예비 결과에서 Fabaceae와 Plantaginaceae 등이 선택되었다. 학술대회 자료이므로 정식 동료심사 논문보다 낮게 취급한다.",
+      "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
     }
   ]
 }
