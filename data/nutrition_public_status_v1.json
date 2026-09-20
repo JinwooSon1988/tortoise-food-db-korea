@@ -3,8 +3,8 @@
   "policy": "Missing nutrition is an explicit evidence state, never zero and never inferred from a related food.",
   "counts": {
     "verified_composition": 26,
-    "mapping_hold": 21,
-    "official_record_not_verified": 22
+    "mapping_hold": 24,
+    "official_record_not_verified": 19
   },
   "plants": [
     {
@@ -221,8 +221,8 @@
       "plant_id": "carrottop",
       "ko": "당근잎",
       "scientific": "Daucus carota subsp. sativus",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA Daucus carota records describe carrot root/juice/products; the current master is carrot tops. Root composition is not substituted for foliage."
     },
     {
       "plant_id": "basil",
@@ -279,8 +279,8 @@
       "plant_id": "pumpkinleaf",
       "ko": "호박잎",
       "scientific": "Cucurbita spp.",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA records for Cucurbita spp. primarily describe squash/pumpkin fruit or seed products; the current master is pumpkin leaf. Plant-part mismatch prevents composition mapping."
     },
     {
       "plant_id": "zucchini",
@@ -420,8 +420,8 @@
       "plant_id": "aehobakleaf",
       "ko": "애호박잎",
       "scientific": "Cucurbita moschata",
-      "state": "official_record_not_verified",
-      "reason": "공식 식품성분 record와 현재 master 식물 identity·식용부위·조리상태를 정확히 연결한 자료가 아직 없다."
+      "state": "mapping_hold",
+      "reason": "USDA Cucurbita moschata records describe squash fruit; the current master is Cucurbita moschata leaf. Fruit composition is not substituted for leaves."
     },
     {
       "plant_id": "pea_shoot",
