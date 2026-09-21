@@ -59,14 +59,16 @@
     "role": "계획 급여 대상에서 제외",
     "confidence": "C-",
     "evidence_ids": [
-      "tortoise_table_water_dropwort_warning"
+      "tortoise_table_water_dropwort_warning",
+      "lu_oenanthe_javanica_review_2019"
     ],
     "limits": [
-      "Oenanthe속 수준의 위험 경고를 O. javanica 이베라 독성 용량으로 과장하지 않음",
-      "이베라 종수준 dose-response 자료 없음",
+      "Oenanthe속 다른 종의 독성을 O. javanica에 자동 전이하지 않음",
+      "O. javanica의 포유류 독성자료는 이베라 급여 안전성을 입증하지 않음",
+      "이베라 종수준 급여시험·dose-response 자료 없음",
       "미나리와 유사 산형과 식물의 오동정 주의"
     ],
-    "why": "전문 육지거북 식물 DB가 Oenanthe water-dropwort류를 강한 위험군으로 경고한다. O. javanica 직접 이베라 독성시험은 아니므로 독성 용량을 제시하지 않되, 불확실성 하에서 계획 급여에서는 제외한다.",
-    "applicability_note": "Oenanthe genus-level specialist warning; exact Ibera toxicity dose unknown."
+    "why": "전문 육지거북 식물 DB는 Oenanthe water-dropwort류를 위험군으로 경고하지만, O. javanica 자체의 종특이적 포유류 독성 문헌은 단회 고용량에서 뚜렷한 급성독성이 없었다는 결과와 고용량 반복·추출물에서의 유해 신호를 함께 보고한다. 속 수준 경고를 종 수준 치사독성으로 과장할 수 없고 이베라 급여 안전성 자료도 없으므로, 불확실성 하에서 계획 급여 대상에서는 제외한다.",
+    "applicability_note": "Oenanthe genus-level specialist warning + exact O. javanica non-tortoise toxicology context; exact Ibera feeding safety remains unresolved."
   }
 ]
