@@ -1276,6 +1276,201 @@
       "doi": null,
       "pmid": null,
       "url": null
+    },
+    {
+      "id": "tortoise_table_chrysanthemum",
+      "plant_ids": [
+        "chrysanthemumleaf"
+      ],
+      "source_title": "The Tortoise Table. Chrysanthemum.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Chrysanthemum-group context; assessment maps historical Chrysanthemum coronarium to Glebionis coronaria",
+      "plant_part_state": "leaf food concept; pyrethrin-rich Chrysanthemum taxa excluded",
+      "directness": "contextual",
+      "supports": "The existing assessment preserves the specialist database's moderation framing for most Chrysanthemum-group plants while explicitly excluding pyrethrin-rich taxa.",
+      "does_not_support": "This is not an exact-taxon Testudo graeca ibera trial. Historical-name linkage must not be used to transfer the conclusion to Chrysanthemum cinerariifolium, C. coccineum or unrelated taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "tortoise_table_fig_tree",
+      "plant_ids": [
+        "figleaf"
+      ],
+      "source_title": "The Tortoise Table. Fig Tree.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Ficus carica",
+      "plant_part_state": "leaf/tree sap context; fruit separately distinguished",
+      "directness": "contextual",
+      "supports": "The assessment preserves the specialist database's do-not-feed recommendation for fig-tree material because of irritating sap exposure.",
+      "does_not_support": "Does not establish that the entire plant is systemically toxic to Testudo graeca ibera. Leaf/sap irritation and the separate high-sugar fruit issue must not be conflated.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "tortoise_table_mugwort",
+      "plant_ids": [
+        "ssuk"
+      ],
+      "source_title": "The Tortoise Table. Mugwort / Artemisia.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Artemisia spp.; Korean master Artemisia princeps",
+      "plant_part_state": "plant; genus-level source scope",
+      "directness": "contextual",
+      "supports": "The existing assessment preserves the specialist database's Do not Feed category for Artemisia spp. and therefore excludes planned feeding of the Korean Artemisia princeps concept.",
+      "does_not_support": "This is genus-level evidence, not an Artemisia princeps-specific Testudo trial. It does not establish identical chemistry across Artemisia species or a tortoise toxic dose.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "tortoise_table_pea_shoots",
+      "plant_ids": [
+        "pea_shoot"
+      ],
+      "source_title": "The Tortoise Table. Pea / Pea Shoots.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Pisum sativum",
+      "plant_part_state": "young aerial shoots; seed/other parts not silently substituted",
+      "directness": "contextual",
+      "supports": "The specialist database categorizes Pisum sativum/pea shoots as Do not Feed while also stating that the plant is not actually toxic; its rationale discusses protein, phytate and possible calcium-absorption concerns.",
+      "does_not_support": "The mechanism discussion is not a Testudo graeca ibera dose-response or harm trial. The record does not independently establish a tortoise toxic dose or convert the composition rationale into proven poisoning.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "tortoise_table_pelargonium",
+      "plant_ids": [
+        "geranium"
+      ],
+      "source_title": "The Tortoise Table. Pelargonium.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Pelargonium spp.",
+      "plant_part_state": "plant; Pelargonium distinguished from hardy Geranium",
+      "directness": "contextual",
+      "supports": "Feed in Moderation in the specialist database; the assessment therefore keeps Pelargonium only as a small component of a varied diet.",
+      "does_not_support": "Does not establish an Ibera-specific percentage or frequency and must not be transferred to true Geranium species merely because both may be called geranium.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "tortoise_table_perilla",
+      "plant_ids": [
+        "perilla"
+      ],
+      "source_title": "The Tortoise Table. Perilla.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Perilla spp.; Korean food concept Perilla frutescens",
+      "plant_part_state": "plant; cultivar/chemotype variation separately evidenced",
+      "directness": "contextual",
+      "supports": "The specialist database categorizes Perilla as Do not Feed. The assessment combines that husbandry caution with separately stored mammalian toxicology and chemotype evidence while excluding planned feeding.",
+      "does_not_support": "This specialist verdict is not a Testudo graeca ibera toxicity trial. It does not establish a tortoise toxic dose, identical susceptibility to mammals, or identical perilla-ketone content across edible cultivars.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "tortoise_trust_mediterranean_grass_context",
+      "plant_ids": [
+        "orchard",
+        "timothy",
+        "wheatgrass",
+        "barleygrass",
+        "oatgrass",
+        "ryegrass"
+      ],
+      "source_title": "Tortoise Trust. Mediterranean tortoise feeding context.",
+      "source_type": "specialist_husbandry",
+      "animal_taxon": "Mediterranean Testudo",
+      "applicability": "mediterranean_testudo",
+      "plant_taxon": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+      "plant_part_state": "grass vegetation; not grain/seed equivalence",
+      "directness": "contextual",
+      "supports": "Provides Mediterranean Testudo husbandry context in which grasses occur within a broader fibrous plant diet. Exact grass-food conclusions are supported separately by taxon-specific specialist records.",
+      "does_not_support": "Does not establish that every Poaceae species is safe, nor an Ibera-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+    },
+    {
+      "id": "ucdavis_herbivorous_reptile_greens",
+      "plant_ids": [
+        "mustard"
+      ],
+      "source_title": "UC Davis School of Veterinary Medicine. Herbivorous reptile diet guidance.",
+      "source_type": "veterinary_husbandry_guidance",
+      "animal_taxon": "Herbivorous reptiles",
+      "applicability": "herbivorous_reptile_general",
+      "plant_taxon": "Mustard greens category; assessment master Brassica juncea requires identity confirmation",
+      "plant_part_state": "leafy greens",
+      "directness": "contextual",
+      "supports": "The veterinary guidance includes mustard greens among examples used in varied diets for herbivorous reptiles; the assessment therefore treats it only as general supplementary context.",
+      "does_not_support": "This is not a Mediterranean Testudo or Testudo graeca ibera feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "korea_lambs_lettuce_identity",
+      "plant_ids": [
+        "lambs_lettuce"
+      ],
+      "source_title": "Korean-market identity record for Lamb's Lettuce / Corn Salad.",
+      "source_type": "plant_identity_context",
+      "animal_taxon": "Not an animal feeding source",
+      "applicability": "composition_only",
+      "plant_taxon": "Valerianella locusta",
+      "plant_part_state": "identity only",
+      "directness": "contextual",
+      "supports": "Preserves the assessment's identity scope: Lamb's Lettuce / Corn Salad is treated as Valerianella locusta; Korean transliterated market naming is not itself a feeding-safety claim.",
+      "does_not_support": "Identity evidence does not prove tortoise feeding safety, dose, percentage or frequency.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
+    },
+    {
+      "id": "rda_korean_chard_identity",
+      "plant_ids": [
+        "chard"
+      ],
+      "source_title": "Rural Development Administration identity context for Korean chard (근대).",
+      "source_type": "official_agriculture_database",
+      "animal_taxon": "Not an animal feeding source",
+      "applicability": "composition_only",
+      "plant_taxon": "Beta vulgaris subsp. cicla",
+      "plant_part_state": "identity only; Korean crop name 근대",
+      "directness": "contextual",
+      "supports": "The assessment records the Korean crop identity 근대 as Beta vulgaris subsp. cicla, linking the domestic food concept to the chard taxonomic scope.",
+      "does_not_support": "Official crop identity does not establish tortoise feeding safety, oxalate effect, dose, percentage or frequency.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": null
     }
   ]
 }
