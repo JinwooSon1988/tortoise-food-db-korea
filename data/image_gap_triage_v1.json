@@ -2,9 +2,30 @@
   "schema_version": 1,
   "policy": "A species image must not represent an spp.-level master concept. Exact taxon and license provenance are required before publication.",
   "counts": {
-    "exact_species_candidate": 31,
-    "exact_infraspecific_candidate": 0,
+    "exact_species_candidate": 0,
+    "exact_infraspecific_candidate": 1,
     "genus_scope_hold": 14
   },
-  "groups": {}
+  "groups": {
+    "exact_species_candidate": [],
+    "exact_infraspecific_candidate": [
+      {"plant_id":"napa","scientific":"Brassica rapa subsp. pekinensis","ko":"배추"}
+    ],
+    "genus_scope_hold": [
+      {"plant_id":"dandelion","scientific":"Taraxacum spp.","ko":"민들레"},
+      {"plant_id":"sowthistle","scientific":"Sonchus spp.","ko":"방가지똥"},
+      {"plant_id":"plantain","scientific":"Plantago spp.","ko":"질경이"},
+      {"plant_id":"mulberry","scientific":"Morus spp.","ko":"뽕잎"},
+      {"plant_id":"mallow","scientific":"Malva spp.","ko":"아욱"},
+      {"plant_id":"mint","scientific":"Mentha spp.","ko":"민트"},
+      {"plant_id":"clover","scientific":"Trifolium spp.","ko":"클로버"},
+      {"plant_id":"pumpkinleaf","scientific":"Cucurbita spp.","ko":"호박잎"},
+      {"plant_id":"rose","scientific":"Rosa spp.","ko":"장미꽃"},
+      {"plant_id":"pricklypear","scientific":"Opuntia spp.","ko":"천년초"},
+      {"plant_id":"ryegrass","scientific":"Lolium spp.","ko":"라이그라스"},
+      {"plant_id":"violet","scientific":"Viola spp.","ko":"제비꽃"},
+      {"plant_id":"geranium","scientific":"Pelargonium spp.","ko":"제라늄"},
+      {"plant_id":"marigold","scientific":"Tagetes spp.","ko":"메리골드"}
+    ]
+  }
 }
