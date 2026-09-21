@@ -1067,6 +1067,63 @@
       "year": null,
       "doi": null,
       "pmid": null
+    },
+    {
+      "id": "kerr_perilla_cattle_1986",
+      "plant_ids": [
+        "perilla"
+      ],
+      "source_title": "Kerr LA, Johnson BJ, Burrows GE. Intoxication of cattle by Perilla frutescens (purple mint). Veterinary and Human Toxicology. 1986;28(5):412-416.",
+      "source_type": "peer_reviewed_veterinary_toxicology",
+      "animal_taxon": "Bos taurus (cattle)",
+      "applicability": "composition_only",
+      "plant_taxon": "Perilla frutescens",
+      "plant_part_state": "feeding-trial plant material; flowering/seed stage discussed",
+      "directness": "related_taxon",
+      "supports": "In a cattle feeding study, 3 of 5 calves developed atypical interstitial pneumonia; emphysema and pulmonary edema were reported. Flowering/seed-stage material was described as more toxic and associated with higher perilla ketone.",
+      "does_not_support": "Cattle toxicity cannot be converted into a Testudo graeca ibera toxic dose, safe dose, feeding frequency or percentage. It also does not establish that every edible Korean perilla cultivar has the same perilla-ketone concentration.",
+      "year": 1986,
+      "doi": null,
+      "pmid": "3776081",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3776081/"
+    },
+    {
+      "id": "nitta_perilla_genotypes_2009",
+      "plant_ids": [
+        "perilla"
+      ],
+      "source_title": "Determination of toxic perilla ketone, secondary plant metabolites and antioxidative capacity in five Perilla frutescens L. varieties. Food and Chemical Toxicology. 2010;48(1):264-270.",
+      "source_type": "peer_reviewed_plant_chemistry",
+      "animal_taxon": "Not an animal feeding trial",
+      "applicability": "composition_only",
+      "plant_taxon": "Perilla frutescens",
+      "plant_part_state": "five genotypes/varieties; chemotype-dependent composition",
+      "directness": "composition_only",
+      "supports": "GC/MS analysis detected perilla ketone in two of five P. frutescens genotypes, demonstrating meaningful genotype/chemotype variation.",
+      "does_not_support": "This plant-chemistry study is not a tortoise feeding trial. It does not establish a Testudo graeca ibera toxic threshold, safe intake, frequency, or that all edible perilla cultivars contain equivalent perilla-ketone concentrations.",
+      "year": 2010,
+      "doi": "10.1016/j.fct.2009.10.009",
+      "pmid": "19833165",
+      "url": "https://doi.org/10.1016/j.fct.2009.10.009"
+    },
+    {
+      "id": "mulberry_feed_jfca_2025",
+      "plant_ids": [
+        "mulberry"
+      ],
+      "source_title": "Nutritional quality assessment of mulberry leaves from different varieties as an alternative feed in ruminant nutrition. Journal of Food Composition and Analysis. 2025;140:107213.",
+      "source_type": "peer_reviewed",
+      "animal_taxon": "Ruminant nutrition context",
+      "applicability": "composition_only",
+      "plant_taxon": "Morus macroura; Morus alba; Morus wittiorum",
+      "plant_part_state": "leaves; multiple Morus taxa/varieties",
+      "directness": "composition_only",
+      "supports": "Reports nutritional/feed-quality differences among mulberry taxa/varieties, supporting the need to preserve species/variety identity rather than assigning one fixed composition to generic 'mulberry leaf'.",
+      "does_not_support": "This is not a Testudo graeca ibera feeding-safety study and does not establish tortoise-specific safety, dose, frequency, percentage, or a single composition value for unidentified Korean-market mulberry leaves.",
+      "year": 2025,
+      "doi": "10.1016/j.jfca.2025.107213",
+      "pmid": null,
+      "url": "https://doi.org/10.1016/j.jfca.2025.107213"
     }
   ]
 }
