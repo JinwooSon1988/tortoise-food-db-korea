@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "policy": "A species image must not represent an spp.-level master concept. Exact taxon and license provenance are required before publication.",
+  "counts": {
+    "exact_species_candidate": 31,
+    "exact_infraspecific_candidate": 0,
+    "genus_scope_hold": 14
+  },
+  "groups": {}
+}

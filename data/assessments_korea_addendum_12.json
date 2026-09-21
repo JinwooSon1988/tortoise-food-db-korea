@@ -5,9 +5,68 @@
     "verdict": "supplement_general_evidence",
     "role": "다양한 잎채소·야생초 혼합의 보조 구성",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_lambs_lettuce", "korea_lambs_lettuce_identity"],
-    "limits": ["Valerianella locusta 범위", "일반 육지거북 근거이며 Mediterranean Testudo 또는 이베라 직접근거가 아님", "급여 비율이나 주식 비중을 임의 산출하지 않음", "램스레터스는 유통·음역 별칭으로만 취급"],
+    "evidence_ids": [
+      "tortoise_table_lambs_lettuce",
+      "korea_lambs_lettuce_identity"
+    ],
+    "limits": [
+      "Valerianella locusta 범위",
+      "일반 육지거북 근거이며 Mediterranean Testudo 또는 이베라 직접근거가 아님",
+      "급여 비율이나 주식 비중을 임의 산출하지 않음",
+      "램스레터스는 유통·음역 별칭으로만 취급"
+    ],
     "why": "전문 육지거북 식물 DB가 Lamb's Lettuce / Corn Salad를 Safe to Feed로 분류하므로 다양한 식단의 보조 구성으로 사용할 일반 육지거북 근거가 있다.",
     "applicability_note": "Valerianella locusta에 대한 일반 육지거북 근거이며 Testudo graeca ibera 직접 급여시험으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "mallow",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "정확한 종 동정 후 혼합식 보조 후보",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_mallow"
+    ],
+    "limits": [
+      "한국 유통명 아욱을 Malva spp. 전체와 동일시하지 않음",
+      "species-level mapping 전 exact-taxon 판정 금지",
+      "Safe to Feed를 단독주식·무제한 급여로 해석하지 않음"
+    ],
+    "why": "전문 식물 DB는 Malva spp.의 잎과 꽃을 Safe to Feed로 분류하지만 한국 유통 아욱의 종수준 매핑이 아직 해결되지 않았다.",
+    "applicability_note": "Tortoise general 전문 DB 근거 + 한국 유통종 동정 보류."
+  },
+  {
+    "plant_id": "mint",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_supplement",
+    "role": "종이 확인된 일부 Mentha만 소량 보조 후보",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_mint"
+    ],
+    "limits": [
+      "Mentha spp. 전체 안전 판정 금지",
+      "peppermint와 pennyroyal 등 제외 대상과 혼동 금지",
+      "제품 라벨 또는 학명으로 종 확인 전 급여 판정 보류"
+    ],
+    "why": "전문 DB는 일부 Mentha 종을 Safe to Feed로 다루지만 민트라는 유통명은 여러 종·교잡종을 포함하므로 속 전체로 확대할 수 없다.",
+    "applicability_note": "Tortoise general 근거이며 exact Mentha taxon 확인이 선행되어야 한다."
+  },
+  {
+    "plant_id": "minari",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_water_dropwort_warning"
+    ],
+    "limits": [
+      "Oenanthe속 수준의 위험 경고를 O. javanica 이베라 독성 용량으로 과장하지 않음",
+      "이베라 종수준 dose-response 자료 없음",
+      "미나리와 유사 산형과 식물의 오동정 주의"
+    ],
+    "why": "전문 육지거북 식물 DB가 Oenanthe water-dropwort류를 강한 위험군으로 경고한다. O. javanica 직접 이베라 독성시험은 아니므로 독성 용량을 제시하지 않되, 불확실성 하에서 계획 급여에서는 제외한다.",
+    "applicability_note": "Oenanthe genus-level specialist warning; exact Ibera toxicity dose unknown."
   }
 ]

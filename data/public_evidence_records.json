@@ -1471,6 +1471,63 @@
       "doi": null,
       "pmid": null,
       "url": null
+    },
+    {
+      "id": "tortoise_table_mallow",
+      "plant_ids": [
+        "mallow"
+      ],
+      "source_title": "The Tortoise Table. Mallow.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Malva spp.",
+      "plant_part_state": "leaves and flowers",
+      "directness": "contextual",
+      "supports": "The specialist plant database classifies Mallow (Malva spp.) as Safe to Feed and explicitly describes both flowers and leaves as eaten by tortoises.",
+      "does_not_support": "This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=363"
+    },
+    {
+      "id": "tortoise_table_mint",
+      "plant_ids": [
+        "mint"
+      ],
+      "source_title": "The Tortoise Table. Mint (Garden Mint, Spearmint, Apple Mint).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Mentha sachalinensis; Mentha spicata; Mentha suaveolens",
+      "plant_part_state": "aerial plant material; exact listed mint taxa only",
+      "directness": "contextual",
+      "supports": "The specialist database classifies the listed garden mint, spearmint and apple mint taxa as Safe to Feed / harmless if nibbled.",
+      "does_not_support": "The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=506"
+    },
+    {
+      "id": "tortoise_table_water_dropwort_warning",
+      "plant_ids": [
+        "minari"
+      ],
+      "source_title": "The Tortoise Table. Dropwort — water-dropwort warning.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Oenanthe genus warning; Korean master Oenanthe javanica",
+      "plant_part_state": "genus-level hazard warning; not an Oenanthe javanica feeding trial",
+      "directness": "contextual",
+      "supports": "The specialist source explicitly warns that water dropworts of the genus Oenanthe are different from Filipendula dropwort and describes Oenanthe water dropworts as highly toxic plants that should be avoided.",
+      "does_not_support": "This is a genus-level caution, not an Oenanthe javanica-specific Testudo graeca ibera toxicity study or dose-response experiment. It does not establish a tortoise toxic dose for Korean minari.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=828"
     }
   ]
 }
