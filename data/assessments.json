@@ -336,21 +336,22 @@
   {
     "plant_id": "dandelion",
     "species_group": "Sulcata",
-    "verdict": "supported_mixed_diet",
+    "verdict": "limited_mixed_diet",
     "role": "grass/hay 중심 식단의 보조 야생초",
     "confidence": "C",
     "evidence_ids": [
       "bcg_sulcata_care"
     ],
     "limits": [
-      "grass/hay roughage 중심 원칙 유지"
+      "grass/hay roughage 중심 원칙 유지",
+      "단일 specialist husbandry source를 단독 주식·무제한 급여·고정 급여비율로 확대하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다."
+    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry source이므로 혼합 보조 범위로 제한한다."
   },
   {
     "plant_id": "plantain",
     "species_group": "Sulcata",
-    "verdict": "supported_mixed_diet",
+    "verdict": "limited_mixed_diet",
     "role": "grass/hay 중심 식단의 보조 야생초",
     "confidence": "C",
     "evidence_ids": [
@@ -358,9 +359,10 @@
     ],
     "limits": [
       "grass/hay 기반 유지",
-      "Plantago 종 동정 필요"
+      "Plantago 종 동정 필요",
+      "단일 specialist husbandry source를 단독 주식·무제한 급여·고정 급여비율로 확대하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 plantain을 후보 식물로 제시한다."
+    "why": "BCG 설카타 사육자료가 plantain을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry source이므로 혼합 보조 범위로 제한한다."
   },
   {
     "plant_id": "clover",
@@ -388,10 +390,9 @@
     ],
     "limits": [
       "grass/hay roughage 중심 원칙 유지",
-      "사포닌 때문에 고비율 반복 급여로 확대하지 않음",
       "채집 오염 확인"
     ],
-    "why": "BCG 설카타 사육자료가 chickweed를 고섬유 야생초 후보 중 하나로 제시한다.",
+    "why": "BCG 설카타 사육자료가 chickweed를 고섬유 야생초 후보 중 하나로 제시한다. 현재 연결 근거 범위 안에서 혼합 보조로 제한한다.",
     "applicability_note": "Sulcata 전문 사육근거이므로 다른 종에 자동 적용하지 않음."
   },
   {
