@@ -1528,6 +1528,82 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=828"
+    },
+    {
+      "id": "tortoise_table_kale",
+      "plant_ids": [
+        "kale"
+      ],
+      "source_title": "The Tortoise Table. Kale (Curly Kale, Collard Greens, Spring Greens).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Brassica oleracea (Acephala Group)",
+      "plant_part_state": "leaves, fresh",
+      "directness": "contextual",
+      "supports": "Classifies kale as Feed in Moderation and permits it as part of a varied tortoise diet while flagging goitrogen concerns.",
+      "does_not_support": "Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=529"
+    },
+    {
+      "id": "tortoise_table_dandelion",
+      "plant_ids": [
+        "dandelion"
+      ],
+      "source_title": "The Tortoise Table. Dandelion.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Taraxacum officinale",
+      "plant_part_state": "plant material; older leaves specifically discussed",
+      "directness": "contextual",
+      "supports": "Classifies Taraxacum officinale as Feed in Moderation and suitable as part of a wider varied diet; notes oxalates and mild diuretic properties.",
+      "does_not_support": "Master concept is Taraxacum spp.; this record must not be generalized to every Taraxacum species and does not establish Ibera-specific dose, percentage, or fixed frequency.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=5"
+    },
+    {
+      "id": "tortoise_table_calendula_current",
+      "plant_ids": [
+        "calendula"
+      ],
+      "source_title": "The Tortoise Table. Marigold (Pot Marigold, Field Marigold, Calendula).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Calendula spp.",
+      "plant_part_state": "flowers and leaves",
+      "directness": "contextual",
+      "supports": "Classifies Calendula as Safe to Feed and states flowers and leaves may be included as part of a varied diet.",
+      "does_not_support": "Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=313"
+    },
+    {
+      "id": "lu_oenanthe_javanica_review_2019",
+      "plant_ids": [
+        "minari"
+      ],
+      "source_title": "Lu C-l, Li X-f. A Review of Oenanthe javanica (Blume) DC. as Traditional Medicinal Plant and Its Therapeutic Potential.",
+      "source_type": "peer_reviewed_review",
+      "animal_taxon": "Non-tortoise toxicology / composition context",
+      "applicability": "composition_only",
+      "plant_taxon": "Oenanthe javanica (Blume) DC.",
+      "plant_part_state": "fresh whole plant and extracts; toxicology literature summarized",
+      "directness": "composition_only",
+      "supports": "Species-specific review reports mouse acute testing of fresh O. javanica at 15 g/kg without mortality or evident acute organ toxicity, while high-dose dry powder increased sperm deformity and reduced body weight/food consumption; high-dose phenolic extract produced reversible subchronic toxicity in rats.",
+      "does_not_support": "Does not establish safety for Testudo graeca ibera, a tortoise feeding dose or frequency, or justify transferring toxicity of other Oenanthe species to O. javanica. It also does not prove that O. javanica is safe as a captive tortoise food.",
+      "year": 2019,
+      "doi": "10.1155/2019/6495819",
+      "pmid": "31057651",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6463588/"
     }
   ]
 }
