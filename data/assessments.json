@@ -24,9 +24,9 @@
   {
     "plant_id": "plantain",
     "species_group": "Mediterranean_Testudo",
-    "verdict": "supported_mixed_diet",
-    "role": "혼합 야생초 구성 후보",
-    "confidence": "C+",
+    "verdict": "limited_mixed_diet",
+    "role": "혼합 야생초 일부",
+    "confidence": "C",
     "evidence_ids": [
       "bcg_mediterranean_care",
       "tt_plantfoods",
@@ -37,7 +37,8 @@
       "채집 오염 주의",
       "단독주식 판정 아님"
     ],
-    "why": "전문 사육자료와 Testudo 야생섭식 자료가 Plantago를 혼합 자연식 후보로 지지한다."
+    "why": "Mediterranean Testudo 사육자료와 T. hermanni의 관련 야생섭식 자료가 Plantago를 혼합 자연식 후보로 뒷받침하지만, T. g. ibera의 Plantago 직접 근거와 Plantago spp. 전체의 종수준 동등성은 확립되지 않아 제한적 혼합식으로 둔다.",
+    "applicability_note": "Mediterranean Testudo 사육근거 + 관련종 T. hermanni 자료. 이베라 직접 Plantago 섭식 근거는 현재 공개 evidence layer에 없음."
   },
   {
     "plant_id": "sowthistle",
@@ -253,17 +254,16 @@
     "species_group": "Mediterranean_Testudo",
     "verdict": "limited_mixed_diet",
     "role": "혼합 야생초 일부",
-    "confidence": "C+",
+    "confidence": "C",
     "evidence_ids": [
       "bcg_mediterranean_care"
     ],
     "limits": [
       "BCG는 지중해 육지거북의 정원 forage 후보로 제시하지만 단독 주식 판정은 아님",
       "채집 오염·농약·제초제 노출 확인",
-      "Stellaria media와 유사 식물 동정 확인",
-      "사포닌 관련 이유로 고비율 반복 급여는 피함"
+      "Stellaria media와 유사 식물 동정 확인"
     ],
-    "why": "British Chelonia Group의 Mediterranean tortoise caresheet가 chickweed를 정원에서 섭식할 수 있는 forage 후보로 명시한다. 전문 식물 DB에서는 사포닌 때문에 moderation을 권고하므로 제한적 혼합식으로 분류한다.",
+    "why": "British Chelonia Group의 Mediterranean tortoise caresheet가 chickweed를 정원 forage 후보로 제시한다. 현재 공개 evidence layer에서 확인되는 근거는 이 전문 사육자료가 중심이므로 제한적 혼합식으로 유지하며 별도의 성분 위해 주장은 붙이지 않는다.",
     "applicability_note": "Mediterranean Testudo 전문 사육근거. 이베라 종수준 직접 야생섭식 근거는 아님."
   },
   {
