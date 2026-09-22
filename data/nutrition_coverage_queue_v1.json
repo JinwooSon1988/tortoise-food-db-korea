@@ -20,18 +20,6 @@
       "do_not_infer": true
     },
     {
-      "plant_id": "dandelion",
-      "ko": "민들레",
-      "scientific": "Taraxacum spp.",
-      "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
-    },
-    {
       "plant_id": "sowthistle",
       "ko": "방가지똥",
       "scientific": "Sonchus spp.",
@@ -212,30 +200,6 @@
       "do_not_infer": true
     },
     {
-      "plant_id": "pumpkinleaf",
-      "ko": "호박잎",
-      "scientific": "Cucurbita spp.",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
-    },
-    {
-      "plant_id": "zucchini",
-      "ko": "애호박",
-      "scientific": "Cucurbita moschata",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
-    },
-    {
       "plant_id": "bellpepper",
       "ko": "파프리카",
       "scientific": "Capsicum annuum",
@@ -360,18 +324,6 @@
       "ko": "옥수수잎",
       "scientific": "Zea mays",
       "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
-    },
-    {
-      "plant_id": "chrysanthemumleaf",
-      "ko": "쑥갓",
-      "scientific": "Glebionis coronaria",
-      "priority": "P2",
       "nutrition_source_priority": [
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
@@ -512,15 +464,27 @@
       "do_not_infer": true
     },
     {
-      "plant_id": "lambs_lettuce",
-      "ko": "콘샐러드",
-      "scientific": "Valerianella locusta",
-      "priority": "P2",
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "scientific": "Taraxacum spp.",
+      "priority": "P1",
       "nutrition_source_priority": [
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "identity_scope_hold",
       "do_not_infer": true
     }
   ]
