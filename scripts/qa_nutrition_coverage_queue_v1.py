@@ -13,5 +13,5 @@ assert all(x["mapping_status"] in {"pending_source_file","identity_scope_hold","
 print("OK")
 
 assert not any('review' in x['mapping_status'] for x in q['records'])
-assert len(q['records']) == 34, f"expected 34 unresolved nutrition records, got {len(q['records'])}"
+assert len(q['records']) == 33, f"expected 33 unresolved nutrition records, got {len(q['records'])}"
 print('OK: all missing nutrition records have explicit closed mapping states')

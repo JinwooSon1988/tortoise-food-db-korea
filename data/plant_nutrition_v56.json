@@ -749,6 +749,27 @@
       "calcium_mg": 39,
       "phosphorus_mg": 34,
       "calcium_phosphorus_ratio": 1.15
+    },
+    {
+      "plant_id": "mulberry",
+      "food_description": "뽕잎, 생것",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
+      "source_id": "F2350000000a",
+      "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "data_type": "Korean Standard Food Composition DB",
+      "dataset_release": "Korean Standard Food Composition Database 10.4 (2026)",
+      "verification_status": "verified",
+      "verified_at": "2026-09-22",
+      "basis": "per 100 g raw edible portion",
+      "water_g": 78.3,
+      "protein_g": 6.28,
+      "fat_g": 0.5,
+      "carbohydrate_g": 12.82,
+      "fiber_g": 10.7,
+      "calcium_mg": 243,
+      "phosphorus_mg": 105,
+      "calcium_phosphorus_ratio": 2.31,
+      "potassium_mg": 688
     }
   ]
 }

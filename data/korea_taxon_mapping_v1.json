@@ -47,14 +47,18 @@
       "plant_id": "mulberry",
       "ko": "뽕잎",
       "korea_taxon": "Morus alba L.",
-      "mapping_status": "rda_exact_record_pending_external_identity_corroboration",
+      "mapping_status": "verified_korea_name",
       "rda_food_code": "F2350000000a",
       "rda_food_name": "뽕잎, 생것",
       "rda_part_state": "leaf raw",
       "authority_sources": [
+        "National Institute of Biological Resources (NIBR)",
         "RDA Korean Standard Food Composition DB 10.4"
       ],
-      "nutrition_mapping_status": "hold_until_independent_korea_identity_source"
+      "nutrition_mapping_status": "eligible_exact_korea_taxon",
+      "identity_source_name": "National Institute of Biological Resources (NIBR)",
+      "identity_source_url": "https://species.nibr.go.kr/usefpreview/manual/manual.pdf",
+      "note": "NIBR independently identifies 뽕나무 as Morus alba; RDA 10.4 identifies raw mulberry leaf as Morus alba L. Global Morus spp. master remains broad."
     },
     {
       "plant_id": "sowthistle",
