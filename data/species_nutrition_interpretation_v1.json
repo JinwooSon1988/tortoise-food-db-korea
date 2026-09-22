@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "principle_ko": "영양성분은 급여 판정의 단독 근거가 아니다. 종별 직접근거·생리근거·식물 성분자료의 적용범위를 분리해 설명한다.",
+  "physiology": [
+    {
+      "id": "testudo_mineral_digestibility_17988349",
+      "topic": "mineral_utilization",
+      "animal_taxon": "Testudo hermanni",
+      "directness": "related_species_physiology",
+      "summary_ko": "통제 급여시험에서 식이 칼슘 수준에 따라 칼슘·마그네슘 이용성이 달라졌다.",
+      "meaning_ko": "표의 칼슘 함량만으로 식물의 가치를 단정하지 않고 실제 이용성과 전체 식단 맥락을 함께 본다.",
+      "limit_ko": "T. graeca ibera의 요구량이나 특정 식물의 안전성·급여비율을 정한 연구가 아니다.",
+      "pmid": "17988349"
+    },
+    {
+      "id": "testudo_blood_chemistry_20630020",
+      "topic": "calcium_phosphorus_status",
+      "animal_taxon": "Testudo spp.; Testudo graeca ibera included",
+      "directness": "ibera_included_not_feeding_trial",
+      "summary_ko": "사육 Testudo의 혈액 칼슘·인 상태를 조사했고 표본에 T. graeca ibera가 포함됐다.",
+      "meaning_ko": "칼슘·인 상태가 Testudo 임상생리에서 실제 측정되는 변수라는 배경근거다.",
+      "limit_ko": "먹이시험이 아니며 이베라의 특정 Ca:P 요구량이나 개별 식물 판정을 제시하지 않는다.",
+      "pmid": "20630020"
+    }
+  ],
+  "interpretation_rules": {
+    "calcium_phosphorus_ratio": {
+      "label_ko": "Ca:P",
+      "positive_ko": "칼슘과 인의 상대적 구성 확인에 유용",
+      "caution_ko": "비율 하나만으로 좋은 먹이·나쁜 먹이를 판정하지 않음"
+    },
+    "fiber_g": {
+      "label_ko": "식이섬유",
+      "positive_ko": "초식성 육지거북 식단의 구조적 특성을 이해하는 참고값",
+      "caution_ko": "식품성분 DB의 조섬유/식이섬유 값과 실제 Testudo 소화생리를 동일시하지 않음"
+    },
+    "water_g": {
+      "label_ko": "수분",
+      "positive_ko": "생잎의 수분 특성을 보여주는 참고값",
+      "caution_ko": "수분 함량만으로 급여 적합성이나 설사 위험을 자동 판정하지 않음"
+    }
+  }
+}
