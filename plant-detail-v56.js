@@ -11,10 +11,7 @@ function evidenceDistance(all){const animal=ANIMAL[selectedAnimal]||ANIMAL.testu
 function whyCard(a,n,evidence,interp,limitData,id){const animal=ANIMAL[selectedAnimal]||ANIMAL.testudo;
  const exact=evidence.filter(e=>e.applicability==='exact_taxon'||e.animal_taxon===animal.taxon);
  const direct=exact.filter(e=>e.directness==='direct'||e.directness==='direct_observation');
- const nutrient=[];
- if(n?.calcium_phosphorus_ratio!=null){const v=Number(n.calcium_phosphorus_ratio);nutrient.push({tone:v>=2?'plus':'neutral',title:'칼슘:인 구성',text:`Ca:P ${v}:1. 칼슘이 인보다 많은 구성이다. 다만 이 비율만으로 흡수율·안전성·급여량을 정하지 않는다.`});}
- if(n?.fiber_g!=null)nutrient.push({tone:'neutral',title:'식이섬유',text:`${n.fiber_g}g/100g. 식물 간 섬유 특성 비교에는 쓸 수 있지만 이 값 자체가 Testudo 소화율이나 필요량은 아니다.`});
- if(n?.water_g!=null)nutrient.push({tone:'neutral',title:'수분',text:`${n.water_g}g/100g. 생잎의 수분 특성이다. 높고 낮음만으로 좋은 먹이·나쁜 먹이를 가르지 않는다.`});
+ const nutritionMeaning=(n,animal)=>{if(!n)return[];const out=[],v=Number(n.calcium_phosphorus_ratio),tax=animal?.taxon||'';const isTestudo=tax.startsWith('Testudo');if(Number.isFinite(v))out.push({tone:v>=2?'plus':'neutral',title:'칼슘:인(Ca:P)',text:`원자료 Ca:P ${v}:1. 약 2:1은 전체 식단을 해석할 때의 참고 원칙이지 개별 식물의 합격선이 아니다. 이 값만으로 안전성·급여량을 정하지 않는다.`});if(n.fiber_g!=null)out.push({tone:'plus',title:'식이섬유',text:`${n.fiber_g}g/100g 생식품. ${isTestudo?'Testudo의 고섬유 식물성 식단 맥락에서 중요한 비교 지표다.':'초식성 육지거북에서 식물성 식단의 섬유 특성을 이해하는 핵심 비교 지표다.'} 개별 수치가 종별 필요량을 뜻하지는 않는다.`});if(n.protein_g!=null)out.push({tone:'neutral',title:'단백질',text:`${n.protein_g}g/100g. ${isTestudo?'지중해 Testudo의 저단백 식물성 식단 원칙과 함께 해석한다.':'식물 간 성분 특성 비교 자료이며 종별 필요량 자체는 아니다.'}`});if(n.fat_g!=null)out.push({tone:'neutral',title:'지방',text:`${n.fat_g}g/100g. ${isTestudo?'지중해 Testudo의 저지방 식물성 식단 원칙과 함께 해석한다.':'식물 간 성분 특성 비교 자료이며 단독 판정 기준은 아니다.'}`});if(n.water_g!=null)out.push({tone:'neutral',title:'수분',text:`${n.water_g}g/100g. 생식품의 수분 특성이며 높다고 자동으로 더 좋은 먹이가 되는 것은 아니다.`});return out;}; const nutrient=nutritionMeaning(n,animal);
  const limits=(Array.isArray(a?.limits)?a.limits:[]).filter(Boolean);
  const classified=limitData?.plants?.[id]?.items||[];
  const catNames=limitData?.categories||{};
