@@ -7,7 +7,7 @@
     "research_pool_count": 150,
     "published": {
       "verified_image": 54,
-      "verified_nutrition": 26,
+      "verified_nutrition": 29,
       "with_assessment": 69,
       "with_evidence": 69,
       "with_korea_alias": 10,
@@ -371,8 +371,8 @@
       "korea_alias_present": true,
       "gaps": [
         "identity",
-        "image",
-        "nutrition"
+        "nutrition",
+        "image"
       ],
       "next_action": "identity"
     },
@@ -670,16 +670,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "cucumber",
@@ -925,16 +924,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "ssuk",
@@ -1164,16 +1162,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     }
   ],
   "intake_candidates": [
