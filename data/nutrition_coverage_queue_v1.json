@@ -53,21 +53,6 @@
       "reviewed_at": "2026-09-22"
     },
     {
-      "plant_id": "mulberry",
-      "ko": "뽕잎",
-      "scientific": "Morus spp.",
-      "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "identity_scope_hold",
-      "do_not_infer": true,
-      "review_basis": "RDA_Korean_Standard_Food_Composition_DB_10.4_workbook",
-      "review_note": "RDA 10.4 has raw mulberry leaf F2350000000a = Morus alba L.; master is Morus spp., so species-level composition remains held pending identity narrowing.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
       "plant_id": "figleaf",
       "ko": "무화과잎",
       "scientific": "Ficus carica",
@@ -503,8 +488,8 @@
     }
   ],
   "summary": {
-    "missing_count": 34,
-    "verified_count": 35,
-    "coverage_percent": 50.7
+    "missing_count": 33,
+    "verified_count": 36,
+    "coverage_percent": 52.2
   }
 }
