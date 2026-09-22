@@ -1,0 +1,17 @@
+name: Canonical search engine QA
+on:
+  pull_request:
+    paths:
+      - 'search-live.js'
+      - 'data/korean_search_name_map_v1.json'
+      - 'scripts/qa_canonical_search_engine_v1.py'
+      - '.github/workflows/canonical-search-engine-qa.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/qa_canonical_search_engine_v1.py
