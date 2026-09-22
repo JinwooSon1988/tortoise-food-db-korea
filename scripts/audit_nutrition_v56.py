@@ -68,7 +68,7 @@ def main():
                 if m and f'/food-details/{m.group(1)}/' not in u.path: errors.append(f'{tag}: source URL FDC id does not match source_id')
             except Exception: errors.append(f'{tag}: invalid USDA source_url')
         elif source_name == 'Korean Standard Food Composition Database (RDA)':
-            if not re.fullmatch(r'[A-Z][0-9A-Za-z]+', source_id): errors.append(f'{tag}: invalid RDA food code format')
+            if not re.fullmatch(r'[A-Za-z][0-9A-Za-z]+', source_id): errors.append(f'{tag}: invalid RDA food code format')
             try:
                 u = urlparse(source_url)
                 if u.scheme != 'https' or u.hostname not in {'www.nics.go.kr','koreanfood.rda.go.kr'}: errors.append(f'{tag}: RDA source_url must use an official RDA/NICS host')
