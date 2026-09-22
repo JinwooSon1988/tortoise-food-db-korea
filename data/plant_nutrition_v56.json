@@ -682,7 +682,7 @@
     {
       "plant_id": "plantain",
       "food_description": "질경이, 생것",
-      "source_name": "Korean Standard Food Composition Database 10.4 (RDA)",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
       "source_id": "F1700000000a",
       "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
       "data_type": "Korean Standard Food Composition DB",
@@ -694,12 +694,12 @@
       "fat_g": 0.2,
       "calcium_mg": 119,
       "phosphorus_mg": 56,
-      "ca_p_ratio": 2.13
+      "calcium_phosphorus_ratio": 2.13
     },
     {
       "plant_id": "dandelion",
       "food_description": "민들레, 생것",
-      "source_name": "Korean Standard Food Composition Database 10.4 (RDA)",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
       "source_id": "F0780000000a",
       "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
       "data_type": "Korean Standard Food Composition DB",
@@ -712,12 +712,12 @@
       "fiber_g": 3.3,
       "calcium_mg": 119,
       "phosphorus_mg": 44,
-      "ca_p_ratio": 2.7
+      "calcium_phosphorus_ratio": 2.7
     },
     {
       "plant_id": "mallow",
       "food_description": "아욱, 생것",
-      "source_name": "Korean Standard Food Composition Database 10.4 (RDA)",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
       "source_id": "F1230000000a",
       "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
       "data_type": "Korean Standard Food Composition DB",
@@ -730,7 +730,7 @@
       "fiber_g": 4.5,
       "calcium_mg": 267,
       "phosphorus_mg": 76,
-      "ca_p_ratio": 3.51
+      "calcium_phosphorus_ratio": 3.51
     }
   ]
 }
