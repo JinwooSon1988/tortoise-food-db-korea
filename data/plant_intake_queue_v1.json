@@ -798,26 +798,6 @@
       "notes_ko": "검증 전 후보. 급여 권장으로 해석하지 않음."
     },
     {
-      "id": "dill",
-      "ko": "딜",
-      "canonical_taxon_candidate": "Anethum graveolens",
-      "status": "candidate",
-      "feeding_verdict": null,
-      "identity_source": null,
-      "evidence_ids": [],
-      "notes_ko": "검증 전 후보. 급여 권장으로 해석하지 않음."
-    },
-    {
-      "id": "celeryleaf",
-      "ko": "셀러리 잎",
-      "canonical_taxon_candidate": "Apium graveolens",
-      "status": "candidate",
-      "feeding_verdict": null,
-      "identity_source": null,
-      "evidence_ids": [],
-      "notes_ko": "검증 전 후보. 급여 권장으로 해석하지 않음."
-    },
-    {
       "id": "radishleafwild",
       "ko": "무속 잎 후보",
       "canonical_taxon_candidate": "Raphanus spp.",
@@ -828,9 +808,29 @@
       "notes_ko": "검증 전 후보. 급여 권장으로 해석하지 않음."
     },
     {
-      "id": "sweetpotatoleaf",
-      "ko": "고구마 잎",
-      "canonical_taxon_candidate": "Ipomoea batatas",
+      "id": "chrysanthemumleaf",
+      "ko": "쑥갓·국화속 잎 후보",
+      "canonical_taxon_candidate": "Glebionis coronaria",
+      "status": "candidate",
+      "feeding_verdict": null,
+      "identity_source": null,
+      "evidence_ids": [],
+      "notes_ko": "검증 전 후보. 급여 권장으로 해석하지 않음."
+    },
+    {
+      "id": "perillaleafcandidate",
+      "ko": "들깨 잎 후보",
+      "canonical_taxon_candidate": "Perilla frutescens",
+      "status": "candidate",
+      "feeding_verdict": null,
+      "identity_source": null,
+      "evidence_ids": [],
+      "notes_ko": "검증 전 후보. 급여 권장으로 해석하지 않음."
+    },
+    {
+      "id": "mallowkorean",
+      "ko": "아욱 후보",
+      "canonical_taxon_candidate": "Malva verticillata",
       "status": "candidate",
       "feeding_verdict": null,
       "identity_source": null,
