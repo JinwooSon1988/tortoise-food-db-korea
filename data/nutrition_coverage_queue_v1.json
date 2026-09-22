@@ -23,19 +23,6 @@
       "reviewed_at": "2026-09-22"
     },
     {
-      "plant_id": "sowthistle",
-      "ko": "방가지똥",
-      "scientific": "Sonchus spp.",
-      "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "identity_scope_hold",
-      "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
-    },
-    {
       "plant_id": "radishgreens",
       "ko": "무잎",
       "scientific": "Raphanus sativus",
@@ -514,5 +501,10 @@
       "do_not_infer": true,
       "review_basis": "official_usda_archives_supplied_2026-09-22"
     }
-  ]
+  ],
+  "summary": {
+    "missing_count": 34,
+    "verified_count": 35,
+    "coverage_percent": 50.7
+  }
 }
