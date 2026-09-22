@@ -1,0 +1,17 @@
+name: Korean search-name QA
+on:
+  pull_request:
+    paths:
+      - 'data/plants.json'
+      - 'data/korean_search_name_map_v1.json'
+      - 'scripts/qa_korean_search_name_map_v1.py'
+      - '.github/workflows/korean-search-name-qa.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/qa_korean_search_name_map_v1.py
