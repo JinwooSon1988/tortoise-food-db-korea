@@ -655,10 +655,10 @@
       "water_g": 94.7,
       "protein_g": 1.19,
       "fat_g": 0.08,
-      "fiber_g": 1.0,
+      "fiber_g": 1,
       "calcium_mg": 190,
       "phosphorus_mg": 19,
-      "calcium_phosphorus_ratio": 10.0
+      "calcium_phosphorus_ratio": 10
     },
     {
       "plant_id": "ssuk",
@@ -678,6 +678,59 @@
       "calcium_mg": 109,
       "phosphorus_mg": 69,
       "calcium_phosphorus_ratio": 1.58
+    },
+    {
+      "plant_id": "plantain",
+      "food_description": "질경이, 생것",
+      "source_name": "Korean Standard Food Composition Database 10.4 (RDA)",
+      "source_id": "F1700000000a",
+      "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "data_type": "Korean Standard Food Composition DB",
+      "verification_status": "verified",
+      "basis": "per 100 g raw edible portion",
+      "verified_at": "2026-09-22",
+      "water_g": 83.8,
+      "protein_g": 3,
+      "fat_g": 0.2,
+      "calcium_mg": 119,
+      "phosphorus_mg": 56,
+      "ca_p_ratio": 2.13
+    },
+    {
+      "plant_id": "dandelion",
+      "food_description": "민들레, 생것",
+      "source_name": "Korean Standard Food Composition Database 10.4 (RDA)",
+      "source_id": "F0780000000a",
+      "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "data_type": "Korean Standard Food Composition DB",
+      "verification_status": "verified",
+      "basis": "per 100 g raw edible portion",
+      "verified_at": "2026-09-22",
+      "water_g": 90.2,
+      "protein_g": 2.44,
+      "fat_g": 0.44,
+      "fiber_g": 3.3,
+      "calcium_mg": 119,
+      "phosphorus_mg": 44,
+      "ca_p_ratio": 2.7
+    },
+    {
+      "plant_id": "mallow",
+      "food_description": "아욱, 생것",
+      "source_name": "Korean Standard Food Composition Database 10.4 (RDA)",
+      "source_id": "F1230000000a",
+      "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "data_type": "Korean Standard Food Composition DB",
+      "verification_status": "verified",
+      "basis": "per 100 g raw edible portion",
+      "verified_at": "2026-09-22",
+      "water_g": 87.4,
+      "protein_g": 3.08,
+      "fat_g": 0.31,
+      "fiber_g": 4.5,
+      "calcium_mg": 267,
+      "phosphorus_mg": 76,
+      "ca_p_ratio": 3.51
     }
   ]
 }
