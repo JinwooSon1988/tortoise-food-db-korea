@@ -7,7 +7,7 @@
     "research_pool_count": 150,
     "published": {
       "verified_image": 54,
-      "verified_nutrition": 31,
+      "verified_nutrition": 34,
       "with_assessment": 69,
       "with_evidence": 69,
       "with_korea_alias": 10,
@@ -96,7 +96,7 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 2,
       "exact_species_taxa": [
         "Centrochelys sulcata"
@@ -104,8 +104,7 @@
       "evidence_record_present": true,
       "korea_alias_present": true,
       "gaps": [
-        "image",
-        "nutrition"
+        "image"
       ],
       "next_action": "image"
     },
@@ -311,7 +310,7 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 2,
       "exact_species_taxa": [
         "Centrochelys sulcata"
@@ -319,8 +318,7 @@
       "evidence_record_present": true,
       "korea_alias_present": true,
       "gaps": [
-        "image",
-        "nutrition"
+        "image"
       ],
       "next_action": "image"
     },
@@ -364,15 +362,14 @@
       "published": true,
       "identity_status": "needs_species_level_mapping",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": true,
       "gaps": [
         "identity",
-        "image",
-        "nutrition"
+        "image"
       ],
       "next_action": "identity"
     },

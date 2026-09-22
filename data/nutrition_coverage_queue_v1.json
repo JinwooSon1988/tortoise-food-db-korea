@@ -66,21 +66,6 @@
       "reviewed_at": "2026-09-22"
     },
     {
-      "plant_id": "plantain",
-      "ko": "질경이",
-      "scientific": "Plantago spp.",
-      "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "identity_scope_hold",
-      "do_not_infer": true,
-      "review_basis": "RDA_Korean_Standard_Food_Composition_DB_10.4_workbook",
-      "review_note": "RDA 10.4 has exact raw Asian plantain record F1700000000a = Plantago asiatica L.; master is Plantago spp., so nutrition remains held until canonical identity is narrowed.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
       "plant_id": "mulberry",
       "ko": "뽕잎",
       "scientific": "Morus spp.",
@@ -108,21 +93,6 @@
       "do_not_infer": true,
       "review_basis": "official_usda_archives_supplied_2026-09-22",
       "review_note": "No exact raw Ficus carica leaf composition record established from the supplied USDA archives; fig fruit is not substituted.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
-      "plant_id": "mallow",
-      "ko": "아욱",
-      "scientific": "Malva spp.",
-      "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "identity_scope_hold",
-      "do_not_infer": true,
-      "review_basis": "RDA_Korean_Standard_Food_Composition_DB_10.4_workbook",
-      "review_note": "RDA 10.4 has raw curled mallow F1230000000a = Malva verticillata L.; master is Malva spp., so species-level composition remains held pending identity narrowing.",
       "reviewed_at": "2026-09-22"
     },
     {
@@ -529,21 +499,6 @@
       "do_not_infer": true,
       "review_basis": "official_usda_archives_supplied_2026-09-22",
       "review_note": "No exact Calendula edible leaf/flower record identified in supplied archives.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
-      "plant_id": "dandelion",
-      "ko": "민들레",
-      "scientific": "Taraxacum spp.",
-      "priority": "P1",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "identity_scope_hold",
-      "do_not_infer": true,
-      "review_basis": "RDA_Korean_Standard_Food_Composition_DB_10.4_workbook",
-      "review_note": "RDA 10.4 has raw dandelion F0780000000a = Taraxacum platycarpum H. Dahlstedt; master is Taraxacum spp., so species-level composition is not substituted.",
       "reviewed_at": "2026-09-22"
     },
     {
