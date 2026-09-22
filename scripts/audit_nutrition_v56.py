@@ -52,7 +52,7 @@ def main():
         if not p: errors.append(f'{tag}: no matching master plant')
         else:
             sci = str(p.get('scientific') or '').strip(); status = str(p.get('identity_status') or '').lower()
-            if re.search(r'\bspp\.?$', sci, re.I): errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})')
+            if re.search(r'\bspp\.? errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})'), sci, re.I) and pid not in korea_taxa: errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})')
             if any(x in status for x in ('blocked','unverified','needs_')) and pid not in korea_taxa: errors.append(f'{tag}: unresolved master identity_status={status}')
 
         source_name = n.get('source_name')
