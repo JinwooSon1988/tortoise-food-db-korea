@@ -73,6 +73,30 @@
       "phosphorus_mg": 49,
       "potassium_mg": 267,
       "calcium_phosphorus_ratio": 0.69
+    },
+    {
+      "plant_id": "radishgreens",
+      "taxon": "Raphanus sativus L.",
+      "variant": "조선무",
+      "part": "leaf",
+      "state": "raw",
+      "food_description": "무청, 조선무, 생것",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
+      "source_id": "F067002B140a",
+      "data_type": "Korean Standard Food Composition DB",
+      "dataset_release": "Korean Standard Food Composition Database 10.4 (2026)",
+      "verification_status": "verified",
+      "verified_at": "2026-09-22",
+      "basis": "per 100 g raw edible portion",
+      "water_g": 92.1,
+      "protein_g": 1.84,
+      "fat_g": 0.42,
+      "carbohydrate_g": 4.29,
+      "fiber_g": 2.9,
+      "calcium_mg": 200,
+      "phosphorus_mg": 28,
+      "potassium_mg": 509,
+      "calcium_phosphorus_ratio": 7.14
     }
   ]
 }
