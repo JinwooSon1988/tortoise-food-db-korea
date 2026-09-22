@@ -13,7 +13,7 @@
     "plant_ids": "master plant ids to which the record is relevant",
     "source_title": "human-readable source title",
     "source_type": "academic_study | specialist_plant_database | specialist_husbandry_source | official_composition_database | other",
-    "animal_taxon": "taxon/population actually covered by the source",
+    "animal_taxon": "animal taxon/population actually covered by the source; use not_applicable when the evidence is plant identity, plant chemistry, human nutrition, or other non-animal evidence with no applicable animal taxon",
     "applicability": "exact_taxon | species | mediterranean_testudo | tortoise_general | herbivorous_reptile_general | composition_only",
     "plant_taxon": "plant taxon actually supported",
     "plant_part_state": "leaf/flower/whole aerial parts/etc plus fresh/dried state when known",
