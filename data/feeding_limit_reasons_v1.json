@@ -257,6 +257,49 @@
           "evidence_basis": "assessment_existing"
         }
       ]
+    },
+    "spinach": {
+      "items": [
+        {
+          "category": "phytochemical_concern",
+          "text_ko": "시금치의 oxalate는 칼슘 이용성을 낮출 수 있다는 직접적인 식품·흡수 연구가 있다. 사람 대상 교차시험에서는 같은 200 mg Ca 조건에서 시금치 Ca 흡수율이 우유보다 현저히 낮았다.",
+          "evidence_basis": "heaney_spinach_calcium_1988"
+        },
+        {
+          "category": "evidence_limitation",
+          "text_ko": "이 결과는 사람의 칼슘 흡수 연구이며 이베라의 독성·결석 위험·정확한 용량을 입증하지 않는다.",
+          "evidence_basis": "heaney_spinach_calcium_1988"
+        },
+        {
+          "category": "diet_role_limitation",
+          "text_ko": "육지거북 전문 식물 DB는 oxalic acid와 칼슘 이용 저해 우려를 근거로 급여하지 않도록 분류한다.",
+          "evidence_basis": "tortoise_table_spinach"
+        }
+      ]
+    },
+    "parsley": {
+      "items": [
+        {
+          "category": "phytochemical_concern",
+          "text_ko": "파슬리 잎·뿌리에는 oxypeucedanin, psoralen, 5-MOP, 8-MOP 등 광활성 furanocoumarin이 실제 분석에서 확인됐다.",
+          "evidence_basis": "chaudhary_parsley_furocoumarin_1986"
+        },
+        {
+          "category": "phytochemical_concern",
+          "text_ko": "여러 파슬리 품종에서 furanocoumarin 조성과 농도 차이가 확인돼 단순 영양성분표만으로 식물화학적 특성을 설명할 수 없다.",
+          "evidence_basis": "manderfeld_parsley_furocoumarins_1997"
+        },
+        {
+          "category": "evidence_limitation",
+          "text_ko": "이 식물화학·광생물학 연구들은 이베라 경구 급여 독성시험이 아니므로 특정 용량의 독성을 주장하지 않는다.",
+          "evidence_basis": "chaudhary_parsley_furocoumarin_1986"
+        },
+        {
+          "category": "diet_role_limitation",
+          "text_ko": "육지거북 전문 식물 DB는 파슬리를 급여하지 않도록 분류하지만, 이베라 직접 급여시험에 근거한 판정은 아니다.",
+          "evidence_basis": "tortoise_table_parsley"
+        }
+      ]
     }
   }
 }
