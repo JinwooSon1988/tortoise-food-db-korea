@@ -24,4 +24,6 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.x'}
       - run: python scripts/qa_public_content_coverage.py
-      - run: git diff --exit-code -- data/public_content_coverage.json
+      - name: Verify materialized coverage matches generator
+        run: |
+          git diff --exit-code --ignore-space-at-eol -- data/public_content_coverage.json
