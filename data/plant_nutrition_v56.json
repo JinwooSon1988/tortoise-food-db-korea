@@ -659,6 +659,25 @@
       "calcium_mg": 190,
       "phosphorus_mg": 19,
       "calcium_phosphorus_ratio": 10.0
+    },
+    {
+      "plant_id": "ssuk",
+      "food_description": "쑥, 생것",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
+      "source_id": "F1180000000a",
+      "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "data_type": "Korean Standard Food Composition DB",
+      "dataset_release": "Korean Standard Food Composition Database 10.4 (2026)",
+      "verification_status": "verified",
+      "verified_at": "2026-09-22",
+      "basis": "per 100 g raw edible portion",
+      "water_g": 87.3,
+      "protein_g": 3.4,
+      "fat_g": 0.38,
+      "fiber_g": 5.9,
+      "calcium_mg": 109,
+      "phosphorus_mg": 69,
+      "calcium_phosphorus_ratio": 1.58
     }
   ]
 }
