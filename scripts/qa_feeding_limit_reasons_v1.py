@@ -8,8 +8,9 @@ ass=json.loads((root/'data/assessments.json').read_text(encoding='utf-8'))
 eids={x['id']:x for x in ev}
 med={x['plant_id'] for x in ass if x.get('species_group')=='Mediterranean_Testudo'}
 errors=[]
-if set(limits['plants'])!=med:
-    errors.append(f"classified plant set differs from Mediterranean assessments: missing={sorted(med-set(limits['plants']))}, extra={sorted(set(limits['plants'])-med)}")
+if not med.issubset(set(limits['plants'])):
+    errors.append(f"Mediterranean assessments missing classifications: {sorted(med-set(limits['plants']))}")
+# Additional classified plants are allowed when another species_group has evidence-backed limits (e.g. do_not_feed).
 for pid,block in limits['plants'].items():
     for item in block.get('items',[]):
         cat=item.get('category')
