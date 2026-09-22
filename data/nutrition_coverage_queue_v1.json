@@ -1,0 +1,527 @@
+{
+  "schema_version": "1.0",
+  "purpose": "nutrition coverage intake queue",
+  "policy": "Do not populate values from related foods, genus averages, or web snippets. Reconcile exact food identity, plant part, preparation state, and source record before publishing.",
+  "source_priority": [
+    "USDA FoodData Central Foundation Foods April 2026",
+    "USDA SR Legacy April 2018"
+  ],
+  "records": [
+    {
+      "plant_id": "lettuce",
+      "ko": "상추",
+      "scientific": "Lactuca sativa",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "scientific": "Taraxacum spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "sowthistle",
+      "ko": "방가지똥",
+      "scientific": "Sonchus spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "radishgreens",
+      "ko": "무잎",
+      "scientific": "Raphanus sativus",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "cauliflowerleaf",
+      "ko": "콜리플라워잎",
+      "scientific": "Brassica oleracea var. botrytis",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "plantain",
+      "ko": "질경이",
+      "scientific": "Plantago spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "mulberry",
+      "ko": "뽕잎",
+      "scientific": "Morus spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "figleaf",
+      "ko": "무화과잎",
+      "scientific": "Ficus carica",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "mallow",
+      "ko": "아욱",
+      "scientific": "Malva spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "hibiscusleaf",
+      "ko": "무궁화잎",
+      "scientific": "Hibiscus syriacus",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "ko": "무궁화꽃",
+      "scientific": "Hibiscus syriacus",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "celeryleaf",
+      "ko": "셀러리잎",
+      "scientific": "Apium graveolens",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "carrottop",
+      "ko": "당근잎",
+      "scientific": "Daucus carota subsp. sativus",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "mint",
+      "ko": "민트",
+      "scientific": "Mentha spp.",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "clover",
+      "ko": "클로버",
+      "scientific": "Trifolium spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "alfalfa",
+      "ko": "알팔파",
+      "scientific": "Medicago sativa",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "chickweed",
+      "ko": "별꽃",
+      "scientific": "Stellaria media",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "zucchini",
+      "ko": "애호박",
+      "scientific": "Cucurbita moschata",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "rose",
+      "ko": "장미꽃",
+      "scientific": "Rosa spp.",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "nasturtium",
+      "ko": "한련화",
+      "scientific": "Tropaeolum majus",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "pricklypear",
+      "ko": "천년초",
+      "scientific": "Opuntia spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "orchard",
+      "ko": "오차드그라스",
+      "scientific": "Dactylis glomerata",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "ryegrass",
+      "ko": "라이그라스",
+      "scientific": "Lolium spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "wheatgrass",
+      "ko": "밀싹",
+      "scientific": "Triticum aestivum",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "barleygrass",
+      "ko": "보리싹",
+      "scientific": "Hordeum vulgare",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "oatgrass",
+      "ko": "귀리싹",
+      "scientific": "Avena sativa",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "cornleaf",
+      "ko": "옥수수잎",
+      "scientific": "Zea mays",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "chrysanthemumleaf",
+      "ko": "쑥갓",
+      "scientific": "Glebionis coronaria",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "ssuk",
+      "ko": "쑥",
+      "scientific": "Artemisia princeps",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "dolnamul",
+      "ko": "돌나물",
+      "scientific": "Sedum sarmentosum",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "minari",
+      "ko": "미나리",
+      "scientific": "Oenanthe javanica",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "aehobakleaf",
+      "ko": "애호박잎",
+      "scientific": "Cucurbita moschata",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "pea_shoot",
+      "ko": "완두순",
+      "scientific": "Pisum sativum",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "sunflowerleaf",
+      "ko": "해바라기잎",
+      "scientific": "Helianthus annuus",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "violet",
+      "ko": "제비꽃",
+      "scientific": "Viola spp.",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "geranium",
+      "ko": "제라늄",
+      "scientific": "Pelargonium spp.",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "pansy",
+      "ko": "팬지",
+      "scientific": "Viola × wittrockiana",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "marigold",
+      "ko": "메리골드",
+      "scientific": "Tagetes spp.",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "calendula",
+      "ko": "금잔화",
+      "scientific": "Calendula officinalis",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "ko": "콘샐러드",
+      "scientific": "Valerianella locusta",
+      "priority": "P2",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "pending_source_file",
+      "do_not_infer": true
+    }
+  ]
+}
