@@ -1,0 +1,17 @@
+name: Animal taxon assessment QA
+on:
+  pull_request:
+    paths:
+      - 'data/assessments.json'
+      - 'data/animal_taxon_selector_v1.json'
+      - 'scripts/qa_animal_taxon_assessments_v1.py'
+      - '.github/workflows/animal-taxon-assessment-qa.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/qa_animal_taxon_assessments_v1.py

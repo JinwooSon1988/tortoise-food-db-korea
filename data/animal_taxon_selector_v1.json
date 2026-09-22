@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "principle_ko": "식물 원본과 동물별 급여 판정을 분리한다. 사용자가 선택한 동물 분류군에 맞는 assessment를 우선 표시하되, 직접근거가 없는 종에 다른 종의 판정을 자동 이전하지 않는다.",
+  "selector_groups": [
+    {
+      "id": "testudo",
+      "ko": "Testudo 계열",
+      "taxon": "Testudo",
+      "children": [
+        {
+          "id": "testudo_graeca",
+          "ko": "그리스 육지거북",
+          "taxon": "Testudo graeca",
+          "children": [
+            {
+              "id": "testudo_graeca_ibera",
+              "ko": "이베라 그리스 육지거북",
+              "taxon": "Testudo graeca ibera"
+            }
+          ]
+        },
+        {
+          "id": "testudo_hermanni",
+          "ko": "헤르만 육지거북",
+          "taxon": "Testudo hermanni"
+        },
+        {
+          "id": "testudo_marginata",
+          "ko": "마지나타 육지거북",
+          "taxon": "Testudo marginata"
+        }
+      ]
+    },
+    {
+      "id": "horsfieldii",
+      "ko": "러시안 육지거북",
+      "taxon": "Testudo horsfieldii",
+      "taxonomy_note_ko": "분류학적 처리 차이를 내부 taxonomy layer에서 추적하며 UI 명칭과 evidence taxon을 분리한다."
+    },
+    {
+      "id": "sulcata",
+      "ko": "설카타 육지거북",
+      "taxon": "Centrochelys sulcata"
+    },
+    {
+      "id": "leopard",
+      "ko": "레오파드 육지거북",
+      "taxon": "Stigmochelys pardalis"
+    }
+  ],
+  "evidence_priority": [
+    "exact_taxon",
+    "parent_taxon",
+    "same_genus",
+    "ecologically_related_tortoise",
+    "herbivorous_reptile_general",
+    "plant_composition_only"
+  ],
+  "rules_ko": [
+    "선택 종의 직접근거를 최우선으로 표시한다.",
+    "상위 분류군·같은 속·다른 육지거북 근거는 evidence distance를 표시한다.",
+    "다른 종의 급여 판정을 선택 종의 판정으로 자동 복사하지 않는다.",
+    "식물 영양·화학 데이터는 공통 plant layer에 두고 동물별 안전성 판정을 자동 생성하지 않는다.",
+    "근거가 부족하면 not_confirmed로 표시한다."
+  ]
+}
