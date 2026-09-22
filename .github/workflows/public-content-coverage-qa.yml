@@ -26,4 +26,10 @@ jobs:
       - run: python scripts/qa_public_content_coverage.py
       - name: Verify materialized coverage matches generator
         run: |
-          git diff --exit-code --ignore-space-at-eol -- data/public_content_coverage.json
+          python - <<'PY'
+          import json, subprocess
+          committed=json.loads(subprocess.check_output(["git","show","HEAD:data/public_content_coverage.json"], text=True))
+          generated=json.load(open("data/public_content_coverage.json", encoding="utf-8"))
+          assert committed == generated, "materialized public coverage content is stale"
+          print("OK: materialized public coverage content matches generator")
+          PY
