@@ -7,7 +7,7 @@
     "research_pool_count": 150,
     "published": {
       "verified_image": 54,
-      "verified_nutrition": 29,
+      "verified_nutrition": 31,
       "with_assessment": 69,
       "with_evidence": 69,
       "with_korea_alias": 10,
@@ -940,16 +940,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "dolnamul",
@@ -957,16 +956,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "minari",
