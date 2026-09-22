@@ -12,3 +12,5 @@
 .v56-nutrient-meaning{display:flex;flex-direction:column;gap:3px;padding:8px 0;border-bottom:1px solid #ecefea}.v56-nutrient-meaning:last-child{border-bottom:0}
 .v56-nutrient-meaning span,.v56-why-grid small{font-size:.9em;line-height:1.5;opacity:.82}
 @media(max-width:720px){.v56-why{padding:14px}.v56-why-grid{grid-template-columns:1fr}.v56-why-grid article{padding:12px}}
+
+.v56-distance{grid-column:1/-1;margin-top:16px;border-top:1px solid #dce5dd;padding-top:16px}.v56-distance h2{margin:0 0 10px}.v56-distance .v56-evidence-summary{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:620px){.v56-distance .v56-evidence-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
