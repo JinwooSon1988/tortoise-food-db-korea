@@ -114,14 +114,13 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": true,
       "gaps": [
-        "image",
-        "nutrition"
+        "image"
       ],
       "next_action": "image"
     },
