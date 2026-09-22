@@ -1,11 +1,26 @@
 {
-  "plants": 69,
-  "nutrition_verified": 29,
-  "nutrition_missing": 40,
-  "images_verified": 54,
-  "images_missing": 15,
-  "nutrition_coverage_pct": 42,
   "image_coverage_pct": 78.3,
+  "image_missing_ids": [
+    "clover",
+    "dandelion",
+    "geranium",
+    "mallow",
+    "marigold",
+    "mint",
+    "mulberry",
+    "napa",
+    "plantain",
+    "pricklypear",
+    "pumpkinleaf",
+    "rose",
+    "ryegrass",
+    "sowthistle",
+    "violet"
+  ],
+  "images_missing": 15,
+  "images_verified": 54,
+  "nutrition_coverage_pct": 42,
+  "nutrition_missing": 40,
   "nutrition_missing_ids": [
     "aehobakleaf",
     "alfalfa",
@@ -48,21 +63,6 @@
     "violet",
     "wheatgrass"
   ],
-  "image_missing_ids": [
-    "clover",
-    "dandelion",
-    "geranium",
-    "mallow",
-    "marigold",
-    "mint",
-    "mulberry",
-    "napa",
-    "plantain",
-    "pricklypear",
-    "pumpkinleaf",
-    "rose",
-    "ryegrass",
-    "sowthistle",
-    "violet"
-  ]
+  "nutrition_verified": 29,
+  "plants": 69
 }
