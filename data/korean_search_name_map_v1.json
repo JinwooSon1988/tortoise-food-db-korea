@@ -1,0 +1,868 @@
+{
+  "schema_version": "1.0",
+  "principle_ko": "표준 한국명 검색과 실제 유통 상품명 매핑을 분리한다. 검색어 존재만으로 판매·학명 동일성을 확정하지 않는다.",
+  "records": [
+    {
+      "plant_id": "chicory",
+      "retail_terms": [
+        "치커리",
+        "치커리잎",
+        "치커리 잎"
+      ],
+      "master_scientific": "Cichorium intybus",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "치커리",
+        "치커리 잎",
+        "치커리잎"
+      ]
+    },
+    {
+      "plant_id": "romaine",
+      "retail_terms": [
+        "로메인",
+        "로메인상추",
+        "로메인 상추"
+      ],
+      "master_scientific": "Lactuca sativa var. longifolia",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "로메인",
+        "로메인 상추",
+        "로메인상추"
+      ]
+    },
+    {
+      "plant_id": "endive",
+      "retail_terms": [
+        "엔다이브",
+        "앤다이브",
+        "엔디브"
+      ],
+      "master_scientific": "Cichorium endivia",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "앤다이브",
+        "엔다이브",
+        "엔디브"
+      ]
+    },
+    {
+      "plant_id": "dandelion",
+      "retail_terms": [
+        "민들레",
+        "민들레잎",
+        "민들레 잎"
+      ],
+      "master_scientific": "Taraxacum spp.",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "민들레",
+        "민들레 잎",
+        "민들레잎"
+      ]
+    },
+    {
+      "plant_id": "sowthistle",
+      "retail_terms": [
+        "방가지똥",
+        "방가지똥류"
+      ],
+      "master_scientific": "Sonchus spp.",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "방가지똥",
+        "방가지똥류"
+      ]
+    },
+    {
+      "plant_id": "plantain",
+      "retail_terms": [
+        "질경이",
+        "질경이잎",
+        "질경이 잎"
+      ],
+      "master_scientific": "Plantago spp.",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "질경이",
+        "질경이 잎",
+        "질경이잎"
+      ]
+    },
+    {
+      "plant_id": "mulberry",
+      "retail_terms": [
+        "뽕잎",
+        "뽕나무잎",
+        "뽕나무 잎"
+      ],
+      "master_scientific": "Morus spp.",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "뽕나무 잎",
+        "뽕나무잎",
+        "뽕잎"
+      ]
+    },
+    {
+      "plant_id": "mallow",
+      "retail_terms": [
+        "아욱",
+        "아욱잎",
+        "아욱 잎"
+      ],
+      "master_scientific": "Malva spp.",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "아욱",
+        "아욱 잎",
+        "아욱잎"
+      ]
+    },
+    {
+      "plant_id": "clover",
+      "retail_terms": [
+        "클로버",
+        "토끼풀"
+      ],
+      "master_scientific": "Trifolium spp.",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "클로버",
+        "토끼풀"
+      ]
+    },
+    {
+      "plant_id": "alfalfa",
+      "retail_terms": [
+        "알팔파",
+        "자주개자리"
+      ],
+      "master_scientific": "Medicago sativa",
+      "mapping_status": "name_candidate_only",
+      "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+      "aliases": [
+        "알팔파",
+        "자주개자리"
+      ]
+    },
+    {
+      "plant_id": "lettuce",
+      "retail_terms": [
+        "상추"
+      ],
+      "master_scientific": "Lactuca sativa",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "상추"
+      ]
+    },
+    {
+      "plant_id": "radicchio",
+      "retail_terms": [
+        "라디키오"
+      ],
+      "master_scientific": "Cichorium intybus var. foliosum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "라디키오"
+      ]
+    },
+    {
+      "plant_id": "kale",
+      "retail_terms": [
+        "케일"
+      ],
+      "master_scientific": "Brassica oleracea var. sabellica",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "케일"
+      ]
+    },
+    {
+      "plant_id": "bokchoy",
+      "retail_terms": [
+        "청경채"
+      ],
+      "master_scientific": "Brassica rapa subsp. chinensis",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "청경채"
+      ]
+    },
+    {
+      "plant_id": "mustard",
+      "retail_terms": [
+        "갓"
+      ],
+      "master_scientific": "Brassica juncea",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "갓"
+      ]
+    },
+    {
+      "plant_id": "turnipgreens",
+      "retail_terms": [
+        "순무잎"
+      ],
+      "master_scientific": "Brassica rapa subsp. rapa",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "순무잎"
+      ]
+    },
+    {
+      "plant_id": "collard",
+      "retail_terms": [
+        "콜라드그린"
+      ],
+      "master_scientific": "Brassica oleracea var. viridis",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "콜라드그린"
+      ]
+    },
+    {
+      "plant_id": "cabbage",
+      "retail_terms": [
+        "양배추"
+      ],
+      "master_scientific": "Brassica oleracea var. capitata",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "양배추"
+      ]
+    },
+    {
+      "plant_id": "napa",
+      "retail_terms": [
+        "배추"
+      ],
+      "master_scientific": "Brassica rapa subsp. pekinensis",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "배추"
+      ]
+    },
+    {
+      "plant_id": "radishgreens",
+      "retail_terms": [
+        "무잎"
+      ],
+      "master_scientific": "Raphanus sativus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "무잎"
+      ]
+    },
+    {
+      "plant_id": "broccolileaf",
+      "retail_terms": [
+        "브로콜리잎"
+      ],
+      "master_scientific": "Brassica oleracea var. italica",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "브로콜리잎"
+      ]
+    },
+    {
+      "plant_id": "cauliflowerleaf",
+      "retail_terms": [
+        "콜리플라워잎"
+      ],
+      "master_scientific": "Brassica oleracea var. botrytis",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "콜리플라워잎"
+      ]
+    },
+    {
+      "plant_id": "arugula",
+      "retail_terms": [
+        "루꼴라"
+      ],
+      "master_scientific": "Eruca vesicaria",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "루꼴라"
+      ]
+    },
+    {
+      "plant_id": "figleaf",
+      "retail_terms": [
+        "무화과잎"
+      ],
+      "master_scientific": "Ficus carica",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "무화과잎"
+      ]
+    },
+    {
+      "plant_id": "hibiscusleaf",
+      "retail_terms": [
+        "무궁화잎"
+      ],
+      "master_scientific": "Hibiscus syriacus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "무궁화잎"
+      ]
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "retail_terms": [
+        "무궁화꽃"
+      ],
+      "master_scientific": "Hibiscus syriacus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "무궁화꽃"
+      ]
+    },
+    {
+      "plant_id": "spinach",
+      "retail_terms": [
+        "시금치"
+      ],
+      "master_scientific": "Spinacia oleracea",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "시금치"
+      ]
+    },
+    {
+      "plant_id": "beetgreens",
+      "retail_terms": [
+        "비트잎"
+      ],
+      "master_scientific": "Beta vulgaris",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "비트잎"
+      ]
+    },
+    {
+      "plant_id": "watercress",
+      "retail_terms": [
+        "물냉이"
+      ],
+      "master_scientific": "Nasturtium officinale",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "물냉이"
+      ]
+    },
+    {
+      "plant_id": "parsley",
+      "retail_terms": [
+        "파슬리"
+      ],
+      "master_scientific": "Petroselinum crispum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "파슬리"
+      ]
+    },
+    {
+      "plant_id": "cilantro",
+      "retail_terms": [
+        "고수"
+      ],
+      "master_scientific": "Coriandrum sativum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "고수"
+      ]
+    },
+    {
+      "plant_id": "celeryleaf",
+      "retail_terms": [
+        "셀러리잎"
+      ],
+      "master_scientific": "Apium graveolens",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "셀러리잎"
+      ]
+    },
+    {
+      "plant_id": "carrottop",
+      "retail_terms": [
+        "당근잎"
+      ],
+      "master_scientific": "Daucus carota subsp. sativus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "당근잎"
+      ]
+    },
+    {
+      "plant_id": "basil",
+      "retail_terms": [
+        "바질"
+      ],
+      "master_scientific": "Ocimum basilicum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "바질"
+      ]
+    },
+    {
+      "plant_id": "mint",
+      "retail_terms": [
+        "민트"
+      ],
+      "master_scientific": "Mentha spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "민트"
+      ]
+    },
+    {
+      "plant_id": "perilla",
+      "retail_terms": [
+        "깻잎"
+      ],
+      "master_scientific": "Perilla frutescens",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "깻잎"
+      ]
+    },
+    {
+      "plant_id": "chickweed",
+      "retail_terms": [
+        "별꽃"
+      ],
+      "master_scientific": "Stellaria media",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "별꽃"
+      ]
+    },
+    {
+      "plant_id": "sweetpotatoleaf",
+      "retail_terms": [
+        "고구마잎"
+      ],
+      "master_scientific": "Ipomoea batatas",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "고구마잎"
+      ]
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "retail_terms": [
+        "호박잎"
+      ],
+      "master_scientific": "Cucurbita spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "호박잎"
+      ]
+    },
+    {
+      "plant_id": "zucchini",
+      "retail_terms": [
+        "애호박"
+      ],
+      "master_scientific": "Cucurbita moschata",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "애호박"
+      ]
+    },
+    {
+      "plant_id": "cucumber",
+      "retail_terms": [
+        "오이"
+      ],
+      "master_scientific": "Cucumis sativus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "오이"
+      ]
+    },
+    {
+      "plant_id": "bellpepper",
+      "retail_terms": [
+        "파프리카"
+      ],
+      "master_scientific": "Capsicum annuum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "파프리카"
+      ]
+    },
+    {
+      "plant_id": "tomato",
+      "retail_terms": [
+        "토마토"
+      ],
+      "master_scientific": "Solanum lycopersicum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "토마토"
+      ]
+    },
+    {
+      "plant_id": "grapeleaf",
+      "retail_terms": [
+        "포도잎"
+      ],
+      "master_scientific": "Vitis vinifera",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "포도잎"
+      ]
+    },
+    {
+      "plant_id": "rose",
+      "retail_terms": [
+        "장미꽃"
+      ],
+      "master_scientific": "Rosa spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "장미꽃"
+      ]
+    },
+    {
+      "plant_id": "nasturtium",
+      "retail_terms": [
+        "한련화"
+      ],
+      "master_scientific": "Tropaeolum majus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "한련화"
+      ]
+    },
+    {
+      "plant_id": "pricklypear",
+      "retail_terms": [
+        "천년초"
+      ],
+      "master_scientific": "Opuntia spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "천년초"
+      ]
+    },
+    {
+      "plant_id": "timothy",
+      "retail_terms": [
+        "티모시"
+      ],
+      "master_scientific": "Phleum pratense",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "티모시"
+      ]
+    },
+    {
+      "plant_id": "orchard",
+      "retail_terms": [
+        "오차드그라스"
+      ],
+      "master_scientific": "Dactylis glomerata",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "오차드그라스"
+      ]
+    },
+    {
+      "plant_id": "ryegrass",
+      "retail_terms": [
+        "라이그라스"
+      ],
+      "master_scientific": "Lolium spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "라이그라스"
+      ]
+    },
+    {
+      "plant_id": "wheatgrass",
+      "retail_terms": [
+        "밀싹"
+      ],
+      "master_scientific": "Triticum aestivum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "밀싹"
+      ]
+    },
+    {
+      "plant_id": "barleygrass",
+      "retail_terms": [
+        "보리싹"
+      ],
+      "master_scientific": "Hordeum vulgare",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "보리싹"
+      ]
+    },
+    {
+      "plant_id": "oatgrass",
+      "retail_terms": [
+        "귀리싹"
+      ],
+      "master_scientific": "Avena sativa",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "귀리싹"
+      ]
+    },
+    {
+      "plant_id": "cornleaf",
+      "retail_terms": [
+        "옥수수잎"
+      ],
+      "master_scientific": "Zea mays",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "옥수수잎"
+      ]
+    },
+    {
+      "plant_id": "chrysanthemumleaf",
+      "retail_terms": [
+        "쑥갓"
+      ],
+      "master_scientific": "Glebionis coronaria",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "쑥갓"
+      ]
+    },
+    {
+      "plant_id": "ssuk",
+      "retail_terms": [
+        "쑥"
+      ],
+      "master_scientific": "Artemisia princeps",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "쑥"
+      ]
+    },
+    {
+      "plant_id": "dolnamul",
+      "retail_terms": [
+        "돌나물"
+      ],
+      "master_scientific": "Sedum sarmentosum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "돌나물"
+      ]
+    },
+    {
+      "plant_id": "minari",
+      "retail_terms": [
+        "미나리"
+      ],
+      "master_scientific": "Oenanthe javanica",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "미나리"
+      ]
+    },
+    {
+      "plant_id": "aehobakleaf",
+      "retail_terms": [
+        "애호박잎"
+      ],
+      "master_scientific": "Cucurbita moschata",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "애호박잎"
+      ]
+    },
+    {
+      "plant_id": "pea_shoot",
+      "retail_terms": [
+        "완두순"
+      ],
+      "master_scientific": "Pisum sativum",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "완두순"
+      ]
+    },
+    {
+      "plant_id": "sunflowerleaf",
+      "retail_terms": [
+        "해바라기잎"
+      ],
+      "master_scientific": "Helianthus annuus",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "해바라기잎"
+      ]
+    },
+    {
+      "plant_id": "violet",
+      "retail_terms": [
+        "제비꽃"
+      ],
+      "master_scientific": "Viola spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "제비꽃"
+      ]
+    },
+    {
+      "plant_id": "geranium",
+      "retail_terms": [
+        "제라늄"
+      ],
+      "master_scientific": "Pelargonium spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "제라늄"
+      ]
+    },
+    {
+      "plant_id": "pansy",
+      "retail_terms": [
+        "팬지"
+      ],
+      "master_scientific": "Viola × wittrockiana",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "팬지"
+      ]
+    },
+    {
+      "plant_id": "marigold",
+      "retail_terms": [
+        "메리골드"
+      ],
+      "master_scientific": "Tagetes spp.",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "메리골드"
+      ]
+    },
+    {
+      "plant_id": "calendula",
+      "retail_terms": [
+        "금잔화"
+      ],
+      "master_scientific": "Calendula officinalis",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "금잔화"
+      ]
+    },
+    {
+      "plant_id": "dill",
+      "retail_terms": [
+        "딜"
+      ],
+      "master_scientific": "Anethum graveolens",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "딜"
+      ]
+    },
+    {
+      "plant_id": "chard",
+      "retail_terms": [
+        "근대"
+      ],
+      "master_scientific": "Beta vulgaris subsp. cicla",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "근대"
+      ]
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "retail_terms": [
+        "콘샐러드"
+      ],
+      "master_scientific": "Valerianella locusta",
+      "mapping_status": "canonical_search_name_only",
+      "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+      "aliases": [
+        "콘샐러드"
+      ]
+    }
+  ]
+}
