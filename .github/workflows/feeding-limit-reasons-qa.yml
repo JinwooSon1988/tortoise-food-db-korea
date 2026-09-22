@@ -1,0 +1,19 @@
+name: Feeding limit reasons QA
+on:
+  pull_request:
+  push:
+    paths:
+      - 'data/feeding_limit_reasons_v1.json'
+      - 'data/public_evidence_records.json'
+      - 'data/assessments.json'
+      - 'scripts/qa_feeding_limit_reasons_v1.py'
+      - '.github/workflows/feeding-limit-reasons-qa.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/qa_feeding_limit_reasons_v1.py
