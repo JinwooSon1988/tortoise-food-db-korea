@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "principle": "Korean common/market-name mapping is jurisdiction-specific and does not replace a broader global plant master. Species mapping requires an authoritative Korean source and exact RDA taxon/part reconciliation before nutrition use.",
+  "records": [
+    {
+      "plant_id": "plantain",
+      "ko": "질경이",
+      "korea_taxon": "Plantago asiatica L.",
+      "mapping_status": "verified_korea_name",
+      "rda_food_code": "F1700000000a",
+      "rda_food_name": "질경이, 생것",
+      "rda_part_state": "raw edible plant",
+      "authority_sources": [
+        "Korea Biodiversity Information Sharing System",
+        "RDA National Crop Pest Management System"
+      ],
+      "nutrition_mapping_status": "eligible_exact_korea_taxon"
+    },
+    {
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "korea_taxon": "Taraxacum platycarpum",
+      "mapping_status": "verified_korea_name",
+      "rda_food_code": "F0780000000a",
+      "rda_food_name": "민들레, 생것",
+      "rda_part_state": "raw edible plant",
+      "authority_sources": [
+        "RDA Nongsaro",
+        "RDA National Crop Pest Management System"
+      ],
+      "nutrition_mapping_status": "eligible_exact_korea_taxon"
+    },
+    {
+      "plant_id": "mallow",
+      "ko": "아욱",
+      "korea_taxon": "Malva verticillata L.",
+      "mapping_status": "verified_korea_crop",
+      "rda_food_code": "F1230000000a",
+      "rda_food_name": "아욱, 생것",
+      "rda_part_state": "raw edible plant",
+      "authority_sources": [
+        "BRIS / Korea Agriculture Technology Promotion Agency"
+      ],
+      "nutrition_mapping_status": "eligible_exact_korea_taxon"
+    },
+    {
+      "plant_id": "mulberry",
+      "ko": "뽕잎",
+      "korea_taxon": "Morus alba L.",
+      "mapping_status": "rda_exact_record_pending_external_identity_corroboration",
+      "rda_food_code": "F2350000000a",
+      "rda_food_name": "뽕잎, 생것",
+      "rda_part_state": "leaf raw",
+      "authority_sources": [
+        "RDA Korean Standard Food Composition DB 10.4"
+      ],
+      "nutrition_mapping_status": "hold_until_independent_korea_identity_source"
+    }
+  ]
+}
