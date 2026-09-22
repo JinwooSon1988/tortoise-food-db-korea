@@ -3,3 +3,12 @@
 .v56-photo-missing{border:1px dashed #cbd5c7;background:#f8faf7;border-radius:14px;padding:18px;min-height:0;display:flex;flex-direction:column;gap:6px;justify-content:center}.v56-photo-missing b{font-size:14px}.v56-photo-missing small{color:#647067;line-height:1.55}.v56-photo img{width:100%;height:auto;max-height:420px;object-fit:cover;border-radius:14px}.v56-nutrition-source{line-height:1.65}.v56-nutrition-separate{white-space:nowrap}
 
 .v56-evidence-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:0 0 10px}.v56-evidence-summary>div{border:1px solid var(--line);background:#f7faf7;border-radius:10px;padding:8px 9px}.v56-evidence-summary b{display:block;font-size:16px}.v56-evidence-summary span{display:block;font-size:10px;color:var(--muted);margin-top:1px}.v56-firstlook{border:1px solid #cfe0d3;background:#f0f7f2;border-radius:11px;padding:10px 11px;margin-bottom:12px}.v56-firstlook b{display:block;font-size:12px;margin-bottom:3px}.v56-firstlook span{font-size:13px;line-height:1.55}.v56-evidence-record{border:1px solid var(--line);border-radius:12px;padding:13px;margin-top:10px;background:#fbfdfb}.v56-evidence-record h3{margin:0 0 9px;font-size:15px}.v56-evidence-record dl{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 10px;font-size:12px}.v56-evidence-record dt{font-weight:800}.v56-evidence-record dd{margin:0;overflow-wrap:anywhere}@media(max-width:620px){.v56-evidence-summary{grid-template-columns:repeat(3,minmax(0,1fr))}.v56-evidence-record dl{grid-template-columns:90px minmax(0,1fr)}}
+
+
+.v56-why{margin-top:18px;padding:18px;border:1px solid #d8ddd5;border-radius:14px}
+.v56-why h2{margin-top:0}.v56-answer{padding:14px 16px;margin:10px 0 14px;border-left:5px solid currentColor;background:rgba(127,127,127,.08)}
+.v56-answer p{margin:.45rem 0 0}.v56-why-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.v56-why-grid article{padding:14px;border:1px solid #e1e5df;border-radius:12px}.v56-why-grid article p{margin:.5rem 0}
+.v56-nutrient-meaning{display:flex;flex-direction:column;gap:3px;padding:8px 0;border-bottom:1px solid #ecefea}.v56-nutrient-meaning:last-child{border-bottom:0}
+.v56-nutrient-meaning span,.v56-why-grid small{font-size:.9em;line-height:1.5;opacity:.82}
+@media(max-width:720px){.v56-why{padding:14px}.v56-why-grid{grid-template-columns:1fr}.v56-why-grid article{padding:12px}}
