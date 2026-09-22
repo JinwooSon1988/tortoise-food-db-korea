@@ -462,6 +462,30 @@
       ],
       "mapping_status": "pending_source_file",
       "do_not_infer": true
+    },
+    {
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "scientific": "Taraxacum spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "priority": "P1",
+      "nutrition_source_priority": [
+        "USDA FoodData Central Foundation Foods 2026-04",
+        "USDA SR Legacy 2018-04"
+      ],
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true
     }
   ]
 }
