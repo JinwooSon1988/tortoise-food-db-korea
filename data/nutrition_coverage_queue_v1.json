@@ -16,8 +16,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "source_record_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA contains multiple raw Lactuca sativa market types (butterhead/red leaf/green leaf/iceberg/romaine); generic master 'lettuce' cannot select one composition record without subtype evidence.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "sowthistle",
@@ -28,8 +31,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "radishgreens",
@@ -40,8 +44,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA contains raw radish roots (including Foundation FDC 2747665), but no exact radish-leaf/greens record was identified in the supplied archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "cauliflowerleaf",
@@ -52,8 +59,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA contains cauliflower raw head/florets (Foundation FDC 2685573), not an exact cauliflower-leaf record.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "plantain",
@@ -64,8 +74,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "mulberry",
@@ -76,8 +87,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "figleaf",
@@ -88,8 +100,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "mallow",
@@ -100,8 +113,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "hibiscusleaf",
@@ -112,8 +126,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "not_listed_exact",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Hibiscus syriacus leaf food record identified; SR Legacy hibiscus hit is brewed tea, not leaf food composition.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "hibiscusflower",
@@ -124,8 +141,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "not_listed_exact",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Hibiscus syriacus flower food record identified; brewed hibiscus tea is not substituted.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "celeryleaf",
@@ -136,8 +156,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA contains celery raw (Foundation FDC 2346405), but the master item is specifically celery leaf; whole/stalk food record is not substituted.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "carrottop",
@@ -148,8 +171,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA contains carrot roots, not an exact carrot-top/leaf record.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "mint",
@@ -160,8 +186,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "clover",
@@ -172,8 +199,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "alfalfa",
@@ -184,8 +212,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA SR Legacy contains alfalfa seeds, sprouted, raw (FDC 168384); this is not forage/leaf alfalfa.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "chickweed",
@@ -196,8 +227,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "source_record_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "bellpepper",
@@ -208,8 +240,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "cultivar_or_color_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "Foundation has separate green/yellow/red/orange raw bell-pepper records (FDC 2258588-2258591); generic bellpepper master cannot select one color record without subtype.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "rose",
@@ -220,8 +255,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "nasturtium",
@@ -232,8 +268,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "not_listed_exact",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Tropaeolum majus edible leaf/flower record identified in supplied archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "pricklypear",
@@ -244,8 +283,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "SR Legacy contains prickly pear fruit records (e.g. FDC 167750), while the tortoise-food item requires the relevant cactus pad/cladode state; fruit is not substituted.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "timothy",
@@ -256,8 +298,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "orchard",
@@ -268,8 +311,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "ryegrass",
@@ -280,8 +324,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "wheatgrass",
@@ -292,8 +337,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "barleygrass",
@@ -304,8 +350,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "oatgrass",
@@ -316,8 +363,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "cornleaf",
@@ -328,8 +376,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "ssuk",
@@ -340,8 +389,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "source_record_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "dolnamul",
@@ -352,8 +402,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "source_record_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "minari",
@@ -364,8 +415,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "source_record_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "aehobakleaf",
@@ -376,8 +428,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_review",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "pea_shoot",
@@ -388,8 +441,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact raw pea-shoot record identified in supplied Foundation/SR Legacy archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "sunflowerleaf",
@@ -400,8 +456,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "part_or_state_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "USDA records found are sunflower seed/kernel/oil, not sunflower leaf.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "violet",
@@ -412,8 +471,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "geranium",
@@ -424,8 +484,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "pansy",
@@ -436,8 +497,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "not_listed_exact",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact pansy edible flower/leaf record identified in supplied archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "marigold",
@@ -448,8 +512,9 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "identity_scope_hold",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "calendula",
@@ -460,8 +525,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "pending_source_file",
-      "do_not_infer": true
+      "mapping_status": "not_listed_exact",
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Calendula edible leaf/flower record identified in supplied archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "dandelion",
@@ -473,7 +541,8 @@
         "USDA SR Legacy 2018-04"
       ],
       "mapping_status": "identity_scope_hold",
-      "do_not_infer": true
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
       "plant_id": "pumpkinleaf",
@@ -485,7 +554,8 @@
         "USDA SR Legacy 2018-04"
       ],
       "mapping_status": "identity_scope_hold",
-      "do_not_infer": true
+      "do_not_infer": true,
+      "review_basis": "official_usda_archives_supplied_2026-09-22"
     }
   ]
 }
