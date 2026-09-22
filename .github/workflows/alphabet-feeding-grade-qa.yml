@@ -1,0 +1,20 @@
+name: Alphabet feeding grade QA
+on:
+  pull_request:
+    paths:
+      - 'public-plant-card-v56.js'
+      - 'all-plants/index.html'
+      - 'core-foods/index.html'
+      - 'plant-detail-v56.js'
+      - 'plant-detail-v56.css'
+      - 'scripts/qa_alphabet_feeding_grade_v1.py'
+      - '.github/workflows/alphabet-feeding-grade-qa.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/qa_alphabet_feeding_grade_v1.py
