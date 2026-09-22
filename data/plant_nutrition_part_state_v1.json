@@ -97,6 +97,21 @@
       "phosphorus_mg": 28,
       "potassium_mg": 509,
       "calcium_phosphorus_ratio": 7.14
+    },
+    {
+      "plant_id": "alfalfa",
+      "taxon": "Medicago sativa L.",
+      "variant": "알팔파",
+      "part": "shoot",
+      "state": "raw",
+      "food_description": "알팔파, 싹, 생것",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
+      "source_id": "F127000B120a",
+      "data_type": "Korean Standard Food Composition DB",
+      "dataset_release": "Korean Standard Food Composition Database 10.4 (2026)",
+      "verification_status": "verified",
+      "verified_at": "2026-09-22",
+      "basis": "per 100 g raw edible portion"
     }
   ]
 }
