@@ -16,10 +16,10 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "source_record_review",
+      "mapping_status": "cultivar_or_color_hold",
       "do_not_infer": true,
       "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "USDA contains multiple raw Lactuca sativa market types (butterhead/red leaf/green leaf/iceberg/romaine); generic master 'lettuce' cannot select one composition record without subtype evidence.",
+      "review_note": "USDA supplies multiple raw Lactuca sativa market-type records; generic lettuce is not assigned one subtype composition.",
       "reviewed_at": "2026-09-22"
     },
     {
@@ -100,9 +100,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "part_or_state_hold",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact raw Ficus carica leaf composition record established from the supplied USDA archives; fig fruit is not substituted.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "mallow",
@@ -227,9 +229,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "source_record_review",
+      "mapping_status": "not_listed_exact",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Stellaria media raw-food composition record established from the supplied USDA archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "bellpepper",
@@ -298,9 +302,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "not_listed_exact",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Phleum pratense fresh forage/leaf food composition record established in the supplied USDA food archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "orchard",
@@ -311,9 +317,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "not_listed_exact",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Dactylis glomerata fresh forage/leaf food composition record established in the supplied USDA food archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "ryegrass",
@@ -337,9 +345,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "part_or_state_hold",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "Wheat grain/flour products are not interchangeable with fresh Triticum aestivum grass/shoot tissue.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "barleygrass",
@@ -350,9 +360,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "part_or_state_hold",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "Barley grain products are not interchangeable with fresh Hordeum vulgare grass/shoot tissue.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "oatgrass",
@@ -363,9 +375,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "part_or_state_hold",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "Oat grain products are not interchangeable with fresh Avena sativa grass/shoot tissue.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "cornleaf",
@@ -376,9 +390,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "part_or_state_hold",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "Corn kernels/products are not interchangeable with Zea mays leaf tissue.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "ssuk",
@@ -389,9 +405,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "source_record_review",
+      "mapping_status": "not_listed_exact",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Artemisia princeps raw-food composition record established from the supplied USDA archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "dolnamul",
@@ -402,9 +420,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "source_record_review",
+      "mapping_status": "not_listed_exact",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Sedum sarmentosum raw-food composition record established from the supplied USDA archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "minari",
@@ -415,9 +435,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "source_record_review",
+      "mapping_status": "not_listed_exact",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "No exact Oenanthe javanica raw-food composition record established from the supplied USDA archives.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "aehobakleaf",
@@ -428,9 +450,11 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_review",
+      "mapping_status": "part_or_state_hold",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22"
+      "review_basis": "official_usda_archives_supplied_2026-09-22",
+      "review_note": "Cucurbita moschata fruit/squash composition is not interchangeable with leaf tissue.",
+      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "pea_shoot",
