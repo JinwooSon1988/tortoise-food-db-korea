@@ -6,11 +6,11 @@ limits=json.loads((root/'data/feeding_limit_reasons_v1.json').read_text(encoding
 ev=json.loads((root/'data/public_evidence_records.json').read_text(encoding='utf-8'))['records']
 ass=json.loads((root/'data/assessments.json').read_text(encoding='utf-8'))
 eids={x['id']:x for x in ev}
-med={x['plant_id'] for x in ass if x.get('species_group')=='Mediterranean_Testudo'}
+assessed={x['plant_id'] for x in ass}
 errors=[]
-if not med.issubset(set(limits['plants'])):
-    errors.append(f"Mediterranean assessments missing classifications: {sorted(med-set(limits['plants']))}")
-# Additional classified plants are allowed when another species_group has evidence-backed limits (e.g. do_not_feed).
+if not assessed.issubset(set(limits['plants'])):
+    errors.append(f"assessed plants missing classifications: {sorted(assessed-set(limits['plants']))}")
+# Every plant with a formal assessment must have classified limit reasons. Extra records remain allowed when evidence-backed.
 for pid,block in limits['plants'].items():
     for item in block.get('items',[]):
         cat=item.get('category')
@@ -23,4 +23,4 @@ for pid,block in limits['plants'].items():
             errors.append(f"{pid}: {cat} requires explicit evidence, not assessment_existing")
 if errors:
     raise SystemExit("\n".join(errors))
-print(f"OK: {len(limits['plants'])} Mediterranean plants; explicit hazard claims require linked evidence")
+print(f"OK: {len(limits['plants'])} classified plants; all assessed plants covered; explicit hazard claims require linked evidence")
