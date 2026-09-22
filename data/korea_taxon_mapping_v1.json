@@ -55,6 +55,20 @@
         "RDA Korean Standard Food Composition DB 10.4"
       ],
       "nutrition_mapping_status": "hold_until_independent_korea_identity_source"
+    },
+    {
+      "plant_id": "sowthistle",
+      "korean_name": "방가지똥",
+      "global_master_scientific": "Sonchus spp.",
+      "korea_taxon": "Sonchus oleraceus L.",
+      "identity_source_name": "National Institute of Biological Resources (NIBR), Biodiversity QR Code Plant",
+      "identity_source_url": "https://species.nibr.go.kr/html/home/nibr_qr_code_plant.pdf",
+      "identity_status": "verified_korea_name",
+      "rda_food_code": "F0850000000a",
+      "rda_food_name": "방가지똥, 생것",
+      "rda_scientific_name": "Sonchus oleraceus L.",
+      "nutrition_mapping_status": "eligible_exact_korea_taxon",
+      "note": "Korean national biodiversity source and RDA 10.4 independently align 방가지똥 with Sonchus oleraceus; global Sonchus spp. master remains broad."
     }
   ]
 }

@@ -731,6 +731,24 @@
       "calcium_mg": 267,
       "phosphorus_mg": 76,
       "calcium_phosphorus_ratio": 3.51
+    },
+    {
+      "plant_id": "sowthistle",
+      "food_description": "방가지똥, 생것",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
+      "source_id": "F0850000000a",
+      "source_url": "https://www.nics.go.kr/food/kfi/fct/fctIntro/list",
+      "data_type": "Korean Standard Food Composition DB",
+      "dataset_release": "Korean Standard Food Composition Database 10.4 (2026)",
+      "verification_status": "verified",
+      "verified_at": "2026-09-22",
+      "basis": "per 100 g raw edible portion",
+      "water_g": 85.2,
+      "protein_g": 2.5,
+      "fat_g": 0.4,
+      "calcium_mg": 39,
+      "phosphorus_mg": 34,
+      "calcium_phosphorus_ratio": 1.15
     }
   ]
 }
