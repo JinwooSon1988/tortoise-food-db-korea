@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 NUTRITION = ROOT / 'data' / 'plant_nutrition_v56.json'
 PLANTS = ROOT / 'data' / 'plants.json'
+KOREA_TAXA = ROOT / 'data' / 'korea_taxon_mapping_v1.json'
 
 FORBIDDEN_KEYS = {
     'verdict', 'feeding_verdict', 'feeding_level', 'frequency', 'feeding_frequency',
@@ -27,6 +28,10 @@ def main():
     data = json.loads(NUTRITION.read_text(encoding='utf-8'))
     plants = json.loads(PLANTS.read_text(encoding='utf-8'))
     master = {p.get('id'): p for p in plants}
+    korea_taxa = {}
+    if KOREA_TAXA.exists():
+        kd = json.loads(KOREA_TAXA.read_text(encoding='utf-8'))
+        korea_taxa = {x.get('plant_id'): x for x in kd.get('records',[]) if x.get('nutrition_mapping_status') == 'eligible_exact_korea_taxon'}
 
     if str(data.get('schema_version')) != '5.6': errors.append('schema_version must be 5.6')
     policy = data.get('policy') or {}
@@ -48,7 +53,7 @@ def main():
         else:
             sci = str(p.get('scientific') or '').strip(); status = str(p.get('identity_status') or '').lower()
             if re.search(r'\bspp\.?$', sci, re.I): errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})')
-            if any(x in status for x in ('blocked','unverified','needs_')): errors.append(f'{tag}: unresolved master identity_status={status}')
+            if any(x in status for x in ('blocked','unverified','needs_')) and pid not in korea_taxa: errors.append(f'{tag}: unresolved master identity_status={status}')
 
         source_name = n.get('source_name')
         source_id = str(n.get('source_id') or '')
