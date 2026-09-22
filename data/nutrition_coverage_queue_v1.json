@@ -31,10 +31,10 @@
         "USDA FoodData Central Foundation Foods 2026-04",
         "USDA SR Legacy 2018-04"
       ],
-      "mapping_status": "part_or_state_hold",
+      "mapping_status": "exact_part_record_available",
       "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "USDA contains raw radish roots (including Foundation FDC 2747665), but no exact radish-leaf/greens record was identified in the supplied archives.",
+      "review_basis": "RDA_Korean_Standard_Food_Composition_DB_10.4_workbook",
+      "review_note": "RDA 10.4 contains exact Korean radish leaf raw record F067002B140a (무청, 조선무, 생것), Raphanus sativus L.; preserved in part/state registry without silently generalizing cultivar-specific composition.",
       "reviewed_at": "2026-09-22"
     },
     {
