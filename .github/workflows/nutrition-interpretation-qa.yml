@@ -1,0 +1,16 @@
+name: Nutrition interpretation QA
+on:
+  pull_request:
+    paths:
+      - 'plant-detail-v56.js'
+      - 'scripts/qa_nutrition_interpretation_v1.py'
+      - '.github/workflows/nutrition-interpretation-qa.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/qa_nutrition_interpretation_v1.py
