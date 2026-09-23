@@ -10,7 +10,7 @@ assessment_paths = [ROOT / "data/assessments.json"] + sorted((ROOT / "data").glo
 
 ibera_claim = re.compile(r"(?:Testudo graeca ibera|T\.\s*g\.\s*ibera|이베라)", re.I)
 exact_ibera = re.compile(r"Testudo\s+graeca\s+ibera", re.I)
-negative = re.compile(r"(?:없|아님|아니|미확립|확립되지|확인되지|직접자료가 아니)", re.I)
+negative = re.compile(r"(?:없|아님|아니|미확립|확립되지|확인되지|직접자료가 아니|직접[^.]{0,40}(?:아님|아니|없)|확대하지|의미하지|확정하지|확정하지 않|직접 근거 없이|직접 위해근거 없이)", re.I)
 errors = []
 checked = 0
 
@@ -22,7 +22,7 @@ for path in assessment_paths:
         text = " ".join(str(row.get(k, "")) for k in ("why", "applicability_note"))
         positive_claim = False
         for match in ibera_claim.finditer(text):
-            sentence_start = max(text.rfind(".", 0, match.start()), text.rfind("。", 0, match.start()))
+            sentence_start = max(text.rfind(".", 0, match.start()), text.rfind("。", 0, match.start()), text.rfind("다. ", 0, match.start()))
             next_dot = text.find(".", match.end())
             sentence_end = len(text) if next_dot < 0 else next_dot + 1
             sentence = text[sentence_start + 1:sentence_end]
