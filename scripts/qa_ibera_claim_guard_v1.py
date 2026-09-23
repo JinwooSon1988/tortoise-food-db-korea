@@ -8,9 +8,10 @@ evidence_rows = json.loads((ROOT / "data/public_evidence_records.json").read_tex
 evidence = {row["id"]: row for row in evidence_rows}
 assessment_paths = [ROOT / "data/assessments.json"] + sorted((ROOT / "data").glob("assessments_korea_addendum*.json"))
 
-ibera_claim = re.compile(r"(?:Testudo graeca ibera|T\.\s*g\.\s*ibera|이베라)", re.I)
+ibera = re.compile(r"(?:Testudo graeca ibera|T\.\s*g\.\s*ibera|이베라)", re.I)
 exact_ibera = re.compile(r"Testudo\s+graeca\s+ibera", re.I)
-negative = re.compile(r"(?:없|아님|아니|미확립|확립되지|확인되지|직접자료가 아니|직접[^.]{0,80}(?:아님|아니|없)|확대하지|의미하지|확정하지|직접 근거 없이|직접 위해근거 없이|직접 근거[^.]{0,80}확립되지|직접[^.]{0,80}확립되지)", re.I)
+positive_markers = re.compile(r"(?:직접\s*(?:야생)?섭식|직접\s*(?:관찰|근거|자료)|종수준\s*직접)", re.I)
+negative_markers = re.compile(r"(?:없|아님|아니|미확립|확립되지|확인되지|확대하지|의미하지|확정하지|직접\s*근거\s*없이|직접\s*위해근거\s*없이)", re.I)
 errors = []
 checked = 0
 
@@ -19,17 +20,13 @@ for path in assessment_paths:
         continue
     for row in json.loads(path.read_text(encoding="utf-8")):
         checked += 1
-        text = str(row.get("why", "")) + "\n" + str(row.get("applicability_note", ""))
-        positive_claim = False
-        for match in ibera_claim.finditer(text):
-            sentence_start = max(text.rfind(".", 0, match.start()), text.rfind("。", 0, match.start()), text.rfind("\n", 0, match.start()))
-            next_dot = text.find(".", match.end())
-            sentence_end = len(text) if next_dot < 0 else next_dot + 1
-            sentence = text[sentence_start + 1:sentence_end]
-            if not negative.search(sentence):
-                positive_claim = True
-                break
-        if not positive_claim:
+        fields = [str(row.get("why", "")), str(row.get("applicability_note", ""))]
+        claims = []
+        for field in fields:
+            for sentence in re.split(r"(?<=[.!?])\s+|\n+", field):
+                if ibera.search(sentence) and positive_markers.search(sentence) and not negative_markers.search(sentence):
+                    claims.append(sentence)
+        if not claims:
             continue
         linked = [evidence[eid] for eid in row.get("evidence_ids", []) if eid in evidence]
         supported = any(
@@ -38,7 +35,7 @@ for path in assessment_paths:
             for ev in linked
         )
         if not supported:
-            errors.append(f"{path.name}:{row.get('plant_id')}: positive Ibera-specific claim lacks exact_taxon T. g. ibera evidence")
+            errors.append(f"{path.name}:{row.get('plant_id')}: positive Ibera direct-evidence claim lacks exact_taxon T. g. ibera evidence")
 
 if errors:
     raise SystemExit("Ibera claim guard failed:\n- " + "\n- ".join(errors))
