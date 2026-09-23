@@ -19,10 +19,10 @@ for path in assessment_paths:
         continue
     for row in json.loads(path.read_text(encoding="utf-8")):
         checked += 1
-        text = " ".join(str(row.get(k, "")) for k in ("why", "applicability_note"))
+        text = str(row.get("why", "")) + "\n" + str(row.get("applicability_note", ""))
         positive_claim = False
         for match in ibera_claim.finditer(text):
-            sentence_start = max(text.rfind(".", 0, match.start()), text.rfind("。", 0, match.start()), text.rfind("다. ", 0, match.start()))
+            sentence_start = max(text.rfind(".", 0, match.start()), text.rfind("。", 0, match.start()), text.rfind("\n", 0, match.start()))
             next_dot = text.find(".", match.end())
             sentence_end = len(text) if next_dot < 0 else next_dot + 1
             sentence = text[sentence_start + 1:sentence_end]
