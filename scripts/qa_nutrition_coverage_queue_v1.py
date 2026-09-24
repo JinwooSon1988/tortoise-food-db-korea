@@ -2,7 +2,9 @@
 import json
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-plants=json.loads((R/"data/plants.json").read_text())\n# Coverage queue tracks reviewed/public records only; intake candidates have no inferred nutrition obligation.\npublic=[p for p in plants if p.get("suitability_status")!="unreviewed" and p.get("identity_status")!="candidate_name"] 
+plants=json.loads((R/"data/plants.json").read_text())
+# Coverage queue tracks reviewed/public records only; intake candidates have no inferred nutrition obligation.
+public=[p for p in plants if p.get("suitability_status")!="unreviewed" and p.get("identity_status")!="candidate_name"] 
 nut=json.loads((R/"data/plant_nutrition_v56.json").read_text())
 q=json.loads((R/"data/nutrition_coverage_queue_v1.json").read_text())
 existing={x["plant_id"] for x in nut["plants"]}
@@ -13,5 +15,6 @@ assert all(x["mapping_status"] in {"pending_source_file","identity_scope_hold","
 print("OK")
 
 assert not any('review' in x['mapping_status'] for x in q['records'])
-expected=len([p for p in public if p['id'] not in existing])\nassert len(q['records']) == expected, f"expected {expected} unresolved public nutrition records, got {len(q['records'])}"
+expected=len([p for p in public if p['id'] not in existing])
+assert len(q['records']) == expected, f"expected {expected} unresolved public nutrition records, got {len(q['records'])}"
 print('OK: all missing nutrition records have explicit closed mapping states')
