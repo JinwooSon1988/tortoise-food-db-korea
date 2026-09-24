@@ -30,8 +30,12 @@ def main() -> int:
         errors.append(f"duplicate plant ids: {dup_ids}")
 
     id_set = set(ids)
+    # Only reviewed/public records are required to have indexable detail pages.
+    # Candidate/unreviewed records stay in the searchable intake catalog without
+    # creating thin SEO pages or implying a feeding verdict.
+    public_ids = {p["id"] for p in plants if p.get("suitability_status") != "unreviewed" and p.get("identity_status") != "candidate_name"}
     dirs = {p.name for p in PLANT_DIR.iterdir() if p.is_dir() and (p / "index.html").exists()}
-    missing_pages = sorted(id_set - dirs)
+    missing_pages = sorted(public_ids - dirs)
     extra_pages = sorted(dirs - id_set)
     if missing_pages:
         errors.append(f"missing plant detail pages: {missing_pages}")
@@ -50,7 +54,7 @@ def main() -> int:
         m = re.search(r"/tortoise-food-db-korea/plant/([^/]+)/?", path)
         if m:
             sitemap_ids.add(m.group(1))
-    missing_sitemap = sorted(id_set - sitemap_ids)
+    missing_sitemap = sorted(public_ids - sitemap_ids)
     extra_sitemap = sorted(sitemap_ids - id_set)
     if missing_sitemap:
         errors.append(f"plant ids missing from sitemap: {missing_sitemap}")
@@ -72,6 +76,7 @@ def main() -> int:
         errors.append(f"missing/wrong canonical on plant pages: {bad_canonical}")
 
     print(f"plants.json ids: {len(ids)}")
+    print(f"public/indexable ids: {len(public_ids)}")
     print(f"detail pages: {len(dirs)}")
     print(f"sitemap plant URLs: {len(sitemap_ids)}")
     print(f"sitemap total URLs: {len(locs)}")

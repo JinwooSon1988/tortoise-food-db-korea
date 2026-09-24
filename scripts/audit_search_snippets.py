@@ -4,7 +4,8 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 base = 'https://jinwooson1988.github.io/tortoise-food-db-korea/'
-plants = json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
+all_plants = json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
+plants = [p for p in all_plants if p.get('suitability_status') != 'unreviewed' and p.get('identity_status') != 'candidate_name']
 
 def read(path): return path.read_text(encoding='utf-8')
 def meta(html, name):

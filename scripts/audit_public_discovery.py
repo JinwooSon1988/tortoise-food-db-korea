@@ -6,13 +6,14 @@ root = Path(__file__).resolve().parents[1]
 origin = 'https://jinwooson1988.github.io/tortoise-food-db-korea/'
 robots = (root / 'robots.txt').read_text(encoding='utf-8')
 index = (root / 'index.html').read_text(encoding='utf-8')
-plants = json.loads((root / 'data' / 'plants.json').read_text(encoding='utf-8'))
+all_plants = json.loads((root / 'data' / 'plants.json').read_text(encoding='utf-8'))
+plants = [p for p in all_plants if p.get('suitability_status') != 'unreviewed' and p.get('identity_status') != 'candidate_name']
 
 assert 'User-agent: *' in robots
 assert 'Allow: /' in robots
 assert f'Sitemap: {origin}sitemap.xml' in robots
 assert '<meta name="description"' in index
-assert '전체 식물 69종 보기' in index
+assert '전체 식물 데이터 한눈에 보기' in index
 
 xml_root = ET.parse(root / 'sitemap.xml').getroot()
 ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}

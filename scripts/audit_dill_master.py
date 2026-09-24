@@ -13,8 +13,9 @@ cov=json.loads((DATA/'coverage.json').read_text(encoding='utf-8'))
 assert len(plants)>=67, len(plants)
 assert len(assessed)>=64, len(assessed)
 account=cov['master_review_accounting']
-assert account['total']==len(plants)
-assert account['assessed']==len(assessed)
+reviewed={p['id'] for p in plants if p.get('suitability_status')!='unreviewed' and p.get('identity_status')!='candidate_name'}
+assert account['total']==len(reviewed)
+assert account['assessed']==len(assessed & reviewed)
 assert account['total']==account['assessed']+account['identity_blocked']+account['evidence_blocked']
 assert 'dill' in ids and 'dill' in assessed
 assert 'dill' not in (cov.get('pending_master_candidates') or [])
