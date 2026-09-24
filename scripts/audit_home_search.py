@@ -12,9 +12,12 @@ for i in range(1, 13):
     addenda += json.loads((root / 'data' / name).read_text(encoding='utf-8'))
 assessments = base + addenda
 
-assert len(plants) == 69, len(plants)
+assert len(plants) >= 69, len(plants)
+public = [p for p in plants if p.get('suitability_status') != 'unreviewed' and p.get('identity_status') != 'candidate_name']
+assert len(public) == 69, len(public)
 assert "현재 등록된 '+plants.length+'종" in html
-assert "전체 식물 69종 보기" in html
+assert "전체 식물 보기" in html
+assert "전체 식물 69종 보기" not in html
 assert 'href="./all-plants/"' in html
 assert 'href="./core-foods/"' in html
 # Retired recommendation / husbandry-recording entry points must not return.
