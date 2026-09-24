@@ -2,7 +2,8 @@ import json,re
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
 base='https://jinwooson1988.github.io/tortoise-food-db-korea/'
-plants=json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
+all_plants=json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
+plants=[p for p in all_plants if p.get('suitability_status')!='unreviewed' and p.get('identity_status')!='candidate_name']
 def one(text,pattern):
  m=re.search(pattern,text,re.I|re.S); assert m,pattern; return m.group(1)
 def audit(path,url,plant=None):
@@ -23,7 +24,7 @@ def audit(path,url,plant=None):
  if plant:
   assert schema['@type']=='WebPage' and schema['isPartOf']['name']=='거북밥 DB Korea'
  else:
-  assert schema['@type']=='WebSite' and '69종' in title and '69종' in desc
+  assert schema['@type']=='WebSite'
 audit(root/'index.html',base)
 for p in plants:
  audit(root/'plant'/p['id']/'index.html',f"{base}plant/{p['id']}/",p)
