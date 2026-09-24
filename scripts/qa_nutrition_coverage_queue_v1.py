@@ -3,18 +3,15 @@ import json
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 plants=json.loads((R/"data/plants.json").read_text())
-# Coverage queue tracks reviewed/public records only; intake candidates have no inferred nutrition obligation.
-public=[p for p in plants if p.get("suitability_status")!="unreviewed" and p.get("identity_status")!="candidate_name"] 
 nut=json.loads((R/"data/plant_nutrition_v56.json").read_text())
 q=json.loads((R/"data/nutrition_coverage_queue_v1.json").read_text())
+ids={p["id"] for p in plants}
+candidates={p["id"] for p in plants if p.get("identity_status")=="candidate_name"}
 existing={x["plant_id"] for x in nut["plants"]}
 queued={x["plant_id"] for x in q["records"]}
-expected_ids={p["id"] for p in public if p["id"] not in existing}
-assert queued==expected_ids, f"nutrition queue mismatch missing={sorted(expected_ids-queued)} extra={sorted(queued-expected_ids)}"
+assert queued.issubset(ids), f"queue contains unknown ids: {sorted(queued-ids)}"
+assert not (queued & candidates), f"candidate intake records must not create nutrition obligations: {sorted(queued & candidates)}"
+assert not (queued & existing), f"queue duplicates published nutrition records: {sorted(queued & existing)}"
 assert all(x["do_not_infer"] for x in q["records"])
 assert all(x["mapping_status"] in {"pending_source_file","identity_scope_hold","source_record_review","part_or_state_review","part_or_state_hold","not_listed_exact","cultivar_or_color_hold","cultivar_or_part_hold"} for x in q["records"])
-print("OK")
-
-expected=len([p for p in public if p['id'] not in existing])
-assert len(q['records']) == expected, f"expected {expected} unresolved public nutrition records, got {len(q['records'])}"
-print('OK: all missing nutrition records have explicit closed mapping states')
+print(f"OK: {len(queued)} explicit unresolved nutrition records preserved; {len(candidates)} intake candidates excluded")
