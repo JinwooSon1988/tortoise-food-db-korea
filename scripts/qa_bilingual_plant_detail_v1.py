@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[1]
 g=(ROOT/"scripts/generate_static_pages.py").read_text(encoding="utf-8")
 lang=(ROOT/"language-toggle.js").read_text(encoding="utf-8")
 errors=[]
-for n in ['language-toggle.js?v=20260926-2','class="topmeta"']:
+for n in ['language-toggle.js?v=20260926-2','class="topmeta"','data-plant-en="{esc(en)}"']:
     if n not in g: errors.append("generator missing "+n)
 for ko,en in {
 '← 거북밥 DB 검색으로':'← Back to Tortoise Food DB search',
