@@ -5,8 +5,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8"))
 required=["id","plant_ids","source_title","source_type","animal_taxon","applicability","plant_taxon","plant_part_state","directness","supports","does_not_support"]
-allowed_directness={"direct","related_taxon","contextual","composition_only"}
-allowed_applicability={"exact_taxon","species","mediterranean_testudo","tortoise_general","herbivorous_reptile_general","composition_only"}
+allowed_directness={"direct","related_taxon","contextual","composition_only","expert_husbandry"}
+allowed_applicability={"exact_taxon","species","mediterranean_testudo","tortoise_general","herbivorous_reptile_general","composition_only","taxon_group"}
 seen=set()
 errors=[]
 for i,r in enumerate(data.get("records",[])):
