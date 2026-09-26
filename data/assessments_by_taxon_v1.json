@@ -63,5 +63,68 @@
     "applicability_note": "Trifolium 속 수준 근거를 포함한다. 개별 clover 종은 별도 검증한다.",
     "migration_source": "assessments.json",
     "applicability_note_en": "Includes evidence at Trifolium genus level. Individual clover species require separate verification."
+  },
+  {
+    "plant_id": "ribwortplantain",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "supported_mixed_diet",
+    "confidence": "B",
+    "evidence_ids": [
+      "hermanni_foraging_italy_2015",
+      "tt_plantfoods"
+    ],
+    "applicability_note": "Mediterranean Testudo에서 Plantago lanceolata의 직접 사육 식단 근거와 전문 먹이자료가 있다. 혼합식의 한 구성요소로 해석하며 단독·무제한 급여를 뜻하지 않는다.",
+    "applicability_note_en": "Plantago lanceolata has direct captive-diet evidence in Mediterranean Testudo plus specialist food guidance. Treat it as one component of a varied diet, not an exclusive or unlimited food.",
+    "migration_source": "candidate_fastlane_20260926_a"
+  },
+  {
+    "plant_id": "broadleafplantain",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "limited_mixed_diet",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_plantfoods"
+    ],
+    "applicability_note": "Plantago major는 전문 육지거북 먹이자료에서 안전한 혼합식 식물로 다뤄진다. 현재 확보된 직접 Testudo 종별 연구는 창질경이보다 약하므로 보수적으로 제한적 혼합급여로 둔다.",
+    "applicability_note_en": "Specialist tortoise food guidance treats Plantago major as suitable within a varied diet. Direct taxon-specific evidence is currently weaker than for ribwort plantain, so the assessment remains conservative.",
+    "migration_source": "candidate_fastlane_20260926_a"
+  },
+  {
+    "plant_id": "hollyhock",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "limited_mixed_diet",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_hollyhock"
+    ],
+    "applicability_note": "Alcea rosea의 잎과 꽃은 전문 육지거북 식물 DB에서 다양한 식단의 일부로 안전하게 급여 가능한 것으로 제시된다. 단일 전문 출처 중심이므로 보수적으로 표시한다.",
+    "applicability_note_en": "Specialist tortoise plant guidance lists Alcea rosea leaves and flowers as safe within a varied diet. Because the current evidence is specialist-source led, the assessment remains conservative.",
+    "migration_source": "candidate_fastlane_20260926_a"
+  },
+  {
+    "plant_id": "whiteclover",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "limited_mixed_diet",
+    "confidence": "B-",
+    "evidence_ids": [
+      "tt_plantfoods",
+      "hermanni_foraging_italy_2015"
+    ],
+    "applicability_note": "Trifolium은 야생 Testudo hermanni 식이에서 확인되고 Tortoise Trust는 T. repens를 급여 식물로 명시한다. 클로버는 다양식의 일부로 제한해 사용한다.",
+    "applicability_note_en": "Trifolium occurs in wild Testudo hermanni diets, and Tortoise Trust explicitly lists T. repens as a food plant. Use clover as a limited component of a varied diet.",
+    "migration_source": "candidate_fastlane_20260926_a"
+  },
+  {
+    "plant_id": "redclover",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "limited_mixed_diet",
+    "confidence": "B-",
+    "evidence_ids": [
+      "tt_plantfoods",
+      "hermanni_foraging_italy_2015"
+    ],
+    "applicability_note": "Trifolium은 야생 Testudo hermanni 식이에서 확인되고 Tortoise Trust는 T. pratense를 급여 식물로 명시한다. 다양식의 일부로 제한해 사용한다.",
+    "applicability_note_en": "Trifolium occurs in wild Testudo hermanni diets, and Tortoise Trust explicitly lists T. pratense as a food plant. Use it as a limited component of a varied diet.",
+    "migration_source": "candidate_fastlane_20260926_a"
   }
 ]
