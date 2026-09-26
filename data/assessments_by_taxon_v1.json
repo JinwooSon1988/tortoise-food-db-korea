@@ -13,7 +13,8 @@
       "tortoise_table_dandelion"
     ],
     "applicability_note": "Mediterranean Testudo 근거. 야생섭식 관찰은 사육 급여비율을 의미하지 않는다.",
-    "migration_source": "assessments.json"
+    "migration_source": "assessments.json",
+    "applicability_note_en": "Mediterranean Testudo evidence. Wild feeding observations do not establish captive diet percentages."
   },
   {
     "plant_id": "plantain",
@@ -27,7 +28,8 @@
       "leone_testudo_diet_2021"
     ],
     "applicability_note": "Mediterranean Testudo 및 전문 장기 사육 근거. Plantago 종별 동등성을 자동 가정하지 않는다.",
-    "migration_source": "assessments.json"
+    "migration_source": "assessments.json",
+    "applicability_note_en": "Mediterranean Testudo and long-term specialist husbandry evidence. Do not assume equivalence among Plantago species."
   },
   {
     "plant_id": "sowthistle",
@@ -43,7 +45,8 @@
       "leone_testudo_diet_2021"
     ],
     "applicability_note": "Mediterranean Testudo 근거. Sonchus 속 관찰을 개별 종으로 자동 전이하지 않는다.",
-    "migration_source": "assessments.json"
+    "migration_source": "assessments.json",
+    "applicability_note_en": "Mediterranean Testudo evidence. Observations at Sonchus genus level are not automatically transferred to individual species."
   },
   {
     "plant_id": "clover",
@@ -58,6 +61,7 @@
       "hermanni_foraging_italy_2015"
     ],
     "applicability_note": "Trifolium 속 수준 근거를 포함한다. 개별 clover 종은 별도 검증한다.",
-    "migration_source": "assessments.json"
+    "migration_source": "assessments.json",
+    "applicability_note_en": "Includes evidence at Trifolium genus level. Individual clover species require separate verification."
   }
 ]
