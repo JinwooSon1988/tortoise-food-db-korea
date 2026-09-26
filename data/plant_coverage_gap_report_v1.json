@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
-    "published_count": 88,
-    "candidate_count": 56,
+    "published_count": 100,
+    "candidate_count": 44,
     "research_pool_count": 144,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
-      "with_assessment": 88,
-      "with_evidence": 88,
+      "with_assessment": 100,
+      "with_evidence": 100,
       "with_korea_alias": 10,
       "fully_complete_current_schema": 3
     }
@@ -1506,6 +1506,222 @@
         "korea_alias"
       ],
       "next_action": "image"
+    },
+    {
+      "plant_id": "hollyhock",
+      "ko": "접시꽃",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "lemonbalm",
+      "ko": "레몬밤",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "lavender",
+      "ko": "라벤더",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "chamomile",
+      "ko": "캐모마일",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "cornflower",
+      "ko": "수레국화",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "echinacea",
+      "ko": "에키네시아",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "yarrow",
+      "ko": "서양톱풀",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "appleleaf",
+      "ko": "사과나무잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "cosmos",
+      "ko": "코스모스",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "purslane",
+      "ko": "쇠비름",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "hibiscusrosa",
+      "ko": "하와이무궁화",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "daisy",
+      "ko": "데이지",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
     }
   ],
   "intake_candidates": [
@@ -1523,37 +1739,11 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "hollyhock",
-      "ko": "접시꽃",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Alcea rosea",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "grapehyacinth",
       "ko": "무스카리",
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Muscari armeniacum",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "lemonbalm",
-      "ko": "레몬밤",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Melissa officinalis",
       "gaps": [
         "identity",
         "evidence",
@@ -1614,71 +1804,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "lavender",
-      "ko": "라벤더",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Lavandula angustifolia",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "chamomile",
-      "ko": "캐모마일",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Matricaria chamomilla",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "cornflower",
-      "ko": "수레국화",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Centaurea cyanus",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "echinacea",
-      "ko": "에키네시아",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Echinacea purpurea",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "yarrow",
-      "ko": "서양톱풀",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Achillea millefolium",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "chrysanthemum",
       "ko": "국화",
       "published": false,
@@ -1731,19 +1856,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "appleleaf",
-      "ko": "사과나무잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Malus domestica",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "pearleaf",
       "ko": "배나무잎",
       "published": false,
@@ -1783,19 +1895,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "cosmos",
-      "ko": "코스모스",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Cosmos bipinnatus",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "mallowleaf",
       "ko": "아욱잎",
       "published": false,
@@ -1827,19 +1926,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Amaranthus spp.",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "purslane",
-      "ko": "쇠비름",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Portulaca oleracea",
       "gaps": [
         "identity",
         "evidence",
@@ -2108,19 +2194,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "hibiscusrosa",
-      "ko": "하와이무궁화",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Hibiscus rosa-sinensis",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "lindenleaf",
       "ko": "피나무잎",
       "published": false,
@@ -2217,19 +2290,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Ginkgo biloba",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "daisy",
-      "ko": "데이지",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Bellis perennis",
       "gaps": [
         "identity",
         "evidence",
