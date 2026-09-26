@@ -27,6 +27,7 @@ if path.exists():
         if not r.get("evidence_ids"): errors.append(f"{key}: no evidence_ids")
         if not r.get("verdict"): errors.append(f"{key}: no verdict")
         if not r.get("applicability_note"): errors.append(f"{key}: applicability_note missing")
+        if not r.get("applicability_note_en"): errors.append(f"{key}: applicability_note_en missing")
 if errors:
     print("FAIL: animal taxon registry / assessment contract")
     for e in errors: print("-",e)
