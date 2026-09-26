@@ -12,6 +12,8 @@ for ko,en in {
 '영양자료':'Nutrition data','미확인':'Unverified'
 }.items():
     if ko in p and (ko not in lang or en not in lang): errors.append("missing catalog translation: "+ko)
+for needle in ["Showing '+out.length+' of '+rows.length+' plants", "document.documentElement.lang==='en'?'Evidence grade':'근거등급'", "document.documentElement.lang==='en'?'Direct evidence':'직접근거'", "document.documentElement.lang==='en'?'Nutrition data':'영양자료'"]:
+    if needle not in p: errors.append('dynamic English catalog localization missing: '+needle)
 if errors:
  print("FAIL: bilingual catalog coverage")
  for e in errors: print("-",e)

@@ -70,5 +70,1155 @@
     ],
     "why": "육지거북 전문 DB는 Oenanthe water-dropwort류를 회피 대상으로 경고한다. 반면 O. javanica 자체의 종수준 리뷰에는 포유류에서 급성 무독성 관찰과 고용량/추출물 독성 신호가 함께 보고되어, 다른 Oenanthe 종의 독성을 그대로 전이할 수 없음을 보여준다. Ibera 직접 안전성 자료가 없으므로 계획 급여에서는 보수적으로 제외하되 독성 용량을 단정하지 않는다.",
     "applicability_note": "Oenanthe genus-level specialist warning + exact O. javanica non-tortoise toxicology context; exact Ibera feeding safety remains unresolved."
+  },
+  {
+    "plant_id": "whiteclover",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "다양한 야생초 혼합식의 일부",
+    "confidence": "B",
+    "evidence_ids": [
+      "tt_mediterranean_food",
+      "tt_plantfoods",
+      "kew_whiteclover_identity"
+    ],
+    "limits": [
+      "Trifolium repens에 한정",
+      "Tortoise Trust는 단백질이 높은 점을 들어 moderation을 명시",
+      "단독 주식·고비율 반복 급여로 확대하지 않음"
+    ],
+    "why": "Tortoise Trust가 Mediterranean tortoise 식단에서 white clover를 명시적으로 moderation으로 제시하고, 별도 plant-food 자료도 Trifolium repens의 잎·줄기·꽃을 야생식 목록에 포함한다.",
+    "applicability_note": "Mediterranean tortoise 전문 사육근거 + Kew 종수준 identity."
+  },
+  {
+    "plant_id": "redclover",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "다양한 야생초 혼합식의 일부",
+    "confidence": "B-",
+    "evidence_ids": [
+      "tt_plantfoods",
+      "kew_redclover_identity"
+    ],
+    "limits": [
+      "Trifolium pratense에 한정",
+      "전문 사육자료의 야생식 목록 근거이며 고정 급여비율을 제시하지 않음",
+      "단독·고비율 반복 급여로 확대하지 않음"
+    ],
+    "why": "Tortoise Trust의 herbivorous tortoise plant-food 자료가 red clover의 잎·줄기·꽃을 야생식 목록에 명시한다.",
+    "applicability_note": "전문 사육근거 + Kew 종수준 identity; Ibera 종특이 급여시험은 아님."
+  },
+  {
+    "plant_id": "ribwortplantain",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "고섬유 야생초 혼합식 후보",
+    "confidence": "B-",
+    "evidence_ids": [
+      "tt_plantfoods",
+      "kew_ribwortplantain_identity"
+    ],
+    "limits": [
+      "Plantago lanceolata에 한정",
+      "전문 사육자료의 추천 식물 목록을 무제한 급여로 해석하지 않음",
+      "채집지 농약·제초제·오염 확인"
+    ],
+    "why": "Tortoise Trust가 Plantago spp.를 자연식 기반 후보로 제시하고 구체적 야생식 목록에서 ribwort plantain(Plantago lanceolata)을 명시한다.",
+    "applicability_note": "Mediterranean 관찰을 포함한 전문 사육근거 + Kew 종수준 identity."
+  },
+  {
+    "plant_id": "commonmallow",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "잎·꽃 혼합식 후보",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_mallow",
+      "tt_plantfoods",
+      "kew_commonmallow_identity"
+    ],
+    "limits": [
+      "Malva sylvestris에 한정",
+      "Malva 속 또는 'mallow'라는 일반명 전체로 자동 확대하지 않음",
+      "단독 주식·고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 육지거북 식물 DB가 Malva spp.의 잎과 꽃을 급여 가능한 것으로 분류하고 Tortoise Trust도 Malva를 고섬유 자연식 후보로 열거한다.",
+    "applicability_note": "일반 육지거북 전문 DB + Mediterranean 관찰 맥락 + Kew 종수준 identity."
+  },
+  {
+    "plant_id": "broadleafplantain",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "고섬유 야생초 혼합식 후보",
+    "confidence": "B-",
+    "evidence_ids": [
+      "tt_plantfoods"
+    ],
+    "limits": [
+      "Plantago major에 한정",
+      "전문 사육자료를 무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "Tortoise Trust가 broad-leaved plantain(Plantago major)을 herbivorous tortoise의 야생식 목록에 포함한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "violetleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 잎·꽃 혼합식의 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_violet"
+    ],
+    "limits": [
+      "Viola mandshurica의 잎 개념",
+      "Viola가 아닌 유사 일반명 식물과 혼동 금지"
+    ],
+    "why": "전문 육지거북 식물 DB는 true Viola species를 급여 가능한 식물로 다룬다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "violetflower",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 잎·꽃 혼합식의 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_violet"
+    ],
+    "limits": [
+      "Viola mandshurica 꽃 개념",
+      "정확한 식물 동정 필요"
+    ],
+    "why": "전문 육지거북 식물 DB는 true Viola species의 꽃과 잎을 급여 가능한 것으로 다룬다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "geraniumleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_pelargonium"
+    ],
+    "limits": [
+      "Pelargonium spp.에 한정",
+      "Geranium속과 일반명 제라늄을 혼동하지 않음",
+      "소량·혼합식 범위"
+    ],
+    "why": "전문 DB는 Pelargonium을 Feed in Moderation으로 분류한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "waterdropwort",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_water_dropwort_warning",
+      "lu_oenanthe_javanica_review_2019"
+    ],
+    "limits": [
+      "Oenanthe속 경고와 O. javanica 종수준 비파충류 독성자료를 구분",
+      "Ibera 독성 용량을 단정하지 않음"
+    ],
+    "why": "Oenanthe water-dropwort류에 대한 전문 DB의 강한 위험 경고가 있어 계획 급여에서는 보수적으로 제외한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "sweetpotatovine",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_sweetpotato"
+    ],
+    "limits": [
+      "Ipomoea batatas 잎·줄기 개념",
+      "독성 단정이 아니라 영양비와 전문 DB 권고에 따른 계획 급여 제외"
+    ],
+    "why": "전문 DB는 고구마 잎이 독성 자체는 아니라고 구분하면서도 불리한 Ca:P를 이유로 권장하지 않는다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "cucumberleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량 보조 구성",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_cucumber"
+    ],
+    "limits": [
+      "Cucumis sativus 잎에 한정",
+      "과실과 잎의 영양적 의미를 동일시하지 않음"
+    ],
+    "why": "전문 DB는 오이 잎과 꽃을 소량 급여할 수 있다고 구분한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "grapevineleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "어린 잎의 소량 보조 구성",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_grapevine"
+    ],
+    "limits": [
+      "Vitis amurensis를 Vitis spp. 범위의 contextual evidence로만 연결",
+      "과실과 잎을 동일시하지 않음"
+    ],
+    "why": "전문 DB는 Vitis spp.의 어린 신선 잎을 moderation 범위에서 허용한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "opuntiapad",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단의 수분 많은 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_opuntia"
+    ],
+    "limits": [
+      "Opuntia ficus-indica 패드에 적용",
+      "과량 시 완하 작용 가능성 때문에 무제한 급여로 확대하지 않음"
+    ],
+    "why": "전문 DB는 Opuntia 패드를 Safe to Feed 범주로 다루면서 과량의 완하 가능성을 경고한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "wheatleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "어린 풀의 혼합식 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_cat_grass"
+    ],
+    "limits": [
+      "Triticum aestivum의 어린 잎에 한정",
+      "성숙 종자는 별도이며 급여하지 않음"
+    ],
+    "why": "전문 DB의 Cat Grass 항목은 어린 Triticum grasses를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "barleyleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "어린 풀의 혼합식 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_cat_grass"
+    ],
+    "limits": [
+      "Hordeum vulgare의 어린 잎에 한정",
+      "성숙 종자는 별도이며 급여하지 않음"
+    ],
+    "why": "전문 DB의 Cat Grass 항목은 어린 Hordeum grasses를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "oatleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "어린 풀의 혼합식 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_cat_grass"
+    ],
+    "limits": [
+      "Avena sativa의 어린 잎에 한정",
+      "성숙 종자는 별도이며 급여하지 않음"
+    ],
+    "why": "전문 DB의 Cat Grass 항목은 어린 Avena sativa를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+  },
+  {
+    "plant_id": "sunflowerpetal",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 꽃잎 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_sunflower"
+    ],
+    "limits": [
+      "Helianthus annuus 꽃잎에 한정",
+      "전문 DB의 moderation 범위를 넘겨 주식·고비율 급여로 확대하지 않음"
+    ],
+    "why": "전문 육지거북 식물 DB의 Helianthus annuus moderation 근거를 꽃잎의 소량 보조 범위로 제한해 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB 근거이며 Ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "peashoot",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_pea_shoots"
+    ],
+    "limits": [
+      "Pisum sativum의 pea shoots에 한정",
+      "'독성'으로 단정하지 않음",
+      "전문 DB가 제시한 단백질·phytate·칼슘 이용 관련 우려를 계획 급여 제외 근거로만 사용"
+    ],
+    "why": "전문 육지거북 식물 DB가 pea shoots를 Do not Feed로 분류하면서 실제 독성 식물이라는 의미와는 구분한다. 따라서 독성 단정 없이 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB 근거; exact Ibera toxicology를 의미하지 않는다."
+  },
+  {
+    "plant_id": "pumpkinflower",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 꽃 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_pumpkin"
+    ],
+    "limits": [
+      "Cucurbita spp. 꽃에 한정",
+      "잎·과실에 대한 판정을 꽃에 자동 전이하지 않음",
+      "소량 혼합식 범위"
+    ],
+    "why": "기존 Cucurbita 전문 DB 근거의 식물부위 범위를 보수적으로 적용해 호박꽃을 소량 보조 구성으로 취급한다.",
+    "applicability_note": "Cucurbita spp. 일반 육지거북 근거이며 종·품종별 Ibera 직접근거는 아니다."
+  },
+  {
+    "plant_id": "hollyhock",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "잎·꽃 혼합식의 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_hollyhock"
+    ],
+    "limits": [
+      "Alcea rosea 잎·꽃에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 접시꽃의 잎과 꽃을 급여 가능한 것으로 분류한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "lemonbalm",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_lemon_balm"
+    ],
+    "limits": [
+      "Melissa officinalis에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Feed in Moderation 판정을 따라 소량 혼합식으로 제한한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "chamomile",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "가끔 사용하는 소량 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_chamomile"
+    ],
+    "limits": [
+      "Matricaria chamomilla(=M. recutita)에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 sparingly로 제한하므로 정기·고비율 급여로 확대하지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "cornflower",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_cornflower"
+    ],
+    "limits": [
+      "Centaurea cyanus에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Feed in Moderation 범위에서만 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "echinacea",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단의 보조 구성",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_echinacea"
+    ],
+    "limits": [
+      "Echinacea purpurea 후보를 Echinacea 속 전문 DB 근거에 contextual하게 연결",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB는 Echinacea를 급여 가능한 식물로 분류한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "yarrow",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_yarrow"
+    ],
+    "limits": [
+      "Achillea millefolium에 한정; 치명적 독성이나 Ibera 독성 용량을 단정하지 않음",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "purslane",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_purslane"
+    ],
+    "limits": [
+      "Portulaca oleracea에 한정; 옥살산 존재를 Ibera 독성 용량으로 환산하지 않음",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 높은 옥살산을 이유로 계획 급여를 권하지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "daisy",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_daisy"
+    ],
+    "limits": [
+      "Bellis perennis에 한정; 우발적 한입과 계획 급여를 구분",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 계획 급여는 피하도록 분류한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "hibiscusrosa",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "잎·꽃 혼합식의 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_hibiscus_rosa"
+    ],
+    "limits": [
+      "Hibiscus rosa-sinensis에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 하와이무궁화를 급여 가능한 식물로 분류한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "lavender",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_lavender"
+    ],
+    "limits": [
+      "Lavandula angustifolia를 Lavandula spp. 범위에서만 contextual 적용",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 moderation 범위를 넘기지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "cosmos",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단의 소량 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_cosmos"
+    ],
+    "limits": [
+      "Cosmos bipinnatus를 Cosmos spp. 범위에서 contextual 적용",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 moderation 범위를 넘기지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "appleleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "정확한 잎 상태 확인 후 매우 제한적인 보조 후보",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_apple_tree"
+    ],
+    "limits": [
+      "Malus domestica 잎 개념에만 연결; 과실·씨앗 판정과 동일시하지 않음",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Malus domestica tree 항목을 보수적으로 sparingly 범위에서만 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "fennelleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "가끔 사용하는 소량 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_fennel"
+    ],
+    "limits": [
+      "Foeniculum vulgare 잎/지상부 범위",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Feed Sparingly 판정을 따라 정기·고비율 급여로 확대하지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "sorrel",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_sorrel"
+    ],
+    "limits": [
+      "Rumex acetosa에 한정; Ibera 독성 용량을 단정하지 않음",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "dock",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_dock"
+    ],
+    "limits": [
+      "Rumex crispus를 Rumex spp. 전문 DB 범위에 contextual 적용",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Rumex spp. Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "lambsquarters",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_lambsquarters"
+    ],
+    "limits": [
+      "Chenopodium album에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "kohlrabileaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_kohlrabi"
+    ],
+    "limits": [
+      "Brassica oleracea Gongylodes Group 잎 개념; 다른 Brassica로 확대 금지",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 kohlrabi Do not Feed 판정을 잎 개념에 보수적으로 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "raspberryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "어린 잎의 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_raspberry"
+    ],
+    "limits": [
+      "Rubus idaeus 어린잎에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 어린 라즈베리잎과 꽃을 sparingly 범위에서 허용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "strawberryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "어린 잎의 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_strawberry"
+    ],
+    "limits": [
+      "Fragaria × ananassa 어린잎에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 어린 딸기잎을 다양한 식단의 일부로 허용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "oregano",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단의 보조 식물",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_oregano"
+    ],
+    "limits": [
+      "Origanum vulgare 지상부 범위",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Safe to Feed 판정을 활용하되 단독 주식이나 정량 비율로 확대하지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "sage",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_sage"
+    ],
+    "limits": [
+      "Salvia officinalis에 한정; 다른 Salvia 종으로 확대 금지",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "thyme",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단의 보조 식물",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_thyme"
+    ],
+    "limits": [
+      "Thymus vulgaris를 Thymus spp. 속 수준 근거에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Safe to Feed 범위지만 정유 농축물과 식물 자체를 구분한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "grapehyacinth",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 및 사육장 식재에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_grape_hyacinth"
+    ],
+    "limits": [
+      "Muscari armeniacum을 Muscari spp. 속 수준 근거에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Do not Feed 및 사육장 식재 제외 권고를 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "ginkgoleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적·간헐적 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_ginkgo"
+    ],
+    "limits": [
+      "Ginkgo biloba 잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위 이상으로 확대하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "elmleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "어린잎 중심의 다양한 식단 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_elm"
+    ],
+    "limits": [
+      "Ulmus spp. 속 수준, 특히 어린잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "속 수준 Safe to Feed 근거를 종 특이 정량 권고로 해석하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "lindenleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_linden"
+    ],
+    "limits": [
+      "Tilia spp. 잎·꽃 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "willowleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_willow"
+    ],
+    "limits": [
+      "Salix spp. 잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Do not Feed 판정에 따라 계획 급여에서 제외하며 Ibera 독성 용량을 단정하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "birchleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_birch"
+    ],
+    "limits": [
+      "Betula spp. 잎/지상부 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "rosemary",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량·간헐적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_rosemary"
+    ],
+    "limits": [
+      "Salvia rosmarinus(=Rosmarinus officinalis) 식물체 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 근거이며 정유·추출물 안전성으로 확대하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "pearleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량·간헐적 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_pear_tree"
+    ],
+    "limits": [
+      "Pyrus pyrifolia를 Pyrus spp. 나무 항목에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위로만 적용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "peachleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량·간헐적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_peach_tree"
+    ],
+    "limits": [
+      "Prunus persica 나무잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위이며 과실·씨앗·핵과 동일 판정으로 확대하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "blackberryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "새잎 중심의 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_bramble_leaf"
+    ],
+    "limits": [
+      "Rubus fruticosus agg.를 Rubus spp. bramble 새잎·꽃 범위에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "열매 판정과 분리하고 새잎 범위의 Feed in Moderation만 적용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "mapleleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_maple"
+    ],
+    "limits": [
+      "Acer spp. 잎",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위의 간헐적 보조",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hazelleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hazel"
+    ],
+    "limits": [
+      "Corylus spp. 잎",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위의 제한적 보조",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "poplarleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_poplar"
+    ],
+    "limits": [
+      "Populus spp. 잎",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "계획 급여 제외; Ibera 독성 용량 단정 아님",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "mungbeansprout",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_mung_bean_sprout"
+    ],
+    "limits": [
+      "Vigna radiata 새싹",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "계획 급여 제외; 독초라는 의미로 확대하지 않음",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "eveningprimrose",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_evening_primrose"
+    ],
+    "limits": [
+      "Oenothera spp. 잎·꽃",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "다양한 식단의 보조 식물",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "milkthistle",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_milk_thistle"
+    ],
+    "limits": [
+      "Silybum marianum 명시 부위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawthorn",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hawthorn"
+    ],
+    "limits": [
+      "Crataegus spp. source scope",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "계획 급여 제외",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "sainfoin",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_sainfoin"
+    ],
+    "limits": [
+      "Onobrychis viciifolia 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "borage",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_borage"
+    ],
+    "limits": [
+      "Borago officinalis 잎·꽃",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "계획 급여 제외; 정량 독성값 근거 아님",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "henbit",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_henbit"
+    ],
+    "limits": [
+      "Lamium amplexicaule에 한정",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위; 다른 Lamium 종으로 확대 금지",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "houseleek",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_houseleek"
+    ],
+    "limits": [
+      "Sempervivum spp. 새잎·잎",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed이지만 다육식물 특성상 과량 급여를 피한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "echeveria",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_echeveria"
+    ],
+    "limits": [
+      "Echeveria spp. 잎·꽃·줄기",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed이지만 다육식물 특성상 moderation을 유지한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "snapdragon",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_snapdragon"
+    ],
+    "limits": [
+      "Antirrhinum majus 중심 잎·꽃",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hosta",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hosta"
+    ],
+    "limits": [
+      "Hosta spp. source scope",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "saponin 관련 source 주의에 따라 Feed in Moderation으로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "salsify",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_salsify"
+    ],
+    "limits": [
+      "Tragopogon spp. 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위이며 Aruncus dioicus와 오동정하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawksbeard",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_hawksbeard"
+    ],
+    "limits": [
+      "Crepis spp. 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawkbit",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hawkbit"
+    ],
+    "limits": [
+      "Leontodon spp. 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "catsear",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_catsear"
+    ],
+    "limits": [
+      "Hypochaeris radicata 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위이며 다양한 식단의 일부로 적용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawkweed",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hawkweed"
+    ],
+    "limits": [
+      "Hieracium spp. 성숙 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "shepherdspurse",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_shepherdspurse"
+    ],
+    "limits": [
+      "Capsella bursa-pastoris 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Brassicaceae/goitrogen source 맥락에 따라 Feed in Moderation으로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   }
 ]
