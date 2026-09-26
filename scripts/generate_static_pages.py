@@ -4,7 +4,7 @@ import json, html, re
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
 all_plants=json.loads((ROOT/"data/plants.json").read_text(encoding="utf-8"))
-plants=[p for p in all_plants if p.get("suitability_status")!="unreviewed" and p.get("identity_status")!="candidate_name"]
+plants=[p for p in all_plants if p.get("identity_status")!="candidate_name"]
 
 def load_series(base_name):
     base=ROOT/"data"/f"{base_name}.json"
