@@ -1638,7 +1638,7 @@
     "aliases": [
       "숙주"
     ],
-    "identity_status": "candidate_name",
+    "identity_status": "verified_name",
     "suitability_status": "unreviewed"
   },
   {
@@ -1975,7 +1975,7 @@
     "aliases": [
       "헤이즐잎"
     ],
-    "identity_status": "candidate_name",
+    "identity_status": "verified_name",
     "suitability_status": "unreviewed"
   },
   {
@@ -2017,7 +2017,7 @@
     "aliases": [
       "포플러 잎"
     ],
-    "identity_status": "candidate_name",
+    "identity_status": "verified_name",
     "suitability_status": "unreviewed"
   },
   {
@@ -2045,7 +2045,7 @@
     "aliases": [
       "단풍잎"
     ],
-    "identity_status": "candidate_name",
+    "identity_status": "verified_name",
     "suitability_status": "unreviewed"
   },
   {
@@ -2072,6 +2072,90 @@
     "market": "재배",
     "aliases": [
       "잉글리시데이지"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "eveningprimrose",
+    "ko": "달맞이꽃",
+    "en": "Evening primrose",
+    "scientific": "Oenothera spp.",
+    "family": "Onagraceae",
+    "category": "wild_plant",
+    "market": "야생·재배",
+    "aliases": [
+      "달맞이꽃속"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "milkthistle",
+    "ko": "밀크시슬",
+    "en": "Milk thistle",
+    "scientific": "Silybum marianum",
+    "family": "Asteraceae",
+    "category": "wild_plant",
+    "market": "야생·재배",
+    "aliases": [
+      "마리아엉겅퀴"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "hawthorn",
+    "ko": "산사나무속 잎",
+    "en": "Hawthorn leaf",
+    "scientific": "Crataegus spp.",
+    "family": "Rosaceae",
+    "category": "tree_leaf",
+    "market": "야생·재배",
+    "aliases": [
+      "산사나무잎"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "sainfoin",
+    "ko": "샌포인",
+    "en": "Sainfoin",
+    "scientific": "Onobrychis viciifolia",
+    "family": "Fabaceae",
+    "category": "wild_plant",
+    "market": "재배",
+    "aliases": [
+      "sainfoin"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "borage",
+    "ko": "보리지",
+    "en": "Borage",
+    "scientific": "Borago officinalis",
+    "family": "Boraginaceae",
+    "category": "wild_plant",
+    "market": "야생·재배",
+    "aliases": [
+      "스타플라워"
+    ],
+    "identity_status": "verified_name",
+    "suitability_status": "unreviewed"
+  },
+  {
+    "id": "henbit",
+    "ko": "광대나물",
+    "en": "Henbit",
+    "scientific": "Lamium amplexicaule",
+    "family": "Lamiaceae",
+    "category": "wild_plant",
+    "market": "야생",
+    "aliases": [
+      "henbit deadnettle"
     ],
     "identity_status": "verified_name",
     "suitability_status": "unreviewed"
