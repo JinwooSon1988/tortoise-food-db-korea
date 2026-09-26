@@ -1,0 +1,63 @@
+[
+  {
+    "plant_id": "dandelion",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "supported_mixed_diet",
+    "confidence": "B+",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "mitrevichin_ibera_bulgaria_2023",
+      "bcg_mediterranean_care",
+      "tt_mediterranean_food",
+      "tt_plantfoods",
+      "tortoise_table_dandelion"
+    ],
+    "applicability_note": "Mediterranean Testudo 근거. 야생섭식 관찰은 사육 급여비율을 의미하지 않는다.",
+    "migration_source": "assessments.json"
+  },
+  {
+    "plant_id": "plantain",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "limited_mixed_diet",
+    "confidence": "C",
+    "evidence_ids": [
+      "bcg_mediterranean_care",
+      "tt_plantfoods",
+      "hermanni_foraging_italy_2015",
+      "leone_testudo_diet_2021"
+    ],
+    "applicability_note": "Mediterranean Testudo 및 전문 장기 사육 근거. Plantago 종별 동등성을 자동 가정하지 않는다.",
+    "migration_source": "assessments.json"
+  },
+  {
+    "plant_id": "sowthistle",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "supported_mixed_diet",
+    "confidence": "B",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "ibera_eastern_account_2023",
+      "bcg_mediterranean_care",
+      "tt_mediterranean_food",
+      "tt_plantfoods",
+      "leone_testudo_diet_2021"
+    ],
+    "applicability_note": "Mediterranean Testudo 근거. Sonchus 속 관찰을 개별 종으로 자동 전이하지 않는다.",
+    "migration_source": "assessments.json"
+  },
+  {
+    "plant_id": "clover",
+    "taxon_id": "mediterranean_testudo",
+    "verdict": "limited_mixed_diet",
+    "confidence": "B",
+    "evidence_ids": [
+      "iftime_ibera_dobrogea_2012",
+      "ibera_eastern_account_2023",
+      "bcg_mediterranean_care",
+      "tt_mediterranean_food",
+      "hermanni_foraging_italy_2015"
+    ],
+    "applicability_note": "Trifolium 속 수준 근거를 포함한다. 개별 clover 종은 별도 검증한다.",
+    "migration_source": "assessments.json"
+  }
+]
