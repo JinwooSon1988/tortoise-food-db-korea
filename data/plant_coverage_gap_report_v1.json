@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
-    "published_count": 120,
-    "candidate_count": 24,
-    "research_pool_count": 144,
+    "published_count": 130,
+    "candidate_count": 20,
+    "research_pool_count": 150,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
-      "with_assessment": 120,
-      "with_evidence": 120,
+      "with_assessment": 130,
+      "with_evidence": 130,
       "with_korea_alias": 10,
       "fully_complete_current_schema": 3
     }
@@ -1796,6 +1796,24 @@
       "next_action": "image"
     },
     {
+      "plant_id": "mungbeansprout",
+      "ko": "숙주나물",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "kohlrabileaf",
       "ko": "콜라비잎",
       "published": true,
@@ -1994,6 +2012,24 @@
       "next_action": "image"
     },
     {
+      "plant_id": "hazelleaf",
+      "ko": "개암나무잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "birchleaf",
       "ko": "자작나무잎",
       "published": true,
@@ -2030,8 +2066,44 @@
       "next_action": "image"
     },
     {
+      "plant_id": "poplarleaf",
+      "ko": "포플러잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "elmleaf",
       "ko": "느릅나무잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "mapleleaf",
+      "ko": "단풍나무잎",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
@@ -2068,6 +2140,114 @@
     {
       "plant_id": "daisy",
       "ko": "데이지",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "eveningprimrose",
+      "ko": "달맞이꽃",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "milkthistle",
+      "ko": "밀크시슬",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "hawthorn",
+      "ko": "산사나무속 잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "sainfoin",
+      "ko": "샌포인",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "borage",
+      "ko": "보리지",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "henbit",
+      "ko": "광대나물",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
@@ -2182,19 +2362,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Glycine max",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "mungbeansprout",
-      "ko": "숙주나물",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Vigna radiata",
       "gaps": [
         "identity",
         "evidence",
@@ -2351,45 +2518,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Cynodon dactylon",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "hazelleaf",
-      "ko": "개암나무잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Corylus spp.",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "poplarleaf",
-      "ko": "포플러잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Populus spp.",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "mapleleaf",
-      "ko": "단풍나무잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Acer spp.",
       "gaps": [
         "identity",
         "evidence",
