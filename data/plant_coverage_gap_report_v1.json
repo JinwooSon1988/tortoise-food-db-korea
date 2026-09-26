@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
-    "published_count": 100,
-    "candidate_count": 44,
+    "published_count": 111,
+    "candidate_count": 33,
     "research_pool_count": 144,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
-      "with_assessment": 100,
-      "with_evidence": 100,
+      "with_assessment": 111,
+      "with_evidence": 111,
       "with_korea_alias": 10,
       "fully_complete_current_schema": 3
     }
@@ -1274,8 +1274,80 @@
       "next_action": "image"
     },
     {
+      "plant_id": "grapehyacinth",
+      "ko": "무스카리",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "lemonbalm",
       "ko": "레몬밤",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "sage",
+      "ko": "세이지",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "thyme",
+      "ko": "타임",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "oregano",
+      "ko": "오레가노",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
@@ -1400,6 +1472,42 @@
       "next_action": "image"
     },
     {
+      "plant_id": "strawberryleaf",
+      "ko": "딸기잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "raspberryleaf",
+      "ko": "라즈베리잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "appleleaf",
       "ko": "사과나무잎",
       "published": true,
@@ -1508,6 +1616,24 @@
       "next_action": "image"
     },
     {
+      "plant_id": "fennelleaf",
+      "ko": "펜넬잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "purslane",
       "ko": "쇠비름",
       "published": true,
@@ -1526,8 +1652,80 @@
       "next_action": "image"
     },
     {
+      "plant_id": "lambsquarters",
+      "ko": "명아주",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "sorrel",
+      "ko": "수영",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "dock",
+      "ko": "소리쟁이",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "peashoot",
       "ko": "완두순",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "kohlrabileaf",
+      "ko": "콜라비잎",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
@@ -1739,58 +1937,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "grapehyacinth",
-      "ko": "무스카리",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Muscari armeniacum",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "sage",
-      "ko": "세이지",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Salvia officinalis",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "thyme",
-      "ko": "타임",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Thymus vulgaris",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "oregano",
-      "ko": "오레가노",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Origanum vulgare",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "rosemary",
       "ko": "로즈마리",
       "published": false,
@@ -1809,32 +1955,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Chrysanthemum morifolium",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "strawberryleaf",
-      "ko": "딸기잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Fragaria × ananassa",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "raspberryleaf",
-      "ko": "라즈베리잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Rubus idaeus",
       "gaps": [
         "identity",
         "evidence",
@@ -1908,63 +2028,11 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "fennelleaf",
-      "ko": "펜넬잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Foeniculum vulgare",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "amaranthleaf",
       "ko": "비름",
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Amaranthus spp.",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "lambsquarters",
-      "ko": "명아주",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Chenopodium album",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "sorrel",
-      "ko": "수영",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Rumex acetosa",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "dock",
-      "ko": "소리쟁이",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Rumex crispus",
       "gaps": [
         "identity",
         "evidence",
@@ -2043,19 +2111,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Brassica oleracea var. italica",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "kohlrabileaf",
-      "ko": "콜라비잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Brassica oleracea var. gongylodes",
       "gaps": [
         "identity",
         "evidence",
