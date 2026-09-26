@@ -17,6 +17,8 @@ for ko,en in {
 '다른 먹이 찾기 →':'Find another food →'
 }.items():
     if ko in g and (ko not in lang or en not in lang): errors.append("missing detail translation: "+ko)
+for token in ['This conclusion is valid only within the applicability','A Korean retail name is only a search candidate','Database names and scientific names are search references','Wild consumption ≠ unlimited feeding','These links only navigate to other plants']:
+    if token not in lang: errors.append('missing shared English detail narrative: '+token)
 if errors:
  print("FAIL: bilingual generated plant detail contract")
  for e in errors: print("-",e)
