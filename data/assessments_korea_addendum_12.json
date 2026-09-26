@@ -1060,5 +1060,165 @@
     ],
     "why": "Feed Sparingly 범위; 다른 Lamium 종으로 확대 금지",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "houseleek",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_houseleek"
+    ],
+    "limits": [
+      "Sempervivum spp. 새잎·잎",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed이지만 다육식물 특성상 과량 급여를 피한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "echeveria",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_echeveria"
+    ],
+    "limits": [
+      "Echeveria spp. 잎·꽃·줄기",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed이지만 다육식물 특성상 moderation을 유지한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "snapdragon",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_snapdragon"
+    ],
+    "limits": [
+      "Antirrhinum majus 중심 잎·꽃",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hosta",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hosta"
+    ],
+    "limits": [
+      "Hosta spp. source scope",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "saponin 관련 source 주의에 따라 Feed in Moderation으로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "salsify",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_salsify"
+    ],
+    "limits": [
+      "Tragopogon spp. 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위이며 Aruncus dioicus와 오동정하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawksbeard",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_hawksbeard"
+    ],
+    "limits": [
+      "Crepis spp. 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawkbit",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hawkbit"
+    ],
+    "limits": [
+      "Leontodon spp. 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "catsear",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단 내 보조",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_catsear"
+    ],
+    "limits": [
+      "Hypochaeris radicata 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Safe to Feed 범위이며 다양한 식단의 일부로 적용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "hawkweed",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_hawkweed"
+    ],
+    "limits": [
+      "Hieracium spp. 성숙 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "shepherdspurse",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "다양한 식단 내 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_shepherdspurse"
+    ],
+    "limits": [
+      "Capsella bursa-pastoris 지상부",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Brassicaceae/goitrogen source 맥락에 따라 Feed in Moderation으로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   }
 ]
