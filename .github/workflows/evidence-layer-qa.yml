@@ -14,3 +14,4 @@ jobs:
       - run: python scripts/qa_public_evidence_layer.py
       - run: python scripts/qa_assessment_evidence_graph.py
       - run: python scripts/qa_animal_taxa_v1.py
+      - run: python scripts/qa_animal_selector_ui_v2.py
