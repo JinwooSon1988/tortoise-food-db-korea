@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "principle_ko": "마트 식단은 현실적인 편의 대안이며, 자연식·고섬유 식물 다양성을 완전히 대체하는 것으로 표시하지 않는다.",
+  "principle_en": "Supermarket greens are a practical convenience option, not a complete replacement for diverse, high-fiber natural forage.",
+  "plans": [
+    {
+      "taxon_id": "mediterranean_testudo",
+      "tiers": [
+        {
+          "id": "easy_market",
+          "ko": "오늘 마트에서 바로",
+          "en": "Easy supermarket mix",
+          "status": "curated_guidance",
+          "items": [
+            "chicory",
+            "endive",
+            "romaine"
+          ],
+          "note_ko": "구하기 쉬운 잎채소를 여러 종류 섞는 현실적인 기본안. 한 품목만 장기 단독급여하지 않는다.",
+          "note_en": "A practical base using several readily available leafy greens. Do not rely on one item as a long-term exclusive food."
+        },
+        {
+          "id": "improved",
+          "ko": "한 단계 더 좋게",
+          "en": "Improved mixed diet",
+          "status": "curated_guidance",
+          "items": [
+            "chicory",
+            "endive",
+            "dandelion",
+            "plantain"
+          ],
+          "note_ko": "마트 잎채소에 검증된 야생초·재배 가능한 먹이식물을 섞어 다양성과 섬유질 방향을 개선한다.",
+          "note_en": "Combine grocery greens with verified forage or cultivated food plants to improve diversity and fiber."
+        },
+        {
+          "id": "ideal_direction",
+          "ko": "이상적인 방향",
+          "en": "Ideal direction",
+          "status": "principle_only",
+          "items": [
+            "dandelion",
+            "plantain",
+            "sowthistle",
+            "clover"
+          ],
+          "note_ko": "다양한 안전한 야생초·잎·꽃을 중심으로 구성하고 계절·식물동정·오염 위험을 함께 관리한다. 고정 레시피나 급여비율로 해석하지 않는다.",
+          "note_en": "Center the diet on diverse verified weeds, leaves, and flowers while managing season, plant identification, and contamination risk. This is not a fixed recipe or feeding ratio."
+        }
+      ],
+      "evidence_ids": [
+        "bcg_mediterranean_care",
+        "leone_testudo_diet_2021"
+      ]
+    }
+  ],
+  "rules": [
+    "Only expose a plan for a taxon when its evidence scope supports that taxon.",
+    "Candidate-name plants must not appear in public meal plans.",
+    "A plan is guidance, not a prescription or fixed feeding percentage."
+  ]
+}
