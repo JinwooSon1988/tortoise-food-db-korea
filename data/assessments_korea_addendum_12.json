@@ -692,5 +692,69 @@
     ],
     "why": "전문 DB가 어린 딸기잎을 다양한 식단의 일부로 허용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "oregano",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단의 보조 식물",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tortoise_table_oregano"
+    ],
+    "limits": [
+      "Origanum vulgare 지상부 범위",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Safe to Feed 판정을 활용하되 단독 주식이나 정량 비율로 확대하지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "sage",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_sage"
+    ],
+    "limits": [
+      "Salvia officinalis에 한정; 다른 Salvia 종으로 확대 금지",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "thyme",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "다양한 식단의 보조 식물",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_thyme"
+    ],
+    "limits": [
+      "Thymus vulgaris를 Thymus spp. 속 수준 근거에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Safe to Feed 범위지만 정유 농축물과 식물 자체를 구분한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "grapehyacinth",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 및 사육장 식재에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_grape_hyacinth"
+    ],
+    "limits": [
+      "Muscari armeniacum을 Muscari spp. 속 수준 근거에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+    ],
+    "why": "전문 DB Do not Feed 및 사육장 식재 제외 권고를 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
   }
 ]
