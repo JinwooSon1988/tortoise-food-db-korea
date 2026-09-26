@@ -756,5 +756,149 @@
     ],
     "why": "전문 DB Do not Feed 및 사육장 식재 제외 권고를 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "ginkgoleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적·간헐적 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_ginkgo"
+    ],
+    "limits": [
+      "Ginkgo biloba 잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위 이상으로 확대하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "elmleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "supplement_general_evidence",
+    "role": "어린잎 중심의 다양한 식단 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_elm"
+    ],
+    "limits": [
+      "Ulmus spp. 속 수준, 특히 어린잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "속 수준 Safe to Feed 근거를 종 특이 정량 권고로 해석하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "lindenleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_linden"
+    ],
+    "limits": [
+      "Tilia spp. 잎·꽃 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "willowleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_willow"
+    ],
+    "limits": [
+      "Salix spp. 잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Do not Feed 판정에 따라 계획 급여에서 제외하며 Ibera 독성 용량을 단정하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "birchleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_birch"
+    ],
+    "limits": [
+      "Betula spp. 잎/지상부 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed in Moderation 범위로 제한한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "rosemary",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량·간헐적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_rosemary"
+    ],
+    "limits": [
+      "Salvia rosmarinus(=Rosmarinus officinalis) 식물체 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 근거이며 정유·추출물 안전성으로 확대하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "pearleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량·간헐적 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_pear_tree"
+    ],
+    "limits": [
+      "Pyrus pyrifolia를 Pyrus spp. 나무 항목에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위로만 적용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "peachleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "소량·간헐적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_peach_tree"
+    ],
+    "limits": [
+      "Prunus persica 나무잎 범위",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "Feed Sparingly 범위이며 과실·씨앗·핵과 동일 판정으로 확대하지 않는다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+  },
+  {
+    "plant_id": "blackberryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "새잎 중심의 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_bramble_leaf"
+    ],
+    "limits": [
+      "Rubus fruticosus agg.를 Rubus spp. bramble 새잎·꽃 범위에 contextual 적용",
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+    ],
+    "why": "열매 판정과 분리하고 새잎 범위의 Feed in Moderation만 적용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   }
 ]
