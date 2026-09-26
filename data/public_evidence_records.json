@@ -218,7 +218,11 @@
       "plant_ids": [
         "dandelion",
         "plantain",
-        "sowthistle"
+        "sowthistle",
+        "whiteclover",
+        "redclover",
+        "ribwortplantain",
+        "commonmallow"
       ],
       "source_title": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
       "source_type": "specialist_husbandry",
@@ -1475,7 +1479,8 @@
     {
       "id": "tortoise_table_mallow",
       "plant_ids": [
-        "mallow"
+        "mallow",
+        "commonmallow"
       ],
       "source_title": "The Tortoise Table. Mallow.",
       "source_type": "specialist_plant_database",
@@ -1634,6 +1639,82 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+    },
+    {
+      "id": "kew_whiteclover_identity",
+      "plant_ids": [
+        "whiteclover"
+      ],
+      "source_title": "Plants of the World Online — Trifolium repens",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "identity_only",
+      "plant_taxon": "Trifolium repens",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Trifolium repens as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A523626-1"
+    },
+    {
+      "id": "kew_redclover_identity",
+      "plant_ids": [
+        "redclover"
+      ],
+      "source_title": "Plants of the World Online — Trifolium pratense",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "identity_only",
+      "plant_taxon": "Trifolium pratense",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Trifolium pratense as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/523575-1"
+    },
+    {
+      "id": "kew_ribwortplantain_identity",
+      "plant_ids": [
+        "ribwortplantain"
+      ],
+      "source_title": "Plants of the World Online — Plantago lanceolata",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "identity_only",
+      "plant_taxon": "Plantago lanceolata",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Plantago lanceolata as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A321285-2"
+    },
+    {
+      "id": "kew_commonmallow_identity",
+      "plant_ids": [
+        "commonmallow"
+      ],
+      "source_title": "Plants of the World Online — Malva sylvestris",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "identity_only",
+      "plant_taxon": "Malva sylvestris",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Malva sylvestris as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A561932-1"
     }
   ]
 }
