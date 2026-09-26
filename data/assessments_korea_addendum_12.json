@@ -580,5 +580,117 @@
     ],
     "why": "전문 DB의 Malus domestica tree 항목을 보수적으로 sparingly 범위에서만 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "fennelleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "가끔 사용하는 소량 보조",
+    "confidence": "C-",
+    "evidence_ids": [
+      "tortoise_table_fennel"
+    ],
+    "limits": [
+      "Foeniculum vulgare 잎/지상부 범위",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Feed Sparingly 판정을 따라 정기·고비율 급여로 확대하지 않는다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "sorrel",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_sorrel"
+    ],
+    "limits": [
+      "Rumex acetosa에 한정; Ibera 독성 용량을 단정하지 않음",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "dock",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_dock"
+    ],
+    "limits": [
+      "Rumex crispus를 Rumex spp. 전문 DB 범위에 contextual 적용",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Rumex spp. Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "lambsquarters",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_lambsquarters"
+    ],
+    "limits": [
+      "Chenopodium album에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "kohlrabileaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_kohlrabi"
+    ],
+    "limits": [
+      "Brassica oleracea Gongylodes Group 잎 개념; 다른 Brassica로 확대 금지",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB의 kohlrabi Do not Feed 판정을 잎 개념에 보수적으로 적용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "raspberryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "어린 잎의 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_raspberry"
+    ],
+    "limits": [
+      "Rubus idaeus 어린잎에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 어린 라즈베리잎과 꽃을 sparingly 범위에서 허용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+  },
+  {
+    "plant_id": "strawberryleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "어린 잎의 제한적 보조",
+    "confidence": "C",
+    "evidence_ids": [
+      "tortoise_table_strawberry"
+    ],
+    "limits": [
+      "Fragaria × ananassa 어린잎에 한정",
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+    ],
+    "why": "전문 DB가 어린 딸기잎을 다양한 식단의 일부로 허용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   }
 ]
