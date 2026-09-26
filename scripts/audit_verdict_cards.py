@@ -2,7 +2,8 @@ from pathlib import Path
 import json, re, sys
 
 ROOT=Path(__file__).resolve().parents[1]
-plants=json.loads((ROOT/'data/plants.json').read_text(encoding='utf-8'))
+all_plants=json.loads((ROOT/'data/plants.json').read_text(encoding='utf-8'))
+plants=[p for p in all_plants if p.get('identity_status')!='candidate_name']
 assessment_files=[ROOT/'data/assessments.json']+sorted((ROOT/'data').glob('assessments_korea_addendum*.json'))
 assessments=[]
 for path in assessment_files:
@@ -31,4 +32,8 @@ if errors:
     print('FAIL: verdict card audit')
     for e in errors: print('-',e)
     sys.exit(1)
-print(f'PASS: {len(plants)} verdict cards follow safety invariants across {len(assessment_files)} assessment files')
+candidate_ids={p['id'] for p in all_plants if p.get('identity_status')=='candidate_name'}
+for pid in candidate_ids:
+    if (ROOT/'plant'/pid/'index.html').exists():
+        print('FAIL: candidate detail page published',pid); sys.exit(1)
+print(f'PASS: {len(plants)} non-candidate verdict cards follow safety invariants; {len(candidate_ids)} candidates withheld across {len(assessment_files)} assessment files')
