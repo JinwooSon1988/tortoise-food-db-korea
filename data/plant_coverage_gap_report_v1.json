@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
-    "published_count": 69,
-    "candidate_count": 75,
+    "published_count": 88,
+    "candidate_count": 56,
     "research_pool_count": 144,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
-      "with_assessment": 69,
-      "with_evidence": 69,
+      "with_assessment": 88,
+      "with_evidence": 88,
       "with_korea_alias": 10,
       "fully_complete_current_schema": 3
     }
@@ -1164,74 +1164,351 @@
         "korea_alias"
       ],
       "next_action": "korea_alias"
-    }
-  ],
-  "intake_candidates": [
+    },
     {
       "plant_id": "whiteclover",
       "ko": "화이트클로버",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Trifolium repens",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
       "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
+        "image",
+        "nutrition",
+        "korea_alias"
       ],
-      "next_action": "identity"
+      "next_action": "image"
     },
     {
       "plant_id": "redclover",
       "ko": "레드클로버",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Trifolium pratense",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
       "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
+        "image",
+        "nutrition",
+        "korea_alias"
       ],
-      "next_action": "identity"
+      "next_action": "image"
     },
     {
       "plant_id": "ribwortplantain",
       "ko": "창질경이",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Plantago lanceolata",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
       "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
+        "image",
+        "nutrition",
+        "korea_alias"
       ],
-      "next_action": "identity"
+      "next_action": "image"
     },
     {
       "plant_id": "broadleafplantain",
       "ko": "왕질경이",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Plantago major",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
       "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
+        "image",
+        "nutrition",
+        "korea_alias"
       ],
-      "next_action": "identity"
+      "next_action": "image"
     },
     {
       "plant_id": "commonmallow",
       "ko": "말바",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Malva sylvestris",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
       "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
+        "image",
+        "nutrition",
+        "korea_alias"
       ],
-      "next_action": "identity"
+      "next_action": "image"
     },
+    {
+      "plant_id": "sunflowerpetal",
+      "ko": "해바라기꽃잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "violetleaf",
+      "ko": "제비꽃잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "violetflower",
+      "ko": "제비꽃",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "geraniumleaf",
+      "ko": "제라늄잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "waterdropwort",
+      "ko": "미나리",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "peashoot",
+      "ko": "완두순",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "sweetpotatovine",
+      "ko": "고구마줄기",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "pumpkinflower",
+      "ko": "호박꽃",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "cucumberleaf",
+      "ko": "오이잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "grapevineleaf",
+      "ko": "머루잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "opuntiapad",
+      "ko": "손바닥선인장패드",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "wheatleaf",
+      "ko": "밀잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "barleyleaf",
+      "ko": "보리잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "oatleaf",
+      "ko": "귀리잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    }
+  ],
+  "intake_candidates": [
     {
       "plant_id": "marshmallow",
       "ko": "마시멜로우",
@@ -1415,19 +1692,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "sunflowerpetal",
-      "ko": "해바라기꽃잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Helianthus annuus",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "strawberryleaf",
       "ko": "딸기잎",
       "published": false,
@@ -1519,45 +1783,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "violetleaf",
-      "ko": "제비꽃잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Viola mandshurica",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "violetflower",
-      "ko": "제비꽃",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Viola mandshurica",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "geraniumleaf",
-      "ko": "제라늄잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Pelargonium spp.",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "cosmos",
       "ko": "코스모스",
       "published": false,
@@ -1576,19 +1801,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Malva verticillata",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "waterdropwort",
-      "ko": "미나리",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Oenanthe javanica",
       "gaps": [
         "identity",
         "evidence",
@@ -1680,19 +1892,6 @@
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Fagopyrum esculentum",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "peashoot",
-      "ko": "완두순",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Pisum sativum",
       "gaps": [
         "identity",
         "evidence",
@@ -1831,45 +2030,6 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "sweetpotatovine",
-      "ko": "고구마줄기",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Ipomoea batatas",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "pumpkinflower",
-      "ko": "호박꽃",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Cucurbita spp.",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "cucumberleaf",
-      "ko": "오이잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Cucumis sativus",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "melonleaf",
       "ko": "멜론잎",
       "published": false,
@@ -1896,76 +2056,11 @@
       "next_action": "identity"
     },
     {
-      "plant_id": "grapevineleaf",
-      "ko": "머루잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Vitis amurensis",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
       "plant_id": "kiwileaf",
       "ko": "키위잎",
       "published": false,
       "status": "catalog_candidate",
       "canonical_taxon_candidate": "Actinidia deliciosa",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "opuntiapad",
-      "ko": "손바닥선인장패드",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Opuntia ficus-indica",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "wheatleaf",
-      "ko": "밀잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Triticum aestivum",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "barleyleaf",
-      "ko": "보리잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Hordeum vulgare",
-      "gaps": [
-        "identity",
-        "evidence",
-        "assessment"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "oatleaf",
-      "ko": "귀리잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Avena sativa",
       "gaps": [
         "identity",
         "evidence",
