@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Canonical animal-taxon registry for plant × tortoise assessment expansion. A taxon entry defines identity and discovery labels only; it never transfers a food verdict between taxa.",
+  "taxa": [
+    {
+      "id": "mediterranean_testudo",
+      "scientific": "Testudo spp.",
+      "ko": "지중해 Testudo",
+      "en": "Mediterranean Testudo",
+      "scope": "genus_group"
+    },
+    {
+      "id": "sulcata",
+      "scientific": "Centrochelys sulcata",
+      "ko": "설카타육지거북",
+      "en": "African spurred tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "leopard",
+      "scientific": "Stigmochelys pardalis",
+      "ko": "레오파드육지거북",
+      "en": "Leopard tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "redfoot",
+      "scientific": "Chelonoidis carbonarius",
+      "ko": "레드풋육지거북",
+      "en": "Red-footed tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "yellowfoot",
+      "scientific": "Chelonoidis denticulatus",
+      "ko": "옐로우풋육지거북",
+      "en": "Yellow-footed tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "elongated",
+      "scientific": "Indotestudo elongata",
+      "ko": "엘롱가타육지거북",
+      "en": "Elongated tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "radiated",
+      "scientific": "Astrochelys radiata",
+      "ko": "방사거북",
+      "en": "Radiated tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "indian_star",
+      "scientific": "Geochelone elegans",
+      "ko": "인도별거북",
+      "en": "Indian star tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "burmese_star",
+      "scientific": "Geochelone platynota",
+      "ko": "버마별거북",
+      "en": "Burmese star tortoise",
+      "scope": "species"
+    },
+    {
+      "id": "angulate",
+      "scientific": "Chersina angulata",
+      "ko": "앵무부리육지거북",
+      "en": "Angulate tortoise",
+      "scope": "species"
+    }
+  ],
+  "rules": [
+    "Assessments require explicit evidence applicability to the target taxon.",
+    "Do not inherit a verdict from another species solely because both are tortoises or herbivorous reptiles.",
+    "Wild feeding observation, toxicology, veterinary guidance, specialist databases and expert husbandry remain separately typed evidence.",
+    "Common-name ambiguity must be resolved to a scientific taxon before species-specific assessment."
+  ]
+}

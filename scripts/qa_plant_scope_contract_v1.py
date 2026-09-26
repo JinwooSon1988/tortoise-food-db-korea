@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 rows=json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8")).get("records",[])
 errors=[]
-allowed={"direct","related_taxon","contextual","composition_only"}
+allowed={"direct","related_taxon","contextual","composition_only","expert_husbandry"}
 for r in rows:
     rid=r.get("id","<missing-id>")
     for field in ("plant_taxon","plant_part_state"):
