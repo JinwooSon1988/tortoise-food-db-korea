@@ -17,3 +17,4 @@ jobs:
       - run: python scripts/qa_animal_selector_ui_v2.py
       - run: python scripts/qa_bilingual_home_v1.py
       - run: python scripts/qa_bilingual_catalog_v1.py
+      - run: python scripts/qa_bilingual_plant_detail_v1.py
