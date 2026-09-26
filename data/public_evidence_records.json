@@ -48,7 +48,8 @@
     {
       "id": "tortoise_table_grapevine",
       "plant_ids": [
-        "grapeleaf"
+        "grapeleaf",
+        "grapevineleaf"
       ],
       "source_title": "The Tortoise Table — Grape Vine",
       "source_type": "specialist_plant_database",
@@ -222,7 +223,8 @@
         "whiteclover",
         "redclover",
         "ribwortplantain",
-        "commonmallow"
+        "commonmallow",
+        "broadleafplantain"
       ],
       "source_title": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
       "source_type": "specialist_husbandry",
@@ -482,7 +484,10 @@
         "wheatgrass",
         "orchard",
         "barleygrass",
-        "ryegrass"
+        "ryegrass",
+        "wheatleaf",
+        "barleyleaf",
+        "oatleaf"
       ],
       "source_title": "The Tortoise Table. Cat Grass (Oat Grass, Wheat Grass, Orchard Grass, Barley Grass, Rye Grass).",
       "source_type": "specialist_plant_database",
@@ -501,7 +506,8 @@
     {
       "id": "tortoise_table_opuntia",
       "plant_ids": [
-        "pricklypear"
+        "pricklypear",
+        "opuntiapad"
       ],
       "source_title": "The Tortoise Table. Opuntia Cactus (Prickly Pear/Nopales).",
       "source_type": "specialist_plant_database",
@@ -520,7 +526,8 @@
     {
       "id": "tortoise_table_sweetpotato",
       "plant_ids": [
-        "sweetpotatoleaf"
+        "sweetpotatoleaf",
+        "sweetpotatovine"
       ],
       "source_title": "The Tortoise Table. Sweet Potato.",
       "source_type": "specialist_plant_database",
@@ -923,7 +930,8 @@
     {
       "id": "tortoise_table_cucumber",
       "plant_ids": [
-        "cucumber"
+        "cucumber",
+        "cucumberleaf"
       ],
       "source_title": "The Tortoise Table. Cucumber.",
       "plant_taxon": "Cucumis sativus",
@@ -1037,7 +1045,9 @@
     {
       "id": "tortoise_table_violet",
       "plant_ids": [
-        "violet"
+        "violet",
+        "violetleaf",
+        "violetflower"
       ],
       "source_title": "The Tortoise Table. Violet.",
       "plant_taxon": "Viola spp.",
@@ -1360,7 +1370,8 @@
     {
       "id": "tortoise_table_pelargonium",
       "plant_ids": [
-        "geranium"
+        "geranium",
+        "geraniumleaf"
       ],
       "source_title": "The Tortoise Table. Pelargonium.",
       "source_type": "specialist_plant_database",
@@ -1518,7 +1529,8 @@
     {
       "id": "tortoise_table_water_dropwort_warning",
       "plant_ids": [
-        "minari"
+        "minari",
+        "waterdropwort"
       ],
       "source_title": "The Tortoise Table. Dropwort — water-dropwort warning.",
       "source_type": "specialist_plant_database",
@@ -1594,7 +1606,8 @@
     {
       "id": "lu_oenanthe_javanica_review_2019",
       "plant_ids": [
-        "minari"
+        "minari",
+        "waterdropwort"
       ],
       "source_title": "Lu C-l, Li X-f. A Review of Oenanthe javanica (Blume) DC. as Traditional Medicinal Plant and Its Therapeutic Potential.",
       "source_type": "peer_reviewed_review",
