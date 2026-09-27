@@ -4,7 +4,6 @@ import json, html, re
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
 all_plants=json.loads((ROOT/"data/plants.json").read_text(encoding="utf-8"))
-plants=[p for p in all_plants if p.get("identity_status")!="candidate_name"]
 
 def load_series(base_name):
     base=ROOT/"data"/f"{base_name}.json"
@@ -22,6 +21,9 @@ assessments=load_series("assessments")
 retail=json.loads((ROOT/"data/korean_retail_name_map.json").read_text(encoding="utf-8"))
 med={a["plant_id"]:a for a in assessments if a.get("species_group")=="Mediterranean_Testudo"}
 general={a["plant_id"]:a for a in assessments if a.get("species_group") in {"Tortoise_general","Herbivorous_reptile_general"}}
+assessed_ids=set(med)|set(general)
+# Public detail pages are evidence-reviewed records only. Master-only intake records stay in the research pool until assessed.
+plants=[p for p in all_plants if p.get("identity_status")!="candidate_name" and p.get("id") in assessed_ids]
 retail_by_id={r["plant_id"]:r for r in retail}
 SPECIAL={"dandelion":("green","🟢 혼합급여 적합","루마니아와 남서부 불가리아의 야생 T. g. ibera에서 Taraxacum 섭식이 직접 관찰되었고 지중해 Testudo 전문 사육근거도 일치한다. 다만 야생 관찰 빈도를 사육 배합률로 환산하지 않는다."),"plantain":("yellow","🟡 혼합급여 지지근거 있음","Plantago 속과 지중해 Testudo의 섭식·사육 근거가 있다. 국내 실제 식물의 정확한 종 동정과 공식 영양자료 검증은 별도 확인이 필요하다."),"mallow":("hold","⚪ 판단보류 / 종 수준 미확정","한국 유통명 ‘아욱’만으로 특정 Malva 종을 확정하지 않는다. 특히 아욱을 Malva parviflora로 자동 간주하지 않는다.")}
 VERDICT_MAP={"supported_mixed_diet":("yellow","🟡 혼합급여 지지근거 있음"),"limited_mixed_diet":("yellow","🟡 제한적 혼합급여 근거"),"limited_supplement":("yellow","🟡 제한적 보조식 근거"),"supplement_general_evidence":("yellow","🟡 일반 보조식 근거"),"general_reptile_supplement":("yellow","🟡 일반 초식 파충류 보조근거"),"do_not_feed":("hold","🔴 급여 비권장")}
