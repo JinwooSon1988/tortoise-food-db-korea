@@ -2910,6 +2910,25 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=523"
+    },
+    {
+      "id": "buckwheat_leaf_fagopyrin_2019",
+      "plant_ids": [
+        "buckwheatleaf"
+      ],
+      "source_title": "Common buckwheat leaf fagopyrin analysis (2019)",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "General context",
+      "applicability": "taxon_group",
+      "plant_taxon": "Fagopyrum esculentum",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Analytical evidence that common buckwheat leaves contain phototoxic fagopyrins.",
+      "does_not_support": "No tortoise-specific feeding threshold or dose.",
+      "year": 2019,
+      "doi": "10.3390/antiox8060160",
+      "pmid": "31163698",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6617123/"
     }
   ]
 }
