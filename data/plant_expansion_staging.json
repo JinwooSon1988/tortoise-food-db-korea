@@ -80,30 +80,42 @@
       "submitted_name": "Astragalus cruciatus",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Astragalus crenatus Schult.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "medicago_hispida",
       "submitted_name": "Medicago hispida",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종; 현재 수용명 확인 필요",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Medicago polymorpha L.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "lotus_arenarius",
       "submitted_name": "Lotus arenarius",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Lotus arenarius Brot.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "scorpiurus_sulcatus",
@@ -120,10 +132,14 @@
       "submitted_name": "Conyza canadensis",
       "family": "Asteraceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo hermanni hermanni 야생 연구에서 반복 섭식 보고",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Erigeron canadensis L.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "ruscus_aculeatus",
