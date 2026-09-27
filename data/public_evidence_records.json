@@ -3179,6 +3179,72 @@
       "supports": "Poa pratensis is an accepted species and is documented as used as animal food.",
       "does_not_support": "Does not establish tortoise-specific safety or feeding quantity.",
       "url": "https://powo.science.kew.org/taxon/417792-1"
+    },
+    {
+      "id": "vetpharm_althaea_officinalis",
+      "plant_ids": [
+        "marshmallow"
+      ],
+      "source_title": "CliniPharm/University of Zurich Giftpflanzen: Althaea officinalis",
+      "source_type": "veterinary_toxicology_database",
+      "animal_taxon": "Animals general",
+      "applicability": "composition_only",
+      "plant_taxon": "Althaea officinalis",
+      "plant_part_state": "leaves and root; plant-level toxicology",
+      "directness": "contextual",
+      "supports": "The veterinary toxicology database classifies Althaea officinalis as a non-poisonous plant and notes no animal poisoning cases in the cited literature.",
+      "does_not_support": "The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.",
+      "url": "https://www.vetpharm.uzh.ch/GIFTDB/PFLANZEN/0471_bot.htm"
+    },
+    {
+      "id": "actinidia_deliciosa_leaf_genotoxicity_2026",
+      "plant_ids": [
+        "kiwileaf"
+      ],
+      "source_title": "Metabolomics Profiling and In Vitro Genoprotective Effect of Actinidia chinensis var. deliciosa Leaf Extract",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Chinese hamster ovary cells; in vitro",
+      "applicability": "composition_only",
+      "plant_taxon": "Actinidia deliciosa",
+      "plant_part_state": "methanolic leaf extract",
+      "directness": "composition_only",
+      "supports": "Under the tested in-vitro conditions, the leaf extract did not induce genotoxic effects and contained proanthocyanidins, flavonols and triterpenoid saponins.",
+      "does_not_support": "Does not establish oral feeding safety, digestibility, dose, or suitability for tortoises.",
+      "year": 2026,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13119791/"
+    },
+    {
+      "id": "actinidia_iridoid_distribution_2023",
+      "plant_ids": [
+        "kiwileaf"
+      ],
+      "source_title": "Assessing the safety and suitability of using silver vine as an olfactory enrichment for cats",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Cats and plant chemistry",
+      "applicability": "composition_only",
+      "plant_taxon": "Actinidia deliciosa",
+      "plant_part_state": "green leaves and roots",
+      "directness": "composition_only",
+      "supports": "A. deliciosa green leaves contained little to no bioactive iridoids in the reported analysis, while roots contained higher levels.",
+      "does_not_support": "Does not establish tortoise feeding safety or nutritional suitability.",
+      "year": 2023,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10558724/"
+    },
+    {
+      "id": "kew_poa_pratensis_animal_food",
+      "plant_ids": [
+        "meadowgrass"
+      ],
+      "source_title": "Plants of the World Online: Poa pratensis L.",
+      "source_type": "taxonomic_database",
+      "animal_taxon": "Not applicable",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Poa pratensis L.",
+      "plant_part_state": "species-level use record",
+      "directness": "contextual",
+      "supports": "Kew recognizes Poa pratensis as an accepted species and records animal-food use.",
+      "does_not_support": "Does not establish tortoise-specific suitability or captive feeding quantity.",
+      "url": "https://powo.science.kew.org/taxon/417792-1"
     }
   ]
 }
