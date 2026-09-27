@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "purpose": "Track exhaustive evidence-ladder review before leaving a plant unresolved.",
+  "evidence_ladder": [
+    "canonical_taxonomy",
+    "specialist_tortoise_husbandry",
+    "wild_diet_or_field_observation",
+    "peer_reviewed_plant_toxicology",
+    "veterinary_or_livestock_toxicology",
+    "antinutritional_phytochemistry",
+    "verified_food_composition"
+  ],
+  "rule": "A missing direct tortoise study does not end review. Indirect evidence may support a conservative result only when its scope and limitations remain explicit.",
+  "queue": [
+    {
+      "family": "Malvaceae",
+      "plant_ids": [
+        "marshmallow",
+        "mallowleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Fabaceae",
+      "plant_ids": [
+        "beanleaf",
+        "soybeanleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Brassicaceae",
+      "plant_ids": [
+        "broccolisprout",
+        "mizuna",
+        "tatsoi",
+        "komatsuna"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Poaceae",
+      "plant_ids": [
+        "meadowgrass",
+        "fescue",
+        "bermudagrass"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Asteraceae",
+      "plant_ids": [
+        "chrysanthemum"
+      ],
+      "priority": "medium"
+    },
+    {
+      "family": "Rosaceae",
+      "plant_ids": [
+        "plumleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Amaranthaceae",
+      "plant_ids": [
+        "amaranthleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Actinidiaceae",
+      "plant_ids": [
+        "kiwileaf"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
