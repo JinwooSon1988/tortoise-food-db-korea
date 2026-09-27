@@ -60,20 +60,28 @@
       "submitted_name": "Leontodon saxatilis",
       "family": "Asteraceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Leontodon saxatilis Lam.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "malva_parviflora",
       "submitted_name": "Malva parviflora",
       "family": "Malvaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Malva parviflora L.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "astragalus_cruciatus",
@@ -146,10 +154,14 @@
       "submitted_name": "Ruscus aculeatus",
       "family": "Asparagaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo hermanni hermanni 가을철 꽃·미숙과 섭식 보고",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Ruscus aculeatus L.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "medicago_minima",
@@ -166,30 +178,36 @@
       "submitted_name": "Trifolium campestre",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Hermann's tortoise 서식지·식이 연구 후보",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Trifolium campestre Schreb.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27"
     },
     {
       "id": "carthamus_spp",
       "submitted_name": "Carthamus spp.",
       "family": "Asteraceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "needs_species_resolution",
       "source_hint": "Testudo graeca 야생 식물 먹이 문헌 후보; 종 수준 분리 필요",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함."
     },
     {
       "id": "carlina_spp",
       "submitted_name": "Carlina spp.",
       "family": "Asteraceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "needs_species_resolution",
       "source_hint": "Testudo graeca 야생 식물 먹이 문헌 후보; 종 수준 분리 필요",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함."
     }
   ],
   "rules": [
