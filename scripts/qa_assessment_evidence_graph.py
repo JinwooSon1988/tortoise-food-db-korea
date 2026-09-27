@@ -23,6 +23,7 @@ warnings = []
 seen = set()
 strong_verdicts = {"supported_mixed_diet", "safe_staple", "staple", "recommended"}
 weak_directness = {"composition_only", "contextual", "related_taxon"}
+public_grade_a_verdicts = {"supported_mixed_diet", "safe_staple", "staple", "recommended"}
 hazard_re = re.compile(r"독성|독성물질|신장|간 손상|결석|갑상선|사포닌|옥살레이트|oxalate|goitrogen|glucosinolate", re.I)
 hazard_evidence_re = re.compile(r"독성|tox|renal|kidney|liver|oxalat|goitrogen|glucosinolate|saponin|thyroid", re.I)
 
@@ -54,6 +55,8 @@ for filename, row in rows:
 
     if linked and row.get("verdict") in strong_verdicts and all(e.get("directness") in weak_directness for e in linked):
         errors.append(f"{filename}:{pid}|{group}: strong verdict {row.get('verdict')} has no direct evidence")
+    if linked and row.get("verdict") in public_grade_a_verdicts and not any(e.get("directness") in {"direct","expert_husbandry"} for e in linked):
+        errors.append(f"{filename}:{pid}|{group}: public A-grade verdict requires direct or expert husbandry evidence")
 
     text = " ".join([str(row.get("why", ""))] + [str(x) for x in row.get("limits", [])])
     if linked and hazard_re.search(text):
