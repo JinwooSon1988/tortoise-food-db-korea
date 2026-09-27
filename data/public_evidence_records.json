@@ -3062,6 +3062,58 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=694"
+    },
+    {
+      "id": "tt_broccoli_622",
+      "plant_ids": [
+        "broccolisprout"
+      ],
+      "source_title": "The Tortoise Table. Broccoli (Calabrese, Sprouting Broccoli).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Brassica oleracea Italica Group",
+      "plant_part_state": "broccoli plant; sprouting broccoli entry, not a quantified microgreen trial",
+      "directness": "expert_husbandry",
+      "supports": "Specialist tortoise guidance advises not feeding broccoli because of goitrogen concerns.",
+      "does_not_support": "Does not quantify a safe or toxic dose for young broccoli microgreens or Testudo graeca ibera.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=622"
+    },
+    {
+      "id": "broccoli_sprout_glucoraphanin_1997",
+      "plant_ids": [
+        "broccolisprout"
+      ],
+      "source_title": "Broccoli sprouts: an exceptionally rich source of inducers of enzymes that protect against chemical carcinogens",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Plant chemistry; mammalian experimental context",
+      "applicability": "composition_only",
+      "plant_taxon": "Brassica oleracea broccoli cultivars",
+      "plant_part_state": "3-day-old sprouts versus mature broccoli",
+      "directness": "composition_only",
+      "supports": "Three-day-old broccoli sprouts had much higher glucoraphanin-related glucosinolate levels than mature broccoli in the studied cultivars.",
+      "does_not_support": "Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.",
+      "year": 1997,
+      "pmid": "9294217",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9294217/"
+    },
+    {
+      "id": "tt_brassica_rapa_117",
+      "plant_ids": [
+        "mizuna",
+        "tatsoi",
+        "komatsuna"
+      ],
+      "source_title": "The Tortoise Table. Field Mustard (Brassica rapa).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Brassica rapa",
+      "plant_part_state": "plant material; cultivar-specific quantity not established",
+      "directness": "related_taxon",
+      "supports": "Brassica rapa is described as acceptable as a small part of a varied tortoise diet, with goitrogen-related caution.",
+      "does_not_support": "Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=117"
     }
   ]
 }
