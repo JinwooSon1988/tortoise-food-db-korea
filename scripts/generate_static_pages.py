@@ -21,6 +21,8 @@ assessments=load_series("assessments")
 retail=json.loads((ROOT/"data/korean_retail_name_map.json").read_text(encoding="utf-8"))
 evidence_records=json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8")).get("records",[])
 evidence_by_id={e["id"]:e for e in evidence_records}
+nutrition_records=json.loads((ROOT/"data/plant_nutrition_v56.json").read_text(encoding="utf-8")).get("plants",[])
+nutrition_by_id={n["plant_id"]:n for n in nutrition_records if n.get("verification_status")=="verified"}
 med={a["plant_id"]:a for a in assessments if a.get("species_group")=="Mediterranean_Testudo"}
 general={a["plant_id"]:a for a in assessments if a.get("species_group") in {"Tortoise_general","Herbivorous_reptile_general"}}
 assessed_ids=set(med)|set(general)
