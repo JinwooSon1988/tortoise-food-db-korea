@@ -3114,6 +3114,71 @@
       "supports": "Brassica rapa is described as acceptable as a small part of a varied tortoise diet, with goitrogen-related caution.",
       "does_not_support": "Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.",
       "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=117"
+    },
+    {
+      "id": "tt_malva_spp_safe",
+      "plant_ids": [
+        "mallowleaf"
+      ],
+      "source_title": "The Tortoise Table. Mallow (Malva spp.).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Malva spp.",
+      "plant_part_state": "plant material",
+      "directness": "expert_husbandry",
+      "supports": "Mallow (Malva spp.) is listed as safe to feed and is included on a Mediterranean tortoise suitable-plant list.",
+      "does_not_support": "Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Mallow&x=0&y=0"
+    },
+    {
+      "id": "testudo_graeca_cynodon_field_diet_2008",
+      "plant_ids": [
+        "bermudagrass"
+      ],
+      "source_title": "Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Testudo graeca",
+      "applicability": "species",
+      "plant_taxon": "Cynodon dactylon",
+      "plant_part_state": "leaves and stems identified in faecal diet analysis",
+      "directness": "direct",
+      "supports": "Cynodon dactylon leaves and stems were identified as important food items in wild Testudo graeca diet.",
+      "does_not_support": "Wild consumption does not establish unlimited captive feeding, a precise ration, or equivalence for every Testudo graeca population.",
+      "year": 2008,
+      "url": "https://www.researchgate.net/publication/233047565_Food_choice_of_an_Algerian_population_of_the_spur-thighed_tortoise_Testudo_graeca"
+    },
+    {
+      "id": "chersina_cynodon_field_diet",
+      "plant_ids": [
+        "bermudagrass"
+      ],
+      "source_title": "Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape",
+      "source_type": "academic_thesis",
+      "animal_taxon": "Chersina angulata",
+      "applicability": "herbivorous_reptile_general",
+      "plant_taxon": "Cynodon dactylon",
+      "plant_part_state": "wild diet",
+      "directness": "related_taxon",
+      "supports": "Cynodon dactylon was a principal food item across three of four seasons at one study site.",
+      "does_not_support": "Does not directly determine captive feeding quantity for Testudo graeca ibera.",
+      "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5"
+    },
+    {
+      "id": "kew_poa_pratensis_identity",
+      "plant_ids": [
+        "meadowgrass"
+      ],
+      "source_title": "Plants of the World Online. Poa pratensis L.",
+      "source_type": "taxonomic_database",
+      "animal_taxon": "Not applicable",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Poa pratensis L.",
+      "plant_part_state": "whole taxon identity",
+      "directness": "contextual",
+      "supports": "Poa pratensis is an accepted species and is documented as used as animal food.",
+      "does_not_support": "Does not establish tortoise-specific safety or feeding quantity.",
+      "url": "https://powo.science.kew.org/taxon/417792-1"
     }
   ]
 }
