@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "purpose": "야생 육지거북 섭식 관찰을 사육 권장과 분리해 저장하는 근거 계층",
+  "fields": {
+    "id": "고유 근거 ID",
+    "plant_id": "내부 식물 ID",
+    "plant_taxon_reported": "원문 식물명",
+    "plant_taxon_accepted": "현재 수용명",
+    "tortoise_taxon": "관찰된 육지거북 분류군",
+    "population_region": "관찰 지역",
+    "study_method": "직접관찰/분변분석/위내용물 등",
+    "plant_part": "잎/줄기/꽃/열매/미상",
+    "season": "관찰 계절 또는 기간",
+    "feeding_signal": "주요/반복/확인/미상",
+    "source_id": "원자료 식별자",
+    "directness": "exact_species/subspecies/genus/related_tortoise",
+    "ibera_applicability": "direct/near_direct/indirect/context_only",
+    "limitations": "사육 급여량으로 전환할 수 없는 한계"
+  },
+  "interpretation_rules": [
+    "야생 섭식 확인만으로 무제한 사육 급여를 권장하지 않는다.",
+    "섭식 빈도와 영양적 적합성을 같은 개념으로 취급하지 않는다.",
+    "원문 식물명과 현재 수용명을 함께 보존한다.",
+    "식물 부위가 불명확하면 다른 부위의 안전성으로 확장하지 않는다.",
+    "Testudo graeca 자료라도 ibera 아종 직접자료가 아니면 이를 명시한다."
+  ],
+  "records": []
+}
