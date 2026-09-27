@@ -58,8 +58,8 @@ for p in plants:
     related_html="".join(f'<a class="related" href="../{esc(x["id"])}/">{esc(x.get("ko") or x["id"])} 먹이 판정 →</a>' for x in related)
     share_text=f"육지거북 {ko} 먹이 판정 | 거북밥 DB"
     en_name=p.get("en") or sci
-    en_pending="Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence."
-    en_scope="See the Korean evidence summary for the source-specific scope; evidence is not automatically transferred across taxa."
+    en_pending=("This plant has a reviewed evidence record. The feeding grade is limited to the evidence scope shown below; it does not imply unlimited feeding." if a else "Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence.")
+    en_scope=("Reviewed evidence is available. Check source taxon, plant part, directness, and limitations below before applying the result." if a else "Evidence is incomplete; do not transfer safety assumptions across taxa.")
     en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
     role_html=f"<div><b>식단 내 역할</b><br>{esc(role)}</div>" if role else "<div><b>식단 내 역할</b><br>아직 공개 권장 역할을 확정하지 않음</div>"
     linked_evidence=[evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids") or []) if eid in evidence_by_id]
