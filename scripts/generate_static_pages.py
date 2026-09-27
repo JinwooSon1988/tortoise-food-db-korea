@@ -71,6 +71,14 @@ for p in plants:
         source=f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(e.get("source_title") or e.get("id"))}</a>' if url else esc(e.get("source_title") or e.get("id"))
         evidence_cards.append(f'''<article class="evcard"><div class="evhead"><b>근거 {i}</b><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span></div><h3>{source}</h3><div class="evgrid"><div><b>대상 범위</b><br>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</div><div><b>식물 분류</b><br><i>{esc(e.get("plant_taxon"))}</i></div><div><b>대상 동물</b><br>{esc(e.get("animal_taxon"))}</div><div><b>식물 부위·상태</b><br>{esc(e.get("plant_part_state"))}</div></div><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p></article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 공개 가능한 개별 근거 레코드가 연결되지 않았다. 따라서 안전성을 추정하지 않는다.</p>'
+    nu=nutrition_by_id.get(pid)
+    if nu:
+        def nv(key,unit=""):
+            v=nu.get(key)
+            return "미확인" if v is None else f"{v}{unit}"
+        nutrition_html=f'''<div class="nutgrid"><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div><div><b>칼륨</b><strong>{nv("potassium_mg"," mg")}</strong></div><div><b>비타민 C</b><strong>{nv("vitamin_c_mg"," mg")}</strong></div></div><p class="small"><b>자료 기준:</b> {esc(nu.get("basis"))} · <b>자료명:</b> {esc(nu.get("food_description"))}</p><p><b>원자료:</b> <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} · {esc(nu.get("source_id"))}</a></p><p class="small">영양성분 수치는 식품성분 자료이며 육지거북의 독성 한계치나 단독 급여비율을 의미하지 않는다.</p>'''
+    else:
+        nutrition_html='<p><b>검증된 공식 영양성분 자료가 아직 연결되지 않았다.</b></p><p class="small">자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 사용하지 않는다.</p>'
     if a:
         scope=a.get("applicability_note") or ("지중해 Testudo 일반 근거. 이베라 직접 정량근거와 동일하지 않음" if a.get("species_group")=="Mediterranean_Testudo" else "육지거북·초식 파충류 일반 근거. Mediterranean Testudo 직접 판정이 아님"); evidence_html=f"<div><b>적용 범위</b><br>{esc(scope)}</div>"
     else: evidence_html="<div><b>적용 범위</b><br>종별 판정 근거 검토 미완료</div>"
