@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "purpose": "대량 확장 후보를 공개 식물 DB와 분리해 수집·검증하기 위한 staging queue",
+  "public_boundary": "이 파일의 항목은 이름 검증·근거 검토·판정 완료 전까지 공개 식물 카탈로그에 포함하지 않는다.",
+  "stages": [
+    "collected",
+    "taxonomy_verified",
+    "evidence_researched",
+    "assessed",
+    "promoted"
+  ],
+  "required_before_promotion": [
+    "canonical_scientific_name",
+    "accepted_taxonomy_checked",
+    "plant_part_defined",
+    "evidence_ladder_reviewed",
+    "assessment_written",
+    "public_copy_reviewed"
+  ],
+  "expansion_groups": [
+    {
+      "group": "한국 유통 잎채소",
+      "priority": 1,
+      "target_count": 100
+    },
+    {
+      "group": "한국 자생·귀화 야생초",
+      "priority": 1,
+      "target_count": 200
+    },
+    {
+      "group": "지중해 Testudo 야생 먹이식물",
+      "priority": 1,
+      "target_count": 200
+    },
+    {
+      "group": "정원·관상식물",
+      "priority": 2,
+      "target_count": 200
+    },
+    {
+      "group": "과수 잎·꽃·열매 부산물",
+      "priority": 2,
+      "target_count": 100
+    },
+    {
+      "group": "벼과·사초과 초본",
+      "priority": 2,
+      "target_count": 100
+    },
+    {
+      "group": "해외 육지거북 사육 식물",
+      "priority": 2,
+      "target_count": 200
+    }
+  ],
+  "candidates": [],
+  "rules": [
+    "속 수준 안전성을 종 수준 안전성으로 자동 전이하지 않는다.",
+    "식용 열매의 안전성을 잎·줄기·씨앗으로 자동 전이하지 않는다.",
+    "사람 식품 안전성을 육지거북 안전성으로 자동 전이하지 않는다.",
+    "영양성분 자료만으로 A/B 급여 판정을 만들지 않는다.",
+    "U 판정도 조사 이력과 publication_blocker를 남긴다."
+  ]
+}
