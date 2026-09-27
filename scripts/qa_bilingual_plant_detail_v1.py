@@ -17,6 +17,17 @@ for ko,en in {
 '다른 먹이 찾기 →':'Find another food →'
 }.items():
     if ko in g and (ko not in lang or en not in lang): errors.append("missing detail translation: "+ko)
+for n in [
+    'This plant has a reviewed evidence record.',
+    'Reviewed evidence is available.',
+    '학술자료 · 원논문',
+    '검증된 영양성분 자료',
+    '근거 읽는 법',
+    'quickfacts'
+]:
+    if n not in g: errors.append("generator missing deep-detail bilingual/evidence contract: "+n)
+if 'en_pending="Evidence review is incomplete.' in g:
+    errors.append("assessed pages may still hard-code incomplete English review state")
 for n in ['function toggleEvidence(lang)',"document.querySelectorAll('.ko-evidence')","document.querySelectorAll('.en-evidence')"]:
     if n not in lang: errors.append('language toggle missing evidence-body switching: '+n)
 if errors:
