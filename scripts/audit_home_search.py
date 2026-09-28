@@ -34,6 +34,10 @@ assert ".resultanswer{margin-top:14px;padding-top:14px" in html
 assert "max-width:820px" in html
 assert ".resultcard+.resultcard{margin-top:12px}" in html
 assert ".evidencequick{font-size:10px" in html
+assert 'aria-label="'+esc(r.label)+' 상세 근거 보기"' in html
+assert '상세 근거 보기 <span aria-hidden="true">→</span>' in html
+assert "button:focus-visible,a:focus-visible,input:focus-visible" in html
+assert "@media(prefers-reduced-motion:reduce)" in html
 assert "종 특이 근거와 육지거북 일반 근거를 구분" in html
 assert "등급은 이렇게 읽으세요" in html
 assert 'class="gradeguide"' in html
