@@ -31,13 +31,13 @@ assert 'aria-describedby="searchHelp"' in html
 assert 'id="searchHelp" class="searchhelp"' in html
 assert "direct=directCount(a)" in html
 assert "function matchRank(r,q)" in html
-assert "animalSelect.addEventListener('change'" in html
+assert 'id="animalSelect"' not in html
+assert "selectedAnimal" not in html
 assert "function scopeLabel(a)" in html
-assert "선택 종 직접 판정" in html
+assert "function speciesNotes(id,primary)" in html
+assert "종별 특이사항" in html
 assert "육지거북 일반 근거" in html
 assert "지중해 Testudo 근거" in html
-assert "selectedAnimal=animalSelect.value" in html
-assert "if(input.value.trim()||activeFilter!=='all')search()" in html
 assert "terms.some(x=>x===q)" in html
 assert "terms.some(x=>x.startsWith(q))" in html
 assert "matchRank(a,q)-matchRank(b,q)||directCount(best(b.plant_id))-directCount(best(a.plant_id))" in html
