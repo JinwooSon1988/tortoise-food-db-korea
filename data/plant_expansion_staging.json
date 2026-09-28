@@ -131,10 +131,10 @@
       "submitted_name": "Medicago hispida",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "assessed",
+      "stage": "promoted",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종; 현재 수용명 확인 필요",
       "feeding_grade": "B",
-      "public": false,
+      "public": true,
       "accepted_name": "Medicago polymorpha L.",
       "submitted_name_status": "synonym",
       "taxonomy_authority": "Kew Plants of the World Online",
@@ -144,7 +144,7 @@
         "toxicology": "species-level saponin evidence plus forage-risk context reviewed",
         "status": "reviewed_with_antinutritional_caution"
       },
-      "publication_blocker": "판정 완료. public_assessments 병합, 공개 식물 master 승격 및 정적 페이지 생성/QA 후 공개 가능.",
+      "publication_blocker": "공개 master·assessment·evidence·정적 페이지·sitemap 반영 및 QA 완료. 단, 학술 원자료의 정확한 서지정보·DOI/원문 URL source trace는 공개 근거 품질 보강 과제로 남아 있음.",
       "risk_status": "reviewed_with_antinutritional_caution",
       "assessment_readiness": {
         "status": "candidate_for_conservative_assessment",
@@ -156,7 +156,9 @@
           "사포닌 존재와 실제 파충류 독성량은 동일하지 않음"
         ]
       },
-      "assessment_ref": "assessments_korea_addendum_19.json"
+      "assessment_ref": "assessments_korea_addendum_19.json",
+      "source_trace_status": "bibliographic_metadata_pending",
+      "promotion_note": "171 master / 164 current public-scope 체계에서 정적 상세페이지와 sitemap 생성 검증 완료."
     },
     {
       "id": "lotus_arenarius",
