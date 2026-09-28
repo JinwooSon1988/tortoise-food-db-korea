@@ -29,6 +29,11 @@ assert ".resulttop>div:first-child{order:2}" in html
 assert ".verdictstack{order:1;align-items:flex-start;width:100%" in html
 assert ".badge strong{font-size:18px}" in html
 assert ".speciesnote li{grid-template-columns:1fr}" in html
+assert ".resultcard{grid-template-columns:1fr;gap:0;padding:22px 24px" in html
+assert ".resultanswer{margin-top:14px;padding-top:14px" in html
+assert "max-width:820px" in html
+assert ".resultcard+.resultcard{margin-top:12px}" in html
+assert ".evidencequick{font-size:10px" in html
 assert "gap:10px;margin:14px 0 18px" in html
 assert "align-items:end;margin-top:30px;padding:28px 4px" in html
 assert "현재 공개 판정 '+publicCount+'종" in html
