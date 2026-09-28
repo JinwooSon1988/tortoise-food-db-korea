@@ -222,11 +222,19 @@
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-28",
       "taxonomy_note": "Scorpiurus sulcatus L.은 POWO에서 Scorpiurus muricatus L.의 synonym. 원문 명칭은 provenance로 보존.",
-      "publication_blocker": "정확한 종의 가축 사료 이용 근거는 있으나 Testudo 직접 섭식/전문 사육 또는 파충류 안전자료가 부족하다. 공개 A/B 판정 전 적용성 근거 보강 필요.",
-      "risk_status": "reviewed_with_species_specific_feed_context",
+      "publication_blocker": "Scorpiurus muricatus의 종특이 목초·사료 이용 근거는 있으나, canonical 자료에서 Testudo 직접섭식 또는 파충류 경구 안전근거가 확정되지 않았다. 가축 사료 이용을 육지거북 안전성으로 자동 전이하지 않고 A/B 판정을 보류한다.",
+      "risk_status": "species_specific_forage_evidence_without_Testudo_directness",
       "evidence_review": {
-        "status": "reviewed_with_species_specific_feed_context",
-        "note": "종특이 식물화학/사료학 자료까지 검토했으나 Testudo 적용성은 미해결. 간접근거를 직접 안전근거로 전이하지 않음."
+        "taxonomy": "Scorpiurus sulcatus L. retained as source-name provenance; accepted taxon Scorpiurus muricatus L.",
+        "forage_context": "Exact accepted species has Mediterranean forage/pasture use evidence, supporting that it is consumed by grazing herbivores.",
+        "Testudo_directness": "No sufficiently verified Testudo-specific direct feeding record is present in the canonical evidence set.",
+        "safety_interpretation": "Livestock forage use is indirect evidence only and does not establish a tortoise oral safety dose or feeding frequency.",
+        "status": "species_specific_forage_evidence_without_Testudo_directness"
+      },
+      "assessment_readiness": {
+        "status": "hold_for_Testudo_direct_or_reptile_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Scorpiurus muricatus(또는 원문 synonym S. sulcatus)의 Testudo 직접섭식·전문 사육자료 또는 파충류/초식척추동물 경구 안전자료"
       }
     },
     {
