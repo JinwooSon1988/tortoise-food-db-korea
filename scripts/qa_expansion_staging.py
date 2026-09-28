@@ -18,6 +18,11 @@ for c in d.get("candidates",[]):
     rr=risk_by_id.get(cid)
     if stage in {"evidence_researched","assessed","promoted"} and not rr:
         errors.append(f"{cid}: {stage} without risk-screening audit")
+    if rr and stage=="evidence_researched":
+        if c.get("risk_status") != rr.get("status"):
+            errors.append(f"{cid}: staging risk_status is stale vs risk screening")
+        if str(c.get("publication_blocker") or "").strip() != str(rr.get("publication_blocker") or "").strip():
+            errors.append(f"{cid}: staging publication_blocker is stale vs risk screening")
     if rr and stage in {"assessed","promoted"}:
         rstatus=str(rr.get("status",""))
         blocker=str(rr.get("publication_blocker") or "").strip()
