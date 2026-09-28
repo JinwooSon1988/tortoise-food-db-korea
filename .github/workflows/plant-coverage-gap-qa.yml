@@ -6,6 +6,8 @@ on:
       - 'scripts/build_plant_coverage_gap_report_v1.py'
       - 'scripts/qa_plant_coverage_gap_report_v1.py'
       - '.github/workflows/plant-coverage-gap-qa.yml'
+permissions:
+  contents: write
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -15,4 +17,16 @@ jobs:
         with:
           python-version: '3.x'
       - run: python scripts/qa_plant_coverage_gap_report_v1.py
-      - run: git diff --exit-code --ignore-space-at-eol data/plant_coverage_gap_report_v1.json
+      - name: Synchronize coverage gap report
+        run: |
+          if ! git diff --quiet -- data/plant_coverage_gap_report_v1.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/plant_coverage_gap_report_v1.json
+            git commit -m "chore: synchronize plant coverage gap report"
+            git push
+          fi
+      - name: Verify coverage gap report is current
+        run: |
+          python scripts/qa_plant_coverage_gap_report_v1.py
+          git diff --exit-code --ignore-space-at-eol data/plant_coverage_gap_report_v1.json
