@@ -271,19 +271,46 @@
       "family": "Asparagaceae",
       "group": "지중해 Testudo 야생 먹이식물",
       "stage": "evidence_researched",
-      "source_hint": "Testudo hermanni hermanni 가을철 꽃·미숙과 섭식 보고",
+      "source_hint": "Del Vecchio et al. (2011), wild Testudo hermanni hermanni in central Italy: autumn consumption of Ruscus aculeatus flowers, unripe fruit and leaves; DOI 10.1655/HERPETOLOGICA-D-10-00064.1.",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Ruscus aculeatus L.",
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
-      "publication_blocker": "지상부/열매/잎모양 cladode 등 실제 섭식 부위와 Testudo 급여 안전성을 분리 확인해야 함. 현재 A/B 판정 금지.",
+      "publication_blocker": "직접 야생 Testudo 섭식 근거는 확보됨. 그러나 이는 T. hermanni hermanni의 계절성 야생 섭식이며 T. graeca/ibera 사육 급여량·빈도·안전 용량을 정하지 않는다. EMA의 독성자료는 주로 뿌리/근경 추출물이라 꽃·미숙과·잎 급여 위험으로 직접 전이하지 않는다. A 판정 금지; 제한적 B/C 후보 검토.",
       "evidence_review": {
-        "status": "reviewed_with_open_species_or_part_gap",
-        "note": "EMA 수의·herbal 독성자료 검토 완료. 자료 대부분 뿌리/근경 추출물 또는 국소용이므로 지상부 급여에 직접 전이 불가."
+        "status": "direct_wild_Testudo_evidence_with_part_specific_toxicology_boundary",
+        "note": "2011 Herpetologica study directly documents wild T. h. hermanni switching to R. aculeatus flowers and unripe fruit in autumn; full text also reports autumn leaf consumption. EMA assessment concerns medicinal rhizome/root preparations and cannot be used as an aerial-part tortoise toxic dose.",
+        "primary_feeding_source": {
+          "title": "Seasonal changes in the diet of Testudo hermanni hermanni in central Italy",
+          "authors": "Del Vecchio S.; Burke R.L.; Rugiero L.; Capula M.; Luiselli L.",
+          "year": 2011,
+          "journal": "Herpetologica",
+          "volume": "67(3)",
+          "pages": "236-249",
+          "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+          "animal_taxon": "Testudo hermanni hermanni",
+          "parts_observed": [
+            "flowers",
+            "unripe fruit",
+            "leaves"
+          ],
+          "directness": "subspecies_wild_observation"
+        },
+        "toxicity_boundary": {
+          "source": "EMA Final assessment report on Ruscus aculeatus L. rhizoma, Revision 1",
+          "reference": "EMA/HMPC/188805/2017",
+          "scope": "root/rhizome extracts; mammalian/medicinal toxicology",
+          "do_not_transfer_to": "fresh aerial parts or tortoise oral toxic dose"
+        }
       },
-      "risk_status": "reviewed_with_part_specific_gap"
+      "risk_status": "direct_wild_Testudo_feeding_with_part_specific_toxicology_boundary",
+      "assessment_readiness": {
+        "status": "candidate_for_limited_public_assessment",
+        "maximum_supported_grade": "B",
+        "recommended_direction": "B/C only; emphasize wild Hermann's tortoise directness and no captive ibera dose/frequency evidence"
+      }
     },
     {
       "id": "medicago_minima",
