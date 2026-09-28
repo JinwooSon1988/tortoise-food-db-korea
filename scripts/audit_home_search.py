@@ -34,6 +34,9 @@ assert ".resultanswer{margin-top:14px;padding-top:14px" in html
 assert "max-width:820px" in html
 assert ".resultcard+.resultcard{margin-top:12px}" in html
 assert ".evidencequick{font-size:10px" in html
+assert "종 특이 근거와 육지거북 일반 근거를 구분" in html
+assert "검색 결과는 이렇게 읽으세요" in html
+assert "A/B/C/D는 단독 주식 여부가 아니라 현재 근거에 따른 급여 판단 등급입니다." in html
 assert "gap:10px;margin:14px 0 18px" in html
 assert "align-items:end;margin-top:30px;padding:28px 4px" in html
 assert "현재 공개 판정 '+publicCount+'종" in html
