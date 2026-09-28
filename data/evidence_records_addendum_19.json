@@ -1,0 +1,37 @@
+[
+  {
+    "id": "wild_medicago_polymorpha_tgg_morocco",
+    "plant_id": "medicago_hispida",
+    "evidence_type": "wild_diet_observation",
+    "source_class": "peer_reviewed_field_study",
+    "taxon": "Testudo graeca graeca",
+    "plant_taxon_reported": "Medicago hispida",
+    "plant_taxon_accepted": "Medicago polymorpha L.",
+    "directness": "subspecies",
+    "applicability": "Mediterranean_Testudo",
+    "finding": "모로코의 야생 Testudo graeca graeca 분변 식이 연구에서 주요 섭식 식물군에 포함됐다.",
+    "interpretation": "야생에서 실제 섭식된 직접근거다. 사육환경의 급여량이나 단일식 안전성을 뜻하지 않는다.",
+    "limitations": [
+      "graeca 아종 자료이며 ibera 직접자료가 아님",
+      "사육 급여비율을 제시하지 않음",
+      "식물의 사포닌 등 항영양성분 검토를 대체하지 않음"
+    ],
+    "provenance": "promoted from wild_feeding_evidence staging layer"
+  },
+  {
+    "id": "medicago_polymorpha_saponin_species",
+    "plant_id": "medicago_hispida",
+    "evidence_type": "phytochemistry",
+    "source_class": "species_specific_scholarly",
+    "taxon": "Medicago polymorpha L.",
+    "directness": "plant_species",
+    "applicability": "composition_risk_context",
+    "finding": "Medicago polymorpha에서 사포닌 계열 성분에 관한 종특이 식물화학 자료가 확인된다.",
+    "interpretation": "사포닌 존재는 주의 근거이지만 육지거북의 독성 용량을 직접 제시하지 않는다.",
+    "limitations": [
+      "Testudo 독성시험이 아님",
+      "성분 존재를 실제 임상 독성과 동일시하지 않음"
+    ],
+    "provenance": "promoted from wild_candidate_risk_screening staging layer"
+  }
+]
