@@ -3,8 +3,8 @@
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
     "published_count": 165,
-    "candidate_count": 7,
-    "research_pool_count": 172,
+    "candidate_count": 8,
+    "research_pool_count": 173,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
@@ -2976,6 +2976,17 @@
       "published": false,
       "status": "assessment_pending",
       "canonical_taxon_candidate": "Erigeron canadensis L.",
+      "gaps": [
+        "assessment"
+      ],
+      "next_action": "assessment"
+    },
+    {
+      "plant_id": "ruscus_aculeatus",
+      "ko": "부처스브룸",
+      "published": false,
+      "status": "assessment_pending",
+      "canonical_taxon_candidate": "Ruscus aculeatus L.",
       "gaps": [
         "assessment"
       ],
