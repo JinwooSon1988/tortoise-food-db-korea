@@ -90,15 +90,15 @@ for p in plants:
     scope_note=(" · ".join(applicability_ko.get(x,x) for x in scopes) if scopes else "범위 미확인")
     taxon_note=(" / ".join(taxa) if taxa else "대상 동물 미확인")
     part_note=" / ".join(sorted({str(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "부위 정보 미확인"
-    quick_html=f'''<div class="quickfacts"><div><b>근거 수준</b><strong>{esc(strength_label)}</strong></div><div><b>근거 구성</b><strong>직접 {direct_count} · 전문사육 {husbandry_count} · 기타 {indirect_count}</strong></div><div><b>적용 범위</b><strong>{esc(scope_note)}</strong><span class="small">{esc(taxon_note)}</span></div></div>'''
-    interpretation_html='''<div class="decisionrule"><b>판정 읽는 법</b><span>급여 가능 판정도 단독 주식이나 무제한 급여를 뜻하지 않는다. 아래의 실제 급여 해석과 근거 한계를 함께 확인한다.</span></div>'''
-    practical_html=f'''<section class="card practical"><h2>실제 급여에서는 이렇게 해석하세요</h2><div class="practicalgrid"><div><b>급여 역할</b><p>{esc(role or "현재 근거 범위 안에서 보조적으로 해석한다.")}</p></div><div><b>확인된 부위·상태</b><p>{esc(part_note)}</p></div><div><b>확인되지 않은 것</b><p>자료에 없는 급여량·빈도·장기 안전용량은 임의로 만들지 않는다. 야생 섭식도 단독 주식이나 무제한 급여의 뜻으로 바꾸지 않는다.</p></div></div></section>'''
+    quick_html=f'''<div class="quickfacts"><div><b>근거 수준</b><strong>{esc(strength_label)}</strong></div><div><b>근거 구성</b><strong>직접 {direct_count} · 전문 사육 {husbandry_count} · 간접·맥락 {indirect_count}</strong></div><div><b>적용 범위</b><strong>{esc(scope_note)}</strong><span class="small">{esc(taxon_note)}</span></div></div>'''
+    interpretation_html='''<div class="decisionrule"><b>판정 읽는 법</b><span>급여 가능은 ‘먹여도 된다’는 범위를 뜻하며, 단독 주식이나 무제한 급여를 뜻하지 않는다. 실제 급여 해석과 근거 한계를 함께 확인한다.</span></div>'''
+    practical_html=f'''<section class="card practical"><h2>실제로 먹일 때는 이렇게 해석하세요</h2><div class="practicalgrid"><div><b>급여 역할</b><p>{esc(role or "현재 근거 범위 안에서 보조적으로 해석한다.")}</p></div><div><b>확인된 부위·상태</b><p>{esc(part_note)}</p></div><div><b>아직 알 수 없는 것</b><p>근거에 없는 급여량·빈도·장기 안전성은 임의로 정하지 않는다. 야생에서 먹는다는 기록도 단독 주식이나 무제한 급여의 뜻으로 해석하지 않는다.</p></div></div></section>'''
     species_rows=[]
     for x in exact_by_plant.get(pid,[]):
         _,x_label=VERDICT_MAP.get(x.get("verdict"),("hold","별도 판정"))
         who=x.get("display_group") or x.get("species_group") or x.get("animal_taxon")
         species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)}</b><span>{esc(x_label)}</span></div><p>{esc(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다.")}</p></article>')
-    species_specific_html=(f'<section class="card species-specific"><h2>종별 특이사항</h2><p class="small">아래 내용은 특정 종에서 확인된 별도 근거다. 이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.</p>{"".join(species_rows)}</section>' if species_rows else "")
+    species_specific_html=(f'<section class="card species-specific"><h2>종별 특이사항</h2><p class="small">특정 종에서만 확인된 근거다. 다른 육지거북 종에도 같다고 가정하지 않는다.</p>{"".join(species_rows)}</section>' if species_rows else "")
     evidence_cards=[]
     for i,e in enumerate(linked_evidence,1):
         url=e.get("url") or ""
@@ -140,7 +140,7 @@ for p in plants:
         nutrition_html='<p><b>검증된 공식 영양성분 자료가 아직 연결되지 않았다.</b></p><p class="small">자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 사용하지 않는다.</p>'
     if a:
         scope=a.get("applicability_note") or ("지중해 육지거북류(Testudo속)에 관한 일반 근거다. 이베라 그리스육지거북을 직접 시험해 얻은 정량 자료와는 다르다" if a.get("species_group")=="Mediterranean_Testudo" else "육지거북·초식 파충류 일반 근거. Mediterranean Testudo 직접 판정이 아님"); evidence_html=f"<div><b>적용 범위</b><br>{esc(scope)}</div>"
-    else: evidence_html="<div><b>적용 범위</b><br>종별 판정 근거 검토 미완료</div>"
+    else: evidence_html="<div><b>적용 범위</b><br>현재 공개 근거만으로 특정 종까지 좁혀 판단하지 않는다.</div>"
     schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"inLanguage":"ko","isPartOf":{"@type":"WebSite","name":"거북밥 DB Korea","url":SITE_URL+"/"}},ensure_ascii=False,separators=(",",":"))
     doc=f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="거북밥 DB Korea"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
