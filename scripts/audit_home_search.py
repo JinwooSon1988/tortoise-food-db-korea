@@ -15,7 +15,9 @@ assessments = base + addenda
 assert len(plants) >= 69, len(plants)
 candidate = [p for p in plants if p.get('identity_status') == 'candidate_name']
 assert len(candidate) >= 1, 'catalog expansion must retain explicit candidate records'
-assert "현재 등록된 '+plants.length+'종" in html
+assert "const publicCount=plantCatalog.filter(r=>r.isPublic).length" in html
+assert "현재 공개 판정 '+publicCount+'종" in html
+assert "if(!r.isPublic)return false" in html
 assert "전체 식물 보기" in html
 assert "전체 식물 69종 보기" not in html
 assert 'href="./all-plants/"' in html
