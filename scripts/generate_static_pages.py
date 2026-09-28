@@ -17,7 +17,9 @@ def load_series(base_name):
         if isinstance(extra,list): merged.extend(extra)
     return merged
 
-# Public rendering uses the same canonical assessment registry as QA.\n_public_assessments=json.loads((ROOT/"data/public_assessments.json").read_text(encoding="utf-8"))\nassessments=_public_assessments.get("assessments",_public_assessments.get("records",[])) if isinstance(_public_assessments,dict) else _public_assessments
+# Public rendering uses the same canonical assessment registry as QA.
+_public_assessments=json.loads((ROOT/"data/public_assessments.json").read_text(encoding="utf-8"))
+assessments=_public_assessments.get("assessments",_public_assessments.get("records",[])) if isinstance(_public_assessments,dict) else _public_assessments
 retail=json.loads((ROOT/"data/korean_retail_name_map.json").read_text(encoding="utf-8"))
 evidence_records=json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8")).get("records",[])
 evidence_by_id={e["id"]:e for e in evidence_records}
