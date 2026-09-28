@@ -34,6 +34,9 @@ assert ".resultanswer{margin-top:14px;padding-top:14px" in html
 assert "max-width:820px" in html
 assert ".resultcard+.resultcard{margin-top:12px}" in html
 assert ".evidencequick{font-size:10px" in html
+assert "먹여도 되는지 → 왜 그런지 → 어디까지 믿을 수 있는지 → 원자료" in html
+assert "① 먹여도 되는지" in html and "② 왜 그런지" in html and "③ 근거까지 확인" in html
+assert "A/B/C/D, 이렇게 읽으면 됩니다" in html
 assert '한글명·영문명·학명 모두 검색됩니다. 이름이 헷갈리면 아는 이름 그대로 입력하세요.' in html
 assert '② 어디까지 믿을지' in html
 assert 'A/B/C/D는 급여 의미를 뜻합니다' in html
