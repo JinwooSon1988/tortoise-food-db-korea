@@ -25,6 +25,10 @@ assert ".hero{padding:28px 4px 18px}" in html
 assert ".hero h1{font-size:34px;line-height:1.2;margin:0 0 12px}" not in html
 assert html.count(".hero p{font-size:15px}") == 1  # intentional legacy mobile breakpoint only
 assert ".truststrip{margin-top:14px}.belowfold{margin-top:30px}" not in html
+assert ".resulttop>div:first-child{order:2}" in html
+assert ".verdictstack{order:1;align-items:flex-start;width:100%" in html
+assert ".badge strong{font-size:18px}" in html
+assert ".speciesnote li{grid-template-columns:1fr}" in html
 assert "gap:10px;margin:14px 0 18px" in html
 assert "align-items:end;margin-top:30px;padding:28px 4px" in html
 assert "현재 공개 판정 '+publicCount+'종" in html
