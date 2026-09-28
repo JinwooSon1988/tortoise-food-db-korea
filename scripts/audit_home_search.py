@@ -34,6 +34,10 @@ assert ".resultanswer{margin-top:14px;padding-top:14px" in html
 assert "max-width:820px" in html
 assert ".resultcard+.resultcard{margin-top:12px}" in html
 assert ".evidencequick{font-size:10px" in html
+assert '한글명·영문명·학명 모두 검색됩니다. 이름이 헷갈리면 아는 이름 그대로 입력하세요.' in html
+assert '② 어디까지 믿을지' in html
+assert 'A/B/C/D는 급여 의미를 뜻합니다' in html
+assert '얼마나 자주 먹여라' in html
 assert 'aria-label="'+esc(r.label)+' 상세 근거 보기"' in html
 assert '상세 근거 보기 <span aria-hidden="true">→</span>' in html
 assert "button:focus-visible,a:focus-visible,input:focus-visible" in html
