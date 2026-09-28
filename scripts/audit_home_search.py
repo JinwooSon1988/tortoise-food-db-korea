@@ -26,6 +26,9 @@ assert "현재 공개 판정 '+publicCount+'종" in html
 assert "if(!r.isPublic)return false" in html
 assert 'aria-controls="searchResults"' in html
 assert 'id="searchResults" role="status" aria-live="polite"' in html
+assert 'enterkeyhint="search"' in html
+assert 'aria-describedby="searchHelp"' in html
+assert 'id="searchHelp" class="searchhelp"' in html
 assert "전체 식물 보기" in html
 assert "전체 식물 69종 보기" not in html
 assert 'href="./all-plants/"' in html
