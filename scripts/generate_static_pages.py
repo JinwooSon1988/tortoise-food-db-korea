@@ -36,6 +36,8 @@ assessed_ids=set(med)|set(general)
 plants=[p for p in all_plants if p.get("identity_status")!="candidate_name" and p.get("id") in assessed_ids]
 retail_by_id={r["plant_id"]:r for r in retail}
 SPECIAL={"dandelion":("green","🟢 혼합급여 적합","루마니아와 남서부 불가리아의 야생 T. g. ibera에서 Taraxacum 섭식이 직접 관찰되었고 지중해 Testudo 전문 사육근거도 일치한다. 다만 야생 관찰 빈도를 사육 배합률로 환산하지 않는다."),"plantain":("yellow","🟡 혼합급여 지지근거 있음","Plantago 속과 지중해 Testudo의 섭식·사육 근거가 있다. 국내 실제 식물의 정확한 종 동정과 공식 영양자료 검증은 별도 확인이 필요하다."),"mallow":("hold","⚪ 판단보류 / 종 수준 미확정","한국 유통명 ‘아욱’만으로 특정 Malva 종을 확정하지 않는다. 특히 아욱을 Malva parviflora로 자동 간주하지 않는다.")}
+directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
+applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
 VERDICT_MAP={"supported_mixed_diet":("green","A · 혼합식 활용 가능"),"limited_mixed_diet":("yellow","B · 제한적 혼합 급여"),"limited_supplement":("yellow","C · 가끔 보조 급여"),"supplement_general_evidence":("yellow","C · 가끔 보조 급여"),"general_reptile_supplement":("yellow","C · 가끔 보조 급여"),"do_not_feed":("danger","D · 급여하지 않음")}
 def esc(v): return html.escape(str(v or ""),quote=True)
 def verdict_for(pid):
@@ -80,8 +82,6 @@ for p in plants:
     part_note=" / ".join(sorted({str(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "부위 정보 미확인"
     quick_html=f'''<div class="quickfacts"><div><b>결론</b><strong>{esc(label)}</strong></div><div><b>근거가 다루는 부위</b><strong>{esc(part_note)}</strong></div><div><b>근거 수준</b><strong>{esc(strength_label)}</strong></div><div><b>신뢰도</b><strong>{esc((a or {}).get("confidence") or "검토중")}</strong></div></div>'''
     interpretation_html=f'''<div class="interpret"><div><b>판정 핵심</b><br>{esc(summary)}</div><div><b>근거 구성</b><br>{esc(strength_label)} · 직접 {direct_count} · 전문사육 {husbandry_count} · 기타 {indirect_count}</div><div><b>근거 적용범위</b><br>{esc(scope_note)}<br><span class="small">{esc(taxon_note)}</span></div><div><b>실제 적용 원칙</b><br>등급은 아래 적용 범위와 제한사항 안에서 해석한다. 급여 가능 판정도 단독 주식·무제한 급여를 뜻하지 않는다.</div></div>'''
-    directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
-    applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
     evidence_cards=[]
     for i,e in enumerate(linked_evidence,1):
         url=e.get("url") or ""
