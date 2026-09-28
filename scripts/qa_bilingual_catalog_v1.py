@@ -14,6 +14,8 @@ for ko,en in {
     if ko in p and (ko not in lang or en not in lang): errors.append("missing catalog translation: "+ko)
 for needle in ["Showing '+out.length+' of '+rows.length+' plants", "document.documentElement.lang==='en'?'Evidence grade':'근거등급'", "document.documentElement.lang==='en'?'Direct evidence':'직접근거'", "document.documentElement.lang==='en'?'Nutrition data':'영양자료'"]:
     if needle not in p: errors.append('dynamic English catalog localization missing: '+needle)
+for needle in ["Public assessments available: ","현재 공개 판정 '+m[1]+'종을 검색할 수 있습니다."]:
+    if needle not in lang: errors.append("dynamic home count localization missing: "+needle)
 if errors:
  print("FAIL: bilingual catalog coverage")
  for e in errors: print("-",e)
