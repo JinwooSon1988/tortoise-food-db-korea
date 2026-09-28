@@ -7,16 +7,13 @@ plants = {p["id"] for p in json.loads((ROOT/"data/plants.json").read_text(encodi
 evidence_rows = json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8")).get("records", [])
 evidence = {e["id"]: e for e in evidence_rows}
 
-assessment_paths = [ROOT/"data/assessments.json"] + sorted(
-    (ROOT/"data").glob("assessments_korea_addendum*.json")
-)
-rows = []
-for path in assessment_paths:
-    if not path.exists():
-        continue
-    data = json.loads(path.read_text(encoding="utf-8"))
-    for row in data:
-        rows.append((path.name, row))
+# Validate the canonical merged artifact used by the public site. Source/addendum
+# merge fidelity is checked separately by qa_public_assessments_merged.py.
+public_assessments = ROOT/"data/public_assessments.json"
+data = json.loads(public_assessments.read_text(encoding="utf-8"))
+if isinstance(data, dict):
+    data = data.get("assessments", data.get("records", []))
+rows = [(public_assessments.name, row) for row in data]
 
 errors = []
 warnings = []
