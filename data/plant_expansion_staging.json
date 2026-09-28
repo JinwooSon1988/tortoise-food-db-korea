@@ -144,7 +144,7 @@
         "toxicology": "species-level saponin evidence plus forage-risk context reviewed",
         "status": "reviewed_with_antinutritional_caution"
       },
-      "publication_blocker": "공개 master·assessment·evidence·정적 페이지·sitemap 반영 및 QA 완료. 단, 학술 원자료의 정확한 서지정보·DOI/원문 URL source trace는 공개 근거 품질 보강 과제로 남아 있음.",
+      "publication_blocker": null,
       "risk_status": "reviewed_with_antinutritional_caution",
       "assessment_readiness": {
         "status": "candidate_for_conservative_assessment",
@@ -157,8 +157,20 @@
         ]
       },
       "assessment_ref": "assessments_korea_addendum_19.json",
-      "source_trace_status": "bibliographic_metadata_pending",
-      "promotion_note": "171 master / 164 current public-scope 체계에서 정적 상세페이지와 sitemap 생성 검증 완료."
+      "source_trace_status": "complete",
+      "promotion_note": "171 master / 164 current public-scope 체계에서 정적 상세페이지와 sitemap 생성 검증 완료.",
+      "source_trace": {
+        "wild_diet": {
+          "title": "Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco",
+          "year": 2006,
+          "doi": "10.1016/j.jaridenv.2005.06.010"
+        },
+        "phytochemistry": {
+          "title": "Chemical investigation of saponins from twelve annual Medicago species and their bioassay with the brine shrimp Artemia salina",
+          "year": 2012,
+          "pmid": "22908560"
+        }
+      }
     },
     {
       "id": "lotus_arenarius",
