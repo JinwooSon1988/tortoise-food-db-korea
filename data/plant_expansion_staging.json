@@ -74,13 +74,12 @@
         "toxicology": "species-level phytochemistry/in-vitro activity reviewed; no tortoise oral toxic dose established",
         "status": "reviewed_with_gap"
       },
-      "publication_blocker": "육지거북 또는 초식동물 경구 안전성 자료와 실제 섭식 부위의 정량적 위험 검토 필요",
-      "risk_status": "partial",
+      "publication_blocker": "야생 Testudo graeca graeca 직접 섭식 근거는 강하지만, 정확한 종의 생초·섭식부위에 대한 초식척추동물 경구 안전자료가 부족하여 공개 급여등급 승격을 보류한다.",
+      "risk_status": "direct_wild_evidence_with_oral_safety_gap",
       "assessment_readiness": {
-        "status": "needs_one_more_safety_pass",
+        "status": "hold_for_oral_safety_evidence",
         "maximum_supported_grade": null,
-        "rationale": "Testudo graeca graeca의 주요 야생섭식 직접근거는 강하지만 종특이 경구 안전성 검토가 아직 충분하지 않다.",
-        "required_next_evidence": "Leontodon saxatilis 정확한 종의 독성·항영양성분 또는 초식척추동물 안전성 검토"
+        "required_next_evidence": "Leontodon saxatilis 생초 또는 지상부의 초식척추동물 경구 안전자료나 전문 Testudo 사육자료"
       }
     },
     {
