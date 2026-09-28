@@ -303,12 +303,19 @@
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
-      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지.",
+      "publication_blocker": "Trifolium campestre 자체의 cyanogenic potential과 Testudo/초식척추동물 경구 안전자료가 확인되지 않았고, 현재 직접 야생섭식 근거도 확정하지 못했다. 공개 A/B 판정 보류.",
       "evidence_review": {
-        "status": "reviewed_with_open_species_or_part_gap",
-        "note": "Kew 종 수준 animal-food/poison 메타데이터 확인. 독성 원인·부위·용량 및 Testudo 적용성 미해결."
+        "wild_diet": "Current reviewed Testudo graeca graeca evidence set does not establish Trifolium campestre as a direct consumed species.",
+        "veterinary_context": "Veterinary toxicology references identify Trifolium spp. as a cyanogenic-glycoside plant group, but this is genus-level and does not establish T. campestre cyanogenic content or tortoise toxicity.",
+        "species_specific_gap": "No exact-species T. campestre cyanogenic potential or Testudo oral-safety evidence was established in this review.",
+        "interpretation": "Do not transfer genus-level cyanogenic risk automatically to T. campestre, but do not treat absence of species-specific evidence as proof of safety."
       },
-      "risk_status": "research_gap_species_specific"
+      "risk_status": "species_specific_cyanogenesis_unresolved",
+      "assessment_readiness": {
+        "status": "hold_for_species_specific_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Trifolium campestre 종특이 cyanogenic glycoside/HCN 분석 또는 초식척추동물·Testudo 경구 안전자료; 직접 야생섭식 자료가 있으면 별도 검증"
+      }
     },
     {
       "id": "carthamus_spp",
