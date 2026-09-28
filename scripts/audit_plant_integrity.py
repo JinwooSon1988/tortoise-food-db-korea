@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 PLANTS = ROOT / "data" / "plants.json"
+ASSESSMENTS = ROOT / "data" / "public_assessments.json"
 PLANT_DIR = ROOT / "plant"
 SITEMAP = ROOT / "sitemap.xml"
 BASE = "https://jinwooson1988.github.io/tortoise-food-db-korea/"
@@ -33,7 +34,10 @@ def main() -> int:
     # Only reviewed/public records are required to have indexable detail pages.
     # Candidate/unreviewed records stay in the searchable intake catalog without
     # creating thin SEO pages or implying a feeding verdict.
-    public_ids = {p["id"] for p in plants if p.get("suitability_status") != "unreviewed" and p.get("identity_status") != "candidate_name"}
+    assessment_rows = json.loads(ASSESSMENTS.read_text(encoding="utf-8"))
+    if isinstance(assessment_rows, dict): assessment_rows = assessment_rows.get("assessments", assessment_rows.get("records", []))
+    assessed_ids = {a.get("plant_id") for a in assessment_rows if a.get("plant_id")}
+    public_ids = {p["id"] for p in plants if p.get("identity_status") != "candidate_name" and p.get("id") in assessed_ids}
     dirs = {p.name for p in PLANT_DIR.iterdir() if p.is_dir() and (p / "index.html").exists()}
     missing_pages = sorted(public_ids - dirs)
     extra_pages = sorted(dirs - id_set)
