@@ -109,6 +109,79 @@
         }
       ],
       "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지."
+    },
+    {
+      "plant_id": "conyzacanadensis",
+      "signals": [
+        {
+          "type": "leaf_irritant",
+          "finding": "정확한 종의 잎이 사람과 가축에서 점막 자극을 일으킬 수 있는 저강도 독성 식물로 분류됨.",
+          "source": "North Carolina Extension Plant Toolbox",
+          "scope": "잎·사람/가축",
+          "interpretation": "육지거북 경구 독성을 직접 입증하지 않지만 정확한 종·잎 수준 위험신호다."
+        },
+        {
+          "type": "essential_oil_cytotoxicity",
+          "finding": "국내산 E. canadensis 지상부 정유에서 limonene과 delta-3-carene이 주요 성분으로 확인됐고 HaCaT 세포독성이 보고됨.",
+          "source": "Applied Biological Chemistry 51(1):55-59 (2008); KCI ART001235807",
+          "scope": "지상부 농축 정유·in vitro",
+          "interpretation": "농축 정유 세포독성을 생잎의 육지거북 경구 독성량으로 환산하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Erigeron canadensis L.",
+      "status": "reviewed_with_species_specific_caution",
+      "publication_blocker": "정확한 종·잎 위험신호가 존재하고 육지거북 경구 안전자료가 없다. 야생 Testudo 섭식 직접근거가 추가 확보되기 전 A/B 판정 금지."
+    },
+    {
+      "plant_id": "ruscus_aculeatus",
+      "signals": [
+        {
+          "type": "veterinary_extract_toxicology",
+          "finding": "EMA는 ruscogenin의 제한적 경구 이용률과 낮은 급성 경구독성을 언급했으나 수의학적 결론은 국소용에 한정됨.",
+          "source": "EMA CVMP Ruscus aculeatus summary report (1999)",
+          "scope": "추출물/활성성분·식용동물·국소사용",
+          "interpretation": "식물체를 먹이로 급여해도 안전하다는 결론이 아니다."
+        },
+        {
+          "type": "extract_toxicity",
+          "finding": "EMA herbal assessment에는 고용량 Ruscus 뿌리·근경 추출물에서 동물 독성 징후가 보고되고 장기·유전독성 자료의 한계가 기술됨.",
+          "source": "EMA/HMPC/188805/2017",
+          "scope": "뿌리·근경 추출물·실험동물",
+          "interpretation": "야생 거북이 섭식할 수 있는 지상부와 부위가 다르므로 직접 전이하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Ruscus aculeatus L.",
+      "status": "reviewed_with_part_specific_gap",
+      "publication_blocker": "지상부/열매/잎모양 cladode 등 실제 섭식 부위와 Testudo 급여 안전성을 분리 확인해야 함. 현재 A/B 판정 금지."
+    },
+    {
+      "plant_id": "trifolium_campestre",
+      "signals": [
+        {
+          "type": "authoritative_use_flag",
+          "finding": "Kew POWO/ILDIS는 이 종을 animal food로 이용되는 동시에 poison 용도/위험 표기도 있는 종으로 제시함.",
+          "source": "Kew Plants of the World Online",
+          "scope": "종 수준 용도 메타데이터",
+          "interpretation": "독성 원인·부위·용량을 설명하지 않으므로 단독 급여판정 근거로 사용하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Trifolium campestre Schreb.",
+      "status": "research_gap_species_specific",
+      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지."
+    },
+    {
+      "plant_id": "medicago_minima",
+      "signals": [],
+      "accepted_taxon": "Medicago minima (L.) Bartal.",
+      "status": "research_gap_species_specific",
+      "publication_blocker": "정확한 종의 사포닌/기타 항영양성분과 Testudo 또는 초식척추동물 급여안전 자료를 충분히 확보하지 못함. 속 수준 Medicago 위험을 자동 전이하지 말 것."
+    },
+    {
+      "plant_id": "scorpiurus_sulcatus",
+      "signals": [],
+      "accepted_taxon": "Scorpiurus muricatus L.",
+      "status": "research_gap_species_specific",
+      "publication_blocker": "Scorpiurus muricatus 자체의 독성·항영양성분 및 Testudo 급여안전 자료가 충분하지 않음. 정확한 종 자료 확보 전 판정 금지."
     }
   ]
 }
