@@ -22,7 +22,23 @@ for ko,en in {
 '현재 근거의 한계':'Limits of the current evidence',
 '이 판정으로 말할 수 없는 것':'What this assessment cannot establish',
 '이 근거가 지지하는 내용':'What this evidence supports',
-'이 근거만으로 말할 수 없는 내용':'What this evidence alone cannot establish'
+'이 근거만으로 말할 수 없는 내용':'What this evidence alone cannot establish',
+'직접 근거':'Direct evidence',
+'전문 사육 근거':'Specialist husbandry evidence',
+'근연 분류군 근거':'Related-taxon evidence',
+'성분 근거':'Composition evidence',
+'근거 수준':'Evidence level',
+'신뢰도':'Confidence',
+'판정 핵심':'Assessment summary',
+'근거 구성':'Evidence composition',
+'근거 적용범위':'Evidence applicability',
+'실제 적용 원칙':'Practical application rule',
+'야생 섭식 기록':'Wild feeding record',
+'이 기록이 뜻하는 것':'What this record shows',
+'이 기록만으로 말할 수 없는 것':'What this record cannot establish',
+'야생에서는 실제로 어떻게 먹었나?':'How was it actually eaten in the wild?',
+'검증된 영양성분 자료':'Verified nutrient data',
+'더 깊이 보고 싶다면 — 학술자료와 원논문':'Go deeper — academic studies and original sources'
 }.items():
     if ko in g and (ko not in lang or en not in lang): errors.append("missing detail translation: "+ko)
 core_detail_copy={
