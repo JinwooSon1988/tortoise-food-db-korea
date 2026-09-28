@@ -10,8 +10,11 @@ assessments=json.loads((root/'data/public_assessments.json').read_text(encoding=
 if isinstance(assessments,dict): assessments=assessments.get('assessments',assessments.get('records',[]))
 public_groups={'Mediterranean_Testudo','Tortoise_general','Herbivorous_reptile_general'}
 assessed_ids={a['plant_id'] for a in assessments if a.get('species_group') in public_groups}
-expected=sum(1 for p in plants if p.get('identity_status')!='candidate_name' and p.get('id') in assessed_ids)
-assert len(pages)==expected, (len(pages),expected)
+public_ids={p['id'] for p in plants if p.get('identity_status')!='candidate_name' and p.get('id') in assessed_ids}
+expected=len(public_ids)
+page_ids={p.parent.name for p in pages}
+missing=sorted(public_ids-page_ids)
+assert not missing, ('missing reviewed public pages',missing)
 for x in ['국명','영명','학명','과명','적용 대상','근거 등급','판정 보류','급여하지 않음','검증된 이미지 준비 중','사진과 유통명만으로 식물 종을 확정하지 않는다.']:
     assert x in js,x
 assert 'verified_plant_images_v56.json' in js
