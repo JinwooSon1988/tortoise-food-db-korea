@@ -96,12 +96,18 @@
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
       "evidence_review": {
-        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence",
-        "toxicology": "species-level acute oral extract evidence plus nitrate-accumulation livestock warning",
-        "status": "reviewed_with_open_risk"
+        "wild_diet": "direct T. graeca graeca fecal-analysis evidence; Malva parviflora was one of five main preferred plants accounting collectively for 70% of identified dietary material in the 2006 Morocco study. A later Souss Valley study also reports M. parviflora among consumed plants.",
+        "veterinary_toxicity": "species-specific equine and ovine reports describe suspected/probable toxicosis after heavy grazing; proposed mechanisms include cyclopropene fatty acids. These are mammalian data and do not establish Testudo toxicity.",
+        "counterevidence": "2022 rat study of isolated leaf/fruit mucilage found no acute toxicity at 5 g/kg, but this was an extracted mucilage preparation, not whole fresh plant and not a tortoise study.",
+        "interpretation": "The tortoise feeding evidence and mammalian veterinary toxicity cannot be collapsed into a simple safe/unsafe conclusion. Testudo-specific oral safety evidence remains absent."
       },
-      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요.",
-      "risk_status": "blocked_veterinary_toxicity"
+      "publication_blocker": "T. graeca graeca의 직접 야생섭식 근거가 강하지만, M. parviflora의 포유류 수의독성 사례와 충돌한다. 2022년 쥐의 추출 점액질 안전성은 생초 전체의 육지거북 안전성을 입증하지 않는다. Testudo/파충류 경구자료 확보 전 A/B 공개 승격 금지.",
+      "risk_status": "direct_wild_evidence_with_cross_species_veterinary_toxicity_conflict",
+      "assessment_readiness": {
+        "status": "hold_for_taxon_specific_reptile_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Malva parviflora 생초/실제 섭식부위의 파충류 또는 Testudo 경구 안전자료; 가능하면 cyclopropene fatty acid와 실제 섭식량의 관계 자료"
+      }
     },
     {
       "id": "astragalus_cruciatus",
