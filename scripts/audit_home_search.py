@@ -21,6 +21,8 @@ assert '<style id="premium-home-v1">' in html and '<style id="ux-hardening-20260
 assert '</style><style id="ux-hardening-20260928">' in html
 assert "현재 공개 판정 '+publicCount+'종" in html
 assert "if(!r.isPublic)return false" in html
+assert 'aria-controls="searchResults"' in html
+assert 'id="searchResults" role="status" aria-live="polite"' in html
 assert "전체 식물 보기" in html
 assert "전체 식물 69종 보기" not in html
 assert 'href="./all-plants/"' in html
