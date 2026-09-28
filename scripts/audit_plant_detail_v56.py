@@ -25,6 +25,9 @@ assert 'assessment_scope' in generator and 'exact_species' in generator
 assert '종별 특이사항' in generator
 assert '이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.' in generator
 assert 'species-specific' in generator and 'speciesexception' in generator
+assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
+assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
+assert '확인된 부위·상태</b><p>{esc(part_note)}' in generator
 assert 'class="skiplink" href="#main-content"' in generator
 assert '<main id="main-content">' in generator
 assert 'a:focus-visible,button:focus-visible' in generator
