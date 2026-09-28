@@ -263,7 +263,15 @@
       "source_hint": "Testudo graeca 야생 식물 먹이 문헌 후보; 종 수준 분리 필요",
       "feeding_grade": null,
       "public": false,
-      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함."
+      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함.",
+      "source_trace": {
+        "secondary_source": "Benítez-Malvido et al. 2019, PeerJ 7:e8076",
+        "secondary_claim": "Testudo graeca diet includes thistles, e.g. Carthamus and Carlina; citation combines Andreu, Díaz-Paniagua & Keller 2000 with El Mouden et al. 2006.",
+        "primary_lead": "Andreu, Díaz-Paniagua & Keller (2000), La tortuga mora (Testudo graeca L.) en Doñana",
+        "resolution_status": "publicly accessible evidence checked so far supports genus-level identification only",
+        "rule": "Do not infer a species from regional flora or later citations. Promote taxonomy only if the primary source identifies the species."
+      },
+      "publication_blocker": "원출처에서 Carthamus/Carlina의 정확한 종명이 확인되지 않음. 현재 속 수준 자료만 검증되어 species-level 공개 레코드 생성 금지."
     },
     {
       "id": "carlina_spp",
@@ -274,7 +282,15 @@
       "source_hint": "Testudo graeca 야생 식물 먹이 문헌 후보; 종 수준 분리 필요",
       "feeding_grade": null,
       "public": false,
-      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함."
+      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함.",
+      "source_trace": {
+        "secondary_source": "Benítez-Malvido et al. 2019, PeerJ 7:e8076",
+        "secondary_claim": "Testudo graeca diet includes thistles, e.g. Carthamus and Carlina; citation combines Andreu, Díaz-Paniagua & Keller 2000 with El Mouden et al. 2006.",
+        "primary_lead": "Andreu, Díaz-Paniagua & Keller (2000), La tortuga mora (Testudo graeca L.) en Doñana",
+        "resolution_status": "publicly accessible evidence checked so far supports genus-level identification only",
+        "rule": "Do not infer a species from regional flora or later citations. Promote taxonomy only if the primary source identifies the species."
+      },
+      "publication_blocker": "원출처에서 Carthamus/Carlina의 정확한 종명이 확인되지 않음. 현재 속 수준 자료만 검증되어 species-level 공개 레코드 생성 금지."
     }
   ],
   "rules": [
