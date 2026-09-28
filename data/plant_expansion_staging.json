@@ -283,11 +283,18 @@
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-28",
       "taxonomy_note": "POWO에서 accepted species로 확인. 분류검증은 급여안전 판정을 의미하지 않음.",
-      "publication_blocker": "M. minima 종특이 사포닌 존재는 확인되지만 Testudo/파충류에서의 실제 섭취량·안전범위 자료가 없다. A 판정 금지; 공개 판정 전 야생섭식 또는 전문 사육근거 추가 필요.",
-      "risk_status": "reviewed_with_antinutritional_caution",
+      "publication_blocker": "M. minima는 가축·초식동물의 사료/방목 식물로 사용되는 근거가 반복되지만 Testudo 직접섭식·경구 안전량 자료가 없다. Medicago 속 사포닌 정보를 종특이 독성으로 전이하지 않으며 A/B 공개 판정은 보류.",
+      "risk_status": "species_specific_safety_gap_with_repeated_herbivore_use",
       "evidence_review": {
-        "status": "reviewed_with_antinutritional_caution",
-        "note": "종특이 식물화학/사료학 자료까지 검토했으나 Testudo 적용성은 미해결. 간접근거를 직접 안전근거로 전이하지 않음."
+        "wild_diet": "No direct Testudo graeca feeding record established in the reviewed evidence set.",
+        "herbivore_use": "Species is documented as forage/animal food and as a grazed species; GRIN records animal-food forage use, and field/pasture sources document grazing by sheep/cattle.",
+        "phytochemistry": "Exact-species studies document substantial phenolic variation among roots, stems, leaves and seeds; Medicago genus is saponin-rich, but the reviewed 12-species saponin study did not include M. minima, so genus-level saponin information is not treated as species-specific toxicity.",
+        "interpretation": "Herbivore forage use supports ecological plausibility but does not establish Testudo safety or a feeding grade."
+      },
+      "assessment_readiness": {
+        "status": "hold_for_Testudo_specific_or_specialist_herbivore_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "M. minima의 Testudo/파충류 직접섭식 또는 전문 사육자료, 또는 정확한 종·부위의 초식척추동물 경구 안전자료"
       }
     },
     {
