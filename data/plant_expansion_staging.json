@@ -101,14 +101,21 @@
       "submitted_name": "Astragalus cruciatus",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "taxonomy_verified",
+      "stage": "evidence_researched",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Astragalus crenatus Schult.",
       "submitted_name_status": "synonym",
       "taxonomy_authority": "Kew Plants of the World Online",
-      "taxonomy_checked": "2026-09-27"
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence under reported name Astragalus cruciatus",
+        "taxonomy": "reported name normalized to accepted Astragalus crenatus Schult.",
+        "toxicology": "genus toxicology reviewed; exact-species swainsonine/nitro/selenium status unresolved",
+        "status": "species_specific_toxicology_gap"
+      },
+      "publication_blocker": "Astragalus crenatus 종특이 독성성분 분석 또는 신뢰 가능한 초식동물 안전자료 미확보. A/B 공개판정 금지."
     },
     {
       "id": "medicago_hispida",
