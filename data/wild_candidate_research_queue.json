@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "generated_from": [
+    "plant_expansion_staging.json",
+    "wild_candidate_risk_screening.json",
+    "wild_feeding_evidence.json"
+  ],
+  "rule": "낮은 priority 숫자부터 조사하되 안전성 blocker를 해소하기 전 공개 판정하지 않는다.",
+  "queue": [
+    {
+      "priority": 1,
+      "plant_id": "carlina_spp",
+      "accepted_name": null,
+      "stage": "needs_species_resolution",
+      "risk_status": "not_screened",
+      "has_direct_wild_record": false,
+      "bucket": "species_resolution",
+      "next_action": "원자료에서 정확한 종명을 먼저 확정",
+      "publication_blocker": null
+    },
+    {
+      "priority": 1,
+      "plant_id": "carthamus_spp",
+      "accepted_name": null,
+      "stage": "needs_species_resolution",
+      "risk_status": "not_screened",
+      "has_direct_wild_record": false,
+      "bucket": "species_resolution",
+      "next_action": "원자료에서 정확한 종명을 먼저 확정",
+      "publication_blocker": null
+    },
+    {
+      "priority": 2,
+      "plant_id": "medicago_minima",
+      "accepted_name": "Medicago minima (L.) Bartal.",
+      "stage": "taxonomy_verified",
+      "risk_status": "research_gap_species_specific",
+      "has_direct_wild_record": false,
+      "bucket": "toxicology_research",
+      "next_action": "종특이 독성·항영양·초식동물 안전자료 검색",
+      "publication_blocker": "정확한 종의 사포닌/기타 항영양성분과 Testudo 또는 초식척추동물 급여안전 자료를 충분히 확보하지 못함. 속 수준 Medicago 위험을 자동 전이하지 말 것."
+    },
+    {
+      "priority": 2,
+      "plant_id": "scorpiurus_sulcatus",
+      "accepted_name": "Scorpiurus muricatus L.",
+      "stage": "taxonomy_verified",
+      "risk_status": "research_gap_species_specific",
+      "has_direct_wild_record": false,
+      "bucket": "toxicology_research",
+      "next_action": "종특이 독성·항영양·초식동물 안전자료 검색",
+      "publication_blocker": "Scorpiurus muricatus 자체의 독성·항영양성분 및 Testudo 급여안전 자료가 충분하지 않음. 정확한 종 자료 확보 전 판정 금지."
+    },
+    {
+      "priority": 3,
+      "plant_id": "malva_parviflora",
+      "accepted_name": "Malva parviflora L.",
+      "stage": "evidence_researched",
+      "risk_status": "blocked_veterinary_toxicity",
+      "has_direct_wild_record": true,
+      "bucket": "conflicting_evidence",
+      "next_action": "상충 수의독성 근거를 해소할 Testudo/파충류 자료 검색",
+      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요."
+    },
+    {
+      "priority": 4,
+      "plant_id": "astragalus_cruciatus",
+      "accepted_name": "Astragalus crenatus Schult.",
+      "stage": "evidence_researched",
+      "risk_status": "research_gap_species_specific",
+      "has_direct_wild_record": true,
+      "bucket": "species_specific_gap",
+      "next_action": "정확한 종·부위의 위험성 자료 검색",
+      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시."
+    },
+    {
+      "priority": 4,
+      "plant_id": "lotus_arenarius",
+      "accepted_name": "Lotus arenarius Brot.",
+      "stage": "evidence_researched",
+      "risk_status": "research_gap",
+      "has_direct_wild_record": true,
+      "bucket": "species_specific_gap",
+      "next_action": "정확한 종·부위의 위험성 자료 검색",
+      "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지."
+    },
+    {
+      "priority": 4,
+      "plant_id": "trifolium_campestre",
+      "accepted_name": "Trifolium campestre Schreb.",
+      "stage": "evidence_researched",
+      "risk_status": "research_gap_species_specific",
+      "has_direct_wild_record": false,
+      "bucket": "species_specific_gap",
+      "next_action": "정확한 종·부위의 위험성 자료 검색",
+      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지."
+    },
+    {
+      "priority": 5,
+      "plant_id": "leontodon_saxatilis",
+      "accepted_name": "Leontodon saxatilis Lam.",
+      "stage": "evidence_researched",
+      "risk_status": "partial",
+      "has_direct_wild_record": true,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "육지거북 또는 초식동물 경구 안전성 자료와 실제 섭식 부위의 정량적 위험 검토 필요"
+    },
+    {
+      "priority": 5,
+      "plant_id": "medicago_hispida",
+      "accepted_name": "Medicago polymorpha L.",
+      "stage": "evidence_researched",
+      "risk_status": "reviewed_with_antinutritional_caution",
+      "has_direct_wild_record": true,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "Testudo 직접 야생섭식 근거는 있으나 사포닌/사료학 위험의 파충류 적용성이 불명확하다. 공개 시 제한적 혼합급여 이하의 보수적 문구와 근거 직접성 표시 필요."
+    },
+    {
+      "priority": 5,
+      "plant_id": "conyzacanadensis",
+      "accepted_name": "Erigeron canadensis L.",
+      "stage": "evidence_researched",
+      "risk_status": "reviewed_with_species_specific_caution",
+      "has_direct_wild_record": false,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "정확한 종·잎 위험신호가 존재하고 육지거북 경구 안전자료가 없다. 야생 Testudo 섭식 직접근거가 추가 확보되기 전 A/B 판정 금지."
+    },
+    {
+      "priority": 5,
+      "plant_id": "ruscus_aculeatus",
+      "accepted_name": "Ruscus aculeatus L.",
+      "stage": "evidence_researched",
+      "risk_status": "reviewed_with_part_specific_gap",
+      "has_direct_wild_record": false,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "지상부/열매/잎모양 cladode 등 실제 섭식 부위와 Testudo 급여 안전성을 분리 확인해야 함. 현재 A/B 판정 금지."
+    }
+  ]
+}
