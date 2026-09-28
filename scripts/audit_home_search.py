@@ -37,6 +37,7 @@ assert ".speciesbar{" not in html
 assert ".specieshint{" not in html
 assert "function scopeLabel(a)" in html
 assert "function speciesNotes(id,primary)" in html
+assert "x.assessment_scope==='exact_species'&&x.animal_taxon&&x.animal_taxon!=='Testudo'" in html
 assert "종별 특이사항" in html
 assert "육지거북 일반 근거" in html
 assert "지중해 Testudo 근거" in html
