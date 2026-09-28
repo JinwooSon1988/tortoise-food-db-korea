@@ -30,7 +30,10 @@ assert 'enterkeyhint="search"' in html
 assert 'aria-describedby="searchHelp"' in html
 assert 'id="searchHelp" class="searchhelp"' in html
 assert "direct=directCount(a)" in html
-assert "directCount(bb)-directCount(aa)" in html
+assert "function matchRank(r,q)" in html
+assert "terms.some(x=>x===q)" in html
+assert "terms.some(x=>x.startsWith(q))" in html
+assert "matchRank(a,q)-matchRank(b,q)||directCount(best(b.plant_id))-directCount(best(a.plant_id))" in html
 assert 'class="evidencequick"' in html
 assert "직접근거 '+direct+'건" in html
 assert ".grade-a{border-left:4px" in html and ".grade-d{border-left:4px" in html
