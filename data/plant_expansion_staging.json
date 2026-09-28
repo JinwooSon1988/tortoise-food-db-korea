@@ -250,12 +250,20 @@
       "submitted_name_status": "synonym",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
-      "publication_blocker": "정확한 종·잎 위험신호가 존재하고 육지거북 경구 안전자료가 없다. 야생 Testudo 섭식 직접근거가 추가 확보되기 전 A/B 판정 금지.",
+      "publication_blocker": "정확한 종의 잎·식물에 점막 자극 위험신호가 있고 전문 사육 DB도 급여 회피를 권고한다. 농축 정유 세포독성을 생잎 경구독성으로 과장하지 않되, Testudo 직접 안전자료가 없으므로 A/B 승격 금지. 공개 D 판정 후보로 별도 assessment 검토 가능.",
       "evidence_review": {
-        "status": "reviewed_with_open_species_or_part_gap",
-        "note": "종 수준 잎 자극·지상부 정유 세포독성 신호 검토 완료. 농축 정유 결과를 생잎 경구독성으로 전이하지 않음. Testudo 직접근거/경구안전 자료 부족."
+        "species_specific_hazard": "Exact-species extension references report leaf/plant volatile-oil, tannic-acid and gallic-acid related skin or mucosal irritation in humans/livestock and poor livestock forage value.",
+        "concentrated_extract": "A 2008 Korean study found cytotoxicity of steam-distilled essential oil from aerial Erigeron canadensis in HaCaT cells; this is concentrated essential oil in vitro and is not equivalent to fresh-leaf oral toxicity.",
+        "husbandry_evidence": "The Tortoise Table lists Conyza canadensis / Erigeron canadensis as Do not Feed, citing irritant properties, possible cadmium uptake on contaminated soil, and poor livestock palatability.",
+        "Testudo_directness": "No sufficiently verified direct Testudo feeding/safety study is present in the canonical evidence set.",
+        "interpretation": "Species-specific hazard signals plus specialist husbandry avoidance justify conservative handling, while concentrated-oil cytotoxicity must not be presented as a fresh-plant tortoise toxic dose."
       },
-      "risk_status": "reviewed_with_species_specific_caution"
+      "risk_status": "species_specific_irritant_signal_with_husbandry_avoidance",
+      "assessment_readiness": {
+        "status": "candidate_for_conservative_D_review",
+        "maximum_supported_grade": "D",
+        "required_next_evidence": "D 판정 작성 시 종특이 자극성 자료와 Tortoise Table 전문 사육근거를 분리 인용하고, 정유 in-vitro 자료는 보조 위험신호로만 표시"
+      }
     },
     {
       "id": "ruscus_aculeatus",
