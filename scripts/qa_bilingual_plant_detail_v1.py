@@ -14,7 +14,9 @@ for ko,en in {
 '학명 표기':'Scientific name',
 '이 판정 공유하기':'Share this assessment',
 '링크 복사':'Copy link',
-'다른 먹이 찾기 →':'Find another food →'
+'다른 먹이 찾기 →':'Find another food →',
+'종별 특이사항':'Species-specific notes',
+'아래 내용은 특정 종에서 확인된 별도 근거다. 이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.':'The following is separate evidence confirmed for a specific species. Do not automatically transfer it to other tortoise species.'
 }.items():
     if ko in g and (ko not in lang or en not in lang): errors.append("missing detail translation: "+ko)
 for n in [
@@ -23,7 +25,9 @@ for n in [
     '학술자료와 원논문',
     '검증된 영양성분 자료',
     '근거 읽는 법',
-    'quickfacts'
+    'quickfacts',
+    'species-specific',
+    'speciesexception'
 ]:
     if n not in g: errors.append("generator missing deep-detail bilingual/evidence contract: "+n)
 if 'en_pending="Evidence review is incomplete.' in g:
