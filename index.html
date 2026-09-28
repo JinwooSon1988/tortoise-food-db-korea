@@ -7,6 +7,20 @@ body{background:radial-gradient(circle at 50% -10%,#eaf3ec 0,#f7f9f6 38%,#f5f7f4
 .resulttop{align-items:flex-start}.badge{display:inline-flex;align-items:center;gap:2px;white-space:nowrap;background:#f4f7f4;border:1px solid var(--line2);color:var(--ink);font-size:12px}.badge strong{font-size:16px;line-height:1}.badge.bad{border-color:#efcaca}
 .resultanswer{margin-top:16px;padding-top:15px;border-top:1px solid var(--line2)}.resultanswer>b,.resultscope>b{display:block;font-size:12px;color:var(--forest2);letter-spacing:.02em}.resultanswer p{margin:5px 0 0;font-size:15px;line-height:1.65}.resultscope{display:grid;grid-template-columns:180px 1fr;gap:12px;margin-top:13px;padding:12px 14px;background:#f7faf7;border-radius:12px}.resultscope span{font-size:13px;color:var(--sub)}.detailbtn{margin-top:15px;max-width:320px}.emptyresult{margin-top:16px;padding:18px;border:1px dashed #b9c9bd;border-radius:14px;background:#fafcfa}.emptyresult b,.emptyresult span{display:block}.emptyresult span{margin-top:4px;color:var(--sub);font-size:13px}.searchhint{margin:14px 2px 0;color:var(--sub);font-size:13px}
 @media(max-width:620px){.resultcard{padding:17px}.resulttop{gap:8px}.badge{align-self:flex-start}.resultscope{grid-template-columns:1fr;gap:3px}.detailbtn{max-width:none;width:100%}}
+/* search-first polish: keep the decision path above secondary context */
+.top{min-height:44px}.hero{padding:48px 12px 24px}.hero p{max-width:610px}.searchstage{position:relative}
+.searchrow input::placeholder{color:#7a887f}.primary{box-shadow:0 8px 18px rgba(35,107,70,.16)}
+.quickfilters{scrollbar-width:thin}.quickfilter.active{box-shadow:0 0 0 2px rgba(35,107,70,.08)}
+#searchResults:not(:empty){margin-top:18px;padding-top:2px}
+.resultcard:first-child{margin-top:0}.resulttop h3{font-size:22px;line-height:1.3}.resulttop h3 small{display:block;margin-top:3px;font-size:13px;font-weight:650;color:var(--sub)}
+.truststrip{margin-top:14px}.belowfold{margin-top:30px}
+@media(max-width:700px){
+  .wrap{padding-top:10px}.top{min-height:38px}.brand{font-size:21px}.hero{padding:28px 4px 18px}.eyebrow{margin-bottom:8px;font-size:10px}.hero h1{font-size:34px;margin-bottom:9px}.hero p{font-size:14px;line-height:1.55}
+  .searchstage{padding:15px;border-radius:18px;box-shadow:0 14px 38px rgba(28,67,43,.09)}.speciesbar{margin-bottom:12px}.specieshint{line-height:1.45}.speciesbar select{min-height:46px}
+  .searchrow input{min-height:54px;font-size:16px}.searchrow button{min-height:50px}.catalogcount{margin-top:8px}.quickfilters{margin-top:10px}
+  .truststrip{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.truststrip div{padding:10px 8px;border-radius:12px}.truststrip b{font-size:11px}.truststrip span{font-size:10px;line-height:1.35}
+  .belowfold{margin-top:22px;padding-top:22px}.belowfold h2{font-size:18px}
+}
 </style></head><body><main class="wrap"><header class="top"><a class="brand" href="./" aria-label="거북밥 홈">🐢 <span>거북밥</span></a><div class="topmeta"><span id="visitorCount" class="visitorcount" aria-live="polite"></span><span class="version">근거 기반 육지거북 먹이 DB</span></div></header>
 <section class="hero"><div class="eyebrow">TORTOISE FOOD EVIDENCE DATABASE</div><h1>이 식물, 먹여도 될까?</h1><p>이름 하나만 검색하면 <b>급여 판정 → 이유 → 적용 범위 → 원자료</b> 순서로 확인할 수 있다.</p></section>
 <section class="searchstage" aria-label="먹이 검색"><div class="speciesbar"><div><label for="animalSelect">내 거북 기준</label><span class="specieshint">종이 다르면 같은 식물도 근거 적용 범위가 달라진다. 다른 종의 판정을 자동 전이하지 않는다.</span></div><select id="animalSelect"><option value="mediterranean_testudo">지중해 육지거북 (그리스·헤르만 등)</option><option value="sulcata">설카타육지거북</option><option value="leopard">레오파드육지거북</option><option value="redfoot">레드풋육지거북</option><option value="yellowfoot">옐로우풋육지거북</option><option value="elongated">엘롱가타육지거북</option><option value="radiated">방사거북</option><option value="indian_star">인도별거북</option><option value="burmese_star">버마별거북</option><option value="angulate">앵무부리육지거북</option></select></div>
