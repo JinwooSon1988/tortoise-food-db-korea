@@ -39,6 +39,10 @@ assert "function scopeLabel(a)" in html
 assert "function speciesNotes(id,primary)" in html
 assert "x.assessment_scope==='exact_species'&&x.animal_taxon&&x.animal_taxon!=='Testudo'" in html
 assert "종별 특이사항" in html
+assert "speciesverdict" in html and "specieswho" in html
+assert "notes.map(n=>" in html
+assert "n.grade" in html and "n.label" in html
+assert "notes.map(esc).join('<br>')" not in html
 assert "육지거북 일반 근거" in html
 assert "지중해 Testudo 근거" in html
 assert "terms.some(x=>x===q)" in html
