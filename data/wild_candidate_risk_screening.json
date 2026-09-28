@@ -70,7 +70,7 @@
     {
       "plant_id": "astragalus_cruciatus",
       "accepted_taxon": "Astragalus crenatus Schult.",
-      "status": "blocked_species_specific_toxicology",
+      "status": "research_gap_species_specific",
       "signals": [
         {
           "type": "genus_toxicology",
@@ -78,9 +78,23 @@
           "source": "Cornell Poisonous Plants; PMID:28964750",
           "scope": "속 수준·가축 독성",
           "interpretation": "이 위험을 A. crenatus에 자동 전이할 수 없다."
+        },
+        {
+          "type": "species_specific_gap",
+          "finding": "Astragalus crenatus 자체에서 swainsonine, nitro compounds 또는 selenium 축적을 확인하거나 배제하는 종특이 자료를 이번 검토에서 확보하지 못함.",
+          "source": "species-specific literature search; Astragalus toxicology context",
+          "scope": "정확한 종 자료 공백",
+          "interpretation": "검색에서 직접 보고를 찾지 못했다는 사실은 해당 독성성분이 없다는 증거가 아니다."
+        },
+        {
+          "type": "genus_heterogeneity",
+          "finding": "Astragalus의 swainsonine·nitrotoxin·selenium 위험은 속 전체에 균일하지 않고 종·계통 및 관련 생물학적 요인에 따라 달라진다.",
+          "source": "Astragalus toxicology literature",
+          "scope": "속 수준 독성학",
+          "interpretation": "속 수준 위험을 A. crenatus에 자동 적용하거나 자동 배제하지 않는다."
         }
       ],
-      "publication_blocker": "Astragalus crenatus 자체의 swainsonine/nitro compound/selenium 자료 확인 전 공개 급여등급 승격 금지"
+      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시."
     },
     {
       "plant_id": "lotus_arenarius",
