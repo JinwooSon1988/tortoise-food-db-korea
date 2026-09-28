@@ -19,7 +19,7 @@
     },
     {
       "plant_id": "malva_parviflora",
-      "status": "partial",
+      "status": "blocked_veterinary_toxicity",
       "signals": [
         {
           "type": "acute_toxicity",
@@ -34,9 +34,16 @@
           "source": "UC IPM Little Mallow",
           "scope": "식물 전체 위험관리·가축",
           "interpretation": "재배환경에 따라 위험이 달라질 수 있어 무제한 급여 근거로 사용하지 않는다."
+        },
+        {
+          "type": "veterinary_case_reports",
+          "finding": "Malva parviflora 섭취와 연관된 양의 중독 사례 및 말·조랑말의 심근질환/근병증 사례군이 동료심사 문헌에 보고됨.",
+          "source": "PMID:16629193; PMID:27341541; doi:10.1111/avj.13455",
+          "scope": "양·말/조랑말 수의 임상 사례",
+          "interpretation": "육지거북 독성을 직접 입증하지는 않지만, 야생 Testudo 섭식만으로 안전 판정을 내릴 수 없게 하는 강한 수의독성 위험신호다."
         }
       ],
-      "publication_blocker": "질산염 축적 조건과 육지거북 적용성 검토 필요"
+      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요."
     },
     {
       "plant_id": "medicago_hispida",
