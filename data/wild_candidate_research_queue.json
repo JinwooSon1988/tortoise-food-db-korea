@@ -30,17 +30,6 @@
       "publication_blocker": "원출처에서 Carthamus/Carlina의 정확한 종명이 확인되지 않음. 현재 속 수준 자료만 검증되어 species-level 공개 레코드 생성 금지."
     },
     {
-      "priority": 3,
-      "plant_id": "malva_parviflora",
-      "accepted_name": "Malva parviflora L.",
-      "stage": "evidence_researched",
-      "risk_status": "blocked_veterinary_toxicity",
-      "has_direct_wild_record": true,
-      "bucket": "conflicting_evidence",
-      "next_action": "상충 수의독성 근거를 해소할 Testudo/파충류 자료 검색",
-      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요."
-    },
-    {
       "priority": 4,
       "plant_id": "trifolium_campestre",
       "accepted_name": "Trifolium campestre Schreb.",
@@ -83,6 +72,17 @@
       "bucket": "assessment_blocker",
       "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
       "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지."
+    },
+    {
+      "priority": 5,
+      "plant_id": "malva_parviflora",
+      "accepted_name": "Malva parviflora L.",
+      "stage": "evidence_researched",
+      "risk_status": "direct_wild_evidence_with_cross_species_veterinary_toxicity_conflict",
+      "has_direct_wild_record": true,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요."
     },
     {
       "priority": 5,
