@@ -3283,6 +3283,44 @@
       "doi": null,
       "pmid": "22908560",
       "url": "https://pubmed.ncbi.nlm.nih.gov/22908560/"
+    },
+    {
+      "id": "tortoise_table_erigeron_canadensis",
+      "plant_ids": [
+        "conyzacanadensis"
+      ],
+      "source_title": "The Tortoise Table — Canadian Fleabane / Horseweed",
+      "source_type": "expert_husbandry_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Conyza canadensis (syn. Erigeron canadensis L.)",
+      "plant_part_state": "whole plant / feeding plant entry",
+      "directness": "expert_husbandry",
+      "supports": "Specialist tortoise husbandry guidance classifies this plant as Do not Feed and notes irritant properties and poor palatability.",
+      "does_not_support": "Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=472"
+    },
+    {
+      "id": "erigeron_canadensis_essential_oil_2008",
+      "plant_ids": [
+        "conyzacanadensis"
+      ],
+      "source_title": "Species-specific Korean study of Erigeron canadensis aerial-part essential oil",
+      "source_type": "academic_study",
+      "animal_taxon": "HaCaT cell line; not an animal feeding study",
+      "applicability": "composition_only",
+      "plant_taxon": "Erigeron canadensis L.",
+      "plant_part_state": "aerial parts; steam-distilled essential oil",
+      "directness": "composition_only",
+      "supports": "Provides a species-specific concentrated-essential-oil hazard signal and documents biologically active volatile constituents.",
+      "does_not_support": "In-vitro cytotoxicity of concentrated essential oil does not establish fresh-leaf oral toxicity, a tortoise toxic dose, or an accidental-exposure outcome.",
+      "year": 2008,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001235807"
     }
   ]
 }
