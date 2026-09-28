@@ -61,28 +61,40 @@
       "submitted_name": "Leontodon saxatilis",
       "family": "Asteraceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "taxonomy_verified",
+      "stage": "evidence_researched",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Leontodon saxatilis Lam.",
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
-      "taxonomy_checked": "2026-09-27"
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence",
+        "toxicology": "species-level phytochemistry/in-vitro activity reviewed; no tortoise oral toxic dose established",
+        "status": "reviewed_with_gap"
+      },
+      "publication_blocker": "초식척추동물 경구 안전성 또는 충분한 전문 사육자료 확인 필요"
     },
     {
       "id": "malva_parviflora",
       "submitted_name": "Malva parviflora",
       "family": "Malvaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "taxonomy_verified",
+      "stage": "evidence_researched",
       "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Malva parviflora L.",
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
-      "taxonomy_checked": "2026-09-27"
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence",
+        "toxicology": "species-level acute oral extract evidence plus nitrate-accumulation livestock warning",
+        "status": "reviewed_with_open_risk"
+      },
+      "publication_blocker": "질산염 축적 조건을 고려한 공개 급여문구·제한조건 확정 필요"
     },
     {
       "id": "astragalus_cruciatus",
