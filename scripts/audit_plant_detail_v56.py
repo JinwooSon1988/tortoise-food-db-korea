@@ -19,6 +19,12 @@ for x in ['국명','영명','학명','과명','적용 대상','근거 등급','�
     assert x in js,x
 assert 'verified_plant_images_v56.json' in js
 assert 'exact_species' in js
+generator=(root/'scripts/generate_static_pages.py').read_text(encoding='utf-8')
+assert 'exact_by_plant' in generator
+assert 'assessment_scope' in generator and 'exact_species' in generator
+assert '종별 특이사항' in generator
+assert '이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.' in generator
+assert 'species-specific' in generator and 'speciesexception' in generator
 # Evidence-only architecture: retired recommendation/recording routes must never
 # be reintroduced into the shared plant-detail enhancer.
 for retired in ['today/','meal/?add=','그래서 오늘 뭐 먹이지?','이 먹이 급여기록에 추가']:
