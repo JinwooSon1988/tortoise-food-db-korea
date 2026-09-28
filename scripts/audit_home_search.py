@@ -19,6 +19,9 @@ assert "const publicCount=plantCatalog.filter(r=>r.isPublic).length" in html
 assert html.index("plantCatalog=plants.map") < html.index("const publicCount=plantCatalog.filter")
 assert '<style id="home-design-system-20260928">' in html
 assert html.count('<style') == 1 and html.count('</style>') == 1
+assert "search-first polish" in html
+assert ".truststrip{grid-template-columns:repeat(3,minmax(0,1fr))" in html
+assert ".hero{padding:28px 4px 18px}" in html
 assert "현재 공개 판정 '+publicCount+'종" in html
 assert "if(!r.isPublic)return false" in html
 assert 'aria-controls="searchResults"' in html
