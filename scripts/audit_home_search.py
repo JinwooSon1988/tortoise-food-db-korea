@@ -33,6 +33,8 @@ assert "direct=directCount(a)" in html
 assert "function matchRank(r,q)" in html
 assert 'id="animalSelect"' not in html
 assert "selectedAnimal" not in html
+assert ".speciesbar{" not in html
+assert ".specieshint{" not in html
 assert "function scopeLabel(a)" in html
 assert "function speciesNotes(id,primary)" in html
 assert "종별 특이사항" in html
