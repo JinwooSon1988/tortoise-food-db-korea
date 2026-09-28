@@ -25,6 +25,10 @@ assert 'assessment_scope' in generator and 'exact_species' in generator
 assert '종별 특이사항' in generator
 assert '이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.' in generator
 assert 'species-specific' in generator and 'speciesexception' in generator
+assert '.decision{{padding:26px 28px' in generator
+assert '.practical{{margin-top:16px}}' in generator
+assert '.detailnav{{margin-bottom:22px;padding-bottom:12px}}' in generator
+assert '.decisionwhy{{font-size:15px;line-height:1.62}}' in generator
 assert 'decisionrule' in generator
 assert '<b>결론</b><strong>{esc(label)}</strong>' not in generator
 assert '<b>판정 핵심</b><br>{esc(summary)}' not in generator
