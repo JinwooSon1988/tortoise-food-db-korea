@@ -25,6 +25,23 @@ for ko,en in {
 '이 근거만으로 말할 수 없는 내용':'What this evidence alone cannot establish'
 }.items():
     if ko in g and (ko not in lang or en not in lang): errors.append("missing detail translation: "+ko)
+core_detail_copy={
+'먹이기 전에 식물부터 확인하세요':'Identify the plant before feeding',
+'왜 이런 결론이 나왔을까?':'Why did we reach this conclusion?',
+'현재 근거의 한계':'Limits of the current evidence',
+'대상 범위':'Scope',
+'식물 분류':'Plant taxonomy',
+'대상 동물':'Target animal',
+'식물 부위·상태':'Plant part / state',
+'연구 대상':'Study subject',
+'식물·부위':'Plant / part',
+'근거 직접성':'Evidence directness',
+'근거 읽는 법':'How to read the evidence',
+'원문/초록 열기':'Open source / abstract',
+'육지거북에게 먹여도 되는지 현재 확인된 근거로 판정한다.':'Assesses whether this plant can be fed to tortoises using currently verified evidence.'
+}
+for ko,en in core_detail_copy.items():
+    if ko in g and (ko not in lang or en not in lang): errors.append("missing core detail copy translation: "+ko)
 for n in [
     'This plant has a reviewed evidence record.',
     'Reviewed evidence is available.',
