@@ -17,8 +17,8 @@ candidate = [p for p in plants if p.get('identity_status') == 'candidate_name']
 assert len(candidate) >= 1, 'catalog expansion must retain explicit candidate records'
 assert "const publicCount=plantCatalog.filter(r=>r.isPublic).length" in html
 assert html.index("plantCatalog=plants.map") < html.index("const publicCount=plantCatalog.filter")
-assert '<style id="premium-home-v1">' in html and '<style id="ux-hardening-20260928">' in html
-assert '</style><style id="ux-hardening-20260928">' in html
+assert '<style id="home-design-system-20260928">' in html
+assert html.count('<style') == 1 and html.count('</style>') == 1
 assert "현재 공개 판정 '+publicCount+'종" in html
 assert "if(!r.isPublic)return false" in html
 assert 'aria-controls="searchResults"' in html
