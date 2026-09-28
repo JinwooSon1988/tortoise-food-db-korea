@@ -6,7 +6,11 @@ css=(root/'plant-detail-v56.css').read_text(encoding='utf-8')
 inj=(root/'scripts/inject_plant_detail_v56.py').read_text(encoding='utf-8')
 pages=list((root/'plant').glob('*/index.html'))
 plants=json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
-expected=sum(1 for p in plants if p.get('identity_status')!='candidate_name')
+assessments=json.loads((root/'data/public_assessments.json').read_text(encoding='utf-8'))
+if isinstance(assessments,dict): assessments=assessments.get('assessments',assessments.get('records',[]))
+public_groups={'Mediterranean_Testudo','Tortoise_general','Herbivorous_reptile_general'}
+assessed_ids={a['plant_id'] for a in assessments if a.get('species_group') in public_groups}
+expected=sum(1 for p in plants if p.get('identity_status')!='candidate_name' and p.get('id') in assessed_ids)
 assert len(pages)==expected, (len(pages),expected)
 for x in ['국명','영명','학명','과명','적용 대상','근거 등급','판정 보류','급여하지 않음','검증된 이미지 준비 중','사진과 유통명만으로 식물 종을 확정하지 않는다.']:
     assert x in js,x
