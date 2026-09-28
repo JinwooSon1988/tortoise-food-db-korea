@@ -3,8 +3,8 @@
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
     "published_count": 165,
-    "candidate_count": 6,
-    "research_pool_count": 171,
+    "candidate_count": 7,
+    "research_pool_count": 172,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
@@ -2969,6 +2969,17 @@
         "assessment"
       ],
       "next_action": "identity"
+    },
+    {
+      "plant_id": "conyzacanadensis",
+      "ko": "망초",
+      "published": false,
+      "status": "assessment_pending",
+      "canonical_taxon_candidate": "Erigeron canadensis L.",
+      "gaps": [
+        "assessment"
+      ],
+      "next_action": "assessment"
     }
   ]
 }
