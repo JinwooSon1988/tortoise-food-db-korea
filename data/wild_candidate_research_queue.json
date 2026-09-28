@@ -30,17 +30,6 @@
       "publication_blocker": "원출처에서 Carthamus/Carlina의 정확한 종명이 확인되지 않음. 현재 속 수준 자료만 검증되어 species-level 공개 레코드 생성 금지."
     },
     {
-      "priority": 4,
-      "plant_id": "trifolium_campestre",
-      "accepted_name": "Trifolium campestre Schreb.",
-      "stage": "evidence_researched",
-      "risk_status": "research_gap_species_specific",
-      "has_direct_wild_record": false,
-      "bucket": "species_specific_gap",
-      "next_action": "정확한 종·부위의 위험성 자료 검색",
-      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지."
-    },
-    {
       "priority": 5,
       "plant_id": "astragalus_cruciatus",
       "accepted_name": "Astragalus crenatus Schult.",
@@ -127,6 +116,17 @@
       "bucket": "assessment_blocker",
       "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
       "publication_blocker": "정확한 종의 가축 사료 이용 근거는 있으나 Testudo 직접 섭식/전문 사육 또는 파충류 안전자료가 부족하다. 공개 A/B 판정 전 적용성 근거 보강 필요."
+    },
+    {
+      "priority": 5,
+      "plant_id": "trifolium_campestre",
+      "accepted_name": "Trifolium campestre Schreb.",
+      "stage": "evidence_researched",
+      "risk_status": "species_specific_cyanogenesis_unresolved",
+      "has_direct_wild_record": false,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지."
     }
   ]
 }
