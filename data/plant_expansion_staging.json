@@ -185,12 +185,17 @@
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
       "evidence_review": {
-        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence",
-        "toxicology": "Lotus genus cyanogenesis reviewed; exact-species evidence remains unresolved",
-        "status": "reviewed_with_species_specific_gap"
+        "wild_diet": "repeated direct Testudo graeca graeca fecal-analysis evidence in Morocco (2006 and 2023 studies); prominent/preferred food in at least one study year",
+        "safety_gap": "Lotus-genus cyanogenesis is indirect; exact Lotus arenarius cyanogenic potential or oral toxic dose was not established in the reviewed sources",
+        "status": "repeated_direct_wild_evidence_with_species_specific_cyanogenesis_gap"
       },
-      "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지.",
-      "risk_status": "research_gap"
+      "publication_blocker": "반복된 T. g. graeca 야생섭식 직접근거는 강하지만 Lotus arenarius 자체의 cyanogenic potential·섭식부위·경구 안전량이 미확정이다. Lotus 속 수준 위험을 종 수준으로 자동 전이하지 말고, 정확한 종 자료 확보 전 공개 A/B 승격을 보류한다.",
+      "risk_status": "repeated_direct_wild_evidence_with_species_specific_cyanogenesis_gap",
+      "assessment_readiness": {
+        "status": "hold_for_species_specific_cyanogenesis_or_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Lotus arenarius 정확한 종의 cyanogenic glycoside/HCN 분석 또는 초식척추동물·Testudo 경구 안전자료"
+      }
     },
     {
       "id": "scorpiurus_sulcatus",
