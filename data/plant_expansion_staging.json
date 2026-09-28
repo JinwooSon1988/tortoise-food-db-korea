@@ -119,11 +119,16 @@
       "evidence_review": {
         "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence under reported name Astragalus cruciatus",
         "taxonomy": "reported name normalized to accepted Astragalus crenatus Schult.",
-        "toxicology": "genus toxicology reviewed; exact-species swainsonine/nitro/selenium status unresolved",
-        "status": "species_specific_toxicology_gap"
+        "toxicology": "Astragalus genus swainsonine, nitro-compound and selenium hazards reviewed; no exact A. crenatus evidence located that establishes or excludes these hazards.",
+        "status": "direct_wild_evidence_with_unresolved_species_specific_toxicology"
       },
-      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시.",
-      "risk_status": "research_gap_species_specific"
+      "publication_blocker": "A. crenatus는 야생 T. g. graeca 섭식 직접근거가 있으나, 종 자체의 swainsonine·nitro compound·selenium 위험을 확인하거나 배제할 자료가 부족하다. 부재 검색결과를 안전 증거로 취급하지 않으며 공개 A/B 승격을 보류한다.",
+      "risk_status": "direct_wild_evidence_with_unresolved_species_specific_toxicology",
+      "assessment_readiness": {
+        "status": "hold_for_species_specific_toxicology",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Astragalus crenatus 종특이 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식척추동물·Testudo 경구 안전자료"
+      }
     },
     {
       "id": "medicago_hispida",
