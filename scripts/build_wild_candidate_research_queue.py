@@ -9,7 +9,9 @@ wild_ids={r.get("plant_id") for r in wild.get("records",[])}
 rows=[]
 for c in st.get("candidates",[]):
     cid=c["id"]; stage=c.get("stage"); rr=risk_by.get(cid,{})
-    status=rr.get("status") or c.get("risk_status") or "not_screened"
+    if stage=="promoted" or c.get("public") is True:
+        continue
+    status=c.get("risk_status") or rr.get("status") or "not_screened"
     if stage=="needs_species_resolution":
         priority=1; bucket="species_resolution"; action="원자료에서 정확한 종명을 먼저 확정"
     elif stage=="taxonomy_verified":
