@@ -69,6 +69,12 @@ for n in [
     'speciesexception'
 ]:
     if n not in g: errors.append("generator missing deep-detail bilingual/evidence contract: "+n)
+for n in [
+    'This section explains the evidence behind the conclusion.',
+    'Direct evidence</b> addresses the target question directly.',
+    'Indirect evidence</b> comes from other animals or related plants'
+]:
+    if n not in g: errors.append("generator missing complete English evidence explanation: "+n)
 if 'en_pending="Evidence review is incomplete.' in g:
     errors.append("assessed pages may still hard-code incomplete English review state")
 for n in ['function toggleEvidence(lang)',"document.querySelectorAll('.ko-evidence')","document.querySelectorAll('.en-evidence')"]:
