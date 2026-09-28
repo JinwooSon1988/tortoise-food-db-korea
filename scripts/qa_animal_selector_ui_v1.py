@@ -5,8 +5,9 @@ root=Path(__file__).resolve().parents[1]
 home=(root/"index.html").read_text(encoding="utf-8")
 detail=(root/"plant-detail-v56.js").read_text(encoding="utf-8")
 checks={
- "home exposes current taxon selector": 'id="animalSelect"' in home,
- "home states no cross-taxon verdict transfer": "다른 종의 판정을 자동 전이하지 않는다" in home,
+ "home removes taxon selector": 'id="animalSelect"' not in home,
+ "home exposes species-specific notes": "종별 특이사항" in home and "speciesNotes" in home,
+ "home keeps scope labels": "육지거북 일반 근거" in home and "지중해 Testudo 근거" in home,
  "detail retains evidence taxon handling": "tortoiseAnimalTaxon" in detail,
  "sulcata taxon retained in evidence/detail model": "Centrochelys sulcata" in detail,
  "leopard taxon retained in evidence/detail model": "Stigmochelys pardalis" in detail,
@@ -16,4 +17,4 @@ checks={
 bad=[k for k,v in checks.items() if not v]
 if bad:
  print("FAIL: "+", ".join(bad)); sys.exit(1)
-print("OK: homepage exposes taxon selection without cross-taxon verdict transfer; detail evidence model retained")
+print("OK: homepage is plant-first; species-specific evidence remains visible without a selector")
