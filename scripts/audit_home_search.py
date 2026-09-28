@@ -31,6 +31,9 @@ assert 'aria-describedby="searchHelp"' in html
 assert 'id="searchHelp" class="searchhelp"' in html
 assert "direct=directCount(a)" in html
 assert "function matchRank(r,q)" in html
+assert "animalSelect.addEventListener('change'" in html
+assert "selectedAnimal=animalSelect.value" in html
+assert "if(input.value.trim()||activeFilter!=='all')search()" in html
 assert "terms.some(x=>x===q)" in html
 assert "terms.some(x=>x.startsWith(q))" in html
 assert "matchRank(a,q)-matchRank(b,q)||directCount(best(b.plant_id))-directCount(best(a.plant_id))" in html
