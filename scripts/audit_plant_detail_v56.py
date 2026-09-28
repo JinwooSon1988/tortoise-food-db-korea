@@ -25,6 +25,10 @@ assert 'assessment_scope' in generator and 'exact_species' in generator
 assert '종별 특이사항' in generator
 assert '이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.' in generator
 assert 'species-specific' in generator and 'speciesexception' in generator
+assert 'decisionrule' in generator
+assert '<b>결론</b><strong>{esc(label)}</strong>' not in generator
+assert '<b>판정 핵심</b><br>{esc(summary)}' not in generator
+assert '직접 {direct_count} · 전문사육 {husbandry_count} · 기타 {indirect_count}' in generator
 # Evidence-only architecture: retired recommendation/recording routes must never
 # be reintroduced into the shared plant-detail enhancer.
 for retired in ['today/','meal/?add=','그래서 오늘 뭐 먹이지?','이 먹이 급여기록에 추가']:
