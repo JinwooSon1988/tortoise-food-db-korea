@@ -24,7 +24,7 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/plant_coverage_gap_report_v1.json
             git commit -m "chore: synchronize plant coverage gap report"
-            git push
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
       - name: Verify coverage gap report is current
         run: |
