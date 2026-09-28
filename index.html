@@ -9,6 +9,7 @@ body{background:radial-gradient(circle at 50% -10%,#eaf3ec 0,#f7f9f6 38%,#f5f7f4
 @media(max-width:620px){.resultcard{padding:17px}.resulttop{gap:8px}.badge{align-self:flex-start}.resultscope{grid-template-columns:1fr;gap:3px}.detailbtn{max-width:none;width:100%}}
 /* search-first polish: keep the decision path above secondary context */
 .top{min-height:44px}.hero{padding:48px 12px 24px}.hero p{max-width:610px}.searchstage{position:relative}
+.searchhelp{margin:8px 2px 0;font-size:12px;color:var(--sub)}
 .searchrow input::placeholder{color:#7a887f}.primary{box-shadow:0 8px 18px rgba(35,107,70,.16)}
 .quickfilters{scrollbar-width:thin}.quickfilter.active{box-shadow:0 0 0 2px rgba(35,107,70,.08)}
 #searchResults:not(:empty){margin-top:18px;padding-top:2px}
@@ -24,7 +25,7 @@ body{background:radial-gradient(circle at 50% -10%,#eaf3ec 0,#f7f9f6 38%,#f5f7f4
 </style></head><body><main class="wrap"><header class="top"><a class="brand" href="./" aria-label="거북밥 홈">🐢 <span>거북밥</span></a><div class="topmeta"><span id="visitorCount" class="visitorcount" aria-live="polite"></span><span class="version">근거 기반 육지거북 먹이 DB</span></div></header>
 <section class="hero"><div class="eyebrow">TORTOISE FOOD EVIDENCE DATABASE</div><h1>이 식물, 먹여도 될까?</h1><p>이름 하나만 검색하면 <b>급여 판정 → 이유 → 적용 범위 → 원자료</b> 순서로 확인할 수 있다.</p></section>
 <section class="searchstage" aria-label="먹이 검색"><div class="speciesbar"><div><label for="animalSelect">내 거북 기준</label><span class="specieshint">종이 다르면 같은 식물도 근거 적용 범위가 달라진다. 다른 종의 판정을 자동 전이하지 않는다.</span></div><select id="animalSelect"><option value="mediterranean_testudo">지중해 육지거북 (그리스·헤르만 등)</option><option value="sulcata">설카타육지거북</option><option value="leopard">레오파드육지거북</option><option value="redfoot">레드풋육지거북</option><option value="yellowfoot">옐로우풋육지거북</option><option value="elongated">엘롱가타육지거북</option><option value="radiated">방사거북</option><option value="indian_star">인도별거북</option><option value="burmese_star">버마별거북</option><option value="angulate">앵무부리육지거북</option></select></div>
-<div class="searchrow"><input id="searchInput" type="search" placeholder="민들레, 질경이, 치커리처럼 검색하세요" autocomplete="off" spellcheck="false" aria-label="먹이 이름 검색" aria-controls="searchResults"><button id="searchBtn" class="primary">판정 확인</button></div>
+<div class="searchrow"><input id="searchInput" type="search" placeholder="민들레, 질경이, 치커리처럼 검색하세요" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="먹이 이름 검색" aria-controls="searchResults" aria-describedby="searchHelp"><button id="searchBtn" class="primary">판정 확인</button></div><div id="searchHelp" class="searchhelp">한글명 · 영문명 · 학명으로 검색할 수 있습니다.</div>
 <div id="catalogCount" class="catalogcount">검증된 데이터를 불러오는 중...</div>
 <div class="quickfilters" aria-label="검색 범위"><button class="quickfilter active" data-filter="all">전체</button><button class="quickfilter" data-filter="market">마트·시장</button><button class="quickfilter" data-filter="wild">야생초</button><button class="quickfilter" data-filter="supported">혼합식 활용</button><button class="quickfilter" data-filter="caution">제한·보조</button><button class="quickfilter" data-filter="avoid">급여 제외</button></div>
 <div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>
