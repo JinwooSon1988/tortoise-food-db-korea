@@ -170,35 +170,46 @@
       "submitted_name_status": "synonym",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-28",
-      "taxonomy_note": "Scorpiurus sulcatus L.은 POWO에서 Scorpiurus muricatus L.의 synonym. 원문 명칭은 provenance로 보존."
+      "taxonomy_note": "Scorpiurus sulcatus L.은 POWO에서 Scorpiurus muricatus L.의 synonym. 원문 명칭은 provenance로 보존.",
+      "publication_blocker": "수용명 Scorpiurus muricatus의 종특이 독성·항영양 및 Testudo 안전자료가 아직 불충분하여 evidence_researched 승격 보류."
     },
     {
       "id": "conyzacanadensis",
       "submitted_name": "Conyza canadensis",
       "family": "Asteraceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "taxonomy_verified",
+      "stage": "evidence_researched",
       "source_hint": "Testudo hermanni hermanni 야생 연구에서 반복 섭식 보고",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Erigeron canadensis L.",
       "submitted_name_status": "synonym",
       "taxonomy_authority": "Kew Plants of the World Online",
-      "taxonomy_checked": "2026-09-27"
+      "taxonomy_checked": "2026-09-27",
+      "publication_blocker": "종 수준 잎 자극·지상부 정유 세포독성 신호 검토 완료. 농축 정유 결과를 생잎 경구독성으로 전이하지 않음. Testudo 직접근거/경구안전 자료 부족.",
+      "evidence_review": {
+        "status": "reviewed_with_open_species_or_part_gap",
+        "note": "종 수준 잎 자극·지상부 정유 세포독성 신호 검토 완료. 농축 정유 결과를 생잎 경구독성으로 전이하지 않음. Testudo 직접근거/경구안전 자료 부족."
+      }
     },
     {
       "id": "ruscus_aculeatus",
       "submitted_name": "Ruscus aculeatus",
       "family": "Asparagaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "taxonomy_verified",
+      "stage": "evidence_researched",
       "source_hint": "Testudo hermanni hermanni 가을철 꽃·미숙과 섭식 보고",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Ruscus aculeatus L.",
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
-      "taxonomy_checked": "2026-09-27"
+      "taxonomy_checked": "2026-09-27",
+      "publication_blocker": "EMA 수의·herbal 독성자료 검토 완료. 자료 대부분 뿌리/근경 추출물 또는 국소용이므로 지상부 급여에 직접 전이 불가.",
+      "evidence_review": {
+        "status": "reviewed_with_open_species_or_part_gap",
+        "note": "EMA 수의·herbal 독성자료 검토 완료. 자료 대부분 뿌리/근경 추출물 또는 국소용이므로 지상부 급여에 직접 전이 불가."
+      }
     },
     {
       "id": "medicago_minima",
@@ -213,21 +224,27 @@
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-28",
-      "taxonomy_note": "POWO에서 accepted species로 확인. 분류검증은 급여안전 판정을 의미하지 않음."
+      "taxonomy_note": "POWO에서 accepted species로 확인. 분류검증은 급여안전 판정을 의미하지 않음.",
+      "publication_blocker": "종특이 사포닌/항영양·급여안전 근거가 아직 불충분하여 evidence_researched 승격 보류."
     },
     {
       "id": "trifolium_campestre",
       "submitted_name": "Trifolium campestre",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "taxonomy_verified",
+      "stage": "evidence_researched",
       "source_hint": "Hermann's tortoise 서식지·식이 연구 후보",
       "feeding_grade": null,
       "public": false,
       "accepted_name": "Trifolium campestre Schreb.",
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
-      "taxonomy_checked": "2026-09-27"
+      "taxonomy_checked": "2026-09-27",
+      "publication_blocker": "Kew 종 수준 animal-food/poison 메타데이터 확인. 독성 원인·부위·용량 및 Testudo 적용성 미해결.",
+      "evidence_review": {
+        "status": "reviewed_with_open_species_or_part_gap",
+        "note": "Kew 종 수준 animal-food/poison 메타데이터 확인. 독성 원인·부위·용량 및 Testudo 적용성 미해결."
+      }
     },
     {
       "id": "carthamus_spp",
