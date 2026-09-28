@@ -75,7 +75,13 @@
         "status": "reviewed_with_gap"
       },
       "publication_blocker": "육지거북 또는 초식동물 경구 안전성 자료와 실제 섭식 부위의 정량적 위험 검토 필요",
-      "risk_status": "partial"
+      "risk_status": "partial",
+      "assessment_readiness": {
+        "status": "needs_one_more_safety_pass",
+        "maximum_supported_grade": null,
+        "rationale": "Testudo graeca graeca의 주요 야생섭식 직접근거는 강하지만 종특이 경구 안전성 검토가 아직 충분하지 않다.",
+        "required_next_evidence": "Leontodon saxatilis 정확한 종의 독성·항영양성분 또는 초식척추동물 안전성 검토"
+      }
     },
     {
       "id": "malva_parviflora",
@@ -139,7 +145,17 @@
         "status": "reviewed_with_antinutritional_caution"
       },
       "publication_blocker": "Testudo 직접 야생섭식 근거는 있으나 사포닌/사료학 위험의 파충류 적용성이 불명확하다. 공개 시 제한적 혼합급여 이하의 보수적 문구와 근거 직접성 표시 필요.",
-      "risk_status": "reviewed_with_antinutritional_caution"
+      "risk_status": "reviewed_with_antinutritional_caution",
+      "assessment_readiness": {
+        "status": "candidate_for_conservative_assessment",
+        "maximum_supported_grade": "B",
+        "rationale": "Testudo graeca graeca 야생섭식 직접근거가 있으나 사포닌·사료학 위험의 파충류 적용성이 불명확하므로 무제한/주식성 A는 지지하지 않는다.",
+        "required_public_caveats": [
+          "graeca 아종 야생자료이며 ibera 직접자료가 아님",
+          "사육 급여량·비율 근거 없음",
+          "사포닌 존재와 실제 파충류 독성량은 동일하지 않음"
+        ]
+      }
     },
     {
       "id": "lotus_arenarius",
