@@ -74,7 +74,8 @@
         "toxicology": "species-level phytochemistry/in-vitro activity reviewed; no tortoise oral toxic dose established",
         "status": "reviewed_with_gap"
       },
-      "publication_blocker": "초식척추동물 경구 안전성 또는 충분한 전문 사육자료 확인 필요"
+      "publication_blocker": "육지거북 또는 초식동물 경구 안전성 자료와 실제 섭식 부위의 정량적 위험 검토 필요",
+      "risk_status": "partial"
     },
     {
       "id": "malva_parviflora",
@@ -94,7 +95,8 @@
         "toxicology": "species-level acute oral extract evidence plus nitrate-accumulation livestock warning",
         "status": "reviewed_with_open_risk"
       },
-      "publication_blocker": "질산염 축적 조건을 고려한 공개 급여문구·제한조건 확정 필요"
+      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요.",
+      "risk_status": "blocked_veterinary_toxicity"
     },
     {
       "id": "astragalus_cruciatus",
@@ -115,7 +117,8 @@
         "toxicology": "genus toxicology reviewed; exact-species swainsonine/nitro/selenium status unresolved",
         "status": "species_specific_toxicology_gap"
       },
-      "publication_blocker": "Astragalus crenatus 종특이 독성성분 분석 또는 신뢰 가능한 초식동물 안전자료 미확보. A/B 공개판정 금지."
+      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시.",
+      "risk_status": "research_gap_species_specific"
     },
     {
       "id": "medicago_hispida",
@@ -135,7 +138,8 @@
         "toxicology": "species-level saponin evidence plus forage-risk context reviewed",
         "status": "reviewed_with_antinutritional_caution"
       },
-      "publication_blocker": "사포닌·사료학 위험의 파충류 적용성이 불명확함. 공개 판정 시 제한적 혼합급여 이하의 보수적 해석 필요."
+      "publication_blocker": "Testudo 직접 야생섭식 근거는 있으나 사포닌/사료학 위험의 파충류 적용성이 불명확하다. 공개 시 제한적 혼합급여 이하의 보수적 문구와 근거 직접성 표시 필요.",
+      "risk_status": "reviewed_with_antinutritional_caution"
     },
     {
       "id": "lotus_arenarius",
@@ -155,7 +159,8 @@
         "toxicology": "Lotus genus cyanogenesis reviewed; exact-species evidence remains unresolved",
         "status": "reviewed_with_species_specific_gap"
       },
-      "publication_blocker": "Lotus arenarius 자체 cyanogenic potential/섭식부위 독성자료 미확인. A/B 판정 금지."
+      "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지.",
+      "risk_status": "research_gap"
     },
     {
       "id": "scorpiurus_sulcatus",
@@ -186,11 +191,12 @@
       "submitted_name_status": "synonym",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
-      "publication_blocker": "종 수준 잎 자극·지상부 정유 세포독성 신호 검토 완료. 농축 정유 결과를 생잎 경구독성으로 전이하지 않음. Testudo 직접근거/경구안전 자료 부족.",
+      "publication_blocker": "정확한 종·잎 위험신호가 존재하고 육지거북 경구 안전자료가 없다. 야생 Testudo 섭식 직접근거가 추가 확보되기 전 A/B 판정 금지.",
       "evidence_review": {
         "status": "reviewed_with_open_species_or_part_gap",
         "note": "종 수준 잎 자극·지상부 정유 세포독성 신호 검토 완료. 농축 정유 결과를 생잎 경구독성으로 전이하지 않음. Testudo 직접근거/경구안전 자료 부족."
-      }
+      },
+      "risk_status": "reviewed_with_species_specific_caution"
     },
     {
       "id": "ruscus_aculeatus",
@@ -205,11 +211,12 @@
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
-      "publication_blocker": "EMA 수의·herbal 독성자료 검토 완료. 자료 대부분 뿌리/근경 추출물 또는 국소용이므로 지상부 급여에 직접 전이 불가.",
+      "publication_blocker": "지상부/열매/잎모양 cladode 등 실제 섭식 부위와 Testudo 급여 안전성을 분리 확인해야 함. 현재 A/B 판정 금지.",
       "evidence_review": {
         "status": "reviewed_with_open_species_or_part_gap",
         "note": "EMA 수의·herbal 독성자료 검토 완료. 자료 대부분 뿌리/근경 추출물 또는 국소용이므로 지상부 급여에 직접 전이 불가."
-      }
+      },
+      "risk_status": "reviewed_with_part_specific_gap"
     },
     {
       "id": "medicago_minima",
@@ -240,11 +247,12 @@
       "submitted_name_status": "accepted",
       "taxonomy_authority": "Kew Plants of the World Online",
       "taxonomy_checked": "2026-09-27",
-      "publication_blocker": "Kew 종 수준 animal-food/poison 메타데이터 확인. 독성 원인·부위·용량 및 Testudo 적용성 미해결.",
+      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지.",
       "evidence_review": {
         "status": "reviewed_with_open_species_or_part_gap",
         "note": "Kew 종 수준 animal-food/poison 메타데이터 확인. 독성 원인·부위·용량 및 Testudo 적용성 미해결."
-      }
+      },
+      "risk_status": "research_gap_species_specific"
     },
     {
       "id": "carthamus_spp",
