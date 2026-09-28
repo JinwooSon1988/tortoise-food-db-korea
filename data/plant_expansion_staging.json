@@ -131,10 +131,15 @@
       "submitted_name": "Scorpiurus sulcatus",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Testudo graeca graeca 연구에서 흔한 먹이로 보고",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Scorpiurus muricatus L.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-28",
+      "taxonomy_note": "Scorpiurus sulcatus L.은 POWO에서 Scorpiurus muricatus L.의 synonym. 원문 명칭은 provenance로 보존."
     },
     {
       "id": "conyzacanadensis",
@@ -169,10 +174,15 @@
       "submitted_name": "Medicago minima",
       "family": "Fabaceae",
       "group": "지중해 Testudo 야생 먹이식물",
-      "stage": "collected",
+      "stage": "taxonomy_verified",
       "source_hint": "Hermann's tortoise 서식지·식이 연구 후보",
       "feeding_grade": null,
-      "public": false
+      "public": false,
+      "accepted_name": "Medicago minima (L.) Bartal.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-28",
+      "taxonomy_note": "POWO에서 accepted species로 확인. 분류검증은 급여안전 판정을 의미하지 않음."
     },
     {
       "id": "trifolium_campestre",
