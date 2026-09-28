@@ -20,7 +20,7 @@ for ko,en in {
 for n in [
     'This plant has a reviewed evidence record.',
     'Reviewed evidence is available.',
-    '학술자료 · 원논문',
+    '학술자료와 원논문',
     '검증된 영양성분 자료',
     '근거 읽는 법',
     'quickfacts'
