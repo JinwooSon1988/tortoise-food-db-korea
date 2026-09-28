@@ -171,17 +171,47 @@
     },
     {
       "plant_id": "medicago_minima",
-      "signals": [],
+      "signals": [
+        {
+          "type": "species_specific_saponins",
+          "finding": "Medicago minima의 지상부/식물체에서 triterpenoid saponin 계열을 다룬 종특이 식물화학 자료가 확인됨.",
+          "source": "Medicago species phytochemical/saponin literature",
+          "scope": "정확한 종·식물화학",
+          "interpretation": "사포닌 존재 자체가 육지거북 독성량을 뜻하지 않지만, 무제한 안전식으로 간주할 근거도 아니다."
+        },
+        {
+          "type": "forage_context",
+          "finding": "Medicago류는 사료식물로 이용되지만 사포닌 등 항영양성분의 양과 생물학적 영향은 종·부위·조건에 따라 달라질 수 있음.",
+          "source": "forage and Medicago saponin literature",
+          "scope": "속/사료학 보조근거",
+          "interpretation": "M. minima의 파충류 안전성으로 직접 전이하지 않는다."
+        }
+      ],
       "accepted_taxon": "Medicago minima (L.) Bartal.",
-      "status": "research_gap_species_specific",
-      "publication_blocker": "정확한 종의 사포닌/기타 항영양성분과 Testudo 또는 초식척추동물 급여안전 자료를 충분히 확보하지 못함. 속 수준 Medicago 위험을 자동 전이하지 말 것."
+      "status": "reviewed_with_antinutritional_caution",
+      "publication_blocker": "M. minima 종특이 사포닌 존재는 확인되지만 Testudo/파충류에서의 실제 섭취량·안전범위 자료가 없다. A 판정 금지; 공개 판정 전 야생섭식 또는 전문 사육근거 추가 필요."
     },
     {
       "plant_id": "scorpiurus_sulcatus",
-      "signals": [],
+      "signals": [
+        {
+          "type": "species_specific_feed_use",
+          "finding": "Scorpiurus muricatus는 지중해권에서 사료/목초 자원으로 연구된 정확한 종 수준 자료가 확인됨.",
+          "source": "Scorpiurus muricatus forage/agronomic literature",
+          "scope": "정확한 종·가축 사료학",
+          "interpretation": "가축의 사료 이용은 육지거북 안전성을 직접 증명하지 않지만 단순 속 수준 추정보다 강한 간접근거다."
+        },
+        {
+          "type": "reptile_gap",
+          "finding": "이번 검토에서 S. muricatus 자체의 Testudo 급여 안전성 또는 독성 용량 자료는 확보되지 않음.",
+          "source": "species-specific evidence review",
+          "scope": "파충류 적용 공백",
+          "interpretation": "사료작물이라는 이유만으로 A/B를 자동 부여하지 않는다."
+        }
+      ],
       "accepted_taxon": "Scorpiurus muricatus L.",
-      "status": "research_gap_species_specific",
-      "publication_blocker": "Scorpiurus muricatus 자체의 독성·항영양성분 및 Testudo 급여안전 자료가 충분하지 않음. 정확한 종 자료 확보 전 판정 금지."
+      "status": "reviewed_with_species_specific_feed_context",
+      "publication_blocker": "정확한 종의 가축 사료 이용 근거는 있으나 Testudo 직접 섭식/전문 사육 또는 파충류 안전자료가 부족하다. 공개 A/B 판정 전 적용성 근거 보강 필요."
     }
   ]
 }
