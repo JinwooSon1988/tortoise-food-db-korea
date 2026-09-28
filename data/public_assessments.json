@@ -3028,5 +3028,23 @@
     ],
     "why": "전문 육지거북 식물 DB가 Erigeron canadensis(동의명 Conyza canadensis)를 Do not Feed로 분류하고 자극성·낮은 기호성 관련 주의를 제시한다. 종특이 지상부 정유 연구에서도 생물활성 위험신호가 있으나 이는 농축 정유의 세포시험이므로 생초 독성량으로 확대하지 않는다. 현재 Testudo 직접 안전성 근거가 없으므로 독성 단정이 아니라 계획 급여 제외로 판정한다.",
     "applicability_note": "정확한 식물종에 대한 전문 육지거북 사육근거 + 종특이 성분/세포시험의 보조 위험신호. Testudo graeca ibera 직접 급여·독성시험은 아니다."
+  },
+  {
+    "plant_id": "ruscus_aculeatus",
+    "species_group": "Mediterranean_Testudo",
+    "verdict": "limited_mixed_diet",
+    "role": "계절성 야생식물로 제한적으로 혼합",
+    "confidence": "B",
+    "evidence_ids": [
+      "wild_ruscus_aculeatus_thh_italy_2011"
+    ],
+    "limits": [
+      "직접근거는 야생 Testudo hermanni hermanni이며 T. graeca ibera 사육시험은 아님",
+      "가을철 꽃·미숙과·잎 섭식을 상시 급여 또는 고정 배합률로 환산하지 않음",
+      "뿌리·근경 추출물의 의약·독성자료를 지상부의 신선 급여 독성으로 직접 전이하지 않음",
+      "정확한 사육 급여량·빈도와 장기 안전용량은 확립되지 않음"
+    ],
+    "why": "야생 Hermann's tortoise가 Ruscus aculeatus의 꽃·미숙과·잎을 실제 섭식한 종특이 직접근거가 있다. 다만 계절성 야생 이용이며 이베라의 사육 급여량·안전용량 자료는 없어 다양한 식물의 일부로 제한한다.",
+    "applicability_note": "T. hermanni hermanni 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정. T. graeca ibera 직접 사육근거는 아니다."
   }
 ]
