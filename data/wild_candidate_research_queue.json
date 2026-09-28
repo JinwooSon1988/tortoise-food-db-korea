@@ -53,17 +53,6 @@
     },
     {
       "priority": 4,
-      "plant_id": "lotus_arenarius",
-      "accepted_name": "Lotus arenarius Brot.",
-      "stage": "evidence_researched",
-      "risk_status": "research_gap",
-      "has_direct_wild_record": true,
-      "bucket": "species_specific_gap",
-      "next_action": "정확한 종·부위의 위험성 자료 검색",
-      "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지."
-    },
-    {
-      "priority": 4,
       "plant_id": "trifolium_campestre",
       "accepted_name": "Trifolium campestre Schreb.",
       "stage": "evidence_researched",
@@ -83,6 +72,17 @@
       "bucket": "assessment_blocker",
       "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
       "publication_blocker": "육지거북 또는 초식동물 경구 안전성 자료와 실제 섭식 부위의 정량적 위험 검토 필요"
+    },
+    {
+      "priority": 5,
+      "plant_id": "lotus_arenarius",
+      "accepted_name": "Lotus arenarius Brot.",
+      "stage": "evidence_researched",
+      "risk_status": "repeated_direct_wild_evidence_with_species_specific_cyanogenesis_gap",
+      "has_direct_wild_record": true,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지."
     },
     {
       "priority": 5,
