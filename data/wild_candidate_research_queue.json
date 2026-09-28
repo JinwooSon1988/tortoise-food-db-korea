@@ -42,17 +42,6 @@
     },
     {
       "priority": 4,
-      "plant_id": "astragalus_cruciatus",
-      "accepted_name": "Astragalus crenatus Schult.",
-      "stage": "evidence_researched",
-      "risk_status": "research_gap_species_specific",
-      "has_direct_wild_record": true,
-      "bucket": "species_specific_gap",
-      "next_action": "정확한 종·부위의 위험성 자료 검색",
-      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시."
-    },
-    {
-      "priority": 4,
       "plant_id": "trifolium_campestre",
       "accepted_name": "Trifolium campestre Schreb.",
       "stage": "evidence_researched",
@@ -61,6 +50,17 @@
       "bucket": "species_specific_gap",
       "next_action": "정확한 종·부위의 위험성 자료 검색",
       "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지."
+    },
+    {
+      "priority": 5,
+      "plant_id": "astragalus_cruciatus",
+      "accepted_name": "Astragalus crenatus Schult.",
+      "stage": "evidence_researched",
+      "risk_status": "direct_wild_evidence_with_unresolved_species_specific_toxicology",
+      "has_direct_wild_record": true,
+      "bucket": "assessment_blocker",
+      "next_action": "남은 publication blocker 해소 후 판정 가능성 재검토",
+      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시."
     },
     {
       "priority": 5,
