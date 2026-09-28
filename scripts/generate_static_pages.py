@@ -40,6 +40,10 @@ directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거
 applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
 VERDICT_MAP={"supported_mixed_diet":("green","A · 혼합식 활용 가능"),"limited_mixed_diet":("yellow","B · 제한적 혼합 급여"),"limited_supplement":("yellow","C · 가끔 보조 급여"),"supplement_general_evidence":("yellow","C · 가끔 보조 급여"),"general_reptile_supplement":("yellow","C · 가끔 보조 급여"),"do_not_feed":("danger","D · 급여하지 않음")}
 def esc(v): return html.escape(str(v or ""),quote=True)
+def source_link(url,label):
+    if not url:
+        return '<span class="small">원문 링크 미등록</span>'
+    return '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>'
 def verdict_for(pid):
     if pid in SPECIAL:
         tone,label,summary=SPECIAL[pid]; return tone,label,summary,med.get(pid) or general.get(pid)
