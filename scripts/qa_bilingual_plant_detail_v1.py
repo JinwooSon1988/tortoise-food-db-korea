@@ -16,7 +16,13 @@ for ko,en in {
 '링크 복사':'Copy link',
 '다른 먹이 찾기 →':'Find another food →',
 '종별 특이사항':'Species-specific notes',
-'아래 내용은 특정 종에서 확인된 별도 근거다. 이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.':'The following is separate evidence confirmed for a specific species. Do not automatically transfer it to other tortoise species.'
+'아래 내용은 특정 종에서 확인된 별도 근거다. 이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.':'The following is separate evidence confirmed for a specific species. Do not automatically transfer it to other tortoise species.',
+'먹이기 전에 식물부터 확인하세요':'Identify the plant before feeding',
+'왜 이런 결론이 나왔을까?':'Why did we reach this conclusion?',
+'현재 근거의 한계':'Limits of the current evidence',
+'이 판정으로 말할 수 없는 것':'What this assessment cannot establish',
+'이 근거가 지지하는 내용':'What this evidence supports',
+'이 근거만으로 말할 수 없는 내용':'What this evidence alone cannot establish'
 }.items():
     if ko in g and (ko not in lang or en not in lang): errors.append("missing detail translation: "+ko)
 for n in [
