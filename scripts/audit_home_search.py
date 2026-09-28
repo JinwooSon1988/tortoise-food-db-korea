@@ -35,8 +35,14 @@ assert "max-width:820px" in html
 assert ".resultcard+.resultcard{margin-top:12px}" in html
 assert ".evidencequick{font-size:10px" in html
 assert "종 특이 근거와 육지거북 일반 근거를 구분" in html
-assert "검색 결과는 이렇게 읽으세요" in html
-assert "A/B/C/D는 단독 주식 여부가 아니라 현재 근거에 따른 급여 판단 등급입니다." in html
+assert "등급은 이렇게 읽으세요" in html
+assert 'class="gradeguide"' in html
+for grade_copy in ("A</b> 혼합식 활용","B</b> 제한적 혼합","C</b> 가끔 보조","D</b> 급여 제외"):
+    assert grade_copy in html
+assert "한눈에 보는 결론" in html
+assert "function confidenceLabel(v)" in html
+assert "근거수준 '+esc(confidenceLabel(a.confidence))" in html
+assert "TORTOISE FOOD EVIDENCE DATABASE</div>" not in html
 assert "gap:10px;margin:14px 0 18px" in html
 assert "align-items:end;margin-top:30px;padding:28px 4px" in html
 assert "현재 공개 판정 '+publicCount+'종" in html
