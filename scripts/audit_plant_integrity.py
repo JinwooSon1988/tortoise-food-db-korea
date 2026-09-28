@@ -36,7 +36,8 @@ def main() -> int:
     # creating thin SEO pages or implying a feeding verdict.
     assessment_rows = json.loads(ASSESSMENTS.read_text(encoding="utf-8"))
     if isinstance(assessment_rows, dict): assessment_rows = assessment_rows.get("assessments", assessment_rows.get("records", []))
-    assessed_ids = {a.get("plant_id") for a in assessment_rows if a.get("plant_id")}
+    public_groups = {"Mediterranean_Testudo", "Tortoise_general", "Herbivorous_reptile_general"}
+    assessed_ids = {a.get("plant_id") for a in assessment_rows if a.get("plant_id") and a.get("species_group") in public_groups}
     public_ids = {p["id"] for p in plants if p.get("identity_status") != "candidate_name" and p.get("id") in assessed_ids}
     dirs = {p.name for p in PLANT_DIR.iterdir() if p.is_dir() and (p / "index.html").exists()}
     missing_pages = sorted(public_ids - dirs)
