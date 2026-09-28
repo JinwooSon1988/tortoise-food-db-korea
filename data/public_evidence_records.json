@@ -3341,6 +3341,41 @@
       "supports": "야생 T. h. hermanni가 가을에 Ruscus aculeatus의 꽃과 미숙과를 이용했고 잎도 섭식했다는 직접 식이 근거.",
       "does_not_support": "T. graeca ibera의 사육 급여량·빈도·장기 안전용량 또는 상시 주식 사용을 정하지 않는다.",
       "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1"
+    },
+    {
+      "id": "ruscus_hermanni_wild_2011",
+      "plant_ids": [
+        "ruscus_aculeatus"
+      ],
+      "source_title": "Seasonal changes in the diet of Testudo hermanni hermanni in central Italy",
+      "source_type": "peer_reviewed_field_study",
+      "year": 2011,
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "animal_taxon": "Testudo hermanni hermanni",
+      "applicability": "mediterranean_testudo",
+      "plant_taxon": "Ruscus aculeatus L.",
+      "part_state": "flowers; unripe fruit; leaves / wild fresh seasonal forage",
+      "directness": "subspecies_wild_observation",
+      "supports": "Wild Hermann's tortoises directly consumed Ruscus aculeatus; the population shifted to its flowers and unripe fruit in autumn, with leaf use also reported.",
+      "does_not_support": "Does not establish captive feeding ratio, chronic safety dose, or direct Testudo graeca ibera feeding safety.",
+      "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1"
+    },
+    {
+      "id": "ruscus_ema_rhizoma_2019",
+      "plant_ids": [
+        "ruscus_aculeatus"
+      ],
+      "source_title": "Final assessment report on Ruscus aculeatus L. rhizoma - Revision 1",
+      "source_type": "regulatory_herbal_assessment",
+      "year": 2019,
+      "animal_taxon": "primarily mammalian/medicinal toxicology; not tortoise feeding",
+      "applicability": "part_specific_toxicology_boundary",
+      "plant_taxon": "Ruscus aculeatus L.",
+      "part_state": "rhizome/root preparations and extracts",
+      "directness": "indirect_part_specific",
+      "supports": "Provides toxicology and pharmacology context for medicinal rhizome/root preparations.",
+      "does_not_support": "Rhizome/root extract findings must not be converted into a fresh flower, fruit or leaf toxic dose for tortoises.",
+      "url": "https://www.ema.europa.eu/en/documents/herbal-report/final-assessment-report-ruscus-aculeatus-l-rhizoma-revision-1_en.pdf"
     }
   ]
 }
