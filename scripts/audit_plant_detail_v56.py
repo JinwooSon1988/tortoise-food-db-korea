@@ -23,7 +23,8 @@ generator=(root/'scripts/generate_static_pages.py').read_text(encoding='utf-8')
 
 assert '육지거북 먹이 판정' in generator
 assert '이 판정은 어디까지 믿을 수 있을까?' in generator
-assert '같은 이름의 다른 식물은 아닌가요?' in generator
+assert "'식물동정 주의' if identity_warning else '식물동정 확인'" in generator
+assert "identity-alert" in generator and "identity-note" in generator
 assert '이 판정이 말해주지 못하는 것' in generator
 assert '판정 근거 자세히 보기' in generator
 assert generator.index('이 판정이 말해주지 못하는 것') < generator.index('판정 근거 자세히 보기')
