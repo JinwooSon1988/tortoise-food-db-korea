@@ -86,3 +86,7 @@ for pid in ('chicory', 'chard', 'lambs_lettuce'):
     assert (root / 'plant' / pid / 'index.html').exists()
 
 print('public evidence-only home search audit: PASS')
+
+assert 'data-filter="hold">보류 · 근거 부족' in html
+assert "activeFilter==='hold'" in html
+assert "TV.display(a).grade==='보류'" in html
