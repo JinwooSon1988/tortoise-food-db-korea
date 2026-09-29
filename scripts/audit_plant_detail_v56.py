@@ -29,6 +29,12 @@ assert '<div class="decisionlabel">3초 결론</div>' in generator
 assert '세부 대상종은 아래 원자료에서 확인' in generator
 assert 'taxon_note=' not in generator
 assert '먹여도 되는지 먼저 확인하고, 필요한 경우 근거와 한계까지 내려가며 확인할 수 있다.' in generator
+assert 'nutrition_section_no' not in generator
+assert 'scholarly_section_no' not in generator
+assert 'related_section_no' not in generator
+assert '<h2>6. 야생에서는 실제로 어떻게 먹었나?</h2>' not in generator
+assert '<h2>검증된 영양성분 자료</h2>' in generator
+assert '<h2>더 깊이 보고 싶다면 — 학술자료와 원논문</h2>' in generator
 assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
 assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
 assert '확인된 부위·상태</b><p>{esc(part_note)}' in generator
