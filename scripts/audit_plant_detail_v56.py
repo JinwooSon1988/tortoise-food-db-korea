@@ -35,6 +35,8 @@ assert 'related_section_no' not in generator
 assert '<h2>6. 야생에서는 실제로 어떻게 먹었나?</h2>' not in generator
 assert '<h2>검증된 영양성분 자료</h2>' in generator
 assert '<h2>더 깊이 보고 싶다면 — 학술자료와 원논문</h2>' in generator
+assert generator.index('<h2>현재 근거의 한계</h2>') < generator.index('<h2>왜 이렇게 판정했을까?</h2>')
+assert generator.index('<h2>왜 이렇게 판정했을까?</h2>') < generator.index('<h2>검증된 영양성분 자료</h2>')
 assert 'interpretation_html=' not in generator
 assert '<h2>실제 급여에서는 이렇게 보세요</h2>' in generator
 assert '<b>근거가 말하지 않는 것</b>' in generator
