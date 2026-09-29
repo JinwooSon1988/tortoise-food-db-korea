@@ -20,6 +20,16 @@ for x in ['국명','영명','학명','과명','적용 대상','근거 등급','�
 assert 'verified_plant_images_v56.json' in js
 assert 'exact_species' in js
 generator=(root/'scripts/generate_static_pages.py').read_text(encoding='utf-8')
+
+assert '육지거북 먹이 판정' in generator
+assert '이 판정은 어디까지 믿을 수 있을까?' in generator
+assert '같은 이름의 다른 식물은 아닌가요?' in generator
+assert '이 판정이 말해주지 못하는 것' in generator
+assert '판정 근거 자세히 보기' in generator
+assert generator.index('이 판정이 말해주지 못하는 것') < generator.index('판정 근거 자세히 보기')
+assert '영양성분은 참고자료로 확인하세요' in generator
+assert '원논문·학술자료' in generator
+assert '다른 식물도 확인하기' in generator
 assert 'exact_by_plant' in generator
 assert 'assessment_scope' in generator and 'exact_species' in generator
 assert '종별 특이사항' in generator
