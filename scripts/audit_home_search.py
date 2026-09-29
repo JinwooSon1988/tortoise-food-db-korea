@@ -40,7 +40,7 @@ assert '정확한 이름을 몰라도 괜찮습니다.' in html
 assert 'A · 혼합식 활용' in html
 assert 'B·C · 제한·보조' in html
 assert 'D · 급여 제외' in html
-assert "먹여도 되는지 → 왜 그런지 → 어디까지 믿을 수 있는지 → 원자료" in html
+assert "먹여도 되는지 → 왜 그런지 → 어디까지 믿을 수 있는지 → 원자료" not in html
 assert "① 먹여도 되는지" in html and "② 왜 그런지" in html and "③ 근거까지 확인" in html
 assert "A/B/C/D, 이렇게 읽으면 됩니다" in html
 assert '한글명·영문명·학명으로 검색할 수 있습니다. 정확한 이름을 몰라도 아는 이름부터 입력해 보세요.' in html
