@@ -23,7 +23,7 @@ generator=(root/'scripts/generate_static_pages.py').read_text(encoding='utf-8')
 assert 'exact_by_plant' in generator
 assert 'assessment_scope' in generator and 'exact_species' in generator
 assert '종별 특이사항' in generator
-assert '이 내용을 다른 육지거북 종에 자동으로 적용하지 않는다.' in generator
+assert '특정 종에서만 확인된 근거다. 다른 육지거북 종에도 같다고 가정하지 않는다.' in generator
 assert 'species-specific' in generator and 'speciesexception' in generator
 assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
 assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
