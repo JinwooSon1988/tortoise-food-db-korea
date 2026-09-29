@@ -18,7 +18,7 @@ for p in plants:
         errors.append(f'{pid}: detail page missing'); continue
     text=path.read_text(encoding='utf-8')
     if '식물동정' not in text: errors.append(f'{pid}: identity warning missing')
-    if not any(x in text for x in ('현재 근거의 한계','근거의 한계와 해석 주의')) and pid not in {'mallow'}: errors.append(f'{pid}: evidence-limit card missing')
+    if not any(x in text for x in ('현재 이 판정이 말해주지 못하는 것','이 판정이 말해주지 못하는 것와 해석 주의')) and pid not in {'mallow'}: errors.append(f'{pid}: evidence-limit card missing')
     verdicts=re.findall(r'(?:A · 혼합식 활용 가능|B · 제한적 혼합 급여|C · 가끔 보조 급여|D · 급여하지 않음|🟢[^<]+|🟡[^<]+|⚪[^<]+|🔴[^<]+|판단보류 / [^<]+)',text)
     if not verdicts: errors.append(f'{pid}: public verdict marker missing')
     if pid=='mallow':
