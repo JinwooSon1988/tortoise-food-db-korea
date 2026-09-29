@@ -5,18 +5,16 @@ root = Path(__file__).resolve().parents[1]
 html = (root / 'index.html').read_text(encoding='utf-8')
 search_live = (root / 'search-live.js').read_text(encoding='utf-8')
 plants = json.loads((root / 'data' / 'plants.json').read_text(encoding='utf-8'))
-base = json.loads((root / 'data' / 'assessments.json').read_text(encoding='utf-8'))
-addenda = []
-for i in range(1, 13):
-    name = 'assessments_korea_addendum.json' if i == 1 else f'assessments_korea_addendum_{i}.json'
-    addenda += json.loads((root / 'data' / name).read_text(encoding='utf-8'))
-assessments = base + addenda
+assessment_data = json.loads((root / 'data' / 'public_assessments.json').read_text(encoding='utf-8'))
+assessments = assessment_data if isinstance(assessment_data, list) else assessment_data.get('assessments', assessment_data.get('records', []))
 
 assert len(plants) >= 69, len(plants)
 candidate = [p for p in plants if p.get('identity_status') == 'candidate_name']
 assert len(candidate) >= 1, 'catalog expansion must retain explicit candidate records'
 assert "const publicCount=plantCatalog.filter(r=>r.isPublic).length" in html
-assert html.index("plantCatalog=plants.map") < html.index("const publicCount=plantCatalog.filter")
+assert html.index("assessmentMap=new Map()") < html.index("plantCatalog=plants.map")
+assert "j('./data/public_assessments.json')" in html
+assert "assessedIds.has(p.id)" in html
 assert '<style id="home-design-system-20260928">' in html
 assert html.count('<style') == 1 and html.count('</style>') == 1
 assert "search-first polish" in html
@@ -58,7 +56,8 @@ assert "등급은 이렇게 읽으세요" in html
 assert 'class="gradeguide"' in html
 for grade_copy in ("A</b> 혼합식 활용","B</b> 제한적 혼합","C</b> 가끔 보조","D</b> 급여 제외"):
     assert grade_copy in html
-assert "한눈에 보는 결론" in html
+assert "한눈에 보는 결론" not in html
+assert '<div class="resultanswer"><b>3초 결론</b><p>' in html
 assert "function confidenceLabel(v)" in html
 assert "근거수준 '+esc(confidenceLabel(a.confidence))" in html
 assert "TORTOISE FOOD EVIDENCE DATABASE</div>" not in html
@@ -101,8 +100,8 @@ for retired in ('./today/','./meal/','./weekly/','./growth/','./monthly/','./tre
     assert retired not in html, retired
 for retired_copy in ('오늘 식단 후보 보기','자주 찾는 핵심 먹이 9종','사육 기록','프로필 관리','7일 식단','30일 요약','장기 추세','백업·복원'):
     assert retired_copy not in html, retired_copy
-assert "Array.from({length:12}" in html
-assert "assessments_korea_addendum'+(i?'_'+(i+1):'')+'.json'" in html
+assert "Array.from({length:12}" not in html
+assert "assessments_korea_addendum" not in html
 assert "new URLSearchParams(location.search).get('q')" in search_live
 assert "deepQuery.slice(0,80)" in search_live
 assert "document.getElementById('searchBtn')?.click()" in search_live
