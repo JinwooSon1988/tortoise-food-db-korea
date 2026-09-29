@@ -37,6 +37,11 @@ assert ".evidencequick{font-size:10px" in html
 assert '<div class="resultanswer"><b>3초 결론</b><p>' in html
 assert "a?.applicability_note||scopeLabel(a)||'적용 범위 확인 중'" in html
 assert "a?.applicability_note||a?.species_group" not in html
+assert '먹여도 되는지부터 근거와 한계까지' in html
+assert '정확한 이름을 몰라도 괜찮습니다.' in html
+assert 'A · 혼합식 활용' in html
+assert 'B·C · 제한·보조' in html
+assert 'D · 급여 제외' in html
 assert "먹여도 되는지 → 왜 그런지 → 어디까지 믿을 수 있는지 → 원자료" in html
 assert "① 먹여도 되는지" in html and "② 왜 그런지" in html and "③ 근거까지 확인" in html
 assert "A/B/C/D, 이렇게 읽으면 됩니다" in html
