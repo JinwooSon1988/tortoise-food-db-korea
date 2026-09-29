@@ -90,3 +90,8 @@ print('public evidence-only home search audit: PASS')
 assert 'data-filter="hold">보류 · 근거 부족' in html
 assert "activeFilter==='hold'" in html
 assert "TV.display(a).grade==='보류'" in html
+
+# Search-first density: keep the final override compact on desktop and mobile.
+assert '.hero{padding:30px 12px 18px}' in html
+assert '.hero{padding:12px 4px 11px}' in html
+assert '.resultcard{display:block;padding:16px 18px' in html
