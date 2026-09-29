@@ -43,10 +43,11 @@ assert 'nutrition_section_no' not in generator
 assert 'scholarly_section_no' not in generator
 assert 'related_section_no' not in generator
 assert '<h2>6. 야생에서는 실제로 어떻게 먹었나?</h2>' not in generator
-assert '<h2>검증된 영양성분 자료</h2>' in generator
-assert '<h2>더 깊이 보고 싶다면 — 학술자료와 원논문</h2>' in generator
-assert generator.index('<h2>현재 근거의 한계</h2>') < generator.index('<h2>왜 이렇게 판정했을까?</h2>')
-assert generator.index('<h2>왜 이렇게 판정했을까?</h2>') < generator.index('<h2>검증된 영양성분 자료</h2>')
+assert '<h2>영양성분은 참고자료로 확인하세요</h2>' in generator
+assert '<h2>원논문·학술자료</h2>' in generator
+assert generator.count('<h2>이 판정이 말해주지 못하는 것</h2>') == 1
+assert generator.index('<h2>이 판정이 말해주지 못하는 것</h2>') < generator.index('<h2>판정 근거 자세히 보기</h2>')
+assert generator.index('<h2>판정 근거 자세히 보기</h2>') < generator.index('<h2>영양성분은 참고자료로 확인하세요</h2>')
 assert 'interpretation_html=' not in generator
 assert '<h2>실제 급여에서는 이렇게 보세요</h2>' in generator
 assert '<b>근거가 말하지 않는 것</b>' in generator
@@ -69,7 +70,9 @@ assert '.decisionwhy{{font-size:15px;line-height:1.62}}' in generator
 assert 'decisionrule' in generator
 assert '<b>결론</b><strong>{esc(label)}</strong>' not in generator
 assert '<b>판정 핵심</b><br>{esc(summary)}' not in generator
-assert '직접 {direct_count} · 전문사육 {husbandry_count} · 기타 {indirect_count}' in generator
+assert '직접 {direct_count} · 전문 사육 {husbandry_count} · 간접·맥락 {indirect_count}' in generator
+assert 'class="card evidence-deep"' in generator
+assert '여기부터는 결론의 근거를 직접 확인하고 싶은 사람을 위한 상세 자료다.' in generator
 # Evidence-only architecture: retired recommendation/recording routes must never
 # be reintroduced into the shared plant-detail enhancer.
 for retired in ['today/','meal/?add=','그래서 오늘 뭐 먹이지?','이 먹이 급여기록에 추가']:
