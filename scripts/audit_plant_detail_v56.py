@@ -39,6 +39,11 @@ assert 'interpretation_html=' not in generator
 assert '<h2>실제 급여에서는 이렇게 보세요</h2>' in generator
 assert '<b>근거가 말하지 않는 것</b>' in generator
 assert '야생 섭식 기록도 무제한 급여를 뜻하지 않는다.' in generator
+assert 'class="gradekey"' in generator
+assert '<b>A</b> 혼합식 활용' in generator
+assert '<b>B</b> 제한적 혼합' in generator
+assert '<b>C</b> 가끔 보조' in generator
+assert '<b>D</b> 급여 제외' in generator
 assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
 assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
 assert '확인된 부위·상태</b><p>{esc(part_note)}' in generator
