@@ -61,8 +61,8 @@ for ko,en in core_detail_copy.items():
 for n in [
     'This plant has a reviewed evidence record.',
     'Reviewed evidence is available.',
-    '학술자료와 원논문',
-    '검증된 영양성분 자료',
+    '원논문·학술자료',
+    '영양성분은 참고자료로 확인하세요',
     '근거 읽는 법',
     'quickfacts',
     'species-specific',
