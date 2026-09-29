@@ -25,6 +25,10 @@ assert 'assessment_scope' in generator and 'exact_species' in generator
 assert '종별 특이사항' in generator
 assert '특정 종에서만 확인된 근거다. 다른 육지거북 종에도 같다고 가정하지 않는다.' in generator
 assert 'species-specific' in generator and 'speciesexception' in generator
+assert '<div class="decisionlabel">3초 결론</div>' in generator
+assert '세부 대상종은 아래 원자료에서 확인' in generator
+assert 'taxon_note=' not in generator
+assert '먹여도 되는지 먼저 확인하고, 필요한 경우 근거와 한계까지 내려가며 확인할 수 있다.' in generator
 assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
 assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
 assert '확인된 부위·상태</b><p>{esc(part_note)}' in generator
