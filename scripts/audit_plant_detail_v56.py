@@ -35,6 +35,10 @@ assert 'related_section_no' not in generator
 assert '<h2>6. 야생에서는 실제로 어떻게 먹었나?</h2>' not in generator
 assert '<h2>검증된 영양성분 자료</h2>' in generator
 assert '<h2>더 깊이 보고 싶다면 — 학술자료와 원논문</h2>' in generator
+assert 'interpretation_html=' not in generator
+assert '<h2>실제 급여에서는 이렇게 보세요</h2>' in generator
+assert '<b>근거가 말하지 않는 것</b>' in generator
+assert '야생 섭식 기록도 무제한 급여를 뜻하지 않는다.' in generator
 assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
 assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
 assert '확인된 부위·상태</b><p>{esc(part_note)}' in generator
