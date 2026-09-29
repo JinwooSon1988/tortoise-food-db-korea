@@ -4,7 +4,7 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 plants=json.loads((ROOT/"data/plants.json").read_text(encoding="utf-8"))
 public=[p for p in plants if p.get("identity_status")!="candidate_name"]
-required=["식물동정","근거의 한계"]
+required=["식물동정","이 판정이 말해주지 못하는 것"]
 for p in public:
     path=ROOT/"plant"/p["id"]/"index.html"
     if not path.exists(): raise SystemExit(f"missing generated page: {p['id']}")
