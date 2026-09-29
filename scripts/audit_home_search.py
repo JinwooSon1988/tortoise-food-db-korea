@@ -1,116 +1,88 @@
-import json
+"""Home search contract (Korean public site).
+
+Checks behaviour-level invariants instead of exact CSS/copy strings:
+canonical data source, shared verdict core, no species selector or retired
+features, the search → grade → reason → detail path, and filter framing.
+Cross-page grade equality is enforced by scripts/qa_verdict_consistency.py.
+"""
+import json, re
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 html = (root / 'index.html').read_text(encoding='utf-8')
 search_live = (root / 'search-live.js').read_text(encoding='utf-8')
+core = (root / 'verdict-core.js').read_text(encoding='utf-8')
 plants = json.loads((root / 'data' / 'plants.json').read_text(encoding='utf-8'))
 assessment_data = json.loads((root / 'data' / 'public_assessments.json').read_text(encoding='utf-8'))
 assessments = assessment_data if isinstance(assessment_data, list) else assessment_data.get('assessments', assessment_data.get('records', []))
+script = re.search(r'<script>([\s\S]*?)</script></body>', html).group(1)
 
+# Data: canonical registry only; candidates stay out of public results.
 assert len(plants) >= 69, len(plants)
-candidate = [p for p in plants if p.get('identity_status') == 'candidate_name']
-assert len(candidate) >= 1, 'catalog expansion must retain explicit candidate records'
-assert "const publicCount=plantCatalog.filter(r=>r.isPublic).length" in html
-assert html.index("assessmentMap=new Map()") < html.index("plantCatalog=plants.map")
-assert "j('./data/public_assessments.json')" in html
-assert "assessedIds.has(p.id)" in html
-assert '<style id="home-design-system-20260928">' in html
-assert html.count('<style') == 1 and html.count('</style>') == 1
-assert "search-first polish" in html
-assert ".truststrip{grid-template-columns:repeat(3,minmax(0,1fr))" in html
-assert ".hero{padding:28px 4px 18px}" in html
-assert ".hero h1{font-size:34px;line-height:1.2;margin:0 0 12px}" not in html
-assert html.count(".hero p{font-size:15px}") == 1  # intentional legacy mobile breakpoint only
-assert ".truststrip{margin-top:14px}.belowfold{margin-top:30px}" not in html
-assert ".resulttop>div:first-child{order:2}" in html
-assert ".verdictstack{order:1;align-items:flex-start;width:100%" in html
-assert ".badge strong{font-size:18px}" in html
-assert ".speciesnote li{grid-template-columns:1fr}" in html
-assert ".resultcard{grid-template-columns:1fr;gap:0;padding:22px 24px" in html
-assert ".resultanswer{margin-top:14px;padding-top:14px" in html
-assert "max-width:820px" in html
-assert ".resultcard+.resultcard{margin-top:12px}" in html
-assert ".evidencequick{font-size:10px" in html
-assert '<div class="resultanswer"><b>3초 결론</b><p>' in html
-assert "a?.applicability_note||scopeLabel(a)||'적용 범위 확인 중'" in html
-assert "a?.applicability_note||a?.species_group" not in html
-assert '먹여도 되는지부터 근거와 한계까지' in html
-assert '정확한 이름을 몰라도 괜찮습니다.' in html
-assert 'A · 혼합식 활용' in html
-assert 'B·C · 제한·보조' in html
-assert 'D · 급여 제외' in html
-assert "먹여도 되는지 → 왜 그런지 → 어디까지 믿을 수 있는지 → 원자료" not in html
-assert "① 결론부터" in html and "② 적용 범위" in html and "③ 원자료 공개" in html
-assert "A/B/C/D, 이렇게 읽으면 됩니다" in html
-assert '정확한 이름을 몰라도 괜찮습니다. 한글명·영문명·학명 중 아는 이름으로 검색하세요.' in html
-assert '② 어디까지 믿을지' in html
-assert 'A/B/C/D는 급여 의미를 뜻합니다' in html
-assert '정해진 급여량·빈도나 단독 주식 여부를 뜻하지 않습니다.' in html
-assert 'aria-label="'+esc(r.label)+' 상세 근거 보기"' in html
-assert '상세 근거 보기 <span aria-hidden="true">→</span>' in html
-assert "button:focus-visible,a:focus-visible,input:focus-visible" in html
-assert "@media(prefers-reduced-motion:reduce)" in html
-assert "종 특이 근거와 육지거북 일반 근거를 구분" in html
-assert "등급은 이렇게 읽으세요" in html
-assert 'class="gradeguide"' in html
-for grade_copy in ("A</b> 혼합식 활용","B</b> 제한적 혼합","C</b> 가끔 보조","D</b> 급여 제외"):
-    assert grade_copy in html
-assert "한눈에 보는 결론" not in html
-assert '<div class="resultanswer"><b>3초 결론</b><p>' in html
-assert "function confidenceLabel(v)" in html
-assert "근거수준 '+esc(confidenceLabel(a.confidence))" in html
-assert "TORTOISE FOOD EVIDENCE DATABASE</div>" not in html
-assert "gap:10px;margin:14px 0 18px" in html
-assert "align-items:end;margin-top:30px;padding:28px 4px" in html
-assert "현재 공개 판정 '+publicCount+'종" in html
-assert "if(!r.isPublic)return false" in html
-assert 'aria-controls="searchResults"' in html
-assert 'id="searchResults" role="status" aria-live="polite"' in html
-assert 'enterkeyhint="search"' in html
-assert 'aria-describedby="searchHelp"' in html
-assert 'id="searchHelp" class="searchhelp"' in html
-assert "direct=directCount(a)" in html
-assert "function matchRank(r,q)" in html
-assert 'id="animalSelect"' not in html
-assert "selectedAnimal" not in html
-assert ".speciesbar{" not in html
-assert ".specieshint{" not in html
-assert "function scopeLabel(a)" in html
-assert "function speciesNotes(id,primary)" in html
-assert "x.assessment_scope==='exact_species'&&x.animal_taxon&&x.animal_taxon!=='Testudo'" in html
-assert "종별 특이사항" in html
-assert "speciesverdict" in html and "specieswho" in html
-assert "notes.map(n=>" in html
-assert "n.grade" in html and "n.label" in html
-assert "notes.map(esc).join('<br>')" not in html
-assert "육지거북 일반 근거" in html
-assert "지중해 Testudo 근거" in html
-assert "terms.some(x=>x===q)" in html
-assert "terms.some(x=>x.startsWith(q))" in html
-assert "matchRank(a,q)-matchRank(b,q)||directCount(best(b.plant_id))-directCount(best(a.plant_id))" in html
-assert 'class="evidencequick"' in html
-assert "직접근거 '+direct+'건" in html
-assert ".grade-a{border-left:4px" in html and ".grade-d{border-left:4px" in html
-assert "전체 식물 보기" in html
-assert "전체 식물 69종 보기" not in html
-assert 'href="./all-plants/"' in html
-assert 'href="./core-foods/"' in html
-for retired in ('./today/','./meal/','./weekly/','./growth/','./monthly/','./trends/','./profile/','./settings/'):
+assert any(p.get('identity_status') == 'candidate_name' for p in plants), 'catalog must retain explicit candidate records'
+assert "j('./data/public_assessments.json')" in script
+assert 'assessments_korea_addendum' not in html + search_live and "'./data/assessments.json'" not in html + search_live
+assert "isPublic:p.identity_status!=='candidate_name'&&assessedIds.has(p.id)" in script
+assert 'if(!r.isPublic)return false' in script
+
+# Verdicts come from the shared core; the home never re-implements or overrides them.
+assert html.index('./verdict-core.js') < html.index('<script>\n'), 'verdict-core.js must load before the inline search script'
+assert 'TV.representative(' in script and 'TV.display(' in script and 'TV.speciesNotes(' in script
+assert 'const GRADE=' not in script and 'const V=' not in script, 'grade tables must live in verdict-core.js only'
+for v in ('supported_mixed_diet', 'limited_mixed_diet', 'limited_supplement', 'do_not_feed'):
+    assert v in core
+assert "grade:'보류'" in core, 'unresolved verdicts must render as 판정 보류, not as a letter grade'
+assert 'replaceWith(verdict)' not in search_live and '.badge' not in search_live, 'no script may rewrite result verdicts'
+
+# No species selector and no retired personal features.
+for banned in ('id="animalSelect"', 'selectedAnimal', 'tortoiseAnimalTaxon', '.speciesbar{'):
+    assert banned not in html + search_live, banned
+for retired in ('./today/', './meal/', './weekly/', './growth/', './monthly/', './trends/', './profile/', './settings/'):
     assert retired not in html, retired
-for retired_copy in ('오늘 식단 후보 보기','자주 찾는 핵심 먹이 9종','사육 기록','프로필 관리','7일 식단','30일 요약','장기 추세','백업·복원'):
+for retired_copy in ('오늘 식단 후보', '7일 식단', '30일 요약', '사육 기록', '프로필 관리', '백업·복원'):
     assert retired_copy not in html, retired_copy
-assert "Array.from({length:12}" not in html
-assert "assessments_korea_addendum" not in html
+
+# Search path: input → result card (grade, meaning, why) → detail CTA.
+assert 'id="searchInput" type="search"' in html and 'aria-controls="searchResults"' in html and 'enterkeyhint="search"' in html
+assert 'id="searchResults" role="status" aria-live="polite"' in html
+card_fn = re.search(r'function card\(r\)\{[\s\S]*?\nfunction render', script).group(0)
+card_markup = card_fn[card_fn.index("return '<article"):]
+order = [card_markup.find(x) for x in ('<h3>', 'gradepill', 'class="meaning"', 'class="why"', '+noteHtml+', 'class="detailbtn"')]
+assert -1 not in order and order == sorted(order), 'result card order must be name → grade → meaning → why → species note → detail'
+assert "' 상세 근거 보기\" href=\"./plant/'" in card_fn
+assert '(기본 판정과 별개)' in card_fn, 'species notes must be labelled as separate from the default verdict'
+for noisy in ('directCount', 'confidenceLabel', '근거수준', 'applicability_note'):
+    assert noisy not in card_fn, f'evidence metadata belongs on the detail page, not the result card: {noisy}'
+
+# Result volume and ranking: paged, never silently truncated; exact Korean name first.
+assert 'PAGE=8' in script and 'id="moreResults"' in script and '더 보기' in script
+assert 'function matchRank(r,q)' in script and 'if(ko===q)return 0' in script
+
+# Filters are framed as views, not recommendations.
+assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html
+assert '구하는 곳' in html and '등급별 보기' in html
+
+# Grade meaning is explained once, with the dose/frequency boundary.
+assert 'class="gradeguide"' in html
+for g in ('<b>A</b>', '<b>B</b>', '<b>C</b>', '<b>D</b>'):
+    assert g in html
+assert html.count('정해진 급여량·빈도') == 1
+assert '판정 보류는 안전하다는 뜻이 아닙니다' in html
+
+# Deep links (?q=) wait for the catalog instead of a copy string.
 assert "new URLSearchParams(location.search).get('q')" in search_live
 assert "deepQuery.slice(0,80)" in search_live
+assert "dataset.ready==='1'" in search_live and "countEl.dataset.ready='1'" in script
 assert "document.getElementById('searchBtn')?.click()" in search_live
+
+assert 'href="./all-plants/"' in html and 'href="./core-foods/"' in html
+assert html.count('<style') == 1 and html.count('</style>') == 1
+assert '@media(prefers-reduced-motion:reduce)' in html and 'button:focus-visible,a:focus-visible,input:focus-visible' in html
 
 ids = {p['id'] for p in plants}
 assessment_ids = {a['plant_id'] for a in assessments}
-for pid in ('chicory','chard','lambs_lettuce'):
-    assert pid in ids
-    assert pid in assessment_ids
+for pid in ('chicory', 'chard', 'lambs_lettuce'):
+    assert pid in ids and pid in assessment_ids
     assert (root / 'plant' / pid / 'index.html').exists()
 
 print('public evidence-only home search audit: PASS')

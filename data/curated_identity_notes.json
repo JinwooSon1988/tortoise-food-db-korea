@@ -1,0 +1,30 @@
+{
+  "purpose": "Plant-identity notes previously hand-written in plant/{mallow,sowthistle,clover}/index.html. Moved into data so every detail page is generated from one template and the grade always comes from data/public_assessments.json. Text is unchanged in substance; *text* renders as italic.",
+  "notes": {
+    "mallow": {
+      "headline": "한국 채소 ‘아욱’ = *Malva verticillata*. 야생 그리스육지거북 연구의 *Malva parviflora*와 다른 종이다.",
+      "items": [
+        "한국에서 채소로 재배·유통되는 ‘아욱’은 공공·전문 자료(BRIS/한국농업기술진흥원, 한국민족문화대백과사전)에서 *Malva verticillata*로 확인된다.",
+        "*Malva verticillata* ≠ *Malva parviflora*. Slimani et al. 2006의 모로코 *Testudo graeca graeca* 야생식이 자료에서 *M. parviflora*가 주요 식물로 보고됐지만, 그 결과를 한국 채소 아욱에 종 수준 직접 적용하지 않는다.",
+        "*M. verticillata* 종 수준의 Testudo 직접근거는 아직 확보되지 않았다.",
+        "식물동정이 해결되었다고 급여 안전성이 자동으로 해결되는 것은 아니다."
+      ]
+    },
+    "sowthistle": {
+      "headline": "방가지똥 = *Sonchus oleraceus*. 큰방가지똥(*Sonchus asper*)은 별도 종이다.",
+      "items": [
+        "야생 *Testudo graeca ibera* 연구의 섭식 식물은 속 수준(*Sonchus sp.*)까지만 보고됐다. 관찰종이 정확히 *S. oleraceus*였다고 단정하지 않는다.",
+        "‘방가지똥류’처럼 뭉뚱그린 이름은 종 수준 확인이 필요하다.",
+        "채집지 농약·제초제·도로변 오염을 확인한다."
+      ]
+    },
+    "clover": {
+      "headline": "토끼풀 = *Trifolium repens*. 일반명 ‘클로버’는 여러 *Trifolium* 종을 가리킬 수 있다.",
+      "items": [
+        "야생 *Testudo graeca ibera* 직접관찰 연구는 *Trifolium sp.* 어린잎 섭식을 보고했지만 종을 확정하지 않았다. 이를 *T. repens* 종 수준 직접근거로 바꾸지 않는다.",
+        "상품·채집물에 ‘클로버’만 적혀 있으면 종 수준 확인이 필요하다.",
+        "*Trifolium* 종별 영양·항영양성분 차이를 일반화하지 않는다."
+      ]
+    }
+  }
+}

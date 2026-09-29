@@ -2,12 +2,12 @@
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 search=(R/"search-live.js").read_text(encoding="utf-8")
-detail=(R/"plant-detail-v56.js").read_text(encoding="utf-8")
+gen=(R/"scripts/generate_static_pages.py").read_text(encoding="utf-8")
 assert "./data/korean_search_name_map_v1.json" in search
 assert "canonical_search_name_only" in search
-assert "const LEVEL={supported_mixed_diet:['A'" in search
-assert "function" not in ""  # keep this QA intentionally source-text based
-for x in ["const nutritionMeaning", "칼슘:인(Ca:P)", "식이섬유", "단백질", "지방", "수분"]:
-    assert x in detail, x
-assert "전체 식단" in detail
+# search-live.js only suggests names; it must not carry its own verdict table or legacy assessment data.
+assert "const LEVEL=" not in search and "assessments.json" not in search
+# Nutrition on detail pages is context only and never changes the grade.
+for x in ["Ca:P", "식이섬유", "칼슘", "단백질", "수분", "사람용 식품성분 자료", "이 수치만으로 급여 등급을 바꾸지 않는다", "자료 부재를 0으로 처리하거나"]:
+    assert x in gen, x
 print("OK")

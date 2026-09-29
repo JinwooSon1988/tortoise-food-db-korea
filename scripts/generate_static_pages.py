@@ -1,25 +1,17 @@
 from pathlib import Path
-import json, html, re
+import json, html, re, sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from public_verdict import load_assessments, representative, display, species_notes, scope_label, by_plant, public_plants
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
 all_plants=json.loads((ROOT/"data/plants.json").read_text(encoding="utf-8"))
 
-def load_series(base_name):
-    base=ROOT/"data"/f"{base_name}.json"
-    merged=json.loads(base.read_text(encoding="utf-8"))
-    files=list((ROOT/"data").glob(f"{base_name}_korea_addendum*.json"))
-    def order(path):
-        m=re.search(r"_(\d+)\.json$",path.name)
-        return int(m.group(1)) if m else 1
-    for path in sorted(files,key=order):
-        extra=json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(extra,list): merged.extend(extra)
-    return merged
-
-# Public rendering uses the same canonical assessment registry as QA.
-_public_assessments=json.loads((ROOT/"data/public_assessments.json").read_text(encoding="utf-8"))
-assessments=_public_assessments.get("assessments",_public_assessments.get("records",[])) if isinstance(_public_assessments,dict) else _public_assessments
+# Public rendering uses the same canonical assessment registry and the same
+# representative-verdict rule as the home search (verdict-core.js).
+assessments=load_assessments()
+assessments_by_plant=by_plant(assessments)
 retail=json.loads((ROOT/"data/korean_retail_name_map.json").read_text(encoding="utf-8"))
 evidence_records=json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8")).get("records",[])
 evidence_by_id={e["id"]:e for e in evidence_records}
@@ -31,115 +23,181 @@ for w in wild_records:
     wild_by_plant.setdefault(w.get("plant_id"),[]).append(w)
 risk_records=json.loads((ROOT/"data/wild_candidate_risk_screening.json").read_text(encoding="utf-8")).get("records",[])
 risk_by_plant={r.get("plant_id"):r for r in risk_records}
-med={a["plant_id"]:a for a in assessments if a.get("species_group")=="Mediterranean_Testudo"}
-general={a["plant_id"]:a for a in assessments if a.get("species_group") in {"Tortoise_general","Herbivorous_reptile_general"}}
-exact_by_plant={}
-for a in assessments:
-    if a.get("assessment_scope")=="exact_species" and a.get("animal_taxon") and a.get("animal_taxon")!="Testudo":
-        exact_by_plant.setdefault(a["plant_id"],[]).append(a)
-assessed_ids=set(med)|set(general)
-# Public detail pages are evidence-reviewed records only. Master-only intake records stay in the research pool until assessed.
-plants=[p for p in all_plants if p.get("identity_status")!="candidate_name" and p.get("id") in assessed_ids]
+ibera=json.loads((ROOT/"data/ibera_direct_feeding_evidence_v56.json").read_text(encoding="utf-8"))
+ibera_sources={s["source_id"]:s for s in ibera.get("sources",[])}
+ibera_by_plant={}
+for o in ibera.get("observations",[]):
+    if o.get("plant_id"): ibera_by_plant.setdefault(o["plant_id"],[]).append(o)
+images=json.loads((ROOT/"data/verified_plant_images_v56.json").read_text(encoding="utf-8")).get("images",[])
+image_by_plant={i["plant_id"]:i for i in images if i.get("identity_scope") in {"exact_species","exact_subspecies","exact_variety"}}
+curated_identity=json.loads((ROOT/"data/curated_identity_notes.json").read_text(encoding="utf-8")).get("notes",{})
+
+# Public detail pages: the same set the home search exposes (non-candidate + any public assessment).
+plants=public_plants(all_plants,assessments)
 retail_by_id={r["plant_id"]:r for r in retail}
-SPECIAL={"dandelion":("green","🟢 혼합급여 적합","루마니아와 남서부 불가리아의 야생 T. g. ibera에서 Taraxacum 섭식이 직접 관찰되었고 지중해 Testudo 전문 사육근거도 일치한다. 다만 야생 관찰 빈도를 사육 배합률로 환산하지 않는다."),"plantain":("yellow","🟡 혼합급여 지지근거 있음","Plantago 속과 지중해 Testudo의 섭식·사육 근거가 있다. 국내 실제 식물의 정확한 종 동정과 공식 영양자료 검증은 별도 확인이 필요하다."),"mallow":("hold","⚪ 판단보류 / 종 수준 미확정","한국 유통명 ‘아욱’만으로 특정 Malva 종을 확정하지 않는다. 특히 아욱을 Malva parviflora로 자동 간주하지 않는다.")}
 directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
 applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
-VERDICT_MAP={"supported_mixed_diet":("green","A · 혼합식 활용 가능"),"limited_mixed_diet":("yellow","B · 제한적 혼합 급여"),"limited_supplement":("yellow","C · 가끔 보조 급여"),"supplement_general_evidence":("yellow","C · 가끔 보조 급여"),"general_reptile_supplement":("yellow","C · 가끔 보조 급여"),"do_not_feed":("danger","D · 급여하지 않음")}
-def esc(v): return html.escape(str(v or ""),quote=True)
-def source_link(url,label):
-    if not url:
-        return '<span class="small">원문 링크 미등록</span>'
-    return '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>'
-def verdict_for(pid):
-    if pid in SPECIAL:
-        tone,label,summary=SPECIAL[pid]; return tone,label,summary,med.get(pid) or general.get(pid)
-    a=med.get(pid) or general.get(pid)
-    if not a: return "hold","⚪ 판단보류 / 검증 미완료","현재 공개 판정을 내릴 만큼 종별 급여 근거 검토가 완료되지 않았다.",None
-    tone,label=VERDICT_MAP.get(a.get("verdict"),("hold","⚪ 판단보류 / 근거 부족")); return tone,label,a.get("why") or "근거 검토 중이다.",a
 
-plant_by_id={p["id"]:p for p in plants}
+def esc(v): return html.escape(str(v or ""),quote=True)
+def rich(v):
+    """Escape, then render *text* as italic (used for scientific names in curated notes)."""
+    return re.sub(r"\*([^*]+)\*",r"<i>\1</i>",esc(v))
+
+def source_kind(e):
+    t=str(e.get("source_type") or "")
+    if t.startswith("peer_reviewed") or e.get("pmid"): return (0,"동료심사 논문")
+    if t.startswith("academic") or t=="conference_proceedings": return (1,"학술 연구")
+    if t.startswith("veterinary") or "veterinary" in t: return (2,"수의학 자료")
+    if t.startswith("specialist") or t.startswith("expert"): return (3,"전문 사육·식물 DB")
+    return (4,"분류·공공 자료")
+
 def related_for(p,limit=6):
     same_family=[x for x in plants if x["id"]!=p["id"] and x.get("family") and x.get("family")==p.get("family")]
     same_category=[x for x in plants if x["id"]!=p["id"] and x.get("category") and x.get("category")==p.get("category") and x not in same_family]
     return (same_family+same_category)[:limit]
 
+CSS='''
+:root{--bg:#f6f8f5;--card:#fff;--line:#dce5dd;--text:#17231b;--muted:#5f6c63;--forest:#235f3e;--green:#e7f5eb;--yellow:#fff7df;--hold:#f1f3f2;--danger:#fdeaea}
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;max-width:920px;margin:auto;padding:18px 22px 40px;line-height:1.62;color:var(--text);background:var(--bg)}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}
+.skiplink{position:absolute;left:12px;top:-60px;z-index:50;background:#fff;border:2px solid #286a46;border-radius:9px;padding:9px 12px;font-weight:900;text-decoration:none}.skiplink:focus{top:10px}
+.small{font-size:13px;color:var(--muted)}h1{margin:0}h2{font-size:18px;margin:0 0 8px}h3{font-size:15px;margin:0 0 6px}ul{padding-left:20px;margin:6px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;scroll-margin-top:18px}
+.detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnav a{font-weight:850;text-decoration:none;color:var(--forest)}.detailnav span{color:var(--muted)}
+.planthead{padding:6px 2px 10px}.planthead h1{font-size:clamp(30px,6vw,44px);letter-spacing:-.04em;line-height:1.15}.scientific{color:var(--muted);font-size:15px;margin-top:2px}.aliases{font-size:12px;color:var(--muted);margin-top:4px}
+.green{background:var(--green)}.yellow{background:var(--yellow)}.hold{background:var(--hold)}.danger{background:var(--danger);border-color:#e8bcbc}
+.decision{border-width:2px;padding:20px 22px}.decisionlabel{font-size:12px;font-weight:800;color:var(--muted);margin-bottom:6px}
+.verdictline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.gradeletter{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:48px;padding:0 10px;border-radius:12px;background:#fff;border:2px solid rgba(0,0,0,.14);font-size:26px;font-weight:950}.hold .gradeletter{font-size:17px}
+.verdict{font-weight:950;font-size:clamp(22px,4.6vw,30px);line-height:1.2}.meaning{font-size:16px;font-weight:750;margin:10px 0 0}
+.decisionwhy{font-size:15px;line-height:1.7;margin:10px 0 0;color:#2c3a31}.decisionwhy b{display:block;font-size:12px;color:var(--muted)}
+.gradekey{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:14px;padding-top:10px;border-top:1px solid rgba(0,0,0,.08);font-size:12px;color:var(--muted)}.gradekey b{color:var(--text)}.gradekey .on{color:var(--text);font-weight:800}
+.practicalgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.practicalgrid>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfdfb}.practicalgrid b{font-size:12px;color:var(--forest)}.practicalgrid p{margin:4px 0 0;font-size:14px}
+.species-specific{background:#fbfcfb;padding:14px 18px}.species-specific h2{font-size:15px}.speciesexception{border-top:1px solid var(--line);padding:9px 0 0;margin-top:9px}.speciesexception>div{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:14px}.speciesexception>div span{flex:0 0 auto;font-size:12px;font-weight:800;color:var(--forest)}.speciesexception p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.scopecard>div{padding:12px 0;border-top:1px solid var(--line)}.scopecard>div:first-of-type{border-top:0;padding-top:0}.scopecard p{margin:4px 0 0;font-size:14px}
+.identity-alert{background:#fff8e6;border:1px solid #e8cf86;border-left:5px solid #a07b16;border-radius:12px;padding:12px 14px!important;margin:6px 0}.identity-alert h3{color:#6d5207}
+.identity-note h3{color:#405047}.identity-note p{color:var(--muted)}
+.plantphoto{display:flex;gap:12px;align-items:flex-start;margin-top:8px}.plantphoto img{width:112px;height:112px;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:#fff}.plantphoto figcaption{font-size:11px;color:var(--muted);line-height:1.5}
+.principles{font-size:12px;color:var(--muted);margin-top:8px}
+.evidence-deep{margin-top:24px;border-top:3px solid #315f46}.sectioneyebrow{font-size:11px;font-weight:900;letter-spacing:.08em;color:#357653;margin-bottom:3px}
+.evsummary{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.evsummary span{border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;background:#f7faf7}
+.legend{font-size:12px;color:var(--muted);margin:6px 0 10px}.legend b{color:var(--text)}
+.evcard{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0;background:#fff}.evhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.evhead span{font-size:11px;font-weight:850;border:1px solid var(--line);border-radius:999px;padding:3px 8px;background:#f3f7f3}.evhead .paper{background:#eaf2fb;border-color:#c9daee}
+.evcard h3{font-size:15px;margin:8px 0 6px}.evmeta{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:12px;margin:0 0 8px}.evmeta dt{color:var(--muted)}.evmeta dd{margin:0}
+.evcard p{font-size:13px;margin:6px 0}.evcard .limit{background:#fff8e8;border-radius:8px;padding:8px 10px}.evcard .ids{font-size:12px;color:var(--muted)}
+.conflict{border:2px solid #a56b19;background:#fff5df;border-radius:12px;padding:12px;margin:10px 0}
+.nutgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.nutgrid>div{border:1px solid var(--line);border-radius:10px;padding:9px;background:#fafcf9}.nutgrid b{display:block;font-size:12px;color:var(--muted)}.nutgrid strong{display:block;font-size:17px}
+.relatedgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.related{display:block;border:1px solid var(--line);border-radius:10px;padding:10px;text-decoration:none;font-weight:800;background:#fff;font-size:14px}
+.share{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.share button,.share a{border:0;border-radius:12px;padding:11px 14px;font-weight:800;background:#e7f5eb;text-decoration:none;cursor:pointer;font-size:14px}
+.topmeta{display:flex;justify-content:flex-end}.langswitch{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.langswitch button{padding:6px 9px;border:0;border-radius:0;background:#fff;color:var(--muted);font-size:11px}.langswitch button.active{background:#286a46;color:#fff}
+@media(max-width:700px){body{padding:12px 14px 32px}.nutgrid{grid-template-columns:1fr 1fr}.relatedgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.detailnav span{display:none}.planthead{padding:2px 2px 6px}.decision{padding:16px}.gradeletter{min-width:42px;height:42px;font-size:22px}.meaning{font-size:15px}.decisionwhy{font-size:14px}.card{padding:14px}.practicalgrid,.relatedgrid{grid-template-columns:1fr}.speciesexception>div{align-items:flex-start;flex-direction:column;gap:2px}}
+'''.replace("\n","")
+
 for p in plants:
     pid=p["id"]; d=ROOT/"plant"/pid; d.mkdir(parents=True,exist_ok=True); ko=p.get("ko") or pid; sci=p.get("scientific") or "학명 검증 중"
     title=f"육지거북 {ko} 먹어도 될까? 급여 판정·근거 | 거북밥 DB"; desc=f"육지거북에게 {ko}를 먹여도 되는지 확인한다. {ko}의 급여 판정, 학명·식물동정, 적용 범위, 주의사항과 근거를 한 페이지에서 확인한다."; canonical=f"{SITE_URL}/plant/{pid}/"
-    tone,label,summary,a=verdict_for(pid); r=retail_by_id.get(pid); aliases=[]
+    rows=assessments_by_plant.get(pid,[])
+    a=representative(rows); g=display(a)
+    tone,grade,label,meaning=g["tone"],g["grade"],g["label"],g["meaning"]
+    summary=(a or {}).get("why") or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
+    r=retail_by_id.get(pid); aliases=[]
     if r: aliases=list(dict.fromkeys((r.get("retail_terms") or [])+(r.get("aliases") or [])))
-    if not aliases: aliases=[ko]+list(p.get("aliases") or [])[:3]
-    identity_warning=(r and r.get("mapping_status")=="name_candidate_only"); role=(a or {}).get("role"); limits=(a or {}).get("limits") or []
-    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
-    identity_text="한국 유통명은 검색 후보일 뿐 실제 식물의 종 동정 결과가 아니다. 상품·재배품·야생채집물은 별도로 확인해야 한다." if identity_warning else "DB의 이름과 학명 표기는 검색 기준이다. 실제 급여할 개체의 식물종과 오염 여부는 별도로 확인해야 한다."
-    related=related_for(p)
-    related_html="".join(f'<a class="related" href="../{esc(x["id"])}/">{esc(x.get("ko") or x["id"])} 먹이 판정 →</a>' for x in related)
-    share_text=f"육지거북 {ko} 먹이 판정 | 거북밥 DB"
-    en_name=p.get("en") or sci
-    en_pending=("This plant has a reviewed evidence record. The feeding grade is limited to the evidence scope shown below; it does not imply unlimited feeding." if a else "Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence.")
-    en_scope=("Reviewed evidence is available. Check source taxon, plant part, directness, and limitations below before applying the result." if a else "Evidence is incomplete; do not transfer safety assumptions across taxa.")
-    en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
-    role_html=f"<div><b>식단 내 역할</b><br>{esc(role)}</div>" if role else "<div><b>식단 내 역할</b><br>아직 공개 권장 역할을 확정하지 않음</div>"
+    if not aliases: aliases=list(p.get("aliases") or [])[:4]
+    aliases=[x for x in aliases if x!=ko]
+    # Identity risk comes only from existing data: retail name mapping or master identity status.
+    identity_warning=bool((r and r.get("mapping_status")=="name_candidate_only") or p.get("identity_status")=="needs_species_level_mapping")
+    role=(a or {}).get("role"); limits=(a or {}).get("limits") or []
     linked_evidence=[evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids") or []) if eid in evidence_by_id]
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
     indirect_count=len(linked_evidence)-direct_count-husbandry_count
-    strength_label=("직접 근거 포함" if direct_count else ("전문 사육 근거 중심" if husbandry_count else ("간접·맥락 근거 중심" if linked_evidence else "공개 근거 미연결")))
-    scopes=sorted({str(e.get("applicability")) for e in linked_evidence if e.get("applicability")})
-    scope_note=(" · ".join(applicability_ko.get(x,x) for x in scopes) if scopes else "범위 미확인")
-    part_note=" / ".join(sorted({str(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "부위 정보 미확인"
-    quick_html=f'''<div class="quickfacts"><div><b>근거 수준</b><strong>{esc(strength_label)}</strong></div><div><b>근거 구성</b><strong>직접 {direct_count} · 전문 사육 {husbandry_count} · 간접·맥락 {indirect_count}</strong></div><div><b>적용 범위</b><strong>{esc(scope_note)}</strong><span class="small">세부 대상종은 아래 원자료에서 확인</span></div></div>'''
-    practical_html=f'''<section class="card practical"><h2>실제 급여에서는 이렇게 보세요</h2><div class="practicalgrid"><div><b>급여 역할</b><p>{esc(role or "현재 근거 범위 안에서 보조적으로 해석한다.")}</p></div><div><b>확인된 부위·상태</b><p>{esc(part_note)}</p></div></div><p class="practicalboundary">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 추정하지 않는다.</p></section>'''
+    part_note=" / ".join(sorted({str(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "근거 자료에 부위 정보가 명시되지 않음"
+    en_pending=("This plant has a reviewed evidence record. The feeding grade is limited to the evidence scope shown below; it does not imply unlimited feeding." if a else "Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence.")
+    en_scope=("Reviewed evidence is available. Check source taxon, plant part, directness, and limitations below before applying the result." if a else "Evidence is incomplete; do not transfer safety assumptions across taxa.")
+    en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
+    basis=scope_label(a)
+
+    # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
+    gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
+    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}"><div class="decisionlabel">급여 판정 · 지중해 Testudo 기준{"" if basis=="지중해 Testudo 근거" else " · "+esc(basis)}</div><div class="verdictline"><span class="gradeletter" aria-hidden="true">{esc(grade)}</span><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
+
+    # 2) Practical reading (only when there is a representative assessment).
+    practical_html=(f'''<section class="card practical"><h2>실제 급여에서는 이렇게 보세요</h2><div class="practicalgrid"><div><b>급여 역할</b><p>{esc(role or "현재 근거 범위 안에서 보조적으로 해석한다.")}</p></div><div><b>근거가 다룬 부위·상태</b><p>{esc(part_note)}</p></div></div></section>''' if a else "")
+
+    # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
-    for x in exact_by_plant.get(pid,[]):
-        _,x_label=VERDICT_MAP.get(x.get("verdict"),("hold","별도 판정"))
+    for x in species_notes(rows,a):
+        xg=display(x)
         who=x.get("display_group") or x.get("species_group") or x.get("animal_taxon")
-        species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)}</b><span>{esc(x_label)}</span></div><p>{esc(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다.")}</p></article>')
-    species_specific_html=(f'<section class="card species-specific"><h2>종별 특이사항</h2><p class="small">특정 종에서만 확인된 근거다. 다른 육지거북 종에도 같다고 가정하지 않는다.</p>{"".join(species_rows)}</section>' if species_rows else "")
+        species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)} <i class="small">{esc(x.get("animal_taxon"))}</i></b><span>{esc(xg["grade"]+" · "+xg["label"])}</span></div><p>{esc(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다.")}</p></article>')
+    species_specific_html=(f'<section class="card species-specific"><h2>종별 특이사항</h2><p class="small">특정 종에서만 확인된 근거다. 위의 기본 판정을 바꾸지 않으며, 다른 육지거북 종에도 같다고 가정하지 않는다.</p>{"".join(species_rows)}</section>' if species_rows else "")
+
+    # 4) Scope → identity → limits, stated once in one card.
+    scope=(a or {}).get("applicability_note") or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 공개 근거만으로 특정 종까지 좁혀 판단하지 않는다.")
+    img=image_by_plant.get(pid)
+    photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
+    cur=curated_identity.get(pid)
+    if identity_warning:
+        identity_text="한국 유통명은 검색 후보일 뿐 실제 식물의 종 동정 결과가 아니다. 상품·재배품·야생채집물은 학명을 따로 확인한다."
+        cur_html=(f'<p><b>{rich(cur["headline"])}</b></p><ul>{"".join(f"<li>{rich(x)}</li>" for x in cur.get("items",[]))}</ul>' if cur else "")
+        identity_html=f'''<div class="identity-alert" data-identity="alert"><h3>⚠ 식물동정 주의</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{cur_html}{photo_html}</div>'''
+    else:
+        identity_text="이름과 학명은 검색 기준이다. 실제 급여할 식물의 종과 농약·오염 여부는 따로 확인한다."
+        identity_html=f'''<div class="identity-note" data-identity="note"><h3>식물동정 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{photo_html}</div>'''
+    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
+    scope_html=f'''<section class="card scopecard" id="scope"><h2>적용 범위와 한계</h2><div><h3>적용 범위</h3><p>{esc(scope)}</p></div>{identity_html}<div><h3>이 판정이 말해주지 못하는 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></section>'''
+
+    # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
+    ordered=sorted(linked_evidence,key=lambda e:source_kind(e)[0])
     evidence_cards=[]
-    for i,e in enumerate(linked_evidence,1):
+    for e in ordered:
         url=e.get("url") or ""
-        source=f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(e.get("source_title") or e.get("id"))}</a>' if url else esc(e.get("source_title") or e.get("id"))
-        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><b>근거 {i}</b><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span></div><h3>{source}</h3><div class="evgrid"><div><b>대상 범위</b><br>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</div><div><b>식물 분류</b><br><i>{esc(e.get("plant_taxon"))}</i></div><div><b>대상 동물</b><br>{esc(e.get("animal_taxon"))}</div><div><b>식물 부위·상태</b><br>{esc(e.get("plant_part_state"))}</div></div><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p></article>''')
+        title_html=f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{esc(e.get("source_title") or e.get("id"))}</a>' if url else esc(e.get("source_title") or e.get("id"))
+        rank,kind=source_kind(e)
+        ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
+        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(e.get("animal_taxon"))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(e.get("plant_part_state"))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}</article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 공개 가능한 개별 근거 레코드가 연결되지 않았다. 따라서 안전성을 추정하지 않는다.</p>'
-    scholarly=[e for e in linked_evidence if e.get("doi") or e.get("pmid") or e.get("source_type")=="peer_reviewed_article"]
-    scholarly_cards=[]
-    for e in scholarly:
-        doi=e.get("doi")
-        pmid=e.get("pmid")
-        ids=[]
-        if doi: ids.append(f'DOI: {esc(doi)}')
-        if pmid: ids.append(f'PMID: {esc(pmid)}')
-        scholarly_cards.append(f'''<article class="paper"><b>{esc(e.get("source_title"))}</b><div class="papergrid"><div><span>연구 대상</span><strong>{esc(e.get("animal_taxon") or "미기재")}</strong></div><div><span>식물·부위</span><strong>{esc((e.get("plant_taxon") or "미기재")+" · "+(e.get("plant_part_state") or "미기재"))}</strong></div><div><span>근거 직접성</span><strong>{esc(directness_ko.get(e.get("directness"),e.get("directness") or "미기재"))}</strong></div><div><span>적용 범위</span><strong>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability") or "미기재"))}</strong></div></div><p><b>이 자료가 지지하는 것:</b> {esc(e.get("supports"))}</p><p class="limit"><b>이 자료만으로 말할 수 없는 것:</b> {esc(e.get("does_not_support"))}</p><p class="small">{' · '.join(ids) or '학술 식별자 미기재'}</p>{source_link(e.get("url"),"원문/초록 열기")}</article>''')
-    scholarly_html="".join(scholarly_cards) or '<p>현재 이 식물에 직접 연결된 동료심사 논문 레코드는 없다. 전문 DB 근거와 학술 근거를 구분해 표시한다.</p>'
-    wild=wild_by_plant.get(pid,[])
-    risk=risk_by_plant.get(pid)
+    papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
+    summary_chips=f'<div class="evsummary"><span>연결 근거 {len(linked_evidence)}건</span><span>동료심사 논문 {papers}</span><span>직접 {direct_count}</span><span>전문 사육 {husbandry_count}</span><span>간접·맥락 {indirect_count}</span></div>'
+
+    # Wild feeding records (one place: static wild data + direct Ibera observations).
+    wild=wild_by_plant.get(pid,[]); risk=risk_by_plant.get(pid); ib=ibera_by_plant.get(pid,[])
     conflict_html=""
     if wild and risk and (risk.get("signals") or risk.get("publication_blocker")):
         risk_items="".join(f"<li><b>{esc(x.get('type') or '위험 신호')}</b> — {esc(x.get('finding'))}<br><span class=\"small\">{esc(x.get('interpretation'))}</span></li>" for x in risk.get("signals",[]))
         conflict_html=f'''<div class="conflict"><b>⚠ 근거 충돌 또는 안전성 미해결</b><p>야생 섭식 기록이 있지만 독성·항영양성분 또는 다른 동물의 수의학적 위험 신호도 확인됐다. 야생에서 먹는다는 사실만으로 사육 급여 안전성을 확정하지 않는다.</p><ul>{risk_items}</ul><p><b>현재 공개판정의 걸림돌:</b> {esc(risk.get("publication_blocker") or "추가 검토 필요")}</p></div>'''
     wild_cards=[]
     for w in wild:
-        wild_cards.append(f'''<article class="evcard wildcard"><div class="evhead"><b>야생 섭식 기록</b><span>{esc(w.get("ibera_applicability") or "적용범위 확인 필요")}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북 미상")} · {esc(w.get("population_region") or "지역 미상")}</h3><div class="evgrid"><div><b>확인 방법</b><br>{esc(w.get("study_method") or "미상")}</div><div><b>먹은 부위</b><br>{esc(w.get("plant_part") or "미상")}</div><div><b>시기</b><br>{esc(w.get("season") or "미상")}</div><div><b>섭식 기록</b><br>{esc(w.get("feeding_signal") or "확인")}</div></div><p><b>이 기록이 뜻하는 것</b><br>야생에서 이 식물을 실제 먹이로 이용한 근거다.</p><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="small"><b>원자료 식물명:</b> <i>{esc(w.get("plant_taxon_reported"))}</i> · <b>현재 수용명:</b> <i>{esc(w.get("plant_taxon_accepted"))}</i> · <b>근거 ID:</b> {esc(w.get("source_id"))}</p></article>''')
-    wild_html="".join(wild_cards)
-    wild_section=(f'''<section class="card"><h2>야생에서는 실제로 어떻게 먹었나?</h2><p>야생 섭식 자료가 있으면 어떤 육지거북이 어디에서 어떤 방법으로 이 식물을 먹은 것이 확인됐는지 보여준다. <b>야생에서 먹었다는 사실은 중요한 근거지만, 사육장에서 마음껏 먹여도 된다는 뜻은 아니다.</b></p>{conflict_html}{wild_html}</section>''' if wild_cards else "")
+        wild_cards.append(f'''<article class="evcard wildcard"><div class="evhead"><span>야생 섭식 기록</span><span>{esc(w.get("ibera_applicability") or "적용범위 확인 필요")}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북 미상")} · {esc(w.get("population_region") or "지역 미상")}</h3><dl class="evmeta"><dt>확인 방법</dt><dd>{esc(w.get("study_method") or "미상")}</dd><dt>먹은 부위</dt><dd>{esc(w.get("plant_part") or "미상")}</dd><dt>시기</dt><dd>{esc(w.get("season") or "미상")}</dd><dt>섭식 기록</dt><dd>{esc(w.get("feeding_signal") or "확인")}</dd></dl><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="ids">원자료 식물명 <i>{esc(w.get("plant_taxon_reported"))}</i> · 현재 수용명 <i>{esc(w.get("plant_taxon_accepted"))}</i> · {esc(w.get("source_id"))}</p></article>''')
+    for o in ib:
+        s=ibera_sources.get(o.get("source_id"),{})
+        scope_txt="식물 종까지 일치" if o.get("identity_scope")=="exact_species" else "속 수준 관찰 — 이 식물의 정확한 종을 먹었다는 뜻으로 확대하지 않는다"
+        link=f'<a href="{esc(s.get("url"))}" target="_blank" rel="noopener noreferrer">원 연구 확인</a>' if s.get("url") else ""
+        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>이베라 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(o.get("observed_part") or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
+    wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{conflict_html}{"".join(wild_cards)}''' if wild_cards else "")
+
+    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">더 깊이 보기</div><h2>판정 근거 자세히 보기</h2><p class="ko-evidence small">논문·전문자료를 하나씩, 무엇을 지지하고 무엇을 말할 수 없는지와 함께 보여준다. <b>직접 근거</b>는 해당 육지거북·식물·질문을 직접 다룬 자료, <b>간접 근거</b>는 다른 동물이나 가까운 식물에서 얻은 참고 자료다. 간접 근거만으로 안전성을 확정하지 않는다.</p><p class="en-evidence" hidden>This section explains the evidence behind the conclusion. <b>Direct evidence</b> addresses the target question directly. <b>Indirect evidence</b> comes from other animals or related plants and is used only as context; indirect evidence alone does not establish safety.</p>{summary_chips}<p class="legend"><b>읽는 법</b> · 동료심사 논문과 전문 사육자료는 같은 수준의 근거가 아니다 · 성분 근거는 성분 존재만 보여줄 뿐 급여 안전성을 증명하지 않는다.</p>{evidence_cards_html}{wild_section}</section>'''
+
     nu=nutrition_by_id.get(pid)
     if nu:
         def nv(key,unit=""):
             v=nu.get(key)
             return "미확인" if v is None else f"{v}{unit}"
-        nutrition_html=f'''<div class="nutgrid"><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div><div><b>칼륨</b><strong>{nv("potassium_mg"," mg")}</strong></div><div><b>비타민 C</b><strong>{nv("vitamin_c_mg"," mg")}</strong></div></div><p class="small"><b>자료 기준:</b> {esc(nu.get("basis"))} · <b>자료명:</b> {esc(nu.get("food_description"))}</p><p><b>원자료:</b> <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} · {esc(nu.get("source_id"))}</a></p><p class="small">영양성분 수치는 식품성분 자료이며 육지거북의 독성 한계치나 단독 급여비율을 의미하지 않는다.</p>'''
+        nutrition_body=f'''<div class="nutgrid"><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div><div><b>칼륨</b><strong>{nv("potassium_mg"," mg")}</strong></div><div><b>비타민 C</b><strong>{nv("vitamin_c_mg"," mg")}</strong></div></div><p class="small">100 g 기준 · {esc(nu.get("basis"))} · {esc(nu.get("food_description"))} · 원자료 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'''
     else:
-        nutrition_html='<p><b>검증된 공식 영양성분 자료가 아직 연결되지 않았다.</b></p><p class="small">자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 사용하지 않는다.</p>'
-    if a:
-        scope=a.get("applicability_note") or ("지중해 육지거북류(Testudo속)에 관한 일반 근거다. 이베라 그리스육지거북을 직접 시험해 얻은 정량 자료와는 다르다" if a.get("species_group")=="Mediterranean_Testudo" else "육지거북·초식 파충류 일반 근거. Mediterranean Testudo 직접 판정이 아님"); evidence_html=f"<div><b>적용 범위</b><br>{esc(scope)}</div>"
-    else: evidence_html="<div><b>적용 범위</b><br>현재 공개 근거만으로 특정 종까지 좁혀 판단하지 않는다.</div>"
+        nutrition_body='<p class="small">검증된 공식 영양성분 자료가 아직 연결되지 않았다. 자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 쓰지 않는다.</p>'
+    nutrition_html=f'''<section class="card" id="nutrition"><h2>영양성분은 참고자료로 확인하세요</h2><p class="small">사람용 식품성분 자료다. Ca:P·섬유질 등 수치는 독성·항영양성분·식물동정·대상종 근거를 대신하지 않으며, 이 수치만으로 급여 등급을 바꾸지 않는다.</p>{nutrition_body}</section>'''
+
+    related_html="".join(f'<a class="related" href="../{esc(x["id"])}/">{esc(x.get("ko") or x["id"])} →</a>' for x in related_for(p))
+    footer_html=f'''<section class="card"><h2>다른 식물도 확인하기</h2><div class="relatedgrid">{related_html}</div><p class="small">같은 과·카테고리로 묶은 탐색 링크다. 식물학적 유사성이 동일한 급여 안전성·영양가·권장도를 뜻하지 않는다.</p><div class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></div></section>'''
+
+    alias_html=f'<div class="aliases">다른 이름 · {esc(", ".join(aliases[:6]))}</div>' if aliases else ""
     schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"inLanguage":"ko","isPartOf":{"@type":"WebSite","name":"거북밥 DB Korea","url":SITE_URL+"/"}},ensure_ascii=False,separators=(",",":"))
     doc=f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="거북밥 DB Korea"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <script type="application/ld+json">{schema}</script>
-<style>:root{{--bg:#f6f8f5;--card:#fff;--line:#dce5dd;--text:#17231b;--muted:#647067;--green:#e7f5eb;--yellow:#fff7df;--hold:#f1f3f2;--danger:#fdeaea}}*{{box-sizing:border-box}}body{{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;max-width:1180px;margin:auto;padding:22px;line-height:1.62;color:var(--text);background:var(--bg)}}a{{color:inherit}}a:focus-visible,button:focus-visible{{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}}.skiplink{{position:absolute;left:12px;top:-60px;z-index:50;background:#fff;border:2px solid #286a46;border-radius:9px;padding:9px 12px;font-weight:900;text-decoration:none}}.skiplink:focus{{top:10px}}.card{{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}}.verdict{{font-weight:950;font-size:25px;line-height:1.25}}.quickfacts{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}}.quickfacts>div{{border:1px solid rgba(0,0,0,.09);border-radius:10px;padding:9px;background:#fff}}.quickfacts b{{display:block;font-size:12px;color:var(--muted)}}.quickfacts strong{{display:block;margin-top:3px}}.quickfacts .small{{display:block;margin-top:3px;font-size:11px}}.decisionrule{{display:flex;gap:10px;align-items:flex-start;margin-top:10px;padding:10px 12px;border-top:1px solid rgba(0,0,0,.08);font-size:13px}}.decisionrule b{{flex:0 0 auto;color:#28583c}}.decisionrule span{{color:var(--muted)}}.green{{background:var(--green)}}.yellow{{background:var(--yellow)}}.hold{{background:var(--hold)}}.danger{{background:var(--danger);border-color:#e8bcbc}}.grid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}}.grid>div{{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}}.warn{{border-left:5px solid #866f25}}.identity-note{{background:#fafcf9}}.identity-note h2{{font-size:16px;color:#405047}}.identity-note p{{margin-bottom:0;font-size:13px;color:var(--muted)}}.identity-alert{{background:#fff9e9}}.small{{font-size:13px;color:var(--muted)}}.relatedgrid{{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}}.practicalgrid{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}.practicalgrid>div{{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fbfdfb}}.practicalgrid b{{font-size:13px;color:#28583c}}.practicalgrid p{{margin:5px 0 0;font-size:14px;line-height:1.6}}.practicalboundary{{margin:10px 2px 0;font-size:12px;color:var(--muted)}}.species-specific{{border-left:4px solid #4f7d61;background:#f8fbf8}}.species-specific>h2{{margin-bottom:6px}}.speciesexception{{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:10px;background:#fff}}.speciesexception>div{{display:flex;justify-content:space-between;gap:12px;align-items:center}}.speciesexception>div b{{font-size:14px}}.speciesexception>div span{{flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:4px 8px;background:#f2f7f3;font-size:12px;font-weight:900}}.speciesexception p{{margin:8px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}}.legend{{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:10px 0 14px}}.legend>b{{grid-column:1/-1}}.legend span{{border:1px solid var(--line);border-radius:10px;padding:9px;background:#f8faf8;font-size:13px}}.evcard{{border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0;background:#fff}}.evhead{{display:flex;justify-content:space-between;gap:8px;align-items:center}}.evhead span{{font-size:12px;font-weight:900;border:1px solid var(--line);border-radius:999px;padding:4px 8px;background:#f3f7f3}}.evcard h3{{font-size:16px;margin:8px 0}}.evgrid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}}.evgrid>div{{border:1px solid var(--line);border-radius:10px;padding:9px;background:#fafcf9;font-size:13px}}.evcard .limit{{background:#fff8e8;border-radius:10px;padding:10px}}.conflict{{border:2px solid #a56b19;background:#fff5df;border-radius:12px;padding:12px;margin:10px 0}}.conflict> b{{font-size:17px}}.nutrition-rule{{border-left:5px solid #286a46;background:#f2f8f4;border-radius:10px;padding:10px 12px}}.paper{{border:1px solid var(--line);border-radius:12px;padding:12px;margin:9px 0;background:#fbfcfb}}.papergrid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:9px 0}}.papergrid>div{{border:1px solid var(--line);border-radius:8px;padding:7px}}.papergrid span{{display:block;font-size:11px;color:var(--muted)}}.papergrid strong{{font-size:12px}}.paper .limit{{background:#fff7e8;border-radius:8px;padding:8px}}.nutgrid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}}.nutgrid>div{{border:1px solid var(--line);border-radius:10px;padding:10px;background:#fafcf9}}.nutgrid b{{display:block;font-size:12px;color:var(--muted)}}.nutgrid strong{{display:block;font-size:18px;margin-top:3px}}.related{{display:block;border:1px solid var(--line);border-radius:12px;padding:11px;text-decoration:none;font-weight:800;background:#fff}}.share{{display:flex;gap:8px;flex-wrap:wrap}}.topmeta{{display:flex;justify-content:flex-end;margin-bottom:8px}}.langswitch{{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}}.langswitch button{{min-height:auto;padding:6px 9px;border:0;border-radius:0;background:#fff;color:var(--muted);font-size:11px}}.langswitch button.active{{background:#286a46;color:#fff}}.share button,.share a{{border:0;border-radius:12px;padding:11px 14px;font-weight:800;background:#e7f5eb;text-decoration:none;cursor:pointer}}h1{{margin-bottom:6px}}h2{{font-size:19px;margin:0 0 8px}}ul{{padding-left:20px}}@media(max-width:800px){{body{{padding:14px}}.grid{{grid-template-columns:1fr 1fr}}.evgrid{{grid-template-columns:1fr 1fr}}.nutgrid{{grid-template-columns:1fr 1fr}}.interpret{{grid-template-columns:1fr}}.quickfacts{{grid-template-columns:1fr 1fr}}.papergrid{{grid-template-columns:1fr 1fr}}.legend{{grid-template-columns:1fr}}.relatedgrid{{grid-template-columns:1fr 1fr}}}}@media(max-width:520px){{.grid,.relatedgrid,.practicalgrid{{grid-template-columns:1fr}}}}.detailnav{{display:flex;justify-content:space-between;align-items:center;margin:0 0 34px;padding:10px 2px 16px;border-bottom:1px solid var(--line);font-size:13px}}.detailnav a{{font-weight:850;text-decoration:none;color:#235f3e}}.detailnav span{{color:var(--muted)}}.planthead{{padding:10px 2px 24px}}.planthead .eyebrow{{font-size:10px;font-weight:900;letter-spacing:.14em;color:#357653}}.planthead h1{{font-size:clamp(34px,7vw,52px);letter-spacing:-.05em;margin:6px 0 2px}}.scientific{{color:var(--muted);font-size:15px}}.planthead p{{color:var(--muted);margin:12px 0 0}}.decision{{padding:26px 28px;border-width:2px}}.decisionlabel{{font-size:11px;font-weight:900;letter-spacing:.08em;color:var(--muted);margin-bottom:7px}}.decision .verdict{{font-size:clamp(25px,5vw,36px);line-height:1.2;margin:0 0 10px}}.decisionwhy{{font-size:16px;line-height:1.7;max-width:760px;margin-bottom:0}}.decision .quickfacts{{margin-top:18px}}.gradekey{{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,.08)}}.gradekey span{{font-size:11px;color:var(--muted)}}.gradekey b{{color:var(--ink)}}.decision .interpret{{margin-top:10px}}.practical{{margin-top:16px}}.practical>h2{{margin-bottom:10px}}.card{{scroll-margin-top:18px}}.evidence-deep{{margin-top:26px;border-top:3px solid #315f46}}.sectioneyebrow{{font-size:10px;font-weight:950;letter-spacing:.12em;color:#357653;margin-bottom:5px}}@media(max-width:520px){{.detailnav{{margin-bottom:22px;padding-bottom:12px}}.detailnav span{{display:none}}.planthead{{padding:2px 2px 18px}}.planthead h1{{font-size:36px}}.planthead p{{font-size:14px;line-height:1.55;margin-top:9px}}.decision{{padding:18px}}.decisionwhy{{font-size:15px;line-height:1.62}}.card{{padding:14px}}.evidence-deep{{margin-top:20px}}.quickfacts{{gap:6px}}.quickfacts>div{{padding:8px}}.decisionrule{{display:block;padding:9px 2px 0}}.decisionrule b{{display:block;margin-bottom:3px}}.speciesexception>div{{align-items:flex-start;flex-direction:column;gap:6px}}</style></head><body>
-<a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><a href="../../index.html">← 다른 먹이 검색</a><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content"><div class="planthead"><div class="eyebrow">육지거북 먹이 판정</div><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div><p>먹여도 되는지 먼저 확인하고, 필요한 경우 근거와 한계까지 내려가며 확인할 수 있다.</p></div><section class="card {tone} decision"><div class="decisionlabel">3초 결론</div><div class="verdict">{esc(label)}</div><p class="decisionwhy ko-evidence">{esc(summary)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p>{quick_html}<div class="gradekey" aria-label="급여 등급 안내"><span><b>A</b> 혼합식 활용</span><span><b>B</b> 제한적 혼합</span><span><b>C</b> 가끔 보조</span><span><b>D</b> 급여 제외</span></div></section>{practical_html}{species_specific_html}<section class="card"><h2>이 판정은 어디까지 믿을 수 있을까?</h2><div class="grid">{role_html}{evidence_html}<div><b>식물 이름</b><br>{esc(', '.join(aliases))}</div><div><b>학명 표기</b><br><i>{esc(sci)}</i></div></div></section><section class="card {'warn identity-alert' if identity_warning else 'identity-note'}"><h2>{'식물동정 주의' if identity_warning else '식물동정 확인'}</h2><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{'<p><b>아욱 주의:</b> 한국 유통명 아욱을 Malva parviflora로 자동 매핑하지 않는다.</p>' if pid=='mallow' else ''}</section><section class="card"><h2>이 판정이 말해주지 못하는 것</h2><p class="small">아래 내용은 이 판정이 직접 증명하지 못하는 범위다. 확인되지 않은 급여량·빈도·장기 안전성을 임의로 보충하지 않는다.</p><h3>이 판정으로 말할 수 없는 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="small">야생에서 먹었다는 기록 ≠ 무제한 급여 권장. 사람용 영양자료 ≠ 육지거북 독성 한계치. 근거 부족 ≠ 안전.</p></section>{wild_section}<section class="card evidence-deep"><div class="sectioneyebrow">더 깊이 보기</div><h2>판정 근거 자세히 보기</h2><p class="ko-evidence">여기부터는 결론의 근거를 직접 확인하고 싶은 사람을 위한 상세 자료다. 판정에 사용한 근거를 하나씩 확인한다. <b>직접 근거</b>는 해당 육지거북·식물·질문을 직접 다룬 자료이고, <b>간접 근거</b>는 다른 동물이나 가까운 식물에서 얻은 참고 자료다. 간접 근거만으로 안전성을 확정하지 않는다.</p><p class="en-evidence" hidden>This section explains the evidence behind the conclusion. <b>Direct evidence</b> addresses the target question directly. <b>Indirect evidence</b> comes from other animals or related plants and is used only as context; indirect evidence alone does not establish safety.</p><div class="legend"><b>근거 읽는 법</b><span><strong>직접 근거</strong> 해당 대상·질문을 직접 다룸</span><span><strong>전문 사육 근거</strong> 육지거북 사육을 전문적으로 다루는 자료</span><span><strong>근연·맥락 근거</strong> 참고 가능하지만 그대로 전이할 수 없음</span><span><strong>성분 근거</strong> 성분 존재를 보여줄 뿐 급여 안전성을 단독 증명하지 않음</span></div>{evidence_cards_html}</section><section class="card"><h2>영양성분은 참고자료로 확인하세요</h2><p class="nutrition-rule"><b>중요:</b> 영양성분표는 식물의 영양적 맥락을 이해하기 위한 보조자료다. Ca:P, 섬유질 또는 특정 영양소 수치가 좋아도 독성·항영양성분·식물동정·대상종 근거를 대신하지 않으며, 이 수치만으로 급여 등급을 올리지 않는다.</p>{nutrition_html}</section><section class="card"><h2>원논문·학술자료</h2><p>여기에는 연구자가 검토한 학술논문과 원자료를 모은다. 어려운 논문을 전부 읽지 않아도 되도록 먼저 핵심을 풀어 설명하고, 직접 확인하고 싶은 사람을 위해 DOI·PMID와 원문 연결도 함께 제공한다.</p><p class="small">전문 사육자료와 동료심사 논문은 성격이 다르므로 같은 수준의 근거로 취급하지 않는다.</p>{scholarly_html}</section><section class="card"><h2>다른 식물도 확인하기</h2><div class="relatedgrid">{related_html}</div><p class="small"><b>탐색 링크:</b> 같은 과·카테고리의 다른 항목으로 이동하기 위한 기능이다. 식물학적 유사성이 동일한 급여 안전성·영양가·권장도를 뜻하지 않는다.</p></section><section class="card"><h2>이 판정 공유하기</h2><div class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../all-plants/">다른 먹이 찾기 →</a></div></section><nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></main><script src="../../language-toggle.js?v=20260926-3" defer></script></body></html>'''
+<style>{CSS}</style></head><body>
+<a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><a href="../../index.html">← 다른 식물 검색</a><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content" data-plant-id="{esc(pid)}"><div class="planthead"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{decision_html}{practical_html}{species_specific_html}{scope_html}{deep_html}{nutrition_html}{footer_html}<nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></main><script src="../../language-toggle.js?v=20260926-3" defer></script></body></html>'''
     (d/"index.html").write_text(doc,encoding="utf-8")
 
 # Keep search-engine discovery synchronized with the same reviewed/public set

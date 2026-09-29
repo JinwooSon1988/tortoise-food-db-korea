@@ -1,100 +1,94 @@
-import json
-from pathlib import Path
-root=Path(__file__).resolve().parents[1]
-js=(root/'plant-detail-v56.js').read_text(encoding='utf-8')
-css=(root/'plant-detail-v56.css').read_text(encoding='utf-8')
-inj=(root/'scripts/inject_plant_detail_v56.py').read_text(encoding='utf-8')
-pages=list((root/'plant').glob('*/index.html'))
-plants=json.loads((root/'data/plants.json').read_text(encoding='utf-8'))
-assessments=json.loads((root/'data/public_assessments.json').read_text(encoding='utf-8'))
-if isinstance(assessments,dict): assessments=assessments.get('assessments',assessments.get('records',[]))
-public_groups={'Mediterranean_Testudo','Tortoise_general','Herbivorous_reptile_general'}
-assessed_ids={a['plant_id'] for a in assessments if a.get('species_group') in public_groups}
-public_ids={p['id'] for p in plants if p.get('identity_status')!='candidate_name' and p.get('id') in assessed_ids}
-expected=len(public_ids)
-page_ids={p.parent.name for p in pages}
-missing=sorted(public_ids-page_ids)
-assert not missing, ('missing reviewed public pages',missing)
-for x in ['국명','영명','학명','과명','적용 대상','근거 등급','판정 보류','급여하지 않음','검증된 이미지 준비 중','사진과 유통명만으로 식물 종을 확정하지 않는다.']:
-    assert x in js,x
-assert 'verified_plant_images_v56.json' in js
-assert 'exact_species' in js
-generator=(root/'scripts/generate_static_pages.py').read_text(encoding='utf-8')
+"""Plant detail page contract, checked on the generated pages themselves.
 
-assert '육지거북 먹이 판정' in generator
-assert '이 판정은 어디까지 믿을 수 있을까?' in generator
-assert "'식물동정 주의' if identity_warning else '식물동정 확인'" in generator
-assert "identity-alert" in generator and "identity-note" in generator
-assert '이 판정이 말해주지 못하는 것' in generator
-assert '판정 근거 자세히 보기' in generator
-assert generator.index('이 판정이 말해주지 못하는 것') < generator.index('판정 근거 자세히 보기')
-assert '영양성분은 참고자료로 확인하세요' in generator
-assert '원논문·학술자료' in generator
-assert '다른 식물도 확인하기' in generator
-assert 'exact_by_plant' in generator
-assert 'assessment_scope' in generator and 'exact_species' in generator
-assert '종별 특이사항' in generator
-assert '특정 종에서만 확인된 근거다. 다른 육지거북 종에도 같다고 가정하지 않는다.' in generator
-assert 'species-specific' in generator and 'speciesexception' in generator
-assert '<div class="decisionlabel">3초 결론</div>' in generator
-assert '세부 대상종은 아래 원자료에서 확인' in generator
-assert 'taxon_note=' not in generator
-assert '먹여도 되는지 먼저 확인하고, 필요한 경우 근거와 한계까지 내려가며 확인할 수 있다.' in generator
-assert 'nutrition_section_no' not in generator
-assert 'scholarly_section_no' not in generator
-assert 'related_section_no' not in generator
-assert '<h2>6. 야생에서는 실제로 어떻게 먹었나?</h2>' not in generator
-assert '<h2>영양성분은 참고자료로 확인하세요</h2>' in generator
-assert '<h2>원논문·학술자료</h2>' in generator
-assert generator.count('<h2>이 판정이 말해주지 못하는 것</h2>') == 1
-assert generator.index('<h2>이 판정이 말해주지 못하는 것</h2>') < generator.index('<h2>판정 근거 자세히 보기</h2>')
-assert generator.index('<h2>판정 근거 자세히 보기</h2>') < generator.index('<h2>영양성분은 참고자료로 확인하세요</h2>')
-assert 'interpretation_html=' not in generator
-assert '<h2>실제 급여에서는 이렇게 보세요</h2>' in generator
-assert '<b>근거가 말하지 않는 것</b>' in generator
-assert '야생 섭식 기록도 무제한 급여를 뜻하지 않는다.' in generator
-assert 'class="gradekey"' in generator
-assert '<b>A</b> 혼합식 활용' in generator
-assert '<b>B</b> 제한적 혼합' in generator
-assert '<b>C</b> 가끔 보조' in generator
-assert '<b>D</b> 급여 제외' in generator
-assert 'grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0' in generator
-assert '근거가 다루는 부위</b><strong>{esc(part_note)}' not in generator
-assert '확인된 부위·상태</b><p>{esc(part_note)}' in generator
-assert 'class="skiplink" href="#main-content"' in generator
-assert '<main id="main-content">' in generator
-assert 'a:focus-visible,button:focus-visible' in generator
-assert '.decision{{padding:26px 28px' in generator
-assert '.practical{{margin-top:16px}}' in generator
-assert '.detailnav{{margin-bottom:22px;padding-bottom:12px}}' in generator
-assert '.decisionwhy{{font-size:15px;line-height:1.62}}' in generator
-assert 'decisionrule' in generator
-assert '<b>결론</b><strong>{esc(label)}</strong>' not in generator
-assert '<b>판정 핵심</b><br>{esc(summary)}' not in generator
-assert '직접 {direct_count} · 전문 사육 {husbandry_count} · 간접·맥락 {indirect_count}' in generator
-assert 'class="card evidence-deep"' in generator
-assert '여기부터는 결론의 근거를 직접 확인하고 싶은 사람을 위한 상세 자료다.' in generator
-# Evidence-only architecture: retired recommendation/recording routes must never
-# be reintroduced into the shared plant-detail enhancer.
-for retired in ['today/','meal/?add=','그래서 오늘 뭐 먹이지?','이 먹이 급여기록에 추가']:
-    assert retired not in js, retired
-assert "glob('*/index.html')" in inj
-assert '@media(max-width:620px)' in css
-registry=json.loads((root/'data/verified_plant_images_v56.json').read_text(encoding='utf-8'))
-master={p['id']:p for p in plants}
-required=set(registry['policy']['required_fields'])
-seen=set()
+Information hierarchy on every page:
+  name → grade → meaning → why → practical reading → species notes → scope / identity / limits
+  → evidence (papers first) → nutrition → related.
+Grade equality with the home search is enforced by scripts/qa_verdict_consistency.py.
+"""
+import json, re
+from pathlib import Path
+
+root = Path(__file__).resolve().parents[1]
+plants = json.loads((root / 'data/plants.json').read_text(encoding='utf-8'))
+assessments = json.loads((root / 'data/public_assessments.json').read_text(encoding='utf-8'))
+if isinstance(assessments, dict): assessments = assessments.get('assessments', assessments.get('records', []))
+generator = (root / 'scripts/generate_static_pages.py').read_text(encoding='utf-8')
+inj = (root / 'scripts/inject_plant_detail_v56.py').read_text(encoding='utf-8')
+assessed_ids = {a['plant_id'] for a in assessments}
+public_ids = {p['id'] for p in plants if p.get('identity_status') != 'candidate_name' and p['id'] in assessed_ids}
+pages = {p.parent.name: p.read_text(encoding='utf-8') for p in (root / 'plant').glob('*/index.html')}
+missing = sorted(public_ids - set(pages))
+assert not missing, ('missing reviewed public pages', missing)
+
+# Generator uses the canonical registry and the shared selection rule; no per-plant verdict overrides.
+assert 'from public_verdict import' in generator and 'representative(rows)' in generator
+assert 'SPECIAL=' not in generator, 'hand-written per-plant verdict overrides are not allowed'
+assert 'assessments_korea_addendum' not in generator
+# Retired runtime enhancers must stay retired (they re-derived verdicts from legacy data and a species selector).
+assert not (root / 'plant-detail-v56.js').exists() and not (root / 'ibera-direct-evidence-v56.js').exists()
+assert "glob('*/index.html')" in inj and 'RETIRED' in inj
+
+errors = []
+for pid in sorted(public_ids):
+    t = pages[pid]
+    main = t[t.index('<main'):]
+    def pos(token):
+        i = main.find(token)
+        return i if i >= 0 else None
+    # First screen: name, then the decision card with grade, meaning, reason.
+    h1, decision, meaning, why = pos('<h1>'), pos(' decision" data-grade='), pos('class="meaning"'), pos('class="decisionwhy')
+    if None in (h1, decision, meaning, why) or not (h1 < decision < meaning < why):
+        errors.append(f'{pid}: first screen must be name → grade → meaning → why'); continue
+    # Nothing heavy may sit between the name and the decision.
+    if re.search(r'<section', main[h1:main.rfind('<section', 0, decision)]):
+        errors.append(f'{pid}: a section pushes the decision below the plant name')
+    later = [pos(x) for x in ('<h2>적용 범위와 한계</h2>', '<h2>판정 근거 자세히 보기</h2>', '<h2>영양성분은 참고자료로 확인하세요</h2>', '<h2>다른 식물도 확인하기</h2>')]
+    if None in later or later != sorted(later) or later[0] < why:
+        errors.append(f'{pid}: scope/limits → evidence → nutrition → related order broken')
+    sp = pos('<h2>종별 특이사항</h2>')
+    if sp is not None and not (why < sp < later[0]):
+        errors.append(f'{pid}: species notes must follow the default verdict and precede scope/limits')
+    # Evidence numbers live in the evidence section, not in the first-screen decision card.
+    decision_card = main[decision:main.find('</section>', decision)]
+    if '직접 ' in decision_card and '근거 구성' in decision_card or 'quickfacts' in decision_card:
+        errors.append(f'{pid}: evidence counts must not crowd the decision card')
+    # Papers are listed before specialist/database sources.
+    kinds = re.findall(r'<article class="evcard"><div class="evhead"><span class="(paper|)">', main)
+    if kinds != sorted(kinds, key=lambda k: 0 if k == 'paper' else 1):
+        errors.append(f'{pid}: peer-reviewed papers must be listed first')
+    if 'scholarly' in main or '<h2>원논문·학술자료</h2>' in main:
+        errors.append(f'{pid}: papers must not be repeated in a second section')
+    for retired in ('today/', 'meal/?add=', '그래서 오늘 뭐 먹이지?', '이 먹이 급여기록에 추가', 'animalSelect', 'tortoiseAnimalTaxon'):
+        if retired in t:
+            errors.append(f'{pid}: retired feature {retired}')
+    if 'class="skiplink" href="#main-content"' not in t or '<main id="main-content"' not in t:
+        errors.append(f'{pid}: skip link / main landmark missing')
+if errors:
+    raise SystemExit('FAIL: plant detail contract\n- ' + '\n- '.join(errors[:60]))
+
+# Direct Ibera wild observations render statically on the matching pages.
+ibera = json.loads((root / 'data/ibera_direct_feeding_evidence_v56.json').read_text(encoding='utf-8'))
+for o in ibera['observations']:
+    if o.get('plant_id') in public_ids:
+        assert 'data-ibera-direct' in pages[o['plant_id']], o['plant_id']
+
+registry = json.loads((root / 'data/verified_plant_images_v56.json').read_text(encoding='utf-8'))
+master = {p['id']: p for p in plants}
+required = set(registry['policy']['required_fields'])
+seen = set()
 for image in registry['images']:
-    pid=image['plant_id']
-    assert required <= set(image), (pid, required-set(image))
+    pid = image['plant_id']
+    assert required <= set(image), (pid, required - set(image))
     assert pid not in seen, pid
     seen.add(pid)
     assert pid in master, pid
-    assert image['identity_scope'] in {'exact_species','exact_subspecies','exact_variety'}, pid
+    assert image['identity_scope'] in {'exact_species', 'exact_subspecies', 'exact_variety'}, pid
     assert 'spp.' not in master[pid]['scientific'], pid
-    assert image['scientific']==master[pid]['scientific'], (pid,image['scientific'],master[pid]['scientific'])
+    assert image['scientific'] == master[pid]['scientific'], (pid, image['scientific'], master[pid]['scientific'])
     assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'), pid
     assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), pid
     assert image['license'], pid
     assert image['creator'], pid
-print(f'plant detail v5.6 evidence-only enhancer audit OK for {expected} pages; {len(seen)} verified images')
+    if pid in public_ids:
+        assert image['image_url'] in pages[pid] and image['license'] in pages[pid], f'{pid}: verified image or licence missing'
+print(f'plant detail v5.6 contract OK for {len(public_ids)} pages; {len(seen)} verified images')

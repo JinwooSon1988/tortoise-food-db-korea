@@ -1,14 +1,14 @@
 from pathlib import Path
 import json, re, sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from public_verdict import load_assessments, by_plant, representative, display, public_plants
+
 ROOT=Path(__file__).resolve().parents[1]
 all_plants=json.loads((ROOT/'data/plants.json').read_text(encoding='utf-8'))
-assessment_files=[ROOT/'data/public_assessments.json']
-assessments=json.loads(assessment_files[0].read_text(encoding='utf-8'))
-if isinstance(assessments,dict): assessments=assessments.get('assessments',assessments.get('records',[]))
-public_groups={'Mediterranean_Testudo','Tortoise_general','Herbivorous_reptile_general'}
-assessed_ids={a['plant_id'] for a in assessments if a.get('species_group') in public_groups}
-plants=[p for p in all_plants if p.get('identity_status')!='candidate_name' and p.get('id') in assessed_ids]
+assessments=load_assessments()
+rows_by=by_plant(assessments)
+plants=public_plants(all_plants,assessments)
 errors=[]
 
 for p in plants:
@@ -17,14 +17,17 @@ for p in plants:
     if not path.exists():
         errors.append(f'{pid}: detail page missing'); continue
     text=path.read_text(encoding='utf-8')
-    if '식물동정' not in text: errors.append(f'{pid}: identity warning missing')
-    if not any(x in text for x in ('현재 이 판정이 말해주지 못하는 것','이 판정이 말해주지 못하는 것와 해석 주의')) and pid not in {'mallow'}: errors.append(f'{pid}: evidence-limit card missing')
-    verdicts=re.findall(r'(?:A · 혼합식 활용 가능|B · 제한적 혼합 급여|C · 가끔 보조 급여|D · 급여하지 않음|🟢[^<]+|🟡[^<]+|⚪[^<]+|🔴[^<]+|판단보류 / [^<]+)',text)
-    if not verdicts: errors.append(f'{pid}: public verdict marker missing')
+    g=display(representative(rows_by.get(pid,[])))
+    if not re.search(r'data-identity="(alert|note)"',text) or '식물동정' not in text: errors.append(f'{pid}: plant-identity boundary missing')
+    if '<h3>이 판정이 말해주지 못하는 것</h3>' not in text: errors.append(f'{pid}: evidence-limit block missing')
+    if '근거 부족 ≠ 안전' not in text: errors.append(f'{pid}: "근거 부족 ≠ 안전" principle missing')
+    if g['label'] not in text or g['meaning'] not in text: errors.append(f'{pid}: public verdict label/meaning missing')
+    for legacy in ('🟢','🟡','🟠','🔴','⚪','판단보류 / '):
+        if legacy in text: errors.append(f'{pid}: legacy verdict marker {legacy}')
     if pid=='mallow':
-        separated=('Malva parviflora' in text and ('서로 다른 종' in text or '자동' in text or '직접 적용하지 않는다' in text))
+        separated=('Malva parviflora' in text and ('서로 다른 종' in text or '다른 종이다' in text or '직접 적용하지 않는다' in text))
         if not separated: errors.append('mallow: explicit M. parviflora non-transfer warning missing')
-        if not any(('판정 보류' in x or '판단보류' in x or x.startswith('⚪')) for x in verdicts): errors.append('mallow: must remain hold/unresolved')
+        if 'data-identity="alert"' not in text: errors.append('mallow: unresolved Korean retail mapping must show the strong identity warning')
 
 if errors:
     print('FAIL: verdict card audit')
@@ -34,4 +37,4 @@ candidate_ids={p['id'] for p in all_plants if p.get('identity_status')=='candida
 for pid in candidate_ids:
     if (ROOT/'plant'/pid/'index.html').exists():
         print('FAIL: candidate detail page published',pid); sys.exit(1)
-print(f'PASS: {len(plants)} non-candidate verdict cards follow safety invariants; {len(candidate_ids)} candidates withheld across {len(assessment_files)} assessment files')
+print(f'PASS: {len(plants)} non-candidate verdict cards follow safety invariants; {len(candidate_ids)} candidates withheld; canonical registry data/public_assessments.json')

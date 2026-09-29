@@ -4,30 +4,42 @@ on:
   pull_request:
     paths:
       - 'data/plants.json'
-      - 'data/assessments.json'
-      - 'data/assessments_korea_addendum*.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/curated_identity_notes.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/ibera_direct_feeding_evidence_v56.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
       - 'scripts/inject_plant_detail_v56.py'
-      - 'plant-detail-v56.js'
-      - 'plant-detail-v56.css'
+      - 'scripts/public_verdict.py'
+      - 'verdict-core.js'
+      - 'index.html'
       - 'scripts/audit_verdict_cards.py'
+      - 'scripts/audit_plant_detail_v56.py'
+      - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
   push:
     branches: [main]
     paths:
       - 'data/plants.json'
-      - 'data/assessments.json'
-      - 'data/assessments_korea_addendum*.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/curated_identity_notes.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/ibera_direct_feeding_evidence_v56.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
       - 'scripts/inject_plant_detail_v56.py'
-      - 'plant-detail-v56.js'
-      - 'plant-detail-v56.css'
+      - 'scripts/public_verdict.py'
+      - 'verdict-core.js'
+      - 'index.html'
       - 'scripts/audit_verdict_cards.py'
+      - 'scripts/audit_plant_detail_v56.py'
+      - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
   workflow_dispatch:
@@ -47,11 +59,9 @@ jobs:
           python-version: '3.12'
       - name: Generate general plant detail pages
         run: python scripts/generate_static_pages.py
-      - name: Restore hand-curated Korean identity pages
-        run: git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
       - name: Add discovery metadata to curated pages
         run: python scripts/patch_curated_social_metadata.py
-      - name: Apply v5.6 identity and feeding display
+      - name: Strip retired runtime verdict enhancers
         run: python scripts/inject_plant_detail_v56.py
       - name: Audit structural integrity
         run: python scripts/audit_plant_integrity.py
@@ -59,6 +69,8 @@ jobs:
         run: python scripts/audit_verdict_cards.py
       - name: Audit v5.6 detail contract
         run: python scripts/audit_plant_detail_v56.py
+      - name: Audit home/detail verdict consistency
+        run: python scripts/qa_verdict_consistency.py
       - name: Generate derived coverage artifacts
         run: |
           python scripts/qa_public_content_coverage.py
@@ -76,7 +88,6 @@ jobs:
       - name: Verify generated pages are current
         run: |
           python scripts/generate_static_pages.py
-          git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
           python scripts/qa_public_content_coverage.py

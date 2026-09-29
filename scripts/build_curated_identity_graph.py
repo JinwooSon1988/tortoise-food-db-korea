@@ -17,7 +17,7 @@ for p in plants:
  sci=p["scientific"]
  concept="food:"+p["id"]; name="name:"+p["id"]+":curated"
  nodes += [
-  {"id":concept,"type":"food_concept","ko":p["ko"],"en":p["en"],"plant_part_or_form":p["category"],"market":p["market"]},
+  {"id":concept,"type":"food_concept","ko":p["ko"],"en":p["en"],"plant_part_or_form":p["category"],"market":p.get("market")},
   {"id":name,"type":"submitted_botanical_name","name":sci,"family":p["family"],"identity_status":p["identity_status"]}
  ]
  edges.append({"from":concept,"to":name,"relation":"labelled_with"})
