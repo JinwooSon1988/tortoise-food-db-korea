@@ -92,3 +92,8 @@ for image in registry['images']:
     if pid in public_ids:
         assert image['image_url'] in pages[pid] and image['license'] in pages[pid], f'{pid}: verified image or licence missing'
 print(f'plant detail v5.6 contract OK for {len(public_ids)} pages; {len(seen)} verified images')
+
+# Mobile verdict card stays compact while retaining the A/B/C/D context key.
+assert '.decision{padding:14px 15px}' in generator
+assert '.gradekey{gap:3px 8px;margin-top:9px;padding-top:7px;font-size:10px}' in generator
+assert 'aria-label="급여 등급 안내"' in generator
