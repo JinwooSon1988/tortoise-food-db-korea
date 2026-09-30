@@ -154,6 +154,16 @@ for p in public:
         errors.append(f"{pid}: ordinary plant must show the neutral identity note, not the warning")
     if "직접 근거</b>" not in text or "간접 근거</b>" not in text:
         errors.append(f"{pid}: direct vs indirect evidence distinction missing")
+    linked = [evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids", [])) if eid in evidence_by_id]
+    expected_direct = sum(1 for e in linked if e.get("directness") == "direct")
+    expected_context = sum(1 for e in linked if e.get("directness") != "direct")
+    if f"<span>직접 {expected_direct}</span>" not in text:
+        errors.append(f"{pid}: displayed direct-evidence count is not traceable to canonical evidence")
+    if expected_context and "간접·맥락" not in text:
+        errors.append(f"{pid}: contextual evidence exists but is not visibly distinguished")
+    for e in linked:
+        if e.get("source_type") in ("plant_identity_context", "official_botanical_database", "official_agriculture_database") and e.get("directness") == "direct":
+            errors.append(f"{pid}: identity/agriculture context must not be classified as direct feeding evidence ({e.get('id')})")
     if text.count("급여량·빈도·장기 안전성") > 1:
         errors.append(f"{pid}: dose/frequency/long-term boundary repeated")
     for retired in ("plant-detail-v56.js", "ibera-direct-evidence-v56.js", "tortoiseAnimalTaxon", "animalSelect"):
