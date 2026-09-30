@@ -41,7 +41,7 @@ body{background:radial-gradient(circle at 50% -10%,#eaf3ec 0,#f7f9f6 38%,#f5f7f4
 <footer class="footer">거북밥 · 근거 기반 육지거북 먹이 데이터베이스</footer></main><script src="./verdict-core.js?v=20260930-1"></script><script src="./language-toggle.js?v=20260924-3" defer></script><script src="./search-live.js?v=20260930-1"></script><script src="./traffic-counter.js?v=20260920-1" defer></script><script>
 const TV=window.TortoiseVerdict,PAGE=8;let plantCatalog=[],assessmentMap=new Map(),activeFilter='all',shown=PAGE,lastRows=[];
 const input=document.getElementById('searchInput'),results=document.getElementById('searchResults'),countEl=document.getElementById('catalogCount'),searchBtn=document.getElementById('searchBtn');
-function norm(s){return(s||'').trim().replace(/\s+/g,'').toLowerCase()}
+function norm(s){return(s||'').normalize('NFKC').trim().toLowerCase().replace(/[\s·._'’\-–—()]+/g,'')}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function rowsFor(id){return assessmentMap.get(id)||[]}
 function best(id){return TV.representative(rowsFor(id))}
