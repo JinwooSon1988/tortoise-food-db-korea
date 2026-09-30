@@ -122,7 +122,7 @@ for p in plants:
     decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}"><div class="decisionlabel">급여 판정 · 지중해 Testudo 기준{"" if basis=="지중해 Testudo 근거" else " · "+esc(basis)}</div><div class="verdictline"><span class="gradeletter" aria-hidden="true">{esc(grade)}</span><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
 
     # 2) Practical reading (only when there is a representative assessment).
-    practical_html=(f'''<section class="card practical"><h2>실제 급여에서는 이렇게 보세요</h2><div class="practicalgrid"><div><b>급여 역할</b><p>{esc(role or "현재 근거 범위 안에서 보조적으로 해석한다.")}</p></div><div><b>근거가 다룬 부위·상태</b><p>{esc(part_note)}</p></div></div></section>''' if a else "")
+    practical_html=(f'''<section class="card practical"><h2>급여할 때 확인할 핵심</h2><div class="practicalgrid"><div><b>식단에서의 역할</b><p>{esc(role or "현재 근거 범위 안에서 보조적으로 해석한다.")}</p></div><div><b>근거가 확인한 부위·상태</b><p>{esc(part_note)}</p></div></div></section>''' if a else "")
 
     # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
@@ -145,7 +145,7 @@ for p in plants:
         identity_text="이름과 학명은 검색 기준이다. 실제 급여할 식물의 종과 농약·오염 여부는 따로 확인한다."
         identity_html=f'''<div class="identity-note" data-identity="note"><h3>식물동정 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{photo_html}</div>'''
     limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
-    scope_html=f'''<section class="card scopecard" id="scope"><h2>적용 범위와 한계</h2><div><h3>적용 범위</h3><p>{esc(scope)}</p></div>{identity_html}<div><h3>이 판정이 말해주지 못하는 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></section>'''
+    scope_html=f'''<section class="card scopecard" id="scope"><h2>이 판정의 적용 범위</h2><div><h3>어디까지 적용되나</h3><p>{esc(scope)}</p></div>{identity_html}<div><h3>근거로 확인되지 않은 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></section>'''
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
     ordered=sorted(linked_evidence,key=lambda e:source_kind(e)[0])
