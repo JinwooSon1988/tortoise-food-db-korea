@@ -504,6 +504,43 @@ def evidence_limit_display(value):
         elif "unlisted plant parts or related taxa" in v:
             base+=" 명시되지 않은 식물 부위나 근연 분류군으로 판정을 확대하지 않는다."
         return base
+    if v.startswith("Cattle toxicity cannot be converted"):
+        return "소의 독성 자료를 이베라그리스육지거북의 독성·안전 용량, 급여 빈도나 비율로 환산할 수 없다. 또한 식용 들깨의 모든 품종이 같은 페릴라케톤 농도를 가진다고 확정하지 않는다."
+    if v.startswith("Does not by itself establish toxicological safety"):
+        return "이 자료만으로 독성학적 안전성·속 전체 종의 동등성·정확한 사육 급여 비율을 확정할 수 없으며, 동료평가 학술근거를 대체하지 않는다."
+    if v.startswith("Does not demonstrate direct toxicity of sweet-potato leaves"):
+        return "고구마 잎의 이베라그리스육지거북 직접 독성을 입증하지 않으며, 우발적 섭취를 곧 중독으로 볼 근거도 아니다. 잎과 덩이뿌리를 동일하게 취급하지 않는다."
+    if v.startswith("Does not directly determine captive feeding quantity"):
+        return "이 자료는 이베라그리스육지거북의 사육 환경 급여량을 직접 확정하지 않는다."
+    if v.startswith("Does not directly test mizuna"):
+        return "미즈나·타쏘이·코마츠나 품종을 직접 시험한 자료가 아니며, 이베라그리스육지거북에 특이적인 급여 비율도 확정하지 않는다."
+    if v.startswith("Does not establish Mediterranean Testudo-specific dose"):
+        extra=" 과실과 잎의 안전성을 서로 동일하다고 보지 않는다." if "equivalence of the fruit with the leaves" in v else ""
+        return "이 자료는 지중해 Testudo에 특이적인 급여량·정확한 급여 빈도·식단 비율·무제한 급여를 확정하지 않는다."+extra
+    if v.startswith("Does not establish a Mediterranean Testudo-specific percentage"):
+        return "이 자료는 지중해 Testudo에 특이적인 식단 비율이나 무제한 급여를 확정하지 않는다. 잎과 과실을 구분하며 여러 식물 분류군의 내용을 서로 동일하게 적용하면 안 된다."
+    if v.startswith("Does not establish a Testudo graeca ibera toxic dose"):
+        return "이 자료는 이베라그리스육지거북의 독성 용량·임상 중독 역치 또는 우발적으로 한입 먹은 경우의 중독 여부를 확정하지 않는다."
+    if v.startswith("Does not establish a Testudo graeca ibera-specific diet percentage"):
+        return "이 자료는 이베라그리스육지거북에 특이적인 식단 비율·고정 급여 빈도·무제한 급여를 확정하지 않는다. 성숙한 씨앗은 어린 풀과 같지 않으며 단백질이 높아 먹이지 않도록 한 원자료의 경고를 따른다."
+    if v.startswith("Does not establish a Testudo graeca ibera-specific feeding percentage"):
+        return "이 자료는 이베라그리스육지거북에 특이적인 급여 비율이나 고정 급여 빈도를 확정하지 않는다. 마른 씨앗 이삭은 풀·건초와 같지 않으며 눈이나 입에 상처를 낼 수 있어 제거하도록 한 원자료의 경고를 따른다."
+    if v.startswith("Does not establish a Testudo graeca ibera-specific intake percentage"):
+        return "이 자료는 이베라그리스육지거북에 특이적인 섭취 비율을 확정하지 않으며 모든 품종과 내생균 상태가 동등하다고 증명하지 않는다."
+    if v.startswith("Does not establish a Testudo graeca ibera-specific percentage"):
+        return "이 자료는 이베라그리스육지거북에 특이적인 급여 비율·고정 급여 빈도·무제한 급여 등 해당 문헌이 직접 확정하지 않은 정량적 안전 범위를 보장하지 않는다."
+    if v.startswith("Does not establish a Testudo graeca ibera-specific toxic dose"):
+        return "이 자료는 이베라그리스육지거북에 특이적인 독성 용량을 확정하지 않으며 모든 관련 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다."
+    if v.startswith("Does not establish a staple percentage"):
+        return "이 자료는 주식 비율·무제한 급여·지중해 Testudo에 특이적인 급여량 또는 이름이 비슷한 근연종의 안전성을 확정하지 않는다."
+    if v.startswith("Does not establish a toxic dose"):
+        return "이 자료는 독성 용량·임상 독성·안전한 사육 급여 비율 또는 Testudo에 특이적인 이상반응을 확정하지 않는다."
+    if v.startswith("Does not establish an Ibera-specific percentage"):
+        return "이 자료는 이베라그리스육지거북에 특이적인 급여 비율이나 빈도를 확정하지 않으며 같은 일반명 때문에 다른 식물 분류군에 판정을 옮겨 적용하면 안 된다."
+    if v.startswith("Does not establish captive diet percentage"):
+        return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북에 대한 직접적인 안전 용량을 확정하지 않는다."
+    if v.startswith("Does not establish captive diet percentages"):
+        return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 해당 속의 모든 종 사이 안전성 동등성을 확정하지 않는다."
     return v
 
 def evidence_role(e):
