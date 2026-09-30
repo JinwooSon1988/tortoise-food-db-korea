@@ -118,9 +118,12 @@ for p in public:
     expected_tone = g["tone"]
     if f'class="card {expected_tone} decision"' not in text:
         errors.append(f"{pid}: decision tone must match canonical verdict ({expected_tone})")
+    decision_start = text.find(' decision" data-grade=')
+    decision_end = text.find('</section>', decision_start)
+    decision_text = text[decision_start:decision_end] if decision_start >= 0 and decision_end >= 0 else ""
     if g["grade"] == "보류":
-        if "보류는 안전하다는 뜻이 아니다" not in text:
-            errors.append(f"{pid}: hold verdict must explicitly say hold does not mean safe")
+        if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다")):
+            errors.append(f"{pid}: hold safety boundary must remain visible in the decision card")
     elif g["grade"] == "D":
         if "급여하지 않음" not in text or "현재 판정에서는 급여 대상에서 제외한다." not in text:
             errors.append(f"{pid}: D verdict must preserve explicit do-not-feed meaning")
@@ -129,6 +132,8 @@ for p in public:
             errors.append(f"{pid}: graded verdict must not look like a hold state")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
+    if a and g["grade"] in ("B", "C", "D") and (a.get("why") or "") not in decision_text:
+        errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
     expected_basis = __import__("public_verdict").scope_label(a)
     if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
         errors.append(f"{pid}: decision label must show actual evidence scope ({expected_basis})")
