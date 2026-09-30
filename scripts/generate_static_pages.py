@@ -203,6 +203,11 @@ def part_state_display(value):
 
 def evidence_support_display(value):
     v=str(value or "").strip()
+    mixed_ko={
+        "The assessment records the Korean crop identity 근대 as Beta vulgaris subsp. cicla, linking the domestic food concept to the chard taxonomic scope.":"평가 기록은 국내 작물명 ‘근대’를 Beta vulgaris subsp. cicla로 확인하여 국내 식품 개념을 근대(chard)의 분류학적 범위와 연결한다.",
+    }
+    if v in mixed_ko:
+        return mixed_ko[v]
     exact={
         "Safe to Feed":"출처는 급여 가능(Safe to Feed)으로 분류한다.",
         "Safe to Feed as part of a varied diet":"출처는 다양한 식단의 일부로 급여 가능(Safe to Feed)하다고 분류한다.",
@@ -478,6 +483,12 @@ def evidence_support_display(value):
 
 def evidence_limit_display(value):
     v=str(value or "").strip()
+    mixed_ko={
+        "This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":"이 자료는 이베라그리스육지거북에 특이적인 급여 비율·고정 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물과의 동등성도 입증하지 않는다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
+        "The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.":"이 결론을 Mentha속 전체로 확대하면 안 된다. 같은 출처는 페퍼민트(Mentha × piperita)와 페니로열(Mentha pulegium)을 별도로 제외하므로, 국내에서 ‘민트’라는 일반명으로 판매되는 제품은 급여 결론 전에 종 확인이 필요하다.",
+    }
+    if v in mixed_ko:
+        return mixed_ko[v]
     exact={
         "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.":"이 자료 하나만으로 정확한 사육 급여 비율·고정 급여 빈도·무제한 급여 또는 자료가 실제로 다룬 동물 분류군·식물 정체성·식물 부위를 넘어선 안전성 동등성을 확정할 수 없다.",
         "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.":"전문 식물 DB 지침은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 정확한 사육 급여 비율·고정 빈도·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 안전성 동등성을 확정하지 않는다.",
