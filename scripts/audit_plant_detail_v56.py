@@ -210,3 +210,9 @@ for token in (
     '꼬투리나 콩알 급여·무제한 급여',
 ):
     assert token in generator, f'missing retail/part boundary: {token}'
+
+# Reader-facing evidence limitations must never silently fall through as raw English.
+assert 'def evidence_limit_display(value):' in generator, 'evidence limitation display helper missing'
+assert 'return v' in generator, 'expected explicit fallback in evidence limitation helper'
+# Any future evidence limitation that lacks a Korean rendering must be caught during generation QA,
+# rather than leaking into the Korean public UI.
