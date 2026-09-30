@@ -7,7 +7,8 @@
   with one copy of each major section.
 - Species-specific assessments never become the representative verdict.
 """
-import json, re, subprocess, sys
+import json
+import html, re, subprocess, sys
 from collections import Counter
 from pathlib import Path
 
@@ -187,6 +188,16 @@ for p in public:
         errors.append(f"{pid}: contextual evidence exists but is not visibly distinguished")
     if linked and "이 자료의 역할" not in text:
         errors.append(f"{pid}: evidence cards must explain each source's role in plain Korean")
+    # Every linked public source is traceable: URL first, then DOI/PMID fallback.
+    if linked and text.count('class="sourceopen"') < len(linked):
+        errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
+    for e in linked:
+        expected_url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
+        if not expected_url:
+            errors.append(f"{pid}: linked evidence has no traceable source locator ({e.get('id')})")
+        elif f'href="{html.escape(str(expected_url), quote=True)}"' not in text:
+            errors.append(f"{pid}: evidence source action does not resolve to canonical locator ({e.get('id')})")
+
     traceable = [e for e in linked if e.get("url") or e.get("doi") or e.get("pmid")]
     if traceable and text.count("원문 보기") < len(traceable):
         errors.append(f"{pid}: every traceable evidence record must expose a clear source action")
