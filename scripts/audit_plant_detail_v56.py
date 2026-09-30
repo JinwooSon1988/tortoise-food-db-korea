@@ -195,3 +195,11 @@ for token in (
     '피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며',
 ):
     assert token in generator, f'missing plant-part/taxon boundary: {token}'
+
+# Clinical/exposure limitations must remain conservative and distinguish evidence from poisoning claims.
+for token in (
+    '같은 출처가 사료로 적합하지 않다고 명시한다.',
+    '독성 용량·임상 독성·안전한 사육 식단 비율',
+    '우발적으로 한입 먹었다는 사실만으로 중독이 발생한다고 입증하지도 않는다.',
+):
+    assert token in generator, f'missing clinical/exposure boundary: {token}'
