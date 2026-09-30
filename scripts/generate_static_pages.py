@@ -157,7 +157,7 @@ for p in plants:
         identity_text="이름과 학명은 검색 기준이다. 실제 급여할 식물의 종과 농약·오염 여부는 따로 확인한다."
         identity_html=f'''<div class="identity-note" data-identity="note"><h3>식물동정 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{photo_html}</div>'''
     limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
-    scope_html=f'''<section class="card scopecard" id="scope"><h2>판정 범위와 주의사항</h2><details class="scopefold"><summary>근거가 어디까지 적용되는지 확인</summary><div class="scopebody"><div><h3>적용 범위</h3><p>{esc(scope)}</p></div>{identity_html}<div><h3>근거로 확인되지 않은 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></div></details></section>'''
+    scope_html=f'''<section class="card scopecard" id="scope"><h2>판정 범위와 주의사항</h2>{identity_html if identity_warning else ""}<details class="scopefold"><summary>근거가 어디까지 적용되는지 확인</summary><div class="scopebody"><div><h3>적용 범위</h3><p>{esc(scope)}</p></div>{"" if identity_warning else identity_html}<div><h3>근거로 확인되지 않은 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></div></details></section>'''
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
     ordered=sorted(linked_evidence,key=lambda e:source_kind(e)[0])
