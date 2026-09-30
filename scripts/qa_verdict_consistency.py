@@ -150,6 +150,12 @@ for p in public:
     has_alert, has_note = 'data-identity="alert"' in text, 'data-identity="note"' in text
     if high_risk and not has_alert:
         errors.append(f"{pid}: identity risk in data but no strong identity warning")
+    if high_risk and has_alert:
+        scope_start = text.find('<section class="card scopecard"')
+        fold_start = text.find('<details class="scopefold"', scope_start)
+        alert_start = text.find('data-identity="alert"', scope_start)
+        if min(scope_start, fold_start, alert_start) < 0 or not (scope_start < alert_start < fold_start):
+            errors.append(f"{pid}: high-risk identity warning must remain visible above the collapsed scope detail")
     if not high_risk and (has_alert or not has_note):
         errors.append(f"{pid}: ordinary plant must show the neutral identity note, not the warning")
     if "직접 근거</b>" not in text or "간접 근거</b>" not in text:
