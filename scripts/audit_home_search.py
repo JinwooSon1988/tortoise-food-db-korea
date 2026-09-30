@@ -103,3 +103,8 @@ assert "TV.display(a).grade==='보류'" in html
 assert '.hero{padding:30px 12px 18px}' in html
 assert '.hero{padding:12px 4px 11px}' in html
 assert '.resultcard{display:block;padding:16px 18px' in html
+
+# Safety/accessibility UX: restrictive verdict reasons stay fully visible and compact controls remain tappable.
+assert '.grade-b .why,.grade-c .why,.grade-d .why,.grade-hold .why{display:block;-webkit-line-clamp:unset;overflow:visible}' in html
+assert '.examples button{min-height:44px;' in html
+assert '.quickfilter{min-height:44px;padding:7px 12px}' in html
