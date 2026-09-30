@@ -372,6 +372,18 @@ def evidence_support_display(value):
         return "꼬투리나 콩알의 급여, 무제한 급여 또는 이베라그리스육지거북의 정량적 급여량을 뒷받침하는 자료는 아니다."
     if v=="Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.":
         return "피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며 이베라그리스육지거북 특이 급여량을 정하는 자료도 아니다."
+    if v=="This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":
+        return "통제된 이베라그리스육지거북 급여시험이 아니므로 사육 식단 비율·고정 급여 빈도·무제한 사용·육지거북 특이 독성 용량을 정할 수 없다."
+    if v=="This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":
+        return "이 전문 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 분류 등급을 정확한 사육 식단 비율·고정 빈도·독성 용량·무제한 사용 또는 명시되지 않은 식물 부위·관련 분류군의 안전성으로 환산하면 안 된다."
+    if v=="The mechanism discussion is not a Testudo graeca ibera dose-response or harm trial. The record does not independently establish a tortoise toxic dose or convert the composition rationale into proven poisoning.":
+        return "기전 설명은 이베라그리스육지거북의 용량-반응 또는 위해 시험이 아니다. 이 자료만으로 육지거북 독성 용량을 정하거나 성분상의 우려를 실제 중독이 입증된 것으로 바꿔 해석할 수 없다."
+    if v=="This is not a Mediterranean Testudo or Testudo graeca ibera feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.":
+        return "지중해 Testudo 또는 이베라그리스육지거북 급여시험이 아니며 Brassica juncea의 종 특이 식단 비율·급여 빈도·제한 없는 사용을 정하지 않는다."
+    if v=="Master concept is Taraxacum spp.; this record must not be generalized to every Taraxacum species and does not establish Ibera-specific dose, percentage, or fixed frequency.":
+        return "마스터 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종에 일반화하면 안 되며 이베라그리스육지거북 특이 급여량·식단 비율·고정 급여 빈도를 정하지 않는다."
+    if v=="Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.":
+        return "이 판정을 Tagetes 메리골드에 전이하면 안 된다. 이베라그리스육지거북 특이 식단 비율·고정 급여 빈도·무제한 사용도 정하지 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
