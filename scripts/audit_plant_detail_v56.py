@@ -42,9 +42,11 @@ for pid in sorted(public_ids):
     # Nothing heavy may sit between the name and the decision.
     if re.search(r'<section', main[h1:main.rfind('<section', 0, decision)]):
         errors.append(f'{pid}: a section pushes the decision below the plant name')
-    later = [pos(x) for x in ('<h2>이 판정의 적용 범위</h2>', '<h2>판정 근거 자세히 보기</h2>', '<h2>영양성분은 참고자료로 확인하세요</h2>', '<h2>다른 식물도 확인하기</h2>')]
+    later = [pos(x) for x in ('<h2>판정 범위와 주의사항</h2>', '<h2>판정 근거 자세히 보기</h2>', '<h2>영양성분은 참고자료로 확인하세요</h2>', '<h2>다른 식물도 확인하기</h2>')]
     if None in later or later != sorted(later) or later[0] < why:
         errors.append(f'{pid}: scope/limits → evidence → nutrition → related order broken')
+    if '<details class="scopefold">' not in main or '<summary>근거가 어디까지 적용되는지 확인</summary>' not in main:
+        errors.append(f'{pid}: secondary scope detail must stay collapsed below the core answer')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None and later[0] is not None and not (why < sp < later[0]):
         errors.append(f'{pid}: species notes must follow the default verdict and precede scope/limits')
