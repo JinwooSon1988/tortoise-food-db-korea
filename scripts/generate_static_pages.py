@@ -344,6 +344,20 @@ def evidence_support_display(value):
         return "이베라그리스육지거북의 안전성·급여량·빈도를 확정하지 않으며 다른 Oenanthe 종의 독성을 O. javanica에 그대로 전이할 근거도 아니다. 반대로 O. javanica가 사육 육지거북에게 안전한 먹이라는 사실을 입증하는 자료도 아니다."
     if v=="This specialist plant-database entry is not a controlled Testudo graeca ibera feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.":
         return "이 전문 식물 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 전이하면 안 되며, 해당 분류는 정확한 사육 식단 비율·고정 급여 빈도·무제한 사용을 정하지 않는다."
+    if v=="Does not establish captive diet percentages, feeding frequency, unlimited use, or equivalence between every species in those genera.":
+        return "사육 환경의 식단 비율·급여 빈도·무제한 사용을 정하는 자료가 아니며, 해당 속에 속한 모든 종이 서로 동등하다는 뜻도 아니다."
+    if v=="Non-quantitative observations do not establish captive diet ratios, feeding frequency, or species-level equivalence for Korean plants within the same genus.":
+        return "비정량 관찰 자료이므로 사육 식단 비율·급여 빈도를 정할 수 없고, 같은 속에 속한다는 이유만으로 국내 식물 종들이 서로 동등하다고 볼 수도 없다."
+    if v=="Wild consumption does not establish unlimited captive feeding, a precise ration, or equivalence for every Testudo graeca population.":
+        return "야생 섭식 관찰은 사육 환경의 무제한 급여나 정확한 배합 비율을 정하지 않으며 모든 Testudo graeca 개체군에 동일하게 적용된다는 뜻도 아니다."
+    if v=="Official crop identity does not establish tortoise feeding safety, oxalate effect, dose, percentage or frequency.":
+        return "공식 작물 동정 자료는 육지거북 급여 안전성·옥살산염 영향·급여량·식단 비율·급여 빈도를 입증하지 않는다."
+    if v=="Does not by itself establish toxicological safety, species-level equivalence across a genus, exact captive feeding percentages, or replace peer-reviewed evidence.":
+        return "이 자료만으로 독성학적 안전성, 같은 속 내 종들의 동등성 또는 정확한 사육 식단 비율을 확정할 수 없으며 동료평가 연구를 대체하지도 않는다."
+    if v=="In-vitro cytotoxicity of concentrated essential oil does not establish fresh-leaf oral toxicity, a tortoise toxic dose, or an accidental-exposure outcome.":
+        return "농축 정유의 시험관 내 세포독성 결과는 생잎의 경구 독성·육지거북 독성 용량·우발 노출 결과를 확정하지 않는다."
+    if v=="Rhizome/root extract findings must not be converted into a fresh flower, fruit or leaf toxic dose for tortoises.":
+        return "뿌리줄기·뿌리 추출물 결과를 육지거북이 생꽃·생열매·생잎을 먹었을 때의 독성 용량으로 환산하면 안 된다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
