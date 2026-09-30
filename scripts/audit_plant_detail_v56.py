@@ -222,6 +222,11 @@ helper_src = generator[helper_start:] if helper_end < 0 else generator[helper_st
 helper_ns = {'re': re}
 exec(helper_src, helper_ns)
 render_limit = helper_ns['evidence_limit_display']
+render_support = helper_ns['evidence_support_display']
+support_values = sorted({str(e.get('supports') or '').strip() for e in evidence_records if str(e.get('supports') or '').strip()})
+unlocalized_supports = [(raw, render_support(raw)) for raw in support_values if not re.search(r'[가-힣]', str(render_support(raw)))]
+assert not unlocalized_supports, 'reader-facing English evidence supports remain: ' + repr(unlocalized_supports[:20])
+
 unlocalized_limits = [(raw, render_limit(raw)) for raw in limit_values if not re.search(r'[가-힣]', str(render_limit(raw)))]
 assert not unlocalized_limits, 'reader-facing English evidence limitations remain: ' + repr(unlocalized_limits[:20])
 
