@@ -92,6 +92,11 @@ for p in public:
         errors.append(f"{pid}: detail grade {m.group(1)}/{m.group(2)} != canonical {g['grade']}/{(a or {}).get('verdict')}")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
+    expected_basis = __import__("public_verdict").scope_label(a)
+    if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
+        errors.append(f"{pid}: decision label must show actual evidence scope ({expected_basis})")
+    if expected_basis != "지중해 Testudo 근거" and "급여 판정 · 지중해 Testudo 기준" in text:
+        errors.append(f"{pid}: decision label overstates Testudo-specific evidence")
     for token in MAJOR:
         if text.count(token) > 1:
             errors.append(f"{pid}: duplicate major section {token}")
