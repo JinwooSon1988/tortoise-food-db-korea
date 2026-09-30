@@ -261,6 +261,13 @@ for field, renderer in (('animal_taxon', render_animal), ('plant_part_state', re
     values = sorted({str(e.get(field) or '').strip() for e in evidence_records if str(e.get(field) or '').strip()})
     leaked = [(raw, renderer(raw)) for raw in values if not re.search(r'[가-힣]', str(renderer(raw)))]
     assert not leaked, f'reader-facing English evidence {field} values remain: {leaked[:20]!r}'
+    unchanged_english = [
+        (raw, renderer(raw)) for raw in values
+        if str(renderer(raw)).strip() == raw
+        and len(re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", raw)) >= 3
+        and len(re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", raw)) > max(1, len(re.findall(r"[가-힣]+", raw))) * 2
+    ]
+    assert not unchanged_english, f'English-dominant evidence {field} values bypass localization: {unchanged_english[:20]!r}'
 
 directness_map = {'direct':'직접 근거','expert_husbandry':'전문 사육 근거','related_taxon':'근연 분류군 근거','contextual':'맥락 근거','composition_only':'성분 근거'}
 applicability_map = {'exact_taxon':'정확한 대상 분류군','species':'종 수준','mediterranean_testudo':'지중해 육지거북류(Testudo속)','tortoise_general':'육지거북 일반','herbivorous_reptile_general':'초식 파충류 일반','composition_only':'성분 자료','taxon_group':'분류군 수준'}
