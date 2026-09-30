@@ -314,6 +314,35 @@ def evidence_support_display(value):
     }
     if v in exact:
         return exact[v]
+    # Common quantitative/scope limitations.
+    if v in {
+        "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+        "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+    }:
+        return "이 자료만으로 이베라그리스육지거북(T. g. ibera)의 종 특이 급여량·고정 급여 빈도·식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 명시된 분류군과 식물 부위 범위 안에서만 적용한다."
+    if v in {
+        "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+        "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+        "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+    }:
+        return "이 자료만으로 이베라그리스육지거북(T. g. ibera)의 종 특이 급여량·고정 식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 판정을 명시되지 않은 식물 부위·관련 분류군 또는 제시된 범위 밖으로 확대하지 않는다."
+    if v=="Does not establish Mediterranean Testudo-specific dose, exact feeding frequency, diet percentage, or unlimited use.":
+        return "지중해 Testudo에 특이적인 급여량·정확한 급여 빈도·식단 비율·무제한 사용을 정하는 자료는 아니다."
+    if v=="Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.":
+        return "통제된 이베라그리스육지거북 급여시험이 아니므로 정확한 식단 비율·고정 급여 빈도·독성 용량·무제한 사용을 정할 수 없다."
+    if v=="No tortoise-specific feeding threshold or dose.":
+        return "육지거북에 특이적인 급여 임계값이나 용량을 정하는 자료는 아니다."
+    if v=="Does not directly determine captive feeding quantity for Testudo graeca ibera.":
+        return "이베라그리스육지거북의 사육 환경 급여량을 직접 결정하는 자료는 아니다."
+    if v=="Does not establish tortoise-specific safety or feeding quantity.":
+        return "육지거북에 특이적인 안전성이나 급여량을 확정하는 자료는 아니다."
+    if v=="Does not establish tortoise feeding safety or nutritional suitability.":
+        return "육지거북 급여 안전성이나 영양학적 적합성을 확정하는 자료는 아니다."
+    if v=="Does not establish tortoise-specific suitability or captive feeding quantity.":
+        return "육지거북에 특이적인 적합성이나 사육 환경 급여량을 확정하는 자료는 아니다."
+    if v=="Does not establish oral feeding safety, digestibility, dose, or suitability for tortoises.":
+        return "육지거북의 경구 급여 안전성·소화성·용량·적합성을 확정하는 자료는 아니다."
+
     # Plant-part-scope records use a fixed public pattern; keep the scope boundary explicit.
     m=re.fullmatch(r"Classifies the stated (.+?) plant-part scope as (Safe to Feed|Feed in Moderation|Feed Sparingly|Do not Feed)\.",v)
     if m:
