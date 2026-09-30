@@ -110,15 +110,15 @@ assert '.examples button{min-height:44px;' in html
 assert '.quickfilter{min-height:44px;padding:7px 12px}' in html
 
 # Keyboard/accessibility baseline for the public home page.
-assert 'class="skiplink" href="#main-content"' in home, "home skip link missing"
-assert '<main id="main-content" class="wrap" tabindex="-1">' in home, "home main landmark/focus target missing"
-assert '.skiplink:focus{transform:translateY(0)}' in home, "home skip-link focus style missing"
-assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex;align-items:center;gap:5px;min-height:44px' in home, "desktop utility targets must be at least 44px"
+assert 'class="skiplink" href="#main-content"' in html, "home skip link missing"
+assert '<main id="main-content" class="wrap" tabindex="-1">' in html, "home main landmark/focus target missing"
+assert '.skiplink:focus{transform:translateY(0)}' in html, "home skip-link focus style missing"
+assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex;align-items:center;gap:5px;min-height:44px' in html, "desktop utility targets must be at least 44px"
 
 # Hold is an evidence state, never an implicit permission to feed.
-assert "g.grade==='보류'?'<div class=\"holdwarning\"" in home, "hold results need an always-visible safety warning"
-assert '판정 보류는 안전하다는 뜻이 아닙니다.' in home, "hold safety boundary wording missing"
-assert '급여 가능으로 해석하지 마세요.' in home, "hold result must explicitly reject safe-to-feed inference"
+assert "g.grade==='보류'?'<div class=\"holdwarning\"" in html, "hold results need an always-visible safety warning"
+assert '판정 보류는 안전하다는 뜻이 아닙니다.' in html, "hold safety boundary wording missing"
+assert '급여 가능으로 해석하지 마세요.' in html, "hold result must explicitly reject safe-to-feed inference"
 
 # Public search controls and result actions must meet the 44px touch-target baseline.
 for token in (
@@ -127,5 +127,5 @@ for token in (
     '.morebtn{display:block;width:100%;margin-top:12px;min-height:44px',
     '.detailbtn{display:flex;background:var(--accent);color:#fff;border-radius:12px;min-height:48px',
 ):
-    assert token in home, f'home touch target contract missing: {token}'
-assert 'button:focus-visible,a:focus-visible,input:focus-visible' in home, 'home keyboard focus indicator missing'
+    assert token in html, f'home touch target contract missing: {token}'
+assert 'button:focus-visible,a:focus-visible,input:focus-visible' in html, 'home keyboard focus indicator missing'
