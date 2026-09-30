@@ -185,9 +185,23 @@ for p in public:
         errors.append(f"{pid}: displayed direct-evidence count is not traceable to canonical evidence")
     if expected_context and "간접·맥락" not in text:
         errors.append(f"{pid}: contextual evidence exists but is not visibly distinguished")
+    if linked and "이 자료의 역할" not in text:
+        errors.append(f"{pid}: evidence cards must explain each source's role in plain Korean")
+    identity_types = ("plant_identity_context", "official_botanical_database", "official_agriculture_database")
+    nutrition_types = ("nutrition_database", "food_composition_database", "official_food_composition_database")
     for e in linked:
-        if e.get("source_type") in ("plant_identity_context", "official_botanical_database", "official_agriculture_database") and e.get("directness") == "direct":
+        st = str(e.get("source_type") or "")
+        if st in identity_types and e.get("directness") == "direct":
             errors.append(f"{pid}: identity/agriculture context must not be classified as direct feeding evidence ({e.get('id')})")
+        if st in identity_types and "급여 안전성" not in text:
+            errors.append(f"{pid}: botanical/identity evidence must explicitly avoid implying feeding safety")
+        if st in nutrition_types and "급여 안전성 자체를 증명하지 않음" not in text:
+            errors.append(f"{pid}: composition evidence must explicitly avoid implying feeding safety")
+    # Internal evidence enums belong in data, not in reader-facing cards.
+    visible_enum_tokens = ("plant_identity_context", "official_botanical_database", "official_agriculture_database", "food_composition_database", "tortoise_general", "exact_species")
+    for token in visible_enum_tokens:
+        if re.search(rf">[^<]*\\b{re.escape(token)}\\b[^<]*<", text):
+            errors.append(f"{pid}: internal evidence enum leaked into visible UI ({token})")
     if text.count("급여량·빈도·장기 안전성") > 1:
         errors.append(f"{pid}: dose/frequency/long-term boundary repeated")
     for retired in ("plant-detail-v56.js", "ibera-direct-evidence-v56.js", "tortoiseAnimalTaxon", "animalSelect"):
