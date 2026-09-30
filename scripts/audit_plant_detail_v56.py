@@ -250,6 +250,18 @@ assert not mixed_supports, 'English-dominant mixed-language evidence supports re
 mixed_limits = [(raw, render_limit(raw)) for raw in limit_values if english_dominant_unchanged(raw, render_limit(raw))]
 assert not mixed_limits, 'English-dominant mixed-language evidence limitations remain: ' + repr(mixed_limits[:20])
 
+# Source-type localization gate: every current evidence source type must resolve to a deliberate Korean category,
+# never the generic fallback. This catches newly introduced internal source_type codes before publication.
+source_start = generator.index('def source_kind')
+source_end = generator.index('\ndef animal_taxon_display', source_start)
+source_ns = {}
+exec(generator[source_start:source_end], source_ns)
+render_source_kind = source_ns['source_kind']
+source_types = sorted({str(e.get('source_type') or '').strip() for e in evidence_records if str(e.get('source_type') or '').strip()})
+source_type_fallbacks = [(raw, render_source_kind({'source_type': raw})) for raw in source_types if render_source_kind({'source_type': raw})[0] == 7]
+assert not source_type_fallbacks, 'unclassified reader-facing evidence source_type values remain: ' + repr(source_type_fallbacks[:20])
+assert all(re.search(r'[가-힣]', render_source_kind({'source_type': raw})[1]) for raw in source_types), 'source type label must be Korean'
+
 # Metadata localization gate: values rendered in the Korean evidence cards must not leak raw English/code labels.
 meta_start = generator.index('def animal_taxon_display')
 meta_end = generator.index('\ndef evidence_support_display', meta_start)
