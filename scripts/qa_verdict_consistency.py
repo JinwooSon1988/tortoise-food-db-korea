@@ -135,6 +135,11 @@ for p in public:
     decision_start = text.find(' decision" data-grade=')
     decision_end = text.find('</section>', decision_start)
     decision_text = text[decision_start:decision_end] if decision_start >= 0 and decision_end >= 0 else ""
+    expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(g["label"]), quote=True)}"'
+    if expected_aria not in decision_text:
+        errors.append(f"{pid}: decision card must expose grade and verdict label to assistive technology")
+    if '<summary>판정의 적용 범위와 확인되지 않은 내용 보기</summary>' not in text:
+        errors.append(f"{pid}: collapsed scope control must describe both applicability and evidence limits")
     if g["grade"] == "보류":
         if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다")):
             errors.append(f"{pid}: hold safety boundary must remain visible in the decision card")
