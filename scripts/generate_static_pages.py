@@ -271,7 +271,7 @@ for p in plants:
     for e in ordered:
         url=e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
         title_html=esc(e.get("source_title") or e.get("id"))
-        source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer">원문 보기 ↗</a>' if url else ""
+        source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
         evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
