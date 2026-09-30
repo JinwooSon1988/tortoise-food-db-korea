@@ -84,6 +84,19 @@ if hold_ids:
         if a and a.get("verdict") == "blocked" and display(a)["grade"] != "보류":
             errors.append(f"{pid}: blocked assessment must remain hold, not A/B/C/D")
 
+# Home result cards must render canonical label and meaning directly from the shared verdict core.
+home_card = re.search(r'function card\\(r\\)\\{[\\s\\S]*?\\nfunction render', home)
+if not home_card:
+    errors.append("home result-card renderer missing")
+else:
+    card_src = home_card.group(0)
+    for token in ("TV.display(a)", "g.grade", "g.label", "g.meaning"):
+        if token not in card_src:
+            errors.append(f"home result card must expose canonical verdict field: {token}")
+    for forbidden in ("gradeOverride", "meaningOverride", "labelOverride"):
+        if forbidden in card_src:
+            errors.append(f"home result card must not override canonical verdict semantics: {forbidden}")
+
 # 3) Detail pages: exist for exactly the public set, same grade, fixed order, no duplicates.
 page_dirs = {p.parent.name for p in (ROOT / "plant").glob("*/index.html")}
 # Sitemap must expose exactly the same public plant set as home/detail generation.
