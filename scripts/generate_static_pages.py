@@ -503,6 +503,10 @@ def evidence_limit_display(value):
             base+=" 명시된 동물 분류군과 식물 부위 범위 안에서만 적용한다."
         elif "unlisted plant parts or related taxa" in v:
             base+=" 명시되지 않은 식물 부위나 근연 분류군으로 판정을 확대하지 않는다."
+        elif "beyond the stated taxon and plant-part scope" in v or "beyond the stated taxon and plant-part scope" in v:
+            base+=" 명시된 동물 분류군과 식물 부위 범위를 넘어 판정을 확대하지 않는다."
+        if "equivalence to other Salvia species" in v:
+            base+=" 다른 Salvia 종과 동등하다고 확정하지 않는다."
         return base
     if v.startswith("Cattle toxicity cannot be converted"):
         return "소의 독성 자료를 이베라그리스육지거북의 독성·안전 용량, 급여 빈도나 비율로 환산할 수 없다. 또한 식용 들깨의 모든 품종이 같은 페릴라케톤 농도를 가진다고 확정하지 않는다."
