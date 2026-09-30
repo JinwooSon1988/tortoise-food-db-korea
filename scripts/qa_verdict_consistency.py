@@ -69,6 +69,14 @@ if hold_ids:
 
 # 3) Detail pages: exist for exactly the public set, same grade, fixed order, no duplicates.
 page_dirs = {p.parent.name for p in (ROOT / "plant").glob("*/index.html")}
+# Sitemap must expose exactly the same public plant set as home/detail generation.
+sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+sitemap_ids = set(re.findall(r"/plant/([^/]+)/", sitemap))
+for pid in sorted(public_ids - sitemap_ids):
+    errors.append(f"{pid}: public plant missing from sitemap")
+for pid in sorted(sitemap_ids - public_ids):
+    errors.append(f"{pid}: sitemap contains non-public/orphan plant")
+
 for pid in sorted(public_ids - page_dirs):
     errors.append(f"{pid}: public plant has no detail page")
 for pid in sorted(page_dirs - public_ids):
