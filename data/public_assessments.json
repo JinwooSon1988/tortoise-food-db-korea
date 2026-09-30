@@ -828,7 +828,7 @@
       "Brassicaceae 또는 glucosinolate 함유라는 사실만으로 별도의 고정 급여빈도·비율·동시급여 금지 규칙을 만들지 않음",
       "식물화학 자료는 성분 존재를 보여줄 뿐 이베라의 갑상선·신장·간 위해 용량을 확립하지 않음"
     ],
-    "why": "The Tortoise Table은 Raphanus sativus의 잎을 Feed in Moderation으로 분류하고 소량은 괜찮다고 설명한다. Raphanus sativus의 체계적 문헌고찰에서는 잎을 포함한 조직에 glucosinolate와 그 분해산물이 존재함을 확인하지만, 이는 육지거북의 위해 용량이나 고정 급여빈도를 정하는 자료가 아니다. 따라서 무잎은 제한적 혼합 급여로 두되 배추과 전체를 일괄 제한하거나 특정 횟수·비율을 만들지 않는다.",
+    "why": "전문 육지거북 DB는 무잎을 소량·제한 급여 대상으로 본다. 종특이 문헌에서도 glucosinolate류가 확인되지만 육지거북의 위해 용량이나 고정 급여 빈도는 정해져 있지 않다. 따라서 다양한 식물과 섞어 제한적으로 급여하며, 배추과 전체로 판정을 확대하지 않는다.",
     "applicability_note": "Raphanus sativus exact-taxon 전문 육지거북 DB의 잎 권고와 exact-taxon 식물화학 체계적 문헌고찰을 함께 사용한다. Testudo graeca ibera 직접 급여·독성시험은 아니다."
   },
   {
@@ -920,7 +920,7 @@
       "다른 Oenanthe 종의 강한 독성을 O. javanica에 자동 전이하지 않음",
       "미나리와 유사 산형과 식물의 오동정 주의"
     ],
-    "why": "육지거북 전문 DB는 Oenanthe water-dropwort류를 회피 대상으로 경고한다. 반면 O. javanica 자체의 종수준 리뷰에는 포유류에서 급성 무독성 관찰과 고용량/추출물 독성 신호가 함께 보고되어, 다른 Oenanthe 종의 독성을 그대로 전이할 수 없음을 보여준다. Ibera 직접 안전성 자료가 없으므로 계획 급여에서는 보수적으로 제외하되 독성 용량을 단정하지 않는다.",
+    "why": "전문 육지거북 DB는 Oenanthe water-dropwort류를 회피 대상으로 본다. O. javanica 자체 자료에는 포유류의 무독성 관찰과 고용량·추출물 독성 신호가 함께 있어 다른 Oenanthe 종의 독성을 그대로 적용할 수 없다. Testudo 직접 안전성 근거가 없어 계획 급여에서는 제외한다.",
     "applicability_note": "Oenanthe genus-level specialist warning + exact O. javanica non-tortoise toxicology context; exact Ibera feeding safety remains unresolved."
   },
   {
@@ -2088,7 +2088,7 @@
       "정확한 안전 급여량·빈도·식단 비율 연구가 없음",
       "단독 주식·고비율 반복 급여로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB는 Petunia spp.에서 독성 증거를 확인하지 못했고 장기간 사육 경험상 문제 보고가 없다고 설명하지만, 독성 nightshade류도 포함하는 Solanaceae 소속이라는 점 때문에 보수적으로 Feed in Moderation을 권한다. 따라서 '안전한 주식'이 아니라 다양한 식물 중 제한적 보조로 해석한다.",
+    "why": "전문 육지거북 DB는 Petunia spp.에서 뚜렷한 독성 근거를 제시하지 않지만, Solanaceae 소속이라는 점을 고려해 제한 급여를 권한다. 따라서 안전한 주식으로 해석하지 않고 다양한 식물 중 소량 보조로 사용한다.",
     "applicability_note": "일반 육지거북 전문 사육 근거이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -2159,7 +2159,7 @@
       "Ruellia 모든 종의 안전성을 자동 확정하지 않음",
       "정량 급여량 자료 없음"
     ],
-    "why": "전문 DB는 Mexican Petunia로 불리는 Ruellia spp., 특히 R. brittoniana·R. makoyana·R. portellae를 Safe to Feed로 분류한다. 이름과 달리 Petunia와 다른 Acanthaceae 식물이므로 정확한 동정이 중요하며, 확인된 Ruellia를 varied diet의 일부로 사용한다.",
+    "why": "전문 육지거북 DB는 Mexican Petunia로 불리는 일부 Ruellia spp.를 급여 가능 식물로 분류한다. 이름과 달리 일반 Petunia와 다른 Acanthaceae 식물이므로 정확한 종 동정이 중요하며, 확인된 Ruellia만 다양한 혼합식의 일부로 사용한다.",
     "applicability_note": "source가 명시한 Ruellia 범위의 일반 육지거북 근거이며 genus 전체 및 Ibera 정량근거로 확대하지 않는다."
   },
   {
@@ -3007,7 +3007,7 @@
       "Medicago polymorpha의 사포닌 존재가 확인되므로 단일식·과량 급여 근거로 해석하지 않음",
       "사포닌 존재 자체가 육지거북의 독성 용량을 의미하지는 않음"
     ],
-    "why": "Medicago polymorpha는 야생 Testudo graeca graeca의 실제 식이에서 확인된 직접근거가 있다. 다만 이 식물에는 사포닌 계열 성분에 관한 종특이 자료가 있고, 파충류에서의 안전 섭취량은 정해져 있지 않다. 따라서 다양한 야생초를 섞는 식단의 일부로 제한적으로 보는 것이 현재 근거에 가장 맞는다.",
+    "why": "Medicago polymorpha는 야생 Testudo graeca graeca의 실제 섭식 기록이 있다. 다만 종특이 사포닌 자료가 있고 파충류의 안전 섭취량은 정해져 있지 않아, 다양한 야생초를 섞는 식단의 일부로 제한적으로 사용한다.",
     "applicability_note": "Testudo graeca graeca 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정이다. 이베라 아종의 포획 사육 급여량을 직접 시험한 결과는 아니다."
   },
   {
@@ -3026,7 +3026,7 @@
       "우발적 소량 섭취를 즉시 중독으로 단정하지 않음",
       "실제 야생 채집물은 종 동정과 농약·오염 여부를 별도로 확인"
     ],
-    "why": "전문 육지거북 식물 DB가 Erigeron canadensis(동의명 Conyza canadensis)를 Do not Feed로 분류하고 자극성·낮은 기호성 관련 주의를 제시한다. 종특이 지상부 정유 연구에서도 생물활성 위험신호가 있으나 이는 농축 정유의 세포시험이므로 생초 독성량으로 확대하지 않는다. 현재 Testudo 직접 안전성 근거가 없으므로 독성 단정이 아니라 계획 급여 제외로 판정한다.",
+    "why": "전문 육지거북 DB는 Erigeron canadensis(동의명 Conyza canadensis)를 급여 제외로 분류한다. 지상부 정유 연구에서도 생물활성 신호가 있지만 농축 정유의 세포시험이므로 생초 독성량으로 확대할 수 없다. Testudo 직접 안전성 근거가 없어 계획 급여에서는 제외한다.",
     "applicability_note": "정확한 식물종에 대한 전문 육지거북 사육근거 + 종특이 성분/세포시험의 보조 위험신호. Testudo graeca ibera 직접 급여·독성시험은 아니다."
   },
   {
