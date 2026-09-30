@@ -173,3 +173,7 @@ for token in (
     '높은 옥살산 함량을 계획 급여를 피하는 이유로 제시한다.',
 ):
     assert token in generator, f'missing specialist exception distinction: {token}'
+
+# Plant-part classification pattern must remain localized and non-transferable.
+assert 'Classifies the stated (.+?) plant-part scope as' in generator
+assert '이 판정을 다른 식물 부위로 확대하지 않는다.' in generator
