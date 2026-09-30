@@ -77,6 +77,16 @@ def animal_taxon_display(value):
         "Testudo hermanni":"헤르만육지거북 (Testudo hermanni)",
         "Testudo hermanni hermanni":"서부헤르만육지거북 (T. h. hermanni)",
         "Testudo spp.":"Testudo속 육지거북",
+        "Testudo graeca ibera and eastern Testudo graeca clades":"이베라그리스육지거북 및 동부 Testudo graeca 계통",
+        "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii":"그리스·헤르만·마지나타·러시안육지거북",
+        "Herbivorous tortoises, with Mediterranean observations":"초식 육지거북 일반 및 지중해 육지거북 관찰",
+        "Bos taurus (cattle)":"소 (Bos taurus) — 육지거북 급여시험 아님",
+        "Mus musculus / Rattus norvegicus (toxicology context)":"생쥐·랫드 독성 맥락 — 육지거북 급여시험 아님",
+        "Chinese hamster ovary cells; in vitro":"중국햄스터 난소세포 시험관 연구 — 동물 급여시험 아님",
+        "HaCaT cell line; not an animal feeding study":"HaCaT 세포주 연구 — 동물 급여시험 아님",
+        "Cats and plant chemistry":"고양이 및 식물화학 맥락 — 육지거북 급여시험 아님",
+        "Plant chemistry; mammalian experimental context":"식물화학·포유류 실험 맥락 — 육지거북 급여시험 아님",
+        "primarily mammalian/medicinal toxicology; not tortoise feeding":"주로 포유류·약용 독성학 자료 — 육지거북 급여시험 아님",
     }
     return exact.get(v,v)
 
