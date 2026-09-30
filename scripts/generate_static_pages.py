@@ -54,6 +54,53 @@ def source_kind(e):
     if t.startswith("regulatory_"): return (6,"공식 평가자료")
     return (7,"기타 공공·맥락 자료")
 
+def animal_taxon_display(value):
+    v=str(value or "").strip()
+    exact={
+        "Mediterranean Testudo":"지중해 Testudo 육지거북",
+        "Mediterranean tortoises":"지중해 육지거북",
+        "Tortoise general":"육지거북 일반",
+        "Tortoises":"육지거북",
+        "Herbivorous reptiles":"초식 파충류",
+        "Plant-eating reptiles":"초식 파충류",
+        "Reptiles":"파충류",
+        "Animals general":"동물 일반",
+        "General context":"일반 맥락 자료",
+        "Not an animal feeding study":"동물 급여시험이 아님",
+        "Not applicable":"해당 없음",
+        "not_applicable":"해당 없음",
+        "Centrochelys sulcata":"설카타육지거북 (Centrochelys sulcata)",
+        "Chersina angulata":"앵귤레이트육지거북 (Chersina angulata)",
+        "Testudo graeca":"그리스육지거북 (Testudo graeca)",
+        "Testudo graeca graeca":"그리스육지거북 T. g. graeca",
+        "Testudo graeca ibera":"이베라그리스육지거북 (T. g. ibera)",
+        "Testudo hermanni":"헤르만육지거북 (Testudo hermanni)",
+        "Testudo hermanni hermanni":"서부헤르만육지거북 (T. h. hermanni)",
+        "Testudo spp.":"Testudo속 육지거북",
+    }
+    return exact.get(v,v)
+
+def part_state_display(value):
+    v=str(value or "").strip()
+    exact={
+        "leaves":"잎",
+        "fruit":"열매",
+        "grass":"풀",
+        "leafy greens":"잎채소",
+        "leafy vegetable":"잎채소",
+        "young leaves":"어린 잎",
+        "young fresh leaves":"어린 생잎",
+        "flowers and leaves":"꽃과 잎",
+        "leaves and flowers":"잎과 꽃",
+        "identity only":"식물 동정만 확인",
+        "taxonomic identity only":"분류학적 동정만 확인",
+        "whole taxon identity":"분류군 동정만 확인",
+        "sprouted shoots":"발아한 새싹",
+        "wild diet":"야생 섭식 기록",
+        "plant material":"식물체",
+    }
+    return exact.get(v,v)
+
 def evidence_role(e):
     t=str(e.get("source_type") or "")
     if "taxonomy" in t or "taxonomic" in t or "botanical" in t or "biodiversity" in t or "agriculture" in t:
@@ -169,7 +216,7 @@ for p in plants:
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer">원문 보기 ↗</a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
-        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(e.get("animal_taxon"))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(e.get("plant_part_state"))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
+        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 공개 가능한 개별 근거 레코드가 연결되지 않았다. 따라서 안전성을 추정하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
     summary_chips=f'<div class="evsummary" aria-label="연결된 근거 자료 현황"><span>연결 근거 {len(linked_evidence)}건</span><span>동료심사 논문 {papers}</span><span>직접 {direct_count}</span><span>전문 사육 {husbandry_count}</span><span>간접·맥락 {indirect_count}</span></div><p class="evcountnote">자료 건수는 연결된 출처의 현황이며, 숫자가 많다고 판정의 신뢰도나 안전성이 더 높다는 뜻은 아니다.</p>'
