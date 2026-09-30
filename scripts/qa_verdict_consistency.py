@@ -23,6 +23,10 @@ rows_by = by_plant(assessments)
 evidence_raw = json.loads((ROOT / "data/public_evidence_records.json").read_text(encoding="utf-8"))
 evidence_records = evidence_raw if isinstance(evidence_raw, list) else evidence_raw.get("evidence", evidence_raw.get("records", []))
 evidence_by_id = {r.get("id"): r for r in evidence_records}
+for record in evidence_records:
+    if not (record.get("url") or record.get("doi") or record.get("pmid")):
+        errors.append(f"{record.get('id')}: public evidence record has no source locator")
+
 for assessment in assessments:
     pid = assessment.get("plant_id")
     for eid in assessment.get("evidence_ids", []):
