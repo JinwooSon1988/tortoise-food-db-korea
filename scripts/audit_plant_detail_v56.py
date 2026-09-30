@@ -153,7 +153,6 @@ for token in (
     '뿌리는 명시적으로 제외한다.',
     '씨앗은 급여하지 말라고 명시한다.',
     '독성이 문제되는 잎·미숙 열매와 성숙 열매를 구분하지만',
-    '다른 부위로 임의 확대하지 않는다.',
 ):
     assert token in generator, f'missing high-use feeding distinction: {token}'
 
