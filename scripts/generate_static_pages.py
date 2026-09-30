@@ -392,6 +392,16 @@ def evidence_support_display(value):
         return "속 수준 지침은 이베라그리스육지거북 특이 식단 비율·고정 급여 빈도·정제 정유의 안전성·무제한 섭취를 확정하지 않는다."
     if v=="Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":
         return "이베라그리스육지거북 특이 독성 용량을 정하지 않으며 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다는 사실도 입증하지 않는다."
+    if v=="Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.":
+        return "이베라그리스육지거북 특이 섭취 비율을 정하지 않으며 모든 품종과 내생균 상태가 동등하다는 사실도 입증하지 않는다."
+    if v=="Does not quantify a safe or toxic dose for young broccoli microgreens or Testudo graeca ibera.":
+        return "어린 브로콜리 마이크로그린 또는 이베라그리스육지거북에 대한 안전 용량이나 독성 용량을 정량화한 자료는 아니다."
+    if v=="Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":
+        return "육지거북 독성이나 안전 용량을 확정하지 않으며 모든 글루코시놀레이트가 동일한 생물학적 효과를 가진다는 뜻도 아니다."
+    if v=="Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.":
+        return "미즈나·타쵸이·코마츠나 품종을 직접 시험한 자료가 아니며 이베라그리스육지거북 특이 급여 비율도 정하지 않는다."
+    if v=="Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":
+        return "Malva verticillata 종 특이 섭취 비율이나 이베라그리스육지거북 대상 정량시험을 제공하지 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
