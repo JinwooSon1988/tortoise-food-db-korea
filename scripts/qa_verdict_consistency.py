@@ -112,7 +112,7 @@ for pid in sorted(public_ids - page_dirs):
 for pid in sorted(page_dirs - public_ids):
     errors.append(f"{pid}: detail page exists for a non-public plant (orphan or candidate)")
 ORDER = ["decision", "<h2>종별 특이사항</h2>", "<h2>이 판정의 적용 범위</h2>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>"]
-MAJOR = ["<h2>급여할 때 확인할 핵심</h2>", "<h2>종별 특이사항</h2>", "<h2>이 판정의 적용 범위</h2>", "<h3>어디까지 적용되나</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>", "<h2>다른 식물도 확인하기</h2>", "야생에서는 실제로 어떻게 먹었나?"]
+MAJOR = ["<h2>급여할 때 확인할 핵심</h2>", "<h2>종별 특이사항</h2>", "<h2>판정 범위와 주의사항</h2>", "<h3>적용 범위</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>", "<h2>다른 식물도 확인하기</h2>", "야생에서는 실제로 어떻게 먹었나?"]
 for p in public:
     pid = p["id"]
     path = ROOT / "plant" / pid / "index.html"
@@ -155,7 +155,7 @@ for p in public:
     for token in MAJOR:
         if text.count(token) > 1:
             errors.append(f"{pid}: duplicate major section {token}")
-    for token in ("<h3>어디까지 적용되나</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>"):
+    for token in ("<h3>적용 범위</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>"):
         if token not in text:
             errors.append(f"{pid}: required section missing {token}")
     positions = [text.find(t) for t in ORDER if t in text]
