@@ -557,10 +557,10 @@ def evidence_limit_display(value):
         return "이 자료는 독성 용량·임상 독성·안전한 사육 급여 비율 또는 Testudo에 특이적인 이상반응을 확정하지 않는다."
     if v.startswith("Does not establish an Ibera-specific percentage"):
         return "이 자료는 이베라그리스육지거북에 특이적인 급여 비율이나 빈도를 확정하지 않으며 같은 일반명 때문에 다른 식물 분류군에 판정을 옮겨 적용하면 안 된다."
-    if v.startswith("Does not establish captive diet percentage"):
-        return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북에 대한 직접적인 안전 용량을 확정하지 않는다."
     if v.startswith("Does not establish captive diet percentages"):
         return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 해당 속의 모든 종 사이 안전성 동등성을 확정하지 않는다."
+    if v.startswith("Does not establish captive diet percentage"):
+        return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북에 대한 직접적인 안전 용량을 확정하지 않는다."
     exact_more={
         "Does not establish oral feeding safety, digestibility, dose, or suitability for tortoises.":"경구 섭취 안전성·소화 가능성·급여량 또는 육지거북 먹이로서의 적합성을 확정하지 않는다.",
         "Does not establish safety for Testudo graeca ibera, a tortoise feeding dose or frequency, or justify transferring toxicity of other Oenanthe species to O. javanica. It also does not prove that O. javanica is safe as a captive tortoise food.":"이베라그리스육지거북에 대한 안전성·급여량·급여 빈도를 확정하지 않는다. 다른 Oenanthe 종의 독성을 O. javanica에 그대로 적용할 수도 없으며, O. javanica가 사육 육지거북 먹이로 안전하다는 증거도 아니다.",
