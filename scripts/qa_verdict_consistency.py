@@ -187,6 +187,9 @@ for p in public:
         errors.append(f"{pid}: contextual evidence exists but is not visibly distinguished")
     if linked and "이 자료의 역할" not in text:
         errors.append(f"{pid}: evidence cards must explain each source's role in plain Korean")
+    traceable = [e for e in linked if e.get("url") or e.get("doi") or e.get("pmid")]
+    if traceable and text.count("원문 보기") < len(traceable):
+        errors.append(f"{pid}: every traceable evidence record must expose a clear source action")
     identity_types = ("plant_identity_context", "official_botanical_database", "official_agriculture_database")
     nutrition_types = ("nutrition_database", "food_composition_database", "official_food_composition_database")
     for e in linked:
