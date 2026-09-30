@@ -253,10 +253,18 @@ for p in public:
     for raw in critical_part_states:
         if any(str(e.get("plant_part_state") or "") == raw for e in linked) and re.search(rf">[^<]*{re.escape(raw)}[^<]*<", text):
             errors.append(f"{pid}: critical plant-part boundary leaked as raw English metadata ({raw})")
-    # Reader-facing part/state metadata must not fall back to raw English.
-    for e in linked:
-        raw_part = str(e.get("plant_part_state") or "").strip()
-        if raw_part and re.search(rf">[^<]*{re.escape(raw_part)}[^<]*<", text):
+    # Reader-facing part/state fields must not fall back to raw English. Checked on the fields that render
+    # part/state (evidence cards, wild/Ibera observations, practical summary) so English source titles and
+    # quoted "supports" text that merely mention a plant part are not mistaken for metadata.
+    part_fields = re.findall(r"<dt>(?:부위·상태|먹은 부위|섭식 부위)</dt><dd>([^<]*)</dd>|근거가 확인한 부위·상태</b><p>([^<]*)</p>", text)
+    for a_val, b_val in part_fields:
+        shown = html.unescape(a_val or b_val)
+        for piece in shown.split(" / "):
+            if re.fullmatch(r"[ -~]*[A-Za-z]{3,}[ -~]*", piece.strip()):
+                errors.append(f"{pid}: plant-part metadata leaked as raw source text ({piece.strip()})")
+    raw_parts = {str(e.get("plant_part_state") or "").strip() for e in linked} - {""}
+    for raw_part in raw_parts:
+        if any(html.unescape(a_val or b_val) == raw_part and re.search(r"[A-Za-z]{3,}", raw_part) for a_val, b_val in part_fields):
             errors.append(f"{pid}: plant-part metadata leaked as raw source text ({raw_part})")
     # Internal evidence enums belong in data, not in reader-facing cards.
     visible_enum_tokens = ("plant_identity_context", "official_botanical_database", "official_agriculture_database", "food_composition_database", "tortoise_general", "exact_species")

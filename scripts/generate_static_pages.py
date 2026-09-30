@@ -94,6 +94,10 @@ def part_state_display(value):
     v=str(value or "").strip()
     exact={
         "leaves":"잎",
+        "young leaves":"어린잎",
+        "young leaves; Fabaceae flowers/inflorescences also reported":"어린잎 — 콩과 꽃·꽃차례 섭식도 함께 보고됨",
+        "young leaves; flowers/inflorescences also reported with leaves":"어린잎 — 잎과 함께 꽃·꽃차례 섭식도 보고됨",
+        "not resolved in extracted source text":"원문 추출본에서 섭식 부위가 확인되지 않음",
         "fruit":"열매",
         "grass":"풀",
         "leafy greens":"잎채소",
@@ -267,7 +271,7 @@ for p in plants:
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
     indirect_count=len(linked_evidence)-direct_count-husbandry_count
-    part_note=" / ".join(sorted({str(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "근거 자료에 부위 정보가 명시되지 않음"
+    part_note=" / ".join(sorted({part_state_display(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "근거 자료에 부위 정보가 명시되지 않음"
     en_pending=("This plant has a reviewed evidence record. The feeding grade is limited to the evidence scope shown below; it does not imply unlimited feeding." if a else "Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence.")
     en_scope=("Reviewed evidence is available. Check source taxon, plant part, directness, and limitations below before applying the result." if a else "Evidence is incomplete; do not transfer safety assumptions across taxa.")
     en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
@@ -330,7 +334,7 @@ for p in plants:
         s=ibera_sources.get(o.get("source_id"),{})
         scope_txt="식물 종까지 일치" if o.get("identity_scope")=="exact_species" else "속 수준 관찰 — 이 식물의 정확한 종을 먹었다는 뜻으로 확대하지 않는다"
         link=f'<a href="{esc(s.get("url"))}" target="_blank" rel="noopener noreferrer">원 연구 확인</a>' if s.get("url") else ""
-        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>이베라 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(o.get("observed_part") or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
+        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>이베라 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
     wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{conflict_html}{"".join(wild_cards)}''' if wild_cards else "")
 
     deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">더 깊이 보기</div><h2>판정 근거 자세히 보기</h2><p class="ko-evidence small">논문·전문자료를 하나씩, 무엇을 지지하고 무엇을 말할 수 없는지와 함께 보여준다. <b>직접 근거</b>는 해당 육지거북·식물·질문을 직접 다룬 자료, <b>간접 근거</b>는 다른 동물이나 가까운 식물에서 얻은 참고 자료다. 간접 근거만으로 안전성을 확정하지 않는다.</p><p class="en-evidence" hidden>This section explains the evidence behind the conclusion. <b>Direct evidence</b> addresses the target question directly. <b>Indirect evidence</b> comes from other animals or related plants and is used only as context; indirect evidence alone does not establish safety.</p>{summary_chips}<p class="legend"><b>읽는 법</b> · 동료심사 논문과 전문 사육자료는 같은 수준의 근거가 아니다 · 성분 근거는 성분 존재만 보여줄 뿐 급여 안전성을 증명하지 않는다.</p>{evidence_cards_html}{wild_section}</section>'''
