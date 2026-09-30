@@ -201,6 +201,36 @@ def part_state_display(value):
     }
     return exact.get(v,v)
 
+def evidence_limit_display(value):
+    v=str(value or "").strip()
+    exact={
+        "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.":"이 자료 하나만으로 정확한 사육 급여 비율·고정 급여 빈도·무제한 급여 또는 자료가 실제로 다룬 동물 분류군·식물 정체성·식물 부위를 넘어선 안전성 동등성을 확정할 수 없다.",
+        "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.":"전문 식물 DB 지침은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 정확한 사육 급여 비율·고정 빈도·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 안전성 동등성을 확정하지 않는다.",
+        "This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Its category must not be converted into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":"이 전문 DB 항목은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 해당 분류를 정확한 사육 급여 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 안전성 동등성으로 바꾸어 해석하면 안 된다.",
+        "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.":"이 기록은 명시된 근거 범위를 넘어 사용하면 안 된다. 식물 동정·성분 자료 자체는 육지거북 급여 안전성을 증명하지 않으며, 근연 분류군 사육자료도 이베라그리스육지거북의 급여량·빈도·비율·무제한 급여를 확정하지 않는다.",
+        "This migrated record preserves the existing assessment/source scope. It is not a controlled Testudo graeca ibera feeding/toxicity trial and does not establish an exact percentage, fixed frequency, toxic dose, unlimited use, or safety equivalence across unlisted plant parts/taxa.":"이 이관 기록은 기존 판정과 출처의 적용 범위를 그대로 보존한다. 이베라그리스육지거북의 통제된 급여·독성시험이 아니며 정확한 급여 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·분류군 사이의 안전성 동등성을 확정하지 않는다.",
+        "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.":"분류학적으로 인정된 식물이라는 사실은 육지거북 급여 안전성·급여량·빈도·식단 비율 또는 식물 부위 간 동등성을 증명하지 않는다.",
+        "No Ibera-specific dose, fixed diet percentage, or unlimited feeding allowance.":"이베라그리스육지거북에 특이적인 급여량·고정 식단 비율·무제한 급여 허용 범위는 확정하지 않는다.",
+    }
+    if v in exact:
+        return exact[v]
+    # High-frequency scope templates. Preserve every substantive boundary while localizing the reader-facing copy.
+    if v.startswith("Does not establish a Testudo graeca ibera-specific dose"):
+        tail=[]
+        if "fixed frequency" in v: tail.append("고정 급여 빈도")
+        if "fixed diet percentage" in v or "diet percentage" in v: tail.append("고정 식단 비율")
+        if "toxic dose" in v: tail.append("독성 용량")
+        if "unlimited feeding allowance" in v: tail.append("무제한 급여 허용 범위")
+        base="이 자료는 이베라그리스육지거북에 특이적인 급여량"
+        if tail: base+="·"+"·".join(tail)
+        base+="을 확정하지 않는다."
+        if "stated taxon and plant-part scope" in v:
+            base+=" 명시된 동물 분류군과 식물 부위 범위 안에서만 적용한다."
+        elif "unlisted plant parts or related taxa" in v:
+            base+=" 명시되지 않은 식물 부위나 근연 분류군으로 판정을 확대하지 않는다."
+        return base
+    return v
+
 def evidence_role(e):
     t=str(e.get("source_type") or "")
     if "taxonomy" in t or "taxonomic" in t or "botanical" in t or "biodiversity" in t or "agriculture" in t:
@@ -316,7 +346,7 @@ for p in plants:
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
-        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(e.get("does_not_support"))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
+        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(e.get("supports"))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 공개 가능한 개별 근거 레코드가 연결되지 않았다. 따라서 안전성을 추정하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
     summary_chips=f'<div class="evsummary" aria-label="연결된 근거 자료 현황"><span>연결 근거 {len(linked_evidence)}건</span><span>동료심사 논문 {papers}</span><span>직접 {direct_count}</span><span>전문 사육 {husbandry_count}</span><span>간접·맥락 {indirect_count}</span></div><p class="evcountnote">자료 건수는 연결된 출처의 현황이며, 숫자가 많다고 판정의 신뢰도나 안전성이 더 높다는 뜻은 아니다.</p>'
