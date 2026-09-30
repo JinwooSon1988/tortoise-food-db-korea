@@ -108,6 +108,21 @@ def part_state_display(value):
         "sprouted shoots":"발아한 새싹",
         "wild diet":"야생 섭식 기록",
         "plant material":"식물체",
+        "leaves and flowers; root explicitly excluded":"잎과 꽃 — 뿌리는 이 근거의 대상이 아님",
+        "leaves and flowers; root explicitly distinguished":"잎과 꽃 — 뿌리는 별도 부위로 구분됨",
+        "flowers and leaves; roots/tubers excluded":"꽃과 잎 — 뿌리·덩이뿌리는 대상에서 제외",
+        "leaves and flowers; fruit not inferred":"잎과 꽃 — 열매까지 같은 근거로 일반화하지 않음",
+        "herb; seeds explicitly excluded":"초본 식물체 — 씨앗은 명시적으로 제외",
+        "leaves only; cob/kernel excluded":"잎만 해당 — 속대·낟알은 제외",
+        "carrot tops distinguished from root":"당근 지상부 — 뿌리와 구분",
+        "leaves and tuber distinguished":"잎과 덩이뿌리를 구분",
+        "grass vegetation; not grain/seed equivalence":"풀의 영양생장부 — 곡물·씨앗과 동일시하지 않음",
+        "young grasses; mature seeds explicitly distinguished":"어린 풀 — 성숙한 씨앗과 구분",
+        "young grass; dried hay; dry seed heads distinguished":"어린 풀·건초·마른 씨앗이삭을 각각 구분",
+        "wild plant material; exact consumed part not established in this record":"야생 식물체 — 실제 섭식 부위는 이 기록에서 확정되지 않음",
+        "wild plant material; non-quantitative observations":"야생 식물체 — 정량 급여자료가 아닌 관찰 기록",
+        "As specified in the cited source and evidence note; plant parts must not be silently generalized.":"인용 자료에 명시된 부위·상태만 해당 — 다른 부위로 임의 일반화하지 않음",
+        "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.":"출처의 부위·상태 구분을 유지 — 뿌리·잎·꽃·열매·씨앗 사이를 일반화하지 않음",
     }
     return exact.get(v,v)
 
