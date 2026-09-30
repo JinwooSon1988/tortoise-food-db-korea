@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
-    "published_count": 165,
-    "candidate_count": 8,
+    "published_count": 167,
+    "candidate_count": 6,
     "research_pool_count": 173,
     "published": {
       "verified_image": 54,
       "verified_nutrition": 36,
-      "with_assessment": 165,
-      "with_evidence": 165,
+      "with_assessment": 167,
+      "with_evidence": 167,
       "with_korea_alias": 10,
       "fully_complete_current_schema": 3
     }
@@ -2702,7 +2702,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2720,7 +2720,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2738,7 +2738,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2756,7 +2756,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2774,7 +2774,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2792,7 +2792,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2810,7 +2810,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2828,7 +2828,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2846,7 +2846,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2864,7 +2864,7 @@
       "identity_status": "verified_name",
       "verified_image": false,
       "verified_nutrition": false,
-      "assessment_count": 2,
+      "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
@@ -2878,6 +2878,42 @@
     {
       "plant_id": "medicago_hispida",
       "ko": "버클로버",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "conyzacanadensis",
+      "ko": "망초",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
+      "plant_id": "ruscus_aculeatus",
+      "ko": "부처스브룸",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
@@ -2969,28 +3005,6 @@
         "assessment"
       ],
       "next_action": "identity"
-    },
-    {
-      "plant_id": "conyzacanadensis",
-      "ko": "망초",
-      "published": false,
-      "status": "assessment_pending",
-      "canonical_taxon_candidate": "Erigeron canadensis L.",
-      "gaps": [
-        "assessment"
-      ],
-      "next_action": "assessment"
-    },
-    {
-      "plant_id": "ruscus_aculeatus",
-      "ko": "부처스브룸",
-      "published": false,
-      "status": "assessment_pending",
-      "canonical_taxon_candidate": "Ruscus aculeatus L.",
-      "gaps": [
-        "assessment"
-      ],
-      "next_action": "assessment"
     }
   ]
 }
