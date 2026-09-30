@@ -203,3 +203,10 @@ for token in (
     '우발적으로 한입 먹었다는 사실만으로 중독이 발생한다고 입증하지도 않는다.',
 ):
     assert token in generator, f'missing clinical/exposure boundary: {token}'
+
+# Retail/common-name and edible-part boundaries must remain explicit.
+for token in (
+    '국내 유통명 ‘아욱’은 정확한 종 수준 결론 전에 종 동정 연결이 필요하다.',
+    '꼬투리나 콩알 급여·무제한 급여',
+):
+    assert token in generator, f'missing retail/part boundary: {token}'
