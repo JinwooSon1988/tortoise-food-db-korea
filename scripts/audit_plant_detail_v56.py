@@ -165,3 +165,11 @@ for token in (
     '육지거북 사육장 안에서 재배하지 말라고 권고한다.',
 ):
     assert token in generator, f'missing assessment safety boundary: {token}'
+
+# Specialist exception translations preserve accidental-nibble and regular-feeding distinctions.
+for token in (
+    '정기적인 급여는 피하도록 권고한다.',
+    '우발적으로 조금 뜯어 먹은 경우까지 해를 일으킬 것으로 보지는 않는다고 설명한다.',
+    '높은 옥살산 함량을 계획 급여를 피하는 이유로 제시한다.',
+):
+    assert token in generator, f'missing specialist exception distinction: {token}'
