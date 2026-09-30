@@ -81,10 +81,6 @@ jobs:
           python scripts/qa_public_content_coverage.py
           python scripts/qa_plant_coverage_gap_report_v1.py
           python scripts/build_wild_candidate_research_queue.py
-      - name: Verify committed plant pages are current
-        run: |
-          diff -qr /tmp/committed-generated/plant plant
-          diff -q /tmp/committed-generated/sitemap.xml sitemap.xml
       - name: Commit regenerated artifacts on PR branch
         if: github.event_name == 'pull_request'
         run: |
@@ -95,6 +91,10 @@ jobs:
             git commit -m "Build: sync generated plant detail pages"
             git push origin HEAD:${{ github.head_ref }}
           fi
+      - name: Verify committed plant pages are current
+        run: |
+          diff -qr /tmp/committed-generated/plant plant
+          diff -q /tmp/committed-generated/sitemap.xml sitemap.xml
       - name: Verify generated artifacts are deterministic
         run: |
           cp -a plant /tmp/plant-rendered
