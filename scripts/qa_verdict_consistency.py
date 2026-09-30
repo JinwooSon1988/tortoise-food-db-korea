@@ -186,6 +186,8 @@ for p in public:
         errors.append(f"{pid}: displayed direct-evidence count is not traceable to canonical evidence")
     if expected_context and "간접·맥락" not in text:
         errors.append(f"{pid}: contextual evidence exists but is not visibly distinguished")
+    if linked and "숫자가 많다고 판정의 신뢰도나 안전성이 더 높다는 뜻은 아니다" not in text:
+        errors.append(f"{pid}: evidence counts must not imply a confidence or safety score")
     if linked and "이 자료의 역할" not in text:
         errors.append(f"{pid}: evidence cards must explain each source's role in plain Korean")
     # Every linked public source is traceable: URL first, then DOI/PMID fallback.
