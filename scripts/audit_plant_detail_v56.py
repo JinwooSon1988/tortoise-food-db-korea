@@ -211,6 +211,20 @@ for token in (
 ):
     assert token in generator, f'missing retail/part boundary: {token}'
 
+# Data-driven localization gate: every populated public evidence limitation must have a Korean reader-facing rendering.
+evidence_root = json.loads((root / 'data/public_evidence_records.json').read_text(encoding='utf-8'))
+evidence_records = evidence_root.get('records', evidence_root) if isinstance(evidence_root, dict) else evidence_root
+limit_values = sorted({str(e.get('does_not_support') or '').strip() for e in evidence_records if str(e.get('does_not_support') or '').strip()})
+# Execute only the pure display helpers from the generator so this audit tests runtime-equivalent output without generating pages.
+helper_start = generator.index('def evidence_support_display')
+helper_end = generator.find('\ndef ', generator.index('def evidence_limit_display') + 1)
+helper_src = generator[helper_start:] if helper_end < 0 else generator[helper_start:helper_end]
+helper_ns = {'re': re}
+exec(helper_src, helper_ns)
+render_limit = helper_ns['evidence_limit_display']
+unlocalized_limits = [(raw, render_limit(raw)) for raw in limit_values if not re.search(r'[가-힣]', str(render_limit(raw)))]
+assert not unlocalized_limits, 'reader-facing English evidence limitations remain: ' + repr(unlocalized_limits[:20])
+
 # Reader-facing evidence limitations must never silently fall through as raw English.
 assert 'def evidence_limit_display(value):' in generator, 'evidence limitation display helper missing'
 assert 'return v' in generator, 'expected explicit fallback in evidence limitation helper'
