@@ -156,3 +156,12 @@ for token in (
     '다른 부위로 임의 확대하지 않는다.',
 ):
     assert token in generator, f'missing high-use feeding distinction: {token}'
+
+# Remaining assessment translations preserve non-transfer and planned-feeding boundaries.
+for token in (
+    '옥수수 속대·알곡 또는 옥수수 전체로 확대 적용하면 안 된다.',
+    '이를 이베라그리스육지거북 특이 독성시험 결과로 해석하지 않는다.',
+    '피레트린 함량이 높은 분류군은 명시적으로 제외한다.',
+    '육지거북 사육장 안에서 재배하지 말라고 권고한다.',
+):
+    assert token in generator, f'missing assessment safety boundary: {token}'
