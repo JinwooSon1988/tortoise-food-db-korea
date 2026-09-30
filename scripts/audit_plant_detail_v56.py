@@ -6,6 +6,7 @@ Information hierarchy on every page:
 Grade equality with the home search is enforced by scripts/qa_verdict_consistency.py.
 """
 import json, re
+import ast
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
