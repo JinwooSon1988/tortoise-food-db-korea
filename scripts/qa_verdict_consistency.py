@@ -19,6 +19,19 @@ errors = []
 plants = json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8"))
 assessments = load_assessments()
 rows_by = by_plant(assessments)
+# Every assessment evidence ID must resolve to a record that explicitly names the same plant.
+evidence_raw = json.loads((ROOT / "data/public_evidence_records.json").read_text(encoding="utf-8"))
+evidence_records = evidence_raw if isinstance(evidence_raw, list) else evidence_raw.get("evidence", evidence_raw.get("records", []))
+evidence_by_id = {r.get("id"): r for r in evidence_records}
+for assessment in assessments:
+    pid = assessment.get("plant_id")
+    for eid in assessment.get("evidence_ids", []):
+        record = evidence_by_id.get(eid)
+        if not record:
+            errors.append(f"{pid}: assessment references missing evidence {eid}")
+        elif pid not in record.get("plant_ids", []):
+            errors.append(f"{pid}: evidence {eid} does not explicitly include this plant")
+
 public = public_plants(plants, assessments)
 public_ids = {p["id"] for p in public}
 retail = {r["plant_id"]: r for r in json.loads((ROOT / "data/korean_retail_name_map.json").read_text(encoding="utf-8"))}
