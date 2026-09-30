@@ -218,6 +218,30 @@ for p in public:
             errors.append(f"{pid}: botanical/identity evidence must explicitly avoid implying feeding safety")
         if st in nutrition_types and "급여 안전성 자체를 증명하지 않음" not in text:
             errors.append(f"{pid}: composition evidence must explicitly avoid implying feeding safety")
+    # Non-tortoise and in-vitro evidence must stay visibly separated from tortoise feeding evidence.
+    non_tortoise_subjects = (
+        "Bos taurus (cattle)",
+        "Mus musculus / Rattus norvegicus (toxicology context)",
+        "Chinese hamster ovary cells; in vitro",
+        "HaCaT cell line; not an animal feeding study",
+        "Cats and plant chemistry",
+        "Plant chemistry; mammalian experimental context",
+        "primarily mammalian/medicinal toxicology; not tortoise feeding",
+    )
+    if any(str(e.get("animal_taxon") or "") in non_tortoise_subjects for e in linked):
+        if "급여시험 아님" not in text:
+            errors.append(f"{pid}: non-tortoise evidence must be visibly identified as not a tortoise/animal feeding trial")
+    # Critical part/state boundaries must be localized rather than exposed as raw English data.
+    critical_part_states = (
+        "leaves and flowers; root explicitly excluded",
+        "leaves and flowers; fruit not inferred",
+        "herb; seeds explicitly excluded",
+        "leaves only; cob/kernel excluded",
+        "grass vegetation; not grain/seed equivalence",
+    )
+    for raw in critical_part_states:
+        if any(str(e.get("plant_part_state") or "") == raw for e in linked) and re.search(rf">[^<]*{re.escape(raw)}[^<]*<", text):
+            errors.append(f"{pid}: critical plant-part boundary leaked as raw English metadata ({raw})")
     # Internal evidence enums belong in data, not in reader-facing cards.
     visible_enum_tokens = ("plant_identity_context", "official_botanical_database", "official_agriculture_database", "food_composition_database", "tortoise_general", "exact_species")
     for token in visible_enum_tokens:
