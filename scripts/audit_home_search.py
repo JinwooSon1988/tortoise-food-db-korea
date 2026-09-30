@@ -50,7 +50,7 @@ card_markup = card_fn[card_fn.index("return '<article"):]
 order = [card_markup.find(x) for x in ('<h3>', 'gradepill', 'class="meaning"', 'class="why"', '+noteHtml+', 'class="detailbtn"')]
 assert -1 not in order and order == sorted(order), 'result card order must be name → grade → meaning → why → species note → detail'
 assert "' 상세 근거 보기\" href=\"./plant/'" in card_fn
-assert '(기본 판정과 별개)' in card_fn, 'species notes must be labelled as separate from the default verdict'
+assert '종별 특이사항 있음' in card_fn and '기본 판정과 분리해 확인' in card_fn, 'species notes must stay subordinate to the default verdict'
 for noisy in ('directCount', 'confidenceLabel', '근거수준', 'applicability_note'):
     assert noisy not in card_fn, f'evidence metadata belongs on the detail page, not the result card: {noisy}'
 
