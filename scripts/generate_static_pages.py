@@ -154,6 +154,44 @@ def part_state_display(value):
         "feeding-trial plant material; flowering/seed stage discussed":"급여시험 식물체 — 개화·결실 단계를 구분해 언급",
 
 
+        "3-day-old sprouts versus mature broccoli":"3일령 새싹과 성숙 브로콜리를 구분",
+        "As described by the source; do not generalize beyond the cited note":"출처에 기술된 범위만 해당 — 인용된 설명 밖으로 일반화하지 않음",
+        "As specified in the source; composition/toxicology findings must not be generalized across untested plant parts or animal taxa.":"출처에 명시된 성분·독성학 범위만 해당 — 시험하지 않은 식물 부위나 동물 분류군으로 일반화하지 않음",
+        "Leaves, flowers, shoots and selected dried plant materials; item-specific details in source":"잎·꽃·새순 및 일부 건조 식물체 — 항목별 세부 범위는 원자료에 따름",
+        "aerial growth sampled at full senescence; species-specific phytochemical analysis":"완전 노화 단계의 지상부 — 해당 종의 식물화학 분석",
+        "aerial parts; steam-distilled essential oil":"지상부의 수증기 증류 정유 — 일반 식물체 급여와 동일시하지 않음",
+        "aerial plant material":"지상부 식물체",
+        "aerial plant material; exact listed mint taxa only":"지상부 식물체 — 명시된 민트 분류군에만 해당",
+        "broccoli plant; flower head and flowers described":"브로콜리 식물체 — 꽃봉오리 머리와 꽃을 구분해 기술",
+        "broccoli plant; sprouting broccoli entry, not a quantified microgreen trial":"브로콜리 식물체 — 발아 브로콜리 항목이며 정량 마이크로그린 급여시험은 아님",
+        "five genotypes/varieties; chemotype-dependent composition":"5개 유전형·품종 — 화학형에 따라 성분이 달라질 수 있음",
+        "flowers, unripe fruit, leaves / wild fresh plant":"꽃·미숙 열매·잎 — 야생 생식물체",
+        "fresh whole plant and extracts; toxicology literature summarized":"신선한 전초와 추출물 — 독성학 문헌 요약이며 일반 급여시험과 동일시하지 않음",
+        "genus-level hazard warning; not an Oenanthe javanica feeding trial":"속 수준 위해 경고 — 미나리(Oenanthe javanica) 급여시험이 아님",
+        "herb; flowers also described":"초본 식물체 — 꽃도 별도로 기술",
+        "identity only; Korean crop name 근대":"식물 동정만 확인 — 국내 작물명 ‘근대’",
+        "leaf food concept; pyrethrin-rich Chrysanthemum taxa excluded":"잎 식품 범위 — 피레트린 함량이 높은 Chrysanthemum 분류군은 제외",
+        "leaf scope used by this food concept":"해당 식품 개념에서 사용하는 잎 범위",
+        "leaf/tree sap context; fruit separately distinguished":"잎·수액 맥락 — 열매는 별도로 구분",
+        "leafy/aerial plant material":"잎·지상부 식물체",
+        "leaves / aerial plant material":"잎·지상부 식물체",
+        "leaves and cauliflower head":"잎과 콜리플라워 꽃머리",
+        "leaves and stems identified in faecal diet analysis":"분변 식이 분석에서 확인된 잎과 줄기",
+        "leaves; multiple Morus taxa/varieties":"잎 — 여러 Morus 분류군·품종 자료",
+        "methanolic leaf extract":"잎의 메탄올 추출물 — 생잎 급여와 동일시하지 않음",
+        "plant material/new untreated growth":"식물체·처리하지 않은 새 생장부",
+        "plant material; cultivar-specific quantity not established":"식물체 — 품종별 정량 범위는 확정되지 않음",
+        "plant material; older leaves specifically discussed":"식물체 — 오래된 잎을 별도로 논의",
+        "plant material; species identification required":"식물체 — 종 수준 동정 필요",
+        "plant; Pelargonium distinguished from hardy Geranium":"식물체 — Pelargonium과 내한성 Geranium을 구분",
+        "plant; Tagetes distinguished from Calendula":"식물체 — Tagetes와 Calendula를 구분",
+        "plant; culinary herb":"식용 허브 식물체",
+        "plant; cultivar/chemotype variation separately evidenced":"식물체 — 품종·화학형 차이는 별도 근거로 구분",
+        "plant; genus-level source scope":"식물체 — 출처의 적용 범위는 속 수준",
+        "species-level use record":"종 수준 이용 기록",
+        "tree leaves / plant material":"나무 잎·식물체",
+        "tree plant material; leaf concept mapped conservatively":"나무 식물체 — 잎 범위는 보수적으로 연결",
+        "young leaves and flowers":"어린 잎과 꽃",
         "As specified in the cited source and evidence note; plant parts must not be silently generalized.":"인용 자료에 명시된 부위·상태만 해당 — 다른 부위로 임의 일반화하지 않음",
         "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.":"출처의 부위·상태 구분을 유지 — 뿌리·잎·꽃·열매·씨앗 사이를 일반화하지 않음",
     }
@@ -181,7 +219,7 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .skiplink{position:absolute;left:12px;top:-60px;z-index:50;background:#fff;border:2px solid #286a46;border-radius:9px;padding:9px 12px;font-weight:900;text-decoration:none}.skiplink:focus{top:10px}
 .small{font-size:13px;color:var(--muted)}h1{margin:0}h2{font-size:18px;margin:0 0 8px}h3{font-size:15px;margin:0 0 6px}ul{padding-left:20px;margin:6px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;scroll-margin-top:18px}
-.detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnav a{font-weight:850;text-decoration:none;color:var(--forest)}.detailnav span{color:var(--muted)}
+.detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnav a{display:inline-flex;align-items:center;min-height:44px;font-weight:850;text-decoration:none;color:var(--forest)}.detailnav span{color:var(--muted)}
 .planthead{padding:6px 2px 10px}.planthead h1{font-size:clamp(30px,6vw,44px);letter-spacing:-.04em;line-height:1.15}.scientific{color:var(--muted);font-size:15px;margin-top:2px}.aliases{font-size:12px;color:var(--muted);margin-top:4px}
 .green{background:var(--green)}.yellow{background:var(--yellow)}.hold{background:var(--hold)}.danger{background:var(--danger);border-color:#e8bcbc}
 .decision{border-width:2px;padding:20px 22px}.decisionlabel{font-size:12px;font-weight:800;color:var(--muted);margin-bottom:6px}
@@ -191,7 +229,7 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .gradekey{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:11px;padding-top:8px;border-top:1px solid rgba(0,0,0,.08);font-size:11px;color:var(--muted)}.gradekey b{color:var(--text)}.gradekey .on{color:var(--text);font-weight:850}
 .practicalgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.practicalgrid>div{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fbfdfb}.practicalgrid b{font-size:12px;color:var(--forest)}.practicalgrid p{margin:4px 0 0;font-size:14px}
 .species-specific{background:#fbfcfb;padding:14px 18px}.species-specific h2{font-size:15px}.speciesexception{border-top:1px solid var(--line);padding:9px 0 0;margin-top:9px}.speciesexception>div{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:14px}.speciesexception>div span{flex:0 0 auto;font-size:12px;font-weight:800;color:var(--forest)}.speciesexception p{margin:4px 0 0;font-size:13px;color:var(--muted)}
-.scopefold{margin-top:2px}.scopefold>summary{cursor:pointer;font-weight:850;color:var(--forest);padding:9px 2px;list-style-position:inside;border-radius:8px}.scopefold>summary:focus-visible{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}.scopebody{padding-top:4px}.scopebody>div{padding:12px 0;border-top:1px solid var(--line)}.scopebody>div:first-of-type{border-top:0;padding-top:4px}.scopecard p{margin:4px 0 0;font-size:14px}
+.scopefold{margin-top:2px}.scopefold>summary{cursor:pointer;min-height:44px;font-weight:850;color:var(--forest);padding:9px 2px;list-style-position:inside;border-radius:8px}.scopefold>summary:focus-visible{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}.scopebody{padding-top:4px}.scopebody>div{padding:12px 0;border-top:1px solid var(--line)}.scopebody>div:first-of-type{border-top:0;padding-top:4px}.scopecard p{margin:4px 0 0;font-size:14px}
 .identity-alert{background:#fff8e6;border:1px solid #e8cf86;border-left:5px solid #a07b16;border-radius:12px;padding:12px 14px!important;margin:6px 0}.identity-alert h3{color:#6d5207}
 .identity-note h3{color:#405047}.identity-note p{color:var(--muted)}
 .plantphoto{display:flex;gap:12px;align-items:flex-start;margin-top:8px}.plantphoto img{width:112px;height:112px;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:#fff}.plantphoto figcaption{font-size:11px;color:var(--muted);line-height:1.5}
@@ -204,11 +242,11 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .evcard p{font-size:13px;margin:6px 0}.evcard .limit{background:#fff8e8;border-radius:8px;padding:8px 10px}.evcard .ids{font-size:12px;color:var(--muted)}
 .conflict{border:2px solid #a56b19;background:#fff5df;border-radius:12px;padding:12px;margin:10px 0}
 .nutgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.nutgrid>div{border:1px solid var(--line);border-radius:10px;padding:9px;background:#fafcf9}.nutgrid b{display:block;font-size:12px;color:var(--muted)}.nutgrid strong{display:block;font-size:17px}
-.relatedgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.related{display:block;border:1px solid var(--line);border-radius:10px;padding:10px;text-decoration:none;font-weight:800;background:#fff;font-size:14px}
+.relatedgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.related{display:flex;align-items:center;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:10px;text-decoration:none;font-weight:800;background:#fff;font-size:14px}
 .share{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.share button,.share a{border:0;border-radius:12px;padding:11px 14px;font-weight:800;background:#e7f5eb;text-decoration:none;cursor:pointer;font-size:14px}
 .topmeta{display:flex;justify-content:flex-end}.langswitch{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.langswitch button{padding:6px 9px;border:0;border-radius:0;background:#fff;color:var(--muted);font-size:11px}.langswitch button.active{background:#286a46;color:#fff}
 @media(max-width:700px){body{padding:12px 14px 32px}.nutgrid{grid-template-columns:1fr 1fr}.relatedgrid{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.detailnav span{display:none}.planthead{padding:2px 2px 6px}.decision{padding:14px 15px}.gradeletter{min-width:40px;height:40px;font-size:21px}.meaning{font-size:15px;margin-top:8px}.decisionwhy{font-size:14px;margin-top:7px}.gradekey{gap:3px 8px;margin-top:9px;padding-top:7px;font-size:10px}.card{padding:14px}.practicalgrid,.relatedgrid{grid-template-columns:1fr}.speciesexception>div{align-items:flex-start;flex-direction:column;gap:2px}.evidence-deep{padding:13px}.evsummary{gap:5px}.evcard{padding:11px 12px;margin:8px 0}.evhead{gap:4px}.evhead span{font-size:10px;padding:2px 6px}.evcard h3{font-size:14px;line-height:1.45}.evrole{font-size:12px;line-height:1.5}.evmeta{grid-template-columns:72px 1fr;font-size:11px;gap:2px 7px}.evcard p{font-size:12px;line-height:1.55}.sourceopen{min-height:40px;align-items:center}}
+@media(max-width:520px){.detailnav span{display:none}.planthead{padding:2px 2px 6px}.decision{padding:14px 15px}.gradeletter{min-width:40px;height:40px;font-size:21px}.meaning{font-size:15px;margin-top:8px}.decisionwhy{font-size:14px;margin-top:7px}.gradekey{gap:3px 8px;margin-top:9px;padding-top:7px;font-size:10px}.card{padding:14px}.practicalgrid,.relatedgrid{grid-template-columns:1fr}.speciesexception>div{align-items:flex-start;flex-direction:column;gap:2px}.evidence-deep{padding:13px}.evsummary{gap:5px}.evcard{padding:11px 12px;margin:8px 0}.evhead{gap:4px}.evhead span{font-size:10px;padding:2px 6px}.evcard h3{font-size:14px;line-height:1.45}.evrole{font-size:12px;line-height:1.5}.evmeta{grid-template-columns:72px 1fr;font-size:11px;gap:2px 7px}.evcard p{font-size:12px;line-height:1.55}.sourceopen{min-height:44px;align-items:center}}
 '''.replace("\n","")
 
 for p in plants:
