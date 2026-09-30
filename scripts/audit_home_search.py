@@ -68,6 +68,10 @@ for g in ('<b>A</b>', '<b>B</b>', '<b>C</b>', '<b>D</b>'):
     assert g in html
 assert html.count('정해진 급여량·빈도') == 1
 assert '판정 보류는 안전하다는 뜻이 아닙니다' in html
+# Zero-result searches must not imply safety and must offer a recovery path without exposing candidates.
+assert '먹여도 된다는 뜻이 아닙니다' in script
+assert '다른 이름·영문명·학명' in script and './all-plants/' in script
+assert '식물 정체성이 확정되지 않은 항목은 공개 판정에 표시하지 않습니다' in script
 
 # Deep links (?q=) wait for the catalog instead of a copy string.
 assert "new URLSearchParams(location.search).get('q')" in search_live
