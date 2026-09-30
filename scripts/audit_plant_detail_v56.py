@@ -129,3 +129,12 @@ for raw in (
     'Kew Plants of the World Online lists',
 ):
     assert raw in generator, f'missing preserved support-translation contract: {raw}'
+
+# Scientific support translations must retain study-domain boundaries in Korean.
+for token in (
+    '포유류 독성시험 결과이므로 육지거북의 독성 용량으로 직접 환산할 수 없다.',
+    '야생 섭식 자료이며 사육 급여 비율을 직접 정하는 자료는 아니다.',
+    '추출물 기반 시험관 연구이므로 생잎의 육지거북 급여 안전성과 동일시하지 않는다.',
+    '농축 정유 자료를 일반 식물체의 육지거북 급여와 동일시하지 않는다.',
+):
+    assert token in generator, f'missing scientific evidence-domain boundary: {token}'
