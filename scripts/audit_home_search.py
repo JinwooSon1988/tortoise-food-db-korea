@@ -108,3 +108,9 @@ assert '.resultcard{display:block;padding:16px 18px' in html
 assert '.grade-b .why,.grade-c .why,.grade-d .why,.grade-hold .why{display:block;-webkit-line-clamp:unset;overflow:visible}' in html
 assert '.examples button{min-height:44px;' in html
 assert '.quickfilter{min-height:44px;padding:7px 12px}' in html
+
+# Keyboard/accessibility baseline for the public home page.
+assert 'class="skiplink" href="#main-content"' in home, "home skip link missing"
+assert '<main id="main-content" class="wrap" tabindex="-1">' in home, "home main landmark/focus target missing"
+assert '.skiplink:focus{transform:translateY(0)}' in home, "home skip-link focus style missing"
+assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex;align-items:center;gap:5px;min-height:44px' in home, "desktop utility targets must be at least 44px"
