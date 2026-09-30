@@ -250,6 +250,19 @@ assert not mixed_supports, 'English-dominant mixed-language evidence supports re
 mixed_limits = [(raw, render_limit(raw)) for raw in limit_values if english_dominant_unchanged(raw, render_limit(raw))]
 assert not mixed_limits, 'English-dominant mixed-language evidence limitations remain: ' + repr(mixed_limits[:20])
 
+# Evidence-card categorical metadata must never expose internal enum codes.
+directness_match = re.search(r'directness_ko=({[^\n]+})', generator)
+applicability_match = re.search(r'applicability_ko=({[^\n]+})', generator)
+assert directness_match and applicability_match, 'evidence metadata localization maps missing'
+directness_ko = ast.literal_eval(directness_match.group(1))
+applicability_ko = ast.literal_eval(applicability_match.group(1))
+directness_values = sorted({str(e.get('directness') or '').strip() for e in evidence_records if str(e.get('directness') or '').strip()})
+applicability_values = sorted({str(e.get('applicability') or '').strip() for e in evidence_records if str(e.get('applicability') or '').strip()})
+assert not [v for v in directness_values if v not in directness_ko], 'unlocalized directness enum values remain: ' + repr([v for v in directness_values if v not in directness_ko])
+assert not [v for v in applicability_values if v not in applicability_ko], 'unlocalized applicability enum values remain: ' + repr([v for v in applicability_values if v not in applicability_ko])
+assert all(re.search(r'[가-힣]', directness_ko[v]) for v in directness_values), 'directness labels must be Korean'
+assert all(re.search(r'[가-힣]', applicability_ko[v]) for v in applicability_values), 'applicability labels must be Korean'
+
 # Source-type localization gate: every current evidence source type must resolve to a deliberate Korean category,
 # never the generic fallback. This catches newly introduced internal source_type codes before publication.
 source_start = generator.index('def source_kind')
