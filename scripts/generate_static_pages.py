@@ -384,6 +384,14 @@ def evidence_support_display(value):
         return "마스터 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종에 일반화하면 안 되며 이베라그리스육지거북 특이 급여량·식단 비율·고정 급여 빈도를 정하지 않는다."
     if v=="Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.":
         return "이 판정을 Tagetes 메리골드에 전이하면 안 된다. 이베라그리스육지거북 특이 식단 비율·고정 급여 빈도·무제한 사용도 정하지 않는다."
+    if v=="Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.":
+        return "이베라그리스육지거북 특이 식단 비율·고정 급여 빈도·정유 안전성·무제한 섭취를 정하는 자료는 아니다."
+    if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
+        return "이베라그리스육지거북 특이 급여량·고정 급여 빈도를 정하지 않으며 다른 Salvia 종과 동등하다고 볼 근거도 아니다."
+    if v=="Genus-level guidance does not establish a Testudo graeca ibera-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.":
+        return "속 수준 지침은 이베라그리스육지거북 특이 식단 비율·고정 급여 빈도·정제 정유의 안전성·무제한 섭취를 확정하지 않는다."
+    if v=="Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":
+        return "이베라그리스육지거북 특이 독성 용량을 정하지 않으며 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다는 사실도 입증하지 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
