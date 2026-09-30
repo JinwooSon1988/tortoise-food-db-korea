@@ -61,6 +61,18 @@ for pid, rows in rows_by.items():
     if a is not None and is_species_only(a):
         errors.append(f"{pid}: species-specific assessment became the representative verdict")
 
+# Representative-verdict priority is a public contract after species-selector removal.
+priority_cases = [
+    ([{'plant_id':'qa','animal_taxon':'Testudo graeca ibera','assessment_scope':'exact_species','verdict':'recommended'}, {'plant_id':'qa','animal_taxon':'Testudo','assessment_scope':'genus','verdict':'avoid'}], 'Testudo'),
+    ([{'plant_id':'qa','animal_taxon':'Testudo graeca ibera','assessment_scope':'exact_species','verdict':'recommended'}, {'plant_id':'qa','species_group':'Mediterranean_Testudo','assessment_scope':'group','verdict':'caution'}], 'Mediterranean_Testudo'),
+    ([{'plant_id':'qa','animal_taxon':'Testudo graeca ibera','assessment_scope':'exact_species','verdict':'recommended'}, {'plant_id':'qa','assessment_scope':'tortoise_general','species_group':'Tortoise_general','verdict':'limited'}], 'tortoise_general'),
+]
+for rows, expected in priority_cases:
+    chosen = representative(rows)
+    if expected == 'Testudo' and chosen.get('animal_taxon') != 'Testudo': errors.append('representative priority must prefer Testudo over exact-species rows')
+    elif expected == 'Mediterranean_Testudo' and chosen.get('species_group') != 'Mediterranean_Testudo': errors.append('representative priority must prefer Mediterranean_Testudo over exact-species rows')
+    elif expected == 'tortoise_general' and chosen.get('assessment_scope') != 'tortoise_general': errors.append('representative priority must prefer tortoise_general over exact-species rows')
+
 # 2) Home wiring: canonical registry only, shared core, no species selector.
 home = (ROOT / "index.html").read_text(encoding="utf-8")
 search_live = (ROOT / "search-live.js").read_text(encoding="utf-8")
