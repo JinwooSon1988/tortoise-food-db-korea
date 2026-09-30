@@ -115,6 +115,14 @@ assert '<main id="main-content" class="wrap" tabindex="-1">' in html, "home main
 assert '.skiplink:focus{transform:translateY(0)}' in html, "home skip-link focus style missing"
 assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex;align-items:center;gap:5px;min-height:44px' in html, "desktop utility targets must be at least 44px"
 
+# Search controls must remain explicitly named and keyboard-operable.
+assert 'id="searchBtn"' in html, 'search submit control missing'
+assert 'id="moreResults"' in html, 'paged-result continuation control missing'
+assert 'type="button"' in html, 'non-submit home controls should declare button semantics'
+assert 'aria-label="빠른 검색 예시"' in html, 'example-query control group needs an accessible name'
+assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html, 'grade filter group needs an accessible name'
+assert 'aria-label="구하는 곳으로 보기"' in html, 'source filter group needs an accessible name'
+
 # Hold is an evidence state, never an implicit permission to feed.
 assert "g.grade==='보류'?'<div class=\"holdwarning\"" in html, "hold results need an always-visible safety warning"
 assert '판정 보류는 안전하다는 뜻이 아닙니다.' in html, "hold safety boundary wording missing"
