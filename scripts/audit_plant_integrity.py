@@ -8,6 +8,9 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import urlparse
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from public_verdict import public_plants
+
 ROOT = Path(__file__).resolve().parents[1]
 PLANTS = ROOT / "data" / "plants.json"
 ASSESSMENTS = ROOT / "data" / "public_assessments.json"
@@ -36,9 +39,11 @@ def main() -> int:
     # creating thin SEO pages or implying a feeding verdict.
     assessment_rows = json.loads(ASSESSMENTS.read_text(encoding="utf-8"))
     if isinstance(assessment_rows, dict): assessment_rows = assessment_rows.get("assessments", assessment_rows.get("records", []))
-    public_groups = {"Mediterranean_Testudo", "Tortoise_general", "Herbivorous_reptile_general"}
-    assessed_ids = {a.get("plant_id") for a in assessment_rows if a.get("plant_id") and a.get("species_group") in public_groups}
-    public_ids = {p["id"] for p in plants if p.get("identity_status") != "candidate_name" and p.get("id") in assessed_ids}
+    # Canonical publication semantics live in public_verdict.public_plants().
+    # This intentionally includes a reviewed non-candidate plant even when its
+    # only current assessment is exact-species evidence; representative() then
+    # renders the public default as HOLD rather than transferring that species verdict.
+    public_ids = {p["id"] for p in public_plants(plants, assessment_rows)}
     dirs = {p.name for p in PLANT_DIR.iterdir() if p.is_dir() and (p / "index.html").exists()}
     missing_pages = sorted(public_ids - dirs)
     extra_pages = sorted(dirs - id_set)
