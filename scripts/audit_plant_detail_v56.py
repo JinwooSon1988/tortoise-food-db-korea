@@ -109,3 +109,13 @@ for token in (
     '.sourceopen{min-height:44px;align-items:center}',
 ):
     assert token in generator, f'missing 44px interaction target contract: {token}'
+
+# Korean public evidence cards must route limitation copy through the localization layer.
+assert 'def evidence_limit_display(value):' in generator
+assert 'evidence_limit_display(e.get("does_not_support"))' in generator
+for raw in (
+    'This source does not by itself establish an exact captive feeding percentage',
+    'Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial',
+    'Taxonomic acceptance does not establish tortoise feeding safety',
+):
+    assert raw in generator, f'missing preserved evidence-limit translation contract: {raw}'
