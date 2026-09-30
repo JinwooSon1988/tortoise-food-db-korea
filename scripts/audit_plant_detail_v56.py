@@ -229,6 +229,25 @@ assert not unlocalized_supports, 'reader-facing English evidence supports remain
 unlocalized_limits = [(raw, render_limit(raw)) for raw in limit_values if (not re.search(r'[가-힣]', raw) and str(render_limit(raw)).strip() == raw) or not re.search(r'[가-힣]', str(render_limit(raw)))]
 assert not unlocalized_limits, 'reader-facing English evidence limitations remain: ' + repr(unlocalized_limits[:20])
 
+# Metadata localization gate: values rendered in the Korean evidence cards must not leak raw English/code labels.
+meta_start = generator.index('def animal_taxon_display')
+meta_end = generator.index('\ndef evidence_support_display', meta_start)
+meta_ns = {}
+exec(generator[meta_start:meta_end], meta_ns)
+render_animal = meta_ns['animal_taxon_display']
+render_part = meta_ns['part_state_display']
+for field, renderer in (('animal_taxon', render_animal), ('plant_part_state', render_part)):
+    values = sorted({str(e.get(field) or '').strip() for e in evidence_records if str(e.get(field) or '').strip()})
+    leaked = [(raw, renderer(raw)) for raw in values if not re.search(r'[가-힣]', str(renderer(raw)))]
+    assert not leaked, f'reader-facing English evidence {field} values remain: {leaked[:20]!r}'
+
+directness_map = {'direct':'직접 근거','expert_husbandry':'전문 사육 근거','related_taxon':'근연 분류군 근거','contextual':'맥락 근거','composition_only':'성분 근거'}
+applicability_map = {'exact_taxon':'정확한 대상 분류군','species':'종 수준','mediterranean_testudo':'지중해 육지거북류(Testudo속)','tortoise_general':'육지거북 일반','herbivorous_reptile_general':'초식 파충류 일반','composition_only':'성분 자료','taxon_group':'분류군 수준'}
+for field, mapping in (('directness', directness_map), ('applicability', applicability_map)):
+    values = sorted({str(e.get(field) or '').strip() for e in evidence_records if str(e.get(field) or '').strip()})
+    leaked = [raw for raw in values if raw not in mapping]
+    assert not leaked, f'unmapped reader-facing evidence {field} values remain: {leaked[:20]!r}'
+
 # Reader-facing evidence limitations must never silently fall through as raw English.
 assert 'def evidence_limit_display(value):' in generator, 'evidence limitation display helper missing'
 assert 'return v' in generator, 'expected explicit fallback in evidence limitation helper'
