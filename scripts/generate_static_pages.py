@@ -410,6 +410,12 @@ def evidence_support_display(value):
         return "독성 용량·임상 독성·안전한 사육 식단 비율 또는 Testudo 특이 이상반응을 확정하는 자료는 아니다."
     if v=="Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.":
         return "이베라그리스육지거북의 독성 용량·임상 중독 역치를 정하지 않으며 우발적으로 한입 먹었다는 사실만으로 중독이 발생한다고 입증하지도 않는다."
+    if v=="This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":
+        return "이베라그리스육지거북 특이 급여 비율·고정 빈도·무제한 사용을 정하지 않으며, 이름에 mallow가 들어가는 무관한 식물까지 동등하게 볼 수 없다. 국내 유통명 ‘아욱’은 정확한 종 수준 결론 전에 종 동정 연결이 필요하다."
+    if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
+        return "이베라그리스육지거북 특이 급여량·고정 급여 빈도를 정하지 않으며 다른 Salvia 종과 동등하다고 볼 근거도 아니다."
+    if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
+        return "꼬투리나 콩알 급여·무제한 급여 또는 이베라그리스육지거북 특이 정량 급여량을 뒷받침하지 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
