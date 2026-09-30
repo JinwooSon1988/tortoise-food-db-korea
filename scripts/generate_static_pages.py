@@ -336,6 +336,14 @@ def evidence_support_display(value):
         return "이베라그리스육지거북 특이 식단 비율이나 급여 빈도를 정하는 자료가 아니다. 일반명이 모두 geranium으로 불릴 수 있다는 이유만으로 진정한 Geranium속 식물에 판정을 전이하면 안 된다."
     if v=="This specialist verdict is not a Testudo graeca ibera toxicity trial. It does not establish a tortoise toxic dose, identical susceptibility to mammals, or identical perilla-ketone content across edible cultivars.":
         return "이 전문 판정은 이베라그리스육지거북 독성시험이 아니다. 육지거북 독성 용량, 포유류와 동일한 감수성 또는 식용 품종 전체의 동일한 페릴라 케톤 함량을 입증하지 않는다."
+    if v=="The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.":
+        return "이 결론을 Mentha속 전체로 확대하면 안 된다. 같은 출처는 페퍼민트(Mentha × piperita)와 페니로열(Mentha pulegium)을 별도로 제외하므로 국내에서 단순히 ‘민트’로 유통되는 식물은 종을 확인한 뒤 급여 판정을 내려야 한다."
+    if v=="This is a genus-level caution, not an Oenanthe javanica-specific Testudo graeca ibera toxicity study or dose-response experiment. It does not establish a tortoise toxic dose for Korean minari.":
+        return "속 수준의 주의 근거이며 Oenanthe javanica를 직접 대상으로 한 이베라그리스육지거북 독성시험이나 용량-반응 시험이 아니다. 국내 미나리의 육지거북 독성 용량을 정하는 자료도 아니다."
+    if v=="Does not establish safety for Testudo graeca ibera, a tortoise feeding dose or frequency, or justify transferring toxicity of other Oenanthe species to O. javanica. It also does not prove that O. javanica is safe as a captive tortoise food.":
+        return "이베라그리스육지거북의 안전성·급여량·빈도를 확정하지 않으며 다른 Oenanthe 종의 독성을 O. javanica에 그대로 전이할 근거도 아니다. 반대로 O. javanica가 사육 육지거북에게 안전한 먹이라는 사실을 입증하는 자료도 아니다."
+    if v=="This specialist plant-database entry is not a controlled Testudo graeca ibera feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.":
+        return "이 전문 식물 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 전이하면 안 되며, 해당 분류는 정확한 사육 식단 비율·고정 급여 빈도·무제한 사용을 정하지 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
