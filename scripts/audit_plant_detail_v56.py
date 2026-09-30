@@ -119,3 +119,13 @@ for raw in (
     'Taxonomic acceptance does not establish tortoise feeding safety',
 ):
     assert raw in generator, f'missing preserved evidence-limit translation contract: {raw}'
+
+# Korean public evidence cards route support claims through a meaning-preserving display layer.
+assert 'def evidence_support_display(value):' in generator
+assert 'evidence_support_display(e.get("supports"))' in generator
+for raw in (
+    'Safe to Feed as part of a varied diet',
+    'Analytical evidence that common buckwheat leaves contain phototoxic fagopyrins.',
+    'Kew Plants of the World Online lists',
+):
+    assert raw in generator, f'missing preserved support-translation contract: {raw}'
