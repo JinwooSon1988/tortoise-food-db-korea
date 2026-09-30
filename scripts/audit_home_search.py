@@ -119,7 +119,7 @@ assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex
 assert 'id="searchBtn"' in html, 'search submit control missing'
 assert 'id="moreResults"' in html, 'paged-result continuation control missing'
 assert 'type="button"' in html, 'non-submit home controls should declare button semantics'
-assert 'aria-label="빠른 검색 예시"' in html, 'example-query control group needs an accessible name'
+assert 'aria-label="검색 예시"' in html, 'example-query control group needs an accessible name'
 assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html, 'grade filter group needs an accessible name'
 assert 'aria-label="구하는 곳으로 보기"' in html, 'source filter group needs an accessible name'
 
