@@ -119,3 +119,13 @@ assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex
 assert "g.grade==='보류'?'<div class=\"holdwarning\"" in home, "hold results need an always-visible safety warning"
 assert '판정 보류는 안전하다는 뜻이 아닙니다.' in home, "hold safety boundary wording missing"
 assert '급여 가능으로 해석하지 마세요.' in home, "hold result must explicitly reject safe-to-feed inference"
+
+# Public search controls and result actions must meet the 44px touch-target baseline.
+for token in (
+    '.quickfilter{min-height:44px',
+    '.examples button{min-height:44px',
+    '.morebtn{display:block;width:100%;margin-top:12px;min-height:44px',
+    '.detailbtn{display:flex;background:var(--accent);color:#fff;border-radius:12px;min-height:48px',
+):
+    assert token in home, f'home touch target contract missing: {token}'
+assert 'button:focus-visible,a:focus-visible,input:focus-visible' in home, 'home keyboard focus indicator missing'
