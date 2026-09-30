@@ -98,6 +98,18 @@ for p in public:
         continue
     if m.group(1) != g["grade"] or m.group(2) != ((a or {}).get("verdict") or "none"):
         errors.append(f"{pid}: detail grade {m.group(1)}/{m.group(2)} != canonical {g['grade']}/{(a or {}).get('verdict')}")
+    expected_tone = g["tone"]
+    if f'class="card {expected_tone} decision"' not in text:
+        errors.append(f"{pid}: decision tone must match canonical verdict ({expected_tone})")
+    if g["grade"] == "보류":
+        if "보류는 안전하다는 뜻이 아니다" not in text:
+            errors.append(f"{pid}: hold verdict must explicitly say hold does not mean safe")
+    elif g["grade"] == "D":
+        if "급여하지 않음" not in text or "현재 판정에서는 급여 대상에서 제외한다." not in text:
+            errors.append(f"{pid}: D verdict must preserve explicit do-not-feed meaning")
+    elif g["grade"] in ("A", "B", "C"):
+        if "판정 보류" in text.split('<section class="card practical"',1)[0]:
+            errors.append(f"{pid}: graded verdict must not look like a hold state")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
     expected_basis = __import__("public_verdict").scope_label(a)
