@@ -402,6 +402,14 @@ def evidence_support_display(value):
         return "미즈나·타쵸이·코마츠나 품종을 직접 시험한 자료가 아니며 이베라그리스육지거북 특이 급여 비율도 정하지 않는다."
     if v=="Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":
         return "Malva verticillata 종 특이 섭취 비율이나 이베라그리스육지거북 대상 정량시험을 제공하지 않는다."
+    if v=="The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.":
+        return "같은 출처가 사료로 적합하지 않다고 명시한다. 이 자료로 육지거북 급여 적합성이나 급여량을 정할 수 없다."
+    if v=="Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.":
+        return "사육 식단 비율·급여 빈도·무제한 사용 또는 이베라그리스육지거북의 직접적인 안전 용량을 정하는 자료는 아니다."
+    if v=="Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.":
+        return "독성 용량·임상 독성·안전한 사육 식단 비율 또는 Testudo 특이 이상반응을 확정하는 자료는 아니다."
+    if v=="Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.":
+        return "이베라그리스육지거북의 독성 용량·임상 중독 역치를 정하지 않으며 우발적으로 한입 먹었다는 사실만으로 중독이 발생한다고 입증하지도 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
