@@ -3,8 +3,11 @@ from pathlib import Path
 import json
 ROOT=Path(__file__).resolve().parents[1]
 plants=json.loads((ROOT/"data/plants.json").read_text(encoding="utf-8"))
-public=[p for p in plants if p.get("identity_status")!="candidate_name"]
-required=["식물동정","이 판정이 말해주지 못하는 것"]
+assessment_data=json.loads((ROOT/"data/public_assessments.json").read_text(encoding="utf-8"))
+assessments=assessment_data if isinstance(assessment_data,list) else assessment_data.get("assessments",assessment_data.get("records",[]))
+assessed_ids={a["plant_id"] for a in assessments}
+public=[p for p in plants if p.get("identity_status")!="candidate_name" and p["id"] in assessed_ids]
+required=["식물동정","근거로 확인되지 않은 것"]
 for p in public:
     path=ROOT/"plant"/p["id"]/"index.html"
     if not path.exists(): raise SystemExit(f"missing generated page: {p['id']}")
