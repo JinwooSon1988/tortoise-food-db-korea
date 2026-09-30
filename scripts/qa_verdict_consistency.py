@@ -253,6 +253,11 @@ for p in public:
     for raw in critical_part_states:
         if any(str(e.get("plant_part_state") or "") == raw for e in linked) and re.search(rf">[^<]*{re.escape(raw)}[^<]*<", text):
             errors.append(f"{pid}: critical plant-part boundary leaked as raw English metadata ({raw})")
+    # Reader-facing part/state metadata must not fall back to raw English.
+    for e in linked:
+        raw_part = str(e.get("plant_part_state") or "").strip()
+        if raw_part and re.search(rf">[^<]*{re.escape(raw_part)}[^<]*<", text):
+            errors.append(f"{pid}: plant-part metadata leaked as raw source text ({raw_part})")
     # Internal evidence enums belong in data, not in reader-facing cards.
     visible_enum_tokens = ("plant_identity_context", "official_botanical_database", "official_agriculture_database", "food_composition_database", "tortoise_general", "exact_species")
     for token in visible_enum_tokens:
