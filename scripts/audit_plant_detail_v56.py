@@ -236,6 +236,20 @@ assert not unlocalized_supports, 'reader-facing English evidence supports remain
 unlocalized_limits = [(raw, render_limit(raw)) for raw in limit_values if (not re.search(r'[가-힣]', raw) and str(render_limit(raw)).strip() == raw) or not re.search(r'[가-힣]', str(render_limit(raw)))]
 assert not unlocalized_limits, 'reader-facing English evidence limitations remain: ' + repr(unlocalized_limits[:20])
 
+# Mixed-language fallback gate: a mostly-English sentence must not pass merely because it contains
+# a Korean crop/common name such as 근대, 아욱 or 민트.
+def english_dominant_unchanged(raw, rendered):
+    if str(rendered).strip() != str(raw).strip():
+        return False
+    latin_words = re.findall(r"\b[A-Za-z][A-Za-z'-]*\b", str(raw))
+    hangul_chunks = re.findall(r"[가-힣]+", str(raw))
+    return len(latin_words) >= 6 and len(latin_words) > max(1, len(hangul_chunks)) * 2
+
+mixed_supports = [(raw, render_support(raw)) for raw in support_values if english_dominant_unchanged(raw, render_support(raw))]
+assert not mixed_supports, 'English-dominant mixed-language evidence supports remain: ' + repr(mixed_supports[:20])
+mixed_limits = [(raw, render_limit(raw)) for raw in limit_values if english_dominant_unchanged(raw, render_limit(raw))]
+assert not mixed_limits, 'English-dominant mixed-language evidence limitations remain: ' + repr(mixed_limits[:20])
+
 # Metadata localization gate: values rendered in the Korean evidence cards must not leak raw English/code labels.
 meta_start = generator.index('def animal_taxon_display')
 meta_end = generator.index('\ndef evidence_support_display', meta_start)
