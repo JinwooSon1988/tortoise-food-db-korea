@@ -57,6 +57,9 @@ for noisy in ('directCount', 'confidenceLabel', '근거수준', 'applicability_n
 # Result volume and ranking: paged, never silently truncated; exact Korean name first.
 assert 'PAGE=8' in script and 'id="moreResults"' in script and '더 보기' in script
 assert 'function matchRank(r,q)' in script and 'if(ko===q)return 0' in script
+assert ".normalize('NFKC')" in script
+assert "[\\s·._'’\\-–—()]+" in script
+assert "matchRank(a,q)-matchRank(b,q)" in script
 
 # Filters are framed as views, not recommendations.
 assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html
