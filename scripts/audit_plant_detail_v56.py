@@ -46,7 +46,7 @@ for pid in sorted(public_ids):
     if None in later or later != sorted(later) or later[0] < why:
         errors.append(f'{pid}: scope/limits → evidence → nutrition → related order broken')
     sp = pos('<h2>종별 특이사항</h2>')
-    if sp is not None and not (why < sp < later[0]):
+    if sp is not None and later[0] is not None and not (why < sp < later[0]):
         errors.append(f'{pid}: species notes must follow the default verdict and precede scope/limits')
     # Evidence numbers live in the evidence section, not in the first-screen decision card.
     decision_card = main[decision:main.find('</section>', decision)]
