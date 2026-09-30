@@ -138,3 +138,12 @@ for token in (
     '농축 정유 자료를 일반 식물체의 육지거북 급여와 동일시하지 않는다.',
 ):
     assert token in generator, f'missing scientific evidence-domain boundary: {token}'
+
+# Specialist husbandry translations retain practical plant-part and exposure warnings.
+for token in (
+    '뿌리와 덩이뿌리는 절대 급여하지 말라고 명시한다.',
+    '꽃집·원예점 식물의 농약 처리 가능성을 경고한다.',
+    'Oenanthe 미나리류를 피해야 할 고독성 식물로 설명한다.',
+    '개별 풀의 급여 판정은 해당 분류군을 직접 다룬 별도 전문 근거로 판단한다.',
+):
+    assert token in generator, f'missing practical husbandry boundary: {token}'
