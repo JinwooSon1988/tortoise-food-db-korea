@@ -9,10 +9,10 @@ nutrition={x["plant_id"] for x in load("data/plant_nutrition_v56.json").get("pla
 ev=load("data/public_evidence_records.json").get("records",[])
 evidence_ids={pid for e in ev for pid in e.get("plant_ids",[])}
 retail={x["plant_id"] for x in load("data/korean_retail_name_map.json")}
-ass=[]
-assessment_paths=[R/"data/assessments.json"]+sorted((R/"data").glob("assessments_korea_addendum*.json"))
-for q in assessment_paths:
-    if q.exists(): ass+=json.loads(q.read_text(encoding="utf-8"))
+# Publication status must use the same canonical assessment layer as home search and detail pages.
+# Raw/addendum assessment files are research inputs and may lag behind the curated public layer.
+public_assessments=load("data/public_assessments.json")
+ass=public_assessments.get("assessments", public_assessments.get("records", [])) if isinstance(public_assessments,dict) else public_assessments
 assmap={}
 for a in ass: assmap.setdefault(a["plant_id"],[]).append(a)
 rows=[]
