@@ -47,16 +47,17 @@ def source_kind(e):
     t=str(e.get("source_type") or "")
     if t.startswith("peer_reviewed") or e.get("pmid"): return (0,"동료심사 논문")
     if t.startswith("academic") or t=="conference_proceedings": return (1,"학술 연구")
-    if t.startswith("veterinary") or "veterinary" in t: return (2,"수의학 사육자료")
-    if t.startswith("specialist") or t.startswith("expert"): return (3,"전문 사육·식물 DB")
-    if "identity" in t or "botanical" in t or "agriculture" in t: return (4,"식물동정 자료")
+    if t.startswith("veterinary") or "veterinary" in t: return (2,"수의학 자료")
+    if t.startswith("specialist") or t.startswith("expert"): return (3,"전문 사육·식물 자료")
+    if "taxonomy" in t or "taxonomic" in t or "botanical" in t or "biodiversity" in t or "agriculture" in t: return (4,"식물동정·분류 자료")
     if "nutrition" in t or "food_composition" in t: return (5,"성분 참고자료")
-    return (6,"기타 공공·맥락 자료")
+    if t.startswith("regulatory_"): return (6,"공식 평가자료")
+    return (7,"기타 공공·맥락 자료")
 
 def evidence_role(e):
     t=str(e.get("source_type") or "")
-    if "identity" in t or "botanical" in t or "agriculture" in t:
-        return "식물의 이름·분류·정체성을 확인하는 보조자료"
+    if "taxonomy" in t or "taxonomic" in t or "botanical" in t or "biodiversity" in t or "agriculture" in t:
+        return "식물의 이름·분류·정체성을 확인하는 보조자료 — 급여 안전성 자체를 증명하지 않음"
     if "nutrition" in t or "food_composition" in t:
         return "성분을 확인하는 참고자료 — 급여 안전성 자체를 증명하지 않음"
     if e.get("directness")=="direct":
