@@ -565,6 +565,24 @@ def evidence_limit_display(value):
     }
     if v in exact_more:
         return exact_more[v]
+    exact_final={
+        "Rhizome/root extract findings must not be converted into a fresh flower, fruit or leaf toxic dose for tortoises.":"뿌리줄기·뿌리 추출물 연구 결과를 육지거북이 신선한 꽃·과실·잎을 섭취할 때의 독성 용량으로 환산하면 안 된다.",
+        "The mechanism discussion is not a Testudo graeca ibera dose-response or harm trial. The record does not independently establish a tortoise toxic dose or convert the composition rationale into proven poisoning.":"기전 설명은 이베라그리스육지거북의 용량-반응 또는 위해성 시험이 아니다. 이 기록만으로 육지거북의 독성 용량을 확정하거나 성분상의 우려를 실제 중독이 입증된 것으로 바꾸어 해석할 수 없다.",
+        "The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.":"같은 출처에서 사료로 적합하지 않다고 명시한다. 육지거북 급여 적합성이나 급여량을 확정하는 자료가 아니다.",
+        "This is a genus-level caution, not an Oenanthe javanica-specific Testudo graeca ibera toxicity study or dose-response experiment. It does not establish a tortoise toxic dose for Korean minari.":"속 수준의 주의 근거이며 Oenanthe javanica를 대상으로 한 이베라그리스육지거북 독성·용량반응 시험이 아니다. 국내 미나리에 대한 육지거북 독성 용량을 확정하지 않는다.",
+        "This is genus-level evidence, not an Artemisia princeps-specific Testudo trial. It does not establish identical chemistry across Artemisia species or a tortoise toxic dose.":"속 수준의 근거이며 Artemisia princeps를 대상으로 한 Testudo 시험이 아니다. Artemisia 각 종의 화학조성이 동일하다고 확정하지 않으며 육지거북 독성 용량도 제시하지 않는다.",
+        "This is not a Mediterranean Testudo or Testudo graeca ibera feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.":"지중해 Testudo 또는 이베라그리스육지거북 급여시험이 아니며 Brassica juncea의 급여 비율·빈도·제한 없는 급여를 확정하지 않는다.",
+        "This is not a Testudo graeca ibera feeding-safety study and does not establish tortoise-specific safety, dose, frequency, percentage, or a single composition value for unidentified Korean-market mulberry leaves.":"이베라그리스육지거북 급여 안전성 연구가 아니다. 육지거북에 특이적인 안전성·급여량·빈도·비율을 확정하지 않으며, 종이 확인되지 않은 국내 유통 뽕잎에 하나의 성분값을 일괄 적용할 수도 없다.",
+        "This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":"이베라그리스육지거북을 대상으로 한 통제 급여시험이 아니며 사육 급여 비율·고정 빈도·무제한 급여 또는 육지거북에 특이적인 독성 용량을 확정하지 않는다.",
+        "This is not an exact-taxon Testudo graeca ibera trial. Historical-name linkage must not be used to transfer the conclusion to Chrysanthemum cinerariifolium, C. coccineum or unrelated taxa.":"정확한 분류군의 이베라그리스육지거북 시험이 아니다. 과거 학명 연결만을 근거로 결론을 Chrysanthemum cinerariifolium, C. coccineum 또는 무관한 분류군에 옮겨 적용하면 안 된다.",
+        "This plant-chemistry study is not a tortoise feeding trial. It does not establish a Testudo graeca ibera toxic threshold, safe intake, frequency, or that all edible perilla cultivars contain equivalent perilla-ketone concentrations.":"이 식물화학 연구는 육지거북 급여시험이 아니다. 이베라그리스육지거북의 독성 역치·안전 섭취량·급여 빈도를 확정하지 않으며 모든 식용 들깨 품종의 페릴라케톤 농도가 같다고 볼 수도 없다.",
+        "This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":"이 전문 DB 항목은 이베라그리스육지거북의 통제 급여·독성시험이 아니다. 해당 분류를 정확한 사육 급여 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 안전성 동등성으로 바꾸어 해석하면 안 된다.",
+        "This specialist plant-database entry is not a controlled Testudo graeca ibera feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.":"이 전문 식물 DB 항목은 이베라그리스육지거북의 통제 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 옮기면 안 되며, 해당 분류는 정확한 사육 급여 비율·고정 빈도·무제한 급여를 규정하지 않는다.",
+        "This specialist verdict is not a Testudo graeca ibera toxicity trial. It does not establish a tortoise toxic dose, identical susceptibility to mammals, or identical perilla-ketone content across edible cultivars.":"이 전문 판정은 이베라그리스육지거북 독성시험이 아니다. 육지거북 독성 용량, 포유류와 동일한 감수성 또는 모든 식용 품종의 동일한 페릴라케톤 함량을 확정하지 않는다.",
+        "Wild consumption does not establish unlimited captive feeding, a precise ration, or equivalence for every Testudo graeca population.":"야생에서 섭식했다는 관찰만으로 사육 환경의 무제한 급여·정확한 식단 비율 또는 모든 Testudo graeca 개체군에 대한 동등성을 확정할 수 없다.",
+    }
+    if v in exact_final:
+        return exact_final[v]
     return v
 
 def evidence_role(e):
