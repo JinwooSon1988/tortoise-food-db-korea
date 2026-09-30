@@ -100,3 +100,12 @@ print(f'plant detail v5.6 contract OK for {len(public_ids)} pages; {len(seen)} v
 assert '.decision{padding:14px 15px}' in generator
 assert '.gradekey{gap:3px 8px;margin-top:9px;padding-top:7px;font-size:10px}' in generator
 assert 'aria-label="급여 등급 안내"' in generator
+
+# Keyboard/touch accessibility: interactive detail-page targets remain at least 44px high.
+for token in (
+    '.detailnav a{display:inline-flex;align-items:center;min-height:44px',
+    '.scopefold>summary{cursor:pointer;min-height:44px',
+    '.related{display:flex;align-items:center;min-height:44px',
+    '.sourceopen{min-height:44px;align-items:center}',
+):
+    assert token in generator, f'missing 44px interaction target contract: {token}'
