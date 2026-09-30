@@ -358,6 +358,20 @@ def evidence_support_display(value):
         return "농축 정유의 시험관 내 세포독성 결과는 생잎의 경구 독성·육지거북 독성 용량·우발 노출 결과를 확정하지 않는다."
     if v=="Rhizome/root extract findings must not be converted into a fresh flower, fruit or leaf toxic dose for tortoises.":
         return "뿌리줄기·뿌리 추출물 결과를 육지거북이 생꽃·생열매·생잎을 먹었을 때의 독성 용량으로 환산하면 안 된다."
+    if v=="Does not establish Mediterranean Testudo-specific dose, feeding frequency, diet percentage, unlimited use, or equivalence of the fruit with the leaves.":
+        return "지중해 Testudo에 특이적인 급여량·빈도·식단 비율·무제한 사용을 정하는 자료가 아니며 열매와 잎을 동등하게 취급할 근거도 아니다."
+    if v=="Does not establish a staple percentage, unlimited feeding, Mediterranean Testudo-specific dose, or safety of similarly named Hypericum species.":
+        return "주식 비율·무제한 급여·지중해 Testudo 특이 급여량을 정하지 않으며 이름이 비슷한 다른 Hypericum 종의 안전성까지 입증하지 않는다."
+    if v=="Does not establish a Mediterranean Testudo-specific percentage or unlimited use; the entry distinguishes leaves from fruit and also spans more than one plant taxon.":
+        return "지중해 Testudo 특이 식단 비율이나 무제한 사용을 정하는 자료가 아니다. 출처는 잎과 열매를 구분하며 둘 이상의 식물 분류군을 함께 다루므로 부위·분류군 경계를 유지해야 한다."
+    if v=="Does not establish that the entire plant is systemically toxic to Testudo graeca ibera. Leaf/sap irritation and the separate high-sugar fruit issue must not be conflated.":
+        return "식물 전체가 이베라그리스육지거북에 전신 독성을 일으킨다는 뜻은 아니다. 잎·수액의 자극성 문제와 별개의 고당도 열매 문제를 서로 혼동하면 안 된다."
+    if v=="Does not establish that every Poaceae species is safe, nor an Ibera-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.":
+        return "모든 벼과 식물이 안전하다는 뜻이 아니며 이베라그리스육지거북의 풀 식단 비율·고정 빈도·무제한 사용도 정하지 않는다. 어린 풀과 성숙한 곡립·씨앗을 동등하게 취급하면 안 된다."
+    if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
+        return "꼬투리나 콩알의 급여, 무제한 급여 또는 이베라그리스육지거북의 정량적 급여량을 뒷받침하는 자료는 아니다."
+    if v=="Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.":
+        return "피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며 이베라그리스육지거북 특이 급여량을 정하는 자료도 아니다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
