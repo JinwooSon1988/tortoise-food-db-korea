@@ -86,7 +86,7 @@ if hold_ids:
             errors.append(f"{pid}: blocked assessment must remain hold, not A/B/C/D")
 
 # Home result cards must render canonical label and meaning directly from the shared verdict core.
-home_card = re.search(r'function card\\(r\\)\\{[\\s\\S]*?\\nfunction render', home)
+home_card = re.search(r'function card\(r\)\{[\s\S]*?\nfunction render', home)
 if not home_card:
     errors.append("home result-card renderer missing")
 else:
@@ -112,7 +112,7 @@ for pid in sorted(public_ids - page_dirs):
     errors.append(f"{pid}: public plant has no detail page")
 for pid in sorted(page_dirs - public_ids):
     errors.append(f"{pid}: detail page exists for a non-public plant (orphan or candidate)")
-ORDER = ["decision", "<h2>종별 특이사항</h2>", "<h2>이 판정의 적용 범위</h2>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>"]
+ORDER = ["decision", "<h2>종별 특이사항</h2>", "<h2>판정 범위와 주의사항</h2>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>"]
 MAJOR = ["<h2>급여할 때 확인할 핵심</h2>", "<h2>종별 특이사항</h2>", "<h2>판정 범위와 주의사항</h2>", "<h3>적용 범위</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>", "<h2>다른 식물도 확인하기</h2>", "야생에서는 실제로 어떻게 먹었나?"]
 for p in public:
     pid = p["id"]
@@ -151,7 +151,7 @@ for p in public:
             errors.append(f"{pid}: graded verdict must not look like a hold state")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
-    if a and g["grade"] in ("B", "C", "D") and (a.get("why") or "") not in decision_text:
+    if a and g["grade"] in ("B", "C", "D") and html.escape(a.get("why") or "", quote=True) not in decision_text:
         errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
     expected_basis = __import__("public_verdict").scope_label(a)
     if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
@@ -165,7 +165,7 @@ for p in public:
         if token not in text:
             errors.append(f"{pid}: required section missing {token}")
     positions = [text.find(t) for t in ORDER if t in text]
-    if positions != sorted(positions) or text.find("decision") > text.find("<h2>이 판정의 적용 범위</h2>"):
+    if positions != sorted(positions) or text.find("decision") > text.find("<h2>판정 범위와 주의사항</h2>"):
         errors.append(f"{pid}: section order broken (decision → species notes → scope/limits → evidence → nutrition)")
     notes = species_notes(rows, a)
     if bool(notes) != ("<h2>종별 특이사항</h2>" in text):
