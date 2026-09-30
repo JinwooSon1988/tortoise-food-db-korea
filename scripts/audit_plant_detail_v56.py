@@ -269,6 +269,11 @@ meta_ns = {}
 exec(generator[meta_start:meta_end], meta_ns)
 render_animal = meta_ns['animal_taxon_display']
 render_part = meta_ns['part_state_display']
+# Current animal-taxon vocabulary is intentionally finite: every value must have an explicit reader-facing mapping.
+animal_values = sorted({str(e.get('animal_taxon') or '').strip() for e in evidence_records if str(e.get('animal_taxon') or '').strip()})
+animal_unmapped = [(raw, render_animal(raw)) for raw in animal_values if str(render_animal(raw)).strip() == raw]
+assert not animal_unmapped, 'unmapped evidence animal_taxon values remain: ' + repr(animal_unmapped[:20])
+
 for field, renderer in (('animal_taxon', render_animal), ('plant_part_state', render_part)):
     values = sorted({str(e.get(field) or '').strip() for e in evidence_records if str(e.get(field) or '').strip()})
     leaked = [(raw, renderer(raw)) for raw in values if not re.search(r'[가-힣]', str(renderer(raw)))]
