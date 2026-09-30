@@ -42,7 +42,7 @@ for pid in sorted(public_ids):
     # Nothing heavy may sit between the name and the decision.
     if re.search(r'<section', main[h1:main.rfind('<section', 0, decision)]):
         errors.append(f'{pid}: a section pushes the decision below the plant name')
-    later = [pos(x) for x in ('<h2>적용 범위와 한계</h2>', '<h2>판정 근거 자세히 보기</h2>', '<h2>영양성분은 참고자료로 확인하세요</h2>', '<h2>다른 식물도 확인하기</h2>')]
+    later = [pos(x) for x in ('<h2>이 판정의 적용 범위</h2>', '<h2>판정 근거 자세히 보기</h2>', '<h2>영양성분은 참고자료로 확인하세요</h2>', '<h2>다른 식물도 확인하기</h2>')]
     if None in later or later != sorted(later) or later[0] < why:
         errors.append(f'{pid}: scope/limits → evidence → nutrition → related order broken')
     sp = pos('<h2>종별 특이사항</h2>')
