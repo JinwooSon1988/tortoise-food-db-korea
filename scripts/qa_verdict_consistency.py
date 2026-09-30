@@ -212,7 +212,14 @@ for p in public:
     traceable = [e for e in linked if e.get("url") or e.get("doi") or e.get("pmid")]
     if traceable and text.count("원문 보기") < len(traceable):
         errors.append(f"{pid}: every traceable evidence record must expose a clear source action")
-    identity_types = ("plant_identity_context", "official_botanical_database", "official_agriculture_database")
+    identity_types = (
+        "plant_identity_context",
+        "official_botanical_database",
+        "official_agriculture_database",
+        "authoritative_taxonomy_database",
+        "taxonomic_database",
+        "official_biodiversity_agriculture",
+    )
     nutrition_types = ("nutrition_database", "food_composition_database", "official_food_composition_database")
     for e in linked:
         st = str(e.get("source_type") or "")
