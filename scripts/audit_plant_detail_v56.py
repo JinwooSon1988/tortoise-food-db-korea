@@ -110,6 +110,13 @@ for token in (
 ):
     assert token in generator, f'missing 44px interaction target contract: {token}'
 
+# Keyboard navigation and external-source semantics must remain explicit on every generated detail page.
+assert 'a:focus-visible,button:focus-visible{outline:3px solid' in generator, 'detail keyboard focus indicator missing'
+assert '.skiplink:focus{top:10px}' in generator, 'detail skip link must become visible on keyboard focus'
+assert 'tabindex="-1"' in generator and '<main id="main-content"' in generator, 'detail main landmark must accept skip-link focus'
+assert 'class="sourceopen"' in generator and 'target="_blank" rel="noopener noreferrer"' in generator, 'evidence source links need safe new-window semantics'
+assert '원문 보기 (새 창)' in generator and 'class="sr-only"> (새 창)</span>' in generator, 'new-window behavior must be announced to assistive technology'
+
 # Korean public evidence cards must route limitation copy through the localization layer.
 assert 'def evidence_limit_display(value):' in generator
 assert 'evidence_limit_display(e.get("does_not_support"))' in generator
