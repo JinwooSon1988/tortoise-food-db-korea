@@ -19,7 +19,7 @@ for p in plants:
     text=path.read_text(encoding='utf-8')
     g=display(representative(rows_by.get(pid,[])))
     if not re.search(r'data-identity="(alert|note)"',text) or '식물동정' not in text: errors.append(f'{pid}: plant-identity boundary missing')
-    if '<h3>이 판정이 말해주지 못하는 것</h3>' not in text: errors.append(f'{pid}: evidence-limit block missing')
+    if '<h3>근거로 확인되지 않은 것</h3>' not in text: errors.append(f'{pid}: evidence-limit block missing')
     if '근거 부족 ≠ 안전' not in text: errors.append(f'{pid}: "근거 부족 ≠ 안전" principle missing')
     if g['label'] not in text or g['meaning'] not in text: errors.append(f'{pid}: public verdict label/meaning missing')
     for legacy in ('🟢','🟡','🟠','🔴','⚪','판단보류 / '):
