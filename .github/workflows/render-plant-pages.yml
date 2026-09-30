@@ -45,7 +45,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   verify:
@@ -81,6 +81,16 @@ jobs:
           python scripts/qa_public_content_coverage.py
           python scripts/qa_plant_coverage_gap_report_v1.py
           python scripts/build_wild_candidate_research_queue.py
+      - name: Commit regenerated artifacts on PR branch
+        if: github.event_name == 'pull_request'
+        run: |
+          if ! git diff --quiet -- plant sitemap.xml; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add plant sitemap.xml
+            git commit -m "Build: sync generated plant detail pages"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
       - name: Verify committed plant pages are current
         run: |
           diff -qr /tmp/committed-generated/plant plant
