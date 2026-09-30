@@ -198,6 +198,10 @@ for p in public:
     # Every linked public source is traceable: URL first, then DOI/PMID fallback.
     if linked and text.count('class="sourceopen"') < len(linked):
         errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
+    if linked and text.count('aria-hidden="true">↗</span>') < len(linked):
+        errors.append(f"{pid}: decorative external-link arrows must be hidden from assistive technology")
+    if linked and text.count("원문 보기 (새 창)") < len(linked):
+        errors.append(f"{pid}: evidence source links must announce new-window behavior")
     for e in linked:
         expected_url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
         if not expected_url:
