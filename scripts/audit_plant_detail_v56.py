@@ -147,3 +147,12 @@ for token in (
     '개별 풀의 급여 판정은 해당 분류군을 직접 다룬 별도 전문 근거로 판단한다.',
 ):
     assert token in generator, f'missing practical husbandry boundary: {token}'
+
+# High-use feeding guidance must preserve practical part/safety distinctions.
+for token in (
+    '뿌리는 명시적으로 제외한다.',
+    '씨앗은 급여하지 말라고 명시한다.',
+    '독성이 문제되는 잎·미숙 열매와 성숙 열매를 구분하지만',
+    '다른 부위로 임의 확대하지 않는다.',
+):
+    assert token in generator, f'missing high-use feeding distinction: {token}'
