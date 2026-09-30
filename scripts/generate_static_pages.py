@@ -528,7 +528,12 @@ def evidence_limit_display(value):
     if v.startswith("Does not establish a Testudo graeca ibera-specific intake percentage"):
         return "이 자료는 이베라그리스육지거북에 특이적인 섭취 비율을 확정하지 않으며 모든 품종과 내생균 상태가 동등하다고 증명하지 않는다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific percentage"):
-        return "이 자료는 이베라그리스육지거북에 특이적인 급여 비율·고정 급여 빈도·무제한 급여 등 해당 문헌이 직접 확정하지 않은 정량적 안전 범위를 보장하지 않는다."
+        base = "이 자료는 이베라그리스육지거북에 특이적인 급여 비율·고정 급여 빈도·무제한 급여 등 해당 문헌이 직접 확정하지 않은 정량적 안전 범위를 보장하지 않는다."
+        if "possible laxative effect" in v:
+            base += " 원자료 자체도 완하 작용 가능성 때문에 과량 급여를 경고한다."
+        if "essential-oil safety" in v:
+            base += " 정유의 안전성도 확정하지 않는다."
+        return base
     if v.startswith("Does not establish a Testudo graeca ibera-specific toxic dose"):
         return "이 자료는 이베라그리스육지거북에 특이적인 독성 용량을 확정하지 않으며 모든 관련 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다."
     if v.startswith("Does not establish a staple percentage"):
