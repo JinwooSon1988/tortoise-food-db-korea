@@ -466,16 +466,16 @@ def evidence_support_display(value):
     m=re.fullmatch(r"Classifies the stated (.+?) plant-part scope as (Safe to Feed|Feed in Moderation|Feed Sparingly|Do not Feed)\.",v)
     if m:
         label={"Safe to Feed":"급여 가능","Feed in Moderation":"제한 급여","Feed Sparingly":"소량·드물게 급여","Do not Feed":"급여하지 않음"}[m.group(2)]
-        return f"출처는 명시된 {m.group(1)} 식물 부위 범위를 {label}({m.group(2)})으로 분류한다. 이 판정을 다른 식물 부위로 확대하지 않는다."
+        return f"출처는 명시된 {m.group(1)} 식물 부위 범위를 {label}으로 분류한다. 이 판정을 다른 식물 부위로 확대하지 않는다."
     m=re.fullmatch(r"Classifies the (.+?) tree entry as (Safe to Feed|Feed in Moderation|Feed Sparingly|Do not Feed)\.",v)
     if m:
         label={"Safe to Feed":"급여 가능","Feed in Moderation":"제한 급여","Feed Sparingly":"소량·드물게 급여","Do not Feed":"급여하지 않음"}[m.group(2)]
-        return f"출처는 {m.group(1)} 나무 항목을 {label}({m.group(2)})으로 분류한다."
+        return f"출처는 {m.group(1)} 나무 항목을 {label}으로 분류한다."
     # Specialist-database classification sentences: localize the classification while retaining taxa/part qualifiers.
     m=re.fullmatch(r"Classifies (.+?) as (Safe to Feed|Feed in Moderation|Feed Sparingly|Do not Feed)\.",v)
     if m:
         label={"Safe to Feed":"급여 가능","Feed in Moderation":"제한 급여","Feed Sparingly":"소량·드물게 급여","Do not Feed":"급여하지 않음"}[m.group(2)]
-        return f"출처는 {m.group(1)} 항목을 {label}({m.group(2)})으로 분류한다."
+        return f"출처는 {m.group(1)} 항목을 {label}으로 분류한다."
     m=re.fullmatch(r"Kew Plants of the World Online lists (.+?) as an accepted species name\.",v)
     if m:
         return f"Kew Plants of the World Online은 {m.group(1)}을(를) 인정되는 종명으로 등재한다. 이는 식물 동정 근거이며 급여 안전성 근거는 아니다."
