@@ -479,6 +479,14 @@ def evidence_support_display(value):
     m=re.fullmatch(r"Kew Plants of the World Online lists (.+?) as an accepted species name\.",v)
     if m:
         return f"Kew Plants of the World Online은 {m.group(1)}을(를) 인정되는 종명으로 등재한다. 이는 식물 동정 근거이며 급여 안전성 근거는 아니다."
+    # Final reader-facing guard for newly added evidence sentences.
+    for raw,label in (
+        ("Feed in Moderation","제한 급여"),
+        ("Feed Sparingly","소량·드물게 급여"),
+        ("Do not Feed","급여하지 않음"),
+        ("Safe to Feed","급여 가능"),
+    ):
+        v=v.replace(raw,label)
     return v
 
 def evidence_limit_display(value):
