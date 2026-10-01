@@ -724,7 +724,16 @@ for p in plants:
     evidence_cards=[]
     for e in ordered:
         url=e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
-        title_html=esc(e.get("source_title") or e.get("id"))
+        title_raw=str(e.get("source_title") or e.get("id"))
+        # Source titles can contain specialist verdict terminology; localize those labels on the Korean page.
+        for raw,label in (
+            ("Feed in Moderation","제한 급여"),
+            ("Feed Sparingly","소량·드물게 급여"),
+            ("Do not Feed","급여하지 않음"),
+            ("Safe to Feed","급여 가능"),
+        ):
+            title_raw=title_raw.replace(raw,label)
+        title_html=esc(title_raw)
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
