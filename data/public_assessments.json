@@ -91,7 +91,7 @@
       "야생 빈도를 급여비율로 환산하지 않음",
       "단독·고비율 반복 급여 권장 아님"
     ],
-    "why": "이베라 야생섭식 직접근거가 있으나 전문 사육자료가 white clover를 moderation으로 제한한다.",
+    "why": "이베라 야생섭식 직접근거가 있으나 전문 사육자료가 white clover를 제한 급여으로 제한한다.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
     "display_group": "Testudo",
@@ -418,7 +418,7 @@
       "grass/hay roughage 중심 원칙 유지",
       "단일 specialist husbandry source를 단독 주식·무제한 급여·고정 급여비율로 확대하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry source이므로 혼합 보조 범위로 제한한다.",
+    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry 출처이므로 혼합 보조 범위로 제한한다.",
     "assessment_scope": "exact_species",
     "animal_taxon": "Centrochelys sulcata",
     "display_group": "설카타",
@@ -438,7 +438,7 @@
       "Plantago 종 동정 필요",
       "단일 specialist husbandry source를 단독 주식·무제한 급여·고정 급여비율로 확대하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 plantain을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry source이므로 혼합 보조 범위로 제한한다.",
+    "why": "BCG 설카타 사육자료가 plantain을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry 출처이므로 혼합 보조 범위로 제한한다.",
     "assessment_scope": "exact_species",
     "animal_taxon": "Centrochelys sulcata",
     "display_group": "설카타",
@@ -554,7 +554,7 @@
       "과실 급여 판정으로 확대하지 않음",
       "국내 호박 품종이 Cucurbita pepo인지 다른 Cucurbita 종인지 확인 필요"
     ],
-    "why": "전문 육지거북 식물 DB에서 Pumpkin/Cucurbita 잎은 small amounts 또는 sparingly로 급여할 수 있다고 제시하므로 일반 보조식으로 제한한다.",
+    "why": "전문 육지거북 식물 DB에서 Pumpkin/Cucurbita 잎은 small amounts 또는 소량·드물게로 급여할 수 있다고 제시하므로 일반 보조식으로 제한한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -608,7 +608,7 @@
       "Mediterranean Testudo 종특이 직접근거가 아님",
       "농약 살포 이력이 있는 포도잎은 급여하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB는 Vitis spp.의 어린 신선한 잎을 moderation으로 급여할 수 있다고 구분한다.",
+    "why": "전문 육지거북 식물 DB는 Vitis spp.의 어린 신선한 잎을 제한 급여으로 급여할 수 있다고 구분한다.",
     "applicability_note": "잎과 열매를 분리한 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -626,7 +626,7 @@
       "Mediterranean Testudo 종특이 직접근거가 아님",
       "Tropaeolum majus 식물동정 확인"
     ],
-    "why": "전문 육지거북 식물 DB가 Tropaeolum majus를 moderation 급여 식물로 분류한다.",
+    "why": "전문 육지거북 식물 DB가 Tropaeolum majus를 제한 급여 급여 식물로 분류한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -662,7 +662,7 @@
       "다른 goitrogenic Brassicaceae와 동시 편중하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB는 순무잎의 칼슘·요오드 맥락을 고려해 잎과 꽃을 moderation으로 허용한다.",
+    "why": "전문 육지거북 식물 DB는 순무잎의 칼슘·요오드 맥락을 고려해 잎과 꽃을 제한 급여으로 허용한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 뿌리와 잎 판정을 분리한다."
   },
   {
@@ -680,7 +680,7 @@
       "장기 단독·고비율 급여 아님",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB는 Napa/Chinese cabbage를 goitrogen 때문에 moderation으로 제한하되 다양한 식단의 작은 일부로는 허용한다.",
+    "why": "전문 육지거북 식물 DB는 Napa/Chinese cabbage를 갑상선종 유발물질 때문에 제한 급여으로 제한하되 다양한 식단의 작은 일부로는 허용한다.",
     "applicability_note": "Brassica rapa pekinensis 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -698,7 +698,7 @@
       "단독 주식·고비율 반복 급여 아님",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 루꼴라를 비독성 식물이지만 Brassicaceae goitrogen 때문에 moderation으로 제한한다.",
+    "why": "전문 육지거북 식물 DB가 루꼴라를 비독성 식물이지만 Brassicaceae 갑상선종 유발물질 때문에 제한 급여으로 제한한다.",
     "applicability_note": "Eruca spp. 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -716,7 +716,7 @@
       "비트 뿌리는 급여하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB는 비트 잎·꽃을 비독성으로 보지만 높은 oxalate 때문에 Feed Sparingly 수준으로 제한한다.",
+    "why": "전문 육지거북 식물 DB는 비트 잎·꽃을 비독성으로 보지만 높은 옥살산염 때문에 소량·드물게 급여 수준으로 제한한다.",
     "applicability_note": "Beta vulgaris 잎 일반 육지거북 근거. 뿌리와 분리한다."
   },
   {
@@ -734,7 +734,7 @@
       "Mediterranean Testudo 종특이 직접근거가 아님",
       "Coriandrum sativum 식물동정 확인"
     ],
-    "why": "전문 육지거북 식물 DB가 고수를 Feed in Moderation으로 분류하므로 혼합식의 제한적 보조로만 사용한다.",
+    "why": "전문 육지거북 식물 DB가 고수를 제한 급여으로 분류하므로 혼합식의 제한적 보조로만 사용한다.",
     "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -752,7 +752,7 @@
       "몇 입 우발 섭취와 계획 급여를 구분",
       "Mediterranean Testudo 종특이 직접시험은 아님"
     ],
-    "why": "전문 DB는 비권장하지만 근거가 oxalate·나트륨·Ca:P 등 성분 해석에 기반하며 이베라 직접 위해시험·용량-반응 자료가 없어 현재 DB 규칙상 급여 금지 판정을 확정하지 않는다.",
+    "why": "전문 DB는 비권장하지만 근거가 옥살산염·나트륨·Ca:P 등 성분 해석에 기반하며 이베라 직접 위해시험·용량-반응 자료가 없어 현재 DB 규칙상 급여 금지 판정을 확정하지 않는다.",
     "applicability_note": "전문 육지거북 DB의 비권장 의견은 보존하되, 이베라 직접 근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
   },
   {
@@ -770,7 +770,7 @@
       "단일 주식 또는 고비율 반복식으로 사용하지 않음",
       "Mediterranean Testudo 또는 이베라 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB의 Anethum graveolens 전용 항목이 Feed in Moderation으로 분류하고 다양한 식단의 일부로만 사용하도록 하며 씨앗은 제외하므로 일반 육지거북의 제한적 보조식으로 판정한다.",
+    "why": "전문 육지거북 식물 DB의 Anethum graveolens 전용 항목이 제한 급여으로 분류하고 다양한 식단의 일부로만 사용하도록 하며 씨앗은 제외하므로 일반 육지거북의 제한적 보조식으로 판정한다.",
     "applicability_note": "Anethum graveolens exact-taxon 일반 육지거북 근거이며 Mediterranean Testudo·이베라 직접 급여시험은 아니다."
   },
   {
@@ -867,7 +867,7 @@
       "급여 비율이나 주식 비중을 임의 산출하지 않음",
       "램스레터스는 유통·음역 별칭으로만 취급"
     ],
-    "why": "전문 육지거북 식물 DB가 Lamb's Lettuce / Corn Salad를 Safe to Feed로 분류하므로 다양한 식단의 보조 구성으로 사용할 일반 육지거북 근거가 있다.",
+    "why": "전문 육지거북 식물 DB가 Lamb's Lettuce / Corn Salad를 급여 가능로 분류하므로 다양한 식단의 보조 구성으로 사용할 일반 육지거북 근거가 있다.",
     "applicability_note": "Valerianella locusta에 대한 일반 육지거북 근거이며 Testudo graeca ibera 직접 급여시험으로 확대하지 않는다."
   },
   {
@@ -884,7 +884,7 @@
       "species-level mapping 전 exact-taxon 판정 금지",
       "Safe to Feed를 단독주식·무제한 급여로 해석하지 않음"
     ],
-    "why": "전문 식물 DB는 Malva spp.의 잎과 꽃을 Safe to Feed로 분류하지만 한국 유통 아욱의 종수준 매핑이 아직 해결되지 않았다.",
+    "why": "전문 식물 DB는 Malva spp.의 잎과 꽃을 급여 가능로 분류하지만 한국 유통 아욱의 종수준 매핑이 아직 해결되지 않았다.",
     "applicability_note": "Tortoise general 전문 DB 근거 + 한국 유통종 동정 보류."
   },
   {
@@ -901,7 +901,7 @@
       "peppermint와 pennyroyal 등 제외 대상과 혼동 금지",
       "제품 라벨 또는 학명으로 종 확인 전 급여 판정 보류"
     ],
-    "why": "전문 DB는 일부 Mentha 종을 Safe to Feed로 다루지만 민트라는 유통명은 여러 종·교잡종을 포함하므로 속 전체로 확대할 수 없다.",
+    "why": "전문 DB는 일부 Mentha 종을 급여 가능로 다루지만 민트라는 유통명은 여러 종·교잡종을 포함하므로 속 전체로 확대할 수 없다.",
     "applicability_note": "Tortoise general 근거이며 exact Mentha taxon 확인이 선행되어야 한다."
   },
   {
@@ -1059,7 +1059,7 @@
       "Geranium속과 일반명 제라늄을 혼동하지 않음",
       "소량·혼합식 범위"
     ],
-    "why": "전문 DB는 Pelargonium을 Feed in Moderation으로 분류한다.",
+    "why": "전문 DB는 Pelargonium을 제한 급여으로 분류한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1124,7 +1124,7 @@
       "Vitis amurensis를 Vitis spp. 범위의 contextual evidence로만 연결",
       "과실과 잎을 동일시하지 않음"
     ],
-    "why": "전문 DB는 Vitis spp.의 어린 신선 잎을 moderation 범위에서 허용한다.",
+    "why": "전문 DB는 Vitis spp.의 어린 신선 잎을 제한 급여 범위에서 허용한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1140,7 +1140,7 @@
       "Opuntia ficus-indica 패드에 적용",
       "과량 시 완하 작용 가능성 때문에 무제한 급여로 확대하지 않음"
     ],
-    "why": "전문 DB는 Opuntia 패드를 Safe to Feed 범주로 다루면서 과량의 완하 가능성을 경고한다.",
+    "why": "전문 DB는 Opuntia 패드를 급여 가능 범주로 다루면서 과량의 완하 가능성을 경고한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1156,7 +1156,7 @@
       "Triticum aestivum의 어린 잎에 한정",
       "성숙 종자는 별도이며 급여하지 않음"
     ],
-    "why": "전문 DB의 Cat Grass 항목은 어린 Triticum grasses를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "why": "전문 DB의 Cat 풀 항목은 어린 Triticum 풀류를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1172,7 +1172,7 @@
       "Hordeum vulgare의 어린 잎에 한정",
       "성숙 종자는 별도이며 급여하지 않음"
     ],
-    "why": "전문 DB의 Cat Grass 항목은 어린 Hordeum grasses를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "why": "전문 DB의 Cat 풀 항목은 어린 Hordeum 풀류를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1188,7 +1188,7 @@
       "Avena sativa의 어린 잎에 한정",
       "성숙 종자는 별도이며 급여하지 않음"
     ],
-    "why": "전문 DB의 Cat Grass 항목은 어린 Avena sativa를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "why": "전문 DB의 Cat 풀 항목은 어린 Avena sativa를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1204,7 +1204,7 @@
       "Helianthus annuus 꽃잎에 한정",
       "전문 DB의 moderation 범위를 넘겨 주식·고비율 급여로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB의 Helianthus annuus moderation 근거를 꽃잎의 소량 보조 범위로 제한해 적용한다.",
+    "why": "전문 육지거북 식물 DB의 Helianthus annuus 제한 급여 근거를 꽃잎의 소량 보조 범위로 제한해 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB 근거이며 Ibera 직접 급여시험은 아니다."
   },
   {
@@ -1221,7 +1221,7 @@
       "'독성'으로 단정하지 않음",
       "전문 DB가 제시한 단백질·phytate·칼슘 이용 관련 우려를 계획 급여 제외 근거로만 사용"
     ],
-    "why": "전문 육지거북 식물 DB가 pea shoots를 Do not Feed로 분류하면서 실제 독성 식물이라는 의미와는 구분한다. 따라서 독성 단정 없이 계획 급여에서 제외한다.",
+    "why": "전문 육지거북 식물 DB가 완두순를 급여하지 않음로 분류하면서 실제 독성 식물이라는 의미와는 구분한다. 따라서 독성 단정 없이 계획 급여에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB 근거; exact Ibera toxicology를 의미하지 않는다."
   },
   {
@@ -1270,7 +1270,7 @@
       "Melissa officinalis에 한정",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Feed in Moderation 판정을 따라 소량 혼합식으로 제한한다.",
+    "why": "전문 DB의 제한 급여 판정을 따라 소량 혼합식으로 제한한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1286,7 +1286,7 @@
       "Matricaria chamomilla(=M. recutita)에 한정",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB가 sparingly로 제한하므로 정기·고비율 급여로 확대하지 않는다.",
+    "why": "전문 DB가 소량·드물게로 제한하므로 정기·고비율 급여로 확대하지 않는다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1302,7 +1302,7 @@
       "Centaurea cyanus에 한정",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Feed in Moderation 범위에서만 적용한다.",
+    "why": "전문 DB의 제한 급여 범위에서만 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1334,7 +1334,7 @@
       "Achillea millefolium에 한정; 치명적 독성이나 Ibera 독성 용량을 단정하지 않음",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "why": "전문 DB의 급여하지 않음 판정에 따라 계획 급여에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1398,7 +1398,7 @@
       "Lavandula angustifolia를 Lavandula spp. 범위에서만 contextual 적용",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 moderation 범위를 넘기지 않는다.",
+    "why": "전문 DB의 제한 급여 범위를 넘기지 않는다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1414,7 +1414,7 @@
       "Cosmos bipinnatus를 Cosmos spp. 범위에서 contextual 적용",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 moderation 범위를 넘기지 않는다.",
+    "why": "전문 DB의 제한 급여 범위를 넘기지 않는다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1430,7 +1430,7 @@
       "Malus domestica 잎 개념에만 연결; 과실·씨앗 판정과 동일시하지 않음",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Malus domestica tree 항목을 보수적으로 sparingly 범위에서만 적용한다.",
+    "why": "전문 DB의 Malus domestica tree 항목을 보수적으로 소량·드물게 범위에서만 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1446,7 +1446,7 @@
       "Foeniculum vulgare 잎/지상부 범위",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Feed Sparingly 판정을 따라 정기·고비율 급여로 확대하지 않는다.",
+    "why": "전문 DB의 소량·드물게 급여 판정을 따라 정기·고비율 급여로 확대하지 않는다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1462,7 +1462,7 @@
       "Rumex acetosa에 한정; Ibera 독성 용량을 단정하지 않음",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "why": "전문 DB의 급여하지 않음 판정에 따라 계획 급여에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1478,7 +1478,7 @@
       "Rumex crispus를 Rumex spp. 전문 DB 범위에 contextual 적용",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Rumex spp. Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "why": "전문 DB의 Rumex spp. 급여하지 않음 판정에 따라 계획 급여에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1494,7 +1494,7 @@
       "Chenopodium album에 한정",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 Do not Feed 판정에 따라 계획 급여에서 제외한다.",
+    "why": "전문 DB의 급여하지 않음 판정에 따라 계획 급여에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1510,7 +1510,7 @@
       "Brassica oleracea Gongylodes Group 잎 개념; 다른 Brassica로 확대 금지",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB의 kohlrabi Do not Feed 판정을 잎 개념에 보수적으로 적용한다.",
+    "why": "전문 DB의 kohlrabi 급여하지 않음 판정을 잎 개념에 보수적으로 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1526,7 +1526,7 @@
       "Rubus idaeus 어린잎에 한정",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 DB가 어린 라즈베리잎과 꽃을 sparingly 범위에서 허용한다.",
+    "why": "전문 DB가 어린 라즈베리잎과 꽃을 소량·드물게 범위에서 허용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1558,7 +1558,7 @@
       "Origanum vulgare 지상부 범위",
       "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
     ],
-    "why": "전문 DB Safe to Feed 판정을 활용하되 단독 주식이나 정량 비율로 확대하지 않는다.",
+    "why": "전문 DB 급여 가능 판정을 활용하되 단독 주식이나 정량 비율로 확대하지 않는다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1574,7 +1574,7 @@
       "Salvia officinalis에 한정; 다른 Salvia 종으로 확대 금지",
       "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
     ],
-    "why": "전문 DB Feed in Moderation 범위로 제한한다.",
+    "why": "전문 DB 제한 급여 범위로 제한한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1590,7 +1590,7 @@
       "Thymus vulgaris를 Thymus spp. 속 수준 근거에 contextual 적용",
       "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
     ],
-    "why": "전문 DB Safe to Feed 범위지만 정유 농축물과 식물 자체를 구분한다.",
+    "why": "전문 DB 급여 가능 범위지만 정유 농축물과 식물 자체를 구분한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1606,7 +1606,7 @@
       "Muscari armeniacum을 Muscari spp. 속 수준 근거에 contextual 적용",
       "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
     ],
-    "why": "전문 DB Do not Feed 및 사육장 식재 제외 권고를 적용한다.",
+    "why": "전문 DB 급여하지 않음 및 사육장 식재 제외 권고를 적용한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1622,7 +1622,7 @@
       "Ginkgo biloba 잎 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 범위 이상으로 확대하지 않는다.",
+    "why": "소량·드물게 급여 범위 이상으로 확대하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1638,7 +1638,7 @@
       "Ulmus spp. 속 수준, 특히 어린잎 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "속 수준 Safe to Feed 근거를 종 특이 정량 권고로 해석하지 않는다.",
+    "why": "속 수준 급여 가능 근거를 종 특이 정량 권고로 해석하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1654,7 +1654,7 @@
       "Tilia spp. 잎·꽃 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed in Moderation 범위로 제한한다.",
+    "why": "제한 급여 범위로 제한한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1670,7 +1670,7 @@
       "Salix spp. 잎 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Do not Feed 판정에 따라 계획 급여에서 제외하며 Ibera 독성 용량을 단정하지 않는다.",
+    "why": "급여하지 않음 판정에 따라 계획 급여에서 제외하며 Ibera 독성 용량을 단정하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1686,7 +1686,7 @@
       "Betula spp. 잎/지상부 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed in Moderation 범위로 제한한다.",
+    "why": "제한 급여 범위로 제한한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1702,7 +1702,7 @@
       "Salvia rosmarinus(=Rosmarinus officinalis) 식물체 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 근거이며 정유·추출물 안전성으로 확대하지 않는다.",
+    "why": "소량·드물게 급여 근거이며 정유·추출물 안전성으로 확대하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1718,7 +1718,7 @@
       "Pyrus pyrifolia를 Pyrus spp. 나무 항목에 contextual 적용",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 범위로만 적용한다.",
+    "why": "소량·드물게 급여 범위로만 적용한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1734,7 +1734,7 @@
       "Prunus persica 나무잎 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 범위이며 과실·씨앗·핵과 동일 판정으로 확대하지 않는다.",
+    "why": "소량·드물게 급여 범위이며 과실·씨앗·핵과 동일 판정으로 확대하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1750,7 +1750,7 @@
       "Rubus fruticosus agg.를 Rubus spp. bramble 새잎·꽃 범위에 contextual 적용",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "열매 판정과 분리하고 새잎 범위의 Feed in Moderation만 적용한다.",
+    "why": "열매 판정과 분리하고 새잎 범위의 제한 급여만 적용한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1766,7 +1766,7 @@
       "Acer spp. 잎",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 범위의 간헐적 보조",
+    "why": "소량·드물게 급여 범위의 간헐적 보조",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1782,7 +1782,7 @@
       "Corylus spp. 잎",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed in Moderation 범위의 제한적 보조",
+    "why": "제한 급여 범위의 제한적 보조",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1846,7 +1846,7 @@
       "Silybum marianum 명시 부위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed in Moderation 범위",
+    "why": "제한 급여 범위",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1878,7 +1878,7 @@
       "Onobrychis viciifolia 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 범위",
+    "why": "소량·드물게 급여 범위",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1910,7 +1910,7 @@
       "Lamium amplexicaule에 한정",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed Sparingly 범위; 다른 Lamium 종으로 확대 금지",
+    "why": "소량·드물게 급여 범위; 다른 Lamium 종으로 확대 금지",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1926,7 +1926,7 @@
       "Sempervivum spp. 새잎·잎",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed이지만 다육식물 특성상 과량 급여를 피한다.",
+    "why": "급여 가능이지만 다육식물 특성상 과량 급여를 피한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1942,7 +1942,7 @@
       "Echeveria spp. 잎·꽃·줄기",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed이지만 다육식물 특성상 moderation을 유지한다.",
+    "why": "급여 가능이지만 다육식물 특성상 제한 급여을 유지한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1958,7 +1958,7 @@
       "Antirrhinum majus 중심 잎·꽃",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "why": "급여 가능 범위의 보조 식물이다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1974,7 +1974,7 @@
       "Hosta spp. source scope",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "saponin 관련 source 주의에 따라 Feed in Moderation으로 제한한다.",
+    "why": "saponin 관련 출처 주의에 따라 제한 급여으로 제한한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1990,7 +1990,7 @@
       "Tragopogon spp. 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed 범위이며 Aruncus dioicus와 오동정하지 않는다.",
+    "why": "급여 가능 범위이며 Aruncus dioicus와 오동정하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2006,7 +2006,7 @@
       "Crepis spp. 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "why": "급여 가능 범위의 보조 식물이다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2022,7 +2022,7 @@
       "Leontodon spp. 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed 범위의 보조 식물이다.",
+    "why": "급여 가능 범위의 보조 식물이다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2038,7 +2038,7 @@
       "Hypochaeris radicata 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Safe to Feed 범위이며 다양한 식단의 일부로 적용한다.",
+    "why": "급여 가능 범위이며 다양한 식단의 일부로 적용한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2054,7 +2054,7 @@
       "Hieracium spp. 성숙 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Feed in Moderation 범위로 제한한다.",
+    "why": "제한 급여 범위로 제한한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2070,7 +2070,7 @@
       "Capsella bursa-pastoris 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "Brassicaceae/goitrogen source 맥락에 따라 Feed in Moderation으로 제한한다.",
+    "why": "Brassicaceae/갑상선종 유발물질 출처 맥락에 따라 제한 급여으로 제한한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2193,7 +2193,7 @@
       "전문 DB 안전 판정 외에 Ibera 직접 섭식·정량 연구 없음",
       "단독 주식·무제한 급여로 확대하지 않음"
     ],
-    "why": "전문 육지거북 DB는 Astilbe spp.를 Safe to Feed로 분류하고 거북에게 안전하다고 설명한다. 다만 Ibera에서의 직접 섭식 연구나 정량 안전량 자료는 없으므로 여러 식물을 섞는 식단의 한 구성으로 사용하는 해석이 적절하다.",
+    "why": "전문 육지거북 DB는 Astilbe spp.를 급여 가능로 분류하고 거북에게 안전하다고 설명한다. 다만 Ibera에서의 직접 섭식 연구나 정량 안전량 자료는 없으므로 여러 식물을 섞는 식단의 한 구성으로 사용하는 해석이 적절하다.",
     "applicability_note": "일반 육지거북 전문 사육 근거이며 Testudo graeca ibera 직접근거가 아니다."
   },
   {
@@ -2211,7 +2211,7 @@
       "거북의 독성 용량·노출 역치는 제시되지 않음",
       "근거 불확실성을 안전성으로 해석하지 않음"
     ],
-    "why": "전문 육지거북 DB는 Primula spp.를 Do not Feed로 분류한다. 사람에서 심한 발진을 일으킬 수 있고 거북 먹이로 일반적으로 부적절하다고 판단한다. 거북의 독성 용량이 정량화된 것은 아니지만, 급여 이익을 뒷받침할 직접 근거도 없어 계획 식단에서는 제외하는 것이 근거 수준에 맞다.",
+    "why": "전문 육지거북 DB는 Primula spp.를 급여하지 않음로 분류한다. 사람에서 심한 발진을 일으킬 수 있고 거북 먹이로 일반적으로 부적절하다고 판단한다. 거북의 독성 용량이 정량화된 것은 아니지만, 급여 이익을 뒷받침할 직접 근거도 없어 계획 식단에서는 제외하는 것이 근거 수준에 맞다.",
     "applicability_note": "일반 육지거북 전문 DB의 회피 판정; 인간 피부반응을 거북 독성 용량으로 환산하지 않는다."
   },
   {
@@ -2229,7 +2229,7 @@
       "어린 잎은 Foxglove·Green Alkanet와 오동정 위험도 있음",
       "'소량이면 안전'이라는 임의 역치를 만들지 않음"
     ],
-    "why": "전문 육지거북 DB는 Comfrey를 Do not Feed로 분류하며 pyrrolizidine alkaloids가 간 손상을 일으킬 가능성을 핵심 이유로 제시한다. 반복 노출의 이득을 뒷받침할 거북 직접 근거가 없고 잠재적 간독성 우려가 있으므로 식단에서 제외한다. 어린 잎의 유사 독성식물 오동정 위험도 추가 이유다.",
+    "why": "전문 육지거북 DB는 Comfrey를 급여하지 않음로 분류하며 pyrrolizidine alkaloids가 간 손상을 일으킬 가능성을 핵심 이유로 제시한다. 반복 노출의 이득을 뒷받침할 거북 직접 근거가 없고 잠재적 간독성 우려가 있으므로 식단에서 제외한다. 어린 잎의 유사 독성식물 오동정 위험도 추가 이유다.",
     "applicability_note": "Symphytum officinale에 대한 전문 DB 위험 근거; Testudo graeca ibera의 독성 용량을 의미하지 않는다."
   },
   {
@@ -2281,7 +2281,7 @@
       "새싹의 별도 정량 안전역치는 없음",
       "Ibera 직접 시험 아님"
     ],
-    "why": "전문 육지거북 DB는 알팔파를 고단백 콩과 식물로 보고 Do not Feed로 분류한다. 계획 식단에서는 제외한다.",
+    "why": "전문 육지거북 DB는 알팔파를 고단백 콩과 식물로 보고 급여하지 않음로 분류한다. 계획 식단에서는 제외한다.",
     "applicability_note": "일반 육지거북 전문 사육 근거; Ibera 특이 독성시험은 아니다."
   },
   {
@@ -2298,7 +2298,7 @@
       "다른 goitrogenic 식물과 중첩 급여 주의",
       "고정 급여비율로 환산하지 않음"
     ],
-    "why": "전문 육지거북 DB는 유채를 Feed in Moderation으로 분류하며 brassica/goitrogen 부담 때문에 과량 급여를 피하도록 한다.",
+    "why": "전문 육지거북 DB는 유채를 제한 급여으로 분류하며 brassica/갑상선종 유발물질 부담 때문에 과량 급여를 피하도록 한다.",
     "applicability_note": "일반 육지거북 전문 사육 근거이며 Ibera 직접 정량자료는 아니다."
   },
   {
@@ -2315,7 +2315,7 @@
       "과육 판정과 혼동 금지",
       "고정 비율 없음"
     ],
-    "why": "전문 육지거북 DB는 멜론의 잎과 꽃은 먹을 수 있으나 sparingly 급여하도록 한다.",
+    "why": "전문 육지거북 DB는 멜론의 잎과 꽃은 먹을 수 있으나 소량·드물게 급여하도록 한다.",
     "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다."
   },
   {
@@ -2332,7 +2332,7 @@
       "과육 판정과 혼동 금지",
       "고정 비율 없음"
     ],
-    "why": "전문 육지거북 DB는 수박을 포함한 melon 항목에서 잎과 꽃은 먹을 수 있으나 sparingly 급여하도록 한다.",
+    "why": "전문 육지거북 DB는 수박을 포함한 melon 항목에서 잎과 꽃은 먹을 수 있으나 소량·드물게 급여하도록 한다.",
     "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다."
   },
   {
@@ -2350,7 +2350,7 @@
       "독성 식물로 단정하지 않음",
       "Mediterranean Testudo 종특이 직접시험은 아님"
     ],
-    "why": "전문 DB는 Broccoli를 비권장하지만 goitrogen 범주만으로 이베라 급여 금지를 확정하지 않는다. 또한 현재 근거는 브로콜리잎 자체의 직접 급여시험이 아니다.",
+    "why": "전문 DB는 Broccoli를 비권장하지만 갑상선종 유발물질 범주만으로 이베라 급여 금지를 확정하지 않는다. 또한 현재 근거는 브로콜리잎 자체의 직접 급여시험이 아니다.",
     "applicability_note": "전문 육지거북 DB의 비권장 의견은 보존하되, 이베라 직접 근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
   },
   {
@@ -2368,7 +2368,7 @@
       "독성 식물로 단정하지 않음",
       "Mediterranean Testudo 종특이 직접시험은 아님"
     ],
-    "why": "전문 DB는 Cauliflower의 비권장 조언이 잎에도 적용된다고 명시하지만, 근거가 goitrogen 설명에 기반하며 이베라 직접 위해시험·용량-반응 자료가 없어 현재 DB 규칙상 급여 금지를 확정하지 않는다.",
+    "why": "전문 DB는 Cauliflower의 비권장 조언이 잎에도 적용된다고 명시하지만, 근거가 갑상선종 유발물질 설명에 기반하며 이베라 직접 위해시험·용량-반응 자료가 없어 현재 DB 규칙상 급여 금지를 확정하지 않는다.",
     "applicability_note": "전문 육지거북 DB의 비권장 의견은 보존하되, 이베라 직접 근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
   },
   {
@@ -2404,7 +2404,7 @@
       "당근 뿌리 판정과 분리",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB는 당근잎을 Feed Sparingly로 분류한다. 이 정성 표현을 임의의 급여량·빈도로 환산하지 않는다.",
+    "why": "전문 육지거북 식물 DB는 당근잎을 소량·드물게 급여로 분류한다. 이 정성 표현을 임의의 급여량·빈도로 환산하지 않는다.",
     "applicability_note": "Daucus carota subsp. sativus 잎 일반 육지거북 근거. 뿌리와 분리한다."
   },
   {
@@ -2422,7 +2422,7 @@
       "수분 공급을 이유로 고비율 반복 급여하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 오이를 moderation으로 허용하지만 지중해 Testudo의 기본 고섬유 먹이로 볼 근거는 없으므로 제한적 보조로만 둔다.",
+    "why": "전문 육지거북 식물 DB가 오이를 제한 급여으로 허용하지만 지중해 Testudo의 기본 고섬유 먹이로 볼 근거는 없으므로 제한적 보조로만 둔다.",
     "applicability_note": "Cucumis sativus 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -2440,7 +2440,7 @@
       "과실을 주식·고비율 반복식으로 사용하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB의 Squash 자료가 C. moschata를 포함하며 sparingly로 제한하므로 애호박 과실도 드문 보조 수준으로 둔다.",
+    "why": "전문 육지거북 식물 DB의 호박류 자료가 C. moschata를 포함하며 소량·드물게로 제한하므로 애호박 과실도 드문 보조 수준으로 둔다.",
     "applicability_note": "Cucurbita moschata가 포함된 genus/species-list 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -2458,7 +2458,7 @@
       "소량 우발 섭취와 계획 급여를 구분",
       "Today 안전 후보에서 제외"
     ],
-    "why": "전문 육지거북 식물 DB가 Sweet/Bell Pepper를 Do not Feed로 분류하므로 계획 급여 후보에서 제외한다.",
+    "why": "전문 육지거북 식물 DB가 Sweet/Bell Pepper를 급여하지 않음로 분류하므로 계획 급여 후보에서 제외한다.",
     "applicability_note": "Capsicum spp. 일반 육지거북 비권장 근거. 이베라 직접 독성시험을 의미하지 않는다."
   },
   {
@@ -2475,7 +2475,7 @@
       "Dactylis glomerata 자체의 이베라 직접 급여시험은 아님",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB가 orchard grass를 Safe to Feed로 분류하고 Tortoise Trust가 Mediterranean Testudo 자연식에 grasses가 포함된다고 설명하므로 혼합식 구성요소로 제한한다.",
+    "why": "전문 육지거북 식물 DB가 orchard 풀를 급여 가능로 분류하고 Tortoise Trust가 Mediterranean Testudo 자연식에 풀류가 포함된다고 설명하므로 혼합식 구성요소로 제한한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 식물 DB 근거. 이베라 종특이 급여시험은 아님."
   },
   {
@@ -2493,7 +2493,7 @@
       "마른 종수는 눈·입 손상 가능성이 있어 제거",
       "Safe to Feed 및 건초 사용 가능 지침을 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "Timothy grass는 전문 식물 DB에서 Safe to Feed이며 Mediterranean tortoise 식단에 grasses가 포함된다는 사육 맥락과 일치한다.",
+    "why": "Timothy 풀는 전문 식물 DB에서 급여 가능이며 Mediterranean tortoise 식단에 풀류가 포함된다는 사육 맥락과 일치한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 근거."
   },
   {
@@ -2511,7 +2511,7 @@
       "싹·잎을 대상으로 하며 곡립 급여 판정으로 확대하지 않음",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "Wheat grass는 전문 육지거북 식물 DB에서 Safe to Feed로 분류되며 Mediterranean tortoise의 고섬유 초본성 식단 맥락에 부합한다.",
+    "why": "Wheat 풀는 전문 육지거북 식물 DB에서 급여 가능로 분류되며 Mediterranean tortoise의 고섬유 초본성 식단 맥락에 부합한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + Triticum grass 일반 육지거북 근거."
   },
   {
@@ -2529,7 +2529,7 @@
       "싹·잎을 대상으로 하며 보리 곡립 급여 판정이 아님",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "Barley grass는 전문 육지거북 식물 DB에서 Safe to Feed로 분류되며 Mediterranean tortoise의 초본성 고섬유 식단에 제한적으로 포함할 수 있다.",
+    "why": "Barley 풀는 전문 육지거북 식물 DB에서 급여 가능로 분류되며 Mediterranean tortoise의 초본성 고섬유 식단에 제한적으로 포함할 수 있다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + Hordeum grass 일반 육지거북 근거."
   },
   {
@@ -2547,7 +2547,7 @@
       "잎·꽃 판정을 종자나 추출물에 확대하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 Ocimum basilicum을 moderation으로 허용하므로 다양한 식단의 제한적 보조로만 둔다.",
+    "why": "전문 육지거북 식물 DB가 Ocimum basilicum을 제한 급여으로 허용하므로 다양한 식단의 제한적 보조로만 둔다.",
     "applicability_note": "Ocimum basilicum 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -2567,7 +2567,7 @@
       "성숙 종자의 고단백 경고는 young grass 자체의 급여 제한 근거로 확대하지 않음",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB가 oat grass를 Safe to Feed로 분류하고 Mediterranean Testudo 자연식에 grasses가 포함된다는 사육 맥락과 일치하므로 혼합식 구성요소로 제한한다.",
+    "why": "전문 육지거북 식물 DB가 oat 풀를 급여 가능로 분류하고 Mediterranean Testudo 자연식에 풀류가 포함된다는 사육 맥락과 일치하므로 혼합식 구성요소로 제한한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + Avena grass 일반 육지거북 근거. 이베라 종특이 직접시험은 아님."
   },
   {
@@ -2605,7 +2605,7 @@
       "Mediterranean Testudo 직접근거가 아님",
       "단독 주식으로 사용하지 않음"
     ],
-    "why": "현재 The Tortoise Table record는 Calendula의 꽃과 잎을 varied diet 일부로 Safe to Feed로 분류한다. 이를 고정 비율·무제한 급여로 확대하지 않는다.",
+    "why": "현재 The Tortoise Table record는 Calendula의 꽃과 잎을 다양한 식단 일부로 급여 가능로 분류한다. 이를 고정 비율·무제한 급여로 확대하지 않는다.",
     "applicability_note": "Calendula 일반 육지거북 근거. Tagetes 계열 marigold에는 적용하지 않음."
   },
   {
@@ -2624,7 +2624,7 @@
       "Mediterranean Testudo 직접근거가 아님",
       "단독 주식으로 사용하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB가 Pansy/Viola의 잎과 꽃을 Safe to Feed로 분류한다.",
+    "why": "전문 육지거북 식물 DB가 Pansy/Viola의 잎과 꽃을 급여 가능로 분류한다.",
     "applicability_note": "Pansy 일반 육지거북 근거. 관상용 유통 과정의 농약 노출은 별도 위험요인이다."
   },
   {
@@ -2643,7 +2643,7 @@
       "Mediterranean Testudo 직접근거가 아님",
       "단독 주식으로 사용하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB가 Viola spp.의 잎과 꽃을 Safe to Feed로 분류한다.",
+    "why": "전문 육지거북 식물 DB가 Viola spp.의 잎과 꽃을 급여 가능로 분류한다.",
     "applicability_note": "Viola spp. 일반 육지거북 근거. 다른 속의 'violet' common name 식물에는 적용하지 않음."
   },
   {
@@ -2683,7 +2683,7 @@
       "과실 급여 판정으로 확대하지 않음",
       "Mediterranean Testudo 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 Cucurbita moschata를 포함한 squash를 sparingly 범위로 다루므로 소량 순환 보조로만 둔다.",
+    "why": "전문 육지거북 식물 DB가 Cucurbita moschata를 포함한 호박류를 소량·드물게 범위로 다루므로 소량 순환 보조로만 둔다.",
     "applicability_note": "Cucurbita moschata 일반 육지거북 근거. 이베라 직접 급여시험은 아님."
   },
   {
@@ -2701,7 +2701,7 @@
       "소량·다양한 식단의 일부로만 사용",
       "Mediterranean Testudo 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB는 대부분의 Chrysanthemum 계열을 moderation으로 허용하지만 특정 pyrethrin 종을 제외하므로, 쑥갓은 낮은 확신도의 제한적 보조로만 둔다.",
+    "why": "전문 육지거북 식물 DB는 대부분의 Chrysanthemum 계열을 제한 급여으로 허용하지만 특정 pyrethrin 종을 제외하므로, 쑥갓은 낮은 확신도의 제한적 보조로만 둔다.",
     "applicability_note": "Glebionis coronaria의 과거명 Chrysanthemum coronarium과의 분류학적 연결을 사용한 일반 육지거북 근거다."
   },
   {
@@ -2719,7 +2719,7 @@
       "소량·다양한 식단의 일부로만 사용",
       "Mediterranean Testudo 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 Pelargonium을 Feed in Moderation으로 분류하므로 소량 보조로만 둔다.",
+    "why": "전문 육지거북 식물 DB가 Pelargonium을 제한 급여으로 분류하므로 소량 보조로만 둔다.",
     "applicability_note": "한국에서 흔히 제라늄이라 부르는 Pelargonium spp.에 대한 일반 육지거북 근거다."
   },
   {
@@ -2757,7 +2757,7 @@
       "고비율·반복 주식으로 사용하지 않음",
       "Mediterranean Testudo 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 Helianthus annuus를 Feed in Moderation으로 분류하므로 잎도 낮은 확신도의 소량 보조로만 둔다.",
+    "why": "전문 육지거북 식물 DB가 Helianthus annuus를 제한 급여으로 분류하므로 잎도 낮은 확신도의 소량 보조로만 둔다.",
     "applicability_note": "Helianthus annuus 일반 육지거북 근거이며 이베라 직접 급여시험은 아니다."
   },
   {
@@ -2793,7 +2793,7 @@
       "단일 주식 또는 고비율 반복식으로 사용하지 않음",
       "Mediterranean Testudo 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 Zea mays의 잎은 Safe to Feed로 명시하지만 이삭은 별도로 제외하므로, 잎만 일반 육지거북 보조 후보로 제한한다.",
+    "why": "전문 육지거북 식물 DB가 Zea mays의 잎은 급여 가능로 명시하지만 이삭은 별도로 제외하므로, 잎만 일반 육지거북 보조 후보로 제한한다.",
     "applicability_note": "Zea mays exact-taxon의 잎 부위 근거이며 이베라 직접 급여시험은 아니다."
   },
   {
@@ -2829,7 +2829,7 @@
       "다른 쑥속 식물과의 화학적 차이를 동일하다고 단정하지 않음",
       "Mediterranean Testudo 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물 DB가 Mugwort/Artemisia spp.를 Do not Feed로 분류하므로 한국 참쑥도 보수적으로 추천 후보에서 제외한다.",
+    "why": "전문 육지거북 식물 DB가 Mugwort/Artemisia spp.를 급여하지 않음로 분류하므로 한국 참쑥도 보수적으로 추천 후보에서 제외한다.",
     "applicability_note": "한국 master Artemisia princeps에 Artemisia 속 수준 근거를 적용한 낮은 확신도의 일반 육지거북 판정이다."
   },
   {
