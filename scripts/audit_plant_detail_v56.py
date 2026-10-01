@@ -307,6 +307,11 @@ for field, mapping in (('directness', directness_map), ('applicability', applica
     leaked = [raw for raw in values if raw not in mapping]
     assert not leaked, f'unmapped reader-facing evidence {field} values remain: {leaked[:20]!r}'
 
+# Korean rendered detail pages must never leak specialist verdict labels beside the localized verdict.
+for pid, html in pages.items():
+    for leaked in ('Safe to Feed', 'Feed in Moderation', 'Do not Feed', 'Feed Sparingly'):
+        assert leaked not in html, f'{pid}: reader-facing English verdict label leaked: {leaked}'
+
 # Reader-facing evidence limitations must never silently fall through as raw English.
 assert 'def evidence_limit_display(value):' in generator, 'evidence limitation display helper missing'
 assert 'return v' in generator, 'expected explicit fallback in evidence limitation helper'
