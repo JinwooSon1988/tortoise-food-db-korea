@@ -18,7 +18,7 @@
       "채집 식물의 정확한 종·오염원을 확인",
       "단독 장기급여를 의미하지 않음"
     ],
-    "why": "야생 T. g. ibera 직접관찰과 지중해 Testudo 전문 사육자료가 dandelion을 반복적으로 지지한다.",
+    "why": "BCG 설카타 사육자료는 민들레를 고섬유 식물 먹이 후보로 제시한다. 단일 전문 사육자료에 근거하므로 혼합식의 보조 구성으로 제한한다.",
     "applicability_note": "이베라 직접 야생섭식 + Mediterranean Testudo 사육근거.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
@@ -41,7 +41,7 @@
       "채집 오염 주의",
       "단독주식 판정 아님"
     ],
-    "why": "Mediterranean Testudo 사육자료와 T. hermanni의 관련 야생섭식 자료가 Plantago를 혼합 자연식 후보로 뒷받침하지만, T. g. ibera의 Plantago 직접 근거와 Plantago spp. 전체의 종수준 동등성은 확립되지 않아 제한적 혼합식으로 둔다.",
+    "why": "BCG 설카타 사육자료는 질경이를 고섬유 식물 먹이 후보로 제시한다. 단일 전문 사육자료에 근거하므로 혼합식의 보조 구성으로 제한한다.",
     "applicability_note": "Mediterranean Testudo 사육근거 + 관련종 T. hermanni 자료. 이베라 직접 Plantago 섭식 근거는 현재 공개 evidence layer에 없음.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
@@ -418,7 +418,7 @@
       "grass/hay roughage 중심 원칙 유지",
       "단일 specialist husbandry source를 단독 주식·무제한 급여·고정 급여비율로 확대하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 dandelion을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry 출처이므로 혼합 보조 범위로 제한한다.",
+    "why": "BCG 설카타 사육자료는 민들레를 고섬유 식물 먹이 후보로 제시한다. 단일 전문 사육자료에 근거하므로 혼합식의 보조 구성으로 제한한다.",
     "assessment_scope": "exact_species",
     "animal_taxon": "Centrochelys sulcata",
     "display_group": "설카타",
@@ -438,7 +438,7 @@
       "Plantago 종 동정 필요",
       "단일 specialist husbandry source를 단독 주식·무제한 급여·고정 급여비율로 확대하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 plantain을 고섬유 vegetation 후보로 제시한다. 단일 specialist husbandry 출처이므로 혼합 보조 범위로 제한한다.",
+    "why": "BCG 설카타 사육자료는 질경이를 고섬유 식물 먹이 후보로 제시한다. 단일 전문 사육자료에 근거하므로 혼합식의 보조 구성으로 제한한다.",
     "assessment_scope": "exact_species",
     "animal_taxon": "Centrochelys sulcata",
     "display_group": "설카타",
@@ -1156,7 +1156,7 @@
       "Triticum aestivum의 어린 잎에 한정",
       "성숙 종자는 별도이며 급여하지 않음"
     ],
-    "why": "전문 DB의 Cat 풀 항목은 어린 Triticum 풀류를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "why": "전문 DB의 캣그라스 항목은 어린 Triticum 풀류를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1172,7 +1172,7 @@
       "Hordeum vulgare의 어린 잎에 한정",
       "성숙 종자는 별도이며 급여하지 않음"
     ],
-    "why": "전문 DB의 Cat 풀 항목은 어린 Hordeum 풀류를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "why": "전문 DB의 캣그라스 항목은 어린 Hordeum 풀류를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1188,7 +1188,7 @@
       "Avena sativa의 어린 잎에 한정",
       "성숙 종자는 별도이며 급여하지 않음"
     ],
-    "why": "전문 DB의 Cat 풀 항목은 어린 Avena sativa를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
+    "why": "전문 DB의 캣그라스 항목은 어린 Avena sativa를 급여 가능한 것으로 구분하고 성숙 종자는 제외한다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -2475,7 +2475,7 @@
       "Dactylis glomerata 자체의 이베라 직접 급여시험은 아님",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB가 orchard 풀를 급여 가능로 분류하고 Tortoise Trust가 Mediterranean Testudo 자연식에 풀류가 포함된다고 설명하므로 혼합식 구성요소로 제한한다.",
+    "why": "전문 육지거북 식물 DB는 오처드그라스를 급여 가능으로 분류하고, Tortoise Trust는 지중해 Testudo 자연식에 풀류가 포함된다고 설명한다. 따라서 혼합식의 한 구성요소로 사용한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 식물 DB 근거. 이베라 종특이 급여시험은 아님."
   },
   {
@@ -2493,7 +2493,7 @@
       "마른 종수는 눈·입 손상 가능성이 있어 제거",
       "Safe to Feed 및 건초 사용 가능 지침을 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "Timothy 풀는 전문 식물 DB에서 급여 가능이며 Mediterranean tortoise 식단에 풀류가 포함된다는 사육 맥락과 일치한다.",
+    "why": "전문 식물 DB는 티머시풀을 급여 가능으로 분류하며, 지중해 육지거북 식단에 풀류가 포함된다는 사육 맥락과도 일치한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 근거."
   },
   {
@@ -2511,7 +2511,7 @@
       "싹·잎을 대상으로 하며 곡립 급여 판정으로 확대하지 않음",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "Wheat 풀는 전문 육지거북 식물 DB에서 급여 가능로 분류되며 Mediterranean tortoise의 고섬유 초본성 식단 맥락에 부합한다.",
+    "why": "전문 육지거북 식물 DB는 밀싹을 급여 가능으로 분류하며, 지중해 육지거북의 고섬유 초본성 식단 맥락과 부합한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + Triticum grass 일반 육지거북 근거."
   },
   {
@@ -2529,7 +2529,7 @@
       "싹·잎을 대상으로 하며 보리 곡립 급여 판정이 아님",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "Barley 풀는 전문 육지거북 식물 DB에서 급여 가능로 분류되며 Mediterranean tortoise의 초본성 고섬유 식단에 제한적으로 포함할 수 있다.",
+    "why": "전문 육지거북 식물 DB는 보리싹을 급여 가능으로 분류하며, 지중해 육지거북의 초본성 고섬유 식단에 포함할 수 있다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + Hordeum grass 일반 육지거북 근거."
   },
   {
@@ -2567,7 +2567,7 @@
       "성숙 종자의 고단백 경고는 young grass 자체의 급여 제한 근거로 확대하지 않음",
       "Safe to Feed를 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물 DB가 oat 풀를 급여 가능로 분류하고 Mediterranean Testudo 자연식에 풀류가 포함된다는 사육 맥락과 일치하므로 혼합식 구성요소로 제한한다.",
+    "why": "전문 육지거북 식물 DB는 귀리싹을 급여 가능으로 분류하고, 지중해 Testudo 자연식에 풀류가 포함된다는 사육 맥락과도 일치한다. 따라서 혼합식의 한 구성요소로 사용한다.",
     "applicability_note": "Mediterranean Testudo 사육 맥락 + Avena grass 일반 육지거북 근거. 이베라 종특이 직접시험은 아님."
   },
   {
