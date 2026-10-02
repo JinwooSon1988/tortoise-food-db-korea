@@ -91,7 +91,7 @@
       "야생 빈도를 급여비율로 환산하지 않음",
       "단독·고비율 반복 급여 권장 아님"
     ],
-    "why": "이베라 야생섭식 직접근거가 있으나 전문 사육자료가 white clover를 제한 급여으로 제한한다.",
+    "why": "이베라 야생섭식 직접근거가 있으나 전문 사육자료가 white clover를 제한 급여로 제한한다.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
     "display_group": "Testudo",
@@ -205,7 +205,7 @@
     "limits": [
       "겨울철·야생초 부족 시 혼합 잎채소 일부",
       "한 종류에 장기간 의존하지 않음",
-      "한국 유통 품목과 영양 record 매핑은 별도 검증"
+      "한국 유통 품목과 영양 성분 기록의 연결은 별도 검증"
     ],
     "why": "Mediterranean winter-feeding 지침과 수의학 자료가 endive를 혼합 대체채소로 지지한다.",
     "assessment_scope": "taxon_group",
@@ -771,7 +771,7 @@
       "Mediterranean Testudo 또는 이베라 직접근거가 아님"
     ],
     "why": "전문 육지거북 식물 DB의 Anethum graveolens 전용 항목이 제한 급여로 분류하고 다양한 식단의 일부로만 사용하도록 하며 씨앗은 제외하므로 일반 육지거북의 제한적 보조식으로 판정한다.",
-    "applicability_note": "Anethum graveolens exact-taxon 일반 육지거북 근거이며 Mediterranean Testudo·이베라 직접 급여시험은 아니다."
+    "applicability_note": "Anethum graveolens 종 자체를 대상으로 한 일반 육지거북 근거이며 Mediterranean Testudo·이베라 직접 급여시험은 아니다."
   },
   {
     "plant_id": "spinach",
@@ -901,7 +901,7 @@
       "peppermint와 pennyroyal 등 제외 대상과 혼동 금지",
       "제품 라벨 또는 학명으로 종 확인 전 급여 판정 보류"
     ],
-    "why": "전문 DB는 일부 Mentha 종을 급여 가능로 다루지만 민트라는 유통명은 여러 종·교잡종을 포함하므로 속 전체로 확대할 수 없다.",
+    "why": "전문 DB는 일부 Mentha 종을 급여 가능으로 다루지만 민트라는 유통명은 여러 종·교잡종을 포함하므로 속 전체로 확대할 수 없다.",
     "applicability_note": "Tortoise general 근거이며 exact Mentha taxon 확인이 선행되어야 한다."
   },
   {
@@ -1221,7 +1221,7 @@
       "'독성'으로 단정하지 않음",
       "전문 DB가 제시한 단백질·phytate·칼슘 이용 관련 우려를 계획 급여 제외 근거로만 사용"
     ],
-    "why": "전문 육지거북 식물 DB가 완두순를 급여하지 않음로 분류하면서 실제 독성 식물이라는 의미와는 구분한다. 따라서 독성 단정 없이 계획 급여에서 제외한다.",
+    "why": "전문 육지거북 식물 DB가 완두순을 급여하지 않음으로 분류하면서 실제 독성 식물이라는 의미와는 구분한다. 따라서 독성 단정 없이 계획 급여에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB 근거; exact Ibera toxicology를 의미하지 않는다."
   },
   {
@@ -2435,7 +2435,7 @@
       "tortoise_table_squash_courgette"
     ],
     "limits": [
-      "한국 master의 Cucurbita moschata는 Squash 근거 범위로 해석",
+      "기준 데이터의 Cucurbita moschata는 Squash 근거 범위로 해석",
       "소량·드문 급여 수준으로 제한",
       "과실을 주식·고비율 반복식으로 사용하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
@@ -2563,7 +2563,7 @@
     "limits": [
       "Avena sativa 자체의 이베라 직접 급여시험은 아님",
       "싹·잎을 대상으로 하며 귀리 종자·곡립 급여 판정이 아님",
-      "성숙 종자·곡립은 young grass와 별도 대상으로 취급하며, 전문 출처의 종자 회피 지침을 따른다",
+      "성숙 종자·곡립은 어린 풀과 별도 대상으로 취급하며, 전문 출처의 종자 회피 지침을 따른다",
       "성숙 종자의 고단백 경고는 어린 풀 자체의 급여 제한 근거로 확대하지 않음",
       "‘급여 가능’ 판정을 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
@@ -2736,7 +2736,7 @@
       "Tagetes spp.에 한정",
       "식용 가능한 Calendula와 혼동 금지",
       "The Tortoise Table의 ‘급여하지 않음’ 판정은 일반 육지거북 전문 DB 근거이며 이베라 직접 독성시험이나 용량-반응 자료는 아님",
-      "Tagetes 여러 종의 뿌리·지상부·꽃에서 thiophene류가 분석됐고 강한 생물살해 활성가 보고됐지만, 이는 육지거북 독성시험이 아님",
+      "Tagetes 여러 종의 뿌리·지상부·꽃에서 thiophene류가 분석됐고 강한 생물살해 활성이 보고됐지만, 이는 육지거북 독성시험이 아님",
       "우발적 소량 섭취를 즉시 이베라 중독으로 단정하지 않음"
     ],
     "why": "전문 육지거북 DB는 Tagetes spp.를 급여 제외로 분류하며, 독립적인 식물화학 연구에서도 여러 부위에서 생물활성 thiophene류가 확인됐다. 따라서 계획 급여에서는 제외하되, 이를 이베라의 독성 용량이나 우발적 소량 섭취의 임상결과로 확대하지 않는다.",
