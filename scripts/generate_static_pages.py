@@ -616,6 +616,9 @@ def evidence_limit_display(value):
     }
     if v in exact_final:
         return exact_final[v]
+    # Korean mode: never expose a wholly untranslated evidence limitation.
+    if re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
+        return "이 자료만으로 육지거북의 정확한 급여량·고정 급여 빈도·식단 비율·독성 용량·무제한 급여 또는 자료가 직접 다루지 않은 식물 부위·근연 분류군의 안전성을 확정할 수 없다. 원자료가 실제로 다룬 범위 안에서만 적용한다."
     return v
 
 def evidence_role(e):
