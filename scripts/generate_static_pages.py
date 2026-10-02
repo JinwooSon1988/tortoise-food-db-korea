@@ -492,6 +492,8 @@ def evidence_support_display(value):
         ("Safe to Feed","급여 가능"),
     ):
         v=v.replace(raw,label)
+    if re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
+        return "이 자료는 해당 식물의 동정·성분·야생 섭식 또는 전문 사육 지침 가운데 명시된 근거 범위를 뒷받침한다. 구체적인 급여 판정은 위 판정 카드와 아래 적용 한계를 함께 확인한다."
     return v
 
 def evidence_limit_display(value):
