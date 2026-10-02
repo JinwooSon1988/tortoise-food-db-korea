@@ -785,7 +785,7 @@ for p in plants:
 <script type="application/ld+json">{schema}</script>
 <style>{CSS}</style></head><body>
 <a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><a href="../../index.html">← 다른 식물 검색</a><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{decision_html}{practical_html}{species_specific_html}{scope_html}{deep_html}{nutrition_html}{footer_html}<nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></main><script src="../../language-toggle.js?v=20260926-3" defer></script></body></html>'''
-    (d/"index.html").write_text(doc,encoding="utf-8")
+    # Final Korean morphology guard for legacy mixed-language evidence strings.\n    doc=doc.replace("급여하지 않음로", "급여하지 않음으로").replace("제한 급여으로", "제한 급여로")\n    (d/"index.html").write_text(doc,encoding="utf-8")
 
 # Keep search-engine discovery synchronized with the same reviewed/public set
 # used to generate detail pages. Preserve durable non-plant landing/guide URLs.
