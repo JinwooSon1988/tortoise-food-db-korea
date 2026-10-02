@@ -90,6 +90,19 @@ def animal_taxon_display(value):
     }
     return exact.get(v,v)
 
+def plant_taxon_display(value):
+    v=str(value or "").strip()
+    exact={
+        "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study":"연구에서 보고된 Taraxacum·Sonchus·Trifolium·Medicago 분류군",
+        "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported":"보고된 Cichorium·Taraxacum·Medicago·Potentilla·Sedum 분류군",
+        "See linked plant concept(s); source scope preserved from evidence registry":"연결된 식물 항목 — 출처의 적용 범위를 그대로 유지",
+        "Cucurbita moschata within the source's squash scope":"출처의 squash 범위에 포함되는 Cucurbita moschata",
+        "Perilla spp.; Korean food concept Perilla frutescens":"Perilla spp. — 국내 식품 범위는 Perilla frutescens",
+        "Grasses as a broad dietary/context category; exact grass taxa require separate evidence":"넓은 식단 맥락의 벼과 식물 — 개별 종은 별도 근거 확인 필요",
+        "Mustard greens category; assessment master Brassica juncea requires identity confirmation":"갓류 범위 — Brassica juncea 종 동정 확인 필요",
+    }
+    return exact.get(v,v)
+
 def part_state_display(value):
     v=str(value or "").strip()
     exact={
@@ -750,7 +763,7 @@ for p in plants:
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
-        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물</dt><dd><i>{esc(e.get("plant_taxon"))}</i></dd><dt>부위·상태</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(evidence_support_display(e.get("supports")))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
+        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{'paper' if rank==0 else ''}">{kind}</span><span>{esc(directness_ko.get(e.get("directness"),e.get("directness")))}</span><span>{esc(applicability_ko.get(e.get("applicability"),e.get("applicability")))}</span></div><h3>{title_html}</h3><p class="evrole"><b>이 자료의 역할</b> · {esc(evidence_role(e))}</p><dl class="evmeta"><dt>대상 동물</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물</dt><dd><i>{esc(plant_taxon_display(e.get("plant_taxon")))}</i></dd><dt>부위·상태</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl><p><b>이 근거가 지지하는 내용</b><br>{esc(evidence_support_display(e.get("supports")))}</p><p class="limit"><b>이 근거만으로 말할 수 없는 내용</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 공개 가능한 개별 근거 레코드가 연결되지 않았다. 따라서 안전성을 추정하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
     summary_chips=f'<div class="evsummary" aria-label="연결된 근거 자료 현황"><span>연결 근거 {len(linked_evidence)}건</span><span>동료심사 논문 {papers}</span><span>직접 {direct_count}</span><span>전문 사육 {husbandry_count}</span><span>간접·맥락 {indirect_count}</span></div><p class="evcountnote">자료 건수는 연결된 출처의 현황이며, 숫자가 많다고 판정의 신뢰도나 안전성이 더 높다는 뜻은 아니다.</p>'
