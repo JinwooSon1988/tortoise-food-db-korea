@@ -199,7 +199,10 @@ def part_state_display(value):
         "As specified in the cited source and evidence note; plant parts must not be silently generalized.":"인용 자료에 명시된 부위·상태만 해당 — 다른 부위로 임의 일반화하지 않음",
         "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.":"출처의 부위·상태 구분을 유지 — 뿌리·잎·꽃·열매·씨앗 사이를 일반화하지 않음",
     }
-    return exact.get(v,v)
+    shown=exact.get(v,v)
+    if shown==v and re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
+        return "출처에 명시된 식물 부위·상태만 해당 — 다른 부위나 상태로 임의 일반화하지 않음"
+    return shown
 
 def evidence_support_display(value):
     v=str(value or "").strip()
