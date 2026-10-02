@@ -89,6 +89,18 @@ jobs:
             plant
             sitemap.xml
           retention-days: 1
+      - name: Emit drift payload for synchronization
+        run: |
+          diff -qr /tmp/committed-generated/plant plant | sed -n 's#.* and \(plant/[^ ]*\) differ#\1#p' | while read -r file; do
+            printf 'SYNCFILE:%s:' "$file"
+            base64 -w0 "$file"
+            printf '\n'
+          done
+          if ! diff -q /tmp/committed-generated/sitemap.xml sitemap.xml >/dev/null; then
+            printf 'SYNCFILE:sitemap.xml:'
+            base64 -w0 sitemap.xml
+            printf '\n'
+          fi
       - name: Verify committed plant pages are current
         run: |
           diff -qr /tmp/committed-generated/plant plant
