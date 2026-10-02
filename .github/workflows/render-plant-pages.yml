@@ -81,6 +81,14 @@ jobs:
           python scripts/qa_public_content_coverage.py
           python scripts/qa_plant_coverage_gap_report_v1.py
           python scripts/build_wild_candidate_research_queue.py
+      - name: Upload rendered plant pages for synchronization
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-plant-pages
+          path: |
+            plant
+            sitemap.xml
+          retention-days: 1
       - name: Verify committed plant pages are current
         run: |
           diff -qr /tmp/committed-generated/plant plant
