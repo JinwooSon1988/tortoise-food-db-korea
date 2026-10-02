@@ -83,7 +83,7 @@ jobs:
           python scripts/build_wild_candidate_research_queue.py
       - name: Verify committed plant pages are current
         run: |
-          diff -ru /tmp/committed-generated/plant plant
+          diff -qr /tmp/committed-generated/plant plant
           diff -q /tmp/committed-generated/sitemap.xml sitemap.xml
       - name: Verify generated artifacts are deterministic
         run: |
