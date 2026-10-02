@@ -704,7 +704,7 @@ for p in plants:
         species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)} <i class="small">{esc(x.get("animal_taxon"))}</i></b><span>{esc(xg["grade"]+" · "+xg["label"])}</span></div><p>{esc(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다.")}</p></article>')
     species_specific_html=(f'<section class="card species-specific"><h2>종별 특이사항</h2><p class="small">특정 종에서만 확인된 근거다. 위의 기본 판정을 바꾸지 않으며, 다른 육지거북 종에도 같다고 가정하지 않는다.</p>{"".join(species_rows)}</section>' if species_rows else "")
 
-    # 4) Scope → identity → limits, stated once in one card.
+    # 4) Scope → identity → limits, stated once in one card; canonical assessment copy is rendered verbatim.
     scope=(a or {}).get("applicability_note") or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 공개 근거만으로 특정 종까지 좁혀 판단하지 않는다.")
     img=image_by_plant.get(pid)
     photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
