@@ -208,6 +208,11 @@ def evidence_support_display(value):
     }
     if v in mixed_ko:
         return mixed_ko[v]
+    # Korean canonical evidence sentences must pass through unchanged.
+    # Otherwise the English verdict-token fallback below can corrupt Korean particles
+    # (for example "급여하지 않음으로" -> "급여하지 않음로").
+    if re.search(r"[가-힣]", v):
+        return v
     exact={
         "Safe to Feed":"출처는 급여 가능으로 분류한다.",
         "Safe to Feed as part of a varied diet":"출처는 다양한 식단의 일부로 급여 가능하다고 분류한다.",
