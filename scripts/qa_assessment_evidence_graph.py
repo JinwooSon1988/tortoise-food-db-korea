@@ -7,22 +7,20 @@ plants = {p["id"] for p in json.loads((ROOT/"data/plants.json").read_text(encodi
 evidence_rows = json.loads((ROOT/"data/public_evidence_records.json").read_text(encoding="utf-8")).get("records", [])
 evidence = {e["id"]: e for e in evidence_rows}
 
-assessment_paths = [ROOT/"data/assessments.json"] + sorted(
-    (ROOT/"data").glob("assessments_korea_addendum*.json")
-)
-rows = []
-for path in assessment_paths:
-    if not path.exists():
-        continue
-    data = json.loads(path.read_text(encoding="utf-8"))
-    for row in data:
-        rows.append((path.name, row))
+# Validate the canonical merged artifact used by the public site. Source/addendum
+# merge fidelity is checked separately by qa_public_assessments_merged.py.
+public_assessments = ROOT/"data/public_assessments.json"
+data = json.loads(public_assessments.read_text(encoding="utf-8"))
+if isinstance(data, dict):
+    data = data.get("assessments", data.get("records", []))
+rows = [(public_assessments.name, row) for row in data]
 
 errors = []
 warnings = []
 seen = set()
 strong_verdicts = {"supported_mixed_diet", "safe_staple", "staple", "recommended"}
 weak_directness = {"composition_only", "contextual", "related_taxon"}
+public_grade_a_verdicts = {"supported_mixed_diet", "safe_staple", "staple", "recommended"}
 hazard_re = re.compile(r"독성|독성물질|신장|간 손상|결석|갑상선|사포닌|옥살레이트|oxalate|goitrogen|glucosinolate", re.I)
 hazard_evidence_re = re.compile(r"독성|tox|renal|kidney|liver|oxalat|goitrogen|glucosinolate|saponin|thyroid", re.I)
 
@@ -54,6 +52,8 @@ for filename, row in rows:
 
     if linked and row.get("verdict") in strong_verdicts and all(e.get("directness") in weak_directness for e in linked):
         errors.append(f"{filename}:{pid}|{group}: strong verdict {row.get('verdict')} has no direct evidence")
+    if linked and row.get("verdict") in public_grade_a_verdicts and not any(e.get("directness") in {"direct","expert_husbandry"} for e in linked):
+        errors.append(f"{filename}:{pid}|{group}: public A-grade verdict requires direct or expert husbandry evidence")
 
     text = " ".join([str(row.get("why", ""))] + [str(x) for x in row.get("limits", [])])
     if linked and hazard_re.search(text):

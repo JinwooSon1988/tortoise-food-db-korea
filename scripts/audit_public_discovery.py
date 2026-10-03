@@ -13,7 +13,8 @@ assert 'User-agent: *' in robots
 assert 'Allow: /' in robots
 assert f'Sitemap: {origin}sitemap.xml' in robots
 assert '<meta name="description"' in index
-assert '전체 식물 데이터 한눈에 보기' in index
+assert 'href="./all-plants/"' in index
+assert '전체 식물 보기' in index
 
 xml_root = ET.parse(root / 'sitemap.xml').getroot()
 ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}

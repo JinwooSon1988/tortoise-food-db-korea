@@ -70,8 +70,8 @@ checks = {
     "korean_dolnamul_identity_present": E["korean_dolnamul_identity"]["taxon"] == "Sedum sarmentosum",
     "testudo_doi_verified": E["testudo2018"].get("doi") == "10.1080/10888705.2018.1453814",
     "testudo_pmid_verified": E["testudo2018"].get("pmid") == "29609473",
-    "alfalfa_page_yellow": "🟡 제한적 혼합급여 근거" in (R / "plant/alfalfa/index.html").read_text(encoding="utf-8"),
-    "dolnamul_page_yellow": "🟡 제한적 보조식 근거" in (R / "plant/dolnamul/index.html").read_text(encoding="utf-8"),
+    "alfalfa_page_limited": "B · 제한적 혼합 급여" in (R / "plant/alfalfa/index.html").read_text(encoding="utf-8"),
+    "dolnamul_page_limited": "C · 가끔 보조 급여" in (R / "plant/dolnamul/index.html").read_text(encoding="utf-8"),
 }
 
 for k, v in checks.items():

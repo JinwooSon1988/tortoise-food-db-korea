@@ -1,0 +1,54 @@
+[
+  {
+    "plant_id": "beanleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "어린잎을 다양한 혼합식에 제한적으로 사용",
+    "confidence": "B",
+    "evidence_ids": [
+      "tt_bean_leaf_494"
+    ],
+    "limits": [
+      "어린잎 근거에 한정",
+      "꼬투리와 콩 자체에는 적용하지 않음",
+      "Ibera 직접 정량자료 없음"
+    ],
+    "why": "전문 육지거북 자료는 강낭콩의 어린잎을 적당량 먹일 수 있다고 본다. 그러나 콩과 꼬투리는 같은 판정을 적용하지 않으므로 부위를 반드시 구분한다.",
+    "applicability_note": "Phaseolus vulgaris를 포함한 콩의 어린잎에 대한 일반 육지거북 전문 사육 근거다."
+  },
+  {
+    "plant_id": "chrysanthemum",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "정확히 동정한 국화류를 혼합식에 제한적으로 사용",
+    "confidence": "B",
+    "evidence_ids": [
+      "tt_chrysanthemum_94"
+    ],
+    "limits": [
+      "Chrysanthemum × morifolium을 포함한 국화속 맥락",
+      "C. cinerariifolium·C. coccineum은 제외",
+      "정확한 종 동정이 안 되면 급여하지 않음",
+      "Ibera 직접 정량자료 없음"
+    ],
+    "why": "전문 육지거북 자료는 대부분의 국화속 식물을 소량 또는 적당량 혼합식에 사용할 수 있다고 본다. 다만 피레트린 함량이 높은 일부 국화는 파충류에 해로울 수 있어 반드시 종을 구분해야 한다.",
+    "applicability_note": "국화속 일반 전문 사육 근거다. 예외 종을 명확히 제외해야 한다."
+  },
+  {
+    "plant_id": "fescue",
+    "species_group": "Tortoise_general",
+    "verdict": "supported_mixed_diet",
+    "role": "다양한 식물 혼합식의 한 구성",
+    "confidence": "B",
+    "evidence_ids": [
+      "tt_fescue_694"
+    ],
+    "limits": [
+      "전문 DB의 Festuca spp. 범위와 현행 분류명 Lolium arundinaceum의 대응을 함께 확인",
+      "품종·내생균 상태가 모두 동일하다고 단정하지 않음",
+      "Ibera 직접 섭취비율 자료 없음"
+    ],
+    "why": "전문 육지거북 자료는 페스큐류를 급여 가능한 풀로 분류한다. 톨페스큐의 내생균 문제는 반추가축에서 중요한 쟁점이므로 그 사실을 숨기지 않고 별도 주의사항으로 제시한다.",
+    "applicability_note": "페스큐류에 관한 일반 육지거북 전문 사육 근거다. 현행 식물분류와 품종 차이는 별도로 표시한다."
+  }
+]

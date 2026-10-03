@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0",
+  "purpose": "야생섭식 후보의 독성·항영양성분 위험 신호를 급여판정과 분리해 기록",
+  "reviewed_on": "2026-09-28",
+  "records": [
+    {
+      "plant_id": "leontodon_saxatilis",
+      "status": "partial",
+      "signals": [
+        {
+          "type": "phytochemistry",
+          "finding": "지상부에서 hydroxycinnamic acid derivatives, flavonoids, sesquiterpenoid crepidiaside A 등이 보고됨.",
+          "source": "doi:10.1039/D0RA10973H",
+          "scope": "성분·in vitro 자료",
+          "interpretation": "세포독성 활성 성분 보고는 육지거북 경구 독성량을 뜻하지 않는다."
+        }
+      ],
+      "publication_blocker": "육지거북 또는 초식동물 경구 안전성 자료와 실제 섭식 부위의 정량적 위험 검토 필요"
+    },
+    {
+      "plant_id": "malva_parviflora",
+      "status": "blocked_veterinary_toxicity",
+      "signals": [
+        {
+          "type": "acute_toxicity",
+          "finding": "잎·열매 mucilage가 rat acute oral study에서 5 g/kg에서 뚜렷한 독성 징후가 보고되지 않음.",
+          "source": "PMID:35455424",
+          "scope": "추출 점액·rat",
+          "interpretation": "전체 생잎의 육지거북 안전성을 직접 증명하지 않는다."
+        },
+        {
+          "type": "nitrate_accumulation",
+          "finding": "특정 생육조건에서 nitrate가 cattle toxic concentration까지 축적될 수 있다는 농업 독성 경고가 있음.",
+          "source": "UC IPM Little Mallow",
+          "scope": "식물 전체 위험관리·가축",
+          "interpretation": "재배환경에 따라 위험이 달라질 수 있어 무제한 급여 근거로 사용하지 않는다."
+        },
+        {
+          "type": "veterinary_case_reports",
+          "finding": "Malva parviflora 섭취와 연관된 양의 중독 사례 및 말·조랑말의 심근질환/근병증 사례군이 동료심사 문헌에 보고됨.",
+          "source": "PMID:16629193; PMID:27341541; doi:10.1111/avj.13455",
+          "scope": "양·말/조랑말 수의 임상 사례",
+          "interpretation": "육지거북 독성을 직접 입증하지는 않지만, 야생 Testudo 섭식만으로 안전 판정을 내릴 수 없게 하는 강한 수의독성 위험신호다."
+        }
+      ],
+      "publication_blocker": "야생 Testudo 섭식근거와 포유류 수의독성 사례가 충돌한다. 육지거북 종특이 안전자료 없이는 A/B 공개 판정 금지; 보수적 위험등급 검토 필요."
+    },
+    {
+      "plant_id": "medicago_hispida",
+      "accepted_taxon": "Medicago polymorpha L.",
+      "status": "reviewed_with_antinutritional_caution",
+      "signals": [
+        {
+          "type": "saponins",
+          "finding": "M. polymorpha를 포함한 annual Medicago 지상부에서 saponin 조성과 함량이 연구됨.",
+          "source": "PMID:22908560",
+          "scope": "식물성분·Artemia bioassay",
+          "interpretation": "사포닌 존재만으로 육지거북 독성을 확정하지 않으며, 야생섭식 사실만으로 위험을 무시하지도 않는다."
+        },
+        {
+          "type": "forage_risk",
+          "finding": "Medicago polymorpha는 목초·사료식물로 이용되지만 Medicago류 사료학에서는 사포닌과 고창증(bloat), 일부 계통의 estrogenic activity 같은 위험요인이 함께 검토된다.",
+          "source": "Medicago polymorpha forage literature; annual Medicago saponin literature",
+          "scope": "반추가축·사료학",
+          "interpretation": "육지거북 독성을 직접 입증하지 않는다. 그러나 야생섭식 기록만으로 무제한 급여를 권장할 수 없다는 보조 위험근거다."
+        }
+      ],
+      "publication_blocker": "Testudo 직접 야생섭식 근거는 있으나 사포닌/사료학 위험의 파충류 적용성이 불명확하다. 공개 시 제한적 혼합급여 이하의 보수적 문구와 근거 직접성 표시 필요."
+    },
+    {
+      "plant_id": "astragalus_cruciatus",
+      "accepted_taxon": "Astragalus crenatus Schult.",
+      "status": "research_gap_species_specific",
+      "signals": [
+        {
+          "type": "genus_toxicology",
+          "finding": "Astragalus 속 일부 종에는 swainsonine, nitro compounds 또는 selenium 관련 독성이 존재함.",
+          "source": "Cornell Poisonous Plants; PMID:28964750",
+          "scope": "속 수준·가축 독성",
+          "interpretation": "이 위험을 A. crenatus에 자동 전이할 수 없다."
+        },
+        {
+          "type": "species_specific_gap",
+          "finding": "Astragalus crenatus 자체에서 swainsonine, nitro compounds 또는 selenium 축적을 확인하거나 배제하는 종특이 자료를 이번 검토에서 확보하지 못함.",
+          "source": "species-specific literature search; Astragalus toxicology context",
+          "scope": "정확한 종 자료 공백",
+          "interpretation": "검색에서 직접 보고를 찾지 못했다는 사실은 해당 독성성분이 없다는 증거가 아니다."
+        },
+        {
+          "type": "genus_heterogeneity",
+          "finding": "Astragalus의 swainsonine·nitrotoxin·selenium 위험은 속 전체에 균일하지 않고 종·계통 및 관련 생물학적 요인에 따라 달라진다.",
+          "source": "Astragalus toxicology literature",
+          "scope": "속 수준 독성학",
+          "interpretation": "속 수준 위험을 A. crenatus에 자동 적용하거나 자동 배제하지 않는다."
+        }
+      ],
+      "publication_blocker": "A. crenatus 종 자체의 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식동물 급여안전 자료가 확보되기 전 A/B 판정 금지. 야생 Testudo 섭식은 별도 직접근거로만 표시."
+    },
+    {
+      "plant_id": "lotus_arenarius",
+      "status": "research_gap",
+      "signals": [
+        {
+          "type": "related_taxon_cyanogenesis",
+          "finding": "Lotus 속 일부 종에서 cyanogenic glycosides/cyanogenesis가 알려져 있으나 Lotus arenarius 자체의 함량·독성 자료로 확인되지 않았다.",
+          "source": "Lotus genus cyanogenesis literature",
+          "scope": "속 수준 간접근거",
+          "interpretation": "다른 Lotus 종의 청산배당체 위험을 L. arenarius에 자동 전이할 수 없고, 반대로 정확한 종 자료가 없다는 이유로 안전하다고 볼 수도 없다."
+        }
+      ],
+      "publication_blocker": "Lotus arenarius 종 자체의 cyanogenic potential 및 섭식 부위 독성 자료가 확인될 때까지 A/B 공개 판정 금지."
+    },
+    {
+      "plant_id": "conyzacanadensis",
+      "signals": [
+        {
+          "type": "leaf_irritant",
+          "finding": "정확한 종의 잎이 사람과 가축에서 점막 자극을 일으킬 수 있는 저강도 독성 식물로 분류됨.",
+          "source": "North Carolina Extension Plant Toolbox",
+          "scope": "잎·사람/가축",
+          "interpretation": "육지거북 경구 독성을 직접 입증하지 않지만 정확한 종·잎 수준 위험신호다."
+        },
+        {
+          "type": "essential_oil_cytotoxicity",
+          "finding": "국내산 E. canadensis 지상부 정유에서 limonene과 delta-3-carene이 주요 성분으로 확인됐고 HaCaT 세포독성이 보고됨.",
+          "source": "Applied Biological Chemistry 51(1):55-59 (2008); KCI ART001235807",
+          "scope": "지상부 농축 정유·in vitro",
+          "interpretation": "농축 정유 세포독성을 생잎의 육지거북 경구 독성량으로 환산하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Erigeron canadensis L.",
+      "status": "reviewed_with_species_specific_caution",
+      "publication_blocker": "정확한 종·잎 위험신호가 존재하고 육지거북 경구 안전자료가 없다. 야생 Testudo 섭식 직접근거가 추가 확보되기 전 A/B 판정 금지."
+    },
+    {
+      "plant_id": "ruscus_aculeatus",
+      "signals": [
+        {
+          "type": "veterinary_extract_toxicology",
+          "finding": "EMA는 ruscogenin의 제한적 경구 이용률과 낮은 급성 경구독성을 언급했으나 수의학적 결론은 국소용에 한정됨.",
+          "source": "EMA CVMP Ruscus aculeatus summary report (1999)",
+          "scope": "추출물/활성성분·식용동물·국소사용",
+          "interpretation": "식물체를 먹이로 급여해도 안전하다는 결론이 아니다."
+        },
+        {
+          "type": "extract_toxicity",
+          "finding": "EMA herbal assessment에는 고용량 Ruscus 뿌리·근경 추출물에서 동물 독성 징후가 보고되고 장기·유전독성 자료의 한계가 기술됨.",
+          "source": "EMA/HMPC/188805/2017",
+          "scope": "뿌리·근경 추출물·실험동물",
+          "interpretation": "야생 거북이 섭식할 수 있는 지상부와 부위가 다르므로 직접 전이하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Ruscus aculeatus L.",
+      "status": "reviewed_with_part_specific_gap",
+      "publication_blocker": "지상부/열매/잎모양 cladode 등 실제 섭식 부위와 Testudo 급여 안전성을 분리 확인해야 함. 현재 A/B 판정 금지."
+    },
+    {
+      "plant_id": "trifolium_campestre",
+      "signals": [
+        {
+          "type": "authoritative_use_flag",
+          "finding": "Kew POWO/ILDIS는 이 종을 animal food로 이용되는 동시에 poison 용도/위험 표기도 있는 종으로 제시함.",
+          "source": "Kew Plants of the World Online",
+          "scope": "종 수준 용도 메타데이터",
+          "interpretation": "독성 원인·부위·용량을 설명하지 않으므로 단독 급여판정 근거로 사용하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Trifolium campestre Schreb.",
+      "status": "research_gap_species_specific",
+      "publication_blocker": "Trifolium campestre 자체의 독성 원인·cyanogenic potential·섭식부위와 Testudo 적용 자료가 부족함. A/B 판정 금지."
+    },
+    {
+      "plant_id": "medicago_minima",
+      "signals": [
+        {
+          "type": "species_specific_saponins",
+          "finding": "Medicago minima의 지상부/식물체에서 triterpenoid saponin 계열을 다룬 종특이 식물화학 자료가 확인됨.",
+          "source": "Medicago species phytochemical/saponin literature",
+          "scope": "정확한 종·식물화학",
+          "interpretation": "사포닌 존재 자체가 육지거북 독성량을 뜻하지 않지만, 무제한 안전식으로 간주할 근거도 아니다."
+        },
+        {
+          "type": "forage_context",
+          "finding": "Medicago류는 사료식물로 이용되지만 사포닌 등 항영양성분의 양과 생물학적 영향은 종·부위·조건에 따라 달라질 수 있음.",
+          "source": "forage and Medicago saponin literature",
+          "scope": "속/사료학 보조근거",
+          "interpretation": "M. minima의 파충류 안전성으로 직접 전이하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Medicago minima (L.) Bartal.",
+      "status": "reviewed_with_antinutritional_caution",
+      "publication_blocker": "M. minima 종특이 사포닌 존재는 확인되지만 Testudo/파충류에서의 실제 섭취량·안전범위 자료가 없다. A 판정 금지; 공개 판정 전 야생섭식 또는 전문 사육근거 추가 필요."
+    },
+    {
+      "plant_id": "scorpiurus_sulcatus",
+      "signals": [
+        {
+          "type": "species_specific_feed_use",
+          "finding": "Scorpiurus muricatus는 지중해권에서 사료/목초 자원으로 연구된 정확한 종 수준 자료가 확인됨.",
+          "source": "Scorpiurus muricatus forage/agronomic literature",
+          "scope": "정확한 종·가축 사료학",
+          "interpretation": "가축의 사료 이용은 육지거북 안전성을 직접 증명하지 않지만 단순 속 수준 추정보다 강한 간접근거다."
+        },
+        {
+          "type": "reptile_gap",
+          "finding": "이번 검토에서 S. muricatus 자체의 Testudo 급여 안전성 또는 독성 용량 자료는 확보되지 않음.",
+          "source": "species-specific evidence review",
+          "scope": "파충류 적용 공백",
+          "interpretation": "사료작물이라는 이유만으로 A/B를 자동 부여하지 않는다."
+        }
+      ],
+      "accepted_taxon": "Scorpiurus muricatus L.",
+      "status": "reviewed_with_species_specific_feed_context",
+      "publication_blocker": "정확한 종의 가축 사료 이용 근거는 있으나 Testudo 직접 섭식/전문 사육 또는 파충류 안전자료가 부족하다. 공개 A/B 판정 전 적용성 근거 보강 필요."
+    }
+  ]
+}

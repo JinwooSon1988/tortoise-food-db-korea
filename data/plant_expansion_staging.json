@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.0",
+  "purpose": "대량 확장 후보를 공개 식물 DB와 분리해 수집·검증하기 위한 staging queue",
+  "public_boundary": "이 파일의 항목은 이름 검증·근거 검토·판정 완료 전까지 공개 식물 카탈로그에 포함하지 않는다.",
+  "stages": [
+    "collected",
+    "needs_species_resolution",
+    "taxonomy_verified",
+    "evidence_researched",
+    "assessed",
+    "promoted"
+  ],
+  "required_before_promotion": [
+    "canonical_scientific_name",
+    "accepted_taxonomy_checked",
+    "plant_part_defined",
+    "evidence_ladder_reviewed",
+    "assessment_written",
+    "public_copy_reviewed"
+  ],
+  "expansion_groups": [
+    {
+      "group": "한국 유통 잎채소",
+      "priority": 1,
+      "target_count": 100
+    },
+    {
+      "group": "한국 자생·귀화 야생초",
+      "priority": 1,
+      "target_count": 200
+    },
+    {
+      "group": "지중해 Testudo 야생 먹이식물",
+      "priority": 1,
+      "target_count": 200
+    },
+    {
+      "group": "정원·관상식물",
+      "priority": 2,
+      "target_count": 200
+    },
+    {
+      "group": "과수 잎·꽃·열매 부산물",
+      "priority": 2,
+      "target_count": 100
+    },
+    {
+      "group": "벼과·사초과 초본",
+      "priority": 2,
+      "target_count": 100
+    },
+    {
+      "group": "해외 육지거북 사육 식물",
+      "priority": 2,
+      "target_count": 200
+    }
+  ],
+  "candidates": [
+    {
+      "id": "leontodon_saxatilis",
+      "submitted_name": "Leontodon saxatilis",
+      "family": "Asteraceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Leontodon saxatilis Lam.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence",
+        "toxicology": "species-level phytochemistry/in-vitro activity reviewed; no tortoise oral toxic dose established",
+        "status": "reviewed_with_gap"
+      },
+      "publication_blocker": "야생 Testudo graeca graeca 직접 섭식 근거는 강하지만, 정확한 종의 생초·섭식부위에 대한 초식척추동물 경구 안전자료가 부족하여 공개 급여등급 승격을 보류한다.",
+      "risk_status": "direct_wild_evidence_with_oral_safety_gap",
+      "assessment_readiness": {
+        "status": "hold_for_oral_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Leontodon saxatilis 생초 또는 지상부의 초식척추동물 경구 안전자료나 전문 Testudo 사육자료"
+      }
+    },
+    {
+      "id": "malva_parviflora",
+      "submitted_name": "Malva parviflora",
+      "family": "Malvaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Malva parviflora L.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct T. graeca graeca fecal-analysis evidence; Malva parviflora was one of five main preferred plants accounting collectively for 70% of identified dietary material in the 2006 Morocco study. A later Souss Valley study also reports M. parviflora among consumed plants.",
+        "veterinary_toxicity": "species-specific equine and ovine reports describe suspected/probable toxicosis after heavy grazing; proposed mechanisms include cyclopropene fatty acids. These are mammalian data and do not establish Testudo toxicity.",
+        "counterevidence": "2022 rat study of isolated leaf/fruit mucilage found no acute toxicity at 5 g/kg, but this was an extracted mucilage preparation, not whole fresh plant and not a tortoise study.",
+        "interpretation": "The tortoise feeding evidence and mammalian veterinary toxicity cannot be collapsed into a simple safe/unsafe conclusion. Testudo-specific oral safety evidence remains absent."
+      },
+      "publication_blocker": "T. graeca graeca의 직접 야생섭식 근거가 강하지만, M. parviflora의 포유류 수의독성 사례와 충돌한다. 2022년 쥐의 추출 점액질 안전성은 생초 전체의 육지거북 안전성을 입증하지 않는다. Testudo/파충류 경구자료 확보 전 A/B 공개 승격 금지.",
+      "risk_status": "direct_wild_evidence_with_cross_species_veterinary_toxicity_conflict",
+      "assessment_readiness": {
+        "status": "hold_for_taxon_specific_reptile_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Malva parviflora 생초/실제 섭식부위의 파충류 또는 Testudo 경구 안전자료; 가능하면 cyclopropene fatty acid와 실제 섭식량의 관계 자료"
+      }
+    },
+    {
+      "id": "astragalus_cruciatus",
+      "submitted_name": "Astragalus cruciatus",
+      "family": "Fabaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Astragalus crenatus Schult.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence under reported name Astragalus cruciatus",
+        "taxonomy": "reported name normalized to accepted Astragalus crenatus Schult.",
+        "toxicology": "Astragalus genus swainsonine, nitro-compound and selenium hazards reviewed; no exact A. crenatus evidence located that establishes or excludes these hazards.",
+        "status": "direct_wild_evidence_with_unresolved_species_specific_toxicology"
+      },
+      "publication_blocker": "A. crenatus는 야생 T. g. graeca 섭식 직접근거가 있으나, 종 자체의 swainsonine·nitro compound·selenium 위험을 확인하거나 배제할 자료가 부족하다. 부재 검색결과를 안전 증거로 취급하지 않으며 공개 A/B 승격을 보류한다.",
+      "risk_status": "direct_wild_evidence_with_unresolved_species_specific_toxicology",
+      "assessment_readiness": {
+        "status": "hold_for_species_specific_toxicology",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Astragalus crenatus 종특이 swainsonine/nitro compound/selenium 분석 또는 신뢰할 수 있는 초식척추동물·Testudo 경구 안전자료"
+      }
+    },
+    {
+      "id": "medicago_hispida",
+      "submitted_name": "Medicago hispida",
+      "family": "Fabaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "promoted",
+      "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종; 현재 수용명 확인 필요",
+      "feeding_grade": "B",
+      "public": true,
+      "accepted_name": "Medicago polymorpha L.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "direct Testudo graeca graeca fecal-analysis evidence",
+        "toxicology": "species-level saponin evidence plus forage-risk context reviewed",
+        "status": "reviewed_with_antinutritional_caution"
+      },
+      "publication_blocker": null,
+      "risk_status": "reviewed_with_antinutritional_caution",
+      "assessment_readiness": {
+        "status": "candidate_for_conservative_assessment",
+        "maximum_supported_grade": "B",
+        "rationale": "Testudo graeca graeca 야생섭식 직접근거가 있으나 사포닌·사료학 위험의 파충류 적용성이 불명확하므로 무제한/주식성 A는 지지하지 않는다.",
+        "required_public_caveats": [
+          "graeca 아종 야생자료이며 ibera 직접자료가 아님",
+          "사육 급여량·비율 근거 없음",
+          "사포닌 존재와 실제 파충류 독성량은 동일하지 않음"
+        ]
+      },
+      "assessment_ref": "assessments_korea_addendum_19.json",
+      "source_trace_status": "complete",
+      "promotion_note": "171 master / 164 current public-scope 체계에서 정적 상세페이지와 sitemap 생성 검증 완료.",
+      "source_trace": {
+        "wild_diet": {
+          "title": "Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco",
+          "year": 2006,
+          "doi": "10.1016/j.jaridenv.2005.06.010"
+        },
+        "phytochemistry": {
+          "title": "Chemical investigation of saponins from twelve annual Medicago species and their bioassay with the brine shrimp Artemia salina",
+          "year": 2012,
+          "pmid": "22908560"
+        }
+      }
+    },
+    {
+      "id": "lotus_arenarius",
+      "submitted_name": "Lotus arenarius",
+      "family": "Fabaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Testudo graeca graeca 야생 분변 연구의 주요 섭식종",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Lotus arenarius Brot.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "evidence_review": {
+        "wild_diet": "repeated direct Testudo graeca graeca fecal-analysis evidence in Morocco (2006 and 2023 studies); prominent/preferred food in at least one study year",
+        "safety_gap": "Lotus-genus cyanogenesis is indirect; exact Lotus arenarius cyanogenic potential or oral toxic dose was not established in the reviewed sources",
+        "status": "repeated_direct_wild_evidence_with_species_specific_cyanogenesis_gap"
+      },
+      "publication_blocker": "반복된 T. g. graeca 야생섭식 직접근거는 강하지만 Lotus arenarius 자체의 cyanogenic potential·섭식부위·경구 안전량이 미확정이다. Lotus 속 수준 위험을 종 수준으로 자동 전이하지 말고, 정확한 종 자료 확보 전 공개 A/B 승격을 보류한다.",
+      "risk_status": "repeated_direct_wild_evidence_with_species_specific_cyanogenesis_gap",
+      "assessment_readiness": {
+        "status": "hold_for_species_specific_cyanogenesis_or_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Lotus arenarius 정확한 종의 cyanogenic glycoside/HCN 분석 또는 초식척추동물·Testudo 경구 안전자료"
+      }
+    },
+    {
+      "id": "scorpiurus_sulcatus",
+      "submitted_name": "Scorpiurus sulcatus",
+      "family": "Fabaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Testudo graeca graeca 연구에서 흔한 먹이로 보고",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Scorpiurus muricatus L.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-28",
+      "taxonomy_note": "Scorpiurus sulcatus L.은 POWO에서 Scorpiurus muricatus L.의 synonym. 원문 명칭은 provenance로 보존.",
+      "publication_blocker": "Scorpiurus muricatus의 종특이 목초·사료 이용 근거는 있으나, canonical 자료에서 Testudo 직접섭식 또는 파충류 경구 안전근거가 확정되지 않았다. 가축 사료 이용을 육지거북 안전성으로 자동 전이하지 않고 A/B 판정을 보류한다.",
+      "risk_status": "species_specific_forage_evidence_without_Testudo_directness",
+      "evidence_review": {
+        "taxonomy": "Scorpiurus sulcatus L. retained as source-name provenance; accepted taxon Scorpiurus muricatus L.",
+        "forage_context": "Exact accepted species has Mediterranean forage/pasture use evidence, supporting that it is consumed by grazing herbivores.",
+        "Testudo_directness": "No sufficiently verified Testudo-specific direct feeding record is present in the canonical evidence set.",
+        "safety_interpretation": "Livestock forage use is indirect evidence only and does not establish a tortoise oral safety dose or feeding frequency.",
+        "status": "species_specific_forage_evidence_without_Testudo_directness"
+      },
+      "assessment_readiness": {
+        "status": "hold_for_Testudo_direct_or_reptile_safety_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Scorpiurus muricatus(또는 원문 synonym S. sulcatus)의 Testudo 직접섭식·전문 사육자료 또는 파충류/초식척추동물 경구 안전자료"
+      }
+    },
+    {
+      "id": "conyzacanadensis",
+      "submitted_name": "Conyza canadensis",
+      "family": "Asteraceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Testudo hermanni hermanni 야생 연구에서 반복 섭식 보고",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Erigeron canadensis L.",
+      "submitted_name_status": "synonym",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "publication_blocker": "정확한 종의 잎·식물에 점막 자극 위험신호가 있고 전문 사육 DB도 급여 회피를 권고한다. 농축 정유 세포독성을 생잎 경구독성으로 과장하지 않되, Testudo 직접 안전자료가 없으므로 A/B 승격 금지. 공개 D 판정 후보로 별도 assessment 검토 가능.",
+      "evidence_review": {
+        "species_specific_hazard": "Exact-species extension references report leaf/plant volatile-oil, tannic-acid and gallic-acid related skin or mucosal irritation in humans/livestock and poor livestock forage value.",
+        "concentrated_extract": "A 2008 Korean study found cytotoxicity of steam-distilled essential oil from aerial Erigeron canadensis in HaCaT cells; this is concentrated essential oil in vitro and is not equivalent to fresh-leaf oral toxicity.",
+        "husbandry_evidence": "The Tortoise Table lists Conyza canadensis / Erigeron canadensis as Do not Feed, citing irritant properties, possible cadmium uptake on contaminated soil, and poor livestock palatability.",
+        "Testudo_directness": "No sufficiently verified direct Testudo feeding/safety study is present in the canonical evidence set.",
+        "interpretation": "Species-specific hazard signals plus specialist husbandry avoidance justify conservative handling, while concentrated-oil cytotoxicity must not be presented as a fresh-plant tortoise toxic dose."
+      },
+      "risk_status": "species_specific_irritant_signal_with_husbandry_avoidance",
+      "assessment_readiness": {
+        "status": "candidate_for_conservative_D_review",
+        "maximum_supported_grade": "D",
+        "required_next_evidence": "D 판정 작성 시 종특이 자극성 자료와 Tortoise Table 전문 사육근거를 분리 인용하고, 정유 in-vitro 자료는 보조 위험신호로만 표시"
+      }
+    },
+    {
+      "id": "ruscus_aculeatus",
+      "submitted_name": "Ruscus aculeatus",
+      "family": "Asparagaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "promoted",
+      "source_hint": "Del Vecchio et al. (2011), wild Testudo hermanni hermanni in central Italy: autumn consumption of Ruscus aculeatus flowers, unripe fruit and leaves; DOI 10.1655/HERPETOLOGICA-D-10-00064.1.",
+      "feeding_grade": "B",
+      "public": true,
+      "accepted_name": "Ruscus aculeatus L.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "publication_blocker": null,
+      "evidence_review": {
+        "status": "direct_wild_Testudo_evidence_with_part_specific_toxicology_boundary",
+        "note": "2011 Herpetologica study directly documents wild T. h. hermanni switching to R. aculeatus flowers and unripe fruit in autumn; full text also reports autumn leaf consumption. EMA assessment concerns medicinal rhizome/root preparations and cannot be used as an aerial-part tortoise toxic dose.",
+        "primary_feeding_source": {
+          "title": "Seasonal changes in the diet of Testudo hermanni hermanni in central Italy",
+          "authors": "Del Vecchio S.; Burke R.L.; Rugiero L.; Capula M.; Luiselli L.",
+          "year": 2011,
+          "journal": "Herpetologica",
+          "volume": "67(3)",
+          "pages": "236-249",
+          "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+          "animal_taxon": "Testudo hermanni hermanni",
+          "parts_observed": [
+            "flowers",
+            "unripe fruit",
+            "leaves"
+          ],
+          "directness": "subspecies_wild_observation"
+        },
+        "toxicity_boundary": {
+          "source": "EMA Final assessment report on Ruscus aculeatus L. rhizoma, Revision 1",
+          "reference": "EMA/HMPC/188805/2017",
+          "scope": "root/rhizome extracts; mammalian/medicinal toxicology",
+          "do_not_transfer_to": "fresh aerial parts or tortoise oral toxic dose"
+        }
+      },
+      "risk_status": "reviewed_promoted_limited_mixed_diet",
+      "assessment_readiness": {
+        "status": "promoted",
+        "maximum_supported_grade": "B",
+        "final_verdict": "limited_mixed_diet",
+        "note": "Canonical Mediterranean_Testudo B assessment published; wild T. h. hermanni direct feeding evidence with explicit ibera/captive-dose limitations."
+      }
+    },
+    {
+      "id": "medicago_minima",
+      "submitted_name": "Medicago minima",
+      "family": "Fabaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Hermann's tortoise 서식지·식이 연구 후보",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Medicago minima (L.) Bartal.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-28",
+      "taxonomy_note": "POWO에서 accepted species로 확인. 분류검증은 급여안전 판정을 의미하지 않음.",
+      "publication_blocker": "M. minima는 가축·초식동물의 사료/방목 식물로 사용되는 근거가 반복되지만 Testudo 직접섭식·경구 안전량 자료가 없다. Medicago 속 사포닌 정보를 종특이 독성으로 전이하지 않으며 A/B 공개 판정은 보류.",
+      "risk_status": "species_specific_safety_gap_with_repeated_herbivore_use",
+      "evidence_review": {
+        "wild_diet": "No direct Testudo graeca feeding record established in the reviewed evidence set.",
+        "herbivore_use": "Species is documented as forage/animal food and as a grazed species; GRIN records animal-food forage use, and field/pasture sources document grazing by sheep/cattle.",
+        "phytochemistry": "Exact-species studies document substantial phenolic variation among roots, stems, leaves and seeds; Medicago genus is saponin-rich, but the reviewed 12-species saponin study did not include M. minima, so genus-level saponin information is not treated as species-specific toxicity.",
+        "interpretation": "Herbivore forage use supports ecological plausibility but does not establish Testudo safety or a feeding grade."
+      },
+      "assessment_readiness": {
+        "status": "hold_for_Testudo_specific_or_specialist_herbivore_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "M. minima의 Testudo/파충류 직접섭식 또는 전문 사육자료, 또는 정확한 종·부위의 초식척추동물 경구 안전자료"
+      }
+    },
+    {
+      "id": "trifolium_campestre",
+      "submitted_name": "Trifolium campestre",
+      "family": "Fabaceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "evidence_researched",
+      "source_hint": "Hermann's tortoise 서식지·식이 연구 후보",
+      "feeding_grade": null,
+      "public": false,
+      "accepted_name": "Trifolium campestre Schreb.",
+      "submitted_name_status": "accepted",
+      "taxonomy_authority": "Kew Plants of the World Online",
+      "taxonomy_checked": "2026-09-27",
+      "publication_blocker": "Trifolium campestre 자체의 cyanogenic potential과 Testudo/초식척추동물 경구 안전자료가 확인되지 않았고, 현재 직접 야생섭식 근거도 확정하지 못했다. 공개 A/B 판정 보류.",
+      "evidence_review": {
+        "wild_diet": "Current reviewed Testudo graeca graeca evidence set does not establish Trifolium campestre as a direct consumed species.",
+        "veterinary_context": "Veterinary toxicology references identify Trifolium spp. as a cyanogenic-glycoside plant group, but this is genus-level and does not establish T. campestre cyanogenic content or tortoise toxicity.",
+        "species_specific_gap": "No exact-species T. campestre cyanogenic potential or Testudo oral-safety evidence was established in this review.",
+        "interpretation": "Do not transfer genus-level cyanogenic risk automatically to T. campestre, but do not treat absence of species-specific evidence as proof of safety."
+      },
+      "risk_status": "species_specific_cyanogenesis_unresolved",
+      "assessment_readiness": {
+        "status": "hold_for_species_specific_evidence",
+        "maximum_supported_grade": null,
+        "required_next_evidence": "Trifolium campestre 종특이 cyanogenic glycoside/HCN 분석 또는 초식척추동물·Testudo 경구 안전자료; 직접 야생섭식 자료가 있으면 별도 검증"
+      }
+    },
+    {
+      "id": "carthamus_spp",
+      "submitted_name": "Carthamus spp.",
+      "family": "Asteraceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "needs_species_resolution",
+      "source_hint": "Testudo graeca 야생 식물 먹이 문헌 후보; 종 수준 분리 필요",
+      "feeding_grade": null,
+      "public": false,
+      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함.",
+      "source_trace": {
+        "secondary_source": "Benítez-Malvido et al. 2019, PeerJ 7:e8076",
+        "secondary_claim": "Testudo graeca diet includes thistles, e.g. Carthamus and Carlina; citation combines Andreu, Díaz-Paniagua & Keller 2000 with El Mouden et al. 2006.",
+        "primary_lead": "Andreu, Díaz-Paniagua & Keller (2000), La tortuga mora (Testudo graeca L.) en Doñana",
+        "resolution_status": "publicly accessible evidence checked so far supports genus-level identification only",
+        "rule": "Do not infer a species from regional flora or later citations. Promote taxonomy only if the primary source identifies the species."
+      },
+      "publication_blocker": "원출처에서 Carthamus/Carlina의 정확한 종명이 확인되지 않음. 현재 속 수준 자료만 검증되어 species-level 공개 레코드 생성 금지."
+    },
+    {
+      "id": "carlina_spp",
+      "submitted_name": "Carlina spp.",
+      "family": "Asteraceae",
+      "group": "지중해 Testudo 야생 먹이식물",
+      "stage": "needs_species_resolution",
+      "source_hint": "Testudo graeca 야생 식물 먹이 문헌 후보; 종 수준 분리 필요",
+      "feeding_grade": null,
+      "public": false,
+      "taxonomy_note": "속 수준 이름으로는 급여 판정 금지. 원 야생식이 자료에서 실제 종을 재추출해야 함.",
+      "source_trace": {
+        "secondary_source": "Benítez-Malvido et al. 2019, PeerJ 7:e8076",
+        "secondary_claim": "Testudo graeca diet includes thistles, e.g. Carthamus and Carlina; citation combines Andreu, Díaz-Paniagua & Keller 2000 with El Mouden et al. 2006.",
+        "primary_lead": "Andreu, Díaz-Paniagua & Keller (2000), La tortuga mora (Testudo graeca L.) en Doñana",
+        "resolution_status": "publicly accessible evidence checked so far supports genus-level identification only",
+        "rule": "Do not infer a species from regional flora or later citations. Promote taxonomy only if the primary source identifies the species."
+      },
+      "publication_blocker": "원출처에서 Carthamus/Carlina의 정확한 종명이 확인되지 않음. 현재 속 수준 자료만 검증되어 species-level 공개 레코드 생성 금지."
+    }
+  ],
+  "rules": [
+    "속 수준 안전성을 종 수준 안전성으로 자동 전이하지 않는다.",
+    "식용 열매의 안전성을 잎·줄기·씨앗으로 자동 전이하지 않는다.",
+    "사람 식품 안전성을 육지거북 안전성으로 자동 전이하지 않는다.",
+    "영양성분 자료만으로 A/B 급여 판정을 만들지 않는다.",
+    "U 판정도 조사 이력과 publication_blocker를 남긴다."
+  ]
+}

@@ -48,7 +48,8 @@
     {
       "id": "tortoise_table_grapevine",
       "plant_ids": [
-        "grapeleaf"
+        "grapeleaf",
+        "grapevineleaf"
       ],
       "source_title": "The Tortoise Table — Grape Vine",
       "source_type": "specialist_plant_database",
@@ -174,7 +175,8 @@
         "clover",
         "romaine",
         "lettuce",
-        "rose"
+        "rose",
+        "whiteclover"
       ],
       "source_title": "Tortoise Trust. Feeding Mediterranean Tortoises – Some Basic Guidelines for a Healthy Diet.",
       "source_type": "specialist_husbandry",
@@ -218,7 +220,12 @@
       "plant_ids": [
         "dandelion",
         "plantain",
-        "sowthistle"
+        "sowthistle",
+        "whiteclover",
+        "redclover",
+        "ribwortplantain",
+        "commonmallow",
+        "broadleafplantain"
       ],
       "source_title": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises.",
       "source_type": "specialist_husbandry",
@@ -355,7 +362,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf"
     },
     {
       "id": "tortoise_table_sedum",
@@ -388,7 +395,7 @@
       "plant_taxon": "Cichorium intybus",
       "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
       "directness": "contextual",
-      "supports": "치커리를 'Feed in Moderation'으로 분류한다. 잎과 꽃은 다양한 식단의 일부로 사용할 수 있다고 설명하지만 뿌리는 전분·당이 높아 급여하지 말 것을 권한다. 종별 직접 연구가 아니라 전문 식물 DB 지침이다.",
+      "supports": "치커리를 ‘제한 급여’로 분류한다. 잎과 꽃은 다양한 식단의 일부로 사용할 수 있다고 설명하지만 뿌리는 전분·당이 높아 급여하지 말 것을 권한다. 종별 직접 연구가 아니라 전문 식물 DB 지침이다.",
       "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
       "year": null,
       "doi": null,
@@ -407,7 +414,7 @@
       "plant_taxon": "Spinacia oleracea",
       "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
       "directness": "contextual",
-      "supports": "Spinacia oleracea를 Do not Feed로 분류한다. 시금치 자체가 독성인 것은 아니며 소량이 큰 위해를 일으킬 가능성은 낮다고 설명하지만, oxalic acid의 칼슘 결합·이용 저해와 calcium oxalate 관련 우려를 이유로 급여하지 않을 것을 권한다. 전문 DB 지침이며 Testudo graeca ibera 직접 독성시험은 아니다.",
+      "supports": "Spinacia oleracea를 급여하지 않음으로 분류한다. 시금치 자체가 독성인 것은 아니며 소량이 큰 위해를 일으킬 가능성은 낮다고 설명하지만, oxalic acid의 칼슘 결합·이용 저해와 calcium oxalate 관련 우려를 이유로 급여하지 않을 것을 권한다. 전문 DB 지침이며 Testudo graeca ibera 직접 독성시험은 아니다.",
       "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
       "year": null,
       "doi": null,
@@ -426,7 +433,7 @@
       "plant_taxon": "Petroselinum crispum",
       "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
       "directness": "contextual",
-      "supports": "Petroselinum crispum을 Do not Feed로 분류한다. 독성 식물은 아니며 한입 정도는 걱정할 필요가 없다고 설명하지만, 이뇨성과 높은 oxalate에 따른 칼슘 흡수 저해 및 잠재적 신장 우려를 이유로 급여를 피하라고 권한다. Testudo graeca ibera 직접 시험은 아니다.",
+      "supports": "Petroselinum crispum을 급여하지 않음으로 분류한다. 독성 식물은 아니며 한입 정도는 걱정할 필요가 없다고 설명하지만, 이뇨성과 높은 oxalate에 따른 칼슘 흡수 저해 및 잠재적 신장 우려를 이유로 급여를 피하라고 권한다. Testudo graeca ibera 직접 시험은 아니다.",
       "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
       "year": null,
       "doi": null,
@@ -445,7 +452,7 @@
       "plant_taxon": "Raphanus sativus",
       "plant_part_state": "Part/state distinctions are preserved in the source note; do not generalize across roots, leaves, flowers, fruits or seeds.",
       "directness": "contextual",
-      "supports": "Raphanus sativus 잎을 Feed in Moderation으로 분류한다. Brassicaceae의 glucosinolates를 이유로 주요 식단으로 많이 급여하지 말라고 설명하면서 소량은 괜찮다고 한다. 뿌리는 별도로 급여하지 말라고 구분한다. Testudo graeca ibera 직접 시험은 아니다.",
+      "supports": "Raphanus sativus 잎을 제한 급여로 분류한다. Brassicaceae의 glucosinolates를 이유로 주요 식단으로 많이 급여하지 말라고 설명하면서 소량은 괜찮다고 한다. 뿌리는 별도로 급여하지 말라고 구분한다. Testudo graeca ibera 직접 시험은 아니다.",
       "does_not_support": "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
       "year": null,
       "doi": null,
@@ -478,7 +485,10 @@
         "wheatgrass",
         "orchard",
         "barleygrass",
-        "ryegrass"
+        "ryegrass",
+        "wheatleaf",
+        "barleyleaf",
+        "oatleaf"
       ],
       "source_title": "The Tortoise Table. Cat Grass (Oat Grass, Wheat Grass, Orchard Grass, Barley Grass, Rye Grass).",
       "source_type": "specialist_plant_database",
@@ -497,7 +507,8 @@
     {
       "id": "tortoise_table_opuntia",
       "plant_ids": [
-        "pricklypear"
+        "pricklypear",
+        "opuntiapad"
       ],
       "source_title": "The Tortoise Table. Opuntia Cactus (Prickly Pear/Nopales).",
       "source_type": "specialist_plant_database",
@@ -516,7 +527,8 @@
     {
       "id": "tortoise_table_sweetpotato",
       "plant_ids": [
-        "sweetpotatoleaf"
+        "sweetpotatoleaf",
+        "sweetpotatovine"
       ],
       "source_title": "The Tortoise Table. Sweet Potato.",
       "source_type": "specialist_plant_database",
@@ -919,7 +931,8 @@
     {
       "id": "tortoise_table_cucumber",
       "plant_ids": [
-        "cucumber"
+        "cucumber",
+        "cucumberleaf"
       ],
       "source_title": "The Tortoise Table. Cucumber.",
       "plant_taxon": "Cucumis sativus",
@@ -1033,7 +1046,9 @@
     {
       "id": "tortoise_table_violet",
       "plant_ids": [
-        "violet"
+        "violet",
+        "violetleaf",
+        "violetflower"
       ],
       "source_title": "The Tortoise Table. Violet.",
       "plant_taxon": "Viola spp.",
@@ -1142,7 +1157,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=176"
     },
     {
       "id": "tortoise_table_lambs_lettuce",
@@ -1161,7 +1176,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=686"
     },
     {
       "id": "tortoise_table_maize_leaf",
@@ -1180,12 +1195,13 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=2&plant=625"
     },
     {
       "id": "tortoise_table_sunflower",
       "plant_ids": [
-        "sunflowerleaf"
+        "sunflowerleaf",
+        "sunflowerpetal"
       ],
       "source_title": "The Tortoise Table. Sunflower.",
       "source_type": "specialist_plant_database",
@@ -1199,12 +1215,13 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=367"
     },
     {
       "id": "tortoise_table_pumpkin",
       "plant_ids": [
-        "pumpkinleaf"
+        "pumpkinleaf",
+        "pumpkinflower"
       ],
       "source_title": "The Tortoise Table. Pumpkin.",
       "source_type": "specialist_plant_database",
@@ -1218,7 +1235,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=229"
     },
     {
       "id": "tortoise_table_squash_cucurbita_moschata",
@@ -1237,7 +1254,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=627"
     },
     {
       "id": "tortoise_table_squash_courgette",
@@ -1248,7 +1265,7 @@
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Cucurbita spp.; assessment maps Korean master to Cucurbita moschata",
+      "plant_taxon": "Cucurbita spp.; 국내 기준 식물은 Cucurbita moschata로 연결한다",
       "plant_part_state": "fruit concept; species mapping explicitly limited",
       "directness": "contextual",
       "supports": "Feed Sparingly. The assessment uses the source's Cucurbita moschata-inclusive squash scope only as general-tortoise evidence for rare supplementary use.",
@@ -1256,7 +1273,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=637"
     },
     {
       "id": "tortoise_table_sweet_pepper",
@@ -1275,7 +1292,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=632"
     },
     {
       "id": "tortoise_table_chrysanthemum",
@@ -1286,15 +1303,15 @@
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Chrysanthemum-group context; assessment maps historical Chrysanthemum coronarium to Glebionis coronaria",
+      "plant_taxon": "국화류 맥락 자료; 과거 학명 Chrysanthemum coronarium은 Glebionis coronaria로 연결한다",
       "plant_part_state": "leaf food concept; pyrethrin-rich Chrysanthemum taxa excluded",
       "directness": "contextual",
       "supports": "The existing assessment preserves the specialist database's moderation framing for most Chrysanthemum-group plants while explicitly excluding pyrethrin-rich taxa.",
-      "does_not_support": "This is not an exact-taxon Testudo graeca ibera trial. Historical-name linkage must not be used to transfer the conclusion to Chrysanthemum cinerariifolium, C. coccineum or unrelated taxa.",
+      "does_not_support": "정확한 분류군의 이베라그리스육지거북 시험이 아니다. 과거 학명 연결만을 근거로 결론을 Chrysanthemum cinerariifolium, C. coccineum 또는 무관한 분류군에 옮겨 적용하면 안 된다.",
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=5&plant=94"
     },
     {
       "id": "tortoise_table_fig_tree",
@@ -1313,7 +1330,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=180"
     },
     {
       "id": "tortoise_table_mugwort",
@@ -1324,7 +1341,7 @@
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Artemisia spp.; Korean master Artemisia princeps",
+      "plant_taxon": "Artemisia spp.; 국내 기준 식물은 Artemisia princeps",
       "plant_part_state": "plant; genus-level source scope",
       "directness": "contextual",
       "supports": "The existing assessment preserves the specialist database's Do not Feed category for Artemisia spp. and therefore excludes planned feeding of the Korean Artemisia princeps concept.",
@@ -1332,12 +1349,13 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=502"
     },
     {
       "id": "tortoise_table_pea_shoots",
       "plant_ids": [
-        "pea_shoot"
+        "pea_shoot",
+        "peashoot"
       ],
       "source_title": "The Tortoise Table. Pea / Pea Shoots.",
       "source_type": "specialist_plant_database",
@@ -1351,12 +1369,13 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=705"
     },
     {
       "id": "tortoise_table_pelargonium",
       "plant_ids": [
-        "geranium"
+        "geranium",
+        "geraniumleaf"
       ],
       "source_title": "The Tortoise Table. Pelargonium.",
       "source_type": "specialist_plant_database",
@@ -1370,7 +1389,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=5&plant=239"
     },
     {
       "id": "tortoise_table_perilla",
@@ -1389,7 +1408,7 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=507"
     },
     {
       "id": "tortoise_trust_mediterranean_grass_context",
@@ -1432,26 +1451,26 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://healthtopics.vetmed.ucdavis.edu/tags/reptiles"
     },
     {
       "id": "korea_lambs_lettuce_identity",
       "plant_ids": [
         "lambs_lettuce"
       ],
-      "source_title": "Korean-market identity record for Lamb's Lettuce / Corn Salad.",
-      "source_type": "plant_identity_context",
+      "source_title": "Korea National Arboretum. Invasive Alien Plants in South Korea — Valerianella locusta (상치아재비).",
+      "source_type": "official_botanical_database",
       "animal_taxon": "not_applicable",
       "applicability": "composition_only",
       "plant_taxon": "Valerianella locusta",
       "plant_part_state": "identity only",
       "directness": "contextual",
-      "supports": "Preserves the assessment's identity scope: Lamb's Lettuce / Corn Salad is treated as Valerianella locusta; Korean transliterated market naming is not itself a feeding-safety claim.",
-      "does_not_support": "Identity evidence does not prove tortoise feeding safety, dose, percentage or frequency.",
+      "supports": "국립수목원 자료에서 Valerianella locusta의 국내 식물명 상치아재비와 국내 분포가 확인된다. 이는 국내 식물 정체성 보조자료이며 먹이 안전성 근거가 아니다.",
+      "does_not_support": "국내 식물명·분포 자료는 Lamb's Lettuce라는 유통명 자체를 공식 표준 유통명으로 확정하지 않으며, 육지거북 급여 안전성·급여량·빈도를 증명하지 않는다.",
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.forest.go.kr/newkfsweb/cmm/fms/BoardFileDown.do?atchFileId=FILE_000000000713430&bbsId=&dwldHistYn=&fileSn=0&fn=Invasive+Alien+Plants+in+South+Korea.pdf"
     },
     {
       "id": "rda_korean_chard_identity",
@@ -1470,12 +1489,13 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": null
+      "url": "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=101954&menuId=PS03796&sSeCode=374005&totalSearchYn=Y"
     },
     {
       "id": "tortoise_table_mallow",
       "plant_ids": [
-        "mallow"
+        "mallow",
+        "commonmallow"
       ],
       "source_title": "The Tortoise Table. Mallow.",
       "source_type": "specialist_plant_database",
@@ -1485,7 +1505,7 @@
       "plant_part_state": "leaves and flowers",
       "directness": "contextual",
       "supports": "The specialist plant database classifies Mallow (Malva spp.) as Safe to Feed and explicitly describes both flowers and leaves as eaten by tortoises.",
-      "does_not_support": "This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.",
+      "does_not_support": "이 자료는 이베라그리스육지거북에 특이적인 급여 비율·고정 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물과의 동등성도 입증하지 않는다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
       "year": null,
       "doi": null,
       "pmid": null,
@@ -1513,13 +1533,14 @@
     {
       "id": "tortoise_table_water_dropwort_warning",
       "plant_ids": [
-        "minari"
+        "minari",
+        "waterdropwort"
       ],
       "source_title": "The Tortoise Table. Dropwort — water-dropwort warning.",
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Oenanthe genus warning; Korean master Oenanthe javanica",
+      "plant_taxon": "Oenanthe속 경고 자료; 국내 기준 식물은 Oenanthe javanica",
       "plant_part_state": "genus-level hazard warning; not an Oenanthe javanica feeding trial",
       "directness": "contextual",
       "supports": "The specialist source explicitly warns that water dropworts of the genus Oenanthe are different from Filipendula dropwort and describes Oenanthe water dropworts as highly toxic plants that should be avoided.",
@@ -1589,7 +1610,8 @@
     {
       "id": "lu_oenanthe_javanica_review_2019",
       "plant_ids": [
-        "minari"
+        "minari",
+        "waterdropwort"
       ],
       "source_title": "Lu C-l, Li X-f. A Review of Oenanthe javanica (Blume) DC. as Traditional Medicinal Plant and Its Therapeutic Potential.",
       "source_type": "peer_reviewed_review",
@@ -1634,6 +1656,1708 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+    },
+    {
+      "id": "kew_whiteclover_identity",
+      "plant_ids": [
+        "whiteclover"
+      ],
+      "source_title": "Plants of the World Online — Trifolium repens",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Trifolium repens",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Trifolium repens as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A523626-1"
+    },
+    {
+      "id": "kew_redclover_identity",
+      "plant_ids": [
+        "redclover"
+      ],
+      "source_title": "Plants of the World Online — Trifolium pratense",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Trifolium pratense",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Trifolium pratense as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/523575-1"
+    },
+    {
+      "id": "kew_ribwortplantain_identity",
+      "plant_ids": [
+        "ribwortplantain"
+      ],
+      "source_title": "Plants of the World Online — Plantago lanceolata",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Plantago lanceolata",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Plantago lanceolata as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A321285-2"
+    },
+    {
+      "id": "kew_commonmallow_identity",
+      "plant_ids": [
+        "commonmallow"
+      ],
+      "source_title": "Plants of the World Online — Malva sylvestris",
+      "source_type": "authoritative_taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Malva sylvestris",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Kew Plants of the World Online lists Malva sylvestris as an accepted species name.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A561932-1"
+    },
+    {
+      "id": "tortoise_table_hollyhock",
+      "plant_ids": [
+        "hollyhock"
+      ],
+      "source_title": "The Tortoise Table. Hollyhock.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Alcea rosea",
+      "plant_part_state": "flowers and leaves",
+      "directness": "contextual",
+      "supports": "Classifies Hollyhock as Safe to Feed and states flowers and leaves can be fed as part of a wider varied diet.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=157"
+    },
+    {
+      "id": "tortoise_table_lemon_balm",
+      "plant_ids": [
+        "lemonbalm"
+      ],
+      "source_title": "The Tortoise Table. Lemon Balm.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Melissa officinalis",
+      "plant_part_state": "aerial herb material",
+      "directness": "contextual",
+      "supports": "Classifies Lemon Balm as Feed in Moderation and recommends it only as part of a wider varied diet.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=219"
+    },
+    {
+      "id": "tortoise_table_chamomile",
+      "plant_ids": [
+        "chamomile"
+      ],
+      "source_title": "The Tortoise Table. Chamomile.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Matricaria recutita; syn. Matricaria chamomilla",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies German Chamomile as Feed Sparingly and advises against regular offering.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=570"
+    },
+    {
+      "id": "tortoise_table_cornflower",
+      "plant_ids": [
+        "cornflower"
+      ],
+      "source_title": "The Tortoise Table. Cornflower (Wild).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Centaurea cyanus",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Centaurea cyanus as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all"
+    },
+    {
+      "id": "tortoise_table_echinacea",
+      "plant_ids": [
+        "echinacea"
+      ],
+      "source_title": "The Tortoise Table. Coneflower (Echinacea).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Echinacea",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Echinacea as Safe to Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=c"
+    },
+    {
+      "id": "tortoise_table_yarrow",
+      "plant_ids": [
+        "yarrow"
+      ],
+      "source_title": "The Tortoise Table. Yarrow (Wildflower).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Achillea millefolium",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Achillea millefolium as Do not Feed and advises avoiding planned feeding.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=403"
+    },
+    {
+      "id": "tortoise_table_purslane",
+      "plant_ids": [
+        "purslane"
+      ],
+      "source_title": "The Tortoise Table. Purslane (Common Purslane).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Portulaca oleracea",
+      "plant_part_state": "leaves / aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Portulaca oleracea as Do not Feed and cites high oxalic-acid content as its reason for avoiding planned feeding.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=321"
+    },
+    {
+      "id": "tortoise_table_daisy",
+      "plant_ids": [
+        "daisy"
+      ],
+      "source_title": "The Tortoise Table. Daisy.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Bellis perennis",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Bellis perennis as Do not Feed while noting an incidental nibble is not expected to cause harm.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=364"
+    },
+    {
+      "id": "tortoise_table_hibiscus_rosa",
+      "plant_ids": [
+        "hibiscusrosa"
+      ],
+      "source_title": "The Tortoise Table. Hibiscus (China Rose).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Hibiscus rosa-sinensis",
+      "plant_part_state": "flowers and leaves",
+      "directness": "contextual",
+      "supports": "Classifies Hibiscus rosa-sinensis as Safe to Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+    },
+    {
+      "id": "tortoise_table_lavender",
+      "plant_ids": [
+        "lavender"
+      ],
+      "source_title": "The Tortoise Table. Lavender.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Lavandula spp.",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Lavender as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=enclosure&x=0&y=0"
+    },
+    {
+      "id": "tortoise_table_cosmos",
+      "plant_ids": [
+        "cosmos"
+      ],
+      "source_title": "The Tortoise Table. Cosmos.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Cosmos spp.",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Cosmos spp. as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all"
+    },
+    {
+      "id": "tortoise_table_apple_tree",
+      "plant_ids": [
+        "appleleaf"
+      ],
+      "source_title": "The Tortoise Table. Apple (Tree).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Malus domestica",
+      "plant_part_state": "tree plant material; leaf concept mapped conservatively",
+      "directness": "contextual",
+      "supports": "Classifies the Malus domestica tree entry as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=db&searchtxt="
+    },
+    {
+      "id": "tortoise_table_fennel",
+      "plant_ids": [
+        "fennelleaf"
+      ],
+      "source_title": "The Tortoise Table. Fennel.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Foeniculum vulgare",
+      "plant_part_state": "leafy/aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Foeniculum vulgare as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=725"
+    },
+    {
+      "id": "tortoise_table_sorrel",
+      "plant_ids": [
+        "sorrel"
+      ],
+      "source_title": "The Tortoise Table. Sorrel.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Rumex acetosa",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Rumex acetosa as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=243"
+    },
+    {
+      "id": "tortoise_table_dock",
+      "plant_ids": [
+        "dock"
+      ],
+      "source_title": "The Tortoise Table. Dock.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Rumex spp.",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies dock (Rumex spp.) as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=92"
+    },
+    {
+      "id": "tortoise_table_lambsquarters",
+      "plant_ids": [
+        "lambsquarters"
+      ],
+      "source_title": "The Tortoise Table. Fat Hen (Lamb's Quarters).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Chenopodium album",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies Chenopodium album as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=183"
+    },
+    {
+      "id": "tortoise_table_kohlrabi",
+      "plant_ids": [
+        "kohlrabileaf"
+      ],
+      "source_title": "The Tortoise Table. Kohlrabi.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Brassica oleracea Gongylodes Group",
+      "plant_part_state": "leaves / plant material",
+      "directness": "contextual",
+      "supports": "Classifies kohlrabi as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=263"
+    },
+    {
+      "id": "tortoise_table_raspberry",
+      "plant_ids": [
+        "raspberryleaf"
+      ],
+      "source_title": "The Tortoise Table. Raspberry.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Rubus idaeus",
+      "plant_part_state": "young leaves and flowers",
+      "directness": "contextual",
+      "supports": "Allows young raspberry leaves and flowers sparingly as part of a varied diet.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=217"
+    },
+    {
+      "id": "tortoise_table_strawberry",
+      "plant_ids": [
+        "strawberryleaf"
+      ],
+      "source_title": "The Tortoise Table. Strawberry.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Fragaria × ananassa",
+      "plant_part_state": "young leaves",
+      "directness": "contextual",
+      "supports": "Allows young strawberry leaves within a varied diet.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=274"
+    },
+    {
+      "id": "tortoise_table_oregano",
+      "plant_ids": [
+        "oregano"
+      ],
+      "source_title": "The Tortoise Table. Oregano.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Origanum vulgare",
+      "plant_part_state": "whole culinary plant / aerial material",
+      "directness": "contextual",
+      "supports": "Classifies oregano (Origanum vulgare) as Safe to Feed within a varied tortoise diet.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=742"
+    },
+    {
+      "id": "tortoise_table_sage",
+      "plant_ids": [
+        "sage"
+      ],
+      "source_title": "The Tortoise Table. Sage.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Salvia officinalis",
+      "plant_part_state": "aerial culinary herb",
+      "directness": "contextual",
+      "supports": "Classifies culinary sage (Salvia officinalis) as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=388"
+    },
+    {
+      "id": "tortoise_table_thyme",
+      "plant_ids": [
+        "thyme"
+      ],
+      "source_title": "The Tortoise Table. Thyme.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Thymus spp.",
+      "plant_part_state": "aerial culinary plant",
+      "directness": "contextual",
+      "supports": "Classifies thyme (Thymus spp.) as Safe to Feed as part of a wider varied diet.",
+      "does_not_support": "Genus-level guidance does not establish a Testudo graeca ibera-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=5&plant=518"
+    },
+    {
+      "id": "tortoise_table_grape_hyacinth",
+      "plant_ids": [
+        "grapehyacinth"
+      ],
+      "source_title": "The Tortoise Table. Grape Hyacinth.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Muscari spp.",
+      "plant_part_state": "whole plant, especially bulb",
+      "directness": "contextual",
+      "supports": "Classifies grape hyacinth (Muscari spp.) as Do not Feed and advises against growing it in tortoise enclosures.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=374"
+    },
+    {
+      "id": "tortoise_table_ginkgo",
+      "plant_ids": [
+        "ginkgoleaf"
+      ],
+      "source_title": "The Tortoise Table. Ginkgo.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Ginkgo biloba",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Classifies the stated Ginkgo biloba plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=-+name"
+    },
+    {
+      "id": "tortoise_table_elm",
+      "plant_ids": [
+        "elmleaf"
+      ],
+      "source_title": "The Tortoise Table. Elm.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Ulmus spp.",
+      "plant_part_state": "primarily young leaves",
+      "directness": "contextual",
+      "supports": "Classifies the stated Ulmus spp. plant-part scope as Safe to Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=4&plant=755"
+    },
+    {
+      "id": "tortoise_table_linden",
+      "plant_ids": [
+        "lindenleaf"
+      ],
+      "source_title": "The Tortoise Table. Lime (Linden).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Tilia spp.",
+      "plant_part_state": "leaves and flowers",
+      "directness": "contextual",
+      "supports": "Classifies the stated Tilia spp. plant-part scope as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=649"
+    },
+    {
+      "id": "tortoise_table_willow",
+      "plant_ids": [
+        "willowleaf"
+      ],
+      "source_title": "The Tortoise Table. Willow.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Salix spp.",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Classifies the stated Salix spp. plant-part scope as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=660"
+    },
+    {
+      "id": "tortoise_table_birch",
+      "plant_ids": [
+        "birchleaf"
+      ],
+      "source_title": "The Tortoise Table. Birch.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Betula spp.",
+      "plant_part_state": "leaves / aerial material",
+      "directness": "contextual",
+      "supports": "Classifies the stated Betula spp. plant-part scope as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=oak+tree+varieties"
+    },
+    {
+      "id": "tortoise_table_rosemary",
+      "plant_ids": [
+        "rosemary"
+      ],
+      "source_title": "The Tortoise Table. Rosemary.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Rosmarinus officinalis",
+      "plant_part_state": "aerial culinary herb",
+      "directness": "contextual",
+      "supports": "Classifies the stated Rosmarinus officinalis plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=287"
+    },
+    {
+      "id": "tortoise_table_pear_tree",
+      "plant_ids": [
+        "pearleaf"
+      ],
+      "source_title": "The Tortoise Table. Pear Tree.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Pyrus spp.",
+      "plant_part_state": "tree leaves / plant material",
+      "directness": "contextual",
+      "supports": "Classifies the stated Pyrus spp. plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples"
+    },
+    {
+      "id": "tortoise_table_peach_tree",
+      "plant_ids": [
+        "peachleaf"
+      ],
+      "source_title": "The Tortoise Table. Peach Tree.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Prunus persica",
+      "plant_part_state": "tree leaves / plant material",
+      "directness": "contextual",
+      "supports": "Classifies the stated Prunus persica plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples"
+    },
+    {
+      "id": "tortoise_table_bramble_leaf",
+      "plant_ids": [
+        "blackberryleaf"
+      ],
+      "source_title": "The Tortoise Table. Bramble.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Rubus spp., esp. Rubus fruticosus",
+      "plant_part_state": "new leaf growth and flowers",
+      "directness": "contextual",
+      "supports": "Classifies the stated Rubus spp., esp. Rubus fruticosus plant-part scope as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=63"
+    },
+    {
+      "id": "tortoise_table_maple",
+      "plant_ids": [
+        "mapleleaf"
+      ],
+      "source_title": "The Tortoise Table. Maple.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Acer spp.",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Classifies the stated Acer spp. plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=437"
+    },
+    {
+      "id": "tortoise_table_hazel",
+      "plant_ids": [
+        "hazelleaf"
+      ],
+      "source_title": "The Tortoise Table. Hazel.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Corylus spp.",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Classifies the stated Corylus spp. plant-part scope as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=141"
+    },
+    {
+      "id": "tortoise_table_poplar",
+      "plant_ids": [
+        "poplarleaf"
+      ],
+      "source_title": "The Tortoise Table. Poplar.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Populus spp.",
+      "plant_part_state": "leaves / aerial material",
+      "directness": "contextual",
+      "supports": "Classifies the stated Populus spp. plant-part scope as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=279"
+    },
+    {
+      "id": "tortoise_table_mung_bean_sprout",
+      "plant_ids": [
+        "mungbeansprout"
+      ],
+      "source_title": "The Tortoise Table. Mung Bean Sprouts.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Vigna radiata",
+      "plant_part_state": "sprouted shoots",
+      "directness": "contextual",
+      "supports": "Classifies the stated Vigna radiata plant-part scope as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=812"
+    },
+    {
+      "id": "tortoise_table_evening_primrose",
+      "plant_ids": [
+        "eveningprimrose"
+      ],
+      "source_title": "The Tortoise Table. Evening Primrose.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Oenothera spp.",
+      "plant_part_state": "leaves and flowers",
+      "directness": "contextual",
+      "supports": "Classifies the stated Oenothera spp. plant-part scope as Safe to Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=113"
+    },
+    {
+      "id": "tortoise_table_milk_thistle",
+      "plant_ids": [
+        "milkthistle"
+      ],
+      "source_title": "The Tortoise Table. Milk Thistle.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Silybum marianum",
+      "plant_part_state": "leaves / flowers",
+      "directness": "contextual",
+      "supports": "Classifies the stated Silybum marianum plant-part scope as Feed in Moderation.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=227"
+    },
+    {
+      "id": "tortoise_table_hawthorn",
+      "plant_ids": [
+        "hawthorn"
+      ],
+      "source_title": "The Tortoise Table. Hawthorn.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Crataegus spp.",
+      "plant_part_state": "leaves / flowers / berries as stated by source",
+      "directness": "contextual",
+      "supports": "Classifies the stated Crataegus spp. plant-part scope as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=149"
+    },
+    {
+      "id": "tortoise_table_sainfoin",
+      "plant_ids": [
+        "sainfoin"
+      ],
+      "source_title": "The Tortoise Table. Sainfoin.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Onobrychis viciifolia",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies the stated Onobrychis viciifolia plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=683"
+    },
+    {
+      "id": "tortoise_table_borage",
+      "plant_ids": [
+        "borage"
+      ],
+      "source_title": "The Tortoise Table. Borage.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Borago officinalis",
+      "plant_part_state": "leaves / flowers",
+      "directness": "contextual",
+      "supports": "Classifies the stated Borago officinalis plant-part scope as Do not Feed.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=450"
+    },
+    {
+      "id": "tortoise_table_henbit",
+      "plant_ids": [
+        "henbit"
+      ],
+      "source_title": "The Tortoise Table. Henbit Deadnettle.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Lamium amplexicaule",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Classifies the stated Lamium amplexicaule plant-part scope as Feed Sparingly.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=786"
+    },
+    {
+      "id": "tortoise_table_houseleek",
+      "plant_ids": [
+        "houseleek"
+      ],
+      "source_title": "The Tortoise Table. House Leek.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Sempervivum spp.",
+      "plant_part_state": "leaves / new growth",
+      "directness": "contextual",
+      "supports": "Safe to Feed; succulent, feed in moderation to avoid loose stools",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=478"
+    },
+    {
+      "id": "tortoise_table_echeveria",
+      "plant_ids": [
+        "echeveria"
+      ],
+      "source_title": "The Tortoise Table. Echeveria.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Echeveria spp.",
+      "plant_part_state": "leaves, flowers and stems",
+      "directness": "contextual",
+      "supports": "Safe to Feed; succulent, feed in moderation",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=3&plant=480"
+    },
+    {
+      "id": "tortoise_table_snapdragon",
+      "plant_ids": [
+        "snapdragon"
+      ],
+      "source_title": "The Tortoise Table. Antirrhinum.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Antirrhinum spp., especially A. majus",
+      "plant_part_state": "leaves and flowers",
+      "directness": "contextual",
+      "supports": "Safe to Feed as part of a varied diet",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=5&plant=316"
+    },
+    {
+      "id": "tortoise_table_hosta",
+      "plant_ids": [
+        "hosta"
+      ],
+      "source_title": "The Tortoise Table. Hosta.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Hosta spp.",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Feed in Moderation; source notes high saponins",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=166"
+    },
+    {
+      "id": "tortoise_table_salsify",
+      "plant_ids": [
+        "salsify"
+      ],
+      "source_title": "The Tortoise Table. Goat's Beard / Salsify.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Tragopogon spp.",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed; source warns not to confuse with toxic Aruncus dioicus",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=435"
+    },
+    {
+      "id": "tortoise_table_hawksbeard",
+      "plant_ids": [
+        "hawksbeard"
+      ],
+      "source_title": "The Tortoise Table. Hawk's-beard.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Crepis spp.",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=146"
+    },
+    {
+      "id": "tortoise_table_hawkbit",
+      "plant_ids": [
+        "hawkbit"
+      ],
+      "source_title": "The Tortoise Table. Hawkbit.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Leontodon spp.",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+    },
+    {
+      "id": "tortoise_table_catsear",
+      "plant_ids": [
+        "catsear"
+      ],
+      "source_title": "The Tortoise Table. Cat's Ear.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Hypochaeris radicata",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed as part of a varied diet",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=81"
+    },
+    {
+      "id": "tortoise_table_hawkweed",
+      "plant_ids": [
+        "hawkweed"
+      ],
+      "source_title": "The Tortoise Table. Hawkweed.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Hieracium spp.",
+      "plant_part_state": "mature aerial plant material",
+      "directness": "contextual",
+      "supports": "Feed in Moderation; mature plants within a varied diet",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+    },
+    {
+      "id": "tortoise_table_shepherdspurse",
+      "plant_ids": [
+        "shepherdspurse"
+      ],
+      "source_title": "The Tortoise Table. Shepherd's Purse.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Capsella bursa-pastoris",
+      "plant_part_state": "aerial plant material",
+      "directness": "contextual",
+      "supports": "Feed in Moderation; Brassicaceae/goitrogen context",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=297"
+    },
+    {
+      "id": "tortoise_table_petunia",
+      "plant_ids": [
+        "petunia"
+      ],
+      "source_title": "The Tortoise Table. Petunia.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Petunia spp.",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Feed in Moderation; no evidence of toxicity cited, but Solanaceae context warrants caution and varied-diet use",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=235"
+    },
+    {
+      "id": "tortoise_table_dahlia",
+      "plant_ids": [
+        "dahlia"
+      ],
+      "source_title": "The Tortoise Table. Dahlia.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Dahlia spp.",
+      "plant_part_state": "flowers and leaves; roots/tubers excluded",
+      "directness": "contextual",
+      "supports": "Feed in Moderation for flowers and leaves; never feed roots or tubers",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=538"
+    },
+    {
+      "id": "tortoise_table_gerbera",
+      "plant_ids": [
+        "gerbera"
+      ],
+      "source_title": "The Tortoise Table. Gerbera.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Gerbera spp.",
+      "plant_part_state": "plant material/new untreated growth",
+      "directness": "contextual",
+      "supports": "Feed in Moderation as part of a varied diet; florist/garden-centre pesticide-treatment caution",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=15"
+    },
+    {
+      "id": "tortoise_table_zinnia",
+      "plant_ids": [
+        "zinnia"
+      ],
+      "source_title": "The Tortoise Table. Zinnia.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Zinnia spp.",
+      "plant_part_state": "flowers and leaves",
+      "directness": "contextual",
+      "supports": "Safe to Feed flowers and leaves as part of a varied diet",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=402"
+    },
+    {
+      "id": "tortoise_table_mexicanpetunia",
+      "plant_ids": [
+        "mexicanpetunia"
+      ],
+      "source_title": "The Tortoise Table. Mexican Petunia.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Ruellia spp., especially R. brittoniana, R. makoyana, R. portellae",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed as part of a varied diet",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=778"
+    },
+    {
+      "id": "tortoise_table_coreopsis",
+      "plant_ids": [
+        "coreopsis"
+      ],
+      "source_title": "The Tortoise Table. Coreopsis.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Coreopsis spp.",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed as part of a wider varied diet",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=578"
+    },
+    {
+      "id": "tortoise_table_astilbe",
+      "plant_ids": [
+        "astilbe"
+      ],
+      "source_title": "The Tortoise Table. Astilbe.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Astilbe spp.",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=781"
+    },
+    {
+      "id": "tortoise_table_primula",
+      "plant_ids": [
+        "primula"
+      ],
+      "source_title": "The Tortoise Table. Primula.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Primula spp.",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Do not Feed; regarded as unsuitable food for tortoises",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=278"
+    },
+    {
+      "id": "tortoise_table_comfrey",
+      "plant_ids": [
+        "comfrey"
+      ],
+      "source_title": "The Tortoise Table. Comfrey.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Symphytum officinale",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Do not Feed; pyrrolizidine alkaloid concern and potential liver damage",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=99"
+    },
+    {
+      "id": "tortoise_table_monarda",
+      "plant_ids": [
+        "monarda"
+      ],
+      "source_title": "The Tortoise Table. Bergamot / Bee Balm.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Monarda spp.",
+      "plant_part_state": "plant material",
+      "directness": "contextual",
+      "supports": "Safe to Feed as part of a varied diet; distinguish from Citrus bergamia",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=523"
+    },
+    {
+      "id": "buckwheat_leaf_fagopyrin_2019",
+      "plant_ids": [
+        "buckwheatleaf"
+      ],
+      "source_title": "Common buckwheat leaf fagopyrin analysis (2019)",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "General context",
+      "applicability": "taxon_group",
+      "plant_taxon": "Fagopyrum esculentum",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "Analytical evidence that common buckwheat leaves contain phototoxic fagopyrins.",
+      "does_not_support": "No tortoise-specific feeding threshold or dose.",
+      "year": 2019,
+      "doi": "10.3390/antiox8060160",
+      "pmid": "31163698",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6617123/"
+    },
+    {
+      "id": "tt_alfalfa_251",
+      "plant_ids": [
+        "alfalfasprout"
+      ],
+      "source_title": "The Tortoise Table. Alfalfa (Lucerne).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Medicago sativa",
+      "plant_part_state": "plant material",
+      "directness": "expert_husbandry",
+      "supports": "Do not Feed; specialist tortoise guidance advises avoiding this high-protein legume.",
+      "does_not_support": "No Ibera-specific dose, fixed diet percentage, or unlimited feeding allowance.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=251"
+    },
+    {
+      "id": "tt_oilseed_rape_418",
+      "plant_ids": [
+        "rapeseedleaf"
+      ],
+      "source_title": "The Tortoise Table. Oilseed Rape.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Brassica napus",
+      "plant_part_state": "plant material",
+      "directness": "expert_husbandry",
+      "supports": "Feed in Moderation; brassica/goitrogen concern and varied-diet limits apply.",
+      "does_not_support": "No Ibera-specific dose, fixed diet percentage, or unlimited feeding allowance.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=418"
+    },
+    {
+      "id": "tt_melon_624",
+      "plant_ids": [
+        "melonleaf"
+      ],
+      "source_title": "The Tortoise Table. Melon.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Cucumis melo",
+      "plant_part_state": "leaves and flowers",
+      "directness": "expert_husbandry",
+      "supports": "Leaves and flowers may be nibbled but should be fed sparingly.",
+      "does_not_support": "No Ibera-specific dose, fixed diet percentage, or unlimited feeding allowance.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=624"
+    },
+    {
+      "id": "tt_watermelon_624",
+      "plant_ids": [
+        "watermelonleaf"
+      ],
+      "source_title": "The Tortoise Table. Melon.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Citrullus lanatus",
+      "plant_part_state": "leaves and flowers",
+      "directness": "expert_husbandry",
+      "supports": "Leaves and flowers may be nibbled but should be fed sparingly.",
+      "does_not_support": "No Ibera-specific dose, fixed diet percentage, or unlimited feeding allowance.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=624"
+    },
+    {
+      "id": "tt_bean_leaf_494",
+      "plant_ids": [
+        "beanleaf"
+      ],
+      "source_title": "The Tortoise Table. Bean (Runner/French/Green/String Bean).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Phaseolus vulgaris; Phaseolus coccineus",
+      "plant_part_state": "young leaves",
+      "directness": "expert_husbandry",
+      "supports": "Young leaves may be fed in moderation.",
+      "does_not_support": "Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=494"
+    },
+    {
+      "id": "tt_chrysanthemum_94",
+      "plant_ids": [
+        "chrysanthemum"
+      ],
+      "source_title": "The Tortoise Table. Chrysanthemum.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Chrysanthemum spp.",
+      "plant_part_state": "plant material; species identification required",
+      "directness": "expert_husbandry",
+      "supports": "Most Chrysanthemum species may be fed in moderate or small quantities as part of a varied diet.",
+      "does_not_support": "Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=94"
+    },
+    {
+      "id": "tt_fescue_694",
+      "plant_ids": [
+        "fescue"
+      ],
+      "source_title": "The Tortoise Table. Fescue Grass.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Festuca spp.; tall fescue included",
+      "plant_part_state": "grass",
+      "directness": "expert_husbandry",
+      "supports": "Fescue grasses are listed as safe to feed; tall fescue endophyte concerns from ruminants are discussed separately.",
+      "does_not_support": "Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=694"
+    },
+    {
+      "id": "tt_broccoli_622",
+      "plant_ids": [
+        "broccolisprout"
+      ],
+      "source_title": "The Tortoise Table. Broccoli (Calabrese, Sprouting Broccoli).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Brassica oleracea Italica Group",
+      "plant_part_state": "broccoli plant; sprouting broccoli entry, not a quantified microgreen trial",
+      "directness": "expert_husbandry",
+      "supports": "Specialist tortoise guidance advises not feeding broccoli because of goitrogen concerns.",
+      "does_not_support": "Does not quantify a safe or toxic dose for young broccoli microgreens or Testudo graeca ibera.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=622"
+    },
+    {
+      "id": "broccoli_sprout_glucoraphanin_1997",
+      "plant_ids": [
+        "broccolisprout"
+      ],
+      "source_title": "Broccoli sprouts: an exceptionally rich source of inducers of enzymes that protect against chemical carcinogens",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Plant chemistry; mammalian experimental context",
+      "applicability": "composition_only",
+      "plant_taxon": "Brassica oleracea broccoli cultivars",
+      "plant_part_state": "3-day-old sprouts versus mature broccoli",
+      "directness": "composition_only",
+      "supports": "Three-day-old broccoli sprouts had much higher glucoraphanin-related glucosinolate levels than mature broccoli in the studied cultivars.",
+      "does_not_support": "Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.",
+      "year": 1997,
+      "pmid": "9294217",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9294217/"
+    },
+    {
+      "id": "tt_brassica_rapa_117",
+      "plant_ids": [
+        "mizuna",
+        "tatsoi",
+        "komatsuna"
+      ],
+      "source_title": "The Tortoise Table. Field Mustard (Brassica rapa).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Brassica rapa",
+      "plant_part_state": "plant material; cultivar-specific quantity not established",
+      "directness": "related_taxon",
+      "supports": "Brassica rapa is described as acceptable as a small part of a varied tortoise diet, with goitrogen-related caution.",
+      "does_not_support": "Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=117"
+    },
+    {
+      "id": "tt_malva_spp_safe",
+      "plant_ids": [
+        "mallowleaf"
+      ],
+      "source_title": "The Tortoise Table. Mallow (Malva spp.).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Malva spp.",
+      "plant_part_state": "plant material",
+      "directness": "expert_husbandry",
+      "supports": "Mallow (Malva spp.) is listed as safe to feed and is included on a Mediterranean tortoise suitable-plant list.",
+      "does_not_support": "Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Mallow&x=0&y=0"
+    },
+    {
+      "id": "testudo_graeca_cynodon_field_diet_2008",
+      "plant_ids": [
+        "bermudagrass"
+      ],
+      "source_title": "Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Testudo graeca",
+      "applicability": "species",
+      "plant_taxon": "Cynodon dactylon",
+      "plant_part_state": "leaves and stems identified in faecal diet analysis",
+      "directness": "direct",
+      "supports": "Cynodon dactylon leaves and stems were identified as important food items in wild Testudo graeca diet.",
+      "does_not_support": "Wild consumption does not establish unlimited captive feeding, a precise ration, or equivalence for every Testudo graeca population.",
+      "year": 2008,
+      "url": "https://www.researchgate.net/publication/233047565_Food_choice_of_an_Algerian_population_of_the_spur-thighed_tortoise_Testudo_graeca"
+    },
+    {
+      "id": "chersina_cynodon_field_diet",
+      "plant_ids": [
+        "bermudagrass"
+      ],
+      "source_title": "Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape",
+      "source_type": "academic_thesis",
+      "animal_taxon": "Chersina angulata",
+      "applicability": "herbivorous_reptile_general",
+      "plant_taxon": "Cynodon dactylon",
+      "plant_part_state": "wild diet",
+      "directness": "related_taxon",
+      "supports": "Cynodon dactylon was a principal food item across three of four seasons at one study site.",
+      "does_not_support": "Does not directly determine captive feeding quantity for Testudo graeca ibera.",
+      "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5"
+    },
+    {
+      "id": "kew_poa_pratensis_identity",
+      "plant_ids": [
+        "meadowgrass"
+      ],
+      "source_title": "Plants of the World Online. Poa pratensis L.",
+      "source_type": "taxonomic_database",
+      "animal_taxon": "Not applicable",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Poa pratensis L.",
+      "plant_part_state": "whole taxon identity",
+      "directness": "contextual",
+      "supports": "Poa pratensis is an accepted species and is documented as used as animal food.",
+      "does_not_support": "Does not establish tortoise-specific safety or feeding quantity.",
+      "url": "https://powo.science.kew.org/taxon/417792-1"
+    },
+    {
+      "id": "vetpharm_althaea_officinalis",
+      "plant_ids": [
+        "marshmallow"
+      ],
+      "source_title": "CliniPharm/University of Zurich Giftpflanzen: Althaea officinalis",
+      "source_type": "veterinary_toxicology_database",
+      "animal_taxon": "Animals general",
+      "applicability": "composition_only",
+      "plant_taxon": "Althaea officinalis",
+      "plant_part_state": "leaves and root; plant-level toxicology",
+      "directness": "contextual",
+      "supports": "The veterinary toxicology database classifies Althaea officinalis as a non-poisonous plant and notes no animal poisoning cases in the cited literature.",
+      "does_not_support": "The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.",
+      "url": "https://www.vetpharm.uzh.ch/GIFTDB/PFLANZEN/0471_bot.htm"
+    },
+    {
+      "id": "actinidia_deliciosa_leaf_genotoxicity_2026",
+      "plant_ids": [
+        "kiwileaf"
+      ],
+      "source_title": "Metabolomics Profiling and In Vitro Genoprotective Effect of Actinidia chinensis var. deliciosa Leaf Extract",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Chinese hamster ovary cells; in vitro",
+      "applicability": "composition_only",
+      "plant_taxon": "Actinidia deliciosa",
+      "plant_part_state": "methanolic leaf extract",
+      "directness": "composition_only",
+      "supports": "Under the tested in-vitro conditions, the leaf extract did not induce genotoxic effects and contained proanthocyanidins, flavonols and triterpenoid saponins.",
+      "does_not_support": "Does not establish oral feeding safety, digestibility, dose, or suitability for tortoises.",
+      "year": 2026,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13119791/"
+    },
+    {
+      "id": "actinidia_iridoid_distribution_2023",
+      "plant_ids": [
+        "kiwileaf"
+      ],
+      "source_title": "Assessing the safety and suitability of using silver vine as an olfactory enrichment for cats",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Cats and plant chemistry",
+      "applicability": "composition_only",
+      "plant_taxon": "Actinidia deliciosa",
+      "plant_part_state": "green leaves and roots",
+      "directness": "composition_only",
+      "supports": "A. deliciosa green leaves contained little to no bioactive iridoids in the reported analysis, while roots contained higher levels.",
+      "does_not_support": "Does not establish tortoise feeding safety or nutritional suitability.",
+      "year": 2023,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10558724/"
+    },
+    {
+      "id": "kew_poa_pratensis_animal_food",
+      "plant_ids": [
+        "meadowgrass"
+      ],
+      "source_title": "Plants of the World Online: Poa pratensis L.",
+      "source_type": "taxonomic_database",
+      "animal_taxon": "Not applicable",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Poa pratensis L.",
+      "plant_part_state": "species-level use record",
+      "directness": "contextual",
+      "supports": "Kew recognizes Poa pratensis as an accepted species and records animal-food use.",
+      "does_not_support": "Does not establish tortoise-specific suitability or captive feeding quantity.",
+      "url": "https://powo.science.kew.org/taxon/417792-1"
+    },
+    {
+      "id": "wild_medicago_polymorpha_tgg_morocco",
+      "plant_ids": [
+        "medicago_hispida"
+      ],
+      "source_title": "Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco",
+      "source_type": "academic_study",
+      "animal_taxon": "Testudo graeca graeca",
+      "applicability": "mediterranean_testudo",
+      "plant_taxon": "Medicago hispida (accepted as Medicago polymorpha L.)",
+      "plant_part_state": "wild plant material; exact consumed part not established in this record",
+      "directness": "direct",
+      "supports": "Wild Testudo graeca graeca were documented consuming the taxon reported as Medicago hispida, now treated here as Medicago polymorpha.",
+      "does_not_support": "Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.",
+      "year": 2006,
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "pmid": null,
+      "url": "https://doi.org/10.1016/j.jaridenv.2005.06.010"
+    },
+    {
+      "id": "medicago_polymorpha_saponin_species",
+      "plant_ids": [
+        "medicago_hispida"
+      ],
+      "source_title": "Chemical investigation of saponins from twelve annual Medicago species and their bioassay with the brine shrimp Artemia salina",
+      "source_type": "academic_study",
+      "animal_taxon": "Not an animal feeding study",
+      "applicability": "composition_only",
+      "plant_taxon": "Medicago polymorpha L.",
+      "plant_part_state": "aerial growth sampled at full senescence; species-specific phytochemical analysis",
+      "directness": "composition_only",
+      "supports": "Species-specific phytochemical evidence documents saponin-class constituents in Medicago polymorpha and supports retaining an antinutritional caution.",
+      "does_not_support": "Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.",
+      "year": 2012,
+      "doi": null,
+      "pmid": "22908560",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22908560/"
+    },
+    {
+      "id": "tortoise_table_erigeron_canadensis",
+      "plant_ids": [
+        "conyzacanadensis"
+      ],
+      "source_title": "The Tortoise Table — Canadian Fleabane / Horseweed",
+      "source_type": "expert_husbandry_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "tortoise_general",
+      "plant_taxon": "Conyza canadensis (syn. Erigeron canadensis L.)",
+      "plant_part_state": "whole plant / feeding plant entry",
+      "directness": "expert_husbandry",
+      "supports": "Specialist tortoise husbandry guidance classifies this plant as Do not Feed and notes irritant properties and poor palatability.",
+      "does_not_support": "Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=472"
+    },
+    {
+      "id": "erigeron_canadensis_essential_oil_2008",
+      "plant_ids": [
+        "conyzacanadensis"
+      ],
+      "source_title": "Species-specific Korean study of Erigeron canadensis aerial-part essential oil",
+      "source_type": "academic_study",
+      "animal_taxon": "HaCaT cell line; not an animal feeding study",
+      "applicability": "composition_only",
+      "plant_taxon": "Erigeron canadensis L.",
+      "plant_part_state": "aerial parts; steam-distilled essential oil",
+      "directness": "composition_only",
+      "supports": "Provides a species-specific concentrated-essential-oil hazard signal and documents biologically active volatile constituents.",
+      "does_not_support": "In-vitro cytotoxicity of concentrated essential oil does not establish fresh-leaf oral toxicity, a tortoise toxic dose, or an accidental-exposure outcome.",
+      "year": 2008,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001235807"
+    },
+    {
+      "id": "wild_ruscus_aculeatus_thh_italy_2011",
+      "plant_ids": [
+        "ruscus_aculeatus"
+      ],
+      "source_title": "Seasonal changes in the diet of Testudo hermanni hermanni in central Italy",
+      "source_type": "peer_reviewed_field_study",
+      "authors": "Del Vecchio S.; Burke R.L.; Rugiero L.; Capula M.; Luiselli L.",
+      "year": 2011,
+      "journal": "Herpetologica",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "animal_taxon": "Testudo hermanni hermanni",
+      "applicability": "mediterranean_testudo",
+      "plant_taxon": "Ruscus aculeatus L.",
+      "plant_part_state": "flowers, unripe fruit, leaves / wild fresh plant",
+      "directness": "direct",
+      "supports": "야생 T. h. hermanni가 가을에 Ruscus aculeatus의 꽃과 미숙과를 이용했고 잎도 섭식했다는 직접 식이 근거.",
+      "does_not_support": "T. graeca ibera의 사육 급여량·빈도·장기 안전용량 또는 상시 주식 사용을 정하지 않는다.",
+      "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1"
+    },
+    {
+      "id": "ruscus_ema_rhizoma_2019",
+      "plant_ids": [
+        "ruscus_aculeatus"
+      ],
+      "source_title": "Final assessment report on Ruscus aculeatus L. rhizoma - Revision 1",
+      "source_type": "regulatory_herbal_assessment",
+      "year": 2019,
+      "animal_taxon": "primarily mammalian/medicinal toxicology; not tortoise feeding",
+      "applicability": "taxon_group",
+      "plant_taxon": "Ruscus aculeatus L.",
+      "directness": "contextual",
+      "supports": "Provides toxicology and pharmacology context for medicinal rhizome/root preparations.",
+      "does_not_support": "Rhizome/root extract findings must not be converted into a fresh flower, fruit or leaf toxic dose for tortoises.",
+      "url": "https://www.ema.europa.eu/en/documents/herbal-report/final-assessment-report-ruscus-aculeatus-l-rhizoma-revision-1_en.pdf",
+      "plant_part_state": "rhizome/root preparations and extracts"
     }
   ]
 }

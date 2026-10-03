@@ -18,5 +18,5 @@ assert 'dill' in ids and 'dill' in assessed
 assert 'dill' not in (cov.get('pending_master_candidates') or [])
 assert (ROOT/'plant/dill/index.html').exists()
 text=(ROOT/'plant/dill/index.html').read_text(encoding='utf-8')
-assert '제한적 보조식 근거' in text and '씨앗' in text
+assert 'C · 가끔 보조 급여' in text and '씨앗은 급여하지 않음' in text
 print('PASS dill regression gate; master',len(plants),'assessed',len(assessed))

@@ -4,36 +4,48 @@ on:
   pull_request:
     paths:
       - 'data/plants.json'
-      - 'data/assessments.json'
-      - 'data/assessments_korea_addendum*.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/curated_identity_notes.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/ibera_direct_feeding_evidence_v56.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
       - 'scripts/inject_plant_detail_v56.py'
-      - 'plant-detail-v56.js'
-      - 'plant-detail-v56.css'
+      - 'scripts/public_verdict.py'
+      - 'verdict-core.js'
+      - 'index.html'
       - 'scripts/audit_verdict_cards.py'
+      - 'scripts/audit_plant_detail_v56.py'
+      - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
   push:
     branches: [main]
     paths:
       - 'data/plants.json'
-      - 'data/assessments.json'
-      - 'data/assessments_korea_addendum*.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/curated_identity_notes.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/ibera_direct_feeding_evidence_v56.json'
       - 'data/korean_retail_name_map.json'
       - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
       - 'scripts/inject_plant_detail_v56.py'
-      - 'plant-detail-v56.js'
-      - 'plant-detail-v56.css'
+      - 'scripts/public_verdict.py'
+      - 'verdict-core.js'
+      - 'index.html'
       - 'scripts/audit_verdict_cards.py'
+      - 'scripts/audit_plant_detail_v56.py'
+      - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   verify:
@@ -45,13 +57,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Require committed generated artifacts to be current
+        run: |
+          mkdir -p /tmp/committed-generated
+          cp -a plant /tmp/committed-generated/plant
+          cp sitemap.xml /tmp/committed-generated/sitemap.xml
       - name: Generate general plant detail pages
         run: python scripts/generate_static_pages.py
-      - name: Restore hand-curated Korean identity pages
-        run: git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
       - name: Add discovery metadata to curated pages
         run: python scripts/patch_curated_social_metadata.py
-      - name: Apply v5.6 identity and feeding display
+      - name: Strip retired runtime verdict enhancers
         run: python scripts/inject_plant_detail_v56.py
       - name: Audit structural integrity
         run: python scripts/audit_plant_integrity.py
@@ -59,19 +74,32 @@ jobs:
         run: python scripts/audit_verdict_cards.py
       - name: Audit v5.6 detail contract
         run: python scripts/audit_plant_detail_v56.py
-      - name: Commit synchronized generated pages
+      - name: Audit home/detail verdict consistency
+        run: python scripts/qa_verdict_consistency.py
+      - name: Generate derived coverage artifacts
         run: |
-          if ! git diff --quiet -- plant/; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add plant/
-            git commit -m "chore: synchronize generated plant pages"
-            git push
-          fi
-      - name: Verify generated pages are current
+          python scripts/qa_public_content_coverage.py
+          python scripts/qa_plant_coverage_gap_report_v1.py
+          python scripts/build_wild_candidate_research_queue.py
+      - name: Verify committed plant pages are current
         run: |
+          diff -qr /tmp/committed-generated/plant plant
+          diff -q /tmp/committed-generated/sitemap.xml sitemap.xml
+      - name: Verify generated artifacts are deterministic
+        run: |
+          cp -a plant /tmp/plant-rendered
+          cp sitemap.xml /tmp/sitemap-rendered.xml
+          cp data/public_content_coverage.json /tmp/public-content-rendered.json
+          cp data/plant_coverage_gap_report_v1.json /tmp/coverage-gap-rendered.json
+          cp data/wild_candidate_research_queue.json /tmp/wild-queue-rendered.json
           python scripts/generate_static_pages.py
-          git checkout -- plant/mallow/index.html plant/sowthistle/index.html plant/clover/index.html
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
-          git diff --exit-code -- plant/
+          python scripts/qa_public_content_coverage.py
+          python scripts/qa_plant_coverage_gap_report_v1.py
+          python scripts/build_wild_candidate_research_queue.py
+          diff -qr /tmp/plant-rendered plant
+          diff -q /tmp/sitemap-rendered.xml sitemap.xml
+          diff -q /tmp/public-content-rendered.json data/public_content_coverage.json
+          diff -q /tmp/coverage-gap-rendered.json data/plant_coverage_gap_report_v1.json
+          diff -q /tmp/wild-queue-rendered.json data/wild_candidate_research_queue.json

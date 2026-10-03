@@ -1,0 +1,126 @@
+{
+  "version": "1.0",
+  "purpose": "Track exhaustive evidence-ladder review before leaving a plant unresolved.",
+  "evidence_ladder": [
+    "canonical_taxonomy",
+    "specialist_tortoise_husbandry",
+    "wild_diet_or_field_observation",
+    "peer_reviewed_plant_toxicology",
+    "veterinary_or_livestock_toxicology",
+    "antinutritional_phytochemistry",
+    "verified_food_composition"
+  ],
+  "rule": "A missing direct tortoise study does not end review. Indirect evidence may support a conservative result only when its scope and limitations remain explicit.",
+  "queue": [
+    {
+      "family": "Malvaceae",
+      "plant_ids": [
+        "marshmallow",
+        "mallowleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Fabaceae",
+      "plant_ids": [
+        "beanleaf",
+        "soybeanleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Brassicaceae",
+      "plant_ids": [
+        "broccolisprout",
+        "mizuna",
+        "tatsoi",
+        "komatsuna"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Poaceae",
+      "plant_ids": [
+        "meadowgrass",
+        "fescue",
+        "bermudagrass"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Asteraceae",
+      "plant_ids": [
+        "chrysanthemum"
+      ],
+      "priority": "medium"
+    },
+    {
+      "family": "Rosaceae",
+      "plant_ids": [
+        "plumleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Amaranthaceae",
+      "plant_ids": [
+        "amaranthleaf"
+      ],
+      "priority": "high"
+    },
+    {
+      "family": "Actinidiaceae",
+      "plant_ids": [
+        "kiwileaf"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "review_status": {
+    "marshmallow": {
+      "tiers_completed": [
+        "canonical_taxonomy",
+        "veterinary_or_livestock_toxicology"
+      ],
+      "remaining": [
+        "specialist_tortoise_husbandry",
+        "wild_diet_or_field_observation",
+        "peer_reviewed_plant_toxicology",
+        "antinutritional_phytochemistry",
+        "verified_food_composition"
+      ],
+      "publication_blocker": "비독성 정보만으로 육지거북 급여 적합성을 판단할 수 없음",
+      "last_reviewed": "2026-09-27"
+    },
+    "kiwileaf": {
+      "tiers_completed": [
+        "canonical_taxonomy",
+        "peer_reviewed_plant_toxicology",
+        "antinutritional_phytochemistry"
+      ],
+      "remaining": [
+        "specialist_tortoise_husbandry",
+        "wild_diet_or_field_observation",
+        "veterinary_or_livestock_toxicology",
+        "verified_food_composition"
+      ],
+      "publication_blocker": "세포·성분 연구는 있으나 육지거북 경구 급여 근거가 없음",
+      "last_reviewed": "2026-09-27"
+    },
+    "meadowgrass": {
+      "tiers_completed": [
+        "canonical_taxonomy",
+        "verified_food_composition"
+      ],
+      "remaining": [
+        "specialist_tortoise_husbandry",
+        "wild_diet_or_field_observation",
+        "peer_reviewed_plant_toxicology",
+        "veterinary_or_livestock_toxicology",
+        "antinutritional_phytochemistry"
+      ],
+      "publication_blocker": "동물 사료 이용 기록만으로 육지거북 급여등급을 확정할 수 없음",
+      "last_reviewed": "2026-09-27"
+    }
+  }
+}

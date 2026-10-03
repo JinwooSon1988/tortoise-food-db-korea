@@ -1,0 +1,40 @@
+[
+  {
+    "id": "wild_medicago_polymorpha_tgg_morocco",
+    "plant_ids": [
+      "medicago_hispida"
+    ],
+    "source_title": "Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco",
+    "source_type": "academic_study",
+    "animal_taxon": "Testudo graeca graeca",
+    "applicability": "mediterranean_testudo",
+    "plant_taxon": "Medicago hispida (accepted as Medicago polymorpha L.)",
+    "plant_part_state": "wild plant material; exact consumed part not established in this record",
+    "directness": "direct",
+    "supports": "Wild Testudo graeca graeca were documented consuming the taxon reported as Medicago hispida, now treated here as Medicago polymorpha.",
+    "does_not_support": "Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.",
+    "year": 2006,
+    "doi": "10.1016/j.jaridenv.2005.06.010",
+    "pmid": null,
+    "url": "https://doi.org/10.1016/j.jaridenv.2005.06.010"
+  },
+  {
+    "id": "medicago_polymorpha_saponin_species",
+    "plant_ids": [
+      "medicago_hispida"
+    ],
+    "source_title": "Chemical investigation of saponins from twelve annual Medicago species and their bioassay with the brine shrimp Artemia salina",
+    "source_type": "academic_study",
+    "animal_taxon": "Not an animal feeding study",
+    "applicability": "composition_only",
+    "plant_taxon": "Medicago polymorpha L.",
+    "plant_part_state": "aerial growth sampled at full senescence; species-specific phytochemical analysis",
+    "directness": "composition_only",
+    "supports": "Species-specific phytochemical evidence documents saponin-class constituents in Medicago polymorpha and supports retaining an antinutritional caution.",
+    "does_not_support": "Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.",
+    "year": 2012,
+    "doi": null,
+    "pmid": "22908560",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22908560/"
+  }
+]

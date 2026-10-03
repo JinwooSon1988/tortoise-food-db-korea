@@ -1,0 +1,70 @@
+[
+  {
+    "plant_id": "alfalfasprout",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여 대상에서 제외",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_alfalfa_251"
+    ],
+    "limits": [
+      "Medicago sativa 범위",
+      "새싹의 별도 정량 안전역치는 없음",
+      "Ibera 직접 시험 아님"
+    ],
+    "why": "전문 육지거북 DB는 알팔파를 고단백 콩과 식물로 보고 Do not Feed로 분류한다. 계획 식단에서는 제외한다.",
+    "applicability_note": "일반 육지거북 전문 사육 근거; Ibera 특이 독성시험은 아니다."
+  },
+  {
+    "plant_id": "rapeseedleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "다양한 혼합식에 제한적으로 사용",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_oilseed_rape_418"
+    ],
+    "limits": [
+      "Brassica napus 범위",
+      "다른 goitrogenic 식물과 중첩 급여 주의",
+      "고정 급여비율로 환산하지 않음"
+    ],
+    "why": "전문 육지거북 DB는 유채를 Feed in Moderation으로 분류하며 brassica/goitrogen 부담 때문에 과량 급여를 피하도록 한다.",
+    "applicability_note": "일반 육지거북 전문 사육 근거이며 Ibera 직접 정량자료는 아니다."
+  },
+  {
+    "plant_id": "melonleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "혼합식의 소량 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_melon_624"
+    ],
+    "limits": [
+      "Cucumis melo의 잎·꽃 범위",
+      "과육 판정과 혼동 금지",
+      "고정 비율 없음"
+    ],
+    "why": "전문 육지거북 DB는 멜론의 잎과 꽃은 먹을 수 있으나 sparingly 급여하도록 한다.",
+    "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다."
+  },
+  {
+    "plant_id": "watermelonleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "혼합식의 소량 보조 구성",
+    "confidence": "C+",
+    "evidence_ids": [
+      "tt_watermelon_624"
+    ],
+    "limits": [
+      "Citrullus lanatus의 잎·꽃 범위",
+      "과육 판정과 혼동 금지",
+      "고정 비율 없음"
+    ],
+    "why": "전문 육지거북 DB는 수박을 포함한 melon 항목에서 잎과 꽃은 먹을 수 있으나 sparingly 급여하도록 한다.",
+    "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다."
+  }
+]
