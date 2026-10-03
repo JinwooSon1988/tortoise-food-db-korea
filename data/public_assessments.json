@@ -3059,5 +3059,23 @@
     ],
     "why": "야생 Hermann’s tortoise(Testudo hermanni hermanni)가 Ruscus aculeatus의 꽃·미숙과를 이용하고 잎도 섭식한 직접 관찰 근거가 있다. 다만 이는 가을철 야생 이용 기록으로, 이베라그리스육지거북의 사육 급여량·빈도나 장기 안전용량을 정한 시험은 아니다. 또한 뿌리·근경 추출물의 의약·독성 자료를 신선한 잎·꽃·미숙과의 독성으로 바꿔 해석해서는 안 된다. 따라서 근거가 확인된 지상부를 여러 식물 중 일부로 제한적으로 사용하고 뿌리·근경은 이 판정에 포함하지 않는다.",
     "applicability_note": "T. hermanni hermanni 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정. T. graeca ibera 직접 사육근거는 아니다."
+  },
+  {
+    "plant_id": "plumleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "do_not_feed",
+    "role": "계획 급여에서 제외",
+    "confidence": "C+",
+    "evidence_ids": [
+      "mizutani_prunus_salicina_cyanogenic_1979",
+      "tortoise_table_plum_tree_related"
+    ],
+    "limits": [
+      "P. salicina 잎의 청산배당체 존재 근거와 근연 자두나무의 육지거북 전문 사육자료를 결합한 예방적 판정",
+      "이베라그리스육지거북에서 P. salicina 잎의 독성 용량·단회 섭취 위험을 측정한 직접 시험은 없음",
+      "과육·꽃·씨앗·핵의 판정을 이 잎 판정과 동일시하지 않음"
+    ],
+    "why": "자두나무(Prunus salicina)의 잎을 포함한 영양기관에서는 청산배당체 prunasin이 확인되어, 육지거북 먹이로 굳이 계획 급여할 이유보다 회피할 근거가 더 분명하다. 또한 근연 자두인 P. domestica를 다룬 육지거북 전문자료도 특히 오래되거나 시든 잎에서 청산성 화합물 우려를 설명하며 가능하면 잎 섭취를 막도록 안내한다. P. salicina 잎을 이베라그리스육지거북에게 먹인 독성 용량 시험은 없으므로 '한 입이면 중독'이라고 단정하지는 않지만, 대체 가능한 안전한 먹이가 많은 사육 환경에서는 자두나무잎을 계획 급여 목록에서 제외한다.",
+    "applicability_note": "정확한 P. salicina 잎의 식물화학 근거 + 근연 Prunus의 육지거북 전문 사육자료. 직접 Ibera 독성시험은 아님."
   }
 ]
