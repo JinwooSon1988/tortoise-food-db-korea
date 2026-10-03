@@ -548,9 +548,9 @@ def evidence_limit_display(value):
         if "fixed diet percentage" in v or "diet percentage" in v: tail.append("구체적인 식단 비율")
         if "toxic dose" in v: tail.append("독성 용량")
         if "unlimited feeding allowance" in v: tail.append("무제한 급여 허용 범위")
-        base="이 자료는 이베라그리스육지거북에 한정된 급여량"
+        base="이 자료만으로 이베라그리스육지거북의 구체적인 급여량"
         if tail: base+="·"+"·".join(tail)
-        base+="을 확정하지 않는다."
+        base+="을 정할 수 없다."
         if "stated taxon and plant-part scope" in v:
             base+=" 명시된 동물 분류군과 식물 부위 범위 안에서만 적용한다."
         elif "unlisted plant parts or related taxa" in v:
