@@ -1,0 +1,40 @@
+name: Sync generated plant pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate plant detail pages
+        run: |
+          python scripts/generate_static_pages.py
+          python scripts/patch_curated_social_metadata.py
+          python scripts/inject_plant_detail_v56.py
+      - name: Audit generated pages
+        run: |
+          python scripts/audit_plant_integrity.py
+          python scripts/audit_verdict_cards.py
+          python scripts/audit_plant_detail_v56.py
+          python scripts/qa_verdict_consistency.py
+      - name: Commit generated pages
+        run: |
+          if git diff --quiet -- plant sitemap.xml; then
+            echo "Generated pages are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add plant sitemap.xml
+          git commit -m "Build: sync generated plant detail pages"
+          git push origin HEAD:main
