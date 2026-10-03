@@ -19,6 +19,7 @@ jobs:
       - name: Generate plant detail pages
         run: |
           python scripts/generate_static_pages.py
+          grep -q "실제로 어떻게 급여하나" plant/chicory/index.html || { echo "Generator output missing reader-first practical section"; exit 1; }
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
       - name: Diagnose rendered reader-first UX
