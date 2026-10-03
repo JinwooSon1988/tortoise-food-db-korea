@@ -62,7 +62,7 @@ for n in [
     'This plant has a reviewed evidence record.',
     'Reviewed evidence is available.',
     'evidence-deep',
-    '영양성분은 참고자료로 확인하세요',
+    'id="nutrition"',
     'evsummary',
     'species-specific',
     'speciesexception'
