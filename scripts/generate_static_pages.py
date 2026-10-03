@@ -92,7 +92,7 @@ def animal_taxon_display(value):
     if shown==v and re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
         # Scientific taxon strings are expected here; prose-like metadata is not.
         if re.search(r"\b(study|context|feeding|toxicology|general|animals|reptiles|observations|chemistry)\b", v, re.I):
-            return "원자료에 명시된 대상 동물 범위 — 육지거북 직접 급여시험 여부는 근거 역할·적용 한계에서 별도 확인"
+            return "원자료가 실제로 다룬 동물 — 육지거북을 직접 시험한 자료인지 여부는 아래 ‘이 자료의 역할’과 ‘말할 수 없는 내용’에서 확인"
     return shown
 
 def plant_taxon_display(value):
@@ -110,7 +110,7 @@ def plant_taxon_display(value):
     if shown==v and re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
         # Keep bare scientific names, but never expose English scope prose in Korean mode.
         if re.search(r"\b(source|scope|study|reported|context|concept|category|assessment|warning|identity|mapped|requires|listed)\b", v, re.I):
-            return "원자료에 명시된 식물 분류군 범위 — 세부 종 동정과 적용 범위는 원자료 기준"
+            return "원자료가 실제로 다룬 식물 범위 — 세부 종과 적용 범위는 출처에 명시된 내용만 사용"
     return shown
 
 def part_state_display(value):
@@ -657,7 +657,7 @@ def evidence_role(e):
         return "성분을 확인하는 참고자료 — 급여 안전성 자체를 증명하지 않음"
     if e.get("directness")=="direct":
         return "급여 판정에 직접 연결되는 근거"
-    return "급여 판정을 보조하는 간접·맥락 근거"
+    return "급여 판정을 보완하는 간접 근거 — 이것만으로 안전성을 결정하지 않음"
 
 def related_for(p,limit=6):
     same_family=[x for x in plants if x["id"]!=p["id"] and x.get("family") and x.get("family")==p.get("family")]
@@ -794,7 +794,7 @@ for p in plants:
         wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>이베라 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
     wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{conflict_html}{"".join(wild_cards)}''' if wild_cards else "")
 
-    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">더 깊이 보기</div><h2>판정 근거 자세히 보기</h2><p class="ko-evidence small">각 자료가 <b>무엇을 지지하는지</b>와 <b>어디까지 말할 수 있는지</b>를 구분해 보여준다.<br><b>직접 근거</b>는 해당 육지거북·식물·질문을 직접 다룬 자료다. <b>간접 근거</b>는 다른 동물이나 근연 식물의 참고 자료이며, 이것만으로 급여 안전성을 확정하지 않는다.</p><p class="en-evidence" hidden>This section explains the evidence behind the conclusion. <b>Direct evidence</b> addresses the target question directly. <b>Indirect evidence</b> comes from other animals or related plants and is used only as context; indirect evidence alone does not establish safety.</p>{summary_chips}<p class="legend"><b>읽는 법</b> · 동료심사 논문과 전문 사육자료는 같은 수준의 근거가 아니다 · 성분 근거는 성분 존재만 보여줄 뿐 급여 안전성을 증명하지 않는다.</p>{evidence_cards_html}{wild_section}</section>'''
+    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">더 깊이 보기</div><h2>판정 근거 자세히 보기</h2><p class="ko-evidence small">각 자료가 <b>무엇을 보여주는지</b>와 <b>어디까지 적용할 수 있는지</b>를 나눠 보여준다.<br><b>직접 근거</b>는 해당 육지거북·식물·질문을 직접 다룬 자료다. <b>간접 근거</b>는 다른 동물이나 근연 식물 등을 다룬 참고자료이므로, 이것만으로 해당 먹이의 안전성을 판단하지 않는다.</p><p class="en-evidence" hidden>This section explains the evidence behind the conclusion. <b>Direct evidence</b> addresses the target question directly. <b>Indirect evidence</b> comes from other animals or related plants and is used only as context; indirect evidence alone does not establish safety.</p>{summary_chips}<p class="legend"><b>읽는 법</b> · 동료심사 논문과 전문 사육자료는 같은 수준의 근거가 아니다 · 성분 근거는 성분 존재만 보여줄 뿐 급여 안전성을 증명하지 않는다.</p>{evidence_cards_html}{wild_section}</section>'''
 
     nu=nutrition_by_id.get(pid)
     if nu:
