@@ -3358,6 +3358,44 @@
       "does_not_support": "Rhizome/root extract findings must not be converted into a fresh flower, fruit or leaf toxic dose for tortoises.",
       "url": "https://www.ema.europa.eu/en/documents/herbal-report/final-assessment-report-ruscus-aculeatus-l-rhizoma-revision-1_en.pdf",
       "plant_part_state": "rhizome/root preparations and extracts"
+    },
+    {
+      "id": "mizutani_prunus_salicina_cyanogenic_1979",
+      "plant_ids": [
+        "plumleaf"
+      ],
+      "source_title": "Mizutani F, Yamada M, Sugiura A, Tomana T. The distribution of prunasin and amygdalin in Prunus species.",
+      "source_type": "peer_reviewed_research",
+      "animal_taxon": "Plant chemistry; no tortoise subjects",
+      "applicability": "plant_chemistry",
+      "plant_taxon": "Prunus salicina (included among examined Prunus taxa)",
+      "plant_part_state": "leaves, stems, roots and fruits examined; vegetative tissues distinguished",
+      "directness": "indirect",
+      "supports": "Prunasin was detected in vegetative tissues of examined Prunus species including P. salicina; among vegetative tissues, roots had the highest concentrations, followed by stems and leaves. This establishes a cyanogenic-glycoside hazard signal in the exact plant taxon/leaf context.",
+      "does_not_support": "Does not establish a Testudo graeca ibera toxic dose, probability of poisoning from a single bite, or a safe captive-feeding threshold.",
+      "year": 1979,
+      "doi": null,
+      "pmid": null,
+      "url": "https://eurekamag.com/research/000/769/000769486.php"
+    },
+    {
+      "id": "tortoise_table_plum_tree_related",
+      "plant_ids": [
+        "plumleaf"
+      ],
+      "source_title": "The Tortoise Table. Plum — Tree (Greengage, Gage).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "related_taxon",
+      "plant_taxon": "Prunus domestica (related Prunus taxon; not P. salicina)",
+      "plant_part_state": "tree blossom, leaves, fruit stones distinguished; older/wilted leaves specifically cautioned",
+      "directness": "indirect",
+      "supports": "Specialist tortoise guidance for a related plum taxon advises preventing access to leaves where possible and notes increased concern as leaves age and wilt; fruit stones are separately avoided.",
+      "does_not_support": "Does not prove identical chemistry or a toxic dose in P. salicina, and does not establish an Ibera-specific dose or single-bite toxicity.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=596"
     }
   ]
 }
