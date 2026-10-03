@@ -724,18 +724,21 @@ for p in plants:
     def concise_part(v):
         v=str(v or "").strip()
         v=re.split(r"\s*[—–-]\s*|\s*—\s*",v,1)[0].strip()
-        # Drop metadata-only states; they are evidence scope, not a plant part.
-        if any(k in v for k in ("동정만", "분류군 동정", "출처에 명시된 성분", "출처에 기술된 범위", "출처에 명시된 범위")):
+        # Evidence qualifiers are not plant parts.
+        if any(k in v for k in ("출처의 부위", "출처에 명시", "출처에 기술", "인용 자료", "동정만", "분류군 동정")):
             return ""
         replacements={
             "야생 식물체":"","야생 섭식 기록":"","식물체":"","급여시험 식물체":"",
-            "잎과 꽃":"잎·꽃","꽃과 잎":"잎·꽃","출처에 명시된 잎·꽃·열매":"잎·꽃·열매",
+            "잎과 꽃":"잎·꽃","꽃과 잎":"잎·꽃","어린 식물체":"",
+            "잎·꽃·새순 및 일부 건조 식물체":"잎·꽃·새순",
+            "잎·미숙 열매·성숙 열매를 각각 구분":"잎·미숙 열매·성숙 열매",
             "식물 전체":"전체 식물체","초본 식물체":"지상부"
         }
         v=replacements.get(v,v)
+        # Remove prose suffixes that describe evidence context rather than anatomy.
+        v=re.sub(r"\s*(범위|맥락|자료)$","",v).strip()
         return v
     clean_parts=list(dict.fromkeys(concise_part(v) for v in part_values if concise_part(v)))
-    # Prefer concrete parts over unresolved generic plant-material records.
     concrete=[v for v in clean_parts if v not in ("식물체","전체 식물체","부위 미확인")]
     part_note=" · ".join(concrete or clean_parts) or "부위 미확인"
     # Reader-first evidence explanation: expose verified facts before source taxonomy.
