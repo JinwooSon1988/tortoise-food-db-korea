@@ -719,7 +719,14 @@ for p in plants:
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
     indirect_count=len(linked_evidence)-direct_count-husbandry_count
-    part_note=" / ".join(sorted({part_state_display(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "근거 자료에 부위 정보가 명시되지 않음"
+    part_values=[part_state_display(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")]
+    # Reader-facing part scope: show only the supported plant parts here; detailed caveats stay in evidence/scope sections.
+    def concise_part(v):
+        v=str(v or "").strip()
+        v=re.split(r"\s*[—–-]\s*|\s*—\s*",v,1)[0].strip()
+        v=re.sub(r"\s*—.*$","",v).strip()
+        return v
+    part_note=" · ".join(dict.fromkeys(concise_part(v) for v in part_values if concise_part(v))) or "부위 정보 미확인"
     # Reader-first evidence explanation: expose verified facts before source taxonomy.
     support_facts=[]
     for e in linked_evidence:
@@ -759,7 +766,7 @@ for p in plants:
         feeding_action="안전하다고 가정해 급여하지 않는다. 공개 근거가 보강될 때까지 판정을 보류한다."
     quantified=any(re.search(r"(percentage|percent|%|frequency|daily|weekly|per week|급여량|빈도|비율)", str(e.get("supports") or ""), re.I) for e in linked_evidence)
     quantity_note=("연결 근거에 정량 정보가 있으므로 아래 원자료 범위에서 확인한다." if quantified else "몇 % 또는 주 몇 회처럼 정할 직접 정량 근거는 확인되지 않았다. 근거 없는 숫자는 제시하지 않는다.")
-    practical_html=(f'''<section class="card practical"><h2>실제로 어떻게 급여하나</h2><div class="practicalgrid"><div><b>지금 할 일</b><p>{esc(feeding_action)}</p></div><div><b>어느 부위에 해당하나</b><p>{esc(part_note)}</p></div><div><b>급여량·빈도</b><p>{esc(quantity_note)}</p></div><div><b>자료상 식단 역할</b><p>{esc(role or "구체적인 식단 역할은 현재 근거만으로 정하지 않는다.")}</p></div></div></section>''' if a else "")
+    practical_html=(f'''<section class="card practical"><h2>실제로 어떻게 급여하나</h2><div class="practicalgrid"><div><b>급여 방법</b><p>{esc(feeding_action)}</p></div><div><b>적용 부위</b><p class="partscope">{esc(part_note)}</p></div><div><b>급여량·빈도</b><p>{esc(quantity_note)}</p></div><div><b>자료상 식단 역할</b><p>{esc(role or "구체적인 식단 역할은 현재 근거만으로 정하지 않는다.")}</p></div></div></section>''' if a else "")
 
     # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
