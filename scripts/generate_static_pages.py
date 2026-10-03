@@ -857,7 +857,7 @@ for p in plants:
     nutrition_html=f'''<section class="card" id="nutrition"><h2>영양성분 수치는 이렇게 보세요</h2><p class="small">사람용 식품성분 자료를 참고용으로 보여준다. Ca:P·섬유질 수치만으로 독성·항영양성분·식물의 정확한 종·육지거북에서의 안전성을 판단할 수 없으므로, 영양수치만 보고 급여 등급을 바꾸지 않는다.</p>{nutrition_body}</section>'''
 
     related_html="".join(f'<a class="related" href="../{esc(x["id"])}/">{esc(x.get("ko") or x["id"])} →</a>' for x in related_for(p))
-    footer_html=f'''<section class="card"><h2>비슷한 식물도 확인하기</h2><div class="relatedgrid">{related_html}</div><p class="small">같은 과·카테고리에서 함께 찾아볼 수 있는 식물이다. 서로 비슷해 보여도 급여 안전성·영양가·권장도가 같다는 뜻은 뜻하지 않는다.</p><div class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></div></section>'''
+    footer_html=f'''<section class="card"><h2>비슷한 식물도 확인하기</h2><div class="relatedgrid">{related_html}</div><p class="small">같은 과·카테고리에서 함께 찾아볼 수 있는 식물이다. 서로 비슷해 보여도 급여 안전성·영양가·권장도가 같다는 뜻은 아니다.</p><div class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></div></section>'''
 
     alias_html=f'<div class="aliases">다른 이름 · {esc(", ".join(aliases[:6]))}</div>' if aliases else ""
     schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"inLanguage":"ko","isPartOf":{"@type":"WebSite","name":"거북밥 DB Korea","url":SITE_URL+"/"}},ensure_ascii=False,separators=(",",":"))
