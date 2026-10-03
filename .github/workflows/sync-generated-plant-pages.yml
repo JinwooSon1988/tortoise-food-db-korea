@@ -21,6 +21,17 @@ jobs:
           python scripts/generate_static_pages.py
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
+      - name: Verify reader-first UX was actually rendered
+        run: |
+          grep -q "실제로 어떻게 급여하나" plant/chicory/index.html
+          grep -q "지금 할 일" plant/chicory/index.html
+          grep -q "급여량·빈도" plant/chicory/index.html
+          if grep -q "급여할 때 확인할 핵심" plant/chicory/index.html; then
+            echo "Legacy practical section survived generation."
+            exit 1
+          fi
+          git status --short -- plant sitemap.xml
+          git diff --stat -- plant sitemap.xml
       - name: Audit generated pages
         run: |
           python scripts/audit_plant_integrity.py
