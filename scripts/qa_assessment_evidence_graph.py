@@ -22,6 +22,8 @@ strong_verdicts = {"supported_mixed_diet", "safe_staple", "staple", "recommended
 weak_directness = {"composition_only", "contextual", "related_taxon"}
 public_grade_a_verdicts = {"supported_mixed_diet", "safe_staple", "staple", "recommended"}
 hazard_re = re.compile(r"독성|독성물질|신장|간 손상|결석|갑상선|사포닌|옥살레이트|oxalate|goitrogen|glucosinolate", re.I)
+# Negated/limiting phrases describe what evidence does NOT establish; they are not hazard claims.
+negated_hazard_re = re.compile(r"(직접 독성[^.]*제시되지|즉시 독성[^.]*과장하지|같은 독성[^.]*입증됐다고 볼 수 없)", re.I)
 hazard_evidence_re = re.compile(r"독성|tox|renal|kidney|liver|oxalat|goitrogen|glucosinolate|saponin|thyroid", re.I)
 
 for filename, row in rows:
@@ -56,7 +58,8 @@ for filename, row in rows:
         errors.append(f"{filename}:{pid}|{group}: public A-grade verdict requires direct or expert husbandry evidence")
 
     text = " ".join([str(row.get("why", ""))] + [str(x) for x in row.get("limits", [])])
-    if linked and hazard_re.search(text):
+    hazard_text = negated_hazard_re.sub("", text)
+    if linked and hazard_re.search(hazard_text):
         visible = " ".join(
             str(e.get(k, "")) for e in linked for k in ("source_title", "supports", "does_not_support")
         )
