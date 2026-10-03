@@ -294,7 +294,7 @@
       "정확한 Rosa 품종별 차이를 일반화하지 않음",
       "단독·고비율 반복 급여 아님"
     ],
-    "why": "Tortoise Trust의 Mediterranean feeding guidance가 rose leaves/petals를 다양한 식단의 일부로 제시한다.",
+    "why": "Tortoise Trust의 지중해 육지거북 급여 지침은 장미의 잎과 꽃잎을 다양한 야생초 식단의 일부로 제시한다. 근거가 가리키는 부위는 잎·꽃잎이며 열매나 다른 부위까지 자동으로 같은 판정을 적용할 수 없다. 또한 정확한 급여 비율을 정한 이베라 직접 시험은 아니다. 따라서 직접 재배했거나 식용·무농약 여부가 확인된 잎과 꽃잎만 여러 적합한 식물과 섞어 보조적으로 사용하고, 화원·절화 장미처럼 농약·보존제 노출을 배제할 수 없는 것은 급여하지 않는다.",
     "applicability_note": "직접 재배하거나 식용·무농약 여부가 확인된 Rosa spp. 잎·꽃에 한정한 보조 판정이다.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
@@ -497,7 +497,7 @@
       "BCG 설카타 자료의 후보 목록 수준이며 단독 주식 판정이 아님",
       "Mediterranean Testudo에 자동 적용하지 않음"
     ],
-    "why": "BCG 설카타 사육자료가 watercress를 식단에 시도할 수 있는 후보 중 하나로 제시한다.",
+    "why": "현재 연결 근거는 설카타 육지거북 사육자료가 물냉이를 고섬유 식단에 시도할 수 있는 여러 식물 중 하나로 제시한 것이다. 이는 이베라그리스육지거북을 대상으로 물냉이의 안전 용량·급여 빈도를 시험한 근거가 아니며, 어느 부위까지 동일하게 적용되는지도 현재 evidence에서 구체화되지 않았다. 따라서 이베라의 주식이나 적극 권장 먹이로 확대하지 않고, 정확한 식물 동정과 깨끗한 재배 상태가 확인된 경우에만 다양한 식단의 제한적 보조 후보로 본다.",
     "applicability_note": "Sulcata 전문 사육근거에 한정.",
     "assessment_scope": "exact_species",
     "animal_taxon": "Centrochelys sulcata",
@@ -1010,7 +1010,7 @@
       "Plantago major에 한정",
       "전문 사육자료를 무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "Tortoise Trust가 broad-leaved plantain(Plantago major)을 herbivorous tortoise의 야생식 목록에 포함한다.",
+    "why": "Tortoise Trust는 넓은잎질경이(Plantago major)를 초식성 육지거북의 고섬유 자연식 후보에 포함한다. 다만 이 자료는 이베라그리스육지거북에서 Plantago major의 정확한 급여량·빈도나 단독식 안전성을 정한 시험이 아니다. 따라서 정확히 동정되고 농약·제초제 오염이 없는 식물체를 다른 적합한 야생초와 섞는 혼합식 재료로 사용하며, 한 종류에 식단을 편중하지 않는다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
   },
   {
@@ -1654,7 +1654,7 @@
       "Tilia spp. 잎·꽃 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "제한 급여 범위로 제한한다.",
+    "why": "전문 육지거북 식물자료는 피나무류(Tilia spp.)의 잎과 꽃을 ‘제한 급여’ 범위로 분류한다. 현재 연결 근거는 이베라그리스육지거북의 정확한 안전 용량·급여 빈도나 특정 위해 기전을 정한 직접 시험이 아니다. 따라서 잎·꽃만 다양한 식단에 제한적으로 섞고, 열매·수피 등 확인되지 않은 부위로 판정을 확대하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1686,7 +1686,7 @@
       "Betula spp. 잎/지상부 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "제한 급여 범위로 제한한다.",
+    "why": "전문 육지거북 식물자료는 자작나무류(Betula spp.)의 잎·지상부를 ‘제한 급여’ 범위로 분류한다. 다만 이베라그리스육지거북의 정확한 급여량·빈도 또는 특정 독성 용량을 정한 직접 시험은 아니다. 따라서 확인된 잎·지상부만 여러 적합한 식물과 섞어 제한적으로 사용하고, 수피·종자 등 확인되지 않은 부위까지 같은 판정을 적용하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1782,7 +1782,7 @@
       "Corylus spp. 잎",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "제한 급여 범위의 제한적 보조",
+    "why": "전문 육지거북 식물자료는 개암나무류(Corylus spp.)의 잎을 ‘제한 급여’ 범위로 분류한다. 현재 근거는 잎에 한정되며 이베라그리스육지거북의 정확한 안전 용량·급여 빈도를 정한 직접 시험이 아니다. 따라서 잎만 여러 적합한 식물과 섞어 제한적으로 사용하고, 견과·수피 등 다른 부위까지 같은 판정을 확대하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1830,7 +1830,7 @@
       "Oenothera spp. 잎·꽃",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "다양한 식단의 보조 식물",
+    "why": "전문 육지거북 식물자료는 달맞이꽃류(Oenothera spp.)의 잎과 꽃을 급여 가능한 범위로 분류한다. 다만 이는 이베라그리스육지거북의 정확한 급여 비율·빈도나 장기 단독급여 안전성을 정한 시험이 아니다. 따라서 확인된 부위인 잎과 꽃을 여러 적합한 식물과 섞는 보조 재료로 사용하며, 뿌리·종자 등 다른 부위까지 같은 판정을 자동 적용하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1846,7 +1846,7 @@
       "Silybum marianum 명시 부위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "제한 급여 범위",
+    "why": "전문 육지거북 식물자료는 밀크시슬(Silybum marianum)의 잎과 꽃을 ‘제한 급여’ 범위로 분류한다. 그러나 현재 연결 근거는 이베라그리스육지거북에서 정확한 안전 용량·급여 빈도나 특정 독성 기전을 정한 직접 시험이 아니다. 따라서 확인된 부위인 잎·꽃만 여러 식물과 섞어 제한적으로 사용하고, ‘제한’의 이유를 근거 없이 독성으로 만들어 설명하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1862,7 +1862,7 @@
       "Crataegus spp. source scope",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "계획 급여 제외",
+    "why": "전문 육지거북 식물자료는 산사나무류(Crataegus spp.)의 잎·꽃·열매를 ‘급여하지 않음’으로 분류한다. 다만 현재 연결 근거에는 이베라그리스육지거북에서 특정 성분의 독성 용량이나 임상 중독 역치를 정한 직접 시험이 제시되지 않는다. 따라서 ‘한입이면 중독’처럼 확대하지 않되, 안전한 계획 급여를 뒷받침할 직접 근거도 없으므로 잎·꽃·열매 모두 식단에서는 제외한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1878,7 +1878,7 @@
       "Onobrychis viciifolia 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "소량·드물게 급여 범위",
+    "why": "전문 육지거북 식물자료는 sainfoin(Onobrychis viciifolia)의 지상부 식물체를 ‘소량 급여’ 범위로 분류한다. 그러나 이베라그리스육지거북에서 정확한 급여량·빈도나 위해 용량을 정한 직접 시험은 아니다. 따라서 뿌리 등 확인되지 않은 부위로 판정을 확대하지 않고, 지상부만 여러 적합한 식물과 섞어 드물게 소량 사용하는 범위로 제한한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1958,7 +1958,7 @@
       "Antirrhinum majus 중심 잎·꽃",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "급여 가능 범위의 보조 식물이다.",
+    "why": "전문 육지거북 식물자료는 금어초류(Antirrhinum spp., 특히 A. majus)의 잎과 꽃을 다양한 식단의 일부로 급여 가능한 것으로 분류한다. 다만 이베라그리스육지거북의 정확한 급여 비율·빈도나 단독급여 안전성을 정한 시험은 아니다. 따라서 정확히 동정되고 농약 노출이 없는 잎·꽃을 여러 적합한 식물과 섞는 보조 재료로 사용한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -2054,7 +2054,7 @@
       "Hieracium spp. 성숙 지상부",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "제한 급여 범위로 제한한다.",
+    "why": "전문 육지거북 식물자료는 hawkweed(Hieracium spp.)의 성숙한 지상부를 다양한 식단에서 ‘제한 급여’할 수 있다고 본다. 그러나 이베라그리스육지거북의 정확한 급여량·빈도나 장기 안전성을 정한 직접 시험은 아니다. 따라서 정확히 동정된 성숙 지상부를 다른 적합한 야생초와 섞어 제한적으로 사용하며, 단독·고비율 반복 급여의 근거로 확대하지 않는다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
