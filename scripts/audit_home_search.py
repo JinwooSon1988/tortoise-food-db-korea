@@ -121,7 +121,7 @@ assert 'id="moreResults"' in html, 'paged-result continuation control missing'
 assert 'type="button"' in html, 'non-submit home controls should declare button semantics'
 assert 'aria-label="검색 예시"' in html, 'example-query control group needs an accessible name'
 assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html, 'grade filter group needs an accessible name'
-assert 'aria-label="구하는 곳으로 보기"' in html, 'source filter group needs an accessible name'
+assert 'aria-label="구하는 곳으로 보기"' not in html, 'retired source filter accessibility group must stay removed'
 
 # Hold is an evidence state, never an implicit permission to feed.
 assert "g.grade==='보류'?'<div class=\"holdwarning\"" in html, "hold results need an always-visible safety warning"
