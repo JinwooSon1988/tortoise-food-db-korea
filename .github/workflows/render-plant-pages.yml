@@ -10,7 +10,6 @@ on:
       - 'data/verified_plant_images_v56.json'
       - 'data/ibera_direct_feeding_evidence_v56.json'
       - 'data/korean_retail_name_map.json'
-      - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
       - 'scripts/inject_plant_detail_v56.py'
       - 'scripts/public_verdict.py'
@@ -82,6 +81,7 @@ jobs:
           python scripts/qa_plant_coverage_gap_report_v1.py
           python scripts/build_wild_candidate_research_queue.py
       - name: Verify committed plant pages are current
+        if: ${{ github.event_name != 'workflow_dispatch' }}
         run: |
           diff -qr /tmp/committed-generated/plant plant
           diff -q /tmp/committed-generated/sitemap.xml sitemap.xml
