@@ -11,7 +11,8 @@
       "bcg_mediterranean_care",
       "tt_mediterranean_food",
       "tt_plantfoods",
-      "tortoise_table_dandelion"
+      "tortoise_table_dandelion",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "야생 관찰 빈도는 사육 배합률이 아님",
@@ -34,7 +35,8 @@
     "evidence_ids": [
       "bcg_mediterranean_care",
       "tt_plantfoods",
-      "hermanni_foraging_italy_2015"
+      "hermanni_foraging_italy_2015",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "Plantago spp. 내부 종 차이 확인",
@@ -59,7 +61,8 @@
       "ibera_eastern_account_2023",
       "bcg_mediterranean_care",
       "tt_mediterranean_food",
-      "tt_plantfoods"
+      "tt_plantfoods",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "Sonchus 속 수준 직접관찰을 한국 특정 종으로 자동 확장하지 않음",
@@ -84,7 +87,8 @@
       "ibera_eastern_account_2023",
       "bcg_mediterranean_care",
       "tt_mediterranean_food",
-      "hermanni_foraging_italy_2015"
+      "hermanni_foraging_italy_2015",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "Trifolium 종별 차이 확인",
@@ -200,7 +204,8 @@
       "tt_winter_feeding",
       "bcg_chelonian_nutrition",
       "merck_tortoise_nutrition_2025",
-      "merck_reptile_plant_composition"
+      "merck_reptile_plant_composition",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "겨울철·야생초 부족 시 혼합 잎채소 일부",
@@ -266,7 +271,8 @@
     "evidence_ids": [
       "mitrevichin_ibera_bulgaria_2023",
       "tortoise_table_chicory",
-      "chicory_foodchem_2021"
+      "chicory_foodchem_2021",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "야생 직접관찰은 정량 사육 급여량을 제시하지 않음",
@@ -412,7 +418,8 @@
     "role": "grass/hay 중심 식단의 보조 야생초",
     "confidence": "C",
     "evidence_ids": [
-      "bcg_sulcata_care"
+      "bcg_sulcata_care",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "grass/hay roughage 중심 원칙 유지",
@@ -431,7 +438,8 @@
     "role": "grass/hay 중심 식단의 보조 야생초",
     "confidence": "C",
     "evidence_ids": [
-      "bcg_sulcata_care"
+      "bcg_sulcata_care",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "grass/hay 기반 유지",
@@ -451,7 +459,8 @@
     "role": "grass/hay 중심 식단의 일부",
     "confidence": "C",
     "evidence_ids": [
-      "bcg_sulcata_care"
+      "bcg_sulcata_care",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "grass/hay 기반 유지",
@@ -877,7 +886,8 @@
     "role": "정확한 종 동정 후 혼합식 보조 후보",
     "confidence": "C-",
     "evidence_ids": [
-      "tortoise_table_mallow"
+      "tortoise_table_mallow",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "한국 유통명 아욱을 Malva spp. 전체와 동일시하지 않음",
@@ -1182,7 +1192,8 @@
     "role": "어린 풀의 혼합식 구성",
     "confidence": "C+",
     "evidence_ids": [
-      "tortoise_table_cat_grass"
+      "tortoise_table_cat_grass",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "Avena sativa의 어린 잎에 한정",
@@ -1520,7 +1531,8 @@
     "role": "어린 잎의 제한적 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_raspberry"
+      "tortoise_table_raspberry",
+      "leone_testudo_diet_2021"
     ],
     "limits": [
       "Rubus idaeus 어린잎에 한정",
