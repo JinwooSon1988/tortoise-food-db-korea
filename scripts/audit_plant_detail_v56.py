@@ -196,9 +196,9 @@ for token in (
 
 # Plant-part and taxon boundaries must not collapse during localization.
 for token in (
-    '열매와 잎을 동등하게 취급할 근거도 아니다.',
+    '열매와 잎을 똑같이 취급할 근거도 아니다.',
     '잎·수액의 자극성 문제와 별개의 고당도 열매 문제를 서로 혼동하면 안 된다.',
-    '어린 풀과 성숙한 곡립·씨앗을 동등하게 취급하면 안 된다.',
+    '어린 풀과 성숙한 곡립·씨앗을 똑같이 취급하면 안 된다.',
     '피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며',
 ):
     assert token in generator, f'missing plant-part/taxon boundary: {token}'
