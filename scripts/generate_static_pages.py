@@ -371,7 +371,7 @@ def evidence_support_display(value):
     if v=="Does not demonstrate direct toxicity of sweet-potato leaves in Testudo graeca ibera, nor does it justify treating accidental nibbling as poisoning. It does not establish equivalence between leaves and tuber.":
         return "고구마 잎이 이베라그리스육지거북에 직접 독성을 보인다는 자료가 아니며 우발적으로 조금 뜯어 먹은 것을 중독으로 간주할 근거도 아니다. 잎과 덩이뿌리를 동일하게 취급할 수도 없다."
     if v=="Cattle toxicity cannot be converted into a Testudo graeca ibera toxic dose, safe dose, feeding frequency or percentage. It also does not establish that every edible Korean perilla cultivar has the same perilla-ketone concentration.":
-        return "소에서 확인된 독성을 이베라그리스육지거북의 독성 용량·안전 용량·급여 빈도·식단 비율로 환산할 수 없다. 또한 국내 식용 들깨의 모든 품종이 동일한 페릴라 케톤 농도를 가진다는 뜻도 아니다."
+        return "소에서 확인된 독성을 이베라그리스육지거북의 독성이 나타나는 양·안전한 섭취량·급여 빈도·식단 비율로 환산할 수 없다. 또한 국내 식용 들깨의 모든 품종이 동일한 페릴라 케톤 농도를 가진다는 뜻도 아니다."
     if v=="This plant-chemistry study is not a tortoise feeding trial. It does not establish a Testudo graeca ibera toxic threshold, safe intake, frequency, or that all edible perilla cultivars contain equivalent perilla-ketone concentrations.":
         return "이 식물화학 연구는 육지거북 급여시험이 아니다. 이베라그리스육지거북의 독성 임계값·안전 섭취량·급여 빈도를 정할 수 없으며 모든 식용 들깨 품종의 페릴라 케톤 농도가 같다고 볼 수도 없다."
     if v=="This is not a Testudo graeca ibera feeding-safety study and does not establish tortoise-specific safety, dose, frequency, percentage, or a single composition value for unidentified Korean-market mulberry leaves.":
@@ -443,9 +443,9 @@ def evidence_support_display(value):
     if v=="Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.":
         return "이베라그리스육지거북에 한정된 섭취 비율을 정하지 않으며 모든 품종과 내생균 상태를 똑같이 볼 근거도 아니다."
     if v=="Does not quantify a safe or toxic dose for young broccoli microgreens or Testudo graeca ibera.":
-        return "어린 브로콜리 마이크로그린 또는 이베라그리스육지거북에 대한 안전 용량이나 독성 용량을 정량화한 자료는 아니다."
+        return "어린 브로콜리 마이크로그린 또는 이베라그리스육지거북에 대한 안전하게 먹을 수 있는 양이나 독성이 나타나는 양을 정량화한 자료는 아니다."
     if v=="Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":
-        return "육지거북 독성이나 안전 용량을 확정하지 않으며 모든 글루코시놀레이트가 동일한 생물학적 효과를 가진다는 뜻도 아니다."
+        return "육지거북에서 독성이 나타나는 양이나 안전한 섭취량을 정하는 자료가 아니며 모든 글루코시놀레이트가 동일한 생물학적 효과를 가진다는 뜻도 아니다."
     if v=="Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.":
         return "미즈나·타쵸이·코마츠나 품종을 직접 시험한 자료가 아니며 이베라그리스육지거북에 한정된 급여 비율도 정하지 않는다."
     if v=="Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":
@@ -453,7 +453,7 @@ def evidence_support_display(value):
     if v=="The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.":
         return "같은 출처가 사료로 적합하지 않다고 명시한다. 이 자료로 육지거북 급여 적합성이나 급여량을 정할 수 없다."
     if v=="Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.":
-        return "사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북의 직접적인 안전 용량을 정하는 자료는 아니다."
+        return "사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북의 안전한 섭취량을 직접 정하는 자료는 아니다."
     if v=="Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.":
         return "독성 용량·임상 독성·안전한 사육 식단 비율 또는 Testudo에 한정된 이상반응을 확정하는 자료는 아니다."
     if v=="Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.":
@@ -582,7 +582,7 @@ def evidence_limit_display(value):
     if v.startswith("Does not establish a Testudo graeca ibera-specific feeding percentage"):
         return "이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 정해진 급여 빈도를 정하는 근거는 아니다. 마른 씨앗 이삭은 풀·건초와 같지 않으며 눈이나 입에 상처를 낼 수 있어 제거하도록 한 원자료의 경고를 따른다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific intake percentage"):
-        return "이 자료는 이베라그리스육지거북에 한정된 섭취 비율을 확정하지 않으며 모든 품종과 내생균 상태가 동등하다고 증명하지 않는다."
+        return "이 자료만으로 이베라그리스육지거북의 구체적인 섭취 비율을 정할 수 없으며, 모든 품종과 내생균 상태를 똑같이 볼 근거도 아니다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific percentage"):
         base = "이 자료는 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여 등 해당 문헌이 직접 확인하지 않은 구체적인 안전 급여 범위를 보장하지 않는다."
         if "possible laxative effect" in v:
@@ -599,7 +599,7 @@ def evidence_limit_display(value):
     if v.startswith("Does not establish an Ibera-specific percentage"):
         return "이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 빈도를 확정하지 않으며 같은 일반명 때문에 다른 식물 분류군에 판정을 옮겨 적용하면 안 된다."
     if v.startswith("Does not establish captive diet percentages"):
-        return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 해당 속의 모든 종 사이 동일한 안전성을 확정하지 않는다."
+        return "이 자료만으로 사육 식단 비율·급여 빈도나 무제한 급여 허용 범위를 정할 수 없으며, 해당 속의 모든 종이 똑같이 안전하다고 볼 근거도 아니다."
     if v.startswith("Does not establish captive diet percentage"):
         return "이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북에 대한 안전한 섭취량을 정하는 근거는 아니다."
     exact_more={
@@ -608,7 +608,7 @@ def evidence_limit_display(value):
         "Does not establish that every Poaceae species is safe, nor an Ibera-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.":"모든 벼과 식물이 안전하다는 뜻은 아니며, 이 자료만으로 이베라그리스육지거북의 풀 급여 비율·구체적인 급여 빈도나 무제한 급여 허용 범위를 정할 수 없다. 어린 풀과 성숙한 곡립·씨앗을 같은 먹이로 취급할 근거도 아니다.",
         "Does not establish that the entire plant is systemically toxic to Testudo graeca ibera. Leaf/sap irritation and the separate high-sugar fruit issue must not be conflated.":"이 자료만으로 식물 전체가 이베라그리스육지거북에 전신 독성을 일으킨다고 판단할 수 없다. 잎·수액의 자극성과 별개의 고당도 과실 문제를 혼동하면 안 된다.",
         "Does not establish tortoise feeding safety or nutritional suitability.":"육지거북에게 안전한 먹이인지, 영양학적으로 적합한지를 이 자료만으로 판단할 수 없다.",
-        "Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":"육지거북 독성·안전 용량을 확정하지 않으며 모든 글루코시놀레이트가 같은 생물학적 효과를 가진다고 볼 수도 없다.",
+        "Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":"육지거북에서 독성이 나타나는 양이나 안전한 섭취량을 정하는 자료가 아니며 모든 글루코시놀레이트가 같은 생물학적 효과를 가진다고 볼 수도 없다.",
         "Does not establish tortoise-specific safety or feeding quantity.":"육지거북에 한정된 안전성이나 급여량을 정하는 근거는 아니다.",
         "Does not establish tortoise-specific suitability or captive feeding quantity.":"육지거북에 한정된 적합성이나 사육 환경 급여량을 정하는 근거는 아니다.",
         "Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":"Malva verticillata에 한정된 섭취 비율이나 이베라그리스육지거북 대상 정량시험을 제공하지 않는다.",
