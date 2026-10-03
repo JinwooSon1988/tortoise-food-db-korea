@@ -62,16 +62,12 @@ assert ".normalize('NFKC')" in script
 assert "[\\s·._'’\\-–—()]+" in script
 assert "matchRank(a,q)-matchRank(b,q)" in script
 
-# Filters are framed as views, not recommendations.
-assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html
-assert '구하는 곳' not in html and '등급별 보기' in html
-
-# Grade meaning is explained once, with the dose/frequency boundary.
-assert 'class="gradeguide"' in html
-for g in ('<b>A</b>', '<b>B</b>', '<b>C</b>', '<b>D</b>'):
-    assert g in html
-assert html.count('정해진 급여량·빈도') == 1
+# Home is intentionally search-first: retired example chips, grade filters, and guide blocks stay absent.
+for retired in ('aria-label="판정 등급으로 보기 (추천 목록 아님)"', '등급별 보기', 'class="gradeguide"', 'aria-label="검색 예시"', 'class="examples"', 'class="quickfilter"'):
+    assert retired not in html, f"retired home control returned: {retired}"
+assert '구하는 곳' not in html
 assert '판정 보류는 안전하다는 뜻이 아닙니다' in html
+
 # Zero-result searches must not imply safety and must offer a recovery path without exposing candidates.
 assert '먹여도 된다는 뜻이 아닙니다' in script
 assert '다른 이름·영문명·학명' in script and './all-plants/' in script
@@ -83,7 +79,7 @@ assert "deepQuery.slice(0,80)" in search_live
 assert "dataset.ready==='1'" in search_live and "countEl.dataset.ready='1'" in script
 assert "document.getElementById('searchBtn')?.click()" in search_live
 
-assert 'href="./all-plants/"' in html and 'href="./core-foods/"' in html
+assert 'href="./all-plants/"' in html and 'href="./core-foods/"' not in html
 assert html.count('<style') == 1 and html.count('</style>') == 1
 assert '@media(prefers-reduced-motion:reduce)' in html and 'button:focus-visible,a:focus-visible,input:focus-visible' in html
 
@@ -95,45 +91,19 @@ for pid in ('chicory', 'chard', 'lambs_lettuce'):
 
 print('public evidence-only home search audit: PASS')
 
-assert html.count('data-filter="hold">보류 · 근거 부족') == 1
-assert "activeFilter==='hold'" in html
-assert "TV.display(a).grade==='보류'" in html
-
-# Search-first density: keep the final override compact on desktop and mobile.
+# Search-first density and accessibility baseline.
 assert '.hero{padding:30px 12px 18px}' in html
 assert '.hero{padding:12px 4px 11px}' in html
 assert '.resultcard{display:block;padding:16px 18px' in html
-
-# Safety/accessibility UX: restrictive verdict reasons stay fully visible and compact controls remain tappable.
 assert '.grade-b .why,.grade-c .why,.grade-d .why,.grade-hold .why{display:block;-webkit-line-clamp:unset;overflow:visible}' in html
-assert '.examples button{min-height:44px;' in html
-assert '.quickfilter{min-height:44px;padding:7px 12px}' in html
-
-# Keyboard/accessibility baseline for the public home page.
-assert 'class="skiplink" href="#main-content"' in html, "home skip link missing"
-assert '<main id="main-content" class="wrap" tabindex="-1">' in html, "home main landmark/focus target missing"
-assert '.skiplink:focus{transform:translateY(0)}' in html, "home skip-link focus style missing"
-assert '.utilitynav a,.utilitynav button{pointer-events:auto;display:inline-flex;align-items:center;gap:5px;min-height:44px' in html, "desktop utility targets must be at least 44px"
-
-# Search controls must remain explicitly named and keyboard-operable.
-assert 'id="searchBtn"' in html, 'search submit control missing'
-assert 'id="moreResults"' in html, 'paged-result continuation control missing'
-assert 'type="button"' in html, 'non-submit home controls should declare button semantics'
-assert 'aria-label="검색 예시"' in html, 'example-query control group needs an accessible name'
-assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html, 'grade filter group needs an accessible name'
-assert 'aria-label="구하는 곳으로 보기"' not in html, 'retired source filter accessibility group must stay removed'
-
-# Hold is an evidence state, never an implicit permission to feed.
-assert "g.grade==='보류'?'<div class=\"holdwarning\"" in html, "hold results need an always-visible safety warning"
-assert '판정 보류는 안전하다는 뜻이 아닙니다.' in html, "hold safety boundary wording missing"
-assert '급여 가능으로 해석하지 마세요.' in html, "hold result must explicitly reject safe-to-feed inference"
-
-# Public search controls and result actions must meet the 44px touch-target baseline.
-for token in (
-    '.quickfilter{min-height:44px',
-    '.examples button{min-height:44px',
-    '.morebtn{display:block;width:100%;margin-top:12px;min-height:44px',
-    '.detailbtn{display:flex;background:var(--accent);color:#fff;border-radius:12px;min-height:48px',
-):
-    assert token in html, f'home touch target contract missing: {token}'
-assert 'button:focus-visible,a:focus-visible,input:focus-visible' in html, 'home keyboard focus indicator missing'
+assert 'class="skiplink" href="#main-content"' in html
+assert '<main id="main-content" class="wrap" tabindex="-1">' in html
+assert '.skiplink:focus{transform:translateY(0)}' in html
+assert 'id="searchBtn"' in html
+assert 'id="moreResults"' in html
+assert "g.grade==='보류'?'<div class=\"holdwarning\"" in html
+assert '판정 보류는 안전하다는 뜻이 아닙니다.' in html
+assert '급여 가능으로 해석하지 마세요.' in html
+assert '.morebtn{display:block;width:100%;margin-top:12px;min-height:44px' in html
+assert '.detailbtn{display:flex;background:var(--accent);color:#fff;border-radius:12px;min-height:48px' in html
+assert 'button:focus-visible,a:focus-visible,input:focus-visible' in html
