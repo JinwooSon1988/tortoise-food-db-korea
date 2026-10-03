@@ -18,7 +18,12 @@ jobs:
           python-version: '3.12'
       - name: Generate plant detail pages
         run: |
+          pwd
+          git rev-parse HEAD
+          git log -1 --oneline -- scripts/generate_static_pages.py
+          grep -n "실제로 어떻게 급여하나\\|급여할 때 확인할 핵심\\|practical_html" scripts/generate_static_pages.py || true
           python scripts/generate_static_pages.py
+          grep -o "실제로 어떻게 급여하나\\|급여할 때 확인할 핵심\\|지금 할 일\\|급여량·빈도" plant/chicory/index.html | sort | uniq -c || true
           grep -q "실제로 어떻게 급여하나" plant/chicory/index.html || { echo "Generator output missing reader-first practical section"; exit 1; }
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
