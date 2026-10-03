@@ -88,7 +88,12 @@ def animal_taxon_display(value):
         "Plant chemistry; mammalian experimental context":"식물화학·포유류 실험 맥락 — 육지거북 급여시험 아님",
         "primarily mammalian/medicinal toxicology; not tortoise feeding":"주로 포유류·약용 독성학 자료 — 육지거북 급여시험 아님",
     }
-    return exact.get(v,v)
+    shown=exact.get(v,v)
+    if shown==v and re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
+        # Scientific taxon strings are expected here; prose-like metadata is not.
+        if re.search(r"\b(study|context|feeding|toxicology|general|animals|reptiles|observations|chemistry)\b", v, re.I):
+            return "원자료에 명시된 대상 동물 범위 — 육지거북 직접 급여시험 여부는 근거 역할·적용 한계에서 별도 확인"
+    return shown
 
 def plant_taxon_display(value):
     v=str(value or "").strip()
@@ -101,7 +106,12 @@ def plant_taxon_display(value):
         "Grasses as a broad dietary/context category; exact grass taxa require separate evidence":"넓은 식단 맥락의 벼과 식물 — 개별 종은 별도 근거 확인 필요",
         "Mustard greens category; assessment master Brassica juncea requires identity confirmation":"갓류 범위 — Brassica juncea 종 동정 확인 필요",
     }
-    return exact.get(v,v)
+    shown=exact.get(v,v)
+    if shown==v and re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
+        # Keep bare scientific names, but never expose English scope prose in Korean mode.
+        if re.search(r"\b(source|scope|study|reported|context|concept|category|assessment|warning|identity|mapped|requires|listed)\b", v, re.I):
+            return "원자료에 명시된 식물 분류군 범위 — 세부 종 동정과 적용 범위는 원자료 기준"
+    return shown
 
 def part_state_display(value):
     v=str(value or "").strip()
