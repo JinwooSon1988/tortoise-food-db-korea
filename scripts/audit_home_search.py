@@ -64,7 +64,7 @@ assert "matchRank(a,q)-matchRank(b,q)" in script
 
 # Filters are framed as views, not recommendations.
 assert 'aria-label="판정 등급으로 보기 (추천 목록 아님)"' in html
-assert '구하는 곳' in html and '등급별 보기' in html
+assert '구하는 곳' not in html and '등급별 보기' in html
 
 # Grade meaning is explained once, with the dose/frequency boundary.
 assert 'class="gradeguide"' in html
