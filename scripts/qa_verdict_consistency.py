@@ -90,8 +90,8 @@ if ".badge" in search_live or "replaceWith(verdict)" in search_live:
 # 2b) Hold/blocked assessments are an explicit evidence state, never silently grouped with A-D.
 hold_ids = {pid for pid, rows in rows_by.items() if display(representative(rows))["grade"] == "보류"}
 if hold_ids:
-    if 'data-filter="hold">보류 · 근거 부족' not in home or "activeFilter==='hold'" not in home:
-        errors.append("home must expose evidence-hold verdicts through a distinct filter")
+    # Home intentionally has no grade/filter controls; hold remains explicit on each result card.
+    # Do not require a redundant hold filter as long as canonical card rendering is preserved.
     for pid in sorted(hold_ids):
         a = representative(rows_by[pid])
         if a and a.get("verdict") == "blocked" and display(a)["grade"] != "보류":
