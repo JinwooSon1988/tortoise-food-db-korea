@@ -720,13 +720,24 @@ for p in plants:
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
     indirect_count=len(linked_evidence)-direct_count-husbandry_count
     part_values=[part_state_display(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")]
-    # Reader-facing part scope: show only the supported plant parts here; detailed caveats stay in evidence/scope sections.
+    # Reader-facing part scope: show actual edible plant parts only. Evidence qualifiers stay below.
     def concise_part(v):
         v=str(v or "").strip()
         v=re.split(r"\s*[—–-]\s*|\s*—\s*",v,1)[0].strip()
-        v=re.sub(r"\s*—.*$","",v).strip()
+        # Drop metadata-only states; they are evidence scope, not a plant part.
+        if any(k in v for k in ("동정만", "분류군 동정", "출처에 명시된 성분", "출처에 기술된 범위", "출처에 명시된 범위")):
+            return ""
+        replacements={
+            "야생 식물체":"","야생 섭식 기록":"","식물체":"","급여시험 식물체":"",
+            "잎과 꽃":"잎·꽃","꽃과 잎":"잎·꽃","출처에 명시된 잎·꽃·열매":"잎·꽃·열매",
+            "식물 전체":"전체 식물체","초본 식물체":"지상부"
+        }
+        v=replacements.get(v,v)
         return v
-    part_note=" · ".join(dict.fromkeys(concise_part(v) for v in part_values if concise_part(v))) or "부위 정보 미확인"
+    clean_parts=list(dict.fromkeys(concise_part(v) for v in part_values if concise_part(v)))
+    # Prefer concrete parts over unresolved generic plant-material records.
+    concrete=[v for v in clean_parts if v not in ("식물체","전체 식물체","부위 미확인")]
+    part_note=" · ".join(concrete or clean_parts) or "부위 미확인"
     # Reader-first evidence explanation: expose verified facts before source taxonomy.
     support_facts=[]
     for e in linked_evidence:
