@@ -163,7 +163,7 @@ for p in public:
             errors.append(f"{pid}: graded verdict must not look like a hold state")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
-    if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나?</b>' not in decision_text):
+    if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나</b>' not in decision_text):
         errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
     expected_basis = __import__("public_verdict").scope_label(a)
     if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
