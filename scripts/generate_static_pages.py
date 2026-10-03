@@ -261,7 +261,7 @@ def evidence_support_display(value):
         "Species-specific review reports mouse acute testing of fresh O. javanica at 15 g/kg without mortality or evident acute organ toxicity, while high-dose dry powder increased sperm deformity and reduced body weight/food consumption; high-dose phenolic extract produced reversible subchronic toxicity in rats.":"미나리(O. javanica) 종 특이적 문헌고찰에서 생식물 15 g/kg을 사용한 생쥐 급성시험에서는 사망이나 뚜렷한 급성 장기독성이 관찰되지 않았다. 반면 고용량 건조분말에서는 정자 기형 증가와 체중·섭취량 감소가, 고용량 페놀성 추출물에서는 흰쥐의 가역적 아급성 독성이 보고됐다. 이는 포유류 시험으로 육지거북 급여 안전성을 직접 입증하지 않는다.",
         "Long-term specialist husbandry practice supports a varied, high-fiber Testudo diet centered on appropriate weeds and leafy plants; the source specifically lists plantain, sow thistle, mallow, dandelion, red clover and several supplemental greens/dried leaves.":"장기간의 전문 사육 경험 자료는 적절한 야생초와 잎 식물을 중심으로 한 다양하고 고섬유질인 Testudo 식단을 지지한다. 질경이·방가지똥류·아욱류·민들레·붉은토끼풀과 여러 보조 잎채소·건조 잎을 구체적으로 제시한다.",
         "Cynodon dactylon leaves and stems were identified as important food items in wild Testudo graeca diet.":"야생 Testudo graeca의 식이 분석에서 우산잔디(Cynodon dactylon)의 잎과 줄기가 주요 섭식 항목으로 확인됐다. 야생 섭식 자료이며 사육 급여 비율을 직접 정하는 자료는 아니다.",
-        "Cynodon dactylon was a principal food item across three of four seasons at one study site.":"한 조사 지역에서 우산잔디(Cynodon dactylon)는 네 계절 중 세 계절에 주요 섭식 항목으로 확인됐다. 해당 지역의 야생 관찰 결과로 사육 환경의 고정 급여 빈도나 비율을 의미하지 않는다.",
+        "Cynodon dactylon was a principal food item across three of four seasons at one study site.":"한 조사 지역에서 우산잔디(Cynodon dactylon)는 네 계절 중 세 계절에 주요 섭식 항목으로 확인됐다. 해당 지역의 야생 관찰 결과로 사육 환경의 정해진 급여 빈도나 비율을 의미하지 않는다.",
         "Wild Testudo graeca graeca were documented consuming the taxon reported as Medicago hispida, now treated here as Medicago polymorpha.":"야생 Testudo graeca graeca가 당시 Medicago hispida로 보고된 분류군을 섭식한 기록이 있으며, 여기서는 현재 분류에 따라 Medicago polymorpha로 다룬다. 야생 섭식 관찰이지 정량 급여시험은 아니다.",
         "Species-specific phytochemical evidence documents saponin-class constituents in Medicago polymorpha and supports retaining an antinutritional caution.":"Medicago polymorpha의 종 특이적 식물화학 자료에서 사포닌 계열 성분이 확인돼 항영양성분에 대한 주의를 유지할 근거가 된다. 성분 검출 자체가 육지거북 독성 용량을 확정하는 것은 아니다.",
         "Three-day-old broccoli sprouts had much higher glucoraphanin-related glucosinolate levels than mature broccoli in the studied cultivars.":"조사된 품종에서 3일령 브로콜리 새싹은 성숙 브로콜리보다 글루코라파닌 관련 글루코시놀레이트 함량이 훨씬 높았다. 이는 성분분석 결과이며 육지거북 급여 안전성을 직접 시험한 자료는 아니다.",
@@ -349,25 +349,25 @@ def evidence_support_display(value):
         "Provides Mediterranean Testudo husbandry context in which grasses occur within a broader fibrous plant diet. Exact grass-food conclusions are supported separately by taxon-specific specialist records.":"지중해 Testudo 사육에서 풀이 폭넓은 고섬유질 식물 식단의 일부로 사용되는 맥락을 제공한다. 개별 풀의 급여 판정은 해당 분류군을 직접 다룬 별도 전문 근거로 판단한다.",
     }
     exact.update({
-        "Does not establish a Testudo graeca ibera-specific feeding percentage or fixed frequency. Dry seed heads are not equivalent to the grass or hay; the source advises removing them because they may cause eye or mouth injury.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 고정 급여 빈도를 확정하지 않는다. 마른 씨앗 이삭은 풀이나 건초와 동일하게 볼 수 없으며, 눈이나 입에 상처를 낼 수 있어 제거하도록 권고한다.",
+        "Does not establish a Testudo graeca ibera-specific feeding percentage or fixed frequency. Dry seed heads are not equivalent to the grass or hay; the source advises removing them because they may cause eye or mouth injury.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 정해진 급여 빈도를 확정하지 않는다. 마른 씨앗 이삭은 풀이나 건초와 동일하게 볼 수 없으며, 눈이나 입에 상처를 낼 수 있어 제거하도록 권고한다.",
         "Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.":"이 자료는 이베라그리스육지거북에 한정된 섭취 비율을 확정하지 않으며, 모든 품종과 내생균 상태가 서로 동등하다고 증명하지 않는다.",
-        "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency or unlimited use. The source itself cautions against overfeeding because of the possible laxative effect.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·고정 빈도·무제한 급여를 확정하지 않는다. 출처 자체도 완하 작용 가능성 때문에 과량 급여를 경고한다.",
-        "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·고정 빈도·정유의 안전성·무제한 섭취를 확정하지 않는다.",
+        "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency or unlimited use. The source itself cautions against overfeeding because of the possible laxative effect.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여를 확정하지 않는다. 출처 자체도 완하 작용 가능성 때문에 과량 급여를 경고한다.",
+        "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·정유의 안전성·무제한 섭취를 확정하지 않는다.",
         "Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":"이 자료는 이베라그리스육지거북에 한정된 독성 용량을 확정하지 않으며, 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다.",
         "Does not establish a staple percentage, unlimited feeding, Mediterranean Testudo-specific dose, or safety of similarly named Hypericum species.":"이 자료는 주식으로 사용할 비율·무제한 급여·지중해 Testudo에 한정된 급여량 또는 이름이 비슷한 다른 Hypericum 종의 안전성을 확정하지 않는다.",
         "Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.":"이 자료는 독성 용량·임상 독성·안전한 사육 급여 비율 또는 Testudo에 한정된 이상반응을 확정하지 않는다.",
         "Does not establish an Ibera-specific percentage or frequency and must not be transferred to true Geranium species merely because both may be called geranium.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 빈도를 확정하지 않는다. 둘 다 제라늄으로 불릴 수 있다는 이유만으로 진짜 Geranium 속 식물에 판정을 옮겨 적용하면 안 된다.",
         "Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.":"이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북에 대한 직접적인 안전 용량을 확정하지 않는다.",
-        "Does not establish captive diet percentages, feeding frequency, unlimited use, or equivalence between every species in those genera.":"이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 해당 속에 속한 모든 종 사이의 동일한 안전성을 확정하지 않는다.",
+        "Does not establish captive diet percentages, feeding frequency, unlimited use, or equivalence between every species in those genera.":"이 자료는 사육 식단 비율·급여 빈도·무제한 급여 또는 해당 속에 속한 모든 종 이 모두 똑같이 안전하다고 볼 근거는 아니다.",
     })
     if v in exact:
         return exact[v]
     if v=="Does not establish a Testudo graeca ibera-specific feeding percentage or fixed frequency. Dry seed heads are not equivalent to the grass or hay; the source advises removing them because they may cause eye or mouth injury.":
         return "이베라그리스육지거북의 고정 식단 비율이나 급여 빈도를 정하는 자료는 아니다. 마른 씨앗 이삭은 풀이나 건초와 동일하지 않으며 눈·입을 다칠 수 있어 제거하라고 출처가 권고한다."
     if v=="Does not establish a Testudo graeca ibera-specific diet percentage, fixed frequency or unlimited use. Mature seeds are not equivalent to young grass; the source says not to allow tortoises to eat the seeds because they are too high in protein.":
-        return "이베라그리스육지거북의 식단 비율·고정 급여 빈도·무제한 급여를 정하는 자료는 아니다. 성숙한 씨앗은 어린 풀과 동일하지 않으며 단백질이 너무 높아 씨앗을 먹지 못하게 하라고 출처가 설명한다."
+        return "이베라그리스육지거북의 식단 비율·정해진 급여 빈도·무제한 급여를 정하는 자료는 아니다. 성숙한 씨앗은 어린 풀과 동일하지 않으며 단백질이 너무 높아 씨앗을 먹지 못하게 하라고 출처가 설명한다."
     if v=="Does not establish a Testudo graeca ibera-specific percentage, fixed frequency or unlimited use. The source itself cautions against overfeeding because of the possible laxative effect.":
-        return "이베라그리스육지거북의 식단 비율·고정 급여 빈도·무제한 급여를 정하는 자료는 아니다. 출처 자체도 잠재적인 완하 작용 때문에 과량 급여를 경고한다."
+        return "이베라그리스육지거북의 식단 비율·정해진 급여 빈도·무제한 급여를 정하는 자료는 아니다. 출처 자체도 잠재적인 완하 작용 때문에 과량 급여를 경고한다."
     if v=="Does not demonstrate direct toxicity of sweet-potato leaves in Testudo graeca ibera, nor does it justify treating accidental nibbling as poisoning. It does not establish equivalence between leaves and tuber.":
         return "고구마 잎이 이베라그리스육지거북에 직접 독성을 보인다는 자료가 아니며 우발적으로 조금 뜯어 먹은 것을 중독으로 간주할 근거도 아니다. 잎과 덩이뿌리를 동일하게 취급할 수도 없다."
     if v=="Cattle toxicity cannot be converted into a Testudo graeca ibera toxic dose, safe dose, feeding frequency or percentage. It also does not establish that every edible Korean perilla cultivar has the same perilla-ketone concentration.":
@@ -391,7 +391,7 @@ def evidence_support_display(value):
     if v=="Does not establish safety for Testudo graeca ibera, a tortoise feeding dose or frequency, or justify transferring toxicity of other Oenanthe species to O. javanica. It also does not prove that O. javanica is safe as a captive tortoise food.":
         return "이베라그리스육지거북의 안전성·급여량·빈도를 확정하지 않으며 다른 Oenanthe 종의 독성을 O. javanica에 그대로 전이할 근거도 아니다. 반대로 O. javanica가 사육 육지거북에게 안전한 먹이라는 사실을 입증하는 자료도 아니다."
     if v=="This specialist plant-database entry is not a controlled Testudo graeca ibera feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.":
-        return "이 전문 식물 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 그대로 적용하면 안 되며, 해당 분류는 정확한 사육 식단 비율·고정 급여 빈도·무제한 급여를 정하지 않는다."
+        return "이 전문 식물 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 그대로 적용하면 안 되며, 해당 분류는 정확한 사육 식단 비율·정해진 급여 빈도·무제한 급여를 정하지 않는다."
     if v=="Does not establish captive diet percentages, feeding frequency, unlimited use, or equivalence between every species in those genera.":
         return "사육 환경의 식단 비율·급여 빈도·무제한 급여를 정하는 자료가 아니며, 해당 속에 속한 모든 종이 서로 동등하다는 뜻도 아니다."
     if v=="Non-quantitative observations do not establish captive diet ratios, feeding frequency, or species-level equivalence for Korean plants within the same genus.":
@@ -415,29 +415,29 @@ def evidence_support_display(value):
     if v=="Does not establish that the entire plant is systemically toxic to Testudo graeca ibera. Leaf/sap irritation and the separate high-sugar fruit issue must not be conflated.":
         return "식물 전체가 이베라그리스육지거북에 전신 독성을 일으킨다는 뜻은 아니다. 잎·수액의 자극성 문제와 별개의 고당도 열매 문제를 서로 혼동하면 안 된다."
     if v=="Does not establish that every Poaceae species is safe, nor an Ibera-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.":
-        return "모든 벼과 식물이 안전하다는 뜻이 아니며 이베라그리스육지거북의 풀 식단 비율·고정 빈도·무제한 급여도 정하지 않는다. 어린 풀과 성숙한 곡립·씨앗을 동등하게 취급하면 안 된다."
+        return "모든 벼과 식물이 안전하다는 뜻이 아니며 이베라그리스육지거북의 풀 식단 비율·정해진 급여 빈도·무제한 급여도 정하지 않는다. 어린 풀과 성숙한 곡립·씨앗을 동등하게 취급하면 안 된다."
     if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
         return "꼬투리나 콩알의 급여, 무제한 급여 또는 이베라그리스육지거북의 정량적 급여량을 뒷받침하는 자료는 아니다."
     if v=="Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.":
         return "피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며 이베라그리스육지거북에 한정된 급여량을 정하는 자료도 아니다."
     if v=="This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":
-        return "통제된 이베라그리스육지거북 급여시험이 아니므로 사육 식단 비율·고정 급여 빈도·무제한 급여·육지거북에 한정된 독성 용량을 정할 수 없다."
+        return "통제된 이베라그리스육지거북 급여시험이 아니므로 사육 식단 비율·정해진 급여 빈도·무제한 급여·육지거북에 한정된 독성 용량을 정할 수 없다."
     if v=="This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":
-        return "이 전문 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 분류 등급을 정확한 사육 식단 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·관련 분류군의 안전성으로 환산하면 안 된다."
+        return "이 전문 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 분류 등급을 정확한 사육 식단 비율·정해진 급여 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·관련 분류군의 안전성으로 환산하면 안 된다."
     if v=="The mechanism discussion is not a Testudo graeca ibera dose-response or harm trial. The record does not independently establish a tortoise toxic dose or convert the composition rationale into proven poisoning.":
         return "기전 설명은 이베라그리스육지거북의 용량-반응 또는 위해 시험이 아니다. 이 자료만으로 육지거북 독성 용량을 정하거나 성분상의 우려를 실제 중독이 입증된 것으로 바꿔 해석할 수 없다."
     if v=="This is not a Mediterranean Testudo or Testudo graeca ibera feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.":
         return "지중해 Testudo 또는 이베라그리스육지거북 급여시험이 아니며 Brassica juncea의 종 특이 식단 비율·급여 빈도·제한 없는 사용을 정하지 않는다."
     if v=="Master concept is Taraxacum spp.; this record must not be generalized to every Taraxacum species and does not establish Ibera-specific dose, percentage, or fixed frequency.":
-        return "마스터 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종에 일반화하면 안 되며 이베라그리스육지거북에 한정된 급여량·식단 비율·고정 급여 빈도를 정하지 않는다."
+        return "마스터 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종에 일반화하면 안 되며 이베라그리스육지거북에 한정된 급여량·식단 비율·정해진 급여 빈도를 정하지 않는다."
     if v=="Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.":
-        return "이 판정을 Tagetes 메리골드에 그대로 적용하면 안 된다. 이베라그리스육지거북에 한정된 식단 비율·고정 급여 빈도·무제한 급여도 정하지 않는다."
+        return "이 판정을 Tagetes 메리골드에 그대로 적용하면 안 된다. 이베라그리스육지거북에 한정된 식단 비율·정해진 급여 빈도·무제한 급여도 정하지 않는다."
     if v=="Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.":
-        return "이베라그리스육지거북에 한정된 식단 비율·고정 급여 빈도·정유 안전성·무제한 섭취를 정하는 자료는 아니다."
+        return "이베라그리스육지거북에 한정된 식단 비율·정해진 급여 빈도·정유 안전성·무제한 섭취를 정하는 자료는 아니다."
     if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
-        return "이베라그리스육지거북에 한정된 급여량·고정 급여 빈도를 정하지 않으며 다른 Salvia 종과 동등하다고 볼 근거도 아니다."
+        return "이베라그리스육지거북에 한정된 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종과 동등하다고 볼 근거도 아니다."
     if v=="Genus-level guidance does not establish a Testudo graeca ibera-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.":
-        return "속 수준 지침은 이베라그리스육지거북에 한정된 식단 비율·고정 급여 빈도·정제 정유의 안전성·무제한 섭취를 확정하지 않는다."
+        return "속 수준 지침은 이베라그리스육지거북에 한정된 식단 비율·정해진 급여 빈도·정제 정유의 안전성·무제한 섭취를 확정하지 않는다."
     if v=="Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":
         return "이베라그리스육지거북에 한정된 독성 용량을 정하지 않으며 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다는 사실도 입증하지 않는다."
     if v=="Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.":
@@ -459,9 +459,9 @@ def evidence_support_display(value):
     if v=="Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.":
         return "이베라그리스육지거북의 독성 용량·임상 중독 역치를 정하지 않으며 우발적으로 한입 먹었다는 사실만으로 중독이 발생한다고 입증하지도 않는다."
     if v=="This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":
-        return "이베라그리스육지거북에 한정된 급여 비율·고정 빈도·무제한 급여를 정하지 않으며, 이름에 mallow가 들어가는 무관한 식물까지 동등하게 볼 수 없다. 국내 유통명 ‘아욱’은 정확한 종 수준 결론 전에 종 동정 연결이 필요하다."
+        return "이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여를 정하지 않으며, 이름에 mallow가 들어가는 무관한 식물까지 동등하게 볼 수 없다. 국내 유통명 ‘아욱’은 정확한 종 수준 결론 전에 종 동정 연결이 필요하다."
     if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
-        return "이베라그리스육지거북에 한정된 급여량·고정 급여 빈도를 정하지 않으며 다른 Salvia 종과 동등하다고 볼 근거도 아니다."
+        return "이베라그리스육지거북에 한정된 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종과 동등하다고 볼 근거도 아니다."
     if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
         return "꼬투리나 콩알 급여·무제한 급여 또는 이베라그리스육지거북에 한정된 정량 급여량을 뒷받침하지 않는다."
     # Common quantitative/scope limitations.
@@ -469,7 +469,7 @@ def evidence_support_display(value):
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
     }:
-        return "이 자료만으로 이베라그리스육지거북(T. g. ibera)의 종 특이 급여량·고정 급여 빈도·식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 명시된 분류군과 식물 부위 범위 안에서만 적용한다."
+        return "이 자료만으로 이베라그리스육지거북(T. g. ibera)의 종 특이 급여량·정해진 급여 빈도·식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 명시된 분류군과 식물 부위 범위 안에서만 적용한다."
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
         "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
@@ -479,7 +479,7 @@ def evidence_support_display(value):
     if v=="Does not establish Mediterranean Testudo-specific dose, exact feeding frequency, diet percentage, or unlimited use.":
         return "지중해 Testudo에 한정된 급여량·정확한 급여 빈도·식단 비율·무제한 급여를 정하는 자료는 아니다."
     if v=="Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.":
-        return "통제된 이베라그리스육지거북 급여시험이 아니므로 정확한 식단 비율·고정 급여 빈도·독성 용량·무제한 급여를 정할 수 없다."
+        return "통제된 이베라그리스육지거북 급여시험이 아니므로 정확한 식단 비율·정해진 급여 빈도·독성 용량·무제한 급여를 정할 수 없다."
     if v=="No tortoise-specific feeding threshold or dose.":
         return "육지거북에 한정된 급여 임계값이나 용량을 정하는 자료는 아니다."
     if v=="Does not directly determine captive feeding quantity for Testudo graeca ibera.":
@@ -525,17 +525,17 @@ def evidence_support_display(value):
 def evidence_limit_display(value):
     v=str(value or "").strip()
     mixed_ko={
-        "This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·고정 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물과의 동등성도 입증하지 않는다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
+        "This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물과의 동등성도 입증하지 않는다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
         "The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.":"이 결론을 Mentha속 전체로 확대하면 안 된다. 같은 출처는 페퍼민트(Mentha × piperita)와 페니로열(Mentha pulegium)을 별도로 제외하므로, 국내에서 ‘민트’라는 일반명으로 판매되는 제품은 급여 결론 전에 종 확인이 필요하다.",
     }
     if v in mixed_ko:
         return mixed_ko[v]
     exact={
-        "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.":"이 자료 하나만으로 정확한 사육 급여 비율·고정 급여 빈도·무제한 급여 또는 자료가 실제로 다룬 동물 분류군·식물 정체성·식물 부위를 넘어선 동일한 안전성을 확정할 수 없다.",
-        "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.":"전문 식물 DB 지침은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 정확한 사육 급여 비율·고정 빈도·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 동일한 안전성을 확정하지 않는다.",
-        "This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Its category must not be converted into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":"이 전문 DB 항목은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 해당 분류를 정확한 사육 급여 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 동일한 안전성으로 바꾸어 해석하면 안 된다.",
+        "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.":"이 자료 하나만으로 정확한 사육 급여 비율·정해진 급여 빈도·무제한 급여 또는 자료가 실제로 다룬 동물 분류군·식물 정체성·식물 부위를 까지 똑같이 안전하다고 확대 해석할 수 없다.",
+        "Specialist plant-database guidance is not a controlled Testudo graeca ibera feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.":"전문 식물 DB 지침은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 정확한 사육 급여 비율·정해진 급여 빈도·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군까지 똑같이 안전하다고 볼 근거는 아니다.",
+        "This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Its category must not be converted into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":"이 전문 DB 항목은 이베라그리스육지거북의 통제된 급여·독성시험이 아니다. 해당 분류를 정확한 사육 급여 비율·정해진 급여 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 동일한 안전성으로 바꾸어 해석하면 안 된다.",
         "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish Testudo graeca ibera-specific dose, frequency, percentage, or unlimited use.":"이 기록은 명시된 근거 범위를 넘어 사용하면 안 된다. 식물 동정·성분 자료 자체는 육지거북 급여 안전성을 증명하지 않으며, 근연 분류군 사육자료도 이베라그리스육지거북의 급여량·빈도·비율·무제한 급여를 확정하지 않는다.",
-        "This migrated record preserves the existing assessment/source scope. It is not a controlled Testudo graeca ibera feeding/toxicity trial and does not establish an exact percentage, fixed frequency, toxic dose, unlimited use, or safety equivalence across unlisted plant parts/taxa.":"이 기록은 기존 판정과 출처의 적용 범위를 그대로 유지한다. 이베라그리스육지거북의 통제된 급여·독성시험이 아니며 정확한 급여 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·분류군 사이의 동일한 안전성을 확정하지 않는다.",
+        "This migrated record preserves the existing assessment/source scope. It is not a controlled Testudo graeca ibera feeding/toxicity trial and does not establish an exact percentage, fixed frequency, toxic dose, unlimited use, or safety equivalence across unlisted plant parts/taxa.":"이 기록은 기존 판정과 출처의 적용 범위를 그대로 유지한다. 이베라그리스육지거북의 통제된 급여·독성시험이 아니며 정확한 급여 비율·정해진 급여 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·분류군 이 모두 똑같이 안전하다고 볼 근거는 아니다.",
         "Taxonomic acceptance does not establish tortoise feeding safety, dose, frequency, diet percentage, or plant-part equivalence.":"분류학적으로 인정된 식물이라는 사실은 육지거북 급여 안전성·급여량·빈도·식단 비율 또는 식물 부위 간 동등성을 증명하지 않는다.",
         "No Ibera-specific dose, fixed diet percentage, or unlimited feeding allowance.":"이베라그리스육지거북에 한정된 급여량·고정 식단 비율·무제한 급여 허용 범위는 확정하지 않는다.",
     }
@@ -544,7 +544,7 @@ def evidence_limit_display(value):
     # High-frequency scope templates. Preserve every substantive boundary while localizing the reader-facing copy.
     if v.startswith("Does not establish a Testudo graeca ibera-specific dose"):
         tail=[]
-        if "fixed frequency" in v: tail.append("고정 급여 빈도")
+        if "fixed frequency" in v: tail.append("정해진 급여 빈도")
         if "fixed diet percentage" in v or "diet percentage" in v: tail.append("고정 식단 비율")
         if "toxic dose" in v: tail.append("독성 용량")
         if "unlimited feeding allowance" in v: tail.append("무제한 급여 허용 범위")
@@ -578,13 +578,13 @@ def evidence_limit_display(value):
     if v.startswith("Does not establish a Testudo graeca ibera toxic dose"):
         return "이 자료는 이베라그리스육지거북의 독성 용량·임상 중독 역치 또는 우발적으로 한입 먹은 경우의 중독 여부를 확정하지 않는다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific diet percentage"):
-        return "이 자료는 이베라그리스육지거북에 한정된 식단 비율·고정 급여 빈도·무제한 급여를 확정하지 않는다. 성숙한 씨앗은 어린 풀과 같지 않으며 단백질이 높아 먹이지 않도록 한 원자료의 경고를 따른다."
+        return "이 자료는 이베라그리스육지거북에 한정된 식단 비율·정해진 급여 빈도·무제한 급여를 확정하지 않는다. 성숙한 씨앗은 어린 풀과 같지 않으며 단백질이 높아 먹이지 않도록 한 원자료의 경고를 따른다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific feeding percentage"):
-        return "이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 고정 급여 빈도를 확정하지 않는다. 마른 씨앗 이삭은 풀·건초와 같지 않으며 눈이나 입에 상처를 낼 수 있어 제거하도록 한 원자료의 경고를 따른다."
+        return "이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 정해진 급여 빈도를 확정하지 않는다. 마른 씨앗 이삭은 풀·건초와 같지 않으며 눈이나 입에 상처를 낼 수 있어 제거하도록 한 원자료의 경고를 따른다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific intake percentage"):
         return "이 자료는 이베라그리스육지거북에 한정된 섭취 비율을 확정하지 않으며 모든 품종과 내생균 상태가 동등하다고 증명하지 않는다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific percentage"):
-        base = "이 자료는 이베라그리스육지거북에 한정된 급여 비율·고정 급여 빈도·무제한 급여 등 해당 문헌이 직접 확인하지 않은 구체적인 안전 급여 범위를 보장하지 않는다."
+        base = "이 자료는 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여 등 해당 문헌이 직접 확인하지 않은 구체적인 안전 급여 범위를 보장하지 않는다."
         if "possible laxative effect" in v:
             base += " 원자료 자체도 완하 작용 가능성 때문에 과량 급여를 경고한다."
         if "essential-oil safety" in v:
@@ -605,7 +605,7 @@ def evidence_limit_display(value):
     exact_more={
         "Does not establish oral feeding safety, digestibility, dose, or suitability for tortoises.":"경구 섭취 안전성·소화 가능성·급여량 또는 육지거북 먹이로서의 적합성을 확정하지 않는다.",
         "Does not establish safety for Testudo graeca ibera, a tortoise feeding dose or frequency, or justify transferring toxicity of other Oenanthe species to O. javanica. It also does not prove that O. javanica is safe as a captive tortoise food.":"이베라그리스육지거북에 대한 안전성·급여량·급여 빈도를 확정하지 않는다. 다른 Oenanthe 종의 독성을 O. javanica에 그대로 적용할 수도 없으며, O. javanica가 사육 육지거북 먹이로 안전하다는 증거도 아니다.",
-        "Does not establish that every Poaceae species is safe, nor an Ibera-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.":"모든 벼과 식물이 안전하다고 확정하지 않으며, 이베라그리스육지거북의 풀 급여 비율·고정 빈도·무제한 급여 또는 어린 풀과 성숙 곡립·씨앗의 동등성도 확정하지 않는다.",
+        "Does not establish that every Poaceae species is safe, nor an Ibera-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.":"모든 벼과 식물이 안전하다고 확정하지 않으며, 이베라그리스육지거북의 풀 급여 비율·정해진 급여 빈도·무제한 급여 또는 어린 풀과 성숙 곡립·씨앗의 동등성도 확정하지 않는다.",
         "Does not establish that the entire plant is systemically toxic to Testudo graeca ibera. Leaf/sap irritation and the separate high-sugar fruit issue must not be conflated.":"식물 전체가 이베라그리스육지거북에 전신 독성을 보인다고 확정하지 않는다. 잎·수액의 자극성과 별개의 고당도 과실 문제를 혼동하면 안 된다.",
         "Does not establish tortoise feeding safety or nutritional suitability.":"육지거북 급여 안전성이나 영양학적 적합성을 확정하지 않는다.",
         "Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":"육지거북 독성·안전 용량을 확정하지 않으며 모든 글루코시놀레이트가 같은 생물학적 효과를 가진다고 볼 수도 없다.",
@@ -615,13 +615,13 @@ def evidence_limit_display(value):
         "Does not quantify a safe or toxic dose for young broccoli microgreens or Testudo graeca ibera.":"어린 브로콜리 마이크로그린 또는 이베라그리스육지거북에 대한 안전·독성 용량을 정량화하지 않는다.",
         "Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":"꼬투리·콩 급여, 무제한 급여 또는 이베라그리스육지거북에 한정된 정량 급여량을 뒷받침하지 않는다.",
         "Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.":"피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외한다. 이베라그리스육지거북에 한정된 급여량도 확정하지 않는다.",
-        "Genus-level guidance does not establish a Testudo graeca ibera-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.":"속 수준의 지침은 이베라그리스육지거북에 한정된 급여 비율·고정 빈도·정제 정유의 안전성 또는 무제한 섭취를 확정하지 않는다.",
+        "Genus-level guidance does not establish a Testudo graeca ibera-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.":"속 수준의 지침은 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·정제 정유의 안전성 또는 무제한 섭취를 확정하지 않는다.",
         "In-vitro cytotoxicity of concentrated essential oil does not establish fresh-leaf oral toxicity, a tortoise toxic dose, or an accidental-exposure outcome.":"농축 정유의 시험관 내 세포독성은 신선한 잎의 경구 독성·육지거북 독성 용량 또는 우발적 노출의 결과를 확정하지 않는다.",
-        "Master concept is Taraxacum spp.; this record must not be generalized to every Taraxacum species and does not establish Ibera-specific dose, percentage, or fixed frequency.":"기준 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종에 일반화하면 안 되며 이베라그리스육지거북에 한정된 급여량·비율·고정 빈도도 확정하지 않는다.",
-        "Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.":"Tagetes 계열 메리골드에 판정을 옮겨 적용하면 안 된다. 이베라그리스육지거북에 한정된 급여 비율·고정 빈도·무제한 급여도 확정하지 않는다.",
+        "Master concept is Taraxacum spp.; this record must not be generalized to every Taraxacum species and does not establish Ibera-specific dose, percentage, or fixed frequency.":"기준 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종에 일반화하면 안 되며 이베라그리스육지거북에 한정된 급여량·비율·정해진 급여 빈도도 확정하지 않는다.",
+        "Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.":"Tagetes 계열 메리골드에 판정을 옮겨 적용하면 안 된다. 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여도 확정하지 않는다.",
         "No tortoise-specific feeding threshold or dose.":"육지거북에 한정된 급여 역치나 급여량은 확정되어 있지 않다.",
         "Non-quantitative observations do not establish captive diet ratios, feeding frequency, or species-level equivalence for Korean plants within the same genus.":"비정량적 관찰은 사육 식단 비율·급여 빈도 또는 같은 속에 속한 국내 식물 종 사이의 동등성을 확정하지 않는다.",
-        "Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.":"이베라그리스육지거북을 대상으로 한 통제시험이 아니며 정확한 급여 비율·고정 빈도·독성 용량·무제한 급여를 확정하지 않는다.",
+        "Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.":"이베라그리스육지거북을 대상으로 한 통제시험이 아니며 정확한 급여 비율·정해진 급여 빈도·독성 용량·무제한 급여를 확정하지 않는다.",
         "Official crop identity does not establish tortoise feeding safety, oxalate effect, dose, percentage or frequency.":"공식 작물 동정 정보는 육지거북 급여 안전성·옥살산염의 영향·급여량·비율·빈도를 확정하지 않는다.",
     }
     if v in exact_more:
@@ -634,11 +634,11 @@ def evidence_limit_display(value):
         "This is genus-level evidence, not an Artemisia princeps-specific Testudo trial. It does not establish identical chemistry across Artemisia species or a tortoise toxic dose.":"속 수준의 근거이며 Artemisia princeps를 대상으로 한 Testudo 시험이 아니다. Artemisia 각 종의 화학조성이 동일하다고 확정하지 않으며 육지거북 독성 용량도 제시하지 않는다.",
         "This is not a Mediterranean Testudo or Testudo graeca ibera feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.":"지중해 Testudo 또는 이베라그리스육지거북 급여시험이 아니며 Brassica juncea의 급여 비율·빈도·제한 없는 급여를 확정하지 않는다.",
         "This is not a Testudo graeca ibera feeding-safety study and does not establish tortoise-specific safety, dose, frequency, percentage, or a single composition value for unidentified Korean-market mulberry leaves.":"이베라그리스육지거북 급여 안전성 연구가 아니다. 육지거북에 한정된 안전성·급여량·빈도·비율을 확정하지 않으며, 종이 확인되지 않은 국내 유통 뽕잎에 하나의 성분값을 일괄 적용할 수도 없다.",
-        "This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":"이베라그리스육지거북을 대상으로 한 통제 급여시험이 아니며 사육 급여 비율·고정 빈도·무제한 급여 또는 육지거북에 한정된 독성 용량을 확정하지 않는다.",
+        "This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":"이베라그리스육지거북을 대상으로 한 통제 급여시험이 아니며 사육 급여 비율·정해진 급여 빈도·무제한 급여 또는 육지거북에 한정된 독성 용량을 확정하지 않는다.",
         "This is not an exact-taxon Testudo graeca ibera trial. Historical-name linkage must not be used to transfer the conclusion to Chrysanthemum cinerariifolium, C. coccineum or unrelated taxa.":"정확한 분류군의 이베라그리스육지거북 시험이 아니다. 과거 학명 연결만을 근거로 결론을 Chrysanthemum cinerariifolium, C. coccineum 또는 무관한 분류군에 옮겨 적용하면 안 된다.",
         "This plant-chemistry study is not a tortoise feeding trial. It does not establish a Testudo graeca ibera toxic threshold, safe intake, frequency, or that all edible perilla cultivars contain equivalent perilla-ketone concentrations.":"이 식물화학 연구는 육지거북 급여시험이 아니다. 이베라그리스육지거북의 독성 역치·안전 섭취량·급여 빈도를 확정하지 않으며 모든 식용 들깨 품종의 페릴라케톤 농도가 같다고 볼 수도 없다.",
-        "This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":"이 전문 DB 항목은 이베라그리스육지거북의 통제 급여·독성시험이 아니다. 해당 분류를 정확한 사육 급여 비율·고정 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 동일한 안전성으로 바꾸어 해석하면 안 된다.",
-        "This specialist plant-database entry is not a controlled Testudo graeca ibera feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.":"이 전문 식물 DB 항목은 이베라그리스육지거북의 통제 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 옮기면 안 되며, 해당 분류는 정확한 사육 급여 비율·고정 빈도·무제한 급여를 규정하지 않는다.",
+        "This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":"이 전문 DB 항목은 이베라그리스육지거북의 통제 급여·독성시험이 아니다. 해당 분류를 정확한 사육 급여 비율·정해진 급여 빈도·독성 용량·무제한 급여 또는 명시되지 않은 식물 부위·근연 분류군의 동일한 안전성으로 바꾸어 해석하면 안 된다.",
+        "This specialist plant-database entry is not a controlled Testudo graeca ibera feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.":"이 전문 식물 DB 항목은 이베라그리스육지거북의 통제 급여·독성시험이 아니다. 일반명이 비슷하다는 이유로 다른 속·종에 판정을 옮기면 안 되며, 해당 분류는 정확한 사육 급여 비율·정해진 급여 빈도·무제한 급여를 규정하지 않는다.",
         "This specialist verdict is not a Testudo graeca ibera toxicity trial. It does not establish a tortoise toxic dose, identical susceptibility to mammals, or identical perilla-ketone content across edible cultivars.":"이 전문 판정은 이베라그리스육지거북 독성시험이 아니다. 육지거북 독성 용량, 포유류와 동일한 감수성 또는 모든 식용 품종의 동일한 페릴라케톤 함량을 확정하지 않는다.",
         "Wild consumption does not establish unlimited captive feeding, a precise ration, or equivalence for every Testudo graeca population.":"야생에서 섭식했다는 관찰만으로 사육 환경의 무제한 급여·정확한 식단 비율 또는 모든 Testudo graeca 개체군에 대한 동등성을 확정할 수 없다.",
     }
@@ -646,7 +646,7 @@ def evidence_limit_display(value):
         return exact_final[v]
     # Korean mode: never expose a wholly untranslated evidence limitation.
     if re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
-        return "이 자료만으로 육지거북의 정확한 급여량·고정 급여 빈도·식단 비율·독성 용량·무제한 급여 또는 자료가 직접 다루지 않은 식물 부위·근연 분류군의 안전성을 확정할 수 없다. 원자료가 실제로 다룬 범위 안에서만 적용한다."
+        return "이 자료만으로 육지거북의 정확한 급여량·정해진 급여 빈도·식단 비율·독성 용량·무제한 급여 또는 자료가 직접 다루지 않은 식물 부위·근연 분류군의 안전성을 확정할 수 없다. 원자료가 실제로 다룬 범위 안에서만 적용한다."
     return v
 
 def evidence_role(e):
