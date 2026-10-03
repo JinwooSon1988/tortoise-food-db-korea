@@ -124,8 +124,8 @@ for pid in sorted(public_ids - page_dirs):
     errors.append(f"{pid}: public plant has no detail page")
 for pid in sorted(page_dirs - public_ids):
     errors.append(f"{pid}: detail page exists for a non-public plant (orphan or candidate)")
-ORDER = ["decision", "<h2>종별 특이사항</h2>", "<h2>판정 범위와 주의사항</h2>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>"]
-MAJOR = ["<h2>급여할 때 확인할 핵심</h2>", "<h2>종별 특이사항</h2>", "<h2>판정 범위와 주의사항</h2>", "<h3>적용 범위</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>", "<h2>영양성분은 참고자료로 확인하세요</h2>", "<h2>다른 식물도 확인하기</h2>", "야생에서는 실제로 어떻게 먹었나?"]
+ORDER = ["decision", "<h2>종별 특이사항</h2>", "<h2>이 판정을 어디까지 적용할 수 있나</h2>", "<h2>왜 이렇게 판정했는지 자세히 보기</h2>", "<h2>영양성분 수치는 이렇게 보세요</h2>"]
+MAJOR = ["<h2>실제로 어떻게 급여하나</h2>", "<h2>종별 특이사항</h2>", "<h2>이 판정을 어디까지 적용할 수 있나</h2>", "<h3>적용 범위</h3>", "<h3>아직 확인되지 않은 내용</h3>", "<h2>왜 이렇게 판정했는지 자세히 보기</h2>", "<h2>영양성분 수치는 이렇게 보세요</h2>", "<h2>비슷한 식물도 확인하기</h2>", "야생에서는 실제로 어떻게 먹었나?"]
 for p in public:
     pid = p["id"]
     path = ROOT / "plant" / pid / "index.html"
@@ -150,7 +150,7 @@ for p in public:
     expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(g["label"]), quote=True)}"'
     if expected_aria not in decision_text:
         errors.append(f"{pid}: decision card must expose grade and verdict label to assistive technology")
-    if '<summary>판정의 적용 범위와 확인되지 않은 내용 보기</summary>' not in text:
+    if '<summary>적용 범위와 아직 확인되지 않은 내용 보기</summary>' not in text:
         errors.append(f"{pid}: collapsed scope control must describe both applicability and evidence limits")
     if g["grade"] == "보류":
         if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다")):
@@ -173,11 +173,11 @@ for p in public:
     for token in MAJOR:
         if text.count(token) > 1:
             errors.append(f"{pid}: duplicate major section {token}")
-    for token in ("<h3>적용 범위</h3>", "<h3>근거로 확인되지 않은 것</h3>", "<h2>판정 근거 자세히 보기</h2>"):
+    for token in ("<h3>적용 범위</h3>", "<h3>아직 확인되지 않은 내용</h3>", "<h2>왜 이렇게 판정했는지 자세히 보기</h2>"):
         if token not in text:
             errors.append(f"{pid}: required section missing {token}")
     positions = [text.find(t) for t in ORDER if t in text]
-    if positions != sorted(positions) or text.find("decision") > text.find("<h2>판정 범위와 주의사항</h2>"):
+    if positions != sorted(positions) or text.find("decision") > text.find("<h2>이 판정을 어디까지 적용할 수 있나</h2>"):
         errors.append(f"{pid}: section order broken (decision → species notes → scope/limits → evidence → nutrition)")
     notes = species_notes(rows, a)
     if bool(notes) != ("<h2>종별 특이사항</h2>" in text):
@@ -194,19 +194,19 @@ for p in public:
             errors.append(f"{pid}: high-risk identity warning must remain visible above the collapsed scope detail")
     if not high_risk and (has_alert or not has_note):
         errors.append(f"{pid}: ordinary plant must show the neutral identity note, not the warning")
-    if "직접 근거</b>" not in text or "간접 근거</b>" not in text:
-        errors.append(f"{pid}: direct vs indirect evidence distinction missing")
     linked = [evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids", [])) if eid in evidence_by_id]
-    expected_direct = sum(1 for e in linked if e.get("directness") == "direct")
-    expected_context = sum(1 for e in linked if e.get("directness") != "direct")
-    if f"<span>직접 {expected_direct}</span>" not in text:
-        errors.append(f"{pid}: displayed direct-evidence count is not traceable to canonical evidence")
-    if expected_context and "간접·맥락" not in text:
-        errors.append(f"{pid}: contextual evidence exists but is not visibly distinguished")
-    if linked and "숫자가 많다고 판정의 신뢰도나 안전성이 더 높다는 뜻은 아니다" not in text:
-        errors.append(f"{pid}: evidence counts must not imply a confidence or safety score")
-    if linked and "이 자료의 역할" not in text:
+    # Reader-first evidence UI identifies source directness in Korean and separates facts from limits.
+    direct_labels = {"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
+    for e in linked:
+        direct_label = direct_labels.get(e.get("directness"))
+        if direct_label and direct_label not in text:
+            errors.append(f"{pid}: evidence directness label missing ({direct_label})")
+    if linked and "출처 수가 많다고 더 안전하다는 뜻은 아니다" not in text:
+        errors.append(f"{pid}: evidence summary must not imply a confidence or safety score")
+    if linked and "이 자료를 왜 봤나?" not in text:
         errors.append(f"{pid}: evidence cards must explain each source's role in plain Korean")
+    if linked and ("이 자료에서 실제로 확인되는 것" not in text or "여기서 확대해석하면 안 되는 것" not in text):
+        errors.append(f"{pid}: evidence cards must separate verified facts from unsupported extrapolation")
     # Every linked public source is traceable: URL first, then DOI/PMID fallback.
     if linked and text.count('class="sourceopen"') < len(linked):
         errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
