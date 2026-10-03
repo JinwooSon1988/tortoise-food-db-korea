@@ -279,7 +279,7 @@ assert all(re.search(r'[가-힣]', render_source_kind({'source_type': raw})[1]) 
 # Metadata localization gate: values rendered in the Korean evidence cards must not leak raw English/code labels.
 meta_start = generator.index('def animal_taxon_display')
 meta_end = generator.index('\ndef evidence_support_display', meta_start)
-meta_ns = {}
+meta_ns = {'re': re}
 exec(generator[meta_start:meta_end], meta_ns)
 render_animal = meta_ns['animal_taxon_display']
 render_part = meta_ns['part_state_display']
