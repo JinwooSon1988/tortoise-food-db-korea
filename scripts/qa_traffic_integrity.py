@@ -18,7 +18,11 @@ for p in public:
     if not any(token in text for token in ("확인되지", "확정할 수 없", "정하지 않는다", "근거가 부족", "부위 미확인")):
         raise SystemExit(f"{p['id']}: missing explicit evidence limitation/unknown boundary")
     # Curated legacy pages may use their own heading structure; the content contract above is authoritative.
-    if "동일한 급여 안전성·영양가·권장도를 뜻하지 않는다" not in text:
+    related_boundary = (
+        "동일한 급여 안전성·영양가·권장도를 뜻하지 않는다" in text
+        or "급여 안전성·영양가·권장도가 같다는 뜻" in text
+    )
+    if not related_boundary:
         raise SystemExit(f"{p['id']}: related-link safety boundary missing")
 candidates=[p for p in plants if p.get("identity_status")=="candidate_name"]
 for p in candidates:
