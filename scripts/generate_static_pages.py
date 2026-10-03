@@ -746,8 +746,20 @@ for p in plants:
     gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
     decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="decisionlabel">급여 판정 · {esc(basis)}</div><div class="verdictline"><span class="gradeletter" aria-hidden="true">{esc(grade)}</span><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
 
-    # 2) Practical reading (only when there is a representative assessment).
-    practical_html=(f'''<section class="card practical"><h2>실제로 급여할 때 핵심</h2><div class="practicalgrid"><div><b>식단에서의 역할</b><p>{esc(role or "현재 근거만으로 주식으로 권하기 어렵다. 다른 먹이와 함께 보조적으로 판단한다.")}</p></div><div><b>어느 부위에 해당하나</b><p>{esc(part_note)}</p></div></div></section>''' if a else "")
+    # 2) Practical reading: translate evidence boundaries into an immediate husbandry action.
+    if grade=="A":
+        feeding_action="다른 적합한 식물과 섞어 혼합식 구성에 사용할 수 있다. 이 등급도 단독·무제한 급여를 뜻하지 않는다."
+    elif grade=="B":
+        feeding_action="혼합식의 일부로만 사용한다. 이 식물을 식단의 중심으로 삼지 말고, 아래에 명시된 부위와 제한사항을 지킨다."
+    elif grade=="C":
+        feeding_action="주식으로 사용하지 않는다. 다양한 식단에 가끔 보조적으로 넣는 범위만 지지된다."
+    elif grade=="D":
+        feeding_action="계획 급여 목록에서 제외한다. 우발적으로 조금 먹은 경우의 독성 여부와 계획적으로 먹이는 것은 별개의 문제다."
+    else:
+        feeding_action="안전하다고 가정해 급여하지 않는다. 공개 근거가 보강될 때까지 판정을 보류한다."
+    quantified=any(re.search(r"(percentage|percent|%|frequency|daily|weekly|per week|급여량|빈도|비율)", str(e.get("supports") or ""), re.I) for e in linked_evidence)
+    quantity_note=("연결 근거에 정량 정보가 있으므로 아래 원자료 범위에서 확인한다." if quantified else "몇 % 또는 주 몇 회처럼 정할 직접 정량 근거는 확인되지 않았다. 근거 없는 숫자는 제시하지 않는다.")
+    practical_html=(f'''<section class="card practical"><h2>실제로 어떻게 급여하나</h2><div class="practicalgrid"><div><b>지금 할 일</b><p>{esc(feeding_action)}</p></div><div><b>어느 부위에 해당하나</b><p>{esc(part_note)}</p></div><div><b>급여량·빈도</b><p>{esc(quantity_note)}</p></div><div><b>자료상 식단 역할</b><p>{esc(role or "구체적인 식단 역할은 현재 근거만으로 정하지 않는다.")}</p></div></div></section>''' if a else "")
 
     # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
