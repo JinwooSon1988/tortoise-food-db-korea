@@ -750,10 +750,10 @@ for p in plants:
         cur_html=(f'<p><b>{rich(cur["headline"])}</b></p><ul>{"".join(f"<li>{rich(x)}</li>" for x in cur.get("items",[]))}</ul>' if cur else "")
         identity_html=f'''<div class="identity-alert" data-identity="alert"><h3>⚠ 식물동정 주의</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{cur_html}{photo_html}</div>'''
     else:
-        identity_text="이름과 학명은 검색 기준이다. 실제 급여할 식물의 종과 농약·오염 여부는 따로 확인한다."
-        identity_html=f'''<div class="identity-note" data-identity="note"><h3>식물동정 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{photo_html}</div>'''
+        identity_text="검색 결과의 이름·학명과 실제 먹이려는 식물이 같은 종인지 확인한다. 농약 사용이나 오염 가능성도 급여 전에 별도로 확인한다."
+        identity_html=f'''<div class="identity-note" data-identity="note"><h3>먹이기 전 식물 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p>{photo_html}</div>'''
     limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
-    scope_html=f'''<section class="card scopecard" id="scope"><h2>판정 범위와 주의사항</h2>{identity_html if identity_warning else ""}<details class="scopefold"><summary>판정의 적용 범위와 확인되지 않은 내용 보기</summary><div class="scopebody"><div><h3>적용 범위</h3><p>{esc(scope)}</p></div>{"" if identity_warning else identity_html}<div><h3>근거로 확인되지 않은 것</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></div></details></section>'''
+    scope_html=f'''<section class="card scopecard" id="scope"><h2>이 판정을 어디까지 적용할 수 있나</h2>{identity_html if identity_warning else ""}<details class="scopefold"><summary>적용 범위와 아직 확인되지 않은 내용 보기</summary><div class="scopebody"><div><h3>적용 범위</h3><p>{esc(scope)}</p></div>{"" if identity_warning else identity_html}<div><h3>아직 확인되지 않은 내용</h3><div class="ko-evidence"><ul>{limits_html}</ul></div><p class="en-evidence" hidden>{esc(en_scope)}</p><p class="principles">급여량·빈도·장기 안전성은 확인된 근거 범위를 넘어 정하지 않는다. 야생 섭식 기록 ≠ 무제한 급여 · 사람용 영양자료 ≠ 육지거북 독성 한계치 · 근거 부족 ≠ 안전.</p></div></div></details></section>'''
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
     ordered=sorted(linked_evidence,key=lambda e:source_kind(e)[0])
@@ -804,10 +804,10 @@ for p in plants:
         nutrition_body=f'''<div class="nutgrid"><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div><div><b>칼륨</b><strong>{nv("potassium_mg"," mg")}</strong></div><div><b>비타민 C</b><strong>{nv("vitamin_c_mg"," mg")}</strong></div></div><p class="small">100 g 기준 · {esc(nu.get("basis"))} · {esc(nu.get("food_description"))} · 원자료 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'''
     else:
         nutrition_body='<p class="small">검증된 공식 영양성분 자료가 아직 연결되지 않았다. 자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 쓰지 않는다.</p>'
-    nutrition_html=f'''<section class="card" id="nutrition"><h2>영양성분은 참고자료로 확인하세요</h2><p class="small">사람용 식품성분 자료다. Ca:P·섬유질 등 수치는 독성·항영양성분·식물동정·대상종 근거를 대신하지 않으며, 이 수치만으로 급여 등급을 바꾸지 않는다.</p>{nutrition_body}</section>'''
+    nutrition_html=f'''<section class="card" id="nutrition"><h2>영양성분 수치는 이렇게 보세요</h2><p class="small">사람용 식품성분 자료를 참고용으로 보여준다. Ca:P·섬유질 수치만으로 독성·항영양성분·식물의 정확한 종·육지거북에서의 안전성을 판단할 수 없으므로, 영양수치만 보고 급여 등급을 바꾸지 않는다.</p>{nutrition_body}</section>'''
 
     related_html="".join(f'<a class="related" href="../{esc(x["id"])}/">{esc(x.get("ko") or x["id"])} →</a>' for x in related_for(p))
-    footer_html=f'''<section class="card"><h2>다른 식물도 확인하기</h2><div class="relatedgrid">{related_html}</div><p class="small">같은 과·카테고리로 묶은 탐색 링크다. 식물학적 유사성이 동일한 급여 안전성·영양가·권장도를 뜻하지 않는다.</p><div class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></div></section>'''
+    footer_html=f'''<section class="card"><h2>비슷한 식물도 확인하기</h2><div class="relatedgrid">{related_html}</div><p class="small">같은 과·카테고리에서 함께 찾아볼 수 있는 식물이다. 서로 비슷해 보여도 급여 안전성·영양가·권장도가 같다는 뜻은 뜻하지 않는다.</p><div class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></div></section>'''
 
     alias_html=f'<div class="aliases">다른 이름 · {esc(", ".join(aliases[:6]))}</div>' if aliases else ""
     schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"inLanguage":"ko","isPartOf":{"@type":"WebSite","name":"거북밥 DB Korea","url":SITE_URL+"/"}},ensure_ascii=False,separators=(",",":"))
