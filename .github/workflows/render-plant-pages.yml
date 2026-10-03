@@ -30,7 +30,6 @@ on:
       - 'data/verified_plant_images_v56.json'
       - 'data/ibera_direct_feeding_evidence_v56.json'
       - 'data/korean_retail_name_map.json'
-      - 'scripts/generate_static_pages.py'
       - 'scripts/patch_curated_social_metadata.py'
       - 'scripts/inject_plant_detail_v56.py'
       - 'scripts/public_verdict.py'
