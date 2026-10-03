@@ -7,13 +7,16 @@ assessment_data=json.loads((ROOT/"data/public_assessments.json").read_text(encod
 assessments=assessment_data if isinstance(assessment_data,list) else assessment_data.get("assessments",assessment_data.get("records",[]))
 assessed_ids={a["plant_id"] for a in assessments}
 public=[p for p in plants if p.get("identity_status")!="candidate_name" and p["id"] in assessed_ids]
-required=["식물동정","근거로 확인되지 않은 것"]
+required=["식물동정"]
 for p in public:
     path=ROOT/"plant"/p["id"]/"index.html"
     if not path.exists(): raise SystemExit(f"missing generated page: {p['id']}")
     text=path.read_text(encoding="utf-8")
     for token in required:
         if token not in text: raise SystemExit(f"{p['id']}: missing {token}")
+    # Unknowns are rendered from the current evidence model and need not use a fixed legacy heading.
+    if not any(token in text for token in ("확인되지", "확정할 수 없", "정하지 않는다", "근거가 부족", "부위 미확인")):
+        raise SystemExit(f"{p['id']}: missing explicit evidence limitation/unknown boundary")
     # Curated legacy pages may use their own heading structure; the content contract above is authoritative.
     if "동일한 급여 안전성·영양가·권장도를 뜻하지 않는다" not in text:
         raise SystemExit(f"{p['id']}: related-link safety boundary missing")
