@@ -720,6 +720,18 @@ for p in plants:
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
     indirect_count=len(linked_evidence)-direct_count-husbandry_count
     part_note=" / ".join(sorted({part_state_display(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")})) or "근거 자료에 부위 정보가 명시되지 않음"
+    # Reader-first evidence explanation: expose verified facts before source taxonomy.
+    support_facts=[]
+    for e in linked_evidence:
+        s=evidence_support_display(e.get("supports"))
+        if s and s not in support_facts:
+            support_facts.append(s)
+    primary_fact=support_facts[0] if support_facts else ""
+    weak_summary=bool(summary and (len(summary)<55 or re.match(r"^(전문|Merck|BCG|The Tortoise Table|Tortoise Table|출처|자료|연구)", summary, re.I)))
+    if a and primary_fact and weak_summary:
+        summary_display=f"확인된 근거: {primary_fact} 현재 판정은 이 근거가 직접 확인한 범위만 적용한다."
+    else:
+        summary_display=summary
     en_pending=("This plant has a reviewed evidence record. The feeding grade is limited to the evidence scope shown below; it does not imply unlimited feeding." if a else "Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence.")
     en_scope=("Reviewed evidence is available. Check source taxon, plant part, directness, and limitations below before applying the result." if a else "Evidence is incomplete; do not transfer safety assumptions across taxa.")
     en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
@@ -727,7 +739,7 @@ for p in plants:
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
     gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
-    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="decisionlabel">급여 판정 · {esc(basis)}</div><div class="verdictline"><span class="gradeletter" aria-hidden="true">{esc(grade)}</span><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
+    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="decisionlabel">급여 판정 · {esc(basis)}</div><div class="verdictline"><span class="gradeletter" aria-hidden="true">{esc(grade)}</span><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
 
     # 2) Practical reading (only when there is a representative assessment).
     practical_html=(f'''<section class="card practical"><h2>실제로 급여할 때 핵심</h2><div class="practicalgrid"><div><b>식단에서의 역할</b><p>{esc(role or "현재 근거만으로 주식으로 권하기 어렵다. 다른 먹이와 함께 보조적으로 판단한다.")}</p></div><div><b>어느 부위에 해당하나</b><p>{esc(part_note)}</p></div></div></section>''' if a else "")
