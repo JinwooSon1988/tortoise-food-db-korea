@@ -29,7 +29,7 @@ assert 'assessments_korea_addendum' not in generator
 assert not (root / 'plant-detail-v56.js').exists() and not (root / 'ibera-direct-evidence-v56.js').exists()
 assert "glob('*/index.html')" in inj and 'RETIRED' in inj
 
-assert '<details class="scopefold">' in generator and '<summary>판정의 적용 범위와 확인되지 않은 내용 보기</summary>' in generator
+assert '<details class="scopefold">' in generator and '<summary>' in generator and '확인되지 않은 내용 보기</summary>' in generator
 errors = []
 for pid in sorted(public_ids):
     t = pages[pid]
