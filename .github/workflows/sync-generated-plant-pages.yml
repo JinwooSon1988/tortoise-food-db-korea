@@ -2,6 +2,10 @@ name: Sync generated plant pages
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_static_pages.py'
 
 permissions:
   contents: write
