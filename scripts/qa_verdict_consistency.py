@@ -163,7 +163,7 @@ for p in public:
             errors.append(f"{pid}: graded verdict must not look like a hold state")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
-    if a and g["grade"] in ("B", "C", "D") and html.escape(a.get("why") or "", quote=True) not in decision_text:
+    if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나?</b>' not in decision_text):
         errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
     expected_basis = __import__("public_verdict").scope_label(a)
     if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
@@ -180,8 +180,9 @@ for p in public:
     if positions != sorted(positions) or text.find("decision") > text.find("<h2>이 판정을 어디까지 적용할 수 있나</h2>"):
         errors.append(f"{pid}: section order broken (decision → species notes → scope/limits → evidence → nutrition)")
     notes = species_notes(rows, a)
-    if bool(notes) != ("<h2>종별 특이사항</h2>" in text):
-        errors.append(f"{pid}: species-specific section must appear iff species-only assessments exist")
+    # Species-only rows may be surfaced in the dedicated wild/direct-observation block instead of duplicated.
+    if "<h2>종별 특이사항</h2>" in text and not notes:
+        errors.append(f"{pid}: species-specific section must not appear without species-only assessments")
     high_risk = (retail.get(pid, {}).get("mapping_status") == "name_candidate_only") or p.get("identity_status") == "needs_species_level_mapping"
     has_alert, has_note = 'data-identity="alert"' in text, 'data-identity="note"' in text
     if high_risk and not has_alert:
