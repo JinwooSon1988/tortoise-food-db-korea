@@ -702,7 +702,8 @@
     "role": "루꼴라 소량 순환 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_rocket"
+      "tortoise_table_rocket",
+      "bennett_eruca_glucosinolate_2002"
     ],
     "limits": [
       "제한 급여 범위",
@@ -710,7 +711,7 @@
       "단독 주식·고비율 반복 급여 아님",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물자료는 루꼴라를 독성 식물로 보지는 않지만, 배추과 식물의 갑상선종 유발물질을 이유로 많은 양의 반복 급여를 피하도록 ‘제한 급여’로 분류한다. 정확한 위해 용량은 확인되지 않았으므로 다양한 식단의 작은 보조 구성으로만 사용한다.",
+    "why": "전문 육지거북 식물자료는 루꼴라를 독성 식물로 분류하지 않지만 많은 양의 반복 급여는 피하도록 권한다. Eruca sativa 잎의 원논문에서는 LC/MS·NMR로 주요 glucosinolate와 추가 glucosinolate가 직접 확인되어, 배추과 특유의 제한성분이 실제 잎에 존재한다는 점은 분명하다. 그러나 이 연구가 육지거북의 갑상선 영향이나 안전 용량을 측정한 것은 아니므로 위해를 과장하지 않고 C 수준의 소량 순환 보조로 유지한다.",
     "applicability_note": "Eruca spp. 일반 육지거북 근거. 이베라 직접 판정이 아님."
   },
   {
@@ -720,7 +721,8 @@
     "role": "비트잎 극소량·드문 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_beetroot"
+      "tortoise_table_beetroot",
+      "simpson_beta_vulgaris_oxalate_2009"
     ],
     "limits": [
       "oxalic acid가 높아 아주 소량만 매우 드물게 사용",
@@ -728,7 +730,7 @@
       "비트 뿌리는 급여하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님"
     ],
-    "why": "전문 육지거북 식물자료는 비트 잎을 독성으로 보지는 않지만 옥살산 함량이 높아 소량·가끔만 급여하도록 권한다. 이 판정은 잎·꽃에 관한 것이며 뿌리는 명시적으로 제외된다. 정확한 독성 용량을 뜻하는 것은 아니므로, 잎을 혼합식의 제한적 보조로만 사용한다.",
+    "why": "전문 육지거북 식물자료는 비트 잎을 독성 식물로 보지는 않지만 옥살산 때문에 소량·가끔만 사용하도록 권한다. Beta vulgaris var. cicla 잎을 직접 분석한 원논문에서도 성장단계에 따라 높은 수용성 옥살레이트가 확인되어, 잎 자체의 제한요인이 실제 성분자료로 뒷받침된다. 다만 이 연구는 육지거북 급여시험이 아니므로 정확한 안전량을 정하지 않고 C 수준의 드문 보조로 제한한다.",
     "applicability_note": "Beta vulgaris 잎 일반 육지거북 근거. 뿌리와 분리한다."
   },
   {
@@ -1502,13 +1504,14 @@
     "role": "계획 급여 대상에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_lambsquarters"
+      "tortoise_table_lambsquarters",
+      "savage_chenopodium_oxalate_2019"
     ],
     "limits": [
       "Chenopodium album에 한정",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 명아주(Chenopodium album)의 지상부를 ‘급여하지 않음’으로 분류한다. 현재 연결 근거는 육지거북의 독성 용량·용량-반응을 정한 직접 시험이 아니다. 따라서 중독을 과장하지 않되 계획 식단에는 포함하지 않는다.",
+    "why": "전문 육지거북 식물자료는 명아주(Chenopodium album)를 계획 급여에서 제외한다. 여기에 정확한 C. album 잎을 분석한 원논문에서 생잎 총 옥살레이트가 1112.4 mg/100 g 건물로 측정되어, 제한성분이 실제 잎에 존재한다는 근거도 확인된다. 다만 이 수치는 육지거북의 독성 용량이 아니므로 ‘한입=중독’으로 확대하지 않고, 현재는 계획 식단에서 제외하는 D 판정을 유지한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
