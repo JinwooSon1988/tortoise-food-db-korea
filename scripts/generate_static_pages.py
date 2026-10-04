@@ -781,7 +781,7 @@ for p in plants:
     elif grade=="B":
         feeding_action="혼합식의 일부로만 사용한다. 이 식물을 식단의 중심으로 삼지 말고, 아래에 명시된 부위와 제한사항을 지킨다."
     elif grade=="C":
-        feeding_action="주식으로 사용하지 않는다. 다양한 식단에 가끔 보조적으로 넣는 범위만 지지된다."
+        feeding_action="주식으로 사용하지 않는다. 다른 적합한 먹이와 함께 가끔 보조적으로만 급여한다."
     elif grade=="D":
         feeding_action="계획 급여 목록에서 제외한다. 우발적으로 조금 먹은 경우의 독성 여부와 계획적으로 먹이는 것은 별개의 문제다."
     else:
