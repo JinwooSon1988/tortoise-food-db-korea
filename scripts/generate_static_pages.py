@@ -838,7 +838,7 @@ for p in plants:
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
-        evidence_cards.append(f'''<article class="evcard"><h3>{title_html}</h3><p>{esc(evidence_support_display(e.get("supports")))}</p><p class="limit"><b>근거의 한계</b> · {esc(evidence_limit_display(e.get("does_not_support")))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
+        evidence_cards.append(f'''<article class="evcard"><h3>{title_html}</h3><p>{esc(evidence_support_display(e.get("supports")))}</p><p class="limit"><b>이 자료만으로는 알 수 없는 것</b> · {esc(evidence_limit_display(e.get("does_not_support")))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 연결된 개별 근거자료가 없다. 먹여도 안전하다고 판단할 근거가 확보되기 전에는 급여하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
     summary_chips=f'<p class="evcountnote"><b>근거 한눈에 보기</b> · 이 결론에는 확인 가능한 출처 {len(linked_evidence)}건이 연결되어 있다. 그중 해당 거북·식물·질문을 직접 다룬 자료는 {direct_count}건, 전문 사육자료는 {husbandry_count}건이다. 출처가 많다는 사실만으로 더 안전한 먹이라는 뜻은 아니다.</p>'
@@ -848,7 +848,7 @@ for p in plants:
     conflict_html=""
     if wild and risk and (risk.get("signals") or risk.get("publication_blocker")):
         risk_items="".join(f"<li><b>{esc(x.get('type') or '위험 신호')}</b> — {esc(x.get('finding'))}<br><span class=\"small\">{esc(x.get('interpretation'))}</span></li>" for x in risk.get("signals",[]))
-        conflict_html=f'''<div class="conflict"><b>⚠ 근거 충돌 또는 안전성 미해결</b><p>야생 섭식 기록이 있지만 독성·항영양성분 또는 다른 동물의 수의학적 위험 신호도 확인됐다. 야생에서 먹는다는 사실만으로 사육 급여 안전성을 확정하지 않는다.</p><ul>{risk_items}</ul><p><b>현재 공개판정의 걸림돌:</b> {esc(risk.get("publication_blocker") or "추가 검토 필요")}</p></div>'''
+        conflict_html=f'''<div class="conflict"><b>⚠ 근거 충돌 또는 안전성 미해결</b><p>야생 섭식 기록이 있지만 독성·항영양성분 또는 다른 동물의 수의학적 위험 신호도 확인됐다. 야생에서 먹는다는 사실만으로 사육 급여 안전성을 확정하지 않는다.</p><ul>{risk_items}</ul><p><b>현재 결론을 더 확실하게 하려면:</b> {esc(risk.get("publication_blocker") or "추가 검토 필요")}</p></div>'''
     wild_cards=[]
     for w in wild:
         wild_cards.append(f'''<article class="evcard wildcard"><div class="evhead"><span>야생 섭식 기록</span><span>{esc(w.get("ibera_applicability") or "적용범위 확인 필요")}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북 미상")} · {esc(w.get("population_region") or "지역 미상")}</h3><dl class="evmeta"><dt>확인 방법</dt><dd>{esc(w.get("study_method") or "미상")}</dd><dt>먹은 부위</dt><dd>{esc(w.get("plant_part") or "미상")}</dd><dt>시기</dt><dd>{esc(w.get("season") or "미상")}</dd><dt>섭식 기록</dt><dd>{esc(w.get("feeding_signal") or "확인")}</dd></dl><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="ids">원자료 식물명 <i>{esc(w.get("plant_taxon_reported"))}</i> · 현재 수용명 <i>{esc(w.get("plant_taxon_accepted"))}</i> · {esc(w.get("source_id"))}</p></article>''')
