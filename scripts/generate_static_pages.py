@@ -752,9 +752,9 @@ for p in plants:
         # Do not disguise a bare specialist recommendation as a biological mechanism.
         bare_recommendation=bool(re.search(r"(분류한다|분류하며|권고한다|허용한다|급여 가능|제한 급여|급여하지 않음)", primary_fact)) and not re.search(r"(때문|이유|옥살|칼슘|독성|알칼로이드|배당체|탄닌|요오드|갑상선|전분|당|완하|질산|광독|흡수|섬유|섭식.*관찰)", primary_fact)
         if bare_recommendation:
-            summary_display=f"현재 확인된 출처는 이 식물을 {grade} 등급 범위로 다루지만, 제한·제외의 생물학적 이유나 안전 용량까지 제시하지는 않는다. 따라서 출처가 실제로 확인한 범위를 넘어 이유를 만들어내지 않고 보수적으로 적용한다."
+            summary_display=f"현재 확인된 출처에서는 이 식물을 {grade} 등급으로 분류하지만, 왜 제한하거나 제외해야 하는지에 대한 생물학적 이유와 안전 용량까지는 제시하지 않는다. 확인되지 않은 이유를 덧붙이지 않고 출처가 다룬 범위 안에서 판단한다."
         else:
-            summary_display=f"핵심 근거: {primary_fact} 이 판정은 여기서 실제로 확인된 식물 부위와 대상 범위까지만 적용한다."
+            summary_display=f"{primary_fact} 따라서 이 판정은 자료에서 실제로 확인된 식물 부위와 대상에 한해서만 적용한다."
     else:
         summary_display=summary
     en_pending=("This plant has a reviewed evidence record. The feeding grade is limited to the evidence scope shown below; it does not imply unlimited feeding." if a else "Evidence review is incomplete. Do not infer safety or unlimited feeding from missing evidence.")
