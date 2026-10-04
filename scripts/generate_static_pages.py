@@ -783,18 +783,18 @@ for p in plants:
 
     # 2) Practical reading: translate evidence boundaries into an immediate husbandry action.
     if grade=="A":
-        feeding_action="다른 적합한 식물과 섞어 혼합식 구성에 사용할 수 있다. 이 등급도 단독·무제한 급여를 뜻하지 않는다."
+        feeding_action="여러 적합한 식물과 섞어 일상 혼합식의 주요 구성으로 활용한다. 한 종류만 계속 주는 단독·무제한 급여는 피한다."
     elif grade=="B":
-        feeding_action="혼합식의 일부로만 사용한다. 이 식물을 식단의 중심으로 삼지 말고, 아래에 명시된 부위와 제한사항을 지킨다."
+        feeding_action="여러 적합한 식물과 함께 혼합식에 넣어 급여한다. 한 종류에 식단을 편중하지 않고, 아래의 부위·제한사항을 지킨다."
     elif grade=="C":
-        feeding_action="주식으로 사용하지 않는다. 다른 적합한 먹이와 함께 가끔 보조적으로만 급여한다."
+        feeding_action="주식으로 쓰지 않는다. 검증된 먹이를 중심으로 구성하고, 필요할 때 소량을 가끔 섞는 정도로 사용한다."
     elif grade=="D":
-        feeding_action="계획 급여 목록에서 제외한다. 우발적으로 조금 먹은 경우의 독성 여부와 계획적으로 먹이는 것은 별개의 문제다."
+        feeding_action="평소 식단에는 넣지 않는다. 우발적으로 조금 먹은 상황과 일부러 반복 급여하는 것은 별개의 문제다."
     else:
         feeding_action="안전하다고 가정해 급여하지 않는다. 공개 근거가 보강될 때까지 판정을 보류한다."
     quantified=any(re.search(r"(percentage|percent|%|frequency|daily|weekly|per week|급여량|빈도|비율)", str(e.get("supports") or ""), re.I) for e in linked_evidence)
     quantity_note=("연결 근거에 정량 정보가 있으므로 아래 원자료 범위에서 확인한다." if quantified else "몇 % 또는 주 몇 회처럼 정할 직접 정량 근거는 확인되지 않았다. 근거 없는 숫자는 제시하지 않는다.")
-    practical_html=(f'''<section class="card practical"><h2>어떻게 먹이면 되나</h2><p><b>{esc(feeding_action)}</b></p><p class="partscope">대상 부위 · {esc(part_note)}{(" · 정량 급여기준은 원자료 범위에서 확인" if quantified else " · 근거 없는 급여 횟수·비율은 정하지 않음")}</p></section>''' if a else "")
+    practical_html=(f'''<section class="card practical"><h2>어떻게 먹이나</h2><p><b>{esc(feeding_action)}</b></p>{f'<p class="roleline"><span>이 식물의 역할</span> {esc(role)}</p>' if role else ""}<p class="partscope"><span>급여 부위</span> {esc(part_note)}{(" · 정량 기준은 확인된 원자료 범위에서만 적용" if quantified else "")}</p></section>''' if a else "")
 
     # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
