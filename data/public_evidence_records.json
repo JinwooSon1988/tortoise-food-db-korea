@@ -4154,6 +4154,44 @@
       "doi": "10.3390/biom10101391",
       "pmid": "33003576",
       "url": "https://pubmed.ncbi.nlm.nih.gov/33003576/"
+    },
+    {
+      "id": "di_noia_rumex_oxalate_2021",
+      "plant_ids": [
+        "sorrel"
+      ],
+      "source_title": "Evaluation of Major Minerals and Trace Elements in Wild and Domesticated Edible Herbs Traditionally Used in the Mediterranean Area",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Rumex acetosa",
+      "plant_part_state": "leaves; wild and cultivated",
+      "directness": "composition_only",
+      "supports": "The study measured nitrate and oxalate in Rumex acetosa leaves under wild and cultivation conditions. Open-field R. acetosa leaves reached 8.5 mg oxalate/g fresh weight, confirming substantial oxalate in the exact species and leaf part.",
+      "does_not_support": "This is plant composition, not a tortoise feeding study. The measured oxalate level cannot be converted into a tortoise toxic dose, fixed safe serving, or proof that accidental small ingestion causes poisoning.",
+      "year": 2021,
+      "doi": "10.1007/s12011-020-02467-3",
+      "pmid": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
+    },
+    {
+      "id": "rowell_rahier_salix_leaf_glycosides_1984",
+      "plant_ids": [
+        "willowleaf"
+      ],
+      "source_title": "The presence or absence of phenolglycosides in Salix (Salicaceae) leaves and the level of dietary specialisation of some of their herbivorous insects",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant chemistry and herbivorous insects",
+      "applicability": "composition_only",
+      "plant_taxon": "Salix spp.",
+      "plant_part_state": "leaves",
+      "directness": "composition_only",
+      "supports": "Comparative work on European Salix species showed that willow leaves differ substantially in secondary chemistry, including phenolic glycosides. This supports treating Salix leaf chemistry as species-dependent rather than assuming all willow leaves are compositionally equivalent.",
+      "does_not_support": "This study concerns willow chemistry and herbivorous insects, not tortoises. It does not establish that phenolic glycosides make willow leaves toxic to tortoises, nor does it define a tortoise toxic dose or justify a genus-wide poisoning claim.",
+      "year": 1984,
+      "doi": "10.1007/BF00377368",
+      "pmid": "28310733",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28310733/"
     }
   ]
 }
