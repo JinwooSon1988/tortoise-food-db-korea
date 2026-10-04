@@ -672,7 +672,7 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .small{font-size:13px;color:var(--muted)}h1{margin:0}h2{font-size:18px;margin:0 0 8px}h3{font-size:15px;margin:0 0 6px}ul{padding-left:20px;margin:6px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;scroll-margin-top:18px}
 .detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnav a{display:inline-flex;align-items:center;min-height:44px;font-weight:850;text-decoration:none;color:var(--forest)}.detailnav span{color:var(--muted)}
-.planthead{padding:6px 2px 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}.plantidentity{min-width:0}.headphoto{margin:0}.headphoto img{width:132px;height:112px;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:#fff;display:block}.planthead h1{font-size:clamp(30px,6vw,44px);letter-spacing:-.04em;line-height:1.15}.scientific{color:var(--muted);font-size:15px;margin-top:2px}.aliases{font-size:12px;color:var(--muted);margin-top:4px}
+.planthead{padding:6px 2px 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}.plantidentity{min-width:0}.headphoto{margin:0}.headphoto{width:132px}.headphoto img{width:132px;height:112px;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:#fff;display:block}.headphoto figcaption{font-size:9px;line-height:1.25;margin-top:3px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.planthead h1{font-size:clamp(30px,6vw,44px);letter-spacing:-.04em;line-height:1.15}.scientific{color:var(--muted);font-size:15px;margin-top:2px}.aliases{font-size:12px;color:var(--muted);margin-top:4px}
 .green{background:var(--green)}.yellow{background:var(--yellow)}.hold{background:var(--hold)}.danger{background:var(--danger);border-color:#e8bcbc}
 .decision{border-width:2px;padding:20px 22px}.decisionlabel{font-size:12px;font-weight:800;color:var(--muted);margin-bottom:6px}
 .verdictline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.gradeletter{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:48px;padding:0 10px;border-radius:12px;background:#fff;border:2px solid rgba(0,0,0,.14);font-size:26px;font-weight:950}.hold .gradeletter{font-size:17px}
@@ -763,7 +763,7 @@ for p in plants:
     en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
     basis=scope_label(a)
     img=image_by_plant.get(pid)
-    header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"></figure>''' if img else "")
+    header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small"><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · {esc(img.get("license") or "")}</figcaption></figure>''' if img else "")
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
     gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
