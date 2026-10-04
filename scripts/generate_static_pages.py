@@ -290,8 +290,8 @@ def evidence_support_display(value):
         "Feed Sparingly. The assessment preserves the specialist source's high-oxalate caution, occasional-use framing and hydration caution.":"전문자료에서는 높은 옥살산염과 수분 관련 문제를 주의하며, 자주 주기보다 가끔 소량만 급여하도록 안내한다.",
         "Safe to Feed. Used as general-tortoise evidence for inclusion within a varied diet, not as a quantified staple prescription.":"일반 육지거북 자료에서 다양한 식단에 포함할 수 있는 급여 가능 근거로 사용한다. 구체적인 주식 비율을 정하는 자료는 아니다.",
         "Safe to Feed applies to leaves in the assessment evidence; it must not be transferred to cob, kernels or whole corn.":"급여 가능하다는 근거는 잎에 한정된다. 옥수수 속대·알곡이나 다른 부위까지 같은 결론을 적용하면 안 된다.",
-        "Feed in Moderation. The assessment applies this conservatively to sunflower leaf as a small rotational supplement.":"해바라기 잎을 순환식 식단의 작은 보조 구성으로만 보수적으로 제한 급여한다.",
-        "Leaves are treated as small/sparing supplementary material in the assessment; the conclusion is not extended to fruit.":"잎은 소량의 보조 식재료로만 평가하며 이 결론을 열매까지 확대하지 않는다.",
+        "Feed in Moderation. The assessment applies this conservatively to sunflower leaf as a small rotational supplement.":"해바라기 잎은 여러 적합한 먹이 사이에 가끔 소량 섞어 급여한다.",
+        "Leaves are treated as small/sparing supplementary material in the assessment; the conclusion is not extended to fruit.":"잎은 가끔 소량 사용하는 보조 먹이로 다루며, 열매까지 같은 결론을 적용하지 않는다.",
         "Feed Sparingly. The assessment limits this to small amounts of young leaves/flowers and does not extend the conclusion to fruit.":"어린 잎과 꽃을 소량·드물게 급여하는 범위로 제한하며 이 결론을 열매까지 확대하지 않는다.",
         "Feed Sparingly. The assessment uses the source's Cucurbita moschata-inclusive squash scope only as general-tortoise evidence for rare supplementary use.":"출처는 Cucurbita moschata를 포함한 호박류를 일반 육지거북의 보조 먹이로 다룬다. 이 자료를 근거로 가끔 소량 급여하는 수준까지만 권한다.",
         "Do not Feed in the specialist database; the assessment therefore excludes planned feeding while explicitly not treating this as an Ibera-specific toxicity trial.":"전문 DB가 급여하지 않음으로 분류하므로 계획적인 급여에서 제외한다. 다만 이를 이베라그리스육지거북에 한정된 독성시험 결과로 해석하지 않는다.",
@@ -656,8 +656,8 @@ def evidence_role(e):
     if "nutrition" in t or "food_composition" in t:
         return "성분을 확인하는 참고자료 — 급여 안전성 자체를 증명하지 않음"
     if e.get("directness")=="direct":
-        return "급여 판정에 직접 연결되는 근거"
-    return "급여 판정을 보완하는 간접 근거 — 이것만으로 안전성을 결정하지 않음"
+        return "현재 급여 결론을 직접 뒷받침하는 근거"
+    return "현재 급여 결론을 보완하는 간접 근거 — 이것만으로 안전성을 결정하지 않음"
 
 def related_for(p,limit=6):
     same_family=[x for x in plants if x["id"]!=p["id"] and x.get("family") and x.get("family")==p.get("family")]
@@ -817,7 +817,7 @@ for p in plants:
     else:
         identity_text="검색 결과의 이름·학명과 실제 먹이려는 식물이 같은 종인지 확인한다. 농약 사용이나 오염 가능성도 급여 전에 별도로 확인한다."
         identity_html=f'''<div class="identity-note" data-identity="note"><h3>먹이기 전 식물 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p></div>'''
-    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독·무제한 급여 판정으로 해석하지 않는다.</li>"
+    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
     scope_html=(f'''<section class="card scopecard" id="scope">{identity_html}</section>''' if identity_warning else "")
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
