@@ -807,7 +807,7 @@ for p in plants:
     species_specific_html=(f'<section class="card species-specific"><h2>특정 종에서만 확인된 내용</h2><p class="small">아래 내용은 해당 종에서만 확인된 근거다. 위의 기본 판정과 구분해서 보고, 다른 육지거북 종에 그대로 적용하지 않는다.</p>{"".join(species_rows)}</section>' if species_rows else "")
 
     # 4) Scope → identity → limits, stated once in one card; canonical assessment copy is rendered verbatim.
-    scope=(a or {}).get("applicability_note") or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 공개 근거만으로 특정 종까지 좁혀 판단하지 않는다.")
+    scope=(a or {}).get("applicability_note") or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 확인된 자료만으로 특정 거북 종까지 같은 결론을 적용할 수는 없다.")
     photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
     cur=curated_identity.get(pid)
     if identity_warning:
@@ -848,10 +848,10 @@ for p in plants:
     conflict_html=""
     if wild and risk and (risk.get("signals") or risk.get("publication_blocker")):
         risk_items="".join(f"<li><b>{esc(x.get('type') or '위험 신호')}</b> — {esc(x.get('finding'))}<br><span class=\"small\">{esc(x.get('interpretation'))}</span></li>" for x in risk.get("signals",[]))
-        conflict_html=f'''<div class="conflict"><b>⚠ 근거 충돌 또는 안전성 미해결</b><p>야생 섭식 기록이 있지만 독성·항영양성분 또는 다른 동물의 수의학적 위험 신호도 확인됐다. 야생에서 먹는다는 사실만으로 사육 급여 안전성을 확정하지 않는다.</p><ul>{risk_items}</ul><p><b>현재 결론을 더 확실하게 하려면:</b> {esc(risk.get("publication_blocker") or "추가 검토 필요")}</p></div>'''
+        conflict_html=f'''<div class="conflict"><b>⚠ 안전성을 판단할 때 함께 봐야 할 정보</b><p>야생에서 먹은 기록이 있더라도 독성·항영양성분 또는 다른 동물에서 확인된 수의학적 위험 정보가 함께 존재할 수 있다. 야생에서 먹었다는 사실만으로 사육 환경에서도 안전하다고 판단할 수는 없다.</p><ul>{risk_items}</ul><p><b>현재 결론을 더 확실하게 하려면:</b> {esc(risk.get("publication_blocker") or "추가 검토 필요")}</p></div>'''
     wild_cards=[]
     for w in wild:
-        wild_cards.append(f'''<article class="evcard wildcard"><div class="evhead"><span>야생 섭식 기록</span><span>{esc(w.get("ibera_applicability") or "적용범위 확인 필요")}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북 미상")} · {esc(w.get("population_region") or "지역 미상")}</h3><dl class="evmeta"><dt>확인 방법</dt><dd>{esc(w.get("study_method") or "미상")}</dd><dt>먹은 부위</dt><dd>{esc(w.get("plant_part") or "미상")}</dd><dt>시기</dt><dd>{esc(w.get("season") or "미상")}</dd><dt>섭식 기록</dt><dd>{esc(w.get("feeding_signal") or "확인")}</dd></dl><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="ids">원자료 식물명 <i>{esc(w.get("plant_taxon_reported"))}</i> · 현재 수용명 <i>{esc(w.get("plant_taxon_accepted"))}</i> · {esc(w.get("source_id"))}</p></article>''')
+        wild_cards.append(f'''<article class="evcard wildcard"><div class="evhead"><span>야생 섭식 기록</span><span>{esc(w.get("ibera_applicability") or "어느 거북에 해당하는지 확인 필요")}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북 미상")} · {esc(w.get("population_region") or "지역 미상")}</h3><dl class="evmeta"><dt>확인 방법</dt><dd>{esc(w.get("study_method") or "미상")}</dd><dt>먹은 부위</dt><dd>{esc(w.get("plant_part") or "미상")}</dd><dt>시기</dt><dd>{esc(w.get("season") or "미상")}</dd><dt>섭식 기록</dt><dd>{esc(w.get("feeding_signal") or "확인")}</dd></dl><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="ids">원자료 식물명 <i>{esc(w.get("plant_taxon_reported"))}</i> · 현재 수용명 <i>{esc(w.get("plant_taxon_accepted"))}</i> · {esc(w.get("source_id"))}</p></article>''')
     for o in ib:
         s=ibera_sources.get(o.get("source_id"),{})
         scope_txt="식물 종까지 일치" if o.get("identity_scope")=="exact_species" else "속 수준 관찰 — 이 식물의 정확한 종을 먹었다는 뜻으로 확대하지 않는다"
