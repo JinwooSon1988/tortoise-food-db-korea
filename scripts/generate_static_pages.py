@@ -674,9 +674,8 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnav a{display:inline-flex;align-items:center;min-height:44px;font-weight:850;text-decoration:none;color:var(--forest)}.detailnav span{color:var(--muted)}
 .planthead{padding:6px 2px 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}.plantidentity{min-width:0}.headphoto{margin:0}.headphoto{width:132px}.headphoto img{width:132px;height:112px;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:#fff;display:block}.headphoto figcaption{font-size:9px;line-height:1.25;margin-top:3px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.planthead h1{font-size:clamp(30px,6vw,44px);letter-spacing:-.04em;line-height:1.15}.scientific{color:var(--muted);font-size:15px;margin-top:2px}.aliases{font-size:12px;color:var(--muted);margin-top:4px}
 .green{background:var(--green)}.yellow{background:var(--yellow)}.hold{background:var(--hold)}.danger{background:var(--danger);border-color:#e8bcbc}
-.decision{border-width:2px;padding:20px 22px}.decisionlabel{font-size:12px;font-weight:800;color:var(--muted);margin-bottom:6px}
-.verdictline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.gradeletter{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:48px;padding:0 10px;border-radius:12px;background:#fff;border:2px solid rgba(0,0,0,.14);font-size:26px;font-weight:950}.hold .gradeletter{font-size:17px}
-.verdict{font-weight:950;font-size:clamp(22px,4.6vw,30px);line-height:1.2}.meaning{font-size:16px;font-weight:750;margin:10px 0 0}
+.decision{border-width:2px;padding:20px 22px}.verdictline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.verdictline{padding:2px 0 3px}.gradeletter{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:48px;padding:0 10px;border-radius:12px;background:#fff;border:2px solid rgba(0,0,0,.14);font-size:26px;font-weight:950}.hold .gradeletter{font-size:17px}
+.verdict{font-weight:950;font-size:clamp(27px,6vw,38px);line-height:1.12;letter-spacing:-.035em}.meaning{font-size:16px;font-weight:750;margin:10px 0 0}
 .decisionwhy{font-size:15px;line-height:1.7;margin:10px 0 0;color:#2c3a31}.decisionwhy b{display:block;font-size:12px;color:var(--muted)}
 .gradekey{display:flex;flex-wrap:wrap;gap:4px 10px;margin-top:11px;padding-top:8px;border-top:1px solid rgba(0,0,0,.08);font-size:11px;color:var(--muted)}.gradekey b{color:var(--text)}.gradekey .on{color:var(--text);font-weight:850}
 .practical{padding:16px 18px}.practical p{margin:4px 0 0;font-size:15px}.practical .partscope{font-size:13px;color:var(--muted);margin-top:8px}.practical b{color:var(--forest)}
@@ -767,7 +766,13 @@ for p in plants:
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
     gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
-    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="decisionlabel">급여 판정 · {esc(basis)}</div><div class="verdictline"><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
+    # Reader-facing summary should not name a single species unless the assessment itself is species-specific.
+    # Species-level evidence remains traceable in the evidence cards/species exception section.
+    if not is_species_only(a):
+        summary_display=re.sub(r"(?:이베라그리스육지거북|이베라 그리스 육지거북)(?:\(T\.\s*g\.\s*ibera\))?", "지중해 육지거북", summary_display)
+        summary_display=re.sub(r"\bT\.\s*g\.\s*ibera\b", "지중해 육지거북", summary_display)
+
+    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="verdictline"><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
 
     # 2) Practical reading: translate evidence boundaries into an immediate husbandry action.
     if grade=="A":
