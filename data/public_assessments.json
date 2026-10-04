@@ -3238,5 +3238,45 @@
     "assessment_scope": "general_tortoise",
     "animal_taxon": "Tortoise general",
     "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "vicia_sativa",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "잎·꽃만 소량 혼합",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_vicia_310",
+      "tortoiseclub_vicia_sativa_mix"
+    ],
+    "limits": [
+      "잎과 꽃에 대한 소량 급여 지침이며 씨앗과 꼬투리는 제외함",
+      "전문 사육자료는 Vicia spp.를 다루며 V. sativa를 직접 예시로 들지만 통제된 장기 급여시험은 아님",
+      "정확한 안전 급여 비율이나 종별 장기 영향은 확립되지 않음"
+    ],
+    "why": "살갈퀴는 먹을 수 있는 부위와 피해야 할 부위를 반드시 나눠야 한다. 전문 육지거북 자료는 잎과 꽃은 다양한 식단의 작은 일부로 급여할 수 있다고 보지만, 씨앗에는 청산배당체가 있어 꼬투리째 급여하지 말라고 안내한다. 따라서 잎·꽃만 소량 섞고 씨앗이나 꼬투리가 생기면 급여 대상에서 제외한다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "vicia_cracca",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "잎·꽃만 소량 혼합",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_vicia_310",
+      "naturescape_nt_tortoise_mix"
+    ],
+    "limits": [
+      "잎과 꽃에 대한 소량 급여 지침이며 씨앗과 꼬투리는 제외함",
+      "Vicia cracca가 전문 사육자료와 육지거북용 종자 혼합물에 직접 포함되지만 통제된 장기 급여시험은 아님",
+      "정확한 안전 급여 비율이나 종별 장기 영향은 확립되지 않음"
+    ],
+    "why": "등갈퀴나물은 전문 육지거북 자료에서 잎과 꽃을 식단의 작은 일부로 급여할 수 있는 Vicia류에 직접 포함된다. 육지거북용 야생초 혼합 종자에도 낮은 비율로 사용되는 사례가 있다. 다만 씨앗은 청산배당체 문제 때문에 피하도록 안내되므로 잎·꽃만 소량 섞고 꼬투리와 씨앗은 주지 않는다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
   }
 ]
