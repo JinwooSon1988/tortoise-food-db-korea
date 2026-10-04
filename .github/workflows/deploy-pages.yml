@@ -3,6 +3,19 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+    # Source-data/generator commits are followed by an Actions-generated
+    # plant-page sync commit. Deploy only site-facing files so those source
+    # commits do not publish the previous render and then publish again.
+    paths:
+      - 'plant/**'
+      - 'index.html'
+      - '404.html'
+      - 'assets/**'
+      - '*.js'
+      - '*.css'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 permissions:
