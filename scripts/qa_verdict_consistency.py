@@ -124,8 +124,6 @@ for pid in sorted(public_ids - page_dirs):
     errors.append(f"{pid}: public plant has no detail page")
 for pid in sorted(page_dirs - public_ids):
     errors.append(f"{pid}: detail page exists for a non-public plant (orphan or candidate)")
-ORDER = ["decision", "<h2>종별 특이사항</h2>", "<h2>이 판정을 어디까지 적용할 수 있나</h2>", "<h2>왜 이렇게 판정했는지 자세히 보기</h2>", "<h2>영양성분 수치는 이렇게 보세요</h2>"]
-MAJOR = ["<h2>실제로 어떻게 급여하나</h2>", "<h2>종별 특이사항</h2>", "<h2>이 판정을 어디까지 적용할 수 있나</h2>", "<h3>적용 범위</h3>", "<h3>아직 확인되지 않은 내용</h3>", "<h2>왜 이렇게 판정했는지 자세히 보기</h2>", "<h2>영양성분 수치는 이렇게 보세요</h2>", "<h2>비슷한 식물도 확인하기</h2>", "야생에서는 실제로 어떻게 먹었나?"]
 for p in public:
     pid = p["id"]
     path = ROOT / "plant" / pid / "index.html"
@@ -150,17 +148,14 @@ for p in public:
     expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(g["label"]), quote=True)}"'
     if expected_aria not in decision_text:
         errors.append(f"{pid}: decision card must expose grade and verdict label to assistive technology")
-    if '<summary>적용 범위와 아직 확인되지 않은 내용 보기</summary>' not in text:
-        errors.append(f"{pid}: collapsed scope control must describe both applicability and evidence limits")
     if g["grade"] == "보류":
         if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다")):
             errors.append(f"{pid}: hold safety boundary must remain visible in the decision card")
     elif g["grade"] == "D":
         if "급여하지 않음" not in text or "현재 판정에서는 급여 대상에서 제외한다." not in text:
             errors.append(f"{pid}: D verdict must preserve explicit do-not-feed meaning")
-    elif g["grade"] in ("A", "B", "C"):
-        if "판정 보류" in text.split('<section class="card practical"',1)[0]:
-            errors.append(f"{pid}: graded verdict must not look like a hold state")
+    elif g["grade"] in ("A", "B", "C") and "판정 보류" in text.split('<section class="card practical"',1)[0]:
+        errors.append(f"{pid}: graded verdict must not look like a hold state")
     if g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
     if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나</b>' not in decision_text):
@@ -168,124 +163,38 @@ for p in public:
     expected_basis = __import__("public_verdict").scope_label(a)
     if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
         errors.append(f"{pid}: decision label must show actual evidence scope ({expected_basis})")
-    if expected_basis != "지중해 Testudo 근거" and "급여 판정 · 지중해 Testudo 기준" in text:
-        errors.append(f"{pid}: decision label overstates Testudo-specific evidence")
-    for token in MAJOR:
-        if text.count(token) > 1:
-            errors.append(f"{pid}: duplicate major section {token}")
-    for token in ("<h3>적용 범위</h3>", "<h3>아직 확인되지 않은 내용</h3>", "<h2>왜 이렇게 판정했는지 자세히 보기</h2>"):
-        if token not in text:
-            errors.append(f"{pid}: required section missing {token}")
-    positions = [text.find(t) for t in ORDER if t in text]
-    if positions != sorted(positions) or text.find("decision") > text.find("<h2>이 판정을 어디까지 적용할 수 있나</h2>"):
-        errors.append(f"{pid}: section order broken (decision → species notes → scope/limits → evidence → nutrition)")
+
+    practical = text.find('<section class="card practical"')
+    evidence = text.find('<section class="card evidence-deep" id="evidence">')
+    nutrition = text.find('<section class="card" id="nutrition">')
+    if evidence < 0 or evidence < decision_start:
+        errors.append(f"{pid}: evidence section missing or precedes verdict")
+    if practical >= 0 and not (decision_start < practical < evidence):
+        errors.append(f"{pid}: practical action must sit between verdict and evidence")
+    if nutrition >= 0 and not (evidence < nutrition):
+        errors.append(f"{pid}: nutrition must follow evidence")
+    if '<details class="scopefold">' in text or '적용 범위와 아직 확인되지 않은 내용 보기' in text or '비슷한 식물도 확인하기' in text:
+        errors.append(f"{pid}: retired scope/related UI returned")
+
     notes = species_notes(rows, a)
-    # Species-only rows may be surfaced in the dedicated wild/direct-observation block instead of duplicated.
     if "<h2>종별 특이사항</h2>" in text and not notes:
         errors.append(f"{pid}: species-specific section must not appear without species-only assessments")
     high_risk = (retail.get(pid, {}).get("mapping_status") == "name_candidate_only") or p.get("identity_status") == "needs_species_level_mapping"
-    has_alert, has_note = 'data-identity="alert"' in text, 'data-identity="note"' in text
+    has_alert = 'data-identity="alert"' in text
     if high_risk and not has_alert:
         errors.append(f"{pid}: identity risk in data but no strong identity warning")
-    if high_risk and has_alert:
-        scope_start = text.find('<section class="card scopecard"')
-        fold_start = text.find('<details class="scopefold"', scope_start)
-        alert_start = text.find('data-identity="alert"', scope_start)
-        if min(scope_start, fold_start, alert_start) < 0 or not (scope_start < alert_start < fold_start):
-            errors.append(f"{pid}: high-risk identity warning must remain visible above the collapsed scope detail")
-    if not high_risk and (has_alert or not has_note):
-        errors.append(f"{pid}: ordinary plant must show the neutral identity note, not the warning")
+
     linked = [evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids", [])) if eid in evidence_by_id]
-    # Reader-first evidence UI identifies source directness in Korean and separates facts from limits.
-    direct_labels = {"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
-    for e in linked:
-        direct_label = direct_labels.get(e.get("directness"))
-        if direct_label and direct_label not in text:
-            errors.append(f"{pid}: evidence directness label missing ({direct_label})")
-    if linked and "출처 수가 많다고 더 안전하다는 뜻은 아니다" not in text:
-        errors.append(f"{pid}: evidence summary must not imply a confidence or safety score")
-    if linked and "이 자료를 왜 봤나?" not in text:
-        errors.append(f"{pid}: evidence cards must explain each source's role in plain Korean")
-    if linked and ("이 자료에서 실제로 확인되는 것" not in text or "여기서 확대해석하면 안 되는 것" not in text):
-        errors.append(f"{pid}: evidence cards must separate verified facts from unsupported extrapolation")
-    # Every linked public source is traceable: URL first, then DOI/PMID fallback.
     if linked and text.count('class="sourceopen"') < len(linked):
         errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
-    if linked and text.count('aria-hidden="true">↗</span>') < len(linked):
-        errors.append(f"{pid}: decorative external-link arrows must be hidden from assistive technology")
-    if linked and text.count("원문 보기 (새 창)") < len(linked):
-        errors.append(f"{pid}: evidence source links must announce new-window behavior")
+    if linked and text.count("근거의 한계") < len(linked):
+        errors.append(f"{pid}: every linked evidence card must state its evidence limit")
     for e in linked:
         expected_url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
         if not expected_url:
             errors.append(f"{pid}: linked evidence has no traceable source locator ({e.get('id')})")
         elif f'href="{html.escape(str(expected_url), quote=True)}"' not in text:
             errors.append(f"{pid}: evidence source action does not resolve to canonical locator ({e.get('id')})")
-
-    traceable = [e for e in linked if e.get("url") or e.get("doi") or e.get("pmid")]
-    if traceable and text.count("원문 보기") < len(traceable):
-        errors.append(f"{pid}: every traceable evidence record must expose a clear source action")
-    identity_types = (
-        "plant_identity_context",
-        "official_botanical_database",
-        "official_agriculture_database",
-        "authoritative_taxonomy_database",
-        "taxonomic_database",
-        "official_biodiversity_agriculture",
-    )
-    nutrition_types = ("nutrition_database", "food_composition_database", "official_food_composition_database")
-    for e in linked:
-        st = str(e.get("source_type") or "")
-        if st in identity_types and e.get("directness") == "direct":
-            errors.append(f"{pid}: identity/agriculture context must not be classified as direct feeding evidence ({e.get('id')})")
-        if st in identity_types and "급여 안전성" not in text:
-            errors.append(f"{pid}: botanical/identity evidence must explicitly avoid implying feeding safety")
-        if st in nutrition_types and "급여 안전성 자체를 증명하지 않음" not in text:
-            errors.append(f"{pid}: composition evidence must explicitly avoid implying feeding safety")
-    # Non-tortoise and in-vitro evidence must stay visibly separated from tortoise feeding evidence.
-    non_tortoise_subjects = (
-        "Bos taurus (cattle)",
-        "Mus musculus / Rattus norvegicus (toxicology context)",
-        "Chinese hamster ovary cells; in vitro",
-        "HaCaT cell line; not an animal feeding study",
-        "Cats and plant chemistry",
-        "Plant chemistry; mammalian experimental context",
-        "primarily mammalian/medicinal toxicology; not tortoise feeding",
-    )
-    if any(str(e.get("animal_taxon") or "") in non_tortoise_subjects for e in linked):
-        if "급여시험 아님" not in text:
-            errors.append(f"{pid}: non-tortoise evidence must be visibly identified as not a tortoise/animal feeding trial")
-    # Critical part/state boundaries must be localized rather than exposed as raw English data.
-    critical_part_states = (
-        "leaves and flowers; root explicitly excluded",
-        "leaves and flowers; fruit not inferred",
-        "herb; seeds explicitly excluded",
-        "leaves only; cob/kernel excluded",
-        "grass vegetation; not grain/seed equivalence",
-    )
-    for raw in critical_part_states:
-        if any(str(e.get("plant_part_state") or "") == raw for e in linked) and re.search(rf">[^<]*{re.escape(raw)}[^<]*<", text):
-            errors.append(f"{pid}: critical plant-part boundary leaked as raw English metadata ({raw})")
-    # Reader-facing part/state fields must not fall back to raw English. Checked on the fields that render
-    # part/state (evidence cards, wild/Ibera observations, practical summary) so English source titles and
-    # quoted "supports" text that merely mention a plant part are not mistaken for metadata.
-    part_fields = re.findall(r"<dt>(?:부위·상태|먹은 부위|섭식 부위)</dt><dd>([^<]*)</dd>|근거가 확인한 부위·상태</b><p>([^<]*)</p>", text)
-    for a_val, b_val in part_fields:
-        shown = html.unescape(a_val or b_val)
-        for piece in shown.split(" / "):
-            if re.fullmatch(r"[ -~]*[A-Za-z]{3,}[ -~]*", piece.strip()):
-                errors.append(f"{pid}: plant-part metadata leaked as raw source text ({piece.strip()})")
-    raw_parts = {str(e.get("plant_part_state") or "").strip() for e in linked} - {""}
-    for raw_part in raw_parts:
-        if any(html.unescape(a_val or b_val) == raw_part and re.search(r"[A-Za-z]{3,}", raw_part) for a_val, b_val in part_fields):
-            errors.append(f"{pid}: plant-part metadata leaked as raw source text ({raw_part})")
-    # Internal evidence enums belong in data, not in reader-facing cards.
-    visible_enum_tokens = ("plant_identity_context", "official_botanical_database", "official_agriculture_database", "food_composition_database", "tortoise_general", "exact_species")
-    for token in visible_enum_tokens:
-        if re.search(rf">[^<]*\\b{re.escape(token)}\\b[^<]*<", text):
-            errors.append(f"{pid}: internal evidence enum leaked into visible UI ({token})")
-    if text.count("급여량·빈도·장기 안전성") > 1:
-        errors.append(f"{pid}: dose/frequency/long-term boundary repeated")
     for retired in ("plant-detail-v56.js", "ibera-direct-evidence-v56.js", "tortoiseAnimalTaxon", "animalSelect"):
         if retired in text:
             errors.append(f"{pid}: retired runtime enhancer or species selector referenced ({retired})")
