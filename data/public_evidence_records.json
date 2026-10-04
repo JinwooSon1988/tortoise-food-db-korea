@@ -3624,6 +3624,177 @@
       "doi": null,
       "pmid": null,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7913150/"
+    },
+    {
+      "id": "ttable_dichondra_707",
+      "plant_ids": [
+        "dichondra_micrantha"
+      ],
+      "source_title": "The Tortoise Table. Kidney Weed (Dichondra).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Dichondra spp.; explicitly includes Dichondra micrantha",
+      "plant_part_state": "plant; included in tortoise diet",
+      "directness": "expert_husbandry",
+      "supports": "Classifies Dichondra spp. as Safe to Feed and explicitly names Dichondra micrantha among species safe to include in the tortoise diet.",
+      "does_not_support": "Does not establish a controlled long-term feeding ratio, unrestricted monodiet use, or safety of plants exposed to lawn herbicides.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=707"
+    },
+    {
+      "id": "kew_dichondra_micrantha",
+      "plant_ids": [
+        "dichondra_micrantha"
+      ],
+      "source_title": "Kew Plants of the World Online. Dichondra micrantha Urb.",
+      "source_type": "taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Dichondra micrantha Urb.",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Confirms Dichondra micrantha Urb. as an accepted species in Convolvulaceae and records introduction into Korea.",
+      "does_not_support": "Taxonomic acceptance and distribution do not establish tortoise feeding safety, dose, frequency, or plant-part safety.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:79457-2"
+    },
+    {
+      "id": "ttable_abutilon_32",
+      "plant_ids": [
+        "abutilon_indicum"
+      ],
+      "source_title": "The Tortoise Table. Abutilon (Flowering Maple, Chinese Lantern).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Abutilon spp.",
+      "plant_part_state": "plant; flowers specifically mentioned",
+      "directness": "related_taxon",
+      "supports": "Classifies Abutilon spp. as Safe to Feed, notes tortoises eat the flowers, and warns not to confuse Abutilon with Physalis called Chinese Lantern.",
+      "does_not_support": "Genus-level husbandry guidance does not constitute an Abutilon indicum-specific controlled trial and does not establish equal safety for seeds, roots, or every plant part.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=4&plant=32"
+    },
+    {
+      "id": "kew_abutilon_indicum",
+      "plant_ids": [
+        "abutilon_indicum"
+      ],
+      "source_title": "Kew Plants of the World Online. Abutilon indicum (L.) Sweet.",
+      "source_type": "taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Abutilon indicum (L.) Sweet",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Confirms Abutilon indicum (L.) Sweet as an accepted species in Malvaceae.",
+      "does_not_support": "Taxonomic acceptance and recorded human or animal uses do not establish tortoise feeding safety, safe dose, frequency, or interchangeable safety of all plant parts.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/1101632-2"
+    },
+    {
+      "id": "ttable_aeonium_530",
+      "plant_ids": [
+        "aeonium_arboreum"
+      ],
+      "source_title": "The Tortoise Table. Aeonium.",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Aeonium spp.",
+      "plant_part_state": "succulent plant; small part of varied diet",
+      "directness": "related_taxon",
+      "supports": "Classifies Aeonium spp. as Safe to Feed but advises moderation because overfeeding succulents may have a laxative effect and some Aeoniums may contain fairly high calcium oxalates.",
+      "does_not_support": "Does not establish an Aeonium arboreum-specific tortoise dose-response, exact oxalate concentration, or a precise safe percentage of the diet.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=530"
+    },
+    {
+      "id": "kew_aeonium_arboreum",
+      "plant_ids": [
+        "aeonium_arboreum"
+      ],
+      "source_title": "Kew Plants of the World Online. Aeonium arboreum (L.) Webb & Berthel.",
+      "source_type": "taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Aeonium arboreum (L.) Webb & Berthel.",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Confirms Aeonium arboreum (L.) Webb & Berthel. as an accepted species in Crassulaceae.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, laxative threshold, oxalate exposure, or feeding frequency.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:272194-1"
+    },
+    {
+      "id": "ttable_buddleia_68",
+      "plant_ids": [
+        "buddleja_davidii"
+      ],
+      "source_title": "The Tortoise Table. Buddleia (Butterfly Bush, Buddleja).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "taxon_group",
+      "plant_taxon": "Buddleia/Buddleja spp.",
+      "plant_part_state": "plant; moderation guidance",
+      "directness": "related_taxon",
+      "supports": "Classifies Buddleia spp. as Feed in Moderation and states it is fine to feed in moderation.",
+      "does_not_support": "Genus-level husbandry guidance does not establish a Buddleja davidii-specific controlled trial, exact safe percentage, or unrestricted regular feeding.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=68"
+    },
+    {
+      "id": "kew_buddleja_davidii",
+      "plant_ids": [
+        "buddleja_davidii"
+      ],
+      "source_title": "Kew Plants of the World Online. Buddleja davidii Franch.",
+      "source_type": "taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Buddleja davidii Franch.",
+      "plant_part_state": "taxonomic identity only",
+      "directness": "contextual",
+      "supports": "Confirms Buddleja davidii Franch. as an accepted species in Scrophulariaceae.",
+      "does_not_support": "Taxonomic acceptance does not establish tortoise feeding safety, toxic dose, safe diet percentage, or plant-part equivalence.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:545734-1"
+    },
+    {
+      "id": "kbr_buddleja_davidii",
+      "plant_ids": [
+        "buddleja_davidii"
+      ],
+      "source_title": "Korea Biodiversity Resources. Buddleja davidii Franch. (부들레야).",
+      "source_type": "taxonomy_database",
+      "animal_taxon": "not_applicable",
+      "applicability": "composition_only",
+      "plant_taxon": "Buddleja davidii Franch.",
+      "plant_part_state": "Korean name and identity only",
+      "directness": "contextual",
+      "supports": "Confirms the Korean common name 부들레야 linked to Buddleja davidii Franch. in a Korean biodiversity resource.",
+      "does_not_support": "Korean-name mapping does not establish tortoise feeding safety, toxicity, dose, frequency, or edible plant parts.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.kbr.go.kr/man/home/rsc/rsc01003v.do?clsGbnCd=LOCAL&clsNo=0&commGroup=VP&gbifnubTxnId=0&tempClsSno=9702"
     }
   ]
 }
