@@ -3341,5 +3341,44 @@
     "assessment_scope": "general_tortoise",
     "animal_taxon": "Tortoise general",
     "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "amaranthleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "정확한 종을 확인한 경우에도 소량·가끔만 보조적으로 고려",
+    "confidence": "C",
+    "evidence_ids": [
+      "prakash_amaranthus_leaves_1991"
+    ],
+    "limits": [
+      "현재 항목이 Amaranthus spp.로 되어 있어 국내에서 ‘비름’으로 불리는 정확한 종이 확정되지 않음",
+      "비름류 잎은 종·계통·재배조건에 따라 oxalate와 nitrate 수준이 달라질 수 있음",
+      "육지거북 대상 직접 급여시험이나 정확한 장기 안전량은 확보되지 않음"
+    ],
+    "why": "비름류 잎은 영양소가 풍부한 식용 잎채소지만, 여러 Amaranthus 종의 잎에서 oxalate와 nitrate 같은 항영양성분이 확인되고 그 수준도 종·계통·재배조건에 따라 달라진다. 더 중요한 문제는 국내의 ‘비름’이라는 이름만으로 정확한 Amaranthus 종을 확정하기 어렵다는 점이다. 따라서 검증된 야생초보다 우선할 이유가 없으며, 정확한 종을 확인한 경우에도 식단의 작은 일부로 가끔 사용하는 C 판정이 현재 근거에 가장 적절하다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "soybeanleaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "주식으로 사용하지 않고 소량·가끔만 보조적으로 고려",
+    "confidence": "C",
+    "evidence_ids": [
+      "soybean_leaf_nutrition_2026",
+      "soybean_leaf_trypsin_1987"
+    ],
+    "limits": [
+      "Glycine max 잎 자체의 성분자료는 확보됐지만 육지거북 직접 급여시험은 아님",
+      "잎에도 trypsin inhibitor와 phytic acid가 존재하며 trypsin inhibitor 활성은 생육·초식 스트레스에 따라 크게 달라질 수 있음",
+      "콩알·콩나물의 자료를 성숙한 콩잎 판정에 대신 적용하지 않음"
+    ],
+    "why": "콩잎은 콩알과 별개의 부위로 평가했다. 실제 Glycine max 잎 분석에서 섬유와 칼슘·인이 확인되지만, 동시에 trypsin inhibitor와 phytic acid도 존재한다. 특히 잎의 trypsin inhibitor 활성은 식물의 생육과 초식 피해에 따라 크게 증가할 수 있어 성분이 일정한 먹이라고 보기 어렵다. 육지거북에서 신선한 콩잎의 장기 급여 안전성을 확인한 직접 자료도 없으므로 주식이나 적극 권장 먹이로 올리지 않고, 굳이 사용할 경우 작은 양을 가끔 섞는 C 판정이 적절하다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
   }
 ]
