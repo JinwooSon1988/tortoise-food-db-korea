@@ -12,6 +12,8 @@ on:
       - 'scripts/generate_static_pages.py'
       - '.github/workflows/sync-generated-plant-pages.yml'
       - 'scripts/qa_verdict_consistency.py'
+      - 'scripts/qa_traffic_integrity.py'
+      - 'scripts/qa_bilingual_plant_detail_v1.py'
 
 permissions:
   contents: write
