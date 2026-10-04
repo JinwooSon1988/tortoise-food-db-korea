@@ -1,4 +1,4 @@
-const CACHE='tfd-v56-evidence-only-103';
+const CACHE='tfd-v56-evidence-only-104';
 const CORE=['./','./index.html','./all-plants/','./offline.html','./manifest.webmanifest','./search-live.js','./verdict-core.js','./data/plants.json','./data/public_assessments.json','./data/plant_nutrition_v56.json','./data/rda_food_composition_v56.json'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>Promise.allSettled(CORE.map(u=>c.add(u)))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
