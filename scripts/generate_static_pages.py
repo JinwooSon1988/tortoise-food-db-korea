@@ -673,7 +673,7 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;scroll-margin-top:18px}
 .detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnav a{display:inline-flex;align-items:center;min-height:44px;font-weight:850;text-decoration:none;color:var(--forest)}.detailnav span{color:var(--muted)}
 .planthead{padding:6px 2px 10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}.plantidentity{min-width:0}.headphoto{margin:0}.headphoto{width:132px}.headphoto img{width:132px;height:112px;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:#fff;display:block}.headphoto figcaption{font-size:9px;line-height:1.25;margin-top:3px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.planthead h1{font-size:clamp(30px,6vw,44px);letter-spacing:-.04em;line-height:1.15}.scientific{color:var(--muted);font-size:15px;margin-top:2px}.aliases{font-size:12px;color:var(--muted);margin-top:4px}
-.green{background:var(--green)}.yellow{background:var(--yellow)}.hold{background:var(--hold)}.danger{background:var(--danger);border-color:#e8bcbc}
+.green{background:var(--green)}.teal{background:#e5f4f1;border-color:#afd8cf}.yellow{background:var(--yellow)}.hold{background:var(--hold)}.danger{background:var(--danger);border-color:#e8bcbc}
 .decision{border-width:2px;padding:20px 22px}.verdictline{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.verdictline{padding:2px 0 3px}.gradeletter{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:48px;padding:0 10px;border-radius:12px;background:#fff;border:2px solid rgba(0,0,0,.14);font-size:26px;font-weight:950}.hold .gradeletter{font-size:17px}
 .verdict{font-weight:950;font-size:clamp(27px,6vw,38px);line-height:1.12;letter-spacing:-.035em}.meaning{font-size:16px;font-weight:750;margin:10px 0 0}
 .decisionwhy{font-size:15px;line-height:1.7;margin:10px 0 0;color:#2c3a31}.decisionwhy b{display:block;font-size:12px;color:var(--muted)}
@@ -765,7 +765,7 @@ for p in plants:
     header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small"><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · {esc(img.get("license") or "")}</figcaption></figure>''' if img else "")
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
-    gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
+    gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","적극 권장"),("B","권장"),("C","가끔 보조"),("D","계획 급여 제외")))
     # Reader-facing summary should not name a single species unless the assessment itself is species-specific.
     # Species-level evidence remains traceable in the evidence cards/species exception section.
     species_scope = str((a or {}).get("assessment_scope") or "").lower() in ("exact_species", "species_specific")
