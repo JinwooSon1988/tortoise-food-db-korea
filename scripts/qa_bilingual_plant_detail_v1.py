@@ -68,12 +68,9 @@ for n in [
     'speciesexception'
 ]:
     if n not in g: errors.append("generator missing deep-detail bilingual/evidence contract: "+n)
-for n in [
-    'This section explains the evidence behind the conclusion.',
-    'Direct evidence</b> addresses the target question directly.',
-    'Indirect evidence</b> comes from other animals or related plants'
-]:
-    if n not in g: errors.append("generator missing complete English evidence explanation: "+n)
+# The Korean-first focused detail page no longer publishes the retired explanatory preamble.
+for n in ['적용 범위와 아직 확인되지 않은 내용 보기','비슷한 식물도 확인하기']:
+    if n in g: errors.append("retired detail UI returned: "+n)
 if 'en_pending="Evidence review is incomplete.' in g:
     errors.append("assessed pages may still hard-code incomplete English review state")
 for n in ['function toggleEvidence(lang)',"document.querySelectorAll('.ko-evidence')","document.querySelectorAll('.en-evidence')"]:
