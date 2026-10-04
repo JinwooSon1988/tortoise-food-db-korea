@@ -864,10 +864,12 @@ for p in plants:
         def nv(key,unit=""):
             v=nu.get(key)
             return "미확인" if v is None else f"{v}{unit}"
-        nutrition_body=f'''<div class="nutgrid"><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div><div><b>칼륨</b><strong>{nv("potassium_mg"," mg")}</strong></div><div><b>비타민 C</b><strong>{nv("vitamin_c_mg"," mg")}</strong></div></div><p class="small">100 g 기준 · {esc(nu.get("basis"))} · {esc(nu.get("food_description"))} · 원자료 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'''
+        ratio=nu.get("calcium_phosphorus_ratio")
+        nutrition_note=("칼슘과 인의 비율은 식단을 볼 때 참고할 수 있지만, 이 값 하나만으로 좋은 먹이인지 결정하지 않는다." if ratio not in (None,"","—") else "Ca:P 자료가 없으면 임의 계산하거나 추정하지 않는다.")
+        nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">100 g 기준 · {esc(nu.get("basis"))} · {esc(nu.get("food_description"))} · 원자료 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'''
     else:
         nutrition_body='<p class="small">검증된 공식 영양성분 자료가 아직 연결되지 않았다. 자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 쓰지 않는다.</p>'
-    nutrition_html=f'''<section class="card" id="nutrition"><h2>영양성분</h2><p class="small">사람용 식품성분 자료를 참고용으로 보여준다. Ca:P·섬유질 수치만으로 독성·항영양성분·식물의 정확한 종·육지거북에서의 안전성을 판단할 수 없으므로, 영양수치만 보고 급여 등급을 바꾸지 않는다.</p>{nutrition_body}</section>'''
+    nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2><p class="small">검증된 성분값만 표시한다. 영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않는다.</p>{nutrition_body}</section>'''
 
     footer_html=f'''<section class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></section>'''
 
