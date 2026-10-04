@@ -46,8 +46,12 @@ for pid in sorted(public_ids):
         errors.append(f'{pid}: a section pushes the decision below the plant name')
     later = [pos(x) for x in ('<h2>어떻게 먹이면 되나</h2>', '<h2>왜 이렇게 판정했나</h2>', '<h2>영양성분</h2>')]
     present = [x for x in later if x is not None]
-    if not present or present != sorted(present) or present[0] < why or later[0] is None or later[1] is None:
-        errors.append(f'{pid}: practical action → evidence → nutrition order broken')
+    # A practical-action card exists only when the representative public verdict applies to the default Testudo reader.
+    # Species-specific-only records may legitimately start with their species note and evidence.
+    if not present or present != sorted(present) or present[0] < why or later[1] is None:
+        errors.append(f'{pid}: evidence → nutrition order broken')
+    if later[0] is not None and later[0] > later[1]:
+        errors.append(f'{pid}: practical action must precede evidence')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None and later[0] is not None and not (why < sp < later[0]):
         errors.append(f'{pid}: species notes must follow the default verdict and precede evidence')
