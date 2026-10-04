@@ -54,8 +54,10 @@ for pid in sorted(public_ids):
     if nutrition is not None and (evidence is None or nutrition < evidence):
         errors.append(f'{pid}: nutrition must follow evidence')
     sp = pos('<h2>종별 특이사항</h2>')
-    if sp is not None and later[0] is not None and not (why < sp < later[0]):
-        errors.append(f'{pid}: species notes must follow the default verdict and precede evidence')
+    if sp is not None:
+        upper = practical if practical is not None else evidence
+        if upper is None or not (why < sp < upper):
+            errors.append(f'{pid}: species notes must follow the default verdict and precede practical/evidence')
     # Evidence numbers live in the evidence section, not in the first-screen decision card.
     decision_card = main[decision:main.find('</section>', decision)]
     if '직접 ' in decision_card and '근거 구성' in decision_card or 'quickfacts' in decision_card:
