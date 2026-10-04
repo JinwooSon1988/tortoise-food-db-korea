@@ -794,7 +794,9 @@ for p in plants:
         feeding_action="안전하다고 가정해 급여하지 않는다. 공개 근거가 보강될 때까지 판정을 보류한다."
     quantified=any(re.search(r"(percentage|percent|%|frequency|daily|weekly|per week|급여량|빈도|비율)", str(e.get("supports") or ""), re.I) for e in linked_evidence)
     quantity_note=("연결 근거에 정량 정보가 있으므로 아래 원자료 범위에서 확인한다." if quantified else "몇 % 또는 주 몇 회처럼 정할 직접 정량 근거는 확인되지 않았다. 근거 없는 숫자는 제시하지 않는다.")
-    practical_html=(f'''<section class="card practical"><h2>어떻게 먹이나</h2><p><b>{esc(feeding_action)}</b></p>{f'<p class="roleline"><span>이 식물의 역할</span> {esc(role)}</p>' if role else ""}<p class="partscope"><span>급여 부위</span> {esc(part_note)}{(" · 정량 기준은 확인된 원자료 범위에서만 적용" if quantified else "")}</p></section>''' if a else "")
+    role_html=(f'<p class="roleline"><span>이 식물의 역할</span> {esc(role)}</p>' if role else "")
+    quantity_inline=(" · 정량 기준은 확인된 원자료 범위에서만 적용" if quantified else "")
+    practical_html=(f'''<section class="card practical"><h2>어떻게 먹이나</h2><p><b>{esc(feeding_action)}</b></p>{role_html}<p class="partscope"><span>급여 부위</span> {esc(part_note)}{quantity_inline}</p></section>''' if a else "")
 
     # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
