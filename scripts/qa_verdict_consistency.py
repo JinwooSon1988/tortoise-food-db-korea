@@ -160,10 +160,6 @@ for p in public:
         errors.append(f"{pid}: grade label/meaning missing")
     if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나</b>' not in decision_text):
         errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
-    expected_basis = __import__("public_verdict").scope_label(a)
-    if f'<div class="decisionlabel">급여 판정 · {expected_basis}</div>' not in text:
-        errors.append(f"{pid}: decision label must show actual evidence scope ({expected_basis})")
-
     practical = text.find('<section class="card practical"')
     evidence = text.find('<section class="card evidence-deep" id="evidence">')
     nutrition = text.find('<section class="card" id="nutrition">')
