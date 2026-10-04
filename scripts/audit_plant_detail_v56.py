@@ -51,7 +51,7 @@ for pid in sorted(public_ids):
         errors.append(f'{pid}: evidence section missing or precedes the verdict')
     if practical is not None and practical < why:
         errors.append(f'{pid}: practical action must follow the verdict')
-    if nutrition is not None and (nutrition < why or (evidence is not None and nutrition > evidence)):
+    if nutrition is not None and (nutrition < why or (practical is not None and nutrition < practical) or (evidence is not None and nutrition > evidence)):
         errors.append(f'{pid}: nutrition must sit between verdict/practical guidance and detailed evidence')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None:
@@ -103,7 +103,7 @@ print(f'plant detail v5.6 contract OK for {len(public_ids)} pages; {len(seen)} v
 # Mobile verdict card stays compact while retaining the A/B/C/D context key.
 assert '.decision{padding:14px 15px}' in generator
 assert '.gradekey{' not in generator and 'class="gradekey"' not in generator, 'obsolete all-grade legend must stay removed'
-assert 'aria-label="급여 등급 안내"' in generator
+assert 'aria-label="급여 등급 안내"' not in generator, 'obsolete grade legend accessibility hook must stay removed'
 
 # Keyboard/touch accessibility: interactive detail-page targets remain at least 44px high.
 for token in (
