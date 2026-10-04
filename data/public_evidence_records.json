@@ -3964,6 +3964,63 @@
       "year": 1987,
       "doi": "10.1093/jee/80.1.237",
       "url": "https://doi.org/10.1093/jee/80.1.237"
+    },
+    {
+      "id": "savage_chenopodium_oxalate_2019",
+      "plant_ids": [
+        "lambsquarters"
+      ],
+      "source_title": "Oxalate Contents of Raw, Boiled, Wok-Fried and Pesto and Juice Made from Fat Hen (Chenopodium album) Leaves",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Chenopodium album",
+      "plant_part_state": "leaves; raw and processed",
+      "directness": "composition",
+      "supports": "HPLC measurement found total oxalate of 1112.4 mg/100 g dry matter in raw Chenopodium album leaves; boiling and wok cooking reduced total oxalate. This directly supports the presence and magnitude of a limiting compound in the exact plant and leaf part.",
+      "does_not_support": "This is a plant-composition study, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, safe percentage, feeding frequency, or prove that a small accidental ingestion causes poisoning.",
+      "year": 2019,
+      "doi": "10.3390/foods8010002",
+      "pmid": "30577599",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30577599/"
+    },
+    {
+      "id": "simpson_beta_vulgaris_oxalate_2009",
+      "plant_ids": [
+        "beetgreens"
+      ],
+      "source_title": "Oxalate content of silver beet leaves (Beta vulgaris var. cicla) at different stages of maturation and the effect of cooking with different milk sources",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Beta vulgaris var. cicla",
+      "plant_part_state": "leaves at different maturity stages",
+      "directness": "composition",
+      "supports": "Measured high soluble oxalate in Beta vulgaris var. cicla leaves, with regrowth tissue reaching 7267 ± 307 mg/100 g dry matter and soluble oxalate comprising 58–89% of total oxalate depending on maturity. This supports treating oxalate as a real leaf-specific limiting factor.",
+      "does_not_support": "The studied taxon is silver beet/chard within Beta vulgaris, not a controlled tortoise feeding study of every beet cultivar. It does not define a tortoise toxic dose, exact safe serving size, or feeding frequency.",
+      "year": 2009,
+      "doi": "10.1021/jf902124w",
+      "pmid": "19877639",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19877639/"
+    },
+    {
+      "id": "bennett_eruca_glucosinolate_2002",
+      "plant_ids": [
+        "arugula"
+      ],
+      "source_title": "Identification of the major glucosinolate (4-mercaptobutyl glucosinolate) in leaves of Eruca sativa L. (salad rocket)",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Eruca sativa",
+      "plant_part_state": "leaves",
+      "directness": "composition",
+      "supports": "LC/MS, LC/MS/MS and NMR identified 4-mercaptobutyl glucosinolate as the major glucosinolate in Eruca sativa leaves, with additional glucosinolates also present. This confirms that the limiting-compound discussion for rocket leaves has a direct plant-chemistry basis.",
+      "does_not_support": "This study identifies leaf glucosinolates; it does not test thyroid function, toxicity, palatability, or safe intake in tortoises and therefore cannot by itself define a feeding percentage or frequency.",
+      "year": 2002,
+      "doi": "10.1016/S0031-9422(02)00203-0",
+      "pmid": "12165298",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12165298/"
     }
   ]
 }
