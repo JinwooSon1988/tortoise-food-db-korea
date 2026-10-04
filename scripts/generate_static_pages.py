@@ -773,6 +773,14 @@ for p in plants:
         summary_display=re.sub(r"(?:이베라그리스육지거북|이베라 그리스 육지거북)(?:\(T\.\s*g\.\s*ibera\))?", "지중해 육지거북", summary_display)
         summary_display=re.sub(r"\bT\.\s*g\.\s*ibera\b", "지중해 육지거북", summary_display)
 
+    # Smooth recurring database/proof-style Korean without changing evidential strength.
+    summary_display=summary_display.replace("보조 채소로만 적용한다", "보조 채소로만 사용한다")
+    summary_display=summary_display.replace("소량 보조로만 적용한다", "소량 보조로만 사용한다")
+    summary_display=summary_display.replace("작은 보조 구성으로만 적용한다", "작은 보조 구성으로만 사용한다")
+    summary_display=summary_display.replace("혼합식 보조 후보로 적용한다", "혼합식에 넣을 수 있는 보조 식물로 본다")
+    summary_display=summary_display.replace("정해진 것으로 해석하지 않는다", "정해졌다는 뜻은 아니다")
+    summary_display=summary_display.replace("속 수준 판정을 넘겨 해석하지 않고", "속 수준 자료가 말하는 범위를 넘기지 않고")
+
     decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="verdictline"><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><div class="gradekey" aria-label="급여 등급 안내">{gradekey}</div></section>'''
 
     # 2) Practical reading: translate evidence boundaries into an immediate husbandry action.
