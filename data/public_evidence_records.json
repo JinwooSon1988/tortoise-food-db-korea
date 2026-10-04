@@ -3193,8 +3193,8 @@
       "plant_taxon": "Althaea officinalis",
       "plant_part_state": "leaves and root; plant-level toxicology",
       "directness": "contextual",
-      "supports": "The veterinary toxicology database classifies Althaea officinalis as a non-poisonous plant and notes no animal poisoning cases in the cited literature.",
-      "does_not_support": "The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.",
+      "supports": "취리히대 수의약리·독성 데이터베이스는 Althaea officinalis를 ‘비독성 식물’로 분류하고, 검토 문헌에서 동물 중독 사례가 보고되지 않았다고 정리한다. 잎과 뿌리는 수의 식물요법에도 사용된다. 따라서 이 식물을 강한 독초로 취급할 근거는 현재 확인되지 않는다는 수의학적 안전성 맥락을 제공한다.",
+      "does_not_support": "같은 데이터베이스가 동시에 ‘사료로는 적합하지 않다’고 명시하므로, 비독성이라는 분류를 육지거북의 권장 먹이라는 뜻으로 바꾸어 해석하면 안 된다. 육지거북 대상 급여량·빈도·장기 영양 적합성을 정한 자료도 아니다.",
       "url": "https://www.vetpharm.uzh.ch/GIFTDB/PFLANZEN/0471_bot.htm"
     },
     {
@@ -3855,6 +3855,24 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.naturescape.co.uk/product/nt-tortoise-food-mix/"
+    },
+    {
+      "id": "althaea_carp_toxicology_2016",
+      "plant_ids": [
+        "marshmallow"
+      ],
+      "source_title": "Preclinical toxicity and safety evaluation of Althaea officinalis L. extract in common carp",
+      "source_type": "peer_reviewed_veterinary_toxicology",
+      "animal_taxon": "Cyprinus carpio",
+      "applicability": "composition_only",
+      "plant_taxon": "Althaea officinalis",
+      "plant_part_state": "plant extract added to feed; not equivalent to fresh tortoise forage",
+      "directness": "contextual",
+      "supports": "150마리의 잉어를 4개 처리군으로 나눠 Althaea officinalis 추출물 0, 2.5, 5, 10 g/kg 사료를 60일 급여하고 혈액·간 효소 지표를 비교했다. 2.5와 5 g/kg에서는 뚜렷한 간 효소 부작용이 확인되지 않았지만 10 g/kg에서는 AST·ALT·ALP·LDH 증가 등 세포독성을 시사하는 변화가 나타났다. 따라서 ‘천연 식물이라 무제한 안전하다’는 가정은 피해야 한다는 용량 의존적 독성 맥락을 제공한다.",
+      "does_not_support": "잉어에게 식물 추출물을 사료에 첨가한 연구로 신선한 잎·꽃을 먹는 육지거북과 노출 형태와 동물종이 모두 다르다. 잉어의 g/kg 용량을 육지거북 급여량으로 환산할 수 없고, 육지거북 먹이로서의 영양적 적합성도 입증하지 않는다.",
+      "year": 2016,
+      "doi": "10.1080/10454438.2016.1172285",
+      "url": "https://doi.org/10.1080/10454438.2016.1172285"
     }
   ]
 }
