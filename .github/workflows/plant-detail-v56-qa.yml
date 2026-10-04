@@ -3,6 +3,15 @@ on:
   pull_request:
   push:
     branches: [main]
+    paths:
+      - 'plant/**'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/audit_plant_detail_v56.py'
+      - 'scripts/public_verdict.py'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/plant_nutrition_v56.json'
+      - '.github/workflows/plant-detail-v56-qa.yml'
 jobs:
   audit:
     runs-on: ubuntu-latest
