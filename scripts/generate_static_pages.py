@@ -87,6 +87,10 @@ def animal_taxon_display(value):
         "Cats and plant chemistry":"고양이 및 식물화학 맥락 — 육지거북 급여시험 아님",
         "Plant chemistry; mammalian experimental context":"식물화학·포유류 실험 맥락 — 육지거북 급여시험 아님",
         "primarily mammalian/medicinal toxicology; not tortoise feeding":"주로 포유류·약용 독성학 자료 — 육지거북 급여시험 아님",
+        "Clanis bilineata tsingtauica larvae; leaf composition":"Clanis bilineata tsingtauica 유충 및 잎 성분 — 육지거북 급여시험 아님",
+        "Cyprinus carpio":"잉어 (Cyprinus carpio) — 육지거북 급여시험 아님",
+        "Plant bioassays":"식물 생물검정 — 동물 급여시험 아님",
+        "Plant composition":"식물 성분 분석 — 동물 급여시험 아님",
     }
     shown=exact.get(v,v)
     if shown==v and re.search(r"[A-Za-z]{3,}", v) and not re.search(r"[가-힣]", v):
