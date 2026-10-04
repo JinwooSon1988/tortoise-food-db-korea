@@ -4059,6 +4059,63 @@
       "doi": "10.1007/BF01402939",
       "pmid": "24259173",
       "url": "https://pubmed.ncbi.nlm.nih.gov/24259173/"
+    },
+    {
+      "id": "sattler_borage_pa_2023",
+      "plant_ids": [
+        "borage"
+      ],
+      "source_title": "Pyrrolizidine alkaloids in borage (Borago officinalis): Comprehensive profiling and development of a validated LC-MS/MS method for quantification",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Borago officinalis",
+      "plant_part_state": "leaves",
+      "directness": "composition_only",
+      "supports": "UHPLC-QToF profiling and a validated LC-MS/MS method identified and quantified multiple pyrrolizidine alkaloids and their N-oxides in Borago officinalis leaf material. This confirms that borage leaves themselves contain a class of compounds relevant to safety assessment.",
+      "does_not_support": "This is plant-chemistry and food-safety evidence, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, a one-bite poisoning threshold, or the clinical outcome of accidental ingestion.",
+      "year": 2023,
+      "doi": "10.1016/j.talanta.2023.124425",
+      "pmid": "36924638",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36924638/"
+    },
+    {
+      "id": "rumex_acetosa_oxalate_2021",
+      "plant_ids": [
+        "sorrel"
+      ],
+      "source_title": "Evaluation of Major Minerals and Trace Elements in Wild and Domesticated Edible Herbs Traditionally Used in the Mediterranean Area",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Rumex acetosa",
+      "plant_part_state": "leaves; wild and cultivated",
+      "directness": "composition_only",
+      "supports": "The study measured nitrate and oxalate in Rumex acetosa leaves under wild and several cultivation conditions. Open-field leaves reached 8.50 ± 0.21 mg oxalate/g fresh weight, confirming that oxalate can be a substantial leaf-specific limiting factor and varies with cultivation.",
+      "does_not_support": "The study concerns plant composition and human-food interpretation, not tortoise feeding. It does not establish a tortoise toxic dose, exact safe portion, fixed feeding frequency, or prove that a small accidental ingestion causes poisoning.",
+      "year": 2021,
+      "doi": "10.1007/s12011-020-02467-3",
+      "pmid": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
+    },
+    {
+      "id": "piatczak_salix_alba_leaf_2020",
+      "plant_ids": [
+        "willowleaf"
+      ],
+      "source_title": "Identification and Accumulation of Phenolic Compounds in the Leaves and Bark of Salix alba (L.) and Their Biological Potential",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Salix alba",
+      "plant_part_state": "leaves and bark analyzed separately",
+      "directness": "composition_only",
+      "supports": "UPLC-PDA-Q/TOF-MS identified 29 phenolic compounds in Salix alba leaves and demonstrated a substantial leaf phenolic profile. The paper provides exact-species, leaf-specific chemistry relevant to interpreting why willow foliage should not be treated as nutritionally neutral.",
+      "does_not_support": "This is not a tortoise feeding or toxicity trial and Salix alba is only one species within Salix. It does not demonstrate that all willow species have identical chemistry, establish a tortoise toxic dose, or by itself prove that willow leaves must be excluded.",
+      "year": 2020,
+      "doi": "10.3390/biom10101391",
+      "pmid": "33003576",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33003576/"
     }
   ]
 }
