@@ -3295,5 +3295,27 @@
       "추출물의 어류 독성 용량을 육지거북의 급여량으로 환산할 수 없음"
     ],
     "why": "마시멜로우(Althaea officinalis)는 수의독성 자료에서 독초로 분류되지는 않고 동물 중독 사례도 확인되지 않는다. 그러나 같은 자료가 사료용으로는 적합하지 않다고 명시하고, 육지거북에서 신선한 잎이나 꽃의 장기 급여 적합성을 확인한 직접 자료도 부족하다. 따라서 ‘안전한 주식’으로 권장하지 않고, 정확히 동정된 무농약 식물이라도 굳이 사용할 경우 다양한 검증된 먹이 사이에 소량·가끔만 보조적으로 고려하는 보수적 판정이 적절하다."
+  },
+  {
+    "plant_id": "kiwileaf",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "검증된 먹이를 우선하고, 굳이 사용할 경우 소량·가끔만",
+    "confidence": "C",
+    "evidence_ids": [
+      "actinidia_deliciosa_leaf_genotoxicity_2026",
+      "actinidia_iridoid_distribution_2023",
+      "actinidia_leaf_calcium_oxalate_1987",
+      "actinidia_leaf_phytotoxicity_2019"
+    ],
+    "limits": [
+      "육지거북이 신선한 A. deliciosa 잎을 직접 섭식한 급여·야생관찰 근거는 현재 확보되지 않음",
+      "잎의 칼슘 중 상당 부분이 calcium oxalate 형태라는 식물화학 자료가 있어 총 칼슘 수치만으로 영양적 우수성을 판단할 수 없음",
+      "세포시험의 비유전독성 및 식물 대상 phytotoxicity 결과는 육지거북의 경구 안전성을 직접 입증하지 않음"
+    ],
+    "why": "키위잎은 현재 확인된 자료만으로 육지거북의 권장 먹이로 올릴 근거가 부족하다. 특히 A. deliciosa 잎에서는 칼슘의 상당 부분이 옥살산칼슘 형태로 존재한다는 직접 식물화학 자료가 있고, 다양한 생리활성 성분도 확인된다. 반면 특정 세포시험에서는 유전독성이 관찰되지 않았지만 이것은 신선한 잎의 경구 안전성을 뜻하지 않는다. 따라서 검증된 야생초를 우선하고, 정확히 동정된 무농약 키위잎을 굳이 사용할 경우에도 식단의 작은 일부로 가끔만 사용하는 보수적인 C 판정이 적절하다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
   }
 ]
