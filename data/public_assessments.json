@@ -3113,5 +3113,87 @@
     ],
     "why": "육지거북 전문 식물자료는 헤어벨(Campanula rotundifolia)의 잎과 꽃을 급여 가능한 부위로 다루면서 뿌리줄기는 급여하지 않도록 명확히 구분한다. 따라서 정확히 동정된 잎과 꽃은 여러 적합한 식물과 섞어 사용할 수 있지만, 뿌리까지 같은 판정을 적용하지 않고 한 식물에 식단을 편중하지 않는다.",
     "applicability_note": "육지거북 일반 전문자료에 근거한 부위 한정 판정. 정확한 종 동정과 잎·꽃 범위가 핵심이다."
+  },
+  {
+    "plant_id": "erodium_botrys",
+    "species_group": "Tortoise_general",
+    "verdict": "supported_mixed_diet",
+    "role": "다양한 야생초 혼합식의 한 구성",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_erodium_botrys_65",
+      "kew_erodium_botrys"
+    ],
+    "limits": [
+      "전문 사육자료의 정확한 Erodium botrys 판정이지만 통제된 이베라그리스육지거북 장기 급여시험은 아님",
+      "단일 먹이·무제한 급여 또는 정확한 식단 비율을 정한 자료가 아님",
+      "열매·씨앗 등 개별 부위별 안전 용량은 확인되지 않음"
+    ],
+    "why": "전문 육지거북 식물자료는 Erodium botrys를 다양한 식단에 포함할 수 있는 먹이로 분류하고, Kew 자료로 정확한 학명도 확인된다. 따라서 정확히 동정된 식물은 여러 야생초와 함께 혼합식의 한 구성으로 사용할 수 있다. 다만 이베라그리스육지거북에서 장기간 단독 급여한 시험이나 정확한 배합률 자료는 없으므로 한 종류를 주식처럼 계속 주는 의미로 확대하지 않는다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "lamium_album",
+    "species_group": "Tortoise_general",
+    "verdict": "supported_mixed_diet",
+    "role": "다양한 야생초 혼합식의 한 구성",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_lamium_album_774",
+      "ttrust_lamium_album"
+    ],
+    "limits": [
+      "두 전문 사육자료가 급여 식물로 다루지만 통제된 이베라그리스육지거북 급여시험은 아님",
+      "어린 비개화 개체는 쐐기풀과 외형이 비슷할 수 있어 정확한 동정이 필요함",
+      "정확한 장기 급여 비율·안전 용량은 확립되지 않음"
+    ],
+    "why": "서로 독립적인 전문 육지거북 자료에서 Lamium album을 급여 가능한 야생식물로 다룬다. 정확히 동정한 흰광대나물은 여러 적합한 야생초와 섞어 식단 다양성을 높이는 용도로 사용할 수 있다. 다만 어린 식물은 쐐기풀과 혼동할 수 있으므로 채집 식물은 동정이 우선이며, 장기 단독 급여나 고정 배합률까지 입증된 자료는 아니다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "campanula_rotundifolia",
+    "species_group": "Tortoise_general",
+    "verdict": "supported_mixed_diet",
+    "role": "잎·꽃을 혼합식에 활용",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_campanula_rotundifolia_736",
+      "kew_campanula_rotundifolia"
+    ],
+    "limits": [
+      "급여 판정은 잎과 꽃에 한정하며 뿌리줄기는 제외",
+      "전문 사육자료이며 이베라그리스육지거북의 통제 급여시험은 아님",
+      "지역명 bluebell 때문에 Hyacinthoides류와 혼동하지 않아야 함"
+    ],
+    "why": "전문 육지거북 식물자료는 Campanula rotundifolia의 잎과 꽃을 급여 가능한 부위로 명시하고, 뿌리줄기는 급여하지 않도록 구분한다. 따라서 정확히 동정된 식물의 잎과 꽃은 다양한 혼합식에 사용할 수 있다. 일부 지역에서 bluebell이라 부르므로 독립된 다른 식물인 Hyacinthoides류와 이름만 보고 혼동해서는 안 되며, 이 결론을 뿌리줄기까지 확대하지 않는다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "sisymbrium_officinale",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "어린 식물을 제한적으로 혼합",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttrust_sisymbrium_officinale",
+      "ttable_sisymbrium_officinale_712",
+      "sisymbrium_itc_2021"
+    ],
+    "limits": [
+      "Tortoise Trust의 직접 급여 범위는 young plants이며 성숙 식물·씨앗까지 같은 빈도로 확대하지 않음",
+      "전문자료는 십자화과 특성 때문에 과량·반복 급여를 피하도록 안내함",
+      "식물화학 자료의 glucosinolate/isothiocyanate 존재가 육지거북의 정확한 갑상선 독성 용량을 정하는 것은 아님",
+      "물냉이 Nasturtium officinale와 혼동하지 않음"
+    ],
+    "why": "Tortoise Trust는 Sisymbrium officinale의 어린 식물을 육지거북 야생 먹이 목록에 포함하고, 다른 전문자료도 급여 가능하되 자주 많이 주지 않는 식물로 분류한다. 식물화학 연구에서는 이 종에 glucosinolate와 isothiocyanate가 존재함이 확인되어 반복적인 과량 급여를 피하는 보수적 운용과도 맞는다. 따라서 어린 식물을 여러 먹이 사이에 제한적으로 섞어 사용하고, 성숙 식물·씨앗이나 다른 십자화과 식물을 동시에 많이 주는 방식으로 확대하지 않는다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
   }
 ]
