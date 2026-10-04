@@ -1472,13 +1472,14 @@
     "role": "계획 급여 대상에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_sorrel"
+      "tortoise_table_sorrel",
+      "rumex_acetosa_oxalate_2021"
     ],
     "limits": [
       "Rumex acetosa에 한정; Ibera 독성 용량을 단정하지 않음",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 수영(Rumex acetosa)의 지상부를 ‘급여하지 않음’으로 분류한다. 그러나 현재 연결 근거만으로는 육지거북에서 위해를 일으키는 구체적 독성 용량이나 급여 빈도까지 확정할 수 없다. 따라서 독성 기전을 임의로 추가하지 않고 계획 급여 대상에서 제외한다.",
+    "why": "전문 육지거북 식물자료는 수영(Rumex acetosa)을 계획 급여에서 제외한다. R. acetosa 잎을 직접 분석한 연구에서도 재배조건에 따라 옥살레이트가 크게 달라졌고 노지 재배 잎에서 8.50 ± 0.21 mg/g 생중량이 측정되어, 잎의 높은 옥살레이트가 실제 제한요인임을 뒷받침한다. 다만 이 수치는 육지거북 독성 용량이 아니므로 우발적 소량 섭취를 곧바로 중독으로 해석하지 않고 계획 식단에서 제외한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1682,13 +1683,14 @@
     "role": "계획 급여에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_willow"
+      "tortoise_table_willow",
+      "piatczak_salix_alba_leaf_2020"
     ],
     "limits": [
       "Salix spp. 잎 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "전문 육지거북 식물자료는 Salix spp.의 잎을 ‘급여하지 않음’으로 분류한다. 그러나 현재 연결 근거는 이베라그리스육지거북의 특정 독성 용량이나 모든 Salix종의 동일한 위해 수준을 입증한 직접 시험이 아니다. 따라서 독성 수치를 임의로 만들지 않고 계획 급여에서는 제외한다.",
+    "why": "전문 육지거북 식물자료는 Salix spp. 잎을 계획 급여에서 제외한다. Salix alba 잎의 원논문에서도 UPLC 기반 분석으로 다수의 phenolic compounds가 확인되어 버드나무 잎이 성분적으로 단순한 먹이가 아니라는 점은 뒷받침된다. 그러나 이 연구는 육지거북 독성시험이 아니고 S. alba 한 종의 성분자료이므로 Salix속 전체의 동일한 독성이나 특정 위해 용량으로 확대하지 않는다. 현재는 전문 육지거북 지침을 중심으로 D 판정을 유지한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1906,13 +1908,14 @@
     "role": "계획 급여에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_borage"
+      "tortoise_table_borage",
+      "sattler_borage_pa_2023"
     ],
     "limits": [
       "Borago officinalis 잎·꽃",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "전문 육지거북 식물자료는 보리지(Borago officinalis)의 잎·꽃을 ‘급여하지 않음’으로 분류한다. 다만 현재 연결 근거는 이베라그리스육지거북의 구체적인 독성 용량이나 용량-반응을 정한 직접 시험이 아니다. 따라서 근거 없는 독성 수치를 붙이지 않고 계획 식단에서는 제외한다.",
+    "why": "전문 육지거북 식물자료는 보리지(Borago officinalis)의 잎·꽃을 계획 급여에서 제외한다. 여기에 B. officinalis 잎을 직접 분석한 LC-MS/MS 연구에서 pyrrolizidine alkaloid와 그 N-oxide가 확인·정량되어, 잎 자체에 안전성 평가가 필요한 제한성분이 존재한다는 점도 확인된다. 다만 이 연구는 육지거북 독성시험이 아니므로 ‘한입이면 중독’이나 특정 독성 용량으로 확대하지 않고 D 판정을 유지한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
