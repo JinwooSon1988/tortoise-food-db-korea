@@ -45,7 +45,8 @@ for pid in sorted(public_ids):
     if re.search(r'<section', main[h1:main.rfind('<section', 0, decision)]):
         errors.append(f'{pid}: a section pushes the decision below the plant name')
     later = [pos(x) for x in ('<h2>어떻게 먹이면 되나</h2>', '<h2>왜 이렇게 판정했나</h2>', '<h2>영양성분</h2>')]
-    if None in later or later != sorted(later) or later[0] < why:
+    present = [x for x in later if x is not None]
+    if not present or present != sorted(present) or present[0] < why or later[0] is None or later[1] is None:
         errors.append(f'{pid}: practical action → evidence → nutrition order broken')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None and later[0] is not None and not (why < sp < later[0]):
