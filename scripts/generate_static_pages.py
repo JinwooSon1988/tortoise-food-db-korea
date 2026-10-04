@@ -768,7 +768,8 @@ for p in plants:
     gradekey="".join(f'<span class="{"on" if grade==x else ""}"><b>{x}</b> {y}</span>' for x,y in (("A","혼합식 활용"),("B","제한적 혼합"),("C","가끔 보조"),("D","급여 제외")))
     # Reader-facing summary should not name a single species unless the assessment itself is species-specific.
     # Species-level evidence remains traceable in the evidence cards/species exception section.
-    if not is_species_only(a):
+    species_scope = str((a or {}).get("assessment_scope") or "").lower() in ("exact_species", "species_specific")
+    if not species_scope:
         summary_display=re.sub(r"(?:이베라그리스육지거북|이베라 그리스 육지거북)(?:\(T\.\s*g\.\s*ibera\))?", "지중해 육지거북", summary_display)
         summary_display=re.sub(r"\bT\.\s*g\.\s*ibera\b", "지중해 육지거북", summary_display)
 
