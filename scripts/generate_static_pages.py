@@ -817,7 +817,7 @@ for p in plants:
     else:
         identity_text="검색 결과의 이름·학명과 실제 먹이려는 식물이 같은 종인지 확인한다. 농약 사용이나 오염 가능성도 급여 전에 별도로 확인한다."
         identity_html=f'''<div class="identity-note" data-identity="note"><h3>먹이기 전 식물 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p></div>'''
-    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>근거 부족 상태에서는 안전하다고 추정하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
+    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>안전성을 확인할 자료가 부족하므로 먹여도 된다고 판단하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
     scope_html=(f'''<section class="card scopecard" id="scope">{identity_html}</section>''' if identity_warning else "")
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
@@ -839,9 +839,9 @@ for p in plants:
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
         evidence_cards.append(f'''<article class="evcard"><h3>{title_html}</h3><p>{esc(evidence_support_display(e.get("supports")))}</p><p class="limit"><b>근거의 한계</b> · {esc(evidence_limit_display(e.get("does_not_support")))}</p>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</article>''')
-    evidence_cards_html="".join(evidence_cards) or '<p>현재 공개 가능한 개별 근거 레코드가 연결되지 않았다. 따라서 안전성을 추정하지 않는다.</p>'
+    evidence_cards_html="".join(evidence_cards) or '<p>현재 연결된 개별 근거자료가 없다. 먹여도 안전하다고 판단할 근거가 확보되기 전에는 급여하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
-    summary_chips=f'<p class="evcountnote"><b>근거 요약</b> · 이 판정에는 확인 가능한 출처 {len(linked_evidence)}건이 연결되어 있다. 그중 해당 거북·식물·질문을 직접 다룬 자료는 {direct_count}건, 전문 사육자료는 {husbandry_count}건이다. 출처 수가 많다고 더 안전하다는 뜻은 아니다.</p>'
+    summary_chips=f'<p class="evcountnote"><b>근거 한눈에 보기</b> · 이 결론에는 확인 가능한 출처 {len(linked_evidence)}건이 연결되어 있다. 그중 해당 거북·식물·질문을 직접 다룬 자료는 {direct_count}건, 전문 사육자료는 {husbandry_count}건이다. 출처가 많다는 사실만으로 더 안전한 먹이라는 뜻은 아니다.</p>'
 
     # Wild feeding records (one place: static wild data + direct Ibera observations).
     wild=wild_by_plant.get(pid,[]); risk=risk_by_plant.get(pid); ib=ibera_by_plant.get(pid,[])
