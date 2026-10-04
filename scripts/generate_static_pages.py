@@ -73,11 +73,11 @@ def animal_taxon_display(value):
         "Chersina angulata":"앵귤레이트육지거북 (Chersina angulata)",
         "Testudo graeca":"그리스육지거북 (Testudo graeca)",
         "Testudo graeca graeca":"그리스육지거북 T. g. graeca",
-        "Testudo graeca ibera":"이베라그리스육지거북 (T. g. ibera)",
+        "Testudo graeca ibera":"그리스육지거북 (T. graeca ibera 아종)",
         "Testudo hermanni":"헤르만육지거북 (Testudo hermanni)",
         "Testudo hermanni hermanni":"서부헤르만육지거북 (T. h. hermanni)",
         "Testudo spp.":"Testudo속 육지거북",
-        "Testudo graeca ibera and eastern Testudo graeca clades":"이베라그리스육지거북 및 동부 Testudo graeca 계통",
+        "Testudo graeca ibera and eastern Testudo graeca clades":"그리스육지거북 — T. graeca ibera 아종 및 동부 T. graeca 계통",
         "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii":"그리스·헤르만·마지나타·러시안육지거북",
         "Herbivorous tortoises, with Mediterranean observations":"초식 육지거북 일반 및 지중해 육지거북 관찰",
         "Bos taurus (cattle)":"소 (Bos taurus) — 육지거북 급여시험 아님",
@@ -856,7 +856,7 @@ for p in plants:
         s=ibera_sources.get(o.get("source_id"),{})
         scope_txt="식물 종까지 일치" if o.get("identity_scope")=="exact_species" else "속 수준 관찰 — 이 식물의 정확한 종을 먹었다는 뜻으로 확대하지 않는다"
         link=f'<a href="{esc(s.get("url"))}" target="_blank" rel="noopener noreferrer">원 연구 확인</a>' if s.get("url") else ""
-        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>이베라 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
+        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>그리스육지거북 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
     wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{conflict_html}{"".join(wild_cards)}''' if wild_cards else "")
 
     deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">근거 상세히 알아보기</div><h2>자료별 근거를 자세히 확인하기</h2><div class="evidence-core"><h3>판정 근거 요약</h3><p>{esc(summary_display)}</p></div><h3 style="margin-top:18px">근거</h3>{evidence_cards_html}{wild_section}{summary_chips}</section>'''
