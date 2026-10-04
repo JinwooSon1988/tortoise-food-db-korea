@@ -2,7 +2,7 @@
 
 Information hierarchy on every page:
   name → grade → meaning → why → practical action → species notes → identity warning (only when needed)
-  → evidence → nutrition.
+  → nutrition → evidence.
 Grade equality with the home search is enforced by scripts/qa_verdict_consistency.py.
 """
 import json, re
@@ -49,10 +49,10 @@ for pid in sorted(public_ids):
     # Evidence is mandatory. Practical action exists only for a default-applicable verdict; nutrition exists only when verified data is linked.
     if evidence is None or evidence < why:
         errors.append(f'{pid}: evidence section missing or precedes the verdict')
-    if practical is not None and (practical < why or (evidence is not None and practical > evidence)):
-        errors.append(f'{pid}: practical action must sit between verdict and evidence')
-    if nutrition is not None and (evidence is None or nutrition < evidence):
-        errors.append(f'{pid}: nutrition must follow evidence')
+    if practical is not None and practical < why:
+        errors.append(f'{pid}: practical action must follow the verdict')
+    if nutrition is not None and (nutrition < why or (evidence is not None and nutrition > evidence)):
+        errors.append(f'{pid}: nutrition must sit between verdict/practical guidance and detailed evidence')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None:
         upper = practical if practical is not None else evidence
@@ -102,7 +102,7 @@ print(f'plant detail v5.6 contract OK for {len(public_ids)} pages; {len(seen)} v
 
 # Mobile verdict card stays compact while retaining the A/B/C/D context key.
 assert '.decision{padding:14px 15px}' in generator
-assert '.gradekey{gap:3px 8px;margin-top:9px;padding-top:7px;font-size:10px}' in generator
+assert '.gradekey{' not in generator and 'class="gradekey"' not in generator, 'obsolete all-grade legend must stay removed'
 assert 'aria-label="급여 등급 안내"' in generator
 
 # Keyboard/touch accessibility: interactive detail-page targets remain at least 44px high.
