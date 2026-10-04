@@ -3317,5 +3317,29 @@
     "assessment_scope": "general_tortoise",
     "animal_taxon": "Tortoise general",
     "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "meadowgrass",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "어린 잎을 다양한 먹이 사이에 소량 혼합",
+    "confidence": "B-",
+    "evidence_ids": [
+      "kew_poa_pratensis_identity",
+      "kew_poa_pratensis_animal_food",
+      "tortoise_table_cat_grass",
+      "tt_fescue_694",
+      "testudo_graeca_cynodon_field_diet_2008",
+      "tortoise_trust_mediterranean_grass_context"
+    ],
+    "limits": [
+      "Poa pratensis 자체를 Testudo에 급여한 직접 연구는 현재 확보되지 않음",
+      "급여 방향은 정확한 종의 동물사료 이용 기록과 여러 벼과 식물의 육지거북 사육·야생섭식 근거를 함께 사용한 간접 판정임",
+      "성숙한 종자·씨이삭을 어린 잎과 동일하게 취급하지 않으며 잔디밭의 제초제·살충제 노출을 반드시 배제해야 함"
+    ],
+    "why": "왕포아풀(Poa pratensis)은 Kew에서 동물 먹이 이용이 기록된 정확한 벼과 식물이며, 육지거북 전문자료에서도 여러 어린 풀류가 먹이로 사용되고 실제 야생 그리스육지거북에서도 다른 벼과 식물의 잎과 줄기 섭식이 확인된다. 다만 P. pratensis 자체를 그리스육지거북에게 급여한 직접 자료는 확보되지 않았으므로 A급 핵심 먹이로 올리지는 않는다. 약제가 묻지 않은 어린 잎을 여러 검증된 야생초 사이에 소량 섞는 B 수준의 혼합 먹이로 보는 것이 현재 근거에 가장 맞다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
   }
 ]
