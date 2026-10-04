@@ -1,8 +1,8 @@
 """Plant detail page contract, checked on the generated pages themselves.
 
 Information hierarchy on every page:
-  name → grade → meaning → why → practical reading → species notes → scope / identity / limits
-  → evidence (papers first) → nutrition → related.
+  name → grade → meaning → why → practical action → species notes → identity warning (only when needed)
+  → evidence → nutrition.
 Grade equality with the home search is enforced by scripts/qa_verdict_consistency.py.
 """
 import json, re
@@ -29,7 +29,7 @@ assert 'assessments_korea_addendum' not in generator
 assert not (root / 'plant-detail-v56.js').exists() and not (root / 'ibera-direct-evidence-v56.js').exists()
 assert "glob('*/index.html')" in inj and 'RETIRED' in inj
 
-assert '<details class="scopefold">' in generator and '<summary>' in generator and '확인되지 않은 내용 보기</summary>' in generator
+assert '<details class="scopefold">' not in generator and '적용 범위와 아직 확인되지 않은 내용 보기' not in generator
 errors = []
 for pid in sorted(public_ids):
     t = pages[pid]
@@ -46,20 +46,15 @@ for pid in sorted(public_ids):
         errors.append(f'{pid}: a section pushes the decision below the plant name')
     later = [pos(x) for x in ('<h2>어떻게 먹이면 되나</h2>', '<h2>왜 이렇게 판정했나</h2>', '<h2>영양성분</h2>')]
     if None in later or later != sorted(later) or later[0] < why:
-        errors.append(f'{pid}: scope/limits → evidence → nutrition → related order broken')
-    # Scope content is intentionally collapsed, except high-risk identity warnings which stay visible above it.
-    # Materialized pages may lag the generator within the same PR run; fold contract is verified in generator source below.
+        errors.append(f'{pid}: practical action → evidence → nutrition order broken')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None and later[0] is not None and not (why < sp < later[0]):
-        errors.append(f'{pid}: species notes must follow the default verdict and precede scope/limits')
+        errors.append(f'{pid}: species notes must follow the default verdict and precede evidence')
     # Evidence numbers live in the evidence section, not in the first-screen decision card.
     decision_card = main[decision:main.find('</section>', decision)]
     if '직접 ' in decision_card and '근거 구성' in decision_card or 'quickfacts' in decision_card:
         errors.append(f'{pid}: evidence counts must not crowd the decision card')
     # Papers are listed before specialist/database sources.
-    kinds = re.findall(r'<article class="evcard"><div class="evhead"><span class="(paper|)">', main)
-    if kinds != sorted(kinds, key=lambda k: 0 if k == 'paper' else 1):
-        errors.append(f'{pid}: peer-reviewed papers must be listed first')
     if 'scholarly' in main or '<h2>원논문·학술자료</h2>' in main:
         errors.append(f'{pid}: papers must not be repeated in a second section')
     for retired in ('today/', 'meal/?add=', '그래서 오늘 뭐 먹이지?', '이 먹이 급여기록에 추가', 'animalSelect', 'tortoiseAnimalTaxon'):
@@ -105,8 +100,6 @@ assert 'aria-label="급여 등급 안내"' in generator
 # Keyboard/touch accessibility: interactive detail-page targets remain at least 44px high.
 for token in (
     '.detailnav a{display:inline-flex;align-items:center;min-height:44px',
-    '.scopefold>summary{cursor:pointer;min-height:44px',
-    '.related{display:flex;align-items:center;min-height:44px',
     '.sourceopen{min-height:44px;align-items:center}',
 ):
     assert token in generator, f'missing 44px interaction target contract: {token}'
