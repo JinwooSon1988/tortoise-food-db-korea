@@ -20,26 +20,10 @@ on:
       - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'data/plants.json'
-      - 'data/public_assessments.json'
-      - 'data/public_evidence_records.json'
-      - 'data/curated_identity_notes.json'
-      - 'data/verified_plant_images_v56.json'
-      - 'data/ibera_direct_feeding_evidence_v56.json'
-      - 'data/korean_retail_name_map.json'
-      - 'scripts/patch_curated_social_metadata.py'
-      - 'scripts/inject_plant_detail_v56.py'
-      - 'scripts/public_verdict.py'
-      - 'verdict-core.js'
-      - 'index.html'
-      - 'scripts/audit_verdict_cards.py'
-      - 'scripts/audit_plant_detail_v56.py'
-      - 'scripts/qa_verdict_consistency.py'
-      - 'plant/**'
-      - '.github/workflows/render-plant-pages.yml'
+  # Main-branch data/generator changes are generated and audited by
+  # sync-generated-plant-pages.yml. Running this verifier as well duplicated
+  # the expensive render/audit cycle. Keep this workflow for pull requests
+  # and explicit manual verification only.
   workflow_dispatch:
 
 permissions:
