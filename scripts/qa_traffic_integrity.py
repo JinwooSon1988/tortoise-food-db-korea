@@ -7,23 +7,18 @@ assessment_data=json.loads((ROOT/"data/public_assessments.json").read_text(encod
 assessments=assessment_data if isinstance(assessment_data,list) else assessment_data.get("assessments",assessment_data.get("records",[]))
 assessed_ids={a["plant_id"] for a in assessments}
 public=[p for p in plants if p.get("identity_status")!="candidate_name" and p["id"] in assessed_ids]
-required=["식물동정"]
+required=[]
 for p in public:
     path=ROOT/"plant"/p["id"]/"index.html"
     if not path.exists(): raise SystemExit(f"missing generated page: {p['id']}")
     text=path.read_text(encoding="utf-8")
     for token in required:
         if token not in text: raise SystemExit(f"{p['id']}: missing {token}")
-    # Unknowns are rendered from the current evidence model and need not use a fixed legacy heading.
-    if not any(token in text for token in ("확인되지", "확정할 수 없", "정하지 않는다", "근거가 부족", "부위 미확인")):
+    # The focused detail UI must keep a visible evidence boundary without restoring retired accordions/related links.
+    if not any(token in text for token in ("근거의 한계", "확인되지", "확정할 수 없", "정하지 않는다", "근거가 부족", "부위 미확인")):
         raise SystemExit(f"{p['id']}: missing explicit evidence limitation/unknown boundary")
-    # Curated legacy pages may use their own heading structure; the content contract above is authoritative.
-    related_boundary = (
-        "동일한 급여 안전성·영양가·권장도를 뜻하지 않는다" in text
-        or "급여 안전성·영양가·권장도가 같다는 뜻" in text
-    )
-    if not related_boundary:
-        raise SystemExit(f"{p['id']}: related-link safety boundary missing")
+    if "비슷한 식물도 확인하기" in text or "적용 범위와 아직 확인되지 않은 내용 보기" in text:
+        raise SystemExit(f"{p['id']}: retired detail UI returned")
 candidates=[p for p in plants if p.get("identity_status")=="candidate_name"]
 for p in candidates:
     assert not (ROOT/"plant"/p["id"]/"index.html").exists(), f"candidate page must not be published: {p['id']}"
