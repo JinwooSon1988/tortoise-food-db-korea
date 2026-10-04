@@ -3795,6 +3795,65 @@
       "doi": null,
       "pmid": null,
       "url": "https://www.kbr.go.kr/man/home/rsc/rsc01003v.do?clsGbnCd=LOCAL&clsNo=0&commGroup=VP&gbifnubTxnId=0&tempClsSno=9702"
+    },
+    {
+      "id": "ttable_vicia_310",
+      "plant_ids": [
+        "vicia_sativa",
+        "vicia_cracca"
+      ],
+      "source_title": "The Tortoise Table. Vetch (Common Vetch, Hairy Tare, Tufted Vetch).",
+      "source_type": "specialist_plant_database",
+      "animal_taxon": "Tortoise general",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Vicia spp.; explicitly Vicia sativa and Vicia cracca",
+      "plant_part_state": "flowers and leaves; pods/seeds excluded",
+      "directness": "expert_husbandry",
+      "supports": "States that flowers and leaves of Vicia spp., explicitly including Vicia sativa and Vicia cracca, are suitable as a small part of a varied tortoise diet.",
+      "does_not_support": "The source explicitly warns that seeds contain cyanogenic glycoside and advises avoiding pods; it does not establish a controlled long-term feeding percentage.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=310"
+    },
+    {
+      "id": "tortoiseclub_vicia_sativa_mix",
+      "plant_ids": [
+        "vicia_sativa"
+      ],
+      "source_title": "Tortoise Food – Growing from Seed Guide.",
+      "source_type": "specialist_husbandry_guide",
+      "animal_taxon": "Tortoise general",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Vicia sativa",
+      "plant_part_state": "seed mixture intended to establish tortoise forage",
+      "directness": "expert_husbandry",
+      "supports": "Includes Common Vetch (Vicia sativa) at 5% in a tortoise food growing mixture, supporting use as one component of a diverse forage planting.",
+      "does_not_support": "Seed-mixture inclusion does not establish unrestricted feeding, seed or pod safety, a toxicological threshold, or a controlled long-term tortoise trial.",
+      "year": 2014,
+      "doi": null,
+      "pmid": null,
+      "url": "https://emma-jackson-w2z7.squarespace.com/s/5TORTOISE_FOOD_GROW_GUIDE.pdf"
+    },
+    {
+      "id": "naturescape_nt_tortoise_mix",
+      "plant_ids": [
+        "vicia_sativa",
+        "vicia_cracca"
+      ],
+      "source_title": "Naturescape Wildflower Farm. NT Tortoise Food Mix.",
+      "source_type": "specialist_husbandry_guide",
+      "animal_taxon": "Tortoise general",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Vicia sativa; Vicia cracca",
+      "plant_part_state": "forage seed mixture",
+      "directness": "expert_husbandry",
+      "supports": "Includes Vicia sativa at 7% and Vicia cracca at 3% in a 21-species tortoise food seed mixture, supporting their use as minority components of diverse forage.",
+      "does_not_support": "Commercial forage-mix composition is not a controlled feeding trial and does not establish pod or seed safety, toxic dose, or the percentage actually eaten by tortoises.",
+      "year": null,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.naturescape.co.uk/product/nt-tortoise-food-mix/"
     }
   ]
 }
