@@ -3157,5 +3157,86 @@
     "assessment_scope": "general_tortoise",
     "animal_taxon": "Tortoise general",
     "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "dichondra_micrantha",
+    "species_group": "Tortoise_general",
+    "verdict": "supported_mixed_diet",
+    "role": "다양한 식물성 먹이와 섞어 급여",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_dichondra_707",
+      "kew_dichondra_micrantha"
+    ],
+    "limits": [
+      "전문 사육자료는 안전한 식단 구성 식물로 다루지만 통제된 장기 급여시험은 아님",
+      "한 종류만 반복 급여하거나 정확한 식단 비율을 정한 근거는 아님",
+      "잔디 대용으로 재배된 곳에서는 제초제·농약 처리 여부를 확인해야 함"
+    ],
+    "why": "전문 육지거북 식물자료는 Dichondra 속을 급여 가능한 식물로 분류하면서 아욱메풀(D. micrantha)을 직접 예시로 든다. 정확히 동정되고 약제가 묻지 않은 식물이라면 여러 적합한 먹이와 함께 섞어 사용할 수 있다. 다만 잔디처럼 한 종류를 넓게 재배하기도 하므로 ‘먹을 수 있다’는 판정을 단일 주식이나 무제한 방목 급여의 근거로 확대하지 않는다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "abutilon_indicum",
+    "species_group": "Tortoise_general",
+    "verdict": "supported_mixed_diet",
+    "role": "잎·꽃을 식단 다양화용으로 혼합",
+    "confidence": "B-",
+    "evidence_ids": [
+      "ttable_abutilon_32",
+      "kew_abutilon_indicum"
+    ],
+    "limits": [
+      "급여 판정은 Abutilon 속 수준의 전문 사육자료이며 A. indicum 단독 통제시험은 아님",
+      "씨앗·뿌리 등 모든 부위를 잎·꽃과 동일하게 취급할 근거는 없음",
+      "Physalis의 ‘Chinese lantern’과 이름이 겹치므로 식물 동정이 필수"
+    ],
+    "why": "전문 육지거북 자료는 Abutilon 속을 급여 가능한 식물로 분류하고 특히 꽃을 먹는다고 설명한다. 인도아부틸론은 같은 속의 정확히 동정된 종이므로 잎과 꽃을 여러 먹이와 섞는 용도로 사용할 수 있다. 다만 이 판정은 속 수준 사육지침에 근거하므로 씨앗·뿌리까지 자동으로 같은 판정을 적용하지 않으며, 전혀 다른 Physalis류와 혼동하면 안 된다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "aeonium_arboreum",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "소량을 가끔 섞는 다육식물",
+    "confidence": "B",
+    "evidence_ids": [
+      "ttable_aeonium_530",
+      "kew_aeonium_arboreum"
+    ],
+    "limits": [
+      "전문 사육자료는 Aeonium 속을 급여 가능으로 보지만 과량 시 완하 작용 가능성을 경고함",
+      "일부 Aeonium의 칼슘옥살레이트가 높을 수 있다는 사육상 주의가 있어 식단의 작은 일부로 제한함",
+      "A. arboreum에서 육지거북의 정확한 안전 용량을 정한 통제시험은 없음"
+    ],
+    "why": "Aeonium은 전문 육지거북 자료에서 먹일 수 있는 다육식물로 다뤄지지만, 많이 먹으면 변을 무르게 할 수 있고 일부 종은 칼슘옥살레이트가 높을 수 있어 소량만 섞으라고 안내한다. 따라서 에오니움 아르보레움은 주식이 아니라 식단 다양화를 위한 작은 보조 구성으로 쓰는 편이 적절하다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "buddleja_davidii",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_mixed_diet",
+    "role": "소량을 가끔 혼합",
+    "confidence": "B-",
+    "evidence_ids": [
+      "ttable_buddleia_68",
+      "kew_buddleja_davidii",
+      "kbr_buddleja_davidii"
+    ],
+    "limits": [
+      "전문 사육자료의 판정은 Buddleia/Buddleja 속 수준이며 B. davidii 단독 장기 급여시험은 아님",
+      "출처 자체가 적당량 급여를 권하므로 주식·무제한 급여로 확대하지 않음",
+      "원예 식물은 농약·살충제 처리 여부를 확인해야 함"
+    ],
+    "why": "전문 육지거북 식물자료는 부들레야류를 ‘적당량 급여’ 식물로 분류한다. 국내에서 흔히 부들레야로 유통되는 B. davidii도 같은 속에 속하므로 정확히 동정되고 약제가 묻지 않은 잎과 꽃을 소량 섞는 용도로 볼 수 있다. 다만 종별 장기 급여시험이 아니라 속 수준의 사육지침이므로 주식처럼 반복해서 많이 주는 근거는 아니다.",
+    "assessment_scope": "general_tortoise",
+    "animal_taxon": "Tortoise general",
+    "display_group": "육지거북 일반"
   }
 ]
