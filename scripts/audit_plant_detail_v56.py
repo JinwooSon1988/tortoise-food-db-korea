@@ -45,13 +45,14 @@ for pid in sorted(public_ids):
     if re.search(r'<section', main[h1:main.rfind('<section', 0, decision)]):
         errors.append(f'{pid}: a section pushes the decision below the plant name')
     later = [pos(x) for x in ('<h2>어떻게 먹이면 되나</h2>', '<h2>왜 이렇게 판정했나</h2>', '<h2>영양성분</h2>')]
-    present = [x for x in later if x is not None]
-    # A practical-action card exists only when the representative public verdict applies to the default Testudo reader.
-    # Species-specific-only records may legitimately start with their species note and evidence.
-    if not present or present != sorted(present) or present[0] < why or later[1] is None:
-        errors.append(f'{pid}: evidence → nutrition order broken')
-    if later[0] is not None and later[0] > later[1]:
-        errors.append(f'{pid}: practical action must precede evidence')
+    practical, evidence, nutrition = later
+    # Evidence is mandatory. Practical action exists only for a default-applicable verdict; nutrition exists only when verified data is linked.
+    if evidence is None or evidence < why:
+        errors.append(f'{pid}: evidence section missing or precedes the verdict')
+    if practical is not None and (practical < why or (evidence is not None and practical > evidence)):
+        errors.append(f'{pid}: practical action must sit between verdict and evidence')
+    if nutrition is not None and (evidence is None or nutrition < evidence):
+        errors.append(f'{pid}: nutrition must follow evidence')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None and later[0] is not None and not (why < sp < later[0]):
         errors.append(f'{pid}: species notes must follow the default verdict and precede evidence')
