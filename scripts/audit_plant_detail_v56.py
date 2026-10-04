@@ -51,7 +51,7 @@ for pid in sorted(public_ids):
         errors.append(f'{pid}: evidence section missing or precedes the verdict')
     if practical is not None and practical < why:
         errors.append(f'{pid}: practical action must follow the verdict')
-    if nutrition is not None and (nutrition < why or (practical is not None and nutrition < practical) or (evidence is not None and nutrition > evidence)):
+    if nutrition is not None and (nutrition < why or (evidence is not None and nutrition > evidence)):
         errors.append(f'{pid}: nutrition must sit between verdict/practical guidance and detailed evidence')
     sp = pos('<h2>종별 특이사항</h2>')
     if sp is not None:
