@@ -15,7 +15,7 @@ for p in public:
     for token in required:
         if token not in text: raise SystemExit(f"{p['id']}: missing {token}")
     # The focused detail UI must keep a visible evidence boundary without restoring retired accordions/related links.
-    if not any(token in text for token in ("근거의 한계", "확인되지", "확정할 수 없", "정하지 않는다", "근거가 부족", "부위 미확인")):
+    if not any(token in text for token in ("이 자료만으로는 알 수 없는 것", "확인되지", "확정할 수 없", "정하지 않는다", "근거가 부족", "부위 미확인")):
         raise SystemExit(f"{p['id']}: missing explicit evidence limitation/unknown boundary")
     if "비슷한 식물도 확인하기" in text or "적용 범위와 아직 확인되지 않은 내용 보기" in text:
         raise SystemExit(f"{p['id']}: retired detail UI returned")
