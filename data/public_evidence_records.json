@@ -3909,6 +3909,59 @@
       "year": 2019,
       "doi": "10.1016/j.scienta.2019.02.029",
       "url": "https://doi.org/10.1016/j.scienta.2019.02.029"
+    },
+    {
+      "id": "prakash_amaranthus_leaves_1991",
+      "plant_ids": [
+        "amaranthleaf"
+      ],
+      "source_title": "Nutritional and antinutritional composition of vegetable and grain amaranth leaves",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Plant composition",
+      "applicability": "genus_level",
+      "plant_taxon": "Amaranthus spp.; 61 accessions, 10 species",
+      "plant_part_state": "foliage",
+      "directness": "composition_only",
+      "supports": "Amaranthus 10종 61개 계통의 잎을 비교해 단백질·카로티노이드·수분뿐 아니라 nitrate와 oxalate를 함께 분석한 연구다. 비름류 잎은 영양소가 풍부할 수 있지만 종·계통에 따라 항영양성분도 함께 존재하므로, ‘칼슘이 많은 잎채소’라는 이유만으로 육지거북 먹이 적합성을 판단하면 안 된다는 직접 식물성분 근거다.",
+      "does_not_support": "Amaranthus 속 여러 종을 묶어 비교한 식물성분 연구이며 현재 DB의 ‘비름’이 어느 종인지 확정하지 않는다. 육지거북 급여시험도 아니므로 특정 종의 안전량·급여 빈도·장기 영향을 정할 수 없다.",
+      "year": 1991,
+      "doi": "10.1002/jsfa.2740570410",
+      "url": "https://doi.org/10.1002/jsfa.2740570410"
+    },
+    {
+      "id": "soybean_leaf_nutrition_2026",
+      "plant_ids": [
+        "soybeanleaf"
+      ],
+      "source_title": "Comparative Effects of Glycine max and Glycine soja Leaves on Clanis bilineata tsingtauica Rearing Performance",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Clanis bilineata tsingtauica larvae; leaf composition",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Glycine max cv. Qihuang34",
+      "plant_part_state": "leaves",
+      "directness": "contextual",
+      "supports": "재배콩(Glycine max) 잎 자체의 영양·항영양 성분을 분석하고 초식성 곤충의 먹이로 사용한 연구다. G. max 잎은 조단백질 약 242.5 g/kg, 조섬유 9.68%, Ca 3.41 g/kg, P 2.38 g/kg로 측정돼 Ca:P는 약 1.43:1이었다. 동시에 잎에서 trypsin inhibitor와 phytic acid도 정량돼 콩알뿐 아니라 잎에도 항영양성분이 존재함을 확인했다.",
+      "does_not_support": "초식성 곤충을 대상으로 한 연구이며 육지거북의 소화·안전성 시험이 아니다. 이 영양수치와 항영양성분을 육지거북의 적정 급여량으로 환산할 수 없고, 품종·생육단계가 다른 모든 콩잎에 동일한 수치를 적용할 수도 없다.",
+      "year": 2026,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13117024/"
+    },
+    {
+      "id": "soybean_leaf_trypsin_1987",
+      "plant_ids": [
+        "soybeanleaf"
+      ],
+      "source_title": "Induction of Trypsin Inhibitors in Soybean Leaves by Mexican Bean Beetle Defoliation",
+      "source_type": "peer_reviewed_article",
+      "animal_taxon": "Plant chemistry; Mexican bean beetle herbivory",
+      "applicability": "exact_taxon",
+      "plant_taxon": "Glycine max",
+      "plant_part_state": "field-grown foliage",
+      "directness": "composition_only",
+      "supports": "8개 재배콩 계통의 잎에서 trypsin inhibitory activity를 직접 측정한 연구다. 개화 전 잎에서도 억제 활성이 검출됐고, 식물이 성숙하고 초식 피해가 증가하면서 모든 계통에서 활성이 4–23배 증가했다. 따라서 콩잎의 protease inhibitor 수준은 고정된 값이 아니며 생육단계와 초식 스트레스에 따라 크게 달라질 수 있다는 제한성분 근거다.",
+      "does_not_support": "곤충 초식에 대한 식물 방어반응 연구이며 육지거북에서 단백질 소화 저해나 임상 부작용을 측정한 것이 아니다. 특정 trypsin inhibitor 수치로 육지거북의 독성량이나 안전 급여량을 계산할 수 없다.",
+      "year": 1987,
+      "doi": "10.1093/jee/80.1.237",
+      "url": "https://doi.org/10.1093/jee/80.1.237"
     }
   ]
 }
