@@ -3278,5 +3278,22 @@
     "assessment_scope": "general_tortoise",
     "animal_taxon": "Tortoise general",
     "display_group": "육지거북 일반"
+  },
+  {
+    "plant_id": "marshmallow",
+    "species_group": "Tortoise_general",
+    "verdict": "limited_supplement",
+    "role": "권장 먹이 대신 소량·가끔만 보조적으로 고려",
+    "confidence": "C",
+    "evidence_ids": [
+      "vetpharm_althaea_officinalis",
+      "althaea_carp_toxicology_2016"
+    ],
+    "limits": [
+      "수의독성 자료는 비독성 식물로 분류하지만 동시에 사료로 적합하지 않다고 명시함",
+      "육지거북에서 신선한 잎·꽃을 직접 급여한 통제시험은 확인되지 않음",
+      "추출물의 어류 독성 용량을 육지거북의 급여량으로 환산할 수 없음"
+    ],
+    "why": "마시멜로우(Althaea officinalis)는 수의독성 자료에서 독초로 분류되지는 않고 동물 중독 사례도 확인되지 않는다. 그러나 같은 자료가 사료용으로는 적합하지 않다고 명시하고, 육지거북에서 신선한 잎이나 꽃의 장기 급여 적합성을 확인한 직접 자료도 부족하다. 따라서 ‘안전한 주식’으로 권장하지 않고, 정확히 동정된 무농약 식물이라도 굳이 사용할 경우 다양한 검증된 먹이 사이에 소량·가끔만 보조적으로 고려하는 보수적 판정이 적절하다."
   }
 ]
