@@ -183,7 +183,7 @@ for p in public:
     linked = [evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids", [])) if eid in evidence_by_id]
     if linked and text.count('class="sourceopen"') < len(linked):
         errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
-    if linked and text.count("근거의 한계") < len(linked):
+    if linked and text.count("이 자료만으로는 알 수 없는 것") < len(linked):
         errors.append(f"{pid}: every linked evidence card must state its evidence limit")
     for e in linked:
         expected_url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
