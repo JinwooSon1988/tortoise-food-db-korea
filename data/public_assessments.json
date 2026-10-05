@@ -538,18 +538,22 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "다육성 수분·섬유 보조 후보",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_opuntia"
+      "tortoise_table_opuntia",
+      "ginestra_opuntia_cladode_2009"
     ],
     "limits": [
       "Mediterranean Testudo 종특이 직접근거가 아님",
       "대량 급여 시 완하 작용 가능성이 있어 과급여하지 않음",
       "가시와 glochid를 안전하게 제거한 식용 가능한 패드만 사용",
-      "국내 천년초 상품이 정확히 어떤 Opuntia 종·부위인지 확인"
+      "국내 천년초 상품이 정확히 어떤 Opuntia 종·부위인지 확인",
+      "추가 원논문은 정확 종·관련 식물부위/사료 식물의 성분자료이며 육지거북 급여·독성 시험이 아님",
+      "성분 존재를 육지거북 임상 위해 또는 급여 금지로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 Opuntia의 패드와 열매를 급여 가능한 것으로 분류하지만, 많은 양은 완하 작용을 일으킬 수 있다고 함께 경고한다. 정확한 급여 비율·빈도를 정한 시험은 아니므로, 무제한 급여가 아니라 다양한 식단의 보조 재료로 사용한다.",
-    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+    "why": "전문 육지거북 식물자료는 Opuntia의 패드와 열매를 급여 가능한 것으로 분류하지만, 많은 양은 완하 작용을 일으킬 수 있다고 함께 경고한다. 정확한 급여 비율·빈도를 정한 시험은 아니므로, 무제한 급여가 아니라 다양한 식단의 보조 재료로 사용한다. Opuntia ficus-indica의 실제 패드(cladode)를 분석한 원논문에서 calcium oxalate crystal과 여러 식물 성분이 직접 확인됐다. 이 결과는 패드의 성분 특성을 설명하지만 완하작용이나 육지거북 위해 용량을 입증하지 않는다. 따라서 현재 제한적 보조 판정은 유지하되 정확 종의 성분자료를 보조근거로 추가한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님. 정확 종의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "sweetpotatoleaf",
@@ -1976,16 +1980,20 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "다양한 식단 내 제한적 보조",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_sainfoin"
+      "tortoise_table_sainfoin",
+      "marais_sainfoin_polyphenols_2000"
     ],
     "limits": [
       "Onobrychis viciifolia 지상부",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·관련 식물부위/사료 식물의 성분자료이며 육지거북 급여·독성 시험이 아님",
+      "성분 존재를 육지거북 임상 위해 또는 급여 금지로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 sainfoin(Onobrychis viciifolia)의 지상부 식물체를 ‘소량 급여’ 범위로 분류한다. 그러나 정확한 급여량·빈도나 위해 용량을 정한 직접 시험은 아니다. 따라서 뿌리 등 확인되지 않은 부위로 판정을 확대하지 않고, 지상부만 여러 적합한 식물과 섞어 드물게 소량 사용하는 범위로 제한한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 sainfoin(Onobrychis viciifolia)의 지상부 식물체를 ‘소량 급여’ 범위로 분류한다. 그러나 정확한 급여량·빈도나 위해 용량을 정한 직접 시험은 아니다. 따라서 뿌리 등 확인되지 않은 부위로 판정을 확대하지 않고, 지상부만 여러 적합한 식물과 섞어 드물게 소량 사용하는 범위로 제한한다. Onobrychis viciifolia에서 polyphenol과 condensed tannin이 직접 분석됐고 tannin 조성의 변이도 확인됐다. 그러나 tannin 존재만으로 육지거북 독성이나 급여 금지를 의미하지 않는다. 따라서 현재 제한적 보조 판정은 유지하되 정확 종의 성분자료를 보조근거로 추가한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다. 정확 종의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "borage",
