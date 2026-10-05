@@ -81,6 +81,7 @@ def animal_taxon_display(value):
         "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii":"그리스·헤르만·마지나타·러시안육지거북",
         "Herbivorous tortoises, with Mediterranean observations":"초식 육지거북 일반 및 지중해 육지거북 관찰",
         "Bos taurus (cattle)":"소 (Bos taurus) — 육지거북 급여시험 아님",
+        "Ovis aries":"양 (Ovis aries) — 육지거북 급여시험 아님",
         "Mus musculus / Rattus norvegicus (toxicology context)":"생쥐·랫드 독성 맥락 — 육지거북 급여시험 아님",
         "Chinese hamster ovary cells; in vitro":"중국햄스터 난소세포 시험관 연구 — 동물 급여시험 아님",
         "HaCaT cell line; not an animal feeding study":"HaCaT 세포주 연구 — 동물 급여시험 아님",
