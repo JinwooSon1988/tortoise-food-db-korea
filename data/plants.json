@@ -876,21 +876,6 @@
     "suitability_status": "reviewed"
   },
   {
-    "id": "pea_shoot",
-    "ko": "완두순",
-    "en": "Pea shoots",
-    "scientific": "Pisum sativum",
-    "family": "Fabaceae",
-    "category": "sprout",
-    "market": "마트/온라인",
-    "aliases": [
-      "완두싹",
-      "pea shoots"
-    ],
-    "identity_status": "verified_name",
-    "suitability_status": "reviewed"
-  },
-  {
     "id": "sunflowerleaf",
     "ko": "해바라기잎",
     "en": "Sunflower leaf",
@@ -1594,7 +1579,10 @@
     "category": "sprout",
     "market": "마트/온라인",
     "aliases": [
-      "완두싹"
+      "완두싹",
+      "pea shoots",
+      "pea_shoot",
+      "pea shoot"
     ],
     "identity_status": "verified_name",
     "suitability_status": "reviewed"
