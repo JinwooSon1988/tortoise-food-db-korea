@@ -647,18 +647,22 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "한련화 혼합식 일부",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_nasturtium"
+      "tortoise_table_nasturtium",
+      "lykkesfeldt_nasturtium_glucotropaeolin_1993"
     ],
     "limits": [
       "제한 급여 범위",
       "단독 주식 또는 고비율 반복 급여가 아님",
       "Mediterranean Testudo 종특이 직접근거가 아님",
-      "Tropaeolum majus 식물동정 확인"
+      "Tropaeolum majus 식물동정 확인",
+      "추가 원논문은 정확 종·관련 부위의 식물화학 근거이며 육지거북 급여·독성 시험이 아님",
+      "식물 성분의 존재를 생잎 섭취 시 육지거북 임상독성으로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 한련화(Tropaeolum majus)를 ‘제한 급여’로 분류한다. 다만 왜 제한해야 하는지에 대한 육지거북의 직접 독성 기전·위해 용량이나 정확한 급여 빈도는 이 근거에서 제시되지 않는다. 따라서 이유를 임의로 만들어내지 않고 다양한 식단의 작은 보조 구성으로만 적용한다.",
-    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님."
+    "why": "전문 육지거북 식물자료는 한련화(Tropaeolum majus)를 ‘제한 급여’로 분류한다. 다만 왜 제한해야 하는지에 대한 육지거북의 직접 독성 기전·위해 용량이나 정확한 급여 빈도는 이 근거에서 제시되지 않는다. 따라서 이유를 임의로 만들어내지 않고 다양한 식단의 작은 보조 구성으로만 적용한다. Tropaeolum majus의 성숙 식물에서 benzylglucosinolate(glucotropaeolin)가 확인됐고 녹색 잎이 주요 합성 부위로 제시됐다. 그러나 이 결과만으로 육지거북에서 임상 위해나 독성 용량이 입증되는 것은 아니므로 현재 제한적 보조 판정은 유지하고, 성분 근거는 그 한계를 명시한 보조자료로만 사용한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 이베라 직접 판정이 아님. 정확 종·관련 부위의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "mustard",
@@ -1695,16 +1699,20 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "제한적·간헐적 보조",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_ginkgo"
+      "tortoise_table_ginkgo",
+      "he_ginkgo_leaf_ginkgolic_2000"
     ],
     "limits": [
       "Ginkgo biloba 잎 범위",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·관련 부위의 식물화학 근거이며 육지거북 급여·독성 시험이 아님",
+      "식물 성분의 존재를 생잎 섭취 시 육지거북 임상독성으로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 은행나무(Ginkgo biloba)의 잎을 ‘소량 급여’ 범위로 분류한다. 현재 연결 근거는 잎에 한정되며 정확한 안전 용량·급여 빈도를 정한 직접 시험은 아니다. 따라서 잎만 여러 적합한 식물과 섞어 드물게 소량 사용하고, 열매·종자 등 다른 부위까지 같은 판정을 확대하지 않는다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 은행나무(Ginkgo biloba)의 잎을 ‘소량 급여’ 범위로 분류한다. 현재 연결 근거는 잎에 한정되며 정확한 안전 용량·급여 빈도를 정한 직접 시험은 아니다. 따라서 잎만 여러 적합한 식물과 섞어 드물게 소량 사용하고, 열매·종자 등 다른 부위까지 같은 판정을 확대하지 않는다. Ginkgo biloba의 실제 잎에서 ginkgolic acid가 분석·동정됐다. 그러나 이 결과만으로 육지거북에서 임상 위해나 독성 용량이 입증되는 것은 아니므로 현재 제한적 보조 판정은 유지하고, 성분 근거는 그 한계를 명시한 보조자료로만 사용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다. 정확 종·관련 부위의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "elmleaf",
