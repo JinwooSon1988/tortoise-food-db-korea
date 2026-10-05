@@ -1476,13 +1476,14 @@
       "rumex_acetosa_oxalate_2021",
       "ceccanti_rumex_oxalate_2021",
       "di_noia_rumex_oxalate_2021",
-      "di_gioia_rumex_oxalate_2021"
+      "di_gioia_rumex_oxalate_2021",
+      "siener_rumex_oxalate_2006"
     ],
     "limits": [
       "Rumex acetosa에 한정; Ibera 독성 용량을 단정하지 않음",
       "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 수영(Rumex acetosa)을 계획 급여에서 제외한다. 정확한 R. acetosa 잎을 분석한 연구에서도 높은 옥살레이트가 확인됐고, 노지 재배 잎에서는 약 8.5 mg/g 생중량이 보고되어 칼슘 이용을 방해할 수 있는 제한성분이 실제 잎에 상당량 존재한다는 점이 뒷받침된다. 다만 이 수치는 육지거북 독성 역치가 아니므로 우발적 한입을 중독으로 단정하지 않고 계획 식단에서 제외하는 D 판정을 유지한다.",
+    "why": "전문 육지거북 식물자료는 수영(Rumex acetosa)을 계획 급여에서 제외한다. 식품성분 원논문에서도 R. acetosa var. hortensis를 포함한 원료의 옥살레이트를 HPLC 기반 방법으로 정량해, 수영의 제한성분으로 옥살레이트를 다루는 데 직접적인 식물성분 근거가 있다. 그러나 이는 육지거북 급여·독성시험이 아니므로 위해 용량을 임의로 만들지 않고 계획 식단에서 제외하는 D 판정을 유지한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
@@ -1689,13 +1690,14 @@
       "tortoise_table_willow",
       "piatczak_salix_alba_leaf_2020",
       "piatczak_salix_alba_leaf_phenolics_2020",
-      "rowell_rahier_salix_leaf_glycosides_1984"
+      "rowell_rahier_salix_leaf_glycosides_1984",
+      "tawfeek_salix_phytochemistry_2021"
     ],
     "limits": [
       "Salix spp. 잎 범위",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "전문 육지거북 식물자료는 버드나무류(Salix spp.) 잎을 계획 급여에서 제외한다. Salix alba 잎의 원논문에서는 다양한 phenolic compounds가 직접 확인되어 잎에 생리활성 성분이 존재한다는 점은 분명하지만, 이 연구는 육지거북 독성시험이 아니며 Salix속 전체의 위해성을 입증하지도 않는다. 따라서 성분자료를 독성 증명처럼 과장하지 않고, 현재 D 판정은 전문 육지거북 자료에 근거한 보수적 계획급여 제외로 유지한다.",
+    "why": "전문 육지거북 식물자료는 버드나무류(Salix spp.) 잎을 계획 급여에서 제외한다. Salix 식물화학 리뷰에서는 잎에 phenolic glycoside와 여러 생리활성 2차대사산물이 확인되며 salicinoid가 이 속의 특징적 성분임을 정리한다. 다만 속 수준 성분자료는 모든 Salix 잎의 위해가 동일하다는 뜻도, 육지거북의 독성 용량을 정한 자료도 아니다. 따라서 위험을 과장하지 않되 현재는 계획 급여에서 제외하는 D 판정을 유지한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
   },
   {
@@ -1916,13 +1918,14 @@
       "tortoise_table_borage",
       "sattler_borage_pa_2023",
       "sattler_borago_pa_2025",
-      "sattler_borage_pa_2025"
+      "sattler_borage_pa_2025",
+      "sattler_borago_pa_2023"
     ],
     "limits": [
       "Borago officinalis 잎·꽃",
       "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
     ],
-    "why": "전문 육지거북 식물자료는 보리지(Borago officinalis)의 잎·꽃을 계획 급여에서 제외한다. 여기에 2025년 원논문이 잎 106개 시료와 꽃 33개 시료를 직접 분석해 pyrrolizidine alkaloid(PA)를 확인했고, 어린 조직에서 특히 높으며 분석한 모든 꽃에서도 PA가 검출됨을 보여준다. 따라서 제한성분의 존재는 강하게 확인되지만, 이 연구는 육지거북 독성시험이 아니므로 ‘한입이면 중독’이나 정확한 독성량으로 확대하지 않고 D 판정을 유지한다.",
+    "why": "전문 육지거북 식물자료는 보리지(Borago officinalis)를 계획 급여에서 제외한다. 여기에 B. officinalis 잎을 직접 LC-MS/MS로 분석한 원논문에서 pyrrolizidine alkaloid(PA)와 N-oxide가 확인되어, 잎에 주의가 필요한 생리활성 성분이 실제 존재한다는 점도 뒷받침된다. 다만 이 연구는 육지거북 독성시험이 아니므로 ‘한입=중독’이나 특정 독성 용량으로 확대하지 않고 D 판정을 유지한다.",
     "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
   },
   {
