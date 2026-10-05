@@ -1632,14 +1632,18 @@
     "role": "계획 급여 및 사육장 식재에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_grape_hyacinth"
+      "tortoise_table_grape_hyacinth",
+      "asano_muscari_bulb_alkaloids_2000",
+      "siroka_houseplant_pet_toxicity_2023"
     ],
     "limits": [
-      "Muscari armeniacum을 Muscari spp. 속 수준 근거에 contextual 적용",
-      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+      "Muscari spp.의 계획 급여·사육장 식재 제외에 적용",
+      "Muscari armeniacum 구근에서 polyhydroxylated pyrrolizidine alkaloid가 확인됐지만 이를 일반적인 불포화 PA의 간독성과 동일시하지 않음",
+      "수의학 리뷰는 반려동물 중심이며 육지거북 직접 급여·용량반응 시험이 아님",
+      "우발적 소량 섭취를 곧바로 중독으로 단정하지 않으며 Testudo 독성 용량·안전 비율을 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 무스카리(Muscari spp.)를 ‘급여하지 않음’으로 분류하고 사육장에 심지 말 것을 권한다. 특히 구근을 포함한 식물 전체에 대한 경고지만, 모든 Muscari종에서 동일한 위해 크기나 육지거북의 독성 용량을 정한 시험은 아니다. 따라서 위험을 과장해 수치화하지 않되 계획 급여와 사육장 식재에서는 제외한다.",
-    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 무스카리(Muscari spp.)를 계획 급여와 사육장 식재에서 제외한다. Muscari armeniacum 구근 원논문에서는 hyacinthacine A1·A2·A3·B3 등 polyhydroxylated pyrrolizidine alkaloid가 실제 분리됐고, 반려동물 식물독성 수의학 리뷰도 M. armeniacum을 alkaloid 함유 관상식물로 다룬다. 다만 이 hyacinthacine류를 일반적으로 알려진 불포화 pyrrolizidine alkaloid의 간독성과 동일시할 근거는 없으며, 육지거북의 독성 용량을 정한 시험도 아니다. 따라서 위험기전을 과장하지 않고 전문 육지거북 자료를 중심으로 D 판정을 유지한다.",
+    "applicability_note": "Muscari armeniacum 구근의 직접 식물화학 자료와 일반 반려동물 수의학 리뷰를 보조근거로 사용하며, D 판정의 중심은 전문 육지거북 식물자료다."
   },
   {
     "plant_id": "ginkgoleaf",
