@@ -1828,14 +1828,17 @@
     "role": "계획 급여에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_poplar"
+      "tortoise_table_poplar",
+      "jarega_poplar_polyphenols_2021"
     ],
     "limits": [
-      "Populus spp. 잎",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Populus spp. 잎·지상부의 계획 급여에 적용",
+      "6종·3개 교잡종의 잎 성분 연구는 육지거북 급여·독성시험이 아님",
+      "salicylic/phenolic 성분 검출을 육지거북 독성 증명으로 확대하지 않음",
+      "우발적 소량 섭취를 중독으로 단정하지 않으며 독성 용량·안전 비율·고정 급여 빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 포플러류(Populus spp.)의 잎·지상부를 ‘급여하지 않음’으로 분류한다. 다만 현재 연결 근거에는 이베라그리스육지거북의 특정 독성 용량이나 임상 중독 역치를 정한 직접 시험이 제시되지 않는다. 따라서 ‘한입=중독’으로 과장하지 않되, 안전한 계획 급여를 뒷받침할 직접 근거도 없으므로 잎·지상부는 식단에서 제외한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 포플러류(Populus spp.)의 잎·지상부를 계획 급여에서 제외한다. 별도의 원논문은 Populus 6종과 3개 교잡종의 잎을 분석해 salicortin·tremulacin을 포함한 salicylic/phenolic 성분이 종·교잡종에 따라 다르게 존재함을 확인했다. 다만 이 연구는 육지거북 급여·독성시험이 아니므로 이런 성분의 검출만으로 포플러 잎을 ‘독초’라고 단정할 수 없다. 따라서 현재 D 판정은 전문 육지거북 자료를 중심으로 유지하며, 우발적 한입을 중독으로 과장하지 않는다.",
+    "applicability_note": "일반 육지거북의 계획 급여 비권장 근거이며, 특정 Testudo 종의 직접 독성시험으로 확대하지 않는다."
   },
   {
     "plant_id": "mungbeansprout",
