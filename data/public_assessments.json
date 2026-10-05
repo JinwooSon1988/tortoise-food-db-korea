@@ -356,20 +356,24 @@
     "species_group": "Herbivorous_reptile_general",
     "verdict": "general_reptile_supplement",
     "role": "마트채소 보조 후보",
-    "confidence": "D+",
+    "confidence": "C",
     "evidence_ids": [
-      "merck_reptile_home_plant_eaters"
+      "merck_reptile_home_plant_eaters",
+      "wieczorek_pakchoi_glucosinolates_2013"
     ],
     "limits": [
       "지중해 Testudo 직접 근거가 아님",
       "Merck의 일반 food-list 예시는 이베라의 급여량·빈도·단독식 안전성을 정하지 않음",
-      "Brassica 계열이라는 이유만으로 별도의 편중 금지 규칙을 추가하지 않음"
+      "Brassica 계열이라는 이유만으로 별도의 편중 금지 규칙을 추가하지 않음",
+      "추가 원논문은 식물 성분 근거이며 육지거북의 갑상샘 영향·독성 용량·정확한 안전 급여량을 정한 시험이 아님",
+      "glucosinolate 검출 자체를 독성 또는 급여 금지의 증거로 해석하지 않음"
     ],
-    "why": "Merck 수의학 자료는 청경채를 식물식 파충류에게 제공할 수 있는 칼슘이 풍부한 식물성 먹이 예시에 포함한다. 그러나 이 자료는 지중해 Testudo나 육지거북을 대상으로 청경채의 급여량·빈도·장기 안전성을 시험한 연구가 아니다. 따라서 청경채는 주식이 아니라 다양한 식단에 보조적으로 넣는 범위로 제한한다.",
+    "why": "Merck 수의학 자료는 청경채를 식물식 파충류에게 제공할 수 있는 칼슘이 풍부한 식물성 먹이 예시에 포함한다. 그러나 이 자료는 지중해 Testudo나 육지거북을 대상으로 청경채의 급여량·빈도·장기 안전성을 시험한 연구가 아니다. 따라서 청경채는 주식이 아니라 다양한 식단에 보조적으로 넣는 범위로 제한한다. 청경채 정확 분류군의 성숙 잎에서 glucosinolate가 직접 확인되지만 품종·생육단계에 따라 조성이 달라진다. 이 성분자료는 급여 금지 근거가 아니라 배추과 채소를 한 종류의 주식으로 고비율 반복하지 않고 다양한 식단의 보조 재료로 사용하는 현재의 보수적 해석을 보강한다.",
     "assessment_scope": "herbivorous_reptile_general",
     "animal_taxon": null,
     "display_group": "초식성 파충류 일반",
-    "legacy_scope": "Herbivorous_reptile_general"
+    "legacy_scope": "Herbivorous_reptile_general",
+    "applicability_note": " 정확 분류군의 식물 성분 원논문은 composition-only 보조근거로 적용한다."
   },
   {
     "plant_id": "collard",
@@ -396,20 +400,24 @@
     "species_group": "Herbivorous_reptile_general",
     "verdict": "general_reptile_supplement",
     "role": "마트채소 보조 후보",
-    "confidence": "D+",
+    "confidence": "C",
     "evidence_ids": [
-      "merck_reptile_home_plant_eaters"
+      "merck_reptile_home_plant_eaters",
+      "kabouw_cabbage_glucosinolates_2010"
     ],
     "limits": [
       "지중해 Testudo 직접 근거가 아님",
       "Brassica 계열 편중 금지",
-      "단독 주식 아님"
+      "단독 주식 아님",
+      "추가 원논문은 식물 성분 근거이며 육지거북의 갑상샘 영향·독성 용량·정확한 안전 급여량을 정한 시험이 아님",
+      "glucosinolate 검출 자체를 독성 또는 급여 금지의 증거로 해석하지 않음"
     ],
-    "why": "Merck 수의학 자료는 양배추를 식물식 파충류의 식물성 먹이 예시에 포함한다. 그러나 이는 지중해 Testudo를 대상으로 양배추의 적정 급여량·빈도나 장기 안전성을 검증한 직접 급여시험이 아니다. 따라서 주식으로 확대하지 않고 다양한 식단의 보조 채소 수준으로 제한한다.",
+    "why": "Merck 수의학 자료는 양배추를 식물식 파충류의 식물성 먹이 예시에 포함한다. 그러나 이는 지중해 Testudo를 대상으로 양배추의 적정 급여량·빈도나 장기 안전성을 검증한 직접 급여시험이 아니다. 따라서 주식으로 확대하지 않고 다양한 식단의 보조 채소 수준으로 제한한다. 양배추 정확 분류군의 지상부 glucosinolate가 직접 확인되며 품종·환경·생육단계에 따른 변이가 크다. 이 성분자료는 급여 금지 근거가 아니라 배추과 채소를 한 종류의 주식으로 고비율 반복하지 않고 다양한 식단의 보조 재료로 사용하는 현재의 보수적 해석을 보강한다.",
     "assessment_scope": "herbivorous_reptile_general",
     "animal_taxon": null,
     "display_group": "초식성 파충류 일반",
-    "legacy_scope": "Herbivorous_reptile_general"
+    "legacy_scope": "Herbivorous_reptile_general",
+    "applicability_note": " 정확 분류군의 식물 성분 원논문은 composition-only 보조근거로 적용한다."
   },
   {
     "plant_id": "dandelion",
