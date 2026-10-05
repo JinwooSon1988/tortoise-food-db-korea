@@ -1493,13 +1493,17 @@
     "role": "계획 급여 대상에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_dock"
+      "tortoise_table_dock",
+      "costan_rumex_defences_2023",
+      "panciera_rumex_sheep_1990"
     ],
     "limits": [
-      "Rumex crispus를 Rumex spp. 전문 DB 범위에 contextual 적용",
-      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+      "Rumex crispus의 지상부 계획 급여에 적용",
+      "양의 대량섭취 중독 사례를 육지거북 독성 용량으로 환산하지 않음",
+      "우발적 소량 섭취를 곧바로 중독으로 단정하지 않음",
+      "육지거북 직접 급여·용량반응 시험은 아님"
     ],
-    "why": "전문 육지거북 식물자료는 Rumex spp.의 지상부를 ‘급여하지 않음’으로 분류한다. 이는 이베라그리스육지거북의 특정 독성 용량을 입증한 직접 시험이 아니므로 우발적 소량 섭취의 결과까지 단정할 수 없다. 다만 확인된 전문 지침의 범위에서는 계획 급여 대상에서 제외한다.",
+    "why": "전문 육지거북 식물자료는 curly dock(Rumex crispus)을 포함한 Rumex류를 계획 급여에서 제외한다. R. crispus 잎·뿌리의 화학방어를 직접 분석한 원논문에서도 oxalate가 주요 2차대사 성분으로 측정됐고, 수의학 보고에서는 많은 양의 curly dock에 노출된 양에서 급성 oxalate 중독과 저칼슘혈증·신장 병변이 확인됐다. 다만 양의 중독 사례를 육지거북의 독성 용량으로 환산할 수는 없고 우발적 한입을 중독으로 단정할 수도 없다. 따라서 위험을 과장하지 않으면서 계획 식단에서는 제외하는 D 판정을 유지한다.",
     "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
   },
   {
