@@ -1898,14 +1898,17 @@
     "role": "계획 급여에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_hawthorn"
+      "tortoise_table_hawthorn",
+      "keser_hawthorn_parts_2014"
     ],
     "limits": [
-      "Crataegus spp. source scope",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Crataegus spp. 잎·꽃·열매의 계획 급여에 적용",
+      "Crataegus monogyna의 잎·꽃·익은 열매 성분 연구는 육지거북 급여·독성시험이 아님",
+      "flavonoid 등 생리활성 성분 검출을 육지거북 독성 증명으로 확대하지 않음",
+      "우발적 소량 섭취를 중독으로 단정하지 않으며 독성 용량·안전 비율·고정 급여 빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 산사나무류(Crataegus spp.)의 잎·꽃·열매를 ‘급여하지 않음’으로 분류한다. 다만 현재 연결 근거에는 육지거북에서 특정 성분의 독성 용량이나 임상 중독 역치를 정한 직접 시험이 제시되지 않는다. 따라서 ‘한입이면 중독’처럼 확대하지 않되, 안전한 계획 급여를 뒷받침할 직접 근거도 없으므로 잎·꽃·열매 모두 식단에서는 제외한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 산사나무류(Crataegus spp.)의 잎·꽃·열매를 계획 급여에서 제외한다. 별도의 Crataegus monogyna 원논문은 잎·꽃·익은 열매를 각각 분석해 rutin·quercetin·kaempferol 등을 포함한 여러 flavonoid를 확인했고, 부위별 성분·항산화 특성에도 차이가 있음을 보여준다. 다만 이는 식물화학 연구이지 육지거북 급여·독성시험이 아니므로, 이런 생리활성 성분의 존재만으로 산사나무를 독성 식물이라고 단정할 수 없다. 따라서 현재 D 판정은 전문 육지거북 자료를 중심으로 유지하며 우발적 소량 섭취를 중독으로 과장하지 않는다.",
+    "applicability_note": "일반 육지거북의 계획 급여 비권장 근거이며, 특정 Testudo 종의 직접 독성시험으로 확대하지 않는다."
   },
   {
     "plant_id": "sainfoin",
