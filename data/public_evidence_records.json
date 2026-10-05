@@ -4325,6 +4325,44 @@
       "doi": "10.1016/j.foodchem.2024.142032",
       "pmid": "39571428",
       "url": "https://pubmed.ncbi.nlm.nih.gov/39571428/"
+    },
+    {
+      "id": "costan_rumex_defences_2023",
+      "plant_ids": [
+        "dock"
+      ],
+      "source_title": "Comparing the Above and Below-Ground Chemical Defences of Three Rumex Species Between Their Native and Introduced Provenances",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Rumex crispus",
+      "plant_part_state": "leaves and roots",
+      "directness": "composition_only",
+      "supports": "The study directly measured oxalates, phenols and tannins as major secondary metabolites in leaves and roots of Rumex crispus alongside two other Rumex species, providing exact-species evidence that oxalate is part of curly dock leaf chemical defence.",
+      "does_not_support": "This is plant chemical-ecology research, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, safe percentage, feeding frequency, or prove that a small accidental nibble causes poisoning.",
+      "year": 2023,
+      "doi": "10.1007/s10886-023-01417-2",
+      "pmid": "37121960",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37121960/"
+    },
+    {
+      "id": "panciera_rumex_sheep_1990",
+      "plant_ids": [
+        "dock"
+      ],
+      "source_title": "Acute oxalate poisoning attributable to ingestion of curly dock (Rumex crispus) in sheep",
+      "source_type": "peer_reviewed_veterinary_toxicology",
+      "animal_taxon": "Ovis aries",
+      "applicability": "cross_species_toxicology",
+      "plant_taxon": "Rumex crispus / Rumex spp. in affected lot",
+      "plant_part_state": "growing plant material",
+      "directness": "cross_species",
+      "supports": "A veterinary field case linked heavy exposure to growing curly dock with acute oxalate toxicosis in sheep; sampled Rumex contained 6.6–11.1% oxalic acid on a dry-weight basis, with hypocalcemia and renal lesions in affected animals.",
+      "does_not_support": "Sheep are not tortoises and the exposure was substantial field ingestion. This cannot be converted into a Testudo toxic dose, safe amount, fixed frequency, or a claim that one accidental bite causes poisoning.",
+      "year": 1990,
+      "doi": null,
+      "pmid": "2365622",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2365622/"
     }
   ]
 }
