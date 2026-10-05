@@ -1803,16 +1803,20 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "소량·간헐적 보조",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_pear_tree"
+      "tortoise_table_pear_tree",
+      "yang_pyrus_pyrifolia_leaf_phenolics_2021"
     ],
     "limits": [
       "Pyrus pyrifolia를 Pyrus spp. 나무 항목에 contextual 적용",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·관련 부위의 식물화학 자료이며 육지거북 급여·독성 시험이 아님",
+      "추출물·항산화·항균·식물독성 결과를 신선한 식물 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 Pyrus류 나무의 잎을 ‘소량 급여’ 범위로 분류한다. 국내 배나무(Pyrus pyrifolia)에 적용할 때는 속 수준 전문자료를 제한적으로 연결하는 것이며, 정확한 안전 용량·급여 빈도를 정한 시험은 아니다. 따라서 잎만 여러 적합한 식물과 섞어 드물게 소량 사용하고, 배 열매·씨앗 등 다른 부위까지 같은 판정을 적용하지 않는다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 Pyrus류 나무의 잎을 ‘소량 급여’ 범위로 분류한다. 국내 배나무(Pyrus pyrifolia)에 적용할 때는 속 수준 전문자료를 제한적으로 연결하는 것이며, 정확한 안전 용량·급여 빈도를 정한 시험은 아니다. 따라서 잎만 여러 적합한 식물과 섞어 드물게 소량 사용하고, 배 열매·씨앗 등 다른 부위까지 같은 판정을 적용하지 않는다. Pyrus pyrifolia 실제 잎의 phenolic·flavonoid 성분이 직접 분석돼 기존 Pyrus속 수준 근거의 식물 정체성 공백을 줄였다. 따라서 현재 제한적 보조 판정은 유지하되, 정확 종·부위 근거가 추가됐다는 범위에서만 확신도를 조정한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다. 정확 종·관련 부위의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "peachleaf",
@@ -2008,16 +2012,20 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "다양한 식단 내 제한적 보조",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_henbit"
+      "tortoise_table_henbit",
+      "ghoneim_lamium_amplexicaule_aerial_2018"
     ],
     "limits": [
       "Lamium amplexicaule에 한정",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·관련 부위의 식물화학 자료이며 육지거북 급여·독성 시험이 아님",
+      "추출물·항산화·항균·식물독성 결과를 신선한 식물 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 광대나물(Lamium amplexicaule)의 지상부를 ‘소량 급여’ 범위로 분류한다. 이 판정은 Lamium속의 다른 종 전체에 자동 적용할 수 없고, 정확한 안전 용량·급여 빈도를 정한 직접 시험도 아니다. 따라서 L. amplexicaule로 정확히 동정된 지상부만 여러 식물과 섞어 드물게 소량 사용한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 광대나물(Lamium amplexicaule)의 지상부를 ‘소량 급여’ 범위로 분류한다. 이 판정은 Lamium속의 다른 종 전체에 자동 적용할 수 없고, 정확한 안전 용량·급여 빈도를 정한 직접 시험도 아니다. 따라서 L. amplexicaule로 정확히 동정된 지상부만 여러 식물과 섞어 드물게 소량 사용한다. Lamium amplexicaule 정확 종의 지상부에서 여러 2차대사산물이 직접 분리·동정됐다. 따라서 현재 제한적 보조 판정은 유지하되, 정확 종·부위 근거가 추가됐다는 범위에서만 확신도를 조정한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다. 정확 종·관련 부위의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "houseleek",
@@ -2868,18 +2876,22 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_supplement",
     "role": "해바라기잎 소량 순환 보조",
-    "confidence": "C-",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_sunflower"
+      "tortoise_table_sunflower",
+      "fuentes_sunflower_leaf_compounds_2015"
     ],
     "limits": [
       "제한 급여 범위",
       "잎 기준 항목에 보수적으로 적용",
       "고비율·반복 주식으로 사용하지 않음",
-      "Mediterranean Testudo 직접근거가 아님"
+      "Mediterranean Testudo 직접근거가 아님",
+      "추가 원논문은 정확 종·관련 부위의 식물화학 자료이며 육지거북 급여·독성 시험이 아님",
+      "추출물·항산화·항균·식물독성 결과를 신선한 식물 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 해바라기(Helianthus annuus)의 잎을 ‘제한 급여’ 범위로 다룬다. 그러나 정확한 급여량·빈도나 제한의 용량-반응을 정한 직접 시험은 아니다. 따라서 잎을 주식으로 반복하지 않고 다양한 식단에 소량 순환해 넣는다.",
-    "applicability_note": "Helianthus annuus 일반 육지거북 근거이며 이베라 직접 급여시험은 아니다."
+    "why": "전문 육지거북 식물자료는 해바라기(Helianthus annuus)의 잎을 ‘제한 급여’ 범위로 다룬다. 그러나 정확한 급여량·빈도나 제한의 용량-반응을 정한 직접 시험은 아니다. 따라서 잎을 주식으로 반복하지 않고 다양한 식단에 소량 순환해 넣는다. Helianthus annuus 실제 잎 추출물에서 sesquiterpene lactone·diterpene·flavonoid 등 다양한 성분이 직접 동정됐다. 다만 농축 추출물의 식물독성 시험을 생잎 섭취의 거북 독성으로 바꾸어 해석할 수 없다. 따라서 현재 제한적 보조 판정은 유지하되, 정확 종·부위 근거가 추가됐다는 범위에서만 확신도를 조정한다.",
+    "applicability_note": "Helianthus annuus 일반 육지거북 근거이며 이베라 직접 급여시험은 아니다. 정확 종·관련 부위의 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "tomato",
