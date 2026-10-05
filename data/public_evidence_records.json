@@ -4249,6 +4249,63 @@
       "doi": "10.1007/s12011-020-02467-3",
       "pmid": null,
       "url": "https://doi.org/10.1007/s12011-020-02467-3"
+    },
+    {
+      "id": "sattler_borago_pa_2023",
+      "plant_ids": [
+        "borage"
+      ],
+      "source_title": "Pyrrolizidine alkaloids in borage (Borago officinalis): Comprehensive profiling and development of a validated LC-MS/MS method for quantification",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Borago officinalis",
+      "plant_part_state": "leaves",
+      "directness": "composition_only",
+      "supports": "UHPLC-QToF/LC-MS/MS profiling and a validated quantitative method detected pyrrolizidine alkaloids and their N-oxides in Borago officinalis leaf material; acetylated forms were among the quantitatively important compounds in the tested samples.",
+      "does_not_support": "This is leaf chemistry and food-safety analysis, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, one-bite poisoning risk, safe percentage, or feeding frequency.",
+      "year": 2023,
+      "doi": "10.1016/j.talanta.2023.124425",
+      "pmid": "36924638",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36924638/"
+    },
+    {
+      "id": "siener_rumex_oxalate_2006",
+      "plant_ids": [
+        "sorrel"
+      ],
+      "source_title": "Oxalate contents of species of the Polygonaceae, Amaranthaceae and Chenopodiaceae families",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Rumex acetosa L. var. hortensis",
+      "plant_part_state": "raw edible portion",
+      "directness": "composition_only",
+      "supports": "An HPLC-enzyme-reactor method quantified oxalate in raw edible plants that accumulate oxalate, including cultivated sorrel Rumex acetosa L. var. hortensis. This provides exact-taxon-family composition evidence that oxalate is a genuine limiting constituent of sorrel used as food.",
+      "does_not_support": "This is food-composition research, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, exact safe amount, or prove that accidental small ingestion causes poisoning.",
+      "year": 2006,
+      "doi": "10.1016/j.foodchem.2005.05.059",
+      "pmid": null,
+      "url": "https://doi.org/10.1016/j.foodchem.2005.05.059"
+    },
+    {
+      "id": "tawfeek_salix_phytochemistry_2021",
+      "plant_ids": [
+        "willowleaf"
+      ],
+      "source_title": "Phytochemistry, Pharmacology and Medicinal Uses of Plants of the Genus Salix: An Updated Review",
+      "source_type": "peer_reviewed_review",
+      "animal_taxon": "Plant composition",
+      "applicability": "taxon_group",
+      "plant_taxon": "Salix spp.",
+      "plant_part_state": "leaves and other plant parts; leaf chemistry discussed separately",
+      "directness": "composition_only",
+      "supports": "The review documents extensive bioactive secondary metabolites across Salix and notes that leaves mainly contain flavonoids, phenolic acids/derivatives and phenolic glycosides; salicinoids are characteristic Salix metabolites and many phenolic glycosides have been identified in leaves.",
+      "does_not_support": "This is a genus-level phytochemical review, not a tortoise feeding or toxicity trial and not proof that every Salix species or leaf has the same concentration. It cannot define a tortoise toxic dose, safe percentage, or feeding frequency.",
+      "year": 2021,
+      "doi": "10.3389/fphar.2021.593856",
+      "pmid": "33643045",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33643045/"
     }
   ]
 }
