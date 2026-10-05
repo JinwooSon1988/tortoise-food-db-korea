@@ -644,16 +644,20 @@
     "role": "어린 포도잎 소량 혼합 후보",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_grapevine"
+      "tortoise_table_grapevine",
+      "kedrina_grape_leaf_polyphenols_2018"
     ],
     "limits": [
       "어리고 신선한 잎을 moderation 수준으로 제한",
       "포도 열매 판정으로 확대하지 않음",
       "Mediterranean Testudo 종특이 직접근거가 아님",
-      "농약 살포 이력이 있는 포도잎은 급여하지 않음"
+      "농약 살포 이력이 있는 포도잎은 급여하지 않음",
+      "추가 원논문은 정확 종·잎의 식물화학/추출물 자료이며 육지거북 급여·독성 시험이 아님",
+      "성분 또는 농축 추출물의 생물활성을 신선한 잎 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 Vitis류의 어린 신선한 잎을 ‘제한 급여’ 범위에서 허용한다. 이는 Vitis속 수준의 전문자료로 모든 포도 종·품종이 동일하다는 직접 시험이나 지중해 Testudo의 정확한 급여량·빈도를 정한 자료는 아니다. 따라서 정확히 동정되고 농약 살포 이력이 없는 어린 신선한 잎만 다양한 식단에 가끔 보조적으로 사용하며, 열매까지 같은 판정을 확대하지 않는다.",
-    "applicability_note": "잎과 열매를 분리한 일반 육지거북 근거. 이베라 직접 판정이 아님."
+    "why": "전문 육지거북 식물자료는 Vitis류의 어린 신선한 잎을 ‘제한 급여’ 범위에서 허용한다. 이는 Vitis속 수준의 전문자료로 모든 포도 종·품종이 동일하다는 직접 시험이나 지중해 Testudo의 정확한 급여량·빈도를 정한 자료는 아니다. 따라서 정확히 동정되고 농약 살포 이력이 없는 어린 신선한 잎만 다양한 식단에 가끔 보조적으로 사용하며, 열매까지 같은 판정을 확대하지 않는다. Vitis vinifera의 건강한 잎에서 잎몸과 잎맥을 나누어 polyphenol 조성을 분석했고 품종·부위 차이도 확인됐다. 따라서 포도잎 성분을 하나의 고정값으로 취급하지 않는다. 현재 판정은 유지하며 이 원논문은 정확 종·부위 확인용 보조근거로 사용한다.",
+    "applicability_note": "잎과 열매를 분리한 일반 육지거북 근거. 이베라 직접 판정이 아님. 정확 종·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "nasturtium",
@@ -829,16 +833,20 @@
     "role": "딜 잎·허브 소량 혼합 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_dill"
+      "tortoise_table_dill",
+      "teuber_dill_leaf_flavonols_1978"
     ],
     "limits": [
       "소량 혼합 보조로만 사용",
       "씨앗은 급여하지 않음",
       "단일 주식 또는 고비율 반복식으로 사용하지 않음",
-      "Mediterranean Testudo 또는 이베라 직접근거가 아님"
+      "Mediterranean Testudo 또는 이베라 직접근거가 아님",
+      "추가 원논문은 정확 종·잎의 식물화학/추출물 자료이며 육지거북 급여·독성 시험이 아님",
+      "성분 또는 농축 추출물의 생물활성을 신선한 잎 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 딜(Anethum graveolens)의 허브 부분을 ‘제한 급여’로 분류하고 씨앗은 급여 범위에서 명시적으로 제외한다. 이는 육지거북에서 허브 부분의 정확한 안전 용량·급여 빈도나 특정 위해 기전을 정한 직접 시험은 아니다. 따라서 씨앗은 먹이지 않고, 잎·줄기 등 허브 부분만 여러 적합한 식물과 섞는 작은 보조 구성으로 제한한다.",
-    "applicability_note": "Anethum graveolens 종 자체를 대상으로 한 일반 육지거북 근거이며 Mediterranean Testudo·이베라 직접 급여시험은 아니다."
+    "why": "전문 육지거북 식물자료는 딜(Anethum graveolens)의 허브 부분을 ‘제한 급여’로 분류하고 씨앗은 급여 범위에서 명시적으로 제외한다. 이는 육지거북에서 허브 부분의 정확한 안전 용량·급여 빈도나 특정 위해 기전을 정한 직접 시험은 아니다. 따라서 씨앗은 먹이지 않고, 잎·줄기 등 허브 부분만 여러 적합한 식물과 섞는 작은 보조 구성으로 제한한다. Anethum graveolens 실제 잎에서 여러 flavonol glycoside가 직접 분리·동정됐다. 이는 정확 종·잎의 성분 근거지만 육지거북 급여 안전성 시험은 아니다. 현재 판정은 유지하며 이 원논문은 정확 종·부위 확인용 보조근거로 사용한다.",
+    "applicability_note": "Anethum graveolens 종 자체를 대상으로 한 일반 육지거북 근거이며 Mediterranean Testudo·이베라 직접 급여시험은 아니다. 정확 종·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "spinach",
@@ -1191,14 +1199,18 @@
     "role": "어린 잎의 소량 보조 구성",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_grapevine"
+      "tortoise_table_grapevine",
+      "kedrina_grape_leaf_polyphenols_2018"
     ],
     "limits": [
       "Vitis amurensis를 Vitis spp. 범위의 contextual evidence로만 연결",
-      "과실과 잎을 동일시하지 않음"
+      "과실과 잎을 동일시하지 않음",
+      "추가 원논문은 정확 종·잎의 식물화학/추출물 자료이며 육지거북 급여·독성 시험이 아님",
+      "성분 또는 농축 추출물의 생물활성을 신선한 잎 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 Vitis류의 어린 신선한 잎을 ‘제한 급여’ 범위에서 허용한다. 현재 Vitis amurensis 판정은 이 속 수준 근거를 해당 종에 제한적으로 연결한 것이며, 정확한 급여량·빈도를 정한 직접 시험은 아니다. 따라서 V. amurensis로 정확히 동정되고 농약 노출이 없는 어린 신선한 잎만 혼합식의 제한적 보조 재료로 사용하며, 과실까지 같은 판정을 적용하지 않는다.",
-    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 Vitis류의 어린 신선한 잎을 ‘제한 급여’ 범위에서 허용한다. 현재 Vitis amurensis 판정은 이 속 수준 근거를 해당 종에 제한적으로 연결한 것이며, 정확한 급여량·빈도를 정한 직접 시험은 아니다. 따라서 V. amurensis로 정확히 동정되고 농약 노출이 없는 어린 신선한 잎만 혼합식의 제한적 보조 재료로 사용하며, 과실까지 같은 판정을 적용하지 않는다. Vitis vinifera의 건강한 잎에서 잎몸과 잎맥을 나누어 polyphenol 조성을 분석했고 품종·부위 차이도 확인됐다. 따라서 포도나무잎 성분을 하나의 고정값으로 취급하지 않는다. 현재 판정은 유지하며 이 원논문은 정확 종·부위 확인용 보조근거로 사용한다.",
+    "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다. 정확 종·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "opuntiapad",
@@ -1856,14 +1868,18 @@
     "role": "소량·간헐적 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_peach_tree"
+      "tortoise_table_peach_tree",
+      "koyu_peach_leaf_extract_2020"
     ],
     "limits": [
       "Prunus persica 나무잎 범위",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·잎의 식물화학/추출물 자료이며 육지거북 급여·독성 시험이 아님",
+      "성분 또는 농축 추출물의 생물활성을 신선한 잎 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 복숭아나무(Prunus persica)의 잎·나무 식물체를 ‘소량 급여’ 범위로 분류한다. 이 판정은 과실·씨앗·핵까지 같은 안전성을 의미하지 않으며 정확한 급여량도 정하지 않는다. 따라서 부위를 구분하고 잎은 가끔 소량 보조하는 범위를 넘기지 않는다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 복숭아나무(Prunus persica)의 잎·나무 식물체를 ‘소량 급여’ 범위로 분류한다. 이 판정은 과실·씨앗·핵까지 같은 안전성을 의미하지 않으며 정확한 급여량도 정하지 않는다. 따라서 부위를 구분하고 잎은 가끔 소량 보조하는 범위를 넘기지 않는다. Prunus persica 실제 잎에서 만든 추출물의 생물활성이 직접 조사됐다. 다만 농축 추출물의 세포독성을 생복숭아잎을 먹은 육지거북의 독성으로 동일시할 수 없다. 현재 판정은 유지하며 이 원논문은 정확 종·부위 확인용 보조근거로 사용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다. 정확 종·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "blackberryleaf",
