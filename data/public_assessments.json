@@ -225,18 +225,23 @@
     "role": "마트채소 보조·순환",
     "confidence": "C",
     "evidence_ids": [
-      "tt_winter_feeding"
+      "tt_winter_feeding",
+      "germ_chicory_leaf_minerals_2020"
     ],
     "limits": [
       "겨울철 대체 혼합채소 맥락",
       "단독 주식·장기 편중 급여 아님",
-      "일반 치커리 전체에 자동 확대하지 않음"
+      "일반 치커리 전체에 자동 확대하지 않음",
+      "추가 원논문은 정확 분류군·관련 잎의 식물자료이며 육지거북 급여·독성 시험이 아님",
+      "식물 성분 존재를 육지거북 임상 위해 또는 급여 금지로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "Tortoise Trust는 라디키오를 야생초가 부족한 겨울철 지중해 육지거북에게 사용할 수 있는 여러 대체 잎채소 중 하나로 제시하며, 한 종류에 장기간 의존하지 말고 섞고 순환하도록 권한다. 이는 육지거북에서 라디키오의 정확한 급여 비율·빈도나 단독 주식 안전성을 정한 시험이 아니다. 따라서 다른 적합한 잎채소·야생초와 순환·혼합하는 보조 채소로 사용한다.",
+    "why": "Tortoise Trust는 라디키오를 야생초가 부족한 겨울철 지중해 육지거북에게 사용할 수 있는 여러 대체 잎채소 중 하나로 제시하며, 한 종류에 장기간 의존하지 말고 섞고 순환하도록 권한다. 이는 육지거북에서 라디키오의 정확한 급여 비율·빈도나 단독 주식 안전성을 정한 시험이 아니다. 따라서 다른 적합한 잎채소·야생초와 순환·혼합하는 보조 채소로 사용한다. Cichorium intybus var. foliosum의 실제 잎을 분석한 정확 분류군 자료를 추가했다. 다만 해당 연구는 요오드·셀레늄 엽면처리 실험이므로 처리 후 농도를 일반 시판 라디키오의 기본 성분값으로 사용하지 않는다. 따라서 현재 제한적 보조 판정은 유지하며 원논문은 성분·부위 확인용 보조근거로만 사용한다.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
     "display_group": "Testudo",
-    "legacy_scope": "Mediterranean_Testudo"
+    "legacy_scope": "Mediterranean_Testudo",
+    "applicability_note": " 정확 분류군·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "kale",
@@ -701,16 +706,20 @@
     "role": "순무잎 소량 혼합 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_turnip"
+      "tortoise_table_turnip",
+      "padilla_turnip_leaf_glucosinolates_2007"
     ],
     "limits": [
       "잎·꽃만 moderation 범위",
       "순무 뿌리는 급여하지 않음",
       "다른 goitrogenic Brassicaceae와 동시 편중하지 않음",
-      "Mediterranean Testudo 종특이 직접근거가 아님"
+      "Mediterranean Testudo 종특이 직접근거가 아님",
+      "추가 원논문은 정확 분류군·관련 잎의 식물자료이며 육지거북 급여·독성 시험이 아님",
+      "식물 성분 존재를 육지거북 임상 위해 또는 급여 금지로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 Brassica rapa의 순무 계통에서 잎과 꽃을 제한적으로 급여할 수 있다고 구분하면서 뿌리는 급여하지 말라고 명시한다. 현재 기준 식물 Brassica rapa subsp. rapa와 출처의 var. rapa 표기는 같은 순무 계통을 가리키지만, 이 자료가 정확한 급여량·빈도를 정한 직접 시험은 아니다. 따라서 잎·꽃만 혼합식의 제한적 보조 재료로 사용하고 뿌리는 제외한다.",
-    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 뿌리와 잎 판정을 분리한다."
+    "why": "전문 육지거북 식물자료는 Brassica rapa의 순무 계통에서 잎과 꽃을 제한적으로 급여할 수 있다고 구분하면서 뿌리는 급여하지 말라고 명시한다. 현재 기준 식물 Brassica rapa subsp. rapa와 출처의 var. rapa 표기는 같은 순무 계통을 가리키지만, 이 자료가 정확한 급여량·빈도를 정한 직접 시험은 아니다. 따라서 잎·꽃만 혼합식의 제한적 보조 재료로 사용하고 뿌리는 제외한다. Brassica rapa subsp. rapa의 실제 순무잎에서 여러 glucosinolate가 직접 분석됐다. 그러나 성분 검출은 육지거북의 갑상선 장애나 독성 용량을 입증하지 않는다. 따라서 현재 제한적 보조 판정은 유지하며 원논문은 성분·부위 확인용 보조근거로만 사용한다.",
+    "applicability_note": "육지거북 일반 전문 식물 DB 근거. 뿌리와 잎 판정을 분리한다. 정확 분류군·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "napa",
@@ -719,16 +728,20 @@
     "role": "배추 소량 순환 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_chinese_cabbage"
+      "tortoise_table_chinese_cabbage",
+      "park_napa_metabolites_2019"
     ],
     "limits": [
       "넓고 다양한 식단의 작은 일부로 제한",
       "여러 goitrogenic Brassicaceae를 동시에 겹쳐 급여하지 않음",
       "장기 단독·고비율 급여 아님",
-      "Mediterranean Testudo 종특이 직접근거가 아님"
+      "Mediterranean Testudo 종특이 직접근거가 아님",
+      "추가 원논문은 정확 분류군·관련 잎의 식물자료이며 육지거북 급여·독성 시험이 아님",
+      "식물 성분 존재를 육지거북 임상 위해 또는 급여 금지로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 배추·Chinese cabbage를 비독성 주식으로 보는 것이 아니라 갑상선종 유발물질 우려 때문에 ‘제한 급여’로 분류한다. 많은 양을 반복 급여하는 대신 다양한 식단의 작은 일부로 사용할 수 있다는 취지다. 정확한 위해 용량은 제시되지 않았으므로 특정 수치를 임의로 정하지 않는다.",
-    "applicability_note": "Brassica rapa pekinensis 일반 육지거북 근거. 이베라 직접 판정이 아님."
+    "why": "전문 육지거북 식물자료는 배추·Chinese cabbage를 비독성 주식으로 보는 것이 아니라 갑상선종 유발물질 우려 때문에 ‘제한 급여’로 분류한다. 많은 양을 반복 급여하는 대신 다양한 식단의 작은 일부로 사용할 수 있다는 취지다. 정확한 위해 용량은 제시되지 않았으므로 특정 수치를 임의로 정하지 않는다. Brassica rapa subsp. pekinensis의 식용 잎에서 glucosinolate·phenolic·carotenoid 등 대사성분이 직접 분석됐다. 품종 간 차이도 있어 배추를 단일한 고정 성분값으로 취급해서는 안 된다. 따라서 현재 제한적 보조 판정은 유지하며 원논문은 성분·부위 확인용 보조근거로만 사용한다.",
+    "applicability_note": "Brassica rapa pekinensis 일반 육지거북 근거. 이베라 직접 판정이 아님. 정확 분류군·잎 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "arugula",
