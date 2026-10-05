@@ -4458,6 +4458,44 @@
       "doi": "10.5455/jice.20140120103320",
       "pmid": "26401347",
       "url": "https://pubmed.ncbi.nlm.nih.gov/26401347/"
+    },
+    {
+      "id": "asano_muscari_bulb_alkaloids_2000",
+      "plant_ids": [
+        "grapehyacinth"
+      ],
+      "source_title": "New polyhydroxylated pyrrolizidine alkaloids from Muscari armeniacum: structural determination and biological activity",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Muscari armeniacum",
+      "plant_part_state": "bulbs",
+      "directness": "composition_only",
+      "supports": "The study isolated four new polyhydroxylated pyrrolizidine alkaloids (hyacinthacines A1, A2, A3 and B3) from Muscari armeniacum bulbs and evaluated their glycosidase-inhibitory activity, providing exact-species and exact-bulb phytochemical evidence.",
+      "does_not_support": "These hyacinthacines are polyhydroxylated pyrrolizidines studied for glycosidase inhibition; the paper does not establish the hepatotoxicity classically associated with unsaturated pyrrolizidine alkaloids, nor does it test tortoise feeding or define a Testudo toxic dose, safe percentage, or feeding frequency.",
+      "year": 2000,
+      "doi": "10.1016/S0957-4166(99)00508-X",
+      "pmid": null,
+      "url": "https://doi.org/10.1016/S0957-4166(99)00508-X"
+    },
+    {
+      "id": "siroka_houseplant_pet_toxicity_2023",
+      "plant_ids": [
+        "grapehyacinth"
+      ],
+      "source_title": "Toxicity of House Plants to Pet Animals",
+      "source_type": "peer_reviewed_veterinary_review",
+      "animal_taxon": "Companion animals (review)",
+      "applicability": "taxon_group",
+      "plant_taxon": "Muscari armeniacum",
+      "plant_part_state": "whole plant context; bulb-group discussion",
+      "directness": "related_taxon",
+      "supports": "A veterinary review of house-plant hazards includes Muscari armeniacum among alkaloid-containing ornamental plants and notes that, in the discussed bulb-plant group, active constituents are usually most concentrated in bulbs.",
+      "does_not_support": "This review is not a tortoise-specific exposure or dose-response study and does not establish a Muscari armeniacum toxic dose in Testudo. It also should not be read as proof that every alkaloid in M. armeniacum has the same toxicology as lycorine-type alkaloids in other bulb plants.",
+      "year": 2023,
+      "doi": "10.3390/toxins15050346",
+      "pmid": "37235380",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37235380/"
     }
   ]
 }
