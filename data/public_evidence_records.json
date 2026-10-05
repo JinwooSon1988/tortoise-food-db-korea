@@ -4535,6 +4535,44 @@
       "doi": "10.1016/j.scienta.2004.01.006",
       "pmid": null,
       "url": "https://doi.org/10.1016/j.scienta.2004.01.006"
+    },
+    {
+      "id": "couet_comfrey_pa_1996",
+      "plant_ids": [
+        "comfrey"
+      ],
+      "source_title": "Analysis, separation, and bioassay of pyrrolizidine alkaloids from comfrey (Symphytum officinale)",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Symphytum officinale",
+      "plant_part_state": "different plant parts and comfrey preparations",
+      "directness": "composition_only",
+      "supports": "The study measured pyrrolizidine alkaloids in Symphytum officinale, compared levels among plant parts and preparations, separated parent alkaloids from their N-oxides, and found that plant part materially affects alkaloid exposure. It also performed a human-cell-line mutagenicity bioassay on separated fractions.",
+      "does_not_support": "This is not a tortoise feeding or dose-response study. Its cell bioassay and plant-part chemistry cannot be converted into a Testudo toxic dose, safe percentage, feeding frequency, or a claim that one accidental bite causes liver injury.",
+      "year": 1996,
+      "doi": "10.1002/19960404nt3",
+      "pmid": "8887946",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8887946/"
+    },
+    {
+      "id": "stegemann_comfrey_pa_distribution_2019",
+      "plant_ids": [
+        "comfrey"
+      ],
+      "source_title": "Specific Distribution of Pyrrolizidine Alkaloids in Floral Parts of Comfrey (Symphytum officinale) and its Implications for Flower Ecology",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Symphytum officinale",
+      "plant_part_state": "roots, specialized young leaves and floral parts discussed; floral distribution experimentally examined",
+      "directness": "composition_only",
+      "supports": "The study confirms organ-specific pyrrolizidine-alkaloid biology in Symphytum officinale: roots are an established biosynthetic site, specialized young leaves can activate alkaloid production, and PAs accumulate in flowers during a defined developmental stage.",
+      "does_not_support": "This chemical-ecology study is not a tortoise feeding or toxicity trial and does not show that every comfrey organ has the same PA concentration or hazard. It cannot define a Testudo toxic dose, safe amount, or feeding frequency.",
+      "year": 2019,
+      "doi": "10.1007/s10886-018-0990-9",
+      "pmid": "30054770",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30054770/"
     }
   ]
 }
