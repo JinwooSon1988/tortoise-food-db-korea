@@ -5009,6 +5009,44 @@
       "doi": "10.1021/jf000388h",
       "pmid": "10956131",
       "url": "https://pubmed.ncbi.nlm.nih.gov/10956131/"
+    },
+    {
+      "id": "melo_coriander_leaf_oxalate_2008",
+      "plant_ids": [
+        "cilantro"
+      ],
+      "source_title": "Removal of oxalate from coriander leaves (Coriandrum sativum L.) using cooking methods",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Coriandrum sativum L.",
+      "plant_part_state": "fresh coriander leaves",
+      "directness": "composition_only",
+      "supports": "The study directly quantified oxalate in fresh coriander leaves and evaluated changes after cooking, providing exact-species and edible-leaf evidence for the oxalate rationale.",
+      "does_not_support": "This is food/plant composition research, not a tortoise feeding, calcium-balance or toxicity trial. Leaf oxalate concentration alone does not establish a Testudo toxic dose, calcium deficiency threshold, safe percentage, or fixed feeding frequency.",
+      "year": 2008,
+      "doi": "10.1111/j.1745-4557.2008.00195.x",
+      "pmid": null,
+      "url": "https://doi.org/10.1111/j.1745-4557.2008.00195.x"
+    },
+    {
+      "id": "hossain_apple_leaf_cyanogenic_2015",
+      "plant_ids": [
+        "appleleaf"
+      ],
+      "source_title": "Cyanogenic glycosides in apple (Malus domestica Borkh.) leaves and fruit tissues",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Malus domestica Borkh.",
+      "plant_part_state": "leaves and fruit tissues",
+      "directness": "composition_only",
+      "supports": "The study directly examined cyanogenic glycosides in Malus domestica tissues including leaves, supplying exact-species leaf chemistry relevant to separating apple foliage from fruit flesh.",
+      "does_not_support": "This is plant chemistry, not a tortoise feeding or cyanide-toxicity trial. Detection of cyanogenic compounds does not establish the dose released from a fresh leaf meal, a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+      "year": 2015,
+      "doi": null,
+      "pmid": null,
+      "url": "https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/amygdalin"
     }
   ]
 }
