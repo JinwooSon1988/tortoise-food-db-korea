@@ -2436,20 +2436,22 @@
   {
     "plant_id": "cauliflowerleaf",
     "species_group": "Tortoise_general",
-    "verdict": "do_not_feed",
-    "role": "계획 급여에서 제외",
-    "confidence": "C-",
+    "verdict": "limited",
+    "role": "제한적으로만 급여",
+    "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_cauliflower"
+      "tortoise_table_cauliflower",
+      "bhandari_cauliflower_glucosinolates_2015"
     ],
     "limits": [
-      "콜리플라워 전문 DB 비권장 조언은 잎에도 적용된다고 명시되어 있으나, 이베라 종특이 직접 급여시험은 아님",
-      "Brassicaceae 범주만으로 별도의 편중·빈도 규칙을 추가하지 않음",
-      "독성 식물로 단정하지 않음",
-      "Mediterranean Testudo 종특이 직접시험은 아님"
+      "콜리플라워 잎의 glucosinolate 성분과 육지거북의 실제 갑상샘 장애를 구분",
+      "식물 조직 성분 연구는 육지거북 급여·갑상샘 결과 시험이 아님",
+      "식물 부위에 따라 glucosinolate 조성·함량이 달라 꽃머리와 잎을 동일 노출로 취급하지 않음",
+      "급성 독성 식물 또는 우발적 소량 섭취의 중독으로 표현하지 않음",
+      "정확한 안전량·독성량·고정 급여비율은 직접 근거가 없어 제시하지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 콜리플라워의 꽃머리뿐 아니라 잎에도 비권장 조언을 적용하며 갑상샘 기능에 영향을 줄 수 있는 성분을 이유로 든다. 따라서 실용 판정은 ‘계획 급여에서 제외’로 한다. 다만 육지거북에서 정확한 위험 용량과 장기 영향을 확인한 직접 시험은 부족하므로, 이 판정을 강한 독성 식물이라는 뜻으로 확대하지 않는다.",
-    "applicability_note": "전문 육지거북 DB의 비권장 의견은 보존하되, 이베라 직접 근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
+    "why": "콜리플라워(Brassica oleracea var. botrytis)를 포함한 Brassica 조직 분석 연구에서는 잎을 포함한 식물 부위별로 glucosinolate 조성과 함량이 서로 다르다는 점이 확인된다. 전문 육지거북 식물자료는 콜리플라워의 잎과 꽃머리 모두를 권장 먹이로 보지 않으며 갑상샘 영향 가능성을 이유로 든다. 그러나 잎의 glucosinolate 존재만으로 육지거북에서 갑상샘 장애가 발생한다고 입증할 수 없고, 콜리플라워를 급성 독성 식물로 볼 직접 근거도 없다. 따라서 기존의 일괄적인 계획 급여 제외보다 제한급여가 근거 수준에 맞다. 주식이나 반복적인 대량 급여에는 쓰지 않고 다양한 잎채소 식단에서 제한적으로 사용하는 것으로 해석한다.",
+    "applicability_note": "전문 육지거북 자료의 비권장 의견과 콜리플라워를 포함한 Brassica의 조직별 glucosinolate 분석을 함께 적용한 제한급여 판정이다. 직접적인 육지거북 갑상샘 영향 시험은 아니다."
   },
   {
     "plant_id": "figleaf",
