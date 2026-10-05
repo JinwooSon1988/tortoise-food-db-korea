@@ -1847,14 +1847,17 @@
     "role": "계획 급여에서 제외",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_mung_bean_sprout"
+      "tortoise_table_mung_bean_sprout",
+      "elobuike_mungbean_sprouting_2021"
     ],
     "limits": [
-      "Vigna radiata 새싹",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Vigna radiata 발아 새싹의 계획 급여에 적용",
+      "24~120시간 발아물 성분 연구는 육지거북 급여·독성시험이 아님",
+      "발아 시간에 따라 항영양 성분 수준이 변하므로 단일 고정 성분값으로 일반화하지 않음",
+      "우발적 소량 섭취를 중독으로 단정하지 않으며 독성 용량·안전 비율·고정 급여 빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 녹두(Vigna radiata)의 발아 새싹을 ‘급여하지 않음’으로 분류한다. 그러나 현재 연결 근거는 육지거북에서 특정 독성 성분의 위해 용량이나 임상 중독 역치를 입증한 직접 시험이 아니다. 따라서 녹두새싹을 ‘한입이면 중독되는 독초’로 표현하지 않되, 안전한 계획 급여를 뒷받침할 근거도 없으므로 식단에서는 제외한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 녹두(Vigna radiata)의 발아 새싹을 계획 급여에서 제외한다. 별도의 원논문은 24~120시간 발아시킨 녹두에서 phytate·oxalate·trypsin inhibitor 등 여러 항영양 성분을 직접 측정했고, 발아 시간이 길어질수록 대체로 감소한다는 점을 확인했다. 즉 ‘녹두라서 언제나 같은 성분’이 아니라 발아 단계에 따라 조성이 달라진다. 다만 이 연구는 육지거북 급여·독성시험이 아니며 발아물을 분말로 분석한 식품 성분 연구이므로, 항영양 성분 검출만으로 새싹을 독성 식물이라고 단정할 수 없다. 현재 D 판정은 전문 육지거북 자료를 중심으로 유지한다.",
+    "applicability_note": "일반 육지거북의 계획 급여 비권장 근거이며, 특정 Testudo 종의 직접 독성시험으로 확대하지 않는다."
   },
   {
     "plant_id": "eveningprimrose",
