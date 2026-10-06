@@ -230,11 +230,11 @@ evidence_records = evidence_root.get('records', evidence_root) if isinstance(evi
 
 # Taxon-neutrality gate: generic evidence must not inherit an Ibera-specific reader-facing boundary.
 # Genuine Ibera-specific evidence is allowed only when the evidence record explicitly targets that taxon.
-ibera_re = re.compile(r'(?:Testudo\\s+graeca\\s+ibera|T\\.\\s*g\\.\\s*ibera|이베라그리스육지거북|Ibera-specific|Ibera specific|이베라에 한정)', re.I)
+ibera_re = re.compile(r'(?:Testudo\s+graeca\s+ibera|T\.\s*g\.\s*ibera|이베라그리스육지거북|Ibera-specific|Ibera specific|이베라에 한정)', re.I)
 taxon_specific_legacy = []
 for e in evidence_records:
     taxon = str(e.get('animal_taxon') or '')
-    if re.search(r'Testudo\\s+graeca\\s+ibera', taxon, re.I):
+    if re.search(r'Testudo\s+graeca\s+ibera', taxon, re.I):
         continue
     for field in ('source_title', 'supports', 'does_not_support', 'limitations', 'scope_note'):
         value = e.get(field)

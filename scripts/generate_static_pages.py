@@ -38,21 +38,29 @@ retail_by_id={r["plant_id"]:r for r in retail}
 directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
 applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
 
-def assessment_copy(v):
-    """Keep public assessment prose taxon-neutral unless the source explicitly needs a species reference.
-    Legacy Ibera wording is normalized here as a final reader-facing safeguard.
-    """
+IBERA_TEXT=re.compile(r"Testudo\s+graeca\s+ibera|T\.\s*g\.\s*ibera|이베라", re.I)
+
+def ibera_evidence_linked(a):
+    """True only when a linked, non-composition evidence record actually studied T. g. ibera."""
+    for eid in ((a or {}).get("evidence_ids") or []):
+        e=evidence_by_id.get(eid) or {}
+        if e.get("applicability")!="composition_only" and re.search(r"ibera", str(e.get("animal_taxon") or ""), re.I):
+            return True
+    return False
+
+def assessment_copy(v, a=None):
+    """Reader-facing safeguard for legacy assessment prose.
+    When the assessment's own linked evidence studied T. g. ibera, the taxon is part of the evidence
+    statement and is kept verbatim. Otherwise Ibera was only a default reference point, so the wording
+    is restated at the scope the evidence actually covers (tortoises in general)."""
     x=str(v or "")
-    x=re.sub(r"Testudo\\s+graeca\\s+ibera", "그리스육지거북", x, flags=re.I)
-    x=re.sub(r"T\\.\\s*g\\.\\s*ibera", "그리스육지거북", x, flags=re.I)
-    x=x.replace("이베라그리스육지거북", "그리스육지거북")
-    x=x.replace("이베라 직접", "해당 종 직접")
-    x=x.replace("이베라 종특이", "종 특이")
-    x=x.replace("이베라 아종", "해당 아종")
-    x=x.replace("이베라의", "육지거북의")
-    x=x.replace("이베라에서", "육지거북에서")
-    x=x.replace("이베라 중독", "육지거북 중독")
-    x=x.replace("이베라 독성", "육지거북 독성")
+    if not IBERA_TEXT.search(x) or ibera_evidence_linked(a):
+        return x
+    x=re.sub(r"Testudo\s+graeca\s+ibera", "육지거북", x, flags=re.I)
+    x=re.sub(r"T\.\s*g\.\s*ibera", "육지거북", x, flags=re.I)
+    x=x.replace("이베라그리스육지거북", "육지거북")
+    x=x.replace("이베라 종특이", "종 특이").replace("이베라 아종", "특정 아종")
+    x=x.replace("이베라", "육지거북")
     return x
 
 def esc(v): return html.escape(str(v or ""),quote=True)
@@ -738,14 +746,14 @@ for p in plants:
     rows=assessments_by_plant.get(pid,[])
     a=representative(rows); g=display(a)
     tone,grade,label,meaning=g["tone"],g["grade"],g["label"],g["meaning"]
-    summary=assessment_copy((a or {}).get("why")) or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
+    summary=assessment_copy((a or {}).get("why"), a) or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
     r=retail_by_id.get(pid); aliases=[]
     if r: aliases=list(dict.fromkeys((r.get("retail_terms") or [])+(r.get("aliases") or [])))
     if not aliases: aliases=list(p.get("aliases") or [])[:4]
     aliases=[x for x in aliases if x!=ko]
     # Identity risk comes only from existing data: retail name mapping or master identity status.
     identity_warning=bool((r and r.get("mapping_status")=="name_candidate_only") or p.get("identity_status")=="needs_species_level_mapping")
-    role=(a or {}).get("role"); limits=[assessment_copy(x) for x in ((a or {}).get("limits") or [])]
+    role=(a or {}).get("role"); limits=[assessment_copy(x, a) for x in ((a or {}).get("limits") or [])]
     linked_evidence=[evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids") or []) if eid in evidence_by_id]
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
@@ -834,11 +842,11 @@ for p in plants:
     for x in species_notes(rows,a):
         xg=display(x)
         who=x.get("display_group") or x.get("species_group") or x.get("animal_taxon")
-        species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)} <i class="small">{esc(x.get("animal_taxon"))}</i></b><span>{esc(xg["grade"]+" · "+xg["label"])}</span></div><p>{esc(assessment_copy(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다."))}</p></article>')
+        species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)} <i class="small">{esc(x.get("animal_taxon"))}</i></b><span>{esc(xg["grade"]+" · "+xg["label"])}</span></div><p>{esc(assessment_copy(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다.", x))}</p></article>')
     species_specific_html=(f'<section class="card species-specific"><h2>특정 종·아종에서 확인된 자료</h2><p class="small">일부 근거는 특정 종·아종만 조사했다. 전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며, 실제 연구 대상은 아래 상세 근거에서 확인할 수 있다.</p></section>' if species_rows else "")
 
     # 4) Scope → identity → limits, stated once in one card; canonical assessment copy is rendered verbatim.
-    scope=assessment_copy((a or {}).get("applicability_note")) or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 확인된 자료만으로 특정 거북 종까지 같은 결론을 적용할 수는 없다.")
+    scope=assessment_copy((a or {}).get("applicability_note"), a) or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 확인된 자료만으로 특정 거북 종까지 같은 결론을 적용할 수는 없다.")
     photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
     cur=curated_identity.get(pid)
     if identity_warning:
@@ -848,7 +856,7 @@ for p in plants:
     else:
         identity_text="검색 결과의 이름·학명과 실제 먹이려는 식물이 같은 종인지 확인한다. 농약 사용이나 오염 가능성도 급여 전에 별도로 확인한다."
         identity_html=f'''<div class="identity-note" data-identity="note"><h3>먹이기 전 식물 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p></div>'''
-    limits_html="".join(f"<li>{esc(assessment_copy(x))}</li>" for x in limits) or "<li>안전성을 확인할 자료가 부족하므로 먹여도 된다고 판단하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
+    limits_html="".join(f"<li>{esc(assessment_copy(x, a))}</li>" for x in limits) or "<li>안전성을 확인할 자료가 부족하므로 먹여도 된다고 판단하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
     scope_html=(f'''<section class="card scopecard" id="scope">{identity_html}</section>''' if identity_warning else "")
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
