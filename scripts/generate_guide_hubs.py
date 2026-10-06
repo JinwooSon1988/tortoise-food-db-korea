@@ -28,7 +28,7 @@ market=[p for p in plants if any(x in (p.get("market") or "") for x in ("마트"
 wild=[p for p in plants if p.get("category")=="wild" or "채집" in (p.get("market") or "")]
 caution=[p for p in plants if (by.get(p["id"]) or {}).get("verdict") in {"limited_supplement","general_reptile_supplement","do_not_feed"} or p.get("identity_status")!="verified_name"]
 research_slug="research-method"
-research_dir=ROOT/"guides"/research-method
+research_dir=ROOT/"guides"/"research-method"
 research_dir.mkdir(parents=True,exist_ok=True)
 research_url=f"{SITE}/guides/research-method/"
 research_schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":"거북밥 판정·근거 검토 방법","description":"거북밥이 식물 급여 판정을 만들고 근거의 범위와 한계를 표시하는 방법.","url":research_url,"inLanguage":"ko"},ensure_ascii=False,separators=(",",":"))
