@@ -455,7 +455,7 @@ def evidence_support_display(value):
     if v=="Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.":
         return "미즈나·타쵸이·코마츠나 품종을 직접 시험한 자료가 아니며 구체적인 급여 비율도 정하지 않는다."
     if v=="Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":
-        return "Malva verticillata에 한정된 섭취 비율이나 이베라그리스육지거북 대상 정량시험을 제공하지 않는다."
+        return "Malva verticillata에 한정된 섭취 비율이나 육지거북 대상 정량시험을 제공하지 않는다."
     if v=="The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.":
         return "같은 출처가 사료로 적합하지 않다고 명시한다. 이 자료로 육지거북 급여 적합성이나 급여량을 정할 수 없다."
     if v=="Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.":
@@ -469,7 +469,7 @@ def evidence_support_display(value):
     if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
         return "구체적인 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종에도 같은 판정을 적용할 근거는 아니다."
     if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
-        return "꼬투리나 콩알 급여·무제한 급여 또는 이베라그리스육지거북에 한정된 정량 급여량을 뒷받침하지 않는다."
+        return "꼬투리나 콩알 급여·무제한 급여 또는 육지거북의 정량 급여량을 뒷받침하지 않는다."
     # Common quantitative/scope limitations.
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
@@ -575,7 +575,7 @@ def evidence_limit_display(value):
     if v.startswith("Does not directly determine captive feeding quantity"):
         return "이 자료는 사육 육지거북의 구체적인 급여량을 직접 정하는 근거는 아니다."
     if v.startswith("Does not directly test mizuna"):
-        return "미즈나·타쏘이·코마츠나 품종을 직접 시험한 자료가 아니며, 이베라그리스육지거북에 한정된 급여 비율까지 정하는 근거는 아니다."
+        return "미즈나·타쏘이·코마츠나 품종을 직접 시험한 자료가 아니며, 구체적인 급여 비율까지 정하는 근거는 아니다."
     if v.startswith("Does not establish Mediterranean Testudo-specific dose"):
         extra=" 과실과 잎의 안전성을 서로 동일하다고 보지 않는다." if "equivalence of the fruit with the leaves" in v else ""
         return "이 자료만으로 지중해 Testudo의 구체적인 급여량·급여 빈도·식단 비율이나 무제한 급여 허용 범위를 정할 수 없다."+extra
@@ -617,7 +617,7 @@ def evidence_limit_display(value):
         "Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":"육지거북에서 독성이 나타나는 양이나 안전한 섭취량을 정하는 자료가 아니며 모든 글루코시놀레이트가 같은 생물학적 효과를 가진다고 볼 수도 없다.",
         "Does not establish tortoise-specific safety or feeding quantity.":"육지거북에 한정된 안전성이나 급여량을 정하는 근거는 아니다.",
         "Does not establish tortoise-specific suitability or captive feeding quantity.":"육지거북에 한정된 적합성이나 사육 환경 급여량을 정하는 근거는 아니다.",
-        "Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":"Malva verticillata에 한정된 섭취 비율이나 이베라그리스육지거북 대상 정량시험을 제공하지 않는다.",
+        "Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":"Malva verticillata에 한정된 섭취 비율이나 육지거북 대상 정량시험을 제공하지 않는다.",
         "Does not quantify a safe or toxic dose for young broccoli microgreens or Testudo graeca ibera.":"어린 브로콜리 마이크로그린 또는 이베라그리스육지거북에 대한 안전·독성 용량을 정량화하지 않는다.",
         "Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":"꼬투리·콩 급여, 무제한 급여 또는 이베라그리스육지거북에 한정된 정량 급여량을 뒷받침하지 않는다.",
         "Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.":"피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외한다. 이베라그리스육지거북에 한정된 급여량도 확정하지 않는다.",
