@@ -5,8 +5,15 @@
     "verdict": "limited_supplement",
     "role": "제라늄 소량 순환 보조",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_pelargonium"],
-    "limits": ["master taxon은 Pelargonium spp.임","hardy Geranium과 혼동하지 않음","소량·다양한 식단의 일부로만 사용","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_pelargonium"
+    ],
+    "limits": [
+      "master taxon은 Pelargonium spp.임",
+      "hardy Geranium과 혼동하지 않음",
+      "소량·다양한 식단의 일부로만 사용",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 Pelargonium을 Feed in Moderation으로 분류하므로 소량 보조로만 둔다.",
     "applicability_note": "한국에서 흔히 제라늄이라 부르는 Pelargonium spp.에 대한 일반 육지거북 근거다."
   },
@@ -16,9 +23,18 @@
     "verdict": "do_not_feed",
     "role": "급여 비권장",
     "confidence": "C+",
-    "evidence_ids": ["tortoise_table_tagetes","marotti_tagetes_thiophenes_2010"],
-    "limits": ["Tagetes spp.에 한정","식용 가능한 Calendula와 혼동 금지","The Tortoise Table의 Do not Feed는 일반 육지거북 전문 DB 근거이며 이베라 직접 독성시험이나 용량-반응 자료는 아님","Tagetes 여러 종의 뿌리·지상부·꽃에서 thiophene류가 분석됐고 강한 biocidal activity가 보고됐지만, 이는 육지거북 독성시험이 아님","우발적 소량 섭취를 즉시 이베라 중독으로 단정하지 않음"],
-    "why": "The Tortoise Table은 Tagetes spp.를 Do not Feed로 분류하고 뿌리·꽃·잎의 insecticidal substance를 이유로 회피를 권한다. Marotti et al. (2010)은 여러 Tagetes 종의 뿌리·지상부·꽃에서 thiophene류를 분석했고 이 화합물군의 강한 biocidal activity를 보고했다. 따라서 단순 Ca:P·oxalate 같은 영양성분 논리만으로 만든 금지와 달리 독립적인 생물활성 신호가 있어 현재 급여 비권장 판정을 유지한다. 다만 이 식물화학 자료 자체는 육지거북 독성시험이 아니다. 다만 이 자료를 이베라의 독성 용량이나 우발적 소량 섭취의 임상결과로 확대하지 않는다.",
+    "evidence_ids": [
+      "tortoise_table_tagetes",
+      "marotti_tagetes_thiophenes_2010"
+    ],
+    "limits": [
+      "Tagetes spp.에 한정",
+      "식용 가능한 Calendula와 혼동 금지",
+      "The Tortoise Table의 Do not Feed는 일반 육지거북 전문 DB 근거이며 해당 종 직접 독성시험이나 용량-반응 자료는 아님",
+      "Tagetes 여러 종의 뿌리·지상부·꽃에서 thiophene류가 분석됐고 강한 biocidal activity가 보고됐지만, 이는 육지거북 독성시험이 아님",
+      "우발적 소량 섭취를 즉시 육지거북 중독으로 단정하지 않음"
+    ],
+    "why": "The Tortoise Table은 Tagetes spp.를 Do not Feed로 분류하고 뿌리·꽃·잎의 insecticidal substance를 이유로 회피를 권한다. Marotti et al. (2010)은 여러 Tagetes 종의 뿌리·지상부·꽃에서 thiophene류를 분석했고 이 화합물군의 강한 biocidal activity를 보고했다. 따라서 단순 Ca:P·oxalate 같은 영양성분 논리만으로 만든 금지와 달리 독립적인 생물활성 신호가 있어 현재 급여 비권장 판정을 유지한다. 다만 이 식물화학 자료 자체는 육지거북 독성시험이 아니다. 다만 이 자료를 육지거북의 독성 용량이나 우발적 소량 섭취의 임상결과로 확대하지 않는다.",
     "applicability_note": "master의 메리골드는 Tagetes spp.다. Calendula 판정을 적용하지 않는다."
   },
   {
@@ -27,10 +43,17 @@
     "verdict": "limited_supplement",
     "role": "해바라기잎 소량 순환 보조",
     "confidence": "C-",
-    "evidence_ids": ["tortoise_table_sunflower"],
-    "limits": ["Feed in Moderation 범위","잎 master 항목에 보수적으로 적용","고비율·반복 주식으로 사용하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_sunflower"
+    ],
+    "limits": [
+      "Feed in Moderation 범위",
+      "잎 master 항목에 보수적으로 적용",
+      "고비율·반복 주식으로 사용하지 않음",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 Helianthus annuus를 Feed in Moderation으로 분류하므로 잎도 낮은 확신도의 소량 보조로만 둔다.",
-    "applicability_note": "Helianthus annuus 일반 육지거북 근거이며 이베라 직접 급여시험은 아니다."
+    "applicability_note": "Helianthus annuus 일반 육지거북 근거이며 해당 종 직접 급여시험은 아니다."
   },
   {
     "plant_id": "tomato",
@@ -38,8 +61,15 @@
     "verdict": "do_not_feed",
     "role": "급여 비권장",
     "confidence": "C+",
-    "evidence_ids": ["tortoise_table_tomato"],
-    "limits": ["잎과 덜 익은 열매는 급여 금지","익은 열매도 일상 먹이로 추천하지 않음","약 투여 같은 특수 상황 언급을 일반 급여 허용으로 확대하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_tomato"
+    ],
+    "limits": [
+      "잎과 덜 익은 열매는 급여 금지",
+      "익은 열매도 일상 먹이로 추천하지 않음",
+      "약 투여 같은 특수 상황 언급을 일반 급여 허용으로 확대하지 않음",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 토마토 잎·미숙과를 급여 금지하고 익은 열매도 영양구성상 일상 급여를 권장하지 않으므로 전체 master 항목을 추천 후보에서 제외한다.",
     "applicability_note": "Solanum lycopersicum 일반 육지거북 전문 DB 근거다."
   }
