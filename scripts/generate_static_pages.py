@@ -429,7 +429,7 @@ def evidence_support_display(value):
     if v=="This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":
         return "통제된 육지거북 급여시험이 아니므로 사육 식단 비율·정해진 급여 빈도·무제한 급여·육지거북 독성 용량을 정할 수 없다."
     if v=="This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":
-        return "이 전문 DB 항목은 통제된 이베라그리스육지거북 급여·독성시험이 아니다. 분류 정보만으로 정확한 사육 식단 비율·급여 빈도·독성이 나타나는 양·무제한 급여 허용 범위나 원자료가 다루지 않은 식물 부위·관련 분류군의 안전성을 판단하면 안 된다."
+        return "이 전문 DB 항목은 통제된 육지거북 급여·독성시험이 아니다. 분류 정보만으로 정확한 사육 식단 비율·급여 빈도·독성이 나타나는 양·무제한 급여 허용 범위나 원자료가 다루지 않은 식물 부위·관련 분류군의 안전성을 판단하면 안 된다."
     if v=="The mechanism discussion is not a Testudo graeca ibera dose-response or harm trial. The record does not independently establish a tortoise toxic dose or convert the composition rationale into proven poisoning.":
         return "기전 설명은 육지거북의 용량-반응 또는 위해 시험이 아니다. 이 자료만으로 육지거북 독성 용량을 정하거나 성분상의 우려를 실제 중독이 입증된 것으로 바꿔 해석할 수 없다."
     if v=="This is not a Mediterranean Testudo or Testudo graeca ibera feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.":
@@ -485,11 +485,11 @@ def evidence_support_display(value):
     if v=="Does not establish Mediterranean Testudo-specific dose, exact feeding frequency, diet percentage, or unlimited use.":
         return "지중해 Testudo에 한정된 급여량·정확한 급여 빈도·식단 비율·무제한 급여를 정하는 자료는 아니다."
     if v=="Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.":
-        return "통제된 이베라그리스육지거북 급여시험이 아니므로 정확한 식단 비율·정해진 급여 빈도·독성 용량·무제한 급여를 정할 수 없다."
+        return "통제된 육지거북 급여시험이 아니므로 정확한 식단 비율·정해진 급여 빈도·독성 용량·무제한 급여를 정할 수 없다."
     if v=="No tortoise-specific feeding threshold or dose.":
         return "육지거북에 한정된 급여 임계값이나 용량을 정하는 자료는 아니다."
     if v=="Does not directly determine captive feeding quantity for Testudo graeca ibera.":
-        return "이베라그리스육지거북의 사육 환경 급여량을 직접 결정하는 자료는 아니다."
+        return "사육 육지거북의 구체적인 급여량을 직접 결정하는 자료는 아니다."
     if v=="Does not establish tortoise-specific safety or feeding quantity.":
         return "육지거북에 한정된 안전성이나 급여량을 확정하는 자료는 아니다."
     if v=="Does not establish tortoise feeding safety or nutritional suitability.":
@@ -573,7 +573,7 @@ def evidence_limit_display(value):
     if v.startswith("Does not demonstrate direct toxicity of sweet-potato leaves"):
         return "고구마 잎의 이베라그리스육지거북 직접 독성을 입증하지 않으며, 우발적 섭취를 곧 중독으로 볼 근거도 아니다. 잎과 덩이뿌리를 동일하게 취급하지 않는다."
     if v.startswith("Does not directly determine captive feeding quantity"):
-        return "이 자료는 이베라그리스육지거북의 사육 환경의 급여량을 직접 정하는 근거는 아니다."
+        return "이 자료는 사육 육지거북의 구체적인 급여량을 직접 정하는 근거는 아니다."
     if v.startswith("Does not directly test mizuna"):
         return "미즈나·타쏘이·코마츠나 품종을 직접 시험한 자료가 아니며, 이베라그리스육지거북에 한정된 급여 비율까지 정하는 근거는 아니다."
     if v.startswith("Does not establish Mediterranean Testudo-specific dose"):
@@ -586,7 +586,7 @@ def evidence_limit_display(value):
     if v.startswith("Does not establish a Testudo graeca ibera-specific diet percentage"):
         return "이 자료만으로 이베라그리스육지거북의 식단 비율·구체적인 급여 빈도나 무제한 급여 허용 범위를 정할 수 없다. 성숙한 씨앗은 어린 풀과 같지 않으며 단백질이 높아 먹이지 않도록 한 원자료의 경고를 따른다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific feeding percentage"):
-        return "이 자료는 이베라그리스육지거북에 한정된 급여 비율이나 정해진 급여 빈도를 정하는 근거는 아니다. 마른 씨앗 이삭은 풀·건초와 같지 않으며 눈이나 입에 상처를 낼 수 있어 제거하도록 한 원자료의 경고를 따른다."
+        return "이 자료는 구체적인 급여 비율이나 정해진 급여 빈도를 정하는 근거는 아니다. 마른 씨앗 이삭은 풀·건초와 같지 않으며 눈이나 입에 상처를 낼 수 있어 제거하도록 한 원자료의 경고를 따른다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific intake percentage"):
         return "이 자료만으로 이베라그리스육지거북의 구체적인 섭취 비율을 정할 수 없으며, 모든 품종과 내생균 상태를 똑같이 볼 근거도 아니다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific percentage"):
