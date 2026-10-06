@@ -10,16 +10,14 @@ gen=(R/"scripts/generate_static_pages.py").read_text(encoding="utf-8")
 pyv=(R/"scripts/public_verdict.py").read_text(encoding="utf-8")
 for s in [js,allp,core,verdict,gen,pyv]:
     assert "🟢" not in s and "🟡" not in s and "🟠" not in s and "🔴" not in s
-assert "A (혼합식 활용 가능)" in allp
-assert "B (제한적 혼합 급여)" in allp
-assert "C (가끔 보조 급여)" in allp
-assert "D (급여하지 않음)" in allp
-assert "A · 혼합식 활용 가능" in core
-assert "B · 제한적 혼합 급여" in core
-assert "C · 가끔 보조 급여" in core
-assert "D · 급여하지 않음" in core
+# Labels are the canonical ones from verdict-core.js / public_verdict.py on every surface.
+LABELS=(("A","적극 권장"),("B","제한적 혼합 급여"),("C","가끔 보조 급여"),("D","계획 급여에서 제외"))
+assert "verdict-core.js" in allp and "TV.display(" in allp, "catalog must take grades from the shared verdict core"
+for g,label in LABELS:
+    assert f"<i>{g}</i> {label}" in allp, ("catalog legend",g,label)
+    assert f"{g} · {label}" in core, ("core-foods legend",g,label)
 for src in (verdict,pyv):
-    for g,label in (("A","혼합식 활용 가능"),("B","제한적 혼합 급여"),("C","가끔 보조 급여"),("D","급여하지 않음")):
+    for g,label in LABELS:
         assert g in src and label in src, (g,label)
 # Evidence strength (confidence) must never feed into the A-D grade.
 assert "confidence" not in verdict and "confidence" not in pyv

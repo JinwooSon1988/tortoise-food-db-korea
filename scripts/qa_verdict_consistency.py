@@ -195,6 +195,23 @@ for p in public:
         if retired in text:
             errors.append(f"{pid}: retired runtime enhancer or species selector referenced ({retired})")
 
+# Secondary pages that list plants (core-foods, guide hubs) must show the same canonical grade and label.
+def _expected(pid):
+    g = display(representative(rows_by.get(pid, [])))
+    return "판정 보류" if g["grade"] == "보류" else f'{g["grade"]} · {g["label"]}'
+core = (ROOT / "core-foods/index.html").read_text(encoding="utf-8")
+for m in re.finditer(r'<a class="item" href="\.\./plant/([a-z_]+)/">(?:(?!</a>).)*?<span class="tag[^"]*">([^<]*)</span>', core, re.S):
+    if html.unescape(m.group(2)).strip() != _expected(m.group(1)):
+        errors.append(f"core-foods {m.group(1)}: shows '{m.group(2)}', canonical '{_expected(m.group(1))}'")
+for guide in sorted((ROOT / "guides").glob("*/index.html")):
+    gt = guide.read_text(encoding="utf-8")
+    for m in re.finditer(r'<a href="\.\./\.\./plant/([a-z_]+)/">[^<]*</a></h3><span class="grade">([^<]*)</span>', gt):
+        if html.unescape(m.group(2)).strip() != _expected(m.group(1)):
+            errors.append(f"{guide.parent.name} {m.group(1)}: shows '{m.group(2)}', canonical '{_expected(m.group(1))}'")
+    for m in re.finditer(r'href="\.\./\.\./plant/([a-z_]+)/"', gt):
+        if not (ROOT / "plant" / m.group(1) / "index.html").exists():
+            errors.append(f"{guide.parent.name}: links to missing plant page {m.group(1)}")
+
 if errors:
     print(f"FAIL: verdict consistency ({len(errors)})")
     for e in errors[:80]:

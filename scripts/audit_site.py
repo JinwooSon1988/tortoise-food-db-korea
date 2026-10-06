@@ -32,7 +32,8 @@ def target_for(page, ref):
     return target / "index.html" if target.is_dir() else target
 
 
-html_files = sorted(ROOT.glob("*.html")) + sorted(ROOT.glob("*/index.html")) + sorted(ROOT.glob("plant/*/index.html"))
+# Every published HTML page, at any depth (guides/*/index.html was previously unchecked).
+html_files = sorted(p for p in ROOT.rglob("*.html") if not ({".git", "node_modules"} & set(p.relative_to(ROOT).parts)))
 for page in html_files:
     parser = References()
     parser.feed(page.read_text(encoding="utf-8"))
