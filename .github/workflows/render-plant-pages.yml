@@ -17,6 +17,7 @@ on:
       - 'index.html'
       - 'scripts/audit_verdict_cards.py'
       - 'scripts/audit_plant_detail_v56.py'
+      - 'scripts/plant_taxon_scope.py'
       - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
       - '.github/workflows/render-plant-pages.yml'

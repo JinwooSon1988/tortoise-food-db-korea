@@ -777,7 +777,8 @@ for p in plants:
     en_identity="Database names are search references. Confirm the actual plant identity and contamination status before feeding."
     basis=scope_label(a)
     img=image_by_plant.get(pid)
-    header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small"><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · {esc(img.get("license") or "")}</figcaption></figure>''' if img else "")
+    head_scope_caption={"exact_species":"정확한 종으로 검증된 참고 이미지","exact_subspecies":"정확한 아종으로 검증된 참고 이미지","exact_variety":"정확한 변종으로 검증된 참고 이미지"}.get((img or {}).get("identity_scope"),"")
+    header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small">{head_scope_caption}{"<br>사진 속 부위는 실제 급여 부위와 다르다." if img.get("part_match")=="mismatch" else ""}<br><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · {esc(img.get("license") or "")}</figcaption></figure>''' if img else "")
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
     # Reader-facing summary should not name a single species unless the assessment itself is species-specific.
