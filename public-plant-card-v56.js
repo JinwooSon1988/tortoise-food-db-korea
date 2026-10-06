@@ -1,11 +1,11 @@
 (()=>{
 const LEVEL={
- supported_mixed_diet:['A','혼합식으로 활용 가능','비교적 직접적인 육지거북/적용군 근거가 있는 혼합식 후보다. 단독 주식·무제한 급여를 뜻하지 않는다.'],
- limited_mixed_diet:['B','제한적으로 혼합 급여','혼합식에 사용할 수 있으나 근거 또는 사용 범위에 제한이 있다.'],
- limited_supplement:['C','가끔 보조적으로 급여','보조적 사용 범위로 제한한다.'],
- supplement_general_evidence:['C','가끔 보조적으로 급여','일반 육지거북 수준 근거에 의존하므로 보조적 사용으로 제한한다.'],
- general_reptile_supplement:['C','가끔 보조적으로 급여','근거 적용성이 낮아 보조적 사용 이상으로 확대하지 않는다.'],
- do_not_feed:['D','급여하지 않음','현재 판정에서는 급여 대상에서 제외한다.']
+ supported_mixed_diet:['A','혼합식 활용','비교적 직접적인 육지거북/적용군 근거가 있는 혼합식 후보다. 단독 주식·무제한 급여를 뜻하지 않는다.'],
+ limited_mixed_diet:['B','제한적 혼합 급여','혼합식에 사용할 수 있으나 근거 또는 사용 범위에 제한이 있다.'],
+ limited_supplement:['C','가끔 보조 급여','보조적 사용 범위로 제한한다.'],
+ supplement_general_evidence:['C','가끔 보조 급여','일반 육지거북 수준 근거에 의존하므로 보조적 사용으로 제한한다.'],
+ general_reptile_supplement:['C','가끔 보조 급여','근거 적용성이 낮아 보조적 사용 이상으로 확대하지 않는다.'],
+ do_not_feed:['D','급여 제외','현재 판정에서는 급여 대상에서 제외한다.']
 };
 const SCOPE={Mediterranean_Testudo:'지중해 Testudo 적용 근거',Tortoise_general:'육지거북 일반 근거',Herbivorous_reptile_general:'초식 파충류 일반 근거',Sulcata:'설카타 근거'};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
