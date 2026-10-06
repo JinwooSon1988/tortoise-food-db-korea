@@ -1664,14 +1664,19 @@
     "role": "어린 잎의 제한적 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_strawberry"
+      "tortoise_table_strawberry",
+      "hanhineva_strawberry_leaf_2009",
+      "salasarias_strawberry_leaf_2023"
     ],
     "limits": [
       "Fragaria × ananassa 어린잎에 한정",
-      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음",
+      "추가 원논문은 잎의 식물화학/추출물 자료이며 육지거북 급여·독성 시험이 아님",
+      "추출물의 항산화·세포 생물활성을 신선한 잎 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 어린 딸기잎을 다양한 식단의 일부로 사용할 수 있다고 본다. 다만 정확한 급여 비율·빈도를 정한 직접 시험은 아니며 다른 식물 부위까지 같은 판정을 자동 적용할 근거도 아니다. 따라서 어린 잎을 혼합식의 보조 재료로 사용한다.",
-    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+    "why": "전문 육지거북 식물자료는 어린 딸기잎을 다양한 식단의 일부로 사용할 수 있다고 본다. 다만 정확한 급여 비율·빈도를 정한 직접 시험은 아니며 다른 식물 부위까지 같은 판정을 자동 적용할 근거도 아니다. 따라서 어린 잎을 혼합식의 보조 재료로 사용한다. Fragaria × ananassa의 실제 잎을 직접 분석한 두 원논문에서 다양한 phenolic·phenylpropanoid 계열 성분이 확인됐고, 잎과 열매의 성분 프로필도 크게 다를 수 있음이 확인됐다. 따라서 열매 자료를 잎 판정에 대신 사용하지 않는다. 현재 제한적 보조 판정은 유지한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다. Fragaria × ananassa 잎 직접 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "oregano",
@@ -1900,14 +1905,18 @@
     "role": "새잎 중심의 제한적 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_bramble_leaf"
+      "tortoise_table_bramble_leaf",
+      "asnaashari_blackberry_leaf_2015"
     ],
     "limits": [
       "Rubus fruticosus agg.를 Rubus spp. bramble 새잎·꽃 범위에 contextual 적용",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 잎의 식물화학/추출물 자료이며 육지거북 급여·독성 시험이 아님",
+      "추출물의 항산화·세포 생물활성을 신선한 잎 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 Rubus류, 특히 블랙베리의 새로 난 잎과 꽃을 ‘제한 급여’로 분류한다. 이 판정은 열매나 모든 Rubus 부위의 동일한 안전성을 뜻하지 않으며 정확한 급여량·빈도도 정하지 않는다. 따라서 새잎·꽃만 혼합식의 제한적 보조로 사용한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 Rubus류, 특히 블랙베리의 새로 난 잎과 꽃을 ‘제한 급여’로 분류한다. 이 판정은 열매나 모든 Rubus 부위의 동일한 안전성을 뜻하지 않으며 정확한 급여량·빈도도 정하지 않는다. 따라서 새잎·꽃만 혼합식의 제한적 보조로 사용한다. Rubus fruticosus로 보고된 실제 잎 추출 연구가 추가됐다. 다만 논문의 일반명 표기가 raspberry로 혼재하고 현재 DB 식물은 Rubus fruticosus aggregate이므로 이 한 연구를 집합군 전체의 exact-taxon 근거로 확대하지 않는다. 현재 제한적 보조 판정은 유지한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다. Rubus fruticosus로 보고된 잎 연구지만 DB taxon은 Rubus fruticosus agg.이므로 related/exact-part composition 보조근거로 제한한다."
   },
   {
     "plant_id": "mapleleaf",
