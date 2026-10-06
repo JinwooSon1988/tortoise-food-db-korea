@@ -2,8 +2,8 @@
   "schema_version": 2,
   "policy": "An image may represent a master record only at the master's own rank (species, subspecies or variety). spp./agg./s.l. masters never receive a species representative image. Exact taxon and license provenance are required before publication.",
   "counts": {
-    "exact_species_candidate": 52,
-    "exact_infraspecific_candidate": 7,
+    "exact_species_candidate": 7,
+    "exact_infraspecific_candidate": 3,
     "genus_scope_hold": 43
   },
   "groups": {
@@ -27,57 +27,9 @@
         "required_scope": "exact_species"
       },
       {
-        "plant_id": "redclover",
-        "scientific": "Trifolium pratense",
-        "ko": "레드클로버",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "sage",
-        "scientific": "Salvia officinalis",
-        "ko": "세이지",
-        "required_scope": "exact_species"
-      },
-      {
         "plant_id": "chrysanthemum",
         "scientific": "Chrysanthemum morifolium",
         "ko": "국화",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "sunflowerpetal",
-        "scientific": "Helianthus annuus",
-        "ko": "해바라기꽃잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "appleleaf",
-        "scientific": "Malus domestica",
-        "ko": "사과나무잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "plumleaf",
-        "scientific": "Prunus salicina",
-        "ko": "자두나무잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "sorrel",
-        "scientific": "Rumex acetosa",
-        "ko": "수영",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "beanleaf",
-        "scientific": "Phaseolus vulgaris",
-        "ko": "강낭콩잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "soybeanleaf",
-        "scientific": "Glycine max",
-        "ko": "콩잎",
         "required_scope": "exact_species"
       },
       {
@@ -87,237 +39,15 @@
         "required_scope": "exact_species"
       },
       {
-        "plant_id": "alfalfasprout",
-        "scientific": "Medicago sativa",
-        "ko": "알팔파새싹",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "rapeseedleaf",
-        "scientific": "Brassica napus",
-        "ko": "유채잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "sweetpotatovine",
-        "scientific": "Ipomoea batatas",
-        "ko": "고구마줄기",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "cucumberleaf",
-        "scientific": "Cucumis sativus",
-        "ko": "오이잎",
-        "required_scope": "exact_species"
-      },
-      {
         "plant_id": "melonleaf",
         "scientific": "Cucumis melo",
         "ko": "멜론잎",
         "required_scope": "exact_species"
       },
       {
-        "plant_id": "watermelonleaf",
-        "scientific": "Citrullus lanatus",
-        "ko": "수박잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "grapevineleaf",
-        "scientific": "Vitis amurensis",
-        "ko": "머루잎",
-        "required_scope": "exact_species"
-      },
-      {
         "plant_id": "kiwileaf",
         "scientific": "Actinidia deliciosa",
         "ko": "키위잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "opuntiapad",
-        "scientific": "Opuntia ficus-indica",
-        "ko": "손바닥선인장패드",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "wheatleaf",
-        "scientific": "Triticum aestivum",
-        "ko": "밀잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "barleyleaf",
-        "scientific": "Hordeum vulgare",
-        "ko": "보리잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "oatleaf",
-        "scientific": "Avena sativa",
-        "ko": "귀리잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "meadowgrass",
-        "scientific": "Poa pratensis",
-        "ko": "왕포아풀",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "fescue",
-        "scientific": "Schedonorus arundinaceus",
-        "ko": "톨페스큐",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "bermudagrass",
-        "scientific": "Cynodon dactylon",
-        "ko": "우산잔디",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "hibiscusrosa",
-        "scientific": "Hibiscus rosa-sinensis",
-        "ko": "하와이무궁화",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "ginkgoleaf",
-        "scientific": "Ginkgo biloba",
-        "ko": "은행잎",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "daisy",
-        "scientific": "Bellis perennis",
-        "ko": "데이지",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "milkthistle",
-        "scientific": "Silybum marianum",
-        "ko": "밀크시슬",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "sainfoin",
-        "scientific": "Onobrychis viciifolia",
-        "ko": "샌포인",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "borage",
-        "scientific": "Borago officinalis",
-        "ko": "보리지",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "henbit",
-        "scientific": "Lamium amplexicaule",
-        "ko": "광대나물",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "snapdragon",
-        "scientific": "Antirrhinum majus",
-        "ko": "금어초",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "catsear",
-        "scientific": "Hypochaeris radicata",
-        "ko": "서양금혼초",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "shepherdspurse",
-        "scientific": "Capsella bursa-pastoris",
-        "ko": "냉이",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "comfrey",
-        "scientific": "Symphytum officinale",
-        "ko": "컴프리",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "medicago_hispida",
-        "scientific": "Medicago polymorpha L.",
-        "ko": "버클로버",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "conyzacanadensis",
-        "scientific": "Erigeron canadensis L.",
-        "ko": "망초",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "ruscus_aculeatus",
-        "scientific": "Ruscus aculeatus L.",
-        "ko": "부처스브룸",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "hedgemustard",
-        "scientific": "Sisymbrium officinale (L.) Scop.",
-        "ko": "헤지머스터드",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "harebell",
-        "scientific": "Campanula rotundifolia L.",
-        "ko": "헤어벨",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "erodium_botrys",
-        "scientific": "Erodium botrys (Cav.) Bertol.",
-        "ko": "넓은잎필라리",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "lamium_album",
-        "scientific": "Lamium album L.",
-        "ko": "흰광대나물",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "dichondra_micrantha",
-        "scientific": "Dichondra micrantha Urb.",
-        "ko": "아욱메풀",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "abutilon_indicum",
-        "scientific": "Abutilon indicum (L.) Sweet",
-        "ko": "인도아부틸론",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "aeonium_arboreum",
-        "scientific": "Aeonium arboreum (L.) Webb & Berthel.",
-        "ko": "에오니움 아르보레움",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "buddleja_davidii",
-        "scientific": "Buddleja davidii Franch.",
-        "ko": "부들레야",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "vicia_sativa",
-        "scientific": "Vicia sativa L.",
-        "ko": "살갈퀴",
-        "required_scope": "exact_species"
-      },
-      {
-        "plant_id": "vicia_cracca",
-        "scientific": "Vicia cracca L.",
-        "ko": "등갈퀴나물",
         "required_scope": "exact_species"
       }
     ],
@@ -335,33 +65,9 @@
         "required_scope": "exact_subspecies"
       },
       {
-        "plant_id": "broccolisprout",
-        "scientific": "Brassica oleracea var. italica",
-        "ko": "브로콜리새싹",
-        "required_scope": "exact_variety"
-      },
-      {
-        "plant_id": "kohlrabileaf",
-        "scientific": "Brassica oleracea var. gongylodes",
-        "ko": "콜라비잎",
-        "required_scope": "exact_variety"
-      },
-      {
         "plant_id": "mizuna",
         "scientific": "Brassica rapa var. nipposinica",
         "ko": "미즈나",
-        "required_scope": "exact_variety"
-      },
-      {
-        "plant_id": "tatsoi",
-        "scientific": "Brassica rapa subsp. narinosa",
-        "ko": "다채",
-        "required_scope": "exact_subspecies"
-      },
-      {
-        "plant_id": "komatsuna",
-        "scientific": "Brassica rapa var. perviridis",
-        "ko": "코마츠나",
         "required_scope": "exact_variety"
       }
     ],

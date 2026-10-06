@@ -6,7 +6,7 @@
     "candidate_count": 5,
     "research_pool_count": 182,
     "published": {
-      "verified_image": 79,
+      "verified_image": 126,
       "verified_nutrition": 36,
       "with_assessment": 177,
       "with_evidence": 177,
@@ -1174,18 +1174,17 @@
       "ko": "레드클로버",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "ribwortplantain",
@@ -1294,18 +1293,17 @@
       "ko": "세이지",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "thyme",
@@ -1466,18 +1464,17 @@
       "ko": "해바라기꽃잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "strawberryleaf",
@@ -1536,18 +1533,17 @@
       "ko": "사과나무잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "pearleaf",
@@ -1571,18 +1567,17 @@
       "ko": "자두나무잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "peachleaf",
@@ -1760,18 +1755,17 @@
       "ko": "수영",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "dock",
@@ -1829,18 +1823,17 @@
       "ko": "강낭콩잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "mungbeansprout",
@@ -1865,72 +1858,68 @@
       "ko": "알팔파새싹",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "broccolisprout",
       "ko": "브로콜리새싹",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "kohlrabileaf",
       "ko": "콜라비잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "rapeseedleaf",
       "ko": "유채잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "mizuna",
@@ -1955,54 +1944,51 @@
       "ko": "다채",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "komatsuna",
       "ko": "코마츠나",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "sweetpotatovine",
       "ko": "고구마줄기",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "pumpkinflower",
@@ -2027,18 +2013,17 @@
       "ko": "오이잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "melonleaf",
@@ -2063,162 +2048,153 @@
       "ko": "수박잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "grapevineleaf",
       "ko": "머루잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "opuntiapad",
       "ko": "손바닥선인장패드",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "wheatleaf",
       "ko": "밀잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "barleyleaf",
       "ko": "보리잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "oatleaf",
       "ko": "귀리잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "fescue",
       "ko": "톨페스큐",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "bermudagrass",
       "ko": "우산잔디",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "hibiscusrosa",
       "ko": "하와이무궁화",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "lindenleaf",
@@ -2351,36 +2327,34 @@
       "ko": "은행잎",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "daisy",
       "ko": "데이지",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "eveningprimrose",
@@ -2405,18 +2379,17 @@
       "ko": "밀크시슬",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "hawthorn",
@@ -2441,54 +2414,51 @@
       "ko": "샌포인",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "borage",
       "ko": "보리지",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "henbit",
       "ko": "광대나물",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "houseleek",
@@ -2531,18 +2501,17 @@
       "ko": "금어초",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "hosta",
@@ -2621,18 +2590,17 @@
       "ko": "서양금혼초",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "hawkweed",
@@ -2657,18 +2625,17 @@
       "ko": "냉이",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "petunia",
@@ -2819,18 +2786,17 @@
       "ko": "컴프리",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "monarda",
@@ -2855,234 +2821,221 @@
       "ko": "버클로버",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "conyzacanadensis",
       "ko": "망초",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "ruscus_aculeatus",
       "ko": "부처스브룸",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "hedgemustard",
       "ko": "헤지머스터드",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "harebell",
       "ko": "헤어벨",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "erodium_botrys",
       "ko": "넓은잎필라리",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "lamium_album",
       "ko": "흰광대나물",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "dichondra_micrantha",
       "ko": "아욱메풀",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "abutilon_indicum",
       "ko": "인도아부틸론",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "aeonium_arboreum",
       "ko": "에오니움 아르보레움",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "buddleja_davidii",
       "ko": "부들레야",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "vicia_sativa",
       "ko": "살갈퀴",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "vicia_cracca",
       "ko": "등갈퀴나물",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     }
   ],
   "intake_candidates": [
