@@ -1352,14 +1352,18 @@
     "role": "다양한 식단의 소량 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_lemon_balm"
+      "tortoise_table_lemon_balm",
+      "mencherini_melissa_fresh_leaves_2009"
     ],
     "limits": [
       "Melissa officinalis에 한정",
-      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음"
+      "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음",
+      "추가 원논문은 정확 종·잎/신선 지상부의 식물화학 자료이며 육지거북 급여·독성 시험이 아님",
+      "정유·추출물 또는 특정 성분의 농도와 생물활성을 신선한 허브 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 레몬밤을 ‘제한 급여’로 분류하고 다양한 식단의 일부로만 사용할 것을 권한다. 다만 제한의 구체적인 이베라그리스육지거북 독성 기전·위해 용량이나 정확한 급여 빈도는 이 근거에서 제시되지 않는다. 따라서 이유를 임의로 만들지 않고 혼합식의 작은 보조 구성으로만 사용한다.",
-    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다."
+    "why": "전문 육지거북 식물자료는 레몬밤을 ‘제한 급여’로 분류하고 다양한 식단의 일부로만 사용할 것을 권한다. 다만 제한의 구체적인 이베라그리스육지거북 독성 기전·위해 용량이나 정확한 급여 빈도는 이 근거에서 제시되지 않는다. 따라서 이유를 임의로 만들지 않고 혼합식의 작은 보조 구성으로만 사용한다. Melissa officinalis의 신선한 잎·줄기에서 rosmarinic acid, caffeic acid 등 여러 성분이 직접 확인됐다. 정확 종의 신선 지상부 근거지만 육지거북 급여시험은 아니다. 현재 제한적 보조 판정은 유지하며 원논문은 정확 종·부위의 성분 확인용 보조근거로 사용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 Testudo graeca ibera 직접 급여시험은 아니다. 정확 종·잎/지상부 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "chamomile",
@@ -1692,14 +1696,18 @@
     "role": "제한적 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_sage"
+      "tortoise_table_sage",
+      "bandoniene_sage_leaf_rosmarinic_2005"
     ],
     "limits": [
       "Salvia officinalis에 한정; 다른 Salvia 종으로 확대 금지",
-      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험이나 고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·잎/신선 지상부의 식물화학 자료이며 육지거북 급여·독성 시험이 아님",
+      "정유·추출물 또는 특정 성분의 농도와 생물활성을 신선한 허브 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 식용 세이지(Salvia officinalis)의 지상부를 ‘제한 급여’로 분류한다. 이 판정은 다른 Salvia종 전체에 자동 적용할 수 없고, 정확한 급여량·빈도도 정하지 않는다. 따라서 정확한 종 동정 후 다양한 식단의 작은 보조 구성으로만 사용한다.",
-    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 식용 세이지(Salvia officinalis)의 지상부를 ‘제한 급여’로 분류한다. 이 판정은 다른 Salvia종 전체에 자동 적용할 수 없고, 정확한 급여량·빈도도 정하지 않는다. 따라서 정확한 종 동정 후 다양한 식단의 작은 보조 구성으로만 사용한다. Salvia officinalis 실제 잎에서 rosmarinic acid가 HPLC-UV-MS로 직접 분리·동정·정량됐다. 성분 농도는 급여 안전성이나 독성 용량을 뜻하지 않는다. 현재 제한적 보조 판정은 유지하며 원논문은 정확 종·부위의 성분 확인용 보조근거로 사용한다.",
+    "applicability_note": "일반 육지거북 전문 DB의 contextual evidence이며 해당 taxon/part scope 밖으로 확대하지 않는다. 정확 종·잎/지상부 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "thyme",
@@ -1832,14 +1840,18 @@
     "role": "소량·간헐적 보조",
     "confidence": "C",
     "evidence_ids": [
-      "tortoise_table_rosemary"
+      "tortoise_table_rosemary",
+      "delbano_rosemary_leaf_phenolics_2003"
     ],
     "limits": [
       "Salvia rosmarinus(=Rosmarinus officinalis) 식물체 범위",
-      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님"
+      "Testudo graeca ibera 직접 급여시험·고정 급여비율 근거가 아님",
+      "추가 원논문은 정확 종·잎/신선 지상부의 식물화학 자료이며 육지거북 급여·독성 시험이 아님",
+      "정유·추출물 또는 특정 성분의 농도와 생물활성을 신선한 허브 섭취의 육지거북 임상 위해로 직접 전이하지 않음",
+      "정확한 안전량·독성량·고정 급여빈도를 만들지 않음"
     ],
-    "why": "전문 육지거북 식물자료는 로즈마리(Rosmarinus officinalis)의 지상부를 ‘소량 급여’로 분류한다. 이 판정은 정확한 안전 용량을 정한 시험도, 농축 로즈마리 정유·추출물의 안전성을 뜻하는 것도 아니다. 따라서 식물 자체를 가끔 소량 보조하는 범위로 제한한다.",
-    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다."
+    "why": "전문 육지거북 식물자료는 로즈마리(Rosmarinus officinalis)의 지상부를 ‘소량 급여’로 분류한다. 이 판정은 정확한 안전 용량을 정한 시험도, 농축 로즈마리 정유·추출물의 안전성을 뜻하는 것도 아니다. 따라서 식물 자체를 가끔 소량 보조하는 범위로 제한한다. Rosmarinus officinalis의 잎을 포함한 여러 기관에서 carnosic acid·carnosol·rosmarinic acid 등의 분포가 직접 분석됐고 생육 단계에 따른 변화도 조사됐다. 따라서 로즈마리 잎 성분을 고정값으로 취급하지 않는다. 현재 제한적 보조 판정은 유지하며 원논문은 정확 종·부위의 성분 확인용 보조근거로 사용한다.",
+    "applicability_note": "전문 육지거북 식물 DB의 contextual evidence이며 source taxon/plant-part scope 밖으로 확대하지 않는다. 정확 종·잎/지상부 원논문은 composition-only 보조근거다."
   },
   {
     "plant_id": "pearleaf",
