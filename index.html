@@ -30,12 +30,12 @@ body{background:radial-gradient(circle at 50% -10%,#eaf3ec 0,#f7f9f6 38%,#f5f7f4
   .belowfold{margin-top:22px;padding-top:22px}.belowfold h2{font-size:18px}
 }
 </style></head><body><a class="skiplink" href="#main-content">본문으로 바로가기</a><main id="main-content" class="wrap" tabindex="-1"><header class="top"><a class="brand" href="./" aria-label="거북밥 홈">🐢 <span>거북밥</span></a><div class="topmeta"><span id="visitorCount" class="visitorcount" aria-live="polite"></span><span class="version">근거 기반 육지거북 먹이 DB</span></div></header>
-<section class="hero"><div class="eyebrow">육지거북 먹이 근거 데이터베이스</div><h1>이 식물, 먹여도 될까?</h1><p>식물 이름을 검색하면 <b>A·B·C·D 판정과 이유</b>가 바로 나오고, 필요하면 논문·원자료까지 확인할 수 있다.</p></section>
+<section class="hero"><div class="eyebrow">육지거북 먹이 근거 데이터베이스</div><h1>이 식물, 먹여도 될까?</h1><p>식물 이름만 검색하세요. <b>먹여도 되는지 먼저</b> 보여드리고, 왜 그런지와 논문·원자료는 필요할 때 확인할 수 있습니다.</p></section>
 <section class="searchstage" aria-label="먹이 검색"><div class="searchrow"><input id="searchInput" type="search" placeholder="예: 민들레, 치커리, 청경채" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="먹이 이름 검색" aria-controls="searchResults" aria-describedby="searchHelp"><button id="searchBtn" class="primary">판정 확인</button></div><div id="searchHelp" class="searchhelp">정확한 이름을 몰라도 괜찮습니다. 한글명·영문명·학명 중 아는 이름으로 검색하세요.</div>
 <div id="catalogCount" class="catalogcount">검증된 데이터를 불러오는 중...</div>
 <div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>
 <section class="truststrip" aria-label="거북밥 원칙"><div><b>① 결론부터</b><span>A/B/C/D와 실제 의미 확인</span></div><div><b>② 범위 확인</b><span>어떤 거북·부위의 근거인지 구분</span></div><div><b>③ 원자료까지</b><span>논문·전문자료와 한계 공개</span></div></section>
-<section class="belowfold"><div><h2>전체 식물 데이터</h2><p>공개 판정이 있는 식물을 한 번에 검색·비교할 수 있습니다.</p></div><nav class="utilitylinks" aria-label="거북밥 정보"><a href="./all-plants/">전체 식물 보기</a><a href="./guides/research-method/">판정·근거 검토 방법</a></nav></section>
+<section class="belowfold"><div><h2>전체 식물 데이터</h2><p>검색하지 않고도 공개된 식물을 이름·판정과 함께 한 번에 확인할 수 있습니다.</p></div><nav class="utilitylinks" aria-label="거북밥 정보"><a href="./all-plants/">전체 식물 보기</a><a href="./guides/research-method/">근거 검토 방법</a></nav></section>
 <footer class="footer">거북밥 · 근거 기반 육지거북 먹이 데이터베이스</footer></main><script src="./verdict-core.js?v=20261004-2"></script><script src="./language-toggle.js?v=20260924-3" defer></script><script src="./search-live.js?v=20260930-1"></script><script src="./traffic-counter.js?v=20260920-1" defer></script><script>
 const TV=window.TortoiseVerdict,PAGE=8;let plantCatalog=[],assessmentMap=new Map(),activeFilter='all',shown=PAGE,lastRows=[];
 const input=document.getElementById('searchInput'),results=document.getElementById('searchResults'),countEl=document.getElementById('catalogCount'),searchBtn=document.getElementById('searchBtn');
