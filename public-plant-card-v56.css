@@ -2,3 +2,5 @@
 
 /* Mobile verdict is intentionally text-only: prevents legacy/cached panel fragments. */
 @media(max-width:620px){.public-v56 .verdict-panel{background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;margin:14px 0 0!important;width:auto!important;max-width:none!important;min-width:0!important;box-shadow:none!important;overflow:visible!important}.public-v56 .verdict-panel small{margin-top:5px!important}}
+
+.feed-level{min-width:190px;max-width:245px;background:#edf7ee;border:1px solid #bdd9c3;border-radius:13px;padding:10px 12px}.feed-level strong,.feed-level small{display:block}.feed-level strong{font-size:15px}.feed-level small{font-size:11px;color:var(--muted);margin-top:4px}.feed-level.no-feed{background:var(--bad);border-color:#e8bcbc}@media(max-width:620px){.public-v56 .feed-level{min-width:0;max-width:none;width:100%;box-sizing:border-box;margin-top:10px}}
