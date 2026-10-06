@@ -705,6 +705,16 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 @media(max-width:520px){.detailnav span{display:none}.planthead{padding:2px 2px 6px;gap:10px}.headphoto{width:108px}.headphoto img{width:108px;height:92px}.planthead h1{font-size:34px}.decision{padding:14px 15px}.gradeletter{min-width:40px;height:40px;font-size:21px}.meaning{font-size:15px;margin-top:8px}.decisionwhy{font-size:14px;margin-top:9px;padding:11px 12px}.card{padding:14px}.relatedgrid{grid-template-columns:1fr}.speciesexception>div{align-items:flex-start;flex-direction:column;gap:2px}.evidence-deep{padding:13px}.evsummary{gap:5px}.evcard{padding:11px 12px;margin:8px 0}.evhead{gap:4px}.evhead span{font-size:10px;padding:2px 6px}.evcard h3{font-size:14px;line-height:1.45}.evrole{font-size:12px;line-height:1.5}.evmeta{grid-template-columns:72px 1fr;font-size:11px;gap:2px 7px}.evcard p{font-size:12px;line-height:1.55}.sourceopen{min-height:44px;align-items:center}}
 '''.replace("\n","")
 
+# Remove stale generated plant pages that are no longer in the canonical public set.
+# This prevents withheld/candidate plants from surviving as orphan URLs after regeneration.
+canonical_ids={p["id"] for p in plants}
+plant_root=ROOT/"plant"
+if plant_root.exists():
+    for stale in plant_root.iterdir():
+        if stale.is_dir() and stale.name not in canonical_ids:
+            import shutil
+            shutil.rmtree(stale)
+
 for p in plants:
     pid=p["id"]; d=ROOT/"plant"/pid; d.mkdir(parents=True,exist_ok=True); ko=p.get("ko") or pid; sci=p.get("scientific") or "학명 검증 중"
     title=f"육지거북 {ko} 먹어도 될까? 급여 판정·근거 | 거북밥 DB"; desc=f"육지거북에게 {ko}를 먹여도 되는지 확인한다. {ko}의 급여 판정, 학명·식물동정, 적용 범위, 주의사항과 근거를 한 페이지에서 확인한다."; canonical=f"{SITE_URL}/plant/{pid}/"
