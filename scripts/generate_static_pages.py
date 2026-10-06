@@ -475,13 +475,13 @@ def evidence_support_display(value):
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
         "Does not establish a Testudo graeca ibera-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
     }:
-        return "이 자료만으로 이베라그리스육지거북(T. g. ibera)의 해당 종에 한정된 급여량·정해진 급여 빈도·식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 명시된 분류군과 식물 부위 범위 안에서만 적용한다."
+        return "이 자료만으로 해당 육지거북에 한정된 급여량·정해진 급여 빈도·식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 명시된 분류군과 식물 부위 범위 안에서만 적용한다."
     if v in {
         "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
         "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
         "Does not establish a Testudo graeca ibera-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
     }:
-        return "이 자료만으로 이베라그리스육지거북(T. g. ibera)의 해당 종에 한정된 급여량·구체적인 식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 판정을 명시되지 않은 식물 부위·관련 분류군 또는 제시된 범위 밖으로 확대하지 않는다."
+        return "이 자료만으로 해당 육지거북에 한정된 급여량·구체적인 식단 비율·독성 용량·무제한 급여 허용을 정할 수 없다. 판정을 명시되지 않은 식물 부위·관련 분류군 또는 제시된 범위 밖으로 확대하지 않는다."
     if v=="Does not establish Mediterranean Testudo-specific dose, exact feeding frequency, diet percentage, or unlimited use.":
         return "지중해 Testudo에 한정된 급여량·정확한 급여 빈도·식단 비율·무제한 급여를 정하는 자료는 아니다."
     if v=="Not a controlled Testudo graeca ibera trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.":
@@ -531,7 +531,7 @@ def evidence_support_display(value):
 def evidence_limit_display(value):
     v=str(value or "").strip()
     mixed_ko={
-        "This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":"이 자료는 이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물까지 같은 판정을 적용할 근거도 없다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
+        "This does not establish an exact feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":"이 자료는 구체적인 급여 비율·정해진 급여 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물까지 같은 판정을 적용할 근거도 없다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
         "The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.":"이 결론을 Mentha속 전체로 확대하면 안 된다. 같은 출처는 페퍼민트(Mentha × piperita)와 페니로열(Mentha pulegium)을 별도로 제외하므로, 국내에서 ‘민트’라는 일반명으로 판매되는 제품은 급여 결론 전에 종 확인이 필요하다.",
     }
     if v in mixed_ko:
@@ -554,7 +554,7 @@ def evidence_limit_display(value):
         if "fixed diet percentage" in v or "diet percentage" in v: tail.append("구체적인 식단 비율")
         if "toxic dose" in v: tail.append("독성 용량")
         if "unlimited feeding allowance" in v: tail.append("무제한 급여 허용 범위")
-        base="이 자료만으로 이베라그리스육지거북의 구체적인 급여량"
+        base="이 자료만으로 해당 육지거북의 구체적인 급여량"
         if tail: base+="·"+"·".join(tail)
         base+="을 정할 수 없다."
         if "stated taxon and plant-part scope" in v:
@@ -567,7 +567,7 @@ def evidence_limit_display(value):
             base+=" 다른 Salvia 종에 같은 판정을 적용할 근거는 아니다."
         return base
     if v.startswith("Cattle toxicity cannot be converted"):
-        return "소에서 확인된 독성 자료만으로 이베라그리스육지거북에서 독성이 나타나는 양·안전한 섭취량·급여 빈도나 식단 비율을 정할 수 없다. 또한 식용 들깨의 모든 품종이 같은 페릴라케톤 농도를 가진다고 볼 근거도 없다."
+        return "소에서 확인된 독성 자료만으로 육지거북에서 독성이 나타나는 양·안전한 섭취량·급여 빈도나 식단 비율을 정할 수 없다. 또한 식용 들깨의 모든 품종이 같은 페릴라케톤 농도를 가진다고 볼 근거도 없다."
     if v.startswith("Does not by itself establish toxicological safety"):
         return "이 자료만으로 독성학적 안전성·같은 속의 모든 종을 똑같이 볼 근거·정확한 사육 급여 비율을 확정할 수 없으며, 동료평가 학술근거를 대체하지 않는다."
     if v.startswith("Does not demonstrate direct toxicity of sweet-potato leaves"):
