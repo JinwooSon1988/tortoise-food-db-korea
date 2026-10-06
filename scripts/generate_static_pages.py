@@ -781,12 +781,9 @@ for p in plants:
     header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small">{head_scope_caption}{"<br>사진 속 부위는 실제 급여 부위와 다르다." if img.get("part_match")=="mismatch" else ""}<br><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · {esc(img.get("license") or "")}</figcaption></figure>''' if img else "")
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
-    # Reader-facing summary should not name a single species unless the assessment itself is species-specific.
-    # Species-level evidence remains traceable in the evidence cards/species exception section.
-    species_scope = str((a or {}).get("assessment_scope") or "").lower() in ("exact_species", "species_specific")
-    if not species_scope:
-        summary_display=re.sub(r"(?:이베라그리스육지거북|이베라 그리스 육지거북)(?:\(T\.\s*g\.\s*ibera\))?", "지중해 육지거북", summary_display)
-        summary_display=re.sub(r"\bT\.\s*g\.\s*ibera\b", "지중해 육지거북", summary_display)
+    # Preserve the taxonomic scope stated by the reviewed assessment.
+    # Never rewrite one studied taxon into a broader group: that would change the evidence claim.
+    # Species-specific evidence remains traceable in the evidence cards/species exception section.
 
     # Smooth recurring database/proof-style Korean without changing evidential strength.
     summary_display=summary_display.replace("보조 채소로만 적용한다", "보조 채소로만 사용한다")
