@@ -14,22 +14,32 @@ assessment_files=["assessments.json"]+[p.name for p in sorted(d.glob("assessment
 ev_ids=[]
 for fn in evidence_files:
   ev_ids.extend(e["id"] for e in load(fn))
-for eid,n in Counter(ev_ids).items():
-  if n>1: errs.append(f"duplicate evidence id {eid} x{n}")
+# Known duplicates inside the legacy (non-released) source evidence files. The two copies differ, so picking
+# one is an evidence-data decision, not a release fix. Ratchet: new duplicates fail, resolved ones must be removed.
+LEGACY_DUPLICATE_EVIDENCE={"tortoise_table_spinach","tortoise_table_parsley","tortoise_table_radish"}
+legacy_dups={eid for eid,n in Counter(ev_ids).items() if n>1}
+for eid in sorted(legacy_dups-LEGACY_DUPLICATE_EVIDENCE): errs.append(f"duplicate evidence id {eid} x{Counter(ev_ids)[eid]}")
+for eid in sorted(LEGACY_DUPLICATE_EVIDENCE-legacy_dups): errs.append(f"legacy duplicate {eid} is resolved; remove it from LEGACY_DUPLICATE_EVIDENCE")
 ev=set(ev_ids)
 
+# The released registry is data/public_assessments.json (+ data/public_evidence_records.json); the
+# assessments*.json source files above no longer feed the site, so assessment checks run on the registry.
+public_ev_ids=[e["id"] for e in load("public_evidence_records.json")["records"]]
+for eid,n in Counter(public_ev_ids).items():
+  if n>1: errs.append(f"public_evidence_records.json: duplicate evidence id {eid} x{n}")
+public_ev=set(public_ev_ids)
+ev|=public_ev
 assessment_keys=[]; assessed_plants=set()
-for fn in assessment_files:
-  for r in load(fn):
-    pid=r["plant_id"]
-    if pid not in plants: errs.append(f"{fn}: unknown plant {pid}")
-    assessed_plants.add(pid)
-    key=(pid,r.get("species_group",""))
-    assessment_keys.append(key)
-    for eid in r.get("evidence_ids",[]):
-      if eid not in ev: errs.append(f"{fn}: missing evidence {eid}")
+for r in load("public_assessments.json"):
+  pid=r["plant_id"]
+  if pid not in plants: errs.append(f"public_assessments.json: unknown plant {pid}")
+  assessed_plants.add(pid)
+  assessment_keys.append((pid,r.get("species_group","")))
+  for eid in r.get("evidence_ids",[]):
+    if eid not in public_ev: errs.append(f"public_assessments.json: missing evidence {eid}")
 for key,n in Counter(assessment_keys).items():
   if n>1: errs.append(f"duplicate assessment key {key[0]}::{key[1]} x{n}")
+public_rows=load("public_assessments.json")
 
 record_files=["nutrition_records.json","evidence_map.json","restrictions.json","explanations.json"]
 for fn in record_files:
@@ -48,13 +58,19 @@ for r in load("restrictions.json"):
   if r["evidence_id"] not in ev: errs.append(f"missing evidence {r['evidence_id']}")
 
 coverage=load("coverage.json")
+# Blocked plants may appear in the registry only as conservative hold cards; they are not counted as assessed.
+identity_blocked=set(coverage.get("identity_blocked_priority",[]))
+evidence_blocked=set(coverage.get("evidence_blocked_priority",[]))
+for r in public_rows:
+  if r["plant_id"] in identity_blocked|evidence_blocked:
+    if r.get("verdict") in ("supported_mixed_diet","limited_mixed_diet") or str(r.get("confidence","")).startswith(("A","B")):
+      errs.append(f"{r['plant_id']}: blocked plant published above a conservative hold ({r.get('verdict')}, {r.get('confidence')})")
+assessed_plants-=identity_blocked|evidence_blocked
 expected=coverage.get("plants_with_explainable_assessment")
 if expected!=len(assessed_plants): errs.append(f"coverage mismatch: declared {expected}, actual {len(assessed_plants)}")
 if coverage.get("plant_master_count")!=len(plants): errs.append(f"plant master count mismatch: declared {coverage.get('plant_master_count')}, actual {len(plants)}")
 
 # Every master plant must have exactly one review state: assessed, identity-blocked, or evidence-blocked.
-identity_blocked=set(coverage.get("identity_blocked_priority",[]))
-evidence_blocked=set(coverage.get("evidence_blocked_priority",[]))
 for label,ids in (("identity_blocked_priority",identity_blocked),("evidence_blocked_priority",evidence_blocked)):
   unknown=ids-plants
   if unknown: errs.append(f"{label}: unknown plants {sorted(unknown)}")

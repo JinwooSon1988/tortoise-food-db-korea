@@ -1,6 +1,7 @@
 """GitHub Pages 배포용 정적 파일과 내부 연결을 검사한다."""
 from html.parser import HTMLParser
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -58,17 +59,26 @@ elif len(plants) != expected_master_count:
 if plant_ids != page_ids:
     errors.append(f"plant page mismatch: missing={sorted(plant_ids-page_ids)}, extra={sorted(page_ids-plant_ids)}")
 
-for plant_id in plant_ids:
+for plant_id in sorted(plant_ids & page_ids):
     text = (ROOT / "plant" / plant_id / "index.html").read_text(encoding="utf-8")
     canonical = f'<link rel="canonical" href="{SITE_URL}/plant/{plant_id}/">'
     if canonical not in text:
         errors.append(f"plant/{plant_id}/index.html: incorrect canonical URL")
 
-for route in ("index.html", "profile/index.html", "meal/index.html", "weekly/index.html", "settings/index.html"):
+# Current public application pages. profile/meal/weekly/settings were retired with the diet and husbandry
+# recording stack (#114); retired routes must stay out of the sitemap.
+for route in ("index.html", "all-plants/index.html", "core-foods/index.html", "guides/market-foods/index.html",
+              "guides/wild-plants/index.html", "guides/caution-foods/index.html", "guides/research-method/index.html"):
     if not (ROOT / route).is_file():
         errors.append(f"missing application page: {route}")
 
 sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+for retired in ("profile", "meal", "weekly", "settings"):
+    if f"{SITE_URL}/{retired}/" in sitemap:
+        errors.append(f"sitemap lists retired page /{retired}/")
+sitemap_plant_urls = [loc for loc in re.findall(r"<loc>(.*?)</loc>", sitemap) if "/plant/" in loc]
+if len(sitemap_plant_urls) != len(set(sitemap_plant_urls)) or set(sitemap_plant_urls) != {f"{SITE_URL}/plant/{pid}/" for pid in plant_ids}:
+    errors.append(f"sitemap plant URLs ({len(sitemap_plant_urls)}) must match the {len(plant_ids)} master plants exactly")
 expected_urls = {f"{SITE_URL}/plant/{plant_id}/" for plant_id in plant_ids}
 missing_urls = sorted(url for url in expected_urls if f"<loc>{url}</loc>" not in sitemap)
 if missing_urls:

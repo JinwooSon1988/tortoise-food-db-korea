@@ -2,14 +2,14 @@
   "schema_version": "1.0",
   "principle_ko": "coverage는 완성도 상태를 집계할 뿐 급여 안전성 점수나 식물 순위를 만들지 않는다.",
   "summary": {
-    "published_count": 177,
-    "candidate_count": 5,
+    "published_count": 182,
+    "candidate_count": 0,
     "research_pool_count": 182,
     "published": {
-      "verified_image": 126,
+      "verified_image": 129,
       "verified_nutrition": 36,
-      "with_assessment": 177,
-      "with_evidence": 177,
+      "with_assessment": 182,
+      "with_evidence": 182,
       "with_korea_alias": 10,
       "fully_complete_current_schema": 3
     }
@@ -1238,6 +1238,23 @@
       "next_action": "nutrition"
     },
     {
+      "plant_id": "marshmallow",
+      "ko": "마시멜로우",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": true,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "nutrition"
+    },
+    {
       "plant_id": "hollyhock",
       "ko": "접시꽃",
       "published": true,
@@ -1717,6 +1734,24 @@
       "next_action": "nutrition"
     },
     {
+      "plant_id": "amaranthleaf",
+      "ko": "비름",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "image"
+    },
+    {
       "plant_id": "purslane",
       "ko": "쇠비름",
       "published": true,
@@ -1821,6 +1856,23 @@
     {
       "plant_id": "beanleaf",
       "ko": "강낭콩잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": true,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "nutrition"
+    },
+    {
+      "plant_id": "soybeanleaf",
+      "ko": "콩잎",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
@@ -2078,6 +2130,25 @@
       "next_action": "nutrition"
     },
     {
+      "plant_id": "kiwileaf",
+      "ko": "키위잎",
+      "published": true,
+      "identity_status": "needs_species_level_mapping",
+      "verified_image": false,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "identity",
+        "image",
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "identity"
+    },
+    {
       "plant_id": "opuntiapad",
       "ko": "손바닥선인장패드",
       "published": true,
@@ -2131,6 +2202,23 @@
     {
       "plant_id": "oatleaf",
       "ko": "귀리잎",
+      "published": true,
+      "identity_status": "verified_name",
+      "verified_image": true,
+      "verified_nutrition": false,
+      "assessment_count": 1,
+      "exact_species_taxa": [],
+      "evidence_record_present": true,
+      "korea_alias_present": false,
+      "gaps": [
+        "nutrition",
+        "korea_alias"
+      ],
+      "next_action": "nutrition"
+    },
+    {
+      "plant_id": "meadowgrass",
+      "ko": "왕포아풀",
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
@@ -3038,61 +3126,5 @@
       "next_action": "nutrition"
     }
   ],
-  "intake_candidates": [
-    {
-      "plant_id": "marshmallow",
-      "ko": "마시멜로우",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Althaea officinalis",
-      "gaps": [
-        "identity"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "amaranthleaf",
-      "ko": "비름",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Amaranthus spp.",
-      "gaps": [
-        "identity"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "soybeanleaf",
-      "ko": "콩잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Glycine max",
-      "gaps": [
-        "identity"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "kiwileaf",
-      "ko": "키위잎",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Actinidia deliciosa",
-      "gaps": [
-        "identity"
-      ],
-      "next_action": "identity"
-    },
-    {
-      "plant_id": "meadowgrass",
-      "ko": "왕포아풀",
-      "published": false,
-      "status": "catalog_candidate",
-      "canonical_taxon_candidate": "Poa pratensis",
-      "gaps": [
-        "identity"
-      ],
-      "next_action": "identity"
-    }
-  ]
+  "intake_candidates": []
 }

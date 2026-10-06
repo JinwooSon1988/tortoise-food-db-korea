@@ -19,7 +19,11 @@ script = re.search(r'<script>([\s\S]*?)</script></body>', html).group(1)
 
 # Data: canonical registry only; candidates stay out of public results.
 assert len(plants) >= 69, len(plants)
-assert any(p.get('identity_status') == 'candidate_name' for p in plants), 'catalog must retain explicit candidate records'
+# The candidate filter below must stay even when no candidate_name records remain (all may be resolved);
+# every non-candidate master plant with a public assessment needs a detail page.
+for p in plants:
+    if p.get('identity_status') != 'candidate_name' and any(a['plant_id'] == p['id'] for a in assessments):
+        assert (root / 'plant' / p['id'] / 'index.html').exists(), f"public plant without detail page: {p['id']}"
 assert "j('./data/public_assessments.json')" in script
 assert 'assessments_korea_addendum' not in html + search_live and "'./data/assessments.json'" not in html + search_live
 assert "isPublic:p.identity_status!=='candidate_name'&&assessedIds.has(p.id)" in script

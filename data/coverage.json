@@ -1,11 +1,11 @@
 {
-  "plant_master_count": 69,
-  "plants_with_explainable_assessment": 66,
-  "plants_with_direct_or_observational_evidence_map": 8,
-  "plants_with_nutrition_record": 1,
-  "plants_with_official_direct_nutrition_record": 0,
+  "plant_master_count": 182,
+  "plants_with_explainable_assessment": 179,
+  "plants_with_direct_or_observational_evidence_map": 10,
+  "plants_with_nutrition_record": 36,
+  "plants_with_official_direct_nutrition_record": 36,
   "public_safety_verdict_complete": 0,
-  "coverage_note": "66 of 69 master plants have structured assessments. Mallow and mint remain identity-blocked; minari remains evidence-blocked. General tortoise evidence is not promoted to Mediterranean Testudo direct evidence.",
+  "coverage_note": "179 of 182 master plants have structured canonical assessments (data/public_assessments.json). Mallow and mint remain identity-blocked and minari remains evidence-blocked; they are published only as conservative hold cards with their blocking reason. General tortoise evidence is not promoted to Mediterranean Testudo direct evidence.",
   "priority_korea_foods_reviewed": [
     "chicory",
     "romaine",
@@ -83,13 +83,20 @@
   ],
   "blocked_resolution_file": "blocked_food_resolution.json",
   "master_review_accounting": {
-    "assessed": 66,
+    "assessed": 179,
     "identity_blocked": 2,
     "evidence_blocked": 1,
-    "total": 69
+    "total": 182
   },
   "pending_external_evidence_ingestion": [],
   "pending_master_candidates": [],
   "next_priority_candidates": [],
-  "last_updated": "2026-09-16"
+  "last_updated": "2026-10-07",
+  "count_basis": {
+    "plant_master_count": "data/plants.json",
+    "plants_with_explainable_assessment": "plants with a record in data/public_assessments.json, excluding identity/evidence-blocked plants",
+    "plants_with_direct_or_observational_evidence_map": "plants whose canonical assessment links a public evidence record with directness 'direct'",
+    "plants_with_nutrition_record": "verified records in data/plant_nutrition_v56.json",
+    "plants_with_official_direct_nutrition_record": "verified official composition records (USDA FoodData Central, Korean RDA food composition) in data/plant_nutrition_v56.json"
+  }
 }
