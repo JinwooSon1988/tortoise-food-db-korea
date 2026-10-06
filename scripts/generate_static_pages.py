@@ -834,7 +834,7 @@ for p in plants:
     for x in species_notes(rows,a):
         xg=display(x)
         who=x.get("display_group") or x.get("species_group") or x.get("animal_taxon")
-        species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)} <i class="small">{esc(x.get("animal_taxon"))}</i></b><span>{esc(xg["grade"]+" · "+xg["label"])}</span></div><p>{esc(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다.")}</p></article>')
+        species_rows.append(f'<article class="speciesexception"><div><b>{esc(who)} <i class="small">{esc(x.get("animal_taxon"))}</i></b><span>{esc(xg["grade"]+" · "+xg["label"])}</span></div><p>{esc(assessment_copy(x.get("why") or x.get("role") or "해당 종에 대한 별도 판정 근거가 있다."))}</p></article>')
     species_specific_html=(f'<section class="card species-specific"><h2>특정 종·아종에서 확인된 자료</h2><p class="small">일부 근거는 특정 종·아종만 조사했다. 전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며, 실제 연구 대상은 아래 상세 근거에서 확인할 수 있다.</p></section>' if species_rows else "")
 
     # 4) Scope → identity → limits, stated once in one card; canonical assessment copy is rendered verbatim.
@@ -848,7 +848,7 @@ for p in plants:
     else:
         identity_text="검색 결과의 이름·학명과 실제 먹이려는 식물이 같은 종인지 확인한다. 농약 사용이나 오염 가능성도 급여 전에 별도로 확인한다."
         identity_html=f'''<div class="identity-note" data-identity="note"><h3>먹이기 전 식물 확인</h3><p class="ko-evidence">{esc(identity_text)}</p><p class="en-evidence" hidden>{esc(en_identity)}</p></div>'''
-    limits_html="".join(f"<li>{esc(x)}</li>" for x in limits) or "<li>안전성을 확인할 자료가 부족하므로 먹여도 된다고 판단하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
+    limits_html="".join(f"<li>{esc(assessment_copy(x))}</li>" for x in limits) or "<li>안전성을 확인할 자료가 부족하므로 먹여도 된다고 판단하지 않는다.</li><li>단독 먹이나 무제한 급여가 가능하다는 뜻은 아니다.</li>"
     scope_html=(f'''<section class="card scopecard" id="scope">{identity_html}</section>''' if identity_warning else "")
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
