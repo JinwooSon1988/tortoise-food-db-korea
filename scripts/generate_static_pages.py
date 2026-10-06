@@ -439,11 +439,11 @@ def evidence_support_display(value):
     if v=="Must not be transferred to Tagetes marigolds; does not establish Ibera-specific percentage, fixed frequency, or unlimited use.":
         return "이 판정을 Tagetes 메리골드에 그대로 적용하면 안 된다. 구체적인 식단 비율·정해진 급여 빈도·무제한 급여도 정하지 않는다."
     if v=="Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.":
-        return "이베라그리스육지거북에 한정된 식단 비율·정해진 급여 빈도·정유 안전성·무제한 섭취를 정하는 자료는 아니다."
+        return "구체적인 식단 비율·정해진 급여 빈도·정유 안전성·무제한 섭취를 정하는 자료는 아니다."
     if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
-        return "이베라그리스육지거북에 한정된 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종에도 같은 판정을 적용할 근거는 아니다."
+        return "구체적인 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종에도 같은 판정을 적용할 근거는 아니다."
     if v=="Genus-level guidance does not establish a Testudo graeca ibera-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.":
-        return "속 수준 지침만으로 이베라그리스육지거북의 식단 비율·구체적인 급여 빈도·정제 정유의 안전성이나 무제한 섭취 허용 범위를 정할 수 없다."
+        return "속 수준 지침만으로 구체적인 식단 비율·급여 빈도·정제 정유의 안전성이나 무제한 섭취 허용 범위를 정할 수 없다."
     if v=="Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":
         return "이베라그리스육지거북에 한정된 독성 용량을 정하지 않으며 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다는 사실도 입증하지 않는다."
     if v=="Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.":
@@ -453,13 +453,13 @@ def evidence_support_display(value):
     if v=="Does not establish tortoise toxicity, a tortoise safe dose, or that all glucosinolates have the same biological effect.":
         return "육지거북에서 독성이 나타나는 양이나 안전한 섭취량을 정하는 자료가 아니며 모든 글루코시놀레이트가 동일한 생물학적 효과를 가진다는 뜻도 아니다."
     if v=="Does not directly test mizuna, tatsoi or komatsuna cultivars, and does not establish an Ibera-specific feeding percentage.":
-        return "미즈나·타쵸이·코마츠나 품종을 직접 시험한 자료가 아니며 이베라그리스육지거북에 한정된 급여 비율도 정하지 않는다."
+        return "미즈나·타쵸이·코마츠나 품종을 직접 시험한 자료가 아니며 구체적인 급여 비율도 정하지 않는다."
     if v=="Does not provide a Malva verticillata-specific intake percentage or an Ibera-specific quantitative trial.":
         return "Malva verticillata에 한정된 섭취 비율이나 이베라그리스육지거북 대상 정량시험을 제공하지 않는다."
     if v=="The same source says it is not suitable as feed; it does not establish tortoise feeding suitability or quantity.":
         return "같은 출처가 사료로 적합하지 않다고 명시한다. 이 자료로 육지거북 급여 적합성이나 급여량을 정할 수 없다."
     if v=="Does not establish captive diet percentage, feeding frequency, unlimited use, or a direct Testudo graeca ibera safety dose.":
-        return "사육 식단 비율·급여 빈도·무제한 급여 또는 이베라그리스육지거북의 안전한 섭취량을 직접 정하는 자료는 아니다."
+        return "사육 식단 비율·급여 빈도·무제한 급여 또는 안전한 정량 섭취량을 직접 정하는 자료는 아니다."
     if v=="Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.":
         return "독성 용량·임상 독성·안전한 사육 식단 비율 또는 Testudo에 한정된 이상반응을 확정하는 자료는 아니다."
     if v=="Does not establish a Testudo graeca ibera toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.":
@@ -467,7 +467,7 @@ def evidence_support_display(value):
     if v=="This does not establish an Ibera-specific feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":
         return "이베라그리스육지거북에 한정된 급여 비율·정해진 급여 빈도·무제한 급여를 정하지 않으며, 이름에 mallow가 들어간다는 이유만으로 무관한 식물에 같은 판정을 적용할 수 없다. 국내 유통명 ‘아욱’은 정확한 종 수준 결론 전에 종 동정 연결이 필요하다."
     if v=="Does not establish a Testudo graeca ibera-specific dose, fixed frequency, or equivalence to other Salvia species.":
-        return "이베라그리스육지거북에 한정된 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종에도 같은 판정을 적용할 근거는 아니다."
+        return "구체적인 급여량·정해진 급여 빈도를 정하지 않으며 다른 Salvia 종에도 같은 판정을 적용할 근거는 아니다."
     if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
         return "꼬투리나 콩알 급여·무제한 급여 또는 이베라그리스육지거북에 한정된 정량 급여량을 뒷받침하지 않는다."
     # Common quantitative/scope limitations.
