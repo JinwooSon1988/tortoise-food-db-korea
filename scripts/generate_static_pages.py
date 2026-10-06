@@ -919,3 +919,5 @@ sitemap_lines.extend(f"  <url><loc>{esc(url)}</loc></url>" for url in urls)
 sitemap_lines.append("</urlset>")
 sitemap_path.write_text("\n".join(sitemap_lines)+"\n",encoding="utf-8")
 print("generated",len(plants),"reviewed/public plant detail pages from",len(all_plants),"master records and",len(assessments),"assessments; sitemap plant URLs",len(plant_urls))
+
+# Canonical regeneration trigger: retired plant pages must be removed before render.
