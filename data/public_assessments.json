@@ -1039,7 +1039,7 @@
       "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "붉은토끼풀은 다양한 야생초 혼합식의 일부로 제한해 사용한다. Tortoise Trust의 초식성 육지거북 식물자료는 붉은토끼풀(Trifolium pratense)의 잎·줄기·꽃을 자연식 목록에 포함한다. 다만 이 자료는 정확한 급여 비율·빈도를 정한 직접 시험이 아니다. 따라서 확인된 식물 부위를 여러 야생초와 섞는 혼합식의 일부로 사용한다.",
-    "applicability_note": "전문 사육근거 + Kew 종수준 identity; Ibera 종특이 급여시험은 아님."
+    "applicability_note": "전문 사육근거 + Kew 종수준 identity; 특정 종을 대상으로 한 급여시험은 아님."
   },
   {
     "plant_id": "ribwortplantain",
@@ -2333,7 +2333,7 @@
       "특정 종의 급여비율 자료 없음"
     ],
     "why": "백일홍은 잎과 꽃을 다양한 식물 혼합식의 한 구성으로 사용할 수 있다. 전문 육지거북 식물자료는 백일홍(Zinnia spp.)의 잎과 꽃을 다양한 식단의 일부로 급여 가능한 것으로 분류한다. 그러나 정확한 급여 비율·빈도나 무제한 섭취 안전성을 정한 직접 시험은 아니다. 따라서 정확히 동정된 잎·꽃을 혼합식의 보조 재료로 사용한다.",
-    "applicability_note": "일반 육지거북 전문 DB의 잎·꽃 근거; Testudo graeca ibera 직접 시험은 아님."
+    "applicability_note": "일반 육지거북 전문 DB의 잎·꽃 근거; 특정 육지거북 종을 대상으로 한 직접 시험은 아님."
   },
   {
     "plant_id": "mexicanpetunia",
@@ -2351,7 +2351,7 @@
       "정량 급여량 자료 없음"
     ],
     "why": "정확히 동정된 Ruellia류는 다양한 혼합식의 보조 구성으로 사용할 수 있다. 전문 육지거북 DB는 Mexican Petunia로 불리는 일부 Ruellia spp.를 급여 가능 식물로 분류한다. 이름과 달리 일반 Petunia와 다른 Acanthaceae 식물이므로 정확한 종 동정이 중요하며, 확인된 Ruellia만 다양한 혼합식의 일부로 사용한다.",
-    "applicability_note": "source가 명시한 Ruellia 범위의 일반 육지거북 근거이며 genus 전체 및 Ibera 정량근거로 확대하지 않는다."
+    "applicability_note": "source가 명시한 Ruellia 범위의 일반 육지거북 근거이며 genus 전체 및 특정 종의 정량근거로 확대하지 않는다."
   },
   {
     "plant_id": "coreopsis",
@@ -2381,11 +2381,11 @@
     ],
     "limits": [
       "Astilbe spp. 범위",
-      "전문 DB 안전 판정 외에 Ibera 직접 섭식·정량 연구 없음",
+      "전문 DB 안전 판정 외에 육지거북 직접 섭식·정량 연구 없음",
       "단독 주식·무제한 급여로 확대하지 않음"
     ],
     "why": "전문 육지거북 식물자료는 Astilbe류를 급여 가능한 것으로 분류한다. 그러나 이는 Astilbe속 수준의 전문 사육자료로, 모든 종·품종의 동일한 안전성이나 특정 지중해 육지거북의 직접 섭식·장기 안전성·정확한 급여량을 확인한 시험이 아니다. 따라서 정확히 Astilbe로 동정되고 오염되지 않은 식물체만 여러 적합한 먹이와 섞는 보조 재료로 사용한다.",
-    "applicability_note": "일반 육지거북 전문 사육 근거이며 Testudo graeca ibera 직접근거가 아니다."
+    "applicability_note": "일반 육지거북 전문 사육 근거이며 특정 육지거북 종을 대상으로 한 직접근거가 아니다."
   },
   {
     "plant_id": "primula",
@@ -2443,7 +2443,7 @@
       "특정 종 직접 정량자료 없음"
     ],
     "why": "전문 육지거북 식물자료는 Monarda류를 다양한 식단의 일부로 급여 가능한 것으로 분류한다. Bee Balm·Bergamot라는 일반명을 쓰지만 Citrus bergamia와는 전혀 다른 식물이므로 이름만으로 판정을 옮기면 안 된다. 또한 정확한 급여 비율·빈도를 정한 직접 시험은 아니다. 따라서 정확히 Monarda로 동정되고 오염되지 않은 식물체만 여러 먹이와 섞는 보조 재료로 사용한다.",
-    "applicability_note": "Monarda spp.의 일반 육지거북 전문 DB 근거이며 Citrus bergamia에는 적용되지 않고 Ibera 직접 시험도 아니다."
+    "applicability_note": "Monarda spp.의 일반 육지거북 전문 DB 근거이며 Citrus bergamia에는 적용되지 않고 특정 종을 대상으로 한 직접 시험도 아니다."
   },
   {
     "plant_id": "buckwheatleaf",
@@ -2682,7 +2682,7 @@
       "‘급여 가능’ 판정을 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
     "why": "전문 육지거북 식물자료는 오처드그라스(Dactylis glomerata)의 어린 풀을 급여 가능한 범위에 포함한다. 여기서 근거가 가리키는 것은 잎이 자라는 어린 풀이지 성숙한 씨앗·곡립이 아니다. 지중해 Testudo 식단에도 풀류가 포함되지만, 육지거북에서 오처드그라스의 정확한 사육 급여 비율을 정한 시험은 없다. 따라서 어린 잎·줄기를 다른 적합한 야생초와 섞어 제공하고, 씨가 익은 종자 부분은 같은 판정으로 먹이지 않는다.",
-    "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 식물 DB 근거. 이베라 종특이 급여시험은 아님."
+    "applicability_note": "Mediterranean Testudo 사육 맥락 + exact taxon 일반 육지거북 식물 DB 근거. 특정 종을 대상으로 한 급여시험은 아님."
   },
   {
     "plant_id": "timothy",
@@ -2774,7 +2774,7 @@
       "‘급여 가능’ 판정을 단독 주식·무제한 급여·고정 급여비율의 근거로 확대하지 않음"
     ],
     "why": "전문 육지거북 식물자료는 Avena sativa의 어린 귀리싹을 급여 가능한 풀로 분류한다. 다만 같은 출처는 성숙한 씨앗을 어린 풀과 구분하고 단백질이 높아 먹이지 않도록 한다. 따라서 귀리싹은 푸른 어린 잎을 다른 적합한 식물과 섞어 제공하는 범위로 사용하며, 귀리 종자·곡립까지 같은 판정을 확대하지 않는다. 정확한 사육 급여 비율은 현재 근거로 정할 수 없다.",
-    "applicability_note": "Mediterranean Testudo 사육 맥락 + Avena grass 일반 육지거북 근거. 이베라 종특이 직접시험은 아님."
+    "applicability_note": "Mediterranean Testudo 사육 맥락 + Avena grass 일반 육지거북 근거. 특정 종을 대상으로 한 직접시험은 아님."
   },
   {
     "plant_id": "ryegrass",
@@ -3192,8 +3192,8 @@
       "정확한 사육 급여비율을 제시하는 자료는 아님",
       "제초제·농약 처리 잔디는 제외"
     ],
-    "why": "야생 Testudo graeca의 분변 식이 분석에서 버뮤다그래스(Cynodon dactylon)의 잎과 줄기가 실제 주요 먹이 항목으로 확인됐다. 이는 단순한 일반 초식동물 사료자료보다 직접성이 높은 근거다. 다만 야생에서 먹었다는 사실은 사육장에서 단독 주식으로 무제한 급여해도 된다는 시험 결과가 아니며, 이베라 아종의 정확한 배합률도 정하지 않는다. 따라서 농약·제초제에 노출되지 않은 잎과 줄기를 여러 적합한 야생초와 섞는 혼합식 재료로 사용한다.",
-    "applicability_note": "Testudo graeca 야생 식이 직접근거가 포함된다. 다만 이베라 아종의 사육 급여비율을 직접 시험한 자료는 아니다."
+    "why": "야생 Testudo graeca의 분변 식이 분석에서 버뮤다그래스(Cynodon dactylon)의 잎과 줄기가 실제 주요 먹이 항목으로 확인됐다. 이는 단순한 일반 초식동물 사료자료보다 직접성이 높은 근거다. 다만 야생에서 먹었다는 사실은 사육장에서 단독 주식으로 무제한 급여해도 된다는 시험 결과가 아니며, 종·아종별 사육 배합률도 정하지 않는다. 따라서 농약·제초제에 노출되지 않은 잎과 줄기를 여러 적합한 야생초와 섞는 혼합식 재료로 사용한다.",
+    "applicability_note": "Testudo graeca 야생 식이 직접근거가 포함된다. 다만 사육 환경의 급여비율을 직접 시험한 자료는 아니다."
   },
   {
     "plant_id": "medicago_hispida",
@@ -3206,13 +3206,13 @@
       "medicago_polymorpha_saponin_species"
     ],
     "limits": [
-      "야생 Testudo graeca graeca 섭식근거이며 ibera 직접 사육시험은 아님",
+      "야생 Testudo graeca graeca 섭식근거이며 사육 환경의 직접 급여시험은 아님",
       "사육 급여량이나 권장 비율을 제시하는 자료는 없음",
       "Medicago polymorpha의 사포닌 존재가 확인되므로 단일식·과량 급여 근거로 해석하지 않음",
       "사포닌 존재 자체가 육지거북의 독성 용량을 의미하지는 않음"
     ],
     "why": "Medicago polymorpha로 정확히 동정된 경우 다양한 야생초 혼합식에서 제한적으로 활용할 수 있다. 현재 Medicago hispida로 기록된 식물은 Medicago polymorpha로 다루며, 야생 Testudo graeca graeca가 이 분류군을 실제로 섭식한 기록이 있다. 다만 해당 야생 연구는 먹은 정확한 부위·사육 급여 비율을 정한 시험이 아니다. 별도의 식물화학 연구에서는 이 종의 지상부에서 사포닌 계열 성분이 확인됐지만, 그것이 육지거북에서 어느 양부터 해로운지를 보여주지는 않는다. 따라서 ‘사포닌=독성’으로 과장하지 않으면서도 단독·고비율 급여는 피하고 다양한 야생초의 일부로 제한한다.",
-    "applicability_note": "Testudo graeca graeca 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정이다. 이베라 아종의 포획 사육 급여량을 직접 시험한 결과는 아니다."
+    "applicability_note": "Testudo graeca graeca 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정이다. 포획 사육 환경의 급여량을 직접 시험한 결과는 아니다."
   },
   {
     "plant_id": "conyzacanadensis",
@@ -3244,13 +3244,13 @@
       "ruscus_ema_rhizoma_2019"
     ],
     "limits": [
-      "직접근거는 야생 Testudo hermanni hermanni이며 T. graeca ibera 사육시험은 아님",
+      "직접근거는 야생 Testudo hermanni hermanni이며 다른 종이나 사육 환경의 급여시험은 아님",
       "가을철 꽃·미숙과·잎 섭식을 상시 급여 또는 고정 배합률로 환산하지 않음",
       "뿌리·근경 추출물의 의약·독성자료를 지상부의 신선 급여 독성으로 직접 전이하지 않음",
       "정확한 사육 급여량·빈도와 장기 안전용량은 확립되지 않음"
     ],
     "why": "Ruscus aculeatus는 야생 섭식 근거가 있지만 계절성 혼합식의 일부로 제한해 사용한다. 야생 Hermann’s tortoise(Testudo hermanni hermanni)가 Ruscus aculeatus의 꽃·미숙과를 이용하고 잎도 섭식한 직접 관찰 근거가 있다. 다만 이는 가을철 야생 이용 기록으로, 특정 지중해 육지거북의 사육 급여량·빈도나 장기 안전용량을 정한 시험은 아니다. 또한 뿌리·근경 추출물의 의약·독성 자료를 신선한 잎·꽃·미숙과의 독성으로 바꿔 해석해서는 안 된다. 따라서 근거가 확인된 지상부를 여러 식물 중 일부로 제한적으로 사용하고 뿌리·근경은 이 판정에 포함하지 않는다.",
-    "applicability_note": "T. hermanni hermanni 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정. T. graeca ibera 직접 사육근거는 아니다."
+    "applicability_note": "T. hermanni hermanni 야생식이 직접근거를 Mediterranean Testudo에 보수적으로 적용한 판정. 다른 종이나 사육 환경의 직접 급여근거는 아니다."
   },
   {
     "plant_id": "plumleaf",
