@@ -247,6 +247,32 @@ assert not taxon_specific_legacy, (
     + repr(taxon_specific_legacy[:20])
 )
 
+# Mention-level Ibera gate on rendered pages: in the reader-facing judgement / limits / scope area
+# (everything before the per-source evidence cards), an Ibera mention may only state a study fact
+# ("야생 T. g. ibera ...", "... ibera 식이 연구/섭식 기록/관찰") and only on plants whose public
+# assessment links non-composition evidence that actually studied T. g. ibera.
+ibera_mention_re = re.compile(r'Testudo\s+graeca\s+ibera|T\.\s*g\.\s*ibera|이베라그리스육지거북|이베라', re.I)
+study_before_re = re.compile(r'(?:야생|wild)\s*$', re.I)
+study_after_re = re.compile(r'^\s*(?:에서|의|이|가|은|는)?\s*(?:(?:야생|직접|실제)\s*)*(?:식이|섭식|관찰|기록|분변|diet|feeding|field)', re.I)
+_ev_by_id = {e.get('id'): e for e in evidence_records}
+ibera_linked_ids = {
+    a['plant_id'] for a in assessments
+    if any(re.search('ibera', str(_ev_by_id.get(eid, {}).get('animal_taxon') or ''), re.I)
+           and _ev_by_id.get(eid, {}).get('applicability') != 'composition_only'
+           for eid in a.get('evidence_ids', []))
+}
+ibera_violations = []
+for pid, page in pages.items():
+    body = re.sub(r'<script.*?</script>|<style.*?</style>', '', page, flags=re.S)
+    cut = body.find('자료별 상세 근거')
+    text = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', body[:cut if cut > 0 else len(body)]))
+    for m in ibera_mention_re.finditer(text):
+        before, after = text[max(0, m.start() - 8):m.start()], text[m.end():m.end() + 20]
+        is_study = study_before_re.search(before) or study_after_re.match(after)
+        if pid not in ibera_linked_ids or not is_study:
+            ibera_violations.append((pid, text[max(0, m.start() - 40):m.end() + 40]))
+assert not ibera_violations, 'Ibera used as a reference point in reader-facing judgement text: ' + repr(ibera_violations[:10])
+
 # Data-driven localization gate: every populated public evidence limitation must have a Korean reader-facing rendering.
 limit_values = sorted({str(e.get('does_not_support') or '').strip() for e in evidence_records if str(e.get('does_not_support') or '').strip()})
 # Execute only the pure display helpers from the generator so this audit tests runtime-equivalent output without generating pages.
