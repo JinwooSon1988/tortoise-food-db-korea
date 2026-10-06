@@ -1027,7 +1027,7 @@
     "species_group": "Mediterranean_Testudo",
     "verdict": "limited_mixed_diet",
     "role": "다양한 야생초 혼합식의 일부",
-    "confidence": "B-",
+    "confidence": "C+",
     "evidence_ids": [
       "tt_plantfoods",
       "kew_redclover_identity"
@@ -1035,7 +1035,8 @@
     "limits": [
       "Trifolium pratense에 한정",
       "전문 사육자료의 야생식 목록 근거이며 고정 급여비율을 제시하지 않음",
-      "단독·고비율 반복 급여로 확대하지 않음"
+      "단독·고비율 반복 급여로 확대하지 않음",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "Tortoise Trust의 초식성 육지거북 식물자료는 붉은토끼풀(Trifolium pratense)의 잎·줄기·꽃을 자연식 목록에 포함한다. 다만 이 자료는 정확한 급여 비율·빈도를 정한 직접 시험이 아니다. 따라서 확인된 식물 부위를 여러 야생초와 섞는 혼합식의 일부로 사용한다.",
     "applicability_note": "전문 사육근거 + Kew 종수준 identity; Ibera 종특이 급여시험은 아님."
@@ -1045,7 +1046,7 @@
     "species_group": "Mediterranean_Testudo",
     "verdict": "limited_mixed_diet",
     "role": "고섬유 야생초 혼합식 후보",
-    "confidence": "B-",
+    "confidence": "C+",
     "evidence_ids": [
       "tt_plantfoods",
       "kew_ribwortplantain_identity"
@@ -1053,7 +1054,8 @@
     "limits": [
       "Plantago lanceolata에 한정",
       "전문 사육자료의 추천 식물 목록을 무제한 급여로 해석하지 않음",
-      "채집지 농약·제초제·오염 확인"
+      "채집지 농약·제초제·오염 확인",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "Tortoise Trust는 Plantago류를 초식성 육지거북의 고섬유 자연식 후보로 제시하며, 구체적으로 창질경이(Plantago lanceolata)를 야생식 목록에 포함한다. 다만 이 전문 사육자료는 육지거북에서 창질경이의 정확한 급여 비율·빈도나 단독급여 안전성을 정한 시험이 아니다. 따라서 P. lanceolata로 정확히 동정되고 농약·제초제 오염이 없는 식물체를 여러 적합한 야생초와 섞어 사용한다.",
     "applicability_note": "Mediterranean 관찰을 포함한 전문 사육근거 + Kew 종수준 identity."
@@ -1082,13 +1084,14 @@
     "species_group": "Mediterranean_Testudo",
     "verdict": "limited_mixed_diet",
     "role": "고섬유 야생초 혼합식 후보",
-    "confidence": "B-",
+    "confidence": "C",
     "evidence_ids": [
       "tt_plantfoods"
     ],
     "limits": [
       "Plantago major에 한정",
-      "전문 사육자료를 무제한 급여 근거로 확대하지 않음"
+      "전문 사육자료를 무제한 급여 근거로 확대하지 않음",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "Tortoise Trust는 넓은잎질경이(Plantago major)를 초식성 육지거북의 고섬유 자연식 후보에 포함한다. 다만 이 자료는 육지거북에서 Plantago major의 정확한 급여량·빈도나 단독식 안전성을 정한 시험이 아니다. 따라서 정확히 동정되고 농약·제초제 오염이 없는 식물체를 다른 적합한 야생초와 섞는 혼합식 재료로 사용하며, 한 종류에 식단을 편중하지 않는다.",
     "applicability_note": "기존 evidence registry의 taxon/plant-part 범위를 넘겨 확대하지 않는다."
@@ -3312,7 +3315,7 @@
     "species_group": "Tortoise_general",
     "verdict": "supported_mixed_diet",
     "role": "다양한 야생초 혼합식의 한 구성",
-    "confidence": "B",
+    "confidence": "C+",
     "evidence_ids": [
       "ttable_erodium_botrys_65",
       "kew_erodium_botrys"
@@ -3320,7 +3323,8 @@
     "limits": [
       "전문 사육자료의 정확한 Erodium botrys 판정이지만 통제된 특정 지중해 육지거북 장기 급여시험은 아님",
       "단일 먹이·무제한 급여 또는 정확한 식단 비율을 정한 자료가 아님",
-      "열매·씨앗 등 개별 부위별 안전 용량은 확인되지 않음"
+      "열매·씨앗 등 개별 부위별 안전 용량은 확인되지 않음",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "전문 육지거북 식물자료는 Erodium botrys를 다양한 식단에 포함할 수 있는 먹이로 분류하고, Kew 자료로 정확한 학명도 확인된다. 따라서 정확히 동정된 식물은 여러 야생초와 함께 혼합식의 한 구성으로 사용할 수 있다. 다만 특정 지중해 육지거북에서 장기간 단독 급여한 시험이나 정확한 배합률 자료는 없으므로 한 종류를 주식처럼 계속 주는 의미로 확대하지 않는다.",
     "assessment_scope": "general_tortoise",
@@ -3352,7 +3356,7 @@
     "species_group": "Tortoise_general",
     "verdict": "supported_mixed_diet",
     "role": "다양한 식물성 먹이와 섞어 급여",
-    "confidence": "B",
+    "confidence": "C+",
     "evidence_ids": [
       "ttable_dichondra_707",
       "kew_dichondra_micrantha"
@@ -3360,7 +3364,8 @@
     "limits": [
       "전문 사육자료는 안전한 식단 구성 식물로 다루지만 통제된 장기 급여시험은 아님",
       "한 종류만 반복 급여하거나 정확한 식단 비율을 정한 근거는 아님",
-      "잔디 대용으로 재배된 곳에서는 제초제·농약 처리 여부를 확인해야 함"
+      "잔디 대용으로 재배된 곳에서는 제초제·농약 처리 여부를 확인해야 함",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "전문 육지거북 식물자료는 Dichondra 속을 급여 가능한 식물로 분류하면서 아욱메풀(D. micrantha)을 직접 예시로 든다. 정확히 동정되고 약제가 묻지 않은 식물이라면 여러 적합한 먹이와 함께 섞어 사용할 수 있다. 다만 잔디처럼 한 종류를 넓게 재배하기도 하므로 ‘먹을 수 있다’는 판정을 단일 주식이나 무제한 방목 급여의 근거로 확대하지 않는다.",
     "assessment_scope": "general_tortoise",
@@ -3372,7 +3377,7 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_mixed_diet",
     "role": "잎·꽃을 소량씩 식단 다양화용으로 혼합",
-    "confidence": "B-",
+    "confidence": "C",
     "evidence_ids": [
       "ttable_abutilon_32",
       "kew_abutilon_indicum"
@@ -3380,7 +3385,8 @@
     "limits": [
       "급여 판정은 Abutilon 속 수준의 전문 사육자료이며 A. indicum 단독 통제시험은 아님",
       "씨앗·뿌리 등 모든 부위를 잎·꽃과 동일하게 취급할 근거는 없음",
-      "Physalis의 ‘Chinese lantern’과 이름이 겹치므로 식물 동정이 필수"
+      "Physalis의 ‘Chinese lantern’과 이름이 겹치므로 식물 동정이 필수",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "전문 육지거북 자료는 Abutilon 속을 급여 가능한 식물로 분류하고 특히 꽃을 먹는다고 설명한다. 다만 인도아부틸론 자체를 대상으로 한 직접 급여자료가 아니라 속 수준 지침이므로, 잎과 꽃을 여러 먹이 중 하나로 소량 섞는 보수적인 판정이 적절하다. 씨앗·뿌리까지 자동으로 같은 판정을 적용하지 않으며, 전혀 다른 Physalis류와 혼동하면 안 된다.",
     "assessment_scope": "general_tortoise",
@@ -3392,7 +3398,7 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_mixed_diet",
     "role": "소량을 가끔 섞는 다육식물",
-    "confidence": "B",
+    "confidence": "C",
     "evidence_ids": [
       "ttable_aeonium_530",
       "kew_aeonium_arboreum"
@@ -3400,7 +3406,8 @@
     "limits": [
       "전문 사육자료는 Aeonium 속을 급여 가능으로 보지만 과량 시 완하 작용 가능성을 경고함",
       "일부 Aeonium의 칼슘옥살레이트가 높을 수 있다는 사육상 주의가 있어 식단의 작은 일부로 제한함",
-      "A. arboreum에서 육지거북의 정확한 안전 용량을 정한 통제시험은 없음"
+      "A. arboreum에서 육지거북의 정확한 안전 용량을 정한 통제시험은 없음",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "Aeonium은 전문 육지거북 자료에서 먹일 수 있는 다육식물로 다뤄지지만, 많이 먹으면 변을 무르게 할 수 있고 일부 종은 칼슘옥살레이트가 높을 수 있어 소량만 섞으라고 안내한다. 따라서 에오니움 아르보레움은 주식이 아니라 식단 다양화를 위한 작은 보조 구성으로 쓰는 편이 적절하다.",
     "assessment_scope": "general_tortoise",
@@ -3412,7 +3419,7 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_mixed_diet",
     "role": "소량을 가끔 혼합",
-    "confidence": "B-",
+    "confidence": "C",
     "evidence_ids": [
       "ttable_buddleia_68",
       "kew_buddleja_davidii",
@@ -3421,7 +3428,8 @@
     "limits": [
       "전문 사육자료의 판정은 Buddleia/Buddleja 속 수준이며 B. davidii 단독 장기 급여시험은 아님",
       "출처 자체가 적당량 급여를 권하므로 주식·무제한 급여로 확대하지 않음",
-      "원예 식물은 농약·살충제 처리 여부를 확인해야 함"
+      "원예 식물은 농약·살충제 처리 여부를 확인해야 함",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "전문 육지거북 식물자료는 부들레야류를 ‘적당량 급여’ 식물로 분류한다. 국내에서 흔히 부들레야로 유통되는 B. davidii도 같은 속에 속하므로 정확히 동정되고 약제가 묻지 않은 잎과 꽃을 소량 섞는 용도로 볼 수 있다. 다만 종별 장기 급여시험이 아니라 속 수준의 사육지침이므로 주식처럼 반복해서 많이 주는 근거는 아니다.",
     "assessment_scope": "general_tortoise",
@@ -3512,7 +3520,7 @@
     "species_group": "Tortoise_general",
     "verdict": "limited_mixed_diet",
     "role": "어린 잎을 다양한 먹이 사이에 소량 혼합",
-    "confidence": "B-",
+    "confidence": "C",
     "evidence_ids": [
       "kew_poa_pratensis_identity",
       "kew_poa_pratensis_animal_food"
@@ -3520,7 +3528,8 @@
     "limits": [
       "Poa pratensis 자체를 Testudo에 급여한 직접 연구는 현재 확보되지 않음",
       "급여 방향은 정확한 종의 동물사료 이용 기록과 여러 벼과 식물의 육지거북 사육·야생섭식 근거를 함께 사용한 간접 판정임",
-      "성숙한 종자·씨이삭을 어린 잎과 동일하게 취급하지 않으며 잔디밭의 제초제·살충제 노출을 반드시 배제해야 함"
+      "성숙한 종자·씨이삭을 어린 잎과 동일하게 취급하지 않으며 잔디밭의 제초제·살충제 노출을 반드시 배제해야 함",
+      "현재 근거망의 직접성·독립성에 맞춰 신뢰등급을 보수적으로 적용한다."
     ],
     "why": "왕포아풀(Poa pratensis)은 Kew에서 정확한 분류와 동물 먹이 이용이 확인된다. 다만 P. pratensis 자체를 육지거북에게 급여한 직접 연구는 현재 확보되지 않았다. 다른 벼과 식물의 육지거북 사육·야생섭식 자료는 판정의 배경 맥락으로만 참고하며, 왕포아풀 자체의 직접 근거처럼 취급하지 않는다. 따라서 약제가 묻지 않은 어린 잎을 여러 검증된 먹이 사이에 소량 섞는 B 수준으로 제한한다.",
     "assessment_scope": "general_tortoise",
