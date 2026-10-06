@@ -18,17 +18,23 @@ assessments=load("data/public_assessments.json")
 evidence=load("data/public_evidence_records.json")
 em={e.get("id"):e for e in evidence}
 
-claim_re=re.compile(r"(?:야생|직접)s*(?:Testudo|육지거북|거북류)|(?:직접s*(?:관찰|섭식|급여)|실제s*섭식(?:이)?s*기록)")
-broad_re=re.compile(r"야생s+(?:육지거북|거북류)|육지거북에서s+.*(?:직접|실제)s*(?:관찰|섭식)|거북류에서s+.*(?:직접|실제)s*(?:관찰|섭식)")
-
+# Only flag affirmative broad claims. Explicit limitations such as
+# "직접 시험이 아니다" must not be treated as positive feeding claims.
+affirmative_broad_re=re.compile(
+    r"(?:야생\\s+(?:육지거북|거북류)\\s+[^.]{0,80}(?:섭식|먹이|먹었다|관찰)|"
+    r"(?:육지거북|거북류)에서\\s+[^.]{0,80}(?:직접\\s+(?:관찰|섭식|급여)|실제\\s+섭식)|"
+    r"(?:육지거북|거북류)의\\s+[^.]{0,80}(?:직접\\s+(?:섭식|급여)|실제\\s+섭식))"
+)
+negated_broad_re=re.compile(
+    r"(?:육지거북|거북류).{0,100}(?:직접\\s*(?:시험|자료|근거).{0,30}(?:아니|않)|"
+    r"(?:직접|실제).{0,30}(?:자료|근거).{0,30}(?:아니|않))"
+)
 hits=[]
 for a in assessments:
     text=" ".join(str(a.get(k) or "") for k in ("why","applicability_note","limits"))
-    if not claim_re.search(text):
-        continue
     linked=[em[i] for i in a.get("evidence_ids",[]) if i in em]
     taxa=sorted({str(e.get("animal_taxon")) for e in linked if e.get("animal_taxon")})
-    if broad_re.search(text) and any(e.get("applicability") in {"exact_taxon","species"} for e in linked):
+    if affirmative_broad_re.search(text) and not negated_broad_re.search(text) and any(e.get("applicability") in {"exact_taxon","species"} for e in linked):
         hits.append({"plant_id":a.get("plant_id"),"claim":text[:900],"linked_taxa":taxa,"evidence_ids":a.get("evidence_ids",[])})
 
 print(f"Potential provenance-scope review candidates: {len(hits)}")
