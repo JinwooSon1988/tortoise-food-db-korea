@@ -5257,6 +5257,63 @@
       "doi": "10.1021/jf0300745",
       "pmid": "12848492",
       "url": "https://pubmed.ncbi.nlm.nih.gov/12848492/"
+    },
+    {
+      "id": "hanhineva_strawberry_leaf_2009",
+      "plant_ids": [
+        "strawberryleaf"
+      ],
+      "source_title": "NMR and UPLC-qTOF-MS/MS characterisation of novel phenylethanol derivatives of phenylpropanoid glucosides from the leaves of strawberry (Fragaria x ananassa cv. Jonsok)",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Fragaria × ananassa cv. Jonsok",
+      "plant_part_state": "leaves",
+      "directness": "composition_only",
+      "supports": "The study directly characterized metabolites from Fragaria × ananassa leaves using NMR and UPLC-qTOF-MS/MS, providing exact-hybrid, leaf-specific phytochemical evidence.",
+      "does_not_support": "This is plant chemistry, not a tortoise feeding or toxicity trial. Leaf metabolites do not establish a Testudo safe dose, toxic dose, or fixed feeding frequency.",
+      "year": 2009,
+      "doi": "10.1002/pca.1133",
+      "pmid": "19425115",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19425115/"
+    },
+    {
+      "id": "salasarias_strawberry_leaf_2023",
+      "plant_ids": [
+        "strawberryleaf"
+      ],
+      "source_title": "Strawberry Fragaria x ananassa cv. Festival: A Polyphenol-Based Phytochemical Characterization in Fruit and Leaf Extracts",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Fragaria × ananassa cv. Festival",
+      "plant_part_state": "leaves and fruits; leaf extracts analyzed separately",
+      "directness": "composition_only",
+      "supports": "The study directly compared polyphenol profiles of Fragaria × ananassa cv. Festival leaves and fruits and found markedly different phytochemical profiles, reinforcing that fruit evidence should not substitute for leaf evidence.",
+      "does_not_support": "This is extract/composition research with cell-model bioactivity, not a tortoise feeding or toxicity trial. Extract antioxidant or antiproliferative activity does not establish fresh-leaf toxicity or a Testudo dose.",
+      "year": 2023,
+      "doi": "10.3390/molecules28041865",
+      "pmid": "36838852",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36838852/"
+    },
+    {
+      "id": "asnaashari_blackberry_leaf_2015",
+      "plant_ids": [
+        "blackberryleaf"
+      ],
+      "source_title": "Antioxidant activity of raspberry (Rubus fruticosus) leaves extract and its effect on oxidative stability of sunflower oil",
+      "source_type": "peer_reviewed_plant_composition",
+      "animal_taxon": "Plant composition",
+      "applicability": "composition_only",
+      "plant_taxon": "Rubus fruticosus (as reported by the paper; current DB record is Rubus fruticosus agg.)",
+      "plant_part_state": "leaves; solvent extracts",
+      "directness": "composition_only",
+      "supports": "The study directly prepared and analyzed extracts from Rubus fruticosus leaves, supplying leaf-specific phytochemical/antioxidant evidence relevant to the Rubus fruticosus aggregate record.",
+      "does_not_support": "The paper's common-name wording is inconsistent ('raspberry' while reporting Rubus fruticosus), and the DB taxon is an aggregate; therefore it must not be treated as exact aggregate-wide evidence. Solvent-extract antioxidant activity is not a tortoise feeding or toxicity result.",
+      "year": 2015,
+      "doi": "10.1007/s13197-014-1564-7",
+      "pmid": "26243940",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26243940/"
     }
   ]
 }
