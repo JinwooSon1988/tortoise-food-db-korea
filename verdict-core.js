@@ -5,7 +5,7 @@
 (function(root){
  const GRADES={
   supported_mixed_diet:{grade:'A',label:'적극 권장',tone:'green',meaning:'여러 적합한 식물을 섞는 일상 혼합식의 주요 구성으로 활용하기 좋다.'},
-  limited_mixed_diet:{grade:'B',label:'권장',tone:'teal',meaning:'혼합식에 활용하기 좋은 먹이다. 다만 한 종류에 식단을 편중하지 않는다.'},
+  limited_mixed_diet:{grade:'B',label:'제한적 혼합 급여',tone:'teal',meaning:'혼합식에 넣을 수 있지만 사용 범위에 제한이 있다. 한 종류에 식단을 편중하지 않는다.'},
   limited_supplement:{grade:'C',label:'가끔 보조 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
   supplement_general_evidence:{grade:'C',label:'가끔 보조 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
   general_reptile_supplement:{grade:'C',label:'가끔 보조 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
