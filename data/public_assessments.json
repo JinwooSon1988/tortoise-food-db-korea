@@ -69,12 +69,13 @@
       "야생 빈도를 급여비율로 환산하지 않음",
       "채집 오염 확인"
     ],
-    "why": "야생 이베라그리스육지거북이 Sonchus류를 실제로 섭식한 기록이 있으며, 지중해 육지거북 전문 사육자료도 sow-thistle을 자연식 후보로 반복 제시한다. 다만 야생 관찰은 사육환경에서의 정확한 급여 비율·빈도를 정한 시험이 아니다. 따라서 단일 먹이로 고정하지 않고 여러 적합한 야생초와 섞는 혼합식의 주요 후보로 사용한다.",
+    "why": "야생 Testudo graeca ibera에서 Sonchus류의 실제 섭식이 기록됐으며, 지중해 육지거북 전문 사육자료도 sow-thistle을 자연식 후보로 반복 제시한다. 다만 야생 관찰은 사육환경에서의 정확한 급여 비율·빈도를 정한 시험이 아니다. 따라서 단일 먹이로 고정하지 않고 여러 적합한 야생초와 섞는 혼합식의 주요 후보로 사용한다.",
     "applicability_note": "이베라 직접 야생섭식 + Mediterranean Testudo 사육근거.",
     "assessment_scope": "taxon_group",
     "animal_taxon": "Testudo",
     "display_group": "Testudo",
-    "legacy_scope": "Mediterranean_Testudo"
+    "legacy_scope": "Mediterranean_Testudo",
+    "note": "Testudo graeca ibera 직접 야생섭식 + Mediterranean Testudo 사육근거."
   },
   {
     "plant_id": "clover",
@@ -115,7 +116,7 @@
       "rda_alfalfa_identity"
     ],
     "limits": [
-      "이베라 직접관찰은 Medicago 속 수준",
+      "야생 직접관찰은 Medicago 속 수준",
       "국내 M. sativa로 자동 종수준 승격하지 않음",
       "야생 빈도를 사육 급여비율로 환산하지 않음"
     ],
@@ -137,16 +138,17 @@
       "korean_dolnamul_identity"
     ],
     "limits": [
-      "이베라 직접 관찰 Sedum 종과 한국 돌나물 S. sarmentosum은 다른 종",
+      "야생 관찰 Sedum 종과 한국 돌나물 S. sarmentosum은 다른 종",
       "과량 섭취 시 묽은 변 가능성",
       "Sedum acre 등 유사종 오동정 주의"
     ],
-    "why": "국내 ‘돌나물’의 식물 정체성은 확인돼 있지만, 야생 이베라그리스육지거북의 직접 섭식 기록은 다른 Sedum 분류군에 관한 것이다. 전문 식물자료는 대부분의 Sedum을 다양한 식단에 사용할 수 있다고 보면서도 과량 섭취 시 설사 가능성을 경고하고 Sedum acre는 예외적으로 제외한다. 따라서 속 수준 기록을 국내 돌나물에 그대로 확대하지 않고 소량 보조로만 적용한다.",
+    "why": "국내 ‘돌나물’의 식물 정체성은 확인돼 있지만, 야생 Testudo graeca ibera의 직접 섭식 기록은 국내 돌나물과 다른 Sedum 분류군에 관한 것이다. 전문 식물자료는 대부분의 Sedum을 다양한 식단에 사용할 수 있다고 보면서도 과량 섭취 시 설사 가능성을 경고하고 Sedum acre는 예외적으로 제외한다. 따라서 속 수준 기록을 국내 돌나물에 그대로 확대하지 않고 소량 보조로만 적용한다.",
     "applicability_note": "한국 돌나물 종수준 identity와 이베라 관찰종이 일치하지 않음.",
     "assessment_scope": "tortoise_general",
     "animal_taxon": null,
     "display_group": "육지거북 일반",
-    "legacy_scope": "Tortoise_general"
+    "legacy_scope": "Tortoise_general",
+    "note": "한국 돌나물의 종 동정과 야생 관찰 Sedum의 종이 일치하지 않는다."
   },
   {
     "plant_id": "romaine",
