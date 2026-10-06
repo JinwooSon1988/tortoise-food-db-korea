@@ -359,7 +359,7 @@ def evidence_support_display(value):
         "Does not establish a Testudo graeca ibera-specific intake percentage or prove every cultivar/endophyte state equivalent.":"이 자료는 구체적인 섭취 비율을 확정하지 않으며, 모든 품종과 내생균 상태를 똑같이 볼 근거는 아니다.",
         "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency or unlimited use. The source itself cautions against overfeeding because of the possible laxative effect.":"이 자료는 구체적인 급여 비율·정해진 급여 빈도·무제한 급여를 허용하는 근거는 아니다. 출처 자체도 완하 작용 가능성 때문에 과량 급여를 경고한다.",
         "Does not establish a Testudo graeca ibera-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.":"이 자료는 구체적인 급여 비율·급여 빈도·정유의 안전성이나 무제한 섭취 허용 범위를 정하는 근거는 아니다.",
-        "Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":"이 자료만으로 이베라그리스육지거북에서 어느 양부터 독성이 나타나는지 알 수 없으며, 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다.",
+        "Does not establish a Testudo graeca ibera-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.":"이 자료만으로 육지거북에서 어느 양부터 독성이 나타나는지 알 수 없으며, 모든 Muscari 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다.",
         "Does not establish a staple percentage, unlimited feeding, Mediterranean Testudo-specific dose, or safety of similarly named Hypericum species.":"이 자료는 주식으로 사용할 비율·무제한 급여·지중해 Testudo에 한정된 급여량 또는 이름이 비슷한 다른 Hypericum 종까지 안전하다고 볼 근거는 아니다.",
         "Does not establish a toxic dose, clinical toxicity, safe captive feeding percentage, or Testudo-specific adverse effect.":"이 자료는 어느 양부터 독성이 나타나는지, 실제 임상 독성이 발생하는지, 안전한 사육 급여 비율이 얼마인지 또는 Testudo에서 어떤 이상반응이 나타나는지를 이 자료만으로 판단할 수 없다.",
         "Does not establish an Ibera-specific percentage or frequency and must not be transferred to true Geranium species merely because both may be called geranium.":"이 자료는 구체적인 급여 비율이나 빈도를 정하는 근거는 아니다. 둘 다 제라늄으로 불릴 수 있다는 이유만으로 진짜 Geranium 속 식물에 판정을 옮겨 적용하면 안 된다.",
@@ -387,7 +387,7 @@ def evidence_support_display(value):
     if v=="This is genus-level evidence, not an Artemisia princeps-specific Testudo trial. It does not establish identical chemistry across Artemisia species or a tortoise toxic dose.":
         return "속 수준의 근거이며 Artemisia princeps를 직접 대상으로 한 Testudo 시험이 아니다. Artemisia 각 종의 화학 조성이 동일하다고 볼 수 없고 육지거북 독성 용량도 정할 수 없다."
     if v=="Does not establish an Ibera-specific percentage or frequency and must not be transferred to true Geranium species merely because both may be called geranium.":
-        return "이베라그리스육지거북에 한정된 식단 비율이나 급여 빈도를 정하는 자료가 아니다. 일반명이 모두 geranium으로 불릴 수 있다는 이유만으로 진정한 Geranium속 식물에 판정을 그대로 적용하면 안 된다."
+        return "구체적인 식단 비율이나 급여 빈도를 정하는 자료가 아니다. 일반명이 모두 geranium으로 불릴 수 있다는 이유만으로 진정한 Geranium속 식물에 판정을 그대로 적용하면 안 된다."
     if v=="This specialist verdict is not a Testudo graeca ibera toxicity trial. It does not establish a tortoise toxic dose, identical susceptibility to mammals, or identical perilla-ketone content across edible cultivars.":
         return "이 전문 판정은 통제된 육지거북 독성시험이 아니다. 육지거북 독성 용량, 포유류와 동일한 감수성 또는 식용 품종 전체의 동일한 페릴라 케톤 함량을 입증하지 않는다."
     if v=="The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.":
@@ -425,7 +425,7 @@ def evidence_support_display(value):
     if v=="Does not support feeding pods or beans, unlimited feeding, or an Ibera-specific quantitative dose.":
         return "꼬투리나 콩알의 급여, 무제한 급여 또는 구체적인 정량 급여량을 뒷받침하는 자료는 아니다."
     if v=="Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an Ibera-specific dose.":
-        return "피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며 이베라그리스육지거북에 한정된 급여량을 정하는 자료도 아니다."
+        return "피레트린 함량이 높은 C. cinerariifolium과 C. coccineum은 제외하며 구체적인 급여량을 정하는 자료도 아니다."
     if v=="This is not a controlled Testudo graeca ibera feeding trial and does not establish a captive feeding percentage, fixed frequency, unlimited use, or a tortoise-specific toxic dose.":
         return "통제된 육지거북 급여시험이 아니므로 사육 식단 비율·정해진 급여 빈도·무제한 급여·육지거북 독성 용량을 정할 수 없다."
     if v=="This specialist database entry is not a controlled Testudo graeca ibera feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.":
@@ -582,7 +582,7 @@ def evidence_limit_display(value):
     if v.startswith("Does not establish a Mediterranean Testudo-specific percentage"):
         return "이 자료만으로 지중해 Testudo의 식단 비율이나 무제한 급여 허용 범위를 정할 수 없다. 잎과 과실을 구분하며 여러 식물 분류군의 내용을 서로 동일하게 적용하면 안 된다."
     if v.startswith("Does not establish a Testudo graeca ibera toxic dose"):
-        return "이 자료만으로 이베라그리스육지거북에서 어느 양부터 독성이 나타나는지, 임상 중독이 시작되는 수준이 얼마인지 또는 우발적으로 한입 먹었을 때 중독되는지를 판단할 수 없다."
+        return "이 자료만으로 육지거북에서 어느 양부터 독성이 나타나는지, 임상 중독이 시작되는 수준이 얼마인지 또는 우발적으로 한입 먹었을 때 중독되는지를 판단할 수 없다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific diet percentage"):
         return "이 자료만으로 구체적인 식단 비율·급여 빈도나 무제한 급여 허용 범위를 정할 수 없다. 성숙한 씨앗은 어린 풀과 같지 않으며 단백질이 높아 먹이지 않도록 한 원자료의 경고를 따른다."
     if v.startswith("Does not establish a Testudo graeca ibera-specific feeding percentage"):
@@ -597,7 +597,7 @@ def evidence_limit_display(value):
             base += " 정유가 안전하다고 판단할 근거도 아니다."
         return base
     if v.startswith("Does not establish a Testudo graeca ibera-specific toxic dose"):
-        return "이 자료만으로 이베라그리스육지거북에서 어느 양부터 독성이 나타나는지 알 수 없으며 모든 관련 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다."
+        return "이 자료만으로 육지거북에서 어느 양부터 독성이 나타나는지 알 수 없으며 모든 관련 종과 식물 부위의 위해 정도가 동일하다고 증명하지 않는다."
     if v.startswith("Does not establish a staple percentage"):
         return "이 자료는 주식 비율·무제한 급여·지중해 Testudo에 한정된 급여량 또는 이름이 비슷한 근연종까지 안전하다고 볼 근거는 아니다."
     if v.startswith("Does not establish a toxic dose"):
