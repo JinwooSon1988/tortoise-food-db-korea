@@ -1,10 +1,10 @@
 name: Verified plant images v5.6 QA
 on:
   pull_request:
-    paths: ['data/verified_plant_images_v56.json','data/plants.json','scripts/audit_verified_plant_images_v56.py','.github/workflows/verified-plant-images-v56-qa.yml']
+    paths: ['data/verified_plant_images_v56.json','data/plants.json','scripts/audit_verified_plant_images_v56.py','scripts/qa_verified_plant_images.py','scripts/plant_taxon_scope.py','.github/workflows/verified-plant-images-v56-qa.yml']
   push:
     branches: [main]
-    paths: ['data/verified_plant_images_v56.json','data/plants.json','scripts/audit_verified_plant_images_v56.py']
+    paths: ['data/verified_plant_images_v56.json','data/plants.json','scripts/audit_verified_plant_images_v56.py','scripts/qa_verified_plant_images.py','scripts/plant_taxon_scope.py']
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -13,3 +13,4 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.x'}
       - run: python scripts/audit_verified_plant_images_v56.py
+      - run: python scripts/qa_verified_plant_images.py

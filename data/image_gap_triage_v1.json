@@ -1,31 +1,569 @@
 {
-  "schema_version": 1,
-  "policy": "A species image must not represent an spp.-level master concept. Exact taxon and license provenance are required before publication.",
+  "schema_version": 2,
+  "policy": "An image may represent a master record only at the master's own rank (species, subspecies or variety). spp./agg./s.l. masters never receive a species representative image. Exact taxon and license provenance are required before publication.",
   "counts": {
-    "exact_species_candidate": 0,
-    "exact_infraspecific_candidate": 1,
-    "genus_scope_hold": 14
+    "exact_species_candidate": 42,
+    "exact_infraspecific_candidate": 7,
+    "genus_scope_hold": 43
   },
   "groups": {
-    "exact_species_candidate": [],
+    "exact_species_candidate": [
+      {
+        "plant_id": "spinach",
+        "scientific": "Spinacia oleracea",
+        "ko": "시금치",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "timothy",
+        "scientific": "Phleum pratense",
+        "ko": "티모시",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "pansy",
+        "scientific": "Viola × wittrockiana",
+        "ko": "팬지",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "redclover",
+        "scientific": "Trifolium pratense",
+        "ko": "레드클로버",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "sage",
+        "scientific": "Salvia officinalis",
+        "ko": "세이지",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "chrysanthemum",
+        "scientific": "Chrysanthemum morifolium",
+        "ko": "국화",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "sunflowerpetal",
+        "scientific": "Helianthus annuus",
+        "ko": "해바라기꽃잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "appleleaf",
+        "scientific": "Malus domestica",
+        "ko": "사과나무잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "plumleaf",
+        "scientific": "Prunus salicina",
+        "ko": "자두나무잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "sorrel",
+        "scientific": "Rumex acetosa",
+        "ko": "수영",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "beanleaf",
+        "scientific": "Phaseolus vulgaris",
+        "ko": "강낭콩잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "soybeanleaf",
+        "scientific": "Glycine max",
+        "ko": "콩잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "mungbeansprout",
+        "scientific": "Vigna radiata",
+        "ko": "숙주나물",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "alfalfasprout",
+        "scientific": "Medicago sativa",
+        "ko": "알팔파새싹",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "rapeseedleaf",
+        "scientific": "Brassica napus",
+        "ko": "유채잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "sweetpotatovine",
+        "scientific": "Ipomoea batatas",
+        "ko": "고구마줄기",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "cucumberleaf",
+        "scientific": "Cucumis sativus",
+        "ko": "오이잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "melonleaf",
+        "scientific": "Cucumis melo",
+        "ko": "멜론잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "watermelonleaf",
+        "scientific": "Citrullus lanatus",
+        "ko": "수박잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "grapevineleaf",
+        "scientific": "Vitis amurensis",
+        "ko": "머루잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "kiwileaf",
+        "scientific": "Actinidia deliciosa",
+        "ko": "키위잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "opuntiapad",
+        "scientific": "Opuntia ficus-indica",
+        "ko": "손바닥선인장패드",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "wheatleaf",
+        "scientific": "Triticum aestivum",
+        "ko": "밀잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "barleyleaf",
+        "scientific": "Hordeum vulgare",
+        "ko": "보리잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "oatleaf",
+        "scientific": "Avena sativa",
+        "ko": "귀리잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "meadowgrass",
+        "scientific": "Poa pratensis",
+        "ko": "왕포아풀",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "fescue",
+        "scientific": "Schedonorus arundinaceus",
+        "ko": "톨페스큐",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "bermudagrass",
+        "scientific": "Cynodon dactylon",
+        "ko": "우산잔디",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "hibiscusrosa",
+        "scientific": "Hibiscus rosa-sinensis",
+        "ko": "하와이무궁화",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "ginkgoleaf",
+        "scientific": "Ginkgo biloba",
+        "ko": "은행잎",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "daisy",
+        "scientific": "Bellis perennis",
+        "ko": "데이지",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "milkthistle",
+        "scientific": "Silybum marianum",
+        "ko": "밀크시슬",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "sainfoin",
+        "scientific": "Onobrychis viciifolia",
+        "ko": "샌포인",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "borage",
+        "scientific": "Borago officinalis",
+        "ko": "보리지",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "henbit",
+        "scientific": "Lamium amplexicaule",
+        "ko": "광대나물",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "snapdragon",
+        "scientific": "Antirrhinum majus",
+        "ko": "금어초",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "catsear",
+        "scientific": "Hypochaeris radicata",
+        "ko": "서양금혼초",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "shepherdspurse",
+        "scientific": "Capsella bursa-pastoris",
+        "ko": "냉이",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "comfrey",
+        "scientific": "Symphytum officinale",
+        "ko": "컴프리",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "medicago_hispida",
+        "scientific": "Medicago polymorpha L.",
+        "ko": "버클로버",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "conyzacanadensis",
+        "scientific": "Erigeron canadensis L.",
+        "ko": "망초",
+        "required_scope": "exact_species"
+      },
+      {
+        "plant_id": "ruscus_aculeatus",
+        "scientific": "Ruscus aculeatus L.",
+        "ko": "부처스브룸",
+        "required_scope": "exact_species"
+      }
+    ],
     "exact_infraspecific_candidate": [
-      {"plant_id":"napa","scientific":"Brassica rapa subsp. pekinensis","ko":"배추"}
+      {
+        "plant_id": "radicchio",
+        "scientific": "Cichorium intybus var. foliosum",
+        "ko": "라디키오",
+        "required_scope": "exact_variety"
+      },
+      {
+        "plant_id": "chard",
+        "scientific": "Beta vulgaris subsp. cicla",
+        "ko": "근대",
+        "required_scope": "exact_subspecies"
+      },
+      {
+        "plant_id": "broccolisprout",
+        "scientific": "Brassica oleracea var. italica",
+        "ko": "브로콜리새싹",
+        "required_scope": "exact_variety"
+      },
+      {
+        "plant_id": "kohlrabileaf",
+        "scientific": "Brassica oleracea var. gongylodes",
+        "ko": "콜라비잎",
+        "required_scope": "exact_variety"
+      },
+      {
+        "plant_id": "mizuna",
+        "scientific": "Brassica rapa var. nipposinica",
+        "ko": "미즈나",
+        "required_scope": "exact_variety"
+      },
+      {
+        "plant_id": "tatsoi",
+        "scientific": "Brassica rapa subsp. narinosa",
+        "ko": "다채",
+        "required_scope": "exact_subspecies"
+      },
+      {
+        "plant_id": "komatsuna",
+        "scientific": "Brassica rapa var. perviridis",
+        "ko": "코마츠나",
+        "required_scope": "exact_variety"
+      }
     ],
     "genus_scope_hold": [
-      {"plant_id":"dandelion","scientific":"Taraxacum spp.","ko":"민들레"},
-      {"plant_id":"sowthistle","scientific":"Sonchus spp.","ko":"방가지똥"},
-      {"plant_id":"plantain","scientific":"Plantago spp.","ko":"질경이"},
-      {"plant_id":"mulberry","scientific":"Morus spp.","ko":"뽕잎"},
-      {"plant_id":"mallow","scientific":"Malva spp.","ko":"아욱"},
-      {"plant_id":"mint","scientific":"Mentha spp.","ko":"민트"},
-      {"plant_id":"clover","scientific":"Trifolium spp.","ko":"클로버"},
-      {"plant_id":"pumpkinleaf","scientific":"Cucurbita spp.","ko":"호박잎"},
-      {"plant_id":"rose","scientific":"Rosa spp.","ko":"장미꽃"},
-      {"plant_id":"pricklypear","scientific":"Opuntia spp.","ko":"천년초"},
-      {"plant_id":"ryegrass","scientific":"Lolium spp.","ko":"라이그라스"},
-      {"plant_id":"violet","scientific":"Viola spp.","ko":"제비꽃"},
-      {"plant_id":"geranium","scientific":"Pelargonium spp.","ko":"제라늄"},
-      {"plant_id":"marigold","scientific":"Tagetes spp.","ko":"메리골드"}
+      {
+        "plant_id": "dandelion",
+        "scientific": "Taraxacum spp.",
+        "ko": "민들레",
+        "required_scope": null
+      },
+      {
+        "plant_id": "sowthistle",
+        "scientific": "Sonchus spp.",
+        "ko": "방가지똥",
+        "required_scope": null
+      },
+      {
+        "plant_id": "plantain",
+        "scientific": "Plantago spp.",
+        "ko": "질경이",
+        "required_scope": null
+      },
+      {
+        "plant_id": "mulberry",
+        "scientific": "Morus spp.",
+        "ko": "뽕잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "mallow",
+        "scientific": "Malva spp.",
+        "ko": "아욱",
+        "required_scope": null
+      },
+      {
+        "plant_id": "mint",
+        "scientific": "Mentha spp.",
+        "ko": "민트",
+        "required_scope": null
+      },
+      {
+        "plant_id": "clover",
+        "scientific": "Trifolium spp.",
+        "ko": "클로버",
+        "required_scope": null
+      },
+      {
+        "plant_id": "pumpkinleaf",
+        "scientific": "Cucurbita spp.",
+        "ko": "호박잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "rose",
+        "scientific": "Rosa spp.",
+        "ko": "장미꽃",
+        "required_scope": null
+      },
+      {
+        "plant_id": "pricklypear",
+        "scientific": "Opuntia spp.",
+        "ko": "천년초",
+        "required_scope": null
+      },
+      {
+        "plant_id": "ryegrass",
+        "scientific": "Lolium spp.",
+        "ko": "라이그라스",
+        "required_scope": null
+      },
+      {
+        "plant_id": "violet",
+        "scientific": "Viola spp.",
+        "ko": "제비꽃",
+        "required_scope": null
+      },
+      {
+        "plant_id": "geranium",
+        "scientific": "Pelargonium spp.",
+        "ko": "제라늄",
+        "required_scope": null
+      },
+      {
+        "plant_id": "marigold",
+        "scientific": "Tagetes spp.",
+        "ko": "메리골드",
+        "required_scope": null
+      },
+      {
+        "plant_id": "blackberryleaf",
+        "scientific": "Rubus fruticosus agg.",
+        "ko": "블랙베리잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "geraniumleaf",
+        "scientific": "Pelargonium spp.",
+        "ko": "제라늄잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "amaranthleaf",
+        "scientific": "Amaranthus spp.",
+        "ko": "비름",
+        "required_scope": null
+      },
+      {
+        "plant_id": "pumpkinflower",
+        "scientific": "Cucurbita spp.",
+        "ko": "호박꽃",
+        "required_scope": null
+      },
+      {
+        "plant_id": "lindenleaf",
+        "scientific": "Tilia spp.",
+        "ko": "피나무잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "hazelleaf",
+        "scientific": "Corylus spp.",
+        "ko": "개암나무잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "birchleaf",
+        "scientific": "Betula spp.",
+        "ko": "자작나무잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "willowleaf",
+        "scientific": "Salix spp.",
+        "ko": "버드나무잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "poplarleaf",
+        "scientific": "Populus spp.",
+        "ko": "포플러잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "elmleaf",
+        "scientific": "Ulmus spp.",
+        "ko": "느릅나무잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "mapleleaf",
+        "scientific": "Acer spp.",
+        "ko": "단풍나무잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "eveningprimrose",
+        "scientific": "Oenothera spp.",
+        "ko": "달맞이꽃",
+        "required_scope": null
+      },
+      {
+        "plant_id": "hawthorn",
+        "scientific": "Crataegus spp.",
+        "ko": "산사나무속 잎",
+        "required_scope": null
+      },
+      {
+        "plant_id": "houseleek",
+        "scientific": "Sempervivum spp.",
+        "ko": "셈페르비붐",
+        "required_scope": null
+      },
+      {
+        "plant_id": "echeveria",
+        "scientific": "Echeveria spp.",
+        "ko": "에케베리아",
+        "required_scope": null
+      },
+      {
+        "plant_id": "hosta",
+        "scientific": "Hosta spp.",
+        "ko": "비비추속",
+        "required_scope": null
+      },
+      {
+        "plant_id": "salsify",
+        "scientific": "Tragopogon spp.",
+        "ko": "살시피류",
+        "required_scope": null
+      },
+      {
+        "plant_id": "hawksbeard",
+        "scientific": "Crepis spp.",
+        "ko": "씀바귀아재비류",
+        "required_scope": null
+      },
+      {
+        "plant_id": "hawkbit",
+        "scientific": "Leontodon spp.",
+        "ko": "민들레아재비류",
+        "required_scope": null
+      },
+      {
+        "plant_id": "hawkweed",
+        "scientific": "Hieracium spp.",
+        "ko": "조밥나물류",
+        "required_scope": null
+      },
+      {
+        "plant_id": "petunia",
+        "scientific": "Petunia spp.",
+        "ko": "페튜니아",
+        "required_scope": null
+      },
+      {
+        "plant_id": "dahlia",
+        "scientific": "Dahlia spp.",
+        "ko": "달리아",
+        "required_scope": null
+      },
+      {
+        "plant_id": "gerbera",
+        "scientific": "Gerbera spp.",
+        "ko": "거베라",
+        "required_scope": null
+      },
+      {
+        "plant_id": "zinnia",
+        "scientific": "Zinnia spp.",
+        "ko": "백일홍",
+        "required_scope": null
+      },
+      {
+        "plant_id": "mexicanpetunia",
+        "scientific": "Ruellia spp.",
+        "ko": "멕시칸페튜니아",
+        "required_scope": null
+      },
+      {
+        "plant_id": "coreopsis",
+        "scientific": "Coreopsis spp.",
+        "ko": "금계국속",
+        "required_scope": null
+      },
+      {
+        "plant_id": "astilbe",
+        "scientific": "Astilbe spp.",
+        "ko": "아스틸베",
+        "required_scope": null
+      },
+      {
+        "plant_id": "primula",
+        "scientific": "Primula spp.",
+        "ko": "프리뮬라속",
+        "required_scope": null
+      },
+      {
+        "plant_id": "monarda",
+        "scientific": "Monarda spp.",
+        "ko": "모나르다속",
+        "required_scope": null
+      }
     ]
   }
 }

@@ -5,11 +5,13 @@ Information hierarchy on every page:
   → evidence (papers first) → nutrition → related.
 Grade equality with the home search is enforced by scripts/qa_verdict_consistency.py.
 """
-import json, re
+import json, re, sys
 import ast
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(root / 'scripts'))
+from plant_taxon_scope import check_image
 plants = json.loads((root / 'data/plants.json').read_text(encoding='utf-8'))
 assessments = json.loads((root / 'data/public_assessments.json').read_text(encoding='utf-8'))
 if isinstance(assessments, dict): assessments = assessments.get('assessments', assessments.get('records', []))
@@ -86,15 +88,18 @@ for image in registry['images']:
     assert pid not in seen, pid
     seen.add(pid)
     assert pid in master, pid
-    assert image['identity_scope'] in {'exact_species', 'exact_subspecies', 'exact_variety'}, pid
-    assert 'spp.' not in master[pid]['scientific'], pid
-    assert image['scientific'] == master[pid]['scientific'], (pid, image['scientific'], master[pid]['scientific'])
+    scope_problems = check_image(image, master[pid]['scientific'])
+    assert not scope_problems, (pid, scope_problems)
     assert image['source_url'].startswith('https://commons.wikimedia.org/wiki/File:'), pid
     assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), pid
     assert image['license'], pid
     assert image['creator'], pid
     if pid in public_ids:
         assert image['image_url'] in pages[pid] and image['license'] in pages[pid], f'{pid}: verified image or licence missing'
+        caption = {'exact_species': '정확한 종으로 검증된', 'exact_subspecies': '정확한 아종으로 검증된', 'exact_variety': '정확한 변종으로 검증된'}[image['identity_scope']]
+        assert caption in pages[pid], f'{pid}: image caption must state the {image["identity_scope"]} rank'
+        if image.get('part_match') == 'mismatch':
+            assert '사진 속 부위는 실제 급여 부위와 다르다.' in pages[pid], f'{pid}: part-mismatch image needs a caption warning'
 print(f'plant detail v5.6 contract OK for {len(public_ids)} pages; {len(seen)} verified images')
 
 # Mobile verdict card stays compact while retaining the A/B/C/D context key.
