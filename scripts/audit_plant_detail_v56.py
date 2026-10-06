@@ -174,7 +174,7 @@ for token in (
 # Remaining assessment translations preserve non-transfer and planned-feeding boundaries.
 for token in (
     '옥수수 속대·알곡이나 다른 부위까지 같은 결론을 적용하면 안 된다.',
-    '다른 동물에서 확인된 독성시험 결과를 육지거북의 독성 용량으로 직접 확대하지 않는다.',
+    '포유류 독성시험 결과이므로 육지거북에서 어느 양부터 독성이 나타나는지에 직접 적용할 수 없다.',
     '피레트린 함량이 높은 분류군은 명시적으로 제외한다.',
     '육지거북 사육장 안에서 재배하지 말라고 권고한다.',
 ):
