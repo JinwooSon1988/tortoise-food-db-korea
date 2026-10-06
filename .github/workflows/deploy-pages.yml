@@ -14,6 +14,10 @@ on:
       - '*.js'
       - '*.css'
       - 'sitemap.xml'
+      - 'scripts/generate_static_pages.py'
+      - 'data/plants.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
       - 'robots.txt'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
@@ -38,6 +42,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Render canonical plant detail pages
+        run: |
+          python -m pip install --disable-pip-version-check -q pyyaml
+          python scripts/generate_static_pages.py
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
