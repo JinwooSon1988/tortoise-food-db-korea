@@ -3,9 +3,8 @@
 Evidence tagged `Herbivorous_reptile_general` can justify only a cautious supplemental-use card.
 
 It must not be rendered or described as:
-- Mediterranean Testudo direct evidence
-- Ibera direct evidence
+- direct evidence for a narrower tortoise taxon than the source actually studied
 - staple-diet approval
 - unlimited or high-frequency feeding approval
 
-Direct Mediterranean or species-specific claims require evidence with the corresponding applicability scope.
+Species- or subspecies-specific claims require evidence that directly covers that taxon. Genus- or broader-scope evidence must remain labeled at its actual applicability scope; no single species or subspecies is the default reference point for this database.
