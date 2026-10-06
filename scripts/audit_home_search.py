@@ -47,8 +47,9 @@ assert 'id="searchInput" type="search"' in html and 'aria-controls="searchResult
 assert 'id="searchResults" role="status" aria-live="polite"' in html
 card_fn = re.search(r'function card\(r\)\{[\s\S]*?\nfunction render', script).group(0)
 card_markup = card_fn[card_fn.index("return '<article"):]
-order = [card_markup.find(x) for x in ('<h3>', 'gradepill', 'class="meaning"', 'class="why"', '+noteHtml+', 'class="detailbtn"')]
-assert -1 not in order and order == sorted(order), 'result card order must be name → grade → meaning → why → species note → detail'
+order = [card_markup.find(x) for x in ('<h3>', 'gradepill', 'class="decisionline"', 'class="why"', '+noteHtml+', 'class="detailbtn"')]
+assert -1 not in order and order == sorted(order), 'result card order must be name → grade → plain-language decision → why → species note → detail'
+assert "const decision=g.grade==='A'?'급여 가능'" in card_fn, 'letter grades must be translated into an immediate feeding decision'
 assert "' 상세 근거 보기\" href=\"./plant/'" in card_fn
 assert "aria-label=\"'+esc(r.label)+' · '+esc(g.grade)+' '+esc(g.label)+'\"" in card_fn, 'result cards must expose textual verdicts to assistive technology'
 assert '종별 특이사항 있음' in card_fn and '기본 판정과 분리해 확인' in card_fn, 'species notes must stay subordinate to the default verdict'
