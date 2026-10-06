@@ -38,6 +38,23 @@ retail_by_id={r["plant_id"]:r for r in retail}
 directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
 applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
 
+def assessment_copy(v):
+    """Keep public assessment prose taxon-neutral unless the source explicitly needs a species reference.
+    Legacy Ibera wording is normalized here as a final reader-facing safeguard.
+    """
+    x=str(v or "")
+    x=re.sub(r"Testudo\\s+graeca\\s+ibera", "그리스육지거북", x, flags=re.I)
+    x=re.sub(r"T\\.\\s*g\\.\\s*ibera", "그리스육지거북", x, flags=re.I)
+    x=x.replace("이베라그리스육지거북", "그리스육지거북")
+    x=x.replace("이베라 직접", "해당 종 직접")
+    x=x.replace("이베라 종특이", "종 특이")
+    x=x.replace("이베라 아종", "해당 아종")
+    x=x.replace("이베라의", "육지거북의")
+    x=x.replace("이베라에서", "육지거북에서")
+    x=x.replace("이베라 중독", "육지거북 중독")
+    x=x.replace("이베라 독성", "육지거북 독성")
+    return x
+
 def esc(v): return html.escape(str(v or ""),quote=True)
 def rich(v):
     """Escape, then render *text* as italic (used for scientific names in curated notes)."""
@@ -721,14 +738,14 @@ for p in plants:
     rows=assessments_by_plant.get(pid,[])
     a=representative(rows); g=display(a)
     tone,grade,label,meaning=g["tone"],g["grade"],g["label"],g["meaning"]
-    summary=(a or {}).get("why") or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
+    summary=assessment_copy((a or {}).get("why")) or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
     r=retail_by_id.get(pid); aliases=[]
     if r: aliases=list(dict.fromkeys((r.get("retail_terms") or [])+(r.get("aliases") or [])))
     if not aliases: aliases=list(p.get("aliases") or [])[:4]
     aliases=[x for x in aliases if x!=ko]
     # Identity risk comes only from existing data: retail name mapping or master identity status.
     identity_warning=bool((r and r.get("mapping_status")=="name_candidate_only") or p.get("identity_status")=="needs_species_level_mapping")
-    role=(a or {}).get("role"); limits=(a or {}).get("limits") or []
+    role=(a or {}).get("role"); limits=[assessment_copy(x) for x in ((a or {}).get("limits") or [])]
     linked_evidence=[evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids") or []) if eid in evidence_by_id]
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
@@ -821,7 +838,7 @@ for p in plants:
     species_specific_html=(f'<section class="card species-specific"><h2>특정 종·아종에서 확인된 자료</h2><p class="small">일부 근거는 특정 종·아종만 조사했다. 전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며, 실제 연구 대상은 아래 상세 근거에서 확인할 수 있다.</p></section>' if species_rows else "")
 
     # 4) Scope → identity → limits, stated once in one card; canonical assessment copy is rendered verbatim.
-    scope=(a or {}).get("applicability_note") or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 확인된 자료만으로 특정 거북 종까지 같은 결론을 적용할 수는 없다.")
+    scope=assessment_copy((a or {}).get("applicability_note")) or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 확인된 자료만으로 특정 거북 종까지 같은 결론을 적용할 수는 없다.")
     photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
     cur=curated_identity.get(pid)
     if identity_warning:
