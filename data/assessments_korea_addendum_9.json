@@ -5,10 +5,17 @@
     "verdict": "limited_supplement",
     "role": "옥수수잎 소량 혼합 보조",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_maize_leaf"],
-    "limits": ["잎만 해당","옥수수 알·이삭·통옥수수 판정으로 확대 금지","단일 주식 또는 고비율 반복식으로 사용하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_maize_leaf"
+    ],
+    "limits": [
+      "잎만 해당",
+      "옥수수 알·이삭·통옥수수 판정으로 확대 금지",
+      "단일 주식 또는 고비율 반복식으로 사용하지 않음",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 Zea mays의 잎은 Safe to Feed로 명시하지만 이삭은 별도로 제외하므로, 잎만 일반 육지거북 보조 후보로 제한한다.",
-    "applicability_note": "Zea mays exact-taxon의 잎 부위 근거이며 이베라 직접 급여시험은 아니다."
+    "applicability_note": "Zea mays exact-taxon의 잎 부위 근거이며 해당 종 직접 급여시험은 아니다."
   },
   {
     "plant_id": "pea_shoot",
@@ -16,10 +23,17 @@
     "verdict": "blocked",
     "role": "판정 보류",
     "confidence": "C",
-    "evidence_ids": ["tortoise_table_pea_shoots"],
-    "limits": ["The Tortoise Table은 Pisum sativum과 pea shoots를 Do not Feed로 분류하지만 독성 식물은 아니라고 명시함","고단백·피트산 및 칼슘 흡수 저해 설명은 전문 DB의 일반 육지거북 기전 설명이며 이베라 직접 위해시험·용량-반응 자료가 아님","안전 또는 권장 급여 판정으로 해석하지 않음","Mediterranean Testudo 종특이 직접근거가 아님"],
-    "why": "The Tortoise Table은 Pisum sativum과 pea shoots를 Do not Feed로 분류하면서도 실제 독성은 아니라고 명시하고, 고단백·피트산과 칼슘 흡수 저해 가능성을 이유로 든다. 현재 확인된 근거만으로 이 기전 설명을 이베라의 급여 금지 또는 위해 용량으로 확정하지 않는다.",
-    "applicability_note": "Pisum sativum exact-taxon 전문 DB의 비권장 의견은 보존하되, 이베라 직접 위해근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
+    "evidence_ids": [
+      "tortoise_table_pea_shoots"
+    ],
+    "limits": [
+      "The Tortoise Table은 Pisum sativum과 pea shoots를 Do not Feed로 분류하지만 독성 식물은 아니라고 명시함",
+      "고단백·피트산 및 칼슘 흡수 저해 설명은 전문 DB의 일반 육지거북 기전 설명이며 해당 종 직접 위해시험·용량-반응 자료가 아님",
+      "안전 또는 권장 급여 판정으로 해석하지 않음",
+      "Mediterranean Testudo 종특이 직접근거가 아님"
+    ],
+    "why": "The Tortoise Table은 Pisum sativum과 pea shoots를 Do not Feed로 분류하면서도 실제 독성은 아니라고 명시하고, 고단백·피트산과 칼슘 흡수 저해 가능성을 이유로 든다. 현재 확인된 근거만으로 이 기전 설명을 육지거북의 급여 금지 또는 위해 용량으로 확정하지 않는다.",
+    "applicability_note": "Pisum sativum exact-taxon 전문 DB의 비권장 의견은 보존하되, 해당 종 직접 위해근거 없이 성분·기전 설명만으로 급여 금지 판정을 확정하지 않음."
   },
   {
     "plant_id": "ssuk",
@@ -27,8 +41,15 @@
     "verdict": "do_not_feed",
     "role": "급여 비권장",
     "confidence": "C-",
-    "evidence_ids": ["tortoise_table_mugwort"],
-    "limits": ["계획 급여에서 제외","Artemisia princeps exact-species 시험이 아니라 Artemisia spp. 속 수준 판정","다른 쑥속 식물과의 화학적 차이를 동일하다고 단정하지 않음","Mediterranean Testudo 직접근거가 아님"],
+    "evidence_ids": [
+      "tortoise_table_mugwort"
+    ],
+    "limits": [
+      "계획 급여에서 제외",
+      "Artemisia princeps exact-species 시험이 아니라 Artemisia spp. 속 수준 판정",
+      "다른 쑥속 식물과의 화학적 차이를 동일하다고 단정하지 않음",
+      "Mediterranean Testudo 직접근거가 아님"
+    ],
     "why": "전문 육지거북 식물 DB가 Mugwort/Artemisia spp.를 Do not Feed로 분류하므로 한국 참쑥도 보수적으로 추천 후보에서 제외한다.",
     "applicability_note": "한국 master Artemisia princeps에 Artemisia 속 수준 근거를 적용한 낮은 확신도의 일반 육지거북 판정이다."
   }
