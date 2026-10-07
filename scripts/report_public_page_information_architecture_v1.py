@@ -23,7 +23,7 @@ def main():
     missing = []
     evidence_cards = []
     disclosure = []
-    nested_style = []\n    touch_target_risks = []\n    horizontal_overflow_risks = []\n    tiny_text_risks = []
+    nested_style = []\n    touch_target_risks = []\n    horizontal_overflow_risks = []\n    tiny_text_risks = []\n    missing_landmarks = []\n    heading_order_risks = []\n    image_alt_risks = []
 
     for page in pages:
         text = page.read_text(encoding="utf-8")
@@ -59,6 +59,9 @@ def main():
     print(f"possible undersized interactive targets: {len(set(touch_target_risks))}")
     print(f"possible fixed-width mobile overflow: {len(set(horizontal_overflow_risks))}")
     print(f"pages using <=10px text: {len(set(tiny_text_risks))}")
+    print(f"pages missing core semantic landmarks: {len(set(missing_landmarks))}")
+    print(f"pages with heading-order risk: {len(set(heading_order_risks))}")
+    print(f"pages with missing/empty image alt: {len(set(image_alt_risks))}")
     if evidence_cards:
         print("highest evidence-card counts:", ", ".join(f"{pid}={n}" for n, pid in evidence_cards[:10]))
     if missing:
