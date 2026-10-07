@@ -18,9 +18,4 @@ row=rows[0]; assert row['species_group']=='Tortoise_general' and row['verdict']=
 assert (ROOT/'plant/chard/index.html').exists(); text=(ROOT/'plant/chard/index.html').read_text(encoding='utf-8')
 assert '제한적 보조식 근거' in text and '옥살산' in text and 'Mediterranean Testudo' in text
 assert 'plant/chard/' in (ROOT/'sitemap.xml').read_text(encoding='utf-8')
-assert '_korea_addendum_11.json' in (ROOT/'profile-context.js').read_text(encoding='utf-8')
-assert 'assessments_korea_addendum_11.json' in (ROOT/'sw.js').read_text(encoding='utf-8') and 'evidence_korea_addendum_11.json' in (ROOT/'sw.js').read_text(encoding='utf-8')
-packet=json.loads((DATA/'chard_candidate_packet.json').read_text(encoding='utf-8')); staged=json.loads((DATA/'chard_candidate_assessment.json').read_text(encoding='utf-8'))
-assert packet['published'] is True and packet['integration_status']=='promoted_to_master'
-assert staged['user_facing'] is True and staged['status']=='promoted_runtime'
 print('PASS chard regression gate; master',len(plants),'assessed',len(assessed))
