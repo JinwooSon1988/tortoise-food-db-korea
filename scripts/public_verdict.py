@@ -19,7 +19,7 @@ GRADES = {
     "do_not_feed": {"grade": "D", "label": "계획 급여에서 제외", "tone": "danger", "meaning": "일상 식단에 계획적으로 넣지 않는다. 우발적 소량 섭취의 독성과는 별개의 판정이다."},
 }
 HOLD = {"grade": "보류", "label": "판정 보류", "tone": "hold", "meaning": "근거가 부족하거나 엇갈려 등급을 정하지 않았다. 보류는 안전하다는 뜻이 아니다."}
-NO_DEFAULT = {"grade": "보류", "label": "판정 보류", "tone": "hold", "meaning": "지중해 Testudo 기본 판정이 아직 없다. 판정이 없다는 것은 안전하다는 뜻이 아니다."}
+NO_DEFAULT = {"grade": "보류", "label": "판정 보류", "tone": "hold", "meaning": "공통 급여 판정이 아직 없다. 판정이 없다는 것은 안전하다는 뜻이 아니다."}
 
 
 def load_assessments():
@@ -60,7 +60,7 @@ def species_notes(rows, primary):
 
 def scope_label(a):
     if not a:
-        return "지중해 Testudo 판정 없음"
+        return "공통 급여 판정 없음"
     if a.get("animal_taxon") == "Testudo" or a.get("species_group") == "Mediterranean_Testudo":
         return "지중해 Testudo 근거"
     if a.get("assessment_scope") == "tortoise_general" or a.get("species_group") == "Tortoise_general":
