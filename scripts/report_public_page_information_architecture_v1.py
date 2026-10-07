@@ -23,7 +23,7 @@ def main():
     missing = []
     evidence_cards = []
     disclosure = []
-    nested_style = []
+    nested_style = []\n    touch_target_risks = []\n    horizontal_overflow_risks = []\n    tiny_text_risks = []
 
     for page in pages:
         text = page.read_text(encoding="utf-8")
@@ -56,6 +56,9 @@ def main():
     print(f"pages with >=4 evidence cards: {len(dense)}")
     print(f"dense pages without progressive disclosure: {len(dense_without_disclosure)}")
     print(f"malformed nested </style>: {len(nested_style)}")
+    print(f"possible undersized interactive targets: {len(set(touch_target_risks))}")
+    print(f"possible fixed-width mobile overflow: {len(set(horizontal_overflow_risks))}")
+    print(f"pages using <=10px text: {len(set(tiny_text_risks))}")
     if evidence_cards:
         print("highest evidence-card counts:", ", ".join(f"{pid}={n}" for n, pid in evidence_cards[:10]))
     if missing:
