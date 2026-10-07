@@ -102,5 +102,18 @@ def main():
     if nested_style:
         print("nested style:", ", ".join(nested_style[:20]))
 
+    if touch_target_risks:
+        print("touch target risks:", ", ".join(sorted(set(touch_target_risks))[:20]))
+    if horizontal_overflow_risks:
+        print("overflow risks:", ", ".join(sorted(set(horizontal_overflow_risks))[:20]))
+    if tiny_text_risks:
+        print("tiny text:", ", ".join(sorted(set(tiny_text_risks))[:20]))
+    if missing_landmarks:
+        print("missing landmarks:", ", ".join(f"{pid}:{landmark}" for pid, landmark in sorted(set(missing_landmarks))[:20]))
+    if heading_order_risks:
+        print("heading order:", ", ".join(sorted(set(heading_order_risks))[:20]))
+    if image_alt_risks:
+        print("image alt:", ", ".join(sorted(set(image_alt_risks))[:20]))
+
 if __name__ == "__main__":
     main()
