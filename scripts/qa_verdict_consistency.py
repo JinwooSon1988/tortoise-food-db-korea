@@ -13,7 +13,7 @@ from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from public_verdict import load_assessments, by_plant, representative, display, species_notes, public_plants, is_species_only
+from public_verdict import load_assessments, by_plant, representative, display, species_notes, public_plants, is_species_only, GRADES
 
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
@@ -23,7 +23,6 @@ rows_by = by_plant(assessments)
 
 # Every raw public verdict code must be explicitly mapped. Unknown codes must never
 # degrade silently to HOLD, because that can hide a data/schema drift from readers.
-from public_verdict import GRADES
 raw_verdicts = {a.get("verdict") for a in assessments if a.get("verdict")}
 unknown_python_verdicts = sorted(raw_verdicts - set(GRADES))
 for verdict in unknown_python_verdicts:
