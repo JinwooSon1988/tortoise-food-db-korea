@@ -59,6 +59,24 @@ def main():
         if re.search(r"</style>\s*</style>", text, re.I):
             nested_style.append(page.parent.name)
 
+        # Accessibility/mobile heuristics. These are intentionally conservative:
+        # report only concrete markup/CSS patterns rather than pretending unmeasured
+        # properties are zero-risk.
+        if re.search(r'<(?:a|button|summary)\b[^>]*style="[^"]*(?:height|min-height)\s*:\s*(?:[0-3]?\d)px', text, re.I):
+            touch_target_risks.append(page.parent.name)
+        if re.search(r'(?:width|min-width)\s*:\s*(?:[7-9]\d\d|\d{4,})px', text, re.I) and "@media" not in text:
+            horizontal_overflow_risks.append(page.parent.name)
+        if re.search(r'font-size\s*:\s*(?:[1-9]|10)px', text, re.I):
+            tiny_text_risks.append(page.parent.name)
+        for landmark in ("<main", "<nav", "<footer"):
+            if landmark not in text.lower():
+                missing_landmarks.append((page.parent.name, landmark[1:]))
+        headings = [int(x) for x in re.findall(r'<h([1-6])\b', text, re.I)]
+        if any(b > a + 1 for a, b in zip(headings, headings[1:])):
+            heading_order_risks.append(page.parent.name)
+        if re.search(r'<img\b(?![^>]*\balt\s*=)[^>]*>', text, re.I) or re.search(r'<img\b[^>]*\balt\s*=\s*["\']\s*["\']', text, re.I):
+            image_alt_risks.append(page.parent.name)
+
     evidence_cards.sort(reverse=True)
     dense = [(pid, n) for n, pid in evidence_cards if n >= 4]
     dense_without_disclosure = [(pid, n) for pid, n, has in disclosure if not has]
@@ -72,7 +90,7 @@ def main():
     print(f"possible undersized interactive targets: {len(set(touch_target_risks))}")
     print(f"possible fixed-width mobile overflow: {len(set(horizontal_overflow_risks))}")
     print(f"pages using <=10px text: {len(set(tiny_text_risks))}")
-    print(f"pages missing core semantic landmarks: {len(set(missing_landmarks))}")
+    print(f"missing core semantic landmarks: {len(set(missing_landmarks))}")
     print(f"pages with heading-order risk: {len(set(heading_order_risks))}")
     print(f"pages with missing/empty image alt: {len(set(image_alt_risks))}")
     if evidence_cards:
