@@ -975,7 +975,7 @@ for p in plants:
     # Only the long per-source cards are folded. The safety-conflict warning and the evidence count stay visible
     # (the count is shown once, in the core block).
     evidence_detail=f'''<details class="evidencefold"><summary>원문 근거 {detail_count}건 자세히 보기</summary><div class="evidence-list">{evidence_cards_html}{wild_section}</div></details>''' if detail_count else evidence_cards_html
-    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">근거 상세히 알아보기</div><h2>왜 이렇게 판정했나</h2><div class="evidence-core"><h3>핵심 근거</h3><p>{esc(summary_display)}</p>{summary_chips}</div>{conflict_html}{evidence_detail}</section>'''
+    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">근거 상세히 알아보기</div><h2>판정 근거</h2><div class="evidence-core"><h3>근거 구성</h3>{summary_chips}</div>{conflict_html}{evidence_detail}</section>'''
 
     nu=nutrition_by_id.get(pid)
     if nu:
