@@ -11,6 +11,7 @@ for pid,fid in expected.items():
         assert abs((x["calcium_mg"]/x["phosphorus_mg"])-x["calcium_phosphorus_ratio"])<=0.02
 q=json.loads((R/"data/nutrition_coverage_queue_v1.json").read_text())
 assert not (set(expected)&{x["plant_id"] for x in q["records"]})
-assert "pumpkinleaf" in {x["plant_id"] for x in q["records"] if x["mapping_status"]=="identity_scope_hold"}
-assert "dandelion" not in {x["plant_id"] for x in q["records"]}
-print("OK: 3 exact raw USDA SR Legacy records verified; genus-level dandelion/pumpkin leaf remain on identity hold; queue",len(q["records"]))
+queued={x["plant_id"]:x for x in q["records"]}
+assert queued["pumpkinleaf"]["mapping_status"]=="identity_scope_hold" and queued["pumpkinleaf"]["do_not_infer"] is True
+assert "dandelion" not in queued
+print("OK: 3 exact raw USDA SR Legacy records verified; pumpkin leaf remains on identity hold; dandelion is not queued; queue",len(q["records"]))
