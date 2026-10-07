@@ -20,6 +20,14 @@ errors = []
 plants = json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8"))
 assessments = load_assessments()
 rows_by = by_plant(assessments)
+
+# Every raw public verdict code must be explicitly mapped. Unknown codes must never
+# degrade silently to HOLD, because that can hide a data/schema drift from readers.
+from public_verdict import GRADES
+raw_verdicts = {a.get("verdict") for a in assessments if a.get("verdict")}
+unknown_python_verdicts = sorted(raw_verdicts - set(GRADES))
+for verdict in unknown_python_verdicts:
+    errors.append(f"unmapped public verdict code in Python: {verdict}")
 # Every assessment evidence ID must resolve to a record that explicitly names the same plant.
 evidence_raw = json.loads((ROOT / "data/public_evidence_records.json").read_text(encoding="utf-8"))
 evidence_records = evidence_raw if isinstance(evidence_raw, list) else evidence_raw.get("evidence", evidence_raw.get("records", []))
@@ -45,11 +53,17 @@ retail = {r["plant_id"]: r for r in json.loads((ROOT / "data/korean_retail_name_
 node_src = r"""
 const core=require(process.argv[1]);const data=JSON.parse(require('fs').readFileSync(0,'utf8'));
 const out={};for(const [pid,rows] of Object.entries(data)){const a=core.representative(rows);out[pid]={index:a?rows.indexOf(a):-1,grade:core.display(a).grade,label:core.display(a).label,notes:core.speciesNotes(rows,a).map(x=>rows.indexOf(x))}}
+out.__mappedVerdicts=Object.keys(core.GRADES).sort();
 process.stdout.write(JSON.stringify(out));
 """
 try:
     proc = subprocess.run(["node", "-e", node_src, str(ROOT / "verdict-core.js")], input=json.dumps(rows_by), capture_output=True, text=True, encoding="utf-8", check=True)
     js = json.loads(proc.stdout)
+    js_mapped_verdicts = set(js.pop("__mappedVerdicts", []))
+    for verdict in sorted(raw_verdicts - js_mapped_verdicts):
+        errors.append(f"unmapped public verdict code in JS: {verdict}")
+    if set(GRADES) != js_mapped_verdicts:
+        errors.append(f"Python/JS verdict maps differ: Python={sorted(GRADES)} JS={sorted(js_mapped_verdicts)}")
 except (OSError, subprocess.CalledProcessError) as exc:
     print("FAIL: could not execute verdict-core.js with node:", exc)
     sys.exit(1)
