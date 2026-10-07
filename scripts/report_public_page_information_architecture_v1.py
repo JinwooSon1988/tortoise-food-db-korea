@@ -23,7 +23,13 @@ def main():
     missing = []
     evidence_cards = []
     disclosure = []
-    nested_style = []\n    touch_target_risks = []\n    horizontal_overflow_risks = []\n    tiny_text_risks = []\n    missing_landmarks = []\n    heading_order_risks = []\n    image_alt_risks = []
+    nested_style = []
+    touch_target_risks = []
+    horizontal_overflow_risks = []
+    tiny_text_risks = []
+    missing_landmarks = []
+    heading_order_risks = []
+    image_alt_risks = []
 
     for page in pages:
         text = page.read_text(encoding="utf-8")
@@ -41,7 +47,9 @@ def main():
         cards = len(re.findall(r'class="evcard', text))
         evidence_cards.append((cards, page.parent.name))
         if cards >= 4:
-            disclosure.append((page.parent.name, cards, "<details" in text))
+            evidence_pos = text.find('class="card evidence-deep"')
+            evidence_html = text[evidence_pos:] if evidence_pos >= 0 else ""
+            disclosure.append((page.parent.name, cards, "<details" in evidence_html))
 
         if re.search(r"</style>\s*</style>", text, re.I):
             nested_style.append(page.parent.name)
