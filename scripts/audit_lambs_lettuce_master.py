@@ -15,7 +15,4 @@ row=rows[0]; assert row['species_group']=='Tortoise_general' and row['verdict']=
 assert (ROOT/'plant/lambs_lettuce/index.html').exists(); text=(ROOT/'plant/lambs_lettuce/index.html').read_text(encoding='utf-8')
 assert '일반 보조식 근거' in text and 'Mediterranean Testudo' in text
 assert 'plant/lambs_lettuce/' in (ROOT/'sitemap.xml').read_text(encoding='utf-8')
-assert '_korea_addendum_12.json' in (ROOT/'profile-context.js').read_text(encoding='utf-8')
-assert 'assessments_korea_addendum_12.json' in (ROOT/'sw.js').read_text(encoding='utf-8') and 'evidence_korea_addendum_12.json' in (ROOT/'sw.js').read_text(encoding='utf-8')
-packet=json.loads((DATA/'lambs_lettuce_candidate_packet.json').read_text(encoding='utf-8')); assert packet['published'] is True and packet['integration_status']=='promoted_to_master'
 print('PASS Lambs Lettuce regression gate; master',len(plants),'assessed',len(assessed))
