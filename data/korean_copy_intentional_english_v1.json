@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "purpose_ko": "사용자에게 보이는 한국어 문장 안에서 의도적으로 영어(라틴 문자)로 남겨 두는 표기 목록이다. 학명·기관명·출처명·약어처럼 번역하면 오히려 정확성이 떨어지는 항목만 둔다. scripts/qa_korean_english_fragments_v1.py가 이 목록과 데이터의 학명·저자·학술지 필드를 함께 허용 목록으로 사용한다.",
+  "automatic_sources": [
+    "data/plants.json: scientific, family",
+    "data/public_evidence_records.json: plant_taxon, animal_taxon, author/authors (surnames), journal",
+    "data/wild_feeding_evidence.json, data/ibera_direct_feeding_evidence_v56.json: reported/accepted plant and tortoise taxa",
+    "page elements marked lang=\"en\" (English aliases, official food-composition record names), italic text, evidence source titles, DOI/PMID rows and external links",
+    "English inside quotation marks (‘…’, “…”) used to cite an English common name"
+  ],
+  "categories": {
+    "scientific_names": {
+      "description_ko": "본문에서 혼동 주의·비교 대상으로 언급되지만 식물 항목의 학명 필드에는 없는 학명",
+      "items": [
+        "Hyacinthoides",
+        "Physalis",
+        "Hypericum",
+        "Geranium",
+        "Filipendula",
+        "Citrus bergamia",
+        "Sedum acre",
+        "Aruncus dioicus",
+        "Chrysanthemum cinerariifolium",
+        "C. cinerariifolium",
+        "C. coccineum",
+        "Cucurbita pepo",
+        "Lolium arundinaceum",
+        "Mentha pulegium",
+        "piperita",
+        "Bunge",
+        "T. erecta",
+        "T. filifolia",
+        "T. lucida",
+        "T. minuta",
+        "T. patula",
+        "T. tenuifolia",
+        "Rosmarinus officinalis",
+        "Chrysanthemum coronarium",
+        "Broussonetia papyrifera",
+        "Festuca",
+        "Lycopersicon esculentum",
+        "Buddleia",
+        "hortensis"
+      ]
+    },
+    "institutions_and_sources": {
+      "description_ko": "기관·단체·자료명(고유명사)",
+      "items": [
+        "BCG",
+        "UC Davis",
+        "Merck",
+        "Tortoise Trust",
+        "The Tortoise Table",
+        "Kew",
+        "Plants of the World Online",
+        "GBIF",
+        "AGROVOC",
+        "IUCN",
+        "SSC",
+        "Tortoise and Freshwater Turtle Specialist Group",
+        "USDA",
+        "FoodData Central",
+        "Food Chemistry",
+        "DB Korea",
+        "Korea",
+        "Merck Veterinary Manual",
+        "Kew POWO",
+        "POWO",
+        "BRIS"
+      ]
+    },
+    "abbreviations": {
+      "description_ko": "본문에서 한국어 설명과 함께 쓰는 측정·성분·검사 약어",
+      "items": [
+        "PA",
+        "PK",
+        "HPLC",
+        "MOP",
+        "CHO-K1",
+        "AST",
+        "ALT",
+        "ALP",
+        "LDH",
+        "ppm",
+        "DOI",
+        "PMID",
+        "Ca:P",
+        "Ca",
+        "mg",
+        "kg",
+        "g",
+        "IU",
+        "HaCaT"
+      ]
+    },
+    "cultivar_and_trade_names": {
+      "description_ko": "품종명·원문 표기를 그대로 보여야 하는 이름",
+      "items": [
+        "Hayward"
+      ]
+    },
+    "image_licenses": {
+      "description_ko": "사진 출처 표기에 쓰는 공식 라이선스 이름",
+      "items": [
+        "CC BY-SA",
+        "CC BY",
+        "CC0",
+        "Public domain",
+        "US",
+        "GFDL",
+        "FR",
+        "AU",
+        "DE",
+        "UK",
+        "NL",
+        "IGO"
+      ]
+    },
+    "authors": {
+      "description_ko": "본문에서 인용하는 연구자 성(姓)",
+      "items": [
+        "Iftime",
+        "Slimani",
+        "Leone"
+      ]
+    }
+  }
+}

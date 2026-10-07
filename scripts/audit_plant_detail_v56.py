@@ -191,7 +191,7 @@ for token in (
 
 # Plant-part classification pattern must remain localized and non-transferable.
 assert 'Classifies the stated (.+?) plant-part scope as' in generator
-assert '이 판정을 다른 식물 부위로 확대하지 않는다.' in generator
+assert '이 판정을 다른 부위로 넓히지 않는다.' in generator
 
 # Observation, taxonomy and exposure-domain boundaries must remain explicit in Korean.
 for token in (
