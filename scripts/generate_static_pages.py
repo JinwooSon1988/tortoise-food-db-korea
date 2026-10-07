@@ -969,11 +969,13 @@ for p in plants:
         scope_txt="식물 종까지 일치" if o.get("identity_scope")=="exact_species" else "속 수준 관찰 — 이 식물의 정확한 종을 먹었다는 뜻으로 확대하지 않는다"
         link=f'<a href="{esc(s.get("url"))}" target="_blank" rel="noopener noreferrer">원 연구 확인</a>' if s.get("url") else ""
         wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>그리스육지거북 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
-    wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{conflict_html}{"".join(wild_cards)}''' if wild_cards else "")
+    wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{"".join(wild_cards)}''' if wild_cards else "")
 
     detail_count=len(linked_evidence)+len(wild_cards)
-    evidence_detail=f'''<details class="evidencefold"><summary>원문 근거 {detail_count}건 자세히 보기</summary><div class="evidence-list">{evidence_cards_html}{wild_section}{summary_chips}</div></details>''' if detail_count else evidence_cards_html
-    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">근거 상세히 알아보기</div><h2>왜 이렇게 판정했나</h2><div class="evidence-core"><h3>핵심 근거</h3><p>{esc(summary_display)}</p>{summary_chips}</div>{evidence_detail}</section>'''
+    # Only the long per-source cards are folded. The safety-conflict warning and the evidence count stay visible
+    # (the count is shown once, in the core block).
+    evidence_detail=f'''<details class="evidencefold"><summary>원문 근거 {detail_count}건 자세히 보기</summary><div class="evidence-list">{evidence_cards_html}{wild_section}</div></details>''' if detail_count else evidence_cards_html
+    deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">근거 상세히 알아보기</div><h2>왜 이렇게 판정했나</h2><div class="evidence-core"><h3>핵심 근거</h3><p>{esc(summary_display)}</p>{summary_chips}</div>{conflict_html}{evidence_detail}</section>'''
 
     nu=nutrition_by_id.get(pid)
     if nu:

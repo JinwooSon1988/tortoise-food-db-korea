@@ -35,7 +35,12 @@ def main():
         text = page.read_text(encoding="utf-8")
         positions = {}
         for name, marker in ORDER:
-            pos = text.find(marker)
+            if name == "decision":
+                # The decision card is rendered as class="card <tone> decision"; match the class token, not a prefix.
+                m = re.search(r'class="[^"]*\bdecision\b[^"]*"', text)
+                pos = m.start() if m else -1
+            else:
+                pos = text.find(marker)
             if pos < 0:
                 missing.append((page.parent.name, name))
             positions[name] = pos

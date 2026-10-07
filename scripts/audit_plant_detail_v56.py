@@ -265,7 +265,10 @@ ibera_linked_ids = {
 ibera_violations = []
 for pid, page in pages.items():
     body = re.sub(r'<script.*?</script>|<style.*?</style>', '', page, flags=re.S)
-    cut = body.find('자료별 상세 근거')
+    # Judgement text ends where the per-source cards begin: the progressive-disclosure fold
+    # (<details class="evidencefold">), or the older "자료별 상세 근거" heading. Without either, scan everything.
+    cuts = [i for i in (body.find('<details class="evidencefold"'), body.find('자료별 상세 근거')) if i > 0]
+    cut = min(cuts) if cuts else -1
     text = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', body[:cut if cut > 0 else len(body)]))
     for m in ibera_mention_re.finditer(text):
         before, after = text[max(0, m.start() - 8):m.start()], text[m.end():m.end() + 20]
