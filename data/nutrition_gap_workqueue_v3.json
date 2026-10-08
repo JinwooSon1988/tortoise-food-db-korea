@@ -573,6 +573,14 @@
               "verification": "secondary_only"
             },
             "note": "FDC candidates require primary USDA verification; no nutrient values promoted."
+          },
+          "primary_source_review": {
+            "checked_on": "2026-10-08",
+            "usda_foundation_search": "https://fdc.nal.usda.gov/food-search/?query=bell+pepper&type=Foundation",
+            "usda_documentation": "https://fdc.nal.usda.gov/Foundation_Foods_Documentation/",
+            "confirmed": "USDA Foundation search lists four color-specific NDB numbers: green 11333, orange 100278, red 11821, yellow 11951; USDA distinguishes FDC IDs from NDB numbers.",
+            "not_confirmed": "Individual FDC IDs and full per-100-g nutrient payloads have not been directly extracted from official USDA records.",
+            "promotion": "HOLD"
           }
         }
       }
