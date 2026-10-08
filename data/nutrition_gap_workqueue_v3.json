@@ -221,5 +221,38 @@
       "orchard"
     ],
     "rule": "Presence in plant_nutrition_v56 does not by itself mean the record is newly researched in this batch; verify source/part/basis before promotion."
+  },
+  "batch_research_20261008": {
+    "confirmed_official_candidates": [
+      {
+        "plant_id": "bellpepper",
+        "source": "USDA FoodData Central Foundation Foods",
+        "records": [
+          11333,
+          100278,
+          11821,
+          11951
+        ],
+        "descriptions": [
+          "Peppers, bell, green, raw",
+          "Peppers, bell, orange, raw",
+          "Peppers, bell, red, raw",
+          "Peppers, bell, yellow, raw"
+        ],
+        "identity_warning": "Master Capsicum annuum is broader than color-specific records. Do not merge these records into one generic value; retain color/form or define an explicit mapping policy."
+      },
+      {
+        "plant_id": "mungbeansprout",
+        "source": "USDA FoodData Central SR Legacy",
+        "record": 11043,
+        "description": "Mung beans, mature seeds, sprouted, raw",
+        "identity_warning": "This is a sprouted mature-seed food record. Confirm that the site master food means mung-bean sprouts before promotion; do not confuse with whole mung seed or unrelated sprouts."
+      }
+    ],
+    "not_yet_promoted": [
+      "bellpepper",
+      "mungbeansprout"
+    ],
+    "reason": "Record existence is confirmed, but exact master-to-record mapping and nutrient field reconciliation remain required."
   }
 }
