@@ -1,25 +1,7 @@
 name: Deploy GitHub Pages
 
+# Native GitHub Pages handles automatic publication. Manual deployment only.
 on:
-  push:
-    branches: [main]
-    # Source-data/generator commits are followed by an Actions-generated
-    # plant-page sync commit. Deploy only site-facing files so those source
-    # commits do not publish the previous render and then publish again.
-    paths:
-      - 'plant/**'
-      - 'index.html'
-      - '404.html'
-      - 'assets/**'
-      - '*.js'
-      - '*.css'
-      - 'sitemap.xml'
-      - 'scripts/generate_static_pages.py'
-      - 'data/plants.json'
-      - 'data/public_assessments.json'
-      - 'data/public_evidence_records.json'
-      - 'robots.txt'
-      - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
 permissions:
