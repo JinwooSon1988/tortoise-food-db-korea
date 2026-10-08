@@ -206,7 +206,7 @@
     "checked_at": "2026-10-08",
     "priority_records_total": 20,
     "already_present_in_verified_or_current_nutrition": 9,
-    "still_missing_exact_record": 11,
+    "still_missing_exact_record": 10,
     "still_missing_ids": [
       "mint",
       "clover",
@@ -253,6 +253,16 @@
       "bellpepper",
       "mungbeansprout"
     ],
-    "reason": "Record existence is confirmed, but exact master-to-record mapping and nutrient field reconciliation remain required."
+    "reason": "Record existence is confirmed, but exact master-to-record mapping and nutrient field reconciliation remain required.",
+    "mungbeansprout": {
+      "record_status": "already_present_in_plant_nutrition_v56",
+      "source": "USDA FoodData Central SR Legacy",
+      "source_id": "FDC 169957",
+      "basis": "100 g raw edible portion",
+      "part": "sprout",
+      "values_reconciled": true,
+      "action": "Remove from exact-record search queue; retain as verified raw mung-bean sprout record.",
+      "note": "Earlier image search correctly rejected a seed-only photo; nutrition record itself is for sprouted mature seeds and is appropriate only for the raw sprout food record."
+    }
   }
 }
