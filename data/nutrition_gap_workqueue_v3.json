@@ -320,29 +320,26 @@
         ]
       },
       "orchard": {
-        "status": "comparative_nutrition_only",
+        "status": "comparative_forage_record_only",
         "source": "US Forest Service FEIS",
-        "action": "use as grass nutritional ecology context, not official food-composition record",
-        "note": "reported values are for livestock/wildlife and vary by season/harvest; not suitable as a tortoise food nutrient record"
+        "action": "No exact human-food nutrient record established; do not promote seasonal forage values to food composition.",
+        "next": "Use forage literature only for contextual nutrition, not numeric tortoise-food values."
       },
       "timothy": {
-        "status": "no_exact_official_food_record_confirmed_in_scan",
-        "action": "continue botanical forage literature search; do not substitute grass/hay records"
+        "status": "comparative_forage_record_only",
+        "source": "USDA NRCS Plant Guide / forage literature",
+        "action": "No human-food nutrient record found in current scan; do not import hay/forage nutrient values as a food composition record.",
+        "next": "Search livestock feed composition databases only as comparative evidence, clearly separated from official food composition."
       },
       "mint": {
-        "status": "exact_record_candidate",
-        "source": "USDA FoodData Central SR Legacy",
-        "record_search_terms": [
-          "spearmint, fresh",
-          "peppermint, fresh"
-        ],
-        "identity_warning": "Master is Mentha spp.; exact species mapping required. Do not merge Mentha species into one value.",
-        "action": "manual record-level mapping required"
+        "status": "species_split_required",
+        "action": "Search Mentha species records separately; do not merge peppermint/spearmint into Mentha spp."
       },
       "clover": {
-        "status": "not_yet_exact_record",
-        "source": "USDA search may contain Trifolium-related records but exact edible plant record not established",
-        "action": "continue search; no surrogate forage values"
+        "status": "comparative_forage_record_only",
+        "source": "forage/legume literature",
+        "action": "Do not substitute Trifolium hay/forage analysis for fresh clover edible-part composition.",
+        "next": "Exact fresh Trifolium edible record required."
       },
       "chickweed": {
         "status": "exact_record_candidate",
@@ -355,18 +352,12 @@
         "action": "record-level reconciliation required"
       },
       "rose": {
-        "status": "non_food_botanical_records_common",
-        "action": "do not use rose hips, tea, petals of other Rosa species, or extracts as substitutes; exact edible petal record required"
+        "status": "part_split_required",
+        "action": "Fresh petals only; exclude rose hips, teas, extracts and oils."
       },
       "nasturtium": {
-        "status": "exact_record_candidate",
-        "source": "USDA FoodData Central",
-        "record_search_terms": [
-          "nasturtium, leaves, raw",
-          "Tropaeolum majus"
-        ],
-        "identity_warning": "Verify leaf/flower part; do not mix ornamental cultivar records.",
-        "action": "record-level reconciliation required"
+        "status": "part_split_required",
+        "action": "Separate leaves and flowers; exact edible-part record required."
       },
       "bellpepper": {
         "status": "candidate_records_identified_not_promoted",
@@ -453,6 +444,7 @@
       "reason": "The current repository scan identifies candidate records but does not yet contain the authoritative record payload needed to safely promote values.",
       "next_required": "Fetch and reconcile original record payloads for the 10 priority plants before editing plant_nutrition_v56.json."
     },
-    "data_quality_correction": "Previous note calling FDC 169272 Foundation Foods was incorrect; it is SR Legacy. The repository promotion policy must preserve the actual USDA dataset type."
+    "data_quality_correction": "Previous note calling FDC 169272 Foundation Foods was incorrect; it is SR Legacy. The repository promotion policy must preserve the actual USDA dataset type.",
+    "next_batch_status": "Source-type separation completed for remaining difficult foods; no unverified numeric values promoted."
   }
 }
