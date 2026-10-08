@@ -13,13 +13,19 @@
       "ko": "시금치",
       "scientific": "Spinacia oleracea",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry",
+      "image_state": "candidate_metadata_checked_not_published",
       "publication_gate": {
         "identity": "pending_original_file_review",
         "depicted_part": "pending_visual_review",
         "creator_license": "pending_original_file_review",
         "file_stability": "pending",
         "status": "HOLD"
+      },
+      "batch_research": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Spinacia_oleracea_bd-3.jpg",
+        "license": "CC BY-SA 4.0",
+        "review_status": "license_and_taxon_title_found_visual_review_pending",
+        "notes": "File title identifies species; verify photographer, depicted part, and attribution from original before publishing."
       }
     },
     {
@@ -99,13 +105,20 @@
       "ko": "숙주나물",
       "scientific": "Vigna radiata",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry",
+      "image_state": "candidate_rejected_part_mismatch",
       "publication_gate": {
         "identity": "pending_original_file_review",
         "depicted_part": "pending_visual_review",
         "creator_license": "pending_original_file_review",
         "file_stability": "pending",
         "status": "HOLD"
+      },
+      "batch_research": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Vigna.radiata.seeds.jpg",
+        "creator": "Sarefo",
+        "license": "CC BY-SA 4.0",
+        "review_status": "REJECTED_PART_MISMATCH",
+        "notes": "Photo explicitly depicts seeds, not sprouts. Do not use for mung bean sprout food entry."
       }
     },
     {
@@ -416,7 +429,13 @@
         "publication_status": "hold"
       }
     ],
-    "visual_review_requirement": "Visual confirmation cannot be inferred from file title, structured metadata or license alone."
+    "visual_review_requirement": "Visual confirmation cannot be inferred from file title, structured metadata or license alone.",
+    "batch_research_summary": {
+      "new_candidate": "spinach",
+      "rejected_for_wrong_part": "mungbeansprout",
+      "newly_published": 0,
+      "source_check_date": "2026-10-08"
+    }
   },
   "batch_quality_policy": {
     "version": "1.0",
