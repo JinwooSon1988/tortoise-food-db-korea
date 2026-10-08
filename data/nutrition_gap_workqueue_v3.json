@@ -210,7 +210,6 @@
     "still_missing_ids": [
       "mint",
       "clover",
-      "alfalfa",
       "chickweed",
       "pumpkinleaf",
       "bellpepper",
@@ -263,6 +262,38 @@
       "values_reconciled": true,
       "action": "Remove from exact-record search queue; retain as verified raw mung-bean sprout record.",
       "note": "Earlier image search correctly rejected a seed-only photo; nutrition record itself is for sprouted mature seeds and is appropriate only for the raw sprout food record."
+    },
+    "official_candidate_scan": {
+      "alfalfa": {
+        "status": "already_verified_in_plant_nutrition_v56",
+        "source_id": "FDC 168384",
+        "source": "USDA FoodData Central SR Legacy",
+        "action": "remove from queue"
+      },
+      "pumpkinleaf": {
+        "status": "official_record_candidate",
+        "source_id": "FDC 169272",
+        "source": "USDA FoodData Central",
+        "basis": "raw",
+        "action": "source record identity and full nutrient payload still require direct record reconciliation before promotion"
+      },
+      "pricklypear": {
+        "status": "official_record_candidate",
+        "source_id": "FDC 167750",
+        "source": "USDA FoodData Central",
+        "basis": "raw fruit",
+        "action": "master food is Opuntia spp.; exact species/part mapping required before promotion"
+      },
+      "orchard": {
+        "status": "comparative_nutrition_only",
+        "source": "US Forest Service FEIS",
+        "action": "use as grass nutritional ecology context, not official food-composition record",
+        "note": "reported values are for livestock/wildlife and vary by season/harvest; not suitable as a tortoise food nutrient record"
+      },
+      "timothy": {
+        "status": "no_exact_official_food_record_confirmed_in_scan",
+        "action": "continue botanical forage literature search; do not substitute grass/hay records"
+      }
     }
   }
 }
