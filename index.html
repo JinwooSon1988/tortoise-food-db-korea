@@ -29,6 +29,15 @@ body{background:radial-gradient(circle at 50% -10%,#eaf3ec 0,#f7f9f6 38%,#f5f7f4
   .truststrip{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.truststrip div{padding:10px 8px;border-radius:12px}.truststrip b{font-size:11px}.truststrip span{font-size:11px;line-height:1.35}
   .belowfold{margin-top:22px;padding-top:22px}.belowfold h2{font-size:18px}
 }
+/* Search verdict visual hierarchy: maintain visible safety rationale. */
+.resultcard{border-color:#d4e2d8;box-shadow:0 3px 16px rgba(21,62,38,.045);transition:border-color .18s ease,box-shadow .18s ease}
+.resultcard:hover{border-color:#a8c7b2;box-shadow:0 9px 26px rgba(21,62,38,.085)}
+.resulthead h3{letter-spacing:-.035em}
+.resulthead .gradepill{font-variant-numeric:tabular-nums}
+.resultcard .why{color:#263e2e;line-height:1.65;overflow-wrap:anywhere}
+.resultcard .detailbtn:focus-visible{outline:3px solid #7cb48d;outline-offset:3px}
+@media(max-width:620px){.resultcard{box-shadow:0 2px 10px rgba(21,62,38,.045)}.resultcard .why{font-size:14px;line-height:1.6}}
+@media(prefers-reduced-motion:reduce){.resultcard{transition:none}}
 </style></head><body><a class="skiplink" href="#main-content">본문으로 바로가기</a><main id="main-content" class="wrap" tabindex="-1"><header class="top"><a class="brand" href="./" aria-label="거북밥 홈">🐢 <span>거북밥</span></a><div class="topmeta"><span id="visitorCount" class="visitorcount" aria-live="polite"></span><span class="version">근거 기반 육지거북 먹이 DB</span></div></header>
 <section class="hero"><div class="eyebrow">육지거북 먹이 근거 데이터베이스</div><h1>이 식물, 먹여도 될까?</h1><p>식물 이름만 검색하세요. <b>먹여도 되는지 먼저</b> 보여드리고, 왜 그런지와 논문·원자료는 필요할 때 확인할 수 있습니다.</p></section>
 <section class="searchstage" aria-label="먹이 검색"><div class="searchrow"><input id="searchInput" type="search" placeholder="예: 민들레, 치커리, 청경채" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="먹이 이름 검색" aria-controls="searchResults" aria-describedby="searchHelp"><button id="searchBtn" class="primary">판정 확인</button></div><div id="searchHelp" class="searchhelp">정확한 이름을 몰라도 됩니다. 한글명·영문명·학명 중 하나만 입력하세요.<span class="safetyhint">검색 결과 없음 ≠ 안전 · 아직 공개 판정을 찾지 못한 식물일 수 있습니다.</span></div>
