@@ -7,7 +7,7 @@
     "research_pool_count": 182,
     "published": {
       "verified_image": 129,
-      "verified_nutrition": 36,
+      "verified_nutrition": 49,
       "with_assessment": 182,
       "with_evidence": 182,
       "with_korea_alias": 10,
@@ -1328,16 +1328,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "oregano",
@@ -1362,16 +1361,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "lavender",
@@ -1688,16 +1686,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "waterdropwort",
@@ -1757,16 +1754,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "lambsquarters",
@@ -1774,16 +1770,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "sorrel",
@@ -1876,16 +1871,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "mungbeansprout",
@@ -1893,14 +1887,13 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
         "image",
-        "nutrition",
         "korea_alias"
       ],
       "next_action": "image"
@@ -1911,16 +1904,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "broccolisprout",
@@ -1928,16 +1920,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "kohlrabileaf",
@@ -1997,16 +1988,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "komatsuna",
@@ -2014,16 +2004,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "sweetpotatovine",
@@ -2031,16 +2020,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "pumpkinflower",
@@ -2714,16 +2702,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "petunia",

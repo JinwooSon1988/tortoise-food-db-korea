@@ -1,0 +1,2020 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Plants without a verified nutrition record and why (no values are stored here).",
+  "policy": "Hold entries never carry nutrient values. A plant leaves this list only when an exact species + plant part + raw-state record from a named official dataset or peer-reviewed source is verified into data/plant_nutrition_v56.json.",
+  "sources_searched": [
+    "USDA FoodData Central SR Legacy Foods JSON 2018-04 (all 7,793 foods)",
+    "USDA FoodData Central Foundation Foods JSON 2026-04-30 (363 foods)",
+    "농촌진흥청 국립식량과학원 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (공공데이터포털 15100065, 1,858 records)"
+  ],
+  "reason_codes": {
+    "subtype_ambiguous": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
+    "genus_level_master": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+    "species_mismatch": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+    "part_mismatch": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+    "state_mismatch": "후보 기록이 건조·분말 등 날것이 아닌 상태뿐이다.",
+    "part_ambiguous": "후보 기록의 식용 부위가 원자료에서 명시되지 않는다.",
+    "policy_hold": "기존 검토 정책이 일반 기록 연결을 금지한다.",
+    "no_record_found": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다."
+  },
+  "summary": {
+    "genus_level_master": 38,
+    "no_record_found": 46,
+    "part_ambiguous": 1,
+    "part_mismatch": 28,
+    "policy_hold": 2,
+    "species_mismatch": 12,
+    "state_mismatch": 2,
+    "subtype_ambiguous": 4
+  },
+  "held_count": 133,
+  "records": [
+    {
+      "plant_id": "lettuce",
+      "ko": "상추",
+      "scientific": "Lactuca sativa",
+      "hold_reason_code": "subtype_ambiguous",
+      "hold_reason_ko": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 2346391",
+          "data_type": "Foundation",
+          "food_description": "Lettuce, leaf, green, raw",
+          "source_scientific_name": null,
+          "rejected_because": "green leaf type only"
+        },
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168431",
+          "data_type": "SR Legacy",
+          "food_description": "Lettuce, red leaf, raw",
+          "source_scientific_name": "Lactuca sativa var. crispa",
+          "rejected_because": "red leaf type only"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-101023701-0000",
+          "food_description": "상추_뚝섬적축면_적상추_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "적상추 특정 품종"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "radishgreens",
+      "ko": "무잎",
+      "scientific": "Raphanus sativus",
+      "hold_reason_code": "subtype_ambiguous",
+      "hold_reason_ko": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-066027801-0000",
+          "food_description": "무청_조선무_잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "조선무 잎(분석)만"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-066017801-0000",
+          "food_description": "무청_왜무_잎_생것",
+          "data_generation_method": "수집",
+          "rejected_because": "왜무 잎(수집)만"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지 (조선무·왜무 품종 차이)"
+    },
+    {
+      "plant_id": "cauliflowerleaf",
+      "ko": "콜리플라워잎",
+      "scientific": "Brassica oleracea var. botrytis",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 169986",
+          "data_type": "SR Legacy",
+          "food_description": "Cauliflower, raw",
+          "source_scientific_name": "Brassica oleracea (Botrytis Group)",
+          "rejected_because": "curd (flower head), not leaf"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-030000001-0000",
+          "food_description": "꽃양배추(콜리플라워)_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "꽃양배추 꽃봉오리"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "figleaf",
+      "ko": "무화과잎",
+      "scientific": "Ficus carica",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 173021",
+          "data_type": "SR Legacy",
+          "food_description": "Figs, raw",
+          "source_scientific_name": "Ficus carica",
+          "rejected_because": "fruit"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "hibiscusleaf",
+      "ko": "무궁화잎",
+      "scientific": "Hibiscus syriacus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "ko": "무궁화꽃",
+      "scientific": "Hibiscus syriacus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "celeryleaf",
+      "ko": "셀러리잎",
+      "scientific": "Apium graveolens",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 169988",
+          "data_type": "SR Legacy",
+          "food_description": "Celery, raw",
+          "source_scientific_name": "Apium graveolens",
+          "rejected_because": "stalk/petiole"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-107000001-0000",
+          "food_description": "셀러리_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "셀러리(부위 미표기, 줄기 위주 식품)"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "carrottop",
+      "ko": "당근잎",
+      "scientific": "Daucus carota subsp. sativus",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 170393",
+          "data_type": "SR Legacy",
+          "food_description": "Carrots, raw",
+          "source_scientific_name": "Daucus carota",
+          "rejected_because": "root"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-041007601-0000",
+          "food_description": "당근_뿌리_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "당근 뿌리"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "mint",
+      "ko": "민트",
+      "scientific": "Mentha spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 173475",
+          "data_type": "SR Legacy",
+          "food_description": "Spearmint, fresh",
+          "source_scientific_name": "Mentha spicata",
+          "rejected_because": "Mentha spicata only"
+        },
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 173474",
+          "data_type": "SR Legacy",
+          "food_description": "Peppermint, fresh",
+          "source_scientific_name": "Mentha x piperita L. nothosubsp. piperita",
+          "rejected_because": "Mentha x piperita only"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R118-059000001-0000",
+          "food_description": "페퍼민트_생것",
+          "data_generation_method": "수집",
+          "rejected_because": "페퍼민트(수집)만"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "clover",
+      "ko": "클로버",
+      "scientific": "Trifolium spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "alfalfa",
+      "ko": "알팔파",
+      "scientific": "Medicago sativa",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168384",
+          "data_type": "SR Legacy",
+          "food_description": "Alfalfa seeds, sprouted, raw",
+          "source_scientific_name": "Medicago sativa",
+          "rejected_because": "sprout, not forage leaf/hay"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-127002701-0000",
+          "food_description": "알팔파_싹_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "알팔파 싹"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "chickweed",
+      "ko": "별꽃",
+      "scientific": "Stellaria media",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 169272",
+          "data_type": "SR Legacy",
+          "food_description": "Pumpkin leaves, raw",
+          "source_scientific_name": "Cucurbita spp.",
+          "rejected_because": "source is Cucurbita spp.; no Korea taxon mapping"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-198007801-0000",
+          "food_description": "호박_잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "호박 종 미표기"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "hold_reason_code": "subtype_ambiguous",
+      "hold_reason_ko": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-194008101-0000",
+          "food_description": "파프리카(착색단고추)_빨간색_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "빨간색만"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-194008001-0000",
+          "food_description": "파프리카(착색단고추)_노란색_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "노란색만"
+        },
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 170108",
+          "data_type": "SR Legacy",
+          "food_description": "Peppers, sweet, red, raw",
+          "source_scientific_name": null,
+          "rejected_because": "red only"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "rose",
+      "ko": "장미꽃",
+      "scientific": "Rosa spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "nasturtium",
+      "ko": "한련화",
+      "scientific": "Tropaeolum majus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "pricklypear",
+      "ko": "천년초",
+      "scientific": "Opuntia spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168571",
+          "data_type": "SR Legacy",
+          "food_description": "Nopales, raw",
+          "source_scientific_name": "Nopalea cochenillifera",
+          "rejected_because": "Nopalea cochenillifera"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-212037901-0000",
+          "food_description": "선인장_저단선인장_줄기_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "저단선인장 종 확인 불가"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "orchard",
+      "ko": "오차드그라스",
+      "scientific": "Dactylis glomerata",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "ryegrass",
+      "ko": "라이그라스",
+      "scientific": "Lolium spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "wheatgrass",
+      "ko": "밀싹",
+      "scientific": "Triticum aestivum",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-016000101-0000",
+          "food_description": "밀_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "밀 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "barleygrass",
+      "ko": "보리싹",
+      "scientific": "Hordeum vulgare",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-025010101-0000",
+          "food_description": "보리_겉보리_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "보리 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "oatgrass",
+      "ko": "귀리싹",
+      "scientific": "Avena sativa",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-001010101-0000",
+          "food_description": "귀리_겉귀리_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "귀리 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "cornleaf",
+      "ko": "옥수수잎",
+      "scientific": "Zea mays",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-030020001-0000",
+          "food_description": "옥수수_단옥수수_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "옥수수 낟알"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "minari",
+      "ko": "미나리",
+      "scientific": "Oenanthe javanica",
+      "hold_reason_code": "policy_hold",
+      "hold_reason_ko": "기존 검토 정책이 일반 기록 연결을 금지한다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-077030001-0000",
+          "food_description": "미나리_물미나리_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "물미나리 전체; 부위·유형별 기록은 data/plant_nutrition_part_state_v1.json에서 따로 관리"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "qa_nutrition_part_state_v1: generic minari nutrition must not be promoted"
+    },
+    {
+      "plant_id": "aehobakleaf",
+      "ko": "애호박잎",
+      "scientific": "Cucurbita moschata",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-198007801-0000",
+          "food_description": "호박_잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "호박 잎 종 미표기 — C. moschata 확인 불가"
+        },
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 169272",
+          "data_type": "SR Legacy",
+          "food_description": "Pumpkin leaves, raw",
+          "source_scientific_name": "Cucurbita spp.",
+          "rejected_because": "Cucurbita spp. (genus)"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "sunflowerleaf",
+      "ko": "해바라기잎",
+      "scientific": "Helianthus annuus",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-197002701-0000",
+          "food_description": "해바라기_싹_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "해바라기 싹"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R105-034000002-0000",
+          "food_description": "해바라기씨_말린것",
+          "data_generation_method": "분석",
+          "rejected_because": "해바라기씨"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08",
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+    },
+    {
+      "plant_id": "violet",
+      "ko": "제비꽃",
+      "scientific": "Viola spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "geranium",
+      "ko": "제라늄",
+      "scientific": "Pelargonium spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "pansy",
+      "ko": "팬지",
+      "scientific": "Viola × wittrockiana",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "marigold",
+      "ko": "메리골드",
+      "scientific": "Tagetes spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "calendula",
+      "ko": "금잔화",
+      "scientific": "Calendula officinalis",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "whiteclover",
+      "ko": "화이트클로버",
+      "scientific": "Trifolium repens",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "redclover",
+      "ko": "레드클로버",
+      "scientific": "Trifolium pratense",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "ribwortplantain",
+      "ko": "창질경이",
+      "scientific": "Plantago lanceolata",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-170000001-0000",
+          "food_description": "질경이_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "질경이 = Plantago asiatica (korea_taxon_mapping_v1) ≠ P. lanceolata"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "broadleafplantain",
+      "ko": "왕질경이",
+      "scientific": "Plantago major",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-170000001-0000",
+          "food_description": "질경이_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "질경이 = Plantago asiatica (korea_taxon_mapping_v1) ≠ P. major"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "commonmallow",
+      "ko": "말바",
+      "scientific": "Malva sylvestris",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-123000001-0000",
+          "food_description": "아욱_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "아욱 = Malva verticillata ≠ M. sylvestris"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "marshmallow",
+      "ko": "마시멜로우",
+      "scientific": "Althaea officinalis",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hollyhock",
+      "ko": "접시꽃",
+      "scientific": "Alcea rosea",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "grapehyacinth",
+      "ko": "무스카리",
+      "scientific": "Muscari armeniacum",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "lemonbalm",
+      "ko": "레몬밤",
+      "scientific": "Melissa officinalis",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "sage",
+      "ko": "세이지",
+      "scientific": "Salvia officinalis",
+      "hold_reason_code": "state_mismatch",
+      "hold_reason_ko": "후보 기록이 건조·분말 등 날것이 아닌 상태뿐이다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 170935",
+          "data_type": "SR Legacy",
+          "food_description": "Spices, sage, ground",
+          "source_scientific_name": "Salvia officinalis",
+          "rejected_because": "dried ground"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R118-044000002-0000",
+          "food_description": "골든세이지_말린것",
+          "data_generation_method": "분석",
+          "rejected_because": "골든세이지 말린것"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "oregano",
+      "ko": "오레가노",
+      "scientific": "Origanum vulgare",
+      "hold_reason_code": "state_mismatch",
+      "hold_reason_ko": "후보 기록이 건조·분말 등 날것이 아닌 상태뿐이다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 171328",
+          "data_type": "SR Legacy",
+          "food_description": "Spices, oregano, dried",
+          "source_scientific_name": "Origanum vulgare",
+          "rejected_because": "dried"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R118-061000002-0000",
+          "food_description": "오레가노_말린것",
+          "data_generation_method": "수집",
+          "rejected_because": "오레가노 말린것"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "lavender",
+      "ko": "라벤더",
+      "scientific": "Lavandula angustifolia",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "chamomile",
+      "ko": "캐모마일",
+      "scientific": "Matricaria chamomilla",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "cornflower",
+      "ko": "수레국화",
+      "scientific": "Centaurea cyanus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "echinacea",
+      "ko": "에키네시아",
+      "scientific": "Echinacea purpurea",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "yarrow",
+      "ko": "서양톱풀",
+      "scientific": "Achillea millefolium",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "chrysanthemum",
+      "ko": "국화",
+      "scientific": "Chrysanthemum morifolium",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-026000001-0000",
+          "food_description": "국화꽃_생것",
+          "data_generation_method": "수집",
+          "rejected_because": "국화꽃 종 미표기(수집 자료) — C. morifolium 확인 불가"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "sunflowerpetal",
+      "ko": "해바라기꽃잎",
+      "scientific": "Helianthus annuus",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R105-034000002-0000",
+          "food_description": "해바라기씨_말린것",
+          "data_generation_method": "분석",
+          "rejected_because": "해바라기씨"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "strawberryleaf",
+      "ko": "딸기잎",
+      "scientific": "Fragaria × ananassa",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-019010001-0000",
+          "food_description": "딸기_개량종_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "딸기 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "raspberryleaf",
+      "ko": "라즈베리잎",
+      "scientific": "Rubus idaeus",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-115000001-0000",
+          "food_description": "라즈베리_생것",
+          "data_generation_method": "수집",
+          "rejected_because": "라즈베리 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "blackberryleaf",
+      "ko": "블랙베리잎",
+      "scientific": "Rubus fruticosus agg.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "appleleaf",
+      "ko": "사과나무잎",
+      "scientific": "Malus domestica",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-050000001-0000",
+          "food_description": "사과_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "사과 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "pearleaf",
+      "ko": "배나무잎",
+      "scientific": "Pyrus pyrifolia",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "plumleaf",
+      "ko": "자두나무잎",
+      "scientific": "Prunus salicina",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-082000001-0000",
+          "food_description": "자두_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "자두 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "peachleaf",
+      "ko": "복숭아나무잎",
+      "scientific": "Prunus persica",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-043020001-0000",
+          "food_description": "복숭아_백도_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "복숭아 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "violetleaf",
+      "ko": "제비꽃잎",
+      "scientific": "Viola mandshurica",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "violetflower",
+      "ko": "제비꽃",
+      "scientific": "Viola mandshurica",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "geraniumleaf",
+      "ko": "제라늄잎",
+      "scientific": "Pelargonium spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "cosmos",
+      "ko": "코스모스",
+      "scientific": "Cosmos bipinnatus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "waterdropwort",
+      "ko": "미나리",
+      "scientific": "Oenanthe javanica",
+      "hold_reason_code": "policy_hold",
+      "hold_reason_ko": "기존 검토 정책이 일반 기록 연결을 금지한다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-077030001-0000",
+          "food_description": "미나리_물미나리_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "미나리(minari)와 같은 Oenanthe javanica 개념; minari 보류 정책을 우회하지 않음"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "fennelleaf",
+      "ko": "펜넬잎",
+      "scientific": "Foeniculum vulgare",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 169385",
+          "data_type": "SR Legacy",
+          "food_description": "Fennel, bulb, raw",
+          "source_scientific_name": "Foeniculum vulgare",
+          "rejected_because": "bulb"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "amaranthleaf",
+      "ko": "비름",
+      "scientific": "Amaranthus spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168385",
+          "data_type": "SR Legacy",
+          "food_description": "Amaranth leaves, raw",
+          "source_scientific_name": "Amaranthus spp.",
+          "rejected_because": "source is Amaranthus spp."
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-093000001-0000",
+          "food_description": "비름_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "비름 종 미표기"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-143007801-0000",
+          "food_description": "열대비름(아마란스)_잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "열대비름(아마란스) - 다른 식품명"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "sorrel",
+      "ko": "수영",
+      "scientific": "Rumex acetosa",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 170076",
+          "data_type": "SR Legacy",
+          "food_description": "Dock, raw",
+          "source_scientific_name": "Rumex spp.",
+          "rejected_because": "source is Rumex spp. (genus), master is Rumex acetosa"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "dock",
+      "ko": "소리쟁이",
+      "scientific": "Rumex crispus",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 170076",
+          "data_type": "SR Legacy",
+          "food_description": "Dock, raw",
+          "source_scientific_name": "Rumex spp.",
+          "rejected_because": "source is Rumex spp. (genus), master is Rumex crispus"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-108007802-0000",
+          "food_description": "소리쟁이_잎_말린것",
+          "data_generation_method": "분석",
+          "rejected_because": "소리쟁이 잎 말린것(상태 불일치)"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "buckwheatleaf",
+      "ko": "메밀잎",
+      "scientific": "Fagopyrum esculentum",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-211002701-0000",
+          "food_description": "메밀_싹_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "메밀 싹"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-004000101-0000",
+          "food_description": "메밀_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "메밀 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "peashoot",
+      "ko": "완두순",
+      "scientific": "Pisum sativum",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R104-008000001-0000",
+          "food_description": "완두_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "완두 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "beanleaf",
+      "ko": "강낭콩잎",
+      "scientific": "Phaseolus vulgaris",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-183007801-0000",
+          "food_description": "콩잎_잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "콩잎 = 대두(Glycine max) 잎 ≠ Phaseolus vulgaris"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "kohlrabileaf",
+      "ko": "콜라비잎",
+      "scientific": "Brassica oleracea var. gongylodes",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168424",
+          "data_type": "SR Legacy",
+          "food_description": "Kohlrabi, raw",
+          "source_scientific_name": "Brassica oleracea (Gongylodes Group)",
+          "rejected_because": "swollen stem"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-181000001-0000",
+          "food_description": "콜라비_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "콜라비 비대줄기"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "rapeseedleaf",
+      "ko": "유채잎",
+      "scientific": "Brassica napus",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-157007801-0000",
+          "food_description": "유채_잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "유채 잎 — CSV에 학명이 없어 Brassica napus와 B. rapa 구분 불가"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-157042801-0000",
+          "food_description": "유채_서양종_잎줄기_생것",
+          "data_generation_method": "수집",
+          "rejected_because": "서양종 잎줄기(수집)"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "mizuna",
+      "ko": "미즈나",
+      "scientific": "Brassica rapa var. nipposinica",
+      "hold_reason_code": "subtype_ambiguous",
+      "hold_reason_ko": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-236003801-0000",
+          "food_description": "경수채_어린잎_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "어린잎 기록만 존재; 마스터는 생육단계를 특정하지 않음"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "pumpkinflower",
+      "ko": "호박꽃",
+      "scientific": "Cucurbita spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 169270",
+          "data_type": "SR Legacy",
+          "food_description": "Pumpkin flowers, raw",
+          "source_scientific_name": "Cucurbita spp.",
+          "rejected_because": "source is Cucurbita spp.; no Korea taxon mapping"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "cucumberleaf",
+      "ko": "오이잎",
+      "scientific": "Cucumis sativus",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-148010001-0000",
+          "food_description": "오이_개량종_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "오이 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "melonleaf",
+      "ko": "멜론잎",
+      "scientific": "Cucumis melo",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-034010001-0000",
+          "food_description": "멜론_감로_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "멜론 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "watermelonleaf",
+      "ko": "수박잎",
+      "scientific": "Citrullus lanatus",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-061030001-0000",
+          "food_description": "수박_적육질_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "수박 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "grapevineleaf",
+      "ko": "머루잎",
+      "scientific": "Vitis amurensis",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168575",
+          "data_type": "SR Legacy",
+          "food_description": "Grape leaves, raw",
+          "source_scientific_name": "Vitis vinifera",
+          "rejected_because": "Vitis vinifera ≠ Vitis amurensis"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-032004201-0000",
+          "food_description": "머루_껍질+씨포함_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "머루 열매(부위 불일치)"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "kiwileaf",
+      "ko": "키위잎",
+      "scientific": "Actinidia deliciosa",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R108-090020001-0000",
+          "food_description": "키위_그린_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "키위 열매"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "opuntiapad",
+      "ko": "손바닥선인장패드",
+      "scientific": "Opuntia ficus-indica",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 168571",
+          "data_type": "SR Legacy",
+          "food_description": "Nopales, raw",
+          "source_scientific_name": "Nopalea cochenillifera",
+          "rejected_because": "USDA scientific name Nopalea cochenillifera ≠ Opuntia ficus-indica"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-212017901-0000",
+          "food_description": "선인장_보검선인장_줄기_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "보검선인장 줄기 — 원자료에 학명이 없어 O. ficus-indica 여부 확인 불가"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "wheatleaf",
+      "ko": "밀잎",
+      "scientific": "Triticum aestivum",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-016000101-0000",
+          "food_description": "밀_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "밀 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "barleyleaf",
+      "ko": "보리잎",
+      "scientific": "Hordeum vulgare",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-025010101-0000",
+          "food_description": "보리_겉보리_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "보리 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "oatleaf",
+      "ko": "귀리잎",
+      "scientific": "Avena sativa",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R101-001010101-0000",
+          "food_description": "귀리_겉귀리_도정_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "귀리 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "meadowgrass",
+      "ko": "왕포아풀",
+      "scientific": "Poa pratensis",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "fescue",
+      "ko": "톨페스큐",
+      "scientific": "Schedonorus arundinaceus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "bermudagrass",
+      "ko": "우산잔디",
+      "scientific": "Cynodon dactylon",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hibiscusrosa",
+      "ko": "하와이무궁화",
+      "scientific": "Hibiscus rosa-sinensis",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "lindenleaf",
+      "ko": "피나무잎",
+      "scientific": "Tilia spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hazelleaf",
+      "ko": "개암나무잎",
+      "scientific": "Corylus spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "birchleaf",
+      "ko": "자작나무잎",
+      "scientific": "Betula spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "willowleaf",
+      "ko": "버드나무잎",
+      "scientific": "Salix spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "poplarleaf",
+      "ko": "포플러잎",
+      "scientific": "Populus spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "elmleaf",
+      "ko": "느릅나무잎",
+      "scientific": "Ulmus spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "mapleleaf",
+      "ko": "단풍나무잎",
+      "scientific": "Acer spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "ginkgoleaf",
+      "ko": "은행잎",
+      "scientific": "Ginkgo biloba",
+      "hold_reason_code": "part_mismatch",
+      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R105-022000001-0000",
+          "food_description": "은행_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "은행 종실"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "daisy",
+      "ko": "데이지",
+      "scientific": "Bellis perennis",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "eveningprimrose",
+      "ko": "달맞이꽃",
+      "scientific": "Oenothera spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "milkthistle",
+      "ko": "밀크시슬",
+      "scientific": "Silybum marianum",
+      "hold_reason_code": "species_mismatch",
+      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-139000002-0000",
+          "food_description": "엉겅퀴_말린것",
+          "data_generation_method": "분석",
+          "rejected_because": "엉겅퀴(Cirsium) 말린것 — 다른 속, 건조 상태"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hawthorn",
+      "ko": "산사나무속 잎",
+      "scientific": "Crataegus spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "sainfoin",
+      "ko": "샌포인",
+      "scientific": "Onobrychis viciifolia",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "borage",
+      "ko": "보리지",
+      "scientific": "Borago officinalis",
+      "hold_reason_code": "part_ambiguous",
+      "hold_reason_ko": "후보 기록의 식용 부위가 원자료에서 명시되지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "USDA FoodData Central",
+          "source_id": "FDC 170481",
+          "data_type": "SR Legacy",
+          "food_description": "Borage, raw",
+          "source_scientific_name": "Borago officinalis",
+          "rejected_because": "FDC description does not state leaf vs flower; FDC FoodOn attribute indicates flower"
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "henbit",
+      "ko": "광대나물",
+      "scientific": "Lamium amplexicaule",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "houseleek",
+      "ko": "셈페르비붐",
+      "scientific": "Sempervivum spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "echeveria",
+      "ko": "에케베리아",
+      "scientific": "Echeveria spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "snapdragon",
+      "ko": "금어초",
+      "scientific": "Antirrhinum majus",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hosta",
+      "ko": "비비추속",
+      "scientific": "Hosta spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
+          "source_id": "R106-159000001-0000",
+          "food_description": "비비추(이밥추)_생것",
+          "data_generation_method": "분석",
+          "rejected_because": "비비추(이밥추) 단일 종 기록; 마스터는 Hosta spp."
+        }
+      ],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "salsify",
+      "ko": "살시피류",
+      "scientific": "Tragopogon spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hawksbeard",
+      "ko": "씀바귀아재비류",
+      "scientific": "Crepis spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hawkbit",
+      "ko": "민들레아재비류",
+      "scientific": "Leontodon spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "catsear",
+      "ko": "서양금혼초",
+      "scientific": "Hypochaeris radicata",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hawkweed",
+      "ko": "조밥나물류",
+      "scientific": "Hieracium spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "petunia",
+      "ko": "페튜니아",
+      "scientific": "Petunia spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "dahlia",
+      "ko": "달리아",
+      "scientific": "Dahlia spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "gerbera",
+      "ko": "거베라",
+      "scientific": "Gerbera spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "zinnia",
+      "ko": "백일홍",
+      "scientific": "Zinnia spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "mexicanpetunia",
+      "ko": "멕시칸페튜니아",
+      "scientific": "Ruellia spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "coreopsis",
+      "ko": "금계국속",
+      "scientific": "Coreopsis spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "astilbe",
+      "ko": "아스틸베",
+      "scientific": "Astilbe spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "primula",
+      "ko": "프리뮬라속",
+      "scientific": "Primula spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "comfrey",
+      "ko": "컴프리",
+      "scientific": "Symphytum officinale",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "monarda",
+      "ko": "모나르다속",
+      "scientific": "Monarda spp.",
+      "hold_reason_code": "genus_level_master",
+      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "medicago_hispida",
+      "ko": "버클로버",
+      "scientific": "Medicago polymorpha L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "conyzacanadensis",
+      "ko": "망초",
+      "scientific": "Erigeron canadensis L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "ruscus_aculeatus",
+      "ko": "부처스브룸",
+      "scientific": "Ruscus aculeatus L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "hedgemustard",
+      "ko": "헤지머스터드",
+      "scientific": "Sisymbrium officinale (L.) Scop.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "harebell",
+      "ko": "헤어벨",
+      "scientific": "Campanula rotundifolia L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "erodium_botrys",
+      "ko": "넓은잎필라리",
+      "scientific": "Erodium botrys (Cav.) Bertol.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "lamium_album",
+      "ko": "흰광대나물",
+      "scientific": "Lamium album L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "dichondra_micrantha",
+      "ko": "아욱메풀",
+      "scientific": "Dichondra micrantha Urb.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "abutilon_indicum",
+      "ko": "인도아부틸론",
+      "scientific": "Abutilon indicum (L.) Sweet",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "aeonium_arboreum",
+      "ko": "에오니움 아르보레움",
+      "scientific": "Aeonium arboreum (L.) Webb & Berthel.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "buddleja_davidii",
+      "ko": "부들레야",
+      "scientific": "Buddleja davidii Franch.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "vicia_sativa",
+      "ko": "살갈퀴",
+      "scientific": "Vicia sativa L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    },
+    {
+      "plant_id": "vicia_cracca",
+      "ko": "등갈퀴나물",
+      "scientific": "Vicia cracca L.",
+      "hold_reason_code": "no_record_found",
+      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
+      "candidates_examined": [],
+      "do_not_infer": true,
+      "reviewed_at": "2026-10-08"
+    }
+  ]
+}

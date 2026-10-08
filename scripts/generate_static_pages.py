@@ -105,6 +105,11 @@ def assessment_copy(v, a=None):
     split=[_split_ibera_clauses(s) for s in parts]
     return x if split==parts else " ".join(split)
 
+def nutrition_food_name_html(v):
+    """Source food name: Korean RDA names are not marked as English."""
+    v=str(v or "")
+    return esc(v) if re.search(r"[가-힣]",v) and not re.search(r"[A-Za-z]",v) else f'<span lang="en">{esc(v)}</span>'
+
 def nutrition_basis_ko(v):
     """Korean label for the composition basis; the official record name itself stays in English."""
     v=str(v or "").strip().lower().replace("_"," ")
@@ -984,7 +989,7 @@ for p in plants:
             return "미확인" if v is None else f"{v}{unit}"
         ratio=nu.get("calcium_phosphorus_ratio")
         nutrition_note=("칼슘과 인의 비율은 식단을 볼 때 참고할 수 있지만, 이 값 하나만으로 좋은 먹이인지 결정하지 않는다." if ratio not in (None,"","—") else "Ca:P 자료가 없으면 임의 계산하거나 추정하지 않는다.")
-        nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 <span lang="en">{esc(nu.get("food_description"))}</span> · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'''
+        nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 {nutrition_food_name_html(nu.get("food_description"))} · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>{f'<p class="small">적용 범위: {esc(nu.get("applicability_note_ko"))}</p>' if nu.get("applicability_note_ko") else ""}'''
     else:
         nutrition_body='<p class="small">검증된 공식 영양성분 자료가 아직 연결되지 않았다. 자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 쓰지 않는다.</p>'
     nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2><p class="small">검증된 성분값만 표시한다. 영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않는다.</p>{nutrition_body}</section>'''

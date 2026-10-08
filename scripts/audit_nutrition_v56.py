@@ -52,7 +52,7 @@ def main():
         if not p: errors.append(f'{tag}: no matching master plant')
         else:
             sci = str(p.get('scientific') or '').strip(); status = str(p.get('identity_status') or '').lower()
-            if re.search(r'\\bspp\\.?$', sci, re.I) and pid not in korea_taxa: errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})')
+            if re.search(r'\bspp\.?$', sci, re.I) and pid not in korea_taxa: errors.append(f'{tag}: genus-level spp. identity cannot receive species/food nutrition mapping ({sci})')
             if any(x in status for x in ('blocked','unverified','needs_')) and pid not in korea_taxa: errors.append(f'{tag}: unresolved master identity_status={status}')
 
         source_name = n.get('source_name')
@@ -68,10 +68,13 @@ def main():
                 if m and f'/food-details/{m.group(1)}/' not in u.path: errors.append(f'{tag}: source URL FDC id does not match source_id')
             except Exception: errors.append(f'{tag}: invalid USDA source_url')
         elif source_name == 'Korean Standard Food Composition Database (RDA)':
-            if not re.fullmatch(r'[A-Za-z][0-9A-Za-z]+', source_id): errors.append(f'{tag}: invalid RDA food code format')
+            # F-codes: Korean Standard Food Composition DB 10.4 workbook; R-codes: RDA integrated raw-food composition CSV (data.go.kr 15100065)
+            r_code = re.fullmatch(r'R\d{3}-\d{9}-\d{4}', source_id)
+            if not (re.fullmatch(r'[A-Za-z][0-9A-Za-z]+', source_id) or r_code): errors.append(f'{tag}: invalid RDA food code format')
             try:
                 u = urlparse(source_url)
-                if u.scheme != 'https' or u.hostname not in {'www.nics.go.kr','koreanfood.rda.go.kr'}: errors.append(f'{tag}: RDA source_url must use an official RDA/NICS host')
+                if u.scheme != 'https' or u.hostname not in {'www.nics.go.kr','koreanfood.rda.go.kr','www.data.go.kr'}: errors.append(f'{tag}: RDA source_url must use an official RDA/NICS/data.go.kr host')
+                if r_code and u.path != '/data/15100065/fileData.do': errors.append(f'{tag}: RDA R-code records must cite the data.go.kr 15100065 dataset page')
             except Exception: errors.append(f'{tag}: invalid RDA source_url')
         else:
             errors.append(f'{tag}: unsupported official nutrition source_name')

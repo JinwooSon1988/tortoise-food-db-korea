@@ -6,6 +6,10 @@ on:
       - 'data/plant_nutrition_v56.json'
       - 'data/plants.json'
       - 'scripts/audit_nutrition_v56.py'
+      - 'data/nutrition_hold_list_v1.json'
+      - 'data/nutrition_coverage_audit_v1.json'
+      - 'scripts/qa_nutrition_hold_list_v1.py'
+      - 'scripts/build_nutrition_coverage_audit_v1.py'
       - '.github/workflows/nutrition-v56-qa.yml'
   push:
     branches: [main]
@@ -13,6 +17,10 @@ on:
       - 'data/plant_nutrition_v56.json'
       - 'data/plants.json'
       - 'scripts/audit_nutrition_v56.py'
+      - 'data/nutrition_hold_list_v1.json'
+      - 'data/nutrition_coverage_audit_v1.json'
+      - 'scripts/qa_nutrition_hold_list_v1.py'
+      - 'scripts/build_nutrition_coverage_audit_v1.py'
       - '.github/workflows/nutrition-v56-qa.yml'
 
 permissions:
@@ -28,3 +36,9 @@ jobs:
           python-version: '3.12'
       - name: Audit nutrition registry
         run: python scripts/audit_nutrition_v56.py
+      - name: Verified-or-held partition and provenance
+        run: python scripts/qa_nutrition_hold_list_v1.py
+      - name: Coverage audit is current
+        run: |
+          python scripts/build_nutrition_coverage_audit_v1.py
+          git diff --exit-code data/nutrition_coverage_audit_v1.json
