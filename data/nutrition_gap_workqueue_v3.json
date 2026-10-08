@@ -538,7 +538,18 @@
             "source": "https://batchbase.com.au/usda-foods/170108",
             "status": "secondary_crosscheck_only"
           },
-          "caution": "Foundation and SR Legacy records for same NDB differ in analytical basis and nutrients. Do not combine."
+          "caution": "Foundation and SR Legacy records for same NDB differ in analytical basis and nutrients. Do not combine.",
+          "green_foundation_fdc_candidate": {
+            "fdc_id": 2258588,
+            "ndb": 11333,
+            "status": "secondary_crosscheck_only"
+          },
+          "green_sr_legacy_fdc_candidate": {
+            "fdc_id": 170427,
+            "ndb": 11333,
+            "status": "secondary_crosscheck_only"
+          },
+          "verified_scope": "NDB primary confirmed; green FDC mappings from secondary sources only; require primary verification."
         }
       }
     },
