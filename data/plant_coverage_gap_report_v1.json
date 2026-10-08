@@ -7,7 +7,7 @@
     "research_pool_count": 182,
     "published": {
       "verified_image": 129,
-      "verified_nutrition": 49,
+      "verified_nutrition": 56,
       "with_assessment": 182,
       "with_evidence": 182,
       "with_korea_alias": 10,
@@ -243,16 +243,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "broccolileaf",
@@ -276,16 +275,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "arugula",
@@ -511,16 +509,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "basil",
@@ -1462,14 +1459,13 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
         "image",
-        "nutrition",
         "korea_alias"
       ],
       "next_action": "image"
@@ -1837,16 +1833,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "beanleaf",
@@ -1936,16 +1931,15 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": true,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "nutrition",
         "korea_alias"
       ],
-      "next_action": "nutrition"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "rapeseedleaf",
@@ -1970,14 +1964,13 @@
       "published": true,
       "identity_status": "verified_name",
       "verified_image": false,
-      "verified_nutrition": false,
+      "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
         "image",
-        "nutrition",
         "korea_alias"
       ],
       "next_action": "image"
