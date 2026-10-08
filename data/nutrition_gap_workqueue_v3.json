@@ -458,35 +458,31 @@
         "citation": "turn1search0"
       },
       "bellpepper": {
-        "status": "HOLD_record_identifier_type_unverified",
+        "status": "NDB_numbers_confirmed_from_USDA_Foundation_search;FDC_mapping_pending_except_red_secondary",
         "records": [
           {
             "color": "green",
             "food": "Peppers, bell, green, raw",
-            "candidate_identifier": 11333,
-            "identifier_type": "unverified_FDC_vs_NDB",
-            "record_status": "HOLD_identifier_not_verified"
+            "record_status": "NDB_verified_FDC_pending",
+            "ndb_number": 11333
           },
           {
             "color": "orange",
             "food": "Peppers, bell, orange, raw",
-            "candidate_identifier": 100278,
-            "identifier_type": "unverified_FDC_vs_NDB",
-            "record_status": "HOLD_identifier_not_verified"
+            "record_status": "NDB_verified_FDC_pending",
+            "ndb_number": 100278
           },
           {
             "color": "red",
             "food": "Peppers, bell, red, raw",
-            "candidate_identifier": 11821,
-            "identifier_type": "unverified_FDC_vs_NDB",
-            "record_status": "HOLD_identifier_not_verified"
+            "record_status": "NDB_verified_FDC_pending",
+            "ndb_number": 11821
           },
           {
             "color": "yellow",
             "food": "Peppers, bell, yellow, raw",
-            "candidate_identifier": 11951,
-            "identifier_type": "unverified_FDC_vs_NDB",
-            "record_status": "HOLD_identifier_not_verified"
+            "record_status": "NDB_verified_FDC_pending",
+            "ndb_number": 11951
           }
         ],
         "identity_warning": "Master Capsicum annuum is broader than color-specific records; preserve each record separately unless mapping policy explicitly defines cultivar/color equivalence.",
@@ -495,25 +491,55 @@
           "status": "not_yet_captured",
           "records": [
             {
-              "candidate_identifier": 11333,
-              "identifier_type": "unverified_FDC_vs_NDB"
+              "color": "green",
+              "ndb_number": 11333,
+              "fdc_id": null,
+              "record_status": "HOLD_FDC_mapping_and_payload"
             },
             {
-              "candidate_identifier": 100278,
-              "identifier_type": "unverified_FDC_vs_NDB"
+              "color": "orange",
+              "ndb_number": 100278,
+              "fdc_id": null,
+              "record_status": "HOLD_FDC_mapping_and_payload"
             },
             {
-              "candidate_identifier": 11821,
-              "identifier_type": "unverified_FDC_vs_NDB"
+              "color": "red",
+              "ndb_number": 11821,
+              "fdc_id": null,
+              "record_status": "HOLD_FDC_mapping_and_payload"
             },
             {
-              "candidate_identifier": 11951,
-              "identifier_type": "unverified_FDC_vs_NDB"
+              "color": "yellow",
+              "ndb_number": 11951,
+              "fdc_id": null,
+              "record_status": "HOLD_FDC_mapping_and_payload"
             }
           ],
           "reason": "Color-specific USDA records identified; complete nutrient payload extraction and exact display mapping remain before promotion."
         },
-        "correction": "Previous records used fdc_id for numbers that have not been verified as FoodData Central IDs. SR Legacy NDB numbers and FDC IDs are different identifier systems. Verify each against original USDA record before extraction."
+        "correction": "USDA Foundation Foods search explicitly labels 11333, 100278, 11821, 11951 as NDB Number. Earlier FDC ID designation was incorrect.",
+        "identifier_reconciliation": {
+          "source": "https://fdc.nal.usda.gov/food-search/?query=bell+pepper&type=Foundation",
+          "source_column": "NDB Number",
+          "verified_ndb_to_color": {
+            "11333": "green",
+            "11821": "red",
+            "11951": "yellow",
+            "100278": "orange"
+          },
+          "red_foundation_fdc_candidate": {
+            "fdc_id": 2258590,
+            "source": "https://fooddata.the50.store/foods/2258590-peppers-bell-red-raw",
+            "status": "secondary_crosscheck_only"
+          },
+          "red_sr_legacy_fdc_candidate": {
+            "fdc_id": 170108,
+            "ndb": 11821,
+            "source": "https://batchbase.com.au/usda-foods/170108",
+            "status": "secondary_crosscheck_only"
+          },
+          "caution": "Foundation and SR Legacy records for same NDB differ in analytical basis and nutrients. Do not combine."
+        }
       }
     },
     "bellpepper_resolution_plan": {
