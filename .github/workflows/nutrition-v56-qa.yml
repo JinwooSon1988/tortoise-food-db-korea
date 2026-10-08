@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'data/plant_nutrition_v56.json'
+      - 'data/nutrition_gap_workqueue_v3.json'
+      - 'scripts/qa_bellpepper_candidate_gate.py'
       - 'data/plants.json'
       - 'scripts/audit_nutrition_v56.py'
       - 'data/nutrition_hold_list_v1.json'
@@ -18,6 +20,8 @@ on:
     branches: [main]
     paths:
       - 'data/plant_nutrition_v56.json'
+      - 'data/nutrition_gap_workqueue_v3.json'
+      - 'scripts/qa_bellpepper_candidate_gate.py'
       - 'data/plants.json'
       - 'scripts/audit_nutrition_v56.py'
       - 'data/nutrition_hold_list_v1.json'
@@ -42,6 +46,8 @@ jobs:
           python-version: '3.12'
       - name: Audit nutrition registry
         run: python scripts/audit_nutrition_v56.py
+      - name: Block premature bell pepper nutrition promotion
+        run: python scripts/qa_bellpepper_candidate_gate.py
       - name: Verified-or-held partition and provenance
         run: python scripts/qa_nutrition_hold_list_v1.py
       - name: Dry-matter registry and worldwide research log
