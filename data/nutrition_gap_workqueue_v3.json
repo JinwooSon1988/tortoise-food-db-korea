@@ -458,27 +458,35 @@
         "citation": "turn1search0"
       },
       "bellpepper": {
-        "status": "candidate_records_identified_not_promoted",
+        "status": "HOLD_record_identifier_type_unverified",
         "records": [
           {
-            "fdc_id": 11333,
             "color": "green",
-            "food": "Peppers, bell, green, raw"
+            "food": "Peppers, bell, green, raw",
+            "candidate_identifier": 11333,
+            "identifier_type": "unverified_FDC_vs_NDB",
+            "record_status": "HOLD_identifier_not_verified"
           },
           {
-            "fdc_id": 100278,
             "color": "orange",
-            "food": "Peppers, bell, orange, raw"
+            "food": "Peppers, bell, orange, raw",
+            "candidate_identifier": 100278,
+            "identifier_type": "unverified_FDC_vs_NDB",
+            "record_status": "HOLD_identifier_not_verified"
           },
           {
-            "fdc_id": 11821,
             "color": "red",
-            "food": "Peppers, bell, red, raw"
+            "food": "Peppers, bell, red, raw",
+            "candidate_identifier": 11821,
+            "identifier_type": "unverified_FDC_vs_NDB",
+            "record_status": "HOLD_identifier_not_verified"
           },
           {
-            "fdc_id": 11951,
             "color": "yellow",
-            "food": "Peppers, bell, yellow, raw"
+            "food": "Peppers, bell, yellow, raw",
+            "candidate_identifier": 11951,
+            "identifier_type": "unverified_FDC_vs_NDB",
+            "record_status": "HOLD_identifier_not_verified"
           }
         ],
         "identity_warning": "Master Capsicum annuum is broader than color-specific records; preserve each record separately unless mapping policy explicitly defines cultivar/color equivalence.",
@@ -486,19 +494,32 @@
         "record_payload_snapshot": {
           "status": "not_yet_captured",
           "records": [
-            11333,
-            100278,
-            11821,
-            11951
+            {
+              "candidate_identifier": 11333,
+              "identifier_type": "unverified_FDC_vs_NDB"
+            },
+            {
+              "candidate_identifier": 100278,
+              "identifier_type": "unverified_FDC_vs_NDB"
+            },
+            {
+              "candidate_identifier": 11821,
+              "identifier_type": "unverified_FDC_vs_NDB"
+            },
+            {
+              "candidate_identifier": 11951,
+              "identifier_type": "unverified_FDC_vs_NDB"
+            }
           ],
           "reason": "Color-specific USDA records identified; complete nutrient payload extraction and exact display mapping remain before promotion."
-        }
+        },
+        "correction": "Previous records used fdc_id for numbers that have not been verified as FoodData Central IDs. SR Legacy NDB numbers and FDC IDs are different identifier systems. Verify each against original USDA record before extraction."
       }
     },
     "bellpepper_resolution_plan": {
       "display": "Keep color-specific records separate in evidence layer; public summary may show range only when clearly labeled as color-dependent.",
       "required_fields": [
-        "fdc_id",
+        "verified_identifier_type_and_value",
         "color",
         "food_description",
         "scientific_name",
@@ -516,7 +537,7 @@
         "Do not average green/orange/red/yellow values into a single nutrient record.",
         "Do not use a color-specific record as proof for all Capsicum annuum cultivars."
       ],
-      "promotion_gate": "Exact record-level payload and master mapping must be reconciled before verified promotion."
+      "promotion_gate": "Exact record-level payload and master mapping must be reconciled before verified promotion. Confirm whether each record identifier is FDC ID or NDB number; reject unlabeled IDs."
     },
     "next_action": "Proceed with record-level extraction for the 10 unresolved IDs; no promotion until exact taxon/part/raw-state mapping and full nutrient payload are reconciled.",
     "unresolved_current": [
