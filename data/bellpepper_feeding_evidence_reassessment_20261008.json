@@ -1,0 +1,34 @@
+{
+  "plant_id": "bellpepper",
+  "scientific_name": "Capsicum annuum",
+  "plant_part": "fruit",
+  "review_status": "evidence_conflict__requires_feeding_grade_review",
+  "current_site_grade": "C",
+  "source_positions": [
+    {
+      "source": "The Tortoise Table",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=8&plant=632",
+      "position": "Do not feed sweet/bell pepper fruit",
+      "evidence_type": "specialist husbandry guidance"
+    },
+    {
+      "source": "Food Chemistry 2012",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26434294/",
+      "position": "Chemical composition of sweet pepper genotypes; not a tortoise feeding trial",
+      "evidence_type": "plant chemical analysis"
+    },
+    {
+      "source": "USDA FoodData Central original CSV",
+      "url": "https://github.com/JinwooSon1988/tortoise-food-db-korea/blob/main/data/usda_bellpepper_original_csv_verified_20261008.json",
+      "position": "Seven color/source-specific raw pepper fruit nutrient records; none establishes tortoise feeding safety",
+      "evidence_type": "food composition database"
+    }
+  ],
+  "interpretation": {
+    "confirmed": "Nutrient composition differs by fruit color; USDA Foundation Foods Ca:P below 1 in four colors",
+    "not_confirmed": "Safe feeding frequency, dose, chronic outcomes, toxicity threshold or direct tortoise trial",
+    "risk_of_current_reasoning": "Absence of published toxicity evidence is not affirmative evidence of feeding safety; a chemical composition study does not override specialist avoidance guidance",
+    "recommended_action": "Expert review of grade C and rationale before changing public suitability; avoid automatically promoting or downgrading based on nutrient ratios alone"
+  },
+  "feeding_grade_changed": false
+}
