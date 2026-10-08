@@ -891,7 +891,7 @@ for p in plants:
     summary_display=summary_display.replace("정해진 것으로 해석하지 않는다", "정해졌다는 뜻은 아니다")
     summary_display=summary_display.replace("속 수준 판정을 넘겨 해석하지 않고", "속 수준 자료가 말하는 범위를 넘기지 않고")
 
-    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="verdictline"><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><div class="decisionwhy ko-evidence"><details class="whyfold"><summary>왜 이렇게 판정했나 · 이유 보기</summary><p>{esc(summary_display)}</p></details></div><p class="en-evidence" hidden>{esc(en_pending)}</p></section>'''
+    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="verdictline"><div class="verdict">{esc(grade+" · "+label if grade in "ABCD" else label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p></section>'''
 
     # 2) Practical reading: translate evidence boundaries into an immediate husbandry action.
     if grade=="A":
