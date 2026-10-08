@@ -13,70 +13,70 @@
       "ko": "시금치",
       "scientific": "Spinacia oleracea",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "timothy",
       "ko": "티모시",
       "scientific": "Phleum pratense",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "pansy",
       "ko": "팬지",
       "scientific": "Viola × wittrockiana",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "chrysanthemum",
       "ko": "국화",
       "scientific": "Chrysanthemum morifolium",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "mungbeansprout",
       "ko": "숙주나물",
       "scientific": "Vigna radiata",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "melonleaf",
       "ko": "멜론잎",
       "scientific": "Cucumis melo",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "kiwileaf",
       "ko": "키위잎",
       "scientific": "Actinidia deliciosa",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "radicchio",
       "ko": "라디키오",
       "scientific": "Cichorium intybus var. foliosum",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "chard",
       "ko": "근대",
       "scientific": "Beta vulgaris subsp. cicla",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     },
     {
       "plant_id": "mizuna",
       "ko": "미즈나",
       "scientific": "Brassica rapa var. nipposinica",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_unverified"
+      "image_state": "missing_from_verified_registry"
     }
   ],
   "nutrition_priority_exact_record_search": [
@@ -283,5 +283,13 @@
     "No numeric nutrient value without original record, plant part, processing and measurement basis",
     "No feeding grade change from indirect cross-taxon evidence alone",
     "Do not present backlog candidates as verified findings"
-  ]
+  ],
+  "image_audit": {
+    "verified_registry": "data/verified_plant_images_v56.json",
+    "registry_entries": 129,
+    "priority_candidates": 10,
+    "already_in_registry": 0,
+    "still_missing": 10,
+    "notes": "Registry match is not a fresh license audit; do not auto-publish or infer image display success."
+  }
 }
