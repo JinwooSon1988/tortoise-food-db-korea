@@ -31,7 +31,22 @@ with sync_playwright() as pw:
         assert page.locator('a[href="#evidence"]').count() > 0
         assert page.locator("#evidence").count() > 0
         assert not errors, f"JS errors at {width}px: {errors}"
-        print(f"PASS browser smoke: {width}x{height}, home/search/detail")
+        page.goto(url("all-plants/index.html"), wait_until="load")
+        grade_buttons = page.locator(".gradelegend button")
+        assert grade_buttons.count() == 5, "expected A/B/C/D/hold filters"
+        if width <= 639:
+            layout = page.locator(".gradelegend").evaluate("(el) => getComputedStyle(el).display")
+            assert layout == "grid", f"mobile grade legend should use grid, got {layout}"
+            a = grade_buttons.nth(0).bounding_box()
+            b = grade_buttons.nth(1).bounding_box()
+            c = grade_buttons.nth(2).bounding_box()
+            assert a and b and c
+            assert abs(a["y"] - b["y"]) < 5 and c["y"] > a["y"] + 10, "mobile grades should form two columns"
+            for i in range(grade_buttons.count()):
+                box = grade_buttons.nth(i).bounding_box()
+                assert box and box["x"] >= -1 and box["x"] + box["width"] <= width + 1, f"grade {i} clipped on mobile"
+        assert not errors, f"JS errors at {width}px: {errors}"
+        print(f"PASS browser smoke: {width}x{height}, home/search/detail/all-plants")
         page.close()
     browser.close()
 server.shutdown()
