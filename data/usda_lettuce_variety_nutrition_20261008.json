@@ -76,5 +76,33 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/169249/nutrients"
     }
   ],
-  "interpretation": "Different lettuce varieties have distinct nutrient records. Do not average across varieties or infer feeding safety from nutrients."
+  "interpretation": "Different lettuce varieties have distinct nutrient records. Do not average across varieties or infer feeding safety from nutrients.",
+  "original_csv_audit": {
+    "status": "passed",
+    "checked_at": "2026-10-08",
+    "source": "Uploaded USDA SR Legacy 2018-04 CSV ZIP",
+    "tables": [
+      "food.csv",
+      "nutrient.csv",
+      "food_nutrient.csv"
+    ],
+    "verified_fields": [
+      "food_description",
+      "water_g",
+      "protein_g",
+      "fiber_g",
+      "calcium_mg",
+      "phosphorus_mg",
+      "potassium_mg",
+      "vitamin_c_mg"
+    ],
+    "verified_fdc_ids": [
+      168429,
+      168431,
+      169247,
+      169248,
+      169249
+    ],
+    "limitation": "USDA variety descriptions are not automatically equivalent to Korean commercial lettuce names; tortoise suitability is independent of nutrition."
+  }
 }
