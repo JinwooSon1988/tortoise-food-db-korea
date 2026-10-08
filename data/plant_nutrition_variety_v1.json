@@ -15,7 +15,7 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/168429/nutrients",
       "data_type": "SR Legacy",
       "dataset_release": "2018-04",
-      "food_description": null,
+      "food_description": "Lettuce, butterhead (includes boston and bibb types), raw",
       "basis": "per 100 g raw edible portion",
       "plant_part": "leaf",
       "preparation_state": "raw",
@@ -28,8 +28,7 @@
       "potassium_mg": 238,
       "vitamin_c_mg": 3.7,
       "calcium_phosphorus_ratio": 1.061,
-      "food_description_provenance": "UNVERIFIED: exact original food.csv description not yet reconciled; display label is a human-readable variety label, not a verbatim USDA claim.",
-      "food_description_display": "Lettuce, butterhead (includes boston and bibb types), raw"
+      "food_description_provenance": "VERIFIED verbatim against uploaded USDA SR Legacy 2018-04 food.csv by FDC ID on 2026-10-09."
     },
     {
       "plant_id": "lettuce",
@@ -40,7 +39,7 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/168431/nutrients",
       "data_type": "SR Legacy",
       "dataset_release": "2018-04",
-      "food_description": null,
+      "food_description": "Lettuce, red leaf, raw",
       "basis": "per 100 g raw edible portion",
       "plant_part": "leaf",
       "preparation_state": "raw",
@@ -53,8 +52,7 @@
       "potassium_mg": 187,
       "vitamin_c_mg": 3.7,
       "calcium_phosphorus_ratio": 1.179,
-      "food_description_provenance": "UNVERIFIED: exact original food.csv description not yet reconciled; display label is a human-readable variety label, not a verbatim USDA claim.",
-      "food_description_display": "Lettuce, red leaf, raw"
+      "food_description_provenance": "VERIFIED verbatim against uploaded USDA SR Legacy 2018-04 food.csv by FDC ID on 2026-10-09."
     },
     {
       "plant_id": "lettuce",
@@ -65,7 +63,7 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/169247/nutrients",
       "data_type": "SR Legacy",
       "dataset_release": "2018-04",
-      "food_description": null,
+      "food_description": "Lettuce, cos or romaine, raw",
       "basis": "per 100 g raw edible portion",
       "plant_part": "leaf",
       "preparation_state": "raw",
@@ -78,8 +76,7 @@
       "potassium_mg": 247,
       "vitamin_c_mg": 4,
       "calcium_phosphorus_ratio": 1.1,
-      "food_description_provenance": "UNVERIFIED: exact original food.csv description not yet reconciled; display label is a human-readable variety label, not a verbatim USDA claim.",
-      "food_description_display": "Lettuce, cos or romaine, raw"
+      "food_description_provenance": "VERIFIED verbatim against uploaded USDA SR Legacy 2018-04 food.csv by FDC ID on 2026-10-09."
     },
     {
       "plant_id": "lettuce",
@@ -90,7 +87,7 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/169248/nutrients",
       "data_type": "SR Legacy",
       "dataset_release": "2018-04",
-      "food_description": null,
+      "food_description": "Lettuce, iceberg (includes crisphead types), raw",
       "basis": "per 100 g raw edible portion",
       "plant_part": "leaf",
       "preparation_state": "raw",
@@ -103,8 +100,7 @@
       "potassium_mg": 141,
       "vitamin_c_mg": 2.8,
       "calcium_phosphorus_ratio": 0.9,
-      "food_description_provenance": "UNVERIFIED: exact original food.csv description not yet reconciled; display label is a human-readable variety label, not a verbatim USDA claim.",
-      "food_description_display": "Lettuce, iceberg (includes crisphead types), raw"
+      "food_description_provenance": "VERIFIED verbatim against uploaded USDA SR Legacy 2018-04 food.csv by FDC ID on 2026-10-09."
     },
     {
       "plant_id": "lettuce",
@@ -115,7 +111,7 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/169249/nutrients",
       "data_type": "SR Legacy",
       "dataset_release": "2018-04",
-      "food_description": null,
+      "food_description": "Lettuce, green leaf, raw",
       "basis": "per 100 g raw edible portion",
       "plant_part": "leaf",
       "preparation_state": "raw",
@@ -128,9 +124,8 @@
       "potassium_mg": 194,
       "vitamin_c_mg": 9.2,
       "calcium_phosphorus_ratio": 1.241,
-      "food_description_provenance": "UNVERIFIED: exact original food.csv description not yet reconciled; display label is a human-readable variety label, not a verbatim USDA claim.",
-      "food_description_display": "Lettuce, green leaf, raw"
+      "food_description_provenance": "VERIFIED verbatim against uploaded USDA SR Legacy 2018-04 food.csv by FDC ID on 2026-10-09."
     }
   ],
-  "description_integrity_policy": "food_description is null until exact source food.csv string is reconciled by FDC ID. food_description_display is informational and not quoted as official."
+  "description_integrity_policy": "All five food_description strings were matched verbatim by FDC ID against the uploaded official SR Legacy 2018-04 food.csv. Do not extrapolate botanical identity or feeding safety from descriptions."
 }
