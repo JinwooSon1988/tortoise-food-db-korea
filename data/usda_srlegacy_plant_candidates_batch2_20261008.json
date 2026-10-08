@@ -1,0 +1,77 @@
+{
+  "version": "1.0",
+  "status": "original_USDA_SR_Legacy_2018_04_extracted__identity_review_pending",
+  "basis": "per 100 g raw edible portion",
+  "source_files": [
+    "food.csv",
+    "food_nutrient.csv",
+    "nutrient.csv"
+  ],
+  "warning": "Nutrient candidates only. No feeding safety grade or verified master plant mapping.",
+  "records": [
+    {
+      "plant_id": "borage",
+      "fdc_id": 170481,
+      "food_description": "Borage, raw",
+      "water_g": 93,
+      "protein_g": 1.8,
+      "fiber_g": null,
+      "calcium_mg": 93,
+      "phosphorus_mg": 53,
+      "potassium_mg": 470,
+      "vitamin_c_mg": 35,
+      "identity_limit": "Plant part and exact taxon unspecified.",
+      "ca_p_ratio": 1.755,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170481/nutrients",
+      "promotion_status": "HOLD_identity_or_part_match"
+    },
+    {
+      "plant_id": "amaranthleaf",
+      "fdc_id": 168385,
+      "food_description": "Amaranth leaves, raw",
+      "water_g": 91.69,
+      "protein_g": 2.46,
+      "fiber_g": null,
+      "calcium_mg": 215,
+      "phosphorus_mg": 50,
+      "potassium_mg": 611,
+      "vitamin_c_mg": 43.3,
+      "identity_limit": "Amaranthus species unspecified.",
+      "ca_p_ratio": 4.3,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168385/nutrients",
+      "promotion_status": "HOLD_identity_or_part_match"
+    },
+    {
+      "plant_id": "grapevineleaf",
+      "fdc_id": 168575,
+      "food_description": "Grape leaves, raw",
+      "water_g": 73.32,
+      "protein_g": 5.6,
+      "fiber_g": 11,
+      "calcium_mg": 363,
+      "phosphorus_mg": 91,
+      "potassium_mg": 272,
+      "vitamin_c_mg": 11.1,
+      "identity_limit": "Wild grape species identity not established.",
+      "ca_p_ratio": 3.989,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168575/nutrients",
+      "promotion_status": "HOLD_identity_or_part_match"
+    },
+    {
+      "plant_id": "opuntiapad",
+      "fdc_id": 168571,
+      "food_description": "Nopales, raw",
+      "water_g": 94.12,
+      "protein_g": 1.32,
+      "fiber_g": 2.2,
+      "calcium_mg": 164,
+      "phosphorus_mg": 16,
+      "potassium_mg": 257,
+      "vitamin_c_mg": 9.3,
+      "identity_limit": "Exact Opuntia species unspecified.",
+      "ca_p_ratio": 10.25,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168571/nutrients",
+      "promotion_status": "HOLD_identity_or_part_match"
+    }
+  ]
+}
