@@ -13,7 +13,14 @@
       "ko": "시금치",
       "scientific": "Spinacia oleracea",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "timothy",
@@ -37,6 +44,13 @@
           "license": "CC0 1.0",
           "notes": "iNaturalist-sourced photo, Commons license bot review recorded; inspect composition before selection"
         }
+      },
+      "publication_gate": {
+        "identity": "candidate_file_title_or_description_recorded",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "candidate_metadata_recorded_revalidation_required",
+        "file_stability": "pending",
+        "status": "HOLD"
       }
     },
     {
@@ -57,6 +71,13 @@
         "source_reviewed_at": "2026-10-08",
         "attribution_text": "Kolforn (Wikimedia), CC BY-SA 4.0",
         "license_compliance": "Attribution, license link, modification disclosure, and share-alike for adaptations required"
+      },
+      "publication_gate": {
+        "identity": "candidate_file_title_or_description_recorded",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "candidate_metadata_recorded_revalidation_required",
+        "file_stability": "pending",
+        "status": "HOLD"
       }
     },
     {
@@ -64,49 +85,98 @@
       "ko": "국화",
       "scientific": "Chrysanthemum morifolium",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "mungbeansprout",
       "ko": "숙주나물",
       "scientific": "Vigna radiata",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "melonleaf",
       "ko": "멜론잎",
       "scientific": "Cucumis melo",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "kiwileaf",
       "ko": "키위잎",
       "scientific": "Actinidia deliciosa",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "radicchio",
       "ko": "라디키오",
       "scientific": "Cichorium intybus var. foliosum",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "chard",
       "ko": "근대",
       "scientific": "Beta vulgaris subsp. cicla",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     },
     {
       "plant_id": "mizuna",
       "ko": "미즈나",
       "scientific": "Brassica rapa var. nipposinica",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "missing_from_verified_registry",
+      "publication_gate": {
+        "identity": "pending_original_file_review",
+        "depicted_part": "pending_visual_review",
+        "creator_license": "pending_original_file_review",
+        "file_stability": "pending",
+        "status": "HOLD"
+      }
     }
   ],
   "nutrition_priority_exact_record_search": [
@@ -320,6 +390,9 @@
     "priority_candidates": 10,
     "already_in_registry": 0,
     "still_missing": 10,
-    "notes": "Registry match is not a fresh license audit; do not auto-publish or infer image display success."
+    "notes": "Source candidates are not publication-ready until exact taxon, depicted plant part, license provenance, and durable image URL have been independently verified. Registry count is not a count of successfully displayed images.",
+    "publication_ready": 0,
+    "publication_hold": 10,
+    "last_triaged": "2026-10-08"
   }
 }
