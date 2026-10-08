@@ -84,5 +84,17 @@
     ],
     "result": "All four food descriptions and recorded water, protein, calcium, phosphorus, potassium, vitamin C values match original CSV; absent fiber values remain null.",
     "identity_review": "Source food descriptions do not establish exact plant species or plant part for every candidate; HOLD unchanged."
+  },
+  "original_food_description_audit": {
+    "status": "verified_verbatim",
+    "date": "2026-10-09",
+    "source": "Uploaded official USDA SR Legacy 2018-04 food.csv",
+    "matched_fdc_ids": [
+      168385,
+      168571,
+      168575,
+      170481
+    ],
+    "note": "Descriptions matched exactly; botanical species/part holds remain unchanged."
   }
 }
