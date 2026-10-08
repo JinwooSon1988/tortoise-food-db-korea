@@ -1,5 +1,12 @@
 name: Evidence distance UI QA
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/qa_evidence_distance_ui_v1.py'
+      - 'plant/**/index.html'
+      - '.github/workflows/evidence-distance-ui-qa.yml'
   pull_request:
     paths:
       - 'plant-detail-v56.js'
