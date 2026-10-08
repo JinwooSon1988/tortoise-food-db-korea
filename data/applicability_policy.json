@@ -12,5 +12,36 @@
     "Wild consumption is observational evidence, not captive staple approval.",
     "Plant nutrient data alone cannot generate a tortoise feeding verdict."
   ],
-  "fallback": "U"
+  "fallback": "U",
+  "version": "1.1",
+  "evidence_transfer_policy": {
+    "principle": "Comparative herbivorous-reptile evidence may inform hypotheses and risk screening, never directly establish tortoise plant-feeding safety.",
+    "evidence_classes": {
+      "tortoise_direct": "Direct tortoise feeding, clinical or field evidence; record exact taxon and study design.",
+      "other_herbivorous_reptile": "Indirect cross-taxon physiology, digestion, preference or toxicity; retain source taxon and prohibit automatic verdict promotion.",
+      "plant_chemistry": "Botanical nutrient/toxin measurements; require scientific identity, sampled part, processing and wet/dry basis; cannot independently establish feeding safety.",
+      "veterinary_husbandry": "Veterinary/zoo/husbandry guidance; identify intended taxon and whether advice is empirical or research-backed."
+    },
+    "mandatory_fields_for_cross_taxon": [
+      "source_id",
+      "source_taxon",
+      "target_taxon",
+      "plant_scientific_name",
+      "plant_part",
+      "study_design",
+      "finding",
+      "transfer_rationale",
+      "transfer_limitations",
+      "verdict_eligible"
+    ],
+    "transfer_rules": [
+      "Never treat acceptance, preference or digestion by iguanas or other herbivorous lizards as proof of safety for tortoises.",
+      "Species-specific toxicity, gut fermentation, fibre digestibility, mineral absorption and feeding frequencies cannot be transferred without tortoise-specific corroboration.",
+      "Plant chemical composition is an ingredient property; its clinical implications are animal-specific.",
+      "No automated grade promotion from cross-taxon evidence or plant composition alone.",
+      "When exact plant identity, part or measurement basis is missing, flag the mismatch rather than fill with a surrogate value.",
+      "Direct tortoise evidence and indirect comparative evidence must be displayed separately."
+    ],
+    "default_cross_taxon_verdict_eligible": false
+  }
 }
