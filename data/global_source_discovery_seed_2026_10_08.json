@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "discovery_only_not_assessed",
+  "policy": "No source below changes feeding verdicts, grades or nutrition values. Community statements are unverified leads. Respect site terms, robots, copyright, privacy and access restrictions.",
+  "sources": [
+    {
+      "id": "fao_infoods_global",
+      "kind": "official_global_directory",
+      "url": "https://www.fao.org/food-composition/tables-and-databases/",
+      "region": "global",
+      "review_state": "directory_confirmed",
+      "notes": "Worldwide national food composition database directory; inclusion is not FAO endorsement."
+    },
+    {
+      "id": "tortoise_trust_plants",
+      "kind": "specialist_husbandry_observation",
+      "url": "https://www.tortoisetrust.org/articles/plantfoods.html",
+      "region": "UK; Mediterranean field observations",
+      "review_state": "source_confirmed_not_independently_validated",
+      "notes": "Plant food list based partly on wild feeding observations; species, plant part and evidence distance require item-level verification."
+    },
+    {
+      "id": "tortoise_forum_plants_liked",
+      "kind": "unverified_community",
+      "url": "https://tortoiseforum.org/threads/plants-that-are-liked-by-the-tortoises.117737/",
+      "region": "international",
+      "review_state": "public_thread_confirmed",
+      "notes": "Reports from keepers on sulcata and leopard tortoise enclosure plants; not controlled evidence."
+    },
+    {
+      "id": "tortoise_forum_safe_edible",
+      "kind": "unverified_community",
+      "url": "https://tortoiseforum.org/threads/safe-and-edible-plants-for-my-tortoises.187777/",
+      "region": "international",
+      "review_state": "public_thread_confirmed",
+      "notes": "Discussion includes redfoot and elongated tortoises; claims need taxon-specific independent verification."
+    },
+    {
+      "id": "tortoise_forum_padloper",
+      "kind": "unverified_community_with_primary_source_lead",
+      "url": "https://tortoiseforum.org/threads/what-can-i-plant-for-my-padloper-tortoise.224525/",
+      "region": "South Africa; international",
+      "review_state": "public_thread_confirmed",
+      "notes": "Thread references DOI 10.1080/21564574.2002.9635461 and plant names for padlopers. Follow the primary publication; do not promote forum claims."
+    },
+    {
+      "id": "tortoise_forum_enclosure_plants",
+      "kind": "unverified_community",
+      "url": "https://tortoiseforum.org/threads/list-of-tort-safe-plants.176862/",
+      "region": "international",
+      "review_state": "public_thread_confirmed",
+      "notes": "Enclosure plant suggestions and keeper experiences; not proof of edible safety."
+    }
+  ],
+  "access_requests": [],
+  "publication_status": "internal_research_seed_only"
+}
