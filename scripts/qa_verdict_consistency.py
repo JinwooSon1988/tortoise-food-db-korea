@@ -183,6 +183,15 @@ for p in public:
         errors.append(f"{pid}: practical action must sit between verdict and evidence")
     if nutrition >= 0 and not (decision_start < nutrition < evidence):
         errors.append(f"{pid}: nutrition must sit between verdict and detailed evidence")
+    # Shared visual contract for every generated public plant detail, not only sample pages.
+    if 'class="evstats"' not in text or '근거 한눈에 보기' not in text:
+        errors.append(f"{pid}: shared evidence-count card layout missing")
+    if 'class="partscope"' in text and ('class="partlabel"' not in text or 'class="partvalue"' not in text):
+        errors.append(f"{pid}: feeding part label/value layout inconsistent")
+    if '핵심 내용 · 한국어 요약' in text:
+        errors.append(f"{pid}: retired evidence summary heading returned")
+    if 'class="evsummary"' in text and '핵심 내용 요약' not in text:
+        errors.append(f"{pid}: shared evidence summary heading missing")
     if '<details class="scopefold">' in text or '적용 범위와 아직 확인되지 않은 내용 보기' in text or '비슷한 식물도 확인하기' in text:
         errors.append(f"{pid}: retired scope/related UI returned")
 
