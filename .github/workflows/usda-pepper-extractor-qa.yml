@@ -44,6 +44,6 @@ jobs:
               records=json.loads(result.stdout)['records']
               assert len(records)==4,records
               assert {x['color'] for x in records}=={'green','red','yellow','orange'}
-              assert all('Energy' in x['nutrients'] for x in records)
+              assert all('1008:Energy' in x['nutrients'] for x in records)
               print('PASS: four colors, nutrient join, and hot pepper exclusion')
           PY
