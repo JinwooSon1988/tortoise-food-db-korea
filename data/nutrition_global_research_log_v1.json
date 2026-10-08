@@ -1,0 +1,493 @@
+{
+  "schema_version": "1.0",
+  "batch": "worldwide nutrition intake 2026-10-08",
+  "protocol": "docs/GLOBAL_NUTRITION_INTAKE_PROTOCOL_2026-10-08.md",
+  "decision_rule": "adopt only exact species (or master-level taxon) + plant part + state + unit/basis; never borrow from congeners, other parts, other states, compiled multi-species means, or values a database itself copied from another food",
+  "accessed_at": "2026-10-08",
+  "sources": [
+    {
+      "id": "jp_mext_2023",
+      "region": "Asia",
+      "country": "Japan",
+      "institution": "MEXT (文部科学省)",
+      "database": "日本食品標準成分表（八訂）増補2023年",
+      "url": "https://www.mext.go.jp/a_menu/syokuhinseibun/mext_00001.html",
+      "files": [
+        "20260327-mxt_kagsei-mext-000029402_02.xlsx",
+        "20260327-mxt_kagsei-mext-000029402_0001.pdf",
+        "English scientific-name list 1374049_0r10.xlsx"
+      ],
+      "access": "downloaded",
+      "method": "Excel parsed by INFOODS tag row; MEXT scientific-name list matched against every held plant; official food descriptions read from the e-book",
+      "findings": [
+        {
+          "plant_id": "mizuna",
+          "record": "MEXT 06072 みずな 葉 生 (Brassica rapa Japonica Group)",
+          "decision": "adopted",
+          "reason": "species + leaf + raw; generic mizuna record resolves the young-leaf-only RDA hold"
+        },
+        {
+          "plant_id": "carrottop",
+          "record": "MEXT 06211 葉にんじん 葉 生 (Daucus carota)",
+          "decision": "adopted",
+          "reason": "carrot leaves, raw, analysed (young-plant leaves)"
+        },
+        {
+          "plant_id": "peashoot",
+          "record": "MEXT 06019 トウミョウ 茎葉 生 (Pisum sativum)",
+          "decision": "adopted",
+          "reason": "pea shoots (stem+leaf), raw"
+        },
+        {
+          "plant_id": "chrysanthemum",
+          "record": "MEXT 06058 きく 花びら 生 (Chrysanthemum morifolium)",
+          "decision": "adopted",
+          "reason": "exact species, petals, raw; RDA 국화꽃 (수집) carries identical values"
+        },
+        {
+          "plant_id": "lettuce",
+          "record": "MEXT 06362 サンチュ (Sang-chu lettuce, Lactuca sativa Angustana Group) and 06312-06316",
+          "decision": "held",
+          "reason": "several lettuce types; master 상추 does not fix the type (prior subtype hold kept). Sang-chu is the closest Korean-name match but its cultivar-group assignment needs a policy decision"
+        },
+        {
+          "plant_id": "radishgreens",
+          "record": "MEXT 06130 だいこん 葉 生 (Raphanus sativus Daikon Group)",
+          "decision": "rejected",
+          "reason": "cultivar-group-specific; superseded by species-level IFCT C031"
+        },
+        {
+          "plant_id": "rapeseedleaf",
+          "record": "MEXT 06203 洋種なばな 茎葉 生 (Brassica napus)",
+          "decision": "held",
+          "reason": "stem+leaf composite; master is leaf"
+        },
+        {
+          "plant_id": "celeryleaf",
+          "record": "MEXT 06075 キンサイ 茎葉 (Apium graveolens var. secalinum)",
+          "decision": "rejected",
+          "reason": "leaf celery variety and stem+leaf composite; master celery leaf not this variety"
+        },
+        {
+          "plant_id": "waterdropwort",
+          "record": "MEXT 06117 せり 茎葉 生 (Oenanthe javanica)",
+          "decision": "held",
+          "reason": "minari/waterdropwort generic-record policy hold retained"
+        },
+        {
+          "plant_id": "sage",
+          "record": "MEXT 17070 セージ 粉",
+          "decision": "rejected",
+          "reason": "dried ground spice only"
+        }
+      ]
+    },
+    {
+      "id": "fr_ciqual_2025",
+      "region": "Europe",
+      "country": "France",
+      "institution": "ANSES",
+      "database": "Ciqual 2025 (2025-11-03)",
+      "url": "https://ciqual.anses.fr/",
+      "files": [
+        "Table Ciqual 2025_ENG_2025_11_03.xlsx",
+        "2025_11_03.7z (XML with confidence codes and sources)"
+      ],
+      "access": "downloaded",
+      "method": "scientific-name column + per-value confidence code and source citation from XML",
+      "findings": [
+        {
+          "plant_id": "sorrel",
+          "record": "Ciqual 20111 Sorrel, raw (Rumex acetosa L.)",
+          "decision": "rejected",
+          "reason": "all values confidence D; minerals copied from Danish Frida 7.01; protein/carbohydrate/energy imputed by Ciqual (source 444). Traced further: see Frida 872"
+        },
+        {
+          "plant_id": "sage",
+          "record": "Ciqual 11069 Sage, fresh",
+          "decision": "rejected",
+          "reason": "no scientific name in source"
+        },
+        {
+          "plant_id": "mint",
+          "record": "Ciqual 11027 Mint, fresh",
+          "decision": "held",
+          "reason": "master Mentha spp. is genus-level; record species not stated"
+        }
+      ]
+    },
+    {
+      "id": "dk_frida_5_5",
+      "region": "Europe",
+      "country": "Denmark",
+      "institution": "DTU National Food Institute",
+      "database": "Frida 5.5 (CC BY 4.0, doi:10.11583/DTU.29500682.v8)",
+      "url": "https://doi.org/10.11583/DTU.29500682",
+      "files": [
+        "Frida_5.5_Dataset.xlsx"
+      ],
+      "access": "downloaded",
+      "method": "TaxonomicName matched; Data_Normalised source/SourceFood traced per value",
+      "findings": [
+        {
+          "plant_id": "sorrel",
+          "record": "Frida 872 Dock (US), sorrel (UK), raw (Rumex acetosa)",
+          "decision": "rejected",
+          "reason": "water/protein/minerals taken from USDA SR20 \"Dock, raw\", which USDA labels Rumex spp. — species-level identity not established"
+        },
+        {
+          "plant_id": "celeryleaf",
+          "record": "Frida 767 Celeriac, celery leaves, raw (Apium graveolens var. dulce)",
+          "decision": "rejected",
+          "reason": "water/protein/fat/fibre borrowed from Frida food 46 (celeriac root) — root values substituted for leaves"
+        }
+      ]
+    },
+    {
+      "id": "fi_fineli",
+      "region": "Europe",
+      "country": "Finland",
+      "institution": "THL",
+      "database": "Fineli",
+      "url": "https://fineli.fi/",
+      "access": "blocked (HTTP 403 / Cloudflare bot challenge); not bypassed",
+      "method": "none",
+      "findings": []
+    },
+    {
+      "id": "in_ifct_2017",
+      "region": "Asia",
+      "country": "India",
+      "institution": "ICMR-National Institute of Nutrition",
+      "database": "Indian Food Composition Tables 2017",
+      "url": "https://nin.res.in/ebooks/IFCT2017.pdf",
+      "files": [
+        "IFCT2017.pdf",
+        "npm @ifct2017/compositions 2.0.9 (extraction aid only)"
+      ],
+      "access": "downloaded",
+      "method": "scientific names matched; every stored value located in the official PDF row",
+      "findings": [
+        {
+          "plant_id": "cauliflowerleaf",
+          "record": "IFCT C017 Cauliflower leaves (Brassica oleracea var. botrytis)",
+          "decision": "adopted",
+          "reason": "exact variety, leaf, raw; 6 regions"
+        },
+        {
+          "plant_id": "kohlrabileaf",
+          "record": "IFCT C024 Knol-Khol, leaves (Brassica oleracea var. gongylodes)",
+          "decision": "adopted",
+          "reason": "exact variety, leaf, raw; 2 regions"
+        },
+        {
+          "plant_id": "radishgreens",
+          "record": "IFCT C031 Radish leaves (Raphanus sativus)",
+          "decision": "adopted",
+          "reason": "species-level leaf record (no cultivar restriction), 6 regions"
+        },
+        {
+          "plant_id": "lettuce",
+          "record": "IFCT C025 Lettuce (Lactuca sativa)",
+          "decision": "held",
+          "reason": "lettuce type not described; master 상추 implies leaf lettuce"
+        },
+        {
+          "plant_id": "pumpkinleaf",
+          "record": "IFCT C030 Pumpkin leaves, tender (Cucurbita maxima)",
+          "decision": "held",
+          "reason": "master Cucurbita spp. is genus-level"
+        },
+        {
+          "plant_id": "mint",
+          "record": "IFCT G016 Mint leaves (Mentha spicata)",
+          "decision": "held",
+          "reason": "master Mentha spp. is genus-level"
+        }
+      ]
+    },
+    {
+      "id": "fao_wafct_2019",
+      "region": "Africa",
+      "country": "West Africa (regional)",
+      "institution": "FAO/INFOODS",
+      "database": "West African Food Composition Table 2019",
+      "url": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+      "access": "downloaded",
+      "method": "scientific names matched; BiblioID inspected",
+      "findings": [
+        {
+          "plant_id": "pumpkinleaf",
+          "record": "WAFCT 04_053 Pumpkin, leaves, fresh, raw (Cucurbita pepo/Cucurbita maxima)",
+          "decision": "rejected",
+          "reason": "compiled mean of two species and several tables"
+        },
+        {
+          "plant_id": "amaranthleaf",
+          "record": "WAFCT 04_023 Amaranth, leaves (Amaranthus spp.)",
+          "decision": "held",
+          "reason": "genus-level composite"
+        },
+        {
+          "plant_id": "lettuce",
+          "record": "WAFCT 04_040 Lettuce, raw",
+          "decision": "held",
+          "reason": "compiled from several tables, type not stated"
+        }
+      ]
+    },
+    {
+      "id": "fao_kenya_2018",
+      "region": "Africa",
+      "country": "Kenya",
+      "institution": "Government of Kenya / FAO",
+      "database": "Kenya Food Composition Tables 2018",
+      "url": "https://www.fao.org/3/I8897EN/i8897en.pdf",
+      "access": "downloaded (PDF text)",
+      "method": "scientific names searched",
+      "findings": [],
+      "result": "no exact species+part record for any held plant"
+    },
+    {
+      "id": "au_afcd_r3",
+      "region": "Oceania",
+      "country": "Australia",
+      "institution": "FSANZ",
+      "database": "Australian Food Composition Database Release 3",
+      "url": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd/data-files",
+      "access": "downloaded",
+      "method": "food names/descriptions searched (no scientific-name field)",
+      "findings": [
+        {
+          "plant_id": "sage",
+          "record": "AFCD F010439 Sage, fresh, raw (Derivation: Borrowed)",
+          "decision": "rejected",
+          "reason": "borrowed values, no scientific name"
+        },
+        {
+          "plant_id": "oregano",
+          "record": "AFCD F010452 Oregano, fresh, raw (Borrowed)",
+          "decision": "rejected",
+          "reason": "borrowed values, no scientific name"
+        },
+        {
+          "plant_id": "mint",
+          "record": "AFCD F005700 Mint, fresh, raw",
+          "decision": "held",
+          "reason": "genus-level master"
+        }
+      ]
+    },
+    {
+      "id": "feedipedia",
+      "region": "Global",
+      "country": "International (France/FAO)",
+      "institution": "INRAE, CIRAD, AFZ, FAO",
+      "database": "Feedipedia",
+      "url": "https://www.feedipedia.org/",
+      "access": "downloaded HTML pages",
+      "method": "species pages parsed; values marked * (equation) excluded; DM basis kept",
+      "findings": [
+        {
+          "plant_id": "timothy",
+          "record": "Feedipedia node 16887 Timothy (Phleum pratense), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "timothy",
+          "record": "Feedipedia node 16888 Timothy (Phleum pratense), hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "orchard",
+          "record": "Feedipedia node 11991 Cocksfoot, aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "orchard",
+          "record": "Feedipedia node 11990 Cocksfoot hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "bermudagrass",
+          "record": "Feedipedia node 11847 Bermuda grass (Cynodon dactylon), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "bermudagrass",
+          "record": "Feedipedia node 11850 Bermuda grass (Cynodon dactylon), hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "alfalfa",
+          "record": "Feedipedia node 11745 Alfalfa, aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "alfalfa",
+          "record": "Feedipedia node 11743 Alfalfa hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "whiteclover",
+          "record": "Feedipedia node 12762 White clover (Trifolium repens), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "whiteclover",
+          "record": "Feedipedia node 12763 White clover (Trifolium repens), hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "redclover",
+          "record": "Feedipedia node 12508 Red clover (Trifolium pratense), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "redclover",
+          "record": "Feedipedia node 12509 Red clover (Trifolium pratense), hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "sainfoin",
+          "record": "Feedipedia node 11623 Sainfoin, aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "sainfoin",
+          "record": "Feedipedia node 11624 Sainfoin, aerial part, hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "vicia_sativa",
+          "record": "Feedipedia node 12012 Common vetch (Vicia sativa), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "vicia_sativa",
+          "record": "Feedipedia node 12013 Common vetch (Vicia sativa), hay",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "medicago_hispida",
+          "record": "Feedipedia node 11903 Bur clover (Medicago polymorpha), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "erodium_botrys",
+          "record": "Feedipedia node 12076 Erodium (Erodium botrys), aerial part, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "opuntiapad",
+          "record": "Feedipedia node 11595 Prickly pear, cladodes, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "figleaf",
+          "record": "Feedipedia node 12086 Fig (Ficus carica), leaves, fresh",
+          "decision": "adopted",
+          "reason": "exact species; part/state explicit; stored in dry-matter registry only"
+        },
+        {
+          "plant_id": "ribwortplantain",
+          "record": "Feedipedia 11549 Ribwort plantain, aerial part",
+          "decision": "held",
+          "reason": "state (fresh/dried) not stated"
+        },
+        {
+          "plant_id": "comfrey",
+          "record": "Feedipedia 92 Russian comfrey (Symphytum × uplandicum)",
+          "decision": "rejected",
+          "reason": "different species from master Symphytum officinale"
+        },
+        {
+          "plant_id": "willowleaf",
+          "record": "Feedipedia 101 Weeping willow (Salix babylonica), leaves, dry",
+          "decision": "rejected",
+          "reason": "genus-level master; dried leaves"
+        },
+        {
+          "plant_id": "hibiscusrosa",
+          "record": "Feedipedia 139 Hibiscus rosa-sinensis, aerial part, fresh",
+          "decision": "held",
+          "reason": "aerial-part composite; master entry concerns the flower"
+        },
+        {
+          "plant_id": "ryegrass",
+          "record": "Feedipedia 625 Ryegrass (Lolium spp.)",
+          "decision": "held",
+          "reason": "genus-level master and source"
+        }
+      ]
+    },
+    {
+      "id": "europepmc_literature",
+      "region": "Global",
+      "country": "various",
+      "institution": "peer-reviewed journals via Europe PMC open-access full text",
+      "database": "Europe PMC REST (fullTextXML)",
+      "url": "https://www.ebi.ac.uk/europepmc/",
+      "access": "downloaded XML",
+      "method": "queries by scientific name + composition terms; tables and methods parsed from XML",
+      "findings": [
+        {
+          "plant_id": "chickweed",
+          "record": "PMC8621719 (PeerJ 2021, doi:10.7717/peerj.12488) Stellaria media fresh leaves",
+          "decision": "held",
+          "reason": "proximates stated per 100 g FW but mineral basis not stated (analysed on dried samples); \"crude fiber\" labelled with AOAC 991.43 (TDF method); protein 0.20 g/100 g anomalous"
+        },
+        {
+          "plant_id": "nasturtium",
+          "record": "PMC8621719 Tropaeolum majus fresh leaves",
+          "decision": "held",
+          "reason": "same basis ambiguity as above; leaves only"
+        },
+        {
+          "plant_id": "hibiscusleaf",
+          "record": "PMC9469864 (Food Sci Nutr 2022) Hibiscus syriacus leaves/petals",
+          "decision": "rejected",
+          "reason": "only amino acids, sugars, organic acids on dry-weight basis; no proximates/minerals"
+        },
+        {
+          "plant_id": "hibiscusflower",
+          "record": "PMC9469864 Hibiscus syriacus petals",
+          "decision": "rejected",
+          "reason": "as above"
+        },
+        {
+          "plant_id": "violetleaf",
+          "record": "PMC11765146 (Foods 2025) leaves of seven Viola species",
+          "decision": "rejected",
+          "reason": "none of the species is Viola mandshurica (congener substitution not allowed)"
+        }
+      ]
+    },
+    {
+      "id": "not_accessed",
+      "region": "various",
+      "country": "Germany (BLS), Netherlands (NEVO), China (CFCT), UK (CoFID), Brazil (TBCA), Turkey (TürKomp), Italy (BDA)",
+      "access": "not accessed in this batch (licensed, registration form, or no open bulk download identified)",
+      "findings": []
+    }
+  ]
+}

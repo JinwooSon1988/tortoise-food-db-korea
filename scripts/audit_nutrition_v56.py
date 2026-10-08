@@ -14,7 +14,11 @@ FORBIDDEN_KEYS = {
     'safe', 'safety', 'recommendation', 'recommended_ratio', 'diet_ratio'
 }
 NUMERIC_SUFFIXES = ('_g', '_mg', '_mcg')
-DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB'}
+DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB', 'Japan Standard Tables of Food Composition', 'Indian Food Composition Tables'}
+OTHER_OFFICIAL = {
+    'Standard Tables of Food Composition in Japan (MEXT)': (r'MEXT \d{5}', {'www.mext.go.jp'}, 'Japan'),
+    'Indian Food Composition Tables 2017 (ICMR-NIN)': (r'IFCT2017 [A-Z]\d{3}', {'nin.res.in'}, 'India'),
+}
 VERIFICATION_STATUSES = {'source_listed', 'verified'}
 
 
@@ -76,6 +80,14 @@ def main():
                 if u.scheme != 'https' or u.hostname not in {'www.nics.go.kr','koreanfood.rda.go.kr','www.data.go.kr'}: errors.append(f'{tag}: RDA source_url must use an official RDA/NICS/data.go.kr host')
                 if r_code and u.path != '/data/15100065/fileData.do': errors.append(f'{tag}: RDA R-code records must cite the data.go.kr 15100065 dataset page')
             except Exception: errors.append(f'{tag}: invalid RDA source_url')
+        elif source_name in OTHER_OFFICIAL:
+            # National tables added by the worldwide intake batch: fixed ID pattern, official host, explicit country.
+            id_pat, hosts, country = OTHER_OFFICIAL[source_name]
+            if not re.fullmatch(id_pat, source_id): errors.append(f'{tag}: invalid {source_name} record ID format')
+            try:
+                if urlparse(source_url).scheme != 'https' or urlparse(source_url).hostname not in hosts: errors.append(f'{tag}: source_url must use an official host {sorted(hosts)}')
+            except Exception: errors.append(f'{tag}: invalid source_url')
+            if n.get('source_country') != country: errors.append(f'{tag}: source_country must be {country}')
         else:
             errors.append(f'{tag}: unsupported official nutrition source_name')
 

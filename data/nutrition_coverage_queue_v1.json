@@ -23,36 +23,6 @@
       "reviewed_at": "2026-09-22"
     },
     {
-      "plant_id": "radishgreens",
-      "ko": "무잎",
-      "scientific": "Raphanus sativus",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "part_or_state_hold",
-      "do_not_infer": true,
-      "review_basis": "RDA_Korean_Standard_Food_Composition_DB_10.4_workbook",
-      "review_note": "RDA 10.4 contains cultivar-specific exact leaf record F067002B140a (무청, 조선무, 생것; Raphanus sativus L.). The record is preserved in the part/state registry, but the generic radishgreens master remains held because cultivar scope is narrower than the master.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
-      "plant_id": "cauliflowerleaf",
-      "ko": "콜리플라워잎",
-      "scientific": "Brassica oleracea var. botrytis",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "part_or_state_hold",
-      "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "USDA contains cauliflower raw head/florets (Foundation FDC 2685573), not an exact cauliflower-leaf record.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
       "plant_id": "figleaf",
       "ko": "무화과잎",
       "scientific": "Ficus carica",
@@ -110,21 +80,6 @@
       "do_not_infer": true,
       "review_basis": "official_usda_archives_supplied_2026-09-22",
       "review_note": "USDA contains celery raw (Foundation FDC 2346405), but the master item is specifically celery leaf; whole/stalk food record is not substituted.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
-      "plant_id": "carrottop",
-      "ko": "당근잎",
-      "scientific": "Daucus carota subsp. sativus",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "part_or_state_hold",
-      "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "USDA contains carrot roots, not an exact carrot-top/leaf record.",
       "reviewed_at": "2026-09-22"
     },
     {
@@ -473,8 +428,21 @@
     }
   ],
   "summary": {
-    "missing_count": 32,
-    "verified_count": 36,
-    "coverage_percent": 52.2
-  }
+    "missing_count": 29,
+    "verified_count": 56,
+    "coverage_percent": 52.2,
+    "note": "coverage_percent kept from the original 69-plant baseline; see data/nutrition_coverage_audit_v1.json for current coverage"
+  },
+  "resolved_log": [
+    {
+      "resolved_at": "2026-10-08",
+      "plant_ids": [
+        "radishgreens",
+        "cauliflowerleaf",
+        "carrottop"
+      ],
+      "by": "worldwide nutrition intake (MEXT 06211; IFCT 2017 C017, C031)",
+      "see": "data/nutrition_global_research_log_v1.json"
+    }
+  ]
 }

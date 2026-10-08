@@ -2,8 +2,8 @@
   "plant_master_count": 182,
   "plants_with_explainable_assessment": 179,
   "plants_with_direct_or_observational_evidence_map": 10,
-  "plants_with_nutrition_record": 49,
-  "plants_with_official_direct_nutrition_record": 49,
+  "plants_with_nutrition_record": 56,
+  "plants_with_official_direct_nutrition_record": 56,
   "public_safety_verdict_complete": 0,
   "coverage_note": "179 of 182 master plants have structured canonical assessments (data/public_assessments.json). Mallow and mint remain identity-blocked and minari remains evidence-blocked; they are published only as conservative hold cards with their blocking reason. General tortoise evidence is not promoted to Mediterranean Testudo direct evidence.",
   "priority_korea_foods_reviewed": [
@@ -97,6 +97,6 @@
     "plants_with_explainable_assessment": "plants with a record in data/public_assessments.json, excluding identity/evidence-blocked plants",
     "plants_with_direct_or_observational_evidence_map": "plants whose canonical assessment links a public evidence record with directness 'direct'",
     "plants_with_nutrition_record": "verified records in data/plant_nutrition_v56.json",
-    "plants_with_official_direct_nutrition_record": "verified official composition records (USDA FoodData Central, Korean RDA food composition) in data/plant_nutrition_v56.json"
+    "plants_with_official_direct_nutrition_record": "verified official composition records (USDA FoodData Central, Korean RDA, Japan MEXT, India IFCT 2017) in data/plant_nutrition_v56.json"
   }
 }

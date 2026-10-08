@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "nutrition_coverage_audit_v1.json"
 
-FIELDS = ["water_g", "protein_g", "fat_g", "carbohydrate_g", "fiber_g", "sugars_g", "calcium_mg", "phosphorus_mg",
+FIELDS = ["water_g", "protein_g", "fat_g", "carbohydrate_g", "available_carbohydrate_g", "fiber_g", "sugars_g", "calcium_mg", "phosphorus_mg",
           "calcium_phosphorus_ratio", "potassium_mg", "sodium_mg", "magnesium_mg", "iron_mg", "vitamin_c_mg",
           "vitamin_a_rae_ug", "energy_kcal"]
 # data/plants.json ids at commit 79c8948b (2026-09-20, docs/COVERAGE_EXPANSION_V1_QUEUE.md baseline "verified nutrition: 19/69").
@@ -41,6 +41,9 @@ def main():
     ids = [p["id"] for p in plants]
     recs = {r["plant_id"]: r for r in load("data/plant_nutrition_v56.json").get("plants", []) if r.get("verification_status") == "verified"}
     holds = {r["plant_id"]: r for r in load("data/nutrition_hold_list_v1.json").get("records", [])}
+    dm_path = ROOT / "data" / "plant_nutrition_dm_basis_v1.json"
+    dm = json.loads(dm_path.read_text(encoding="utf-8")).get("records", []) if dm_path.exists() else []
+    dm_plants = sorted({r["plant_id"] for r in dm})
     total = len(ids)
     field_cov = {f: {"plants": sum(1 for pid in ids if pid in recs and recs[pid].get(f) is not None)} for f in FIELDS}
     for f in field_cov:
@@ -57,7 +60,7 @@ def main():
                         "preparation_state": r.get("preparation_state"), "fields_present": len(present), "fields_missing": [f for f in FIELDS if f not in present]})
         else:
             h = holds.get(pid)
-            row.update({"status": "held", "hold_reason_code": h["hold_reason_code"] if h else None})
+            row.update({"status": "held", "hold_reason_code": h["hold_reason_code"] if h else None, "dm_basis_record": pid in dm_plants})
         per_plant.append(row)
     legacy_now = sum(1 for pid in LEGACY_69 if pid in recs)
     report = {
@@ -70,6 +73,10 @@ def main():
         "by_source_name": dict(sorted(Counter(recs[pid]["source_name"] for pid in ids if pid in recs).items())),
         "by_data_type": dict(sorted(Counter(recs[pid]["data_type"] for pid in ids if pid in recs).items())),
         "by_source_kind": dict(sorted(Counter(recs[pid].get("source_kind", "official_database") for pid in ids if pid in recs).items())),
+        "by_source_country": dict(sorted(Counter(recs[pid].get("source_country", "USA" if recs[pid]["source_name"].startswith("USDA") else "Korea") for pid in ids if pid in recs).items())),
+        "dry_matter_registry": {"file": "data/plant_nutrition_dm_basis_v1.json", "records": len(dm), "plants": len(dm_plants),
+                                "plants_without_fresh_record": [pid for pid in dm_plants if pid not in recs],
+                                "note": "DM-basis values are not per-100 g fresh values and are not counted in verified_plants"},
         "hold_reasons": dict(sorted(Counter(holds[pid]["hold_reason_code"] for pid in ids if pid in holds).items())),
         "field_coverage": field_cov,
         "legacy_69_baseline": {"baseline_verified": LEGACY_BASELINE_VERIFIED, "baseline_source": "docs/COVERAGE_EXPANSION_V1_QUEUE.md (2026-09-20)",
@@ -79,7 +86,7 @@ def main():
     }
     OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"nutrition coverage: {report['verified_plants']}/{total} verified ({report['coverage_percent']}%), held {report['held_plants']}; "
-          f"legacy 69: {legacy_now}/69")
+          f"legacy 69: {legacy_now}/69; DM-basis registry: {len(dm)} records / {len(dm_plants)} plants")
 
 
 if __name__ == "__main__":

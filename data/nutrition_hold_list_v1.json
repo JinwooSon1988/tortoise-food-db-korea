@@ -5,7 +5,8 @@
   "sources_searched": [
     "USDA FoodData Central SR Legacy Foods JSON 2018-04 (all 7,793 foods)",
     "USDA FoodData Central Foundation Foods JSON 2026-04-30 (363 foods)",
-    "농촌진흥청 국립식량과학원 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (공공데이터포털 15100065, 1,858 records)"
+    "농촌진흥청 국립식량과학원 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (공공데이터포털 15100065, 1,858 records)",
+    "See data/nutrition_global_research_log_v1.json for the 2026-10-08 worldwide batch (Japan, France, Denmark, Finland, India, West Africa, Kenya, Australia, Feedipedia, Europe PMC)."
   ],
   "reason_codes": {
     "subtype_ambiguous": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
@@ -21,13 +22,13 @@
     "genus_level_master": 38,
     "no_record_found": 46,
     "part_ambiguous": 1,
-    "part_mismatch": 28,
+    "part_mismatch": 24,
     "policy_hold": 2,
-    "species_mismatch": 12,
+    "species_mismatch": 11,
     "state_mismatch": 2,
-    "subtype_ambiguous": 4
+    "subtype_ambiguous": 2
   },
-  "held_count": 133,
+  "held_count": 126,
   "records": [
     {
       "plant_id": "lettuce",
@@ -62,60 +63,30 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
-    },
-    {
-      "plant_id": "radishgreens",
-      "ko": "무잎",
-      "scientific": "Raphanus sativus",
-      "hold_reason_code": "subtype_ambiguous",
-      "hold_reason_ko": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
-      "candidates_examined": [
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "international_candidates_examined": [
         {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-066027801-0000",
-          "food_description": "무청_조선무_잎_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "조선무 잎(분석)만"
+          "source": "日本食品標準成分表（八訂）増補2023年",
+          "country": "Japan",
+          "record": "MEXT 06362 サンチュ (Sang-chu lettuce, Lactuca sativa Angustana Group) and 06312-06316",
+          "decision": "held",
+          "reason": "several lettuce types; master 상추 does not fix the type (prior subtype hold kept). Sang-chu is the closest Korean-name match but its cultivar-group assignment needs a policy decision"
         },
         {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-066017801-0000",
-          "food_description": "무청_왜무_잎_생것",
-          "data_generation_method": "수집",
-          "rejected_because": "왜무 잎(수집)만"
-        }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지 (조선무·왜무 품종 차이)"
-    },
-    {
-      "plant_id": "cauliflowerleaf",
-      "ko": "콜리플라워잎",
-      "scientific": "Brassica oleracea var. botrytis",
-      "hold_reason_code": "part_mismatch",
-      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
-      "candidates_examined": [
-        {
-          "source": "USDA FoodData Central",
-          "source_id": "FDC 169986",
-          "data_type": "SR Legacy",
-          "food_description": "Cauliflower, raw",
-          "source_scientific_name": "Brassica oleracea (Botrytis Group)",
-          "rejected_because": "curd (flower head), not leaf"
+          "source": "Indian Food Composition Tables 2017",
+          "country": "India",
+          "record": "IFCT C025 Lettuce (Lactuca sativa)",
+          "decision": "held",
+          "reason": "lettuce type not described; master 상추 implies leaf lettuce"
         },
         {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-030000001-0000",
-          "food_description": "꽃양배추(콜리플라워)_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "꽃양배추 꽃봉오리"
+          "source": "West African Food Composition Table 2019",
+          "country": "West Africa (regional)",
+          "record": "WAFCT 04_040 Lettuce, raw",
+          "decision": "held",
+          "reason": "compiled from several tables, type not stated"
         }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      ]
     },
     {
       "plant_id": "figleaf",
@@ -135,7 +106,14 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 12086"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "hibiscusleaf",
@@ -145,7 +123,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "various",
+          "record": "PMC9469864 (Food Sci Nutr 2022) Hibiscus syriacus leaves/petals",
+          "decision": "rejected",
+          "reason": "only amino acids, sugars, organic acids on dry-weight basis; no proximates/minerals"
+        }
+      ]
     },
     {
       "plant_id": "hibiscusflower",
@@ -155,7 +142,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "various",
+          "record": "PMC9469864 Hibiscus syriacus petals",
+          "decision": "rejected",
+          "reason": "as above"
+        }
+      ]
     },
     {
       "plant_id": "celeryleaf",
@@ -182,34 +178,23 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
-    },
-    {
-      "plant_id": "carrottop",
-      "ko": "당근잎",
-      "scientific": "Daucus carota subsp. sativus",
-      "hold_reason_code": "part_mismatch",
-      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
-      "candidates_examined": [
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "international_candidates_examined": [
         {
-          "source": "USDA FoodData Central",
-          "source_id": "FDC 170393",
-          "data_type": "SR Legacy",
-          "food_description": "Carrots, raw",
-          "source_scientific_name": "Daucus carota",
-          "rejected_because": "root"
+          "source": "日本食品標準成分表（八訂）増補2023年",
+          "country": "Japan",
+          "record": "MEXT 06075 キンサイ 茎葉 (Apium graveolens var. secalinum)",
+          "decision": "rejected",
+          "reason": "leaf celery variety and stem+leaf composite; master celery leaf not this variety"
         },
         {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-041007601-0000",
-          "food_description": "당근_뿌리_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "당근 뿌리"
+          "source": "Frida 5.5 (CC BY 4.0, doi:10.11583/DTU.29500682.v8)",
+          "country": "Denmark",
+          "record": "Frida 767 Celeriac, celery leaves, raw (Apium graveolens var. dulce)",
+          "decision": "rejected",
+          "reason": "water/protein/fat/fibre borrowed from Frida food 46 (celeriac root) — root values substituted for leaves"
         }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      ]
     },
     {
       "plant_id": "mint",
@@ -244,7 +229,30 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "international_candidates_examined": [
+        {
+          "source": "Ciqual 2025 (2025-11-03)",
+          "country": "France",
+          "record": "Ciqual 11027 Mint, fresh",
+          "decision": "held",
+          "reason": "master Mentha spp. is genus-level; record species not stated"
+        },
+        {
+          "source": "Indian Food Composition Tables 2017",
+          "country": "India",
+          "record": "IFCT G016 Mint leaves (Mentha spicata)",
+          "decision": "held",
+          "reason": "master Mentha spp. is genus-level"
+        },
+        {
+          "source": "Australian Food Composition Database Release 3",
+          "country": "Australia",
+          "record": "AFCD F005700 Mint, fresh, raw",
+          "decision": "held",
+          "reason": "genus-level master"
+        }
+      ]
     },
     {
       "plant_id": "clover",
@@ -281,7 +289,15 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 11745",
+          "Feedipedia node 11743"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "chickweed",
@@ -291,7 +307,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "various",
+          "record": "PMC8621719 (PeerJ 2021, doi:10.7717/peerj.12488) Stellaria media fresh leaves",
+          "decision": "held",
+          "reason": "proximates stated per 100 g FW but mineral basis not stated (analysed on dried samples); \"crude fiber\" labelled with AOAC 991.43 (TDF method); protein 0.20 g/100 g anomalous"
+        }
+      ]
     },
     {
       "plant_id": "pumpkinleaf",
@@ -318,7 +343,23 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "international_candidates_examined": [
+        {
+          "source": "Indian Food Composition Tables 2017",
+          "country": "India",
+          "record": "IFCT C030 Pumpkin leaves, tender (Cucurbita maxima)",
+          "decision": "held",
+          "reason": "master Cucurbita spp. is genus-level"
+        },
+        {
+          "source": "West African Food Composition Table 2019",
+          "country": "West Africa (regional)",
+          "record": "WAFCT 04_053 Pumpkin, leaves, fresh, raw (Cucurbita pepo/Cucurbita maxima)",
+          "decision": "rejected",
+          "reason": "compiled mean of two species and several tables"
+        }
+      ]
     },
     {
       "plant_id": "bellpepper",
@@ -372,7 +413,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "various",
+          "record": "PMC8621719 Tropaeolum majus fresh leaves",
+          "decision": "held",
+          "reason": "same basis ambiguity as above; leaves only"
+        }
+      ]
     },
     {
       "plant_id": "pricklypear",
@@ -409,7 +459,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 16887",
+          "Feedipedia node 16888"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "orchard",
@@ -419,7 +477,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 11991",
+          "Feedipedia node 11990"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "ryegrass",
@@ -429,7 +495,16 @@
       "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Feedipedia",
+          "country": "International (France/FAO)",
+          "record": "Feedipedia 625 Ryegrass (Lolium spp.)",
+          "decision": "held",
+          "reason": "genus-level master and source"
+        }
+      ]
     },
     {
       "plant_id": "wheatgrass",
@@ -637,7 +712,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 12762",
+          "Feedipedia node 12763"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "redclover",
@@ -647,7 +730,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 12508",
+          "Feedipedia node 12509"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "ribwortplantain",
@@ -665,7 +756,16 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Feedipedia",
+          "country": "International (France/FAO)",
+          "record": "Feedipedia 11549 Ribwort plantain, aerial part",
+          "decision": "held",
+          "reason": "state (fresh/dried) not stated"
+        }
+      ]
     },
     {
       "plant_id": "broadleafplantain",
@@ -767,7 +867,30 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "日本食品標準成分表（八訂）増補2023年",
+          "country": "Japan",
+          "record": "MEXT 17070 セージ 粉",
+          "decision": "rejected",
+          "reason": "dried ground spice only"
+        },
+        {
+          "source": "Ciqual 2025 (2025-11-03)",
+          "country": "France",
+          "record": "Ciqual 11069 Sage, fresh",
+          "decision": "rejected",
+          "reason": "no scientific name in source"
+        },
+        {
+          "source": "Australian Food Composition Database Release 3",
+          "country": "Australia",
+          "record": "AFCD F010439 Sage, fresh, raw (Derivation: Borrowed)",
+          "decision": "rejected",
+          "reason": "borrowed values, no scientific name"
+        }
+      ]
     },
     {
       "plant_id": "oregano",
@@ -793,7 +916,16 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Australian Food Composition Database Release 3",
+          "country": "Australia",
+          "record": "AFCD F010452 Oregano, fresh, raw (Borrowed)",
+          "decision": "rejected",
+          "reason": "borrowed values, no scientific name"
+        }
+      ]
     },
     {
       "plant_id": "lavender",
@@ -842,24 +974,6 @@
       "hold_reason_code": "no_record_found",
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
-      "plant_id": "chrysanthemum",
-      "ko": "국화",
-      "scientific": "Chrysanthemum morifolium",
-      "hold_reason_code": "species_mismatch",
-      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
-      "candidates_examined": [
-        {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-026000001-0000",
-          "food_description": "국화꽃_생것",
-          "data_generation_method": "수집",
-          "rejected_because": "국화꽃 종 미표기(수집 자료) — C. morifolium 확인 불가"
-        }
-      ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08"
     },
@@ -999,7 +1113,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "various",
+          "record": "PMC11765146 (Foods 2025) leaves of seven Viola species",
+          "decision": "rejected",
+          "reason": "none of the species is Viola mandshurica (congener substitution not allowed)"
+        }
+      ]
     },
     {
       "plant_id": "violetflower",
@@ -1047,7 +1170,16 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "日本食品標準成分表（八訂）増補2023年",
+          "country": "Japan",
+          "record": "MEXT 06117 せり 茎葉 生 (Oenanthe javanica)",
+          "decision": "held",
+          "reason": "minari/waterdropwort generic-record policy hold retained"
+        }
+      ]
     },
     {
       "plant_id": "fennelleaf",
@@ -1099,7 +1231,16 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "West African Food Composition Table 2019",
+          "country": "West Africa (regional)",
+          "record": "WAFCT 04_023 Amaranth, leaves (Amaranthus spp.)",
+          "decision": "held",
+          "reason": "genus-level composite"
+        }
+      ]
     },
     {
       "plant_id": "sorrel",
@@ -1118,7 +1259,23 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Ciqual 2025 (2025-11-03)",
+          "country": "France",
+          "record": "Ciqual 20111 Sorrel, raw (Rumex acetosa L.)",
+          "decision": "rejected",
+          "reason": "all values confidence D; minerals copied from Danish Frida 7.01; protein/carbohydrate/energy imputed by Ciqual (source 444). Traced further: see Frida 872"
+        },
+        {
+          "source": "Frida 5.5 (CC BY 4.0, doi:10.11583/DTU.29500682.v8)",
+          "country": "Denmark",
+          "record": "Frida 872 Dock (US), sorrel (UK), raw (Rumex acetosa)",
+          "decision": "rejected",
+          "reason": "water/protein/minerals taken from USDA SR20 \"Dock, raw\", which USDA labels Rumex spp. — species-level identity not established"
+        }
+      ]
     },
     {
       "plant_id": "dock",
@@ -1172,24 +1329,6 @@
       "reviewed_at": "2026-10-08"
     },
     {
-      "plant_id": "peashoot",
-      "ko": "완두순",
-      "scientific": "Pisum sativum",
-      "hold_reason_code": "part_mismatch",
-      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
-      "candidates_examined": [
-        {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R104-008000001-0000",
-          "food_description": "완두_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "완두 종실"
-        }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
       "plant_id": "beanleaf",
       "ko": "강낭콩잎",
       "scientific": "Phaseolus vulgaris",
@@ -1202,32 +1341,6 @@
           "food_description": "콩잎_잎_생것",
           "data_generation_method": "분석",
           "rejected_because": "콩잎 = 대두(Glycine max) 잎 ≠ Phaseolus vulgaris"
-        }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
-      "plant_id": "kohlrabileaf",
-      "ko": "콜라비잎",
-      "scientific": "Brassica oleracea var. gongylodes",
-      "hold_reason_code": "part_mismatch",
-      "hold_reason_ko": "후보 기록이 다른 부위(열매·뿌리·줄기·종실·새싹 등)이다. 다른 부위 수치로 대체하지 않는다.",
-      "candidates_examined": [
-        {
-          "source": "USDA FoodData Central",
-          "source_id": "FDC 168424",
-          "data_type": "SR Legacy",
-          "food_description": "Kohlrabi, raw",
-          "source_scientific_name": "Brassica oleracea (Gongylodes Group)",
-          "rejected_because": "swollen stem"
-        },
-        {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-181000001-0000",
-          "food_description": "콜라비_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "콜라비 비대줄기"
         }
       ],
       "do_not_infer": true,
@@ -1256,25 +1369,16 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
-      "plant_id": "mizuna",
-      "ko": "미즈나",
-      "scientific": "Brassica rapa var. nipposinica",
-      "hold_reason_code": "subtype_ambiguous",
-      "hold_reason_ko": "공식 DB에 품종·색·생육단계가 다른 기록이 여러 개 있으나 마스터 항목은 하위 유형을 특정하지 않는다. 하나를 임의로 골라 대표값으로 쓰지 않는다.",
-      "candidates_examined": [
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
         {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-236003801-0000",
-          "food_description": "경수채_어린잎_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "어린잎 기록만 존재; 마스터는 생육단계를 특정하지 않음"
+          "source": "日本食品標準成分表（八訂）増補2023年",
+          "country": "Japan",
+          "record": "MEXT 06203 洋種なばな 茎葉 生 (Brassica napus)",
+          "decision": "held",
+          "reason": "stem+leaf composite; master is leaf"
         }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      ]
     },
     {
       "plant_id": "pumpkinflower",
@@ -1417,7 +1521,14 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 11595"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "wheatleaf",
@@ -1501,7 +1612,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 11847",
+          "Feedipedia node 11850"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "hibiscusrosa",
@@ -1511,7 +1630,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Feedipedia",
+          "country": "International (France/FAO)",
+          "record": "Feedipedia 139 Hibiscus rosa-sinensis, aerial part, fresh",
+          "decision": "held",
+          "reason": "aerial-part composite; master entry concerns the flower"
+        }
+      ]
     },
     {
       "plant_id": "lindenleaf",
@@ -1551,7 +1679,16 @@
       "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Feedipedia",
+          "country": "International (France/FAO)",
+          "record": "Feedipedia 101 Weeping willow (Salix babylonica), leaves, dry",
+          "decision": "rejected",
+          "reason": "genus-level master; dried leaves"
+        }
+      ]
     },
     {
       "plant_id": "poplarleaf",
@@ -1657,7 +1794,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 11623",
+          "Feedipedia node 11624"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "borage",
@@ -1874,7 +2019,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Feedipedia",
+          "country": "International (France/FAO)",
+          "record": "Feedipedia 92 Russian comfrey (Symphytum × uplandicum)",
+          "decision": "rejected",
+          "reason": "different species from master Symphytum officinale"
+        }
+      ]
     },
     {
       "plant_id": "monarda",
@@ -1894,7 +2048,14 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 11903"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "conyzacanadensis",
@@ -1944,7 +2105,14 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 12076"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "lamium_album",
@@ -2004,7 +2172,15 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "dm_basis_records": {
+        "file": "data/plant_nutrition_dm_basis_v1.json",
+        "source_ids": [
+          "Feedipedia node 12012",
+          "Feedipedia node 12013"
+        ],
+        "note": "verified dry-matter values exist; they are not per-100 g fresh values and do not lift this hold"
+      }
     },
     {
       "plant_id": "vicia_cracca",

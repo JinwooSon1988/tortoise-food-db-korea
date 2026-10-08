@@ -2,112 +2,143 @@
   "schema_version": "1.0",
   "purpose": "Descriptive nutrition coverage audit. Coverage numbers never change feeding verdicts, grades or confidence.",
   "public_plants": 182,
-  "verified_plants": 49,
-  "held_plants": 133,
-  "coverage_percent": 26.9,
+  "verified_plants": 56,
+  "held_plants": 126,
+  "coverage_percent": 30.8,
   "by_source_name": {
+    "Indian Food Composition Tables 2017 (ICMR-NIN)": 3,
     "Korean Standard Food Composition Database (RDA)": 15,
+    "Standard Tables of Food Composition in Japan (MEXT)": 4,
     "USDA FoodData Central": 34
   },
   "by_data_type": {
     "Foundation": 4,
+    "Indian Food Composition Tables": 3,
+    "Japan Standard Tables of Food Composition": 4,
     "Korean Standard Food Composition DB": 15,
     "SR Legacy": 30
   },
   "by_source_kind": {
-    "official_database": 49
+    "official_database": 56
+  },
+  "by_source_country": {
+    "India": 3,
+    "Japan": 4,
+    "Korea": 15,
+    "USA": 34
+  },
+  "dry_matter_registry": {
+    "file": "data/plant_nutrition_dm_basis_v1.json",
+    "records": 20,
+    "plants": 12,
+    "plants_without_fresh_record": [
+      "alfalfa",
+      "bermudagrass",
+      "erodium_botrys",
+      "figleaf",
+      "medicago_hispida",
+      "opuntiapad",
+      "orchard",
+      "redclover",
+      "sainfoin",
+      "timothy",
+      "vicia_sativa",
+      "whiteclover"
+    ],
+    "note": "DM-basis values are not per-100 g fresh values and are not counted in verified_plants"
   },
   "hold_reasons": {
     "genus_level_master": 38,
     "no_record_found": 46,
     "part_ambiguous": 1,
-    "part_mismatch": 28,
+    "part_mismatch": 24,
     "policy_hold": 2,
-    "species_mismatch": 12,
+    "species_mismatch": 11,
     "state_mismatch": 2,
-    "subtype_ambiguous": 4
+    "subtype_ambiguous": 2
   },
   "field_coverage": {
     "water_g": {
-      "plants": 49,
-      "percent_of_public_plants": 26.9
+      "plants": 56,
+      "percent_of_public_plants": 30.8
     },
     "protein_g": {
-      "plants": 49,
-      "percent_of_public_plants": 26.9
+      "plants": 56,
+      "percent_of_public_plants": 30.8
     },
     "fat_g": {
-      "plants": 48,
-      "percent_of_public_plants": 26.4
+      "plants": 54,
+      "percent_of_public_plants": 29.7
     },
     "carbohydrate_g": {
-      "plants": 42,
-      "percent_of_public_plants": 23.1
+      "plants": 46,
+      "percent_of_public_plants": 25.3
+    },
+    "available_carbohydrate_g": {
+      "plants": 3,
+      "percent_of_public_plants": 1.6
     },
     "fiber_g": {
-      "plants": 43,
-      "percent_of_public_plants": 23.6
+      "plants": 50,
+      "percent_of_public_plants": 27.5
     },
     "sugars_g": {
       "plants": 26,
       "percent_of_public_plants": 14.3
     },
     "calcium_mg": {
-      "plants": 49,
-      "percent_of_public_plants": 26.9
+      "plants": 56,
+      "percent_of_public_plants": 30.8
     },
     "phosphorus_mg": {
-      "plants": 49,
-      "percent_of_public_plants": 26.9
+      "plants": 56,
+      "percent_of_public_plants": 30.8
     },
     "calcium_phosphorus_ratio": {
+      "plants": 56,
+      "percent_of_public_plants": 30.8
+    },
+    "potassium_mg": {
       "plants": 49,
       "percent_of_public_plants": 26.9
     },
-    "potassium_mg": {
-      "plants": 42,
-      "percent_of_public_plants": 23.1
-    },
     "sodium_mg": {
-      "plants": 40,
-      "percent_of_public_plants": 22.0
+      "plants": 47,
+      "percent_of_public_plants": 25.8
     },
     "magnesium_mg": {
-      "plants": 34,
-      "percent_of_public_plants": 18.7
-    },
-    "iron_mg": {
       "plants": 41,
       "percent_of_public_plants": 22.5
     },
+    "iron_mg": {
+      "plants": 48,
+      "percent_of_public_plants": 26.4
+    },
     "vitamin_c_mg": {
+      "plants": 47,
+      "percent_of_public_plants": 25.8
+    },
+    "vitamin_a_rae_ug": {
       "plants": 40,
       "percent_of_public_plants": 22.0
     },
-    "vitamin_a_rae_ug": {
-      "plants": 36,
-      "percent_of_public_plants": 19.8
-    },
     "energy_kcal": {
-      "plants": 38,
-      "percent_of_public_plants": 20.9
+      "plants": 42,
+      "percent_of_public_plants": 23.1
     }
   },
   "legacy_69_baseline": {
     "baseline_verified": 19,
     "baseline_source": "docs/COVERAGE_EXPANSION_V1_QUEUE.md (2026-09-20)",
     "plants": 69,
-    "verified_now": 36,
-    "coverage_percent_now": 52.2,
+    "verified_now": 40,
+    "coverage_percent_now": 58.0,
     "still_held": [
       "lettuce",
-      "radishgreens",
-      "cauliflowerleaf",
       "figleaf",
       "hibiscusleaf",
       "hibiscusflower",
       "celeryleaf",
-      "carrottop",
       "mint",
       "clover",
       "alfalfa",
@@ -126,7 +157,6 @@
       "cornleaf",
       "minari",
       "aehobakleaf",
-      "peashoot",
       "sunflowerleaf",
       "violet",
       "geranium",
@@ -148,7 +178,9 @@
       "plant_part": "leaf (greens)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "romaine",
@@ -162,14 +194,17 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "lettuce",
       "ko": "상추",
       "scientific": "Lactuca sativa",
       "status": "held",
-      "hold_reason_code": "subtype_ambiguous"
+      "hold_reason_code": "subtype_ambiguous",
+      "dm_basis_record": false
     },
     {
       "plant_id": "radicchio",
@@ -184,6 +219,7 @@
       "preparation_state": "raw",
       "fields_present": 13,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g",
         "vitamin_a_rae_ug",
         "energy_kcal"
@@ -201,7 +237,9 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "dandelion",
@@ -217,6 +255,7 @@
       "fields_present": 7,
       "fields_missing": [
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "sugars_g",
         "potassium_mg",
         "sodium_mg",
@@ -241,6 +280,7 @@
       "fields_present": 6,
       "fields_missing": [
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "fiber_g",
         "sugars_g",
         "potassium_mg",
@@ -265,6 +305,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -281,6 +322,7 @@
       "preparation_state": "raw",
       "fields_present": 13,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g",
         "vitamin_a_rae_ug",
         "energy_kcal"
@@ -298,7 +340,9 @@
       "plant_part": "leaf (greens)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "turnipgreens",
@@ -312,7 +356,9 @@
       "plant_part": "leaf (greens)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "collard",
@@ -326,7 +372,9 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "cabbage",
@@ -340,7 +388,9 @@
       "plant_part": "head (leaves)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "napa",
@@ -357,6 +407,7 @@
       "fields_missing": [
         "fat_g",
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "sugars_g",
         "vitamin_c_mg",
         "vitamin_a_rae_ug",
@@ -367,8 +418,20 @@
       "plant_id": "radishgreens",
       "ko": "무잎",
       "scientific": "Raphanus sativus",
-      "status": "held",
-      "hold_reason_code": "subtype_ambiguous"
+      "status": "verified",
+      "source_name": "Indian Food Composition Tables 2017 (ICMR-NIN)",
+      "source_id": "IFCT2017 C031",
+      "data_type": "Indian Food Composition Tables",
+      "source_kind": "official_database",
+      "plant_part": "leaf",
+      "preparation_state": "raw",
+      "fields_present": 13,
+      "fields_missing": [
+        "carbohydrate_g",
+        "sugars_g",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "broccolileaf",
@@ -383,6 +446,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "vitamin_a_rae_ug"
       ]
     },
@@ -390,8 +454,20 @@
       "plant_id": "cauliflowerleaf",
       "ko": "콜리플라워잎",
       "scientific": "Brassica oleracea var. botrytis",
-      "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "status": "verified",
+      "source_name": "Indian Food Composition Tables 2017 (ICMR-NIN)",
+      "source_id": "IFCT2017 C017",
+      "data_type": "Indian Food Composition Tables",
+      "source_kind": "official_database",
+      "plant_part": "leaf",
+      "preparation_state": "raw",
+      "fields_present": 13,
+      "fields_missing": [
+        "carbohydrate_g",
+        "sugars_g",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "arugula",
@@ -405,7 +481,9 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "plantain",
@@ -421,6 +499,7 @@
       "fields_present": 6,
       "fields_missing": [
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "fiber_g",
         "sugars_g",
         "potassium_mg",
@@ -445,6 +524,7 @@
       "preparation_state": "raw",
       "fields_present": 9,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g",
         "sodium_mg",
         "magnesium_mg",
@@ -459,7 +539,8 @@
       "ko": "무화과잎",
       "scientific": "Ficus carica",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": true
     },
     {
       "plant_id": "mallow",
@@ -475,6 +556,7 @@
       "fields_present": 7,
       "fields_missing": [
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "sugars_g",
         "potassium_mg",
         "sodium_mg",
@@ -490,14 +572,16 @@
       "ko": "무궁화잎",
       "scientific": "Hibiscus syriacus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hibiscusflower",
       "ko": "무궁화꽃",
       "scientific": "Hibiscus syriacus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "spinach",
@@ -511,7 +595,9 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "beetgreens",
@@ -525,7 +611,9 @@
       "plant_part": "leaf (greens)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "watercress",
@@ -539,7 +627,9 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "parsley",
@@ -553,7 +643,9 @@
       "plant_part": "leaf (fresh herb)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "cilantro",
@@ -567,21 +659,34 @@
       "plant_part": "leaf",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "celeryleaf",
       "ko": "셀러리잎",
       "scientific": "Apium graveolens",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "carrottop",
       "ko": "당근잎",
       "scientific": "Daucus carota subsp. sativus",
-      "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "status": "verified",
+      "source_name": "Standard Tables of Food Composition in Japan (MEXT)",
+      "source_id": "MEXT 06211",
+      "data_type": "Japan Standard Tables of Food Composition",
+      "source_kind": "official_database",
+      "plant_part": "leaf (young plant)",
+      "preparation_state": "raw",
+      "fields_present": 15,
+      "fields_missing": [
+        "available_carbohydrate_g",
+        "sugars_g"
+      ]
     },
     {
       "plant_id": "basil",
@@ -595,14 +700,17 @@
       "plant_part": "leaf (fresh herb)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "mint",
       "ko": "민트",
       "scientific": "Mentha spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "perilla",
@@ -617,6 +725,7 @@
       "preparation_state": "raw",
       "fields_present": 9,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g",
         "sodium_mg",
         "magnesium_mg",
@@ -631,21 +740,24 @@
       "ko": "클로버",
       "scientific": "Trifolium spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "alfalfa",
       "ko": "알팔파",
       "scientific": "Medicago sativa",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": true
     },
     {
       "plant_id": "chickweed",
       "ko": "별꽃",
       "scientific": "Stellaria media",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "sweetpotatoleaf",
@@ -660,6 +772,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -668,7 +781,8 @@
       "ko": "호박잎",
       "scientific": "Cucurbita spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "zucchini",
@@ -683,6 +797,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "magnesium_mg"
       ]
     },
@@ -698,14 +813,17 @@
       "plant_part": "fruit (with peel)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "bellpepper",
       "ko": "파프리카",
       "scientific": "Capsicum annuum",
       "status": "held",
-      "hold_reason_code": "subtype_ambiguous"
+      "hold_reason_code": "subtype_ambiguous",
+      "dm_basis_record": false
     },
     {
       "plant_id": "tomato",
@@ -719,7 +837,9 @@
       "plant_part": "fruit (ripe)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "grapeleaf",
@@ -733,77 +853,89 @@
       "plant_part": "leaf",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "rose",
       "ko": "장미꽃",
       "scientific": "Rosa spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "nasturtium",
       "ko": "한련화",
       "scientific": "Tropaeolum majus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "pricklypear",
       "ko": "천년초",
       "scientific": "Opuntia spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "timothy",
       "ko": "티모시",
       "scientific": "Phleum pratense",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "orchard",
       "ko": "오차드그라스",
       "scientific": "Dactylis glomerata",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "ryegrass",
       "ko": "라이그라스",
       "scientific": "Lolium spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "wheatgrass",
       "ko": "밀싹",
       "scientific": "Triticum aestivum",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "barleygrass",
       "ko": "보리싹",
       "scientific": "Hordeum vulgare",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "oatgrass",
       "ko": "귀리싹",
       "scientific": "Avena sativa",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "cornleaf",
       "ko": "옥수수잎",
       "scientific": "Zea mays",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "chrysanthemumleaf",
@@ -818,6 +950,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -835,6 +968,7 @@
       "fields_present": 7,
       "fields_missing": [
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "sugars_g",
         "potassium_mg",
         "sodium_mg",
@@ -859,6 +993,7 @@
       "fields_present": 7,
       "fields_missing": [
         "carbohydrate_g",
+        "available_carbohydrate_g",
         "sugars_g",
         "potassium_mg",
         "sodium_mg",
@@ -874,56 +1009,64 @@
       "ko": "미나리",
       "scientific": "Oenanthe javanica",
       "status": "held",
-      "hold_reason_code": "policy_hold"
+      "hold_reason_code": "policy_hold",
+      "dm_basis_record": false
     },
     {
       "plant_id": "aehobakleaf",
       "ko": "애호박잎",
       "scientific": "Cucurbita moschata",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "sunflowerleaf",
       "ko": "해바라기잎",
       "scientific": "Helianthus annuus",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "violet",
       "ko": "제비꽃",
       "scientific": "Viola spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "geranium",
       "ko": "제라늄",
       "scientific": "Pelargonium spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "pansy",
       "ko": "팬지",
       "scientific": "Viola × wittrockiana",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "marigold",
       "ko": "메리골드",
       "scientific": "Tagetes spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "calendula",
       "ko": "금잔화",
       "scientific": "Calendula officinalis",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "dill",
@@ -938,6 +1081,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -953,7 +1097,9 @@
       "plant_part": "leaf (leafy vegetable as sold; part not separately stated in source name)",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "lambs_lettuce",
@@ -968,6 +1114,7 @@
       "preparation_state": "raw",
       "fields_present": 14,
       "fields_missing": [
+        "available_carbohydrate_g",
         "fiber_g",
         "sugars_g"
       ]
@@ -977,70 +1124,80 @@
       "ko": "화이트클로버",
       "scientific": "Trifolium repens",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "redclover",
       "ko": "레드클로버",
       "scientific": "Trifolium pratense",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "ribwortplantain",
       "ko": "창질경이",
       "scientific": "Plantago lanceolata",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "broadleafplantain",
       "ko": "왕질경이",
       "scientific": "Plantago major",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "commonmallow",
       "ko": "말바",
       "scientific": "Malva sylvestris",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "marshmallow",
       "ko": "마시멜로우",
       "scientific": "Althaea officinalis",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hollyhock",
       "ko": "접시꽃",
       "scientific": "Alcea rosea",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "grapehyacinth",
       "ko": "무스카리",
       "scientific": "Muscari armeniacum",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "lemonbalm",
       "ko": "레몬밤",
       "scientific": "Melissa officinalis",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "sage",
       "ko": "세이지",
       "scientific": "Salvia officinalis",
       "status": "held",
-      "hold_reason_code": "state_mismatch"
+      "hold_reason_code": "state_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "thyme",
@@ -1055,6 +1212,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -1063,7 +1221,8 @@
       "ko": "오레가노",
       "scientific": "Origanum vulgare",
       "status": "held",
-      "hold_reason_code": "state_mismatch"
+      "hold_reason_code": "state_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "rosemary",
@@ -1078,6 +1237,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -1086,126 +1246,154 @@
       "ko": "라벤더",
       "scientific": "Lavandula angustifolia",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "chamomile",
       "ko": "캐모마일",
       "scientific": "Matricaria chamomilla",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "cornflower",
       "ko": "수레국화",
       "scientific": "Centaurea cyanus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "echinacea",
       "ko": "에키네시아",
       "scientific": "Echinacea purpurea",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "yarrow",
       "ko": "서양톱풀",
       "scientific": "Achillea millefolium",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "chrysanthemum",
       "ko": "국화",
       "scientific": "Chrysanthemum morifolium",
-      "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "status": "verified",
+      "source_name": "Standard Tables of Food Composition in Japan (MEXT)",
+      "source_id": "MEXT 06058",
+      "data_type": "Japan Standard Tables of Food Composition",
+      "source_kind": "official_database",
+      "plant_part": "flower petals",
+      "preparation_state": "raw",
+      "fields_present": 14,
+      "fields_missing": [
+        "fat_g",
+        "available_carbohydrate_g",
+        "sugars_g"
+      ]
     },
     {
       "plant_id": "sunflowerpetal",
       "ko": "해바라기꽃잎",
       "scientific": "Helianthus annuus",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "strawberryleaf",
       "ko": "딸기잎",
       "scientific": "Fragaria × ananassa",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "raspberryleaf",
       "ko": "라즈베리잎",
       "scientific": "Rubus idaeus",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "blackberryleaf",
       "ko": "블랙베리잎",
       "scientific": "Rubus fruticosus agg.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "appleleaf",
       "ko": "사과나무잎",
       "scientific": "Malus domestica",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "pearleaf",
       "ko": "배나무잎",
       "scientific": "Pyrus pyrifolia",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "plumleaf",
       "ko": "자두나무잎",
       "scientific": "Prunus salicina",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "peachleaf",
       "ko": "복숭아나무잎",
       "scientific": "Prunus persica",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "violetleaf",
       "ko": "제비꽃잎",
       "scientific": "Viola mandshurica",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "violetflower",
       "ko": "제비꽃",
       "scientific": "Viola mandshurica",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "geraniumleaf",
       "ko": "제라늄잎",
       "scientific": "Pelargonium spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "cosmos",
       "ko": "코스모스",
       "scientific": "Cosmos bipinnatus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "mallowleaf",
@@ -1220,6 +1408,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "magnesium_mg"
       ]
     },
@@ -1228,21 +1417,24 @@
       "ko": "미나리",
       "scientific": "Oenanthe javanica",
       "status": "held",
-      "hold_reason_code": "policy_hold"
+      "hold_reason_code": "policy_hold",
+      "dm_basis_record": false
     },
     {
       "plant_id": "fennelleaf",
       "ko": "펜넬잎",
       "scientific": "Foeniculum vulgare",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "amaranthleaf",
       "ko": "비름",
       "scientific": "Amaranthus spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "purslane",
@@ -1257,6 +1449,7 @@
       "preparation_state": "raw",
       "fields_present": 13,
       "fields_missing": [
+        "available_carbohydrate_g",
         "fiber_g",
         "sugars_g",
         "vitamin_a_rae_ug"
@@ -1275,6 +1468,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -1283,35 +1477,49 @@
       "ko": "수영",
       "scientific": "Rumex acetosa",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "dock",
       "ko": "소리쟁이",
       "scientific": "Rumex crispus",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "buckwheatleaf",
       "ko": "메밀잎",
       "scientific": "Fagopyrum esculentum",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "peashoot",
       "ko": "완두순",
       "scientific": "Pisum sativum",
-      "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "status": "verified",
+      "source_name": "Standard Tables of Food Composition in Japan (MEXT)",
+      "source_id": "MEXT 06019",
+      "data_type": "Japan Standard Tables of Food Composition",
+      "source_kind": "official_database",
+      "plant_part": "shoot (stem and leaves)",
+      "preparation_state": "raw",
+      "fields_present": 15,
+      "fields_missing": [
+        "available_carbohydrate_g",
+        "sugars_g"
+      ]
     },
     {
       "plant_id": "beanleaf",
       "ko": "강낭콩잎",
       "scientific": "Phaseolus vulgaris",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "soybeanleaf",
@@ -1326,6 +1534,7 @@
       "preparation_state": "raw",
       "fields_present": 11,
       "fields_missing": [
+        "available_carbohydrate_g",
         "fiber_g",
         "sugars_g",
         "potassium_mg",
@@ -1345,7 +1554,9 @@
       "plant_part": "sprout",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "alfalfasprout",
@@ -1359,7 +1570,9 @@
       "plant_part": "sprout",
       "preparation_state": "raw",
       "fields_present": 16,
-      "fields_missing": []
+      "fields_missing": [
+        "available_carbohydrate_g"
+      ]
     },
     {
       "plant_id": "broccolisprout",
@@ -1374,6 +1587,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "magnesium_mg"
       ]
     },
@@ -1381,22 +1595,45 @@
       "plant_id": "kohlrabileaf",
       "ko": "콜라비잎",
       "scientific": "Brassica oleracea var. gongylodes",
-      "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "status": "verified",
+      "source_name": "Indian Food Composition Tables 2017 (ICMR-NIN)",
+      "source_id": "IFCT2017 C024",
+      "data_type": "Indian Food Composition Tables",
+      "source_kind": "official_database",
+      "plant_part": "leaf",
+      "preparation_state": "raw",
+      "fields_present": 13,
+      "fields_missing": [
+        "carbohydrate_g",
+        "sugars_g",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "rapeseedleaf",
       "ko": "유채잎",
       "scientific": "Brassica napus",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "mizuna",
       "ko": "미즈나",
       "scientific": "Brassica rapa var. nipposinica",
-      "status": "held",
-      "hold_reason_code": "subtype_ambiguous"
+      "status": "verified",
+      "source_name": "Standard Tables of Food Composition in Japan (MEXT)",
+      "source_id": "MEXT 06072",
+      "data_type": "Japan Standard Tables of Food Composition",
+      "source_kind": "official_database",
+      "plant_part": "leaf",
+      "preparation_state": "raw",
+      "fields_present": 15,
+      "fields_missing": [
+        "available_carbohydrate_g",
+        "sugars_g"
+      ]
     },
     {
       "plant_id": "tatsoi",
@@ -1411,6 +1648,7 @@
       "preparation_state": "raw",
       "fields_present": 13,
       "fields_missing": [
+        "available_carbohydrate_g",
         "fiber_g",
         "sugars_g",
         "magnesium_mg"
@@ -1429,6 +1667,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "sugars_g"
       ]
     },
@@ -1445,6 +1684,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "magnesium_mg"
       ]
     },
@@ -1453,266 +1693,304 @@
       "ko": "호박꽃",
       "scientific": "Cucurbita spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "cucumberleaf",
       "ko": "오이잎",
       "scientific": "Cucumis sativus",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "melonleaf",
       "ko": "멜론잎",
       "scientific": "Cucumis melo",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "watermelonleaf",
       "ko": "수박잎",
       "scientific": "Citrullus lanatus",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "grapevineleaf",
       "ko": "머루잎",
       "scientific": "Vitis amurensis",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "kiwileaf",
       "ko": "키위잎",
       "scientific": "Actinidia deliciosa",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "opuntiapad",
       "ko": "손바닥선인장패드",
       "scientific": "Opuntia ficus-indica",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": true
     },
     {
       "plant_id": "wheatleaf",
       "ko": "밀잎",
       "scientific": "Triticum aestivum",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "barleyleaf",
       "ko": "보리잎",
       "scientific": "Hordeum vulgare",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "oatleaf",
       "ko": "귀리잎",
       "scientific": "Avena sativa",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "meadowgrass",
       "ko": "왕포아풀",
       "scientific": "Poa pratensis",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "fescue",
       "ko": "톨페스큐",
       "scientific": "Schedonorus arundinaceus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "bermudagrass",
       "ko": "우산잔디",
       "scientific": "Cynodon dactylon",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "hibiscusrosa",
       "ko": "하와이무궁화",
       "scientific": "Hibiscus rosa-sinensis",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "lindenleaf",
       "ko": "피나무잎",
       "scientific": "Tilia spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hazelleaf",
       "ko": "개암나무잎",
       "scientific": "Corylus spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "birchleaf",
       "ko": "자작나무잎",
       "scientific": "Betula spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "willowleaf",
       "ko": "버드나무잎",
       "scientific": "Salix spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "poplarleaf",
       "ko": "포플러잎",
       "scientific": "Populus spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "elmleaf",
       "ko": "느릅나무잎",
       "scientific": "Ulmus spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "mapleleaf",
       "ko": "단풍나무잎",
       "scientific": "Acer spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "ginkgoleaf",
       "ko": "은행잎",
       "scientific": "Ginkgo biloba",
       "status": "held",
-      "hold_reason_code": "part_mismatch"
+      "hold_reason_code": "part_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "daisy",
       "ko": "데이지",
       "scientific": "Bellis perennis",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "eveningprimrose",
       "ko": "달맞이꽃",
       "scientific": "Oenothera spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "milkthistle",
       "ko": "밀크시슬",
       "scientific": "Silybum marianum",
       "status": "held",
-      "hold_reason_code": "species_mismatch"
+      "hold_reason_code": "species_mismatch",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hawthorn",
       "ko": "산사나무속 잎",
       "scientific": "Crataegus spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "sainfoin",
       "ko": "샌포인",
       "scientific": "Onobrychis viciifolia",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "borage",
       "ko": "보리지",
       "scientific": "Borago officinalis",
       "status": "held",
-      "hold_reason_code": "part_ambiguous"
+      "hold_reason_code": "part_ambiguous",
+      "dm_basis_record": false
     },
     {
       "plant_id": "henbit",
       "ko": "광대나물",
       "scientific": "Lamium amplexicaule",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "houseleek",
       "ko": "셈페르비붐",
       "scientific": "Sempervivum spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "echeveria",
       "ko": "에케베리아",
       "scientific": "Echeveria spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "snapdragon",
       "ko": "금어초",
       "scientific": "Antirrhinum majus",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hosta",
       "ko": "비비추속",
       "scientific": "Hosta spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "salsify",
       "ko": "살시피류",
       "scientific": "Tragopogon spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hawksbeard",
       "ko": "씀바귀아재비류",
       "scientific": "Crepis spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hawkbit",
       "ko": "민들레아재비류",
       "scientific": "Leontodon spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "catsear",
       "ko": "서양금혼초",
       "scientific": "Hypochaeris radicata",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hawkweed",
       "ko": "조밥나물류",
       "scientific": "Hieracium spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "shepherdspurse",
@@ -1727,6 +2005,7 @@
       "preparation_state": "raw",
       "fields_present": 15,
       "fields_missing": [
+        "available_carbohydrate_g",
         "magnesium_mg"
       ]
     },
@@ -1735,161 +2014,184 @@
       "ko": "페튜니아",
       "scientific": "Petunia spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "dahlia",
       "ko": "달리아",
       "scientific": "Dahlia spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "gerbera",
       "ko": "거베라",
       "scientific": "Gerbera spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "zinnia",
       "ko": "백일홍",
       "scientific": "Zinnia spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "mexicanpetunia",
       "ko": "멕시칸페튜니아",
       "scientific": "Ruellia spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "coreopsis",
       "ko": "금계국속",
       "scientific": "Coreopsis spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "astilbe",
       "ko": "아스틸베",
       "scientific": "Astilbe spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "primula",
       "ko": "프리뮬라속",
       "scientific": "Primula spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "comfrey",
       "ko": "컴프리",
       "scientific": "Symphytum officinale",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "monarda",
       "ko": "모나르다속",
       "scientific": "Monarda spp.",
       "status": "held",
-      "hold_reason_code": "genus_level_master"
+      "hold_reason_code": "genus_level_master",
+      "dm_basis_record": false
     },
     {
       "plant_id": "medicago_hispida",
       "ko": "버클로버",
       "scientific": "Medicago polymorpha L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "conyzacanadensis",
       "ko": "망초",
       "scientific": "Erigeron canadensis L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "ruscus_aculeatus",
       "ko": "부처스브룸",
       "scientific": "Ruscus aculeatus L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "hedgemustard",
       "ko": "헤지머스터드",
       "scientific": "Sisymbrium officinale (L.) Scop.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "harebell",
       "ko": "헤어벨",
       "scientific": "Campanula rotundifolia L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "erodium_botrys",
       "ko": "넓은잎필라리",
       "scientific": "Erodium botrys (Cav.) Bertol.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "lamium_album",
       "ko": "흰광대나물",
       "scientific": "Lamium album L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "dichondra_micrantha",
       "ko": "아욱메풀",
       "scientific": "Dichondra micrantha Urb.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "abutilon_indicum",
       "ko": "인도아부틸론",
       "scientific": "Abutilon indicum (L.) Sweet",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "aeonium_arboreum",
       "ko": "에오니움 아르보레움",
       "scientific": "Aeonium arboreum (L.) Webb & Berthel.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "buddleja_davidii",
       "ko": "부들레야",
       "scientific": "Buddleja davidii Franch.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     },
     {
       "plant_id": "vicia_sativa",
       "ko": "살갈퀴",
       "scientific": "Vicia sativa L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": true
     },
     {
       "plant_id": "vicia_cracca",
       "ko": "등갈퀴나물",
       "scientific": "Vicia cracca L.",
       "status": "held",
-      "hold_reason_code": "no_record_found"
+      "hold_reason_code": "no_record_found",
+      "dm_basis_record": false
     }
   ]
 }
