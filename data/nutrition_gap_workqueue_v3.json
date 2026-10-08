@@ -445,6 +445,17 @@
       "next_required": "Fetch and reconcile original record payloads for the 10 priority plants before editing plant_nutrition_v56.json."
     },
     "data_quality_correction": "Previous note calling FDC 169272 Foundation Foods was incorrect; it is SR Legacy. The repository promotion policy must preserve the actual USDA dataset type.",
-    "next_batch_status": "Source-type separation completed for remaining difficult foods; no unverified numeric values promoted."
+    "next_batch_status": "Source-type separation completed for remaining difficult foods; no unverified numeric values promoted.",
+    "quality_summary": {
+      "verified_promotions_this_batch": 0,
+      "numeric_values_added_to_verified_db": 0,
+      "holds_maintained": [
+        "taxon mismatch",
+        "plant-part mismatch",
+        "source-type mismatch",
+        "species aggregation risk"
+      ],
+      "next_focus": "Complete original-record extraction for the unresolved foods; prioritize records with exact scientific identity and edible part before expanding comparative forage evidence."
+    }
   }
 }
