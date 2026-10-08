@@ -293,6 +293,45 @@
       "timothy": {
         "status": "no_exact_official_food_record_confirmed_in_scan",
         "action": "continue botanical forage literature search; do not substitute grass/hay records"
+      },
+      "mint": {
+        "status": "exact_record_candidate",
+        "source": "USDA FoodData Central SR Legacy",
+        "record_search_terms": [
+          "spearmint, fresh",
+          "peppermint, fresh"
+        ],
+        "identity_warning": "Master is Mentha spp.; exact species mapping required. Do not merge Mentha species into one value.",
+        "action": "manual record-level mapping required"
+      },
+      "clover": {
+        "status": "not_yet_exact_record",
+        "source": "USDA search may contain Trifolium-related records but exact edible plant record not established",
+        "action": "continue search; no surrogate forage values"
+      },
+      "chickweed": {
+        "status": "exact_record_candidate",
+        "source": "USDA FoodData Central",
+        "record_search_terms": [
+          "chickweed, raw",
+          "Stellaria media"
+        ],
+        "identity_warning": "Verify scientific identity and edible part before promotion.",
+        "action": "record-level reconciliation required"
+      },
+      "rose": {
+        "status": "non_food_botanical_records_common",
+        "action": "do not use rose hips, tea, petals of other Rosa species, or extracts as substitutes; exact edible petal record required"
+      },
+      "nasturtium": {
+        "status": "exact_record_candidate",
+        "source": "USDA FoodData Central",
+        "record_search_terms": [
+          "nasturtium, leaves, raw",
+          "Tropaeolum majus"
+        ],
+        "identity_warning": "Verify leaf/flower part; do not mix ornamental cultivar records.",
+        "action": "record-level reconciliation required"
       }
     }
   }
