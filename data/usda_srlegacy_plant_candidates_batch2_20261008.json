@@ -73,5 +73,16 @@
       "source_url": "https://fdc.nal.usda.gov/food-details/168571/nutrients",
       "promotion_status": "HOLD_identity_or_part_match"
     }
-  ]
+  ],
+  "audit_20261008": {
+    "source": "Direct inspection of uploaded USDA SR Legacy 2018-04 ZIP food.csv, food_nutrient.csv, nutrient.csv",
+    "checked_fdc_ids": [
+      168385,
+      168571,
+      168575,
+      170481
+    ],
+    "result": "All four food descriptions and recorded water, protein, calcium, phosphorus, potassium, vitamin C values match original CSV; absent fiber values remain null.",
+    "identity_review": "Source food descriptions do not establish exact plant species or plant part for every candidate; HOLD unchanged."
+  }
 }
