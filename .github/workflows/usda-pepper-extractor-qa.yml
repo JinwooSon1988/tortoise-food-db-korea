@@ -1,0 +1,49 @@
+name: USDA pepper extractor QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extract_usda_peppers.py'
+      - '.github/workflows/usda-pepper-extractor-qa.yml'
+  pull_request:
+    paths:
+      - 'scripts/extract_usda_peppers.py'
+      - '.github/workflows/usda-pepper-extractor-qa.yml'
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test USDA CSV pepper extraction
+        run: |
+          python - <<'PY'
+          import csv, json, subprocess, sys, tempfile
+          from pathlib import Path
+          with tempfile.TemporaryDirectory() as tmp:
+              p=Path(tmp)
+              fixtures={
+                'food.csv':(['fdc_id','description','data_type','ndb_number'],[
+                  ['101','Peppers, bell, green, raw','Foundation','11333'],
+                  ['102','Peppers, bell, red, raw','SR Legacy','11821'],
+                  ['103','Peppers, bell, yellow, raw','Foundation','11951'],
+                  ['104','Peppers, bell, orange, raw','Foundation','100278'],
+                  ['105','Peppers, hot, red, raw','Foundation','99999']]),
+                'nutrient.csv':(['id','name','unit_name'],[['1008','Energy','KCAL']]),
+                'food_nutrient.csv':(['fdc_id','nutrient_id','amount'],[
+                  ['101','1008','20'],['102','1008','31'],['103','1008','27'],['104','1008','29']])
+              }
+              for filename,(fields,rows) in fixtures.items():
+                  with (p/filename).open('w',newline='',encoding='utf-8') as f:
+                      writer=csv.writer(f);writer.writerow(fields);writer.writerows(rows)
+              result=subprocess.run([sys.executable,'scripts/extract_usda_peppers.py',str(p)],capture_output=True,text=True,check=True)
+              records=json.loads(result.stdout)['records']
+              assert len(records)==4,records
+              assert {x['color'] for x in records}=={'green','red','yellow','orange'}
+              assert all('Energy' in x['nutrients'] for x in records)
+              print('PASS: four colors, nutrient join, and hot pepper exclusion')
+          PY
