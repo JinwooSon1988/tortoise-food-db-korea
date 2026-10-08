@@ -1,0 +1,27 @@
+name: Plant detail badge QA
+on:
+  pull_request:
+    paths:
+      - 'plant/**'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/qa_plant_detail_grade_badge_v1.py'
+      - '.github/workflows/plant-detail-badge-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'plant/**'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/qa_plant_detail_grade_badge_v1.py'
+      - '.github/workflows/plant-detail-badge-qa.yml'
+permissions:
+  contents: read
+jobs:
+  badge-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Validate every published plant grade badge and rationale
+        run: python scripts/qa_plant_detail_grade_badge_v1.py
