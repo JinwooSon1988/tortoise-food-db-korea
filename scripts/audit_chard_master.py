@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json, re
+import json, sys
 ROOT=Path(__file__).resolve().parents[1]; DATA=ROOT/'data'
+sys.path.insert(0,str(ROOT/'scripts'))
+from public_verdict import load_assessments, display
 plants=json.loads((DATA/'plants.json').read_text(encoding='utf-8')); ids={p['id'] for p in plants}
-ass=[]
-for p in [DATA/'assessments.json']+sorted(DATA.glob('assessments_korea_addendum*.json'),key=lambda x:int(re.search(r'_(\d+)\.json$',x.name).group(1)) if re.search(r'_(\d+)\.json$',x.name) else 1):
-    ass.extend(json.loads(p.read_text(encoding='utf-8')))
-assessed={a['plant_id'] for a in ass if a.get('plant_id') in ids}; cov=json.loads((DATA/'coverage.json').read_text(encoding='utf-8'))
+# Canonical registry is data/public_assessments.json (legacy assessments*.json files are no longer the publication source).
+ass=load_assessments(); cov=json.loads((DATA/'coverage.json').read_text(encoding='utf-8'))
+blocked=set(cov.get('identity_blocked_priority') or [])|set(cov.get('evidence_blocked_priority') or [])
+assessed={a['plant_id'] for a in ass if a.get('plant_id') in ids}-blocked
 assert len(plants)>=68, len(plants)
 assert len(assessed)>=65, len(assessed)
 acct=cov.get('master_review_accounting') or {}
@@ -16,6 +18,9 @@ assert 'chard' in ids and 'chard' in assessed and 'chard' not in (cov.get('pendi
 rows=[a for a in ass if a.get('plant_id')=='chard']; assert len(rows)==1
 row=rows[0]; assert row['species_group']=='Tortoise_general' and row['verdict']=='limited_supplement' and row['confidence']=='C'
 assert (ROOT/'plant/chard/index.html').exists(); text=(ROOT/'plant/chard/index.html').read_text(encoding='utf-8')
-assert '제한적 보조식 근거' in text and '옥살산' in text and 'Mediterranean Testudo' in text
+g=display(row)
+# Current page copy: canonical grade label, the oxalate limit, and evidence scoped to general tortoises (not Mediterranean Testudo).
+assert f"{g['grade']} · {g['label']}" in text and '옥살산' in text and '연구·자료 대상</dt><dd>육지거북 일반' in text
+assert '지중해 Testudo 근거' not in text
 assert 'plant/chard/' in (ROOT/'sitemap.xml').read_text(encoding='utf-8')
 print('PASS chard regression gate; master',len(plants),'assessed',len(assessed))

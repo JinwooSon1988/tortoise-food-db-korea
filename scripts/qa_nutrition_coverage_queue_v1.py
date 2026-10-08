@@ -2,9 +2,9 @@
 import json
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
-plants=json.loads((R/"data/plants.json").read_text())
-nut=json.loads((R/"data/plant_nutrition_v56.json").read_text())
-q=json.loads((R/"data/nutrition_coverage_queue_v1.json").read_text())
+plants=json.loads((R/"data/plants.json").read_text(encoding="utf-8"))
+nut=json.loads((R/"data/plant_nutrition_v56.json").read_text(encoding="utf-8"))
+q=json.loads((R/"data/nutrition_coverage_queue_v1.json").read_text(encoding="utf-8"))
 ids={p["id"] for p in plants}
 candidates={p["id"] for p in plants if p.get("identity_status")=="candidate_name"}
 existing={x["plant_id"] for x in nut["plants"]}
