@@ -113,7 +113,7 @@ assert 'aria-label="급여 등급 안내"' not in generator, 'obsolete grade leg
 
 # Keyboard/touch accessibility: interactive detail-page targets remain at least 44px high.
 for token in (
-    '.detailnav a,.detailnav button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px',
+    '.detailnav a,.detailnav button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;min-width:76px',
     # min-height only applies to a non-inline box, so the source action must be inline-flex.
     '.sourceopen{display:inline-flex;min-height:44px;align-items:center}',
 ):
