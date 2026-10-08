@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """Browser smoke tests for generated pages; no network or account required."""
 from pathlib import Path
-from urllib.parse import quote
+from functools import partial
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from threading import Thread
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
+handler = partial(SimpleHTTPRequestHandler, directory=str(ROOT))
+server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+Thread(target=server.serve_forever, daemon=True).start()
+BASE = f"http://127.0.0.1:{server.server_port}/"
 def url(path):
-    return (ROOT / path).resolve().as_uri()
+    return BASE + path
 
 with sync_playwright() as pw:
     browser = pw.chromium.launch(headless=True)
@@ -28,3 +34,4 @@ with sync_playwright() as pw:
         print(f"PASS browser smoke: {width}x{height}, home/search/detail")
         page.close()
     browser.close()
+server.shutdown()
