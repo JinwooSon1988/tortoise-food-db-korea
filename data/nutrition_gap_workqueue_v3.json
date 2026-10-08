@@ -200,5 +200,26 @@
       "scientific": "Apium graveolens",
       "reason": "USDA record does not establish leaf-only composition required by the master celery-leaf item."
     }
-  ]
+  ],
+  "batch_progress": {
+    "checked_against": "data/plant_nutrition_v56.json",
+    "checked_at": "2026-10-08",
+    "priority_records_total": 20,
+    "already_present_in_verified_or_current_nutrition": 9,
+    "still_missing_exact_record": 11,
+    "still_missing_ids": [
+      "mint",
+      "clover",
+      "alfalfa",
+      "chickweed",
+      "pumpkinleaf",
+      "bellpepper",
+      "rose",
+      "nasturtium",
+      "pricklypear",
+      "timothy",
+      "orchard"
+    ],
+    "rule": "Presence in plant_nutrition_v56 does not by itself mean the record is newly researched in this batch; verify source/part/basis before promotion."
+  }
 }
