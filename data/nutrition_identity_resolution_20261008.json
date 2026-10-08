@@ -68,6 +68,20 @@
     "batch": "pumpkinleaf/pricklypear/bellpepper/mint/clover",
     "status": "in_progress",
     "verified_promotions": 0,
-    "master_taxonomy_changes": 0
+    "master_taxonomy_changes": 0,
+    "validation_result": {
+      "checked_against": "data/plant_nutrition_v56.json",
+      "checked_at": "2026-10-08",
+      "all_priority_ids_still_missing": [
+        "pumpkinleaf",
+        "pricklypear",
+        "bellpepper",
+        "mint",
+        "clover"
+      ],
+      "verified_promotions": 0,
+      "interpretation": "These five remain genuine enrichment targets in the verified nutrition layer. Candidate source records documented elsewhere are not yet sufficient for promotion.",
+      "next": "Continue original-record reconciliation and do not duplicate existing records."
+    }
   }
 }
