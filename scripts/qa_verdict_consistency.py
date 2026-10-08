@@ -201,13 +201,13 @@ for p in public:
         errors.append(f"{pid}: every linked evidence card must state its evidence limit")
     # Reader-first evidence hierarchy: Korean summary must precede interpretation,
     # limitations and bibliographic details on every individual evidence card.
-    for card in re.findall(r'<article class="evcard">([\\s\\S]*?)</article>', text):
+    for card in re.findall(r'<article class="evcard">([\s\S]*?)</article>', text):
         markers = ['class="evsummary"', 'class="evidence-meaning"', 'class="limit"', 'class="evsource"']
         positions = [card.find(marker) for marker in markers]
         if any(pos < 0 for pos in positions) or positions != sorted(positions):
             errors.append(f"{pid}: evidence card must show Korean summary before interpretation, limits and source metadata")
     if 'class="nutrition-missing"' in text:
-        missing = re.search(r'<div class="nutrition-missing">([\\s\\S]*?)</div>', text)
+        missing = re.search(r'<div class="nutrition-missing">([\s\S]*?)</div>', text)
         if not missing or not re.match(r'\s*<strong>검증된 영양자료 없음</strong>', missing.group(1)):
             errors.append(f"{pid}: missing nutrition state must be announced before explanation")
     for e in linked:
