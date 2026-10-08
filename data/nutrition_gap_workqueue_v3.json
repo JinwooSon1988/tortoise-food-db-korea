@@ -360,6 +360,29 @@
         "identity_warning": "Master Capsicum annuum is broader than color-specific records; preserve each record separately unless mapping policy explicitly defines cultivar/color equivalence.",
         "action": "reconcile complete nutrient payload and decide display aggregation policy before promotion"
       }
+    },
+    "bellpepper_resolution_plan": {
+      "display": "Keep color-specific records separate in evidence layer; public summary may show range only when clearly labeled as color-dependent.",
+      "required_fields": [
+        "fdc_id",
+        "color",
+        "food_description",
+        "scientific_name",
+        "plant_part",
+        "preparation_state",
+        "water",
+        "fiber",
+        "calcium",
+        "phosphorus",
+        "potassium",
+        "vitamin_c",
+        "energy"
+      ],
+      "no_aggregation": [
+        "Do not average green/orange/red/yellow values into a single nutrient record.",
+        "Do not use a color-specific record as proof for all Capsicum annuum cultivars."
+      ],
+      "promotion_gate": "Exact record-level payload and master mapping must be reconciled before verified promotion."
     }
   }
 }
