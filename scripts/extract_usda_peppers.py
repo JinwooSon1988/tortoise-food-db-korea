@@ -5,6 +5,7 @@ Read-only: prints candidate records; never writes verified nutrition.
 Usage: python scripts/extract_usda_peppers.py /path/to/unzipped_usda_csv
 """
 import csv
+import math
 import json
 import re
 import sys
@@ -51,5 +52,14 @@ with (folder / "food_nutrient.csv").open(encoding="utf-8-sig", newline="") as f:
         amount = row.get("amount")
         if name and amount not in (None, ""):
             key = f"{row.get('nutrient_id')}:{name}"
-            record["nutrients"][key] = {"amount": amount, "unit": meta.get("unit"), "nutrient_id": row.get("nutrient_id")}
+            try:
+                value = float(amount)
+            except ValueError:
+                continue
+            if not math.isfinite(value) or value < 0:
+                continue
+            if key in record["nutrients"]:
+                record.setdefault("duplicate_nutrient_ids", []).append(key)
+                continue
+            record["nutrients"][key] = {"amount": value, "unit": meta.get("unit"), "nutrient_id": row.get("nutrient_id")}
 print(json.dumps({"source": str(folder), "status": "candidate_only", "records": list(matches.values())}, ensure_ascii=False, indent=2))
