@@ -8,7 +8,7 @@ data = json.loads((root / "data/usda_lettuce_variety_nutrition_20261008.json").r
 page = (root / "plant/lettuce/index.html").read_text(encoding="utf-8")
 assert len(data["records"]) == 5
 section = page.split('<section class="card" id="nutrition">', 1)[1].split("</section>", 1)[0]
-rows = re.findall(r'<tr><th scope="row"[^>]*>[^<]+</th><td>([^<]+)</td><td>([^<]+)</td><td>([^<]+)</td><td><a href="https://fdc.nal.usda.gov/food-details/(\\d+)/nutrients"', section)
+rows = re.findall(r'<tr><th scope="row"[^>]*>[^<]+</th><td>([^<]+)</td><td>([^<]+)</td><td>([^<]+)</td><td><a href="https://fdc.nal.usda.gov/food-details/(\d+)/nutrients"', section)
 assert len(rows) == 5, f"Expected five visible variety rows, found {len(rows)}"
 actual = {int(fdc): (ca, p, fiber) for ca, p, fiber, fdc in rows}
 for rec in data["records"]:
