@@ -550,7 +550,30 @@
             "status": "secondary_crosscheck_only"
           },
           "verified_scope": "NDB primary confirmed; green FDC mappings from secondary sources only; require primary verification.",
-          "nutrient_extraction_gate": "Require primary USDA record and full basis before promoting any secondary-source nutrient snapshot."
+          "nutrient_extraction_gate": "Require primary USDA record and full basis before promoting any secondary-source nutrient snapshot.",
+          "source_audit_20261008": {
+            "foundation_green": {
+              "candidate_fdc_id": 2258588,
+              "ndb_number": 11333,
+              "verification": "secondary_only"
+            },
+            "sr_legacy_green": {
+              "candidate_fdc_id": 170427,
+              "ndb_number": 11333,
+              "verification": "secondary_only"
+            },
+            "foundation_red": {
+              "candidate_fdc_id": 2258590,
+              "ndb_number": 11821,
+              "verification": "secondary_only"
+            },
+            "sr_legacy_red": {
+              "candidate_fdc_id": 170108,
+              "ndb_number": 11821,
+              "verification": "secondary_only"
+            },
+            "note": "FDC candidates require primary USDA verification; no nutrient values promoted."
+          }
         }
       }
     },
