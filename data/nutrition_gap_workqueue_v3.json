@@ -292,7 +292,26 @@
         "source_corroboration": [
           "turn1search0",
           "turn1search3"
-        ]
+        ],
+        "record_payload_snapshot": {
+          "fdc_id": "169272",
+          "dataset": "SR Legacy",
+          "basis": "100 g edible portion",
+          "water_g": 92.9,
+          "energy_kcal": 19,
+          "protein_g": 3.15,
+          "fat_g": 0.4,
+          "carbohydrate_g": 2.33,
+          "calcium_mg": 39,
+          "phosphorus_mg": 104,
+          "potassium_mg": 436,
+          "sodium_mg": 11,
+          "magnesium_mg": 38,
+          "iron_mg": 2.2,
+          "zinc_mg": 0.2,
+          "vitamin_c_mg": 11,
+          "vitamin_a_rae_ug": 97
+        }
       },
       "pricklypear": {
         "status": "official_record_candidate",
@@ -317,7 +336,24 @@
         "source_corroboration": [
           "turn1search2",
           "turn1search11"
-        ]
+        ],
+        "record_payload_snapshot": {
+          "fdc_id": "167750",
+          "dataset": "SR Legacy",
+          "basis": "100 g edible portion",
+          "water_g": 87.6,
+          "energy_kcal": 41,
+          "protein_g": 0.73,
+          "fat_g": 0.51,
+          "carbohydrate_g": 9.57,
+          "fiber_g": 3.6,
+          "calcium_mg": 56,
+          "phosphorus_mg": 24,
+          "potassium_mg": 220,
+          "sodium_mg": 5,
+          "vitamin_c_mg": 14,
+          "vitamin_a_rae_ug": 2
+        }
       },
       "orchard": {
         "status": "comparative_forage_record_only",
@@ -504,6 +540,7 @@
       "next_focus": "Complete original-record extraction for the unresolved foods; prioritize records with exact scientific identity and edible part before expanding comparative forage evidence."
     },
     "web_research_at": "2026-10-08",
-    "web_research_note": "External web research distinguished exact species/part records from broader master taxa and from forage/dry-basis studies. No new verified numeric records promoted in this batch."
+    "web_research_note": "External web research distinguished exact species/part records from broader master taxa and from forage/dry-basis studies. No new verified numeric records promoted in this batch.",
+    "record_payload_status": "Candidate payloads captured from USDA-derived public record reproductions; promotion still requires direct dataset identity and exact master mapping. These snapshots are not verified records."
   }
 }
