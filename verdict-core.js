@@ -3,13 +3,13 @@
    Species-specific (exact_species) assessments are shown as species notes only and never become the representative verdict. */
 (function(root){
  const GRADES={
-  supported_mixed_diet:{grade:'A',label:'적극 권장',tone:'green',meaning:'여러 적합한 식물을 섞는 일상 혼합식의 주요 구성으로 활용하기 좋다.'},
-  limited_mixed_diet:{grade:'B',label:'제한적 혼합 급여',tone:'teal',meaning:'혼합식에 넣을 수 있지만 사용 범위에 제한이 있다. 한 종류에 식단을 편중하지 않는다.'},
-  limited_supplement:{grade:'C',label:'가끔 보조 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
+  supported_mixed_diet:{grade:'A',label:'우선 권장',tone:'green',meaning:'여러 적합한 식물을 섞는 일상 혼합식의 주요 구성으로 활용하기 좋다.'},
+  limited_mixed_diet:{grade:'B',label:'조건부 급여',tone:'teal',meaning:'혼합식에 넣을 수 있지만 사용 범위에 제한이 있다. 한 종류에 식단을 편중하지 않는다.'},
+  limited_supplement:{grade:'C',label:'제한 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
   limited:{grade:'C',label:'제한 급여',tone:'yellow',meaning:'주식이나 반복적인 대량 급여에는 쓰지 않고, 다양한 식단에서 제한적으로만 사용한다.'},
-  supplement_general_evidence:{grade:'C',label:'가끔 보조 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
-  general_reptile_supplement:{grade:'C',label:'가끔 보조 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
-  do_not_feed:{grade:'D',label:'계획 급여에서 제외',tone:'danger',meaning:'일상 식단에 계획적으로 넣지 않는다. 우발적 소량 섭취의 독성과는 별개의 판정이다.'}
+  supplement_general_evidence:{grade:'C',label:'제한 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
+  general_reptile_supplement:{grade:'C',label:'제한 급여',tone:'yellow',meaning:'주식이 아니라 가끔 곁들이는 보조 먹이로만 본다.'},
+  do_not_feed:{grade:'D',label:'급여 제외',tone:'danger',meaning:'일상 식단에 계획적으로 넣지 않는다. 우발적 소량 섭취의 독성과는 별개의 판정이다.'}
  };
  const HOLD={grade:'보류',label:'판정 보류',tone:'hold',meaning:'근거가 부족하거나 엇갈려 등급을 정하지 않았다. 보류는 안전하다는 뜻이 아니다.'};
  const NO_DEFAULT={grade:'보류',label:'판정 보류',tone:'hold',meaning:'공통 급여 판정이 아직 없다. 판정이 없다는 것은 안전하다는 뜻이 아니다.'};
