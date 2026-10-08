@@ -98,6 +98,14 @@
         "creator_license": "pending_original_file_review",
         "file_stability": "pending",
         "status": "HOLD"
+      },
+      "batch_research": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chrysanthemum_morifolium_01.jpg",
+        "creator": "Juni from Kyoto, Japan",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "identity_evidence": "File title identifies Chrysanthemum morifolium; original file page records author and CC BY 2.0.",
+        "status": "candidate_metadata_checked_visual_part_review_pending"
       }
     },
     {
@@ -147,6 +155,13 @@
         "creator_license": "pending_original_file_review",
         "file_stability": "pending",
         "status": "HOLD"
+      },
+      "batch_research": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Actinidia_deliciosa.jpg",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "identity_evidence": "File page identifies Actinidia deliciosa; original page records CC BY 3.0.",
+        "status": "candidate_metadata_checked_visual_part_review_pending"
       }
     },
     {
@@ -161,6 +176,14 @@
         "creator_license": "pending_original_file_review",
         "file_stability": "pending",
         "status": "HOLD"
+      },
+      "batch_research": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Zuckerhut_(Cichorium_intybus_var._foliosum)_Wei%C3%9Fe_Fliegen--Josef_Schlaghecken.jpg",
+        "creator": "Schlaghecken Josef",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "identity_evidence": "File title explicitly identifies Cichorium intybus var. foliosum.",
+        "status": "candidate_metadata_checked_visual_part_review_pending"
       }
     },
     {
@@ -175,6 +198,15 @@
         "creator_license": "pending_original_file_review",
         "file_stability": "pending",
         "status": "HOLD"
+      },
+      "batch_research": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Starr_070730-7872_Beta_vulgaris_subsp._cicla.jpg",
+        "creator": "Forest & Kim Starr",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "identity_evidence": "File title and file history identify Beta vulgaris subsp. cicla, but description also uses Beta vulgaris subsp. vulgaris/Cicla-group wording.",
+        "status": "HOLD_IDENTITY_CONFLICT",
+        "notes": "Do not publish until taxonomic identity conflict between file title/history and description is resolved."
       }
     },
     {
@@ -434,7 +466,15 @@
       "new_candidate": "spinach",
       "rejected_for_wrong_part": "mungbeansprout",
       "newly_published": 0,
-      "source_check_date": "2026-10-08"
+      "source_check_date": "2026-10-08",
+      "new_candidates": [
+        "chrysanthemum",
+        "radicchio",
+        "kiwileaf"
+      ],
+      "identity_hold": [
+        "chard"
+      ]
     }
   },
   "batch_quality_policy": {
