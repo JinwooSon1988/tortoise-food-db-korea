@@ -393,6 +393,29 @@
     "notes": "Source candidates are not publication-ready until exact taxon, depicted plant part, license provenance, and durable image URL have been independently verified. Registry count is not a count of successfully displayed images.",
     "publication_ready": 0,
     "publication_hold": 10,
-    "last_triaged": "2026-10-08"
+    "last_triaged": "2026-10-08",
+    "next_review_batch": [
+      {
+        "plant_id": "timothy",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Timothy_grass.jpg",
+        "checks": [
+          "Inspect original full-resolution image for Phleum pratense diagnostic inflorescence and foliage",
+          "Confirm exact license and source creator on file page",
+          "Confirm pictured part matches plant result use"
+        ],
+        "publication_status": "hold"
+      },
+      {
+        "plant_id": "pansy",
+        "source_url": "https://commons.wikimedia.org/wiki/File:-2019-07-20_Flowering_garden_pansy_(Viola_×_wittrockiana),_Trimingham.JPG",
+        "checks": [
+          "Verify original file page resolves and scientific identity",
+          "Check depicted flower versus food part and whether image should be marked illustrative",
+          "Preserve author credit and CC BY-SA attribution"
+        ],
+        "publication_status": "hold"
+      }
+    ],
+    "visual_review_requirement": "Visual confirmation cannot be inferred from file title, structured metadata or license alone."
   }
 }
