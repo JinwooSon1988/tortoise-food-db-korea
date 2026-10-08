@@ -332,6 +332,33 @@
         ],
         "identity_warning": "Verify leaf/flower part; do not mix ornamental cultivar records.",
         "action": "record-level reconciliation required"
+      },
+      "bellpepper": {
+        "status": "candidate_records_identified_not_promoted",
+        "records": [
+          {
+            "fdc_id": 11333,
+            "color": "green",
+            "food": "Peppers, bell, green, raw"
+          },
+          {
+            "fdc_id": 100278,
+            "color": "orange",
+            "food": "Peppers, bell, orange, raw"
+          },
+          {
+            "fdc_id": 11821,
+            "color": "red",
+            "food": "Peppers, bell, red, raw"
+          },
+          {
+            "fdc_id": 11951,
+            "color": "yellow",
+            "food": "Peppers, bell, yellow, raw"
+          }
+        ],
+        "identity_warning": "Master Capsicum annuum is broader than color-specific records; preserve each record separately unless mapping policy explicitly defines cultivar/color equivalence.",
+        "action": "reconcile complete nutrient payload and decide display aggregation policy before promotion"
       }
     }
   }
