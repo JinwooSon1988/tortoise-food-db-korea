@@ -11,7 +11,7 @@ pyv=(R/"scripts/public_verdict.py").read_text(encoding="utf-8")
 for s in [js,allp,core,verdict,gen,pyv]:
     assert "🟢" not in s and "🟡" not in s and "🟠" not in s and "🔴" not in s
 # Labels are the canonical ones from verdict-core.js / public_verdict.py on every surface.
-LABELS=(("A","적극 권장"),("B","제한적 혼합 급여"),("C","가끔 보조 급여"),("D","계획 급여에서 제외"))
+LABELS=(("A","우선 권장"),("B","조건부 급여"),("C","제한 급여"),("D","급여 제외"))
 assert "verdict-core.js" in allp and "TV.display(" in allp, "catalog must take grades from the shared verdict core"
 for g,label in LABELS:
     assert f"<i>{g}</i> {label}" in allp, ("catalog legend",g,label)
