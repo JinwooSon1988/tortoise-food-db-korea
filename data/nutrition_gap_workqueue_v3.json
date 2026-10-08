@@ -383,6 +383,32 @@
         "Do not use a color-specific record as proof for all Capsicum annuum cultivars."
       ],
       "promotion_gate": "Exact record-level payload and master mapping must be reconciled before verified promotion."
-    }
+    },
+    "next_action": "Proceed with record-level extraction for the 10 unresolved IDs; no promotion until exact taxon/part/raw-state mapping and full nutrient payload are reconciled.",
+    "unresolved_current": [
+      "mint",
+      "clover",
+      "chickweed",
+      "pumpkinleaf",
+      "bellpepper",
+      "rose",
+      "nasturtium",
+      "pricklypear",
+      "timothy",
+      "orchard"
+    ],
+    "priority_order": [
+      "bellpepper",
+      "pumpkinleaf",
+      "pricklypear",
+      "chickweed",
+      "nasturtium",
+      "mint",
+      "rose",
+      "clover",
+      "timothy",
+      "orchard"
+    ],
+    "batch_size": 10
   }
 }
