@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "purpose": "Prevent genus-level master taxa from absorbing species- or plant-part-specific nutrition records.",
+  "principles": [
+    "Do not broaden a species-specific nutrient record to a genus-level master taxon.",
+    "Do not merge leaf, flower, fruit, pad, seed or sprout records.",
+    "Do not merge raw and cooked/dried records.",
+    "Keep original source taxon and food description visible."
+  ],
+  "cases": [
+    {
+      "plant_id": "mint",
+      "master": "Mentha spp.",
+      "recommended_resolution": "split only if product scope requires species-level nutrition; candidate species records such as Mentha spicata remain comparative until split policy is approved."
+    },
+    {
+      "plant_id": "clover",
+      "master": "Trifolium spp.",
+      "recommended_resolution": "separate white/red clover if nutrition data are to be displayed; forage dry-matter records remain separate."
+    },
+    {
+      "plant_id": "rose",
+      "master": "Rosa spp.",
+      "recommended_resolution": "fresh petals must be separated from rose hips and from species-specific Rosa hybrida studies."
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "master": "Cucurbita spp.",
+      "recommended_resolution": "resolve exact Cucurbita species before promoting leaf nutrient records."
+    },
+    {
+      "plant_id": "pricklypear",
+      "master": "Opuntia spp.",
+      "recommended_resolution": "separate fruit from pads and resolve species before promoting numeric records."
+    },
+    {
+      "plant_id": "bellpepper",
+      "master": "Capsicum annuum",
+      "recommended_resolution": "retain color-specific records separately; do not average colors."
+    }
+  ],
+  "release_rule": "No master-taxonomy change is made by inference. Any split must be explicitly justified by the food identity used by the site and supported by source records.",
+  "status": "analysis_only_no_master_changes"
+}
