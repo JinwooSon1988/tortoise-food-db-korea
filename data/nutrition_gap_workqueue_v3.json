@@ -409,6 +409,14 @@
       "timothy",
       "orchard"
     ],
-    "batch_size": 10
+    "batch_size": 10,
+    "extraction_status": {
+      "started": true,
+      "checked_at": "2026-10-08",
+      "rule": "Only exact record-level values are eligible for promotion; source discovery alone remains HOLD.",
+      "records_extracted_this_batch": 0,
+      "reason": "The current repository scan identifies candidate records but does not yet contain the authoritative record payload needed to safely promote values.",
+      "next_required": "Fetch and reconcile original record payloads for the 10 priority plants before editing plant_nutrition_v56.json."
+    }
   }
 }
