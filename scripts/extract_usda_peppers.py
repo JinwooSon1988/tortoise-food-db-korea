@@ -23,7 +23,7 @@ with (folder / "food.csv").open(encoding="utf-8-sig", newline="") as f:
         description = (row.get("description") or "").lower()
         if not ("pepper" in description and "bell" in description and "raw" in description):
             continue
-        color = next((c for c in colors if re.search(r"\\b" + c + r"\\b", description)), None)
+        color = next((c for c in colors if re.search(r"\b" + c + r"\b", description)), None)
         if color is None:
             continue
         fdc_id = row.get("fdc_id")
