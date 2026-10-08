@@ -12,6 +12,8 @@ on:
       - '.github/workflows/sync-generated-plant-pages.yml'
       - 'scripts/audit_plant_detail_v56.py'
       - 'scripts/qa_verdict_consistency.py'
+      - 'core-foods/index.html'
+      - 'guides/*/index.html'
       - 'scripts/qa_traffic_integrity.py'
       - 'scripts/qa_bilingual_plant_detail_v1.py'
       - 'scripts/audit_verdict_cards.py'
