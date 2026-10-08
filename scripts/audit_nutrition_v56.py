@@ -14,10 +14,11 @@ FORBIDDEN_KEYS = {
     'safe', 'safety', 'recommendation', 'recommended_ratio', 'diet_ratio'
 }
 NUMERIC_SUFFIXES = ('_g', '_mg', '_mcg')
-DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB', 'Japan Standard Tables of Food Composition', 'Indian Food Composition Tables'}
+DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB', 'Japan Standard Tables of Food Composition', 'Indian Food Composition Tables', 'German Nutrient Database (BLS)'}
 OTHER_OFFICIAL = {
     'Standard Tables of Food Composition in Japan (MEXT)': (r'MEXT \d{5}', {'www.mext.go.jp'}, 'Japan'),
     'Indian Food Composition Tables 2017 (ICMR-NIN)': (r'IFCT2017 [A-Z]\d{3}', {'nin.res.in'}, 'India'),
+    'German Nutrient Database BLS 4.0 (Max Rubner-Institut)': (r'BLS [A-Z][0-9A-Z]{6}', {'blsdb.de'}, 'Germany'),
 }
 VERIFICATION_STATUSES = {'source_listed', 'verified'}
 

@@ -1,0 +1,3628 @@
+{
+ "schema_version": "1.0",
+ "retrieved_at": "2026-10-08",
+ "source": {
+  "name": "FAO/INFOODS Food Composition Tables and Databases directory",
+  "url": "https://www.fao.org/food-composition/tables-and-databases/",
+  "note": "Inclusion in the directory is not FAO endorsement. Access/format fields are as listed by FAO, not re-verified unless noted in link_checks."
+ },
+ "method": "11 directory list pages and 220 detail pages fetched (~1 request/second; robots.txt permits these paths). One HTTP GET (first 2 KB) per listed link; status only — reachability does not prove the dataset is downloadable or reusable.",
+ "summary": {
+  "entries": 220,
+  "by_access_as_listed": {
+   "Free access": 112,
+   "Print-only": 83,
+   "unknown": 12,
+   "Restricted access": 11,
+   "not available": 1,
+   "Printed book": 1
+  },
+  "by_fao_region": {
+   "Asia": 67,
+   "Europe": 50,
+   "Africa": 43,
+   "Americas": 39,
+   "unknown": 8,
+   "Global": 8,
+   "Oceania": 5
+  },
+  "link_status_counts": {
+   "200": 69,
+   "206": 53,
+   "error:URLError": 10,
+   "404": 9,
+   "403": 6,
+   "202": 2,
+   "error:TimeoutError": 1
+  }
+ },
+ "entries": [
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(albania--2022)-albanian-food-composition-table-tabela-shqiptare-e-përbërjes-së-ushqimeve/en",
+   "country_or_region": "Albania",
+   "fao_region": "Europe",
+   "year": "2022",
+   "title_from_directory_slug": "albanian food composition table tabela shqiptare e përbërjes së ushqimeve",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English, Albanian",
+   "reference": "Universiteti Bujqësor i Tiranës. 2022. Tabela shqiptare e përbërjes së ushqimeve. Prepared for publication by Luziana Hoxha. Tiranë, Gent Grafik.",
+   "infoods_evaluation": "Screening questions score: 75 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.vup.sk/en/index.php?mainID=1&navID=82",
+     "http_status": 200
+    },
+    {
+     "url": "https://vup.sk/en/download.php?fID=34",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(angola--2025)-tabela-de-composição-de-alimentos-do-sul-da-angola/en",
+   "country_or_region": "Angola",
+   "fao_region": "Africa",
+   "year": null,
+   "title_from_directory_slug": "tabela de composição de alimentos do sul da angola",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Portuguese",
+   "reference": "FRESAN; Ministério da Saúde de Angola; Faculdade de Ciências da Nutrição e Alimentação, Universidade do Porto; Faculdade de Medicina, Universidade do Porto; Camões – Instituto da Cooperação e da Língua, I.P.; FAO; PNUD. 2025. Tabela de composição dos alimentos do Sul de Angola (TCASA).",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://sgi-fresancamoes.com/recursos",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(argentina--2010)-tabla-de-composición-de-alimentos/en",
+   "country_or_region": "Argentina",
+   "fao_region": "Americas",
+   "year": "2010",
+   "title_from_directory_slug": "tabla de composición de alimentos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF), electronic file and searchable web tool",
+   "language": "Spanish",
+   "reference": "ArgenFoods. 2010. Tabla de Composición de Alimentos. Luján, Universidad Nacional de Luján.",
+   "infoods_evaluation": "Screening questions score: 110 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.argenfood.unlu.edu.ar/Tablas/Tabla.htm",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(argentina--2022)-sara-2---tabla-de-composición-química-de-alimentos-para-argentina--compilación-para-ennys-2/en",
+   "country_or_region": "Argentina",
+   "fao_region": "Americas",
+   "year": "2022",
+   "title_from_directory_slug": "sara 2   tabla de composición química de alimentos para argentina  compilación para ennys 2",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Ministerio de Salud de la Nación. 2022. SARA 2: Tabla de composición química de alimentos para Argentina - compilación para la Segunda Encuesta Nacional de Nutrición y Salud (ENNyS 2). Ciudad Autónoma de Buenos Aires, Ministerio de Salud de la Nación.",
+   "infoods_evaluation": "Screening questions score: 70 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://cesni-biblioteca.org/sara-2-tabla-de-composicion-quimica-de-alimentos-para-argentina-compilacion-para-ennys-2/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(armenia--2010)-food-composition-table-for-armenia/en",
+   "country_or_region": "Armenia",
+   "fao_region": "Europe",
+   "year": "2010",
+   "title_from_directory_slug": "food composition table for armenia",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Armenian, English",
+   "reference": "Babikyan, K. 2010. Food Composition Table for Armenia. 74 pp.",
+   "infoods_evaluation": "Screening questions score: 110 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/ArmenianFoodCompositionTable2010.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(australia--2023)-australian-food-composition-database/en",
+   "country_or_region": "Australia",
+   "fao_region": "Oceania",
+   "year": "2025",
+   "title_from_directory_slug": "australian food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English",
+   "reference": "Food Standards Australia New Zealand (FSANZ). 2025. Australian Food Composition Database – Release 3. Canberra, FSANZ.",
+   "infoods_evaluation": "Screening questions score: 120 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/afcd",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(australia--2025)-australian-food-and-nutrient-database-(ausnut-2023)/en",
+   "country_or_region": "Australia",
+   "fao_region": "Oceania",
+   "year": "2023",
+   "title_from_directory_slug": "australian food and nutrient database (ausnut 2023)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English",
+   "reference": "Food Standards Australia New Zealand (FSANZ). 2023. AUSNUT 2023. Canberra, FSANZ",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.foodstandards.gov.au/science-data/food-nutrient-databases/ausnut",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(austria--2022)-the-austrian-food-composition-database---österreichische-nährwerttabelle---önwt/en",
+   "country_or_region": "Austria",
+   "fao_region": "Europe",
+   "year": "2022",
+   "title_from_directory_slug": "the austrian food composition database   österreichische nährwerttabelle   önwt",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "dato Denkwerkzeuge & Department für Ernährungswissenschaften der Universität Wien. 2022. Österreichische Nährwerttabelle (ÖNWT). Vienna, Austria.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.oenwt.at/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(bahrain--1985)-food-composition-tables-for-use-in-bahrain/en",
+   "country_or_region": "Bahrain",
+   "fao_region": "Asia",
+   "year": "1985",
+   "title_from_directory_slug": "food composition tables for use in bahrain",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English, Arabic",
+   "reference": "Musaiger, A.O. & Al-Dallal, Z.S. 1985. Food composition tables for use in Bahrain. 1st ed. Manama, Nutrition Unit, Public Health Directorate, Ministry of Health. 75 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(bahrain--1987)-nutritive-value-of-foods/en",
+   "country_or_region": "Bahrain",
+   "fao_region": "Asia",
+   "year": "1987",
+   "title_from_directory_slug": "nutritive value of foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Arabic",
+   "reference": "Musaiger, A.O. & Al-Dallal, Z.S. 1987. Nutritive value of foods. Manama, Ministry of Health. 36 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(bahrain--2011)-food-composition-tables-for-kingdom-of-bahrain/en",
+   "country_or_region": "Bahrain",
+   "fao_region": "Asia",
+   "year": "2011",
+   "title_from_directory_slug": "food composition tables for kingdom of bahrain",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English, Arabic",
+   "reference": "Musaiger, A.O. 2011. Food composition tables for the Kingdom of Bahrain. 1st edition. Arab Center for Nutrition, Bahrain.",
+   "infoods_evaluation": "Screening questions score: 60 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/FOODCOMPOSITONTABLESFORBAHRAIN.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(bahrain--2025)-bahrain-food-composition-tables/en",
+   "country_or_region": "Bahrain",
+   "fao_region": "Asia",
+   "year": "2025",
+   "title_from_directory_slug": "bahrain food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Ministry of Health, Kingdom of Bahrain. 2025. Bahrain Food Composition Tables.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.moh.gov.bh/Content/Upload/File/638916394661198002-FCT-book-final-2025_ar.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(belgium--2022)-belgian-food-composition-table-(nubel)/en",
+   "country_or_region": "Belgium",
+   "fao_region": "Europe",
+   "year": "2022",
+   "title_from_directory_slug": "belgian food composition table (nubel)",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Printed book and electronic file",
+   "language": "Dutch, French",
+   "reference": "NUBEL. 2022. Table de composition des aliments / Voedingsmiddelentabel (Nubel). 7th edition. Brussels, NUBEL.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.nubel.be/foodtable/?lang=nl",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(bolivia--2005)-tabla-boliviana-de-composición-de-alimentos/en",
+   "country_or_region": "Bolivia (Plurinational State of)",
+   "fao_region": "Americas",
+   "year": "2005",
+   "title_from_directory_slug": "tabla boliviana de composición de alimentos",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Spanish",
+   "reference": "Ministerio de Salud y Deportes. 2005. Tabla Boliviana de Composición de Alimentos. La Paz, Bolivia.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(brazil)-sistema-de-informação-sobre-a-biodiversidade-brasileira-(sibbr)/en",
+   "country_or_region": "Brazil",
+   "fao_region": "Americas",
+   "year": "2018",
+   "title_from_directory_slug": "sistema de informação sobre a biodiversidade brasileira (sibbr)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "Portuguese, English",
+   "reference": "Ministério do Meio Ambiente. 2018. Sistema da Informação sobre a Biodiversidade Brasileira (SiBBr).",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://nutricao.sibbr.gov.br/ficha/bin/view/FN",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(brazil--2008)-fontes-brasileiras-de-carotenoides--tabela-brasileira-de-composição-de-carotenoides-em-alimentos/en",
+   "country_or_region": "Brazil",
+   "fao_region": "Americas",
+   "year": "2008",
+   "title_from_directory_slug": "fontes brasileiras de carotenoides  tabela brasileira de composição de carotenoides em alimentos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Portuguese",
+   "reference": "Rodrigues-Amaya, D.B., Kimura, M. & Amaya-Farfan, J. 2008. Fontes brasileiras de carotenoides: tabela brasileira de composição de carotenoides em alimentos. Brasília, MMA/SBF.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "http://www.b4fn.org/fileadmin/templates/b4fn.org/upload/documents/Fontes_Brasileiras_de_Caroten%C3%B3ides.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(brazil--2011)-tabela-brasileira-de-composição-de-alimentos-(taco)/en",
+   "country_or_region": "Brazil",
+   "fao_region": "Americas",
+   "year": "2011",
+   "title_from_directory_slug": "tabela brasileira de composição de alimentos (taco)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "Portuguese",
+   "reference": "NEPA-UNICAMP. 2011. Tabela Brasileira de Composição de Alimentos (TACO). 4th ed. Campinas, Núcleo de Estudos e Pesquisas em Alimentação, UNICAMP.",
+   "infoods_evaluation": "Screening questions score: 110 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.gov.br/agricultura/pt-br/assuntos/inspecao/produtos-vegetal/legislacao-de-produtos-origem-vegetal/biblioteca-de-normas-vinhos-e-bebidas/tabela-brasileira-de-composicao-de-alimentos_taco_2011.pdf",
+     "http_status": 404
+    },
+    {
+     "url": "https://www.nepa.unicamp.br/publicacoes/tabela-taco-excel/",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(brazil--2011)-tabelas-de-composição-nutricional-dos-alimentos-consumidos-no-brasil/en",
+   "country_or_region": "Brazil",
+   "fao_region": "Americas",
+   "year": "2011",
+   "title_from_directory_slug": "tabelas de composição nutricional dos alimentos consumidos no brasil",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "Portuguese",
+   "reference": "IBGE. 2011. Tabelas de Composição Nutricional dos Alimentos Consumidos no Brasil: pesquisa de orçamentos familiares 2008-2009 / Coordenação de Trabalho e Rendimento. Rio de Janeiro, IBGE.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.ibge.gov.br/estatisticas/sociais/populacao/9050-pesquisa-de-orcamentos-familiares.html?edicao=9063&t=resultados",
+     "http_status": 403
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(brazil--2018)-brazilian-biodiversity--flavors-and-flavors-(recipe-book)/en",
+   "country_or_region": "Brazil",
+   "fao_region": "Americas",
+   "year": "2018",
+   "title_from_directory_slug": "brazilian biodiversity  flavors and flavors (recipe book)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Portuguese",
+   "reference": "Ministry of the Environment. 2018. Brazilian Biodiversity: flavors and flavors. Ministry of the Environment, Secretariat of Biodiversity. Brasilia.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.b4fn.org/resources/publications/publication-item/biodiversidade-brasileira-sabores-e-aromas/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(brazil--2025)-tabela-brasileira-de-composição-de-alimentos-(tbca)/en",
+   "country_or_region": "Brazil",
+   "fao_region": "Americas",
+   "year": "2025",
+   "title_from_directory_slug": "tabela brasileira de composição de alimentos (tbca)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool and mobile application",
+   "language": "Portuguese, English",
+   "reference": "USP/FoRC. 2025. Brazilian Food Composition Table / Tabela Brasileira de Composição de Alimentos (TBCA), versão 7.3. São Paulo, Universidade de São Paulo (USP), Food Research Center (FoRC).",
+   "infoods_evaluation": "Screening questions score: 105 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.tbca.net.br/index.html",
+     "http_status": 200
+    },
+    {
+     "url": "https://play.google.com/store/apps/details?id=br.com.ardatz.tbca&pcampaignid=web_share",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(bulgaria)-food-composition-tables---bulgaria/en",
+   "country_or_region": "Bulgaria",
+   "fao_region": "Europe",
+   "year": null,
+   "title_from_directory_slug": "food composition tables   bulgaria",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "NCH. Food Composition Tables - Bulgaria  [in EuroFIR FoodEXplorer]. Brussels, EuroFIR AISBL.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(cameroon--1957)-table-provisoire-de-composition-des-aliments-du-sud-cameroun/en",
+   "country_or_region": "Cameroon",
+   "fao_region": "Africa",
+   "year": "1957",
+   "title_from_directory_slug": "table provisoire de composition des aliments du sud cameroun",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "French",
+   "reference": "Bergeret, B. & Masseyeff, R. 1957. Table provisoire de composition des aliments du Sud-Cameroun. Annales de Nutrition et d’Alimentation, XI: 47–69. Nutrition Section, Office de la Recherche Scientifique et Technique Outre-Mer, Yaoundé",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_5/b_fdi_14-15/20430.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(cameroon--1966)-les-aliments-d'origine-végétale-au-cameroun/en",
+   "country_or_region": "Cameroon",
+   "fao_region": "Africa",
+   "year": "1966",
+   "title_from_directory_slug": "les aliments d'origine végétale au cameroun",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "French",
+   "reference": "Pele, J. & Le Berre, S. 1966. Les aliments d’origine végétale au Cameroun. Yaoundé, Nutrition Section, Office de la Recherche Scientifique et Technique Outre-Mer (ORSTOM).",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/pleins_textes_5/b_fdi_12-13/14524.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(canada--2005)-cine-s-arctic-nutrient-file/en",
+   "country_or_region": "Canada",
+   "fao_region": "Americas",
+   "year": "2005",
+   "title_from_directory_slug": "cine s arctic nutrient file",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "English",
+   "reference": "CINE. 2005. CINE Arctic Nutrient File. Montreal, Center for Indigenous Peoples’ Nutrition and Environment, McGill University.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.mcgill.ca/cine/resources/nutrient",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(canada--2015)-canadian-nutrient-file/en",
+   "country_or_region": "Canada",
+   "fao_region": "Americas",
+   "year": "2015",
+   "title_from_directory_slug": "canadian nutrient file",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, French",
+   "reference": "Health Canada. 2015. Canadian Nutrient File. Ottawa, Health Canada.",
+   "infoods_evaluation": "Screening questions score: 95 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data/canadian-nutrient-file-2015-download-files.html",
+     "http_status": "error:TimeoutError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(chile--1985)-materias-grasas-de-consumo-habitual-y-potencial-en-chile--composición-de-ácidos-grasos/en",
+   "country_or_region": "Chile",
+   "fao_region": "Americas",
+   "year": "1985",
+   "title_from_directory_slug": "materias grasas de consumo habitual y potencial en chile  composición de ácidos grasos",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Spanish",
+   "reference": "Facultad de Ciencias Químicas y Farmacéuticas, Universidad de Chile. 1985. Materias grasas de consumo habitual y potencial en Chile: composición de ácidos grasos. Santiago, Universidad de Chile.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(chile--1990)-tabla-de-composición-de-alimentos-chilenos/en",
+   "country_or_region": "Chile",
+   "fao_region": "Americas",
+   "year": "1990",
+   "title_from_directory_slug": "tabla de composición de alimentos chilenos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Universidad de Chile, Facultad de Ciencias Químicas y Farmacéuticas. 1990. Tabla de composición química de alimentos chilenos. Santiago, Universidad de Chile.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://libros.uchile.cl/files/presses/1/monographs/426/submission/proof/files/assets/common/downloads/publication.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(chile--2018)-tabla-de-composición-de-alimentos/en",
+   "country_or_region": "Chile",
+   "fao_region": "Americas",
+   "year": "2018",
+   "title_from_directory_slug": "tabla de composición de alimentos",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Spanish",
+   "reference": "Zacarías, I., Barrios, L., González, C.G., Loeff, T. & Vera, G. 2018. Tabla de Composición de Alimentos.",
+   "infoods_evaluation": "Screening questions score: 60 [max.120]",
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--1981)-table-of-food-composition/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "1981",
+   "title_from_directory_slug": "table of food composition",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Department of Nutrition, Chinese Academy of Medical Sciences. 1981. Table of food composition. Beijing, People’s Medical Publishing House. 267 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--1991)-the-composition-of-chinese-foods-(national-representative-value)/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "1991",
+   "title_from_directory_slug": "the composition of chinese foods (national representative value)",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Wang, G. 1991. The composition of Chinese foods (national representative values). Beijing, People’s Medical Publishing House. 183 pp. ISBN 7-117-01560-8/R·1561.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--1992)-the-composition-of-chinese-foods-(province-level)/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "1992",
+   "title_from_directory_slug": "the composition of chinese foods (province level)",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Wang, G. 1992. The composition of Chinese foods (province level). Beijing, Institute of Nutrition and Food Hygiene, Chinese Academy of Preventive Medicine. 344 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--1996)-iodine-contents-of-eighty-five-kinds-of-food-in-shanghai-district/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "1996",
+   "title_from_directory_slug": "iodine contents of eighty five kinds of food in shanghai district",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese, English",
+   "reference": "Zhang, W., He, Q. & Wu, Q. 1996. Iodine contents of eighty-five kinds of food in the Shanghai district. Acta Nutrimenta Sinica, 18(4): 492–494. Shanghai, Shanghai Hygiene and Antiepidemic Centre.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--1997)-the-composition-of-chinese-foods/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "1997",
+   "title_from_directory_slug": "the composition of chinese foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Wang, G., Parpin, B. & Wen, Z. 1997. The composition of Chinese foods. Washington, DC, ILSI Press. 333 pp. ISBN 0-944398-95-2.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--2002)-china-food-composition/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "2002",
+   "title_from_directory_slug": "china food composition",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese, English",
+   "reference": "Yang, Y., Wang, G. & Pan, X. 2002. China food composition 2002. Beijing, Institute of Nutrition and Food Safety, Chinese Center for Disease Control and Prevention. 393 pp. ISBN 7-8107-1180-6.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--2004)-china-food-composition/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "2004",
+   "title_from_directory_slug": "china food composition",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Yang, Y. 2004. China food composition 2004. Beijing, Institute of Nutrition and Food Safety, Chinese Center for Disease Control and Prevention; Peking University Medical Press. 351 pp. ISBN 978-7-8107-1678-9.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--2018)-china-food-composition-table---standard-edition-6-release-1/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "2018",
+   "title_from_directory_slug": "china food composition table   standard edition 6 release 1",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Yang, Y. 2018. China food composition table (standard, 6th edition, volume 1). Beijing, Institute of Nutrition and Food Safety, Chinese Center for Disease Control and Prevention; Peking University Medical Press. 361 pp. ISBN 978-7-5659-1699-1.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--2019)-china-food-composition-table--standard-edition-6-release-2/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "2019",
+   "title_from_directory_slug": "china food composition table  standard edition 6 release 2",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Yang, Y. (Ed.). 2019. China Food Composition Table (Standard, 6th Edition, Volume 2). Institute of National and Food Safety, Chinese Center for Disease Control and Prevention. Peking University Medical Press. ISBN: 978-7565919787. 429 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://nlc.chinanutri.cn/fq/",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--2021)-iodine-in-foods/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "2021",
+   "title_from_directory_slug": "iodine in foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Wang, Z., & Xu, J. 2021. Iodine in Foods. Institute of National and Food Safety, Chinese Center for Disease Control and Prevention. Peking University Medical Press. ISBN: 978-7565924781. 93 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(china--2025)-nutritional-data-of-animal-based-aquatic-foods-in-china/en",
+   "country_or_region": "China",
+   "fao_region": "Asia",
+   "year": "2025",
+   "title_from_directory_slug": "nutritional data of animal based aquatic foods in china",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Chinese",
+   "reference": "Institute of Nutrition and Health, Chinese Center for Disease Control and Prevention. 2025. Nutritional data of animal-based aquatic foods in China. Wang, Z. & Yang, Y., eds. Beijing, Peking University Medical Press.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(colombia--2015)-tabla-de-composición-de-alimentos-colombianos/en",
+   "country_or_region": "Colombia",
+   "fao_region": "Americas",
+   "year": "2015",
+   "title_from_directory_slug": "tabla de composición de alimentos colombianos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Instituto Colombiano de Bienestar Familiar (ICBF) and Universidad Nacional de Colombia. 2015. Tabla de composición de alimentos colombianos, versión 2015. Bogotá, Instituto Colombiano de Bienestar Familiar (ICBF) and Universidad Nacional de Colombia.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.icbf.gov.co/sites/default/files/tcac_2015_final_para_imprimir.pdf",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(colombia--2017)-caracterización-y-composición-nutriciional-de-18-preparaciones-tradicionales-en-la-población-colombiana/en",
+   "country_or_region": "Colombia",
+   "fao_region": "Americas",
+   "year": "2017",
+   "title_from_directory_slug": "caracterización y composición nutriciional de 18 preparaciones tradicionales en la población colombiana",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Instituto Colombiano de Bienestar Familiar (ICBF) & Universidad Nacional de Colombia. 2017. Caracterización y Composición Nutricional de 18 Preparaciones Tradicionales en la Población Colombiana, 1ª edición. Bogotá.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.icbf.gov.co/sites/default/files/caracterizacion-composicion-18-preparaciones-tradicionales-icbf1_0.pdf",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(colombia--2018)-tabla-de-composición-de-alimentos-colombianos/en",
+   "country_or_region": "Colombia",
+   "fao_region": "Americas",
+   "year": "2018",
+   "title_from_directory_slug": "tabla de composición de alimentos colombianos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Instituto Colombiano de Bienestar Familiar (ICBF) & Universidad Nacional de Colombia. 2018. Tabla de Composición de Alimentos Colombianos, versión 2018.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.icbf.gov.co/system/files/tcac_web.pdf",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(costa-rica--2006)-tablas-de-composición-de-alimentos--alimentos-fortificados/en",
+   "country_or_region": "Costa Rica",
+   "fao_region": "Americas",
+   "year": "2006",
+   "title_from_directory_slug": "tablas de composición de alimentos  alimentos fortificados",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "INCIENSA & Harvard School of Public Health. 2006. Tablas de composición de alimentos: alimentos fortificados. San José, Costa Rica.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.inciensa.sa.cr/vigilancia_epidemiologica/manuales/tablas%20composicion/Alimentos%20fortificados.pdf",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(costa-rica--2006)-tablas-de-composición-de-alimentos--macronutrientes-y-fibra-dietética/en",
+   "country_or_region": "Costa Rica",
+   "fao_region": "Americas",
+   "year": "2006",
+   "title_from_directory_slug": "tablas de composición de alimentos  macronutrientes y fibra dietética",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "INCIENSA & Harvard School of Public Health. 2006. Tablas de composición de alimentos: macronutrientes y fibra dietética. San José, Costa Rica.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.inciensa.sa.cr/vigilancia_epidemiologica/manuales/tablas%20composicion/Macronutrientes%20y%20fibra.pdf",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(costa-rica--2006)-tablas-de-composición-de-alimentos--ácidos-grasos/en",
+   "country_or_region": "Costa Rica",
+   "fao_region": "Americas",
+   "year": "2006",
+   "title_from_directory_slug": "tablas de composición de alimentos  ácidos grasos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "INCIENSA & Harvard School of Public Health. 2006. Tablas de composición de alimentos: ácidos grasos. San José, Costa Rica.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.inciensa.sa.cr/vigilancia_epidemiologica/manuales/tablas%20composicion/Acidos%20grasos.pdf",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(costa-rica--2013)-tablas-de-composición-de-alimentos---carotenoides-y-tocoferoles/en",
+   "country_or_region": "Costa Rica",
+   "fao_region": "Americas",
+   "year": "2013",
+   "title_from_directory_slug": "tablas de composición de alimentos   carotenoides y tocoferoles",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "INCIENSA & Harvard School of Public Health. 2013. Tablas de composición de alimentos (carotenoides y tocoferoles). San José, Costa Rica.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.inciensa.sa.cr/actualidad/Tabla%20Composicion%20Alimentos.aspx",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(country--date)-title-0/en",
+   "country_or_region": "Cambodia",
+   "fao_region": "Asia",
+   "year": "2013",
+   "title_from_directory_slug": "title 0",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "English",
+   "reference": "Seyha, S., Kuong, K., Chamnan, C., Touch, B., Daream, S., Sophonneary, P., Mary, C., Doets, E., Hulshof, P., Elburg, L., Melse-Boonstra, A., Brouwer, I. & Skau, J.K.H. 2013. SMILING: Food Composition Table for Cambodia. Phnom Penh, Ministry of Agriculture, Forestry and Fisheries of Cambodia, Department of Fisheries Post-Harvest Technologies and Quality Control, Ministry of Health, Cambodia, and National Maternal and Child Health Centre.",
+   "infoods_evaluation": "Screening questions score: 100 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.fao.org%2Ffileadmin%2Ftemplates%2Ffood_composition%2Fdocuments%2FFCT_SMILING_PROJECT_ASIA%2FD3_5a_SMILING_FCT__Cambodia_010813_protected.xlsx&wdOrigin=BROWSELINK",
+     "http_status": 200
+    },
+    {
+     "url": "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.fao.org%2Ffileadmin%2Ftemplates%2Ffood_composition%2Fdocuments%2FFCT_SMILING_PROJECT_ASIA%2FD3_5b_SMILING_FCT_QA_Cambodia_010813.xlsx&wdOrigin=BROWSELINK",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(country--date)-title-1/en",
+   "country_or_region": "Bangladesh",
+   "fao_region": "Asia",
+   "year": "2013",
+   "title_from_directory_slug": "title 1",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book, static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "Shaheen, N., Rahim, A. T. M. A., Mohiduzzaman, M., Banu, C. P., Bari, M. L., Tukun, A. B., Mannan, M. A., Bhattacharjee, L., & Stadlmayr, B. 2013. Food Composition Table for Bangladesh. Institute of Nutrition and Food Science; Centre for Advanced Research in Sciences; University of Dhaka, Dhaka-1000, Bangladesh.",
+   "infoods_evaluation": "Screening questions score: 115 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_10_2_14_final_version.pdf",
+     "http_status": 206
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCDB_7_4_14.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(country--date)-title-18/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "2017",
+   "title_from_directory_slug": "title 18",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "Bahasa, English",
+   "reference": "Indonesian Food Composition Table (IFCT). 2017. Indonesian Food Composition Table. Ministry of Health of the Republic of Indonesia.",
+   "infoods_evaluation": "Screening questions score: 60 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://panganku.org/en-EN/beranda",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(country--date)-title-32/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "2013",
+   "title_from_directory_slug": "title 32",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "English",
+   "reference": "Fahmida, U., Santika, O., Muslimatum, S., Prihatini, S.M., Nazarudin, N., Jahari, A.B., Doets, E., Hulshof, P., Elburg, L., Melse-Boonstra, A. & Brouwer, I. 2013. SMILING D3.5-a: Food Composition Table for Indonesia. SouthEast Asian Ministers of Education Organization, Indonesia, Ministry of Health, Indonesia, and Wageningen University, Netherlands. 7 August 2013.",
+   "infoods_evaluation": "Screening questions score: 110 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_SMILING_PROJECT_ASIA/D3_5a_SMILING_FCT_Indonesia_070813_protected.xlsx",
+     "http_status": 206
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_SMILING_PROJECT_ASIA/D3_5b_SMILING_FCT_QA_Indonesia_070813.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(country--date)-title-8/en",
+   "country_or_region": "Japan",
+   "fao_region": "Asia",
+   "year": "2015",
+   "title_from_directory_slug": "title 8",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English, Japanese",
+   "reference": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan. 2015. Standard Tables of Food Composition in Japan. 7th edition. Office for Resources, Policy Division, Science and Technology Policy Bureau.",
+   "infoods_evaluation": "Screening questions score: 120 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.mext.go.jp/en/policy/science_technology/policy/title01/detail01/1374030.htm",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(country--date)-title-9/en",
+   "country_or_region": "India",
+   "fao_region": "Asia",
+   "year": "2017",
+   "title_from_directory_slug": "title 9",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and mobile application",
+   "language": "English",
+   "reference": "Longvah, T., Ananthan, R., Bhaskarachary, K., & Venkaiah, K. 2017. Indian Food Composition Tables, 2017. National Institute of Nutrition, Indian Council of Medical Research, Hyderabad, Telangana, India.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+     "http_status": 206
+    },
+    {
+     "url": "https://play.google.com/store/apps/details?id=com.nin20.nin2byo2i&pcampaignid=web_share",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(croatia--1976)-tablice-o-sastavu-i-prehrambenoj-vrijednosti-namirnica-i-pica/en",
+   "country_or_region": "Croatia",
+   "fao_region": "Europe",
+   "year": "1976",
+   "title_from_directory_slug": "tablice o sastavu i prehrambenoj vrijednosti namirnica i pica",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Serbo-Croatian",
+   "reference": null,
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(croatia--1990)-tablice-o-sastavu-namirnica-i-pića/en",
+   "country_or_region": "Croatia",
+   "fao_region": "Europe",
+   "year": "1990",
+   "title_from_directory_slug": "tablice o sastavu namirnica i pića",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Croatian",
+   "reference": "Kaić-Rak, A. & Antonić, K. 1990. Tablice o sastavu namirnica i pića. Zagreb, Croatia, Zavod za zaštitu zdravlja, SR Hrvatske.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(cuba--2013)-tabla-de-composición-de-alimentos-utilizados-en-cuba/en",
+   "country_or_region": "Cuba",
+   "fao_region": "Americas",
+   "year": "2013",
+   "title_from_directory_slug": "tabla de composición de alimentos utilizados en cuba",
+   "access_as_listed_by_fao": "not available",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Instituto de Nutrición e Higiene de los Alimentos (INHA). 2013. Tabla de Composición de Alimentos utilizados en Cuba. La Habana, Cuba.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.medigraphic.com/cgi-bin/new/resumenI.cgi?IDARTICULO=53283",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(cyprus--2013)-cyprus-food-composition-tables/en",
+   "country_or_region": "Cyprus",
+   "fao_region": "Asia",
+   "year": "2013",
+   "title_from_directory_slug": "cyprus food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "Cyprus Food Composition Tables. 2013. 3rd edition, December 2013. Nicosia, Cyprus.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.moh.gov.cy/Moh/SGL/sgl.nsf/All/72C8C9F6F124F979C22583C5003E694F?Opendocument",
+     "http_status": 403
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(czechia--2020)-czech-food-composition-database/en",
+   "country_or_region": "Czechia",
+   "fao_region": "Europe",
+   "year": "2026",
+   "title_from_directory_slug": "czech food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "Czech, English",
+   "reference": "Institute of Agricultural Economics and Information. Czech Centre for Food Composition Database. 2026. Czech Food Composition Database, Version 11.26 [online]. Prague, Czech Republic.",
+   "infoods_evaluation": "Screening questions score: 95 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.nutridatabaze.cz/en/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(democratic-republic-of-the-congo--1966)-tables-de-composition-alimentaire-pour-la-re-publique-de-mocratique-du-congo/en",
+   "country_or_region": "Democratic Republic of the Congo",
+   "fao_region": "Africa",
+   "year": "1966",
+   "title_from_directory_slug": "tables de composition alimentaire pour la re publique de mocratique du congo",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Degroote, V.A. 1966. Tables de composition alimentaire pour la République démocratique du Congo. Kinshasa, Office National de la Recherche et du Développement.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(denmark--2024)-danish-food-composition-table/en",
+   "country_or_region": "Denmark",
+   "fao_region": "Europe",
+   "year": "2025",
+   "title_from_directory_slug": "danish food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, Danish",
+   "reference": "Langwagen, M., Jakobsen, J., Christensen, T. & Poulsen, A. 2025. The Danish food composition database, Frida version 5.5. Kongens Lyngby, National Food Institute, Technical University of Denmark.",
+   "infoods_evaluation": "Screening questions score: 110 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://doi.org/10.11583/DTU.29500682",
+     "http_status": 202
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ecuador--2012)-tabla-de-composicón-de-alimentos-para-ecuador/en",
+   "country_or_region": "Ecuador",
+   "fao_region": "Americas",
+   "year": "2012",
+   "title_from_directory_slug": "tabla de composicón de alimentos para ecuador",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Spanish",
+   "reference": "Ministerio de Salud Pública del Ecuador. 2012. Tabla de composición de alimentos para Ecuador. Compilado por el Equipo Técnico de la ENSANUT-ECU. Quito, Ministerio de Salud Pública del Ecuador.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ecuador--2018)-tabla-de-composición-de-alimentos---cuenca-ecuador/en",
+   "country_or_region": "Ecuador",
+   "fao_region": "Americas",
+   "year": "2018",
+   "title_from_directory_slug": "tabla de composición de alimentos   cuenca ecuador",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Universidad de Cuenca. 2018. Tabla de Composición de Alimentos - Cuenca, Ecuador. Grupo de Investigaciones Alimentación, Nutrición y Salud, Departamento de Biociencias, Universidad de Cuenca, Ecuador.",
+   "infoods_evaluation": "Screening questions score: 100 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://dspace-test.ucuenca.edu.ec/bitstream/123456789/34328/1/documento.pdf",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ecuador--2021)-tabla-de-composición-química-de-los-alimentos--basada-en-nutrientes-de-interés-para-la-población-ecuatoriana/en",
+   "country_or_region": "Ecuador",
+   "fao_region": "Americas",
+   "year": "2021",
+   "title_from_directory_slug": "tabla de composición química de los alimentos  basada en nutrientes de interés para la población ecuatoriana",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Herrera‑Fontana, M.E., Chisaguano‑Tonato, A.M., Jumbo Crisanto, J.V., Castro Morillo, N.P. & Anchundia Ortega, A.P. 2021. Tabla de composición química de los alimentos: basada en nutrientes de interés para la población ecuatoriana. Bitácora Académica USFQ, vol. 11. Quito, USFQ Press, Universidad San Francisco de Quito.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://revistas.usfq.edu.ec/index.php/bitacora/issue/view/191/PDF%20Bit%C3%A1cora%20Acad%C3%A9mica%20Vol.%2011",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(egypt--1996)-food-composition-tables-for-egypt/en",
+   "country_or_region": "Egypt",
+   "fao_region": "Africa",
+   "year": "1996",
+   "title_from_directory_slug": "food composition tables for egypt",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "National Nutrition Institute (NNI). 2006. Food composition tables for Egypt. Cairo, NNI.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(estonia--2025)-nutridata-food-composition-database/en",
+   "country_or_region": "Estonia",
+   "fao_region": "Europe",
+   "year": "2026",
+   "title_from_directory_slug": "nutridata food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, Estonian, Russian",
+   "reference": "National Institute for Health Development. 2026. NutriData Food Composition Database, version 16, 26 Feb. 2026. Estonia.",
+   "infoods_evaluation": "Screening questions score: 90 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://tka.nutridata.ee/en/",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ethiopia--1968)-food-composition-table-for-use-in-ethiopia/en",
+   "country_or_region": "Ethiopia",
+   "fao_region": "Africa",
+   "year": "1968",
+   "title_from_directory_slug": "food composition table for use in ethiopia",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Ågren, G. & Gibson, R. 1968. Food composition table for use in Ethiopia I. Stockholm, Swedish International Development Authority, and Addis Ababa, Ethiopian Nutrition Institute. 31 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ethiopia--1975)-food-composition-table-for-use-in-ethiopia-part-ii--amino-acid-content-and-biological-data-on-proteins-in-ethiopian-foods/en",
+   "country_or_region": "Ethiopia",
+   "fao_region": "Africa",
+   "year": "1975",
+   "title_from_directory_slug": "food composition table for use in ethiopia part ii  amino acid content and biological data on proteins in ethiopian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Ågren, G., Eklund, A. & Liedén, S.-Å. 1975. Food composition table for use in Ethiopia II: Amino acid content and biological data on proteins in Ethiopian foods. Stockholm, Swedish International Development Authority, and Addis Ababa, Ethiopian Nutrition Institute. 72 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ethiopia--1997)-food-composition-table-for-use-in-ethiopia-part-iii/en",
+   "country_or_region": "Ethiopia",
+   "fao_region": "Africa",
+   "year": "1997",
+   "title_from_directory_slug": "food composition table for use in ethiopia part iii",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "EHNRI (Ethiopian Health and Nutrition Research Institute). 1997. Food composition table for use in Ethiopia. Part III, 1968–1997. Addis Ababa, EHNRI.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ethiopia--1998)-food-composition-table-for-use-in-ethiopia-part-iv/en",
+   "country_or_region": "Ethiopia",
+   "fao_region": "Africa",
+   "year": "1998",
+   "title_from_directory_slug": "food composition table for use in ethiopia part iv",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "EHNRI (Ethiopian Health and Nutrition Research Institute). 1998. Food composition table for use in Ethiopia. Part IV. Addis Ababa, EHNRI.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ethiopia--2025)-the-ethiopian-food-recipes-2025/en",
+   "country_or_region": "Ethiopia",
+   "fao_region": "Africa",
+   "year": "2025",
+   "title_from_directory_slug": "the ethiopian food recipes 2025",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Ethiopian Public Health Institute (EPHI) and Food and Agriculture Organization of the United Nations (FAO). 2025. The Ethiopian Food Recipes. Addis Ababa, Ethiopia.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/cd9309en",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(faroe-islands--1995)-faroese-food-composition-tables/en",
+   "country_or_region": "Faroe Islands",
+   "fao_region": "Europe",
+   "year": "1995",
+   "title_from_directory_slug": "faroese food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "The Food, Veterinary and Environmental Agency. 1995. Faroese Food Composition Tables. 24 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.hfs.fo/webcenter/ShowProperty?nodeId=%2Fhfs2-cs%2FHFS017914%2F%2FidcPrimaryFile&revision=latestreleased",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1974)-ruokalajien-ravintoainesisältö---nutrient-content-of-finnish-dishes/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1974",
+   "title_from_directory_slug": "ruokalajien ravintoainesisältö   nutrient content of finnish dishes",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Finish",
+   "reference": "Ahlström, A. & Räsänen, L. 1974. Ruokalajien ravintoainesisältö / Nutrient content of Finnish dishes. Kotitalous, 38: 4–9. Helsinki.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1980)-mineral-element-composition-of-finnish-foods/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1980",
+   "title_from_directory_slug": "mineral element composition of finnish foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Koivistoinen, P., ed. 1980. Mineral element composition of Finnish foods: N, K, Ca, Mg, P, S, Fe, Cu, Mn, Zn, Mo, Co, Ni, Cr, F, Se, Si, Rb, Al, B, Br, Hg, As, Cd, Pb and ash. Acta Agriculturae Scandinavica, Suppl. 22. Stockholm, Sweden. 171 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1980)-ruoka-ainetaulukko---food-composition-tables/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1980",
+   "title_from_directory_slug": "ruoka ainetaulukko   food composition tables",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Finish",
+   "reference": "Turpeinen, O. 1980. Ruoka-ainetaulukko / Food composition tables. Keuruu, Otava. 42 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1981)-kivennaisainetaulukko---mineral-element-tables/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1981",
+   "title_from_directory_slug": "kivennaisainetaulukko   mineral element tables",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Varo, P. 1981. Kivennaisainetaulukko / Mineral element tables. Keuruu, Otava.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1982)-iodine-in-finnish-foods/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1982",
+   "title_from_directory_slug": "iodine in finnish foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Varo, P., Saari, E., Paaso, A. & Koivistoinen, P. 1982. Iodine in Finnish foods. International Journal for Vitamin and Nutrition Research, 52: 80–89. Reprint, 10 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1982)-strontium-in-finnish-foods/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1982",
+   "title_from_directory_slug": "strontium in finnish foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Varo, P., Saari, E., Paaso, A. & Koivistoinen, P. 1982. Strontium in Finnish foods. International Journal for Vitamin and Nutrition Research, 52: 342–350.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1984)-dietary-fibre-and-available-carbohydrates-in-finnish-cereal-products/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1984",
+   "title_from_directory_slug": "dietary fibre and available carbohydrates in finnish cereal products",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Varo, P., Laine, R., Veijalainen, K., Pero, K. & Koivistoinen, P. 1984. Dietary fibre and available carbohydrates in Finnish cereal products. Journal of Agricultural Science in Finland, 56: 39–48. Reprint, 10 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--1985)-ruoka-ainetaulukko---food-composition-tables/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "1985",
+   "title_from_directory_slug": "ruoka ainetaulukko   food composition tables",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Finish",
+   "reference": "Turpeinen, O. 1985. Ruoka-ainetaulukko / Food composition tables. 23rd ed. Keuruu, Otava.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--2011)-elintarviketaulukko--tiedot-ravintokoostumuksesta/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "2011",
+   "title_from_directory_slug": "elintarviketaulukko  tiedot ravintokoostumuksesta",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Helldán, A., Salmenhaara, M., Pakkala, H., Korhonen, T. & Reinivuo, H. 2011. Elintarviketaulukko: tiedot ravintokoostumuksesta. Helsinki, Terveyden ja hyvinvoinnin laitos (THL) and Otava.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(finland--2019)-fineli-food-composition-database/en",
+   "country_or_region": "Finland",
+   "fao_region": "Europe",
+   "year": "2019",
+   "title_from_directory_slug": "fineli food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic fila and searchable web tool",
+   "language": "English, Finish, Swedish",
+   "reference": "National Institute for Health and Welfare, Public Health Promotion Unit. Fineli. 2019. Finnish food composition database. Release 20. Helsinki.",
+   "infoods_evaluation": "Screening questions score: 100 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://fineli.fi/fineli/en/index",
+     "http_status": 403
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france)-aprifel-nutritional-sheets/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": null,
+   "title_from_directory_slug": "aprifel nutritional sheets",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English, French",
+   "reference": "Aprifel Research & Information. 2023. Aprifel Nutritional Sheets.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.aprifel.com/en/nutritional-sheet/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1970)-tables-de-composition-des-aliments/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "1970",
+   "title_from_directory_slug": "tables de composition des aliments",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Randoin, L., Le Gallic, P., Dupuis, Y. & Bernardin, A., in collaboration with Duchêne, G. & Brun, P. 1970. Tables de composition des aliments. 4th ed. Paris, Institut Scientifique d’Hygiène Alimentaire, Centre National de la Recherche Scientifique, Jacques Lanore. 116 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1979)-table-de-composition-des-aliments/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "1979",
+   "title_from_directory_slug": "table de composition des aliments",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Renaud, S., Gosdey, F., Ortchanian, E. & Baudier, F. 1979. Table de composition des aliments. Paris, Astra-Calve.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1980)-les-aliments---tables-des-valeurs-nutritives--les-aliments-préparés-industriellement-pour-l'enfance/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "Print-only",
+   "title_from_directory_slug": "les aliments   tables des valeurs nutritives  les aliments préparés industriellement pour l'enfance",
+   "access_as_listed_by_fao": "Printed book",
+   "format_as_listed_by_fao": "French",
+   "language": "unknown",
+   "reference": "Ostrowski, Z.L., Josse, M.C., Bouagina, A. & Blochet, C. 1980. Les aliments – tables des valeurs nutritives: les aliments préparés industriellement pour l’enfance. Paris, ADE and Ville de Paris.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1983)-valeur-nutritionnelle-de-quelques-produits-prêts-à-être-consommés/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "1983",
+   "title_from_directory_slug": "valeur nutritionnelle de quelques produits prêts à être consommés",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Centre de Recherches Foch. 1983. Valeur nutritionnelle de quelques produits prêts à être consommés. Paris, Centre de Recherches Foch. 71 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1985)-les-aliments--tables-des-valeurs-nutritives/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "1985",
+   "title_from_directory_slug": "les aliments  tables des valeurs nutritives",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Ostrowski, Z.L. & Josse, M.C. 1985. Les aliments: tables des valeurs nutritives. Paris, ADE and Ville de Paris.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1987)-répertoire-général-des-aliments--tome-1--table-de-composition-des-corps-gras/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "1987",
+   "title_from_directory_slug": "répertoire général des aliments  tome 1  table de composition des corps gras",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French, English",
+   "reference": "Feinberg, M., Favier, J.C. & Ireland-Ripert, J. 1987. Répertoire général des aliments: tome 1 – table de composition des corps gras. Paris, Fondation Française pour la Nutrition (FFN) and Centre Informatique sur la Qualité des Aliments (CIQUAL), Technique et Documentation–Lavoisier. 147 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--1987)-répertoire-général-des-aliments--tome-2--table-de-composition-des-produits-laitiers/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "1987",
+   "title_from_directory_slug": "répertoire général des aliments  tome 2  table de composition des produits laitiers",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French, English",
+   "reference": "Feinberg, M., Favier, J.C. & Ireland-Ripert, J. 1987. Répertoire général des aliments: tome 2 – table de composition des produits laitiers. Paris, Fondation Française pour la Nutrition (FFN) and Centre Informatique sur la Qualité des Aliments (CIQUAL), Technique et Documentation–Lavoisier. 231 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--2022)-french-food-observatory-(oqali)/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "2022",
+   "title_from_directory_slug": "french food observatory (oqali)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, French",
+   "reference": null,
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.oqali.fr/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(france--2025)-ciqual-french-food-composition-table/en",
+   "country_or_region": "France",
+   "fao_region": "Europe",
+   "year": "2025",
+   "title_from_directory_slug": "ciqual french food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic document and searchable web tool",
+   "language": "English, French",
+   "reference": null,
+   "infoods_evaluation": "Screening questions score: 105 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://ciqual.anses.fr/",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(gambia--1979)-foods-of-rural-gambia/en",
+   "country_or_region": "Gambia",
+   "fao_region": "Africa",
+   "year": "1979",
+   "title_from_directory_slug": "foods of rural gambia",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "McCrae, J.E. & Paul, A.A. 1979. Foods of rural Gambia. Cambridge, UK, and Keneba, The Gambia, Medical Research Council Dunn Nutrition Unit. 89 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(gambia--1987)-gambian-foods--gafna-handbook-no.-1/en",
+   "country_or_region": "Gambia",
+   "fao_region": "Africa",
+   "year": "1987",
+   "title_from_directory_slug": "gambian foods  gafna handbook no. 1",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English, Mandinka",
+   "reference": "Gambian Food and Nutrition Association (GAFNA). [n.d.]. Gambian foods: GAFNA handbook no. 1. Energy and protein tables. A nutrition guidebook for health workers. Banjul, GAFNA. 29 pp., 2 charts.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(gambia--1996)-foods-of-rural-gambia/en",
+   "country_or_region": "Gambia",
+   "fao_region": "Africa",
+   "year": "1966",
+   "title_from_directory_slug": "foods of rural gambia",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "McCrae, J.E. & Paul, A.A. 1996. Foods of rural Gambia. 2nd ed. Cambridge, UK, and Keneba, The Gambia, Medical Research Council Dunn Nutrition Unit. 109 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(georgia--2009)-georgian-food-composition-tables/en",
+   "country_or_region": "Georgia",
+   "fao_region": null,
+   "year": "2009",
+   "title_from_directory_slug": "georgian food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "Georgian, English",
+   "reference": "National Association of Nutritionists. 2009. Food Composition Tables. First edition. 104 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.vup.sk/en/index.php?mainID=1&navID=82",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(germany--2014)-german-nutrient-data-base----bundeslebensmittelschlüssel/en",
+   "country_or_region": "Germany",
+   "fao_region": "Europe",
+   "year": "2025",
+   "title_from_directory_slug": "german nutrient data base    bundeslebensmittelschlüssel",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, German",
+   "reference": "Max Rubner-Institut. 2025. Bundeslebensmittelschlüssel (BLS), Version 4.0 / German Nutrient Database. Karlsruhe. DOI: 10.25826/Data20251217-134202-0",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://blsdb.de/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(germany--2024)-souci-fachmann-kraut-database/en",
+   "country_or_region": "Germany",
+   "fao_region": "Europe",
+   "year": "2025",
+   "title_from_directory_slug": "souci fachmann kraut database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English, German",
+   "reference": "Leibniz Institute for Food Systems Biology, Technical University of Munich. 2025. Souci-Fachmann-Kraut Tables (SFK).",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.sfk.online/#/home",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ghana--1975)-composition-of-foods-commonly-used-in-ghana/en",
+   "country_or_region": "Ghana",
+   "fao_region": "Africa",
+   "year": "1975",
+   "title_from_directory_slug": "composition of foods commonly used in ghana",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Eyeson, K.K. & Ankrah, E.K. 1975. Composition of foods commonly used in Ghana. Accra, Food Research Institute (CSIR); United Nations Development Programme (UNDP); and Food and Agriculture Organization of the United Nations (FAO). 57 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(global--2012)-fao-infoods-density-database---version-2/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": null,
+   "title_from_directory_slug": "fao infoods density database   version 2",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2012. FAO/INFOODS Density Database. Version 2.0. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/ap815e",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/density_DB_v2_0_final-1__1_.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(global--2015)-phenol-explorer-database-on-polyphenol-content-in-foods/en",
+   "country_or_region": "Burkina Faso",
+   "fao_region": "Africa",
+   "year": "2005",
+   "title_from_directory_slug": "phenol explorer database on polyphenol content in foods",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "French",
+   "reference": "Ministère de la Santé, Secrétariat Général, Direction Générale de la Santé, Direction de la Nutrition. 2005. Édition et vulgarisation d’une table de composition des aliments couramment consommés au Burkina Faso. Ouagadougou, Ministère de la Santé.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://pnin-niger.org/pnin-doc/web/BaseDocument/public/metadonnee/214",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(global--2017)-fao-infoods-analytical-food-composition-database---version-2.0-(anfood2.0)/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2017",
+   "title_from_directory_slug": "fao infoods analytical food composition database   version 2.0 (anfood2.0)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2017. FAO/INFOODS Analytical food composition database version 2.0 – AnFooD2.0. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i7360en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/AnFooD2.0.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(global--2017)-fao-infoods-food-composition-database-for-biodiversity---version-4.0-(biofoodcomp4.0)/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2017",
+   "title_from_directory_slug": "fao infoods food composition database for biodiversity   version 4.0 (biofoodcomp4.0)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2017. FAO/INFOODS Food Composition Database for Biodiversity. Version 4.0 – BioFoodComp4.0. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i7364en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/BioFoodComp4.0.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(global--2018)-fao-infoods-izincg-global-food-composition-database-for-phytate---version-1.0-(phyfoodcomp1.0)/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2018",
+   "title_from_directory_slug": "fao infoods izincg global food composition database for phytate   version 1.0 (phyfoodcomp1.0)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO/IZiNCG, 2018. FAO/INFOODS/IZiNCG Global Food Composition Database for Phytate. Version 1.0 - PhyFoodComp 1.0. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i8542en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/PhyFoodComp_1.0.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(greece--2023)-food-composition-tables-of-greek-foods/en",
+   "country_or_region": "Greece",
+   "fao_region": "Europe",
+   "year": "2023",
+   "title_from_directory_slug": "food composition tables of greek foods",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "Greek",
+   "reference": null,
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://users.sch.gr/cristom40/GreekTables/pinakes/full_trofima.htm",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(greece--2023)-food-composition-tables-of-greek/en",
+   "country_or_region": "Greece",
+   "fao_region": "Europe",
+   "year": null,
+   "title_from_directory_slug": "food composition tables of greek",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "HHF.  Composition tables of foods and Greek dishes  [in EuroFIR FoodEXplorer]. Brussels, EuroFIR AISBL.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(greenland--1955)-nogle-undersogelser-af-gronlandske-levnedsmidler-og-kostforhold--appendix-tables/en",
+   "country_or_region": "Greenland",
+   "fao_region": "Americas",
+   "year": "1955",
+   "title_from_directory_slug": "nogle undersogelser af gronlandske levnedsmidler og kostforhold  appendix tables",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Statens Praktisk-Sundhedsmaessige Undersøgelser. 1955. Nogle Undersøgelser af Grønlandske Levnedsmidler og Kostforhold, Appendix Tables. Beretninger vedrørende Grønland, No. 3-11. Copenhagen, Denmark.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(greenland--2005)-vitamins-and-minerals-in-the-traditional-greenland-diet/en",
+   "country_or_region": "Greenland",
+   "fao_region": "Americas",
+   "year": "2005",
+   "title_from_directory_slug": "vitamins and minerals in the traditional greenland diet",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "National Environmental Research Institute (NERI). 2005. Vitamins and Minerals in the Traditional Greenland Diet. NERI Technical Report No. 528.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www2.dmu.dk/1_viden/2_Publikationer/3_fagrapporter/rapporter/FR528.pdf",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(haiti--1965)-table-de-composition-d'aliments-pour-haiti/en",
+   "country_or_region": "Haiti",
+   "fao_region": "Americas",
+   "year": "1965",
+   "title_from_directory_slug": "table de composition d'aliments pour haiti",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Dominique, G. 1965. Table de composition d’aliments pour Haïti. Nutrition Board – Department of Public Health and Population, Department of Agriculture of Natural Resources and Rural Development, Port-au-Prince, Haïti.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(hong-kong--2024)-nutrient-information-inquiry/en",
+   "country_or_region": "China, Hong Kong SAR",
+   "fao_region": "Asia",
+   "year": "2024",
+   "title_from_directory_slug": "nutrient information inquiry",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English",
+   "reference": "Centre for Food Safety, The Government of the Hong Kong Special Administrative Region. 2024. Nutrient information inquiry. Hong Kong, Centre for Food Safety.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.cfs.gov.hk/english/nutrient/index.php",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(hungary--1988)-tápanyagtáblázat---tápanyag-szüks-glet-és-tápanyag-összetétel---food-composition-tables---composition-and-requirements-of-nutrients/en",
+   "country_or_region": "Hungary",
+   "fao_region": "Europe",
+   "year": "1988",
+   "title_from_directory_slug": "tápanyagtáblázat   tápanyag szüks glet és tápanyag összetétel   food composition tables   composition and requirements of nutrients",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Hungarian",
+   "reference": "Biró, G. & Lindner, K. 1988. Tápanyagtáblázat -Tápanyag szüks‚glet és tápanyag összetétel / Food Composition Tables - Composition and Requirements of Nutrients. 11th ed. Budapest, Medicina.Biró, G. & Lindner, K. 1988. Tápanyagtáblázat -Tápanyag szüks‚glet és tápanyag összetétel / Food Composition Tables - Composition and Requirements of Nutrients. 11th ed. Budapest, Medicina.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(hungary--2005)-new-nutritional-table---új-tápanyagtáblázat/en",
+   "country_or_region": "Hungary",
+   "fao_region": "Europe",
+   "year": "2005",
+   "title_from_directory_slug": "new nutritional table   új tápanyagtáblázat",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Hungarian",
+   "reference": "Rodler, I. (ed.). 2005. Új Tápanyagtáblázat (New Nutritional Table). Budapest, Hungary: Medicina Könyvkiadó.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.medicina-kiado.hu/kiadvanyaink/szak-es-tankonyvek/belgyogyaszat/uj-tapanyagtablazat/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(india--1971)-nutritive-value-of-indian-foods/en",
+   "country_or_region": "India",
+   "fao_region": "Asia",
+   "year": "1971",
+   "title_from_directory_slug": "nutritive value of indian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Gopalan, C., Rama Sastri, B.V. & Balasubramanian, S.C. 1971. Nutritive value of Indian foods. Reprinted 1984. Hyderabad, National Institute of Nutrition, Indian Council of Medical Research. 204 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(india--1981)-balanced-diets-and-nutritive-value-of-common-recipes/en",
+   "country_or_region": "India",
+   "fao_region": "Asia",
+   "year": "1981",
+   "title_from_directory_slug": "balanced diets and nutritive value of common recipes",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Swaminathan, M., Joseph, K., Narayana Rao, M., Chandiramani, S.V., Subramanyam, L. & Indira, K. 1981. Balanced diets and nutritive value of common recipes. Mysore, Central Food Technological Research Institute. 117 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(india--1992)-effect-of-processing-on-the-carotene-content-of-vegetables-and-fruits/en",
+   "country_or_region": "India",
+   "fao_region": "Asia",
+   "year": "1992",
+   "title_from_directory_slug": "effect of processing on the carotene content of vegetables and fruits",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Seshadri, S., Sharma, K. & Saiyed, F. 1992. Effect of processing on the carotene content of vegetables and fruits. Vadodara, WHO Collaborating Centre in Weaning Technology and Anaemia Control, Department of Foods and Nutrition, Faculty of Home Science, M.S. University of Baroda. 16 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1967)--food-composition-table/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1967",
+   "title_from_directory_slug": "food composition table",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Indonesian, Latin alphabet",
+   "reference": "Direktorat Gizi, Departemen Kesehatan Republik Indonesia. 1967. Food composition table (Daftar komposisi bahan makanan). Jakarta, Penerbit Bharata. 57 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1979)-amino-acid-composition-of-various-indonesian-foods/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1979",
+   "title_from_directory_slug": "amino acid composition of various indonesian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Indonesian",
+   "reference": "Slamet, D.S. & Purawisastra, S. 1979. Amino acid composition of various Indonesian foods. Bogor, Pusat Penelitian dan Pengembangan Gizi, Badan Penelitian dan Pengembangan Kesehatan, Departemen Kesehatan. 22 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1980)-komposisi-zat-gizi-makanan-indonesia/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1980",
+   "title_from_directory_slug": "komposisi zat gizi makanan indonesia",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Slamet, D.S. & Tarwotjo, I. 1980. Komposisi zat gizi makanan Indonesia [food composition tables]. Penelitian Gizi dan Makanan, 4: 21–36.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1980)-nutrient-content-of-indonesian-food/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1980",
+   "title_from_directory_slug": "nutrient content of indonesian food",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Indonesian",
+   "reference": "Slamet, D.S. & Tarwotjo, I. 1980. Nutrient content of Indonesian food. Bogor, Pusat Penelitian dan Pengembangan Gizi, Departemen Kesehatan. 36 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1980)-observations-of-food-in-various-districts-in-indonesia-that-have-not-been-included-in-food-composition-tables/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1980",
+   "title_from_directory_slug": "observations of food in various districts in indonesia that have not been included in food composition tables",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Indonesian",
+   "reference": "Slamet, D.S., Komariah, M. & Komari. 1980. Observations of food in various districts in Indonesia that have not been included in food composition tables. Bogor, Pusat Penelitian dan Pengembangan Gizi, Badan Penelitian dan Pengembangan Kesehatan, Departemen Kesehatan. 26 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1981)-food-composition-table/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1981",
+   "title_from_directory_slug": "food composition table",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Indonesian",
+   "reference": "Direktorat Gizi, Departemen Kesehatan. 1981. Food composition table. Jakarta, Penerbit Bharata Karya Aksara. 57 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(indonesia--1995)-daftar-komposisi-zat-gizi-pangan-indonesia/en",
+   "country_or_region": "Indonesia",
+   "fao_region": "Asia",
+   "year": "1995",
+   "title_from_directory_slug": "daftar komposisi zat gizi pangan indonesia",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Indonesian",
+   "reference": "Departemen Kesehatan Republik Indonesia. 1995. Daftar komposisi zat gizi pangan Indonesia. Jakarta, Departemen Kesehatan Republik Indonesia. 75 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(iran--2017)-iranian-food-composition-table/en",
+   "country_or_region": "Iran (Islamic Republic of)",
+   "fao_region": "Asia",
+   "year": "2017",
+   "title_from_directory_slug": "iranian food composition table",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "National Nutrition and Food Technology Research Institute. 2017. Iranian food composition table. Tehran, National Nutrition and Food Technology Research Institute  [in EuroFIR FoodEXplorer].",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(iraq)-food-composition-table-for-iraq/en",
+   "country_or_region": "Iraq",
+   "fao_region": "Asia",
+   "year": null,
+   "title_from_directory_slug": "food composition table for iraq",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "Iraqi Ministry of Health. Food Composition Table for Iraq [in EuroFIR FoodEXplorer]. Brussels, EuroFIR AISBL.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(ireland--2009)-irish-food-composition-database/en",
+   "country_or_region": "Ireland",
+   "fao_region": "Europe",
+   "year": null,
+   "title_from_directory_slug": "irish food composition database",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "UCC. Irish Food Composition Database [in EuroFIR FoodEXplorer]. Brussels, EuroFIR AISBL.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(italy--2019)-tabelle-di-composizione-degli-alimenti/en",
+   "country_or_region": "Italy",
+   "fao_region": "Europe",
+   "year": "2019",
+   "title_from_directory_slug": "tabelle di composizione degli alimenti",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable website",
+   "language": "Italian",
+   "reference": "CREA. 2019. Tabelle di composizione degli alimenti. Centro Alimenti e Nutrizione (CREA), Italy.",
+   "infoods_evaluation": "Screening questions score: 100 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.alimentinutrizione.it/sezioni/tabelle-nutrizionali",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(italy--2022)-food-composition-database-for-epidemiological-studies-in-italy---banca-dati-di-composizione-degli-alimenti-per-studi-epidemiologici-in-italia-(bda)/en",
+   "country_or_region": "Italy",
+   "fao_region": "Europe",
+   "year": "2022",
+   "title_from_directory_slug": "food composition database for epidemiological studies in italy   banca dati di composizione degli alimenti per studi epidemiologici in italia (bda)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English, Italian",
+   "reference": "BDA. 2022. Banca Dati di Composizione degli Alimenti per Studi Epidemiologici in Italia (BDA). Milan: Istituto Europeo di Oncologia.",
+   "infoods_evaluation": "Screening questions score: 80 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://bda.ieo.it/?page_id=690&lang=en",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(japan--2023)-standard-tables-of-food-composition-in-japan---8th-edition/en",
+   "country_or_region": "Japan",
+   "fao_region": "Asia",
+   "year": "2023",
+   "title_from_directory_slug": "standard tables of food composition in japan   8th edition",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book, static document (PDF), Electronic file and searchable web tool",
+   "language": "Japanese",
+   "reference": "Ministry of Education, Culture, Sports, Science and Technology (MEXT). 2023. Standard Tables of Food Composition in Japan – Eighth Revised Edition (supplement 2023). Tokyo, MEXT.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://fooddb.mext.go.jp/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(jordan--2020)-composition-of-local-jordanian-food-dishes/en",
+   "country_or_region": "Jordan",
+   "fao_region": "Asia",
+   "year": "2020",
+   "title_from_directory_slug": "composition of local jordanian food dishes",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Takruri, H.R., Al-Ismail, K.M., Tyyem, R. & Al-Dabbas, M. 2020. Composition of local Jordanian food dishes. Amman, Jordan.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(jordan--2021)-chemical-profiles-of-selected-jordanian-foods/en",
+   "country_or_region": "Jordan",
+   "fao_region": "Asia",
+   "year": "2021",
+   "title_from_directory_slug": "chemical profiles of selected jordanian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Haddad, M.A., Yamani, M.I., Abu-Romman, S.M. & Obeidat, M. 2021. Chemical profiles of selected Jordanian foods. Cham, Springer International Publishing.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kenya--1951)-chemical-composition-of-some-kenya-foodstuffs/en",
+   "country_or_region": "Kenya",
+   "fao_region": "Africa",
+   "year": "1951",
+   "title_from_directory_slug": "chemical composition of some kenya foodstuffs",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Harvey, D. 1951. Chemical composition of some Kenya foodstuffs. Records of the Medical Research Laboratory No. 10. Nairobi, Medical Department, Government Printer.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kenya--1993)-national-food-composition-tables-and-the-planning-of-satisfactory-diets-in-kenya/en",
+   "country_or_region": "Kenya",
+   "fao_region": "Africa",
+   "year": "1993",
+   "title_from_directory_slug": "national food composition tables and the planning of satisfactory diets in kenya",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Sehmi, J.K. 1993. National food composition tables and the planning of satisfactory diets in Kenya. Nairobi, Ministry of Health, Government Printer. 200 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kenya--2018)-kenyan-food-recipes---a-recipe-book-of-common-mixed-dishes-with-nutrient-value/en",
+   "country_or_region": "Kenya",
+   "fao_region": "Africa",
+   "year": "2018",
+   "title_from_directory_slug": "kenyan food recipes   a recipe book of common mixed dishes with nutrient value",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "unknown",
+   "reference": "FAO & Government of Kenya. 2018. Kenyan food recipes. A recipe book of common mixed dishes with nutrient value. Nairobi, FAO. 349 pp",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i9056en",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kuwait--1982)-composition-and-protein-quality-of-food-consumed-in-kuwait/en",
+   "country_or_region": "Kuwait",
+   "fao_region": "Asia",
+   "year": "1982",
+   "title_from_directory_slug": "composition and protein quality of food consumed in kuwait",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Eid, N., Al-Hooti, S., Allam, M. & Bourisly, N. 1982. Composition and protein quality of food consumed in Kuwait. Safat, Kuwait Institute for Scientific Research. 135 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kuwait--1998)-food-composition--kuwaiti-composite-dishes/en",
+   "country_or_region": "Kuwait",
+   "fao_region": "Asia",
+   "year": "1998",
+   "title_from_directory_slug": "food composition  kuwaiti composite dishes",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Sawaya, W., Al-Awadi, F., Eid, N., & Dashti, B. (1998). Food composition, Kuwaiti composite dishes (1st ed.). Kuwait: Kuwait Institute for Scientific Research.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kyrgyzstan--2022)-kyrgyzstan's-food-composition-table/en",
+   "country_or_region": "Lao People's Democratic Republic",
+   "fao_region": "Asia",
+   "year": "2013",
+   "title_from_directory_slug": "kyrgyzstan's food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "English",
+   "reference": "Vonglokham, M., Kounnavong, S., Douangvichith, D., Ferguson, E., Doets, E., Hulshof, P., Elburg, L., Melse-Boonstra, A. & Brouwer, I. 2013. SMILING D3.5: Food Composition Table for Laos. Vientiane, National Institute of Public Health, Lao PDR, and Wageningen University, Netherlands. 1 August 2013.",
+   "infoods_evaluation": "Screening questions score: 85 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_SMILING_PROJECT_ASIA/D3_5a_SMILING_FCT_Laos_010813_protected.xlsx",
+     "http_status": 206
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/FCT_SMILING_PROJECT_ASIA/D3_5b_SMILING_FCT_QA_Laos_010813.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(kyrgyzstan--2022)-kyrgyzstan-s-food-composition-table/en",
+   "country_or_region": "Kyrgyzstan",
+   "fao_region": "Asia",
+   "year": "2022",
+   "title_from_directory_slug": "kyrgyzstan s food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Kazakh, English",
+   "reference": "Smanalieva, J., Iskakova, J., Musulmanova, M., & Giertlová, A. 2022. Kyrgyzstan’s Food Composition Table. Polyrafbumresource, Bishkek. 84 pp.",
+   "infoods_evaluation": "Screening questions score: 85 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.vup.sk/en/index.php?mainID=1&navID=1&id=64",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(latvia--2009)-latvian-food-composition-database/en",
+   "country_or_region": "Latvia",
+   "fao_region": "Europe",
+   "year": null,
+   "title_from_directory_slug": "latvian food composition database",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "Latvian",
+   "reference": "Food Centre of Food and Veterinary Service. Latvian Food Database. 2009. Partikasdb. Latvia.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://partikasdb.lv/",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.eurofir.org/food-information/food-composition-databases/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(lebanon--2021)-lebanon-food-composition-data--traditional-dishes--arabic-sweets-and-market-foods/en",
+   "country_or_region": "Lebanon",
+   "fao_region": "Asia",
+   "year": "2021",
+   "title_from_directory_slug": "lebanon food composition data  traditional dishes  arabic sweets and market foods",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "Lebanese University. 2021. Lebanon food composition data: traditional dishes, arabic sweets and market foods. Beirut, Lebanon.",
+   "infoods_evaluation": "Screening questions score: 75 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://ul.edu.lb/files/ann/20210422-LU-RePa-Report.pdf",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(lithuania--2002)-composition-of-foods/en",
+   "country_or_region": "Lithuania",
+   "fao_region": "Europe",
+   "year": "2002",
+   "title_from_directory_slug": "composition of foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Suciliene, S., Abaravicius, A. & Kadziauskiene, K., et al. 2002. Composition of Foods. Lithuania and English, 324 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(malaysia--1982)-nutrient-composition-of-malaysian-foods/en",
+   "country_or_region": "Malaysia",
+   "fao_region": "Asia",
+   "year": "1982",
+   "title_from_directory_slug": "nutrient composition of malaysian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Tee, E.S. 1982. Nutrient composition of Malaysian foods: a preliminary table. Kuala Lumpur, Division of Human Nutrition, Institute for Medical Research. 73 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(malaysia--1985)-nutrient-composition-of-malaysian-foods/en",
+   "country_or_region": "Malaysia",
+   "fao_region": "Asia",
+   "year": "1985",
+   "title_from_directory_slug": "nutrient composition of malaysian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Tee, E.S. 1985. Nutrient composition of Malaysian foods: a preliminary table. Revised edition. Kuala Lumpur, Division of Human Nutrition, Institute for Medical Research, ASEAN Protein Project, National Sub-Committee Malaysia. 69 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(malaysia--1988)-nutrient-composition-of-malaysian-foods/en",
+   "country_or_region": "Malaysia",
+   "fao_region": "Asia",
+   "year": "1988",
+   "title_from_directory_slug": "nutrient composition of malaysian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Tee, E.S., Noor, M.I., Azudin, M.N. & Idris, K. 1988. Nutrient composition of Malaysian foods. Kuala Lumpur, ASEAN Food Habits Project, National Sub-Committee on Protein: Food Habits, Research and Development, Malaysia. 150 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(malaysia--1997)-nutrient-composition-of-malaysian-foods/en",
+   "country_or_region": "Malaysia",
+   "fao_region": "Asia",
+   "year": "1997",
+   "title_from_directory_slug": "nutrient composition of malaysian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Tee, E.S., Noor, M.I., Azudin, M.N. & Idris, K. 1997. Nutrient composition of Malaysian foods. Revised edition. Kuala Lumpur, Malaysian Food Composition Database Programme, Institute for Medical Research. 299 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(malaysia--2015)-malaysian-food-composition-database/en",
+   "country_or_region": "Malaysia",
+   "fao_region": "Asia",
+   "year": "2015",
+   "title_from_directory_slug": "malaysian food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English",
+   "reference": "Ministry of Health Malaysia. 2015. Malaysian Food Composition Database.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://myfcd.moh.gov.my/index.html",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mali--1995)-the-composition-of-malian-foods/en",
+   "country_or_region": "Mali",
+   "fao_region": "Africa",
+   "year": "1995",
+   "title_from_directory_slug": "the composition of malian foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Nordeide, M.B. 1995. The composition of Malian foods. Bamako, Mali, CNRST, Programme de Recherche SSE, and Oslo, Norway, Nordic School of Nutrition, University of Oslo.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mali--2004)-food-composition-table-for-mali---table-de-composition-d'aliments-du-mali/en",
+   "country_or_region": "Mali",
+   "fao_region": "Africa",
+   "year": "2004",
+   "title_from_directory_slug": "food composition table for mali   table de composition d'aliments du mali",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English, French",
+   "reference": "Barikmo, I., Ouattara, F. & Oshaug, A. 2004. Food composition table for Mali / Table de composition d’aliments du Mali. Research Series No. 9. Oslo, Akershus University College.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mexico--2010)-tablas-de-uso-práctico-de-los-alimentos-de-mayor-consumo/en",
+   "country_or_region": "Mexico",
+   "fao_region": "Americas",
+   "year": "2010",
+   "title_from_directory_slug": "tablas de uso práctico de los alimentos de mayor consumo",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Muñoz, M. 2010. Tablas de uso práctico de los alimentos de mayor consumo. 2nd edition. Madrid, McGraw-Hill.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mexico--2014)-tablas-de-uso-práctico-de-los-alimentos-de-mayor-consumo/en",
+   "country_or_region": "Mexico",
+   "fao_region": "Americas",
+   "year": "2014",
+   "title_from_directory_slug": "tablas de uso práctico de los alimentos de mayor consumo",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Spanish",
+   "reference": "Muñoz, M. 2014. Tablas de uso práctico de los alimentos de mayor consumo. 3rd edition. Madrid, McGraw-Hill.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mexico--2015)-tabla-de-composición-de-alimentos-y-productos-alimenticios-mexicanos/en",
+   "country_or_region": "Mexico",
+   "fao_region": "Americas",
+   "year": "2015",
+   "title_from_directory_slug": "tabla de composición de alimentos y productos alimenticios mexicanos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "Spanish",
+   "reference": "Instituto Nacional de Ciencias Médicas y Nutrición Salvador Zubirán (INCMNSZ). 2015. Tabla de Composición de Alimentos y Productos Alimenticios Mexicanos (versión condensada). México.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.incmnsz.mx/2019/TABLAS_ALIMENTOS.pdf",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mexico--2021)-base-de-alimentos-de-méxico-(bam)/en",
+   "country_or_region": "Mexico",
+   "fao_region": "Americas",
+   "year": "2021",
+   "title_from_directory_slug": "base de alimentos de méxico (bam)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "Spanish",
+   "reference": "Ramírez-Silva, I., Barragán-Vázquez, S., Rodríguez-Ramírez, S., Rivera-Dommarco, J.A., Mejía-Rodríguez, F., Barquera-Cervera, S., Tolentino-Mayo, L., Flores-Aldana, M., Villalpando-Hernández, S., Ancira-Moreno, M. et al. 2021. Base de alimentos de México (BAM): compilación de la composición de los alimentos frecuentemente consumidos en el país. Version 18.1.1. Mexico City, Instituto Nacional de Salud Pública.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://insp.mx/informacion-relevante/bam-bienvenida",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(morocco--2018)-moroccan-fast-foods-and-traditional-recipes/en",
+   "country_or_region": "Morocco",
+   "fao_region": "Africa",
+   "year": "2018",
+   "title_from_directory_slug": "moroccan fast foods and traditional recipes",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English",
+   "reference": "Hassan University. 2018. Moroccan fast foods and traditional recipes. Human Nutrition Research Unit Hassan University [in EuroFIR FoodEXplorer].",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(morroco--2020)-moroccan-food-composition-tables/en",
+   "country_or_region": "Morocco",
+   "fao_region": "Africa",
+   "year": "2020",
+   "title_from_directory_slug": "moroccan food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file (available as supplementary material accompanying the article)",
+   "language": "English",
+   "reference": "Khalis, M., Garcia-Larsen, V., Charaka, H., Sidi Deoula, M.M., El Kinany, K., Benslimane, A., Charbotel, B., Soliman, A.S., Huybrechts, I., Soliman, G.A., Slimani, N. & El Rhazi, K. 2020. Update of the Moroccan food composition tables: towards a more reliable tool for nutrition research. Journal of Food Composition and Analysis, 87",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://doi.org/10.1016/j.jfca.2019.103397",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(mozambique--1985)-actual-and-recommended-diet-make-up-for-the-population-of-mozambique--including-food-composition-table/en",
+   "country_or_region": "Mozambique",
+   "fao_region": "Africa",
+   "year": "1985",
+   "title_from_directory_slug": "actual and recommended diet make up for the population of mozambique  including food composition table",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Snijders, F.L. 1985. Actual and recommended diet make-up for the population of Mozambique, including food composition table. Série Terra e Água do Instituto Nacional de Investigação Agronómica, Documento Interno No. 10. Maputo, Instituto Nacional de Investigação Agronómica. 16 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries)-food-database---foodb/en",
+   "country_or_region": null,
+   "fao_region": null,
+   "year": null,
+   "title_from_directory_slug": "food database   foodb",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English",
+   "reference": "Canadian Institutes of Health Research, Canada Foundation for Innovation, and The Metabolomics Innovation Centre (TMIC). Food Database (FOODB). Version 1.0.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "http://www.foodb.ca",
+     "http_status": 403
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries)-world-vegetable-center---phytonutrient-data/en",
+   "country_or_region": null,
+   "fao_region": null,
+   "year": null,
+   "title_from_directory_slug": "world vegetable center   phytonutrient data",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and searchable web tool",
+   "language": "English",
+   "reference": "World Vegetable Center. Phytonutrient Data.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "http://nutrition.worldveg.org/nutrientcontent.asp",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1965)-aliments-de-l'ouest-africain--tables-de-composition/en",
+   "country_or_region": null,
+   "fao_region": "Africa",
+   "year": "1965",
+   "title_from_directory_slug": "aliments de l'ouest africain  tables de composition",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Toury, J., Giorgi, R., Favier, J.C. & Savina, J.F. 1965. Aliments de l’Ouest Africain: Tables de composition. Dakar, Organisation de Coordination et de Coopération pour la Lutte contre les Grandes Endémies / Office de Recherches sur l’Alimentation et la Nutrition Africaines (ORANA). 63 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1965)-plantes-alimentaires-de-l'ouest-africain/en",
+   "country_or_region": null,
+   "fao_region": "Africa",
+   "year": "1965",
+   "title_from_directory_slug": "plantes alimentaires de l'ouest africain",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "French",
+   "reference": "Busson, F.F. & Leconte, M. 1965. Plantes alimentaires de l’Ouest africain: Étude botanique, chimique et biologique des végétaux alimentaires. Marseille, France, ORSTOM. 568 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1968)-food-composition-table-for-use-in-africa/en",
+   "country_or_region": null,
+   "fao_region": "Africa",
+   "year": "1968",
+   "title_from_directory_slug": "food composition table for use in africa",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "Wu Leung, W.-T. 1968. Food composition table for use in Africa. Rome, FAO and Bethesda, MD, USA, US Department of Health, Education, and Welfare. 306 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/docrep/003/X6877E/X6877E00.htm",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1972)-food-composition-table-for-use-in-east-asia/en",
+   "country_or_region": null,
+   "fao_region": "Asia",
+   "year": "1972",
+   "title_from_directory_slug": "food composition table for use in east asia",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and HTML document",
+   "language": "English",
+   "reference": "Wu Leung, W.T., Butrum, R.R., Chang, F.H., Rao, M.N. & Polacchi, W. 1972. Food composition table for use in East Asia. Rome, FAO, and Washington, DC, US Department of Health, Education, and Welfare. 334 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/3/X6878E/X6878E00.htm",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1982)-food-composition-tables-for-the-near-east/en",
+   "country_or_region": null,
+   "fao_region": "Asia",
+   "year": "1982",
+   "title_from_directory_slug": "food composition tables for the near east",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and HTML document",
+   "language": "English",
+   "reference": "FAO. 1982. Food Composition Tables for the Near East. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/4/x6879e/X6879E00.htm#TOC",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1983)-nutrient-composition-of-167-food-items-from-ghana--the-philippines--italy-and-finland/en",
+   "country_or_region": "Finland Ghana Italy Philippines",
+   "fao_region": null,
+   "year": "1983",
+   "title_from_directory_slug": "nutrient composition of 167 food items from ghana  the philippines  italy and finland",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Westenbrink, S., Knuiman, J.T., West, C.E., van der Heijden, L., van de Bovenkamp, P., Koot-Gronsveld, E.A.M., Kosmeijer-Schuil, J.G. & Katan, M.B. 1983. Nutrient composition of 167 food items from Ghana, the Philippines, Italy and Finland. Vol. III of food analyses of the Department of Human Nutrition. Wageningen, Department of Human Nutrition, Agricultural University. 27 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://edepot.wur.nl/39527",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1988)-food-composition-table-for-energy-and-eight-important-nutrients-in-foods-commonly-eaten-in-east-africa/en",
+   "country_or_region": null,
+   "fao_region": "Africa",
+   "year": "1988",
+   "title_from_directory_slug": "food composition table for energy and eight important nutrients in foods commonly eaten in east africa",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "West, C.E., Pepping, F., Scholte, I., Jansen, W. & Albers, H.F.F. 1988. Food composition table for energy and eight important nutrients in foods commonly eaten in East Africa. Wageningen, Technical Centre for Agricultural and Rural Cooperation (CTA).",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.cabidigitallibrary.org/doi/pdf/10.5555/20220301634",
+     "http_status": 403
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1988)-the-composition-of-foods-commonly-eaten-in-east-africa/en",
+   "country_or_region": null,
+   "fao_region": "Africa",
+   "year": "1988",
+   "title_from_directory_slug": "the composition of foods commonly eaten in east africa",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "West, C.E., Pepping, F. & Temalilawa, C.R., eds. 1988. The composition of foods commonly eaten in East Africa. Wageningen, Department of Human Nutrition, Wageningen Agricultural University, and Dar es Salaam, Tanzania Food and Nutrition Centre.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://edepot.wur.nl/466505",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1993)-table-de-composition-des-fruits-exotiques--fruits-de-cueillette-d'afrique/en",
+   "country_or_region": null,
+   "fao_region": "Africa",
+   "year": "1993",
+   "title_from_directory_slug": "table de composition des fruits exotiques  fruits de cueillette d'afrique",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Favier, J.-C., Ireland-Ripert, J., Laussucq, C. & Feinberg, M. 1993. Répertoire général des aliments, 3: Table de composition des fruits exotiques, fruits de cueillette d’Afrique. Paris, CIQUAL & CNEVA. 207 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1995)-food-composition-tables-for-use-in-the-english-speaking-caribbean/en",
+   "country_or_region": null,
+   "fao_region": "Americas",
+   "year": "1995",
+   "title_from_directory_slug": "food composition tables for use in the english speaking caribbean",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Caribbean Food and Nutrition Institute. 1995. Food composition tables for use in the English-speaking Caribbean. Kingston, Pan American Health Organization.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--1998)-food-composition-tables-for-use-in-the-english-speaking-caribbean-(2nd-edition)/en",
+   "country_or_region": null,
+   "fao_region": "Americas",
+   "year": "1998",
+   "title_from_directory_slug": "food composition tables for use in the english speaking caribbean (2nd edition)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "Caribbean Food and Nutrition Institute. 1998. Food composition tables for use in the English-speaking Caribbean. 2nd ed., revised. Kingston, Pan American Health Organization.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://iris.paho.org/bitstream/handle/10665.2/4325/FOOD%20COMPOSITION%20TABLES%20FOR%20USE%20IN%20THE%20ENGLISH%20SPEAKING%20CARIBBEAN%20-%201998%20SECOND%20EDITION%20%28REVI.pdf?sequence=1&isAllowed=y",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2004)-the-pacific-islands-food-composition-tables/en",
+   "country_or_region": null,
+   "fao_region": "Oceania",
+   "year": "2004",
+   "title_from_directory_slug": "the pacific islands food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Secretariat of the Pacific Community (SPC). 2004. The Pacific Islands food composition tables. 2nd ed. Noumea, Secretariat of the Pacific Community. 156 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/y5432e",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2005)-food-composition-tables-for-arab-gulf-countries/en",
+   "country_or_region": null,
+   "fao_region": "Asia",
+   "year": "2005",
+   "title_from_directory_slug": "food composition tables for arab gulf countries",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English, Arabic",
+   "reference": "Musaiger, A.O. 2005. Food composition tables for Arab Gulf countries. 1st ed. Manama, Arab Center for Nutrition. 176 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2007)-tabla-de-composición-de-alimentos-de-centro-américa/en",
+   "country_or_region": null,
+   "fao_region": "Americas",
+   "year": "2007",
+   "title_from_directory_slug": "tabla de composición de alimentos de centro américa",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "Spanish",
+   "reference": "INCAP/OPS. 2007. Tabla de Composición de Alimentos de Centroamérica. 2nd ed. Guatemala, Instituto de Nutrición de Centro América y Panamá/Organización Panamericana de la Salud.",
+   "infoods_evaluation": "Screening questions score: 75 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.sennutricion.org/media/tablas/INCAP.pdf",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2012)-west-african-food-composition-table---table-de-composition-des-aliments-d-afrique-de-l-ouest-(2012)/en",
+   "country_or_region": "Benin Burkina Faso Gambia Ghana Guinea Mali Niger Nigeria Senegal",
+   "fao_region": "Africa",
+   "year": "2012",
+   "title_from_directory_slug": "west african food composition table   table de composition des aliments d afrique de l ouest (2012)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English, French",
+   "reference": "Stadlmayr, B., Charrondière, U.R., Enujiugha, V.N., Bayili, R.G., Fagbohoun, E.G., Samb, B., Addy, P., Barikmo, I., Ouattara, F., Oshaug, A., Akinyele, I., Amponsah Annor, G., Bomfeh, K., Ene-Obong, H., Smith, I.F., Thiam, I. & Burlingame, B. 2012. West African Food Composition Table / Table de composition des aliments d’Afrique de l’Ouest (2012). Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/docrep/015/i2698b/i2698b00.pdf",
+     "http_status": 206
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/upload/WestAfricanFCT_Userdatabase_2012_xls.xls",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2013)-arabic-myfood24-food-composition-database/en",
+   "country_or_region": "Kuwait Saudi Arabia",
+   "fao_region": "Asia",
+   "year": "2013",
+   "title_from_directory_slug": "arabic myfood24 food composition database",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English",
+   "reference": "MyFood24 / Arabic FCDB. 2021. Arabic MyFood24 food composition database (Kuwait and Saudi Arabia).",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2013)-food-composition--tables-for-use-in-the-middle-east/en",
+   "country_or_region": null,
+   "fao_region": "Asia",
+   "year": "1998",
+   "title_from_directory_slug": "food composition  tables for use in the middle east",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Sawaya, W., Al-Awadi, F., Eid, N., & Dashti, B. (1998). Food composition, Kuwaiti composite dishes (1st ed.). Kuwait: Kuwait Institute for Scientific Research.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2014)-asean-food-composition-database/en",
+   "country_or_region": null,
+   "fao_region": "Asia",
+   "year": "2014",
+   "title_from_directory_slug": "asean food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Institute of Nutrition, Mahidol University. 2014. ASEAN food composition database. Electronic version 1, February 2014. Nakhon Pathom, Thailand, Institute of Nutrition, Mahidol University.",
+   "infoods_evaluation": "Screening questions score: 100 [max. 120]",
+   "link_checks": [
+    {
+     "url": "http://www.inmu.mahidol.ac.th/aseanfoods/composition_data.html",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2015)-phenol-explorer-database-on-polyphenol-content-in-foods/en",
+   "country_or_region": null,
+   "fao_region": null,
+   "year": "2015",
+   "title_from_directory_slug": "phenol explorer database on polyphenol content in foods",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English",
+   "reference": "Phenol-Explorer database on polyphenol content in foods. 2015. Version 3.6.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "http://phenol-explorer.eu/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2017)-bioactive-substances-in-food-information-systems---ebasis/en",
+   "country_or_region": null,
+   "fao_region": "Europe",
+   "year": "2017",
+   "title_from_directory_slug": "bioactive substances in food information systems   ebasis",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "15 European languages",
+   "reference": "European Food Information Resource. 2017. Bioactive Substances in Food Information Systems (eBASIS).",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://ebasis.eurofir.org/Default.asp",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2017)-traditional-animal-foods-of-indigenous-peoples-of-northern-north-america/en",
+   "country_or_region": null,
+   "fao_region": "Americas",
+   "year": "2017",
+   "title_from_directory_slug": "traditional animal foods of indigenous peoples of northern north america",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English",
+   "reference": "Kuhnlein, H.V. & Humphries, M.M. 2017. Traditional Animal Foods of Indigenous Peoples of Northern North America. Montreal, Centre for Indigenous Peoples’ Nutrition and Environment, McGill University.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "http://traditionalanimalfoods.org/nutrients.aspx",
+     "http_status": 404
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2018)-species-database---biodiversity-for-food-and-nutrition/en",
+   "country_or_region": "Brazil Kenya Sri Lanka Türkiye",
+   "fao_region": null,
+   "year": "2018",
+   "title_from_directory_slug": "species database   biodiversity for food and nutrition",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English",
+   "reference": "Biodiversity for Food and Nutrition (B4FN). 2018. Species Database. Bioversity International.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "http://www.b4fn.org/resources/species-database/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2018)-tabla-de-composición-de-alimentos-de-centro-américa/en",
+   "country_or_region": null,
+   "fao_region": "Americas",
+   "year": "2018",
+   "title_from_directory_slug": "tabla de composición de alimentos de centro américa",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "Spanish",
+   "reference": "INCAP. 2018. Tabla de Composición de Alimentos de Centroamérica (TCA-INCAP). 3rd ed. Guatemala, Instituto de Nutrición de Centroamérica y Panamá.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2020)-pacific-nutrient-database/en",
+   "country_or_region": null,
+   "fao_region": "Oceania",
+   "year": "2020",
+   "title_from_directory_slug": "pacific nutrient database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO and SPC. 2020. Pacific Nutrient Database User Guide. Noumea, New Caledonia.",
+   "infoods_evaluation": "Screening questions score: 120 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://doi.org/10.4060/cb0267en",
+     "http_status": 200
+    },
+    {
+     "url": "https://microdata.pacificdata.org/index.php/catalog/755",
+     "http_status": 403
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2021)-eastern-mediterranean-region-food-information-data-bank/en",
+   "country_or_region": null,
+   "fao_region": "Asia",
+   "year": "2021",
+   "title_from_directory_slug": "eastern mediterranean region food information data bank",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "English, Arabic",
+   "reference": "Eastern Mediterranean Region Food Information Data Bank (EMFID). 2021. Eastern Mediterranean Region Food Information Data Bank.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://emfid.org/frontend/web/index.php",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2021)-efsa-food-composition-data/en",
+   "country_or_region": null,
+   "fao_region": "Europe",
+   "year": "2026",
+   "title_from_directory_slug": "efsa food composition data",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English",
+   "reference": "European Food Safety Authority. 2026. Food Composition Data.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.efsa.europa.eu/en/data-report/food-composition-data",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2024)-afaci-asian-food-composition-database/en",
+   "country_or_region": "Bangladesh Bhutan Cambodia Indonesia Kyrgyzstan Nepal Philippines Sri Lanka Thailand",
+   "fao_region": "Asia",
+   "year": "2024",
+   "title_from_directory_slug": "afaci asian food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "English, Korean",
+   "reference": "Rural Development Administration (RDA) & Asian Food and Agriculture Cooperation Initiative (AFACI). 2024. AFACI Asian food composition database. Version 1.1. Republic of Korea.",
+   "infoods_evaluation": "Screening questions score: 100 [max. 120]",
+   "link_checks": [
+    {
+     "url": "https://koreanfood.rda.go.kr/eng/fctFoodSrchEng/main",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2024)-portal-latinfoods-de-composición-de-alimentos/en",
+   "country_or_region": "Argentina Brazil Chile Costa Rica Guatemala Mexico Paraguay",
+   "fao_region": "Americas",
+   "year": "2024",
+   "title_from_directory_slug": "portal latinfoods de composición de alimentos",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "Spanish",
+   "reference": "Latinfoods. 2024. Portal LATINFOODS de Composición de Alimentos, versión 1.0. Red Latinoamericana de Composición de Alimentos.",
+   "infoods_evaluation": "Screening questions score: 105 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://latinfoodsportal.net/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(multiple-countries--2025)-crop-composition-database/en",
+   "country_or_region": null,
+   "fao_region": null,
+   "year": "2025",
+   "title_from_directory_slug": "crop composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF), electronic file and searchable web tool",
+   "language": "English",
+   "reference": "Agriculture & Food Systems Institute (AFSI). 2025. Crop Composition Database, Version 10.1.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.cropcomposition.org",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(myanmar--1967)-the-nutritive-value-of-burmese-foods/en",
+   "country_or_region": "Myanmar",
+   "fao_region": "Asia",
+   "year": "1967",
+   "title_from_directory_slug": "the nutritive value of burmese foods",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "The Nutrition Project – Directorate of Health Services. 1967. The Nutritive Value of Burmese Foods. 36, Theinbyu St, Rangoon.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(nepal--1994)-nutrient-contents-in-nepalese-foods/en",
+   "country_or_region": "Nepal",
+   "fao_region": "Asia",
+   "year": "1994",
+   "title_from_directory_slug": "nutrient contents in nepalese foods",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "English, Hindi",
+   "reference": "His Majesty’s Government, Ministry of Agriculture, Agriculture Development Department, Nutrition Programme Section. 1994. Nutrient contents in Nepalese foods. Kathmandu, Agriculture Development Department.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(nepal--2012)-food-composition-table-for-nepal/en",
+   "country_or_region": "Nepal",
+   "fao_region": "Asia",
+   "year": "2012",
+   "title_from_directory_slug": "food composition table for nepal",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Nepal Government, Ministry of Agriculture Development, Department of Food Technology and Quality Control, National Nutrition Program. 2012. Food composition table for Nepal 2012. Kathmandu, Department of Food Technology and Quality Control.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/regional/Nepal_Food_Composition_table_2012.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(nepal--2017)-nepalese-food-composition-table/en",
+   "country_or_region": "Nepal",
+   "fao_region": "Asia",
+   "year": "2017",
+   "title_from_directory_slug": "nepalese food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Printed book and static document (PDF)",
+   "language": "English",
+   "reference": "Government of Nepal, Ministry of Agricultural Development, Department of Food Technology and Quality Control, National Nutrition Program. 2017. Nepalese Food Composition Table. Kathmandu, Nepal.",
+   "infoods_evaluation": "Screening questions score: 35 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://1drv.ms/b/c/753fb7abd2a77e28/IQC7XpkcAmNSSLe_L6QqJ8FrAesd9vfV28mmcwvh9zEDek0?e=eTCwhJ",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(netherlands--2025)-dutch-food-composition-database---nederlands-voedingsstoffenbestand-(nevo)/en",
+   "country_or_region": "Netherlands (Kingdom of the)",
+   "fao_region": "Europe",
+   "year": "2025",
+   "title_from_directory_slug": "dutch food composition database   nederlands voedingsstoffenbestand (nevo)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "Dutch, English",
+   "reference": "IVM. 2025. NEVO Online Food Composition Database. Version 9.0. Netherlands.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.rivm.nl/en/dutch-food-composition-database",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(new-zealand--1988)-proximate-composition-of-new-zealand-marine-finfish-and-shellfish/en",
+   "country_or_region": "New Zealand",
+   "fao_region": "Oceania",
+   "year": "1988",
+   "title_from_directory_slug": "proximate composition of new zealand marine finfish and shellfish",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "HTML document",
+   "language": "English",
+   "reference": "Vlieg, P. 1988. Proximate composition of New Zealand marine finfish and shellfish. Palmerston North, Food Composition & Nutritional Information Programme, Biotechnology Division. 52 pp.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/4/ae581e/ae581e00.htm",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(new-zealand--2021)-new-zealand-food-composition-database/en",
+   "country_or_region": "New Zealand",
+   "fao_region": null,
+   "year": "2024",
+   "title_from_directory_slug": "new zealand food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF), electronic file and searchable web tool",
+   "language": "English",
+   "reference": "The New Zealand Institute for Plant & Food Research Limited and Ministry of Health. 2024. New Zealand Food Composition Database, version August 2024. Wellington / Auckland, New Zealand.",
+   "infoods_evaluation": "Screening questions score: 120 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.foodcomposition.co.nz/",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(nigeria--1968)-nigerian-foods-and-feedingstuffs/en",
+   "country_or_region": "Nigeria",
+   "fao_region": "Africa",
+   "year": "1968",
+   "title_from_directory_slug": "nigerian foods and feedingstuffs",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Oyenuya, V.A. 1968. Nigerian foods and feedingstuffs. Ibadan, University Press.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(nigeria--1995)-nutrient-composition-of-commonly-eaten-foods-in-nigeria---raw--processed-and-prepared/en",
+   "country_or_region": "Nigeria",
+   "fao_region": "Africa",
+   "year": "1995",
+   "title_from_directory_slug": "nutrient composition of commonly eaten foods in nigeria   raw  processed and prepared",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Oguntona, E.B. & Akinyele, I.O. 1995. Nutrient composition of commonly eaten foods in Nigeria: raw, processed and prepared. Food Basket Foundation Publication Series. Ibadan, OBT Printing Venture. 131 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(norway)-seafood-data/en",
+   "country_or_region": "Norway",
+   "fao_region": "Europe",
+   "year": null,
+   "title_from_directory_slug": "seafood data",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) for individual foods only and searchable web tool",
+   "language": "English, Norsk",
+   "reference": "Institute of Marine Research. Seafood  data. Norway.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://sjomatdata.hi.no/#search/",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(norway--2008)-norwegian-national-food-composition-table/en",
+   "country_or_region": "Norway",
+   "fao_region": "Europe",
+   "year": "2008",
+   "title_from_directory_slug": "norwegian national food composition table",
+   "access_as_listed_by_fao": "Print-only",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "unknown",
+   "reference": "Fagerli, R.A., Nordbotten, A., Borgejordet, Å., Vesterhus, K.N., Løken, E.B., Trygg, K. & Fredriksen, J. 2008. Norwegian national food composition table (Matvaretabellen). 3rd ed. Oslo, Gyldendal Undervisning. ISBN 978-82-05-38086-8.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(norway--2024)-norwegian-food-composition-tables/en",
+   "country_or_region": "Norway",
+   "fao_region": "Europe",
+   "year": "2026",
+   "title_from_directory_slug": "norwegian food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "Norgenian, English",
+   "reference": "Norwegian Food Safety Authority. 2026. Norwegian Food Composition Table/Matvaretabellen. Norway.",
+   "infoods_evaluation": "Screening questions score: 100 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://www.mattilsynet.no/en",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan)-pakistan-food-composition/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": null,
+   "title_from_directory_slug": "pakistan food composition",
+   "access_as_listed_by_fao": "Restricted access",
+   "format_as_listed_by_fao": "Searchable web tool",
+   "language": "unknown",
+   "reference": "Pakistan Council of Scientific and Industrial Research. Pakistan Food Composition  [in EuroFIR FoodEXplorer]. Brussels, EuroFIR AISBL.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.eurofir.org/our-tools/foodexplorer/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan--1960)-nutritive-value-of-foodstuffs-and-planning-of-satisfactory-diets-in-pakistan--part-i--composition-of-raw-foodstuffs/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": "1960",
+   "title_from_directory_slug": "nutritive value of foodstuffs and planning of satisfactory diets in pakistan  part i  composition of raw foodstuffs",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Chughtai, M.I.D. & Khan, A.W. 1960. Nutritive value of foodstuffs and planning of satisfactory diets in Pakistan: Part I, composition of raw foodstuffs. Lahore, Institute of Chemistry, Punjab University.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan--1964)-nutritive-value-of-indigenous-cooked-foods--i/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": "1964",
+   "title_from_directory_slug": "nutritive value of indigenous cooked foods  i",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Ali, S.M. & Rana, I.A. 1964. Nutritive value of indigenous cooked foods: I. Vegetable meals. Pakistan Journal of Science, 16(1):30–34.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan--1965)-nutritive-value-of-indigenous-cooked-foods--ii/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": "1965",
+   "title_from_directory_slug": "nutritive value of indigenous cooked foods  ii",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Rana, I.A., Syed, A., Ilyas, A.W. & Ali, S.M. 1965. Nutritive value of indigenous cooked foods: II. Meat meals. Science and Industry, 3(4): 321–326.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan--1966)-nutritive-value-of-indigenous-cooked-foods--iii/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": "1966",
+   "title_from_directory_slug": "nutritive value of indigenous cooked foods  iii",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Rana, I.A., Zaidi, S.F., Bashir, Z. & Ali, S.M. 1966. Nutritive value of indigenous cooked foods: III. Sweet dishes. Science and Industry, 4(1):54–57.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan--1966)-protein-values-of-some-west-pakistan-meals/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": "1966",
+   "title_from_directory_slug": "protein values of some west pakistan meals",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Syed, A., Rana, I.A. & Ali, S.M. 1966. Protein values of some West Pakistan meals. Pakistan Journal of Scientific Research, 18(4):217–219.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/(pakistan--1972)-nutritive-value-of-some-improved-indigenous-weaning-food-recipes-and-farex/en",
+   "country_or_region": "Pakistan",
+   "fao_region": "Asia",
+   "year": "1972",
+   "title_from_directory_slug": "nutritive value of some improved indigenous weaning food recipes and farex",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "unknown",
+   "language": "unknown",
+   "reference": "Rana, I.A. 1972. Nutritive value of some improved indigenous weaning food recipes and Farex. Journal of the Pakistan Medical Association, 22(4): 99–107. Reprint, 9 pp.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/canada--2026)-canadian-nutrient-file/en",
+   "country_or_region": "Canada",
+   "fao_region": "Americas",
+   "year": "2026",
+   "title_from_directory_slug": "canada  2026) canadian nutrient file",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, French",
+   "reference": "Health Canada. 2026. Canadian Nutrient File. Ottawa, Health Canada.",
+   "infoods_evaluation": "Screening questions score: 95 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://open.canada.ca/data/en/dataset/1b6139bd-ed7e-4043-bc28-ff00e10f3109",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/denmark--2026)-the-danish-food-composition-database---version-6.1/en",
+   "country_or_region": "Denmark",
+   "fao_region": "Europe",
+   "year": "2026",
+   "title_from_directory_slug": "denmark  2026) the danish food composition database   version 6.1",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file and searchable web tool",
+   "language": "English, Danish",
+   "reference": "Langwagen, M., Jakobsen, J. & Poulsen, A. 2026. The Danish food composition database, Frida version 6.1. Kongens Lyngby, National Food Institute, Technical University of Denmark.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://fcdb.fooddata.dk/search",
+     "http_status": 206
+    },
+    {
+     "url": "https://doi.org/10.11583/DTU.32312844",
+     "http_status": 202
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/eswatini-food-composition-table/en",
+   "country_or_region": "Eswatini",
+   "fao_region": "Africa",
+   "year": "2019",
+   "title_from_directory_slug": "eswatini food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Maziya-Dixon, B., Mdziniso, P., Jele, B., Zwane-Mdaka, S., Ndwandwe, B., Simelane, G., Tsabedze-Zwane, N., Sibiya, T.E. & Oguntona, T. 2019. Eswatini food composition table. Mbabane, Ministry of Agriculture.",
+   "infoods_evaluation": "Screening questions score: 90 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://agrinfosystems.gov.sz/assets/uploadsEswatini%20food%20composition%20table.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/ethiopian-food-comporition-table/en",
+   "country_or_region": "Ethiopia",
+   "fao_region": "Africa",
+   "year": "2025",
+   "title_from_directory_slug": "ethiopian food comporition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF), electronic file and searchable web tool",
+   "language": "English",
+   "reference": "Ethiopian Public Health Institute (EPHI) and Food and Agriculture Organization of the United Nations (FAO). 2025. The Ethiopian Food Composition Table 2025. Addis Ababa, Ethiopia.",
+   "infoods_evaluation": "Screening questions score: 110 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/cd9308en",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/f-food-composition-tables/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2016",
+   "title_from_directory_slug": "f food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2016. FAO/INFOODS Global Food Composition Database for Fish and Shellfish. Version 1.0 – uFiSh1.0. Rome, FAO.",
+   "infoods_evaluation": "Screening questions score: 115 [max. 120]",
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i6655en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/3/I6655EN/uFiSh1.0.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/fao-infoods-global-database-for-pulses-on-dry-matter-basis---version-1.0-(pulsesdm1.0)/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2017",
+   "title_from_directory_slug": "fao infoods global database for pulses on dry matter basis   version 1.0 (pulsesdm1.0)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2017. FAO/INFOODS Global Database for Pulses on Dry Matter Basis. Version 1.0 – PulsesDM1.0. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i7065en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/PulsesDM1.0.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/food-composition-table-for-use-in-the-gambia/en",
+   "country_or_region": "Gambia",
+   "fao_region": "Africa",
+   "year": "2011",
+   "title_from_directory_slug": "food composition table for use in the gambia",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Prynne, C.J. & Paul, A.A. 2011. Food composition table for use in The Gambia. Cambridge, UK, MRC Human Nutrition Research.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/Gambia04082011.pdf",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/food-composition-tables-for-mozambique/en",
+   "country_or_region": "Mozambique",
+   "fao_region": "Africa",
+   "year": "2011",
+   "title_from_directory_slug": "food composition tables for mozambique",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "Korkalo, L., Hauta-alus, H. & Mutanen, M. 2011. Food composition tables for Mozambique, version 2. Helsinki, Department of Food and Environmental Sciences, University of Helsinki.",
+   "infoods_evaluation": "Screening questions score: 75 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://helda.helsinki.fi/server/api/core/bitstreams/06e10561-2e67-40df-8f65-e627da0b172a/content",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/food-composition-tables/en",
+   "country_or_region": "Benin Burkina Faso Gambia Ghana Guinea Mali Niger Nigeria Senegal",
+   "fao_region": "Africa",
+   "year": "2019",
+   "title_from_directory_slug": "food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English, French",
+   "reference": "Vincent, A., Grande, F., Compaoré, E., Amponsah Annor, G., Addy, P.A., Aburime, L.C., Ahmed, D., Bih Loh, A.M., Dahdouh Cabia, S., Deflache, N., Dembélé, F.M., Dieudonné, B., Edwige, O.B., Ene-Obong, H.N., Fanou Fogny, N., Ferreira, M., Omaghomi Jemide, J., Kouebou, P.C., Muller, C., Nájera Espinosa, S., Ouattara, F., Rittenschober, D., Schönfeldt, H., Stadlmayr, B., van Deventer, M., Razikou Yiagnigni, A. & Charrondière, U.R. 2020. FAO/INFOODS Food Composition Table for Western Africa (2019) User Guide & Condensed Food Composition Table / Table de composition des aliments FAO/INFOODS pour l’Afrique de l’Ouest (2019) Guide d’utilisation & table de composition des aliments condensée. Rome, FAO.",
+   "infoods_evaluation": "Screening questions score: 120 [max. 120]",
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/ca7779b",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/global-nutrient-conversion-table-for-fao-supply-utilization-accounts/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2024",
+   "title_from_directory_slug": "global nutrient conversion table for fao supply utilization accounts",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English, Spanish, French",
+   "reference": "Grande, F., Ueda, Y., Masangwi, S. & Holmes, B. 2024. Global nutrient conversion table for FAO supply utilization accounts. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/cc9678en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/3/CC9678EN/Nutrient_conversion_table_for_SUA_2024.xlsx",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/kenya-food-composition-tables/en",
+   "country_or_region": "Kenya",
+   "fao_region": "Africa",
+   "year": "2018",
+   "title_from_directory_slug": "kenya food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO & Government of Kenya. 2018. Kenya food composition tables. Nairobi, FAO.",
+   "infoods_evaluation": "Screening questions score: 120 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i8897en",
+     "http_status": 200
+    },
+    {
+     "url": "https://1drv.ms/x/c/753fb7abd2a77e28/IQAwOCpyAXM3Sa_lSsfUjJrRAWzcJnzjYzDisO3-oYtuaGY?e=Y8xlfc",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/lesotho-food-composition-table/en",
+   "country_or_region": "Lesotho",
+   "fao_region": "Africa",
+   "year": "2006",
+   "title_from_directory_slug": "lesotho food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2006. Lesotho food composition table. Rome, FAO.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/Lesotho_1-127_pages.pdf",
+     "http_status": 206
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/LesFCT_final_copyrevised1.xlsm",
+     "http_status": 206
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/malawian-food-composition-table/en",
+   "country_or_region": "Malawi",
+   "fao_region": "Africa",
+   "year": "2019",
+   "title_from_directory_slug": "malawian food composition table",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF)",
+   "language": "English",
+   "reference": "MAFOODS. 2019. Malawian Food Composition Table. 1st edition. Van Graan, A., Chetty, J., Jumat, M., Masangwi, S., Mwangwela, A., Phiri, F.P., Ausman, L.M., Ghosh, S. & Marino-Costello, E., eds. Lilongwe, Malawi.",
+   "infoods_evaluation": "Screening questions score: 85 [max.120]",
+   "link_checks": [
+    {
+     "url": "https://mafoods.luanar.ac.mw/files/Malawian%20Food%20Composition%20Table%202019.pdf",
+     "http_status": "error:URLError"
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/multiple-countries--2019)-priority-food-tree-and-crop-food-composition-database/en",
+   "country_or_region": "Kenya",
+   "fao_region": "Africa",
+   "year": "2019",
+   "title_from_directory_slug": "multiple countries  2019) priority food tree and crop food composition database",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Electronic file",
+   "language": "English",
+   "reference": "Stadlmayr B, McMullin S, Jamnadass R. 2019. Priority Food Tree and Crop Food Composition Database: A User Guide. Version 1. Nairobi: World Agroforestry",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://apps.worldagroforestry.org/products/nutrition/index.php/home/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/nigerian-food-composition-table/en",
+   "country_or_region": "Nigeria",
+   "fao_region": "Africa",
+   "year": "2017",
+   "title_from_directory_slug": "nigerian food composition table",
+   "access_as_listed_by_fao": "unknown",
+   "format_as_listed_by_fao": "Printed book",
+   "language": "English",
+   "reference": "Sanusi, R.A., Akinyele, I.O., Ene-Obong, H.N. & Enujiugha, V.N. 2017. Nigerian food composition table. Ibadan, University of Ibadan.",
+   "infoods_evaluation": null,
+   "link_checks": []
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/table-de-composition-des-aliments-pour-les-pays-du-bassin-du-congo/en",
+   "country_or_region": "Cameroon Central African Republic Democratic Republic of the Congo Gabon",
+   "fao_region": "Africa",
+   "year": "2023",
+   "title_from_directory_slug": "table de composition des aliments pour les pays du bassin du congo",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English, French",
+   "reference": "Center for International Forestry Research (CIFOR); University of Yaoundé; University of Kisangani; Institute of Agricultural Research for Development (IRAD), Cameroon. 2023. Food composition table for the countries of the Congo Basin / Table de Composition des Aliments pour les Pays du Bassin du Congo. Bogor, CIFOR-ICRAF.",
+   "infoods_evaluation": "Screening questions score: 115 [max. 120]",
+   "link_checks": [
+    {
+     "url": "https://www.cifor.org/gml/food-security-and-forests/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/the-icelandic-food-composition-database---íslenski-gagnagrunnurinn-um-efnainnihald-matvæla-(ísgem)/en",
+   "country_or_region": "Iceland",
+   "fao_region": "Europe",
+   "year": "2025",
+   "title_from_directory_slug": "the icelandic food composition database   íslenski gagnagrunnurinn um efnainnihald matvæla (ísgem)",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and searchable web tool",
+   "language": "English (website), Icelandic",
+   "reference": "Matís ohf. 2025. Icelandic Food Composition Database (ISGEM), version 5.0.",
+   "infoods_evaluation": null,
+   "link_checks": [
+    {
+     "url": "https://matis.is/en/naeringargildi-matvaela-isgem/",
+     "http_status": 200
+    }
+   ]
+  },
+  {
+   "fao_directory_url": "https://www.fao.org/food-composition/tables-and-databases/detail/x-(kenya--2018)-kenya-food-composition-tables/en",
+   "country_or_region": null,
+   "fao_region": "Global",
+   "year": "2017",
+   "title_from_directory_slug": "x (kenya  2018) kenya food composition tables",
+   "access_as_listed_by_fao": "Free access",
+   "format_as_listed_by_fao": "Static document (PDF) and electronic file",
+   "language": "English",
+   "reference": "FAO. 2017. FAO/INFOODS Global Food Composition Database for Pulses. Version 1.0 – uPulses1.0. Rome, FAO.",
+   "infoods_evaluation": "Screening questions score: 120 [max. 120]",
+   "link_checks": [
+    {
+     "url": "https://openknowledge.fao.org/handle/20.500.14283/i6832en",
+     "http_status": 200
+    },
+    {
+     "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/uPulses1.0.xlsx",
+     "http_status": 206
+    }
+   ]
+  }
+ ]
+}

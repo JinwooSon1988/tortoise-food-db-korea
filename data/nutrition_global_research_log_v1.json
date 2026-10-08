@@ -488,6 +488,75 @@
       "country": "Germany (BLS), Netherlands (NEVO), China (CFCT), UK (CoFID), Brazil (TBCA), Turkey (TürKomp), Italy (BDA)",
       "access": "not accessed in this batch (licensed, registration form, or no open bulk download identified)",
       "findings": []
+    },
+    {
+      "id": "de_bls_4_0",
+      "region": "Europe",
+      "country": "Germany",
+      "institution": "Max Rubner-Institut",
+      "database": "BLS 4.0 (2025), CC BY 4.0",
+      "url": "https://blsdb.de/",
+      "files": [
+        "BLS_4_0_2025_DE.zip"
+      ],
+      "access": "downloaded (open data, no login)",
+      "accessed_at": "2026-10-08",
+      "method": "German/English food names searched for held plants; per-value data origin and reference read",
+      "findings": [
+        {
+          "plant_id": "sorrel",
+          "record": "BLS G263100 Sauerampfer roh",
+          "decision": "adopted",
+          "reason": "raw sorrel; values traced to Souci-Fachmann-Kraut 2008 (not the USDA Rumex spp. record); formula values excluded"
+        },
+        {
+          "plant_id": "fennelleaf",
+          "record": "BLS G431100 Fenchelblatt/Bologneser Fenchel, roh",
+          "decision": "held",
+          "reason": "German name says leaf but \"Bologneser Fenchel\"/\"Roman fennel\" denotes the bulb variety; part cannot be resolved without SFK"
+        },
+        {
+          "plant_id": "pricklypear",
+          "record": "BLS F556100 Kaktusfeige roh",
+          "decision": "rejected",
+          "reason": "fruit; master entry is genus-level and not the fruit"
+        }
+      ]
+    },
+    {
+      "id": "de_sfk_online",
+      "region": "Europe",
+      "country": "Germany",
+      "institution": "Souci-Fachmann-Kraut (MedPharm/Wissenschaftliche Verlagsgesellschaft)",
+      "database": "SFK online",
+      "url": "https://www.sfk.online/",
+      "access": "requires user registration — not registered (account creation is outside agent permissions)",
+      "findings": []
+    },
+    {
+      "id": "no_matvaretabellen_2026",
+      "region": "Europe",
+      "country": "Norway",
+      "institution": "Norwegian Food Safety Authority / Directorate of Health",
+      "database": "Matvaretabellen (open API)",
+      "url": "https://www.matvaretabellen.no/api/en/foods.json",
+      "access": "downloaded (public JSON)",
+      "accessed_at": "2026-10-08",
+      "method": "latinName matched against held plants",
+      "findings": [
+        {
+          "plant_id": "lettuce",
+          "record": "Matvaretabellen 06.058 Lettuce leaves, Norwegian, raw (Lactuca sativa L.)",
+          "decision": "held",
+          "reason": "lettuce type not specified"
+        },
+        {
+          "plant_id": "mint",
+          "record": "Matvaretabellen 06.259 Mint, raw (Mentha L.)",
+          "decision": "held",
+          "reason": "genus-level record and master"
+        }
+      ]
     }
   ]
 }

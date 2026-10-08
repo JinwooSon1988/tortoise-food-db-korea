@@ -4,7 +4,7 @@
   "policy": {
     "purpose": "descriptive_composition_only",
     "feeding_verdict_use": false,
-    "verification_policy": "Nutrition values remain separate from feeding verdicts. verified means the stored record identity (scientific name or Korean standard food name, plant part, raw state) and every stored nutrient value were reconciled against the named official downloadable dataset: USDA FoodData Central (SR Legacy JSON 2018-04 / Foundation JSON 2026-04-30) the RDA Korean standard food composition data, the MEXT Standard Tables of Food Composition in Japan (8th rev., 2023 supplement) or the Indian Food Composition Tables 2017 (ICMR-NIN). Values are never estimated, averaged across records, or borrowed from a congener, a different plant part, or a non-raw state; unmatched plants are listed in data/nutrition_hold_list_v1.json.",
+    "verification_policy": "Nutrition values remain separate from feeding verdicts. verified means the stored record identity (scientific name or Korean standard food name, plant part, raw state) and every stored nutrient value were reconciled against the named official downloadable dataset: USDA FoodData Central (SR Legacy JSON 2018-04 / Foundation JSON 2026-04-30) the RDA Korean standard food composition data, the MEXT Standard Tables of Food Composition in Japan (8th rev., 2023 supplement) the Indian Food Composition Tables 2017 (ICMR-NIN) or the German Nutrient Database BLS 4.0 (MRI). Values are never estimated, averaged across records, or borrowed from a congener, a different plant part, or a non-raw state; unmatched plants are listed in data/nutrition_hold_list_v1.json.",
     "note_ko": "영양성분 수치만으로 육지거북의 급여 안전성·권장 빈도·식단 비율을 판정하지 않는다. 식품 성분값은 품종·재배·분석 조건에 따라 달라질 수 있다."
   },
   "plants": [
@@ -2740,6 +2740,102 @@
       "calcium_mg": 234,
       "iron_mg": 3.82,
       "calcium_phosphorus_ratio": 4.67
+    },
+    {
+      "plant_id": "sorrel",
+      "food_description": "Sauerampfer roh / Sorrel raw",
+      "source_name": "German Nutrient Database BLS 4.0 (Max Rubner-Institut)",
+      "source_institution": "Max Rubner-Institut (MRI), Karlsruhe, Germany",
+      "source_country": "Germany",
+      "source_kind": "official_database",
+      "source_id": "BLS G263100",
+      "source_url": "https://blsdb.de/",
+      "source_doi": "10.25826/Data20251217-134202-0",
+      "data_type": "German Nutrient Database (BLS)",
+      "dataset_release": "Bundeslebensmittelschlüssel (BLS) 4.0, 2025 (BLS_4_0_Daten_2025_DE.xlsx)",
+      "reuse_license": "CC BY 4.0 — cite Max Rubner-Institut (2025): Bundeslebensmittelschlüssel (BLS), Version 4.0",
+      "source_scientific_name": null,
+      "scientific_name": "Rumex acetosa",
+      "verification_status": "verified",
+      "verified_at": "2026-10-08",
+      "basis": "per 100 g raw edible portion",
+      "plant_part": "leaf (vegetable sorrel as sold; part not separately stated)",
+      "preparation_state": "raw",
+      "identity_match_basis": "BLS food name \"Sauerampfer\" is the German standard name of Rumex acetosa (common sorrel); BLS publishes no Latin names, and the underlying Souci-Fachmann-Kraut entry could not be opened because SFK online requires user registration",
+      "identity_confidence": "standard_common_name",
+      "applicability_note_ko": "독일 국가 영양성분 DB 값이며 대부분 Souci-Fachmann-Kraut(2008) 수치를 옮긴 것이다. 단백질·식이섬유는 BLS가 방법 차이를 보정한 환산값이다. 학명은 독일 표준 국명으로 확인했다.",
+      "feeding_scope_note_ko": "성분 기술용 자료이며 급여 등급·빈도·안전성 판정에 사용하지 않는다. 특정 거북 종에 대한 결론으로 일반화하지 않는다.",
+      "value_provenance": {
+        "water_g": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "protein_g": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Converted value from: Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "fat_g": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "fiber_g": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Converted value from: Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "calcium_mg": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "phosphorus_mg": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "potassium_mg": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "magnesium_mg": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "iron_mg": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        },
+        "vitamin_c_mg": {
+          "bls_data_origin": "Nährstoffdatenbank",
+          "bls_reference": "Kirchhoff, E; Souci - Fachmann - Kraut - Die Zusammensetzung der Lebensmittel - Nährwert-Tabellen; 2008; 7"
+        }
+      },
+      "not_stored": {
+        "CHO": "1.16 (Formelberechnung)",
+        "NA": "- (-)",
+        "ENERCC": "25 (Formelberechnung)"
+      },
+      "value_conventions": "Formula-calculated values (CHO, energy) and missing values are not stored.",
+      "units": {
+        "water_g": "g",
+        "protein_g": "g",
+        "fat_g": "g",
+        "fiber_g": "g",
+        "calcium_mg": "mg",
+        "phosphorus_mg": "mg",
+        "potassium_mg": "mg",
+        "magnesium_mg": "mg",
+        "iron_mg": "mg",
+        "vitamin_c_mg": "mg"
+      },
+      "water_g": 89.166,
+      "protein_g": 3.19,
+      "fat_g": 0.36,
+      "fiber_g": 1.95,
+      "calcium_mg": 58,
+      "phosphorus_mg": 51,
+      "potassium_mg": 287,
+      "magnesium_mg": 33,
+      "iron_mg": 2.08,
+      "vitamin_c_mg": 117,
+      "calcium_phosphorus_ratio": 1.14
     }
   ],
   "part_state_records": [

@@ -24,11 +24,11 @@
     "part_ambiguous": 1,
     "part_mismatch": 24,
     "policy_hold": 2,
-    "species_mismatch": 11,
+    "species_mismatch": 10,
     "state_mismatch": 2,
     "subtype_ambiguous": 2
   },
-  "held_count": 126,
+  "held_count": 125,
   "records": [
     {
       "plant_id": "lettuce",
@@ -85,6 +85,13 @@
           "record": "WAFCT 04_040 Lettuce, raw",
           "decision": "held",
           "reason": "compiled from several tables, type not stated"
+        },
+        {
+          "source": "Matvaretabellen (open API)",
+          "country": "Norway",
+          "record": "Matvaretabellen 06.058 Lettuce leaves, Norwegian, raw (Lactuca sativa L.)",
+          "decision": "held",
+          "reason": "lettuce type not specified"
         }
       ]
     },
@@ -251,6 +258,13 @@
           "record": "AFCD F005700 Mint, fresh, raw",
           "decision": "held",
           "reason": "genus-level master"
+        },
+        {
+          "source": "Matvaretabellen (open API)",
+          "country": "Norway",
+          "record": "Matvaretabellen 06.259 Mint, raw (Mentha L.)",
+          "decision": "held",
+          "reason": "genus-level record and master"
         }
       ]
     },
@@ -449,7 +463,16 @@
       ],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08",
-      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지"
+      "note": "data/nutrition_coverage_queue_v1.json 기존 보류 판단 유지",
+      "international_candidates_examined": [
+        {
+          "source": "BLS 4.0 (2025), CC BY 4.0",
+          "country": "Germany",
+          "record": "BLS F556100 Kaktusfeige roh",
+          "decision": "rejected",
+          "reason": "fruit; master entry is genus-level and not the fruit"
+        }
+      ]
     },
     {
       "plant_id": "timothy",
@@ -1198,7 +1221,16 @@
         }
       ],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "BLS 4.0 (2025), CC BY 4.0",
+          "country": "Germany",
+          "record": "BLS G431100 Fenchelblatt/Bologneser Fenchel, roh",
+          "decision": "held",
+          "reason": "German name says leaf but \"Bologneser Fenchel\"/\"Roman fennel\" denotes the bulb variety; part cannot be resolved without SFK"
+        }
+      ]
     },
     {
       "plant_id": "amaranthleaf",
@@ -1239,41 +1271,6 @@
           "record": "WAFCT 04_023 Amaranth, leaves (Amaranthus spp.)",
           "decision": "held",
           "reason": "genus-level composite"
-        }
-      ]
-    },
-    {
-      "plant_id": "sorrel",
-      "ko": "수영",
-      "scientific": "Rumex acetosa",
-      "hold_reason_code": "species_mismatch",
-      "hold_reason_ko": "후보 기록의 종이 마스터 종과 다르거나(같은 속 다른 종 포함) 원자료에서 종을 확인할 수 없다.",
-      "candidates_examined": [
-        {
-          "source": "USDA FoodData Central",
-          "source_id": "FDC 170076",
-          "data_type": "SR Legacy",
-          "food_description": "Dock, raw",
-          "source_scientific_name": "Rumex spp.",
-          "rejected_because": "source is Rumex spp. (genus), master is Rumex acetosa"
-        }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08",
-      "international_candidates_examined": [
-        {
-          "source": "Ciqual 2025 (2025-11-03)",
-          "country": "France",
-          "record": "Ciqual 20111 Sorrel, raw (Rumex acetosa L.)",
-          "decision": "rejected",
-          "reason": "all values confidence D; minerals copied from Danish Frida 7.01; protein/carbohydrate/energy imputed by Ciqual (source 444). Traced further: see Frida 872"
-        },
-        {
-          "source": "Frida 5.5 (CC BY 4.0, doi:10.11583/DTU.29500682.v8)",
-          "country": "Denmark",
-          "record": "Frida 872 Dock (US), sorrel (UK), raw (Rumex acetosa)",
-          "decision": "rejected",
-          "reason": "water/protein/minerals taken from USDA SR20 \"Dock, raw\", which USDA labels Rumex spp. — species-level identity not established"
         }
       ]
     },

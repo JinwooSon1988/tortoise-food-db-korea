@@ -1,0 +1,1610 @@
+{
+ "schema_version": "1.0",
+ "lane": "unverified_observation",
+ "policy_reference": "docs/COMMUNITY_EVIDENCE_SEPARATION_POLICY_2026-10-08.md",
+ "policy": "Unverified leads only. Never shown on verdict cards; never changes A–D grades, nutrient values or safe amounts. Absence of reported harm is not evidence of safety. Counts are not incidence or consensus.",
+ "collection": {
+  "source": "iNaturalist API v1 (https://api.inaturalist.org/v1/docs/)",
+  "query": "taxon Testudinidae (40019) with observation field \"Eating\" (id 13) or \"Eating: (Interaction)\"; all quality grades",
+  "requests": "about 25 API calls at ~1 request/second with an identifying User-Agent",
+  "retrieved_at": "2026-10-08",
+  "privacy": "no user names, profile data, photos, coordinates or free-text descriptions stored; region kept at the coarsest place_guess token",
+  "notes": "No Testudo (Mediterranean tortoise) observation carried an eating field at retrieval time."
+ },
+ "summary": {
+  "records": 31,
+  "by_animal_taxon": {
+   "Chersina angulata": 13,
+   "Gopherus agassizii": 6,
+   "Stigmochelys pardalis": 6,
+   "Kinixys zombensis": 2,
+   "Gopherus polyphemus": 2,
+   "Kinixys zombensis zombensis": 1,
+   "Psammobates oculifer": 1
+  },
+  "by_independent_validation": {
+   "unverified": 24,
+   "partial": 7
+  },
+  "items_linked_to_master_plants": [
+   [
+    "eveningprimrose",
+    "genus_observation_to_genus_master"
+   ]
+  ]
+ },
+ "records": [
+  {
+   "id": "inat:6232285",
+   "source_url": "https://www.inaturalist.org/observations/6232285",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2017-05-08",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus agassizii",
+   "animal_taxon_normalized": "Gopherus agassizii",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Cryptantha",
+     "rank": "genus",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "US",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc0",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:9249984",
+   "source_url": "https://www.inaturalist.org/observations/9249984",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2017-12-23",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Ficus sur",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/9249987",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Garden Route Botanical Garden",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:9851534",
+   "source_url": "https://www.inaturalist.org/observations/9851534",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2016-09-23",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Stigmochelys pardalis",
+   "animal_taxon_normalized": "Stigmochelys pardalis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": null,
+     "free_text": "Asteraceae flowers",
+     "rank": null,
+     "kingdom_hint": "unknown",
+     "identity_source": "free text",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "addo national park",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:10918916",
+   "source_url": "https://www.inaturalist.org/observations/10918916",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2013-12-04",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Cotula discolor",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/10907351",
+     "linked_quality_grade": "casual",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Kirstenbosch Botanical gardens",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:10981050",
+   "source_url": "https://www.inaturalist.org/observations/10981050",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2014-01-18",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Stigmochelys pardalis",
+   "animal_taxon_normalized": "Stigmochelys pardalis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Vachellia karroo",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/10915538",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "ZA",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11020497",
+   "source_url": "https://www.inaturalist.org/observations/11020497",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2014-08-18",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Stigmochelys pardalis",
+   "animal_taxon_normalized": "Stigmochelys pardalis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Asteraceae",
+     "rank": "family",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11009712",
+     "linked_quality_grade": "needs_id",
+     "master_plant_id": null,
+     "master_match": "none"
+    },
+    {
+     "taxon": "Oxalis pes-caprae pes-caprae",
+     "rank": "variety",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11009720",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Montagu WCape: Private land",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11038271",
+   "source_url": "https://www.inaturalist.org/observations/11038271",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2015-03-17",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Hystrix africaeaustralis africaeaustralis",
+     "rank": "subspecies",
+     "kingdom_hint": "Mammalia",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11039099",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "not_a_plant"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "unknown",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11045607",
+   "source_url": "https://www.inaturalist.org/observations/11045607",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2014-08-30",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Othonna auriculifolia",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11045612",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Namakwa Northern Cape",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11087298",
+   "source_url": "https://www.inaturalist.org/observations/11087298",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2015-04-10",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Chironia baccifera",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11087309",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "especially proteas and taaibos.",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11088631",
+   "source_url": "https://www.inaturalist.org/observations/11088631",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2014-10-06",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Stigmochelys pardalis",
+   "animal_taxon_normalized": "Stigmochelys pardalis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Aptosimum procumbens",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11013923",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Rooiberg",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11163406",
+   "source_url": "https://www.inaturalist.org/observations/11163406",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2015-12-20",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Kinixys zombensis",
+   "animal_taxon_normalized": "Kinixys zombensis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Boletus",
+     "rank": "genus",
+     "kingdom_hint": "Fungi",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11163414",
+     "linked_quality_grade": "needs_id",
+     "master_plant_id": null,
+     "master_match": "not_a_plant"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Mtunzini",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:11303277",
+   "source_url": "https://www.inaturalist.org/observations/11303277",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2017-02-21",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Stigmochelys pardalis",
+   "animal_taxon_normalized": "Stigmochelys pardalis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Poaceae",
+     "rank": "family",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11303304",
+     "linked_quality_grade": "needs_id",
+     "master_plant_id": null,
+     "master_match": "none"
+    },
+    {
+     "taxon": "Richardia brasiliensis",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/11303286",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "R62 (1)",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:26388307",
+   "source_url": "https://www.inaturalist.org/observations/26388307",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2016-01-16",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Asystasia intrusa",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/26388297",
+     "linked_quality_grade": "casual",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:56042066",
+   "source_url": "https://www.inaturalist.org/observations/56042066",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2020-08-10",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "captive",
+   "animal_taxon_original": "Stigmochelys pardalis",
+   "animal_taxon_normalized": "Stigmochelys pardalis",
+   "animal_identification": "iNaturalist community quality grade: casual",
+   "plant_items": [
+    {
+     "taxon": null,
+     "free_text": "unknown",
+     "rank": null,
+     "kingdom_hint": "unknown",
+     "identity_source": "free text",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "unknown",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "unknown",
+   "region": "Botswana",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:110177970",
+   "source_url": "https://www.inaturalist.org/observations/110177970",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2022-01-03",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Hermannia althaeoides",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/110179493",
+     "linked_quality_grade": "needs_id",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:111640284",
+   "source_url": "https://www.inaturalist.org/observations/111640284",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2022-04-10",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Kinixys zombensis zombensis",
+   "animal_taxon_normalized": "Kinixys zombensis zombensis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Agaricomycetes",
+     "rank": "class",
+     "kingdom_hint": "Fungi",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/111640280",
+     "linked_quality_grade": "needs_id",
+     "master_plant_id": null,
+     "master_match": "not_a_plant"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:146677548",
+   "source_url": "https://www.inaturalist.org/observations/146677548",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2021-11-20",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Muraltia spinosa",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/146677547",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:151280874",
+   "source_url": "https://www.inaturalist.org/observations/151280874",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2023-03-14",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Psammobates oculifer",
+   "animal_taxon_normalized": "Psammobates oculifer",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Xenostegia tridentata",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/151317035",
+     "linked_quality_grade": "research",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "ZA",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "partial",
+   "independent_validation_note": "tortoise and plant identifications are community-reviewed (research grade); the feeding act itself is not independently verified",
+   "license": "all rights reserved / unspecified",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:158786305",
+   "source_url": "https://www.inaturalist.org/observations/158786305",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2023-04-24",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus agassizii",
+   "animal_taxon_normalized": "Gopherus agassizii",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Oenothera",
+     "rank": "genus",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": "eveningprimrose",
+     "master_match": "genus_observation_to_genus_master"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "United States",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:158786882",
+   "source_url": "https://www.inaturalist.org/observations/158786882",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2023-05-01",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus agassizii",
+   "animal_taxon_normalized": "Gopherus agassizii",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Calochortus",
+     "rank": "genus",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "United States",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:188655922",
+   "source_url": "https://www.inaturalist.org/observations/188655922",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2023-10-22",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus agassizii",
+   "animal_taxon_normalized": "Gopherus agassizii",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Hilaria",
+     "rank": "genus",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "United States",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc0",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:188655923",
+   "source_url": "https://www.inaturalist.org/observations/188655923",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2023-10-22",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus agassizii",
+   "animal_taxon_normalized": "Gopherus agassizii",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Ambrosia dumosa",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "United States",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc0",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:192332874",
+   "source_url": "https://www.inaturalist.org/observations/192332874",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2023-11-19",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Ruta graveolens",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/192332877",
+     "linked_quality_grade": "casual",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:243818793",
+   "source_url": "https://www.inaturalist.org/observations/243818793",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2024-09-23",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus polyphemus",
+   "animal_taxon_normalized": "Gopherus polyphemus",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Poaceae",
+     "rank": "family",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "US",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:253164298",
+   "source_url": "https://www.inaturalist.org/observations/253164298",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2024-11-19",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Dymondia margaretae",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/253164297",
+     "linked_quality_grade": "casual",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:257137883",
+   "source_url": "https://www.inaturalist.org/observations/257137883",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2024-12-01",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Kinixys zombensis",
+   "animal_taxon_normalized": "Kinixys zombensis",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Formicidae",
+     "rank": "family",
+     "kingdom_hint": "Insecta",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "not_a_plant"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "Catapu Forestry Concession",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:267936926",
+   "source_url": "https://www.inaturalist.org/observations/267936926",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2025-03-23",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Tecomaria capensis",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/267936929",
+     "linked_quality_grade": "casual",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:280535141",
+   "source_url": "https://www.inaturalist.org/observations/280535141",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2025-05-12",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus agassizii",
+   "animal_taxon_normalized": "Gopherus agassizii",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Sphaeralcea",
+     "rank": "genus",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "United States",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:315004242",
+   "source_url": "https://www.inaturalist.org/observations/315004242",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2025-09-12",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Dimorphotheca pluvialis",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/315004245",
+     "linked_quality_grade": "needs_id",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:334943220",
+   "source_url": "https://www.inaturalist.org/observations/334943220",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2026-01-01",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Chersina angulata",
+   "animal_taxon_normalized": "Chersina angulata",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Phyla nodiflora",
+     "rank": "species",
+     "kingdom_hint": "Plantae",
+     "identity_source": "linked iNaturalist observation",
+     "linked_observation": "https://www.inaturalist.org/observations/334943221",
+     "linked_quality_grade": "casual",
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "South Africa",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  },
+  {
+   "id": "inat:335337319",
+   "source_url": "https://www.inaturalist.org/observations/335337319",
+   "platform": "iNaturalist (API v1)",
+   "lane": "unverified_observation",
+   "observed_or_posted_at": "2022-08-01",
+   "retrieved_at": "2026-10-08",
+   "observation_type": "firsthand",
+   "setting": "wild (as flagged by iNaturalist)",
+   "animal_taxon_original": "Gopherus polyphemus",
+   "animal_taxon_normalized": "Gopherus polyphemus",
+   "animal_identification": "iNaturalist community quality grade: research",
+   "plant_items": [
+    {
+     "taxon": "Richardia",
+     "rank": "genus",
+     "kingdom_hint": "Plantae",
+     "identity_source": "observer-entered taxon field (not separately reviewed)",
+     "linked_observation": null,
+     "linked_quality_grade": null,
+     "master_plant_id": null,
+     "master_match": "none"
+    }
+   ],
+   "plant_part": "unknown",
+   "preparation_state": "not applicable (wild foraging)",
+   "reported_exposure": "observer tagged the tortoise as eating the listed item(s) via an iNaturalist \"Eating\" field",
+   "reported_outcome": "unknown",
+   "duration": "unknown",
+   "number_of_animals": "unknown",
+   "husbandry_context": "not applicable (wild)",
+   "region": "US",
+   "limitations": [
+    "single observation; no measurement of intake, part or quantity",
+    "feeding inferred from observer annotation/photo",
+    "plant identity may be casual or needs_id grade",
+    "wild foraging does not establish captive feeding safety or frequency"
+   ],
+   "contradictory_reports": [],
+   "independent_validation": "unverified",
+   "independent_validation_note": "identification of at least one party is not research grade, or no plant was linked",
+   "license": "cc-by-nc",
+   "copyright_access_status": "metadata only via public API; no photos, text or user identifiers stored",
+   "editorial_status": "lead",
+   "never_used_for": [
+    "A-D feeding grade",
+    "nutrient values",
+    "safe amount or frequency"
+   ]
+  }
+ ]
+}

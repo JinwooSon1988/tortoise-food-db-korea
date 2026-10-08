@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "purpose": "Descriptive nutrition coverage audit. Coverage numbers never change feeding verdicts, grades or confidence.",
   "public_plants": 182,
-  "verified_plants": 56,
-  "held_plants": 126,
-  "coverage_percent": 30.8,
+  "verified_plants": 57,
+  "held_plants": 125,
+  "coverage_percent": 31.3,
   "by_source_name": {
+    "German Nutrient Database BLS 4.0 (Max Rubner-Institut)": 1,
     "Indian Food Composition Tables 2017 (ICMR-NIN)": 3,
     "Korean Standard Food Composition Database (RDA)": 15,
     "Standard Tables of Food Composition in Japan (MEXT)": 4,
@@ -13,15 +14,17 @@
   },
   "by_data_type": {
     "Foundation": 4,
+    "German Nutrient Database (BLS)": 1,
     "Indian Food Composition Tables": 3,
     "Japan Standard Tables of Food Composition": 4,
     "Korean Standard Food Composition DB": 15,
     "SR Legacy": 30
   },
   "by_source_kind": {
-    "official_database": 56
+    "official_database": 57
   },
   "by_source_country": {
+    "Germany": 1,
     "India": 3,
     "Japan": 4,
     "Korea": 15,
@@ -53,22 +56,22 @@
     "part_ambiguous": 1,
     "part_mismatch": 24,
     "policy_hold": 2,
-    "species_mismatch": 11,
+    "species_mismatch": 10,
     "state_mismatch": 2,
     "subtype_ambiguous": 2
   },
   "field_coverage": {
     "water_g": {
-      "plants": 56,
-      "percent_of_public_plants": 30.8
+      "plants": 57,
+      "percent_of_public_plants": 31.3
     },
     "protein_g": {
-      "plants": 56,
-      "percent_of_public_plants": 30.8
+      "plants": 57,
+      "percent_of_public_plants": 31.3
     },
     "fat_g": {
-      "plants": 54,
-      "percent_of_public_plants": 29.7
+      "plants": 55,
+      "percent_of_public_plants": 30.2
     },
     "carbohydrate_g": {
       "plants": 46,
@@ -79,44 +82,44 @@
       "percent_of_public_plants": 1.6
     },
     "fiber_g": {
-      "plants": 50,
-      "percent_of_public_plants": 27.5
+      "plants": 51,
+      "percent_of_public_plants": 28.0
     },
     "sugars_g": {
       "plants": 26,
       "percent_of_public_plants": 14.3
     },
     "calcium_mg": {
-      "plants": 56,
-      "percent_of_public_plants": 30.8
+      "plants": 57,
+      "percent_of_public_plants": 31.3
     },
     "phosphorus_mg": {
-      "plants": 56,
-      "percent_of_public_plants": 30.8
+      "plants": 57,
+      "percent_of_public_plants": 31.3
     },
     "calcium_phosphorus_ratio": {
-      "plants": 56,
-      "percent_of_public_plants": 30.8
+      "plants": 57,
+      "percent_of_public_plants": 31.3
     },
     "potassium_mg": {
-      "plants": 49,
-      "percent_of_public_plants": 26.9
+      "plants": 50,
+      "percent_of_public_plants": 27.5
     },
     "sodium_mg": {
       "plants": 47,
       "percent_of_public_plants": 25.8
     },
     "magnesium_mg": {
-      "plants": 41,
-      "percent_of_public_plants": 22.5
+      "plants": 42,
+      "percent_of_public_plants": 23.1
     },
     "iron_mg": {
-      "plants": 48,
-      "percent_of_public_plants": 26.4
+      "plants": 49,
+      "percent_of_public_plants": 26.9
     },
     "vitamin_c_mg": {
-      "plants": 47,
-      "percent_of_public_plants": 25.8
+      "plants": 48,
+      "percent_of_public_plants": 26.4
     },
     "vitamin_a_rae_ug": {
       "plants": 40,
@@ -1476,9 +1479,22 @@
       "plant_id": "sorrel",
       "ko": "수영",
       "scientific": "Rumex acetosa",
-      "status": "held",
-      "hold_reason_code": "species_mismatch",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "German Nutrient Database BLS 4.0 (Max Rubner-Institut)",
+      "source_id": "BLS G263100",
+      "data_type": "German Nutrient Database (BLS)",
+      "source_kind": "official_database",
+      "plant_part": "leaf (vegetable sorrel as sold; part not separately stated)",
+      "preparation_state": "raw",
+      "fields_present": 11,
+      "fields_missing": [
+        "carbohydrate_g",
+        "available_carbohydrate_g",
+        "sugars_g",
+        "sodium_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "dock",
