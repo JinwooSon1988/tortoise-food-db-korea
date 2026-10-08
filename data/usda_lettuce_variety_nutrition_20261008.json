@@ -1,0 +1,80 @@
+{
+  "plant_id": "lettuce",
+  "scientific_name": "Lactuca sativa",
+  "source": "USDA FoodData Central SR Legacy 2018-04 original user-provided CSV",
+  "source_tables": [
+    "food.csv",
+    "food_nutrient.csv",
+    "nutrient.csv"
+  ],
+  "basis": "raw edible portion per 100 g",
+  "status": "source_verified__variety_mapping_review",
+  "records": [
+    {
+      "variety": "butterhead",
+      "fdc_id": 168429,
+      "water_g": 95.63,
+      "protein_g": 1.35,
+      "fiber_g": 1.1,
+      "calcium_mg": 35,
+      "phosphorus_mg": 33,
+      "potassium_mg": 238,
+      "vitamin_c_mg": 3.7,
+      "ca_p_ratio": 1.061,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168429/nutrients"
+    },
+    {
+      "variety": "red_leaf",
+      "fdc_id": 168431,
+      "water_g": 95.64,
+      "protein_g": 1.33,
+      "fiber_g": 0.9,
+      "calcium_mg": 33,
+      "phosphorus_mg": 28,
+      "potassium_mg": 187,
+      "vitamin_c_mg": 3.7,
+      "ca_p_ratio": 1.179,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168431/nutrients"
+    },
+    {
+      "variety": "romaine",
+      "fdc_id": 169247,
+      "water_g": 94.61,
+      "protein_g": 1.23,
+      "fiber_g": 2.1,
+      "calcium_mg": 33,
+      "phosphorus_mg": 30,
+      "potassium_mg": 247,
+      "vitamin_c_mg": 4,
+      "ca_p_ratio": 1.1,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169247/nutrients"
+    },
+    {
+      "variety": "iceberg",
+      "fdc_id": 169248,
+      "water_g": 95.64,
+      "protein_g": 0.9,
+      "fiber_g": 1.2,
+      "calcium_mg": 18,
+      "phosphorus_mg": 20,
+      "potassium_mg": 141,
+      "vitamin_c_mg": 2.8,
+      "ca_p_ratio": 0.9,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169248/nutrients"
+    },
+    {
+      "variety": "green_leaf",
+      "fdc_id": 169249,
+      "water_g": 94.98,
+      "protein_g": 1.36,
+      "fiber_g": 1.3,
+      "calcium_mg": 36,
+      "phosphorus_mg": 29,
+      "potassium_mg": 194,
+      "vitamin_c_mg": 9.2,
+      "ca_p_ratio": 1.241,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169249/nutrients"
+    }
+  ],
+  "interpretation": "Different lettuce varieties have distinct nutrient records. Do not average across varieties or infer feeding safety from nutrients."
+}
