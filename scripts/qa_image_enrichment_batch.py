@@ -4,6 +4,7 @@ import json
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
+import re
 
 REQUIRED = ("plant_id", "scientific", "image_url", "source_url", "creator", "license", "license_url", "identity_scope", "master_scientific", "taxon_evidence", "depicted_part", "part_match", "last_verified_at")
 ALLOWED_SCOPE = {"exact_species", "exact_subspecies", "exact_variety"}
@@ -13,6 +14,8 @@ ALLOWED_LICENSE = {"CC0", "CC0 1.0", "CC BY 4.0", "CC BY-SA 4.0", "CC BY 3.0", "
 def validate(batch, existing):
     errors = []
     seen = set()
+    seen_sources = set()
+    existing_sources = {x.get('source_url') for x in existing['images']}
     existing_ids = {x["plant_id"] for x in existing["images"]}
     for i, item in enumerate(batch["images"]):
         ident = item.get("plant_id", f"index-{i}")
@@ -22,6 +25,22 @@ def validate(batch, existing):
         if ident in seen or ident in existing_ids:
             errors.append(f"{ident}: duplicate plant_id")
         seen.add(ident)
+        source = item.get("source_url", "")
+        if source in seen_sources or source in existing_sources:
+            errors.append(f"{ident}: duplicate original photo")
+        seen_sources.add(source)
+        if not source.startswith("https://commons.wikimedia.org/wiki/File:"):
+            errors.append(f"{ident}: original Commons file page required for automatic acceptance")
+        sci = item.get("scientific", "")
+        scope = item.get("identity_scope")
+        if scope == "exact_species" and re.search(r"\\b(?:subsp\\.|var\\.|convar\\.|spp\\.|sp\\.|agg\\.)", sci):
+            errors.append(f"{ident}: exact species scope conflicts with scientific rank")
+        if scope == "exact_subspecies" and "subsp." not in sci:
+            errors.append(f"{ident}: exact subspecies scope lacks subsp.")
+        if scope == "exact_variety" and not re.search(r"\\b(?:var\\.|convar\\.|f\\.)", sci):
+            errors.append(f"{ident}: exact variety scope lacks rank marker")
+        if item.get("license") == "Public domain" and not item.get("public_domain_basis"):
+            errors.append(f"{ident}: missing public domain justification")
         if item.get("scientific") != item.get("master_scientific"):
             errors.append(f"{ident}: master scientific mismatch")
         if item.get("identity_scope") not in ALLOWED_SCOPE:
