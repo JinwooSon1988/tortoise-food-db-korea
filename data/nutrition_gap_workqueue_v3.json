@@ -382,7 +382,19 @@
           "fiber_g": 6.8
         },
         "promotion_hold": "Master Mentha spp. cannot inherit a Mentha spicata record without an explicit species mapping or master split.",
-        "citation": "turn1search59"
+        "citation": "turn1search59",
+        "record_payload_snapshot": {
+          "record_id": "NDB 02065",
+          "dataset": "SR Legacy",
+          "scientific_name": "Mentha spicata",
+          "basis": "100 g edible portion",
+          "water_g": 85.55,
+          "energy_kcal": 44,
+          "protein_g": 3.29,
+          "fat_g": 0.73,
+          "fiber_g": 6.8,
+          "hold": "Mentha spp. master cannot inherit species-specific record"
+        }
       },
       "clover": {
         "status": "species_specific_fresh_leaf_candidate",
@@ -392,7 +404,11 @@
         "citations": [
           "turn2search10",
           "turn2search3"
-        ]
+        ],
+        "record_payload_snapshot": {
+          "status": "not_yet_captured",
+          "hold": "Trifolium spp. master and fresh edible-part identity unresolved"
+        }
       },
       "chickweed": {
         "status": "composition_candidate_not_official",
@@ -466,7 +482,17 @@
           }
         ],
         "identity_warning": "Master Capsicum annuum is broader than color-specific records; preserve each record separately unless mapping policy explicitly defines cultivar/color equivalence.",
-        "action": "reconcile complete nutrient payload and decide display aggregation policy before promotion"
+        "action": "reconcile complete nutrient payload and decide display aggregation policy before promotion",
+        "record_payload_snapshot": {
+          "status": "not_yet_captured",
+          "records": [
+            11333,
+            100278,
+            11821,
+            11951
+          ],
+          "reason": "Color-specific USDA records identified; complete nutrient payload extraction and exact display mapping remain before promotion."
+        }
       }
     },
     "bellpepper_resolution_plan": {
