@@ -274,15 +274,50 @@
         "status": "official_record_candidate",
         "source_id": "FDC 169272",
         "source": "USDA FoodData Central",
-        "basis": "raw",
-        "action": "source record identity and full nutrient payload still require direct record reconciliation before promotion"
+        "basis": "100 g edible portion, raw",
+        "action": "source record identity and full nutrient payload still require direct record reconciliation before promotion",
+        "dataset": "USDA FoodData Central SR Legacy",
+        "record_id": "FDC 169272",
+        "source_url": "https://fdc.nal.usda.gov/food-details/169272/nutrients",
+        "key_values_confirmed": {
+          "energy_kcal": 19,
+          "water_g": 92.9,
+          "protein_g": 3.15,
+          "fat_g": 0.4,
+          "calcium_mg": 39,
+          "phosphorus_mg": 104,
+          "potassium_mg": 436
+        },
+        "promotion_hold": "Master is Cucurbita spp.; exact species-level mapping must be resolved before adding as verified master nutrition record.",
+        "source_corroboration": [
+          "turn1search0",
+          "turn1search3"
+        ]
       },
       "pricklypear": {
         "status": "official_record_candidate",
         "source_id": "FDC 167750",
         "source": "USDA FoodData Central",
-        "basis": "raw fruit",
-        "action": "master food is Opuntia spp.; exact species/part mapping required before promotion"
+        "basis": "100 g edible portion, raw fruit",
+        "action": "master food is Opuntia spp.; exact species/part mapping required before promotion",
+        "dataset": "USDA FoodData Central SR Legacy",
+        "record_id": "FDC 167750",
+        "source_url": "https://fdc.nal.usda.gov/food-details/167750/nutrients",
+        "key_values_confirmed": {
+          "energy_kcal": 41,
+          "water_g": 87.6,
+          "protein_g": 0.73,
+          "fat_g": 0.51,
+          "calcium_mg": 56,
+          "phosphorus_mg": 24,
+          "potassium_mg": 220,
+          "fiber_g": 3.6
+        },
+        "promotion_hold": "Master is Opuntia spp. and the candidate record is fruit; do not use it for cactus pad/leaf nutrition or generic Opuntia without part/species mapping.",
+        "source_corroboration": [
+          "turn1search2",
+          "turn1search11"
+        ]
       },
       "orchard": {
         "status": "comparative_nutrition_only",
@@ -417,6 +452,7 @@
       "records_extracted_this_batch": 0,
       "reason": "The current repository scan identifies candidate records but does not yet contain the authoritative record payload needed to safely promote values.",
       "next_required": "Fetch and reconcile original record payloads for the 10 priority plants before editing plant_nutrition_v56.json."
-    }
+    },
+    "data_quality_correction": "Previous note calling FDC 169272 Foundation Foods was incorrect; it is SR Legacy. The repository promotion policy must preserve the actual USDA dataset type."
   }
 }
