@@ -13,11 +13,12 @@ pages={p.parent.name:p.read_text(encoding="utf-8") for p in (root/"plant").glob(
 NO_TRANSFER=("이것만으로 안전성을 결정하지 않음","급여 안전성 자체를 증명하지 않음","이것만으로 급여 안전성을 확정하지 않는다")
 # Species-specific sections: current wording (since aa7dfe38) "전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며" replaced
 # "다른 육지거북 종에도 같다고 가정하지 않는다"; either states that species findings do not transfer.
-SPECIES_NO_TRANSFER=("다른 육지거북 종에도 같다고 가정하지 않는다","전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며")
+SPECIES_NO_TRANSFER=("다른 육지거북 종에도 같다고 가정하지 않는다","전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며","전체 육지거북에서 동일하게 확인됐다는 뜻은 아니다.")
 page_checks={
  "no auto transfer from indirect evidence": lambda t: any(x in t for x in NO_TRANSFER),
  "species notes do not transfer": lambda t: ("종별 특이사항" not in t and 'class="card species-specific"' not in t) or any(x in t for x in SPECIES_NO_TRANSFER),
  # Evidence count summary was renamed from class="evsummary" to class="evcountnote" in 143c0e61.
+ "species-specific findings are actually rendered": lambda t: ('class="card species-specific"' not in t) or ('class="speciesexception"' in t and 'class="speciesdetail"' in t),
  "evidence counts summarised in evidence section": lambda t: 'class="evcountnote"' in t,
 }
 failures={k:sorted(pid for pid,t in pages.items() if not f(t)) for k,f in page_checks.items()}
