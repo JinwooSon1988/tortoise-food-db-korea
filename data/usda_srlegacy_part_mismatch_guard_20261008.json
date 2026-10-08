@@ -1,0 +1,37 @@
+{
+  "source": "USDA FoodData Central SR Legacy 2018-04, original uploaded food.csv",
+  "status": "food_description_identity_screened__nutrients_not_promoted",
+  "principle": "An available USDA food record does not establish matching plant part or preparation state in the tortoise food registry.",
+  "cases": [
+    {
+      "plant_id": "alfalfa",
+      "fdc_id": 168384,
+      "source_description": "Alfalfa seeds, sprouted, raw",
+      "restriction": "Sprouts are not mature alfalfa leaves; do not transfer nutrient composition."
+    },
+    {
+      "plant_id": "fennelleaf",
+      "fdc_id": 169385,
+      "source_description": "Fennel, bulb, raw",
+      "restriction": "Bulb is not fennel leaf; do not transfer nutrient composition."
+    },
+    {
+      "plant_id": "chicory",
+      "fdc_id": 169993,
+      "source_description": "Chicory roots, raw",
+      "restriction": "Root nutrient values are not chicory greens."
+    },
+    {
+      "plant_id": "dandelion",
+      "fdc_id": 169227,
+      "source_description": "Dandelion greens, cooked, boiled, drained, without salt",
+      "restriction": "Cooked greens cannot substitute for raw greens without explicit basis."
+    },
+    {
+      "plant_id": "turnipgreens",
+      "fdc_id": 168119,
+      "source_description": "Turnip greens, canned, no salt added",
+      "restriction": "Canned product cannot substitute for raw leaf data."
+    }
+  ]
+}
