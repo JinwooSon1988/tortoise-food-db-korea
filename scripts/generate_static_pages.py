@@ -994,7 +994,7 @@ for p in plants:
         nutrition_body='<p class="small">검증된 공식 영양성분 자료가 아직 연결되지 않았다. 자료 부재를 0으로 처리하거나 안전·위험 판정의 근거로 쓰지 않는다.</p>'
     nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2><p class="small">검증된 성분값만 표시한다. 영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않는다. 수치가 미확인인 항목은 0이 아니다.</p>{nutrition_body}</section>'''
 
-    footer_html=f'''<section class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../index.html">다른 먹이 검색 →</a></section>'''
+    footer_html=f'''<section class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../all-plants/index.html">전체 먹이 목록 →</a><a href="../../index.html">다른 먹이 검색 →</a></section>'''
 
     alias_html=f'<div class="aliases">다른 이름 · {", ".join(esc(x) if re.search(r"[가-힣]",str(x)) else f"<span lang=\"en\">{esc(x)}</span>" for x in aliases[:6])}</div>' if aliases else ""
     schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"inLanguage":"ko","isPartOf":{"@type":"WebSite","name":"거북밥 DB Korea","url":SITE_URL+"/"}},ensure_ascii=False,separators=(",",":"))
