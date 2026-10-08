@@ -20,14 +20,32 @@
       "ko": "티모시",
       "scientific": "Phleum pratense",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "candidate_metadata_checked_not_published",
+      "image_research_candidate": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:Timothy_grass.jpg",
+        "creator": "Blokenearexeter",
+        "license": "CC0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "taxon_evidence": "File description explicitly identifies Phleum pratense L.; structured depicts Phleum pratense",
+        "review_status": "source_metadata_checked_pending_image_visual_review",
+        "notes": "Do not publish before checking visible plant part and file image quality."
+      }
     },
     {
       "plant_id": "pansy",
       "ko": "팬지",
       "scientific": "Viola × wittrockiana",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "missing_from_verified_registry"
+      "image_state": "candidate_metadata_checked_not_published",
+      "image_research_candidate": {
+        "source_url": "https://commons.wikimedia.org/wiki/File:-2019-07-20_Flowering_garden_pansy_(Viola_×_wittrockiana),_Trimingham.JPG",
+        "creator": "Kolforn",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "taxon_evidence": "File title explicitly identifies flowering garden pansy (Viola × wittrockiana)",
+        "review_status": "source_metadata_checked_pending_image_visual_review",
+        "notes": "Attribution and share-alike requirements; verify original file metadata and exact depicted part before publishing."
+      }
     },
     {
       "plant_id": "chrysanthemum",
