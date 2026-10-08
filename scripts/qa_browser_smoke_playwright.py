@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+"""Browser smoke tests for generated pages; no network or account required."""
+from pathlib import Path
+from urllib.parse import quote
+from playwright.sync_api import sync_playwright
+
+ROOT = Path(__file__).resolve().parents[1]
+def url(path):
+    return (ROOT / path).resolve().as_uri()
+
+with sync_playwright() as pw:
+    browser = pw.chromium.launch(headless=True)
+    for width, height in ((1440, 900), (390, 844)):
+        page = browser.new_page(viewport={"width": width, "height": height})
+        errors = []
+        page.on("pageerror", lambda error: errors.append(str(error)))
+        page.goto(url("index.html"), wait_until="load")
+        assert page.locator("#searchInput").is_visible(), f"search missing at {width}px"
+        page.locator("#searchInput").fill("민들레")
+        assert page.locator("#searchInput").input_value() == "민들레"
+        assert not errors, f"home JS errors at {width}px: {errors}"
+        page.goto(url("plant/mustard/index.html"), wait_until="load")
+        assert page.locator(".decision .verdictbadge").inner_text().strip() == "C"
+        assert page.locator(".decision .verdictlabel").is_visible()
+        assert page.locator('a[href="#evidence"]').count() > 0
+        assert page.locator("#evidence").count() > 0
+        assert not errors, f"JS errors at {width}px: {errors}"
+        print(f"PASS browser smoke: {width}x{height}, home/search/detail")
+        page.close()
+    browser.close()
