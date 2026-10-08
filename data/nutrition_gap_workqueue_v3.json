@@ -549,7 +549,8 @@
             "ndb": 11333,
             "status": "secondary_crosscheck_only"
           },
-          "verified_scope": "NDB primary confirmed; green FDC mappings from secondary sources only; require primary verification."
+          "verified_scope": "NDB primary confirmed; green FDC mappings from secondary sources only; require primary verification.",
+          "nutrient_extraction_gate": "Require primary USDA record and full basis before promoting any secondary-source nutrient snapshot."
         }
       }
     },
