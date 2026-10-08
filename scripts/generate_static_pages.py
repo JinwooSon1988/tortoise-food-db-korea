@@ -1002,13 +1002,13 @@ for p in plants:
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="거북밥 DB Korea"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <script type="application/ld+json">{schema}</script>
 <style>{CSS}/* Shared verdict presentation across search, catalog and detail pages. */
-.decisionwhy{border-color:#d4e2d8;background:#f7faf7;box-shadow:0 3px 16px rgba(21,62,38,.045);overflow-wrap:anywhere}
-.decisionwhy b{letter-spacing:-.015em;color:#174d32}
-.evidencefold>summary{border-radius:10px;transition:background .18s ease}
-.evidencefold>summary:hover{background:#edf4ef}
-.evidencefold>summary:focus-visible{outline:3px solid #7cb48d;outline-offset:3px}
-@media(max-width:620px){.decisionwhy{padding:13px 14px;font-size:15px;line-height:1.65}}
-@media(prefers-reduced-motion:reduce){.evidencefold>summary{transition:none}}
+.decisionwhy{{border-color:#d4e2d8;background:#f7faf7;box-shadow:0 3px 16px rgba(21,62,38,.045);overflow-wrap:anywhere}}
+.decisionwhy b{{letter-spacing:-.015em;color:#174d32}}
+.evidencefold>summary{{border-radius:10px;transition:background .18s ease}}
+.evidencefold>summary:hover{{background:#edf4ef}}
+.evidencefold>summary:focus-visible{{outline:3px solid #7cb48d;outline-offset:3px}}
+@media(max-width:620px){{.decisionwhy{{padding:13px 14px;font-size:15px;line-height:1.65}}}}
+@media(prefers-reduced-motion:reduce){{.evidencefold>summary{{transition:none}}}}
 </style></head><body>
 <a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><nav class="detailnavlinks" aria-label="페이지 이동"><a href="../../index.html">⌂ 홈</a><button type="button" onclick="if(history.length>1)history.back();else location.href='../../index.html'">← 뒤로</button></nav><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{header_photo_html}</div>{decision_html}{practical_html}{species_specific_html}{scope_html}{nutrition_html}{deep_html}{footer_html}</main><footer class="pagefooter"><nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></footer><script src="../../language-toggle.js?v=20261004-1" defer></script></body></html>'''
     # Final Korean morphology guard for legacy mixed-language evidence strings.
