@@ -208,7 +208,7 @@ for p in public:
             errors.append(f"{pid}: evidence card must show Korean summary before interpretation, limits and source metadata")
     if 'class="nutrition-missing"' in text:
         missing = re.search(r'<div class="nutrition-missing">([\\s\\S]*?)</div>', text)
-        if not missing or not missing.group(1).lstrip().startswith('<strong>검증된 영양자료 없음</strong>'):
+        if not missing or not re.match(r'\s*<strong>검증된 영양자료 없음</strong>', missing.group(1)):
             errors.append(f"{pid}: missing nutrition state must be announced before explanation")
     for e in linked:
         expected_url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
