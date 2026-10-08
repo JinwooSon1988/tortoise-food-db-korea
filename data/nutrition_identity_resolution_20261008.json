@@ -40,5 +40,28 @@
     }
   ],
   "release_rule": "No master-taxonomy change is made by inference. Any split must be explicitly justified by the food identity used by the site and supported by source records.",
-  "status": "analysis_only_no_master_changes"
+  "status": "analysis_only_no_master_changes",
+  "next_validation_batch": {
+    "priority": [
+      "pumpkinleaf",
+      "pricklypear",
+      "bellpepper",
+      "mint",
+      "clover"
+    ],
+    "checks": [
+      "exact master taxon versus source taxon",
+      "edible part match",
+      "raw/cooked/dried state",
+      "source dataset type",
+      "full nutrient payload",
+      "whether master split is actually necessary"
+    ],
+    "do_not_change": [
+      "plants.json master taxonomy",
+      "feeding verdicts",
+      "existing verified nutrition values"
+    ],
+    "promotion_rule": "Only after all checks pass may a candidate enter plant_nutrition_v56.json."
+  }
 }
