@@ -21,7 +21,7 @@ matches = {}
 with (folder / "food.csv").open(encoding="utf-8-sig", newline="") as f:
     for row in csv.DictReader(f):
         description = (row.get("description") or "").lower()
-        if not ("pepper" in description and "bell" in description and "raw" in description):
+        if not (re.search(r"\bpeppers?\b", description) and re.search(r"\bbell\b", description) and re.search(r"\braw\b", description)):
             continue
         color = next((c for c in colors if re.search(r"\b" + c + r"\b", description)), None)
         if color is None:
@@ -34,6 +34,7 @@ with (folder / "food.csv").open(encoding="utf-8-sig", newline="") as f:
             "description": row.get("description"),
             "data_type": row.get("data_type"),
             "ndb_number": row.get("ndb_number") or None,
+            "nutrient_provenance": "USDA CSV candidate; not verified for feeding decisions",
             "nutrients": {},
         }
 nutrients = {}
@@ -49,5 +50,6 @@ with (folder / "food_nutrient.csv").open(encoding="utf-8-sig", newline="") as f:
         name = meta.get("name")
         amount = row.get("amount")
         if name and amount not in (None, ""):
-            record["nutrients"][name] = {"amount": amount, "unit": meta.get("unit")}
+            key = f"{row.get('nutrient_id')}:{name}"
+            record["nutrients"][key] = {"amount": amount, "unit": meta.get("unit"), "nutrient_id": row.get("nutrient_id")}
 print(json.dumps({"source": str(folder), "status": "candidate_only", "records": list(matches.values())}, ensure_ascii=False, indent=2))
