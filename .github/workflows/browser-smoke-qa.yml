@@ -1,0 +1,30 @@
+name: Browser smoke QA
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'plant/**'
+      - 'scripts/qa_browser_smoke_playwright.py'
+      - '.github/workflows/browser-smoke-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'plant/**'
+      - 'scripts/qa_browser_smoke_playwright.py'
+      - '.github/workflows/browser-smoke-qa.yml'
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install playwright
+      - run: python -m playwright install --with-deps chromium
+      - run: python scripts/qa_browser_smoke_playwright.py
