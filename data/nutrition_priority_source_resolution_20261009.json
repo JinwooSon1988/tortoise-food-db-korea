@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "as_of": "2026-10-09",
+  "scope": "125 plants absent from verified master nutrition records",
+  "priority_method": "Rank by existing source records, botanical specificity, plant-part match, and missing verification steps; do not promote candidates automatically.",
+  "priority": [
+    {
+      "plant_id": "lettuce",
+      "status": "PUBLIC_VARIETY_RECORDS_AVAILABLE__MASTER_HOLD",
+      "source": "USDA SR Legacy original CSV",
+      "records": 5,
+      "remaining": "Decide variety-level schema and mapping to Korean retail names; do not collapse five varieties into one generic average."
+    },
+    {
+      "plant_id": "amaranthleaf",
+      "status": "GENUS_LEVEL_RECORD__MASTER_HOLD",
+      "source": "USDA FDC 168385",
+      "records": 1,
+      "remaining": "USDA source specifies Amaranth leaves, raw, but species identity is unresolved. Need species-aware applicability policy."
+    },
+    {
+      "plant_id": "opuntiapad",
+      "status": "EDIBLE_PAD_RECORD__MASTER_HOLD",
+      "source": "USDA FDC 168571",
+      "records": 1,
+      "remaining": "Confirm source taxon or explicitly label as nopales product composition; do not claim Opuntia ficus-indica species-specific data."
+    },
+    {
+      "plant_id": "grapevineleaf",
+      "status": "GENUS_LEVEL_RECORD__MASTER_HOLD",
+      "source": "USDA FDC 168575",
+      "records": 1,
+      "remaining": "USDA grape leaf cannot be asserted to represent Vitis amurensis."
+    },
+    {
+      "plant_id": "borage",
+      "status": "PART_UNSPECIFIED__MASTER_HOLD",
+      "source": "USDA FDC 170481",
+      "records": 1,
+      "remaining": "Identify edible analyzed tissue and taxon from original source metadata."
+    }
+  ],
+  "rules": [
+    "Never infer missing nutrients as zero.",
+    "Never substitute processed, sprouted, cooked, or canned plant tissue for raw leaves.",
+    "Never infer tortoise feeding safety from Ca:P ratio.",
+    "Verified master count stays at 57 until independent species/part/source checks pass."
+  ],
+  "existing_evidence_files": [
+    "data/usda_lettuce_variety_nutrition_20261008.json",
+    "data/usda_srlegacy_plant_candidates_batch2_20261008.json",
+    "data/usda_srlegacy_part_mismatch_guard_20261008.json"
+  ]
+}
