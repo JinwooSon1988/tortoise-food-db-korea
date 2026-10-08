@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Verify the public lettuce nutrition table against its source-audited USDA records."""
+"""Validate five source-linked responsive lettuce nutrition cards against USDA data."""
 import json
-import re
 from pathlib import Path
 root = Path(__file__).resolve().parents[1]
-data = json.loads((root / "data/usda_lettuce_variety_nutrition_20261008.json").read_text(encoding="utf-8"))
+records = json.loads((root / "data/usda_lettuce_variety_nutrition_20261008.json").read_text(encoding="utf-8"))["records"]
 page = (root / "plant/lettuce/index.html").read_text(encoding="utf-8")
-assert len(data["records"]) == 5
 section = page.split('<section class="card" id="nutrition">', 1)[1].split("</section>", 1)[0]
-rows = re.findall(r'<tr><th scope="row"[^>]*>[^<]+</th><td>([^<]+)</td><td>([^<]+)</td><td>([^<]+)</td><td><a href="https://fdc.nal.usda.gov/food-details/(\d+)/nutrients"', section)
-assert len(rows) == 5, f"Expected five visible variety rows, found {len(rows)}"
-actual = {int(fdc): (ca, p, fiber) for ca, p, fiber, fdc in rows}
-for rec in data["records"]:
-    expected = (f'{rec["calcium_mg"]}mg', f'{rec["phosphorus_mg"]}mg', f'{rec["fiber_g"]}g')
-    assert actual[rec["fdc_id"]] == expected, f'Nutrition mismatch for {rec["fdc_id"]}'
+assert len(records) == 5
+assert section.count("<article ") == len(records)
+for rec in records:
+    source = f'https://fdc.nal.usda.gov/food-details/{rec["fdc_id"]}/nutrients'
+    assert source in section, f'Missing USDA source {rec["fdc_id"]}'
+    block = section.split(f'href="{source}"', 1)[0].rsplit("<article ", 1)[1]
+    for val in (f'{rec["calcium_mg"]}mg', f'{rec["phosphorus_mg"]}mg', f'{rec["fiber_g"]}g', f'{rec["ca_p_ratio"]}:1'):
+        assert f'<strong>{val}</strong>' in block, f'Mismatch for {rec["fdc_id"]}: {val}'
 assert "급여 적합성" in section
-print("OK: five public lettuce nutrition rows match USDA verified-source dataset")
+assert "grid-template-columns:repeat(auto-fit" in section
+print("OK: five responsive lettuce nutrition cards match USDA dataset and source links")
