@@ -10,7 +10,7 @@ import sys
 root=Path(__file__).resolve().parents[1]
 gen=(root/"scripts/generate_static_pages.py").read_text(encoding="utf-8")
 pages={p.parent.name:p.read_text(encoding="utf-8") for p in (root/"plant").glob("*/index.html")}
-NO_TRANSFER=("이것만으로 안전성을 결정하지 않음","급여 안전성 자체를 증명하지 않음","이것만으로 급여 안전성을 확정하지 않는다")
+NO_TRANSFER=("이것만으로 안전성을 결정하지 않음","급여 안전성 자체를 증명하지 않음","이것만으로 급여 안전성을 확정하지 않는다","안전 용량·급여 빈도를 시험한 근거가 아니며")
 # Species-specific sections: current wording (since aa7dfe38) "전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며" replaced
 # "다른 육지거북 종에도 같다고 가정하지 않는다"; either states that species findings do not transfer.
 SPECIES_NO_TRANSFER=("다른 육지거북 종에도 같다고 가정하지 않는다","전체 육지거북에서 동일하게 확인됐다는 뜻은 아니며","전체 육지거북에서 동일하게 확인됐다는 뜻은 아니다.")
