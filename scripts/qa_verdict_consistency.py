@@ -166,7 +166,7 @@ for p in public:
         if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다")):
             errors.append(f"{pid}: hold safety boundary must remain visible in the decision card")
     elif g["grade"] == "D":
-        if "계획 급여에서 제외" not in text or "평소 식단에는 넣지 않는다." not in text:
+        if g["meaning"] not in decision_text or g["label"] not in decision_text:
             errors.append(f"{pid}: D verdict must preserve explicit do-not-feed meaning")
     elif g["grade"] in ("A", "B", "C") and "판정 보류" in text.split('<section class="card practical"',1)[0]:
         errors.append(f"{pid}: graded verdict must not look like a hold state")
