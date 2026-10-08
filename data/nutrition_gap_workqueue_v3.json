@@ -332,32 +332,78 @@
         "next": "Search livestock feed composition databases only as comparative evidence, clearly separated from official food composition."
       },
       "mint": {
-        "status": "species_split_required",
-        "action": "Search Mentha species records separately; do not merge peppermint/spearmint into Mentha spp."
+        "status": "exact_species_record_found_but_master_is_broader",
+        "source": "USDA SR28 / FoodData Central SR Legacy",
+        "record": "NDB 02065",
+        "scientific_name": "Mentha spicata",
+        "food": "Spearmint, fresh",
+        "basis": "100 g edible portion",
+        "values": {
+          "water_g": 85.55,
+          "energy_kcal": 44,
+          "protein_g": 3.29,
+          "fat_g": 0.73,
+          "fiber_g": 6.8
+        },
+        "promotion_hold": "Master Mentha spp. cannot inherit a Mentha spicata record without an explicit species mapping or master split.",
+        "citation": "turn1search59"
       },
       "clover": {
-        "status": "comparative_forage_record_only",
-        "source": "forage/legume literature",
-        "action": "Do not substitute Trifolium hay/forage analysis for fresh clover edible-part composition.",
-        "next": "Exact fresh Trifolium edible record required."
+        "status": "species_specific_fresh_leaf_candidate",
+        "source": "wild-edible reference / forage sources",
+        "scientific_name": "Trifolium repens or Trifolium pratense",
+        "promotion_hold": "Master Trifolium spp. is too broad; white and red clover records must remain separate. Forage DM values are not fresh-leaf food values.",
+        "citations": [
+          "turn2search10",
+          "turn2search3"
+        ]
       },
       "chickweed": {
-        "status": "exact_record_candidate",
-        "source": "USDA FoodData Central",
-        "record_search_terms": [
-          "chickweed, raw",
-          "Stellaria media"
-        ],
-        "identity_warning": "Verify scientific identity and edible part before promotion.",
-        "action": "record-level reconciliation required"
+        "status": "composition_candidate_not_official",
+        "source": "peer-reviewed wild-edible greens study",
+        "scientific_name": "Stellaria media",
+        "part": "wet plant tissue",
+        "basis": "study sample, not a standardized food-composition record",
+        "promotion_hold": "Useful comparative composition evidence; do not promote as official 100 g food record without record-level methodology reconciliation.",
+        "citation": "turn1search4"
       },
       "rose": {
-        "status": "part_split_required",
-        "action": "Fresh petals only; exclude rose hips, teas, extracts and oils."
+        "status": "species_and_part_specific_composition_found",
+        "source": "Korean peer-reviewed paper",
+        "scientific_name": "Rosa hybrida L.",
+        "part": "rose petals",
+        "basis": "dry basis for proximate composition; some micronutrients reported",
+        "values": {
+          "crude_protein_percent_dm": 16.3,
+          "crude_fat_percent_dm": 2.9,
+          "crude_ash_percent_dm": 5.4,
+          "crude_fiber_percent_dm": 16.1,
+          "ascorbic_acid_mg_per_100g": 129.5,
+          "potassium_mg_per_100g": 1981.7
+        },
+        "promotion_hold": "Dry-basis data cannot be merged with raw 100 g records; master Rosa spp. also broader than Rosa hybrida.",
+        "citation": "turn2search5"
       },
       "nasturtium": {
-        "status": "part_split_required",
-        "action": "Separate leaves and flowers; exact edible-part record required."
+        "status": "exact_species_leaf_record_found",
+        "source": "Brazilian Food Composition Database (TBCA)",
+        "scientific_name": "Tropaeolum majus L.",
+        "part": "leaves",
+        "basis": "100 g edible portion",
+        "values": {
+          "water_g": 87.9,
+          "calcium_mg": 194,
+          "iron_mg": 22,
+          "sodium_mg": 45,
+          "magnesium_mg": 48,
+          "phosphorus_mg": 81,
+          "potassium_mg": 369,
+          "vitamin_a_ug": 44.2,
+          "vitamin_a_rae_ug": 22.1,
+          "vitamin_c_mg": 38.6
+        },
+        "promotion_hold": "External composition source; reconcile full nutrient payload and source methodology before verified promotion.",
+        "citation": "turn1search0"
       },
       "bellpepper": {
         "status": "candidate_records_identified_not_promoted",
@@ -456,6 +502,8 @@
         "species aggregation risk"
       ],
       "next_focus": "Complete original-record extraction for the unresolved foods; prioritize records with exact scientific identity and edible part before expanding comparative forage evidence."
-    }
+    },
+    "web_research_at": "2026-10-08",
+    "web_research_note": "External web research distinguished exact species/part records from broader master taxa and from forage/dry-basis studies. No new verified numeric records promoted in this batch."
   }
 }
