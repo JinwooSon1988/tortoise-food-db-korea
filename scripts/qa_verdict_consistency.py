@@ -199,6 +199,17 @@ for p in public:
         errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
     if linked and text.count("이 자료만으로는 알 수 없는 것") < len(linked):
         errors.append(f"{pid}: every linked evidence card must state its evidence limit")
+    # Reader-first evidence hierarchy: Korean summary must precede interpretation,
+    # limitations and bibliographic details on every individual evidence card.
+    for card in re.findall(r'<article class="evcard">([\\s\\S]*?)</article>', text):
+        markers = ['class="evsummary"', 'class="evidence-meaning"', 'class="limit"', 'class="evsource"']
+        positions = [card.find(marker) for marker in markers]
+        if any(pos < 0 for pos in positions) or positions != sorted(positions):
+            errors.append(f"{pid}: evidence card must show Korean summary before interpretation, limits and source metadata")
+    if 'class="nutrition-missing"' in text:
+        missing = re.search(r'<div class="nutrition-missing">([\\s\\S]*?)</div>', text)
+        if not missing or not missing.group(1).lstrip().startswith('<strong>검증된 영양자료 없음</strong>'):
+            errors.append(f"{pid}: missing nutrition state must be announced before explanation")
     for e in linked:
         expected_url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
         if not expected_url:
