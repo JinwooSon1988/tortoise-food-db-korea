@@ -1,0 +1,287 @@
+{
+  "version": "1.0",
+  "created_at": "2026-10-08",
+  "purpose": "Joint backlog for evidence-first image, nutrition and cross-taxon literature enrichment. No entries imply verified evidence or permission to publish.",
+  "source_snapshots": [
+    "data/image_gap_triage_v1.json",
+    "data/nutrition_gap_workqueue_v3.json",
+    "data/plant_evidence_research_queue.json"
+  ],
+  "image_priorities": [
+    {
+      "plant_id": "spinach",
+      "ko": "시금치",
+      "scientific": "Spinacia oleracea",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "pansy",
+      "ko": "팬지",
+      "scientific": "Viola × wittrockiana",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "chrysanthemum",
+      "ko": "국화",
+      "scientific": "Chrysanthemum morifolium",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "mungbeansprout",
+      "ko": "숙주나물",
+      "scientific": "Vigna radiata",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "melonleaf",
+      "ko": "멜론잎",
+      "scientific": "Cucumis melo",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "kiwileaf",
+      "ko": "키위잎",
+      "scientific": "Actinidia deliciosa",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "radicchio",
+      "ko": "라디키오",
+      "scientific": "Cichorium intybus var. foliosum",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "chard",
+      "ko": "근대",
+      "scientific": "Beta vulgaris subsp. cicla",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    },
+    {
+      "plant_id": "mizuna",
+      "ko": "미즈나",
+      "scientific": "Brassica rapa var. nipposinica",
+      "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
+      "image_state": "candidate_unverified"
+    }
+  ],
+  "nutrition_priority_exact_record_search": [
+    {
+      "plant_id": "sowthistle",
+      "ko": "방가지똥",
+      "scientific": "Sonchus spp.",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "carrottop",
+      "ko": "당근잎",
+      "scientific": "Daucus carota subsp. sativus",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "basil",
+      "ko": "바질",
+      "scientific": "Ocimum basilicum",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "mint",
+      "ko": "민트",
+      "scientific": "Mentha spp.",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "perilla",
+      "ko": "깻잎",
+      "scientific": "Perilla frutescens",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "clover",
+      "ko": "클로버",
+      "scientific": "Trifolium spp.",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "alfalfa",
+      "ko": "알팔파",
+      "scientific": "Medicago sativa",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "chickweed",
+      "ko": "별꽃",
+      "scientific": "Stellaria media",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "sweetpotatoleaf",
+      "ko": "고구마잎",
+      "scientific": "Ipomoea batatas",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "zucchini",
+      "ko": "애호박",
+      "scientific": "Cucurbita moschata",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "cucumber",
+      "ko": "오이",
+      "scientific": "Cucumis sativus",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "tomato",
+      "ko": "토마토",
+      "scientific": "Solanum lycopersicum",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "grapeleaf",
+      "ko": "포도잎",
+      "scientific": "Vitis vinifera",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "rose",
+      "ko": "장미꽃",
+      "scientific": "Rosa spp.",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "nasturtium",
+      "ko": "한련화",
+      "scientific": "Tropaeolum majus",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "pricklypear",
+      "ko": "천년초",
+      "scientific": "Opuntia spp.",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    },
+    {
+      "plant_id": "orchard",
+      "ko": "오차드그라스",
+      "scientific": "Dactylis glomerata",
+      "task": "Locate official source record matching taxon, part, processing and wet/dry basis",
+      "status": "unverified"
+    }
+  ],
+  "cross_taxon_evidence_priority": [
+    {
+      "family": "Malvaceae",
+      "plant_ids": [
+        "marshmallow",
+        "mallowleaf"
+      ],
+      "task": "Search tortoise direct evidence first, then comparative herbivorous reptile literature with taxon-transfer limitations",
+      "status": "not_reviewed_in_this_batch"
+    },
+    {
+      "family": "Fabaceae",
+      "plant_ids": [
+        "beanleaf",
+        "soybeanleaf"
+      ],
+      "task": "Search tortoise direct evidence first, then comparative herbivorous reptile literature with taxon-transfer limitations",
+      "status": "not_reviewed_in_this_batch"
+    },
+    {
+      "family": "Brassicaceae",
+      "plant_ids": [
+        "broccolisprout",
+        "mizuna",
+        "tatsoi",
+        "komatsuna"
+      ],
+      "task": "Search tortoise direct evidence first, then comparative herbivorous reptile literature with taxon-transfer limitations",
+      "status": "not_reviewed_in_this_batch"
+    },
+    {
+      "family": "Poaceae",
+      "plant_ids": [
+        "meadowgrass",
+        "fescue",
+        "bermudagrass"
+      ],
+      "task": "Search tortoise direct evidence first, then comparative herbivorous reptile literature with taxon-transfer limitations",
+      "status": "not_reviewed_in_this_batch"
+    },
+    {
+      "family": "Rosaceae",
+      "plant_ids": [
+        "plumleaf"
+      ],
+      "task": "Search tortoise direct evidence first, then comparative herbivorous reptile literature with taxon-transfer limitations",
+      "status": "not_reviewed_in_this_batch"
+    },
+    {
+      "family": "Amaranthaceae",
+      "plant_ids": [
+        "amaranthleaf"
+      ],
+      "task": "Search tortoise direct evidence first, then comparative herbivorous reptile literature with taxon-transfer limitations",
+      "status": "not_reviewed_in_this_batch"
+    }
+  ],
+  "release_gates": [
+    "No image without exact identity and documented reuse license",
+    "No numeric nutrient value without original record, plant part, processing and measurement basis",
+    "No feeding grade change from indirect cross-taxon evidence alone",
+    "Do not present backlog candidates as verified findings"
+  ]
+}
