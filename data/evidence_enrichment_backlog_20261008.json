@@ -417,5 +417,32 @@
       }
     ],
     "visual_review_requirement": "Visual confirmation cannot be inferred from file title, structured metadata or license alone."
+  },
+  "batch_quality_policy": {
+    "version": "1.0",
+    "principle": "Batch processing changes throughput, never evidence acceptance standards",
+    "batch_size_target": 50,
+    "auto_approve_only_if": [
+      "exact taxon rank and canonical name match",
+      "original file creator and license independently verifiable",
+      "depicted plant part visually reviewed",
+      "source URL durable and image loads",
+      "no conflicting metadata or licensing"
+    ],
+    "manual_review_if": [
+      "species identification ambiguous",
+      "cultivar/subspecies/variety mismatch",
+      "plant part not visually identifiable",
+      "license unclear or changed",
+      "image quality inadequate"
+    ],
+    "release_gate": [
+      "no unverified image promoted",
+      "run generator and image QA",
+      "verify public page rendering after deployment",
+      "keep unresolved entries HOLD"
+    ],
+    "evidence_separation": "Plant image identity never establishes nutritional or feeding safety evidence.",
+    "status": "policy_defined_not_evidence_verified"
   }
 }
