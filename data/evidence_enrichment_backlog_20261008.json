@@ -27,7 +27,7 @@
       "ko": "티모시",
       "scientific": "Phleum pratense",
       "image_task": "Find exact taxon image and verify license, author, original file URL and permitted reuse",
-      "image_state": "candidate_metadata_checked_not_published",
+      "image_state": "promoted_to_verified_image_registry",
       "image_research_candidate": {
         "source_url": "https://commons.wikimedia.org/wiki/File:Timothy_grass.jpg",
         "creator": "Blokenearexeter",
@@ -46,11 +46,11 @@
         }
       },
       "publication_gate": {
-        "identity": "candidate_file_title_or_description_recorded",
-        "depicted_part": "pending_visual_review",
-        "creator_license": "candidate_metadata_recorded_revalidation_required",
-        "file_stability": "pending",
-        "status": "HOLD"
+        "identity": "passed",
+        "depicted_part": "passed_partial",
+        "creator_license": "passed_CC0_1.0",
+        "file_stability": "commons_redirect",
+        "status": "APPROVED"
       }
     },
     {
@@ -386,13 +386,13 @@
   ],
   "image_audit": {
     "verified_registry": "data/verified_plant_images_v56.json",
-    "registry_entries": 129,
+    "registry_entries": 130,
     "priority_candidates": 10,
-    "already_in_registry": 0,
-    "still_missing": 10,
-    "notes": "Source candidates are not publication-ready until exact taxon, depicted plant part, license provenance, and durable image URL have been independently verified. Registry count is not a count of successfully displayed images.",
-    "publication_ready": 0,
-    "publication_hold": 10,
+    "already_in_registry": 1,
+    "still_missing": 9,
+    "notes": "Timothy approved after original Commons metadata and preview review; remaining 9 image priorities not approved.",
+    "publication_ready": 1,
+    "publication_hold": 9,
     "last_triaged": "2026-10-08",
     "next_review_batch": [
       {
