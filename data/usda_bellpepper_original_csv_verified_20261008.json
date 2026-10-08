@@ -1,0 +1,79 @@
+{
+  "status": "nutrition_source_verified__feeding_grade_not_assessed",
+  "source": "User-supplied official USDA Foundation Foods 2026-04 and SR Legacy 2018-04 CSV exports",
+  "basis": "raw edible portion, per 100 g",
+  "original_csv_crosscheck": "7 records x 6 nutrients (water, protein, dietary fiber, calcium, phosphorus, potassium) matched original CSV; checked food description and nutrient IDs",
+  "records": [
+    {
+      "data_type": "Foundation",
+      "fdc_id": 2258588,
+      "color": "green",
+      "ndb_number": 11333,
+      "calcium_mg_per_100g": 7.496,
+      "phosphorus_mg_per_100g": 16.75,
+      "ca_p_ratio": 0.448,
+      "source_url": "https://fdc.nal.usda.gov/food-details/2258588/nutrients"
+    },
+    {
+      "data_type": "Foundation",
+      "fdc_id": 2258589,
+      "color": "yellow",
+      "ndb_number": 11951,
+      "calcium_mg_per_100g": 6.686,
+      "phosphorus_mg_per_100g": 24.76,
+      "ca_p_ratio": 0.27,
+      "source_url": "https://fdc.nal.usda.gov/food-details/2258589/nutrients"
+    },
+    {
+      "data_type": "Foundation",
+      "fdc_id": 2258590,
+      "color": "red",
+      "ndb_number": 11821,
+      "calcium_mg_per_100g": 6.361,
+      "phosphorus_mg_per_100g": 26.59,
+      "ca_p_ratio": 0.239,
+      "source_url": "https://fdc.nal.usda.gov/food-details/2258590/nutrients"
+    },
+    {
+      "data_type": "Foundation",
+      "fdc_id": 2258591,
+      "color": "orange",
+      "ndb_number": 100278,
+      "calcium_mg_per_100g": 4.899,
+      "phosphorus_mg_per_100g": 26.59,
+      "ca_p_ratio": 0.184,
+      "source_url": "https://fdc.nal.usda.gov/food-details/2258591/nutrients"
+    },
+    {
+      "data_type": "SR Legacy",
+      "fdc_id": 169383,
+      "color": "yellow",
+      "ndb_number": 11951,
+      "calcium_mg_per_100g": 11,
+      "phosphorus_mg_per_100g": 24,
+      "ca_p_ratio": 0.458,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169383/nutrients"
+    },
+    {
+      "data_type": "SR Legacy",
+      "fdc_id": 170108,
+      "color": "red",
+      "ndb_number": 11821,
+      "calcium_mg_per_100g": 7,
+      "phosphorus_mg_per_100g": 26,
+      "ca_p_ratio": 0.269,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+    },
+    {
+      "data_type": "SR Legacy",
+      "fdc_id": 170427,
+      "color": "green",
+      "ndb_number": 11333,
+      "calcium_mg_per_100g": 10,
+      "phosphorus_mg_per_100g": 20,
+      "ca_p_ratio": 0.5,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170427/nutrients"
+    }
+  ],
+  "warning": "Nutrition data alone does not determine suitability for tortoises. Do not merge color variants or Foundation and SR Legacy. Botanical and edible part identity review required before plant registry promotion."
+}
