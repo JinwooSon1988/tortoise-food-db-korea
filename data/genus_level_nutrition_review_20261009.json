@@ -1,0 +1,656 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-10-09",
+  "scope": "37 nutrition holds whose master taxon is genus-level (amaranthleaf was resolved separately on 2026-10-09 via korea_taxon_mapping_v1)",
+  "rule": "A genus-level master receives nutrition only through an exact Korean food-name to species mapping confirmed by two independent official sources plus a raw record of the same food and part. Single-source identity, multi-species masters and genus-level source records stay on HOLD; no congener, other-part or dry-matter values are transferred.",
+  "sources_searched": [
+    "USDA FoodData Central SR Legacy 2018-04 and Foundation 2026-04-30 (food.csv descriptions and SR Legacy scientificName)",
+    "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+    "KFCT 7th ed. (RDA 2006) (FAO-hosted PDF)",
+    "MFDS 식품원료목록 (foodsafetykorea.go.kr)",
+    "Peer-reviewed open-access analyses screened in the 2026-10-09 flower batch"
+  ],
+  "result": {
+    "confirmed": 0,
+    "held": 37,
+    "by_hold_class": {
+      "multi_species_master": 7,
+      "single_source_identity": 1,
+      "genus_only_records": 8,
+      "no_species_record": 21
+    }
+  },
+  "records": [
+    {
+      "plant_id": "mint",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터 ‘민트’가 Mentha 속 전체다. 식약처는 박하(M. arvensis var. piperascens)·서양박하(M. × piperita)·녹양박하(M. spicata)를 별도 원료로 구분한다. USDA 생잎 기록도 페퍼민트(FDC 173474, M. × piperita)·스피어민트(FDC 173475, M. spicata)로 종이 다르다. 농진청 ‘페퍼민트_생것’은 문헌 수집값이다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#774 박하 / #1009 서양박하 / #387 녹양박하",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        },
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 173474 Peppermint, fresh (Mentha x piperita); FDC 173475 Spearmint, fresh (Mentha spicata)",
+          "url": "https://fdc.nal.usda.gov/food-details/173474/nutrients"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "R118-059000001-0000 페퍼민트_생것 (데이터생성방법: 수집)"
+        }
+      ],
+      "next_step_ko": "페퍼민트·스피어민트를 별도 마스터로 분리한 뒤 각 종 기록을 연결(기존 후보 카드 정책 유지)."
+    },
+    {
+      "plant_id": "clover",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터 ‘클로버’가 Trifolium 속 전체이고, 흰토끼풀·붉은토끼풀은 이미 별도 마스터(whiteclover, redclover)다. 식약처도 토끼풀(T. repens)·붉은토끼풀(T. pratense)을 구분한다. 일치하는 생것 영양 기록도 없다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#5267 토끼풀 Trifolium repens L.; #884/#5190 붉은토끼풀 Trifolium pratense L.",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        }
+      ],
+      "next_step_ko": "종별 마스터(whiteclover, redclover)에서 개별 자료를 찾는다. 속 마스터는 보류를 유지한다."
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "decision": "HOLD",
+      "hold_class": "single_source_identity",
+      "reason_ko": "농진청 ‘호박_잎_생것’(R106-198007801-0000, 2015 분석)은 종을 표기하지 않는다. 농진청 7개정 성분표의 ‘호박’ 군에는 C. pepo(국수호박)·C. maxima(단호박)·C. moschata 품목이 함께 있다. 식약처는 ‘호박’=C. moschata로 정의하지만(잎·꽃 사용 가능), 이 기록 하나뿐이고 두 번째 독립 공식 출처가 없다. USDA FDC 169272는 Cucurbita spp.다.",
+      "evidence": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "R106-198007801-0000 호박_잎_생것 (분석, 2015-12-31; 학명 없음)"
+        },
+        {
+          "source": "KFCT 7th ed. (RDA 2006)",
+          "record": "06-414 호박잎 Pumpkin, young leaves — 학명 없음; 같은 호박 군의 국수호박만 Cucurbita pepo 표기"
+        },
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#1842 호박 Cucurbita moschata Duchesne (사용부위 줄기·잎·꽃·열매·씨앗); #1015 서양호박 C. maxima; #445 당호박 C. pepo",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        },
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 169272 Pumpkin leaves, raw (Cucurbita spp.)",
+          "url": "https://fdc.nal.usda.gov/food-details/169272/nutrients"
+        }
+      ],
+      "next_step_ko": "농진청이 호박잎 분석 시료의 종(C. moschata 여부)을 명시한 자료(10.x 학명 열 등)를 확보하면 korea_taxon_mapping으로 연결한다."
+    },
+    {
+      "plant_id": "pumpkinflower",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "일치하는 국내 호박꽃 생것 기록이 없다. USDA FDC 169270은 Cucurbita spp.(속 수준)다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 169270 Pumpkin flowers, raw (Cucurbita spp.)",
+          "url": "https://fdc.nal.usda.gov/food-details/169270/nutrients"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "호박꽃 기록 없음"
+        }
+      ],
+      "next_step_ko": "종이 명시된 호박꽃 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "pricklypear",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터가 천년초·백년초를 한 항목으로 묶는다. 농진청 기록(저단선인장·보검선인장 줄기)에는 학명이 없고, 식약처 ‘선인장’은 Opuntia ficus-indica 하나다. USDA Nopales(FDC 168571)는 Nopalea cochenillifera로 다른 종이다.",
+      "evidence": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "R106-212037901-0000 선인장_저단선인장_줄기_생것; R106-212017901-0000 선인장_보검선인장_줄기_생것 (학명 없음)"
+        },
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#1027 선인장 Opuntia ficus-indica (L.) Mill.; #1298 왕선인장 Opuntia monacantha",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        },
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 168571 Nopales, raw (Nopalea cochenillifera)",
+          "url": "https://fdc.nal.usda.gov/food-details/168571/nutrients"
+        }
+      ],
+      "next_step_ko": "천년초·백년초 마스터를 분리하고, 저단·보검선인장의 학명을 밝힌 공식 자료를 확보한다."
+    },
+    {
+      "plant_id": "hosta",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터가 ‘비비추속’(원예용 Hosta 전체)이다. 식약처는 비비추(H. longipes)·좀비비추·주걱비비추·참비비추를 별도 원료로 둔다. 농진청 ‘비비추(이밥추)_생것’은 국내 식용 비비추 한 종의 기록이라 속 마스터를 대표할 수 없다.",
+      "evidence": [
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "R106-159000001-0000 비비추(이밥추)_생것 (분석, 2009)"
+        },
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#902 비비추 Hosta longipes; #1452 좀비비추 H. minor; #1464 주걱비비추 H. clausa; #1523 참비비추",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        }
+      ],
+      "next_step_ko": "식용 비비추(H. longipes)를 별도 마스터로 둘지 검토한다. 그 경우 두 번째 공식 학명 출처가 필요하다."
+    },
+    {
+      "plant_id": "rose",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터와 식약처 원료 ‘장미’가 모두 Rosa spp.(속 수준)다. 논문 자료는 R. odorata·‘Gloria Dei’ 품종 하나씩이라 속을 대표할 수 없다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#1404 장미 Rosa spp.",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        },
+        {
+          "source": "Rop 2012 / Mlcek 2021",
+          "record": "Rosa odorata 'Ilona'; Rosa 'Gloria Dei'"
+        }
+      ],
+      "next_step_ko": "종이 명시된 장미 마스터를 분리하는 경우에만 연결한다."
+    },
+    {
+      "plant_id": "marigold",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터는 Tagetes spp.다. 식약처는 만수국(T. patula)·만수국아재비(T. minuta)를 구분한다. 논문 꽃 자료는 T. patula뿐이다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#628 만수국 Tagetes patula L.; #629 만수국아재비 Tagetes minuta L.",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        },
+        {
+          "source": "Rop 2012 / Mlcek 2021",
+          "record": "Tagetes patula 'Bolero' / 'Antiqua Orange' fresh flowers"
+        }
+      ],
+      "next_step_ko": "만수국(T. patula) 마스터를 분리하면 Rop 2012 생화 자료를 연결할 수 있다."
+    },
+    {
+      "plant_id": "violet",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터가 Viola 속 전체다. 식약처에는 제비꽃류 원료가 21종 이상 따로 등록돼 있고, 제비꽃잎·제비꽃(Viola mandshurica)은 별도 마스터다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "제비꽃 검색 21건 (종별 개별 원료)",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        }
+      ],
+      "next_step_ko": "종별 마스터(violetleaf, violetflower)에서 자료를 찾는다."
+    },
+    {
+      "plant_id": "geranium",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터와 식약처 원료 ‘제라늄’이 모두 Pelargonium spp.(속 수준)이고, 식약처 사용부위는 꽃이다. 일치하는 영양 분석 기록이 없다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#1429 제라늄 Pelargonium spp. (사용부위 꽃)",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        }
+      ],
+      "next_step_ko": "종·부위가 명시된 생체 분석 자료가 나오기 전까지 보류한다."
+    },
+    {
+      "plant_id": "geraniumleaf",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터와 식약처 원료 ‘제라늄’이 모두 Pelargonium spp.(속 수준)이고, 식약처 사용부위는 꽃이다. 일치하는 영양 분석 기록이 없다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#1429 제라늄 Pelargonium spp. (사용부위 꽃)",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        }
+      ],
+      "next_step_ko": "종·부위가 명시된 생체 분석 자료가 나오기 전까지 보류한다."
+    },
+    {
+      "plant_id": "eveningprimrose",
+      "decision": "HOLD",
+      "hold_class": "multi_species_master",
+      "reason_ko": "마스터가 Oenothera 속 전체다. 식약처는 달맞이꽃(O. biennis)·긴잎달맞이꽃·큰달맞이꽃을 따로 등록하고 주로 씨앗·순을 쓴다. 생잎·꽃의 영양 기록은 없다.",
+      "evidence": [
+        {
+          "source": "MFDS 식품원료목록",
+          "record": "#436 달맞이꽃 Oenothera biennis; #272 긴잎달맞이꽃; #1650 큰달맞이꽃",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04"
+        }
+      ],
+      "next_step_ko": "종·부위가 맞는 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "willowleaf",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터가 Salix 속 전체다. USDA 버드나무 어린잎(FDC 168036)은 알래스카 Salix pulchra 한 종이고, Feedipedia 자료는 건물 기준이다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 168036 Willow, young leaves, chopped (Alaska Native) — Salix pulchra Cham.",
+          "url": "https://fdc.nal.usda.gov/food-details/168036/nutrients"
+        },
+        {
+          "source": "Feedipedia",
+          "record": "Salix babylonica leaves (dry matter basis)"
+        }
+      ],
+      "next_step_ko": "국내 급여 버드나무 종을 특정한 마스터가 생기면 해당 종 자료를 찾는다."
+    },
+    {
+      "plant_id": "blackberryleaf",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터가 Rubus fruticosus 종합체(agg.)다. USDA 블랙베리 기록은 열매이고 Rubus spp.다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 173946 Blackberries, raw / FDC 168982 (Rubus spp., fruit)",
+          "url": "https://fdc.nal.usda.gov/food-details/173946/nutrients"
+        }
+      ],
+      "next_step_ko": "블랙베리 잎(생체) 분석 자료가 필요하다. 열매 수치로 대체하지 않는다."
+    },
+    {
+      "plant_id": "salsify",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터가 Tragopogon 속 전체다. USDA 기록(FDC 169277)은 T. porrifolius의 뿌리(vegetable oyster)라 종과 부위가 다르다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy",
+          "record": "FDC 169277 Salsify (vegetable oyster), raw — Tragopogon porrifolius (root)",
+          "url": "https://fdc.nal.usda.gov/food-details/169277/nutrients"
+        }
+      ],
+      "next_step_ko": "종이 특정된 잎·지상부 자료가 필요하다."
+    },
+    {
+      "plant_id": "ryegrass",
+      "decision": "HOLD",
+      "hold_class": "genus_only_records",
+      "reason_ko": "마스터가 Lolium 속이다. Feedipedia 자료도 Lolium spp. 건물 기준 사료값이다.",
+      "evidence": [
+        {
+          "source": "Feedipedia",
+          "record": "625 Ryegrass (Lolium spp.)"
+        }
+      ],
+      "next_step_ko": "종(예: L. perenne)과 생체 기준이 명시된 자료가 필요하다."
+    },
+    {
+      "plant_id": "lindenleaf",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Tilia 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "피나무 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "hazelleaf",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Corylus 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "개암나무(USDA·농진청 기록은 견과뿐) 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "birchleaf",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Betula 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "자작나무 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "poplarleaf",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Populus 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "포플러 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "elmleaf",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Ulmus 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "느릅나무 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "mapleleaf",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Acer 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "단풍나무 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "hawthorn",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Crataegus 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "산사나무 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "houseleek",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Sempervivum 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "셈페르비붐 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "echeveria",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Echeveria 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "에케베리아 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "hawksbeard",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Crepis 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "씀바귀아재비류 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "hawkbit",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Leontodon 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "민들레아재비류 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "hawkweed",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Hieracium 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "조밥나물류 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "petunia",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Petunia 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "페튜니아 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "dahlia",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Dahlia 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "달리아 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "gerbera",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Gerbera 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "거베라 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "zinnia",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Zinnia 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "백일홍 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "mexicanpetunia",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Ruellia 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "멕시칸페튜니아 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "coreopsis",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Coreopsis 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "금계국속 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "astilbe",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Astilbe 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "아스틸베 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "primula",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Primula 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "프리뮬라 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    },
+    {
+      "plant_id": "monarda",
+      "decision": "HOLD",
+      "hold_class": "no_species_record",
+      "reason_ko": "마스터가 Monarda 속 전체다. USDA SR Legacy·Foundation, 농진청 원재료성식품 CSV, 식약처 식품원료목록에 해당 종·부위의 생것 영양 기록이 없다.",
+      "evidence": [
+        {
+          "source": "USDA SR Legacy/Foundation CSV",
+          "record": "모나르다 잎·꽃 생것 기록 없음"
+        },
+        {
+          "source": "RDA 통합식품영양성분정보(원재료성식품) CSV 2025-12-23 (data.go.kr 15100065)",
+          "record": "일치 기록 없음"
+        }
+      ],
+      "next_step_ko": "마스터를 종 수준으로 확정한 뒤 해당 종·부위의 생체 분석 자료를 찾는다."
+    }
+  ]
+}
