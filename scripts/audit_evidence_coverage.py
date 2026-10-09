@@ -51,6 +51,25 @@ def main():
     ]
     statuses = Counter(x.get("part_match") for x in images)
     reasons = Counter(x.get("hold_reason_code") for x in holds)
+    image_part_mismatches = [
+        {"plant_id": x["plant_id"], "scientific": x.get("scientific"),
+         "depicted_part": x.get("depicted_part"), "source_url": x.get("source_url")}
+        for x in images if x.get("part_match") == "mismatch"
+    ]
+    image_part_partial = sorted(
+        x["plant_id"] for x in images if x.get("part_match") == "partial"
+    )
+    plants_without_images = sorted(plant_set - set(image_ids))
+    # Ambiguous market names must not silently override canonical taxon.
+    alias_taxon_review = [
+        {"plant_id": p["id"], "scientific": p.get("scientific"),
+         "aliases": p.get("aliases", []),
+         "issue": "Korean aehobak and zucchini are not interchangeable cultivar identities"}
+        for p in plants
+        if p["id"] == "zucchini"
+        and p.get("scientific") == "Cucurbita moschata"
+        and "zucchini" in [a.lower() for a in p.get("aliases", [])]
+    ]
     print(json.dumps({
         "plants": len(plants), "images": len(images),
         "images_missing": len(plant_set - set(image_ids)),
@@ -59,6 +78,10 @@ def main():
         "nutrition_held": len(holds),
         "nutrition_hold_reasons": dict(reasons),
         "duplicate_taxon_label_concepts_review_only": duplicate_concepts,
+        "image_part_mismatches_needing_replacement": image_part_mismatches,
+        "image_part_partial_needing_review": image_part_partial,
+        "plants_without_image": plants_without_images,
+        "ambiguous_alias_taxon_review_only": alias_taxon_review,
         "errors": errors,
         "result": "PASS" if not errors else "FAIL"
     }, ensure_ascii=False, indent=2))
