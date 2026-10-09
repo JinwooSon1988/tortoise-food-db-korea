@@ -778,6 +778,7 @@ CSS='''
 *{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;max-width:920px;margin:auto;padding:18px 22px 40px;line-height:1.62;color:var(--text);background:var(--bg)}
 a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}
 .skiplink{position:absolute;left:12px;top:-60px;z-index:50;background:#fff;border:2px solid #286a46;border-radius:9px;padding:9px 12px;font-weight:900;text-decoration:none}.skiplink:focus{top:10px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .small{font-size:13px;color:var(--muted)}h1{margin:0}h2{font-size:18px;margin:0 0 8px}h3{font-size:15px;margin:0 0 6px}ul{padding-left:20px;margin:6px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0;scroll-margin-top:18px}
 .detailnav{display:flex;justify-content:space-between;align-items:center;margin:0 0 18px;padding:6px 0 14px;border-bottom:1px solid var(--line);font-size:13px}.detailnavlinks{display:flex;gap:8px;align-items:center}.detailnav a,.detailnav button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;min-width:76px;padding:0 15px;border:1px solid #205c3d;border-radius:12px;background:#286a46;color:#fff;font:inherit;font-size:13px;font-weight:900;text-decoration:none;box-shadow:0 2px 8px rgba(25,85,53,.14);cursor:pointer}.detailnav button{font-weight:900}.detailnav a:hover,.detailnav button:hover{background:#1d5538;border-color:#17482f;color:#fff}.detailnav a:focus-visible,.detailnav button:focus-visible{outline:3px solid #a8d6b7;outline-offset:3px}.detailnav a:active,.detailnav button:active{transform:translateY(1px)}nav[aria-label="breadcrumb"] a{display:inline-flex;align-items:center;min-height:44px}.sourceopen{display:inline-flex;min-height:44px;align-items:center}.detailnav span{color:var(--muted)}
@@ -993,46 +994,88 @@ for p in plants:
         nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 {nutrition_food_name_html(nu.get("food_description"))} · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>{f'<p class="small">적용 범위: {esc(nu.get("applicability_note_ko"))}</p>' if nu.get("applicability_note_ko") else ""}'''
     else:
         nutrition_body='<div class="nutrition-missing"><strong>검증된 영양자료 없음</strong><p>해당 식물·부위에 일치하는 공식 영양성분 수치가 아직 확인되지 않았습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
-    nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2>{nutrition_body}<p class="small">영양수치는 판정을 보조하는 근거입니다. 검증된 수치만 표시하며 미확인 항목을 0으로 간주하지 않습니다.</p></section>'''
-    # Source-traceable variety cards must survive every static-site regeneration.
+    nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2>{nutrition_body}<p class="small">영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않습니다. 검증된 수치만 표시하며 미확인 항목을 0으로 간주하지 않습니다.</p></section>'''
+    # Source-traceable variety cards must survive every static-site regeneration. Everything shown here is
+    # rendered from the data files (never hand-edited HTML); QA: scripts/qa_variety_card_regeneration_v1.py.
+    def variety_card(title, r, ratio_key):
+        ratio = r.get(ratio_key)
+        cells = [("칼슘", r.get("calcium_mg"), "mg"), ("인", r.get("phosphorus_mg"), "mg"),
+                 ("식이섬유", r.get("fiber_g"), "g"), ("비타민 C", r.get("vitamin_c_mg"), "mg")]
+        grid = "".join(f'<div>{label} <strong>{"미확인" if v is None else f"{v}{u}"}</strong></div>' for label, v, u in cells)
+        grid += f'<div>Ca:P <strong>{"미확인" if ratio is None else f"{ratio}:1"}</strong></div>'
+        return (f'<article class="varietycard" style="border:1px solid #dce5dd;border-radius:12px;padding:12px;min-width:0;background:#fff">'
+                f'<h3 style="margin:0 0 4px;font-size:15px">{esc(title)}</h3>'
+                f'<p class="small" style="margin:0 0 8px;overflow-wrap:anywhere">FDC {esc(r["fdc_id"])} · <span lang="en">{esc(r.get("food_description", ""))}</span></p>'
+                f'<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;font-size:13px">{grid}</div>'
+                f'<p class="small" style="margin:9px 0 0"><a class="sourceopen" href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 보기<span class="sr-only"> (새 창)</span> ↗</a></p></article>')
+    variety_grid_style = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px'
     if pid == "mint":
-        mint_records = json.loads((ROOT / "data/usda_mint_variety_candidates_20261009.json").read_text(encoding="utf-8"))["records"]
+        mint_data = json.loads((ROOT / "data/usda_mint_variety_candidates_20261009.json").read_text(encoding="utf-8"))
         labels = {"peppermint": "페퍼민트", "spearmint": "스피어민트"}
-        cards = "".join(
-            f'<article style="padding:12px;border:1px solid #dce5dd;border-radius:10px">'
-            f'<h3>{labels[r["variety_key"]]}</h3>'
-            f'<p>생것 100g · 칼슘 {r["calcium_mg"]}mg · 인 {r["phosphorus_mg"]}mg · '
-            f'식이섬유 {r["fiber_g"]}g · 비타민 C {r["vitamin_c_mg"]}mg</p>'
-            f'<a href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 ↗</a></article>'
-            for r in mint_records
-        )
-        note = ('<aside style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px">'
+        cards = "".join(variety_card(labels[r["variety_key"]], r, "calcium_phosphorus_ratio") for r in mint_data["records"])
+        note = ('<aside class="varietycompare" style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px;background:#f8faf8">'
                 '<h3>USDA 민트류 참고 비교 · 종·부위 확인 전</h3>'
-                '<p>페퍼민트와 스피어민트의 공식 식품성분 참고자료입니다. '
-                '민트(Mentha spp.) 전체의 검증된 영양값이나 육지거북 급여 안전성을 뜻하지 않습니다.</p>'
-                '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px">'
-                + cards + '</div></aside>')
+                '<p>페퍼민트와 스피어민트의 공식 식품성분 참고자료입니다(생것 가식부 100g · USDA SR Legacy 2018-04). '
+                'USDA 식품명만으로는 정확한 종과 분석 부위를 확정할 수 없어 사이트의 민트(Mentha spp.)에 그대로 대입하지 않으며, '
+                '위의 ‘검증된 영양자료 없음’ 상태를 유지합니다. 민트(Mentha spp.) 전체의 검증된 영양값이나 육지거북 급여 안전성을 뜻하지 않습니다.</p>'
+                f'<div style="{variety_grid_style}">' + cards + '</div>'
+                '<p class="small">영양성분 차이는 육지거북 급여 안전성이나 적정 급여량을 입증하지 않습니다. '
+                '<a href="../../data/usda_mint_variety_candidates_20261009.json">검증 후보 원자료 파일</a></p></aside>')
         nutrition_html = nutrition_html.replace("</section>", note + "</section>", 1)
-
 
     if pid == "lettuce":
         lettuce_data = json.loads((ROOT / "data/plant_nutrition_variety_v1.json").read_text(encoding="utf-8"))
-        lettuce_labels = {"butterhead": "버터헤드", "red_leaf": "적상추형", "romaine": "로메인", "iceberg": "아이스버그", "green_leaf": "청상추형"}
-        lettuce_cards = "".join(
-            f'<article style="padding:12px;border:1px solid #dce5dd;border-radius:10px">'
-            f'<h3>{lettuce_labels[r["variety_key"]]}</h3>'
-            f'<p>생것 100g · 식이섬유 {r["fiber_g"]}g · 칼슘 {r["calcium_mg"]}mg · '
-            f'인 {r["phosphorus_mg"]}mg · 비타민 C {r["vitamin_c_mg"]}mg</p>'
-            f'<a href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 ↗</a></article>'
-            for r in lettuce_data["records"]
-        )
-        lettuce_note = ('<aside style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px">'
+        lettuce_labels = {"butterhead": "버터헤드", "red_leaf": "적상추형(레드리프)", "romaine": "로메인", "iceberg": "아이스버그", "green_leaf": "청상추형(그린리프)"}
+        recs = lettuce_data["records"]
+        lettuce_cards = "".join(variety_card(lettuce_labels[r["variety_key"]], r, "calcium_phosphorus_ratio") for r in recs)
+        def extreme(key, fn):
+            v = fn(r[key] for r in recs)
+            return v, "·".join(lettuce_labels[r["variety_key"]] for r in recs if r[key] == v)
+        ca_hi, ca_hi_n = extreme("calcium_mg", max); ca_lo, ca_lo_n = extreme("calcium_mg", min)
+        fb_hi, fb_hi_n = extreme("fiber_g", max); fb_lo, fb_lo_n = extreme("fiber_g", min)
+        cp_hi, cp_hi_n = extreme("calcium_phosphorus_ratio", max); cp_lo, cp_lo_n = extreme("calcium_phosphorus_ratio", min)
+        summary = (f'<div style="background:#f1f7f2;border:1px solid #c9dfcf;border-radius:12px;padding:12px 14px;margin-top:12px">'
+                   f'<h3 style="margin:0 0 8px;font-size:15px">5개 유형 비교에서 확인할 점</h3>'
+                   f'<p style="margin:4px 0"><strong>칼슘</strong> 가장 높음 {esc(ca_hi_n)} {ca_hi}mg · 가장 낮음 {esc(ca_lo_n)} {ca_lo}mg</p>'
+                   f'<p style="margin:4px 0"><strong>식이섬유</strong> 가장 높음 {esc(fb_hi_n)} {fb_hi}g · 가장 낮음 {esc(fb_lo_n)} {fb_lo}g</p>'
+                   f'<p style="margin:4px 0"><strong>Ca:P</strong> {esc(cp_hi_n)} {cp_hi}:1 ~ {esc(cp_lo_n)} {cp_lo}:1. 영양성분 수치만으로 급여 적합성을 결정할 수 없습니다.</p></div>')
+        lettuce_note = ('<aside class="varietycompare" style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px">'
                         '<h3>상추 유형별 USDA 영양 비교 · 동일 종의 서로 다른 유형</h3>'
-                        '<p>USDA SR Legacy의 상추 5개 유형별 수치입니다. '
-                        '국내 유통 품종과 정확히 일치한다는 의미가 아니며, 육지거북 급여 안전성이나 적정량을 판정하지 않습니다.</p>'
-                        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px">'
-                        + lettuce_cards + '</div></aside>')
+                        '<p>USDA SR Legacy 2018-04의 상추(Lactuca sativa) 5개 유형별 수치입니다(생잎 가식부 100g 기준). '
+                        '국내 유통 품종과 정확히 일치한다는 의미가 아니며, 육지거북 급여 안전성이나 적정량을 판정하지 않습니다. '
+                        '유형이 정해지지 않은 상추 전체의 대표값이 아니므로 위의 ‘검증된 영양자료 없음’ 상태를 유지합니다.</p>'
+                        f'<div style="{variety_grid_style}">' + lettuce_cards + '</div>' + summary +
+                        '<p class="small">이 수치는 영양성분 정보이며 육지거북 급여 적합성·권장량을 입증하지 않습니다. '
+                        '<a href="../../data/plant_nutrition_variety_v1.json">유형별 구조화 원자료 파일</a></p></aside>')
         nutrition_html = nutrition_html.replace("</section>", lettuce_note + "</section>", 1)
+
+    if pid == "bellpepper":
+        pep = json.loads((ROOT / "data/usda_bellpepper_original_csv_verified_20261008.json").read_text(encoding="utf-8"))
+        review = json.loads((ROOT / "data/bellpepper_feeding_evidence_reassessment_20261008.json").read_text(encoding="utf-8"))
+        color_ko = {"green": "초록", "yellow": "노랑", "red": "빨강", "orange": "주황"}
+        found = [r for r in pep["records"] if r["data_type"] == "Foundation"]
+        legacy = [r for r in pep["records"] if r["data_type"] == "SR Legacy"]
+        th = 'style="padding:8px 6px;border-bottom:2px solid #dce5dd;text-align:left"'
+        rows = "".join(f'<tr><th scope="row" style="padding:7px 6px;text-align:left">{color_ko[r["color"]]}</th><td>{r["calcium_mg_per_100g"]}mg</td><td>{r["phosphorus_mg_per_100g"]}mg</td><td>{r["ca_p_ratio"]}:1</td></tr>' for r in found)
+        all_p_gt_ca = all(r["phosphorus_mg_per_100g"] > r["calcium_mg_per_100g"] for r in found)
+        tt = next((s for s in review["source_positions"] if "thetortoisetable" in s["url"]), None)
+        conflict = (f'<div style="margin-top:12px;padding:12px 14px;border:1px solid #efc9c6;border-radius:12px;background:#fffafa">'
+                    f'<h3 style="margin:0 0 6px;font-size:15px">출처 간 상충 · 등급 재검토 필요</h3>'
+                    f'<p style="margin:0">전문 사육 DB <a class="sourceopen" href="{esc(tt["url"])}" target="_blank" rel="noopener noreferrer">The Tortoise Table<span class="sr-only"> (새 창)</span></a>은 파프리카 열매를 <strong>급여하지 않음</strong>으로 분류합니다. '
+                    f'현재 사이트 등급({esc(review["current_site_grade"])})은 이 상충 때문에 재검토 대상이며, 영양 수치만으로 등급을 올리거나 내리지 않았습니다.</p></div>') if tt else ""
+        note = ('<aside class="varietycompare" style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px">'
+                '<h3>파프리카 열매 색상별 USDA 영양 비교 · 원본 대조 기록</h3>'
+                '<p>생열매 가식부 100g 기준. 색상별·자료 유형별 기록을 분리했으며 평균 내지 않습니다. 영양성분 수치가 급여 허용을 뜻하지는 않습니다.</p>'
+                f'<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px"><caption class="sr-only">USDA Foundation Foods 2026-04 파프리카 열매 색상별 칼슘·인</caption>'
+                f'<thead><tr><th scope="col" {th}>색상</th><th scope="col" {th}>칼슘</th><th scope="col" {th}>인</th><th scope="col" {th}>Ca:P</th></tr></thead><tbody>{rows}</tbody></table></div>'
+                + (f'<p><strong>핵심:</strong> USDA Foundation Foods의 {len(found)}개 색상 모두 칼슘보다 인이 많습니다. 식단 전체의 칼슘 균형은 단일 먹이의 수치만으로 평가할 수 없습니다.</p>' if all_p_gt_ca else '')
+                + conflict +
+                '<details style="margin-top:10px"><summary>원자료·추가 기록 확인</summary><p class="small">Foundation Foods 2026-04: '
+                + " · ".join(f'<a href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">{color_ko[r["color"]]}</a>' for r in found)
+                + '. SR Legacy 2018-04의 ' + " · ".join(f'<a href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">{color_ko[r["color"]]}</a>' for r in legacy)
+                + '은 별도 기록으로 보관하며 평균 내지 않습니다.</p><p class="small">검증 데이터: <a href="../../data/usda_bellpepper_original_csv_verified_20261008.json">USDA 원본 대조 기록</a>. '
+                '해당 기록은 열매의 영양정보이며 잎·줄기나 육지거북 대상 급여시험의 근거가 아닙니다.</p></details></aside>')
+        nutrition_html = nutrition_html.replace("</section>", note + "</section>", 1)
 
     footer_html=f'''<section class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../all-plants/index.html">전체 먹이 목록 →</a><a href="../../index.html">다른 먹이 검색 →</a></section>'''
 

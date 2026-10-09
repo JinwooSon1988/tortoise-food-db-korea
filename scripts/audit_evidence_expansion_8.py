@@ -4,6 +4,18 @@ import json, re
 R = Path(__file__).resolve().parents[1]
 DATA = R / "data"
 
+import sys as _sys
+_sys.path.insert(0, str(R / "scripts"))
+from public_verdict import load_assessments as _load_public, by_plant as _by_plant, representative as _representative, display as _display
+
+
+def _page_grade(pid, expected_grade):
+    """Page shows the canonical grade badge + label for pid, and that grade is still the expected limited grade."""
+    g = _display(_representative(_by_plant(_load_public()).get(pid)))
+    text = (R / "plant" / pid / "index.html").read_text(encoding="utf-8")
+    badge = f'<span class="verdictbadge">{g["grade"]}</span><span class="verdictlabel">{g["label"]}</span>'
+    return g["grade"] == expected_grade and (badge in text or f'{g["grade"]} · {g["label"]}' in text)
+
 def addendum_order(path):
     m = re.search(r"_(\d+)\.json$", path.name)
     return int(m.group(1)) if m else 0
@@ -70,8 +82,8 @@ checks = {
     "korean_dolnamul_identity_present": E["korean_dolnamul_identity"]["taxon"] == "Sedum sarmentosum",
     "testudo_doi_verified": E["testudo2018"].get("doi") == "10.1080/10888705.2018.1453814",
     "testudo_pmid_verified": E["testudo2018"].get("pmid") == "29609473",
-    "alfalfa_page_limited": "B · 제한적 혼합 급여" in (R / "plant/alfalfa/index.html").read_text(encoding="utf-8"),
-    "dolnamul_page_limited": "C · 가끔 보조 급여" in (R / "plant/dolnamul/index.html").read_text(encoding="utf-8"),
+    "alfalfa_page_limited": _page_grade("alfalfa", "B"),
+    "dolnamul_page_limited": _page_grade("dolnamul", "C"),
 }
 
 for k, v in checks.items():

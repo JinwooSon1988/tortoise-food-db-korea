@@ -10,6 +10,13 @@ on:
       - 'plant/lettuce/index.html'
       - 'scripts/generate_static_pages.py'
       - 'scripts/audit_public_nutrition_variety_cards.py'
+      - 'scripts/qa_variety_card_regeneration_v1.py'
+      - 'scripts/patch_curated_social_metadata.py'
+      - 'scripts/inject_plant_detail_v56.py'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'data/public_assessments.json'
+      - 'plant/**'
       - '.github/workflows/public-nutrition-variety-cards.yml'
   pull_request:
     paths:
@@ -19,6 +26,13 @@ on:
       - 'plant/lettuce/index.html'
       - 'scripts/generate_static_pages.py'
       - 'scripts/audit_public_nutrition_variety_cards.py'
+      - 'scripts/qa_variety_card_regeneration_v1.py'
+      - 'scripts/patch_curated_social_metadata.py'
+      - 'scripts/inject_plant_detail_v56.py'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'data/public_assessments.json'
+      - 'plant/**'
       - '.github/workflows/public-nutrition-variety-cards.yml'
   workflow_dispatch:
 
@@ -35,3 +49,5 @@ jobs:
           python-version: '3.12'
       - name: Compare public cards to nutrition source records
         run: python scripts/audit_public_nutrition_variety_cards.py
+      - name: Regenerated pages must equal committed pages (no hand-only content)
+        run: python scripts/qa_variety_card_regeneration_v1.py
