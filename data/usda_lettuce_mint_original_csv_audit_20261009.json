@@ -1,0 +1,30 @@
+{
+  "audit_date": "2026-10-09",
+  "source_archive": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+  "source_files": [
+    "food.csv",
+    "food_nutrient.csv"
+  ],
+  "nutrient_ids": {
+    "protein_g": 1003,
+    "water_g": 1051,
+    "fiber_g": 1079,
+    "calcium_mg": 1087,
+    "phosphorus_mg": 1091,
+    "potassium_mg": 1092,
+    "vitamin_c_mg": 1162
+  },
+  "checked_fdc_ids": [
+    168429,
+    168431,
+    169247,
+    169248,
+    169249,
+    173474,
+    173475
+  ],
+  "result": "All 49 stored nutrient values for five lettuce varieties and two mint foods match original USDA food_nutrient.csv rows exactly.",
+  "scope": "Food descriptions and numeric nutrients; no confirmation of Korean commercial cultivar mapping or exact mint taxon and analyzed plant part.",
+  "master_promotion": false,
+  "feeding_verdict_use": false
+}
