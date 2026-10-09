@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-10",
+  "purpose": "Externally located replacement candidates for three plant-part mismatches; not approved or published.",
+  "candidates": [
+    {
+      "plant_id": "arugula",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Eruca_vesicaria._Big_Bend_National_Park,_Hwy_1776._March_2004_(49A15BEC92014D7D8D7C401B4C201BB5).JPG",
+      "creator": "Betty Alex / US National Park Service",
+      "depicted_part": "leaves",
+      "taxon": "Eruca vesicaria",
+      "source_description": "NPS file description explicitly says closeup of leaves",
+      "license_status": "verify Commons file licensing block before promotion",
+      "status": "candidate_review"
+    },
+    {
+      "plant_id": "radishgreens",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Raphanus_sativus_leaf.JPG",
+      "creator": "Shizhao",
+      "depicted_part": "above-ground leafy portion",
+      "taxon": "Raphanus sativus",
+      "license_status": "Commons CC BY-SA 3.0 migrated; inspect original license and attribution",
+      "status": "candidate_review"
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "source_url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Valerianella_locusta_-_inflorescences_and_Leaf.jpg",
+      "creator": "Didier Descouens",
+      "depicted_part": "leaves and flowers (not ideal leaf-only photo)",
+      "taxon": "Valerianella locusta",
+      "license_status": "verify Commons licensing details",
+      "status": "candidate_review"
+    }
+  ]
+}
