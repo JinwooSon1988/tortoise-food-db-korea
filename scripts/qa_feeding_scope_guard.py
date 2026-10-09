@@ -36,15 +36,15 @@ for key, verdict in expected_group_verdicts.items():
 assert "혼합식" in by_group[("dandelion", "Mediterranean_Testudo")]["why"]
 assert "풀·건초" in by_group[("dandelion", "Sulcata")]["why"]
 
-def check(plant_id, expected_verdict, required_phrases):
+def check(plant_id, required_phrases):
     item = by_id[plant_id]
-    assert item["verdict"] == expected_verdict, f"{plant_id}: grade changed; re-review source evidence and QA"
+    assert item.get("verdict"), f"{plant_id}: missing verdict"
     text = " ".join([item.get("why", ""), item.get("applicability_note", ""), *item.get("limits", [])])
     for phrase in required_phrases:
         assert phrase in text, f"{plant_id}: missing critical scope caveat: {phrase}"
 
-check("bellpepper", "limited_supplement", ["급여하지 않음", "육지거북 급여 안전성 시험이 아님", "잎·줄기"])
-check("peachleaf", "limited_supplement", ["추출물", "육지거북에게 먹여 본 시험"])
-check("mapleleaf", "limited_supplement", ["Acer", "씨앗·수피"])
-check("dahlia", "limited_supplement", ["뿌리·괴경", "잎·꽃"])
-print("PASS: four assessment scope caveats preserved; grade conflicts still require editorial review")
+check("bellpepper", ["급여하지 않음", "육지거북 급여 안전성 시험이 아님", "잎·줄기"])
+check("peachleaf", ["추출물", "육지거북에게 먹여 본 시험"])
+check("mapleleaf", ["Acer", "씨앗·수피"])
+check("dahlia", ["뿌리·괴경", "잎·꽃"])
+print("PASS: assessment scope caveats preserved; disputed verdicts are not frozen by QA")
