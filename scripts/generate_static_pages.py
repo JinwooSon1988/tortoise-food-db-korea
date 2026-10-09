@@ -1015,6 +1015,25 @@ for p in plants:
         nutrition_html = nutrition_html.replace("</section>", note + "</section>", 1)
 
 
+    if pid == "lettuce":
+        lettuce_data = json.loads((ROOT / "data/plant_nutrition_variety_v1.json").read_text(encoding="utf-8"))
+        lettuce_labels = {"butterhead": "버터헤드", "red_leaf": "적상추형", "romaine": "로메인", "iceberg": "아이스버그", "green_leaf": "청상추형"}
+        lettuce_cards = "".join(
+            f'<article style="padding:12px;border:1px solid #dce5dd;border-radius:10px">'
+            f'<h3>{lettuce_labels[r["variety_key"]]}</h3>'
+            f'<p>생것 100g · 식이섬유 {r["fiber_g"]}g · 칼슘 {r["calcium_mg"]}mg · '
+            f'인 {r["phosphorus_mg"]}mg · 비타민 C {r["vitamin_c_mg"]}mg</p>'
+            f'<a href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 ↗</a></article>'
+            for r in lettuce_data["records"]
+        )
+        lettuce_note = ('<aside style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px">'
+                        '<h3>상추 유형별 USDA 영양 비교 · 동일 종의 서로 다른 유형</h3>'
+                        '<p>USDA SR Legacy의 상추 5개 유형별 수치입니다. '
+                        '국내 유통 품종과 정확히 일치한다는 의미가 아니며, 육지거북 급여 안전성이나 적정량을 판정하지 않습니다.</p>'
+                        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px">'
+                        + lettuce_cards + '</div></aside>')
+        nutrition_html = nutrition_html.replace("</section>", lettuce_note + "</section>", 1)
+
     footer_html=f'''<section class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../all-plants/index.html">전체 먹이 목록 →</a><a href="../../index.html">다른 먹이 검색 →</a></section>'''
 
     alias_html=f'<div class="aliases">다른 이름 · {", ".join(esc(x) if re.search(r"[가-힣]",str(x)) else f"<span lang=\"en\">{esc(x)}</span>" for x in aliases[:6])}</div>' if aliases else ""
