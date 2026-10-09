@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-10-09",
+  "source": "USDA FoodData Central SR Legacy April 2018 official CSV archive",
+  "source_zip_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+  "source_files": [
+    "food.csv",
+    "food_nutrient.csv",
+    "nutrient.csv"
+  ],
+  "nutrient_id_map": {
+    "water_g": 1051,
+    "protein_g": 1003,
+    "fiber_g": 1079,
+    "calcium_mg": 1087,
+    "phosphorus_mg": 1091,
+    "potassium_mg": 1092,
+    "vitamin_c_mg": 1162
+  },
+  "verified_count": {
+    "foods": 7,
+    "nutrient_values": 49
+  },
+  "scope": "food descriptions and seven composition fields match source; not a tortoise feeding-safety assessment",
+  "records": [
+    {
+      "fdc_id": 168429,
+      "food_description": "Lettuce, butterhead (includes boston and bibb types), raw",
+      "water_g": 95.63,
+      "protein_g": 1.35,
+      "fiber_g": 1.1,
+      "calcium_mg": 35,
+      "phosphorus_mg": 33,
+      "potassium_mg": 238,
+      "vitamin_c_mg": 3.7
+    },
+    {
+      "fdc_id": 168431,
+      "food_description": "Lettuce, red leaf, raw",
+      "water_g": 95.64,
+      "protein_g": 1.33,
+      "fiber_g": 0.9,
+      "calcium_mg": 33,
+      "phosphorus_mg": 28,
+      "potassium_mg": 187,
+      "vitamin_c_mg": 3.7
+    },
+    {
+      "fdc_id": 169247,
+      "food_description": "Lettuce, cos or romaine, raw",
+      "water_g": 94.61,
+      "protein_g": 1.23,
+      "fiber_g": 2.1,
+      "calcium_mg": 33,
+      "phosphorus_mg": 30,
+      "potassium_mg": 247,
+      "vitamin_c_mg": 4
+    },
+    {
+      "fdc_id": 169248,
+      "food_description": "Lettuce, iceberg (includes crisphead types), raw",
+      "water_g": 95.64,
+      "protein_g": 0.9,
+      "fiber_g": 1.2,
+      "calcium_mg": 18,
+      "phosphorus_mg": 20,
+      "potassium_mg": 141,
+      "vitamin_c_mg": 2.8
+    },
+    {
+      "fdc_id": 169249,
+      "food_description": "Lettuce, green leaf, raw",
+      "water_g": 94.98,
+      "protein_g": 1.36,
+      "fiber_g": 1.3,
+      "calcium_mg": 36,
+      "phosphorus_mg": 29,
+      "potassium_mg": 194,
+      "vitamin_c_mg": 9.2
+    },
+    {
+      "fdc_id": 173474,
+      "food_description": "Peppermint, fresh",
+      "water_g": 78.65,
+      "protein_g": 3.75,
+      "fiber_g": 8,
+      "calcium_mg": 243,
+      "phosphorus_mg": 73,
+      "potassium_mg": 569,
+      "vitamin_c_mg": 31.8
+    },
+    {
+      "fdc_id": 173475,
+      "food_description": "Spearmint, fresh",
+      "water_g": 85.55,
+      "protein_g": 3.29,
+      "fiber_g": 6.8,
+      "calcium_mg": 199,
+      "phosphorus_mg": 60,
+      "potassium_mg": 458,
+      "vitamin_c_mg": 13.3
+    }
+  ],
+  "master_promotion_allowed": false
+}
