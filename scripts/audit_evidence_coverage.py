@@ -40,6 +40,15 @@ def main():
         errors.append("nutrition hold count differs from nutrition audit")
     if len(plants) - len(holds) != nutrition["verified_plants"]:
         errors.append("nutrition verified count differs from nutrition audit")
+    # Same Korean label and scientific taxon under multiple IDs can fragment search results.
+    taxon_labels = {}
+    for plant in plants:
+        key = (plant.get("ko", "").strip(), plant.get("scientific", "").strip())
+        taxon_labels.setdefault(key, []).append(plant["id"])
+    duplicate_concepts = [
+        {"ko": ko, "scientific": scientific, "plant_ids": ids}
+        for (ko, scientific), ids in sorted(taxon_labels.items()) if len(ids) > 1
+    ]
     statuses = Counter(x.get("part_match") for x in images)
     reasons = Counter(x.get("hold_reason_code") for x in holds)
     print(json.dumps({
@@ -49,6 +58,7 @@ def main():
         "nutrition_verified": nutrition["verified_plants"],
         "nutrition_held": len(holds),
         "nutrition_hold_reasons": dict(reasons),
+        "duplicate_taxon_label_concepts_review_only": duplicate_concepts,
         "errors": errors,
         "result": "PASS" if not errors else "FAIL"
     }, ensure_ascii=False, indent=2))
