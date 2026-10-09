@@ -127,5 +127,30 @@
       "food_description_provenance": "VERIFIED verbatim against uploaded USDA SR Legacy 2018-04 food.csv by FDC ID on 2026-10-09."
     }
   ],
-  "description_integrity_policy": "All five food_description strings were matched verbatim by FDC ID against the uploaded official SR Legacy 2018-04 food.csv. Do not extrapolate botanical identity or feeding safety from descriptions."
+  "description_integrity_policy": "All five food_description strings were matched verbatim by FDC ID against the uploaded official SR Legacy 2018-04 food.csv. Do not extrapolate botanical identity or feeding safety from descriptions.",
+  "original_usda_csv_recheck_20261009": {
+    "archive": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+    "files": [
+      "food.csv",
+      "food_nutrient.csv"
+    ],
+    "fdc_ids": [
+      168429,
+      168431,
+      169247,
+      169248,
+      169249
+    ],
+    "checked_nutrient_ids": {
+      "water_g": 1051,
+      "protein_g": 1003,
+      "fiber_g": 1079,
+      "calcium_mg": 1087,
+      "phosphorus_mg": 1091,
+      "potassium_mg": 1092,
+      "vitamin_c_mg": 1162
+    },
+    "outcome": "All 5 exact food descriptions and 35 stored nutrient values independently rechecked against original CSV; all matched",
+    "limits": "Korean retail lettuce cultivar equivalence not established; composition does not determine tortoise feeding suitability"
+  }
 }
