@@ -50,5 +50,22 @@
     "all_four_current_confidence": "C",
     "bellpepper_evidence_gap": "Chemical composition paper cannot by itself establish a positive feeding recommendation against specialist avoid-feeding advice.",
     "next_review_gate": "Do not change public feeding verdict before source-by-source review of directness and species/plant-part applicability."
+  },
+  "conflict_keyword_screen_20261009": {
+    "scope": "data/public_assessments.json",
+    "method": "Search limited_supplement verdict explanations for avoid/not-feed language; manually classify context rather than equate keyword hits with contradiction",
+    "hits": [
+      "cilantro",
+      "sainfoin",
+      "dahlia",
+      "bellpepper"
+    ],
+    "classification": {
+      "cilantro": "not_a_conflict; text rejects overinterpreting oxalate as a feeding ban",
+      "sainfoin": "not_a_conflict; text rejects treating tannins as proof of toxicity",
+      "dahlia": "part_specific_caveat; avoid tuber/root while leaves/flowers have separate restricted guidance",
+      "bellpepper": "substantive_conflict; specialist avoid-feeding guidance for fruit versus positive limited-supplement verdict"
+    },
+    "conclusion": "Only bellpepper is a clear conflict from this narrow screening; no automatic grade changes."
   }
 }
