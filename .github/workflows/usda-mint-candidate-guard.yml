@@ -1,0 +1,31 @@
+name: USDA mint candidate guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/usda_mint_variety_candidates_20261009.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'scripts/audit_usda_mint_candidates_ci.py'
+      - '.github/workflows/usda-mint-candidate-guard.yml'
+  pull_request:
+    paths:
+      - 'data/usda_mint_variety_candidates_20261009.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'scripts/audit_usda_mint_candidates_ci.py'
+      - '.github/workflows/usda-mint-candidate-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-mint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check held mint data and master isolation
+        run: python scripts/audit_usda_mint_candidates_ci.py
