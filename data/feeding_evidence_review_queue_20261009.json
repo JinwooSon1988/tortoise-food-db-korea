@@ -60,5 +60,36 @@
     "Record taxon and edible plant part before applying a verdict.",
     "Do not change public grades without source-level verification and an accompanying user-facing explanation."
   ],
-  "handoff": "Claude owns nutrition mapping and page generation; this queue is for independent feeding-evidence adjudication."
+  "handoff": "Claude owns nutrition mapping and page generation; this queue is for independent feeding-evidence adjudication.",
+  "review_protocol": {
+    "version": "1.0",
+    "evidence_hierarchy": [
+      "Direct tortoise feeding or veterinary clinical evidence for identified taxon and part",
+      "Tortoise specialist plant feeding guidance with explicit part and caveats",
+      "Other reptile oral evidence with transferability caveats",
+      "Non-reptile oral toxicology, separately identified",
+      "Plant chemical composition, extracts, in vitro studies: contextual only"
+    ],
+    "required_fields_per_adjudication": [
+      "accepted_scientific_name",
+      "source_taxon",
+      "plant_part",
+      "preparation",
+      "animal_taxon",
+      "exposure_route",
+      "study_type",
+      "directness",
+      "source_locator",
+      "verdict_implication",
+      "uncertainty"
+    ],
+    "decision_rules": [
+      "Absence of documented poisoning is not evidence of suitability for planned feeding.",
+      "A positive limited-feeding verdict requires affirmative feeding support; composition alone does not suffice.",
+      "Do not automatically translate mammalian toxicity or cell results into tortoise toxic doses.",
+      "When the source addresses a genus, do not assert species-wide equivalence without review.",
+      "Record and disclose contradictions between specialist feeding sources and analytical studies."
+    ],
+    "adjudication_state": "Pending independent source-level verification; no grade changes authorized by this queue"
+  }
 }
