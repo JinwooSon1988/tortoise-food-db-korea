@@ -26,6 +26,7 @@ expected_group_verdicts = {
 by_group = {(item["plant_id"], item["species_group"]): item for item in assessments}
 assert len(assessments) >= 186, "Assessment records dropped below the audited baseline (186)"
 assert len({item["plant_id"] for item in assessments}) >= 182, "Plant coverage dropped below the audited baseline (182)"
+assert len(assessments) >= len({item["plant_id"] for item in assessments}), "Invalid assessment coverage"
 for key, verdict in expected_group_verdicts.items():
     assert key in by_group, f"Missing species-specific assessment: {key}"
     assert by_group[key]["verdict"] == verdict, f"Species-specific verdict changed; editorial review required: {key}"
