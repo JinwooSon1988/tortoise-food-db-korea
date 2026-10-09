@@ -6,7 +6,7 @@
     "candidate_count": 0,
     "research_pool_count": 182,
     "published": {
-      "verified_image": 129,
+      "verified_image": 130,
       "verified_nutrition": 57,
       "with_assessment": 182,
       "with_evidence": 182,
@@ -796,18 +796,17 @@
       "ko": "티모시",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": false,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "nutrition",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "nutrition"
     },
     {
       "plant_id": "orchard",
