@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fast CI checks for lettuce variety records; original USDA ZIP audited separately."""
 import json
+import math
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -14,6 +15,7 @@ for r in data["records"]:
     assert r["plant_id"] == "lettuce" and r["scientific_name"] == "Lactuca sativa"
     assert r["preparation_state"] == "raw"
     assert r["source_url"] == f'https://fdc.nal.usda.gov/food-details/{r["fdc_id"]}/nutrients'
+    assert all(math.isfinite(r[k]) and r[k] >= 0 for k in ("calcium_mg", "phosphorus_mg", "calcium_phosphorus_ratio")), "Invalid or nonfinite nutrition value"
     assert r["phosphorus_mg"] > 0
     assert abs(r["calcium_phosphorus_ratio"] - r["calcium_mg"] / r["phosphorus_mg"]) < .001
-print("PASS: 5 lettuce variety identities, source URLs, ratios and master isolation")
+print("PASS (internal consistency only; USDA source ZIP not checked): 5 lettuce variety identities, source URLs, ratios and master isolation")
