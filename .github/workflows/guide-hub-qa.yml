@@ -36,7 +36,7 @@ jobs:
               p=root/'guides'/slug/'index.html'
               assert p.exists(), p
               s=p.read_text(encoding='utf-8')
-              required = ('적용 범위:','근거등급:','목록에 포함됐다는 사실 자체가 급여 권장을 뜻하지 않는다','근거 부족을 안전으로 간주하지 않는다') if slug != 'research-method' else ('식물부터 정확히 확인','무슨 부위인가','근거의 적용 범위','근거가 약하면 약하다고 표시','Merck Veterinary Manual')
+              required = ('적용 범위:','근거 확실성:','목록에 포함됐다는 사실 자체가 급여 권장을 뜻하지 않는다','근거 부족을 안전으로 간주하지 않는다') if slug != 'research-method' else ('식물부터 정확히 확인','무슨 부위인가','근거의 적용 범위','근거가 약하면 약하다고 표시','Merck Veterinary Manual','근거 확실성은 급여 등급과 다르다')
               for x in required:
                   assert x in s,(slug,x)
           print('guide hub QA passed')

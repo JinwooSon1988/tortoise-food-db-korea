@@ -48,6 +48,9 @@ def localize_specialist_labels(v):
     for en,ko in SPECIALIST_LABEL_KO.items():
         x=re.sub(r"\s*\(\s*"+re.escape(en)+r"\s*\)","",x)
         x=x.replace(en,ko)
+    # A sentence that opens with a bare evidence-certainty code ("C-는 …") reads like the A–D feeding grade;
+    # name it explicitly.
+    x=re.sub(r"^([ABCD][+-])(는|은|가|이) ", r"근거 확실성 \1\2 ", x)
     return x
 
 

@@ -59,6 +59,10 @@ jobs:
           python scripts/build_mentha_species_v1.py
           python scripts/build_tagetes_patula_species_v1.py
           python scripts/build_academic_flower_nutrition_v1.py
+      - name: Evidence links and certainty wording
+        run: |
+          python scripts/audit_tortoise_table_links_v1.py
+          python scripts/qa_evidence_certainty_labels_v1.py
       - name: Korean copy
         run: python scripts/qa_korean_english_fragments_v1.py
       - name: Summary
