@@ -1,0 +1,187 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-10",
+  "purpose": "High-priority 14-image plant-part mismatch batch, extracted from verified image registry for parallel remediation.",
+  "source_blob_shas": {
+    "data/verified_plant_images_v56.json": "797d00c2e21295ea131c5910f28201c85b1990c5",
+    "data/plants.json": "f69b511e7eab1d8f714d7f648fe0ee03527eadaf"
+  },
+  "count": 14,
+  "quality_gates": [
+    "Confirm correct botanical taxon and explicitly named plant part.",
+    "Verify replacement image is reachable and accurately depicts intended part.",
+    "Preserve image license, attribution, source URL and license URL.",
+    "Do not auto-replace images until a candidate passes all gates.",
+    "Avoid changing published feeding verdicts or nutrition data."
+  ],
+  "records": [
+    {
+      "plant_id": "lambs_lettuce",
+      "ko": "콘샐러드",
+      "scientific": "Valerianella locusta",
+      "current_depicted_part": "inflorescence",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Valerianella_locusta_sl12.jpg",
+      "current_license": "CC BY-SA 4.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "arugula",
+      "ko": "루꼴라",
+      "scientific": "Eruca vesicaria",
+      "current_depicted_part": "flower",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Eruca_vesicaria.jpg",
+      "current_license": "CC BY-SA 4.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "radishgreens",
+      "ko": "무잎",
+      "scientific": "Raphanus sativus",
+      "current_depicted_part": "flowers",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Raphanus_sativus_000.jpg",
+      "current_license": "CC BY 2.5",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "dill",
+      "ko": "딜",
+      "scientific": "Anethum graveolens",
+      "current_depicted_part": "umbels (flowers)",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Anethum_graveolens_002.JPG",
+      "current_license": "CC BY-SA 3.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "kale",
+      "ko": "케일",
+      "scientific": "Brassica oleracea var. sabellica",
+      "current_depicted_part": "seedling (cotyledons)",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_var._sabellica_Scarlet_2021-05-30_6389.jpg",
+      "current_license": "CC BY-SA 4.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "turnipgreens",
+      "ko": "순무잎",
+      "scientific": "Brassica rapa subsp. rapa",
+      "current_depicted_part": "roots",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Brassica_rapa_subsp._rapa_or_simply_turnips.jpg",
+      "current_license": "CC BY-SA 4.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "zucchini",
+      "ko": "애호박",
+      "scientific": "Cucurbita moschata",
+      "current_depicted_part": "leaves",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Cucurbita_moschata_leaves.jpg",
+      "current_license": "CC BY-SA 3.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "barleygrass",
+      "ko": "보리싹",
+      "scientific": "Hordeum vulgare",
+      "current_depicted_part": "mature awned spikes",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Hordeum_vulgare.jpg",
+      "current_license": "CC BY-SA 3.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "sorrel",
+      "ko": "수영",
+      "scientific": "Rumex acetosa",
+      "current_depicted_part": "flowering stems",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:20140424Rumex_acetosa4.jpg",
+      "current_license": "CC0 1.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "alfalfasprout",
+      "ko": "알팔파새싹",
+      "scientific": "Medicago sativa",
+      "current_depicted_part": "4-week-old shoot (not sprouts)",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Medicago_sativa_shoot.JPG",
+      "current_license": "CC BY-SA 3.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "wheatleaf",
+      "ko": "밀잎",
+      "scientific": "Triticum aestivum",
+      "current_depicted_part": "ears with some leaves",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Bl%C3%A9_tendre_(EPHOROS)-14-cliche_Jean_Weber_(24000546341).jpg",
+      "current_license": "CC BY 2.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "barleyleaf",
+      "ko": "보리잎",
+      "scientific": "Hordeum vulgare",
+      "current_depicted_part": "ears",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Barley_(Hordeum_vulgare)_-_United_States_National_Arboretum_-_24_May_2009.jpg",
+      "current_license": "CC BY 2.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "bermudagrass",
+      "ko": "우산잔디",
+      "scientific": "Cynodon dactylon",
+      "current_depicted_part": "inflorescence",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Bermudagrassflower.jpg",
+      "current_license": "Public domain",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    },
+    {
+      "plant_id": "harebell",
+      "ko": "헤어벨",
+      "scientific": "Campanula rotundifolia L.",
+      "current_depicted_part": "flowers",
+      "current_source_url": "https://commons.wikimedia.org/wiki/File:Campanules_%C3%A0_feuilles_rondes-Campanula_rotundifolia-Fleurs-Tourbi%C3%A8re_flottante-20141011.jpg",
+      "current_license": "CC BY-SA 3.0",
+      "action": "find replacement showing the edible/relevant named plant part; retain species or infraspecific taxon match; verify image source, author, license and URL before change",
+      "publication_status": "review_required",
+      "replacement_source_url": null,
+      "reviewed_replacement": false
+    }
+  ]
+}
