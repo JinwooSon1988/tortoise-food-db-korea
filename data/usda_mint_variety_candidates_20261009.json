@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "purpose": "source_verified_mint_variety_candidates_held",
+  "source_archive": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+  "website_taxon": "Mentha spp.",
+  "identity_hold": "USDA common names peppermint and spearmint do not prove exact species and part mapping to Mentha spp.; never aggregate as a single mint composition",
+  "records": [
+    {
+      "variety_key": "peppermint",
+      "fdc_id": 173474,
+      "food_description": "Peppermint, fresh",
+      "water_g": 78.65,
+      "protein_g": 3.75,
+      "fiber_g": 8,
+      "calcium_mg": 243,
+      "phosphorus_mg": 73,
+      "potassium_mg": 569,
+      "vitamin_c_mg": 31.8,
+      "plant_id": "mint",
+      "basis": "per 100 g fresh edible portion",
+      "source": "USDA FoodData Central SR Legacy April 2018 original food.csv and food_nutrient.csv",
+      "source_url": "https://fdc.nal.usda.gov/food-details/173474/nutrients",
+      "calcium_phosphorus_ratio": 3.329,
+      "verification_scope": "Original CSV FDC food description and numeric nutrients verified; exact botanical species and analyzed plant part not established",
+      "feeding_verdict_use": false,
+      "master_eligible": false
+    },
+    {
+      "variety_key": "spearmint",
+      "fdc_id": 173475,
+      "food_description": "Spearmint, fresh",
+      "water_g": 85.55,
+      "protein_g": 3.29,
+      "fiber_g": 6.8,
+      "calcium_mg": 199,
+      "phosphorus_mg": 60,
+      "potassium_mg": 458,
+      "vitamin_c_mg": 13.3,
+      "plant_id": "mint",
+      "basis": "per 100 g fresh edible portion",
+      "source": "USDA FoodData Central SR Legacy April 2018 original food.csv and food_nutrient.csv",
+      "source_url": "https://fdc.nal.usda.gov/food-details/173475/nutrients",
+      "calcium_phosphorus_ratio": 3.317,
+      "verification_scope": "Original CSV FDC food description and numeric nutrients verified; exact botanical species and analyzed plant part not established",
+      "feeding_verdict_use": false,
+      "master_eligible": false
+    }
+  ]
+}
