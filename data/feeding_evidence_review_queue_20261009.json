@@ -141,7 +141,10 @@
       ],
       "interpretation_ko": "독초로 분류하지 않고 동물 중독 보고도 없지만, 동시에 사료로 적합하지 않다고 명시한다. 따라서 현재의 긍정적 제한 보조 급여 판정은 출처와의 긴장을 해소할 필요가 있다.",
       "direct_tortoise_feeding_trial": false,
-      "review_status": "source_wording_verified__grade_pending_editorial_decision"
+      "review_status": "source_wording_verified__grade_pending_editorial_decision",
+      "verification": "Source webpage checked directly 2026-10-09; toxicity section says Ungiftige Pflanze and toxic parts section says no documented animal poisoning cases and Nicht geeignet als Futter!",
+      "editorial_recommendation": "Replace affirmative occasional-feeding advice with no-planned-feeding precaution unless a stronger tortoise-specific affirmative source is established; not a proven poisoning claim",
+      "source_locator": "Vetpharm Althaea officinalis: Toxikologie / Giftigkeit; Giftige Pflanzenteile"
     },
     {
       "plant_id": "ginkgoleaf",
@@ -154,7 +157,10 @@
       ],
       "interpretation_ko": "전문자료는 은행나무잎의 소량 우발 섭취와 계획적인 정기 급여를 구분한다. 현재 C등급은 대량 급여를 허용한다는 의미가 아니며, 종자에도 적용할 수 없다.",
       "direct_tortoise_feeding_trial": false,
-      "review_status": "specialist_source_verified__avoid_extrapolating_dose"
+      "review_status": "specialist_source_verified__avoid_extrapolating_dose",
+      "verification": "Source webpage checked directly 2026-10-09; Feed Sparingly, but wording concerns a few accidentally fallen leaves and advises against large quantities and seeds.",
+      "editorial_recommendation": "Avoid wording that encourages routine intentional supplementation; make accidental few-leaf tolerance distinct from planned feeding.",
+      "source_locator": "The Tortoise Table Ginkgo entry: Feed Sparingly and concluding paragraph"
     },
     {
       "plant_id": "ginkgoleaf",
@@ -183,6 +189,7 @@
       "sunflowerpetal",
       "geraniumleaf"
     ],
-    "public_grades_changed": false
+    "public_grades_changed": false,
+    "source_verification_method": "Direct public source-page inspection for Vetpharm Althaea and Tortoise Table Ginkgo; EFSA statement remains contextual, not tortoise feeding trial"
   }
 }
