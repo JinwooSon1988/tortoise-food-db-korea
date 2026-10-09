@@ -13,7 +13,7 @@ assert len(set(keys)) == len(keys), "Duplicate plant_id + species_group in publi
 by_id = {item["plant_id"]: item for item in assessments if item["species_group"] == "Tortoise_general"}
 
 # Species-group records are intentionally separate, not accidental duplicates.
-expected_group_verdicts = {
+required_species_group_records = {
     ("dandelion", "Mediterranean_Testudo"): "supported_mixed_diet",
     ("dandelion", "Sulcata"): "limited_mixed_diet",
     ("plantain", "Mediterranean_Testudo"): "limited_mixed_diet",
@@ -26,7 +26,7 @@ expected_group_verdicts = {
 by_group = {(item["plant_id"], item["species_group"]): item for item in assessments}
 assert len(assessments) >= 186, "Assessment records dropped below the audited baseline (186)"
 assert len({item["plant_id"] for item in assessments}) >= 182, "Plant coverage dropped below the audited baseline (182)"
-for key in expected_group_verdicts:
+for key in required_species_group_records:
     assert key in by_group, f"Missing species-specific assessment: {key}"
     assert by_group[key].get("verdict"), f"Species-specific verdict missing: {key}"
     assert by_group[key].get("evidence_ids"), f"Missing evidence references: {key}"
