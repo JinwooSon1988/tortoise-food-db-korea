@@ -178,7 +178,9 @@
           "record": "Tagetes patula 'Bolero' / 'Antiqua Orange' fresh flowers"
         }
       ],
-      "next_step_ko": "만수국(T. patula) 마스터를 분리하면 Rop 2012 생화 자료를 연결할 수 있다."
+      "next_step_ko": "만수국(T. patula) 마스터를 분리하면 Rop 2012 생화 자료를 연결할 수 있다.",
+      "species_record": "data/tagetes_patula_species_nutrition_v1.json",
+      "status_20261009": "만수국(Tagetes patula) 두 품종(‘Bolero’, ‘Antiqua Orange’) 생화 값을 종별 기록으로 분리 저장하고 메리골드 상세의 종별 카드로만 표시한다. 메리골드(Tagetes spp.) 마스터 영양은 계속 보류한다. 별도 공개 마스터는 판정 파일 구조(public_assessments·verdict 코드·근거 레코드) 변경이 필요해 만들지 않았다."
     },
     {
       "plant_id": "violet",

@@ -1065,6 +1065,37 @@ for p in plants:
                         '<a href="../../data/plant_nutrition_variety_v1.json">유형별 구조화 원자료 파일</a></p></aside>')
         nutrition_html = nutrition_html.replace("</section>", lettuce_note + "</section>", 1)
 
+    if pid == "marigold":
+        # 만수국(Tagetes patula) species-level cultivar records, kept apart from the genus-level master
+        # (QA: scripts/build_tagetes_patula_species_v1.py). No verdict is inherited by the species.
+        tp = json.loads((ROOT / "data/tagetes_patula_species_nutrition_v1.json").read_text(encoding="utf-8"))
+        def tp_card(r):
+            cells = [("칼슘", r["calcium_mg"], "mg"), ("인", r["phosphorus_mg"], "mg"), ("칼륨", r["potassium_mg"], "mg"),
+                     ("건물", r["dry_matter_pct"], "%"), ("단백질", r["protein_g"], "g")]
+            grid = "".join(f'<div>{label} <strong>{v}{u}</strong></div>' for label, v, u in cells)
+            grid += f'<div>Ca:P <strong>{r["calcium_phosphorus_ratio"]}:1</strong></div>'
+            return (f'<article class="varietycard" style="border:1px solid #dce5dd;border-radius:12px;padding:12px;min-width:0;background:#fff">'
+                    f'<h3 style="margin:0 0 4px;font-size:15px">만수국 <span lang="en">‘{esc(r["cultivar"])}’</span></h3>'
+                    f'<p class="small" style="margin:0 0 8px;overflow-wrap:anywhere">생화(꽃 전체) · 생체 100g 환산 · {esc(r["sampling_period"].replace(" (two-year mean)", "년 2년 평균"))}, n={r["n"]}</p>'
+                    f'<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;font-size:13px">{grid}</div>'
+                    f'<p class="small" style="margin:8px 0 0">수분·식이섬유·비타민 C: <strong>미확인</strong>(측정되지 않음)</p>'
+                    f'<p class="small" style="margin:6px 0 0"><span lang="en">{esc(r["source_citation"].split(". ")[0])} ({esc(r["source_doi"])})</span> '
+                    f'<a class="sourceopen" href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">원 논문<span class="sr-only"> (새 창)</span> ↗</a></p></article>')
+        fv = tp["feeding_verdict"]
+        tp_note = ('<aside class="varietycompare" style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px;background:#f8faf8">'
+                   f'<h3>만수국(<i lang="la">Tagetes patula</i>) 품종별 생화 영양자료 · 메리골드 전체 값 아님</h3>'
+                   '<p>이 페이지의 메리골드는 <i lang="la">Tagetes</i> 속 전체입니다. 아래 수치는 그중 만수국 두 품종의 생화를 분석한 동료심사 논문 값이며, '
+                   '메리골드 전체의 대표값이 아니므로 위의 ‘검증된 영양자료 없음’ 상태를 유지합니다. 두 연구 값은 평균하지 않고 품종별로 따로 보여줍니다.</p>'
+                   f'<div style="{variety_grid_style}">' + "".join(tp_card(r) for r in tp["records"]) + '</div>'
+                   '<div style="margin-top:12px;padding:12px 14px;border:1px solid #efc9c6;border-radius:12px;background:#fffafa">'
+                   f'<h3 style="margin:0 0 6px;font-size:15px">만수국 급여 판정: 판정 보류</h3>'
+                   f'<p style="margin:0">{esc(fv["display_ko"])} 위 메리골드 판정을 만수국에 자동으로 옮기지 않으며, 영양 수치로 안전성을 판단하지도 않습니다. '
+                   f'다만 전문 육지거북 DB <a class="sourceopen" href="{esc(fv["context_source"])}" target="_blank" rel="noopener noreferrer">The Tortoise Table<span class="sr-only"> (새 창)</span></a>은 '
+                   '만수국(<span lang="en">French Marigold</span>)을 포함한 <i lang="la">Tagetes</i> 속 전체를 <strong>급여하지 않음</strong>으로 분류합니다. 판정 보류는 급여해도 된다는 뜻이 아닙니다.</p></div>'
+                   '<p class="small">학명: 식약처 식품원료목록 #628 만수국 = <i lang="la">Tagetes patula</i> L. GBIF 분류 백본은 이 학명을 <i lang="la">Tagetes erecta</i> L.(아프리칸메리골드)의 이명으로 처리하므로 분류 체계에 따라 범위가 달라질 수 있습니다. '
+                   '<a href="../../data/tagetes_patula_species_nutrition_v1.json">종별 구조화 원자료 파일</a></p></aside>')
+        nutrition_html = nutrition_html.replace("</section>", tp_note + "</section>", 1)
+
     if pid == "bellpepper":
         pep = json.loads((ROOT / "data/usda_bellpepper_original_csv_verified_20261008.json").read_text(encoding="utf-8"))
         review = json.loads((ROOT / "data/bellpepper_feeding_evidence_reassessment_20261008.json").read_text(encoding="utf-8"))

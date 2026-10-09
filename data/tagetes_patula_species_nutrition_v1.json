@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "species_id": "tagetes_patula",
+  "ko": "만수국",
+  "en": "French marigold",
+  "scientific_name": "Tagetes patula L.",
+  "parent_master_plant_id": "marigold",
+  "parent_master_scientific": "Tagetes spp.",
+  "identity": {
+    "korean_name_source": {
+      "name": "MFDS 식품원료목록",
+      "record": "#628 만수국 — French marigold — Tagetes patula L. (사용부위 꽃)",
+      "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04",
+      "checked_at": "2026-10-09"
+    },
+    "global_backbone": {
+      "name": "GBIF Backbone Taxonomy",
+      "record": "Tagetes patula L. (usageKey 3088492) = SYNONYM of Tagetes erecta L. (3088488)",
+      "url": "https://www.gbif.org/species/3088492",
+      "checked_at": "2026-10-09"
+    },
+    "taxonomic_note": "식약처는 만수국을 Tagetes patula L.로 등록한다. GBIF 백본(WCVP 계열)은 T. patula를 T. erecta의 이명으로 처리하므로, 분류 체계에 따라 아프리칸메리골드와 한 종으로 묶일 수 있다. 원논문은 두 편 모두 'Tagetes patula'로 표기했다.",
+    "not_checked": "POWO (Cloudflare challenge; not bypassed)"
+  },
+  "publication": {
+    "public_plant_page": false,
+    "shown_on": "plant/marigold/index.html (nutrition section, species cards)",
+    "structural_reason": "A separate public page needs a public_assessments.json row, a verdict code mapped in public_verdict.py and verdict-core.js, and an evidence record naming the plant; these belong to the feeding-safety review and were not modified."
+  },
+  "feeding_verdict": {
+    "status": "not_assessed",
+    "display_ko": "만수국만을 대상으로 한 급여 판정은 없다(판정 보류).",
+    "inheritance": "The genus-level 메리골드 verdict is not inherited automatically.",
+    "context_ko": "전문 육지거북 DB(The Tortoise Table)는 French Marigold를 포함한 Tagetes spp. 전체를 ‘급여하지 않음’으로 분류한다. 판정 보류는 급여해도 된다는 뜻이 아니다.",
+    "context_source": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=314&c=5"
+  },
+  "policy": {
+    "no_averaging_across_studies": true,
+    "no_other_species_or_part_values": true,
+    "nutrition_is_not_safety_evidence": true
+  },
+  "records": [
+    {
+      "record_id": "tagetes_patula_bolero",
+      "cultivar": "Bolero",
+      "source_scientific_name": "Tagetes patula",
+      "plant_part": "flower (whole fresh flowers at full bloom)",
+      "preparation_state": "raw (fresh)",
+      "basis": "per 100 g fresh flower mass (published mg/kg FM divided by 10)",
+      "n": 10,
+      "sampling_location": "Experimental orchards of Tomas Bata University in Zlín, White Carpathians, Czech Republic (unheated glasshouse, 340 m a.s.l.)",
+      "sampling_period": "2010–2011 (two-year mean)",
+      "source_citation": "Rop O, Mlcek J, Jurikova T, Neugebauerova J, Vabkova J. Edible Flowers—A New Promising Source of Mineral Elements in Human Nutrition. Molecules. 2012;17(6):6672–6683.",
+      "source_doi": "10.3390/molecules17066672",
+      "source_url": "https://doi.org/10.3390/molecules17066672",
+      "source_pmcid": "PMC6268292",
+      "source_tables": "Tables 1–4",
+      "source_license": "CC BY 3.0",
+      "fulltext_xml_sha256": "ccf509b3df3a7e89fe86e54a7f348a11ad5fd36c92a523c2f82a1650d96c4136",
+      "verification_status": "verified",
+      "verified_at": "2026-10-09",
+      "phosphorus_mg": 47.825,
+      "potassium_mg": 380.872,
+      "calcium_mg": 34.685,
+      "magnesium_mg": 20.519,
+      "sodium_mg": 11.432,
+      "iron_mg": 0.872,
+      "protein_g": 0.295,
+      "dry_matter_pct": 9.68,
+      "calcium_phosphorus_ratio": 0.73,
+      "not_measured": [
+        "water_g",
+        "fiber_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
+    },
+    {
+      "record_id": "tagetes_patula_antiqua_orange",
+      "cultivar": "Antiqua Orange",
+      "source_scientific_name": "Tagetes patula",
+      "plant_part": "flower (whole fresh flowers at full bloom)",
+      "preparation_state": "raw (fresh)",
+      "basis": "per 100 g fresh flower mass (published mg/kg FM divided by 10)",
+      "n": 10,
+      "sampling_location": "Experimental orchards of Mendel University in Brno, Lednice, Czech Republic (unheated greenhouse, 170 m a.s.l.)",
+      "sampling_period": "2018–2019 (two-year mean)",
+      "source_citation": "Mlcek J, Plaskova A, Jurikova T, Sochor J, Baron M, Ercisli S. Chemical, Nutritional and Sensory Characteristics of Six Ornamental Edible Flowers Species. Foods. 2021;10(9):2053.",
+      "source_doi": "10.3390/foods10092053",
+      "source_url": "https://doi.org/10.3390/foods10092053",
+      "source_pmcid": "PMC8472405",
+      "source_tables": "Tables 1, 4–6",
+      "source_license": "CC BY 4.0",
+      "fulltext_xml_sha256": "d25c906f078f1ba37c19f41e43fd2ea78873cdbc753e5f5d2cb7806bc79c6a16",
+      "verification_status": "verified",
+      "verified_at": "2026-10-09",
+      "phosphorus_mg": 39.708,
+      "potassium_mg": 362.378,
+      "calcium_mg": 36.295,
+      "magnesium_mg": 20.314,
+      "sodium_mg": 12.1,
+      "iron_mg": 0.82,
+      "protein_g": 0.301,
+      "dry_matter_pct": 9.34,
+      "calcium_phosphorus_ratio": 0.91,
+      "not_measured": [
+        "water_g",
+        "fiber_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
+    }
+  ]
+}
