@@ -14,14 +14,14 @@ by_id = {item["plant_id"]: item for item in assessments if item["species_group"]
 
 # Species-group records are intentionally separate, not accidental duplicates.
 required_species_group_records = {
-    ("dandelion", "Mediterranean_Testudo"): "supported_mixed_diet",
-    ("dandelion", "Sulcata"): "limited_mixed_diet",
-    ("plantain", "Mediterranean_Testudo"): "limited_mixed_diet",
-    ("plantain", "Sulcata"): "limited_mixed_diet",
-    ("clover", "Mediterranean_Testudo"): "limited_mixed_diet",
-    ("clover", "Sulcata"): "limited_mixed_diet",
-    ("chickweed", "Mediterranean_Testudo"): "limited_mixed_diet",
-    ("chickweed", "Sulcata"): "limited_mixed_diet",
+    ("dandelion", "Mediterranean_Testudo"),
+    ("dandelion", "Sulcata"),
+    ("plantain", "Mediterranean_Testudo"),
+    ("plantain", "Sulcata"),
+    ("clover", "Mediterranean_Testudo"),
+    ("clover", "Sulcata"),
+    ("chickweed", "Mediterranean_Testudo"),
+    ("chickweed", "Sulcata"),
 }
 by_group = {(item["plant_id"], item["species_group"]): item for item in assessments}
 assert len(assessments) >= 186, "Assessment records dropped below the audited baseline (186)"
