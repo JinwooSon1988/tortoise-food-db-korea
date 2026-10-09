@@ -19,7 +19,7 @@
     "no_record_found": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다."
   },
   "summary": {
-    "genus_level_master": 38,
+    "genus_level_master": 37,
     "no_record_found": 41,
     "part_ambiguous": 1,
     "part_mismatch": 24,
@@ -28,7 +28,7 @@
     "state_mismatch": 2,
     "subtype_ambiguous": 2
   },
-  "held_count": 120,
+  "held_count": 119,
   "records": [
     {
       "plant_id": "lettuce",
@@ -1221,48 +1221,6 @@
           "record": "BLS G431100 Fenchelblatt/Bologneser Fenchel, roh",
           "decision": "held",
           "reason": "German name says leaf but \"Bologneser Fenchel\"/\"Roman fennel\" denotes the bulb variety; part cannot be resolved without SFK"
-        }
-      ]
-    },
-    {
-      "plant_id": "amaranthleaf",
-      "ko": "비름",
-      "scientific": "Amaranthus spp.",
-      "hold_reason_code": "genus_level_master",
-      "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
-      "candidates_examined": [
-        {
-          "source": "USDA FoodData Central",
-          "source_id": "FDC 168385",
-          "data_type": "SR Legacy",
-          "food_description": "Amaranth leaves, raw",
-          "source_scientific_name": "Amaranthus spp.",
-          "rejected_because": "source is Amaranthus spp."
-        },
-        {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-093000001-0000",
-          "food_description": "비름_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "비름 종 미표기"
-        },
-        {
-          "source": "RDA 통합식품영양성분정보(원재료성식품) 2025-12-23",
-          "source_id": "R106-143007801-0000",
-          "food_description": "열대비름(아마란스)_잎_생것",
-          "data_generation_method": "분석",
-          "rejected_because": "열대비름(아마란스) - 다른 식품명"
-        }
-      ],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08",
-      "international_candidates_examined": [
-        {
-          "source": "West African Food Composition Table 2019",
-          "country": "West Africa (regional)",
-          "record": "WAFCT 04_023 Amaranth, leaves (Amaranthus spp.)",
-          "decision": "held",
-          "reason": "genus-level composite"
         }
       ]
     },

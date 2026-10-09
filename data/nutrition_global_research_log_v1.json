@@ -650,6 +650,25 @@
           "reason": "Tropaeolum majus leaves: basis ambiguity; leaf part differs from the flower record."
         }
       ]
+    },
+    {
+      "id": "kr_amaranth_identity_2026",
+      "region": "Asia",
+      "country": "Korea",
+      "institution": "Rural Development Administration (KFCT 7th, 2006) / Ministry of Food and Drug Safety (식품원료목록)",
+      "database": "Korean official food-name ↔ taxon sources",
+      "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04",
+      "access": "public web page / FAO-hosted PDF",
+      "accessed_at": "2026-10-09",
+      "method": "Korean food name 비름 matched to taxon in two independent official sources, then to RDA raw record",
+      "findings": [
+        {
+          "plant_id": "amaranthleaf",
+          "record": "R106-093000001-0000 비름_생것",
+          "decision": "adopted",
+          "reason": "KFCT 7th 06-203 and MFDS #901 both define 비름 as Amaranthus mangostanus; korea_taxon_mapping_v1 entry added; 개비름 and 열대비름 excluded"
+        }
+      ]
     }
   ]
 }

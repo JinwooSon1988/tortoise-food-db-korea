@@ -2,13 +2,13 @@
   "schema_version": "1.0",
   "purpose": "Descriptive nutrition coverage audit. Coverage numbers never change feeding verdicts, grades or confidence.",
   "public_plants": 182,
-  "verified_plants": 62,
-  "held_plants": 120,
-  "coverage_percent": 34.1,
+  "verified_plants": 63,
+  "held_plants": 119,
+  "coverage_percent": 34.6,
   "by_source_name": {
     "German Nutrient Database BLS 4.0 (Max Rubner-Institut)": 1,
     "Indian Food Composition Tables 2017 (ICMR-NIN)": 3,
-    "Korean Standard Food Composition Database (RDA)": 15,
+    "Korean Standard Food Composition Database (RDA)": 16,
     "Peer-reviewed journal article (open access)": 5,
     "Standard Tables of Food Composition in Japan (MEXT)": 4,
     "USDA FoodData Central": 34
@@ -18,20 +18,20 @@
     "German Nutrient Database (BLS)": 1,
     "Indian Food Composition Tables": 3,
     "Japan Standard Tables of Food Composition": 4,
-    "Korean Standard Food Composition DB": 15,
+    "Korean Standard Food Composition DB": 16,
     "Peer-reviewed study": 5,
     "SR Legacy": 30
   },
   "by_source_kind": {
     "academic_peer_reviewed": 5,
-    "official_database": 57
+    "official_database": 58
   },
   "by_source_country": {
     "Czech Republic": 5,
     "Germany": 1,
     "India": 3,
     "Japan": 4,
-    "Korea": 15,
+    "Korea": 16,
     "USA": 34
   },
   "dry_matter_registry": {
@@ -55,7 +55,7 @@
     "note": "DM-basis values are not per-100 g fresh values and are not counted in verified_plants"
   },
   "hold_reasons": {
-    "genus_level_master": 38,
+    "genus_level_master": 37,
     "no_record_found": 41,
     "part_ambiguous": 1,
     "part_mismatch": 24,
@@ -66,72 +66,72 @@
   },
   "field_coverage": {
     "water_g": {
-      "plants": 57,
-      "percent_of_public_plants": 31.3
+      "plants": 58,
+      "percent_of_public_plants": 31.9
     },
     "protein_g": {
-      "plants": 62,
-      "percent_of_public_plants": 34.1
+      "plants": 63,
+      "percent_of_public_plants": 34.6
     },
     "fat_g": {
-      "plants": 55,
-      "percent_of_public_plants": 30.2
+      "plants": 56,
+      "percent_of_public_plants": 30.8
     },
     "carbohydrate_g": {
-      "plants": 46,
-      "percent_of_public_plants": 25.3
+      "plants": 47,
+      "percent_of_public_plants": 25.8
     },
     "available_carbohydrate_g": {
       "plants": 3,
       "percent_of_public_plants": 1.6
     },
     "fiber_g": {
-      "plants": 51,
-      "percent_of_public_plants": 28.0
-    },
-    "sugars_g": {
-      "plants": 26,
-      "percent_of_public_plants": 14.3
-    },
-    "calcium_mg": {
-      "plants": 62,
-      "percent_of_public_plants": 34.1
-    },
-    "phosphorus_mg": {
-      "plants": 62,
-      "percent_of_public_plants": 34.1
-    },
-    "calcium_phosphorus_ratio": {
-      "plants": 62,
-      "percent_of_public_plants": 34.1
-    },
-    "potassium_mg": {
-      "plants": 55,
-      "percent_of_public_plants": 30.2
-    },
-    "sodium_mg": {
       "plants": 52,
       "percent_of_public_plants": 28.6
+    },
+    "sugars_g": {
+      "plants": 27,
+      "percent_of_public_plants": 14.8
+    },
+    "calcium_mg": {
+      "plants": 63,
+      "percent_of_public_plants": 34.6
+    },
+    "phosphorus_mg": {
+      "plants": 63,
+      "percent_of_public_plants": 34.6
+    },
+    "calcium_phosphorus_ratio": {
+      "plants": 63,
+      "percent_of_public_plants": 34.6
+    },
+    "potassium_mg": {
+      "plants": 56,
+      "percent_of_public_plants": 30.8
+    },
+    "sodium_mg": {
+      "plants": 53,
+      "percent_of_public_plants": 29.1
     },
     "magnesium_mg": {
       "plants": 47,
       "percent_of_public_plants": 25.8
     },
     "iron_mg": {
-      "plants": 54,
-      "percent_of_public_plants": 29.7
+      "plants": 55,
+      "percent_of_public_plants": 30.2
     },
     "vitamin_c_mg": {
-      "plants": 48,
-      "percent_of_public_plants": 26.4
+      "plants": 49,
+      "percent_of_public_plants": 26.9
     },
     "vitamin_a_rae_ug": {
-      "plants": 40,
-      "percent_of_public_plants": 22.0
+      "plants": 41,
+      "percent_of_public_plants": 22.5
     },
     "energy_kcal": {
-      "plants": 42,
-      "percent_of_public_plants": 23.1
+      "plants": 43,
+      "percent_of_public_plants": 23.6
     }
   },
   "legacy_69_baseline": {
@@ -1500,9 +1500,18 @@
       "plant_id": "amaranthleaf",
       "ko": "비름",
       "scientific": "Amaranthus spp.",
-      "status": "held",
-      "hold_reason_code": "genus_level_master",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "Korean Standard Food Composition Database (RDA)",
+      "source_id": "R106-093000001-0000",
+      "data_type": "Korean Standard Food Composition DB",
+      "source_kind": "official_database",
+      "plant_part": "edible portion (RDA 가식부; part not stated in source food name; MFDS food-use part for 비름 is 순 = young shoots)",
+      "preparation_state": "raw",
+      "fields_present": 15,
+      "fields_missing": [
+        "available_carbohydrate_g",
+        "magnesium_mg"
+      ]
     },
     {
       "plant_id": "purslane",

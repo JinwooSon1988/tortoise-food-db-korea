@@ -73,6 +73,55 @@
       "rda_scientific_name": "Sonchus oleraceus L.",
       "nutrition_mapping_status": "eligible_exact_korea_taxon",
       "note": "Korean national biodiversity source and RDA 10.4 independently align 방가지똥 with Sonchus oleraceus; global Sonchus spp. master remains broad."
+    },
+    {
+      "plant_id": "amaranthleaf",
+      "korean_name": "비름",
+      "global_master_scientific": "Amaranthus spp.",
+      "korea_taxon": "Amaranthus mangostanus L.",
+      "korea_taxon_synonyms_in_source": [
+        "Amaranthus inamoenus Willd.",
+        "Amaranthus inamoenus f. viridis Makino"
+      ],
+      "taxonomic_note": "POWO/GRIN treat A. mangostanus L. as a synonym of A. tricolor L.; the Korean food name is mapped to the taxon exactly as the Korean official sources print it.",
+      "identity_status": "verified_korea_name",
+      "mapping_status": "verified_korea_name",
+      "authority_sources": [
+        {
+          "name": "Korean Food Composition Table, 7th revision (Rural Development Administration, 2006), Vol. 1, item 06-203",
+          "record": "비름 Amaranthus mangostanus, Pig weed — 생것 Raw",
+          "url": "https://fao.org/fileadmin/templates/food_composition/documents/regional/Korean_food_compositon_table_vol._1_7th__2006_.pdf",
+          "sha256": "3c1be0d1501a210a13236f1044b6a7543e35ae09b1a1aa81763291b7e2a8b6df",
+          "accessed_at": "2026-10-09"
+        },
+        {
+          "name": "MFDS 식품원료목록 (식품안전나라)",
+          "record": "#901 비름 — 이명: 비름나물, 새비름, 참비름, 개비름, Edible amaranth; 학명: Amaranthus mangostanus L. / Amaranthus inamoenus Willd. / Amaranthus inamoenus f. viridis Makino; 식용 O; 사용부위 순",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04",
+          "accessed_at": "2026-10-09"
+        }
+      ],
+      "not_used": [
+        {
+          "name": "NIBR 한반도의 생물다양성 (species.nibr.go.kr ktsn=120000060702)",
+          "reason": "page content is served only through a robots-disallowed /api/ path; not read directly"
+        },
+        {
+          "name": "RDA NCPMS weed database",
+          "reason": "no entry for 비름 (only 가는털비름, 가시비름 etc.)"
+        }
+      ],
+      "rda_food_code": "R106-093000001-0000",
+      "rda_food_name": "비름_생것",
+      "rda_crosscheck_code": "F0930000000a",
+      "rda_part_state": "raw edible portion (part not stated)",
+      "excluded_related_foods": [
+        "개비름 (MFDS #97, Amaranthus lividus L.)",
+        "열대비름(아마란스) R106-143007801-0000 / F1430000000a"
+      ],
+      "nutrition_mapping_status": "eligible_exact_korea_taxon",
+      "reviewed_at": "2026-10-09",
+      "note": "RDA's own 7th-edition table and the MFDS raw-material list independently define the food 비름 as Amaranthus mangostanus. The current RDA record (2015 analysis) keeps the same food concept (대표식품코드 06093) but does not print a species, so this is a food-name mapping, not a voucher-level identification of the 2015 sample. The global Amaranthus spp. master remains broad."
     }
   ]
 }

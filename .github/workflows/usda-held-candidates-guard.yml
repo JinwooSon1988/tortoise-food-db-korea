@@ -7,12 +7,14 @@ on:
       - 'data/usda_srlegacy_plant_candidates_batch2_20261008.json'
       - 'data/plant_nutrition_v56.json'
       - 'scripts/audit_usda_held_candidates_ci.py'
+      - 'data/korea_taxon_mapping_v1.json'
       - '.github/workflows/usda-held-candidates-guard.yml'
   pull_request:
     paths:
       - 'data/usda_srlegacy_plant_candidates_batch2_20261008.json'
       - 'data/plant_nutrition_v56.json'
       - 'scripts/audit_usda_held_candidates_ci.py'
+      - 'data/korea_taxon_mapping_v1.json'
       - '.github/workflows/usda-held-candidates-guard.yml'
   workflow_dispatch:
 
