@@ -1,0 +1,31 @@
+name: USDA lettuce variety guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/plant_nutrition_variety_v1.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'scripts/audit_usda_lettuce_varieties_ci.py'
+      - '.github/workflows/usda-lettuce-variety-guard.yml'
+  pull_request:
+    paths:
+      - 'data/plant_nutrition_variety_v1.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'scripts/audit_usda_lettuce_varieties_ci.py'
+      - '.github/workflows/usda-lettuce-variety-guard.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-lettuce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check lettuce variety provenance and master isolation
+        run: python scripts/audit_usda_lettuce_varieties_ci.py
