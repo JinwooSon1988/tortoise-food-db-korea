@@ -994,6 +994,26 @@ for p in plants:
     else:
         nutrition_body='<div class="nutrition-missing"><strong>검증된 영양자료 없음</strong><p>해당 식물·부위에 일치하는 공식 영양성분 수치가 아직 확인되지 않았습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
     nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2>{nutrition_body}<p class="small">영양수치는 판정을 보조하는 근거입니다. 검증된 수치만 표시하며 미확인 항목을 0으로 간주하지 않습니다.</p></section>'''
+    # Source-traceable variety cards must survive every static-site regeneration.
+    if pid == "mint":
+        mint_records = json.loads((ROOT / "data/usda_mint_variety_candidates_20261009.json").read_text(encoding="utf-8"))["records"]
+        labels = {"peppermint": "페퍼민트", "spearmint": "스피어민트"}
+        cards = "".join(
+            f'<article style="padding:12px;border:1px solid #dce5dd;border-radius:10px">'
+            f'<h3>{labels[r["variety_key"]]}</h3>'
+            f'<p>생것 100g · 칼슘 {r["calcium_mg"]}mg · 인 {r["phosphorus_mg"]}mg · '
+            f'식이섬유 {r["fiber_g"]}g · 비타민 C {r["vitamin_c_mg"]}mg</p>'
+            f'<a href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 ↗</a></article>'
+            for r in mint_records
+        )
+        note = ('<aside style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px">'
+                '<h3>USDA 민트류 참고 비교 · 종·부위 확인 전</h3>'
+                '<p>페퍼민트와 스피어민트의 공식 식품성분 참고자료입니다. '
+                '민트(Mentha spp.) 전체의 검증된 영양값이나 육지거북 급여 안전성을 뜻하지 않습니다.</p>'
+                '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px">'
+                + cards + '</div></aside>')
+        nutrition_html = nutrition_html.replace("</section>", note + "</section>", 1)
+
 
     footer_html=f'''<section class="share"><button type="button" onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent='링크 복사 완료')">링크 복사</button><a href="../../all-plants/index.html">전체 먹이 목록 →</a><a href="../../index.html">다른 먹이 검색 →</a></section>'''
 
