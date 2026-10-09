@@ -1,0 +1,780 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-10",
+  "purpose": "Combined cross-domain QA priorities: 76 plant imagery issues linked to nutrition coverage; no public verdict changes.",
+  "sources": {
+    "data/nutrition_hold_list_v1.json": "b259ca4fd9a8dc1f2a9bd2e8cac9147dbce4d2a4",
+    "data/verified_plant_images_v56.json": "797d00c2e21295ea131c5910f28201c85b1990c5",
+    "data/plants.json": "f69b511e7eab1d8f714d7f648fe0ee03527eadaf"
+  },
+  "total_targets": 76,
+  "targets_with_nutrition_hold": 49,
+  "priority_definitions": {
+    "1": "Image depicts wrong plant part; verify and replace before promoting imagery.",
+    "2": "Missing image but verified nutrition record; complete already evidence-rich page.",
+    "3": "Partial part match; improve feeding-part illustration.",
+    "4": "Other missing images; genus-level taxon must not be represented as exact species."
+  },
+  "targets": [
+    {
+      "plant_id": "dill",
+      "ko": "딜",
+      "scientific": "Anethum graveolens",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Anethum_graveolens_002.JPG",
+      "depicted_part": "umbels (flowers)"
+    },
+    {
+      "plant_id": "arugula",
+      "ko": "루꼴라",
+      "scientific": "Eruca vesicaria",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Eruca_vesicaria.jpg",
+      "depicted_part": "flower"
+    },
+    {
+      "plant_id": "radishgreens",
+      "ko": "무잎",
+      "scientific": "Raphanus sativus",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Raphanus_sativus_000.jpg",
+      "depicted_part": "flowers"
+    },
+    {
+      "plant_id": "wheatleaf",
+      "ko": "밀잎",
+      "scientific": "Triticum aestivum",
+      "image_status": "mismatch",
+      "nutrition_status": "part_mismatch",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Bl%C3%A9_tendre_(EPHOROS)-14-cliche_Jean_Weber_(24000546341).jpg",
+      "depicted_part": "ears with some leaves"
+    },
+    {
+      "plant_id": "barleygrass",
+      "ko": "보리싹",
+      "scientific": "Hordeum vulgare",
+      "image_status": "mismatch",
+      "nutrition_status": "part_mismatch",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Hordeum_vulgare.jpg",
+      "depicted_part": "mature awned spikes"
+    },
+    {
+      "plant_id": "barleyleaf",
+      "ko": "보리잎",
+      "scientific": "Hordeum vulgare",
+      "image_status": "mismatch",
+      "nutrition_status": "part_mismatch",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Barley_(Hordeum_vulgare)_-_United_States_National_Arboretum_-_24_May_2009.jpg",
+      "depicted_part": "ears"
+    },
+    {
+      "plant_id": "sorrel",
+      "ko": "수영",
+      "scientific": "Rumex acetosa",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:20140424Rumex_acetosa4.jpg",
+      "depicted_part": "flowering stems"
+    },
+    {
+      "plant_id": "turnipgreens",
+      "ko": "순무잎",
+      "scientific": "Brassica rapa subsp. rapa",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Brassica_rapa_subsp._rapa_or_simply_turnips.jpg",
+      "depicted_part": "roots"
+    },
+    {
+      "plant_id": "alfalfasprout",
+      "ko": "알팔파새싹",
+      "scientific": "Medicago sativa",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Medicago_sativa_shoot.JPG",
+      "depicted_part": "4-week-old shoot (not sprouts)"
+    },
+    {
+      "plant_id": "zucchini",
+      "ko": "애호박",
+      "scientific": "Cucurbita moschata",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Cucurbita_moschata_leaves.jpg",
+      "depicted_part": "leaves"
+    },
+    {
+      "plant_id": "bermudagrass",
+      "ko": "우산잔디",
+      "scientific": "Cynodon dactylon",
+      "image_status": "mismatch",
+      "nutrition_status": "no_record_found",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Bermudagrassflower.jpg",
+      "depicted_part": "inflorescence"
+    },
+    {
+      "plant_id": "kale",
+      "ko": "케일",
+      "scientific": "Brassica oleracea var. sabellica",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_var._sabellica_Scarlet_2021-05-30_6389.jpg",
+      "depicted_part": "seedling (cotyledons)"
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "ko": "콘샐러드",
+      "scientific": "Valerianella locusta",
+      "image_status": "mismatch",
+      "nutrition_status": "verified",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Valerianella_locusta_sl12.jpg",
+      "depicted_part": "inflorescence"
+    },
+    {
+      "plant_id": "harebell",
+      "ko": "헤어벨",
+      "scientific": "Campanula rotundifolia L.",
+      "image_status": "mismatch",
+      "nutrition_status": "no_record_found",
+      "priority": 1,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Campanules_%C3%A0_feuilles_rondes-Campanula_rotundifolia-Fleurs-Tourbi%C3%A8re_flottante-20141011.jpg",
+      "depicted_part": "flowers"
+    },
+    {
+      "plant_id": "chrysanthemum",
+      "ko": "국화",
+      "scientific": "Chrysanthemum morifolium",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "chard",
+      "ko": "근대",
+      "scientific": "Beta vulgaris subsp. cicla",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "radicchio",
+      "ko": "라디키오",
+      "scientific": "Cichorium intybus var. foliosum",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mizuna",
+      "ko": "미즈나",
+      "scientific": "Brassica rapa var. nipposinica",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "dandelion",
+      "ko": "민들레",
+      "scientific": "Taraxacum spp.",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "sowthistle",
+      "ko": "방가지똥",
+      "scientific": "Sonchus spp.",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "amaranthleaf",
+      "ko": "비름",
+      "scientific": "Amaranthus spp.",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mulberry",
+      "ko": "뽕잎",
+      "scientific": "Morus spp.",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mungbeansprout",
+      "ko": "숙주나물",
+      "scientific": "Vigna radiata",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "spinach",
+      "ko": "시금치",
+      "scientific": "Spinacia oleracea",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mallow",
+      "ko": "아욱",
+      "scientific": "Malva spp.",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "plantain",
+      "ko": "질경이",
+      "scientific": "Plantago spp.",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "pansy",
+      "ko": "팬지",
+      "scientific": "Viola × wittrockiana",
+      "image_status": "missing",
+      "nutrition_status": "verified",
+      "priority": 2,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "beanleaf",
+      "ko": "강낭콩잎",
+      "scientific": "Phaseolus vulgaris",
+      "image_status": "partial",
+      "nutrition_status": "species_mismatch",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Bean..jpg",
+      "depicted_part": "leaf with flower"
+    },
+    {
+      "plant_id": "sweetpotatovine",
+      "ko": "고구마줄기",
+      "scientific": "Ipomoea batatas",
+      "image_status": "partial",
+      "nutrition_status": "verified",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Leaves_of_Ipomoea_batatas.jpg",
+      "depicted_part": "leaves"
+    },
+    {
+      "plant_id": "calendula",
+      "ko": "금잔화",
+      "scientific": "Calendula officinalis",
+      "image_status": "partial",
+      "nutrition_status": "verified",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Calendula_officinalis_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-024.jpg",
+      "depicted_part": "botanical illustration (whole plant, flowers)"
+    },
+    {
+      "plant_id": "endive",
+      "ko": "엔다이브",
+      "scientific": "Cichorium endivia",
+      "image_status": "partial",
+      "nutrition_status": "verified",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Cichorium_endivia_kz04.jpg",
+      "depicted_part": "flowering plant"
+    },
+    {
+      "plant_id": "chicory",
+      "ko": "치커리",
+      "scientific": "Cichorium intybus",
+      "image_status": "partial",
+      "nutrition_status": "verified",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Cichorium_intybus2.jpg",
+      "depicted_part": "whole flowering plant"
+    },
+    {
+      "plant_id": "cauliflowerleaf",
+      "ko": "콜리플라워잎",
+      "scientific": "Brassica oleracea var. botrytis",
+      "image_status": "partial",
+      "nutrition_status": "verified",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Cauliflower-with-leaves2.JPG",
+      "depicted_part": "curd with surrounding leaves"
+    },
+    {
+      "plant_id": "timothy",
+      "ko": "티모시",
+      "scientific": "Phleum pratense",
+      "image_status": "partial",
+      "nutrition_status": "no_record_found",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Timothy_grass.jpg",
+      "depicted_part": "living grass with seedheads and leaves"
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "image_status": "partial",
+      "nutrition_status": "subtype_ambiguous",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:Capsicum_annuum_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-027.jpg",
+      "depicted_part": "botanical illustration (shoot with fruit)"
+    },
+    {
+      "plant_id": "sunflowerpetal",
+      "ko": "해바라기꽃잎",
+      "scientific": "Helianthus annuus",
+      "image_status": "partial",
+      "nutrition_status": "part_mismatch",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:A_field_of_sunflowers.jpg",
+      "depicted_part": "flower heads in field (ray florets visible)"
+    },
+    {
+      "plant_id": "sunflowerleaf",
+      "ko": "해바라기잎",
+      "scientific": "Helianthus annuus",
+      "image_status": "partial",
+      "nutrition_status": "part_mismatch",
+      "priority": 3,
+      "source_image": "https://commons.wikimedia.org/wiki/File:2010_sonnenblume_(Helianthus_annuus).JPG",
+      "depicted_part": "whole plant with leaves and flower head"
+    },
+    {
+      "plant_id": "hazelleaf",
+      "ko": "개암나무잎",
+      "scientific": "Corylus spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "gerbera",
+      "ko": "거베라",
+      "scientific": "Gerbera spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "coreopsis",
+      "ko": "금계국속",
+      "scientific": "Coreopsis spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "elmleaf",
+      "ko": "느릅나무잎",
+      "scientific": "Ulmus spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mapleleaf",
+      "ko": "단풍나무잎",
+      "scientific": "Acer spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "dahlia",
+      "ko": "달리아",
+      "scientific": "Dahlia spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "eveningprimrose",
+      "ko": "달맞이꽃",
+      "scientific": "Oenothera spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "ryegrass",
+      "ko": "라이그라스",
+      "scientific": "Lolium spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "marigold",
+      "ko": "메리골드",
+      "scientific": "Tagetes spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mexicanpetunia",
+      "ko": "멕시칸페튜니아",
+      "scientific": "Ruellia spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "melonleaf",
+      "ko": "멜론잎",
+      "scientific": "Cucumis melo",
+      "image_status": "missing",
+      "nutrition_status": "part_mismatch",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "monarda",
+      "ko": "모나르다속",
+      "scientific": "Monarda spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "hawkbit",
+      "ko": "민들레아재비류",
+      "scientific": "Leontodon spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "mint",
+      "ko": "민트",
+      "scientific": "Mentha spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "zinnia",
+      "ko": "백일홍",
+      "scientific": "Zinnia spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "willowleaf",
+      "ko": "버드나무잎",
+      "scientific": "Salix spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "blackberryleaf",
+      "ko": "블랙베리잎",
+      "scientific": "Rubus fruticosus agg.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "hosta",
+      "ko": "비비추속",
+      "scientific": "Hosta spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "hawthorn",
+      "ko": "산사나무속 잎",
+      "scientific": "Crataegus spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "salsify",
+      "ko": "살시피류",
+      "scientific": "Tragopogon spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "houseleek",
+      "ko": "셈페르비붐",
+      "scientific": "Sempervivum spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "hawksbeard",
+      "ko": "씀바귀아재비류",
+      "scientific": "Crepis spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "astilbe",
+      "ko": "아스틸베",
+      "scientific": "Astilbe spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "echeveria",
+      "ko": "에케베리아",
+      "scientific": "Echeveria spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "birchleaf",
+      "ko": "자작나무잎",
+      "scientific": "Betula spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "rose",
+      "ko": "장미꽃",
+      "scientific": "Rosa spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "geranium",
+      "ko": "제라늄",
+      "scientific": "Pelargonium spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "geraniumleaf",
+      "ko": "제라늄잎",
+      "scientific": "Pelargonium spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "violet",
+      "ko": "제비꽃",
+      "scientific": "Viola spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "hawkweed",
+      "ko": "조밥나물류",
+      "scientific": "Hieracium spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "pricklypear",
+      "ko": "천년초",
+      "scientific": "Opuntia spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "clover",
+      "ko": "클로버",
+      "scientific": "Trifolium spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "kiwileaf",
+      "ko": "키위잎",
+      "scientific": "Actinidia deliciosa",
+      "image_status": "missing",
+      "nutrition_status": "part_mismatch",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "petunia",
+      "ko": "페튜니아",
+      "scientific": "Petunia spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "poplarleaf",
+      "ko": "포플러잎",
+      "scientific": "Populus spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "primula",
+      "ko": "프리뮬라속",
+      "scientific": "Primula spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "lindenleaf",
+      "ko": "피나무잎",
+      "scientific": "Tilia spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "pumpkinflower",
+      "ko": "호박꽃",
+      "scientific": "Cucurbita spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "ko": "호박잎",
+      "scientific": "Cucurbita spp.",
+      "image_status": "missing",
+      "nutrition_status": "genus_level_master",
+      "priority": 4,
+      "source_image": null,
+      "depicted_part": null
+    }
+  ]
+}
