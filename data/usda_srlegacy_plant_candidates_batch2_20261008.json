@@ -96,5 +96,39 @@
       170481
     ],
     "note": "Descriptions matched exactly; botanical species/part holds remain unchanged."
+  },
+  "review_matrix_20261009": {
+    "policy": "Keep candidate records separate from master until exact scientific taxon and edible part are proven; no feeding verdict from food composition",
+    "candidates": [
+      {
+        "plant_id": "amaranthleaf",
+        "food_label": "Amaranth leaves, raw",
+        "taxon_gap": "USDA does not identify Amaranthus species",
+        "part_gap": "leaf and raw state stated",
+        "resolution_needed": "Authoritative USDA source metadata linking analyzed sample to taxon or exact species-matched food dataset"
+      },
+      {
+        "plant_id": "opuntiapad",
+        "food_label": "Nopales, raw",
+        "taxon_gap": "USDA does not identify Opuntia species",
+        "part_gap": "Nopales is a food common name; analyzed cladode identity should be documented",
+        "resolution_needed": "Official sample taxonomy and plant-part documentation"
+      },
+      {
+        "plant_id": "grapevineleaf",
+        "food_label": "Grape leaves, raw",
+        "taxon_gap": "USDA does not identify Vitis species; site is Vitis amurensis",
+        "part_gap": "leaf and raw state stated",
+        "resolution_needed": "Species-level source confirming Vitis amurensis or separate same-species composition"
+      },
+      {
+        "plant_id": "borage",
+        "food_label": "Borage, raw",
+        "taxon_gap": "USDA food description does not provide scientific taxon",
+        "part_gap": "Food description does not specify leaf/flower/other analyzed part",
+        "resolution_needed": "Primary USDA sample documentation for both species and plant part"
+      }
+    ],
+    "verified_master_eligible": 0
   }
 }
