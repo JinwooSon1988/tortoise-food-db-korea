@@ -27,6 +27,12 @@ by_group = {(item["plant_id"], item["species_group"]): item for item in assessme
 for key, verdict in expected_group_verdicts.items():
     assert key in by_group, f"Missing species-specific assessment: {key}"
     assert by_group[key]["verdict"] == verdict, f"Species-specific verdict changed; editorial review required: {key}"
+    assert by_group[key].get("evidence_ids"), f"Missing evidence references: {key}"
+    assert by_group[key].get("why", "").strip(), f"Missing feeding rationale: {key}"
+
+# The same plant can have different roles in Testudo and Sulcata diets.
+assert "혼합식" in by_group[("dandelion", "Mediterranean_Testudo")]["why"]
+assert "풀·건초" in by_group[("dandelion", "Sulcata")]["why"]
 
 def check(plant_id, expected_verdict, required_phrases):
     item = by_id[plant_id]
