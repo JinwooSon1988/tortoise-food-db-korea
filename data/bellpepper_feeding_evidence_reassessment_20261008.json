@@ -30,5 +30,17 @@
     "risk_of_current_reasoning": "Absence of published toxicity evidence is not affirmative evidence of feeding safety; a chemical composition study does not override specialist avoidance guidance",
     "recommended_action": "Expert review of grade C and rationale before changing public suitability; avoid automatically promoting or downgrading based on nutrient ratios alone"
   },
-  "feeding_grade_changed": false
+  "feeding_grade_changed": false,
+  "review_decision_20261009": {
+    "decision": "Current C grade is not independently substantiated by the cited nutrient chemistry; keep conflict explicitly unresolved pending assessment-level review.",
+    "source_hierarchy": "Specialist feeding guidance is relevant to husbandry; chemical nutrient data describe composition only and cannot establish feeding safety.",
+    "public_copy_risk": "Do not phrase C as demonstrated safe occasional feeding while a specialist source explicitly advises against feeding.",
+    "next_steps": [
+      "Verify original Tortoise Table page and scope of its pepper recommendation",
+      "Find species-specific primary feeding or veterinary evidence if available",
+      "Review existing C-grade rationale against the specialist warning",
+      "Publish a qualified recommendation only after documented editorial decision"
+    ],
+    "automatic_grade_change": false
+  }
 }
