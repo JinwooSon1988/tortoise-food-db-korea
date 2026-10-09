@@ -107,5 +107,26 @@
       "Species-level nutrient evidence can coexist with a feeding assessment that remains unresolved."
     ],
     "status": "Editorial guardrail only; not a generated-page or nutrition-schema change"
-  }
+  },
+  "additional_review_candidates": [
+    {
+      "plant_id": "mint",
+      "priority": "high",
+      "reason": "Current limited_supplement grade coexists with explanation advising to hold feeding until Mentha species is identified. Ensure verdict does not convey permission for unidentified mint.",
+      "required_check": "Species identity and species-specific specialist feeding source; coordinate with nutrition split without inheriting grade."
+    },
+    {
+      "plant_id": "sunflowerpetal",
+      "priority": "medium",
+      "reason": "Current limited_supplement grade rests on specialist guidance primarily scoped to sunflower leaves; flower petal applicability may be indirect.",
+      "required_check": "Locate petal-specific specialist guidance; do not transfer leaf grade to petals without support."
+    },
+    {
+      "plant_id": "geraniumleaf",
+      "priority": "medium",
+      "reason": "Pelargonium genus-level guidance is not automatically leaf-specific across cultivars and species.",
+      "required_check": "Confirm specialist source plant-part scope and distinguish Geranium from Pelargonium."
+    }
+  ],
+  "additional_candidate_status": "Flagged from canonical assessment explanations; not yet primary-source adjudicated"
 }
