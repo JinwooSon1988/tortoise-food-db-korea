@@ -128,5 +128,61 @@
       "required_check": "Confirm specialist source plant-part scope and distinguish Geranium from Pelargonium."
     }
   ],
-  "additional_candidate_status": "Flagged from canonical assessment explanations; not yet primary-source adjudicated"
+  "additional_candidate_status": "Flagged from canonical assessment explanations; not yet primary-source adjudicated",
+  "source_verified_findings_20261009": [
+    {
+      "plant_id": "marshmallow",
+      "taxon": "Althaea officinalis L.",
+      "source": "University of Zurich Vetpharm plant monograph",
+      "url": "https://www.vetpharm.uzh.ch/GIFTDB/PFLANZEN/0471_bot.htm",
+      "original_claims": [
+        "Ungiftige Pflanze (keine Giftpflanze)",
+        "Bisher sind in der Literatur keine Vergiftungsfälle beim Tier beschrieben worden. Nicht geeignet als Futter!"
+      ],
+      "interpretation_ko": "독초로 분류하지 않고 동물 중독 보고도 없지만, 동시에 사료로 적합하지 않다고 명시한다. 따라서 현재의 긍정적 제한 보조 급여 판정은 출처와의 긴장을 해소할 필요가 있다.",
+      "direct_tortoise_feeding_trial": false,
+      "review_status": "source_wording_verified__grade_pending_editorial_decision"
+    },
+    {
+      "plant_id": "ginkgoleaf",
+      "taxon": "Ginkgo biloba L.",
+      "source": "The Tortoise Table Ginkgo plant entry",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=650",
+      "original_claims": [
+        "Feed Sparingly",
+        "few fallen leaves eaten are not expected to be concerning; avoid feeding large quantities and seeds"
+      ],
+      "interpretation_ko": "전문자료는 은행나무잎의 소량 우발 섭취와 계획적인 정기 급여를 구분한다. 현재 C등급은 대량 급여를 허용한다는 의미가 아니며, 종자에도 적용할 수 없다.",
+      "direct_tortoise_feeding_trial": false,
+      "review_status": "specialist_source_verified__avoid_extrapolating_dose"
+    },
+    {
+      "plant_id": "ginkgoleaf",
+      "taxon": "Ginkgo biloba L.",
+      "source": "EFSA FEEDAP 2024 assessment of ginkgo leaf tinctures",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11099737/",
+      "original_claims": [
+        "Risk evaluation of specified ginkgo leaf tinctures as feed additives at proposed low inclusion levels for listed animal categories"
+      ],
+      "interpretation_ko": "정해진 규격의 은행잎 팅크제에 대한 사료첨가제 위해평가이지, 육지거북에게 신선한 은행잎을 급여하는 시험이 아니다. 이를 생잎의 안전량으로 환산해서는 안 된다.",
+      "direct_tortoise_feeding_trial": false,
+      "review_status": "source_scope_verified__not_direct_feeding_evidence"
+    }
+  ],
+  "review_progress": {
+    "source_verified_items": [
+      "marshmallow",
+      "ginkgoleaf"
+    ],
+    "remaining_primary_source_checks": [
+      "kiwileaf",
+      "peachleaf",
+      "hosta",
+      "petunia",
+      "mint",
+      "sunflowerpetal",
+      "geraniumleaf"
+    ],
+    "public_grades_changed": false
+  }
 }
