@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "audit_date": "2026-10-09",
+  "scope": "Assessment evidence logic; excludes nutrition expansion",
+  "source_file": "data/public_assessments.json",
+  "reviewed_ids": [
+    "bellpepper",
+    "peachleaf",
+    "mapleleaf",
+    "dahlia"
+  ],
+  "findings": [
+    {
+      "plant_id": "bellpepper",
+      "severity": "high",
+      "issue": "Positive limited-supplement verdict is inferred despite specialist avoid-feeding guidance; cited chemistry paper is not affirmative tortoise-feeding evidence.",
+      "action": "Review grade and published rationale together; distinguish non-recommended fruit from proven acute toxicity."
+    },
+    {
+      "plant_id": "peachleaf",
+      "severity": "review",
+      "issue": "Assessment relies on limited-feeding specialist guidance and a leaf-extract paper; extract cytotoxicity does not establish safety of fresh leaves in tortoises.",
+      "action": "Verify specialist plant-part recommendation and keep extract findings explicitly non-clinical."
+    },
+    {
+      "plant_id": "mapleleaf",
+      "severity": "review",
+      "issue": "Genus-level Acer spp. guidance may not transfer safely to each species; current assessment recognizes this uncertainty.",
+      "action": "Check species identity and known species-specific hazards before promoting individual species."
+    },
+    {
+      "plant_id": "dahlia",
+      "severity": "review",
+      "issue": "Leaves/flowers and tubers are correctly distinguished in the existing assessment; mammalian effects are not direct tortoise evidence.",
+      "action": "Maintain part-specific caveat; check that all public cards preserve it."
+    }
+  ],
+  "policy": "Audit flags are not evidence of toxicity; do not alter public grades without primary-source review.",
+  "status": "independent_review_logged__public_assessments_unchanged"
+}
