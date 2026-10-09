@@ -3,6 +3,7 @@ import json, html, re, sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from public_verdict import load_assessments, representative, display, species_notes, scope_label, by_plant, public_plants
+from feeding_cautions import group_limits, localize_specialist_labels
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
@@ -804,7 +805,7 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .verdict{font-weight:950;font-size:clamp(27px,6vw,38px);line-height:1.12;letter-spacing:-.035em}.verdict{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.verdictbadge{display:inline-flex;align-items:center;justify-content:center;min-width:62px;height:62px;padding:0 12px;border-radius:16px;font-size:36px;font-weight:950;border:2px solid transparent}.decision[data-grade="A"] .verdictbadge{background:#d7eee0;color:#195f39;border-color:#a8d3b6}.decision[data-grade="B"] .verdictbadge{background:#ddebfa;color:#225c98;border-color:#aecde9}.decision[data-grade="C"] .verdictbadge{background:#f4cb73;color:#4c3407;border-color:#e1b553}.decision[data-grade="D"] .verdictbadge{background:#f8d8d5;color:#963a31;border-color:#e9b1aa}@media(max-width:620px){.verdictbadge{min-width:54px;height:54px;font-size:30px}.verdict{gap:10px}}
 .meaning{font-size:16px;font-weight:750;margin:10px 0 0}
 .decisionwhy{font-size:16px;line-height:1.72;margin:14px 0 0;padding:13px 15px;background:rgba(255,255,255,.58);border:1px solid rgba(0,0,0,.07);border-radius:13px;color:#24352b}.decisionwhy b{display:block;font-size:14px;color:var(--text);margin-bottom:5px;font-weight:900}.whyfold>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:15px;font-weight:900;color:var(--forest)}.whyfold>p{margin:8px 0 0;line-height:1.7}.whyfold>summary:focus-visible{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}
-.practical{padding:16px 18px}.practical p{margin:4px 0 0;font-size:15px}.practical .partscope{font-size:13px;color:var(--muted);margin-top:8px}.practical b{color:var(--forest)}.practical .partscope{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;border-top:1px solid var(--line);padding-top:10px}.partlabel{color:var(--muted);min-width:62px}.partvalue{color:var(--text);font-weight:850}
+.cautions{padding:16px 18px}.cautions h2{margin:0 0 6px}.cautionintro{font-size:13px;color:var(--muted);margin:0 0 8px}.cautiongroup{border-left:4px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0;background:#fafbfa;min-width:0}.cautiongroup h3{margin:0 0 2px;font-size:15px}.cautiongroup .cautionnote{margin:0 0 6px;font-size:12px;color:var(--muted)}.cautiongroup ul,.cautionevidence ul{margin:0;padding-left:18px}.cautiongroup li,.cautionevidence li{font-size:14px;line-height:1.55;margin:3px 0;overflow-wrap:anywhere}.cg-risk{border-left-color:#c0392b;background:#fff6f5}.cg-scope{border-left-color:#2f6f9f;background:#f4f8fb}.cg-practice{border-left-color:#2e7d4f;background:#f4faf6}.cautionevidence{margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:#fff}.cautionevidence summary{cursor:pointer;font-weight:800;font-size:14px;min-height:32px}.cautionevidence .cautionnote{font-size:12px;color:var(--muted);margin:6px 0}.practical{padding:16px 18px}.practical p{margin:4px 0 0;font-size:15px}.practical .partscope{font-size:13px;color:var(--muted);margin-top:8px}.practical b{color:var(--forest)}.practical .partscope{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;border-top:1px solid var(--line);padding-top:10px}.partlabel{color:var(--muted);min-width:62px}.partvalue{color:var(--text);font-weight:850}
 .species-specific{background:#fbfcfb;padding:14px 18px}.species-specific h2{font-size:15px}.speciesexception{border-top:1px solid var(--line);padding:9px 0 0;margin-top:9px}.speciesexception>div{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:14px}.speciesexception>div span{flex:0 0 auto;font-size:12px;font-weight:800;color:var(--forest)}.speciesexception p{margin:4px 0 0;font-size:13px;color:var(--muted)}
 .evidencelink{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;padding:8px 12px;border:1px solid #b7d0bd;border-radius:10px;background:#fff;color:#174d32;font-weight:800;font-size:13px;text-decoration:none}.evidencelink:hover{background:#edf4ef}.evidencelink:focus-visible{outline:3px solid #7cb48d;outline-offset:3px}#evidence{scroll-margin-top:20px}.speciesdetail>summary{cursor:pointer;min-height:44px;padding:10px 0;font-size:13px;font-weight:800;color:var(--forest)}.speciesdetail>summary:focus-visible{outline:3px solid #7cb48d;outline-offset:2px}.speciesdetail p{margin:0 0 10px;line-height:1.7;overflow-wrap:anywhere}.scopefold{margin-top:2px}.scopefold>summary{cursor:pointer;min-height:44px;font-weight:850;color:var(--forest);padding:9px 2px;list-style-position:inside;border-radius:8px}.scopefold>summary:focus-visible{outline:3px solid rgba(40,106,70,.28);outline-offset:3px}.scopebody{padding-top:4px}.scopebody>div{padding:12px 0;border-top:1px solid var(--line)}.scopebody>div:first-of-type{border-top:0;padding-top:4px}.scopecard p{margin:4px 0 0;font-size:14px}
 .identity-alert{background:#fff8e6;border:1px solid #e8cf86;border-left:5px solid #a07b16;border-radius:12px;padding:12px 14px!important;margin:6px 0}.identity-alert h3{color:#6d5207}
@@ -907,6 +908,7 @@ for p in plants:
     # Species-specific evidence remains traceable in the evidence cards/species exception section.
 
     # Smooth recurring database/proof-style Korean without changing evidential strength.
+    summary_display=localize_specialist_labels(summary_display)
     summary_display=summary_display.replace("보조 채소로만 적용한다", "보조 채소로만 사용한다")
     summary_display=summary_display.replace("소량 보조로만 적용한다", "소량 보조로만 사용한다")
     summary_display=summary_display.replace("작은 보조 구성으로만 적용한다", "작은 보조 구성으로만 사용한다")
@@ -932,6 +934,17 @@ for p in plants:
     role_html=(f'<p class="roleline"><span>이 식물의 역할</span> {esc(role)}</p>' if role else "")
     quantity_inline=(" · 정량 기준은 확인된 원자료 범위에서만 적용" if quantified else "")
     practical_html=(f'''<section class="card practical"><h2>어떻게 먹이나</h2><p><b>{esc(feeding_action)}</b></p>{role_html}<p class="partscope"><span class="partlabel">급여 부위</span><strong class="partvalue">{esc(part_note)}</strong>{quantity_inline}</p></section>''' if a else "")
+    # 2b) Feeding cautions: the assessment limits, de-duplicated and grouped (scripts/feeding_cautions.py).
+    # Hazards, species/part scope and feeding method are visible; evidence gaps are folded. Text stays verbatim.
+    caution_groups=group_limits([localize_specialist_labels(assessment_copy(x, a)) for x in ((a or {}).get("limits") or [])])
+    caution_parts=[]
+    for key,label,note,items in caution_groups:
+        lis="".join(f"<li>{rich(x)}</li>" for x in items)
+        if key=="evidence":
+            caution_parts.append(f'<details class="cautionevidence" data-caution="evidence"><summary>{esc(label)} {len(items)}건 보기</summary><p class="cautionnote">{esc(note)}</p><ul>{lis}</ul></details>')
+        else:
+            caution_parts.append(f'<div class="cautiongroup cg-{key}" data-caution="{key}"><h3>{esc(label)}</h3><p class="cautionnote">{esc(note)}</p><ul>{lis}</ul></div>')
+    cautions_html=(f'''<section class="card cautions" id="cautions"><h2>급여 시 주의할 점</h2><p class="cautionintro">판정의 세부 조건이다. 위의 등급과 함께 확인한다.</p>{"".join(caution_parts)}</section>''' if caution_parts else "")
 
     # 3) Species-specific notes: visually subordinate; they never replace the default verdict.
     species_rows=[]
@@ -1163,7 +1176,7 @@ for p in plants:
 @media(max-width:620px){{.decisionwhy{{padding:13px 14px;font-size:15px;line-height:1.65}}}}
 @media(prefers-reduced-motion:reduce){{.evidencefold>summary{{transition:none}}}}
 </style></head><body>
-<a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><nav class="detailnavlinks" aria-label="페이지 이동"><a href="../../index.html">⌂ 홈</a><button type="button" onclick="if(history.length>1)history.back();else location.href='../../index.html'">← 뒤로</button></nav><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{header_photo_html}</div>{decision_html}{practical_html}{species_specific_html}{scope_html}{nutrition_html}{deep_html}{footer_html}</main><footer class="pagefooter"><nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></footer><script src="../../language-toggle.js?v=20261004-1" defer></script></body></html>'''
+<a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><nav class="detailnavlinks" aria-label="페이지 이동"><a href="../../index.html">⌂ 홈</a><button type="button" onclick="if(history.length>1)history.back();else location.href='../../index.html'">← 뒤로</button></nav><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{header_photo_html}</div>{decision_html}{practical_html}{cautions_html}{species_specific_html}{scope_html}{nutrition_html}{deep_html}{footer_html}</main><footer class="pagefooter"><nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></footer><script src="../../language-toggle.js?v=20261004-1" defer></script></body></html>'''
     # Final Korean morphology guard for legacy mixed-language evidence strings.
     doc=doc.replace("급여하지 않음로", "급여하지 않음으로").replace("제한 급여으로", "제한 급여로")
     (d/"index.html").write_text(doc,encoding="utf-8")
