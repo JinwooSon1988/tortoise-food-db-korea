@@ -45,5 +45,28 @@
       "feeding_verdict_use": false,
       "master_eligible": false
     }
-  ]
+  ],
+  "original_csv_audit": {
+    "checked_files": [
+      "food.csv",
+      "food_nutrient.csv",
+      "nutrient.csv"
+    ],
+    "release": "2018-04",
+    "verified_fdc_ids": [
+      173474,
+      173475
+    ],
+    "nutrient_id_mapping": {
+      "water_g": 1051,
+      "protein_g": 1003,
+      "fiber_g": 1079,
+      "calcium_mg": 1087,
+      "phosphorus_mg": 1091,
+      "potassium_mg": 1092,
+      "vitamin_c_mg": 1162
+    },
+    "result": "all 14 displayed numeric nutrient values match original USDA CSV rows; original food descriptions also match",
+    "limits": "Food name and nutrient amounts verified, but source does not establish precise taxonomic species and plant part; retain master_eligible=false"
+  }
 }
