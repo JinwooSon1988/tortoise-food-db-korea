@@ -14,7 +14,7 @@
       "plant_id": "bellpepper",
       "severity": "high",
       "issue": "Positive limited-supplement verdict is inferred despite specialist avoid-feeding guidance; cited chemistry paper is not affirmative tortoise-feeding evidence.",
-      "action": "Review grade and published rationale together; distinguish non-recommended fruit from proven acute toxicity."
+      "action": "Canonical verdict updated to do_not_feed; verify regenerated plant page, caution-foods and market-foods against canonical grade."
     },
     {
       "plant_id": "peachleaf",
@@ -36,9 +36,9 @@
     }
   ],
   "policy": "Audit flags are not evidence of toxicity; do not alter public grades without primary-source review.",
-  "status": "independent_review_logged__public_assessments_unchanged",
+  "status": "bellpepper_public_assessment_corrected__generated_page_sync_pending",
   "followup_20261009": {
-    "verified_from_live_repository": true,
+    "verified_from_live_repository": false,
     "assessment_record_count": 186,
     "verified_assessment_ids": [
       "peachleaf",
@@ -46,10 +46,14 @@
       "dahlia",
       "bellpepper"
     ],
-    "all_four_current_verdict": "limited_supplement",
-    "all_four_current_confidence": "C",
-    "bellpepper_evidence_gap": "Chemical composition paper cannot by itself establish a positive feeding recommendation against specialist avoid-feeding advice.",
-    "next_review_gate": "Do not change public feeding verdict before source-by-source review of directness and species/plant-part applicability."
+    "bellpepper_evidence_gap": "Resolved in canonical assessment: chemical-composition evidence cannot establish positive feeding safety; precautionary planned-feeding exclusion does not imply proven toxicity.",
+    "next_review_gate": "Generated public cards and search listings must match the canonical bellpepper verdict; verify independently after Claude regeneration.",
+    "current_verdicts": {
+      "bellpepper": "do_not_feed",
+      "peachleaf": "limited_supplement",
+      "mapleleaf": "limited_supplement",
+      "dahlia": "limited_supplement"
+    }
   },
   "conflict_keyword_screen_20261009": {
     "scope": "data/public_assessments.json",
@@ -66,6 +70,20 @@
       "dahlia": "part_specific_caveat; avoid tuber/root while leaves/flowers have separate restricted guidance",
       "bellpepper": "substantive_conflict; specialist avoid-feeding guidance for fruit versus positive limited-supplement verdict"
     },
-    "conclusion": "Only bellpepper is a clear conflict from this narrow screening; no automatic grade changes."
+    "conclusion": "Historical scan found one substantive conflict (bellpepper), now corrected in canonical assessment; generated public pages still require synchronization."
+  },
+  "resolution_20261009": {
+    "canonical_source": "data/public_assessments.json",
+    "bellpepper_verdict": "do_not_feed",
+    "bellpepper_role": "계획 급여 비권장",
+    "safety_interpretation": "Precautionary exclusion from planned feeding, not proof of acute toxicity or a known toxic dose.",
+    "regeneration_owner": "Claude (generator and public pages)",
+    "editorial_owner": "ChatGPT (evidence scope and conflict audit)",
+    "ci_failure_root_causes": [
+      "caution-foods and market-foods retained stale C grade",
+      "plant/bellpepper/index.html differed from generator output"
+    ],
+    "korean_copy_issue": "Fixed in commit 795a508; latest CI check needed",
+    "deployment_verified_for_current_generated_cards": false
   }
 }
