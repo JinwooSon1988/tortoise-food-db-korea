@@ -453,8 +453,11 @@
       "mapping_status": "canonical_search_name_only",
       "rule": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
       "aliases": [
-        "민트"
-      ]
+        "민트",
+        "스피어민트",
+        "페퍼민트"
+      ],
+      "species_note": "페퍼민트(Mentha × piperita)·스피어민트(Mentha spicata)는 민트(Mentha spp.)의 서로 다른 종이다. 검색 시 민트 페이지의 종별 구역으로 연결되며, 속 전체 판정을 종별 판정으로 확정하지 않는다."
     },
     {
       "plant_id": "perilla",

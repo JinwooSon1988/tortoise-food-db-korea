@@ -8,8 +8,8 @@
    disappearing on the next deploy (deploy-pages.yml runs the generator before publishing).
 2. Checks data-driven content contracts that must survive regeneration:
    - timothy: verified photo, creator, licence and Commons source link from verified_plant_images_v56.json
-   - mint: peppermint/spearmint USDA candidate cards (FDC ID, food name, values, Ca:P, source link),
-     hold wording and candidate data link, while the master nutrition stays "검증된 영양자료 없음"
+   - mint: peppermint/spearmint species sections (FDC ID, food name, values, Ca:P, source link, separate
+     feeding-evidence box), while the genus master nutrition stays "검증된 영양자료 없음"
    - lettuce: five USDA variety cards with values and Ca:P, data-computed comparison summary and data link
 """
 import json, shutil, subprocess, sys, tempfile
@@ -32,8 +32,7 @@ t = page("timothy")
 for needle in (img["image_url"], img["source_url"], img["creator"], img["license"]):
     if needle not in t: errors.append(f"timothy: verified photo field missing from page: {needle}")
 
-for pid, path, labels in (("mint", "data/usda_mint_variety_candidates_20261009.json", None),
-                          ("lettuce", "data/plant_nutrition_variety_v1.json", None)):
+for pid, path, labels in (("lettuce", "data/plant_nutrition_variety_v1.json", None),):
     data = load(path)
     sec = nutrition_section(page(pid))
     if "검증된 영양자료 없음" not in sec: errors.append(f"{pid}: master nutrition must stay '검증된 영양자료 없음'")
@@ -45,8 +44,19 @@ for pid, path, labels in (("mint", "data/usda_mint_variety_candidates_20261009.j
                        f"<strong>{r['fiber_g']}g</strong>", f"<strong>{r['vitamin_c_mg']}mg</strong>", f"<strong>{r['calcium_phosphorus_ratio']}:1</strong>"):
             if needle not in card: errors.append(f"{pid}: FDC {r['fdc_id']} card missing {needle!r}")
     if "minmax(min(100%," not in sec: errors.append(f"{pid}: variety grid must shrink below its minimum on narrow screens")
+# Mint: species-level peppermint/spearmint sections (data/mentha_species_nutrition_v1.json) replaced the
+# candidate cards; each USDA FDC record is rendered exactly once and the genus master stays without values.
 mint_sec = nutrition_section(page("mint"))
-for needle in ("종·부위 확인 전", "검증된 영양자료 없음’ 상태를 유지", "../../data/usda_mint_variety_candidates_20261009.json", "육지거북 급여 안전성"):
+if "검증된 영양자료 없음" not in mint_sec: errors.append("mint: master nutrition must stay '검증된 영양자료 없음'")
+ms = load("data/mentha_species_nutrition_v1.json")
+if mint_sec.count('class="varietycard"') != len(ms["species"]): errors.append(f"mint: expected {len(ms['species'])} species cards")
+for sp in ms["species"]:
+    n = sp["nutrition"]
+    card = mint_sec.split(f'href="{n["source_url"]}"', 1)[0].rsplit('<article class="varietycard"', 1)[-1]
+    for needle in (f"FDC {n['fdc_id']}", n["food_description"], f"<strong>{n['values']['calcium_mg']}mg</strong>", f"<strong>{n['values']['phosphorus_mg']}mg</strong>",
+                   f"<strong>{n['values']['fiber_g']}g</strong>", f"<strong>{n['values']['vitamin_c_mg']}mg</strong>", f"<strong>{n['calcium_phosphorus_ratio']}:1</strong>"):
+        if needle not in card: errors.append(f"mint: FDC {n['fdc_id']} card missing {needle!r}")
+for needle in ("검증된 영양자료 없음’ 상태를 유지", "../../data/mentha_species_nutrition_v1.json", "육지거북 급여 안전성", "검토 보류", "급여 근거 · 영양자료와 별개"):
     if needle not in mint_sec: errors.append(f"mint: missing {needle!r}")
 let_sec = nutrition_section(page("lettuce"))
 recs = load("data/plant_nutrition_variety_v1.json")["records"]

@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-09",
+  "parent_master_plant_id": "mint",
+  "parent_master_scientific": "Mentha spp.",
+  "purpose": "Separate species-level nutrition for peppermint and spearmint without changing the genus-level mint master or its verdict.",
+  "publication": {
+    "public_plant_pages": false,
+    "shown_on": "plant/mint/index.html (species sections)",
+    "structural_reason": "Separate public plant pages require rows in data/public_assessments.json, a verdict code in public_verdict.py/verdict-core.js and evidence records naming the plants; those files belong to the separate feeding-safety review and were not modified."
+  },
+  "replaces_display_of": "data/usda_mint_variety_candidates_20261009.json (same FDC records; the candidate file is kept as history and no longer rendered, so each FDC record is shown once)",
+  "rda_peppermint_record": {
+    "source_id": "R118-059000001-0000",
+    "food_description": "페퍼민트_생것",
+    "data_generation_method": "수집 (literature-collected, 2018-12-31)",
+    "independence": "not independent: water, protein, fat, carbohydrate, fibre, Ca, P, K, Na, Fe and vitamin C equal USDA FDC 173474; vitamin A differs (RDA 0 vs USDA 212 µg RAE) and RDA states refuse 39%",
+    "decision": "not used"
+  },
+  "species": [
+    {
+      "species_key": "peppermint",
+      "ko": "페퍼민트",
+      "en": "Peppermint",
+      "scientific_name": "Mentha × piperita L.",
+      "synonyms_or_names": [
+        "서양박하 (식약처 원료명)",
+        "Mentha piperita (The Tortoise Table 표기)"
+      ],
+      "not_same_as": "식약처 #774 ‘박하’(Mentha arvensis var. piperascens; GBIF에서 Mentha canadensis L.의 이명)는 영문 별칭이 Peppermint이지만 다른 종이다.",
+      "identity_sources": [
+        {
+          "name": "MFDS 식품원료목록",
+          "record": "#1009 서양박하 — 이명 페퍼민트, Peppermint — Mentha x piperita L. (사용부위 잎)",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04",
+          "checked_at": "2026-10-09"
+        },
+        {
+          "name": "GBIF Backbone Taxonomy",
+          "record": {
+            "key": 8707933,
+            "name": "Mentha × piperita L.",
+            "status": "ACCEPTED"
+          },
+          "url": "https://www.gbif.org/species/8707933",
+          "checked_at": "2026-10-09"
+        },
+        {
+          "name": "USDA FoodData Central SR Legacy scientificName",
+          "record": "Mentha x piperita L. nothosubsp. piperita",
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "nutrition": {
+        "source_name": "USDA FoodData Central",
+        "data_type": "SR Legacy",
+        "release": "2018-04",
+        "fdc_id": 173474,
+        "food_description": "Peppermint, fresh",
+        "source_url": "https://fdc.nal.usda.gov/food-details/173474/nutrients",
+        "archive": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+        "archive_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+        "basis": "per 100 g fresh (raw) edible portion",
+        "plant_part": "not stated by USDA (household portions are expressed in leaves)",
+        "preparation_state": "raw (fresh)",
+        "values": {
+          "protein_g": 3.75,
+          "fiber_g": 8,
+          "iron_mg": 5.08,
+          "magnesium_mg": 80,
+          "phosphorus_mg": 73,
+          "sodium_mg": 31,
+          "vitamin_c_mg": 31.8,
+          "fat_g": 0.94,
+          "water_g": 78.65,
+          "calcium_mg": 243,
+          "potassium_mg": 569,
+          "vitamin_a_rae_ug": 212
+        },
+        "data_points": {
+          "protein_g": 2,
+          "fiber_g": 2,
+          "iron_mg": 2,
+          "magnesium_mg": 2,
+          "phosphorus_mg": 2,
+          "sodium_mg": 2,
+          "vitamin_c_mg": 2,
+          "fat_g": 2,
+          "water_g": 2,
+          "calcium_mg": 2,
+          "potassium_mg": 2,
+          "vitamin_a_rae_ug": 2
+        },
+        "derivation": "A (analytical) for every stored value",
+        "not_shown_calculated": [
+          "carbohydrate_g",
+          "energy_kcal"
+        ],
+        "calcium_phosphorus_ratio": 3.33,
+        "unconfirmed": [
+          "analysed plant part (USDA does not state it)"
+        ],
+        "dried_records_not_converted": "USDA FDC 172239 Spearmint, dried and RDA 민트_말린것 are dried products and are never converted to fresh values."
+      },
+      "feeding": {
+        "site_verdict_status": "review_pending",
+        "site_verdict_display_ko": "검토 보류 — 이 종에 대한 사이트 급여 등급은 아직 없다.",
+        "inheritance": "The genus-level 민트(Mentha spp.) verdict is not inherited.",
+        "specialist_database_context": {
+          "source": "The Tortoise Table",
+          "entry": "Peppermint (Mentha piperita)",
+          "classification": "Do not Feed",
+          "classification_ko": "급여하지 않음",
+          "reason_quote": "Peppermint contains the natural organic compound pulegone (also found in Pennyroyal), which has been found to cause liver damage and to be toxic to rats if consumed in large quantities.",
+          "reason_ko": "페니로열과 같은 풀레곤 성분을 근거로 급여 제외를 권한다(쥐 대량 섭취 독성 근거).",
+          "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=512",
+          "checked_at": "2026-10-09"
+        },
+        "nutrition_is_not_safety": true
+      },
+      "image": {
+        "status": "not_verified",
+        "display_ko": "종별 검증 사진 없음"
+      }
+    },
+    {
+      "species_key": "spearmint",
+      "ko": "스피어민트",
+      "en": "Spearmint",
+      "scientific_name": "Mentha spicata L.",
+      "synonyms_or_names": [
+        "녹양박하 (식약처 원료명)",
+        "Mentha viridis (L.) L. (이명)"
+      ],
+      "not_same_as": "페퍼민트(Mentha × piperita)·페니로열(Mentha pulegium)과 다른 종이다.",
+      "identity_sources": [
+        {
+          "name": "MFDS 식품원료목록",
+          "record": "#387 녹양박하 — 이명 스피어민트, 양박하, Spearmint — Mentha spicata L. / Mentha viridis L. (사용부위 잎)",
+          "url": "https://www.foodsafetykorea.go.kr/portal/safefoodlife/foodMeterial/foodMeterialDB.do?menu_no=2968&menu_grp=MENU_NEW04",
+          "checked_at": "2026-10-09"
+        },
+        {
+          "name": "GBIF Backbone Taxonomy",
+          "record": {
+            "key": 2927175,
+            "name": "Mentha spicata L.",
+            "status": "ACCEPTED",
+            "synonym_checked": "Mentha viridis (L.) L. = SYNONYM (accepted Mentha spicata subsp. spicata)"
+          },
+          "url": "https://www.gbif.org/species/2927175",
+          "checked_at": "2026-10-09"
+        },
+        {
+          "name": "USDA FoodData Central SR Legacy scientificName",
+          "record": "Mentha spicata",
+          "checked_at": "2026-10-09"
+        }
+      ],
+      "nutrition": {
+        "source_name": "USDA FoodData Central",
+        "data_type": "SR Legacy",
+        "release": "2018-04",
+        "fdc_id": 173475,
+        "food_description": "Spearmint, fresh",
+        "source_url": "https://fdc.nal.usda.gov/food-details/173475/nutrients",
+        "archive": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+        "archive_sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+        "basis": "per 100 g fresh (raw) edible portion",
+        "plant_part": "not stated by USDA (household portions are expressed in leaves)",
+        "preparation_state": "raw (fresh)",
+        "values": {
+          "fat_g": 0.73,
+          "water_g": 85.55,
+          "calcium_mg": 199,
+          "potassium_mg": 458,
+          "protein_g": 3.29,
+          "fiber_g": 6.8,
+          "iron_mg": 11.87,
+          "magnesium_mg": 63,
+          "phosphorus_mg": 60,
+          "sodium_mg": 30,
+          "vitamin_c_mg": 13.3,
+          "vitamin_a_rae_ug": 203
+        },
+        "data_points": {
+          "fat_g": 2,
+          "water_g": 2,
+          "calcium_mg": 2,
+          "potassium_mg": 2,
+          "protein_g": 2,
+          "fiber_g": 2,
+          "iron_mg": 2,
+          "magnesium_mg": 2,
+          "phosphorus_mg": 2,
+          "sodium_mg": 2,
+          "vitamin_c_mg": 2,
+          "vitamin_a_rae_ug": 2
+        },
+        "derivation": "A (analytical) for every stored value",
+        "not_shown_calculated": [
+          "carbohydrate_g",
+          "energy_kcal"
+        ],
+        "calcium_phosphorus_ratio": 3.32,
+        "unconfirmed": [
+          "analysed plant part (USDA does not state it)"
+        ],
+        "dried_records_not_converted": "USDA FDC 172239 Spearmint, dried and RDA 민트_말린것 are dried products and are never converted to fresh values."
+      },
+      "feeding": {
+        "site_verdict_status": "review_pending",
+        "site_verdict_display_ko": "검토 보류 — 이 종에 대한 사이트 급여 등급은 아직 없다.",
+        "inheritance": "The genus-level 민트(Mentha spp.) verdict is not inherited.",
+        "specialist_database_context": {
+          "source": "The Tortoise Table",
+          "entry": "Mint (Garden Mint, Spearmint, Apple Mint) — Mentha sachalinensis; M. spicata, M. suaveolens",
+          "classification": "Safe to Feed",
+          "classification_ko": "급여 가능",
+          "reason_quote": "do not confuse these mints with Peppermint (Mentha piperita), Pennyroyal (Mentha pulegium) or Purple Mint (Perilla)",
+          "reason_ko": "가든민트·애플민트와 함께 묶인 항목으로 분류하며, 페퍼민트·페니로열과 혼동하지 말라고 경고한다. 급여 비율·빈도나 거북 대상 시험 근거는 제시하지 않는다.",
+          "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=506",
+          "checked_at": "2026-10-09"
+        },
+        "nutrition_is_not_safety": true
+      },
+      "image": {
+        "status": "not_verified",
+        "display_ko": "종별 검증 사진 없음"
+      }
+    }
+  ]
+}

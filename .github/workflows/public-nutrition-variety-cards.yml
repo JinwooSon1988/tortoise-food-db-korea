@@ -7,6 +7,8 @@ on:
       - 'data/usda_mint_variety_candidates_20261009.json'
       - 'data/plant_nutrition_variety_v1.json'
       - 'data/tagetes_patula_species_nutrition_v1.json'
+      - 'data/mentha_species_nutrition_v1.json'
+      - 'scripts/build_mentha_species_v1.py'
       - 'data/academic_flower_nutrition_sources_20261009.json'
       - 'scripts/build_tagetes_patula_species_v1.py'
       - 'plant/mint/index.html'
@@ -26,6 +28,8 @@ on:
       - 'data/usda_mint_variety_candidates_20261009.json'
       - 'data/plant_nutrition_variety_v1.json'
       - 'data/tagetes_patula_species_nutrition_v1.json'
+      - 'data/mentha_species_nutrition_v1.json'
+      - 'scripts/build_mentha_species_v1.py'
       - 'data/academic_flower_nutrition_sources_20261009.json'
       - 'scripts/build_tagetes_patula_species_v1.py'
       - 'plant/mint/index.html'
@@ -55,6 +59,8 @@ jobs:
           python-version: '3.12'
       - name: Compare public cards to nutrition source records
         run: python scripts/audit_public_nutrition_variety_cards.py
+      - name: 페퍼민트·스피어민트 species sections stay consistent and scoped
+        run: python scripts/build_mentha_species_v1.py
       - name: 만수국 species cards equal the published tables and stay scoped
         run: python scripts/build_tagetes_patula_species_v1.py
       - name: Regenerated pages must equal committed pages (no hand-only content)

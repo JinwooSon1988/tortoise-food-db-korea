@@ -1026,17 +1026,40 @@ for p in plants:
                 f'<p class="small" style="margin:9px 0 0"><a class="sourceopen" href="{esc(r["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 보기<span class="sr-only"> (새 창)</span> ↗</a></p></article>')
     variety_grid_style = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px'
     if pid == "mint":
-        mint_data = json.loads((ROOT / "data/usda_mint_variety_candidates_20261009.json").read_text(encoding="utf-8"))
-        labels = {"peppermint": "페퍼민트", "spearmint": "스피어민트"}
-        cards = "".join(variety_card(labels[r["variety_key"]], r, "calcium_phosphorus_ratio") for r in mint_data["records"])
+        # Species-level peppermint/spearmint sections (data/mentha_species_nutrition_v1.json; QA:
+        # scripts/build_mentha_species_v1.py). Nutrition and feeding context are separate boxes; no grade is
+        # inherited from the genus-level 민트 verdict and no new grade is assigned here.
+        ms = json.loads((ROOT / "data/mentha_species_nutrition_v1.json").read_text(encoding="utf-8"))
+        def mint_species(s):
+            n, v, fc = s["nutrition"], s["nutrition"]["values"], s["feeding"]["specialist_database_context"]
+            cells = [("수분", v.get("water_g"), "g"), ("단백질", v.get("protein_g"), "g"), ("식이섬유", v.get("fiber_g"), "g"),
+                     ("칼슘", v.get("calcium_mg"), "mg"), ("인", v.get("phosphorus_mg"), "mg"), ("칼륨", v.get("potassium_mg"), "mg"),
+                     ("비타민 C", v.get("vitamin_c_mg"), "mg")]
+            grid = "".join(f'<div>{label} <strong>{"미확인" if x is None else f"{x}{u}"}</strong></div>' for label, x, u in cells)
+            grid += f'<div>Ca:P <strong>{n["calcium_phosphorus_ratio"]}:1</strong></div>'
+            sci = esc(s["scientific_name"]).replace(" L.", "")
+            names = " · ".join(esc(x) for x in s["synonyms_or_names"][:1])
+            return (f'<div class="mintspecies" style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:14px;background:#fff;min-width:0">'
+                    f'<h3 style="margin:0 0 2px">{esc(s["ko"])} <i lang="la">{sci}</i> L.</h3>'
+                    f'<p class="small" style="margin:0 0 10px">{names} · 종별 검증 사진 없음</p>'
+                    f'<article class="varietycard" style="border:1px solid #dce5dd;border-radius:12px;padding:12px;min-width:0;background:#f8faf8">'
+                    f'<h4 style="margin:0 0 4px;font-size:14px">영양성분 · 생것 가식부 100g</h4>'
+                    f'<p class="small" style="margin:0 0 8px;overflow-wrap:anywhere">USDA FDC {n["fdc_id"]} · <span lang="en">{esc(n["food_description"])}</span> · SR Legacy 2018-04 분석값</p>'
+                    f'<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;font-size:13px">{grid}</div>'
+                    f'<p class="small" style="margin:8px 0 0">분석 부위: <strong>미확인</strong>(USDA 미표기, 계량 단위는 잎). 탄수화물·에너지는 계산값이라 표시하지 않으며, 말린 민트 값은 환산하지 않습니다.</p>'
+                    f'<p class="small" style="margin:6px 0 0"><a class="sourceopen" href="{esc(n["source_url"])}" target="_blank" rel="noopener noreferrer">USDA 원문 보기<span class="sr-only"> (새 창)</span> ↗</a></p></article>'
+                    f'<div style="margin-top:10px;padding:12px;border:1px dashed #b9c4bb;border-radius:12px;background:#fbfbf7">'
+                    f'<h4 style="margin:0 0 4px;font-size:14px">급여 근거 · 영양자료와 별개</h4>'
+                    f'<p style="margin:0 0 6px"><strong>사이트 판정: 검토 보류</strong> — 이 종의 급여 등급은 아직 정하지 않았고, 위 민트 판정을 옮기지도 않습니다.</p>'
+                    f'<p class="small" style="margin:0">전문 육지거북 DB <a class="sourceopen" href="{esc(fc["url"])}" target="_blank" rel="noopener noreferrer">The Tortoise Table<span class="sr-only"> (새 창)</span></a>: '
+                    f'<strong>{esc(fc["classification_ko"])}</strong>. {esc(fc["reason_ko"])}</p></div></div>')
         note = ('<aside class="varietycompare" style="margin-top:14px;padding:14px;border:1px solid #d9e2da;border-radius:12px;background:#f8faf8">'
-                '<h3>USDA 민트류 참고 비교 · 종·부위 확인 전</h3>'
-                '<p>페퍼민트와 스피어민트의 공식 식품성분 참고자료입니다(생것 가식부 100g · USDA SR Legacy 2018-04). '
-                'USDA 식품명만으로는 정확한 종과 분석 부위를 확정할 수 없어 사이트의 민트(Mentha spp.)에 그대로 대입하지 않으며, '
-                '위의 ‘검증된 영양자료 없음’ 상태를 유지합니다. 민트(Mentha spp.) 전체의 검증된 영양값이나 육지거북 급여 안전성을 뜻하지 않습니다.</p>'
-                f'<div style="{variety_grid_style}">' + cards + '</div>'
-                '<p class="small">영양성분 차이는 육지거북 급여 안전성이나 적정 급여량을 입증하지 않습니다. '
-                '<a href="../../data/usda_mint_variety_candidates_20261009.json">검증 후보 원자료 파일</a></p></aside>')
+                '<h3>종별 민트: 페퍼민트와 스피어민트</h3>'
+                '<p>‘민트’는 여러 <i lang="la">Mentha</i> 종을 묶은 이름이라 위의 ‘검증된 영양자료 없음’ 상태를 유지합니다. '
+                '아래는 종이 확인된 두 종의 자료를 따로 정리한 것이며, 민트 전체의 대표값이 아닙니다. 영양성분 수치는 육지거북 급여 안전성을 뜻하지 않습니다.</p>'
+                + "".join(mint_species(s) for s in ms["species"]) +
+                '<p class="small">국내 ‘박하’(식약처 원료명)는 페퍼민트와 다른 종입니다. 농촌진흥청 ‘페퍼민트_생것’은 문헌 수집값으로 USDA 자료와 같아 별도 근거로 쓰지 않습니다. '
+                '<a href="../../data/mentha_species_nutrition_v1.json">종별 구조화 원자료 파일</a></p></aside>')
         nutrition_html = nutrition_html.replace("</section>", note + "</section>", 1)
 
     if pid == "lettuce":
