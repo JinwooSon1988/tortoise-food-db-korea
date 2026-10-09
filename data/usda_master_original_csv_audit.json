@@ -1,0 +1,959 @@
+{
+  "audit_date": "2026-10-09",
+  "kind": "original_usda_csv_direct_comparison",
+  "archives": {
+    "SR Legacy": {
+      "file": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+      "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+      "origin": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip"
+    },
+    "Foundation": {
+      "file": "FoodData_Central_foundation_food_csv_2026-04-30.zip",
+      "sha256": "70457ee9d9342f43bda2010318c85f04210c689fdeb9cd2da4c513b0e8dbc655",
+      "origin": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-04-30.zip"
+    }
+  },
+  "records": 34,
+  "values_checked": 484,
+  "values_aligned_to_csv": 58,
+  "note": "Differences were rounding only (USDA JSON editions/website-style 3 significant figures vs full CSV precision); no FDC ID or food identity changed.",
+  "changes": [
+    {
+      "field": "water_g",
+      "stored": 92.7,
+      "original_csv": 92.66,
+      "plant_id": "chard"
+    },
+    {
+      "field": "water_g",
+      "stored": 94.6,
+      "original_csv": 94.61,
+      "plant_id": "romaine"
+    },
+    {
+      "field": "water_g",
+      "stored": 93.8,
+      "original_csv": 93.79,
+      "plant_id": "endive"
+    },
+    {
+      "field": "water_g",
+      "stored": 95.1,
+      "original_csv": 95.11,
+      "plant_id": "watercress"
+    },
+    {
+      "field": "water_g",
+      "stored": 91.7,
+      "original_csv": 91.71,
+      "plant_id": "arugula"
+    },
+    {
+      "field": "water_g",
+      "stored": 89.6,
+      "original_csv": 89.62,
+      "plant_id": "collard"
+    },
+    {
+      "field": "water_g",
+      "stored": 89.7,
+      "original_csv": 89.67,
+      "plant_id": "turnipgreens"
+    },
+    {
+      "field": "water_g",
+      "stored": 92.2,
+      "original_csv": 92.18,
+      "plant_id": "cabbage"
+    },
+    {
+      "field": "water_g",
+      "stored": 87.7,
+      "original_csv": 87.71,
+      "plant_id": "parsley"
+    },
+    {
+      "field": "water_g",
+      "stored": 92.2,
+      "original_csv": 92.21,
+      "plant_id": "cilantro"
+    },
+    {
+      "field": "water_g",
+      "stored": 91,
+      "original_csv": 91.02,
+      "plant_id": "beetgreens"
+    },
+    {
+      "field": "water_g",
+      "stored": 90.7,
+      "original_csv": 90.69,
+      "plant_id": "broccolileaf"
+    },
+    {
+      "field": "water_g",
+      "stored": 95.2,
+      "original_csv": 95.23,
+      "plant_id": "cucumber"
+    },
+    {
+      "field": "water_g",
+      "stored": 92.1,
+      "original_csv": 92.06,
+      "plant_id": "basil"
+    },
+    {
+      "field": "water_g",
+      "stored": 86.8,
+      "original_csv": 86.81,
+      "plant_id": "sweetpotatoleaf"
+    },
+    {
+      "field": "water_g",
+      "stored": 86,
+      "original_csv": 85.95,
+      "plant_id": "dill"
+    },
+    {
+      "field": "water_g",
+      "stored": 73.3,
+      "original_csv": 73.32,
+      "plant_id": "grapeleaf"
+    },
+    {
+      "field": "carbohydrate_g",
+      "stored": 17.3,
+      "original_csv": 17.31,
+      "plant_id": "grapeleaf"
+    },
+    {
+      "field": "vitamin_a_rae_ug",
+      "stored": 1380,
+      "original_csv": 1376.0,
+      "plant_id": "grapeleaf"
+    },
+    {
+      "field": "water_g",
+      "stored": 94.5,
+      "original_csv": 94.52,
+      "plant_id": "tomato"
+    },
+    {
+      "field": "water_g",
+      "stored": 92.9,
+      "original_csv": 92.86,
+      "plant_id": "purslane"
+    },
+    {
+      "field": "water_g",
+      "stored": 65.1,
+      "original_csv": 65.11,
+      "plant_id": "thyme"
+    },
+    {
+      "field": "carbohydrate_g",
+      "stored": 24.4,
+      "original_csv": 24.45,
+      "plant_id": "thyme"
+    },
+    {
+      "field": "iron_mg",
+      "stored": 17.4,
+      "original_csv": 17.45,
+      "plant_id": "thyme"
+    },
+    {
+      "field": "vitamin_c_mg",
+      "stored": 160,
+      "original_csv": 160.1,
+      "plant_id": "thyme"
+    },
+    {
+      "field": "water_g",
+      "stored": 67.8,
+      "original_csv": 67.77,
+      "plant_id": "rosemary"
+    },
+    {
+      "field": "water_g",
+      "stored": 92.8,
+      "original_csv": 92.82,
+      "plant_id": "alfalfasprout"
+    },
+    {
+      "field": "water_g",
+      "stored": 94.5,
+      "original_csv": 94.54,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "protein_g",
+      "stored": 1.02,
+      "original_csv": 1.02375,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "fat_g",
+      "stored": 0.234,
+      "original_csv": 0.2338,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "carbohydrate_g",
+      "stored": 3.51,
+      "original_csv": 3.51495,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "fiber_g",
+      "stored": 1.26,
+      "original_csv": 1.259,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "calcium_mg",
+      "stored": 61.9,
+      "original_csv": 61.93,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "phosphorus_mg",
+      "stored": 30.5,
+      "original_csv": 30.51,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "potassium_mg",
+      "stored": 228,
+      "original_csv": 227.8,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "sodium_mg",
+      "stored": 14.3,
+      "original_csv": 14.27,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "magnesium_mg",
+      "stored": 13.6,
+      "original_csv": 13.64,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "iron_mg",
+      "stored": 0.439,
+      "original_csv": 0.4388,
+      "plant_id": "bokchoy"
+    },
+    {
+      "field": "water_g",
+      "stored": 94.2,
+      "original_csv": 94.24,
+      "plant_id": "napa"
+    },
+    {
+      "field": "protein_g",
+      "stored": 1.06,
+      "original_csv": 1.06375,
+      "plant_id": "napa"
+    },
+    {
+      "field": "calcium_mg",
+      "stored": 35,
+      "original_csv": 35.05,
+      "plant_id": "napa"
+    },
+    {
+      "field": "phosphorus_mg",
+      "stored": 34.4,
+      "original_csv": 34.38,
+      "plant_id": "napa"
+    },
+    {
+      "field": "potassium_mg",
+      "stored": 235,
+      "original_csv": 234.6,
+      "plant_id": "napa"
+    },
+    {
+      "field": "sodium_mg",
+      "stored": 12.6,
+      "original_csv": 12.65,
+      "plant_id": "napa"
+    },
+    {
+      "field": "magnesium_mg",
+      "stored": 11.3,
+      "original_csv": 11.26,
+      "plant_id": "napa"
+    },
+    {
+      "field": "iron_mg",
+      "stored": 0.255,
+      "original_csv": 0.2554,
+      "plant_id": "napa"
+    },
+    {
+      "field": "water_g",
+      "stored": 92.8,
+      "original_csv": 92.82,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "protein_g",
+      "stored": 1.31,
+      "original_csv": 1.30875,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "fat_g",
+      "stored": 0.143,
+      "original_csv": 0.1431,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "carbohydrate_g",
+      "stored": 4.96,
+      "original_csv": 4.96125,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "fiber_g",
+      "stored": 2.11,
+      "original_csv": 2.114,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "calcium_mg",
+      "stored": 30.9,
+      "original_csv": 30.91,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "phosphorus_mg",
+      "stored": 35.5,
+      "original_csv": 35.47,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "potassium_mg",
+      "stored": 335,
+      "original_csv": 334.6,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "sodium_mg",
+      "stored": 8.08,
+      "original_csv": 8.076,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "magnesium_mg",
+      "stored": 13,
+      "original_csv": 12.95,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "iron_mg",
+      "stored": 0.401,
+      "original_csv": 0.4006,
+      "plant_id": "radicchio"
+    },
+    {
+      "field": "vitamin_c_mg",
+      "stored": 6.18,
+      "original_csv": 6.181,
+      "plant_id": "radicchio"
+    }
+  ],
+  "per_record": [
+    {
+      "plant_id": "chicory",
+      "fdc_id": 169992,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": []
+    },
+    {
+      "plant_id": "chard",
+      "fdc_id": 169991,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.7,
+          "original_csv": 92.66
+        }
+      ]
+    },
+    {
+      "plant_id": "romaine",
+      "fdc_id": 169247,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 94.6,
+          "original_csv": 94.61
+        }
+      ]
+    },
+    {
+      "plant_id": "endive",
+      "fdc_id": 168412,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 93.8,
+          "original_csv": 93.79
+        }
+      ]
+    },
+    {
+      "plant_id": "watercress",
+      "fdc_id": 170068,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 95.1,
+          "original_csv": 95.11
+        }
+      ]
+    },
+    {
+      "plant_id": "spinach",
+      "fdc_id": 168462,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": []
+    },
+    {
+      "plant_id": "arugula",
+      "fdc_id": 169387,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 91.7,
+          "original_csv": 91.71
+        }
+      ]
+    },
+    {
+      "plant_id": "collard",
+      "fdc_id": 170406,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 89.6,
+          "original_csv": 89.62
+        }
+      ]
+    },
+    {
+      "plant_id": "mustard",
+      "fdc_id": 169256,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": []
+    },
+    {
+      "plant_id": "turnipgreens",
+      "fdc_id": 170061,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 89.7,
+          "original_csv": 89.67
+        }
+      ]
+    },
+    {
+      "plant_id": "cabbage",
+      "fdc_id": 169975,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.2,
+          "original_csv": 92.18
+        }
+      ]
+    },
+    {
+      "plant_id": "parsley",
+      "fdc_id": 170416,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 87.7,
+          "original_csv": 87.71
+        }
+      ]
+    },
+    {
+      "plant_id": "cilantro",
+      "fdc_id": 169997,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.2,
+          "original_csv": 92.21
+        }
+      ]
+    },
+    {
+      "plant_id": "beetgreens",
+      "fdc_id": 170375,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 91,
+          "original_csv": 91.02
+        }
+      ]
+    },
+    {
+      "plant_id": "broccolileaf",
+      "fdc_id": 169329,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 90.7,
+          "original_csv": 90.69
+        }
+      ]
+    },
+    {
+      "plant_id": "cucumber",
+      "fdc_id": 168409,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 95.2,
+          "original_csv": 95.23
+        }
+      ]
+    },
+    {
+      "plant_id": "basil",
+      "fdc_id": 172232,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.1,
+          "original_csv": 92.06
+        }
+      ]
+    },
+    {
+      "plant_id": "sweetpotatoleaf",
+      "fdc_id": 169303,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 86.8,
+          "original_csv": 86.81
+        }
+      ]
+    },
+    {
+      "plant_id": "dill",
+      "fdc_id": 172233,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 86,
+          "original_csv": 85.95
+        }
+      ]
+    },
+    {
+      "plant_id": "grapeleaf",
+      "fdc_id": 168575,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 73.3,
+          "original_csv": 73.32
+        },
+        {
+          "field": "carbohydrate_g",
+          "stored": 17.3,
+          "original_csv": 17.31
+        },
+        {
+          "field": "vitamin_a_rae_ug",
+          "stored": 1380,
+          "original_csv": 1376.0
+        }
+      ]
+    },
+    {
+      "plant_id": "tomato",
+      "fdc_id": 170457,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 94.5,
+          "original_csv": 94.52
+        }
+      ]
+    },
+    {
+      "plant_id": "chrysanthemumleaf",
+      "fdc_id": 169995,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": []
+    },
+    {
+      "plant_id": "lambs_lettuce",
+      "fdc_id": 169219,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 13,
+      "values_changed": []
+    },
+    {
+      "plant_id": "purslane",
+      "fdc_id": 169274,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 12,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.9,
+          "original_csv": 92.86
+        }
+      ]
+    },
+    {
+      "plant_id": "lambsquarters",
+      "fdc_id": 169244,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": []
+    },
+    {
+      "plant_id": "thyme",
+      "fdc_id": 173470,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 65.1,
+          "original_csv": 65.11
+        },
+        {
+          "field": "carbohydrate_g",
+          "stored": 24.4,
+          "original_csv": 24.45
+        },
+        {
+          "field": "iron_mg",
+          "stored": 17.4,
+          "original_csv": 17.45
+        },
+        {
+          "field": "vitamin_c_mg",
+          "stored": 160,
+          "original_csv": 160.1
+        }
+      ]
+    },
+    {
+      "plant_id": "rosemary",
+      "fdc_id": 173473,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 67.8,
+          "original_csv": 67.77
+        }
+      ]
+    },
+    {
+      "plant_id": "komatsuna",
+      "fdc_id": 168438,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": []
+    },
+    {
+      "plant_id": "alfalfasprout",
+      "fdc_id": 168384,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.8,
+          "original_csv": 92.82
+        }
+      ]
+    },
+    {
+      "plant_id": "mungbeansprout",
+      "fdc_id": 169957,
+      "data_type": "SR Legacy",
+      "description_match": true,
+      "values_checked": 15,
+      "values_changed": []
+    },
+    {
+      "plant_id": "kale",
+      "fdc_id": 323505,
+      "data_type": "Foundation",
+      "description_match": true,
+      "values_checked": 14,
+      "values_changed": []
+    },
+    {
+      "plant_id": "bokchoy",
+      "fdc_id": 2685572,
+      "data_type": "Foundation",
+      "description_match": true,
+      "values_checked": 12,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 94.5,
+          "original_csv": 94.54
+        },
+        {
+          "field": "protein_g",
+          "stored": 1.02,
+          "original_csv": 1.02375
+        },
+        {
+          "field": "fat_g",
+          "stored": 0.234,
+          "original_csv": 0.2338
+        },
+        {
+          "field": "carbohydrate_g",
+          "stored": 3.51,
+          "original_csv": 3.51495
+        },
+        {
+          "field": "fiber_g",
+          "stored": 1.26,
+          "original_csv": 1.259
+        },
+        {
+          "field": "calcium_mg",
+          "stored": 61.9,
+          "original_csv": 61.93
+        },
+        {
+          "field": "phosphorus_mg",
+          "stored": 30.5,
+          "original_csv": 30.51
+        },
+        {
+          "field": "potassium_mg",
+          "stored": 228,
+          "original_csv": 227.8
+        },
+        {
+          "field": "sodium_mg",
+          "stored": 14.3,
+          "original_csv": 14.27
+        },
+        {
+          "field": "magnesium_mg",
+          "stored": 13.6,
+          "original_csv": 13.64
+        },
+        {
+          "field": "iron_mg",
+          "stored": 0.439,
+          "original_csv": 0.4388
+        }
+      ]
+    },
+    {
+      "plant_id": "napa",
+      "fdc_id": 2727583,
+      "data_type": "Foundation",
+      "description_match": true,
+      "values_checked": 9,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 94.2,
+          "original_csv": 94.24
+        },
+        {
+          "field": "protein_g",
+          "stored": 1.06,
+          "original_csv": 1.06375
+        },
+        {
+          "field": "calcium_mg",
+          "stored": 35,
+          "original_csv": 35.05
+        },
+        {
+          "field": "phosphorus_mg",
+          "stored": 34.4,
+          "original_csv": 34.38
+        },
+        {
+          "field": "potassium_mg",
+          "stored": 235,
+          "original_csv": 234.6
+        },
+        {
+          "field": "sodium_mg",
+          "stored": 12.6,
+          "original_csv": 12.65
+        },
+        {
+          "field": "magnesium_mg",
+          "stored": 11.3,
+          "original_csv": 11.26
+        },
+        {
+          "field": "iron_mg",
+          "stored": 0.255,
+          "original_csv": 0.2554
+        }
+      ]
+    },
+    {
+      "plant_id": "radicchio",
+      "fdc_id": 2747664,
+      "data_type": "Foundation",
+      "description_match": true,
+      "values_checked": 12,
+      "values_changed": [
+        {
+          "field": "water_g",
+          "stored": 92.8,
+          "original_csv": 92.82
+        },
+        {
+          "field": "protein_g",
+          "stored": 1.31,
+          "original_csv": 1.30875
+        },
+        {
+          "field": "fat_g",
+          "stored": 0.143,
+          "original_csv": 0.1431
+        },
+        {
+          "field": "carbohydrate_g",
+          "stored": 4.96,
+          "original_csv": 4.96125
+        },
+        {
+          "field": "fiber_g",
+          "stored": 2.11,
+          "original_csv": 2.114
+        },
+        {
+          "field": "calcium_mg",
+          "stored": 30.9,
+          "original_csv": 30.91
+        },
+        {
+          "field": "phosphorus_mg",
+          "stored": 35.5,
+          "original_csv": 35.47
+        },
+        {
+          "field": "potassium_mg",
+          "stored": 335,
+          "original_csv": 334.6
+        },
+        {
+          "field": "sodium_mg",
+          "stored": 8.08,
+          "original_csv": 8.076
+        },
+        {
+          "field": "magnesium_mg",
+          "stored": 13,
+          "original_csv": 12.95
+        },
+        {
+          "field": "iron_mg",
+          "stored": 0.401,
+          "original_csv": 0.4006
+        },
+        {
+          "field": "vitamin_c_mg",
+          "stored": 6.18,
+          "original_csv": 6.181
+        }
+      ]
+    }
+  ]
+}

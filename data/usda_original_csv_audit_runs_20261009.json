@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Record of original USDA CSV audits actually executed, kept separate from internal CI consistency checks.",
+  "distinction": {
+    "original_source_audit": "reads the official USDA CSV ZIP (food.csv, food_nutrient.csv, nutrient.csv) and compares FDC ID, food description and each stored amount",
+    "internal_ci_check": "audit_usda_*_ci.py / audit_public_nutrition_variety_cards.py / qa_variety_card_regeneration_v1.py: compare repository data with repository pages and rules only; they never read USDA files and cannot prove USDA provenance"
+  },
+  "archives": {
+    "sr_legacy_2018_04": {
+      "file": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+      "sha256": "b80817294b8850530aaedf2e515c02593b1824f763a0ff356e5c2081643e6fd0",
+      "origin": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+      "obtained": "downloaded 2026-10-09 from the official USDA FDC dataset server (no user-supplied copy was found on drive D or in the repository)"
+    },
+    "foundation_2026_04_30": {
+      "file": "FoodData_Central_foundation_food_csv_2026-04-30.zip",
+      "sha256": "70457ee9d9342f43bda2010318c85f04210c689fdeb9cd2da4c513b0e8dbc655",
+      "origin": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-04-30.zip",
+      "obtained": "downloaded 2026-10-09 from the official USDA FDC dataset server"
+    }
+  },
+  "runs": [
+    {
+      "script": "scripts/audit_usda_lettuce_varieties.py",
+      "archive": "sr_legacy_2018_04",
+      "date": "2026-10-09",
+      "exit_code": 0,
+      "output": "PASS: 5 lettuce USDA food identities and 35 numeric nutrient values match original CSV"
+    },
+    {
+      "script": "scripts/audit_usda_mint_candidates.py",
+      "archive": "sr_legacy_2018_04",
+      "date": "2026-10-09",
+      "exit_code": 0,
+      "output": "PASS: 2 USDA mint foods, 14 original CSV nutrient values; both held from master and feeding verdict"
+    },
+    {
+      "script": "scripts/audit_usda_master_original_csv.py",
+      "archive": "both",
+      "date": "2026-10-09",
+      "exit_code": 1,
+      "output": "CHECKED: 34 USDA records, 484 values; 58 differ from original CSV (rounding only)"
+    },
+    {
+      "script": "scripts/audit_usda_master_original_csv.py --apply",
+      "archive": "both",
+      "date": "2026-10-09",
+      "exit_code": 0,
+      "output": "APPLIED: 58 values aligned to exact CSV amounts; details in data/usda_master_original_csv_audit.json"
+    },
+    {
+      "script": "scripts/audit_usda_master_original_csv.py",
+      "archive": "both",
+      "date": "2026-10-09",
+      "exit_code": 0,
+      "output": "CHECKED: 34 USDA records, 484 values; 0 differ from original CSV"
+    }
+  ],
+  "cross_check_note": "The same 49 lettuce/mint values were also compared with the USDA SR Legacy JSON 2018-04 edition: 42 identical, 7 water values differ only because the JSON edition rounds to 3 significant figures.",
+  "not_established": [
+    "Korean retail lettuce cultivar equivalence to USDA lettuce types",
+    "exact Mentha species and analysed plant part for USDA peppermint/spearmint",
+    "tortoise feeding suitability (composition never sets grades)"
+  ]
+}
