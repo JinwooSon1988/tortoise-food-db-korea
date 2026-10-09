@@ -129,6 +129,31 @@
         "resolution_needed": "Primary USDA sample documentation for both species and plant part"
       }
     ],
-    "verified_master_eligible": 0
+    "verified_master_eligible": 0,
+    "evidence_thresholds": {
+      "taxon": "Accepted scientific species identity must match the site's plant record; common food names alone are insufficient.",
+      "part": "Analyzed edible tissue must match the site plant part; leaves, roots, sprouts and cladodes are not interchangeable.",
+      "state": "Raw, cooked, canned, dried and other preparation states are distinct analytical matrices.",
+      "traceability": "Preserve FDC ID, exact source description, source URL, provenance and date of verification.",
+      "decision": "Keep HOLD if any required identity dimension remains unresolved; composition never determines feeding safety."
+    },
+    "review_priority": [
+      {
+        "plant_id": "grapevineleaf",
+        "reason": "Site is Vitis amurensis while USDA food label only says grape leaves; high-risk cross-species substitution."
+      },
+      {
+        "plant_id": "borage",
+        "reason": "Both taxon and edible part remain unverified."
+      },
+      {
+        "plant_id": "opuntiapad",
+        "reason": "Nopales label lacks species and explicit analyzed-part confirmation."
+      },
+      {
+        "plant_id": "amaranthleaf",
+        "reason": "Leaf/raw match is stated but Amaranthus species is unresolved."
+      }
+    ]
   }
 }
