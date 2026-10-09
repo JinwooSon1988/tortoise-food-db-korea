@@ -1,0 +1,64 @@
+{
+  "version": "1.0",
+  "created_at": "2026-10-09",
+  "scope": "Independent feeding safety and evidence-directness triage; no nutrition database or generated page edits",
+  "source": "data/public_assessments.json",
+  "method": "Manual review of currently published verdict, rationale, evidence identifiers and scope caveats; no new primary-source validation claimed",
+  "records": [
+    {
+      "plant_id": "kiwileaf",
+      "priority": "high",
+      "current_verdict": "limited_supplement",
+      "issue": "The assessment itself says no direct tortoise feeding evidence; cell genotoxicity and leaf chemistry do not establish a positive feeding recommendation.",
+      "review_gate": "Check whether a specialist tortoise-feeding source supports even occasional use. If not, distinguish unverified suitability from permitted supplementation.",
+      "do_not_infer": "Non-genotoxicity in cell assays means oral safety in tortoises."
+    },
+    {
+      "plant_id": "marshmallow",
+      "priority": "high",
+      "current_verdict": "limited_supplement",
+      "issue": "Cited veterinary toxicology source reportedly calls the plant unsuitable as feed, but the verdict permits occasional supplementation without tortoise feeding evidence.",
+      "review_gate": "Verify original Vetpharm wording and applicability; determine whether cautious non-recommendation is more faithful than a positive C grade.",
+      "do_not_infer": "Not classified as poisonous means suitable for planned feeding."
+    },
+    {
+      "plant_id": "ginkgoleaf",
+      "priority": "high",
+      "current_verdict": "limited_supplement",
+      "issue": "Ginkgolic acids are identified in leaves, while the supporting study is composition rather than tortoise oral safety evidence.",
+      "review_gate": "Verify the specialist feeding guidance and any relevant species/part-specific hazard data before affirming a positive grade.",
+      "do_not_infer": "Detection of ginkgolic acid proves tortoise toxicity or provides a safe dose."
+    },
+    {
+      "plant_id": "peachleaf",
+      "priority": "medium",
+      "current_verdict": "limited_supplement",
+      "issue": "Leaf extract cell effects are not equivalent to consumption of fresh leaves; part-specific source verification is necessary.",
+      "review_gate": "Confirm specialist source addresses fresh leaves, and explicitly exclude seeds/pits and unrelated plant parts.",
+      "do_not_infer": "Extract toxicity determines a safe or toxic feeding dose."
+    },
+    {
+      "plant_id": "hosta",
+      "priority": "medium",
+      "current_verdict": "limited_supplement",
+      "issue": "Genus-level advice and saponin concerns lack species-specific tortoise dose-response evidence.",
+      "review_gate": "Check whether genus-level advice applies to identifiable species and specific parts.",
+      "do_not_infer": "All Hosta species and parts share identical safety."
+    },
+    {
+      "plant_id": "petunia",
+      "priority": "medium",
+      "current_verdict": "limited_supplement",
+      "issue": "Family-level Solanaceae caution is not evidence of Petunia toxicity or oral safety.",
+      "review_gate": "Keep the distinction between taxonomic precaution and direct tortoise feeding evidence.",
+      "do_not_infer": "Solanaceae membership alone establishes toxicity."
+    }
+  ],
+  "editorial_policy": [
+    "Never promote an ingredient from unknown to positive feeding status solely because no toxicity case is reported.",
+    "Distinguish chemical composition, extracts, cell studies and non-tortoise toxicology from direct oral feeding evidence.",
+    "Record taxon and edible plant part before applying a verdict.",
+    "Do not change public grades without source-level verification and an accompanying user-facing explanation."
+  ],
+  "handoff": "Claude owns nutrition mapping and page generation; this queue is for independent feeding-evidence adjudication."
+}
