@@ -91,5 +91,21 @@
       "Record and disclose contradictions between specialist feeding sources and analytical studies."
     ],
     "adjudication_state": "Pending independent source-level verification; no grade changes authorized by this queue"
+  },
+  "cross_domain_safeguards": {
+    "purpose": "Prevent nutrition species splitting from silently inheriting feeding safety verdicts",
+    "applies_to": [
+      "Tagetes spp. → Tagetes patula",
+      "Mentha spp. → Mentha × piperita / Mentha spicata",
+      "Hosta spp. → named Hosta species"
+    ],
+    "requirements": [
+      "A nutrition taxon split does not establish tortoise feeding safety.",
+      "Keep existing genus-level feeding assessment unchanged unless independently reviewed.",
+      "New species-level feeding assessment must have its own source-to-species and source-to-plant-part linkage.",
+      "Never copy a genus-level positive grade to a species-level record solely because nutrient data exists.",
+      "Species-level nutrient evidence can coexist with a feeding assessment that remains unresolved."
+    ],
+    "status": "Editorial guardrail only; not a generated-page or nutrition-schema change"
   }
 }
