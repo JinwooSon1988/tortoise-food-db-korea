@@ -12,6 +12,22 @@ keys = [(item["plant_id"], item["species_group"]) for item in assessments]
 assert len(set(keys)) == len(keys), "Duplicate plant_id + species_group in public assessments"
 by_id = {item["plant_id"]: item for item in assessments if item["species_group"] == "Tortoise_general"}
 
+# Species-group records are intentionally separate, not accidental duplicates.
+expected_group_verdicts = {
+    ("dandelion", "Mediterranean_Testudo"): "supported_mixed_diet",
+    ("dandelion", "Sulcata"): "limited_mixed_diet",
+    ("plantain", "Mediterranean_Testudo"): "limited_mixed_diet",
+    ("plantain", "Sulcata"): "limited_mixed_diet",
+    ("clover", "Mediterranean_Testudo"): "limited_mixed_diet",
+    ("clover", "Sulcata"): "limited_mixed_diet",
+    ("chickweed", "Mediterranean_Testudo"): "limited_mixed_diet",
+    ("chickweed", "Sulcata"): "limited_mixed_diet",
+}
+by_group = {(item["plant_id"], item["species_group"]): item for item in assessments}
+for key, verdict in expected_group_verdicts.items():
+    assert key in by_group, f"Missing species-specific assessment: {key}"
+    assert by_group[key]["verdict"] == verdict, f"Species-specific verdict changed; editorial review required: {key}"
+
 def check(plant_id, expected_verdict, required_phrases):
     item = by_id[plant_id]
     assert item["verdict"] == expected_verdict, f"{plant_id}: grade changed; re-review source evidence and QA"
