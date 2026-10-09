@@ -152,5 +152,32 @@
     },
     "outcome": "All 5 exact food descriptions and 35 stored nutrient values independently rechecked against original CSV; all matched",
     "limits": "Korean retail lettuce cultivar equivalence not established; composition does not determine tortoise feeding suitability"
+  },
+  "original_csv_numeric_audit_20261009": {
+    "source_archive": "FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+    "source_files": [
+      "food.csv",
+      "food_nutrient.csv"
+    ],
+    "checked_fdc_ids": [
+      168429,
+      168431,
+      169247,
+      169248,
+      169249
+    ],
+    "checked_fields": [
+      "water_g",
+      "protein_g",
+      "fiber_g",
+      "calcium_mg",
+      "phosphorus_mg",
+      "potassium_mg",
+      "vitamin_c_mg"
+    ],
+    "verified_values_count": 35,
+    "food_descriptions_checked": 5,
+    "result": "All five original food.csv descriptions and all 35 stored nutrient values matched the original food_nutrient.csv records exactly",
+    "scope": "Food description and nutrient value verification; Korean retail cultivar mapping and tortoise feeding suitability are not established"
   }
 }
