@@ -33,5 +33,21 @@
       "source_description": "Turnip greens, canned, no salt added",
       "restriction": "Canned product cannot substitute for raw leaf data."
     }
-  ]
+  ],
+  "review_policy_20261009": {
+    "disallowed_inferences": [
+      "Sprouted seeds to mature leaves",
+      "Bulb or root to foliage",
+      "Cooked or canned greens to raw greens",
+      "Food-name similarity to exact botanical identity"
+    ],
+    "required_before_promotion": [
+      "Species-level botanical match",
+      "Exact edible-part match",
+      "Preparation-state match",
+      "Source record and analytical unit traceability"
+    ],
+    "status": "HOLD; no values transferred to verified nutrition master",
+    "feeding_verdict": "No feeding safety conclusion can be inferred from a food composition match"
+  }
 }
