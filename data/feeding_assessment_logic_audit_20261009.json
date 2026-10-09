@@ -36,5 +36,19 @@
     }
   ],
   "policy": "Audit flags are not evidence of toxicity; do not alter public grades without primary-source review.",
-  "status": "independent_review_logged__public_assessments_unchanged"
+  "status": "independent_review_logged__public_assessments_unchanged",
+  "followup_20261009": {
+    "verified_from_live_repository": true,
+    "assessment_record_count": 186,
+    "verified_assessment_ids": [
+      "peachleaf",
+      "mapleleaf",
+      "dahlia",
+      "bellpepper"
+    ],
+    "all_four_current_verdict": "limited_supplement",
+    "all_four_current_confidence": "C",
+    "bellpepper_evidence_gap": "Chemical composition paper cannot by itself establish a positive feeding recommendation against specialist avoid-feeding advice.",
+    "next_review_gate": "Do not change public feeding verdict before source-by-source review of directness and species/plant-part applicability."
+  }
 }
