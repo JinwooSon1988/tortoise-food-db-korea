@@ -39,6 +39,8 @@ assert "풀·건초" in by_group[("dandelion", "Sulcata")]["why"]
 def check(plant_id, required_phrases):
     item = by_id[plant_id]
     assert item.get("verdict"), f"{plant_id}: missing verdict"
+    assert item.get("evidence_ids"), f"{plant_id}: missing evidence references"
+    assert item.get("why", "").strip(), f"{plant_id}: missing rationale"
     text = " ".join([item.get("why", ""), item.get("applicability_note", ""), *item.get("limits", [])])
     for phrase in required_phrases:
         assert phrase in text, f"{plant_id}: missing critical scope caveat: {phrase}"
