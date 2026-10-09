@@ -8,8 +8,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 assessments = json.loads((ROOT / "data/public_assessments.json").read_text(encoding="utf-8"))
-by_id = {item["plant_id"]: item for item in assessments}
-assert len(by_id) == len(assessments), "Duplicate plant_id in public assessments"
+keys = [(item["plant_id"], item["species_group"]) for item in assessments]
+assert len(set(keys)) == len(keys), "Duplicate plant_id + species_group in public assessments"
+by_id = {item["plant_id"]: item for item in assessments if item["species_group"] == "Tortoise_general"}
 
 def check(plant_id, expected_verdict, required_phrases):
     item = by_id[plant_id]
