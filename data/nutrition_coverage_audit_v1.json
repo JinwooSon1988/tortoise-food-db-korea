@@ -2,13 +2,14 @@
   "schema_version": "1.0",
   "purpose": "Descriptive nutrition coverage audit. Coverage numbers never change feeding verdicts, grades or confidence.",
   "public_plants": 182,
-  "verified_plants": 57,
-  "held_plants": 125,
-  "coverage_percent": 31.3,
+  "verified_plants": 62,
+  "held_plants": 120,
+  "coverage_percent": 34.1,
   "by_source_name": {
     "German Nutrient Database BLS 4.0 (Max Rubner-Institut)": 1,
     "Indian Food Composition Tables 2017 (ICMR-NIN)": 3,
     "Korean Standard Food Composition Database (RDA)": 15,
+    "Peer-reviewed journal article (open access)": 5,
     "Standard Tables of Food Composition in Japan (MEXT)": 4,
     "USDA FoodData Central": 34
   },
@@ -18,12 +19,15 @@
     "Indian Food Composition Tables": 3,
     "Japan Standard Tables of Food Composition": 4,
     "Korean Standard Food Composition DB": 15,
+    "Peer-reviewed study": 5,
     "SR Legacy": 30
   },
   "by_source_kind": {
+    "academic_peer_reviewed": 5,
     "official_database": 57
   },
   "by_source_country": {
+    "Czech Republic": 5,
     "Germany": 1,
     "India": 3,
     "Japan": 4,
@@ -52,7 +56,7 @@
   },
   "hold_reasons": {
     "genus_level_master": 38,
-    "no_record_found": 46,
+    "no_record_found": 41,
     "part_ambiguous": 1,
     "part_mismatch": 24,
     "policy_hold": 2,
@@ -66,8 +70,8 @@
       "percent_of_public_plants": 31.3
     },
     "protein_g": {
-      "plants": 57,
-      "percent_of_public_plants": 31.3
+      "plants": 62,
+      "percent_of_public_plants": 34.1
     },
     "fat_g": {
       "plants": 55,
@@ -90,32 +94,32 @@
       "percent_of_public_plants": 14.3
     },
     "calcium_mg": {
-      "plants": 57,
-      "percent_of_public_plants": 31.3
+      "plants": 62,
+      "percent_of_public_plants": 34.1
     },
     "phosphorus_mg": {
-      "plants": 57,
-      "percent_of_public_plants": 31.3
+      "plants": 62,
+      "percent_of_public_plants": 34.1
     },
     "calcium_phosphorus_ratio": {
-      "plants": 57,
-      "percent_of_public_plants": 31.3
+      "plants": 62,
+      "percent_of_public_plants": 34.1
     },
     "potassium_mg": {
-      "plants": 50,
-      "percent_of_public_plants": 27.5
+      "plants": 55,
+      "percent_of_public_plants": 30.2
     },
     "sodium_mg": {
+      "plants": 52,
+      "percent_of_public_plants": 28.6
+    },
+    "magnesium_mg": {
       "plants": 47,
       "percent_of_public_plants": 25.8
     },
-    "magnesium_mg": {
-      "plants": 42,
-      "percent_of_public_plants": 23.1
-    },
     "iron_mg": {
-      "plants": 49,
-      "percent_of_public_plants": 26.9
+      "plants": 54,
+      "percent_of_public_plants": 29.7
     },
     "vitamin_c_mg": {
       "plants": 48,
@@ -134,8 +138,8 @@
     "baseline_verified": 19,
     "baseline_source": "docs/COVERAGE_EXPANSION_V1_QUEUE.md (2026-09-20)",
     "plants": 69,
-    "verified_now": 40,
-    "coverage_percent_now": 58.0,
+    "verified_now": 43,
+    "coverage_percent_now": 62.3,
     "still_held": [
       "lettuce",
       "figleaf",
@@ -149,7 +153,6 @@
       "pumpkinleaf",
       "bellpepper",
       "rose",
-      "nasturtium",
       "pricklypear",
       "timothy",
       "orchard",
@@ -163,9 +166,7 @@
       "sunflowerleaf",
       "violet",
       "geranium",
-      "pansy",
-      "marigold",
-      "calendula"
+      "marigold"
     ]
   },
   "plants": [
@@ -872,9 +873,25 @@
       "plant_id": "nasturtium",
       "ko": "한련화",
       "scientific": "Tropaeolum majus",
-      "status": "held",
-      "hold_reason_code": "no_record_found",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "Peer-reviewed journal article (open access)",
+      "source_id": "DOI 10.3390/molecules17066672 Tables 2–4",
+      "data_type": "Peer-reviewed study",
+      "source_kind": "academic_peer_reviewed",
+      "plant_part": "flower",
+      "preparation_state": "raw",
+      "fields_present": 8,
+      "fields_missing": [
+        "water_g",
+        "fat_g",
+        "carbohydrate_g",
+        "available_carbohydrate_g",
+        "fiber_g",
+        "sugars_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "pricklypear",
@@ -1051,9 +1068,25 @@
       "plant_id": "pansy",
       "ko": "팬지",
       "scientific": "Viola × wittrockiana",
-      "status": "held",
-      "hold_reason_code": "no_record_found",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "Peer-reviewed journal article (open access)",
+      "source_id": "DOI 10.3390/molecules17066672 Tables 2–4",
+      "data_type": "Peer-reviewed study",
+      "source_kind": "academic_peer_reviewed",
+      "plant_part": "flower",
+      "preparation_state": "raw",
+      "fields_present": 8,
+      "fields_missing": [
+        "water_g",
+        "fat_g",
+        "carbohydrate_g",
+        "available_carbohydrate_g",
+        "fiber_g",
+        "sugars_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "marigold",
@@ -1067,9 +1100,25 @@
       "plant_id": "calendula",
       "ko": "금잔화",
       "scientific": "Calendula officinalis",
-      "status": "held",
-      "hold_reason_code": "no_record_found",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "Peer-reviewed journal article (open access)",
+      "source_id": "DOI 10.3390/foods10092053 Tables 4–6",
+      "data_type": "Peer-reviewed study",
+      "source_kind": "academic_peer_reviewed",
+      "plant_part": "flower",
+      "preparation_state": "raw",
+      "fields_present": 8,
+      "fields_missing": [
+        "water_g",
+        "fat_g",
+        "carbohydrate_g",
+        "available_carbohydrate_g",
+        "fiber_g",
+        "sugars_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "dill",
@@ -1264,9 +1313,25 @@
       "plant_id": "cornflower",
       "ko": "수레국화",
       "scientific": "Centaurea cyanus",
-      "status": "held",
-      "hold_reason_code": "no_record_found",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "Peer-reviewed journal article (open access)",
+      "source_id": "DOI 10.3390/molecules17066672 Tables 2–4",
+      "data_type": "Peer-reviewed study",
+      "source_kind": "academic_peer_reviewed",
+      "plant_part": "flower",
+      "preparation_state": "raw",
+      "fields_present": 8,
+      "fields_missing": [
+        "water_g",
+        "fat_g",
+        "carbohydrate_g",
+        "available_carbohydrate_g",
+        "fiber_g",
+        "sugars_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "echinacea",
@@ -1956,9 +2021,25 @@
       "plant_id": "snapdragon",
       "ko": "금어초",
       "scientific": "Antirrhinum majus",
-      "status": "held",
-      "hold_reason_code": "no_record_found",
-      "dm_basis_record": false
+      "status": "verified",
+      "source_name": "Peer-reviewed journal article (open access)",
+      "source_id": "DOI 10.3390/molecules17066672 Tables 2–4",
+      "data_type": "Peer-reviewed study",
+      "source_kind": "academic_peer_reviewed",
+      "plant_part": "flower",
+      "preparation_state": "raw",
+      "fields_present": 8,
+      "fields_missing": [
+        "water_g",
+        "fat_g",
+        "carbohydrate_g",
+        "available_carbohydrate_g",
+        "fiber_g",
+        "sugars_g",
+        "vitamin_c_mg",
+        "vitamin_a_rae_ug",
+        "energy_kcal"
+      ]
     },
     {
       "plant_id": "hosta",

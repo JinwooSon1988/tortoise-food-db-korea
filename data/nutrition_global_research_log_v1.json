@@ -557,6 +557,99 @@
           "reason": "genus-level record and master"
         }
       ]
+    },
+    {
+      "id": "academic_open_access_flowers_2026",
+      "region": "Europe",
+      "country": "Czech Republic",
+      "institution": "Tomas Bata University in Zlín / Mendel University in Brno (peer-reviewed, MDPI open access)",
+      "database": "Europe PMC open-access full text (peer-reviewed primary analyses)",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+      "access": "downloaded (public fullTextXML, CC BY)",
+      "accessed_at": "2026-10-09",
+      "method": "exact master binomial + flower part + fresh-mass unit; no cross-study averaging",
+      "findings": [
+        {
+          "plant_id": "snapdragon",
+          "record": "PMC6268292 Antirrhinum majus",
+          "decision": "adopted",
+          "reason": "exact species, whole fresh flower, mg/kg FM converted ÷10"
+        },
+        {
+          "plant_id": "cornflower",
+          "record": "PMC6268292 Centaurea cyanus",
+          "decision": "adopted",
+          "reason": "exact species, whole fresh flower, mg/kg FM converted ÷10"
+        },
+        {
+          "plant_id": "nasturtium",
+          "record": "PMC6268292 Tropaeolum majus",
+          "decision": "adopted",
+          "reason": "exact species, whole fresh flower, mg/kg FM converted ÷10"
+        },
+        {
+          "plant_id": "pansy",
+          "record": "PMC6268292 Viola x wittrockiana",
+          "decision": "adopted",
+          "reason": "exact species, whole fresh flower, mg/kg FM converted ÷10"
+        },
+        {
+          "plant_id": "calendula",
+          "record": "PMC8472405 Calendula officinalis",
+          "decision": "adopted",
+          "reason": "exact species, whole fresh flower, mg/kg FM converted ÷10"
+        },
+        {
+          "plant_id": "rose",
+          "record": "PMC6268292 Rosa odorata 'Ilona'; PMC8472405 Rosa 'Gloria Dei'",
+          "decision": "held",
+          "reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
+        },
+        {
+          "plant_id": "marigold",
+          "record": "PMC6268292 Tagetes patula 'Bolero'; PMC8472405 Tagetes patula 'Antiqua Orange'",
+          "decision": "held",
+          "reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
+        },
+        {
+          "plant_id": "violetflower",
+          "record": "PMC6268292 Viola x wittrockiana 'Fancy'",
+          "decision": "held",
+          "reason": "species_mismatch: garden pansy is not Viola mandshurica."
+        },
+        {
+          "plant_id": "calendula",
+          "record": "PMC13295730",
+          "decision": "rejected",
+          "reason": "Calendula and nasturtium minerals reported on a dry-weight basis (%, mg/kg DW) under experimental growing media; dry-to-fresh conversion is not allowed."
+        }
+      ],
+      "screened_and_rejected": [
+        {
+          "pmc": "PMC10143808",
+          "reason": "Alpine wild greens (Valmalenco): proximate composition only (no Ca/P), medians; Malva sylvestris and Rubus idaeus were cited in the survey but not analysed."
+        },
+        {
+          "pmc": "PMC7760095",
+          "reason": "Mediterranean wild greens: Foeniculum vulgare only cited from other literature; analysed species are not held masters."
+        },
+        {
+          "pmc": "PMC13295730",
+          "reason": "Calendula and nasturtium minerals reported on a dry-weight basis (%, mg/kg DW) under experimental growing media; dry-to-fresh conversion is not allowed."
+        },
+        {
+          "pmc": "PMC10220415",
+          "reason": "Ethiopian wild plants, dry-weight basis; species are not held masters."
+        },
+        {
+          "pmc": "PMC11394892",
+          "reason": "Catalan wild edible plants: values compiled from earlier literature/secondary tables, not primary measurements of the held species."
+        },
+        {
+          "pmc": "PMC8621719",
+          "reason": "Tropaeolum majus leaves: basis ambiguity; leaf part differs from the flower record."
+        }
+      ]
     }
   ]
 }

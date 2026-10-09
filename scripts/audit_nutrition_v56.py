@@ -14,12 +14,13 @@ FORBIDDEN_KEYS = {
     'safe', 'safety', 'recommendation', 'recommended_ratio', 'diet_ratio'
 }
 NUMERIC_SUFFIXES = ('_g', '_mg', '_mcg')
-DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB', 'Japan Standard Tables of Food Composition', 'Indian Food Composition Tables', 'German Nutrient Database (BLS)'}
+DATA_TYPES = {'SR Legacy', 'Foundation', 'Korean Standard Food Composition DB', 'Japan Standard Tables of Food Composition', 'Indian Food Composition Tables', 'German Nutrient Database (BLS)', 'Peer-reviewed study'}
 OTHER_OFFICIAL = {
     'Standard Tables of Food Composition in Japan (MEXT)': (r'MEXT \d{5}', {'www.mext.go.jp'}, 'Japan'),
     'Indian Food Composition Tables 2017 (ICMR-NIN)': (r'IFCT2017 [A-Z]\d{3}', {'nin.res.in'}, 'India'),
     'German Nutrient Database BLS 4.0 (Max Rubner-Institut)': (r'BLS [A-Z][0-9A-Z]{6}', {'blsdb.de'}, 'Germany'),
 }
+ACADEMIC_SOURCE = 'Peer-reviewed journal article (open access)'
 VERIFICATION_STATUSES = {'source_listed', 'verified'}
 
 
@@ -89,6 +90,16 @@ def main():
                 if urlparse(source_url).scheme != 'https' or urlparse(source_url).hostname not in hosts: errors.append(f'{tag}: source_url must use an official host {sorted(hosts)}')
             except Exception: errors.append(f'{tag}: invalid source_url')
             if n.get('source_country') != country: errors.append(f'{tag}: source_country must be {country}')
+        elif source_name == ACADEMIC_SOURCE:
+            # Used only where no national table has the exact species/part; values must be traceable to a DOI'd primary analysis.
+            doi = str(n.get('source_doi') or '')
+            if not re.fullmatch(r'10\.\d{4,9}/\S+', doi): errors.append(f'{tag}: academic record requires source_doi')
+            if not source_id.startswith(f'DOI {doi} Table'): errors.append(f'{tag}: academic source_id must be "DOI <doi> Table(s) ..."')
+            if source_url != f'https://doi.org/{doi}': errors.append(f'{tag}: academic source_url must be https://doi.org/<doi>')
+            if n.get('source_kind') != 'academic_peer_reviewed' or n.get('data_type') != 'Peer-reviewed study': errors.append(f'{tag}: academic record must declare source_kind/data_type')
+            for k in ('source_country', 'source_license', 'source_citation', 'fulltext_xml_sha256', 'source_scientific_name', 'sample', 'n'):
+                if not n.get(k): errors.append(f'{tag}: academic record requires {k}')
+            if p and str(n.get('source_scientific_name','')).replace(' x ',' × ').split()[:3] != str(p.get('scientific','')).split()[:3]: errors.append(f'{tag}: academic source species must equal the master taxon')
         else:
             errors.append(f'{tag}: unsupported official nutrition source_name')
 

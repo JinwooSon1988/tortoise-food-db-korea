@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-09",
+  "purpose": "Exact-species fresh-mass composition of edible flowers from open-access peer-reviewed studies, used only where no official national food-composition record exists for the master species and part.",
+  "retrieval": "Europe PMC REST fullTextXML (open access, CC BY). Values were parsed programmatically from the published XML tables; fulltext_xml_sha256 identifies the exact file read.",
+  "conversion": "Per-100 g values = published mg/kg FM ÷ 10 (and g/kg FM ÷ 10 for crude protein). No other conversion. Water is not derived from dry matter; dry matter is stored as published in dry_matter_pct. Fibre, vitamin C and energy were not measured and are not stored.",
+  "policy": {
+    "no_averaging_across_studies": true,
+    "no_dry_to_fresh_conversion": true,
+    "no_cross_part_transfer": true,
+    "genus_level_masters_not_mapped": true,
+    "feeding_verdict_use": false
+  },
+  "papers": [
+    {
+      "pmc": "PMC6268292",
+      "doi": "10.3390/molecules17066672",
+      "pmid": "22728361",
+      "citation": "Rop O, Mlcek J, Jurikova T, Neugebauerova J, Vabkova J. Edible Flowers—A New Promising Source of Mineral Elements in Human Nutrition. Molecules. 2012;17(6):6672–6683.",
+      "license": "CC BY 3.0",
+      "institution": "Tomas Bata University in Zlín (Faculty of Technology), Czech Republic",
+      "location": "Experimental orchards of Tomas Bata University in Zlín, White Carpathians, Czech Republic (unheated glasshouse, 340 m a.s.l.)",
+      "period": "2010–2011 (two-year mean)",
+      "tables": {
+        "dm": "Table 2",
+        "macro": "Table 3",
+        "micro": "Table 4",
+        "cultivar": "Table 1"
+      },
+      "fulltext_xml_sha256": "ccf509b3df3a7e89fe86e54a7f348a11ad5fd36c92a523c2f82a1650d96c4136",
+      "rows": [
+        {
+          "species_as_printed": "Antirrhinum majus",
+          "cultivar": "Zluty Kral",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 417.62,
+            "potassium": 2861.83,
+            "calcium": 357.2,
+            "magnesium": 172.02,
+            "sodium": 87.74,
+            "iron": 4.38
+          },
+          "dry_matter_pct_w_w": 12.61,
+          "crude_protein_g_per_kg_fresh_mass": 4.85
+        },
+        {
+          "species_as_printed": "Begonia boliviensis",
+          "cultivar": "Bonfire",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 202.11,
+            "potassium": 1842.61,
+            "calcium": 348.73,
+            "magnesium": 149.53,
+            "sodium": 93.34,
+            "iron": 2.65
+          },
+          "dry_matter_pct_w_w": 14.2,
+          "crude_protein_g_per_kg_fresh_mass": 2.78
+        },
+        {
+          "species_as_printed": "Centaurea cyanus",
+          "cultivar": "Modracek",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 534.48,
+            "potassium": 3568.77,
+            "calcium": 246.18,
+            "magnesium": 138.49,
+            "sodium": 74.28,
+            "iron": 6.89
+          },
+          "dry_matter_pct_w_w": 9.74,
+          "crude_protein_g_per_kg_fresh_mass": 6.73
+        },
+        {
+          "species_as_printed": "Chrysanthemum frutescens",
+          "cultivar": "Silver Leaf",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 428.36,
+            "potassium": 2617.24,
+            "calcium": 258.55,
+            "magnesium": 105.26,
+            "sodium": 89.1,
+            "iron": 5.15
+          },
+          "dry_matter_pct_w_w": 9.57,
+          "crude_protein_g_per_kg_fresh_mass": 6.85
+        },
+        {
+          "species_as_printed": "Chrysanthemum parthenium",
+          "cultivar": "Roya",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 501.29,
+            "potassium": 3600.34,
+            "calcium": 341.32,
+            "magnesium": 195.17,
+            "sodium": 113.31,
+            "iron": 5.83
+          },
+          "dry_matter_pct_w_w": 9.86,
+          "crude_protein_g_per_kg_fresh_mass": 6.77
+        },
+        {
+          "species_as_printed": "Dianthus caryophyllus",
+          "cultivar": "Picotee",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 531.35,
+            "potassium": 3544.81,
+            "calcium": 491.89,
+            "magnesium": 186.55,
+            "sodium": 114.29,
+            "iron": 9.85
+          },
+          "dry_matter_pct_w_w": 11.55,
+          "crude_protein_g_per_kg_fresh_mass": 6.89
+        },
+        {
+          "species_as_printed": "Fuchsia x hybrida",
+          "cultivar": "Autumnale",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 215.46,
+            "potassium": 1967.3,
+            "calcium": 239.1,
+            "magnesium": 170.71,
+            "sodium": 125.58,
+            "iron": 8.12
+          },
+          "dry_matter_pct_w_w": 8.37,
+          "crude_protein_g_per_kg_fresh_mass": 2.41
+        },
+        {
+          "species_as_printed": "Impatiens walleriana",
+          "cultivar": "Rockapulco Purple",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 382.73,
+            "potassium": 2835.25,
+            "calcium": 405.62,
+            "magnesium": 203.34,
+            "sodium": 94.29,
+            "iron": 7.26
+          },
+          "dry_matter_pct_w_w": 14.75,
+          "crude_protein_g_per_kg_fresh_mass": 4.6
+        },
+        {
+          "species_as_printed": "Rosa odorata",
+          "cultivar": "Ilona",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 225.17,
+            "potassium": 1969.11,
+            "calcium": 275.15,
+            "magnesium": 141.83,
+            "sodium": 76.61,
+            "iron": 3.55
+          },
+          "dry_matter_pct_w_w": 10.09,
+          "crude_protein_g_per_kg_fresh_mass": 2.66
+        },
+        {
+          "species_as_printed": "Tagetes patula",
+          "cultivar": "Bolero",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 478.25,
+            "potassium": 3808.72,
+            "calcium": 346.85,
+            "magnesium": 205.19,
+            "sodium": 114.32,
+            "iron": 8.72
+          },
+          "dry_matter_pct_w_w": 9.68,
+          "crude_protein_g_per_kg_fresh_mass": 2.95
+        },
+        {
+          "species_as_printed": "Tropaeolum majus",
+          "cultivar": "Tom Pouce",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 481.31,
+            "potassium": 2453.39,
+            "calcium": 337.23,
+            "magnesium": 149.38,
+            "sodium": 88.52,
+            "iron": 6.47
+          },
+          "dry_matter_pct_w_w": 11.27,
+          "crude_protein_g_per_kg_fresh_mass": 4.74
+        },
+        {
+          "species_as_printed": "Viola x wittrockiana",
+          "cultivar": "Fancy",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 514.62,
+            "potassium": 3964.84,
+            "calcium": 486.44,
+            "magnesium": 190.05,
+            "sodium": 131.97,
+            "iron": 7.29
+          },
+          "dry_matter_pct_w_w": 10.01,
+          "crude_protein_g_per_kg_fresh_mass": 6.7
+        }
+      ],
+      "source_url": "https://doi.org/10.3390/molecules17066672",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6268292/fullTextXML",
+      "units_as_published": {
+        "minerals": "mg/kg fresh mass (FM)",
+        "crude_protein": "g/kg FM (Kjeldahl N × 6.25)",
+        "dry_matter": "% w/w (oven 105 °C)"
+      },
+      "sample": "Whole fresh flowers harvested at full bloom from five plants per cultivar, pooled, puréed within 24 h; five replicates per year; values are the two-year mean (n = 10)."
+    },
+    {
+      "pmc": "PMC8472405",
+      "doi": "10.3390/foods10092053",
+      "pmid": "34574164",
+      "citation": "Mlcek J, Plaskova A, Jurikova T, Sochor J, Baron M, Ercisli S. Chemical, Nutritional and Sensory Characteristics of Six Ornamental Edible Flowers Species. Foods. 2021;10(9):2053.",
+      "license": "CC BY 4.0",
+      "institution": "Tomas Bata University in Zlín / Mendel University in Brno, Czech Republic",
+      "location": "Experimental orchards of Mendel University in Brno, Lednice, Czech Republic (unheated greenhouse, 170 m a.s.l.)",
+      "period": "2018–2019 (two-year mean)",
+      "tables": {
+        "cultivar": "Table 1",
+        "macro": "Table 4",
+        "micro": "Table 5",
+        "dm": "Table 6"
+      },
+      "fulltext_xml_sha256": "d25c906f078f1ba37c19f41e43fd2ea78873cdbc753e5f5d2cb7806bc79c6a16",
+      "rows": [
+        {
+          "species_as_printed": "Begonia × tuberhybrida",
+          "cultivar": "Doublet Rose",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 208.59,
+            "potassium": 2008.55,
+            "calcium": 385.75,
+            "magnesium": 131.18,
+            "sodium": 70.34,
+            "iron": 3.12
+          },
+          "dry_matter_pct_w_w": 11.34,
+          "crude_protein_g_per_kg_fresh_mass": 4.51
+        },
+        {
+          "species_as_printed": "Tropaeolum majus",
+          "cultivar": "Empress of India",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 452.02,
+            "potassium": 2353.3,
+            "calcium": 317.54,
+            "magnesium": 152.89,
+            "sodium": 85.21,
+            "iron": 6.52
+          },
+          "dry_matter_pct_w_w": 7.38,
+          "crude_protein_g_per_kg_fresh_mass": 4.56
+        },
+        {
+          "species_as_printed": "Calendula officinalis",
+          "cultivar": "Orange King",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 268.98,
+            "potassium": 2988.64,
+            "calcium": 294.08,
+            "magnesium": 189.56,
+            "sodium": 86.31,
+            "iron": 4.62
+          },
+          "dry_matter_pct_w_w": 8.98,
+          "crude_protein_g_per_kg_fresh_mass": 3.48
+        },
+        {
+          "species_as_printed": "Rosa",
+          "cultivar": "Gloria Dei",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 245.15,
+            "potassium": 2033.44,
+            "calcium": 285.58,
+            "magnesium": 142.45,
+            "sodium": 79.23,
+            "iron": 4.02
+          },
+          "dry_matter_pct_w_w": 14.39,
+          "crude_protein_g_per_kg_fresh_mass": 2.89
+        },
+        {
+          "species_as_printed": "Hemerocallis",
+          "cultivar": "Bonanza",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 235.05,
+            "potassium": 2759.22,
+            "calcium": 490.82,
+            "magnesium": 284.15,
+            "sodium": 96.08,
+            "iron": 8.7
+          },
+          "dry_matter_pct_w_w": 11.24,
+          "crude_protein_g_per_kg_fresh_mass": 3.54
+        },
+        {
+          "species_as_printed": "Tagetes patula",
+          "cultivar": "Antiqua Orange",
+          "minerals_mg_per_kg_fresh_mass": {
+            "phosphorus": 397.08,
+            "potassium": 3623.78,
+            "calcium": 362.95,
+            "magnesium": 203.14,
+            "sodium": 121.0,
+            "iron": 8.2
+          },
+          "dry_matter_pct_w_w": 9.34,
+          "crude_protein_g_per_kg_fresh_mass": 3.01
+        }
+      ],
+      "source_url": "https://doi.org/10.3390/foods10092053",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8472405/fullTextXML",
+      "units_as_published": {
+        "minerals": "mg/kg fresh mass (FM)",
+        "crude_protein": "g/kg FM (Kjeldahl N × 6.25)",
+        "dry_matter": "% w/w (oven 105 °C)"
+      },
+      "sample": "Whole fresh flowers harvested at full bloom from five plants per cultivar, pooled, puréed within 24 h; five replicates per year; values are the two-year mean (n = 10)."
+    }
+  ],
+  "adopted": [
+    {
+      "plant_id": "snapdragon",
+      "pmc": "PMC6268292",
+      "species_as_printed": "Antirrhinum majus"
+    },
+    {
+      "plant_id": "cornflower",
+      "pmc": "PMC6268292",
+      "species_as_printed": "Centaurea cyanus"
+    },
+    {
+      "plant_id": "nasturtium",
+      "pmc": "PMC6268292",
+      "species_as_printed": "Tropaeolum majus",
+      "crosscheck": {
+        "pmc": "PMC8472405",
+        "species_as_printed": "Tropaeolum majus",
+        "use": "shown as an independent second study only; not averaged into the primary record"
+      }
+    },
+    {
+      "plant_id": "pansy",
+      "pmc": "PMC6268292",
+      "species_as_printed": "Viola x wittrockiana"
+    },
+    {
+      "plant_id": "calendula",
+      "pmc": "PMC8472405",
+      "species_as_printed": "Calendula officinalis"
+    }
+  ],
+  "not_adopted": [
+    {
+      "plant_id": "rose",
+      "master_scientific": "Rosa spp.",
+      "records": [
+        "PMC6268292 Rosa odorata 'Ilona'",
+        "PMC8472405 Rosa 'Gloria Dei'"
+      ],
+      "reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
+    },
+    {
+      "plant_id": "marigold",
+      "master_scientific": "Tagetes spp.",
+      "records": [
+        "PMC6268292 Tagetes patula 'Bolero'",
+        "PMC8472405 Tagetes patula 'Antiqua Orange'"
+      ],
+      "reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
+    },
+    {
+      "plant_id": "violetflower",
+      "master_scientific": "Viola mandshurica",
+      "records": [
+        "PMC6268292 Viola x wittrockiana 'Fancy'"
+      ],
+      "reason": "species_mismatch: garden pansy is not Viola mandshurica."
+    },
+    {
+      "plant_id": "chrysanthemum",
+      "master_scientific": "Chrysanthemum morifolium",
+      "records": [
+        "PMC6268292 Chrysanthemum frutescens",
+        "PMC6268292 Chrysanthemum parthenium"
+      ],
+      "reason": "already verified from an official database; the paper species differ (Argyranthemum frutescens, Tanacetum parthenium)."
+    }
+  ],
+  "papers_screened_and_rejected": [
+    {
+      "pmc": "PMC10143808",
+      "reason": "Alpine wild greens (Valmalenco): proximate composition only (no Ca/P), medians; Malva sylvestris and Rubus idaeus were cited in the survey but not analysed."
+    },
+    {
+      "pmc": "PMC7760095",
+      "reason": "Mediterranean wild greens: Foeniculum vulgare only cited from other literature; analysed species are not held masters."
+    },
+    {
+      "pmc": "PMC13295730",
+      "reason": "Calendula and nasturtium minerals reported on a dry-weight basis (%, mg/kg DW) under experimental growing media; dry-to-fresh conversion is not allowed."
+    },
+    {
+      "pmc": "PMC10220415",
+      "reason": "Ethiopian wild plants, dry-weight basis; species are not held masters."
+    },
+    {
+      "pmc": "PMC11394892",
+      "reason": "Catalan wild edible plants: values compiled from earlier literature/secondary tables, not primary measurements of the held species."
+    },
+    {
+      "pmc": "PMC8621719",
+      "reason": "Tropaeolum majus leaves: basis ambiguity; leaf part differs from the flower record."
+    }
+  ]
+}

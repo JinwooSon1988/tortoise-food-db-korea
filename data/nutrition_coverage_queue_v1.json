@@ -167,21 +167,6 @@
       "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
-      "plant_id": "nasturtium",
-      "ko": "한련화",
-      "scientific": "Tropaeolum majus",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "not_listed_exact",
-      "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "No exact Tropaeolum majus edible leaf/flower record identified in supplied archives.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
       "plant_id": "pricklypear",
       "ko": "천년초",
       "scientific": "Opuntia spp.",
@@ -371,21 +356,6 @@
       "review_basis": "official_usda_archives_supplied_2026-09-22"
     },
     {
-      "plant_id": "pansy",
-      "ko": "팬지",
-      "scientific": "Viola × wittrockiana",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "not_listed_exact",
-      "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "No exact pansy edible flower/leaf record identified in supplied archives.",
-      "reviewed_at": "2026-09-22"
-    },
-    {
       "plant_id": "marigold",
       "ko": "메리골드",
       "scientific": "Tagetes spp.",
@@ -397,21 +367,6 @@
       "mapping_status": "identity_scope_hold",
       "do_not_infer": true,
       "review_basis": "official_usda_archives_supplied_2026-09-22"
-    },
-    {
-      "plant_id": "calendula",
-      "ko": "금잔화",
-      "scientific": "Calendula officinalis",
-      "priority": "P2",
-      "nutrition_source_priority": [
-        "USDA FoodData Central Foundation Foods 2026-04",
-        "USDA SR Legacy 2018-04"
-      ],
-      "mapping_status": "not_listed_exact",
-      "do_not_infer": true,
-      "review_basis": "official_usda_archives_supplied_2026-09-22",
-      "review_note": "No exact Calendula edible leaf/flower record identified in supplied archives.",
-      "reviewed_at": "2026-09-22"
     },
     {
       "plant_id": "pumpkinleaf",
@@ -428,7 +383,7 @@
     }
   ],
   "summary": {
-    "missing_count": 29,
+    "missing_count": 26,
     "verified_count": 56,
     "coverage_percent": 52.2,
     "note": "coverage_percent kept from the original 69-plant baseline; see data/nutrition_coverage_audit_v1.json for current coverage"
@@ -443,6 +398,16 @@
       ],
       "by": "worldwide nutrition intake (MEXT 06211; IFCT 2017 C017, C031)",
       "see": "data/nutrition_global_research_log_v1.json"
+    },
+    {
+      "resolved_at": "2026-10-09",
+      "plant_ids": [
+        "calendula",
+        "nasturtium",
+        "pansy"
+      ],
+      "by": "peer-reviewed open-access fresh-flower analyses (doi:10.3390/molecules17066672; doi:10.3390/foods10092053)",
+      "see": "data/academic_flower_nutrition_sources_20261009.json"
     }
   ]
 }

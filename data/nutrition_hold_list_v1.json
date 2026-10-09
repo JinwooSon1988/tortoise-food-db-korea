@@ -20,7 +20,7 @@
   },
   "summary": {
     "genus_level_master": 38,
-    "no_record_found": 46,
+    "no_record_found": 41,
     "part_ambiguous": 1,
     "part_mismatch": 24,
     "policy_hold": 2,
@@ -28,7 +28,7 @@
     "state_mismatch": 2,
     "subtype_ambiguous": 2
   },
-  "held_count": 125,
+  "held_count": 120,
   "records": [
     {
       "plant_id": "lettuce",
@@ -417,24 +417,21 @@
       "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
-      "plant_id": "nasturtium",
-      "ko": "한련화",
-      "scientific": "Tropaeolum majus",
-      "hold_reason_code": "no_record_found",
-      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
-      "candidates_examined": [],
-      "do_not_infer": true,
       "reviewed_at": "2026-10-08",
       "international_candidates_examined": [
         {
           "source": "Europe PMC REST (fullTextXML)",
-          "country": "various",
-          "record": "PMC8621719 Tropaeolum majus fresh leaves",
+          "country": "Czech Republic",
+          "record": "PMC6268292 Rosa odorata 'Ilona'",
           "decision": "held",
-          "reason": "same basis ambiguity as above; leaves only"
+          "reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
+        },
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "Czech Republic",
+          "record": "PMC8472405 Rosa 'Gloria Dei'",
+          "decision": "held",
+          "reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
         }
       ]
     },
@@ -698,16 +695,6 @@
       "reviewed_at": "2026-10-08"
     },
     {
-      "plant_id": "pansy",
-      "ko": "팬지",
-      "scientific": "Viola × wittrockiana",
-      "hold_reason_code": "no_record_found",
-      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
-      "candidates_examined": [],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
       "plant_id": "marigold",
       "ko": "메리골드",
       "scientific": "Tagetes spp.",
@@ -715,17 +702,23 @@
       "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
-      "plant_id": "calendula",
-      "ko": "금잔화",
-      "scientific": "Calendula officinalis",
-      "hold_reason_code": "no_record_found",
-      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
-      "candidates_examined": [],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "Czech Republic",
+          "record": "PMC6268292 Tagetes patula 'Bolero'",
+          "decision": "held",
+          "reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
+        },
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "Czech Republic",
+          "record": "PMC8472405 Tagetes patula 'Antiqua Orange'",
+          "decision": "held",
+          "reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
+        }
+      ]
     },
     {
       "plant_id": "whiteclover",
@@ -971,16 +964,6 @@
       "reviewed_at": "2026-10-08"
     },
     {
-      "plant_id": "cornflower",
-      "ko": "수레국화",
-      "scientific": "Centaurea cyanus",
-      "hold_reason_code": "no_record_found",
-      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
-      "candidates_examined": [],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
       "plant_id": "echinacea",
       "ko": "에키네시아",
       "scientific": "Echinacea purpurea",
@@ -1155,7 +1138,16 @@
       "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
+      "reviewed_at": "2026-10-08",
+      "international_candidates_examined": [
+        {
+          "source": "Europe PMC REST (fullTextXML)",
+          "country": "Czech Republic",
+          "record": "PMC6268292 Viola x wittrockiana 'Fancy'",
+          "decision": "held",
+          "reason": "species_mismatch: garden pansy is not Viola mandshurica."
+        }
+      ]
     },
     {
       "plant_id": "geraniumleaf",
@@ -1846,16 +1838,6 @@
       "scientific": "Echeveria spp.",
       "hold_reason_code": "genus_level_master",
       "hold_reason_ko": "마스터 학명이 속 수준(spp. 등)이다. 저장소 정책(audit_nutrition_v56 / korea_taxon_mapping_v1)상 국내 종 매핑이 확인되기 전에는 종·식품 단위 성분값을 연결하지 않는다.",
-      "candidates_examined": [],
-      "do_not_infer": true,
-      "reviewed_at": "2026-10-08"
-    },
-    {
-      "plant_id": "snapdragon",
-      "ko": "금어초",
-      "scientific": "Antirrhinum majus",
-      "hold_reason_code": "no_record_found",
-      "hold_reason_ko": "USDA FDC(SR Legacy·Foundation)와 농촌진흥청 원재료성식품 성분 자료에서 해당 종·부위·날것 기록을 찾지 못했다.",
       "candidates_examined": [],
       "do_not_infer": true,
       "reviewed_at": "2026-10-08"

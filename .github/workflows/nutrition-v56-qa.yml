@@ -23,6 +23,8 @@ on:
       - 'data/plant_nutrition_dm_basis_v1.json'
       - 'data/nutrition_global_research_log_v1.json'
       - 'scripts/qa_nutrition_dm_basis_v1.py'
+      - 'data/academic_flower_nutrition_sources_20261009.json'
+      - 'scripts/build_academic_flower_nutrition_v1.py'
       - '.github/workflows/nutrition-v56-qa.yml'
   push:
     branches: [main]
@@ -47,6 +49,8 @@ on:
       - 'data/plant_nutrition_dm_basis_v1.json'
       - 'data/nutrition_global_research_log_v1.json'
       - 'scripts/qa_nutrition_dm_basis_v1.py'
+      - 'data/academic_flower_nutrition_sources_20261009.json'
+      - 'scripts/build_academic_flower_nutrition_v1.py'
       - '.github/workflows/nutrition-v56-qa.yml'
 
 permissions:
@@ -72,6 +76,8 @@ jobs:
         run: python scripts/qa_bellpepper_evidence_conflict.py
       - name: Verified-or-held partition and provenance
         run: python scripts/qa_nutrition_hold_list_v1.py
+      - name: Peer-reviewed flower records equal the published tables
+        run: python scripts/build_academic_flower_nutrition_v1.py
       - name: Dry-matter registry and worldwide research log
         run: python scripts/qa_nutrition_dm_basis_v1.py
       - name: Coverage audit is current

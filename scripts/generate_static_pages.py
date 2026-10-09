@@ -115,9 +115,25 @@ def nutrition_basis_ko(v):
     v=str(v or "").strip().lower().replace("_"," ")
     if "rda" in v or "nics" in v:
         return "가식부 100 g 기준(농촌진흥청 국가표준식품성분표)"
+    if "fresh flower" in v:
+        return "생화(꽃) 100 g 기준(논문의 mg/kg 생체중 값을 100 g 단위로 환산)"
     if "raw" in v:
         return "날것 가식부 100 g 기준"
     return "가식부 100 g 기준"
+
+def academic_nutrition_html(nu):
+    """Peer-reviewed (non-national-table) records: say so, cite the study, and show an independent second study unaveraged."""
+    if nu.get("source_kind")!="academic_peer_reviewed":
+        return ""
+    out=(f'<p class="small">자료 유형: 국가 식품성분표가 아닌 동료심사 논문의 1차 분석값(오픈액세스 {esc(nu.get("source_license"))}). '
+         f'수분·식이섬유는 측정되지 않아 표시하지 않으며, 건물 비율은 논문 측정값 그대로다. '
+         f'인용: <span lang="en">{esc(nu.get("source_citation"))}</span></p>')
+    cc=nu.get("independent_crosscheck")
+    if cc:
+        out+=(f'<p class="small">다른 독립 연구(품종 <span lang="en">‘{esc(cc.get("cultivar"))}’</span>, {esc(str(cc.get("sampling_period","")).replace(" (two-year mean)","년 2년 평균"))}): '
+              f'칼슘 {cc.get("calcium_mg")} mg · 인 {cc.get("phosphorus_mg")} mg · Ca:P {cc.get("calcium_phosphorus_ratio")}:1 · 건물 {cc.get("dry_matter_pct")}%. '
+              f'두 연구 값을 평균하지 않고 따로 보여준다. <a href="{esc(cc.get("source_url"))}" target="_blank" rel="noopener noreferrer">원 논문<span class="sr-only"> (새 창)</span></a></p>')
+    return out
 
 RISK_SIGNAL_KO={
     "phytochemistry":"식물 성분","acute_toxicity":"급성 독성","nitrate_accumulation":"질산염 축적","veterinary_case_reports":"수의학 사례 보고",
@@ -991,7 +1007,7 @@ for p in plants:
             return "미확인" if v is None else f"{v}{unit}"
         ratio=nu.get("calcium_phosphorus_ratio")
         nutrition_note=("칼슘과 인의 비율은 식단을 볼 때 참고할 수 있지만, 이 값 하나만으로 좋은 먹이인지 결정하지 않는다." if ratio not in (None,"","—") else "Ca:P 자료가 없으면 임의 계산하거나 추정하지 않는다.")
-        nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div><div><b>수분</b><strong>{nv("water_g"," g")}</strong></div><div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 {nutrition_food_name_html(nu.get("food_description"))} · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>{f'<p class="small">적용 범위: {esc(nu.get("applicability_note_ko"))}</p>' if nu.get("applicability_note_ko") else ""}'''
+        nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div>{f'<div><b>건물</b><strong>{nu["dry_matter_pct"]}%</strong></div>' if nu.get("water_g") is None and nu.get("dry_matter_pct") is not None else f'<div><b>수분</b><strong>{nv("water_g"," g")}</strong></div>'}<div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 {nutrition_food_name_html(nu.get("food_description"))} · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>{f'<p class="small">적용 범위: {esc(nu.get("applicability_note_ko"))}</p>' if nu.get("applicability_note_ko") else ""}{academic_nutrition_html(nu)}'''
     else:
         nutrition_body='<div class="nutrition-missing"><strong>검증된 영양자료 없음</strong><p>해당 식물·부위에 일치하는 공식 영양성분 수치가 아직 확인되지 않았습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
     nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2>{nutrition_body}<p class="small">영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않습니다. 검증된 수치만 표시하며 미확인 항목을 0으로 간주하지 않습니다.</p></section>'''
