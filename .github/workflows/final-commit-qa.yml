@@ -1,0 +1,66 @@
+name: Final commit QA
+
+# Verifies the commit that GitHub Pages actually publishes.
+# "Sync generated plant pages" may push a bot commit with GITHUB_TOKEN; such pushes start no push-triggered
+# workflows, so without this job the published commit would never be checked. workflow_run fires after every
+# completion of the sync workflow (whether or not it committed), checks out the current main and runs the core QA
+# on it. It only reads the repository: no commit, no deployment, therefore no loop and no duplicate deploy.
+on:
+  workflow_run:
+    workflows: ["Sync generated plant pages"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: final-commit-qa
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record the commit under test
+        run: |
+          {
+            echo "### Final commit QA"
+            echo "- Tested main commit: \`$(git rev-parse HEAD)\` — $(git log -1 --format=%s)"
+            echo "- Triggered by: ${{ github.event_name }} ${{ github.event.workflow_run.head_sha }}"
+            echo "- Sync workflow result: ${{ github.event.workflow_run.conclusion || 'n/a (manual run)' }}"
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Sync workflow must have succeeded
+        if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion != 'success'
+        run: |
+          echo "Sync generated plant pages ended with '${{ github.event.workflow_run.conclusion }}'; generated pages may be stale." | tee -a "$GITHUB_STEP_SUMMARY"
+          exit 1
+      - name: Committed pages equal canonical generator output
+        run: python scripts/qa_variety_card_regeneration_v1.py
+      - name: Detail page, verdict and caution contracts
+        run: |
+          python scripts/audit_plant_integrity.py
+          python scripts/audit_verdict_cards.py
+          python scripts/audit_plant_detail_v56.py
+          python scripts/qa_verdict_consistency.py
+          python scripts/qa_feeding_cautions_v1.py
+      - name: Nutrition records and species cards
+        run: |
+          python scripts/audit_nutrition_v56.py
+          python scripts/qa_nutrition_hold_list_v1.py
+          python scripts/audit_public_nutrition_variety_cards.py
+          python scripts/build_mentha_species_v1.py
+          python scripts/build_tagetes_patula_species_v1.py
+          python scripts/build_academic_flower_nutrition_v1.py
+      - name: Korean copy
+        run: python scripts/qa_korean_english_fragments_v1.py
+      - name: Summary
+        run: |
+          echo "- Result: all core QA steps passed on \`$(git rev-parse HEAD)\`" | tee -a "$GITHUB_STEP_SUMMARY"

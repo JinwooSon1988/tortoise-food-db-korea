@@ -1,27 +1,30 @@
 name: Sync generated plant pages
 
+# Source edits (assessments, evidence, nutrition, generator code) are pushed by people; this workflow renders the
+# public pages with the canonical generators, audits the result and commits it back to main.
+# The commit is pushed with GITHUB_TOKEN, which does not start new push-triggered workflows, so there is no
+# commit loop. Verification of the FINAL main commit (including that bot commit) is done by
+# .github/workflows/final-commit-qa.yml, which runs after every completion of this workflow (workflow_run).
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - 'data/public_evidence_records.json'
-      - 'data/public_assessments.json'
-      - 'data/plants.json'
-      - 'scripts/generate_static_pages.py'
-      - '.github/workflows/sync-generated-plant-pages.yml'
-      - 'scripts/audit_plant_detail_v56.py'
-      - 'scripts/qa_verdict_consistency.py'
+      - 'data/**'
+      - 'scripts/**'
+      - 'plant/**'
+      - 'guides/**'
       - 'core-foods/index.html'
-      - 'guides/*/index.html'
-      - 'scripts/qa_traffic_integrity.py'
-      - 'scripts/qa_bilingual_plant_detail_v1.py'
-      - 'scripts/audit_verdict_cards.py'
-      - 'scripts/public_verdict.py'
+      - 'sitemap.xml'
       - 'verdict-core.js'
+      - '.github/workflows/sync-generated-plant-pages.yml'
 
 permissions:
   contents: write
+
+concurrency:
+  group: sync-generated-pages
+  cancel-in-progress: false
 
 jobs:
   sync:
@@ -35,19 +38,13 @@ jobs:
           python-version: '3.12'
       - name: Generate plant detail pages
         run: |
-          pwd
           git rev-parse HEAD
-          git log -1 --oneline -- scripts/generate_static_pages.py
-          grep -n "어떻게 먹이나\\|급여할 때 확인할 핵심\\|practical_html" scripts/generate_static_pages.py || true
           python scripts/generate_static_pages.py
-          grep -o "어떻게 먹이나\\|급여할 때 확인할 핵심\\|급여 부위\\|근거 없는 급여 횟수·비율" plant/chicory/index.html | sort | uniq -c || true
           grep -q "어떻게 먹이나" plant/chicory/index.html || { echo "Generator output missing reader-first practical section"; exit 1; }
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
-      - name: Diagnose rendered reader-first UX
-        run: |
-          grep -n "어떻게 먹이나\|급여할 때 확인할 핵심\|practical_html" scripts/generate_static_pages.py || true
-          grep -o "어떻게 먹이나\|급여할 때 확인할 핵심\|급여 부위\|근거 없는 급여 횟수·비율" plant/chicory/index.html | sort | uniq -c || true
+      - name: Generate guide hubs
+        run: python scripts/generate_guide_hubs.py
       - name: Verify reader-first UX was actually rendered
         run: |
           grep -q "어떻게 먹이나" plant/chicory/index.html
@@ -56,22 +53,24 @@ jobs:
             echo "Legacy practical section survived generation."
             exit 1
           fi
-          git status --short -- plant sitemap.xml
-          git diff --stat -- plant sitemap.xml
+          git status --short -- plant guides sitemap.xml
+          git diff --stat -- plant guides sitemap.xml
       - name: Audit generated pages
         run: |
           python scripts/audit_plant_integrity.py
           python scripts/audit_verdict_cards.py
           python scripts/audit_plant_detail_v56.py
           python scripts/qa_verdict_consistency.py
+          python scripts/qa_feeding_cautions_v1.py
       - name: Commit generated pages
         run: |
-          if git diff --quiet -- plant sitemap.xml; then
-            echo "Generated pages are already current."
+          if git diff --quiet -- plant guides sitemap.xml; then
+            echo "Generated pages are already current." | tee -a "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add plant sitemap.xml
+          git add plant guides sitemap.xml
           git commit -m "Build: sync generated plant detail pages"
           git push origin HEAD:main
+          echo "Committed generated pages as $(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
