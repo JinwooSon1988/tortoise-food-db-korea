@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 3,
-    "registered_numeric_reference_plants": 10
+    "pending_numeric_transcription": 2,
+    "registered_numeric_reference_plants": 11
   },
   "records": [
     {
@@ -226,7 +226,7 @@
     {
       "plant_id": "violetflower",
       "priority": "medium",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Europe PMC REST (fullTextXML)",
@@ -235,9 +235,11 @@
           "hold_reason": "Analyzed taxon Viola × wittrockiana 'Fancy' is not master Viola mandshurica. Species/cultivar mismatch; plant part and quantitative basis also require primary-paper verification. No exact-species numeric registration."
         }
       ],
-      "next_action": "Identity mismatch gate: master is Viola mandshurica, but PMC6268292 candidate analyzes Viola × wittrockiana 'Fancy'. Do not promote or attach those numbers as same-species nutrition; require a clearly labeled related-species reference with original part, preparation and basis, or seek direct V. mandshurica analysis first.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Different-species pansy Viola × wittrockiana 'Fancy' whole-flower values registered only as related-species reference. Continue searching direct Viola mandshurica flower/leaf nutrition. Never promote pansy values to same-species or safety verdict.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "pmc6268292-viola-wittrockiana-fancy-flower-20261010"
+      ]
     },
     {
       "plant_id": "waterdropwort",
