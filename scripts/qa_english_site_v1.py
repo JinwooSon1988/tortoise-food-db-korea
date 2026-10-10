@@ -274,7 +274,8 @@ for l in locs:
     if not l.startswith(SITE + "/") or not t.exists():
         fail(f"sitemap URL has no page: {l}")
 en_locs = {l for l in locs if l.startswith(SITE + "/en/")}
-expected_en = {SITE + rel_of(f) for f in en_pages}
+expected_en = {SITE + rel_of(f) for f in en_pages if f not in REDIRECT_STUBS}
+# Noindex redirect stubs remain navigable but must not be advertised for indexing.
 if en_locs != expected_en:
     fail(f"sitemap English URLs differ from generated pages: {sorted(en_locs ^ expected_en)[:5]}")
 for blk in re.findall(r"<url>.*?</url>", sm):
