@@ -1441,12 +1441,68 @@
         "calcium_g_per_kg_dm": 2,
         "phosphorus_g_per_kg_dm": 2
       }
+    },
+    {
+      "reference_id": "feedipedia-12682-sweetpotatovine-20261010",
+      "plant_id": "sweetpotatovine",
+      "scientific_name": "Ipomoea batatas",
+      "source_name": "Feedipedia — Sweet potato, aerial part, fresh",
+      "source_id": "12682",
+      "source_url": "https://www.feedipedia.org/node/12682",
+      "analyzed_part": "aerial part (leaves and stems together; not leaf-only)",
+      "preparation_state": "fresh forage sampled; nutrients expressed on dry matter basis",
+      "basis": "dry matter (DM); dry matter % as fed; protein/fibre % DM; minerals g/kg DM",
+      "nutrients": {
+        "dry_matter_pct_as_fed": 13,
+        "crude_protein_pct_dm": 16.5,
+        "crude_fibre_pct_dm": 21.1,
+        "ndf_pct_dm": 42.7,
+        "adf_pct_dm": 31.7,
+        "lignin_pct_dm": 8.3,
+        "ether_extract_pct_dm": 4.8,
+        "ash_pct_dm": 11.2,
+        "calcium_g_per_kg_dm": 9.5,
+        "phosphorus_g_per_kg_dm": 2.9,
+        "potassium_g_per_kg_dm": 24.9
+      },
+      "nutrient_units": {
+        "dry_matter_pct_as_fed": "% as fed",
+        "crude_protein_pct_dm": "% DM",
+        "crude_fibre_pct_dm": "% DM",
+        "ndf_pct_dm": "% DM",
+        "adf_pct_dm": "% DM",
+        "lignin_pct_dm": "% DM",
+        "ether_extract_pct_dm": "% DM",
+        "ash_pct_dm": "% DM",
+        "calcium_g_per_kg_dm": "g/kg DM",
+        "phosphorus_g_per_kg_dm": "g/kg DM",
+        "potassium_g_per_kg_dm": "g/kg DM"
+      },
+      "sample_counts": {
+        "dry_matter_pct_as_fed": 21,
+        "crude_protein_pct_dm": 23,
+        "crude_fibre_pct_dm": 17,
+        "ndf_pct_dm": 10,
+        "adf_pct_dm": 10,
+        "lignin_pct_dm": 10,
+        "ether_extract_pct_dm": 14,
+        "ash_pct_dm": 17,
+        "calcium_g_per_kg_dm": 12,
+        "phosphorus_g_per_kg_dm": 11,
+        "potassium_g_per_kg_dm": 10
+      },
+      "display_tier": "dry_matter_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "고구마 줄기·잎 지상부 혼합, 생초 시료의 건조물 기준",
+      "display_note_ko": "고구마 지상부(잎과 줄기 포함) 사료 성분입니다. 잎만의 수치가 아니며 건물 함량을 제외한 영양성분은 건조물 기준입니다. 분석 항목별 표본 수가 달라 동일 시료의 완전한 조성으로 해석하지 마세요. 급여 안전성 판정과는 별개입니다.",
+      "source_verification": "original_feedipedia_table_checked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false
     }
   ],
   "coverage": {
-    "reference_records": 27,
-    "distinct_plants": 17,
-    "existing_dm_records_reused": 20,
-    "notice": "Includes pre-existing verified dry-matter registry measurements, not newly discovered measurements. All DM values remain separate from fresh per-100g edible values."
+    "reference_records": 28,
+    "distinct_plants": 18,
+    "notice": "Source-checked dry-matter forage references are not raw per-100g edible nutrition. No feeding verdict changes."
   }
 }
