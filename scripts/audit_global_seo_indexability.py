@@ -37,7 +37,7 @@ for url in locs:
 for url in locs:
     rel = url[len(BASE):].strip("/")
     if rel.startswith("en/"):
-        ko_url, en_url = BASE + "/" + rel[3:] + ("" if rel[3:].endswith("/") else "/"), url
+        ko_url, en_url = BASE + "/" + rel[3:].strip("/") + ("/" if rel[3:].strip("/") else ""), url
     else:
         ko_url, en_url = url, BASE + "/en/" + rel + ("" if rel.endswith("/") else "/")
     if ko_url not in locs or en_url not in locs:
