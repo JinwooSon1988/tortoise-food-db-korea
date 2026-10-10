@@ -98,6 +98,19 @@ function boot(){
  apply(lang);
  updateNav(lang);
  // Keep the user's explicit choice across all internal pages and browser navigation.
+ // Normalize links immediately as well: keyboard navigation and newly opened tabs
+ // should preserve the selected language, not only mouse clicks.
+ function syncInternalLinks(){
+   document.querySelectorAll('a[href]').forEach(link=>{
+     if(link.hasAttribute('download')||link.getAttribute('href').startsWith('#'))return;
+     let target;try{target=new URL(link.href,location.href)}catch(_){return}
+     if(target.origin!==location.origin||!target.pathname.startsWith(new URL(ROOT).pathname))return;
+     target.searchParams.set('lang',document.documentElement.lang);
+     if(target.href!==link.href)link.href=target.href;
+   });
+ }
+ syncInternalLinks();
+ window.addEventListener('tfdblanguagechange',syncInternalLinks);
  document.addEventListener('click',e=>{
    const link=e.target.closest('a[href]');
    if(!link||link.hasAttribute('download')||link.target==='_blank')return;
