@@ -14,7 +14,8 @@ def main():
     plant_ids = {p["id"] for p in load("plants.json")}
     by_plant = {}
     for item in references:
-        by_plant.setdefault(item["plant_id"], []).append(item["reference_id"])
+        if item.get("nutrients") and item.get("status") == "reference_only":
+            by_plant.setdefault(item["plant_id"], []).append(item["reference_id"])
     errors = []
     seen = set()
     for item in queue["records"]:
@@ -24,6 +25,18 @@ def main():
         seen.add(pid)
         if pid not in plant_ids:
             errors.append(f"unknown plant: {pid}")
+        sources = item.get("candidate_sources")
+        if not isinstance(sources, list) or not sources:
+            errors.append(f"{pid}: candidate_sources must be nonempty")
+        else:
+            for index, source in enumerate(sources):
+                if not isinstance(source, dict) or not all(
+                    isinstance(source.get(field), str) and source[field].strip()
+                    for field in ("institution", "record", "hold_reason")
+                ):
+                    errors.append(f"{pid}: candidate source {index} missing provenance or hold reason")
+        if not isinstance(item.get("next_action"), str) or not item["next_action"].strip():
+            errors.append(f"{pid}: missing next_action")
         actual = sorted(by_plant.get(pid, []))
         recorded = sorted(item.get("registered_reference_ids", []))
         if actual != recorded:
