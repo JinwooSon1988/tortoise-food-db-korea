@@ -20,6 +20,8 @@ on:
       - "index.html"
       - "en/index.html"
       - "en/search-en.js"
+      - "language-toggle.js"
+      - "data/i18n/en/catalog_en.json"
       - ".github/workflows/evidence-integrity.yml"
   pull_request:
     paths:
@@ -39,6 +41,8 @@ on:
       - "index.html"
       - "en/index.html"
       - "en/search-en.js"
+      - "language-toggle.js"
+      - "data/i18n/en/catalog_en.json"
       - ".github/workflows/evidence-integrity.yml"
   workflow_dispatch:
 permissions:
