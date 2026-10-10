@@ -6,6 +6,8 @@ on:
       - "data/verified_plant_images_v56.json"
       - "data/nutrition_hold_list_v1.json"
       - "data/nutrition_coverage_audit_v1.json"
+      - "data/plant_nutrition_v56.json"
+      - "scripts/audit_nutrition_consistency.py"
       - "scripts/audit_evidence_coverage.py"
       - "scripts/qa_verified_plant_images.py"
       - "scripts/plant_taxon_scope.py"
@@ -16,6 +18,8 @@ on:
       - "data/verified_plant_images_v56.json"
       - "data/nutrition_hold_list_v1.json"
       - "data/nutrition_coverage_audit_v1.json"
+      - "data/plant_nutrition_v56.json"
+      - "scripts/audit_nutrition_consistency.py"
       - "scripts/audit_evidence_coverage.py"
       - ".github/workflows/evidence-integrity.yml"
   workflow_dispatch:
@@ -34,3 +38,5 @@ jobs:
         run: python scripts/audit_evidence_coverage.py
       - name: Check image provenance and taxon-scope rules
         run: python scripts/qa_verified_plant_images.py
+      - name: Check nutrient coverage and mineral calculations
+        run: python scripts/audit_nutrition_consistency.py
