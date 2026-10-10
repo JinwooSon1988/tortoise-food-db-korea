@@ -21,17 +21,22 @@ def main():
         if rid in reference_ids:
             duplicate_reference_ids.add(rid)
         reference_ids.add(rid)
-        if item.get("nutrients") and item.get("status") == "reference_only":
-            by_plant.setdefault(item["plant_id"], []).append(item["reference_id"])
+        if item.get("status") == "reference_only" and isinstance(item.get("nutrients"), dict) and item["nutrients"]:
+            pid = item.get("plant_id")
+            if isinstance(pid, str) and pid.strip() and isinstance(rid, str) and rid.strip():
+                by_plant.setdefault(pid, []).append(rid)
     errors = [f"duplicate reference ID: {rid}" for rid in sorted(duplicate_reference_ids, key=str)]
     for item in references:
-        if item.get("nutrients") and item.get("status") == "reference_only":
+        if item.get("status") == "reference_only" and item.get("nutrients"):
+            if not isinstance(item.get("nutrients"), dict):
+                errors.append(f"{item.get('reference_id')}: nutrients must be an object")
+                continue
             if not isinstance(item.get("reference_id"), str) or not item["reference_id"].strip():
                 errors.append(f"reference for {item.get('plant_id')}: missing reference ID")
             if item.get("plant_id") not in plant_ids:
                 errors.append(f"reference for unknown plant: {item.get('plant_id')}")
     for item in references:
-        if item.get("status") != "reference_only" or not item.get("nutrients"):
+        if item.get("status") != "reference_only" or not isinstance(item.get("nutrients"), dict) or not item["nutrients"]:
             continue
         rid = item.get("reference_id")
         if item.get("feeding_verdict_use") is not False:
@@ -66,8 +71,6 @@ def main():
             errors.append(f"{rid}: preparation state required")
         if not isinstance(item.get("basis"), str) or not item["basis"].strip():
             errors.append(f"{rid}: quantitative measurement basis required")
-        if item.get("status") == "reference_only" and item.get("feeding_verdict_use") is not False:
-            errors.append(f"{rid}: nutrition reference cannot set feeding verdict")
         if item.get("display_tier") not in ("related_species_reference", "related_part_reference", "related_cultivar_reference", "dry_matter_reference", "reference_only", "same_species_reference", "same_part_reference"):
             errors.append(f"{rid}: unknown reference display tier {item.get('display_tier')}")
     seen = set()
