@@ -21,7 +21,9 @@ for x in rows:
     if x.get("identity_scope") not in ACCEPTED_SCOPES: errors.append(f"{pid}: invalid identity_scope {x.get('identity_scope')}")
     if not str(x.get("source_url","")).startswith("https://commons.wikimedia.org/wiki/File:"): errors.append(f"{pid}: non-Commons source_url")
     if not str(x.get("image_url","")).startswith("https://commons.wikimedia.org/wiki/Special:Redirect/file/"): errors.append(f"{pid}: unexpected image_url")
-    if not str(x.get("license_url","")).startswith("https://creativecommons.org/"): errors.append(f"{pid}: license_url must be a creativecommons.org URL")
+    license_url = str(x.get("license_url", ""))
+    if not (license_url.startswith("https://creativecommons.org/") or (str(x.get("license", "")).startswith("Public domain") and license_url in {"https://commons.wikimedia.org/wiki/Template:PD-USGov-NPS", "https://commons.wikimedia.org/wiki/Template:PD-self"})):
+        errors.append(f"{pid}: unsupported license_url for recorded license")
     if x.get("part_match") not in registry.get("policy",{}).get("part_match_values",{}): errors.append(f"{pid}: invalid part_match {x.get('part_match')}")
     errors += [f"{pid}: {p}" for p in check_image(x, plants[pid].get("scientific",""))]
 for item in registry.get("rejected_candidates",[]):
