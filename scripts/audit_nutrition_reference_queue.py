@@ -116,6 +116,13 @@ def main():
         expected_status = "reference_numeric_registered" if has_numeric else "source_candidate_only_no_numeric_transcription"
         if item.get("numeric_status") != expected_status:
             errors.append(f"{pid}: numeric status incorrect")
+    coverage = load("plant_nutrition_reference_v1.json").get("coverage", {})
+    actual_reference_count = len(references)
+    actual_distinct_plants = len({item.get("plant_id") for item in references if item.get("plant_id")})
+    if coverage.get("reference_records") != actual_reference_count:
+        errors.append(f"coverage.reference_records: expected {actual_reference_count}, got {coverage.get('reference_records')}")
+    if coverage.get("distinct_plants") != actual_distinct_plants:
+        errors.append(f"coverage.distinct_plants: expected {actual_distinct_plants}, got {coverage.get('distinct_plants')}")
     counts = queue["counts"]
     expected = {"candidate_plants":len(seen),"pending_numeric_transcription":sum(not by_plant.get(p) for p in seen),"registered_numeric_reference_plants":sum(bool(by_plant.get(p)) for p in seen)}
     for key,value in expected.items():
