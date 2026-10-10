@@ -1560,11 +1560,49 @@
         "ruminant_digestibility",
         "ruminant_energy"
       ]
+    },
+    {
+      "reference_id": "ifct2017-c030-pumpkinleaf-20261010",
+      "plant_id": "pumpkinleaf",
+      "scientific_name": "Cucurbita maxima",
+      "source_name": "Indian Food Composition Tables 2017 — National Institute of Nutrition, ICMR",
+      "source_id": "IFCT 2017 C030 Table 1",
+      "source_url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+      "analyzed_part": "tender leaves",
+      "preparation_state": "fresh edible leaves (food-composition entry)",
+      "basis": "per 100 g edible portion, fresh weight",
+      "nutrients": {
+        "water_g": 85.82,
+        "protein_g": 4.21,
+        "fat_g": 0.74,
+        "fiber_g": 2.25,
+        "carbohydrate_g": 4.75,
+        "ash_g": 2.24
+      },
+      "nutrient_units": {
+        "water_g": "g/100g fresh",
+        "protein_g": "g/100g fresh",
+        "fat_g": "g/100g fresh",
+        "fiber_g": "g/100g fresh (total dietary fibre)",
+        "carbohydrate_g": "g/100g fresh (available carbohydrate)",
+        "ash_g": "g/100g fresh"
+      },
+      "sample_counts": {
+        "regions": 6
+      },
+      "display_tier": "related_species_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "서양호박(Cucurbita maxima)의 어린 잎, 생체 100g 기준",
+      "display_note_ko": "인도 식품성분표의 서양호박 어린 잎 분석값입니다. 거북밥의 '호박잎(Cucurbita spp.)' 전체에 동일하게 적용되는 값은 아닙니다. 총 식이섬유와 이용가능 탄수화물은 서로 다른 항목이며, 급여 안전성을 뜻하지 않습니다.",
+      "source_verification": "IFCT2017_C030_table1_text_crosschecked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false,
+      "review_note": "Original official PDF identified via FAO, but direct full PDF retrieval was size-limited; numeric C030 row cross-checked against independently indexed copies. Six regions, not six independent lab replicates."
     }
   ],
   "coverage": {
-    "reference_records": 29,
-    "distinct_plants": 19,
+    "reference_records": 30,
+    "distinct_plants": 20,
     "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
