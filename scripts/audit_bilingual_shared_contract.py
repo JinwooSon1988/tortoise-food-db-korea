@@ -3,6 +3,8 @@
 from pathlib import Path
 import re
 import sys
+import json
+from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[1]
 KR = (ROOT / "index.html").read_text(encoding="utf-8")
@@ -26,6 +28,25 @@ if not re.search(r'<html[^>]+lang=["\']ko["\']', KR):
     errors.append("KR html lang missing")
 if not re.search(r'<html[^>]+lang=["\']en["\']', EN):
     errors.append("EN html lang missing")
+# The English catalog must be a translation layer over the same plant IDs, never a separate catalog.
+plants = json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8"))
+translations = json.loads((ROOT / "data/i18n/en/catalog_en.json").read_text(encoding="utf-8"))["plants"]
+source_ids = [p.get("id") for p in plants]
+translated_ids = [p.get("id") for p in translations]
+for label, ids in (("source", source_ids), ("English", translated_ids)):
+    for pid, count in Counter(ids).items():
+        if count > 1:
+            errors.append(f"{label}: duplicate plant ID {pid}")
+for pid in sorted(set(source_ids) - set(translated_ids)):
+    errors.append(f"EN: missing plant translation {pid}")
+for pid in sorted(set(translated_ids) - set(source_ids)):
+    errors.append(f"EN: orphan translation {pid}")
+for item in translations:
+    pid = item.get("id", "<missing>")
+    for field in ("name", "why", "role"):
+        value = item.get(field)
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"EN: {pid} missing {field}")
 print("BILINGUAL SHARED CONTRACT:", "FAIL" if errors else "PASS")
 for error in errors:
     print("-", error)
