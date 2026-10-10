@@ -58,7 +58,7 @@ function boot(){
      const btn=e.target.closest('button[data-lang]');
      if(!btn)return;
      const next=btn.dataset.lang;
-     if(next!==document.documentElement.lang){apply(next);updateNav(next)}
+     if(next!==document.documentElement.lang){const url=new URL(location.href);url.searchParams.set('lang',next);try{history.replaceState(history.state,'',url.pathname+url.search+url.hash)}catch(e){}apply(next);updateNav(next)}
    });
  }
  apply(lang);
