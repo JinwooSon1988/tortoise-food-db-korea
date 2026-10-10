@@ -74,8 +74,22 @@ function navLabel(lang){return lang==='en'?{home:'Home',back:'Back'}:{home:'홈'
 function ensureNav(){const path=new URL(location.href).pathname.replace(/\/index\.html$/,'/');const rootPath=new URL(ROOT).pathname;if(path===rootPath||document.querySelector('.detailnav')){document.querySelectorAll('.utilitynav').forEach(n=>n.remove());return}if(document.querySelector('.utilitynav'))return;const n=document.createElement('nav');n.className='utilitynav';n.setAttribute('aria-label','Page navigation');n.innerHTML='<a class="utilityhome" href="'+ROOT+'">⌂ <span>홈</span></a><button class="utilityback" type="button">← <span>뒤로</span></button>';document.body.prepend(n);n.querySelector('.utilityback').onclick=()=>{if(history.length>1)history.back();else location.href=ROOT}}
 function updateNav(lang){const l=navLabel(lang),n=document.querySelector('.utilitynav');if(!n)return;n.querySelector('.utilityhome span').textContent=l.home;n.querySelector('.utilityback span').textContent=l.back}
 /* One page, one search engine: language switching updates the current DOM without navigation. */
+function bindDetailLocaleNavigation(){
+ const nav=document.querySelector('.detailnav .langswitch');
+ if(!nav)return;
+ nav.addEventListener('click',function(e){
+  const link=e.target.closest('a[hreflang]');
+  if(!link||!nav.contains(link))return;
+  const next=link.getAttribute('hreflang');
+  if(next!=='ko'&&next!=='en')return;
+  e.preventDefault();
+  try{localStorage.setItem(K,next)}catch(err){}
+  location.replace(link.href);
+ });
+}
 function boot(){
  ensureNav();
+ bindDetailLocaleNavigation();
  let lang='ko';
  try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}const requested=new URLSearchParams(location.search).get('lang');if(requested==='ko'||requested==='en')lang=requested;
  // Legacy plant detail pages have a separately authored full English page.
