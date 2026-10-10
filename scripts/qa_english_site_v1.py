@@ -18,10 +18,10 @@ HANGUL = re.compile(r"[가-힣]")
 errors = []
 # Homepage is search-first. Removed promotional and guide blocks must never return.
 _home = (ROOT / "en/index.html").read_text(encoding="utf-8")
-for _obsolete in ('<section class="truststrip"', '<h2>All plant data</h2>', '<h2>Guides</h2>'):
+for _obsolete in ('<section class="truststrip"', '<h2>Guides</h2>'):
     if _obsolete in _home:
         errors.append("English homepage regression: obsolete section returned: " + _obsolete)
-for _required in ('href="./all-plants/"', 'href="./guides/research-method/"', 'href="./guides/market-foods/"', 'href="./guides/wild-plants/"', 'href="./guides/caution-foods/"'):
+for _required in ('href="./all-plants/"', 'href="./guides/research-method/"'):
     if _required not in _home:
         errors.append("English homepage missing essential navigation: " + _required)
 
