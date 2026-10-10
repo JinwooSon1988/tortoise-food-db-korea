@@ -45,13 +45,16 @@ function boot(){
  let lang='ko';
  try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}
  const host=document.querySelector('.topmeta');
- if(host&&!document.querySelector('.langswitch')){
+ if(host){
    const nav=document.createElement('nav');
    nav.className='langswitch';
    nav.setAttribute('aria-label','언어 / Language');
    nav.innerHTML='<button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="en" aria-pressed="false">English</button>';
-   host.prepend(nav);
-   nav.addEventListener('click',e=>{
+   if(!host.querySelector('.langswitch'))host.prepend(nav);
+ }
+ const activeNav=document.querySelector('.langswitch');
+ if(activeNav){
+   activeNav.addEventListener('click',e=>{
      const btn=e.target.closest('button[data-lang]');
      if(!btn)return;
      const next=btn.dataset.lang;
