@@ -1984,10 +1984,11 @@
       "identity_scope": "exact_species",
       "verified_at": "2026-10-06",
       "master_scientific": "Campanula rotundifolia L.",
-      "taxon_evidence": "commons_category: Campanula rotundifolia (file description checked for conflicting identification)",
+      "taxon_evidence": "commons_category: Campanula rotundifolia; food-part cross-check: data/public_assessments.json (harebell, permitted leaves and flowers)",
       "depicted_part": "flowers",
-      "part_match": "mismatch",
-      "last_verified_at": "2026-10-06"
+      "part_match": "match",
+      "last_verified_at": "2026-10-10",
+      "verification_note": "The corresponding public_assessments.json record explicitly permits leaves AND flowers of Campanula rotundifolia, excluding rhizomes. This image depicts flowers of the exact species and therefore matches an accepted food part. Image remains flower-focused, not representative of both allowed parts."
     },
     {
       "plant_id": "erodium_botrys",
