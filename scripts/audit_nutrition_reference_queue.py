@@ -54,6 +54,10 @@ def main():
         for field in ("source_name", "source_url", "scientific_name", "analyzed_part", "basis"):
             if not isinstance(item.get(field), str) or not item[field].strip():
                 errors.append(f"{rid}: missing source metadata {field}")
+        if isinstance(item.get("source_url"), str) and not item["source_url"].startswith("https://"):
+            errors.append(f"{rid}: source_url must use HTTPS")
+        if item.get("status") == "reference_only" and not isinstance(item.get("reference_scope_ko"), str):
+            errors.append(f"{rid}: missing Korean reference scope")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
