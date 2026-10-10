@@ -163,10 +163,10 @@
           "institution": "Frontiers in Microbiology (2018)",
           "record": "doi:10.3389/fmicb.2018.02184 Table 1: Lolium perenne experimental diet, total N 22.5, WSC 176.7, NDF 413.4, ADF 239.3 g/kg DM",
           "country": "United Kingdom",
-          "hold_reason": "Dry-matter units explicit; source material and independent analytical replicates not yet verified. Candidate only; no genus-wide extrapolation or tortoise feeding-safety inference."
+          "hold_reason": "Explicit g/kg DM reported for experimental diet, but whether diet is solely Lolium perenne and whether independent chemical-analysis replicates exist has not been established. Do not relabel experimental-diet composition as pure ryegrass leaf or forage composition."
         }
       ],
-      "next_action": "Verify percentage basis in PMC3842282 Methods before numeric registration. Independently review Frontiers Microbiology 2018 doi:10.3389/fmicb.2018.02184 Table 1, which explicitly reports Lolium perenne experimental-diet composition in g/kg DM; verify sampling before reference-only registration.",
+      "next_action": "Registration gate: (1) verify exact analyzed matrix (ryegrass leaf vs whole forage vs experimental diet), (2) dry-matter or fresh-weight denominator for every analyte, (3) independent chemical-analysis sample n vs pooled field plots, (4) cultivar and cut, (5) exact original table and citation. Do not register or surface numerical values before all gates pass; no inference about tortoise feeding safety.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
