@@ -60,6 +60,10 @@ def main():
             errors.append(f"{rid}: missing Korean reference scope")
         if not isinstance(item.get("display_note_ko"), str) or not item["display_note_ko"].strip():
             errors.append(f"{rid}: missing Korean display note")
+        if not isinstance(item.get("analyzed_part"), str) or not item["analyzed_part"].strip():
+            errors.append(f"{rid}: analyzed plant part required")
+        if not isinstance(item.get("preparation_state"), str) or not item["preparation_state"].strip():
+            errors.append(f"{rid}: preparation state required")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
