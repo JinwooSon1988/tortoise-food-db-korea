@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Validate reference-only nutrition without confusing it with primary values."""
-import json
+import json, re
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parents[1] / "data"
+DENOMINATOR = re.compile(r"(/\s*100\s*g|per 100\s*g|100\s*g\b|/\s*kg|% DM|% as fed|% fresh|% of fresh|dry matter|\bDM\b|w/w)", re.I)
 
 def read(name):
     return json.loads((DATA / name).read_text(encoding="utf-8"))
@@ -16,7 +17,7 @@ def main():
     dm_lookup = {(r["plant_id"], r["source_id"]): r for r in dm_records}
     problems = []
     ids = set()
-    allowed = {"related_part_reference", "related_species_reference", "dry_matter_reference"}
+    allowed = {"related_part_reference", "related_species_reference", "related_cultivar_reference", "dry_matter_reference"}
     for row in reference:
         rid = row.get("reference_id")
         pid = row.get("plant_id")
@@ -47,8 +48,13 @@ def main():
         for key, value in nutrients.items():
             if not isinstance(value, (int, float)) or isinstance(value, bool) or value < 0:
                 problems.append(f"{rid}: invalid {key}")
-        if row.get("display_tier") != "dry_matter_reference" and "100" not in str(row.get("basis", "")):
-            problems.append(f"{rid}: reference basis must be explicit per 100g")
+        # Units are kept exactly as published (per 100 g, per kg fresh mass, % DM ...), never silently converted, so
+        # every value needs a unit with an explicit denominator and the record basis must state it too.
+        for key, unit in units.items():
+            if not DENOMINATOR.search(str(unit)):
+                problems.append(f"{rid}: unit for {key} lacks an explicit denominator ({unit})")
+        if not DENOMINATOR.search(str(row.get("basis", ""))):
+            problems.append(f"{rid}: basis lacks an explicit denominator")
         if row.get("origin_registry") == "data/plant_nutrition_dm_basis_v1.json":
             original = dm_lookup.get((pid, row.get("origin_source_id")))
             if original is None:
