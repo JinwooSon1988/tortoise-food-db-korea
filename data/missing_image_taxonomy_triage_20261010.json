@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-10",
+  "scope": "52 plant IDs absent from data/verified_plant_images_v56.json",
+  "policy": "Do not promote a species image to genus-wide identity, do not claim image verification without a working source file and license, and do not treat missing image as evidence of feeding safety.",
+  "counts": {
+    "species_exact": 5,
+    "genus_or_aggregate": 43,
+    "cultivar_or_hybrid": 4
+  },
+  "groups": {
+    "species_exact": [
+      {
+        "id": "spinach",
+        "scientific": "Spinacia oleracea",
+        "ko": "시금치"
+      },
+      {
+        "id": "chrysanthemum",
+        "scientific": "Chrysanthemum morifolium",
+        "ko": "국화"
+      },
+      {
+        "id": "mungbeansprout",
+        "scientific": "Vigna radiata",
+        "ko": "숙주나물"
+      },
+      {
+        "id": "melonleaf",
+        "scientific": "Cucumis melo",
+        "ko": "멜론잎"
+      },
+      {
+        "id": "kiwileaf",
+        "scientific": "Actinidia deliciosa",
+        "ko": "키위잎"
+      }
+    ],
+    "genus_or_aggregate": [
+      {
+        "id": "dandelion",
+        "scientific": "Taraxacum spp.",
+        "ko": "민들레"
+      },
+      {
+        "id": "sowthistle",
+        "scientific": "Sonchus spp.",
+        "ko": "방가지똥"
+      },
+      {
+        "id": "plantain",
+        "scientific": "Plantago spp.",
+        "ko": "질경이"
+      },
+      {
+        "id": "mulberry",
+        "scientific": "Morus spp.",
+        "ko": "뽕잎"
+      },
+      {
+        "id": "mallow",
+        "scientific": "Malva spp.",
+        "ko": "아욱"
+      },
+      {
+        "id": "mint",
+        "scientific": "Mentha spp.",
+        "ko": "민트"
+      },
+      {
+        "id": "clover",
+        "scientific": "Trifolium spp.",
+        "ko": "클로버"
+      },
+      {
+        "id": "pumpkinleaf",
+        "scientific": "Cucurbita spp.",
+        "ko": "호박잎"
+      },
+      {
+        "id": "rose",
+        "scientific": "Rosa spp.",
+        "ko": "장미꽃"
+      },
+      {
+        "id": "pricklypear",
+        "scientific": "Opuntia spp.",
+        "ko": "천년초"
+      },
+      {
+        "id": "ryegrass",
+        "scientific": "Lolium spp.",
+        "ko": "라이그라스"
+      },
+      {
+        "id": "violet",
+        "scientific": "Viola spp.",
+        "ko": "제비꽃"
+      },
+      {
+        "id": "geranium",
+        "scientific": "Pelargonium spp.",
+        "ko": "제라늄"
+      },
+      {
+        "id": "marigold",
+        "scientific": "Tagetes spp.",
+        "ko": "메리골드"
+      },
+      {
+        "id": "blackberryleaf",
+        "scientific": "Rubus fruticosus agg.",
+        "ko": "블랙베리잎"
+      },
+      {
+        "id": "geraniumleaf",
+        "scientific": "Pelargonium spp.",
+        "ko": "제라늄잎"
+      },
+      {
+        "id": "amaranthleaf",
+        "scientific": "Amaranthus spp.",
+        "ko": "비름"
+      },
+      {
+        "id": "pumpkinflower",
+        "scientific": "Cucurbita spp.",
+        "ko": "호박꽃"
+      },
+      {
+        "id": "lindenleaf",
+        "scientific": "Tilia spp.",
+        "ko": "피나무잎"
+      },
+      {
+        "id": "hazelleaf",
+        "scientific": "Corylus spp.",
+        "ko": "개암나무잎"
+      },
+      {
+        "id": "birchleaf",
+        "scientific": "Betula spp.",
+        "ko": "자작나무잎"
+      },
+      {
+        "id": "willowleaf",
+        "scientific": "Salix spp.",
+        "ko": "버드나무잎"
+      },
+      {
+        "id": "poplarleaf",
+        "scientific": "Populus spp.",
+        "ko": "포플러잎"
+      },
+      {
+        "id": "elmleaf",
+        "scientific": "Ulmus spp.",
+        "ko": "느릅나무잎"
+      },
+      {
+        "id": "mapleleaf",
+        "scientific": "Acer spp.",
+        "ko": "단풍나무잎"
+      },
+      {
+        "id": "eveningprimrose",
+        "scientific": "Oenothera spp.",
+        "ko": "달맞이꽃"
+      },
+      {
+        "id": "hawthorn",
+        "scientific": "Crataegus spp.",
+        "ko": "산사나무속 잎"
+      },
+      {
+        "id": "houseleek",
+        "scientific": "Sempervivum spp.",
+        "ko": "셈페르비붐"
+      },
+      {
+        "id": "echeveria",
+        "scientific": "Echeveria spp.",
+        "ko": "에케베리아"
+      },
+      {
+        "id": "hosta",
+        "scientific": "Hosta spp.",
+        "ko": "비비추속"
+      },
+      {
+        "id": "salsify",
+        "scientific": "Tragopogon spp.",
+        "ko": "살시피류"
+      },
+      {
+        "id": "hawksbeard",
+        "scientific": "Crepis spp.",
+        "ko": "씀바귀아재비류"
+      },
+      {
+        "id": "hawkbit",
+        "scientific": "Leontodon spp.",
+        "ko": "민들레아재비류"
+      },
+      {
+        "id": "hawkweed",
+        "scientific": "Hieracium spp.",
+        "ko": "조밥나물류"
+      },
+      {
+        "id": "petunia",
+        "scientific": "Petunia spp.",
+        "ko": "페튜니아"
+      },
+      {
+        "id": "dahlia",
+        "scientific": "Dahlia spp.",
+        "ko": "달리아"
+      },
+      {
+        "id": "gerbera",
+        "scientific": "Gerbera spp.",
+        "ko": "거베라"
+      },
+      {
+        "id": "zinnia",
+        "scientific": "Zinnia spp.",
+        "ko": "백일홍"
+      },
+      {
+        "id": "mexicanpetunia",
+        "scientific": "Ruellia spp.",
+        "ko": "멕시칸페튜니아"
+      },
+      {
+        "id": "coreopsis",
+        "scientific": "Coreopsis spp.",
+        "ko": "금계국속"
+      },
+      {
+        "id": "astilbe",
+        "scientific": "Astilbe spp.",
+        "ko": "아스틸베"
+      },
+      {
+        "id": "primula",
+        "scientific": "Primula spp.",
+        "ko": "프리뮬라속"
+      },
+      {
+        "id": "monarda",
+        "scientific": "Monarda spp.",
+        "ko": "모나르다속"
+      }
+    ],
+    "cultivar_or_hybrid": [
+      {
+        "id": "radicchio",
+        "scientific": "Cichorium intybus var. foliosum",
+        "ko": "라디키오"
+      },
+      {
+        "id": "pansy",
+        "scientific": "Viola × wittrockiana",
+        "ko": "팬지"
+      },
+      {
+        "id": "chard",
+        "scientific": "Beta vulgaris subsp. cicla",
+        "ko": "근대"
+      },
+      {
+        "id": "mizuna",
+        "scientific": "Brassica rapa var. nipposinica",
+        "ko": "미즈나"
+      }
+    ]
+  }
+}
