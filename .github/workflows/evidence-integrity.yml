@@ -68,7 +68,7 @@ jobs:
         with:
           node-version: '22'
       - name: Check exact, reference-only and missing nutrition coverage
-        run: node scripts/audit_nutrition_coverage.mjs
+        run: node scripts/audit_nutrition_coverage.mjs > nutrition-coverage-report.json
       - name: Check reference-only nutrition integrity
         run: python scripts/audit_nutrition_references.py
       - name: Check international nutrition research queue against registered references
