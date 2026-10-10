@@ -44,7 +44,7 @@
           "hold_reason": "lettuce type not specified"
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "next_action": "Prioritize Norwegian Matvaretabellen 06.058 Lactuca sativa L. raw leaves as related-cultivar reference; confirm official nutrient values, FoodEx2 analyzed part, whether each nutrient is measured or borrowed, and data reuse terms. Do not claim specific Korean leaf-lettuce cultivar or exact match. Independently compare IFCT C025 and MEXT 06362 before promotion.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
@@ -96,7 +96,7 @@
           "hold_reason": "proximates stated per 100 g FW but mineral basis not stated (analysed on dried samples); \"crude fiber\" labelled with AOAC 991.43 (TDF method); protein 0.20 g/100 g anomalous"
         }
       ],
-      "next_action": "Audit PeerJ PMC8621719 Table 1 against methods: protein 0.20 g/100g FW may be anomalous; AOAC 991.43 measures total dietary fiber rather than crude fiber; mineral analysis on dried samples has unresolved reporting denominator. Do not transcribe nutrient panel until each analyte basis and method is reconciled.",
+      "next_action": "Hold registration until PeerJ PMC8621719 protein 0.20 g/100g FW, AOAC 991.43 dietary-fiber terminology, and mineral fresh/dry denominator are reconciled from the paper and supporting data. Partial registration only if individual analytes and their bases are independently defensible.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
