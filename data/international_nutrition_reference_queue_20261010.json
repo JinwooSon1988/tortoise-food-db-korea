@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 5,
-    "registered_numeric_reference_plants": 8
+    "pending_numeric_transcription": 4,
+    "registered_numeric_reference_plants": 9
   },
   "records": [
     {
@@ -182,7 +182,7 @@
     {
       "plant_id": "marigold",
       "priority": "medium",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Europe PMC REST (fullTextXML)",
@@ -197,9 +197,11 @@
           "hold_reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "PMC8472405 Tagetes patula 'Antiqua Orange' flower-only numeric reference registered. Seek independent Tagetes species/cultivars and leaves; do not generalize to Tagetes spp. or feeding safety.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "pmc8472405-tagetes-patula-antiqua-orange-20261010"
+      ]
     },
     {
       "plant_id": "ribwortplantain",
