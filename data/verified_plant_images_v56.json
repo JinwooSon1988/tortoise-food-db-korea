@@ -57,8 +57,9 @@
       "master_scientific": "Cichorium intybus",
       "taxon_evidence": "file_description: \"Cichorium intybus o'simligi\" (no taxon category on file page)",
       "depicted_part": "whole flowering plant",
-      "part_match": "partial",
-      "last_verified_at": "2026-10-06"
+      "part_match": "match",
+      "last_verified_at": "2026-10-10",
+      "verification_note": "Cross-checked against data/public_assessments.json: assessed parts include leaves and flowers (chicory, calendula) or leaves (lambs_lettuce). The existing photo includes those relevant parts, although it is not a close-up. This is part inclusion, not photographic optimality or feeding safety."
     },
     {
       "plant_id": "endive",
@@ -121,9 +122,9 @@
       "master_scientific": "Valerianella locusta",
       "taxon_evidence": "Commons valued image: Valerianella locusta (L.) Laterr., flowers and leaves; Muséum de Toulouse, photograph by Didier Descouens",
       "depicted_part": "leaves and inflorescences",
-      "part_match": "partial",
+      "part_match": "match",
       "last_verified_at": "2026-10-10",
-      "verification_note": "Source identifies both leaves and flowers; leaf-only image remains preferable for food-part illustration."
+      "verification_note": "Source identifies both leaves and flowers; leaf-only image remains preferable for food-part illustration. Cross-checked against data/public_assessments.json: assessed parts include leaves and flowers (chicory, calendula) or leaves (lambs_lettuce). The existing photo includes those relevant parts, although it is not a close-up. This is part inclusion, not photographic optimality or feeding safety."
     },
     {
       "plant_id": "arugula",
@@ -382,11 +383,11 @@
       "identity_scope": "exact_species",
       "verified_at": "2026-09-21",
       "master_scientific": "Calendula officinalis",
-      "verification_note": "Botanical plate explicitly identifies Calendula officinalis and depicts the diagnostic flowering plant; public-domain historical botanical illustration.",
+      "verification_note": "Botanical plate explicitly identifies Calendula officinalis and depicts the diagnostic flowering plant; public-domain historical botanical illustration. Cross-checked against data/public_assessments.json: assessed parts include leaves and flowers (chicory, calendula) or leaves (lambs_lettuce). The existing photo includes those relevant parts, although it is not a close-up. This is part inclusion, not photographic optimality or feeding safety.",
       "taxon_evidence": "commons_category: Calendula officinalis - botanical illustrations",
       "depicted_part": "botanical illustration (whole plant, flowers)",
-      "part_match": "partial",
-      "last_verified_at": "2026-10-06"
+      "part_match": "match",
+      "last_verified_at": "2026-10-10"
     },
     {
       "plant_id": "dill",
