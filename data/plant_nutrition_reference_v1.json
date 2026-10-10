@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-10",
+  "purpose": "Publishable reference-nutrition sidecar; distinct from exact-match primary values and feeding safety verdicts.",
+  "display_policy": {
+    "verified_exact": "Show verified exact part/state values first when available.",
+    "related_part_reference": "Show original numbers with an explicit analyzed-part and source notice; never label as leaf-only or exact-match.",
+    "dry_matter_reference": "Show only with dry-matter units; never mix with per-100g-fresh metrics.",
+    "related_species_reference": "Show exact species name and warn that species differ.",
+    "upgrade": "When exact part/state values are verified, promote only those to primary and retain these historical references.",
+    "safety": "Nutrition composition never determines tortoise feeding verdict."
+  },
+  "records": [
+    {
+      "reference_id": "international-20261010-1",
+      "plant_id": "waterdropwort",
+      "scientific_name": "Oenanthe javanica",
+      "source_name": "MEXT Japan 2023",
+      "source_id": "06117",
+      "source_url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06117_7",
+      "analyzed_part": "stems and leaves",
+      "preparation_state": "raw",
+      "basis": "per 100g edible portion",
+      "nutrients": {
+        "water_g": 93.4,
+        "protein_g": 2,
+        "fat_g": 0.1,
+        "carbohydrate_g": 3.3,
+        "fiber_g": 2.5,
+        "calcium_mg": 34,
+        "phosphorus_mg": 51,
+        "vitamin_c_mg": 20
+      },
+      "display_tier": "related_part_reference",
+      "status": "reference_only",
+      "display_note_ko": "식물 부위 및 시료 조건이 대표 영양자료와 다를 수 있습니다. 해당 분석 부위의 참고값입니다.",
+      "review_note": "Existing policy prohibits generic record association; require explicit policy approval and reconciliation of geographic sample variability.",
+      "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "international-20261010-2",
+      "plant_id": "waterdropwort",
+      "scientific_name": "Oenanthe javanica",
+      "source_name": "Japan International Research Center for Agricultural Sciences (JIRCAS) Thai vegetable database",
+      "source_id": null,
+      "source_url": "https://www.jircas.go.jp/en/database/thaivege/080",
+      "analyzed_part": "young shoots",
+      "preparation_state": "fresh edible shoots",
+      "basis": "per 100g serving",
+      "nutrients": {
+        "water_g": 91.6,
+        "protein_g": 1.1,
+        "fat_g": 0.4,
+        "carbohydrate_g": 4.4,
+        "fiber_g": 1,
+        "calcium_mg": 138,
+        "phosphorus_mg": 43,
+        "vitamin_c_mg": 60.5
+      },
+      "display_tier": "related_part_reference",
+      "status": "reference_only",
+      "display_note_ko": "식물 부위 및 시료 조건이 대표 영양자료와 다를 수 있습니다. 해당 분석 부위의 참고값입니다.",
+      "review_note": "Different edible part/sample population; demonstrates substantial Ca variability, not a replacement for MEXT.",
+      "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "international-20261010-3",
+      "plant_id": "rapeseedleaf",
+      "scientific_name": "Brassica napus",
+      "source_name": "MEXT Japan 2023",
+      "source_id": "06203",
+      "source_url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06203_7",
+      "analyzed_part": "stems and leaves",
+      "preparation_state": "raw",
+      "basis": "per 100g edible portion",
+      "nutrients": {
+        "water_g": 88.3,
+        "protein_g": 4.1,
+        "fat_g": 0.4,
+        "carbohydrate_g": 6,
+        "fiber_g": 3.7,
+        "calcium_mg": 97,
+        "phosphorus_mg": 78,
+        "vitamin_c_mg": 110
+      },
+      "display_tier": "related_part_reference",
+      "status": "reference_only",
+      "display_note_ko": "잎과 줄기를 함께 분석한 자료입니다. 잎만의 성분과 다를 수 있습니다.",
+      "review_note": "Master entry is leaf-only; mixed stems+leaves cannot be assigned to leaf-only nutrient card. Some source nutrients estimated from related vegetables; see foodInfo note.",
+      "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "international-20261010-4",
+      "plant_id": "shepherdspurse",
+      "scientific_name": "Capsella bursa-pastoris",
+      "source_name": "MEXT Standard Tables of Food Composition in Japan 2023",
+      "source_id": "06200",
+      "source_url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06200_7",
+      "analyzed_part": "leaf",
+      "preparation_state": "raw",
+      "basis": "per 100 g edible portion",
+      "nutrients": {
+        "calcium_mg": 290,
+        "phosphorus_mg": 92,
+        "vitamin_c_mg": 110,
+        "water_g": 86.8
+      },
+      "display_tier": "related_part_reference",
+      "status": "reference_only",
+      "display_note_ko": "일본에서 측정한 생잎 자료입니다. 한국 가식부 자료와 분석 부위 및 시료 조건이 달라 수치가 다를 수 있습니다.",
+      "feeding_verdict_use": false
+    }
+  ]
+}
