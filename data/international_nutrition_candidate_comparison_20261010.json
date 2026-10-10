@@ -1,0 +1,77 @@
+{
+  "version": "1.0",
+  "reviewed_at": "2026-10-10",
+  "purpose": "Cross-country primary source comparison for held records; values are evidence candidates, NOT promoted nutrient registry values.",
+  "records": [
+    {
+      "plant_id": "waterdropwort",
+      "source": "MEXT Japan 2023",
+      "source_id": "06117",
+      "url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06117_7",
+      "scientific": "Oenanthe javanica",
+      "part": "stems and leaves",
+      "state": "raw",
+      "basis": "per 100g edible portion",
+      "values": {
+        "water_g": 93.4,
+        "protein_g": 2,
+        "fat_g": 0.1,
+        "carbohydrate_g": 3.3,
+        "fiber_g": 2.5,
+        "calcium_mg": 34,
+        "phosphorus_mg": 51,
+        "vitamin_c_mg": 20
+      },
+      "review": "candidate_verified_source",
+      "decision": "hold",
+      "reason": "Existing policy prohibits generic record association; require explicit policy approval and reconciliation of geographic sample variability."
+    },
+    {
+      "plant_id": "waterdropwort",
+      "source": "Japan International Research Center for Agricultural Sciences (JIRCAS) Thai vegetable database",
+      "url": "https://www.jircas.go.jp/en/database/thaivege/080",
+      "scientific": "Oenanthe javanica",
+      "part": "young shoots",
+      "state": "fresh edible shoots",
+      "basis": "per 100g serving",
+      "values": {
+        "water_g": 91.6,
+        "protein_g": 1.1,
+        "fat_g": 0.4,
+        "carbohydrate_g": 4.4,
+        "fiber_g": 1,
+        "calcium_mg": 138,
+        "phosphorus_mg": 43,
+        "vitamin_c_mg": 60.5
+      },
+      "review": "candidate_verified_source",
+      "decision": "hold",
+      "reason": "Different edible part/sample population; demonstrates substantial Ca variability, not a replacement for MEXT."
+    },
+    {
+      "plant_id": "rapeseedleaf",
+      "source": "MEXT Japan 2023",
+      "source_id": "06203",
+      "url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06203_7",
+      "scientific": "Brassica napus",
+      "part": "stems and leaves",
+      "state": "raw",
+      "basis": "per 100g edible portion",
+      "values": {
+        "water_g": 88.3,
+        "protein_g": 4.1,
+        "fat_g": 0.4,
+        "carbohydrate_g": 6,
+        "fiber_g": 3.7,
+        "calcium_mg": 97,
+        "phosphorus_mg": 78,
+        "vitamin_c_mg": 110
+      },
+      "review": "candidate_verified_source",
+      "decision": "hold",
+      "reason": "Master entry is leaf-only; mixed stems+leaves cannot be assigned to leaf-only nutrient card. Some source nutrients estimated from related vegetables; see foodInfo note.",
+      "source_method_note_url": "https://fooddb.mext.go.jp/details/foodInfo.pl?ITEM_NO=6_06203_7"
+    }
+  ],
+  "no_promotion": true
+}
