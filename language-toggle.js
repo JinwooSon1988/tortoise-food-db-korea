@@ -119,6 +119,13 @@ function boot(){
      if(link.hasAttribute('download')||link.getAttribute('href').startsWith('#'))return;
      let target;try{target=new URL(link.href,location.href)}catch(_){return}
      if(target.origin!==location.origin||!target.pathname.startsWith(new URL(ROOT).pathname))return;
+     const base=new URL(ROOT).pathname;
+     const relative=target.pathname.slice(base.length);
+     if(document.documentElement.lang==='en' && (/^guides\/research-method\/?$/.test(relative)||/^plant\/[^/]+\/?$/.test(relative))){
+       target.pathname=base+'en/'+relative.replace(/\/$/,'')+'/';
+     }else if(document.documentElement.lang==='ko' && (/^en\/guides\/research-method\/?$/.test(relative)||/^en\/plant\/[^/]+\/?$/.test(relative))){
+       target.pathname=base+relative.replace(/^en\//,'').replace(/\/$/,'')+'/';
+     }
      target.searchParams.set('lang',document.documentElement.lang);
      if(target.href!==link.href)link.href=target.href;
    });
