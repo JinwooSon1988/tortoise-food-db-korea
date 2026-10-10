@@ -1781,11 +1781,46 @@
       "primary_eligible": false,
       "feeding_verdict_use": false,
       "review_note": "Two-year greenhouse experiment; five flowers from five plants pooled per cultivar and five technical replications per parameter. Numeric values are table means, not SD. The published sample does not generalize to all Tagetes species or plant parts. Original article CC BY 4.0."
+    },
+    {
+      "reference_id": "pmc8472405-rosa-gloria-dei-flowers-20261010",
+      "plant_id": "rose",
+      "scientific_name": "Rosa (cultivar 'Gloria Dei'; species not resolved in paper)",
+      "source_name": "Mlcek et al., Foods (2021), Chemical, Nutritional and Sensory Characteristics of Six Ornamental Edible Flowers Species",
+      "source_id": "PMC8472405 Sections 2.1–2.2, 3.3–3.5",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8472405/",
+      "analyzed_part": "fully opened flowers; petals discussed, but whole-flower sample anatomical separation not established",
+      "preparation_state": "fresh mature flowers, homogenized within 24 hours",
+      "basis": "dry matter % of fresh flower mass; total phenolics g GAE/kg fresh mass; total flavonoids g RE/kg fresh mass",
+      "nutrients": {
+        "dry_matter_percent": 14.39,
+        "total_phenolics_g_GAE_per_kg_fresh": 4.45,
+        "total_flavonoids_g_RE_per_kg_fresh": 2.43
+      },
+      "nutrient_units": {
+        "dry_matter_percent": "% fresh mass (w/w)",
+        "total_phenolics_g_GAE_per_kg_fresh": "g gallic acid equivalents/kg fresh mass",
+        "total_flavonoids_g_RE_per_kg_fresh": "g rutin equivalents/kg fresh mass"
+      },
+      "sample_counts": {
+        "plants_per_cultivar": 5,
+        "flowers_pooled_per_cultivar": 5,
+        "technical_replicates_per_parameter": 5,
+        "study_years": 2
+      },
+      "display_tier": "related_cultivar_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "장미(Rosa) 'Gloria Dei' 품종의 개화한 꽃 시료, 생체 질량 기준; 논문에 종명과 꽃잎 단독 분석 여부가 명시되지 않음",
+      "display_note_ko": "특정 장미 품종의 꽃 시료에서 측정한 건물률·총페놀·총플라보노이드 참고값입니다. 페놀과 플라보노이드는 표준물질 환산량(GAE·RE)으로 실제 성분 질량과 같지 않습니다. 장미속 전체나 잎·줄기에 적용할 수 없으며 거북 급여 안전성 판정에도 사용하지 않습니다.",
+      "source_verification": "PMC8472405_sections_2_1_2_2_3_3_3_5_checked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false,
+      "review_note": "Values explicitly reported in original article text: DM 14.39% (section 3.5), TPC 4.45 g GAE/kg FM (section 3.3), TFC 2.43 g RE/kg FM (section 3.3). Whole-flower versus isolated petals ambiguous; do not label as petal-only. Five flowers pooled per cultivar and five technical replicates; no independent five-sample inference. Other nutrients omitted pending exact table verification."
     }
   ],
   "coverage": {
-    "reference_records": 35,
-    "distinct_plants": 24,
+    "reference_records": 36,
+    "distinct_plants": 25,
     "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
