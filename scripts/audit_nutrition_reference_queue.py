@@ -13,10 +13,16 @@ def main():
     references = load("plant_nutrition_reference_v1.json")["records"]
     plant_ids = {p["id"] for p in load("plants.json")}
     by_plant = {}
+    reference_ids = set()
+    duplicate_reference_ids = set()
     for item in references:
+        rid = item.get("reference_id")
+        if rid in reference_ids:
+            duplicate_reference_ids.add(rid)
+        reference_ids.add(rid)
         if item.get("nutrients") and item.get("status") == "reference_only":
             by_plant.setdefault(item["plant_id"], []).append(item["reference_id"])
-    errors = []
+    errors = [f"duplicate reference ID: {rid}" for rid in sorted(duplicate_reference_ids)]
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
@@ -39,9 +45,13 @@ def main():
             errors.append(f"{pid}: missing next_action")
         actual = sorted(by_plant.get(pid, []))
         recorded = sorted(item.get("registered_reference_ids", []))
+        if len(recorded) != len(set(recorded)):
+            errors.append(f"{pid}: duplicate registered reference IDs")
         if actual != recorded:
             errors.append(f"{pid}: registered reference IDs differ; expected {actual}, got {recorded}")
         has_numeric = bool(actual)
+        if has_numeric and any(not ref_id for ref_id in actual):
+            errors.append(f"{pid}: blank reference ID")
         if item.get("reference_numeric_already_registered") is not has_numeric:
             errors.append(f"{pid}: numeric registration flag incorrect")
         expected_status = "reference_numeric_registered" if has_numeric else "source_candidate_only_no_numeric_transcription"
