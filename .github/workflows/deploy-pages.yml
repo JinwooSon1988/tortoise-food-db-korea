@@ -1,8 +1,18 @@
 name: Deploy GitHub Pages
 
-# Native GitHub Pages handles automatic publication. Manual deployment only.
+# Publish every committed plant-language update; keep manual redeploy available.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'plant/**'
+      - 'en/**'
+      - 'detail-locale-history.js'
+      - 'language-toggle.js'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/generate_en_pages.py'
+      - '.github/workflows/deploy-pages.yml'
 
 permissions:
   contents: read
