@@ -64,6 +64,10 @@ def main():
             errors.append(f"{rid}: analyzed plant part required")
         if not isinstance(item.get("preparation_state"), str) or not item["preparation_state"].strip():
             errors.append(f"{rid}: preparation state required")
+        if not isinstance(item.get("basis"), str) or not item["basis"].strip():
+            errors.append(f"{rid}: quantitative measurement basis required")
+        if item.get("status") == "reference_only" and item.get("feeding_verdict_use") is not False:
+            errors.append(f"{rid}: nutrition reference cannot set feeding verdict")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
