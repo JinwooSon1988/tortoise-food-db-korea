@@ -27,6 +27,24 @@ def main():
         errors.append("nutrition and hold registries do not partition all plants")
     if len(nutrient_ids) != audit["verified_plants"] or len(held_ids) != audit["held_plants"]:
         errors.append("coverage summary count differs from actual registry")
+    # Detect source identity and nutritional basis drift without inventing values.
+    allowed_hold_reasons = {
+        "subtype_ambiguous", "part_mismatch", "no_record_found",
+        "genus_level_master", "policy_hold", "species_mismatch",
+        "state_mismatch", "part_ambiguous",
+    }
+    for row in holds:
+        if row.get("hold_reason_code") not in allowed_hold_reasons:
+            errors.append(f"{row['plant_id']}: unknown nutrition hold reason")
+        if row.get("do_not_infer") is not True:
+            errors.append(f"{row['plant_id']}: nutrition hold must forbid inference")
+    for row in nutrients:
+        if row.get("verification_status") != "verified":
+            errors.append(f"{row['plant_id']}: nutrition record not verified")
+        if not row.get("source_name") or not row.get("source_id"):
+            errors.append(f"{row['plant_id']}: source identity missing")
+        if "100 g" not in str(row.get("basis", "")):
+            errors.append(f"{row['plant_id']}: nutrition basis not per 100 g")
     numeric_fields = ("water_g", "protein_g", "fat_g", "carbohydrate_g", "fiber_g",
                       "calcium_mg", "phosphorus_mg", "potassium_mg", "sodium_mg",
                       "magnesium_mg", "iron_mg", "sugars_g", "vitamin_c_mg",
