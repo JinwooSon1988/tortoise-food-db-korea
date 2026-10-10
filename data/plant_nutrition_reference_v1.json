@@ -1639,11 +1639,54 @@
       "review_note": "Food ID 06.259; taxon Mentha L.; FoodEx2 part-nature 'aromatic herbs (leaves and other minor parts)'. Nutrient source codes include 430c and MI identifiers; not independent Norwegian analytical sample. No sample n claimed.",
       "primary_eligible": false,
       "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "norway-06058-lettuce-20261010",
+      "plant_id": "lettuce",
+      "scientific_name": "Lactuca sativa L. (cultivar unspecified)",
+      "source_name": "Norwegian Food Composition Table — Matvaretabellen",
+      "source_id": "06.058",
+      "source_url": "https://www.matvaretabellen.no/en/lettuce-leaves-norwegian-raw/",
+      "analyzed_part": "leaf (LanguaL C0200)",
+      "preparation_state": "raw",
+      "basis": "per 100 g edible portion, fresh/raw",
+      "nutrients": {
+        "water_g": 97,
+        "protein_g": 1.2,
+        "fat_g": 0.1,
+        "carbohydrate_g": 0.7,
+        "fiber_g": 1,
+        "calcium_mg": 47,
+        "phosphorus_mg": 33,
+        "potassium_mg": 338,
+        "magnesium_mg": 14,
+        "vitamin_c_mg": 3
+      },
+      "nutrient_units": {
+        "water_g": "g/100g raw",
+        "protein_g": "g/100g raw",
+        "fat_g": "g/100g raw",
+        "carbohydrate_g": "g/100g raw",
+        "fiber_g": "g/100g raw",
+        "calcium_mg": "mg/100g raw",
+        "phosphorus_mg": "mg/100g raw",
+        "potassium_mg": "mg/100g raw",
+        "magnesium_mg": "mg/100g raw",
+        "vitamin_c_mg": "mg/100g raw"
+      },
+      "display_tier": "related_species_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "상추(Lactuca sativa) 생잎, 품종 미지정, 생체 100g 기준",
+      "display_note_ko": "노르웨이 식품성분표의 생상추 잎 수치입니다. 국내 특정 상추 품종의 독립 분석값이 아니며, 수분과 탄수화물은 계산값입니다. 급여 안전성을 뜻하지 않습니다.",
+      "source_verification": "official_matvaretabellen_06_058_original_page_checked_2026-10-10",
+      "review_note": "FoodEx2 generic lettuce; LanguaL leaf. Protein, fat, fibre, Ca, P, K, Mg, vitamin C source code 202 (1994 Norwegian analysis); water MI0142 by difference, available carbohydrate MI0181 from starch and sugars. No independent sample n provided.",
+      "primary_eligible": false,
+      "feeding_verdict_use": false
     }
   ],
   "coverage": {
-    "reference_records": 31,
-    "distinct_plants": 21,
+    "reference_records": 32,
+    "distinct_plants": 22,
     "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
