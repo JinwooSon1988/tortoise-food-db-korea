@@ -157,10 +157,16 @@
           "institution": "PLOS ONE (2013), PMC3842282",
           "record": "Table 1, Lolium perenne cv AberMagic: N 4.04%, WSC 3.63%, NDF 37.58%, ADF 22.64%, ADL 7.20%; means from n=4 independent grass trays",
           "country": "United Kingdom",
-          "hold_reason": "Independent plant trays support n=4 within this controlled growth-cabinet study, unlike pooled field harvest in PMC10909542. Percent basis must be independently verified from methods before any numeric registry publication. Cultivar-specific, not all Lolium spp.; not a feeding safety study."
+          "hold_reason": "Table 1 confirms n=4 independent grass trays and reported % N, % WSC, % NDF, % ADF, % ADL. Exact percentage denominator (dry matter vs fresh mass) not established from Table 1 alone; do not label as % DM or convert. Cultivar-specific; not tortoise feeding-safety evidence."
+        },
+        {
+          "institution": "Frontiers in Microbiology (2018)",
+          "record": "doi:10.3389/fmicb.2018.02184 Table 1: Lolium perenne experimental diet, total N 22.5, WSC 176.7, NDF 413.4, ADF 239.3 g/kg DM",
+          "country": "United Kingdom",
+          "hold_reason": "Dry-matter units explicit; source material and independent analytical replicates not yet verified. Candidate only; no genus-wide extrapolation or tortoise feeding-safety inference."
         }
       ],
-      "next_action": "Review PLOS ONE 2013 PMC3842282 full methods for percentage basis (DM vs as-fed) and analytic handling before registering reference-only numbers. n=4 independent grass trays confirmed for Table 1. Preserve cultivar and conditions; feeding verdict unchanged.",
+      "next_action": "Verify percentage basis in PMC3842282 Methods before numeric registration. Independently review Frontiers Microbiology 2018 doi:10.3389/fmicb.2018.02184 Table 1, which explicitly reports Lolium perenne experimental-diet composition in g/kg DM; verify sampling before reference-only registration.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
