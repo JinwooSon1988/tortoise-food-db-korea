@@ -1740,11 +1740,52 @@
       "review_note": "PMC10909542 Table 1 Cut 4: FD DM 174.2 g/kg fresh; WSC 151.7 g/kg freeze-dried DM; total N 31.4 g/kg freeze-dried DM. Field blocks bulked before subsampling; no independent chemical-analysis n inferred.",
       "primary_eligible": false,
       "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "pmc8472405-tagetes-patula-antiqua-orange-20261010",
+      "plant_id": "marigold",
+      "scientific_name": "Tagetes patula 'Antiqua Orange'",
+      "source_name": "Foods (2021), Chemical, Nutritional and Sensory Characteristics of Six Ornamental Edible Flowers Species",
+      "source_id": "PMC8472405 Tables 4 and 6",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8472405/",
+      "analyzed_part": "fully opened flower petals (five flowers pooled per cultivar)",
+      "preparation_state": "fresh flowers collected at full maturity, homogenized within 24 hours",
+      "basis": "dry matter % of fresh mass; crude protein g/kg fresh mass; minerals mg/kg fresh mass",
+      "nutrients": {
+        "dry_matter_percent": 9.34,
+        "crude_protein_g_per_kg_fresh": 3.01,
+        "calcium_mg_per_kg_fresh": 362.95,
+        "phosphorus_mg_per_kg_fresh": 397.08,
+        "potassium_mg_per_kg_fresh": 3623.78,
+        "magnesium_mg_per_kg_fresh": 203.14
+      },
+      "nutrient_units": {
+        "dry_matter_percent": "% fresh mass (w/w)",
+        "crude_protein_g_per_kg_fresh": "g/kg fresh mass",
+        "calcium_mg_per_kg_fresh": "mg/kg fresh mass",
+        "phosphorus_mg_per_kg_fresh": "mg/kg fresh mass",
+        "potassium_mg_per_kg_fresh": "mg/kg fresh mass",
+        "magnesium_mg_per_kg_fresh": "mg/kg fresh mass"
+      },
+      "sample_counts": {
+        "plants_per_cultivar": 5,
+        "flowers_pooled_per_cultivar": 5,
+        "technical_replicates_per_parameter": 5,
+        "study_years": 2
+      },
+      "display_tier": "related_cultivar_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "프렌치메리골드(Tagetes patula) 'Antiqua Orange' 품종의 개화한 꽃잎, 생체 질량 기준",
+      "display_note_ko": "체코 연구에서 특정 품종의 꽃잎을 분석한 값입니다. 메리골드(Tagetes spp.) 전체나 잎·줄기 영양성분을 대표하지 않습니다. 조단백질은 생체 1kg당 g, 무기질은 생체 1kg당 mg이며, 건물률은 생체 질량 대비 %입니다. 5회 측정은 독립된 5개체 시료를 뜻하지 않으며 육지거북 급여 안전성의 근거가 아닙니다.",
+      "source_verification": "PMC8472405_full_text_tables_2_4_6_methods_checked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false,
+      "review_note": "Two-year greenhouse experiment; five flowers from five plants pooled per cultivar and five technical replications per parameter. Numeric values are table means, not SD. The published sample does not generalize to all Tagetes species or plant parts. Original article CC BY 4.0."
     }
   ],
   "coverage": {
-    "reference_records": 34,
-    "distinct_plants": 23,
+    "reference_records": 35,
+    "distinct_plants": 24,
     "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
