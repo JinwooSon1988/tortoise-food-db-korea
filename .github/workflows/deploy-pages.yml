@@ -8,6 +8,7 @@ on:
     paths:
       - 'plant/**'
       - 'en/**'
+      - 'index.html'
       - 'detail-locale-history.js'
       - 'language-toggle.js'
       - 'scripts/generate_static_pages.py'
