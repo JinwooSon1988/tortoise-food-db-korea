@@ -1,0 +1,62 @@
+name: Rebuild all bilingual plant navigation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-language-navigation.yml'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/generate_en_pages.py'
+      - 'scripts/qa_detail_language_navigation.py'
+      - 'detail-locale-history.js'
+      - 'language-toggle.js'
+permissions:
+  contents: write
+concurrency:
+  group: sync-generated-pages
+  cancel-in-progress: false
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate all Korean and English plant pages
+        run: |
+          python -m py_compile scripts/generate_static_pages.py scripts/generate_en_pages.py
+          python scripts/generate_static_pages.py
+          python scripts/patch_curated_social_metadata.py
+          python scripts/inject_plant_detail_v56.py
+          python scripts/generate_en_pages.py
+      - name: Verify every generated plant language switch and history script
+        run: |
+          python scripts/qa_detail_language_navigation.py
+          python - <<'PY'
+          from pathlib import Path
+          ko=list(Path('plant').glob('*/index.html'))
+          en=list(Path('en/plant').glob('*/index.html'))
+          assert len(ko)>=180 and len(en)>=180,(len(ko),len(en))
+          for p in ko+en:
+              t=p.read_text(encoding='utf-8')
+              assert 'detail-locale-history.js' in t,str(p)
+              assert 'class="iconnav-home"' in t,str(p)
+              assert 'class="iconnav-back"' in t,str(p)
+          print('Navigation and history verified:',len(ko),'Korean +',len(en),'English pages')
+          PY
+      - name: Commit and publish generated plant pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add plant en data/i18n/en/catalog_en.json sitemap.xml
+          if git diff --cached --quiet; then
+            echo "All generated plant pages already current." >> "$GITHUB_STEP_SUMMARY"
+          else
+            git commit -m "Build: apply bilingual navigation to all plant detail pages"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo "Published $(git rev-parse HEAD)" >> "$GITHUB_STEP_SUMMARY"
+          fi
