@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 4,
-    "registered_numeric_reference_plants": 9
+    "pending_numeric_transcription": 3,
+    "registered_numeric_reference_plants": 10
   },
   "records": [
     {
@@ -123,7 +123,7 @@
     {
       "plant_id": "rose",
       "priority": "medium",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Europe PMC REST (fullTextXML)",
@@ -138,9 +138,11 @@
           "hold_reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Partial fresh-flower chemistry registered from PMC8472405 for Rosa 'Gloria Dei': dry matter and phenolic/flavonoid assay equivalents only. Verify original tables before adding minerals or crude protein; establish exact anatomical part and species, and never generalize to Rosa spp. feeding safety.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "pmc8472405-rosa-gloria-dei-flowers-20261010"
+      ]
     },
     {
       "plant_id": "ryegrass",
