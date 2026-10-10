@@ -39,6 +39,9 @@ def main():
         if item.get("primary_eligible") is not False:
             errors.append(f"{rid}: reference must not be promoted to primary")
         units = item.get("nutrient_units", {})
+        if not isinstance(units, dict):
+            errors.append(f"{rid}: nutrient_units must be an object")
+            units = {}
         for nutrient, value in item["nutrients"].items():
             if not units.get(nutrient):
                 errors.append(f"{rid}: missing unit for {nutrient}")
@@ -68,7 +71,11 @@ def main():
         if not isinstance(item.get("next_action"), str) or not item["next_action"].strip():
             errors.append(f"{pid}: missing next_action")
         actual = sorted(by_plant.get(pid, []))
-        recorded = sorted(item.get("registered_reference_ids", []))
+        raw_recorded = item.get("registered_reference_ids", [])
+        if not isinstance(raw_recorded, list) or not all(isinstance(v, str) for v in raw_recorded):
+            errors.append(f"{pid}: registered_reference_ids must be a list of strings")
+            raw_recorded = []
+        recorded = sorted(raw_recorded)
         if len(recorded) != len(set(recorded)):
             errors.append(f"{pid}: duplicate registered reference IDs")
         if actual != recorded:
