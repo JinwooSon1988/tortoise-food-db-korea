@@ -152,9 +152,15 @@
           "record": "PMC10909542 Table 1, Lolium perenne cv AberMagic, fresh forage before wilting. Cut 2: FD DM 203.3 g/kg fresh, WSC 161.9 g/kg freeze-dried DM, total N 24.9 g/kg freeze-dried DM. Cut 4: 174.2, 151.7, 31.4 in corresponding units.",
           "country": "United Kingdom",
           "hold_reason": "Four replicate field blocks, but four plots were bulked before subsampling; do not treat four field plots as independent chemical analyses. Cultivar/cut-specific, no calcium or phosphorus data, no feeding safety implication."
+        },
+        {
+          "institution": "PLOS ONE (2013), PMC3842282",
+          "record": "Table 1, Lolium perenne cv AberMagic: N 4.04%, WSC 3.63%, NDF 37.58%, ADF 22.64%, ADL 7.20%; means from n=4 independent grass trays",
+          "country": "United Kingdom",
+          "hold_reason": "Independent plant trays support n=4 within this controlled growth-cabinet study, unlike pooled field harvest in PMC10909542. Percent basis must be independently verified from methods before any numeric registry publication. Cultivar-specific, not all Lolium spp.; not a feeding safety study."
         }
       ],
-      "next_action": "Original PMC10909542 Table 1 numbers and Methods 2.1-2.3 checked; clarify analytical replication of pooled forage before reference-only registration. Preserve cultivar, cut and units. Feedipedia 625 remains non-citable.",
+      "next_action": "Review PLOS ONE 2013 PMC3842282 full methods for percentage basis (DM vs as-fed) and analytic handling before registering reference-only numbers. n=4 independent grass trays confirmed for Table 1. Preserve cultivar and conditions; feeding verdict unchanged.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
