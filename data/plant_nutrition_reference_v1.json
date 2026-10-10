@@ -225,11 +225,50 @@
       "source_verification": "source_table_directly_checked_2026-10-10_legacy_revision_pending",
       "primary_eligible": false,
       "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "feedipedia-15683-rape-forage-fresh-20261010",
+      "plant_id": "rapeseedleaf",
+      "scientific_name": "Brassica napus (rape forage; confirm exact subspecies and crop stage)",
+      "source_name": "Feedipedia — Rape forage",
+      "source_id": "15683",
+      "source_url": "https://www.feedipedia.org/node/15683",
+      "analyzed_part": "rape forage aerial parts (not leaf-only)",
+      "preparation_state": "fresh forage analyzed; nutrient concentrations reported on dry-matter basis",
+      "basis": "dry matter (DM); dry matter % as fed, protein/fibre % DM, calcium/phosphorus g/kg DM",
+      "nutrients": {
+        "dry_matter_pct_as_fed": 12.1,
+        "crude_protein_pct_dm": 19.3,
+        "crude_fibre_pct_dm": 15.8,
+        "calcium_g_per_kg_dm": 21.7,
+        "phosphorus_g_per_kg_dm": 5.8
+      },
+      "nutrient_units": {
+        "dry_matter_pct_as_fed": "% as fed",
+        "crude_protein_pct_dm": "% DM",
+        "crude_fibre_pct_dm": "% DM",
+        "calcium_g_per_kg_dm": "g/kg DM",
+        "phosphorus_g_per_kg_dm": "g/kg DM"
+      },
+      "display_tier": "dry_matter_reference",
+      "status": "reference_only",
+      "display_note_ko": "유채의 사료용 생초(지상부) 분석 평균입니다. 잎만의 성분이 아니며, 단백질·섬유소는 건조물 대비 %, 칼슘·인은 건조물 kg당 g입니다. 영양소마다 분석 표본 수가 다르므로 동일 시료의 구성으로 해석하지 마세요. 육지거북 급여 안전성을 뜻하지 않습니다.",
+      "reference_scope_ko": "유채 사료용 생초 지상부, 건조물 기준",
+      "source_verification": "feedipedia_original_table_web_checked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false,
+      "sample_counts": {
+        "dry_matter": 50,
+        "crude_protein": 70,
+        "crude_fibre": 31,
+        "calcium": 13,
+        "phosphorus": 13
+      }
     }
   ],
   "coverage": {
-    "reference_records": 6,
+    "reference_records": 7,
     "distinct_plants": 5,
-    "notice": "Dry-matter values are not raw edible per-100g values. Feedipedia legacy and forage tables are reference-only."
+    "notice": "Reference-only records include raw edible and forage dry-matter tables. Do not merge values across basis, species, parts or samples."
   }
 }
