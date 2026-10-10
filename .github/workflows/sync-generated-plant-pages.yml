@@ -68,6 +68,7 @@ jobs:
           python scripts/qa_verdict_consistency.py
           python scripts/qa_feeding_cautions_v1.py
           python scripts/qa_english_site_v1.py
+          python scripts/qa_detail_language_navigation.py
       - name: Commit generated pages
         run: |
           if git diff --quiet -- plant guides en data/i18n/en/catalog_en.json sitemap.xml && [ -z "$(git status --porcelain -- en)" ]; then
