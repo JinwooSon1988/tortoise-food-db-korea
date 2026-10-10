@@ -11,7 +11,7 @@ EN_SEARCH = (ROOT / "en/search-en.js").read_text(encoding="utf-8")
 errors = []
 DATA = ("plants.json", "public_assessments.json", "verified_plant_images_v56.json")
 for name, html in (("KR", KR), ("EN", EN)):
-    if not re.search(r'<script[^>]+src=["\'](?:\\.\\./|\\./)?verdict-core\\.js', html):
+    if not re.search(r'<script[^>]+src=["\'](?:\.\./|\./)?verdict-core\.js', html):
         errors.append(f"{name}: shared verdict-core.js missing")
 for name in DATA:
     if name not in KR:
