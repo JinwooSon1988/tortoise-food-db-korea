@@ -33,6 +33,21 @@ for url in locs:
         errors.append(f"Missing title: {url}")
     if not re.search(r'<meta[^>]+name=["\']description["\']', html, re.I):
         errors.append(f"Missing description: {url}")
+# Validate bilingual hreflang pairs for all indexed counterparts.
+for url in locs:
+    rel = url[len(BASE):].strip("/")
+    if rel.startswith("en/"):
+        ko_url, en_url = BASE + "/" + rel[3:], url
+    else:
+        ko_url, en_url = url, BASE + "/en/" + rel + ("" if rel.endswith("/") else "/")
+    if ko_url not in locs or en_url not in locs:
+        continue
+    page = ROOT / rel / "index.html" if rel else ROOT / "index.html"
+    html = page.read_text(encoding="utf-8")
+    for lang, target in (("ko", ko_url), ("en", en_url)):
+        expected = 'hreflang="' + lang + '" href="' + target + '"'
+        if expected not in html:
+            errors.append(f"Missing bilingual alternate {lang}: {url}")
 if BASE + "/en/all-plants/" in locs:
     errors.append("Noindex English catalog redirect is in sitemap")
 ko = {x[len(BASE):] for x in locs if "/en/" not in x[len(BASE):]}
