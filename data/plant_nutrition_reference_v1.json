@@ -1816,11 +1816,54 @@
       "primary_eligible": false,
       "feeding_verdict_use": false,
       "review_note": "Values explicitly reported in original article text: DM 14.39% (section 3.5), TPC 4.45 g GAE/kg FM (section 3.3), TFC 2.43 g RE/kg FM (section 3.3). Whole-flower versus isolated petals ambiguous; do not label as petal-only. Five flowers pooled per cultivar and five technical replicates; no independent five-sample inference. Other nutrients omitted pending exact table verification."
+    },
+    {
+      "reference_id": "pmc6268292-viola-wittrockiana-fancy-flower-20261010",
+      "plant_id": "violetflower",
+      "scientific_name": "Viola × wittrockiana 'Fancy' (NOT Viola mandshurica)",
+      "source_name": "Rop et al., Molecules (2012), Edible Flowers—A New Promising Source of Mineral Elements in Human Nutrition",
+      "source_id": "PMC6268292 Tables 2, 3 and 6; Section 3",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6268292/",
+      "analyzed_part": "whole mature flowers from five pooled plants, not isolated petals",
+      "preparation_state": "fresh flowers, homogenized within 24 h",
+      "basis": "dry matter percentage of fresh flower mass; crude protein g/kg fresh mass; mineral concentrations mg/kg fresh mass",
+      "nutrients": {
+        "dry_matter_percent": 10.01,
+        "crude_protein_g_per_kg_fresh": 6.7,
+        "phosphorus_mg_per_kg_fresh": 514.62,
+        "potassium_mg_per_kg_fresh": 3964.84,
+        "calcium_mg_per_kg_fresh": 486.44,
+        "magnesium_mg_per_kg_fresh": 190.05,
+        "sodium_mg_per_kg_fresh": 131.97
+      },
+      "nutrient_units": {
+        "dry_matter_percent": "% fresh mass (w/w)",
+        "crude_protein_g_per_kg_fresh": "g/kg fresh mass",
+        "phosphorus_mg_per_kg_fresh": "mg/kg fresh mass",
+        "potassium_mg_per_kg_fresh": "mg/kg fresh mass",
+        "calcium_mg_per_kg_fresh": "mg/kg fresh mass",
+        "magnesium_mg_per_kg_fresh": "mg/kg fresh mass",
+        "sodium_mg_per_kg_fresh": "mg/kg fresh mass"
+      },
+      "sample_counts": {
+        "plants_per_cultivar": 5,
+        "flowers_pooled_per_cultivar": 5,
+        "technical_replicates_per_parameter": 5,
+        "study_years": 2
+      },
+      "display_tier": "related_species_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "팬지(Viola × wittrockiana) 'Fancy' 품종의 개화한 꽃 전체, 생체 질량 기준. 거북밥 제비꽃(Viola mandshurica)과 다른 종",
+      "display_note_ko": "제비꽃(Viola mandshurica)이 아니라 원예 팬지(Viola × wittrockiana) 'Fancy'의 꽃 전체를 분석한 관련 종 참고값입니다. 잎이나 다른 제비꽃류에 적용할 수 없으며, 건물률과 생체 1kg 기준 조단백질·무기질을 혼동하면 안 됩니다. 영양성분은 급여 안전성 판정의 근거가 아닙니다.",
+      "source_verification": "PMC6268292_primary_paper_tables_2_3_6_methods_verified_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false,
+      "review_note": "Rop et al. 2012, two-year mean; five flowers from five plants mixed into one sample per cultivar, five analytical replications; n=10 reported in tables is not ten independently collected plants. Master Viola mandshurica identity mismatch remains unresolved. Paper CC BY 3.0."
     }
   ],
   "coverage": {
-    "reference_records": 36,
-    "distinct_plants": 25,
+    "reference_records": 37,
+    "distinct_plants": 26,
     "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
