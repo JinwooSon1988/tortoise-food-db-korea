@@ -146,9 +146,15 @@
           "record": "Feedipedia 625 Ryegrass (Lolium spp.)",
           "country": "International (France/FAO)",
           "hold_reason": "Feedipedia node 625 explicitly states 'DATASHEET UNDER CONSTRUCTION. DO NOT QUOTE.' (last updated 2010-03-16); historical FAO/Göhl source and revision pending. Not eligible for numeric transcription or citation as verified nutrition."
+        },
+        {
+          "institution": "Peer-reviewed study (PMC10909542)",
+          "record": "Lolium perenne cv AberMagic, fresh forage, Table 1; dry matter and nitrogen / water-soluble carbohydrates reported for cuts 2 and 4",
+          "country": "United Kingdom",
+          "hold_reason": "Species/cultivar-specific, cut-specific, not genus-wide; sample count and full methods need checking before numeric transcription. Keep candidate-only."
         }
       ],
-      "next_action": "Find an independently citable ryegrass (Lolium spp.) analytical table; verify taxon, forage part, fresh/hay state, dry-matter basis, analyte units and sample counts before registering any numeric reference. Keep feeding verdict unchanged.",
+      "next_action": "Prioritize original PMC10909542 Table 1 and methods: verify sample counts and fresh-forage sampling; record cut-specific DM, N and WSC units, and explicitly label Lolium perenne cv AberMagic. Do not generalize to Lolium spp. or use as feeding verdict. Feedipedia 625 remains non-citable.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
