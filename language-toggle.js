@@ -81,9 +81,15 @@ function boot(){
  // Legacy plant detail pages have a separately authored full English page.
  // Route there rather than mixing translated labels with untranslated Korean paragraphs.
  const detailMatch=location.pathname.match(/^(.*\/tortoise-food-db-korea\/)plant\/([^/]+)\/?(?:index\.html)?$/);
+ const methodMatch=location.pathname.match(/^(.*\/tortoise-food-db-korea\/)guides\/research-method\/?(?:index\.html)?$/);
  if(detailMatch&&lang==='en'){
    try{localStorage.setItem(K,'en')}catch(e){}
    location.replace(detailMatch[1]+'en/plant/'+detailMatch[2]+'/?lang=en'+location.hash);
+   return;
+ }
+ if(methodMatch&&lang==='en'){
+   try{localStorage.setItem(K,'en')}catch(e){}
+   location.replace(methodMatch[1]+'en/guides/research-method/?lang=en'+location.hash);
    return;
  }
  const host=document.querySelector('.topmeta');
