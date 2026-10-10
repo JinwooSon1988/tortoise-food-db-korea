@@ -13,6 +13,13 @@ def main():
     queue = load("international_nutrition_reference_queue_20261010.json")
     references = load("plant_nutrition_reference_v1.json")["records"]
     plant_ids = {p["id"] for p in load("plants.json")}
+    errors = []
+    if not isinstance(references, list):
+        raise ValueError("reference records must be a list")
+    for index, item in enumerate(references):
+        if not isinstance(item, dict):
+            errors.append(f"reference record {index}: expected an object")
+    references = [item for item in references if isinstance(item, dict)]
     by_plant = {}
     reference_ids = set()
     duplicate_reference_ids = set()
@@ -25,7 +32,7 @@ def main():
             pid = item.get("plant_id")
             if isinstance(pid, str) and pid.strip() and isinstance(rid, str) and rid.strip():
                 by_plant.setdefault(pid, []).append(rid)
-    errors = [f"duplicate reference ID: {rid}" for rid in sorted(duplicate_reference_ids, key=str)]
+    errors.extend(f"duplicate reference ID: {rid}" for rid in sorted(duplicate_reference_ids, key=str))
     for item in references:
         if item.get("status") == "reference_only" and item.get("nutrients"):
             if not isinstance(item.get("nutrients"), dict):
