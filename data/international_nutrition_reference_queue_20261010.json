@@ -1,0 +1,260 @@
+{
+  "version": "1.0",
+  "created_at": "2026-10-10",
+  "purpose": "Independent research queue for international nutrition candidates, not nutrient measurements.",
+  "rules": [
+    "No values inferred from source titles or other plant parts.",
+    "Related species and cultivar data may only be shown as conspicuously labeled references, never as exact-match primary.",
+    "Reject copied or borrowed nutrient numbers when provenance cannot be shown.",
+    "Never use nutrition reference values to determine tortoise feeding safety."
+  ],
+  "counts": {
+    "candidate_plants": 13,
+    "pending_numeric_transcription": 11
+  },
+  "records": [
+    {
+      "plant_id": "lettuce",
+      "priority": "high",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "日本食品標準成分表（八訂）増補2023年",
+          "record": "MEXT 06362 サンチュ (Sang-chu lettuce, Lactuca sativa Angustana Group) and 06312-06316",
+          "country": "Japan",
+          "hold_reason": "several lettuce types; master 상추 does not fix the type (prior subtype hold kept). Sang-chu is the closest Korean-name match but its cultivar-group assignment needs a policy decision"
+        },
+        {
+          "institution": "Indian Food Composition Tables 2017",
+          "record": "IFCT C025 Lettuce (Lactuca sativa)",
+          "country": "India",
+          "hold_reason": "lettuce type not described; master 상추 implies leaf lettuce"
+        },
+        {
+          "institution": "West African Food Composition Table 2019",
+          "record": "WAFCT 04_040 Lettuce, raw",
+          "country": "West Africa (regional)",
+          "hold_reason": "compiled from several tables, type not stated"
+        },
+        {
+          "institution": "Matvaretabellen (open API)",
+          "record": "Matvaretabellen 06.058 Lettuce leaves, Norwegian, raw (Lactuca sativa L.)",
+          "country": "Norway",
+          "hold_reason": "lettuce type not specified"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "mint",
+      "priority": "high",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Ciqual 2025 (2025-11-03)",
+          "record": "Ciqual 11027 Mint, fresh",
+          "country": "France",
+          "hold_reason": "master Mentha spp. is genus-level; record species not stated"
+        },
+        {
+          "institution": "Indian Food Composition Tables 2017",
+          "record": "IFCT G016 Mint leaves (Mentha spicata)",
+          "country": "India",
+          "hold_reason": "master Mentha spp. is genus-level"
+        },
+        {
+          "institution": "Australian Food Composition Database Release 3",
+          "record": "AFCD F005700 Mint, fresh, raw",
+          "country": "Australia",
+          "hold_reason": "genus-level master"
+        },
+        {
+          "institution": "Matvaretabellen (open API)",
+          "record": "Matvaretabellen 06.259 Mint, raw (Mentha L.)",
+          "country": "Norway",
+          "hold_reason": "genus-level record and master"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "chickweed",
+      "priority": "high",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Europe PMC REST (fullTextXML)",
+          "record": "PMC8621719 (PeerJ 2021, doi:10.7717/peerj.12488) Stellaria media fresh leaves",
+          "country": "various",
+          "hold_reason": "proximates stated per 100 g FW but mineral basis not stated (analysed on dried samples); \"crude fiber\" labelled with AOAC 991.43 (TDF method); protein 0.20 g/100 g anomalous"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "pumpkinleaf",
+      "priority": "high",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Indian Food Composition Tables 2017",
+          "record": "IFCT C030 Pumpkin leaves, tender (Cucurbita maxima)",
+          "country": "India",
+          "hold_reason": "master Cucurbita spp. is genus-level"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "rose",
+      "priority": "medium",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Europe PMC REST (fullTextXML)",
+          "record": "PMC6268292 Rosa odorata 'Ilona'",
+          "country": "Czech Republic",
+          "hold_reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
+        },
+        {
+          "institution": "Europe PMC REST (fullTextXML)",
+          "record": "PMC8472405 Rosa 'Gloria Dei'",
+          "country": "Czech Republic",
+          "hold_reason": "genus_level_master: master taxon is Rosa spp.; a single cultivar/species cannot represent the genus. The Foods 2021 record is also identified only to genus (hybrid tea cultivar)."
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "ryegrass",
+      "priority": "medium",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Feedipedia",
+          "record": "Feedipedia 625 Ryegrass (Lolium spp.)",
+          "country": "International (France/FAO)",
+          "hold_reason": "genus-level master and source"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "marigold",
+      "priority": "medium",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Europe PMC REST (fullTextXML)",
+          "record": "PMC6268292 Tagetes patula 'Bolero'",
+          "country": "Czech Republic",
+          "hold_reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
+        },
+        {
+          "institution": "Europe PMC REST (fullTextXML)",
+          "record": "PMC8472405 Tagetes patula 'Antiqua Orange'",
+          "country": "Czech Republic",
+          "hold_reason": "genus_level_master: master taxon is Tagetes spp.; T. patula values are not transferred to the genus."
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "ribwortplantain",
+      "priority": "medium",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Feedipedia",
+          "record": "Feedipedia 11549 Ribwort plantain, aerial part",
+          "country": "International (France/FAO)",
+          "hold_reason": "state (fresh/dried) not stated"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "violetflower",
+      "priority": "medium",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Europe PMC REST (fullTextXML)",
+          "record": "PMC6268292 Viola x wittrockiana 'Fancy'",
+          "country": "Czech Republic",
+          "hold_reason": "species_mismatch: garden pansy is not Viola mandshurica."
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "waterdropwort",
+      "priority": "low",
+      "reference_numeric_already_registered": true,
+      "candidate_sources": [
+        {
+          "institution": "日本食品標準成分表（八訂）増補2023年",
+          "record": "MEXT 06117 せり 茎葉 生 (Oenanthe javanica)",
+          "country": "Japan",
+          "hold_reason": "minari/waterdropwort generic-record policy hold retained"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "one_or_more_numeric_records_in_reference_v1"
+    },
+    {
+      "plant_id": "fennelleaf",
+      "priority": "high",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "BLS 4.0 (2025), CC BY 4.0",
+          "record": "BLS G431100 Fenchelblatt/Bologneser Fenchel, roh",
+          "country": "Germany",
+          "hold_reason": "German name says leaf but \"Bologneser Fenchel\"/\"Roman fennel\" denotes the bulb variety; part cannot be resolved without SFK"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    },
+    {
+      "plant_id": "rapeseedleaf",
+      "priority": "low",
+      "reference_numeric_already_registered": true,
+      "candidate_sources": [
+        {
+          "institution": "日本食品標準成分表（八訂）増補2023年",
+          "record": "MEXT 06203 洋種なばな 茎葉 生 (Brassica napus)",
+          "country": "Japan",
+          "hold_reason": "stem+leaf composite; master is leaf"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "one_or_more_numeric_records_in_reference_v1"
+    },
+    {
+      "plant_id": "hibiscusrosa",
+      "priority": "high",
+      "reference_numeric_already_registered": false,
+      "candidate_sources": [
+        {
+          "institution": "Feedipedia",
+          "record": "Feedipedia 139 Hibiscus rosa-sinensis, aerial part, fresh",
+          "country": "International (France/FAO)",
+          "hold_reason": "aerial-part composite; master entry concerns the flower"
+        }
+      ],
+      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
+      "numeric_status": "source_candidate_only_no_numeric_transcription"
+    }
+  ]
+}
