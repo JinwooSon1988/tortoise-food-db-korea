@@ -22,7 +22,13 @@ def main():
         reference_ids.add(rid)
         if item.get("nutrients") and item.get("status") == "reference_only":
             by_plant.setdefault(item["plant_id"], []).append(item["reference_id"])
-    errors = [f"duplicate reference ID: {rid}" for rid in sorted(duplicate_reference_ids)]
+    errors = [f"duplicate reference ID: {rid}" for rid in sorted(duplicate_reference_ids, key=str)]
+    for item in references:
+        if item.get("nutrients") and item.get("status") == "reference_only":
+            if not isinstance(item.get("reference_id"), str) or not item["reference_id"].strip():
+                errors.append(f"reference for {item.get('plant_id')}: missing reference ID")
+            if item.get("plant_id") not in plant_ids:
+                errors.append(f"reference for unknown plant: {item.get('plant_id')}")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
@@ -50,8 +56,6 @@ def main():
         if actual != recorded:
             errors.append(f"{pid}: registered reference IDs differ; expected {actual}, got {recorded}")
         has_numeric = bool(actual)
-        if has_numeric and any(not ref_id for ref_id in actual):
-            errors.append(f"{pid}: blank reference ID")
         if item.get("reference_numeric_already_registered") is not has_numeric:
             errors.append(f"{pid}: numeric registration flag incorrect")
         expected_status = "reference_numeric_registered" if has_numeric else "source_candidate_only_no_numeric_transcription"
