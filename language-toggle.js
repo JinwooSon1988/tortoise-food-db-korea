@@ -97,5 +97,16 @@ function boot(){
  }
  apply(lang);
  updateNav(lang);
+ // Keep the user's explicit choice across all internal pages and browser navigation.
+ document.addEventListener('click',e=>{
+   const link=e.target.closest('a[href]');
+   if(!link||link.hasAttribute('download')||link.target==='_blank')return;
+   let target;try{target=new URL(link.href,location.href)}catch(_){return}
+   if(target.origin!==location.origin||!target.pathname.startsWith(new URL(ROOT).pathname))return;
+   if(target.searchParams.get('lang')!==document.documentElement.lang){
+     target.searchParams.set('lang',document.documentElement.lang);
+     link.href=target.href;
+   }
+ },true);
 }
 document.addEventListener('DOMContentLoaded',boot)})();
