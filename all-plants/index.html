@@ -70,7 +70,7 @@ const CAT={leafy:['잎채소','Leafy vegetable'],wild:['야생초','Wild plant']
 const catLabel=c=>CAT[c]?CAT[c][en()?1:0]:c;
 const VR={A:1,B:2,C:3,D:4,'보류':5};let rows=[],sortKey='ko',sortDir=1,evidenceMap=new Map,imageMap=new Map,qTimer=null;const $=id=>document.getElementById(id);
 async function j(u){try{let r=await fetch(u);return r.ok?await r.json():null}catch(e){return null}}
-function n(v){return v==null?null:Number(v)}function val(v,d=2){return v==null?'<span class="na" aria-label="자료 없음">—</span>':Number(v).toFixed(d).replace(/\.00$/,'')}
+function n(v){return v==null?null:Number(v)}function val(v,d=2){return v==null?'<span class="na" aria-label="' +(en()?'No verified data':'검증된 자료 없음')+ '">—</span>':Number(v).toFixed(d).replace(/\.00$/,'')}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function fill(sel,vals,labelFn=null){const seen=new Set;[...new Set(vals.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),'ko')).forEach(v=>{const label=labelFn?labelFn(v):v;if(seen.has(label))return;seen.add(label);let o=document.createElement('option');o.value=v;o.textContent=label;sel.appendChild(o)})}
 function relabel(sel,labelFn){[...sel.options].forEach(o=>{if(o.value)o.textContent=labelFn(o.value)})}
