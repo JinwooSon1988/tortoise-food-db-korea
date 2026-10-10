@@ -12,6 +12,8 @@ def main():
     reference = read("plant_nutrition_reference_v1.json")["records"]
     plants = {p["id"] for p in read("plants.json")}
     primary = {p["plant_id"] for p in read("plant_nutrition_v56.json")["plants"]}
+    dm_records = read("plant_nutrition_dm_basis_v1.json")["records"]
+    dm_lookup = {(r["plant_id"], r["source_id"]): r for r in dm_records}
     problems = []
     ids = set()
     allowed = {"related_part_reference", "related_species_reference", "dry_matter_reference"}
@@ -47,6 +49,24 @@ def main():
                 problems.append(f"{rid}: invalid {key}")
         if row.get("display_tier") != "dry_matter_reference" and "100" not in str(row.get("basis", "")):
             problems.append(f"{rid}: reference basis must be explicit per 100g")
+        if row.get("origin_registry") == "data/plant_nutrition_dm_basis_v1.json":
+            original = dm_lookup.get((pid, row.get("origin_source_id")))
+            if original is None:
+                problems.append(f"{rid}: missing original DM registry record")
+            else:
+                expected = {k: v["value"] for k, v in original["values"].items()}
+                expected_n = {k: v["n"] for k, v in original["values"].items() if "n" in v}
+                if nutrients != expected:
+                    problems.append(f"{rid}: DM nutrient values differ from verified source registry")
+                if row.get("sample_counts") != expected_n:
+                    problems.append(f"{rid}: DM sample counts differ from source registry")
+                for key in expected:
+                    unit = "% as fed" if key == "dry_matter_pct_as_fed" else (
+                        "g/kg DM" if key.endswith("_g_per_kg_dm") else "% DM")
+                    if units.get(key) != unit:
+                        problems.append(f"{rid}: unit mismatch for {key}")
+                if row.get("preparation_state") != original.get("preparation_state"):
+                    problems.append(f"{rid}: source state mismatch")
         if pid in primary and row.get("display_tier") == "related_part_reference":
             # Permitted, but must remain reference-only rather than replacing primary.
             if row.get("status") != "reference_only":
