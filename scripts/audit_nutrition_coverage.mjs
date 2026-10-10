@@ -11,6 +11,15 @@ const missing=plants.filter(p=>!exactIds.has(p.id)&&!referenceIds.has(p.id));
 const referenceOnly=plants.filter(p=>!exactIds.has(p.id)&&referenceIds.has(p.id));
 const orphanExact=exact.filter(p=>!ids.has(p.plant_id));
 const orphanReferences=references.filter(p=>!ids.has(p.plant_id));
+const duplicateNameGroups=[...new Set(plants.map(p=>p.ko).filter(Boolean))].map(name=>plants.filter(p=>p.ko===name)).filter(group=>group.length>1);
+const duplicateNameCollisions=duplicateNameGroups.map(group=>({
+ name:group[0].ko,
+ ids:group.map(p=>p.id),
+ scientific_names:[...new Set(group.map(p=>p.scientific))],
+ verdict_review_required:true,
+ nutrition_review_required:true,
+ action:'Do not merge IDs or change feeding verdicts without evidence review'
+}));
 const invalidReferences=references.filter(r=>r.feeding_verdict_use!==false||r.status!=='reference_only'||!r.source_url||!r.analyzed_part||!r.display_tier);
 const conflictingPrimary=references.filter(r=>r.primary_eligible===true);
 const referenceTiers=references.reduce((a,r)=>(a[r.display_tier]=(a[r.display_tier]||0)+1,a),{});
@@ -33,11 +42,7 @@ const summary={
     action:'manual_review_only',
     auto_copy_nutrients:false
   })),
-  duplicate_korean_names:[...new Set(plants.map(p=>p.ko).filter((name,i,arr)=>name&&arr.indexOf(name)!==i))].map(name=>({
-    name,
-    ids:plants.filter(p=>p.ko===name).map(p=>p.id),
-    action:'review_aliases_and_duplicate_search_results'
-  })),
+  duplicate_korean_names:duplicateNameCollisions,
   reference_tiers:referenceTiers,
   invalid_reference_records:invalidReferences.map(r=>r.reference_id),
   incorrectly_primary_eligible_references:conflictingPrimary.map(r=>r.reference_id),
