@@ -50,8 +50,6 @@ def main():
     published_ids = {a["plant_id"] for a in public_assessments}
     published_ids &= set(ids)
     official_ids = set(recs) | rda_ids
-    if not (reference_only_ids := (reference_ids - official_ids) & published_ids) and reference_ids:
-        print("NOTICE: no reference-only published plants remain")
     reference_only_ids = (reference_ids - official_ids) & published_ids
     unlinked_ids = published_ids - official_ids - reference_ids
     dm_path = ROOT / "data" / "plant_nutrition_dm_basis_v1.json"
