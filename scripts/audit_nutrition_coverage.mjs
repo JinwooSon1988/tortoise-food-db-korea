@@ -27,7 +27,17 @@ const summary={
   reference_records:references.length,
   distinct_reference_plants:referenceIds.size,
   reference_records_overlapping_exact:references.filter(r=>exactIds.has(r.plant_id)).length,
-  possible_same_taxon_manual_review:possibleSameTaxon,
+  possible_same_taxon_manual_review:possibleSameTaxon.map(group=>({
+    ...group,
+    review_required:'Confirm exact taxon, edible part, preparation state, units and source before linking',
+    action:'manual_review_only',
+    auto_copy_nutrients:false
+  })),
+  duplicate_korean_names:[...new Set(plants.map(p=>p.ko).filter((name,i,arr)=>name&&arr.indexOf(name)!==i))].map(name=>({
+    name,
+    ids:plants.filter(p=>p.ko===name).map(p=>p.id),
+    action:'review_aliases_and_duplicate_search_results'
+  })),
   reference_tiers:referenceTiers,
   invalid_reference_records:invalidReferences.map(r=>r.reference_id),
   incorrectly_primary_eligible_references:conflictingPrimary.map(r=>r.reference_id),
