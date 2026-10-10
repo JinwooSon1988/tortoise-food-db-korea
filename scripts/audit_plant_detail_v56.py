@@ -5,7 +5,7 @@ Information hierarchy on every page:
   → nutrition → evidence.
 Grade equality with the home search is enforced by scripts/qa_verdict_consistency.py.
 """
-import json, re
+import html, json, re
 import ast
 import sys
 from pathlib import Path
@@ -99,7 +99,8 @@ for image in registry['images']:
     assert image['license'], pid
     assert image['creator'], pid
     if pid in public_ids:
-        assert image['image_url'] in pages[pid] and image['license'] in pages[pid], f'{pid}: verified image or licence missing'
+        # Pages HTML-escape attribute values (an apostrophe in a Commons file name becomes &#x27;).
+        assert html.escape(image['image_url'], quote=True) in pages[pid] and html.escape(image['license']) in pages[pid], f'{pid}: verified image or licence missing'
         caption = {'exact_species': '정확한 종으로 검증된', 'exact_subspecies': '정확한 아종으로 검증된', 'exact_variety': '정확한 변종으로 검증된'}[image['identity_scope']]
         assert caption in pages[pid], f'{pid}: image caption must state the {image["identity_scope"]} rank'
         if image.get('part_match') == 'mismatch':

@@ -837,7 +837,7 @@ for p in plants:
     basis=scope_label(a)
     img=image_by_plant.get(pid)
     head_scope_caption={"exact_species":"정확한 종으로 검증된 참고 이미지","exact_subspecies":"정확한 아종으로 검증된 참고 이미지","exact_variety":"정확한 변종으로 검증된 참고 이미지"}.get((img or {}).get("identity_scope"),"")
-    header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small">{head_scope_caption}{"<br>사진 속 부위는 실제 급여 부위와 다르다." if img.get("part_match")=="mismatch" else ""}<br><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · {esc(img.get("license") or "")}</figcaption></figure>''' if img else "")
+    header_photo_html=(f'''<figure class="headphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="eager" width="132" height="112"><figcaption class="small">{head_scope_caption}{"<br>사진 속 부위는 실제 급여 부위와 다르다." if img.get("part_match")=="mismatch" else ""}<br><a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator") or "사진 출처")}</a> · <span lang="en">{esc(img.get("license") or "")}</span></figcaption></figure>''' if img else "")
 
     # 1) Decision: name → grade → meaning → why. Nothing else competes with it.
     # Preserve the taxonomic scope stated by the reviewed assessment.
@@ -893,7 +893,7 @@ for p in plants:
 
     # 4) Scope → identity → limits, stated once in one card; canonical assessment copy is rendered verbatim.
     scope=assessment_copy((a or {}).get("applicability_note"), a) or {"지중해 Testudo 근거":"지중해 육지거북류(Testudo속)에 관한 근거다. 특정 종·아종을 직접 시험한 정량 자료와는 다르다.","육지거북 일반 근거":"육지거북 일반 근거를 지중해 Testudo에 적용한 판정이다. 지중해 Testudo 종 직접 판정이 아니다.","초식 파충류 일반 근거":"초식 파충류 일반 근거다. 지중해 Testudo 직접 판정이 아니다."}.get(basis,"현재 확인된 자료만으로 특정 거북 종까지 같은 결론을 적용할 수는 없다.")
-    photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
+    photo_html=(f'''<figure class="plantphoto"><img src="{esc(img["image_url"])}" alt="{esc(ko)} ({esc(sci)}) 참고 이미지" loading="lazy" width="112" height="112"><figcaption>정확한 종으로 검증된 참고 이미지<br>사진: <a href="{esc(img["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(img.get("creator"))}</a> · <a href="{esc(img.get("license_url"))}" target="_blank" rel="noopener noreferrer" lang="en">{esc(img.get("license"))}</a><br>사진만으로 식물 종을 확정하지 않는다.</figcaption></figure>''' if img else "")
     cur=curated_identity.get(pid)
     if identity_warning:
         identity_text="한국 유통명은 검색 후보일 뿐 실제 식물의 종 동정 결과가 아니다. 상품·재배품·야생채집물은 학명을 따로 확인한다."
