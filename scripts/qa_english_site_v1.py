@@ -16,6 +16,12 @@ from public_verdict import load_assessments, public_plants, by_plant, representa
 SITE = "https://jinwooson1988.github.io/tortoise-food-db-korea"
 HANGUL = re.compile(r"[가-힣]")
 errors = []
+# Homepage is search-first. Removed promotional and guide blocks must never return.
+_home = (ROOT / "en/index.html").read_text(encoding="utf-8")
+for _obsolete in ('<section class="truststrip"', '<section class="belowfold"', '<h2>All plant data</h2>', '<h2>Guides</h2>'):
+    if _obsolete in _home:
+        errors.append("English homepage regression: obsolete section returned: " + _obsolete)
+
 fail = lambda msg: errors.append(msg)
 read = lambda p: p.read_text(encoding="utf-8")
 
