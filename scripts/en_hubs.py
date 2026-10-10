@@ -107,7 +107,7 @@ GUIDE_PRINCIPLES = ('<section class="note"><b>How we interpret evidence</b><br>W
 GUIDES = {
     "market-foods": ("Tortoise foods you can buy in shops",
                      "Compare tortoise foods that are easy to find in supermarkets, markets and online shops by their database grade and evidence scope.",
-                     "Foods that are easy to buy in Korea. Plant identification and the level of evidence come before convenience."),
+                     "Browse common supermarket greens and market vegetables by feeding grade, then check plant identity, cautions and supporting evidence. Availability varies by country."),
     "wild-plants": ("Wild and foraged plants for tortoises",
                     "Check the grade, applicability and evidence for wild and foraged tortoise plants such as dandelion and plantain.",
                     "Being a natural food does not make a wild plant automatically safe. Check the plant’s identity, possible contamination and the evidence for the animal concerned."),
