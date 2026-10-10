@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 8,
-    "registered_numeric_reference_plants": 5
+    "pending_numeric_transcription": 7,
+    "registered_numeric_reference_plants": 6
   },
   "records": [
     {
@@ -51,7 +51,7 @@
     {
       "plant_id": "mint",
       "priority": "high",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Ciqual 2025 (2025-11-03)",
@@ -78,9 +78,11 @@
           "hold_reason": "genus-level record and master"
         }
       ],
-      "next_action": "Prioritize IFCT G016 Mentha spicata leaf data as explicitly related-species reference only; master mint is Mentha spp. Verify original values, edible part, fresh basis and reuse license before transcription. Do not generalize to all mints.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Norwegian Matvaretabellen 06.259 raw Mentha L. reference registered, with FoodEx2 leaves-and-minor-parts caveat and source-code borrowing caveat. Next obtain independently analyzed Mentha spicata leaf values (IFCT G016), verifying license and analytical basis; do not infer tortoise feeding safety.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "norway-06259-mint-20261010"
+      ]
     },
     {
       "plant_id": "chickweed",
