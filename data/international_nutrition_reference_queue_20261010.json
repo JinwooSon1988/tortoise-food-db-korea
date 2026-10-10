@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 1,
-    "registered_numeric_reference_plants": 12
+    "pending_numeric_transcription": 0,
+    "registered_numeric_reference_plants": 13
   },
   "records": [
     {
@@ -89,18 +89,25 @@
     {
       "plant_id": "chickweed",
       "priority": "high",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Europe PMC REST (fullTextXML)",
           "record": "PMC8621719 (PeerJ 2021, doi:10.7717/peerj.12488) Stellaria media fresh leaves",
           "country": "various",
           "hold_reason": "proximates stated per 100 g FW but mineral basis not stated (analysed on dried samples); \"crude fiber\" labelled with AOAC 991.43 (TDF method); protein 0.20 g/100 g anomalous"
+        },
+        {
+          "institution": "European Journal of Medicinal Plants (2024)",
+          "record": "Effects of Various Drying Methods on the Proximate Composition and Antioxidant Activities of Stellaria media Leaves, Table 1 fresh-leaf FL values",
+          "hold_reason": "Revised manuscript table available; journal landing page confirms article. n=3 biological independence unclear; 2021 PeerJ conflicting protein value remains unresolved; reference-only."
         }
       ],
-      "next_action": "Hold registration until PeerJ PMC8621719 protein 0.20 g/100g FW, AOAC 991.43 dietary-fiber terminology, and mineral fresh/dry denominator are reconciled from the paper and supporting data. Partial registration only if individual analytes and their bases are independently defensible.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Fresh-leaf values from EJMP 2024 Table 1 registered reference-only. Independently verify final version table and sampling n; investigate PeerJ 2021 anomalous protein 0.20 g/100g and AOAC fiber labeling before any synthesis. No feeding-verdict use.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "ejmp2024-stellaria-media-fresh-leaves-20261010"
+      ]
     },
     {
       "plant_id": "pumpkinleaf",
