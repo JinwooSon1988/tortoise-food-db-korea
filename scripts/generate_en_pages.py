@@ -50,6 +50,8 @@ esc = lambda v: html.escape(str(v or ""), quote=True)
 rich = lambda v: re.sub(r"\*([^*]+)\*", r"<i>\1</i>", esc(v))
 NEWTAB = '<span class="sr-only"> (opens in a new tab)</span>'
 
+DETAIL_ICON_CSS = (".detailnavlinks .iconnav-home,.detailnavlinks .iconnav-back{display:inline-flex;align-items:center;justify-content:center;min-width:54px;min-height:52px;padding:10px;box-sizing:border-box}.detailnavlinks svg{flex:none}.langswitch a.active{background:#286a46!important;color:#fff!important}")
+
 LANG_CSS = (".langswitch{display:inline-flex;align-items:stretch;border:1px solid #c9d8cd;border-radius:12px;overflow:hidden;background:#fff}"
             ".langswitch a,.langswitch strong{display:inline-flex;align-items:center;min-height:44px;padding:0 13px;font-size:13px;font-weight:850;text-decoration:none;color:#174d32}"
             ".langswitch strong{background:#286a46;color:#fff}.langswitch a:hover{background:#edf4ef}.topmeta{margin-left:auto}"
@@ -59,7 +61,7 @@ LANG_CSS = (".langswitch{display:inline-flex;align-items:stretch;border:1px soli
 
 def lang_switch(ko_href, en_current=True):
     if en_current:
-        return f'<nav class="langswitch" aria-label="Language"><a href="{ko_href}" hreflang="ko" lang="ko">한국어</a><strong aria-current="page">English</strong></nav>'
+        return f'<nav class="langswitch" aria-label="Language"><a href="{ko_href}?lang=ko" hreflang="ko" lang="ko">한국어</a><a href="./?lang=en" hreflang="en" lang="en" aria-current="page" class="active">English</a></nav>'
     return f'<nav class="langswitch" aria-label="언어"><strong aria-current="page">한국어</strong><a href="{ko_href}" hreflang="en" lang="en">English</a></nav>'
 
 
@@ -473,9 +475,9 @@ def render(p):
             f'<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{en_url}">'
             + (f'<meta property="og:image" content="{esc(img["image_url"])}">' if img else "") +
             f'<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">'
-            f'<script type="application/ld+json">{schema}</script><style>{style}{LANG_CSS}</style></head>')
+            f'<script type="application/ld+json">{schema}</script><style>{style}{LANG_CSS}{DETAIL_ICON_CSS}</style></head>')
     body = (f'<body><a class="skiplink" href="#main-content">Skip to content</a><header class="detailnav"><nav class="detailnavlinks" aria-label="Page navigation">'
-            f'<a href="../../">⌂ Home</a><button type="button" onclick="if(history.length>1)history.back();else location.href=\'../../\'">← Back</button></nav>'
+            f'<a href="../../" aria-label="Home / 홈" title="Home / 홈" class="iconnav-home"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-7h6v7"/></svg></a><button type="button" aria-label="Back / 뒤로" title="Back / 뒤로" class="iconnav-back" onclick="if(history.length>1)history.back();else location.href=\'../../\'"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M5 12h14"/></svg></button></nav>'
             f'<div class="topmeta">{lang_switch(f"../../../plant/{pid}/")}</div></header>'
             f'<main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(name)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{photo}</div>'
             f'{decision}{practical}{cautions}{species_html}{scope_html}{nutrition}{deep}{footer}</main>'
