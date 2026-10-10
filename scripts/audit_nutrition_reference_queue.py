@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Ensure the international source queue reflects registered numeric references."""
+import json
+from pathlib import Path
+
+DATA = Path(__file__).resolve().parents[1] / "data"
+
+def load(name):
+    return json.loads((DATA / name).read_text(encoding="utf-8"))
+
+def main():
+    queue = load("international_nutrition_reference_queue_20261010.json")
+    references = load("plant_nutrition_reference_v1.json")["records"]
+    plant_ids = {p["id"] for p in load("plants.json")}
+    by_plant = {}
+    for item in references:
+        by_plant.setdefault(item["plant_id"], []).append(item["reference_id"])
+    errors = []
+    seen = set()
+    for item in queue["records"]:
+        pid = item["plant_id"]
+        if pid in seen:
+            errors.append(f"duplicate candidate plant: {pid}")
+        seen.add(pid)
+        if pid not in plant_ids:
+            errors.append(f"unknown plant: {pid}")
+        actual = sorted(by_plant.get(pid, []))
+        recorded = sorted(item.get("registered_reference_ids", []))
+        if actual != recorded:
+            errors.append(f"{pid}: registered reference IDs differ; expected {actual}, got {recorded}")
+        has_numeric = bool(actual)
+        if item.get("reference_numeric_already_registered") is not has_numeric:
+            errors.append(f"{pid}: numeric registration flag incorrect")
+        expected_status = "reference_numeric_registered" if has_numeric else "source_candidate_only_no_numeric_transcription"
+        if item.get("numeric_status") != expected_status:
+            errors.append(f"{pid}: numeric status incorrect")
+    counts = queue["counts"]
+    expected = {"candidate_plants":len(seen),"pending_numeric_transcription":sum(not by_plant.get(p) for p in seen),"registered_numeric_reference_plants":sum(bool(by_plant.get(p)) for p in seen)}
+    for key,value in expected.items():
+        if counts.get(key) != value:
+            errors.append(f"counts.{key}: expected {value}, got {counts.get(key)}")
+    print(json.dumps({"result":"FAIL" if errors else "PASS",**expected,"errors":errors},ensure_ascii=False,indent=2))
+    return bool(errors)
+
+if __name__ == "__main__":
+    raise SystemExit(main())
