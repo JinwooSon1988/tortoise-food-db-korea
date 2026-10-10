@@ -2153,6 +2153,40 @@
       "depicted_part": "living grass with seedheads and leaves",
       "part_match": "partial",
       "last_verified_at": "2026-10-08"
+    },
+    {
+      "plant_id": "spinach",
+      "scientific": "Spinacia oleracea",
+      "creator": "Yercaud-elango",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "depicted_part": "leaves",
+      "taxon_evidence": "Commons original description explicitly names Spinacia oleracea and leaves used as vegetable; source own work, Yercaud-elango, CC BY-SA 4.0.",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Spinacia%20oleracea-1-yercaud-salem-India.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Spinacia_oleracea-1-yercaud-salem-India.jpg",
+      "identity_scope": "exact_species",
+      "master_scientific": "Spinacia oleracea",
+      "part_match": "match",
+      "verified_at": "2026-10-10",
+      "last_verified_at": "2026-10-10",
+      "verification_note": "Commons original file page checked for taxon/part/author/license; live site image rendering not yet tested. Photograph does not imply feeding suitability."
+    },
+    {
+      "plant_id": "mungbeansprout",
+      "scientific": "Vigna radiata",
+      "creator": "David E Mead",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "depicted_part": "mung bean sprouts",
+      "taxon_evidence": "Commons original description explicitly identifies sprouted mung beans (Vigna radiata) at a market; own work by David E Mead, CC0 1.0.",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mung%20bean%20(sprouts).jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Mung_bean_(sprouts).jpg",
+      "identity_scope": "exact_species",
+      "master_scientific": "Vigna radiata",
+      "part_match": "match",
+      "verified_at": "2026-10-10",
+      "last_verified_at": "2026-10-10",
+      "verification_note": "Commons original file page checked for taxon/part/author/license; live site image rendering not yet tested. Photograph does not imply feeding suitability."
     }
   ],
   "rejected_candidates": [
