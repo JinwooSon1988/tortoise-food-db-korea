@@ -28,10 +28,18 @@ def main():
         if row.get("display_tier") not in allowed:
             problems.append(f"{rid}: unknown display tier")
         for field in ("source_name", "source_url", "scientific_name",
+                      "reference_scope_ko", "source_verification",
                       "analyzed_part", "preparation_state", "basis", "display_note_ko"):
             if not row.get(field):
                 problems.append(f"{rid}: missing {field}")
+        if row.get("primary_eligible") is not False:
+            problems.append(f"{rid}: reference cannot be promoted without review")
+        if not str(row.get("source_url", "")).startswith("https://"):
+            problems.append(f"{rid}: source must be HTTPS")
         nutrients = row.get("nutrients", {})
+        units = row.get("nutrient_units", {})
+        if any(k not in units for k in nutrients):
+            problems.append(f"{rid}: missing per-nutrient unit")
         if not nutrients:
             problems.append(f"{rid}: no nutrients")
         for key, value in nutrients.items():
