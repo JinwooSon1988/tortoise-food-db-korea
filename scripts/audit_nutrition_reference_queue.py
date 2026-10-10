@@ -38,9 +38,14 @@ def main():
         if item.get("primary_eligible") is not False:
             errors.append(f"{rid}: reference must not be promoted to primary")
         units = item.get("nutrient_units", {})
-        for nutrient in item["nutrients"]:
+        for nutrient, value in item["nutrients"].items():
             if not units.get(nutrient):
                 errors.append(f"{rid}: missing unit for {nutrient}")
+            if isinstance(value, bool) or not isinstance(value, (int, float)):
+                errors.append(f"{rid}: invalid numeric value for {nutrient}")
+        for field in ("source_name", "source_url", "scientific_name", "analyzed_part", "basis"):
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                errors.append(f"{rid}: missing source metadata {field}")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
