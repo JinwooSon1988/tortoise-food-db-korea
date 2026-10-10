@@ -53,7 +53,7 @@ jobs:
           for obsolete in ('<section class="truststrip"', '<h2>Guides</h2>'):
               if obsolete in home:
                   raise SystemExit('DEPLOY BLOCKED: obsolete English home section: '+obsolete)
-          for required in ('href="./all-plants/"', 'href="./guides/research-method/"'):
+          for required in ('href="../all-plants/?lang=en"', 'href="./guides/research-method/"'):
               if required not in home:
                   raise SystemExit('DEPLOY BLOCKED: missing English home navigation: '+required)
           print('English homepage regression and navigation checks passed')
