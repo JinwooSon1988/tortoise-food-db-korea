@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 9,
-    "registered_numeric_reference_plants": 4
+    "pending_numeric_transcription": 8,
+    "registered_numeric_reference_plants": 5
   },
   "records": [
     {
@@ -101,7 +101,7 @@
     {
       "plant_id": "pumpkinleaf",
       "priority": "high",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Indian Food Composition Tables 2017",
@@ -110,9 +110,11 @@
           "hold_reason": "master Cucurbita spp. is genus-level"
         }
       ],
-      "next_action": "Obtain IFCT 2017 C030 original nutrient rows for tender Cucurbita maxima leaves. If source license permits, add related_species_reference only with species and tender-leaf scope; master Cucurbita spp. cannot inherit as genus-wide exact values.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Registered IFCT2017 C030 Table 1 reference-only for Cucurbita maxima tender leaves; verify any additional minerals from original tables separately, retain genus mismatch warning and six-region sampling scope.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "ifct2017-c030-pumpkinleaf-20261010"
+      ]
     },
     {
       "plant_id": "rose",
