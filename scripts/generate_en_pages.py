@@ -481,7 +481,7 @@ def render(p):
             f'<div class="topmeta">{lang_switch(f"../../../plant/{pid}/")}</div></header>'
             f'<main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(name)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{photo}</div>'
             f'{decision}{practical}{cautions}{species_html}{scope_html}{nutrition}{deep}{footer}</main>'
-            f'<footer class="pagefooter"><nav class="small" aria-label="Breadcrumb"><a href="../../">Tortoise Food DB</a> › {esc(name)}</nav></footer><script src=\"../../../detail-locale-history.js?v=1\" defer></script></body></html>')
+            f'<footer class="pagefooter"><nav class="small" aria-label="Breadcrumb"><a href="../../">Tortoise Food DB</a> › {esc(name)}</nav></footer><script src=\"../../../detail-locale-history.js?v=20261010-2\" defer></script></body></html>')
     return head + body
 
 
