@@ -1598,11 +1598,52 @@
       "primary_eligible": false,
       "feeding_verdict_use": false,
       "review_note": "Original official PDF identified via FAO, but direct full PDF retrieval was size-limited; numeric C030 row cross-checked against independently indexed copies. Six regions, not six independent lab replicates."
+    },
+    {
+      "reference_id": "norway-06259-mint-20261010",
+      "plant_id": "mint",
+      "scientific_name": "Mentha L. (genus-level food category; species unspecified)",
+      "source_name": "Norwegian Food Composition Table — Matvaretabellen",
+      "source_id": "06.259",
+      "source_url": "https://www.matvaretabellen.no/en/mint-raw/",
+      "analyzed_part": "aromatic herb, leaves and other minor parts (FoodEx2 classification)",
+      "preparation_state": "raw",
+      "basis": "per 100 g edible portion, fresh/raw",
+      "nutrients": {
+        "water_g": 83,
+        "protein_g": 3.5,
+        "fat_g": 0.8,
+        "carbohydrate_g": 5.3,
+        "fiber_g": 7,
+        "calcium_mg": 221,
+        "phosphorus_mg": 67,
+        "potassium_mg": 514,
+        "vitamin_c_mg": 23
+      },
+      "nutrient_units": {
+        "water_g": "g/100g raw",
+        "protein_g": "g/100g raw",
+        "fat_g": "g/100g raw",
+        "carbohydrate_g": "g/100g raw",
+        "fiber_g": "g/100g raw",
+        "calcium_mg": "mg/100g raw",
+        "phosphorus_mg": "mg/100g raw",
+        "potassium_mg": "mg/100g raw",
+        "vitamin_c_mg": "mg/100g raw"
+      },
+      "display_tier": "related_part_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "민트류(Mentha L.), 생허브의 잎 및 소량의 기타 부위, 생체 100g",
+      "display_note_ko": "노르웨이 국가 식품성분표의 생민트 항목입니다. 특정 민트 종이나 잎만의 독립 분석값이 아니며, 식품성분표의 일부 수치는 다른 출처에서 편집·차용됐을 수 있습니다. 급여 안전성을 의미하지 않습니다.",
+      "source_verification": "official_matvaretabellen_06_259_page_checked_2026-10-10",
+      "review_note": "Food ID 06.259; taxon Mentha L.; FoodEx2 part-nature 'aromatic herbs (leaves and other minor parts)'. Nutrient source codes include 430c and MI identifiers; not independent Norwegian analytical sample. No sample n claimed.",
+      "primary_eligible": false,
+      "feeding_verdict_use": false
     }
   ],
   "coverage": {
-    "reference_records": 30,
-    "distinct_plants": 20,
+    "reference_records": 31,
+    "distinct_plants": 21,
     "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
