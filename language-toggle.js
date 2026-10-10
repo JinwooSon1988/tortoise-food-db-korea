@@ -39,9 +39,26 @@ function apply(lang){document.documentElement.lang=lang;localStorage.setItem(K,l
 function navLabel(lang){return lang==='en'?{home:'Home',back:'Back'}:{home:'홈',back:'뒤로'}}
 function ensureNav(){const path=new URL(location.href).pathname.replace(/\/index\.html$/,'/');const rootPath=new URL(ROOT).pathname;if(path===rootPath||document.querySelector('.detailnav')){document.querySelectorAll('.utilitynav').forEach(n=>n.remove());return}if(document.querySelector('.utilitynav'))return;const n=document.createElement('nav');n.className='utilitynav';n.setAttribute('aria-label','Page navigation');n.innerHTML='<a class="utilityhome" href="'+ROOT+'">⌂ <span>홈</span></a><button class="utilityback" type="button">← <span>뒤로</span></button>';document.body.prepend(n);n.querySelector('.utilityback').onclick=()=>{if(history.length>1)history.back();else location.href=ROOT}}
 function updateNav(lang){const l=navLabel(lang),n=document.querySelector('.utilitynav');if(!n)return;n.querySelector('.utilityhome span').textContent=l.home;n.querySelector('.utilityback span').textContent=l.back}
-/* The English site is a separate set of fully translated pages under /en/ (scripts/generate_en_pages.py). Korean pages
-   always render in Korean; the language switch is a link to the same plant/guide in English, never an in-page partial
-   translation. The dictionaries above are kept only as the reference glossary checked by the legacy bilingual QA. */
-function enHref(){const base=new URL(ROOT).pathname,p=location.pathname.replace(/index\.html$/,'');if(!p.startsWith(base))return null;const rel=p.slice(base.length);return /^(|all-plants\/|core-foods\/|plant\/[^/]+\/|guides\/[^/]+\/)$/.test(rel)?ROOT+'en/'+rel:null}
-function boot(){ensureNav();try{localStorage.removeItem(K)}catch(e){}document.documentElement.lang='ko';toggleEvidence('ko');updateNav('ko');if(document.querySelector('.langswitch'))return;const host=document.querySelector('.topmeta'),href=enHref();if(!host||!href)return;const nav=document.createElement('nav');nav.className='langswitch';nav.setAttribute('aria-label','언어');nav.innerHTML='<strong aria-current="page">한국어</strong><a href="'+href+'" hreflang="en" lang="en">English</a>';host.prepend(nav)}
+/* One page, one search engine: language switching updates the current DOM without navigation. */
+function boot(){
+ ensureNav();
+ let lang='ko';
+ try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}
+ const host=document.querySelector('.topmeta');
+ if(host&&!document.querySelector('.langswitch')){
+   const nav=document.createElement('nav');
+   nav.className='langswitch';
+   nav.setAttribute('aria-label','언어 / Language');
+   nav.innerHTML='<button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="en" aria-pressed="false">English</button>';
+   host.prepend(nav);
+   nav.addEventListener('click',e=>{
+     const btn=e.target.closest('button[data-lang]');
+     if(!btn)return;
+     const next=btn.dataset.lang;
+     if(next!==document.documentElement.lang){apply(next);updateNav(next)}
+   });
+ }
+ apply(lang);
+ updateNav(lang);
+}
 document.addEventListener('DOMContentLoaded',boot)})();
