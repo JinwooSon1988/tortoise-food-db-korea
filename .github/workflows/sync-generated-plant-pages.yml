@@ -15,6 +15,9 @@ on:
       - 'plant/**'
       - 'guides/**'
       - 'core-foods/index.html'
+      - 'index.html'
+      - 'all-plants/index.html'
+      - 'en/**'
       - 'sitemap.xml'
       - 'verdict-core.js'
       - '.github/workflows/sync-generated-plant-pages.yml'
@@ -45,6 +48,8 @@ jobs:
           python scripts/inject_plant_detail_v56.py
       - name: Generate guide hubs
         run: python scripts/generate_guide_hubs.py
+      - name: Generate English site (en/), English catalog and bilingual sitemap
+        run: python scripts/generate_en_pages.py
       - name: Verify reader-first UX was actually rendered
         run: |
           grep -q "어떻게 먹이나" plant/chicory/index.html
@@ -53,8 +58,8 @@ jobs:
             echo "Legacy practical section survived generation."
             exit 1
           fi
-          git status --short -- plant guides sitemap.xml
-          git diff --stat -- plant guides sitemap.xml
+          git status --short -- plant guides en data/i18n/en/catalog_en.json sitemap.xml
+          git diff --stat -- plant guides en data/i18n/en/catalog_en.json sitemap.xml
       - name: Audit generated pages
         run: |
           python scripts/audit_plant_integrity.py
@@ -62,15 +67,16 @@ jobs:
           python scripts/audit_plant_detail_v56.py
           python scripts/qa_verdict_consistency.py
           python scripts/qa_feeding_cautions_v1.py
+          python scripts/qa_english_site_v1.py
       - name: Commit generated pages
         run: |
-          if git diff --quiet -- plant guides sitemap.xml; then
+          if git diff --quiet -- plant guides en data/i18n/en/catalog_en.json sitemap.xml && [ -z "$(git status --porcelain -- en)" ]; then
             echo "Generated pages are already current." | tee -a "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add plant guides sitemap.xml
+          git add plant guides en data/i18n/en/catalog_en.json sitemap.xml
           git commit -m "Build: sync generated plant detail pages"
           git push origin HEAD:main
           echo "Committed generated pages as $(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"

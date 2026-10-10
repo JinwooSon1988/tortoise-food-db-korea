@@ -2,8 +2,10 @@
 """Regeneration-preservation guard for plant detail pages.
 
 1. Copies the working tree to a temporary directory, runs the same page pipeline as CI
-   (generate_static_pages -> patch_curated_social_metadata -> inject_plant_detail_v56) and
-   requires every committed plant/*/index.html to be byte-identical to the regenerated file.
+   (generate_static_pages -> patch_curated_social_metadata -> inject_plant_detail_v56 -> generate_guide_hubs ->
+   generate_en_pages) and
+   requires every committed plant/*/index.html, en/**/index.html, guides/*/index.html, sitemap.xml and
+   data/i18n/en/catalog_en.json to be byte-identical to the regenerated file.
    Any content that exists only as a hand edit therefore fails here instead of silently
    disappearing on the next deploy (deploy-pages.yml runs the generator before publishing).
 2. Checks data-driven content contracts that must survive regeneration:
@@ -86,7 +88,7 @@ if "--skip-regen" not in sys.argv:
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp) / "repo"
         shutil.copytree(ROOT, work, ignore=shutil.ignore_patterns(".git", "node_modules", "__pycache__"))
-        for step in ("generate_static_pages.py", "patch_curated_social_metadata.py", "inject_plant_detail_v56.py"):
+        for step in ("generate_static_pages.py", "patch_curated_social_metadata.py", "inject_plant_detail_v56.py", "generate_guide_hubs.py", "generate_en_pages.py"):
             r = subprocess.run([sys.executable, f"scripts/{step}"], cwd=work, capture_output=True, text=True, encoding="utf-8", errors="replace")
             if r.returncode != 0:
                 errors.append(f"regeneration step {step} failed: {r.stderr[-400:]}")
@@ -98,8 +100,13 @@ if "--skip-regen" not in sys.argv:
                 errors.append(f"page set differs after regeneration: only committed {sorted(set(committed) - set(regenerated))[:5]}, only regenerated {sorted(set(regenerated) - set(committed))[:5]}")
             drift = [pid for pid in sorted(set(committed) & set(regenerated)) if committed[pid].read_bytes() != regenerated[pid].read_bytes()]
             if drift: errors.append(f"{len(drift)} committed page(s) differ from generator output (hand edits would be lost on deploy): {drift[:10]}")
+            # English site, guides and the bilingual sitemap are generator-owned too.
+            owned = sorted({p.relative_to(ROOT).as_posix() for p in (ROOT / "en").rglob("index.html")} | {p.relative_to(work).as_posix() for p in (work / "en").rglob("index.html")}
+                           | {p.relative_to(ROOT).as_posix() for p in (ROOT / "guides").rglob("index.html")} | {"sitemap.xml", "data/i18n/en/catalog_en.json"})
+            other = [rel for rel in owned if not (ROOT / rel).exists() or not (work / rel).exists() or (ROOT / rel).read_bytes() != (work / rel).read_bytes()]
+            if other: errors.append(f"{len(other)} committed English/guide/sitemap file(s) differ from generator output: {other[:10]}")
 
 if errors:
     for e in errors: print("ERROR:", e)
     sys.exit(f"regeneration preservation QA FAILED: {len(errors)} error(s)")
-print(f"OK: all {len(list((ROOT / 'plant').glob('*/index.html')))} plant pages reproduce byte-identically; timothy photo, mint candidate cards and lettuce variety cards are generator-owned")
+print(f"OK: all {len(list((ROOT / 'plant').glob('*/index.html')))} plant pages, the English site, guides and sitemap reproduce byte-identically; timothy photo, mint candidate cards and lettuce variety cards are generator-owned")

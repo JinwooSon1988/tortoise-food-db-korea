@@ -1,0 +1,47 @@
+/* English full plant list. Same data files, filters and grade selection (verdict-core.js) as the Korean all-plants page;
+   English names come from data/i18n/en/catalog_en.json, labels from window.TFDB_EN. */
+(function(){
+const TV=window.TortoiseVerdict,EN=window.TFDB_EN;
+const VR={A:1,B:2,C:3,D:4,'On hold':5};let rows=[],sortKey='name',sortDir=1,evidenceMap=new Map,imageMap=new Map,qTimer=null;const $=id=>document.getElementById(id);
+const gradeOf=a=>{const g=TV.display(a).grade;return g.length===1?g:'On hold'};
+const gradeLabel=g=>EN.gradeLabel[g]||EN.hold.label;
+const tone=g=>['A','B','C','D'].includes(g)?'t-'+g:'t-hold';
+const catLabel=c=>EN.category[c]||c;
+const certainty=c=>EN.certainty[String(c||'').trim()]||'Not assessed';
+const hint=g=>EN.hint[g]||EN.hint['On hold'];
+async function j(u){try{let r=await fetch(u);return r.ok?await r.json():null}catch(e){return null}}
+function n(v){return v==null?null:Number(v)}function val(v,d=2){return v==null?'<span class="na" aria-label="No data">—</span>':Number(v).toFixed(d).replace(/\.00$/,'')}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function fill(sel,vals,labelFn){const seen=new Set;[...new Set(vals.filter(Boolean))].map(v=>[v,labelFn?labelFn(v):v]).sort((a,b)=>String(a[1]).localeCompare(String(b[1]),'en')).forEach(([v,label])=>{if(seen.has(label))return;seen.add(label);let o=document.createElement('option');o.value=v;o.textContent=label;sel.appendChild(o)})}
+function filtered(){let term=$('q').value.trim().toLowerCase(),v=$('verdict').value,c=$('category').value,f=$('family').value,nu=$('nutrition').value;return rows.filter(r=>(!term||r.terms.join(' ').toLowerCase().includes(term))&&(!v||r.verdict===v)&&(!c||r.category===c)&&(!f||r.family===f)&&(!nu||(nu==='yes')===r.hasNutrition))}
+function cmp(a,b){let x=a[sortKey],y=b[sortKey];if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return-1;if(typeof x==='number'&&typeof y==='number')return(x-y)*sortDir||a.name.localeCompare(b.name,'en');return String(x).localeCompare(String(y),'en',{numeric:true})*sortDir||a.name.localeCompare(b.name,'en')}
+function thumb(r){const im=imageMap.get(r.id);if(!im)return '<figure class="mthumb empty" aria-hidden="true">Verified photo pending</figure>';return '<figure class="mthumb"><img src="'+esc(im.image_url+'?width=160')+'" alt="" loading="lazy" decoding="async" width="160" height="160" title="'+esc(/[가-힣]/.test(im.creator)?'Photo · '+im.license+' (credit on the plant page)':'Photo '+im.creator+' · '+im.license)+'"></figure>'}
+function emptyHTML(){return '<div class="emptystate"><b>No plants match these filters.</b><p>A missing plant is not a safe plant. Try another name or clear the filters.</p><button type="button" class="resetbtn" data-reset>Clear filters</button></div>'}
+function syncUrl(){const p=new URLSearchParams;[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=$(id).value.trim();if(v)p.set(k,v)});if(!(sortKey==='name'&&sortDir===1))p.set('sort',sortKey+':'+sortDir);const qs=p.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:''))}
+function render(){let out=filtered().sort(cmp);const active=['q','verdict','category','family','nutrition'].some(id=>$(id).value.trim());
+ $('summary').textContent='Showing '+out.length+' of '+rows.length+' plants';$('reset').hidden=!active;
+ document.querySelectorAll('.gradelegend button').forEach(b=>{const on=$('verdict').value===b.dataset.grade;b.setAttribute('aria-pressed',String(on));b.classList.toggle('dim',!!$('verdict').value&&!on)});
+ $('mobilecards').innerHTML=out.length?out.map(r=>'<article class="mcard '+tone(r.verdict)+'">'+thumb(r)+'<div class="mbody"><h2><a href="../plant/'+encodeURIComponent(r.id)+'/">'+esc(r.name)+'</a></h2><span class="sci" lang="la">'+esc(r.scientific)+'</span><span class="mverdict"><b>'+esc(r.verdict==='On hold'?'Hold':r.verdict)+'</b>'+esc(gradeLabel(r.verdict))+'</span><span class="decisionhint">'+esc(hint(r.verdict))+'</span><div class="mmeta"><div><span>Evidence certainty</span><b>'+esc(certainty(r.confidence))+'</b></div><div><span>Direct evidence</span><b>'+esc(r.directEvidence)+'</b></div><div><span>Nutrition data</span><b>'+(r.hasNutrition?'Available':'Unverified')+'</b></div></div></div></article>').join(''):emptyHTML();
+ $('body').innerHTML=out.length?out.map(r=>'<tr><td class="name"><a href="../plant/'+encodeURIComponent(r.id)+'/">'+esc(r.name)+'</a><span class="sci" lang="la">'+esc(r.scientific)+'</span></td><td class="verdict '+tone(r.verdict)+'"><span class="tag"><b>'+esc(r.verdict==='On hold'?'—':r.verdict)+'</b>'+esc(gradeLabel(r.verdict))+'</span></td><td>'+esc(certainty(r.confidence))+'</td><td>'+esc(catLabel(r.category))+'</td><td>'+esc(r.family)+'</td><td class="num">'+val(r.ratio,2)+'</td><td class="num">'+val(r.fiber,2)+'</td><td class="num">'+val(r.calcium,1)+'</td><td class="num">'+val(r.phosphorus,1)+'</td></tr>').join(''):'<tr><td colspan="9">'+emptyHTML()+'</td></tr>';
+ document.querySelectorAll('th[data-k]').forEach(th=>{th.querySelector('.sortmark')?.remove();if(th.dataset.k===sortKey){th.setAttribute('aria-sort',sortDir===1?'ascending':'descending');let s=document.createElement('span');s.className='sortmark';s.setAttribute('aria-hidden','true');s.textContent=sortDir===1?'▲':'▼';th.querySelector('button').appendChild(s)}else th.removeAttribute('aria-sort')});
+ const so=$('sort'),key=sortKey+':'+sortDir;if([...so.options].some(o=>o.value===key))so.value=key;syncUrl()}
+function counts(){const c={};rows.forEach(r=>c[r.verdict]=(c[r.verdict]||0)+1);document.querySelectorAll('[data-count]').forEach(e=>{e.textContent=c[e.dataset.count]||0})}
+function reset(){['q','verdict','category','family','nutrition'].forEach(id=>$(id).value='');render();$('q').focus()}
+async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,cat]=await Promise.all([j('../../data/plants.json'),j('../../data/plant_nutrition_v56.json'),j('../../data/rda_food_composition_v56.json'),j('../../data/public_evidence_records.json'),j('../../data/public_assessments.json'),j('../../data/verified_plant_images_v56.json'),j('../../data/i18n/en/catalog_en.json')]);
+ if(!plants||!publicAssessments||!cat){$('summary').textContent='The plant data could not be loaded. Please reload the page.';return}
+ evidenceMap=new Map((evidenceData?.records||[]).map(e=>[e.id,e]));imageMap=new Map((images?.images||[]).map(im=>[im.plant_id,im]));
+ let amap=new Map;[publicAssessments].filter(Array.isArray).flat().forEach(a=>{if(!amap.has(a.plant_id))amap.set(a.plant_id,[]);amap.get(a.plant_id).push(a)});
+ let nm=new Map((nut?.plants||[]).map(x=>[x.plant_id,x])),rm=new Map((rda?.records||rda?.plants||[]).map(x=>[x.plant_id,x])),enById=new Map((cat.plants||[]).map(x=>[x.id,x]));
+ rows=plants.filter(p=>p.identity_status!=='candidate_name'&&(amap.get(p.id)||[]).length&&enById.has(p.id)).map(p=>{let a=TV.representative(amap.get(p.id)||[]),g=gradeOf(a),u=nm.get(p.id)||rm.get(p.id)||{},e=enById.get(p.id);return{id:p.id,name:e.name,scientific:p.scientific||'',terms:[e.name,p.scientific,...(e.aliases||[]),p.ko,...(p.aliases||[]),...(p.search_aliases||[])].filter(Boolean),family:p.family||'',category:p.category||'',verdict:g,verdictRank:VR[g]||5,confidence:a?.confidence||'',directEvidence:(a?.evidence_ids||[]).map(id=>evidenceMap.get(id)).filter(x=>x&&['direct','exact_taxon','direct_observation'].includes(x.directness)).length,hasNutrition:Object.keys(u).length>0,fiber:n(u.fiber_g),calcium:n(u.calcium_mg),phosphorus:n(u.phosphorus_mg),ratio:n(u.calcium_phosphorus_ratio)}});
+ fill($('verdict'),rows.map(r=>r.verdict),v=>v==='On hold'?EN.hold.label:v+' ('+gradeLabel(v)+')');fill($('category'),rows.map(r=>r.category),catLabel);fill($('family'),rows.map(r=>r.family));counts();
+ const p=new URLSearchParams(location.search);[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=p.get(k);if(v!=null&&(id==='q'||[...$(id).options].some(o=>o.value===v)))$(id).value=id==='q'?v.slice(0,80):v});
+ const s=(p.get('sort')||'').split(':');if(s[0]&&document.querySelector('th[data-k="'+CSS.escape(s[0])+'"]')){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
+ render()}
+document.querySelectorAll('th[data-k]').forEach(th=>th.querySelector('button').onclick=()=>{let k=th.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=['ratio','calcium','phosphorus','fiber'].includes(k)?-1:1}render()});
+$('sort').addEventListener('change',e=>{const[k,d]=e.target.value.split(':');sortKey=k;sortDir=Number(d);render()});
+$('q').addEventListener('input',()=>{clearTimeout(qTimer);qTimer=setTimeout(render,120)});
+['verdict','category','family','nutrition'].forEach(id=>$(id).addEventListener('change',render));
+document.querySelector('.gradelegend').addEventListener('click',e=>{const b=e.target.closest('button[data-grade]');if(!b)return;$('verdict').value=$('verdict').value===b.dataset.grade?'':b.dataset.grade;render()});
+$('reset').onclick=reset;document.addEventListener('click',e=>{if(e.target.closest('[data-reset]'))reset()});
+boot();
+})();

@@ -5,6 +5,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from public_verdict import load_assessments, representative, display, species_notes, scope_label, by_plant, public_plants
 from feeding_cautions import group_limits, localize_specialist_labels
 from evidence_certainty import certainty_ko
+from assessment_copy import assessment_copy
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
@@ -39,73 +40,6 @@ plants=public_plants(all_plants,assessments)
 retail_by_id={r["plant_id"]:r for r in retail}
 directness_ko={"direct":"직접 근거","expert_husbandry":"전문 사육 근거","related_taxon":"근연 분류군 근거","contextual":"맥락 근거","composition_only":"성분 근거"}
 applicability_ko={"exact_taxon":"정확한 대상 분류군","species":"종 수준","mediterranean_testudo":"지중해 육지거북류(Testudo속)","tortoise_general":"육지거북 일반","herbivorous_reptile_general":"초식 파충류 일반","composition_only":"성분 자료","taxon_group":"분류군 수준"}
-
-IBERA_TEXT=re.compile(r"Testudo\s+graeca\s+ibera|T\.\s*g\.\s*ibera|이베라그리스육지거북|이베라", re.I)
-# An Ibera mention is a statement of study fact only when it is attached to the study itself:
-# "야생 T. g. ibera ...", "Testudo graeca ibera 식이 연구", "T. g. ibera 야생 관찰", "...ibera의 직접 섭식 기록".
-IBERA_STUDY_BEFORE=re.compile(r"(?:야생|wild)\s*$", re.I)
-IBERA_STUDY_AFTER=re.compile(r"^\s*(?:에서|의|이|가|은|는)?\s*(?:(?:야생|직접|실제)\s*)*(?:식이|섭식|관찰|기록|분변|diet|feeding|field)", re.I)
-# Compound sentences that join an Ibera study clause to a general-source clause are split, so the taxon
-# is not read as qualifying the general source.
-IBERA_CLAUSE_JOIN=re.compile(r"(됐|되었|했|하였)(?:고|으며),\s+")
-
-def ibera_evidence_linked(a):
-    """True only when a linked, non-composition evidence record actually studied T. g. ibera."""
-    for eid in ((a or {}).get("evidence_ids") or []):
-        e=evidence_by_id.get(eid) or {}
-        if e.get("applicability")!="composition_only" and re.search(r"ibera", str(e.get("animal_taxon") or ""), re.I):
-            return True
-    return False
-
-def _ibera_neutral(mention, following):
-    if mention=="이베라" and following.startswith(" 아종"):
-        return "특정", 0
-    if mention=="이베라" and following.startswith(" 종특이"):
-        return "종 특이", len(" 종특이")
-    if following.startswith(" 직접") or following.startswith("에 한정"):
-        # "not an Ibera-direct test" on general evidence means "not a species-specific test"
-        return "특정 종", 0
-    return "육지거북", 0
-
-def _split_ibera_clauses(sentence):
-    """'야생 T. g. ibera ... 기록됐고, 일반 자료도 ...' -> two sentences, only when the Ibera mention is
-    confined to the first clause."""
-    m=IBERA_CLAUSE_JOIN.search(sentence)
-    if not m:
-        return sentence
-    head, tail=sentence[:m.start()], sentence[m.end():]
-    if IBERA_TEXT.search(head) and not IBERA_TEXT.search(tail):
-        return f"{head}{m.group(1)}다. {tail}"
-    return sentence
-
-def assessment_copy(v, a=None):
-    """Reader-facing safeguard for assessment prose, decided per Ibera mention.
-    An Ibera mention is kept only when (1) a linked, non-composition evidence record of this assessment
-    actually studied T. g. ibera and (2) the mention states that study fact (wild diet/observation record).
-    Any other mention used Ibera as a default reference point for general evidence and is restated at the
-    scope that evidence covers ("육지거북", "특정 아종", "종 특이"). Clauses that attach an Ibera study to
-    a general source in one sentence are split so the taxon stays with the study only."""
-    x=str(v or "")
-    if not IBERA_TEXT.search(x):
-        return x
-    linked=ibera_evidence_linked(a)
-    out=[]; pos=0
-    for m in IBERA_TEXT.finditer(x):
-        before=x[max(0, m.start()-8):m.start()]; after=x[m.end():m.end()+20]
-        is_study=linked and (IBERA_STUDY_BEFORE.search(before) or IBERA_STUDY_AFTER.match(after))
-        if m.start()<pos:
-            continue
-        out.append(x[pos:m.start()])
-        if is_study:
-            out.append(m.group(0)); pos=m.end()
-        else:
-            word, skip=_ibera_neutral(m.group(0), x[m.end():m.end()+6])
-            out.append(word); pos=m.end()+skip
-    out.append(x[pos:])
-    x="".join(out)
-    parts=re.split(r"(?<=[.!?])\s+", x)
-    split=[_split_ibera_clauses(s) for s in parts]
-    return x if split==parts else " ".join(split)
 
 def nutrition_food_name_html(v):
     """Source food name: Korean RDA names are not marked as English."""
@@ -825,7 +759,7 @@ a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid rgba(40,1
 .nutgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.nutgrid>div{border:1px solid var(--line);border-radius:10px;padding:9px;background:#fafcf9}.nutgrid b{display:block;font-size:12px;color:var(--muted)}.nutgrid strong{display:block;font-size:17px}
 .relatedgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.pagefooter{max-width:820px;margin:0 auto;padding:0 18px 32px}.pagefooter nav{border-top:1px solid var(--line);padding-top:10px}.related{display:flex;align-items:center;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:10px;text-decoration:none;font-weight:800;background:#fff;font-size:14px}
 .share{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.share button,.share a{border:0;border-radius:12px;padding:11px 14px;font-weight:800;background:#e7f5eb;text-decoration:none;cursor:pointer;font-size:14px}
-.topmeta{display:flex;justify-content:flex-end}.langswitch{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.langswitch button{padding:6px 9px;min-width:44px;border:0;border-radius:0;background:#fff;color:var(--muted);font-size:11px}.langswitch button.active{background:#286a46;color:#fff}
+.topmeta{display:flex;justify-content:flex-end}.langswitch{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}.langswitch button{padding:6px 9px;min-width:44px;border:0;border-radius:0;background:#fff;color:var(--muted);font-size:11px}.langswitch button.active{background:#286a46;color:#fff}.topmeta{gap:8px;align-items:center}.langswitch a,.langswitch strong{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:13px;font-weight:850;text-decoration:none;color:#174d32}.langswitch strong{background:#286a46;color:#fff}.langswitch a:hover{background:#edf4ef}.detailnav .langswitch a{min-width:0;border:0;border-radius:0;box-shadow:none;background:#fff;color:#174d32}.detailnav .langswitch a:hover{background:#edf4ef;color:#174d32}
 @media(max-width:700px){body{padding:12px 14px 32px}.nutgrid{grid-template-columns:1fr 1fr}.relatedgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.detailnav span{display:none}.planthead{padding:2px 2px 6px;gap:10px}.headphoto{width:108px}.headphoto img{width:108px;height:92px}.planthead h1{font-size:34px}.decision{padding:14px 15px}.gradeletter{min-width:40px;height:40px;font-size:21px}.meaning{font-size:15px;margin-top:8px}.decisionwhy{font-size:14px;margin-top:9px;padding:11px 12px}.card{padding:14px}.relatedgrid{grid-template-columns:1fr}.speciesexception>div{align-items:flex-start;flex-direction:column;gap:2px}.evidence-deep{padding:13px}.evsummary{gap:5px}.evcard{padding:11px 12px;margin:8px 0}.evhead{gap:4px}.evhead span{font-size:11px;padding:3px 7px}.evcard h3{font-size:14px;line-height:1.45}.evrole{font-size:12px;line-height:1.5}.evmeta{grid-template-columns:72px minmax(0,1fr);font-size:11px;gap:2px 7px}.evcard p{font-size:12px;line-height:1.55}.evstats{gap:5px}.evstats>div{padding:9px 3px}.evstats span{font-size:11px;overflow-wrap:anywhere}.evstats strong{font-size:17px}.practical .partscope{gap:5px 10px}.partlabel{min-width:58px}.partvalue{overflow-wrap:anywhere}.sourceopen{display:inline-flex;min-height:44px;align-items:center}}
 '''.replace("\n","")
@@ -989,7 +923,7 @@ for p in plants:
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
-        evidence_cards.append(f'''<article class="evcard"><div class="evhead"><span class="{"paper" if rank==0 else ""}">{esc(kind)}</span><span class="directness">{esc(directness_ko.get(e.get("directness"), "간접 근거"))}</span></div><div class="evsummary"><strong>핵심 내용 요약</strong><p>{esc(evidence_support_display(e.get("supports")))}</p></div><p class="evidence-meaning"><b>거북밥 판정에서의 의미</b><br>{esc(evidence_role(e))}</p><p class="limit"><b>이 자료만으로는 알 수 없는 것</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p><div class="evsource"><h3>{title_html}</h3><dl class="evmeta"><dt>연구·자료 대상</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물 범위</dt><dd>{esc(plant_taxon_display(e.get("plant_taxon")))}</dd><dt>확인 부위</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</div></article>''')
+        evidence_cards.append(f'''<article class="evcard" data-evidence-id="{esc(e.get('id'))}"><div class="evhead"><span class="{"paper" if rank==0 else ""}">{esc(kind)}</span><span class="directness">{esc(directness_ko.get(e.get("directness"), "간접 근거"))}</span></div><div class="evsummary"><strong>핵심 내용 요약</strong><p>{esc(evidence_support_display(e.get("supports")))}</p></div><p class="evidence-meaning"><b>거북밥 판정에서의 의미</b><br>{esc(evidence_role(e))}</p><p class="limit"><b>이 자료만으로는 알 수 없는 것</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p><div class="evsource"><h3>{title_html}</h3><dl class="evmeta"><dt>연구·자료 대상</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물 범위</dt><dd>{esc(plant_taxon_display(e.get("plant_taxon")))}</dd><dt>확인 부위</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</div></article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 연결된 개별 근거자료가 없다. 먹여도 안전하다고 판단할 근거가 확보되기 전에는 급여하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
     summary_chips=f'<div class="evcountnote"><b>근거 한눈에 보기</b><div class="evstats"><div><span>연결된 출처</span><strong>{len(linked_evidence)}건</strong></div><div><span>직접 근거</span><strong>{direct_count}건</strong></div><div><span>전문 사육자료</span><strong>{husbandry_count}건</strong></div></div><small>출처 수는 안전성 등급이 아닙니다. 항목은 서로 중복될 수 있습니다.</small><p class="certaintyline">근거 확실성 <b>{esc(certainty_ko((a or {}).get("confidence")))}</b> · 급여 등급(A–D)과 별개로, 판정을 뒷받침하는 근거가 얼마나 직접적이고 충분한지 나타냅니다. <a href="../../guides/research-method/#certainty">뜻 보기</a></p></div>'
@@ -1002,12 +936,12 @@ for p in plants:
         conflict_html=f'''<div class="conflict"><b>⚠ 안전성을 판단할 때 함께 봐야 할 정보</b><p>야생에서 먹은 기록이 있더라도 독성·항영양성분 또는 다른 동물에서 확인된 수의학적 위험 정보가 함께 존재할 수 있다. 야생에서 먹었다는 사실만으로 사육 환경에서도 안전하다고 판단할 수는 없다.</p><ul>{risk_items}</ul><p><b>현재 결론을 더 확실하게 하려면:</b> {esc(risk.get("publication_blocker") or "추가 검토 필요")}</p></div>'''
     wild_cards=[]
     for w in wild:
-        wild_cards.append(f'''<article class="evcard wildcard"><div class="evhead"><span>야생 섭식 기록</span><span>{esc({"direct":"대상 거북 직접 관찰","near_direct":"근연 육지거북 야생 관찰"}.get(w.get("ibera_applicability"),"어느 거북에 해당하는지 확인 필요"))}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북이 자료에 명시되지 않음")} · {esc(w.get("population_region") or "지역이 자료에 명시되지 않음")}</h3><dl class="evmeta"><dt>확인 방법</dt><dd>{esc(w.get("study_method") or "확인 방법이 자료에 명시되지 않음")}</dd><dt>먹은 부위</dt><dd>{esc(w.get("plant_part") or "먹은 부위가 자료에 명시되지 않음")}</dd><dt>시기</dt><dd>{esc(w.get("season") or "관찰 시기가 자료에 명시되지 않음")}</dd><dt>섭식 기록</dt><dd>{esc(w.get("feeding_signal") or "확인")}</dd></dl><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="ids">원자료 식물명 <i>{esc(w.get("plant_taxon_reported"))}</i> · 현재 수용명 <i>{esc(w.get("plant_taxon_accepted"))}</i> · {esc(w.get("source_id"))}</p></article>''')
+        wild_cards.append(f'''<article class="evcard wildcard" data-evidence-id="{esc(w.get('id'))}"><div class="evhead"><span>야생 섭식 기록</span><span>{esc({"direct":"대상 거북 직접 관찰","near_direct":"근연 육지거북 야생 관찰"}.get(w.get("ibera_applicability"),"어느 거북에 해당하는지 확인 필요"))}</span></div><h3>{esc(w.get("tortoise_taxon") or "대상 거북이 자료에 명시되지 않음")} · {esc(w.get("population_region") or "지역이 자료에 명시되지 않음")}</h3><dl class="evmeta"><dt>확인 방법</dt><dd>{esc(w.get("study_method") or "확인 방법이 자료에 명시되지 않음")}</dd><dt>먹은 부위</dt><dd>{esc(w.get("plant_part") or "먹은 부위가 자료에 명시되지 않음")}</dd><dt>시기</dt><dd>{esc(w.get("season") or "관찰 시기가 자료에 명시되지 않음")}</dd><dt>섭식 기록</dt><dd>{esc(w.get("feeding_signal") or "확인")}</dd></dl><p class="limit"><b>이 기록만으로 말할 수 없는 것</b><br>{esc(w.get("limitations") or "야생 섭식 기록만으로 사육 급여량이나 무제한 급여 안전성을 정할 수 없다.")}</p><p class="ids">원자료 식물명 <i>{esc(w.get("plant_taxon_reported"))}</i> · 현재 수용명 <i>{esc(w.get("plant_taxon_accepted"))}</i> · {esc(w.get("source_id"))}</p></article>''')
     for o in ib:
         s=ibera_sources.get(o.get("source_id"),{})
         scope_txt="식물 종까지 일치" if o.get("identity_scope")=="exact_species" else "속 수준 관찰 — 이 식물의 정확한 종을 먹었다는 뜻으로 확대하지 않는다"
         link=f'<a href="{esc(s.get("url"))}" target="_blank" rel="noopener noreferrer">원 연구 확인</a>' if s.get("url") else ""
-        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct><div class="evhead"><span>그리스육지거북 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
+        wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct data-evidence-id="{esc(o.get('source_id'))}"><div class="evhead"><span>그리스육지거북 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
     wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{"".join(wild_cards)}''' if wild_cards else "")
 
     detail_count=len(linked_evidence)+len(wild_cards)
@@ -1168,7 +1102,7 @@ for p in plants:
     alias_html=f'<div class="aliases">다른 이름 · {", ".join(esc(x) if re.search(r"[가-힣]",str(x)) else f"<span lang=\"en\">{esc(x)}</span>" for x in aliases[:6])}</div>' if aliases else ""
     schema=json.dumps({"@context":"https://schema.org","@type":"WebPage","name":title,"description":desc,"url":canonical,"inLanguage":"ko","isPartOf":{"@type":"WebSite","name":"거북밥 DB Korea","url":SITE_URL+"/"}},ensure_ascii=False,separators=(",",":"))
     doc=f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow">
-<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="거북밥 DB Korea"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
+<title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="ko" href="{canonical}"><link rel="alternate" hreflang="en" href="{SITE_URL}/en/plant/{pid}/"><link rel="alternate" hreflang="x-default" href="{SITE_URL}/en/plant/{pid}/"><meta property="og:type" content="article"><meta property="og:locale" content="ko_KR"><meta property="og:locale:alternate" content="en_US"><meta property="og:site_name" content="거북밥 DB Korea"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canonical}"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <script type="application/ld+json">{schema}</script>
 <style>{CSS}/* Shared verdict presentation across search, catalog and detail pages. */
 .decisionwhy{{border-color:#d4e2d8;background:#f7faf7;box-shadow:0 3px 16px rgba(21,62,38,.045);overflow-wrap:anywhere}}
@@ -1179,7 +1113,7 @@ for p in plants:
 @media(max-width:620px){{.decisionwhy{{padding:13px 14px;font-size:15px;line-height:1.65}}}}
 @media(prefers-reduced-motion:reduce){{.evidencefold>summary{{transition:none}}}}
 </style></head><body>
-<a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><nav class="detailnavlinks" aria-label="페이지 이동"><a href="../../index.html">⌂ 홈</a><button type="button" onclick="if(history.length>1)history.back();else location.href='../../index.html'">← 뒤로</button></nav><div class="topmeta"><span>거북밥 · 근거 기반 판정</span></div></header><main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{header_photo_html}</div>{decision_html}{practical_html}{cautions_html}{species_specific_html}{scope_html}{nutrition_html}{deep_html}{footer_html}</main><footer class="pagefooter"><nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></footer><script src="../../language-toggle.js?v=20261004-1" defer></script></body></html>'''
+<a class="skiplink" href="#main-content">본문으로 바로가기</a><header class="detailnav"><nav class="detailnavlinks" aria-label="페이지 이동"><a href="../../index.html">⌂ 홈</a><button type="button" onclick="if(history.length>1)history.back();else location.href='../../index.html'">← 뒤로</button></nav><div class="topmeta"><span>거북밥 · 근거 기반 판정</span><nav class="langswitch" aria-label="언어"><strong aria-current="page">한국어</strong><a href="../../en/plant/{esc(pid)}/" hreflang="en" lang="en">English</a></nav></div></header><main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(ko)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{header_photo_html}</div>{decision_html}{practical_html}{cautions_html}{species_specific_html}{scope_html}{nutrition_html}{deep_html}{footer_html}</main><footer class="pagefooter"><nav class="small" aria-label="breadcrumb"><a href="../../index.html">거북밥 DB</a> › {esc(ko)}</nav></footer><script src="../../language-toggle.js?v=20261004-1" defer></script></body></html>'''
     # Final Korean morphology guard for legacy mixed-language evidence strings.
     doc=doc.replace("급여하지 않음로", "급여하지 않음으로").replace("제한 급여으로", "제한 급여로")
     (d/"index.html").write_text(doc,encoding="utf-8")
@@ -1190,7 +1124,8 @@ sitemap_path=ROOT/"sitemap.xml"
 existing=sitemap_path.read_text(encoding="utf-8") if sitemap_path.exists() else ""
 nonplant_urls=[]
 for loc in re.findall(r"<loc>(.*?)</loc>",existing):
-    if "/plant/" not in loc and loc not in nonplant_urls:
+    # English URLs (/en/...) are added back with hreflang alternates by scripts/generate_en_pages.py.
+    if "/plant/" not in loc and "/en/" not in loc and loc not in nonplant_urls:
         nonplant_urls.append(loc)
 if SITE_URL+"/" not in nonplant_urls:
     nonplant_urls.insert(0,SITE_URL+"/")

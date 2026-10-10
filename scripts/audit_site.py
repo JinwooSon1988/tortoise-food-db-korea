@@ -77,9 +77,12 @@ sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
 for retired in ("profile", "meal", "weekly", "settings"):
     if f"{SITE_URL}/{retired}/" in sitemap:
         errors.append(f"sitemap lists retired page /{retired}/")
-sitemap_plant_urls = [loc for loc in re.findall(r"<loc>(.*?)</loc>", sitemap) if "/plant/" in loc]
-if len(sitemap_plant_urls) != len(set(sitemap_plant_urls)) or set(sitemap_plant_urls) != {f"{SITE_URL}/plant/{pid}/" for pid in plant_ids}:
-    errors.append(f"sitemap plant URLs ({len(sitemap_plant_urls)}) must match the {len(plant_ids)} master plants exactly")
+sitemap_locs = re.findall(r"<loc>(.*?)</loc>", sitemap)
+# Korean and English plant URLs are each checked against the master plants (English pages live under /en/plant/).
+for prefix in ("", "/en"):
+    sitemap_plant_urls = [loc for loc in sitemap_locs if loc.startswith(f"{SITE_URL}{prefix}/plant/")]
+    if len(sitemap_plant_urls) != len(set(sitemap_plant_urls)) or set(sitemap_plant_urls) != {f"{SITE_URL}{prefix}/plant/{pid}/" for pid in plant_ids}:
+        errors.append(f"sitemap {prefix or '/'} plant URLs ({len(sitemap_plant_urls)}) must match the {len(plant_ids)} master plants exactly")
 expected_urls = {f"{SITE_URL}/plant/{plant_id}/" for plant_id in plant_ids}
 missing_urls = sorted(url for url in expected_urls if f"<loc>{url}</loc>" not in sitemap)
 if missing_urls:

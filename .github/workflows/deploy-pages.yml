@@ -28,6 +28,10 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check -q pyyaml
           python scripts/generate_static_pages.py
+          python scripts/patch_curated_social_metadata.py
+          python scripts/inject_plant_detail_v56.py
+          python scripts/generate_guide_hubs.py
+          python scripts/generate_en_pages.py
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:

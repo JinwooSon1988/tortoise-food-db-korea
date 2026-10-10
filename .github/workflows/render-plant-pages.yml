@@ -20,6 +20,13 @@ on:
       - 'scripts/plant_taxon_scope.py'
       - 'scripts/qa_verdict_consistency.py'
       - 'plant/**'
+      - 'en/**'
+      - 'data/i18n/**'
+      - 'scripts/generate_en_pages.py'
+      - 'scripts/en_hubs.py'
+      - 'scripts/i18n_en.py'
+      - 'scripts/assessment_copy.py'
+      - 'scripts/qa_english_site_v1.py'
       - '.github/workflows/render-plant-pages.yml'
   # Main-branch data/generator changes are generated and audited by
   # sync-generated-plant-pages.yml. Running this verifier as well duplicated
@@ -44,6 +51,7 @@ jobs:
         run: |
           mkdir -p /tmp/committed-generated
           cp -a plant /tmp/committed-generated/plant
+          cp -a en /tmp/committed-generated/en
           cp sitemap.xml /tmp/committed-generated/sitemap.xml
       - name: Generate general plant detail pages
         run: python scripts/generate_static_pages.py
@@ -51,6 +59,12 @@ jobs:
         run: python scripts/patch_curated_social_metadata.py
       - name: Strip retired runtime verdict enhancers
         run: python scripts/inject_plant_detail_v56.py
+      - name: Generate guide hubs and the English site
+        run: |
+          python scripts/generate_guide_hubs.py
+          python scripts/generate_en_pages.py
+      - name: Audit the English site against the Korean pages
+        run: python scripts/qa_english_site_v1.py
       - name: Audit structural integrity
         run: python scripts/audit_plant_integrity.py
       - name: Audit verdict-card safety invariants
@@ -68,10 +82,12 @@ jobs:
         if: ${{ github.event_name != 'workflow_dispatch' }}
         run: |
           diff -qr /tmp/committed-generated/plant plant
+          diff -qr /tmp/committed-generated/en en
           diff -q /tmp/committed-generated/sitemap.xml sitemap.xml
       - name: Verify generated artifacts are deterministic
         run: |
           cp -a plant /tmp/plant-rendered
+          cp -a en /tmp/en-rendered
           cp sitemap.xml /tmp/sitemap-rendered.xml
           cp data/public_content_coverage.json /tmp/public-content-rendered.json
           cp data/plant_coverage_gap_report_v1.json /tmp/coverage-gap-rendered.json
@@ -79,10 +95,13 @@ jobs:
           python scripts/generate_static_pages.py
           python scripts/patch_curated_social_metadata.py
           python scripts/inject_plant_detail_v56.py
+          python scripts/generate_guide_hubs.py
+          python scripts/generate_en_pages.py
           python scripts/qa_public_content_coverage.py
           python scripts/qa_plant_coverage_gap_report_v1.py
           python scripts/build_wild_candidate_research_queue.py
           diff -qr /tmp/plant-rendered plant
+          diff -qr /tmp/en-rendered en
           diff -q /tmp/sitemap-rendered.xml sitemap.xml
           diff -q /tmp/public-content-rendered.json data/public_content_coverage.json
           diff -q /tmp/coverage-gap-rendered.json data/plant_coverage_gap_report_v1.json

@@ -65,6 +65,11 @@ jobs:
           python scripts/qa_evidence_certainty_labels_v1.py
       - name: Korean copy
         run: python scripts/qa_korean_english_fragments_v1.py
+      - name: English site (completeness, ko/en parity, hreflang, sitemap, links)
+        run: |
+          python scripts/qa_english_site_v1.py
+          python scripts/qa_bilingual_home_v1.py
+          python scripts/audit_site.py
       - name: Summary
         run: |
           echo "- Result: all core QA steps passed on \`$(git rev-parse HEAD)\`" | tee -a "$GITHUB_STEP_SUMMARY"
