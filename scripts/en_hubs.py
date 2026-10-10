@@ -105,8 +105,8 @@ GUIDE_PRINCIPLES = ('<section class="note"><b>How we interpret evidence</b><br>W
                     'are not the same as evidence that directly covers Mediterranean tortoises (genus Testudo). A lack of evidence is not treated as safety.</section>')
 
 GUIDES = {
-    "market-foods": ("Tortoise foods you can buy in shops",
-                     "Compare tortoise foods that are easy to find in supermarkets, markets and online shops by their database grade and evidence scope.",
+    "market-foods": ("Can tortoises eat supermarket vegetables? Food grades and evidence",
+                     "Check supermarket vegetables and greens for tortoises: feeding grades, plant identification, evidence strength and cautions for each food.",
                      "Browse common supermarket greens and market vegetables by feeding grade, then check plant identity, cautions and supporting evidence. Availability varies by country."),
     "wild-plants": ("Wild and foraged plants for tortoises",
                     "Check the grade, applicability and evidence for wild and foraged tortoise plants such as dandelion and plantain.",
