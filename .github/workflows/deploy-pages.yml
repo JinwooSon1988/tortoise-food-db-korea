@@ -13,6 +13,8 @@ on:
       - 'language-toggle.js'
       - 'scripts/generate_static_pages.py'
       - 'scripts/generate_en_pages.py'
+      - 'scripts/en_hubs.py'
+      - 'scripts/qa_english_site_v1.py'
       - '.github/workflows/deploy-pages.yml'
 
 permissions:
@@ -43,6 +45,16 @@ jobs:
           python scripts/inject_plant_detail_v56.py
           python scripts/generate_guide_hubs.py
           python scripts/generate_en_pages.py
+      - name: Block obsolete English homepage sections before deployment
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          home = Path('en/index.html').read_text(encoding='utf-8')
+          for obsolete in ('<section class="truststrip"', '<section class="belowfold"', '<h2>All plant data</h2>', '<h2>Guides</h2>'):
+              if obsolete in home:
+                  raise SystemExit('DEPLOY BLOCKED: obsolete English home section: '+obsolete)
+          print('English homepage regression check passed')
+          PY
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
