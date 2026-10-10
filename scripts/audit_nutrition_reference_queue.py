@@ -68,6 +68,8 @@ def main():
             errors.append(f"{rid}: quantitative measurement basis required")
         if item.get("status") == "reference_only" and item.get("feeding_verdict_use") is not False:
             errors.append(f"{rid}: nutrition reference cannot set feeding verdict")
+        if item.get("display_tier") not in ("related_species_reference", "related_part_reference", "related_cultivar_reference", "reference_only", "same_species_reference", "same_part_reference"):
+            errors.append(f"{rid}: unknown reference display tier {item.get('display_tier')}")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
