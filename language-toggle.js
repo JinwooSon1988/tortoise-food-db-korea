@@ -116,7 +116,7 @@ function boot(){
  // should preserve the selected language, not only mouse clicks.
  function syncInternalLinks(){
    document.querySelectorAll('a[href]').forEach(link=>{
-     if(link.hasAttribute('download')||link.getAttribute('href').startsWith('#'))return;
+     if(link.hasAttribute('download')||link.getAttribute('href').startsWith('#')||link.closest('.langswitch')||link.hasAttribute('hreflang'))return;
      let target;try{target=new URL(link.href,location.href)}catch(_){return}
      if(target.origin!==location.origin||!target.pathname.startsWith(new URL(ROOT).pathname))return;
      const base=new URL(ROOT).pathname;
