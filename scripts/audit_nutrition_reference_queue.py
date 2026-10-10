@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Ensure the international source queue reflects registered numeric references."""
 import json
+import math
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parents[1] / "data"
@@ -41,8 +42,8 @@ def main():
         for nutrient, value in item["nutrients"].items():
             if not units.get(nutrient):
                 errors.append(f"{rid}: missing unit for {nutrient}")
-            if isinstance(value, bool) or not isinstance(value, (int, float)):
-                errors.append(f"{rid}: invalid numeric value for {nutrient}")
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
+                errors.append(f"{rid}: invalid or non-finite numeric value for {nutrient}")
         for field in ("source_name", "source_url", "scientific_name", "analyzed_part", "basis"):
             if not isinstance(item.get(field), str) or not item[field].strip():
                 errors.append(f"{rid}: missing source metadata {field}")
