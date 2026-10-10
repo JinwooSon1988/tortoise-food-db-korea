@@ -149,12 +149,12 @@
         },
         {
           "institution": "Peer-reviewed study (PMC10909542)",
-          "record": "Lolium perenne cv AberMagic, fresh forage, Table 1; dry matter and nitrogen / water-soluble carbohydrates reported for cuts 2 and 4",
+          "record": "PMC10909542 Table 1, Lolium perenne cv AberMagic, fresh forage before wilting. Cut 2: FD DM 203.3 g/kg fresh, WSC 161.9 g/kg freeze-dried DM, total N 24.9 g/kg freeze-dried DM. Cut 4: 174.2, 151.7, 31.4 in corresponding units.",
           "country": "United Kingdom",
-          "hold_reason": "Species/cultivar-specific, cut-specific, not genus-wide; sample count and full methods need checking before numeric transcription. Keep candidate-only."
+          "hold_reason": "Four replicate field blocks, but four plots were bulked before subsampling; do not treat four field plots as independent chemical analyses. Cultivar/cut-specific, no calcium or phosphorus data, no feeding safety implication."
         }
       ],
-      "next_action": "Prioritize original PMC10909542 Table 1 and methods: verify sample counts and fresh-forage sampling; record cut-specific DM, N and WSC units, and explicitly label Lolium perenne cv AberMagic. Do not generalize to Lolium spp. or use as feeding verdict. Feedipedia 625 remains non-citable.",
+      "next_action": "Original PMC10909542 Table 1 numbers and Methods 2.1-2.3 checked; clarify analytical replication of pooled forage before reference-only registration. Preserve cultivar, cut and units. Feedipedia 625 remains non-citable.",
       "numeric_status": "source_candidate_only_no_numeric_transcription",
       "registered_reference_ids": []
     },
