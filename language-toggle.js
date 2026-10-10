@@ -159,7 +159,7 @@ function boot(){
  window.addEventListener('tfdblanguagechange',syncInternalLinks);
  document.addEventListener('click',e=>{
    const link=e.target.closest('a[href]');
-   if(!link||link.hasAttribute('download')||link.target==='_blank')return;
+   if(!link||link.hasAttribute('download')||link.target==='_blank'||link.closest('.langswitch')||link.hasAttribute('hreflang'))return;
    let target;try{target=new URL(link.href,location.href)}catch(_){return}
    if(target.origin!==location.origin||!target.pathname.startsWith(new URL(ROOT).pathname))return;
    if(target.searchParams.get('lang')!==document.documentElement.lang){
