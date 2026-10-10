@@ -117,4 +117,4 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&
 searchBtn.onclick=search;let searchTimer=null;
 input.addEventListener('input',()=>{clearTimeout(searchTimer);const q=norm(input.value);if(!q&&activeFilter==='all'){results.innerHTML='';return}if(q.length<2&&activeFilter==='all'&&!/[a-z]/.test(q)&&!plantCatalog.some(r=>norm(r.label)===q)){results.innerHTML='<p class="searchhint">두 글자 이상 입력하면 바로 검색합니다.</p>';return}searchTimer=setTimeout(search,120)});
 input.onkeydown=e=>{if(e.key==='Enter'){clearTimeout(searchTimer);search()}};
-</script></body></html>
+</script><script src="./language-state-sync.js?v=20261010-1" defer></script></body></html>
