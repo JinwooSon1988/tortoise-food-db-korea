@@ -33,9 +33,22 @@
       },
       "display_tier": "related_part_reference",
       "status": "reference_only",
-      "display_note_ko": "식물 부위 및 시료 조건이 대표 영양자료와 다를 수 있습니다. 해당 분석 부위의 참고값입니다.",
+      "display_note_ko": "이 수치는 미나리 생줄기·생잎 혼합 분석 결과입니다. 다른 부위나 재배 조건의 수치와 다를 수 있으며, 급여 가능 여부를 뜻하지 않습니다.",
       "review_note": "Existing policy prohibits generic record association; require explicit policy approval and reconciliation of geographic sample variability.",
-      "feeding_verdict_use": false
+      "feeding_verdict_use": false,
+      "reference_scope_ko": "미나리 생줄기·생잎 혼합 분석",
+      "nutrient_units": {
+        "water_g": "g/100g",
+        "protein_g": "g/100g",
+        "fat_g": "g/100g",
+        "carbohydrate_g": "g/100g",
+        "fiber_g": "g/100g",
+        "calcium_mg": "mg/100g",
+        "phosphorus_mg": "mg/100g",
+        "vitamin_c_mg": "mg/100g"
+      },
+      "source_verification": "transcribed_from_existing_2026-10-10_research_record",
+      "primary_eligible": false
     },
     {
       "reference_id": "international-20261010-2",
@@ -59,9 +72,22 @@
       },
       "display_tier": "related_part_reference",
       "status": "reference_only",
-      "display_note_ko": "식물 부위 및 시료 조건이 대표 영양자료와 다를 수 있습니다. 해당 분석 부위의 참고값입니다.",
+      "display_note_ko": "이 수치는 미나리 어린순 분석 결과입니다. 다른 부위나 재배 조건의 수치와 다를 수 있으며, 급여 가능 여부를 뜻하지 않습니다.",
       "review_note": "Different edible part/sample population; demonstrates substantial Ca variability, not a replacement for MEXT.",
-      "feeding_verdict_use": false
+      "feeding_verdict_use": false,
+      "reference_scope_ko": "미나리 어린순 분석",
+      "nutrient_units": {
+        "water_g": "g/100g",
+        "protein_g": "g/100g",
+        "fat_g": "g/100g",
+        "carbohydrate_g": "g/100g",
+        "fiber_g": "g/100g",
+        "calcium_mg": "mg/100g",
+        "phosphorus_mg": "mg/100g",
+        "vitamin_c_mg": "mg/100g"
+      },
+      "source_verification": "transcribed_from_existing_2026-10-10_research_record",
+      "primary_eligible": false
     },
     {
       "reference_id": "international-20261010-3",
@@ -85,9 +111,22 @@
       },
       "display_tier": "related_part_reference",
       "status": "reference_only",
-      "display_note_ko": "잎과 줄기를 함께 분석한 자료입니다. 잎만의 성분과 다를 수 있습니다.",
+      "display_note_ko": "이 수치는 유채 잎만이 아니라 줄기와 잎을 함께 분석한 결과입니다. 잎만의 성분으로 해석하면 안 되며, 급여 가능 여부를 뜻하지 않습니다.",
       "review_note": "Master entry is leaf-only; mixed stems+leaves cannot be assigned to leaf-only nutrient card. Some source nutrients estimated from related vegetables; see foodInfo note.",
-      "feeding_verdict_use": false
+      "feeding_verdict_use": false,
+      "reference_scope_ko": "유채의 생줄기·생잎 혼합 분석",
+      "nutrient_units": {
+        "water_g": "g/100g",
+        "protein_g": "g/100g",
+        "fat_g": "g/100g",
+        "carbohydrate_g": "g/100g",
+        "fiber_g": "g/100g",
+        "calcium_mg": "mg/100g",
+        "phosphorus_mg": "mg/100g",
+        "vitamin_c_mg": "mg/100g"
+      },
+      "source_verification": "transcribed_from_existing_2026-10-10_research_record",
+      "primary_eligible": false
     },
     {
       "reference_id": "international-20261010-4",
@@ -107,8 +146,26 @@
       },
       "display_tier": "related_part_reference",
       "status": "reference_only",
-      "display_note_ko": "일본에서 측정한 생잎 자료입니다. 한국 가식부 자료와 분석 부위 및 시료 조건이 달라 수치가 다를 수 있습니다.",
-      "feeding_verdict_use": false
+      "display_note_ko": "이 수치는 일본 냉이 생잎 분석 결과입니다. 국내 가식부 전체 분석값과 분석 부위 및 시료가 다르므로 별도 참고값으로 표시하며, 급여 가능 여부를 뜻하지 않습니다.",
+      "feeding_verdict_use": false,
+      "reference_scope_ko": "냉이 생잎 분석",
+      "nutrient_units": {
+        "water_g": "g/100g",
+        "protein_g": "g/100g",
+        "fat_g": "g/100g",
+        "carbohydrate_g": "g/100g",
+        "fiber_g": "g/100g",
+        "calcium_mg": "mg/100g",
+        "phosphorus_mg": "mg/100g",
+        "vitamin_c_mg": "mg/100g"
+      },
+      "source_verification": "transcribed_from_existing_2026-10-10_research_record",
+      "primary_eligible": false
     }
-  ]
+  ],
+  "coverage": {
+    "reference_records": 4,
+    "distinct_plants": 3,
+    "notice": "Counts are records, not newly verified primary plants. Values transcribed from pre-existing comparison research; recheck originals before upgrading."
+  }
 }
