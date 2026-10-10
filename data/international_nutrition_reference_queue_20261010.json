@@ -10,8 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 2,
-    "registered_numeric_reference_plants": 11
+    "pending_numeric_transcription": 1,
+    "registered_numeric_reference_plants": 12
   },
   "records": [
     {
@@ -263,18 +263,26 @@
     {
       "plant_id": "fennelleaf",
       "priority": "high",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "BLS 4.0 (2025), CC BY 4.0",
           "record": "BLS G431100 Fenchelblatt/Bologneser Fenchel, roh",
           "country": "Germany",
           "hold_reason": "German name says leaf but \"Bologneser Fenchel\"/\"Roman fennel\" denotes the bulb variety; part cannot be resolved without SFK"
+        },
+        {
+          "institution": "Barros et al. 2010 (LWT) / Badgujar et al. 2014 (BioMed Research International)",
+          "record": "Foeniculum vulgare leaves separate from bulbs/stems; Barros 2010 DOI 10.1016/j.lwt.2010.01.010, transcribed from 2014 open review Table 3",
+          "country": "Portugal",
+          "hold_reason": "Original 2010 full numeric table behind access restrictions; secondary 2014 table reproduces leaf-specific figures. Only reference-only, never primary-exact."
         }
       ],
-      "next_action": "Resolve BLS G431100 edible anatomical part using original SFK and BLS documentation before transcribing values. Do not treat Bologneser fennel bulb data as fennel leaf values. If unresolved, seek a clearly leaf-specific original analysis.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Leaf-specific values registered via 2014 review reproduction of 2010 primary paper. Retrieve original Barros 2010 LWT Table 2 to cross-check, identify sample independence and distinguish carbohydrates by difference from sugars/fiber. Do not use unresolved BLS G431100 bulb/leaf record.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "barros2010-fennel-leaves-secondary-table-20261010"
+      ]
     },
     {
       "plant_id": "rapeseedleaf",
