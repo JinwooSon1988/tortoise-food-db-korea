@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "generated_from": "data/plants.json + data/plant_nutrition_v56.json + data/plant_nutrition_reference_v1.json",
+  "purpose": "Manual review of nutrition gaps; never transfer values between plant parts or alter feeding verdicts.",
+  "priority": "same-scientific-name with an existing nutrient record",
+  "review_candidates": [
+    {
+      "target_id": "minari",
+      "related_id": "waterdropwort",
+      "scientific_name": "Oenanthe javanica",
+      "issue": "Duplicate Korean name and identical scientific name; references are stored under waterdropwort only.",
+      "review": "Check whether both entries describe the same plant identity and intended edible part; review duplicate catalog identity before linking.",
+      "existing_sources": [
+        "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06117_7",
+        "https://www.jircas.go.jp/en/database/thaivege/080"
+      ],
+      "status": "manual_review_required"
+    },
+    {
+      "target_id": "aehobakleaf",
+      "related_id": "zucchini",
+      "scientific_name": "Cucurbita moschata",
+      "issue": "Leaf lacks nutrition data; related entry measures fruit.",
+      "review": "Find independently sourced leaf analysis; do not copy fruit values.",
+      "status": "source_needed"
+    },
+    {
+      "target_id": "cucumberleaf",
+      "related_id": "cucumber",
+      "scientific_name": "Cucumis sativus",
+      "issue": "Leaf lacks nutrition data; related entry measures fruit.",
+      "review": "Find independently sourced leaf analysis; do not copy fruit values.",
+      "status": "source_needed"
+    },
+    {
+      "target_id": "pumpkinflower",
+      "related_id": "pumpkinleaf",
+      "scientific_name": "Cucurbita spp.",
+      "issue": "Flower lacks nutrition data; related reference measures leaf; genus-level name may cover multiple species.",
+      "review": "Resolve species and find flower-specific analysis.",
+      "status": "source_needed"
+    },
+    {
+      "target_id": "violetleaf",
+      "related_id": "violetflower",
+      "scientific_name": "Viola mandshurica",
+      "issue": "Leaf lacks nutrition data; related reference measures flower.",
+      "review": "Find leaf-specific analysis and confirm species identity.",
+      "status": "source_needed"
+    }
+  ],
+  "rules": [
+    "Nutrition composition must never determine feeding verdict.",
+    "Retain original part, preparation state, source and units.",
+    "Do not count a review candidate as covered until a validated source is linked."
+  ]
+}
