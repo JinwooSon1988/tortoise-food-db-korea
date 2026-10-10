@@ -1,0 +1,1656 @@
+{
+ "schema_version": "1.0",
+ "plants": [
+  {
+   "id": "chicory",
+   "name": "Chicory",
+   "why": "Chicory leaves and flowers can be part of a varied mixed diet. Wild T. g. ibera in south-western Bulgaria were directly observed eating Cichorium. A specialist tortoise plant database considers the leaves and flowers of Cichorium intybus usable as part of a varied diet, but advises against feeding the root because it is high in starch and sugar. Wild observations are not trials that set captive feeding amounts or frequency, so only the leaves and flowers are used, as one part of a mixed diet.",
+   "role": "Leaves and flowers as part of a mixed diet",
+   "market": "supermarket, online",
+   "aliases": [
+    "chicory"
+   ]
+  },
+  {
+   "id": "romaine",
+   "name": "Romaine lettuce",
+   "why": "Specialist sources on Mediterranean tortoises and veterinary sources present romaine as one component of a vegetable mix that can be used when wild plants are scarce, for example in winter. They stress that a mix of wild plants should remain the basis of the diet and that tortoises should not rely on a single leafy vegetable for long periods. This is not a trial that sets the exact feeding proportion or frequency of romaine for tortoises, or shows it is safe as a sole staple. Romaine is therefore used as a supplementary vegetable that is rotated and mixed with other suitable foods, not as a staple.",
+   "role": "Supplementary shop-bought vegetable",
+   "market": "supermarket, online",
+   "aliases": [
+    "romaine"
+   ]
+  },
+  {
+   "id": "lettuce",
+   "name": "Lettuce",
+   "why": "The Tortoise Trust lists leaf lettuces such as red leaf lettuce, with limits, as an alternative vegetable mix for Mediterranean tortoises when wild plants are scarce, and the Merck Veterinary Manual includes green leaf lettuce in an example vegetable mix for tortoises. Neither assesses all Lactuca cultivars equally or is a trial that sets an exact feeding proportion or frequency. Leaf lettuce is therefore used as a supplementary vegetable rotated and mixed with other suitable foods, not as a staple replacing wild plants and high-fibre plants.",
+   "role": "Supplementary shop-bought leaf lettuce, in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "lettuce"
+   ]
+  },
+  {
+   "id": "radicchio",
+   "name": "Radicchio",
+   "why": "The Tortoise Trust lists radicchio as one of several alternative leafy vegetables that can be used for Mediterranean tortoises in winter when wild plants are scarce, and recommends mixing and rotating them rather than relying on one for long periods. This is not a trial that sets the exact feeding proportion or frequency of radicchio for tortoises, or shows it is safe as a sole staple. It is therefore used as a supplementary vegetable rotated and mixed with other suitable leafy vegetables and wild plants. There is also a composition study that analysed radicchio (Cichorium intybus var. foliosum) leaves directly. However, the leaves in that experiment were sprayed with iodine and selenium, so the post-treatment concentrations are not used as values for ordinary radicchio. The current limited-supplement assessment is therefore kept, and the paper is used only as a reference that confirms composition and plant part.",
+   "role": "Supplementary shop-bought vegetable, in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "radicchio"
+   ]
+  },
+  {
+   "id": "endive",
+   "name": "Endive",
+   "why": "Specialist sources on Mediterranean tortoises present endive as an alternative ingredient that can be mixed and rotated with several leafy vegetables in winter when wild plants are scarce, and veterinary sources include it among example supplementary vegetables for tortoise diets. These are not trials showing that long-term feeding as a sole staple is safe for any tortoise species, so endive is used as a supplementary vegetable within a mixed diet rather than relied on alone.",
+   "role": "Supplementary shop-bought vegetable",
+   "market": "supermarket, online",
+   "aliases": [
+    "endive"
+   ]
+  },
+  {
+   "id": "dandelion",
+   "name": "Dandelion",
+   "why": "Dandelion is a good candidate component of a varied mixed diet of wild plants. A dietary study of wild Testudo graeca ibera recorded Taraxacum as a plant group actually eaten, and specialist husbandry sources for Mediterranean tortoises also list dandelion as a high-fibre natural food. Being eaten in the wild, however, does not set the exact share or frequency of dandelion in captivity, or show that it is safe as a sole staple. Correctly identified, uncontaminated dandelions are therefore used as one ingredient of a mixed diet together with several suitable wild plants.",
+   "role": "Candidate component of a mix of wild plants",
+   "market": "home-grown, foraged, online",
+   "aliases": [
+    "dandelion"
+   ]
+  },
+  {
+   "id": "sowthistle",
+   "name": "Sow thistle",
+   "why": "Sow-thistles are a good candidate component of a varied mixed diet of wild plants. Feeding on Sonchus has been recorded in wild Testudo graeca ibera, and specialist husbandry sources for Mediterranean tortoises repeatedly list sow-thistles as a natural food. Wild observations, however, are not trials that set exact feeding proportions or frequency in captivity. Sow-thistles are therefore used as a main candidate in a mixed diet with several suitable wild plants, not fixed as a single food.",
+   "role": "Candidate component of a mix of wild plants",
+   "market": "foraged",
+   "aliases": [
+    "sow thistle"
+   ]
+  },
+  {
+   "id": "kale",
+   "name": "Kale",
+   "why": "Specialist husbandry and veterinary sources present kale as a leafy vegetable that can be used in tortoise diets, but a specialist plant database classifies it as feed in moderation because of concern about goitrogens, and winter alternative-diet guidance treats it as an occasional small addition. There is no direct trial that sets a harmful thyroid dose or a safe feeding proportion of kale for tortoises. It is therefore not repeated as a staple but rotated in small amounts among several suitable plants.",
+   "role": "Supplementary shop-bought vegetable, small amounts in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "kale"
+   ]
+  },
+  {
+   "id": "bokchoy",
+   "name": "Bok choy",
+   "why": "The Merck Veterinary Manual includes bok choy among examples of calcium-rich plant foods that can be offered to herbivorous reptiles. This source is not a study that tested feeding amounts, frequency or long-term safety of bok choy in tortoises. Bok choy is therefore limited to a supplementary role within a varied diet, not a staple. A study of mature bok choy (Brassica rapa subsp. chinensis) leaves found glucosinolates (the bitter and pungent compounds of the cabbage family), but their composition varies with cultivar and growth stage. These composition data are not a reason to prohibit feeding. They only support the current assessment: use brassicas as a supplementary ingredient among several foods rather than feeding one of them heavily and repeatedly like a staple.",
+   "role": "Candidate supplementary shop-bought vegetable",
+   "market": "supermarket, online",
+   "aliases": [
+    "bok choy"
+   ]
+  },
+  {
+   "id": "mustard",
+   "name": "Mustard greens",
+   "why": "UC Davis veterinary guidance includes mustard leaves among examples of leafy vegetables that herbivorous reptiles can use in a varied diet. This is not evidence that tested appropriate amounts or frequency of Brassica juncea in tortoises, so it is applied only as a supplementary vegetable in a varied diet, not as a staple. Analyses of mustard (Brassica juncea) by plant part, including the leaves, found differences in glucosinolate composition between cultivated lines. These composition data do not show that mustard is actually harmful to tortoises, so they are used only as a reference supporting the current limited-supplement assessment.",
+   "role": "Mustard leaves as a small supplement in rotation",
+   "market": "supermarket, market",
+   "aliases": [
+    "mustard greens"
+   ]
+  },
+  {
+   "id": "turnipgreens",
+   "name": "Turnip greens",
+   "why": "A specialist tortoise plant database distinguishes the turnip forms of Brassica rapa: the leaves and flowers can be fed in limited amounts, while the root should not be fed. The current reference plant, Brassica rapa subsp. rapa, and the source's var. rapa refer to the same turnip group, but the source is not a direct trial that sets exact feeding amounts or frequency. Only the leaves and flowers are therefore used as a limited supplementary ingredient in a mixed diet, and the root is excluded. A study that analysed turnip (Brassica rapa subsp. rapa) leaves directly found several glucosinolates. Detecting these compounds does not prove thyroid disorders or a toxic dose in tortoises. The current limited-supplement assessment is therefore kept, and the paper is used only as a reference that confirms composition and plant part.",
+   "role": "Turnip leaves as a small supplement in a mix",
+   "market": "market, home-grown",
+   "aliases": [
+    "turnip greens"
+   ]
+  },
+  {
+   "id": "collard",
+   "name": "Collard greens",
+   "why": "The Merck Veterinary Manual includes collard greens among examples of calcium-rich plant foods that can be offered to herbivorous reptiles. This source is not a study that tested feeding amounts, frequency or long-term safety of collards in tortoises. Collards are therefore applied only as a supplementary vegetable in a varied diet, not as a sole staple. A study that analysed collard (Brassica oleracea var. viridis) leaves directly found differences in glucosinolate composition between cultivars and lines. These composition data do not show that collards are actually harmful to tortoises, so they are used only as a reference supporting the current limited-supplement assessment.",
+   "role": "Candidate supplementary shop-bought vegetable",
+   "market": "online, home-grown",
+   "aliases": [
+    "collard greens"
+   ]
+  },
+  {
+   "id": "cabbage",
+   "name": "Cabbage",
+   "why": "The Merck Veterinary Manual includes cabbage among examples of plant foods for herbivorous reptiles. This is not a direct feeding trial that verified appropriate amounts, frequency or long-term safety of cabbage in tortoises. Cabbage is therefore not extended to a staple and is limited to a supplementary vegetable in a varied diet. A study that analysed the aerial parts of cabbage (Brassica oleracea var. capitata) directly found glucosinolates, with large differences between cultivars, environments and growth stages. These composition data are not a reason to prohibit feeding. They only support the current assessment: use brassicas as a supplementary ingredient among several foods rather than feeding one of them heavily and repeatedly like a staple.",
+   "role": "Candidate supplementary shop-bought vegetable",
+   "market": "supermarket, online",
+   "aliases": [
+    "cabbage"
+   ]
+  },
+  {
+   "id": "napa",
+   "name": "Napa cabbage",
+   "why": "A specialist tortoise plant database does not treat napa cabbage as a non-toxic staple; it classifies it as feed in moderation because of concern about goitrogens. The intent is that it can be a small part of a varied diet rather than fed in large amounts repeatedly. No harmful dose is given, so no specific figure is set here. A study that analysed the edible leaves of napa cabbage (Brassica rapa subsp. pekinensis) directly found glucosinolates, phenolic compounds and carotenoids, among others. Cultivars also differ, so napa cabbage should not be treated as having a single fixed composition. The current limited-supplement assessment is therefore kept, and the paper is used only as a reference that confirms composition and plant part.",
+   "role": "Napa cabbage as a small supplement in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "napa cabbage"
+   ]
+  },
+  {
+   "id": "radishgreens",
+   "name": "Radish greens",
+   "why": "A specialist tortoise database treats radish leaves as something to feed in small, limited amounts. Literature on radish (Raphanus sativus) also reports glucosinolates, but no harmful dose or fixed feeding frequency for tortoises has been established. Radish leaves are therefore fed in limited amounts mixed with a variety of plants, and the assessment is not extended to the whole cabbage family.",
+   "role": "Feed in limited amounts as part of a mix",
+   "market": "supermarket, market",
+   "aliases": [
+    "radish greens"
+   ]
+  },
+  {
+   "id": "broccolileaf",
+   "name": "Broccoli leaves",
+   "why": "Broccoli leaves should not be used as a staple and should be fed only in limited amounts. An original paper that analysed broccoli leaves themselves detected several glucosinolates directly, with large differences between cultivars. A specialist tortoise plant database does not consider broccoli a recommended food because these compounds may affect the thyroid. Broccoli is not, however, classified as a toxic plant, and detecting glucosinolates in the leaves does not prove that thyroid disorders occur in tortoises. The previous blanket exclusion from planned feeding has therefore been adjusted to limited feeding, matching the strength of the evidence. It is read as rare, small use within a varied leafy-vegetable diet, not as a staple or for repeated large feeds.",
+   "role": "Feed only in limited amounts",
+   "market": "home-grown, some markets",
+   "aliases": [
+    "broccoli leaves"
+   ]
+  },
+  {
+   "id": "cauliflowerleaf",
+   "name": "Cauliflower leaves",
+   "why": "Cauliflower leaves should not be used as a staple and should be fed only in limited amounts. Studies analysing Brassica tissues, including cauliflower (Brassica oleracea var. botrytis), show that glucosinolate composition and content differ between plant parts, including the leaves. A specialist tortoise plant database does not consider either the leaves or the head of cauliflower recommended foods and cites possible thyroid effects. The presence of glucosinolates in the leaves alone, however, does not prove that thyroid disorders occur in tortoises, and there is no direct evidence that cauliflower is an acutely toxic plant. Limited feeding therefore matches the strength of the evidence better than the previous blanket exclusion from planned feeding. It is read as limited use within a varied leafy-vegetable diet, not as a staple or for repeated large feeds.",
+   "role": "Feed only in limited amounts",
+   "market": "home-grown, some markets",
+   "aliases": []
+  },
+  {
+   "id": "arugula",
+   "name": "Arugula",
+   "why": "A specialist tortoise plant database does not classify rocket as a toxic plant but advises against repeated feeding in large amounts. An original paper that analysed Eruca sativa leaves with precise instruments found several glucosinolates, so the leaves clearly contain the compounds of concern typical of the cabbage family. The study did not, however, measure thyroid effects or safe amounts in tortoises, so the risk is not exaggerated and rocket stays at grade C, as a small supplement in rotation.",
+   "role": "Rocket as a small supplement in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "rocket",
+    "arugula"
+   ]
+  },
+  {
+   "id": "plantain",
+   "name": "Plantain",
+   "why": "Plantains can be part of a varied, high-fibre mixed diet of wild plants. Specialist sources on Mediterranean tortoises list Plantago as a high-fibre natural food, and a study of wild Hermann's tortoises observed them selecting plants of the plantain family (Plantaginaceae). The latter is preliminary conference data and a record of a single species, T. hermanni. No direct observations of Plantago feeding in other Testudo species are linked yet. Correctly identified, uncontaminated plantains are therefore used mixed with several suitable wild plants, without reading this as an established feeding proportion or frequency for any species, or as proof that plantain is safe as a sole staple.",
+   "role": "Part of a mix of wild plants",
+   "market": "home-grown, foraged, online",
+   "aliases": [
+    "plantain"
+   ]
+  },
+  {
+   "id": "mulberry",
+   "name": "Mulberry leaf",
+   "why": "A specialist tortoise plant database considers mulberry (Morus) leaves usable as part of a varied diet. The same entry also includes the leaves of the similarly named paper mulberry (Broussonetia papyrifera). Feed composition data show, however, that nutrient composition differs between species and cultivars within Morus, so a single fixed composition for “mulberry leaf”, or identical properties across all species, cannot be assumed. This is not a direct trial that sets exact feeding proportions or frequency either, so only correctly identified Morus leaves are used as a supplement mixed with several suitable plants, and the assessment is not extended to the fruit.",
+   "role": "Tree leaves as part of a mixed diet",
+   "market": "online, home-grown",
+   "aliases": [
+    "mulberry leaf"
+   ]
+  },
+  {
+   "id": "figleaf",
+   "name": "Fig leaf",
+   "why": "A specialist tortoise plant database advises against planned feeding of fig (Ficus carica) because of exposure to the leaves and sap. Species-level research in people has also confirmed photoactive furanocoumarins in fig and a risk of phytophotodermatitis, which is supporting evidence that the leaves and sap are not simply harmless plant tissue. A phototoxic skin reaction in people cannot, however, be read as oral systemic toxicity in tortoises. The leaves and sap are therefore excluded from the planned diet, without concluding that an accidental small bite causes poisoning.",
+   "role": "Not recommended",
+   "market": "home-grown",
+   "aliases": [
+    "fig leaf"
+   ]
+  },
+  {
+   "id": "mallow",
+   "name": "Mallow",
+   "why": "A specialist tortoise plant database treats the leaves and flowers of Malva spp. as feedable and names them as parts tortoises actually eat. However, further species-level checking is needed to confirm that the plant sold in Korea as auk (Chinese mallow) matches the Malva taxa covered by the source. The safety assessment is therefore not extended on the basis of the name alone; the plant is a candidate supplement in a mixed diet only when its species has been identified exactly.",
+   "role": "Candidate supplement in a mixed diet after exact species identification",
+   "market": "supermarket, market",
+   "aliases": [
+    "mallow"
+   ]
+  },
+  {
+   "id": "hibiscusleaf",
+   "name": "Rose of Sharon leaf",
+   "why": "A specialist tortoise plant database classifies the leaves and flowers of rose of Sharon (Hibiscus syriacus) as feedable. This is not evidence of an exact feeding proportion for tortoises or of unlimited feeding, and the assessment cannot be applied to other plants with similar names. The leaves of correctly identified H. syriacus are therefore used as a supplementary ingredient in a varied mixed diet.",
+   "role": "Rose of Sharon leaves as part of a mixed diet",
+   "market": "home-grown",
+   "aliases": [
+    "hibiscus leaf"
+   ]
+  },
+  {
+   "id": "hibiscusflower",
+   "name": "Rose of Sharon flower",
+   "why": "A specialist tortoise plant database classifies the flowers and leaves of rose of Sharon (Hibiscus syriacus) as feedable. This is not evidence of an exact feeding proportion for tortoises or of unlimited feeding, and the assessment cannot be applied to other plants with similar names. The flowers of correctly identified H. syriacus are therefore used as a supplementary ingredient in a varied mixed diet.",
+   "role": "Rose of Sharon flowers as part of a mixed diet",
+   "market": "home-grown",
+   "aliases": [
+    "hibiscus flower"
+   ]
+  },
+  {
+   "id": "spinach",
+   "name": "Spinach",
+   "why": "A specialist tortoise plant database does not regard spinach itself as a poisonous plant, but advises against planned feeding because of its high oxalate content and its potential to reduce calcium availability. Calcium absorption studies in people also confirm the low calcium availability of spinach, although these are not direct toxicity studies in tortoises. Spinach is therefore excluded from the planned diet because of its disadvantage for calcium, without asserting that it causes stones or setting a specific toxic dose.",
+   "role": "Not recommended",
+   "market": "supermarket, online",
+   "aliases": [
+    "spinach"
+   ]
+  },
+  {
+   "id": "beetgreens",
+   "name": "Beet greens",
+   "why": "A specialist tortoise plant database does not regard beet leaves as a toxic plant, but because of oxalate it recommends using them only in small amounts and occasionally. An original paper that analysed Beta vulgaris var. cicla leaves directly also measured high soluble oxalate, depending on growth stage. This study is not a tortoise feeding trial, however, so no exact safe amount is set and beet leaves are limited to rare supplementary use at grade C.",
+   "role": "Beet leaves as a very small, rare supplement",
+   "market": "online, home-grown",
+   "aliases": [
+    "beet greens"
+   ]
+  },
+  {
+   "id": "watercress",
+   "name": "Watercress",
+   "why": "",
+   "role": "",
+   "market": "online, some supermarkets",
+   "aliases": [
+    "watercress"
+   ]
+  },
+  {
+   "id": "parsley",
+   "name": "Parsley",
+   "why": "A specialist tortoise database does not regard parsley as a toxic plant, but advises avoiding planned feeding because of oxalate and other factors. Independent research has also found photoactive furanocoumarins, so the current exclusion is kept, without extending it to a direct toxic dose, kidney damage or a phototoxic dose for any particular species.",
+   "role": "Not recommended",
+   "market": "supermarket, online",
+   "aliases": [
+    "parsley"
+   ]
+  },
+  {
+   "id": "cilantro",
+   "name": "Cilantro",
+   "why": "A specialist tortoise plant database treats coriander as an ingredient that can go into a varied diet, while classifying it as feed in moderation because of oxalate. A separate original paper quantified oxalate directly in the leaves of Coriandrum sativum, reinforcing that the compound is present in the leaves. That study did not test reduced calcium absorption or clinical harm in tortoises, so the presence of oxalate alone is not extended to toxicity or a feeding ban. Coriander is therefore kept as a limited supplementary ingredient mixed with several suitable plants, not repeated as a staple.",
+   "role": "Coriander as a small supplement in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "cilantro",
+    "coriander"
+   ]
+  },
+  {
+   "id": "celeryleaf",
+   "name": "Celery leaf",
+   "why": "A specialist tortoise plant database does not regard celery as a toxic plant but advises against planned feeding, citing oxalate in the leaves and the nutrient balance of the whole plant, among other reasons. A separate original paper on Apium graveolens analysed minerals in the leaves, stalks and seeds of 20 cultivars (genotypes) separately, showing that composition varies with plant part and genotype. This composition study is not a tortoise feeding, oxalate or toxicity study, so it does not prove the D assessment by itself. The current D assessment therefore rests mainly on the specialist tortoise source, and the paper is used as supporting evidence that the nutrient composition of celery leaves is not a single fixed value.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, online",
+   "aliases": [
+    "celery leaf"
+   ]
+  },
+  {
+   "id": "carrottop",
+   "name": "Carrot tops",
+   "why": "A specialist tortoise plant database describes the leaves of cultivated carrot (the sativus group of Daucus carota) as high in oxalate, potassium and protein and limits them to feed sparingly. The current reference plant, Daucus carota subsp. sativus, and the source's Daucus carota sativus both refer to cultivated carrot, but this is not a direct trial that sets an exact safe amount. The assessment is therefore kept separate from the root, and only carrot tops are used occasionally in small amounts among several plants.",
+   "role": "Carrot tops as a limited supplement",
+   "market": "home-grown, some markets",
+   "aliases": [
+    "carrot tops"
+   ]
+  },
+  {
+   "id": "basil",
+   "name": "Basil",
+   "why": "A specialist tortoise plant database classifies basil (Ocimum basilicum) as feed in moderation and notes that its strong smell and taste may make it less palatable. This is not a trial that sets exact feeding amounts or frequency, so basil is used only as a small supplementary component mixed with several suitable plants.",
+   "role": "Basil as a small supplement in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "basil"
+   ]
+  },
+  {
+   "id": "mint",
+   "name": "Mint",
+   "why": "Feeding mint is on hold until the exact species is confirmed. “Mint” is not one species but a name covering several Mentha species. Current specialist tortoise sources treat some garden mint, spearmint and apple mint as usable, while separately excluding peppermint and pennyroyal. A plant sold simply as “mint” should therefore not be fed on the basis of a shared assessment for the whole genus Mentha. Once the scientific name or exact type is confirmed, apply the evidence for that species; if it cannot be confirmed, do not feed it.",
+   "role": "Feeding on hold until the mint species is confirmed · species-level assessment needed",
+   "market": "supermarket, online, home-grown",
+   "aliases": [
+    "mint"
+   ]
+  },
+  {
+   "id": "perilla",
+   "name": "Perilla leaf",
+   "why": "A specialist tortoise database classifies perilla as do not feed, and independent research has linked perilla ketone in Perilla frutescens to lung toxicity in several animals. Because chemotypes differ between cultivars, perilla is excluded from planned feeding, but this is not extended to a toxic dose for any particular species or to the same level of risk for every edible perilla-leaf cultivar.",
+   "role": "Not recommended",
+   "market": "supermarket, online",
+   "aliases": [
+    "perilla"
+   ]
+  },
+  {
+   "id": "clover",
+   "name": "Clover",
+   "why": "Clovers are limited to being one part of a varied mixed diet, not a sole staple. A dietary study of wild Testudo graeca ibera recorded Trifolium as a plant group actually eaten, and specialist sources on Mediterranean tortoises also treat clover as a natural food. A wild feeding record is not, however, a trial that sets the exact feeding proportion or frequency of clover in captivity or shows it is safe as a sole staple. Correctly identified clovers are therefore used mixed with several suitable wild plants, without letting the diet lean on one kind.",
+   "role": "Part of a mixed diet",
+   "market": "home-grown, foraged",
+   "aliases": [
+    "clover"
+   ]
+  },
+  {
+   "id": "alfalfa",
+   "name": "Alfalfa",
+   "why": "Alfalfa is limited to being one part of a varied mixed diet of wild and cultivated plants, not a sole staple. Wild T. g. ibera in Romania and Bulgaria were directly observed eating Medicago. That record does not mean the alfalfa sold in Korea is fully the same in species or growing conditions, and it is not a trial that sets captive feeding amounts or frequency. Alfalfa is therefore used, after confirming its identity, as one part of a mixed diet with several plants.",
+   "role": "Part of a mix of wild and cultivated plants",
+   "market": "online",
+   "aliases": [
+    "alfalfa"
+   ]
+  },
+  {
+   "id": "chickweed",
+   "name": "Chickweed",
+   "why": "Chickweed can be part of a varied mixed diet of wild plants. Specialist husbandry sources for Mediterranean tortoises list chickweed as one of the plants that can be picked in the garden and fed. This is not a trial that sets exact feeding amounts or frequency of chickweed, or shows long-term sole feeding is safe. Plants correctly identified as Stellaria media and free of pesticide, herbicide and other contamination are therefore used as one ingredient of a mixed diet with several suitable wild plants, without letting the diet lean on one kind.",
+   "role": "Part of a mix of wild plants",
+   "market": "home-grown, foraged",
+   "aliases": [
+    "chickweed"
+   ]
+  },
+  {
+   "id": "sweetpotatoleaf",
+   "name": "Sweet potato leaves",
+   "why": "A specialist tortoise plant database excludes sweet potato leaves from planned feeding, citing an unfavourable calcium-to-phosphorus balance as the main reason. A separate original paper quantified total, soluble and insoluble calcium oxalate directly in the aerial parts (stems and leaves) of 8 sweet potato lines, confirming the oxalate composition of the aerial parts and its variability. That study is not a tortoise feeding trial, nor a toxicity test of the leaves alone. Detecting oxalate is therefore not extended into evidence of a “poisonous plant”, and the current D assessment rests mainly on the specialist source's judgement about dietary balance.",
+   "role": "Not recommended",
+   "market": "market, home-grown",
+   "aliases": [
+    "sweet potato leaves"
+   ]
+  },
+  {
+   "id": "pumpkinleaf",
+   "name": "Pumpkin leaf",
+   "why": "A specialist tortoise plant database treats the leaves of squash and pumpkin plants as a supplementary food to be used in small amounts and only occasionally. A separate original paper measured antinutrients and phenolic compounds directly in the leaves of Cucurbita moschata, adding composition evidence for pumpkin leaves. That study is not a tortoise feeding, digestion or toxicity test, and the result for one species cannot be taken to represent the current entry, Cucurbita spp., as a whole. Pumpkin leaves therefore remain a limited supplement, not a staple.",
+   "role": "Leaves and flowers as a small supplement",
+   "market": "supermarket, market",
+   "aliases": [
+    "pumpkin leaf"
+   ]
+  },
+  {
+   "id": "zucchini",
+   "name": "Korean zucchini",
+   "why": "A specialist tortoise plant database (The Tortoise Table) explains that the fruit of squashes, including Cucurbita moschata, is not toxic to tortoises, but does not recommend feeding the fruit to tortoises other than naturally fruit-eating species such as the red-footed tortoise. It separately says the leaves can be fed in small amounts and the flowers in moderation. No feeding trials in tortoises that would overturn this view have been found. Korean zucchini fruit is therefore excluded from the planned diet. This does not mean that eating a little Korean zucchini causes poisoning, and it is not a claim that a toxic dose has been established. The young leaves of Korean zucchini and pumpkin flowers are assessed in separate entries.",
+   "role": "Fruit not recommended for planned feeding (except for fruit-eating species)",
+   "market": "supermarket, online",
+   "aliases": [
+    "zucchini"
+   ]
+  },
+  {
+   "id": "cucumber",
+   "name": "Cucumber",
+   "why": "A specialist tortoise plant database describes cucumber fruit as a food that is mostly water, mentions supplementary uses such as hydration or hiding medicine, and classifies it as feed in moderation. The leaves and flowers are distinguished separately as feedable in small amounts. This is not a direct trial that sets exact feeding amounts or frequency. Cucumber fruit is therefore not treated as a high-fibre staple and is used only occasionally as a supplement alongside other suitable plants.",
+   "role": "Cucumber as a limited supplement for moisture",
+   "market": "supermarket, online",
+   "aliases": [
+    "cucumber"
+   ]
+  },
+  {
+   "id": "bellpepper",
+   "name": "Bell pepper",
+   "why": "A specialist tortoise plant database (The Tortoise Table) classifies sweet pepper fruit as do not feed. No direct feeding-safety trials in tortoises that would overturn this have been found. The study that analysed the chemical composition of Capsicum annuum fruit describes the composition of non-pungent fruit, but it is not evidence that the fruit is safe to feed to tortoises. Until more evidence is available, sweet peppers are therefore excluded from the planned diet. This does not mean that a single bite of sweet pepper causes poisoning, and it is not a claim that a toxic dose has been established.",
+   "role": "Not recommended for planned feeding",
+   "market": "supermarket, online",
+   "aliases": [
+    "bell pepper"
+   ]
+  },
+  {
+   "id": "tomato",
+   "name": "Tomato",
+   "why": "A specialist tortoise plant database separates tomato leaves and unripe fruit as do not feed, and does not recommend ripe fruit for the everyday diet either. An original paper quantified α-tomatine and dehydrotomatine directly in the vegetative organs of Solanum lycopersicum, such as leaves and stems, and in fruit at different stages of ripeness, confirming that glycoalkaloid exposure varies greatly with plant part and ripeness. The hazard evidence for leaves and unripe fruit and the dietary suitability of ripe fruit are therefore not lumped together as one reason. This composition study is not a tortoise toxicity test, so it does not support an exact toxic dose or the idea that one bite means poisoning; tomato as a whole is excluded as a candidate for planned regular feeding.",
+   "role": "Not recommended",
+   "market": "supermarket, online",
+   "aliases": [
+    "tomato"
+   ]
+  },
+  {
+   "id": "grapeleaf",
+   "name": "Grape leaf",
+   "why": "A specialist tortoise plant database allows young fresh leaves of Vitis within its feed in moderation range. This is genus-level specialist information; it is not a direct trial showing that all grape species and cultivars are the same, nor evidence that sets exact feeding amounts or frequency for tortoises. Only young fresh leaves that are correctly identified and have no history of pesticide spraying are therefore used occasionally as a supplement in a varied diet, and the assessment is not extended to the fruit. A study analysed the polyphenol composition of healthy Vitis vinifera leaves, separating the blade and the veins, and found differences between cultivars and between parts. Grape leaf composition is therefore not treated as a single fixed value. The current assessment is kept, and the paper is used only as a reference that confirms species and plant part.",
+   "role": "Young grape leaves in small amounts in a mix",
+   "market": "home-grown",
+   "aliases": [
+    "grape leaf"
+   ]
+  },
+  {
+   "id": "rose",
+   "name": "Rose petals",
+   "why": "The Tortoise Trust's feeding guidance for Mediterranean tortoises lists rose leaves and petals as part of a varied diet of wild plants. The evidence refers to the leaves and petals; the same assessment cannot automatically be applied to the hips or other parts. It is also not feeding-trial evidence that sets an exact feeding proportion. Only leaves and petals that you have grown yourself, or that are confirmed to be edible and unsprayed, are therefore used as a supplement mixed with several suitable plants. Roses whose exposure to pesticides or preservatives cannot be ruled out, such as those from garden centres or cut-flower roses, are not fed.",
+   "role": "Unsprayed leaves and flowers as a supplement in a mix",
+   "market": "home-grown",
+   "aliases": [
+    "rose petals"
+   ]
+  },
+  {
+   "id": "nasturtium",
+   "name": "Nasturtium",
+   "why": "A specialist tortoise plant database classifies nasturtium (Tropaeolum majus) as feed in moderation. This evidence does not, however, give a direct toxicity mechanism or harmful dose in tortoises that explains why it should be limited, or an exact feeding frequency. No reason is invented here; nasturtium is applied only as a small supplementary component of a varied diet. Benzyl glucosinolate (glucotropaeolin) has been found in mature Tropaeolum majus plants, with the green leaves identified as the main part producing it. This result alone does not prove clinical harm or a toxic dose in tortoises, so the current limited-supplement assessment is kept, and the composition evidence is used only as supporting material with its limits stated.",
+   "role": "Nasturtium as part of a mixed diet",
+   "market": "home-grown, online",
+   "aliases": [
+    "nasturtium"
+   ]
+  },
+  {
+   "id": "pricklypear",
+   "name": "Prickly pear cactus",
+   "why": "A specialist tortoise plant database classifies the pads and fruit of Opuntia as feedable, but also warns that large amounts can have a laxative effect. This is not a trial that sets an exact feeding proportion or frequency, so it is used as a supplementary ingredient in a varied diet, not fed without limit. An original paper that analysed the pads (flattened stem segments) of Opuntia ficus-indica directly found calcium oxalate crystals and various plant compounds. This describes the composition of the pads but does not prove a laxative effect or a harmful dose in tortoises. The current limited-supplement assessment is therefore kept, and the composition data for this species are added only as reference evidence.",
+   "role": "Candidate succulent supplement for moisture and fibre",
+   "market": "online, home-grown",
+   "aliases": [
+    "prickly pear"
+   ]
+  },
+  {
+   "id": "timothy",
+   "name": "Timothy grass",
+   "why": "A specialist tortoise plant database classifies young timothy grass and timothy hay as feedable, but recommends removing dry seed heads because they may injure the eyes and mouth. Grasses can have a place in a Mediterranean Testudo diet, but this is not a direct trial that sets the exact captive proportion of timothy for tortoises. Young grass and suitable hay are therefore mixed with several other herbaceous plants, and dry seed heads are removed.",
+   "role": "Fresh timothy and timothy hay, limited, in a mix",
+   "market": "online",
+   "aliases": [
+    "timothy"
+   ]
+  },
+  {
+   "id": "orchard",
+   "name": "Orchard grass",
+   "why": "A specialist tortoise plant database includes young orchard grass (Dactylis glomerata) in its feedable range. The evidence here refers to young grass with growing leaves, not to mature seeds or grain. Grasses are part of a Mediterranean Testudo diet, but there is no trial that sets the exact captive feeding proportion of orchard grass for tortoises. Young leaves and stems are therefore offered mixed with other suitable wild plants, and the ripe seed parts are not fed under the same assessment.",
+   "role": "Orchard grass as a component of a mixed diet",
+   "market": "online",
+   "aliases": [
+    "orchard grass"
+   ]
+  },
+  {
+   "id": "ryegrass",
+   "name": "Ryegrass",
+   "why": "A specialist tortoise plant database includes young Lolium perenne in its feedable range. Products sold as “ryegrass” are sometimes of unclear species, however, so grass not confirmed as Lolium perenne should not automatically be covered by the same assessment. The evidence also concerns young grass and does not apply equally to mature seeds or grain. Young leaves of a confirmed species are used mixed with several suitable plants, without reading this as an established feeding proportion.",
+   "role": "Ryegrass as a component of a mixed diet",
+   "market": "online, home-grown",
+   "aliases": [
+    "ryegrass"
+   ]
+  },
+  {
+   "id": "wheatgrass",
+   "name": "Wheatgrass",
+   "why": "A specialist tortoise plant database classifies young wheatgrass (Triticum) as a feedable grass. The same source separates mature seeds, which should not be fed because they are high in protein, so “wheatgrass is feedable” does not mean wheat grain is feedable. There is no trial that sets an exact feeding proportion for wheatgrass either. Green young leaves are therefore offered mixed with several suitable plants, and mature seeds are excluded.",
+   "role": "Wheatgrass as a component of a mixed diet",
+   "market": "online, home-grown",
+   "aliases": [
+    "wheatgrass"
+   ]
+  },
+  {
+   "id": "barleygrass",
+   "name": "Barley grass",
+   "why": "A specialist tortoise plant database classifies young barley grass (Hordeum) as a feedable grass, but separates mature seeds, which should not be fed because they are high in protein. In other words, the assessment for barley grass is not an assessment for barley grain. There is no trial that sets exact feeding amounts or frequency, so the young leaves are used as one ingredient of a mixed diet with several wild plants, and mature seeds are excluded.",
+   "role": "Barley grass as a component of a mixed diet",
+   "market": "online, home-grown",
+   "aliases": [
+    "barley grass"
+   ]
+  },
+  {
+   "id": "oatgrass",
+   "name": "Oat grass",
+   "why": "A specialist tortoise plant database classifies young oat grass (Avena sativa) as a feedable grass. The same source distinguishes mature seeds from young grass and advises against feeding them because they are high in protein. Oat grass is therefore used only as green young leaves offered mixed with other suitable plants, and the assessment is not extended to oat seeds or grain. The current evidence cannot set an exact captive feeding proportion.",
+   "role": "Oat grass as a component of a mixed diet",
+   "market": "online, home-grown",
+   "aliases": [
+    "oat grass"
+   ]
+  },
+  {
+   "id": "cornleaf",
+   "name": "Corn leaf",
+   "why": "A specialist tortoise plant database distinguishes the leaves of maize (Zea mays) as feedable but does not apply the same assessment to the cobs or kernels. It is not a direct trial that sets exact feeding proportions or frequency either. Only clean leaves are therefore used as a supplementary ingredient in a mixed diet, kept separate from the cobs and kernels.",
+   "role": "Maize leaves as a small supplement in a mix",
+   "market": "home-grown",
+   "aliases": [
+    "corn leaf"
+   ]
+  },
+  {
+   "id": "chrysanthemumleaf",
+   "name": "Crown daisy",
+   "why": "A specialist tortoise plant database considers some plants of the daisy family usable in limited amounts while separately excluding particular taxa that are high in pyrethrins. Crown daisy is currently managed precisely as Glebionis coronaria, and a separate original paper analysed the essential oils of the actual leaves and flowers of this species, showing that their chemical composition can vary greatly with plant part and origin. A study of concentrated essential oil is not, however, evidence about harm in tortoises that ate fresh leaves. The hazards of other Chrysanthemum plants are therefore not automatically transferred to crown daisy, and it stays a limited supplement, provided the species is correctly identified.",
+   "role": "Crown daisy as a small supplement in rotation",
+   "market": "supermarket, online",
+   "aliases": [
+    "crown daisy"
+   ]
+  },
+  {
+   "id": "ssuk",
+   "name": "Mugwort",
+   "why": "A specialist tortoise plant database excludes Artemisia spp. from planned feeding. An original paper that analysed the leaves of Artemisia princeps itself detected 192 volatile compounds, and α-thujone was measured directly as one of the main volatile components. Detecting compounds in a leaf extract is not, however, a toxicity test in tortoises and does not indicate the actual exposure or a toxic dose when fresh leaves are eaten. The claim that mugwort is “proven toxic” is therefore not made, and the current D assessment is kept as a low-certainty exclusion from planned feeding based on the specialist tortoise source.",
+   "role": "Not recommended",
+   "market": "market, home-grown, foraged",
+   "aliases": [
+    "mugwort"
+   ]
+  },
+  {
+   "id": "dolnamul",
+   "name": "Stringy stonecrop",
+   "why": "Stringy stonecrop is treated only as a candidate for small supplementary use, not as a staple. The species of the Korean plant (Sedum sarmentosum) has been confirmed, but the direct feeding records in wild Testudo graeca ibera concern a different Sedum taxon. A specialist plant database considers most Sedum usable in a varied diet while warning that large amounts may cause diarrhoea, and it excludes Sedum acre as an exception. The genus-level record is therefore not extended directly to the Korean plant, and it is applied only as a small supplement.",
+   "role": "Candidate succulent supplement in a mixed diet",
+   "market": "supermarket, market",
+   "aliases": []
+  },
+  {
+   "id": "minari",
+   "name": "Water dropwort",
+   "why": "A specialist tortoise database regards plants of the genus Oenanthe (including the hemlock water dropwort group) as plants to avoid. Data on O. javanica itself include both observations of no toxicity in mammals and toxicity signals at high doses or from extracts, so the toxicity of other Oenanthe species cannot be applied to it directly. With no direct safety evidence in Testudo, it is excluded from planned feeding.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, online",
+   "aliases": [
+    "water dropwort"
+   ]
+  },
+  {
+   "id": "aehobakleaf",
+   "name": "Squash leaf",
+   "why": "A specialist tortoise plant database treats the young leaves and flowers of squashes and pumpkins, including Cucurbita moschata, as feed sparingly and does not extend the same assessment to the fruit. This is not a trial that sets exact feeding amounts or frequency, so young Korean zucchini leaves are limited to occasional small supplementary use.",
+   "role": "Young Korean zucchini leaves and flowers as a small supplement",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "sunflowerleaf",
+   "name": "Sunflower leaf",
+   "why": "A specialist tortoise plant database treats sunflower (Helianthus annuus) leaves as feed in moderation. This is not, however, a direct trial that sets exact feeding amounts, frequency or a dose–response for the limit. The leaves are therefore not repeated as a staple but rotated in small amounts in a varied diet. Various compounds, including sesquiterpene lactones, diterpenes and flavonoids, have been identified directly in extracts of actual Helianthus annuus leaves. A phytotoxicity test of a concentrated extract cannot, however, be read as toxicity to tortoises eating fresh leaves. The current limited-supplement assessment is therefore kept; the only change is that the existence of direct analyses of this species and part is reflected in the evidence certainty.",
+   "role": "Sunflower leaves as a small supplement in rotation",
+   "market": "home-grown",
+   "aliases": [
+    "sunflower leaf"
+   ]
+  },
+  {
+   "id": "violet",
+   "name": "Violet",
+   "why": "The leaves and flowers of correctly identified violets can be used as a supplementary component of a varied mixed diet. A specialist tortoise plant database treats the leaves and flowers of correctly identified Viola spp. as feedable. The assessment must not be transferred to plants of other genera just because they share the common name “violet”, and the source does not set an unlimited intake for tortoises. The leaves and flowers of true Viola plants are therefore used as a supplementary ingredient of a varied mixed diet.",
+   "role": "Violet leaves and flowers as a supplement in a mix",
+   "market": "home-grown, foraged",
+   "aliases": [
+    "violet"
+   ]
+  },
+  {
+   "id": "geranium",
+   "name": "Geranium",
+   "why": "A specialist tortoise plant database classifies Pelargonium as feed in moderation. This assessment cannot be applied automatically to true Geranium (cranesbill) plants that may also be called “geranium”, and it does not set exact feeding amounts or frequency. After exact identification, it is therefore used only as a small supplementary component of a mixed diet.",
+   "role": "Geranium as a small supplement in rotation",
+   "market": "garden centre, home-grown",
+   "aliases": [
+    "pelargonium"
+   ]
+  },
+  {
+   "id": "pansy",
+   "name": "Pansy",
+   "why": "A specialist tortoise plant database classifies the leaves and flowers of correctly identified pansies as feedable. The assessment cannot, however, be applied to unrelated plants with similar common names, and it is not a trial that sets an exact feeding proportion or frequency. The leaves and flowers of identified pansies are therefore used as a supplementary ingredient in a mixed diet.",
+   "role": "Pansy leaves and flowers as a supplement in a mix",
+   "market": "garden centre, home-grown",
+   "aliases": [
+    "pansy"
+   ]
+  },
+  {
+   "id": "marigold",
+   "name": "Marigold",
+   "why": "A specialist tortoise database classifies Tagetes spp. as do not feed, and independent plant-chemistry research has also found bioactive thiophenes in several plant parts. Marigolds are therefore excluded from planned feeding, but this is not extended to a toxic dose for any particular species or to the clinical outcome of an accidental small bite.",
+   "role": "Not recommended",
+   "market": "garden centre, home-grown",
+   "aliases": [
+    "marigold"
+   ]
+  },
+  {
+   "id": "calendula",
+   "name": "Calendula",
+   "why": "A specialist tortoise plant database classifies the leaves and flowers of pot marigold (Calendula) as feedable as part of a varied diet. This assessment cannot be applied to the similarly named Tagetes marigolds, and it does not set an unlimited amount for tortoises. Leaves and flowers correctly identified as Calendula are therefore used as a supplementary ingredient in a mixed diet.",
+   "role": "Pot marigold leaves and flowers as a supplement in a mix",
+   "market": "garden centre, home-grown",
+   "aliases": [
+    "calendula"
+   ]
+  },
+  {
+   "id": "dill",
+   "name": "Dill",
+   "why": "A specialist tortoise plant database classifies the herb parts of dill (Anethum graveolens) as feed in moderation and explicitly excludes the seeds. This is not a direct trial that sets an exact safe amount, feeding frequency or a specific mechanism of harm for the herb parts in tortoises. The seeds are therefore not fed, and only the herb parts, such as leaves and stems, are used as a small supplementary component mixed with several suitable plants. Several flavonol glycosides have been isolated and identified directly from dill (Anethum graveolens) leaves. This is composition evidence for the leaves of this species, but it is not a feeding-safety test in tortoises. The current assessment is kept, and the paper is used only as a reference that confirms species and plant part.",
+   "role": "Dill leaves and herb as a small supplement in a mix",
+   "market": "supermarket, online, home-grown",
+   "aliases": [
+    "dill"
+   ]
+  },
+  {
+   "id": "chard",
+   "name": "Chard / Swiss Chard",
+   "why": "A specialist tortoise plant database limits chard leaves to feed sparingly because of their high oxalate content and also notes a caution related to water. Korean Rural Development Administration data confirm that the Korean chard is Beta vulgaris subsp. cicla. This is not a trial that sets an exact safe amount, so chard is not repeated as a staple and is used occasionally as a small supplement.",
+   "role": "Chard leaves as a very small, occasional supplement in rotation",
+   "market": "supermarket, market, online, home-grown",
+   "aliases": [
+    "Swiss chard",
+    "chard"
+   ]
+  },
+  {
+   "id": "lambs_lettuce",
+   "name": "Lamb's Lettuce / Corn Salad",
+   "why": "A specialist tortoise plant database classifies the leaves of corn salad (lamb's lettuce) as feedable and considers it suitable for a varied diet. This is not, however, a direct trial that proves an exact feeding proportion, frequency or unlimited feeding. It is therefore used as a supplementary leafy vegetable in a mixed diet, provided the plant is correctly identified.",
+   "role": "Supplementary component of a mix of leafy vegetables and wild plants",
+   "market": "online, imported vegetable, home-grown",
+   "aliases": [
+    "Corn salad"
+   ]
+  },
+  {
+   "id": "whiteclover",
+   "name": "White clover",
+   "why": "White clover can be used, in limited amounts, as part of a varied mixed diet of wild plants. Specialist sources on Mediterranean tortoises include the leaves, stems and flowers of Trifolium repens among natural foods, while recommending limited feeding because of its high protein content. The evidence currently linked consists of specialist husbandry and taxonomic sources, not a direct feeding trial or an original wild-feeding study of this exact species. It is therefore not extended to a sole staple or to repeated feeding in a high proportion.",
+   "role": "Part of a varied mixed diet of wild plants",
+   "market": "foraged, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "redclover",
+   "name": "Red clover",
+   "why": "Red clover is used, in limited amounts, as part of a varied mixed diet of wild plants. The Tortoise Trust's plant information for herbivorous tortoises includes the leaves, stems and flowers of red clover (Trifolium pratense) in its natural-food list. This is not a direct trial that sets an exact feeding proportion or frequency. The confirmed plant parts are therefore used as part of a mixed diet with several wild plants.",
+   "role": "Part of a varied mixed diet of wild plants",
+   "market": "foraged, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "ribwortplantain",
+   "name": "Ribwort plantain",
+   "why": "Ribwort plantain can be used as one component of a high-fibre mixed diet of wild plants. The Tortoise Trust lists Plantago as a high-fibre natural food for herbivorous tortoises and specifically includes ribwort plantain (Plantago lanceolata) in its wild-food list. This specialist husbandry source is not, however, a trial that sets the exact feeding proportion or frequency of ribwort plantain for tortoises or shows sole feeding is safe. Plants correctly identified as P. lanceolata and free of pesticide and herbicide contamination are therefore used mixed with several suitable wild plants.",
+   "role": "Candidate for a high-fibre mixed diet of wild plants",
+   "market": "foraged, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "broadleafplantain",
+   "name": "Broadleaf plantain",
+   "why": "Broadleaf plantain can be used as one component of a high-fibre mixed diet of wild plants. The Tortoise Trust includes broadleaf plantain (Plantago major) among high-fibre natural foods for herbivorous tortoises. This is not a trial that sets exact feeding amounts or frequency of Plantago major for tortoises or shows it is safe as a sole food. Correctly identified plants free of pesticide and herbicide contamination are therefore used as one ingredient of a mixed diet with other suitable wild plants, without letting the diet lean on one kind.",
+   "role": "Candidate for a high-fibre mixed diet of wild plants",
+   "market": "foraged, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "commonmallow",
+   "name": "Common mallow",
+   "why": "After exact identification, the leaves and flowers of mallows (Malva) can be one component of a varied mixed diet. A specialist tortoise plant database classifies the leaves and flowers of Malva spp. as feedable, and the Tortoise Trust also lists Malva as a high-fibre natural food. This is not a direct trial that sets exact feeding amounts or frequency. They are used as a supplementary ingredient in a mixed diet, keeping to exact species identification and to the leaves and flowers.",
+   "role": "Leaves and flowers as part of a mixed diet",
+   "market": "home-grown, foraged",
+   "aliases": []
+  },
+  {
+   "id": "marshmallow",
+   "name": "Marsh mallow",
+   "why": "Marshmallow (Althaea officinalis) is currently best left out of the planned tortoise diet. The University of Zurich Vetpharm veterinary toxicology database does not classify the plant as poisonous and reports no cases of animal poisoning, but it also states explicitly that it is not suitable as feed. The other study currently linked evaluated an extract used in carp and cannot confirm safety when tortoises eat fresh leaves or flowers. Marshmallow is therefore excluded from planned feeding until confirmed evidence of feeding suitability is available. This does not mean toxicity has been proven or that an accidental small bite necessarily causes poisoning.",
+   "role": "Not recommended for planned feeding",
+   "market": "home-grown, online",
+   "aliases": []
+  },
+  {
+   "id": "hollyhock",
+   "name": "Hollyhock",
+   "why": "A specialist tortoise plant database classifies the leaves and flowers of hollyhock as feedable as part of a varied diet. This is not, however, a direct trial that proves exact feeding amounts, frequency or unlimited feeding. The leaves and flowers of correctly identified hollyhock are therefore used as a supplementary ingredient in a mixed diet.",
+   "role": "Supplementary component of a leaf-and-flower mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "grapehyacinth",
+   "name": "Grape hyacinth",
+   "why": "A specialist tortoise plant database excludes grape hyacinths (Muscari spp.) from planned feeding and from planting in enclosures. An original paper on Muscari armeniacum bulbs actually isolated polyhydroxylated pyrrolizidine alkaloids such as hyacinthacines A1, A2, A3 and B3, and a veterinary review of plant toxicity in pets also treats M. armeniacum as an alkaloid-containing ornamental. There is, however, no evidence that these hyacinthacines share the toxicity of the unsaturated pyrrolizidine alkaloids known to harm the liver, and there is no trial setting a toxic dose for tortoises. The D assessment is therefore kept on the basis of the specialist tortoise source, without overstating the mechanism of harm.",
+   "role": "Excluded from planned feeding and from planting in the enclosure",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "lemonbalm",
+   "name": "Lemon balm",
+   "why": "A specialist tortoise plant database classifies lemon balm as feed in moderation and recommends using it only as part of a varied diet. This evidence does not, however, give the specific reason for the limit (a toxicity mechanism or harmful dose in tortoises) or an exact feeding frequency. No reason is invented here; it is used only as a small supplementary component of a mixed diet. Several compounds, including rosmarinic acid and caffeic acid, have been found directly in fresh leaves and stems of Melissa officinalis. This is evidence about the fresh aerial parts of this species, but it is not a tortoise feeding trial. The current limited-supplement assessment is kept, and the paper is used only as a reference that confirms the composition of this species and part.",
+   "role": "Small supplement in a varied diet",
+   "market": "supermarket, online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "sage",
+   "name": "Sage",
+   "why": "A specialist tortoise plant database classifies the aerial parts of culinary sage (Salvia officinalis) as feed in moderation. This assessment cannot automatically be applied to other Salvia species, and it does not set exact feeding amounts or frequency. After exact species identification, sage is therefore used only as a small supplementary component of a varied diet. Rosmarinic acid has been isolated, identified and quantified directly in actual Salvia officinalis leaves by precise instrumental analysis. Compound concentrations do not indicate feeding safety or a toxic dose. The current limited-supplement assessment is kept, and the paper is used only as a reference that confirms the composition of this species and part.",
+   "role": "Limited supplement",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "thyme",
+   "name": "Thyme",
+   "why": "Thyme can be used as a supplementary plant mixed in small amounts into a varied diet. A specialist tortoise plant database classifies the aerial parts of thyme (Thymus spp.) as feedable as part of a varied diet. This does not mean that refined, concentrated thyme essential oil is safe, and it does not set an unlimited intake for tortoises. The plant itself is therefore used as a supplementary ingredient in a mixed diet, kept separate from the essential oil.",
+   "role": "Supplementary plant in a varied diet",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "oregano",
+   "name": "Oregano",
+   "why": "A specialist tortoise plant database classifies the aerial parts of oregano (Origanum vulgare) as feedable as part of a varied diet. This does not set an unlimited intake for tortoises, nor does it mean that concentrated oregano essential oil is safe. The plant itself is therefore used as a supplementary ingredient in a mixed diet, kept separate from the essential oil.",
+   "role": "Supplementary plant in a varied diet",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "rosemary",
+   "name": "Rosemary",
+   "why": "A specialist tortoise plant database classifies the aerial parts of rosemary (Rosmarinus officinalis) as feed sparingly. This assessment is neither a trial that sets an exact safe amount nor an indication that concentrated rosemary essential oil or extracts are safe. The plant itself is therefore limited to occasional small supplementary use. The distribution of carnosic acid, carnosol, rosmarinic acid and other compounds has been analysed directly in several organs of Rosmarinus officinalis, including the leaves, together with changes over growth stages. Rosemary leaf composition is therefore not treated as fixed. The current limited-supplement assessment is kept, and the paper is used only as a reference that confirms the composition of this species and part.",
+   "role": "Small, occasional supplement",
+   "market": "supermarket, online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "lavender",
+   "name": "Lavender",
+   "why": "A specialist tortoise plant database classifies the aerial parts of lavender as feed in moderation. The evidence currently linked does not give a specific reason for the limit, a safe amount or a feeding frequency for tortoises. No reasons or figures are invented here; lavender is used only as a small supplementary component of a varied diet.",
+   "role": "Small supplement in a varied diet",
+   "market": "home-grown, online",
+   "aliases": []
+  },
+  {
+   "id": "chamomile",
+   "name": "German chamomile",
+   "why": "A specialist tortoise plant database classifies German chamomile as feed sparingly and recommends not offering it regularly. This is not, however, a direct trial that sets a toxic dose or an exact safe frequency for tortoises. No unsupported figures are set; it is limited to occasional small supplementary use. Coumarin-type compounds have been found directly in German chamomile leaves and flower heads. This is not a toxicity test in tortoises, however, so harm is not assumed from the presence of these compounds alone. The current limited-feeding assessment is therefore kept, and only the scope and limits of this evidence are made clear.",
+   "role": "Small supplement used occasionally",
+   "market": "home-grown, online",
+   "aliases": []
+  },
+  {
+   "id": "cornflower",
+   "name": "Cornflower",
+   "why": "A specialist tortoise plant database classifies the aerial parts of cornflower (Centaurea cyanus) as feed in moderation. It does not, however, give the specific reason for the limit (a toxicity mechanism or harmful dose in tortoises) or an exact feeding frequency. No reason that is not in the evidence is invented; cornflower is used only as a small supplementary component of a varied diet.",
+   "role": "Small supplement in a varied diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "echinacea",
+   "name": "Purple coneflower",
+   "why": "A specialist tortoise plant database classifies the aerial parts of Echinacea as feedable. This is not, however, a direct trial that sets an exact feeding proportion or frequency or shows that unlimited intake is safe. Correctly identified plants are therefore used as a supplementary ingredient in a varied mixed diet.",
+   "role": "Supplementary component of a varied diet",
+   "market": "home-grown, online",
+   "aliases": []
+  },
+  {
+   "id": "yarrow",
+   "name": "Yarrow",
+   "why": "A specialist tortoise plant database excludes the aerial parts of yarrow (Achillea millefolium) from planned feeding. An original paper on the species itself identified 102 components in essential oil from samples across several European regions, reporting several terpenoids such as α- and β-thujone, 1,8-cineole and camphor, but the composition differed greatly by origin. These data only show that yarrow varies greatly in chemistry; they do not prove toxicity in tortoises that ate the fresh aerial parts. The current D is therefore kept as a conservative exclusion from planned feeding based on the specialist tortoise source, not as “confirmed lethal toxicity”, and it is not extended to treating an accidental small bite as poisoning.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown, foraged",
+   "aliases": []
+  },
+  {
+   "id": "chrysanthemum",
+   "name": "Chrysanthemum",
+   "why": "Specialist tortoise sources consider most Chrysanthemum species usable in a mixed diet in small or moderate amounts, but explicitly exclude C. cinerariifolium and C. coccineum, which are high in pyrethrins. All species should therefore not be given the same assessment on the basis of the common name or the genus name alone. Chrysanthemum is used only in limited amounts, and only when the exact species is confirmed and is not one of the excluded species, without reading this as an established safe amount.",
+   "role": "Correctly identified chrysanthemums used in limited amounts in a mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "sunflowerpetal",
+   "name": "Sunflower petal",
+   "why": "The feeding evidence for sunflower (Helianthus annuus) leaves cannot simply be applied to the petals to conclude that they are safe. The Tortoise Table's feed in moderation guidance linked here is a specialist reference on the sunflower plant, but no tortoise feeding trial or exact feeding amount or frequency for the petals alone has been found. The petals are therefore not presented as a recommended staple or a verified everyday food; if feeding them is considered, check the limits of the part-specific evidence first and prioritise verified foods. This lack of evidence does not mean the petals themselves have been shown to be toxic.",
+   "role": "Limited evidence for the petals · not recommended as a staple",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "strawberryleaf",
+   "name": "Strawberry leaf",
+   "why": "A specialist tortoise plant database considers young strawberry leaves usable as part of a varied diet. This is not, however, a direct trial that sets an exact feeding proportion or frequency, nor evidence for automatically applying the same assessment to other plant parts. The source classifies the plant as feed sparingly: it says older leaves develop toxins, so only young leaves are recommended; the fruit should not be given unless the tortoise is a tropical fruit-eating species; and the plant contains tannins. Only young leaves are therefore used occasionally as a supplementary ingredient in a mixed diet. Two original papers that analysed actual Fragaria × ananassa leaves directly found various phenolic and phenylpropanoid compounds and confirmed that the composition profiles of leaves and fruit can differ greatly. Data on the fruit are therefore not used in place of the leaf assessment. The current limited-supplement assessment is kept.",
+   "role": "Young leaves as a limited supplement",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "raspberryleaf",
+   "name": "Raspberry leaf",
+   "why": "A specialist tortoise plant database considers young raspberry leaves and flowers usable in small amounts in a varied diet. This is not a direct trial that sets exact feeding amounts or frequency, so it is not automatically extended to mature leaves or other parts. The confirmed scope, young leaves, is used occasionally as a supplement.",
+   "role": "Young leaves as a limited supplement",
+   "market": "home-grown, online",
+   "aliases": []
+  },
+  {
+   "id": "blackberryleaf",
+   "name": "Blackberry leaf",
+   "why": "A specialist tortoise plant database classifies the new leaves and flowers of Rubus, especially bramble (blackberry), as feed in moderation. This assessment does not mean the fruit or all Rubus parts are equally safe, and it does not set exact feeding amounts or frequency. Only new leaves and flowers are therefore used as a limited supplement in a mixed diet. There is also a study of a leaf extract reported as Rubus fruticosus. However, the common name raspberry was also used in that paper, and the current database entry is the Rubus fruticosus aggregate, which groups several species, so this single study is not extended into evidence for the whole aggregate. The current limited-supplement assessment is kept.",
+   "role": "Limited supplement, mainly new leaves",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "appleleaf",
+   "name": "Apple leaf",
+   "why": "A specialist tortoise plant database treats the apple tree (Malus domestica) entry as feed sparingly. A separate original paper analysed the phenolic composition of actual Malus domestica leaves directly, adding composition evidence for this species and part. A phenolic analysis is not, however, a test of feeding safety or toxic dose in tortoises. Apple leaves are therefore not extended to a regular staple and remain a limited supplement.",
+   "role": "Very limited candidate supplement after checking the leaf condition",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "pearleaf",
+   "name": "Pear leaf",
+   "why": "A specialist tortoise plant database classifies the leaves of Pyrus trees as feed sparingly. Applying this to the Asian pear (Pyrus pyrifolia) grown in Korea is a limited link to genus-level specialist information, not a trial that sets an exact safe amount or feeding frequency. Only the leaves are therefore used rarely and in small amounts mixed with several suitable plants, and the assessment is not applied to the pears, seeds or other parts. There are data that analysed the phenolic compounds and flavonoids of Asian pear (Pyrus pyrifolia) leaves directly, partly addressing the limitation of having only genus-level information. The current limited-supplement assessment is therefore kept; the only change is that the existence of direct analyses of this species and part is reflected in the evidence certainty.",
+   "role": "Small, occasional supplement",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "plumleaf",
+   "name": "Plum leaf",
+   "why": "The cyanogenic glycoside prunasin has been found in the vegetative organs of Japanese plum (Prunus salicina), including the leaves, so there is clearer reason to avoid the leaves than to feed them deliberately. A specialist tortoise source on the related European plum, P. domestica, also describes concern about cyanogenic compounds, especially in old or wilted leaves, and advises preventing access to the leaves where possible. There is no trial feeding P. salicina leaves to tortoises to establish a toxic dose, so it is not claimed that one bite causes poisoning; but in captivity, where many safe alternatives exist, Japanese plum leaves are excluded from the planned feeding list.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "peachleaf",
+   "name": "Peach leaf",
+   "why": "Peach tree (Prunus persica) leaves are not recommended as part of a regular planned diet. The Tortoise Table classifies them as ‘feed sparingly’, but its description warns that old or wilted leaves can develop cyanide-related compounds, and it separates a few fallen leaves eaten by chance from deliberate feeding. This classification should therefore not be read as evidence that repeated feeding of fresh leaves is safe. The linked study of a peach-leaf extract is also not a trial in which tortoises were fed fresh leaves, so it cannot set a safe or toxic amount. Prioritise other verified foods, and do not extend the leaf assessment to the seeds, stones or fruit, or to other Prunus species. This also does not mean that an accidental small bite necessarily causes poisoning.",
+   "role": "Prefer verified foods over planned feeding",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "violetleaf",
+   "name": "Violet leaf",
+   "why": "A specialist tortoise plant database treats the leaves and flowers of correctly identified Viola plants as feedable. The key condition is not the common name “violet” itself but confirming that the plant really belongs to the genus Viola. This is not a trial that sets an exact feeding proportion for tortoises, so the leaves of identified Viola are used as a supplementary ingredient in a varied diet.",
+   "role": "Supplementary component of a varied leaf-and-flower mixed diet",
+   "market": "foraged",
+   "aliases": []
+  },
+  {
+   "id": "violetflower",
+   "name": "Violet flower",
+   "why": "A specialist tortoise plant database treats the flowers and leaves of correctly identified Viola plants as feedable. The key condition is not the common name “violet” itself but confirming that the plant really belongs to the genus Viola. This is not a trial that sets an exact feeding proportion for tortoises, so the flowers of identified Viola are used as a supplementary ingredient in a varied diet.",
+   "role": "Supplementary component of a varied leaf-and-flower mixed diet",
+   "market": "foraged",
+   "aliases": []
+  },
+  {
+   "id": "geraniumleaf",
+   "name": "Geranium leaf",
+   "why": "The common name “geranium” alone is not enough to judge whether a plant is suitable for tortoises. The feed in moderation guidance in the specialist tortoise plant database linked here concerns the genus Pelargonium and cannot be applied as it stands to the similarly named genus Geranium (cranesbills) or to every cultivar and plant part. If the scientific name and the actual plant part cannot be confirmed, do not feed it. Even when the plant is correctly identified as Pelargonium, that specialist source is not a trial that sets an exact safe amount or repeat-feeding frequency for tortoises, so prioritise a variety of verified foods and do not go beyond small supplementary use.",
+   "role": "Limited supplement after confirming Pelargonium",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "cosmos",
+   "name": "Cosmos",
+   "why": "Cosmos is used as a supplementary plant mixed in small amounts into a varied diet, not as a staple. A specialist tortoise plant database classifies the aerial parts of Cosmos spp. as feed in moderation. This evidence does not, however, confirm a specific reason for the limit, a safe amount or an exact feeding frequency for tortoises. The genus-level assessment is therefore not read beyond its scope, and cosmos is used only as a small supplementary component of a mixed diet.",
+   "role": "Small supplement in a varied diet",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "mallowleaf",
+   "name": "Chinese mallow leaf",
+   "why": "Chinese mallow leaves can be one component of a mixed diet of leafy vegetables and wild plants. Chinese mallow is a plant of the genus Malva, and a specialist tortoise plant database classifies Malva spp. as feedable to tortoises. However, there is no quantitative trial that sets an exact feeding proportion for Malva verticillata itself or that fed it to tortoises. Clean leaves correctly identified as Chinese mallow are therefore used as one ingredient of a mixed diet with several suitable plants.",
+   "role": "One component of a varied mix of leafy vegetables and wild plants",
+   "market": "supermarket, market",
+   "aliases": []
+  },
+  {
+   "id": "waterdropwort",
+   "name": "Water dropwort",
+   "why": "Plants of the genus Oenanthe are excluded from planned feeding unless the exact species and its safety are confirmed. Specialist plant sources warn of a strong toxicity risk for Oenanthe plants (including the hemlock water dropwort group), but mammalian toxicity research on the Korean water dropwort itself, Oenanthe javanica, shows that the risk of other Oenanthe species cannot be applied to it directly. That research does not, on the other hand, prove safety in tortoises. With feeding safety in tortoises unresolved at species level, it is conservatively excluded from planned feeding.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, market",
+   "aliases": []
+  },
+  {
+   "id": "fennelleaf",
+   "name": "Fennel leaf",
+   "why": "A specialist tortoise plant database classifies the leaves and aerial parts of fennel (Foeniculum vulgare) as feed sparingly. This is not, however, a direct trial that sets a toxic dose or an exact safe frequency for tortoises. No unsupported figures are set; it is limited to occasional small supplementary use. The volatile composition of actual Foeniculum vulgare leaves has been analysed directly. The composition of concentrated essential oil cannot, however, be equated with the exposure from eating fresh leaves. The current limited-feeding assessment is therefore kept, and only the scope and limits of this evidence are made clear.",
+   "role": "Small supplement used occasionally",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "amaranthleaf",
+   "name": "Amaranth greens",
+   "why": "Even when the exact species is confirmed, amaranth leaves are considered only for small, occasional supplementary use. Amaranth leaves are a nutrient-rich edible leafy vegetable, but antinutrients such as oxalate and nitrate have been found in the leaves of several Amaranthus species, and their levels vary with species, line and growing conditions. More importantly, the Korean name “bireum” alone does not pin down the exact Amaranthus species. There is therefore no reason to prefer it over verified wild plants, and even with the exact species confirmed, a C assessment, as an occasional small part of the diet, fits the current evidence best.",
+   "role": "Even with the species confirmed, considered only for small, occasional supplementary use",
+   "market": "market, foraged",
+   "aliases": []
+  },
+  {
+   "id": "purslane",
+   "name": "Purslane",
+   "why": "A specialist tortoise plant database excludes purslane (Portulaca oleracea) from planned feeding because of its high oxalate content. A separate original paper measured oxalate directly in fully expanded leaves of real purslane and confirmed that the concentration can vary greatly with harvest stage and the form of nitrogen supplied. In other words, the presence of oxalate is confirmed directly, but not all purslane can be treated as having one fixed value. This study is not a tortoise feeding or toxicity test, so “contains oxalate” is not extended to “one bite causes poisoning”, and the current D assessment rests mainly on the specialist tortoise source's advice to exclude it from planned feeding.",
+   "role": "Excluded from planned feeding",
+   "market": "foraged, market",
+   "aliases": []
+  },
+  {
+   "id": "lambsquarters",
+   "name": "Lamb's quarters",
+   "why": "A specialist tortoise plant database excludes fat hen (Chenopodium album) from planned feeding. An original paper that analysed leaves of C. album specifically also measured total leaf oxalate at 1,112.4 mg per 100 g dry weight, confirming that the compound of concern is actually present in the leaves. This figure is not a toxic dose for tortoises, however, so it is not extended to “one bite means poisoning”, and the current D assessment, exclusion from the planned diet, is kept.",
+   "role": "Excluded from planned feeding",
+   "market": "foraged",
+   "aliases": []
+  },
+  {
+   "id": "sorrel",
+   "name": "Sorrel",
+   "why": "A specialist tortoise plant database excludes common sorrel (Rumex acetosa) from planned feeding. An original food-composition paper also quantified oxalate in materials including R. acetosa var. hortensis by precise instrumental analysis (HPLC), so there is direct plant-composition evidence for treating oxalate as the limiting compound in sorrel. This is not a tortoise feeding or toxicity test, however, so no harmful dose is invented and the D assessment, exclusion from the planned diet, is kept.",
+   "role": "Excluded from planned feeding",
+   "market": "foraged, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "dock",
+   "name": "Dock",
+   "why": "A specialist tortoise plant database excludes Rumex, including curly dock (Rumex crispus), from planned feeding. An original paper that analysed the defensive compounds of curly dock leaves and roots directly measured oxalate as a major component, and a veterinary report confirmed acute oxalate poisoning with hypocalcaemia and kidney lesions in sheep that ate large amounts of curly dock. The sheep cases cannot, however, be converted into a toxic dose for tortoises, and an accidental single bite cannot be assumed to cause poisoning. The D assessment, exclusion from the planned diet, is therefore kept without overstating the risk.",
+   "role": "Excluded from planned feeding",
+   "market": "foraged",
+   "aliases": []
+  },
+  {
+   "id": "buckwheatleaf",
+   "name": "Buckwheat leaf",
+   "why": "It is safer to exclude fresh buckwheat leaves from planned feeding. Fagopyrin-type compounds associated with photosensitisation have been confirmed by analysis in the green aerial parts of buckwheat (Fagopyrum esculentum). This original paper is, however, a plant-composition study, not a trial that sets the dose or frequency at which photosensitisation occurs in tortoises eating fresh buckwheat leaves. Claims such as “one bite of buckwheat leaf causes phototoxicity” are therefore not made. On the other hand, the evidence currently linked cannot set a safe planned feeding amount either, so fresh buckwheat leaves are conservatively excluded from the planned diet, and the food safety of the seeds or processed grain is not extended to the feeding safety of the leaves.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "peashoot",
+   "name": "Pea shoots",
+   "why": "A specialist tortoise plant database excludes pea shoots (the young aerial parts of Pisum sativum) from planned feeding, without describing the plant itself as toxic. A separate original paper analysed young pea shoots, the part actually eaten, directly and reports their macronutrient, mineral, vitamin, carotenoid and flavonoid composition. Thanks to these data, the composition of mature pea seeds does not have to stand in for the shoots, but the study did not test phytate harm, reduced calcium absorption or toxicity in tortoises. The D assessment therefore rests mainly on the specialist tortoise source, and the paper is used only as part-matched nutritional supporting evidence.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, online",
+   "aliases": [
+    "pea shoots",
+    "pea_shoot",
+    "pea shoot"
+   ]
+  },
+  {
+   "id": "beanleaf",
+   "name": "Common bean leaf",
+   "why": "Specialist tortoise sources consider the young leaves of common beans feedable in limited amounts, but do not include the beans or pods in the same assessment. This is not a trial that sets exact feeding amounts or frequency either. Only young leaves are therefore used in limited amounts mixed with several plants, kept separate from the beans and pods.",
+   "role": "Young leaves used in limited amounts in a varied mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "soybeanleaf",
+   "name": "Soybean leaf",
+   "why": "Soybean leaves should not be used as a staple and are considered only for small, occasional supplementary use. Soybean leaves were assessed separately from the beans, as a different plant part. Analyses of actual Glycine max leaves confirm fibre, calcium and phosphorus, but trypsin inhibitors and phytate are present as well. In particular, trypsin-inhibitor activity in the leaves can rise sharply with plant growth and herbivore damage, so the leaves are hard to regard as a food of consistent composition. There are also no direct data confirming the long-term safety of feeding fresh soybean leaves to tortoises, so they are not raised to a staple or an actively recommended food; if used at all, a C assessment, with small amounts mixed in occasionally, is appropriate.",
+   "role": "Not a staple; considered only for small, occasional supplementary use",
+   "market": "market, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "mungbeansprout",
+   "name": "Mung bean sprout",
+   "why": "A specialist tortoise plant database excludes sprouted mung beans (Vigna radiata) from planned feeding. A separate original paper directly measured several antinutrients, including phytate, oxalate and trypsin inhibitors, in mung beans sprouted for 24–120 hours, and found that they generally decrease as sprouting time increases. In other words, composition changes with the sprouting stage rather than staying the same just because it is mung bean. This study is not a tortoise feeding or toxicity test and analysed powdered sprouts as a food-composition study, so the sprouts cannot be called a toxic plant on the basis of antinutrients being detected. The current D assessment rests mainly on the specialist tortoise source.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, market",
+   "aliases": []
+  },
+  {
+   "id": "alfalfasprout",
+   "name": "Alfalfa sprouts",
+   "why": "Specialist tortoise sources exclude alfalfa from planned feeding. An original paper that analysed alfalfa sprouts themselves found L-canavanine (a toxic amino acid) at 1.3–2.4% of the dry weight of commercial sprouts, and a separate germination study found that canavanine and saponin concentrations in early sprouts changed greatly with the number of days of growth. These composition studies are not tortoise toxicity tests, however, so no specific toxic dose is claimed, and the D assessment, exclusion from the planned diet, is kept for now.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, online",
+   "aliases": []
+  },
+  {
+   "id": "broccolisprout",
+   "name": "Broccoli sprouts",
+   "why": "Specialist tortoise sources advise excluding broccoli from the planned diet because of concern about goitrogens. Broccoli sprouts do not have the same composition as mature broccoli, and a plant-chemistry study found that certain glucosinolate-related compounds were much higher in 3-day-old sprouts than in mature plants. That study is not a tortoise toxicity test, however, so a harmful dose such as “toxic at so many grams” is not known. The toxic dose is therefore not overstated, but since there is no direct evidence supporting a safe feeding amount either, broccoli sprouts are excluded from planned feeding.",
+   "role": "Excluded from planned feeding",
+   "market": "supermarket, online",
+   "aliases": []
+  },
+  {
+   "id": "kohlrabileaf",
+   "name": "Kohlrabi leaf",
+   "why": "A specialist tortoise plant database excludes kohlrabi from planned feeding. An original paper on kohlrabi (Brassica oleracea var. gongylodes) tissues analysed the glucosinolate composition of leaf tissue directly and found glucoraphanin to be especially abundant in the leaves. This composition study is not a tortoise feeding, thyroid or toxicity test, however, so the detection of glucosinolates alone cannot make kohlrabi a “poisonous plant” or produce a specific toxic dose. The current D assessment therefore rests mainly on the specialist tortoise source, and the paper is used as supporting evidence that the limiting compounds are present in the leaves.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown, some markets",
+   "aliases": []
+  },
+  {
+   "id": "rapeseedleaf",
+   "name": "Rapeseed greens",
+   "why": "Specialist tortoise sources classify rapeseed greens as feed in moderation because of the goitrogen load of cabbage-family plants and advise avoiding overfeeding. This is not a trial that sets a harmful dose or feeding frequency, so no specific figure is invented and the plant is used as a limited component mixed with several plants.",
+   "role": "Used in limited amounts in a varied mixed diet",
+   "market": "market, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "mizuna",
+   "name": "Mizuna",
+   "why": "Mizuna is fed only as a small part of a varied mixed diet. Mizuna is a cultivated form of Brassica rapa, and specialist tortoise sources advise using B. rapa only as a small part of a varied diet because of concern about goitrogens. There are, however, no data from feeding the mizuna form itself to tortoises. A single cabbage-family vegetable is therefore not made a repeated staple and is mixed in only in limited amounts.",
+   "role": "Limited to a small part of a varied mixed diet",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "tatsoi",
+   "name": "Tatsoi",
+   "why": "Tatsoi is fed only as a small part of a varied mixed diet. Tatsoi is a cultivated form of Brassica rapa, and specialist tortoise sources advise using B. rapa only as a small part of a varied diet because of concern about goitrogens. There are, however, no data from feeding the tatsoi form itself to tortoises. A single cabbage-family vegetable is therefore not made a repeated staple and is mixed in only in limited amounts.",
+   "role": "Limited to a small part of a varied mixed diet",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "komatsuna",
+   "name": "Komatsuna",
+   "why": "Komatsuna is fed only as a small part of a varied mixed diet. Komatsuna is a cultivated form of Brassica rapa, and specialist tortoise sources advise using B. rapa only as a small part of a varied diet because of concern about goitrogens. There are, however, no data from feeding the komatsuna form itself to tortoises. A single cabbage-family vegetable is therefore not made a repeated staple and is mixed in only in limited amounts.",
+   "role": "Limited to a small part of a varied mixed diet",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "sweetpotatovine",
+   "name": "Sweet potato vine",
+   "why": "A specialist tortoise plant database does not regard sweet potato leaves as a toxic plant but advises against planned feeding because of an unfavourable calcium-to-phosphorus balance. A separate original paper quantified total, soluble and insoluble calcium oxalate directly in the aerial parts (stems and leaves) of 8 sweet potato lines, confirming that composition varies with line and growing conditions. The study did not test leaves and stems separately, so it cannot be used as evidence that the vines are toxic. The D assessment therefore rests mainly on the specialist source's judgement about dietary balance, and the aerial-part paper is used only as supporting composition evidence.",
+   "role": "Excluded from planned feeding",
+   "market": "market, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "pumpkinflower",
+   "name": "Pumpkin flower",
+   "why": "A specialist tortoise plant database treats the leaves and flowers of Cucurbita as small supplementary foods and does not extend the same assessment to the fruit. The current pumpkin-flower assessment applies genus-level Cucurbita information to the flowers in a limited way; it does not mean all species and cultivars have the same composition. It is not a direct trial that sets exact feeding amounts or frequency either, so correctly identified flowers are used occasionally in small amounts, mixed with several suitable plants.",
+   "role": "Flowers as a small supplement in a varied diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "cucumberleaf",
+   "name": "Cucumber leaf",
+   "why": "A specialist tortoise plant database distinguishes cucumber leaves and flowers as feedable in small amounts. This evidence is not a direct trial that sets exact feeding amounts or frequency, and the fruit assessment has not simply been applied to the leaves. The confirmed part, the leaves, is therefore used in small amounts as a supplement in a varied diet.",
+   "role": "Small supplementary component",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "melonleaf",
+   "name": "Melon leaf",
+   "why": "Specialist tortoise sources regard melon leaves and flowers as edible parts but limit them to feed sparingly. This assessment does not automatically apply to the fruit or other parts and is not a trial that sets exact feeding amounts or frequency. Only the leaves and flowers are therefore used occasionally as a small supplement.",
+   "role": "Small supplementary component of a mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "watermelonleaf",
+   "name": "Watermelon leaf",
+   "why": "Specialist tortoise sources regard watermelon leaves and flowers as edible parts but limit them to feed sparingly. This assessment does not automatically apply to the fruit or other parts and is not a trial that sets exact feeding amounts or frequency. Only the leaves and flowers are therefore used occasionally as a small supplement.",
+   "role": "Small supplementary component of a mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "grapevineleaf",
+   "name": "Wild grape leaf",
+   "why": "A specialist tortoise plant database allows young fresh leaves of Vitis within its feed in moderation range. The current assessment for Vitis amurensis links this genus-level evidence to the species in a limited way and is not a direct trial that sets exact feeding amounts or frequency. Only young fresh leaves correctly identified as V. amurensis and free of pesticide exposure are therefore used as a limited supplementary ingredient in a mixed diet, and the assessment is not applied to the fruit. A study analysed the polyphenol composition of healthy Vitis vinifera leaves, separating the blade and the veins, and found differences between cultivars and parts. Grapevine leaf composition is therefore not treated as a single fixed value. The current assessment is kept, and the paper is used only as a reference that confirms species and plant part.",
+   "role": "Young leaves as a small supplementary component",
+   "market": "home-grown, foraged",
+   "aliases": []
+  },
+  {
+   "id": "kiwileaf",
+   "name": "Kiwifruit leaf",
+   "why": "Kiwi leaves (Actinidia deliciosa) are not recommended, because there is not yet enough evidence to include them in the planned tortoise diet. The linked studies concern calcium oxalate and phytochemicals in the leaves and tests on cells and plants; none fed fresh kiwi leaves to tortoises to confirm safety and nutritional suitability. In particular, calcium availability cannot be judged from the total calcium content of the leaves alone. Choose other verified plants until direct evidence of feeding suitability is available. This does not mean that kiwi leaves have been shown to be toxic to tortoises or that an accidental small bite necessarily causes poisoning.",
+   "role": "Not recommended for planned feeding",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "opuntiapad",
+   "name": "Prickly pear pad",
+   "why": "A specialist tortoise plant database classifies Opuntia pads as feedable but warns that large amounts can have a laxative effect. This is not a direct trial that sets an exact feeding proportion or frequency, so the pads are used as a supplementary ingredient in a varied diet, not fed without limit.",
+   "role": "Watery supplementary component of a varied diet",
+   "market": "online, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "wheatleaf",
+   "name": "Wheat leaf",
+   "why": "A specialist tortoise plant database distinguishes young cat grass, including Triticum, as feedable, but states that mature seeds should not be fed because they are high in protein. The current reference plant is linked to Triticum aestivum, but the source itself is at the level of the genus Triticum, so it does not remove species differences between wheats. The assessment is therefore applied conservatively only to young leaves and grass of T. aestivum, mature seeds are excluded, and no exact feeding proportion should be read into it.",
+   "role": "Young grass as a component of a mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "barleyleaf",
+   "name": "Barley leaf",
+   "why": "A specialist tortoise plant database distinguishes young cat grass, including Hordeum, as feedable, but states that mature seeds should not be fed because they are high in protein. The current reference plant is linked to Hordeum vulgare, but the source itself is at the level of the genus Hordeum, so this does not mean all barleys are the same. The assessment is therefore applied conservatively to young leaves and grass of H. vulgare, mature seeds are excluded, and no exact feeding proportion should be read into it.",
+   "role": "Young grass as a component of a mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "oatleaf",
+   "name": "Oat leaf",
+   "why": "A specialist tortoise plant database distinguishes young Avena sativa grass as feedable, but states that mature seeds should not be fed because they are high in protein. The assessment therefore applies only to young leaves and grass and is not extended to the seeds. It is not a trial that sets an exact feeding proportion, so oat grass is used as a supplementary ingredient in a mixed diet.",
+   "role": "Young grass as a component of a mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "meadowgrass",
+   "name": "Kentucky bluegrass",
+   "why": "Kew confirms the classification of Kentucky bluegrass (Poa pratensis) and its use as animal forage. However, no direct study of feeding P. pratensis itself to tortoises has been found yet. Husbandry and wild-feeding data on other grasses for tortoises are used only as background context for the assessment and are not treated as direct evidence for Kentucky bluegrass itself. It is therefore limited to grade B: young, untreated leaves mixed in small amounts among several verified foods.",
+   "role": "Young leaves mixed in small amounts among various foods",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "fescue",
+   "name": "Tall fescue",
+   "why": "A specialist tortoise plant database classifies fescue grasses as feedable. The endophyte problem known in tall fescue comes mainly from risk data in ruminant livestock, and that alone does not prove the same toxicity or a harmful dose in tortoises. On the other hand, there is no evidence that every cultivar and endophyte status is equally safe either. Clean young grass is therefore used mixed with several grasses and wild plants, but this is not extended into grounds for feeding tall fescue of unclear origin alone or in a high proportion repeatedly.",
+   "role": "One component of a varied mixed diet of plants",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "bermudagrass",
+   "name": "Bermuda grass",
+   "why": "A faecal diet analysis of wild Testudo graeca confirmed the leaves and stems of Bermuda grass (Cynodon dactylon) as a major food item actually eaten. This is more direct evidence than general herbivore forage data. Being eaten in the wild is not, however, a trial result showing that it can be fed without limit as a sole staple in captivity, and it does not set captive proportions for any species or subspecies. Leaves and stems not exposed to pesticides or herbicides are therefore used as one ingredient of a mixed diet with several suitable wild plants.",
+   "role": "One component of a varied mix of grasses and wild plants",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hibiscusrosa",
+   "name": "Chinese hibiscus",
+   "why": "A specialist tortoise plant database classifies the leaves and flowers of Chinese hibiscus (Hibiscus rosa-sinensis) as feedable. This is not, however, a direct trial that sets an exact feeding proportion or frequency or shows that unlimited intake is safe. Correctly identified leaves and flowers are therefore used as a supplementary ingredient in a varied mixed diet.",
+   "role": "Supplementary component of a leaf-and-flower mixed diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "lindenleaf",
+   "name": "Linden leaf",
+   "why": "Lime (linden) leaves should not be used as a staple and are considered only as a limited supplementary food. A specialist tortoise plant database classifies the leaves and flowers of lime trees (Tilia spp.) as feed in moderation. The evidence currently linked is not a direct trial that sets an exact safe amount, feeding frequency or a specific mechanism of harm. Only the leaves and flowers are therefore mixed into a varied diet in limited amounts, and the assessment is not extended to unconfirmed parts such as the fruit or bark.",
+   "role": "Limited supplement",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hazelleaf",
+   "name": "Hazel leaf",
+   "why": "Hazel leaves are considered only as a limited supplementary food in a varied diet. A specialist tortoise plant database classifies the leaves of hazels (Corylus spp.) as feed in moderation. The current evidence is limited to the leaves and is not a direct trial that sets an exact safe amount or feeding frequency. Only the leaves are therefore used in limited amounts mixed with several suitable plants, and the assessment is not extended to other parts such as the nuts or bark.",
+   "role": "Limited supplement in a varied diet",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "birchleaf",
+   "name": "Birch leaf",
+   "why": "Birch leaves should not be used as a staple and are considered only as a limited supplementary food. A specialist tortoise plant database classifies the leaves and aerial parts of birches (Betula spp.) as feed in moderation. This is not, however, a direct trial that sets exact feeding amounts, frequency or a specific toxic dose. Only the confirmed leaves and aerial parts are therefore used in limited amounts mixed with several suitable plants, and the assessment is not applied to unconfirmed parts such as the bark or seeds.",
+   "role": "Limited supplement",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "willowleaf",
+   "name": "Willow leaf",
+   "why": "A specialist tortoise plant database excludes willow (Salix spp.) leaves from planned feeding. A review of Salix phytochemistry reports phenolic glycosides and various bioactive secondary metabolites in the leaves and summarises salicinoids (salicin-type compounds) as characteristic of the genus. Genus-level composition data do not, however, mean that all Salix leaves carry the same hazard, nor do they set a toxic dose for tortoises. The risk is therefore not overstated, but the D assessment, exclusion from planned feeding, is kept for now.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "poplarleaf",
+   "name": "Poplar leaf",
+   "why": "A specialist tortoise plant database excludes the leaves and aerial parts of poplars (Populus spp.) from planned feeding. A separate original paper analysed the leaves of 6 Populus species and 3 hybrids and found that salicylate-type and phenolic compounds such as salicortin and tremulacin occur differently between species and hybrids. That study is not a tortoise feeding or toxicity test, however, so poplar leaves cannot be called a “poisonous plant” just because these compounds were detected. The current D assessment therefore rests mainly on the specialist tortoise source, and an accidental single bite is not overstated as poisoning.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "elmleaf",
+   "name": "Elm leaf",
+   "why": "Young elm leaves can be used as a supplementary component of a varied diet. A specialist tortoise plant database classifies the young leaves of Ulmus spp. as feedable. Genus-level guidance is not, however, evidence of an exact feeding proportion or frequency or of the safety of every part of the elm. Only correctly identified young leaves are therefore used as a supplementary ingredient in a varied mixed diet.",
+   "role": "Supplement in a varied diet, mainly young leaves",
+   "market": "home-grown, wild",
+   "aliases": []
+  },
+  {
+   "id": "mapleleaf",
+   "name": "Maple leaf",
+   "why": "Even after the exact species is confirmed, maple leaves are considered only as a limited supplementary food. A specialist tortoise plant database classifies the leaves of maples (Acer spp.) as feed sparingly. This is not, however, a direct trial showing that every species and cultivar in the genus Acer is the same, nor exact safe-amount data. Only correctly identified leaves are therefore used rarely and in small amounts mixed with several plants, and the assessment is not extended to unconfirmed parts such as the seeds or bark.",
+   "role": "Limited supplement in a varied diet",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "ginkgoleaf",
+   "name": "Ginkgo leaf",
+   "why": "There is not enough evidence to recommend ginkgo (Ginkgo biloba) leaves as part of a regular planned tortoise diet. The Tortoise Table classifies them as feed sparingly, but its description separates a few fallen leaves eaten by chance from feeding large amounts or eating the seeds. This classification is therefore not read as advice to feed ginkgo leaves deliberately and repeatedly. Ginkgolic acids have been found in Ginkgo biloba leaves, but this composition analysis alone cannot establish a toxic amount for tortoises. Prioritise other verified foods, and do not extend the leaf assessment to the fruit or seeds.",
+   "role": "Prefer verified foods over planned feeding",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "daisy",
+   "name": "Common daisy",
+   "why": "A specialist tortoise plant database excludes lawn daisy (Bellis perennis) from planned feeding, but distinguishes that no harm is expected if a small amount is nibbled accidentally. An original paper on the species itself isolated and identified several triterpene saponins directly from the flowers. Pharmacological studies of methanol extracts and isolated saponins are not, however, toxicity tests in tortoises that ate fresh daisies, so the plant cannot be called a “toxic plant” just because it contains saponins. The current D assessment is therefore kept as a conservative exclusion from planned feeding based on the specialist tortoise source, and an accidental small bite is not equated with poisoning.",
+   "role": "Excluded from planned feeding",
+   "market": "home-grown",
+   "aliases": []
+  },
+  {
+   "id": "eveningprimrose",
+   "name": "Evening primrose",
+   "why": "Evening primroses can be used as a supplementary plant mixed in limited amounts into a varied diet. A specialist tortoise plant database classifies the leaves and flowers of evening primroses (Oenothera spp.) as feedable. This is not, however, a trial that sets an exact feeding proportion or frequency or shows long-term sole feeding is safe. The confirmed parts, leaves and flowers, are therefore used as a supplementary ingredient mixed with several suitable plants, and the same assessment is not automatically applied to other parts such as the roots or seeds.",
+   "role": "Limited supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "milkthistle",
+   "name": "Milk thistle",
+   "why": "A specialist tortoise plant database classifies the leaves and flowers of milk thistle (Silybum marianum) as feed in moderation. The evidence currently linked is not, however, a direct trial that sets an exact safe amount, feeding frequency or a specific toxicity mechanism. Only the confirmed parts, leaves and flowers, are therefore used in limited amounts mixed with several plants, and the reason for the limit is not explained by inventing a toxicity that the evidence does not support.",
+   "role": "Limited supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hawthorn",
+   "name": "Hawthorn leaf",
+   "why": "A specialist tortoise plant database excludes the leaves, flowers and fruit of hawthorns (Crataegus spp.) from planned feeding. A separate original paper on Crataegus monogyna analysed the leaves, flowers and ripe fruit separately and found several flavonoids, including rutin, quercetin and kaempferol, with differences in composition and antioxidant properties between parts. This is plant-chemistry research, not a tortoise feeding or toxicity test, so hawthorn cannot be called a toxic plant just because these bioactive compounds are present. The current D assessment therefore rests mainly on the specialist tortoise source, and an accidental small bite is not overstated as poisoning.",
+   "role": "Excluded from planned feeding",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "sainfoin",
+   "name": "Sainfoin",
+   "why": "A specialist tortoise plant database classifies the aerial parts of sainfoin (Onobrychis viciifolia) as feed sparingly. This is not, however, a direct trial that sets exact feeding amounts, frequency or a harmful dose. The assessment is therefore not extended to unconfirmed parts such as the roots, and only the aerial parts are used rarely and in small amounts mixed with several suitable plants. Polyphenols and condensed tannins have been analysed directly in Onobrychis viciifolia, with variation in tannin composition. The presence of tannins alone does not, however, mean toxicity in tortoises or a feeding ban. The current limited-supplement assessment is therefore kept, and the composition data for this species are added only as reference evidence.",
+   "role": "Limited supplement in a varied diet",
+   "market": "home-grown",
+   "aliases": [
+    "sainfoin"
+   ]
+  },
+  {
+   "id": "borage",
+   "name": "Borage",
+   "why": "A specialist tortoise plant database excludes borage (Borago officinalis) from planned feeding. An original paper that analysed borage leaves with precise instruments also actually detected pyrrolizidine alkaloids (PAs, plant compounds that can harm the liver) and their N-oxides. That study is not a toxicity test in tortoises, however, so it is not extended to “one bite means poisoning” or to a specific toxic dose, and the D assessment is kept.",
+   "role": "Excluded from planned feeding",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "henbit",
+   "name": "Henbit",
+   "why": "A specialist tortoise plant database classifies the aerial parts of henbit (Lamium amplexicaule) as feed sparingly. This assessment cannot automatically be applied to all other species of Lamium, and it is not a direct trial that sets an exact safe amount or feeding frequency. Only aerial parts correctly identified as L. amplexicaule are therefore used rarely and in small amounts mixed with several plants. Several secondary metabolites have been isolated and identified directly from the aerial parts of Lamium amplexicaule itself. The current limited-supplement assessment is therefore kept; the only change is that the existence of direct analyses of this species and part is reflected in the evidence certainty.",
+   "role": "Limited supplement in a varied diet",
+   "market": "wild",
+   "aliases": [
+    "henbit deadnettle"
+   ]
+  },
+  {
+   "id": "houseleek",
+   "name": "House leek",
+   "why": "A specialist tortoise plant database classifies the new leaves and leaves of Sempervivum as feedable, but because it is a succulent, eating a lot can cause loose stools, so it should be used in moderation. This caution is not a trial that sets an exact harmful dose. New leaves and leaves are therefore used as a supplement mixed with several plants, without giving a large amount at once or repeating it as a sole ingredient.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "echeveria",
+   "name": "Echeveria",
+   "why": "A specialist tortoise plant database classifies the leaves, flowers and stems of Echeveria as feedable, while advising moderate use because it is a succulent. This is not, however, a trial that sets exact feeding amounts, frequency or long-term sole-feeding safety. The confirmed leaves, flowers and stems are therefore limited to a supplementary ingredient mixed with several plants, and large amounts are not fed repeatedly at one time.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "snapdragon",
+   "name": "Snapdragon",
+   "why": "Snapdragons can be used as a supplementary plant mixed into a varied diet. A specialist tortoise plant database classifies the leaves and flowers of snapdragons (Antirrhinum spp., especially A. majus) as feedable as part of a varied diet. This is not, however, a trial that sets an exact feeding proportion or frequency or shows sole feeding is safe. Correctly identified leaves and flowers without pesticide exposure are therefore used as a supplementary ingredient mixed with several suitable plants.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hosta",
+   "name": "Hosta",
+   "why": "A specialist tortoise plant database classifies hostas (Hosta spp.) as feed in moderation, taking saponins into account. This does not mean, however, that every species, cultivar and plant part in the genus Hosta has the same composition or feeding suitability. The presence of saponins alone cannot establish a toxic dose or clinical harm in tortoises either. If the identity of the plant and the part to be fed cannot be confirmed, do not feed it; even when they are confirmed, prioritise verified foods and treat hosta only as a limited supplement.",
+   "role": "Limited supplement after identifying the hosta",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "salsify",
+   "name": "Salsify / Goat's beard",
+   "why": "A specialist tortoise plant database classifies the aerial parts of Tragopogon as feedable, but warns not to confuse it with the similarly named toxic plant Aruncus dioicus. It is not a direct trial that sets an exact feeding proportion or frequency. Only aerial parts correctly identified as Tragopogon are therefore used mixed with several suitable wild plants; if the identification is uncertain, do not feed it.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hawksbeard",
+   "name": "Hawksbeard",
+   "why": "A specialist tortoise plant database classifies the aerial parts of Crepis as feedable. This is not, however, a direct trial that sets exact feeding amounts, frequency or long-term sole-feeding safety. Correctly identified, uncontaminated aerial parts are therefore used as a supplementary ingredient mixed with several suitable wild plants, and the assessment is not extended to unconfirmed parts such as the roots.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hawkbit",
+   "name": "Hawkbit",
+   "why": "A specialist tortoise plant database classifies the aerial parts of Leontodon as feedable. This is not, however, a direct trial that sets an exact feeding proportion or frequency or shows sole feeding is safe. Correctly identified aerial parts are therefore used mixed with several suitable wild plants, and the assessment is not extended to unconfirmed parts or look-alike plants.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "catsear",
+   "name": "Cat's ear",
+   "why": "A specialist tortoise plant database classifies the aerial parts of cat's-ear (Hypochaeris radicata) as feedable as part of a varied diet. This is not, however, a direct trial that sets exact feeding amounts, frequency or safety as a sole staple. Correctly identified, uncontaminated aerial parts are therefore used as one ingredient of a mixed diet with several suitable wild plants.",
+   "role": "Supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "hawkweed",
+   "name": "Hawkweed",
+   "why": "Hawkweeds (Hieracium) are considered only as a limited supplementary food after the exact species is confirmed. A specialist tortoise plant database considers the mature aerial parts of hawkweeds (Hieracium spp.) feedable in moderation in a varied diet. This is not, however, a direct trial that sets exact feeding amounts, frequency or long-term safety. Correctly identified mature aerial parts are therefore used in limited amounts mixed with other suitable wild plants, and this is not extended into grounds for feeding them alone or in a high proportion repeatedly.",
+   "role": "Limited supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "shepherdspurse",
+   "name": "Shepherd's purse",
+   "why": "A specialist tortoise plant database classifies the aerial parts of shepherd's purse (Capsella bursa-pastoris) as feed in moderation because of concern about goitrogens in cabbage-family plants. This is not, however, a direct trial that quantified a harmful dose or thyroid effects of shepherd's purse in tortoises. The aerial parts are therefore used in limited amounts mixed with several plants, without letting the diet lean on cabbage-family plants.",
+   "role": "Limited supplement in a varied diet",
+   "market": "wild, home-grown",
+   "aliases": []
+  },
+  {
+   "id": "petunia",
+   "name": "Petunia",
+   "why": "A specialist tortoise plant database classifies petunias (Petunia spp.) as feed in moderation. That source does not present confirmed toxicity of petunia itself, but gives conservative guidance because it belongs to the nightshade family (Solanaceae). Membership of the nightshade family alone does not make petunia toxic, nor can the petunia assessment be applied to other plants of the same family. The current evidence is not a direct trial that sets an exact safe amount or repeat-feeding frequency for tortoises. Only correctly identified petunias are treated as a limited supplement among several verified foods, and ornamental plants of unclear identity, or plants whose contamination or chemical treatment cannot be checked, are not fed.",
+   "role": "Limited supplement after identifying the petunia",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "dahlia",
+   "name": "Dahlia",
+   "why": "A specialist tortoise plant database clearly separates the plant parts of dahlia: the leaves and flowers can be fed in limited amounts, but the roots and tubers should not be fed. The mild gastroenteritis and dermatitis reported in mammals cannot be assumed to appear as the same toxicity in tortoises, and this is not a direct trial that sets an exact safe amount for tortoises. Only the leaves and flowers are therefore used in small amounts mixed with several plants, and the roots and tubers are excluded from the diet.",
+   "role": "Supplementary plant: only leaves and flowers, mixed in limited amounts",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "gerbera",
+   "name": "Gerbera",
+   "why": "A specialist tortoise plant database considers Gerbera usable in limited amounts as part of a varied diet and separately warns that plants from garden centres and florists may have been treated with pesticides. This is genus-level specialist information for Gerbera, not a direct trial showing that all species and cultivars are the same, nor exact feeding-amount data. Gerbera is therefore used as a small supplement among several foods only when it is correctly identified as Gerbera and new growth with no history of pesticide treatment is confirmed.",
+   "role": "Supplementary plant mixed occasionally into a varied diet",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "zinnia",
+   "name": "Zinnia",
+   "why": "The leaves and flowers of zinnia can be one component of a varied mixed diet. A specialist tortoise plant database classifies the leaves and flowers of zinnias (Zinnia spp.) as feedable as part of a varied diet. This is not, however, a direct trial that sets an exact feeding proportion or frequency or shows that unlimited intake is safe. Correctly identified leaves and flowers are therefore used as a supplementary ingredient in a mixed diet.",
+   "role": "Leaves and flowers used as one component of a varied mixed diet of plants",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "mexicanpetunia",
+   "name": "Mexican Petunia",
+   "why": "Correctly identified Ruellia can be used as a supplementary component of a varied mixed diet. A specialist tortoise database classifies some Ruellia spp., known in English as “Mexican petunia”, as feedable. Despite the name, it belongs to the acanthus family (Acanthaceae) and is entirely different from common petunias (nightshade family), so exact species identification matters; only confirmed Ruellia is used as part of a varied mixed diet.",
+   "role": "Correctly identified Ruellia used as a supplementary component of a varied mixed diet",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "coreopsis",
+   "name": "Coreopsis",
+   "why": "Coreopsis can be one component of a varied mixed diet of plants. A specialist tortoise plant database classifies Coreopsis spp. as feedable and gives no known hazards. This is not, however, a direct trial that sets an exact feeding proportion or shows that unlimited intake is safe. Correctly identified plants are therefore used as a supplementary ingredient in a varied mixed diet.",
+   "role": "One component of a varied mixed diet of plants",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "astilbe",
+   "name": "Astilbe",
+   "why": "A specialist tortoise plant database classifies Astilbe as feedable. This is, however, genus-level specialist husbandry information for Astilbe; it is not a trial confirming the same safety for every species and cultivar, or direct feeding, long-term safety or exact feeding amounts in tortoises. Only plants correctly identified as Astilbe and free of contamination are therefore used as a supplementary ingredient mixed with several suitable foods.",
+   "role": "Supplementary component of a varied mixed diet of plants",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "primula",
+   "name": "Primula",
+   "why": "A specialist tortoise plant database excludes primroses (Primula) from planned feeding. A separate original paper quantified primin, a contact skin allergen, and its precursor miconidin directly in the leaves, stems and flowers of Primula obconica, and found small amounts of primin released even from undamaged plants. This is plant-chemistry research describing contact and airborne exposure risks in people, not an oral toxicity test in tortoises. Allergen composition can also differ between Primula species and cultivars, so the P. obconica result is not applied equally to all Primula. The D is therefore kept as a conservative exclusion from planned feeding based on the specialist tortoise source, not as confirmed oral toxicity.",
+   "role": "Excluded from planned feeding",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "comfrey",
+   "name": "Comfrey",
+   "why": "A specialist tortoise plant database excludes comfrey (Symphytum officinale) from planned feeding and gives pyrrolizidine alkaloids (PAs) as the key risk. An original paper actually analysed the PAs in comfrey and confirmed that exposure varies with plant part, and a separate chemical-ecology study shows that PA biosynthesis is active not only in the roots but also in certain young leaves, and that PAs can accumulate in flowers depending on the developmental stage. The types and concentrations of PAs differ with part and conditions, however, and these studies are not trials that set a toxic dose for tortoises. Claims such as “one bite causes liver damage” are therefore not made, but there is no evidence supporting the safety of repeated planned feeding, so the D assessment is kept.",
+   "role": "Excluded from planned feeding",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "monarda",
+   "name": "Bergamot / Bee Balm",
+   "why": "A specialist tortoise plant database classifies Monarda as feedable as part of a varied diet. It is called “bee balm” or “bergamot” in English, but it is an entirely different plant from Citrus bergamia, so the assessment must not be transferred on the basis of the name alone. It is also not a direct trial that sets an exact feeding proportion or frequency. Only plants correctly identified as Monarda and free of contamination are therefore used as a supplementary ingredient mixed with several foods.",
+   "role": "One component of a varied mixed diet of plants",
+   "market": "",
+   "aliases": []
+  },
+  {
+   "id": "medicago_hispida",
+   "name": "Bur clover",
+   "why": "When correctly identified as Medicago polymorpha, it can be used in limited amounts in a varied mixed diet of wild plants. The plant currently recorded as Medicago hispida is treated as Medicago polymorpha, and there is a record of wild Testudo graeca graeca actually eating this taxon. That wild study does not, however, establish the exact part eaten or a captive feeding proportion. A separate plant-chemistry study found saponin-type compounds in the aerial parts of this species, but it does not show from what amount they become harmful to tortoises. Without overstating “saponins = toxic”, feeding it alone or in a high proportion is avoided and it is limited to being part of a variety of wild plants.",
+   "role": "Component used in limited amounts in a varied mixed diet of wild plants",
+   "market": "wild, home-grown",
+   "aliases": [
+    "Medicago hispida",
+    "bur clover",
+    "burr medic",
+    "toothed medick"
+   ]
+  },
+  {
+   "id": "conyzacanadensis",
+   "name": "Canadian horseweed",
+   "why": "A specialist tortoise plant database classifies Erigeron canadensis (synonym Conyza canadensis) as do not feed. A study of essential oil from the aerial parts also reported bioactivity signals, but that was a cell test with concentrated essential oil and cannot be converted into a toxic dose for tortoises eating the fresh plant. On the other hand, no direct evidence supporting safe planned feeding is currently linked either, so it is excluded from the diet.",
+   "role": "Excluded from planned feeding",
+   "market": "wild",
+   "aliases": [
+    "Conyza canadensis",
+    "Canadian fleabane",
+    "horseweed"
+   ]
+  },
+  {
+   "id": "ruscus_aculeatus",
+   "name": "Butcher's broom",
+   "why": "Ruscus aculeatus has wild-feeding evidence but is used only in limited amounts as part of a seasonal mixed diet. There is direct observational evidence that wild Hermann's tortoises (Testudo hermanni hermanni) used the flowers and unripe fruit of Ruscus aculeatus and also ate the leaves. This is, however, a record of wild use in autumn, not a trial that sets captive feeding amounts, frequency or a long-term safe dose. Medicinal and toxicological data on root and rhizome extracts must also not be read as toxicity of the fresh leaves, flowers or unripe fruit. The aerial parts with confirmed evidence are therefore used in limited amounts as one of several plants, and the roots and rhizomes are not covered by this assessment.",
+   "role": "Seasonal wild plant mixed in limited amounts",
+   "market": "wild",
+   "aliases": [
+    "butcher's broom",
+    "Ruscus aculeatus"
+   ]
+  },
+  {
+   "id": "hedgemustard",
+   "name": "Hedge mustard",
+   "why": "The Tortoise Trust includes young plants of hedge mustard (Sisymbrium officinale) in its list of wild foods for tortoises, and other specialist sources classify it as feedable but not to be given in large amounts repeatedly. Plant-chemistry research has found glucosinolates and isothiocyanates. Correctly identified young plants are therefore mixed in limited amounts among several foods, and this is not extended to mature plants, seeds or to giving several other cabbage-family plants in large amounts at the same time.",
+   "role": "Young plants mixed in limited amounts",
+   "market": "wild, home-grown",
+   "aliases": [
+    "hedge mustard",
+    "common hedge mustard",
+    "Sisymbrium officinale"
+   ]
+  },
+  {
+   "id": "harebell",
+   "name": "Harebell",
+   "why": "A specialist tortoise plant database names the leaves and flowers of harebell (Campanula rotundifolia) as feedable parts and separates the rhizome as not to be fed. Correctly identified leaves and flowers can therefore be used mixed with several suitable plants. In some regions it is also called “bluebell” in English, so it must not be confused with Hyacinthoides on the basis of the name alone.",
+   "role": "Leaves and flowers used as part of a varied mixed diet",
+   "market": "wild, home-grown",
+   "aliases": [
+    "harebell",
+    "bellflower",
+    "Campanula rotundifolia"
+   ]
+  },
+  {
+   "id": "erodium_botrys",
+   "name": "Broadleaf filaree",
+   "why": "A specialist tortoise plant database classifies Erodium botrys as a food that can be included in a varied diet, and Kew data confirm the exact scientific name. Correctly identified plants can therefore be used as one component of a mixed diet together with several wild plants. There are, however, no trials of long-term sole feeding to tortoises or exact proportion data, so this is not extended to feeding one kind continuously like a staple.",
+   "role": "One component of a varied mixed diet of wild plants",
+   "market": "wild, home-grown",
+   "aliases": [
+    "broadleaf filaree",
+    "long-beaked stork's-bill",
+    "Mediterranean stork's-bill"
+   ]
+  },
+  {
+   "id": "lamium_album",
+   "name": "White dead-nettle",
+   "why": "Independent specialist tortoise sources treat Lamium album as a feedable wild plant. Correctly identified white dead-nettle can be used to add variety to the diet, mixed with several suitable wild plants. Young plants can, however, be confused with stinging nettle, so identification comes first for foraged plants, and there are no data proving long-term sole feeding or a fixed proportion.",
+   "role": "One component of a varied mixed diet of wild plants",
+   "market": "wild, home-grown",
+   "aliases": [
+    "white dead-nettle",
+    "white deadnettle",
+    "white archangel"
+   ]
+  },
+  {
+   "id": "dichondra_micrantha",
+   "name": "Kidney weed",
+   "why": "A specialist tortoise plant database classifies the genus Dichondra as feedable and gives Dichondra micrantha directly as an example. If the plant is correctly identified and has not been treated with chemicals, it can be used mixed with several suitable foods. It is, however, sometimes grown over a wide area like a lawn, as a single plant, so the assessment that it “can be eaten” is not extended into grounds for a single staple or unlimited grazing.",
+   "role": "Fed mixed with a variety of plant foods",
+   "market": "wild, grown as a lawn substitute",
+   "aliases": [
+    "kidney weed",
+    "dichondra",
+    "wonderlawn",
+    "Mercury Bay weed"
+   ]
+  },
+  {
+   "id": "abutilon_indicum",
+   "name": "Indian mallow",
+   "why": "Specialist tortoise sources classify the genus Abutilon as feedable and describe the flowers in particular as eaten. This is, however, genus-level guidance rather than direct feeding data on Indian mallow itself, so a conservative assessment, mixing small amounts of leaves and flowers as one of several foods, is appropriate. The same assessment is not automatically applied to the seeds or roots, and it must not be confused with the entirely different Physalis.",
+   "role": "Leaves and flowers mixed in small amounts to add variety",
+   "market": "home-grown, wild outside Korea",
+   "aliases": [
+    "Indian mallow",
+    "country mallow",
+    "Indian abutilon"
+   ]
+  },
+  {
+   "id": "aeonium_arboreum",
+   "name": "Tree aeonium",
+   "why": "Aeonium arboreum is used as a succulent mixed in occasionally in small amounts, not as a staple. Specialist tortoise sources treat Aeonium as a feedable succulent, but advise mixing in only small amounts because eating a lot can soften the stools and some species can be high in calcium oxalate. Aeonium arboreum is therefore best used as a small supplementary component to add variety to the diet, not as a staple.",
+   "role": "Succulent mixed in occasionally in small amounts",
+   "market": "garden plant, home-grown",
+   "aliases": [
+    "tree aeonium",
+    "tree houseleek",
+    "Irish rose",
+    "Aeonium arboreum 'Atropurpureum'"
+   ]
+  },
+  {
+   "id": "buddleja_davidii",
+   "name": "Butterfly bush",
+   "why": "A specialist tortoise plant database classifies Buddleja as feed in moderation. B. davidii, the buddleja commonly sold in Korea, belongs to the same genus, so correctly identified leaves and flowers that have not been treated with chemicals can be considered for mixing in small amounts. This is, however, genus-level husbandry guidance rather than a species-specific long-term feeding trial, so it is not grounds for feeding large amounts repeatedly like a staple.",
+   "role": "Mixed in occasionally in small amounts",
+   "market": "garden plant, wildflower",
+   "aliases": [
+    "butterfly bush",
+    "summer lilac",
+    "Buddleia davidii"
+   ]
+  },
+  {
+   "id": "vicia_sativa",
+   "name": "Common vetch",
+   "why": "For common vetch, only the leaves and flowers are mixed in small amounts, and the seeds and pods are excluded. With common vetch, the parts that can be eaten and the parts to avoid must be kept apart. Specialist tortoise sources consider the leaves and flowers feedable as a small part of a varied diet, but advise against feeding the pods because the seeds contain cyanogenic glycosides. Only the leaves and flowers are therefore mixed in small amounts, and once seeds or pods form, the plant is no longer fed.",
+   "role": "Only the leaves and flowers, mixed in small amounts",
+   "market": "wild, grown as forage or green manure",
+   "aliases": [
+    "common vetch",
+    "garden vetch",
+    "taring vetch"
+   ]
+  },
+  {
+   "id": "vicia_cracca",
+   "name": "Tufted vetch",
+   "why": "Tufted vetch is directly included in the specialist tortoise sources' Vicia entry, whose leaves and flowers can be fed as a small part of the diet. It is also used at a low proportion in some wild-plant seed mixes for tortoises. The seeds should, however, be avoided because of cyanogenic glycosides, so only the leaves and flowers are mixed in small amounts, and the pods and seeds are not given.",
+   "role": "Only the leaves and flowers, mixed in small amounts",
+   "market": "wild",
+   "aliases": [
+    "tufted vetch",
+    "cow vetch",
+    "bird vetch"
+   ]
+  }
+ ]
+}
