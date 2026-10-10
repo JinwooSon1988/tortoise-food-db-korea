@@ -1498,11 +1498,73 @@
       "source_verification": "original_feedipedia_table_checked_2026-10-10",
       "primary_eligible": false,
       "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "feedipedia-12624-soybean-forage-20261010",
+      "plant_id": "soybeanleaf",
+      "scientific_name": "Glycine max",
+      "source_name": "Feedipedia — Soybean, aerial part, fresh",
+      "source_id": "12624",
+      "source_url": "https://www.feedipedia.org/node/12624",
+      "analyzed_part": "aerial part (leaves and stems, not leaves alone)",
+      "preparation_state": "fresh forage sampled; reported nutrients on dry-matter basis",
+      "basis": "dry matter (DM); dry matter % as fed, protein/fibre % DM, minerals g/kg DM",
+      "nutrients": {
+        "dry_matter_pct_as_fed": 24,
+        "crude_protein_pct_dm": 15.7,
+        "crude_fibre_pct_dm": 31.2,
+        "ndf_pct_dm": 48.1,
+        "adf_pct_dm": 37.2,
+        "lignin_pct_dm": 5.8,
+        "ether_extract_pct_dm": 4.4,
+        "ash_pct_dm": 9.3,
+        "calcium_g_per_kg_dm": 14.8,
+        "phosphorus_g_per_kg_dm": 2.7,
+        "magnesium_g_per_kg_dm": 6.3
+      },
+      "nutrient_units": {
+        "dry_matter_pct_as_fed": "% as fed",
+        "crude_protein_pct_dm": "% DM",
+        "crude_fibre_pct_dm": "% DM",
+        "ndf_pct_dm": "% DM",
+        "adf_pct_dm": "% DM",
+        "lignin_pct_dm": "% DM",
+        "ether_extract_pct_dm": "% DM",
+        "ash_pct_dm": "% DM",
+        "calcium_g_per_kg_dm": "g/kg DM",
+        "phosphorus_g_per_kg_dm": "g/kg DM",
+        "magnesium_g_per_kg_dm": "g/kg DM"
+      },
+      "sample_counts": {
+        "dry_matter_pct_as_fed": 12,
+        "crude_protein_pct_dm": 27,
+        "crude_fibre_pct_dm": 10,
+        "ndf_pct_dm": 18,
+        "adf_pct_dm": 18,
+        "lignin_pct_dm": 6,
+        "ether_extract_pct_dm": 10,
+        "ash_pct_dm": 11,
+        "calcium_g_per_kg_dm": 10,
+        "phosphorus_g_per_kg_dm": 12,
+        "magnesium_g_per_kg_dm": 1
+      },
+      "display_tier": "dry_matter_reference",
+      "status": "reference_only",
+      "reference_scope_ko": "대두 사료용 생초 지상부(잎·줄기 혼합), 건조물 기준",
+      "display_note_ko": "대두 잎만이 아니라 줄기를 포함한 지상부 생초의 사료 성분입니다. 건물 함량 외 영양성분은 건조물 기준이며, 항목별 표본 수가 다릅니다. 생잎 100g 영양정보 또는 육지거북 급여 적합성으로 해석하면 안 됩니다.",
+      "source_verification": "feedipedia_primary_table_checked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false,
+      "excluded_equation_values": [
+        "gross_energy_mj_per_kg_dm",
+        "ruminant_digestibility",
+        "ruminant_energy"
+      ]
     }
   ],
   "coverage": {
-    "reference_records": 28,
-    "distinct_plants": 18,
-    "notice": "Source-checked dry-matter forage references are not raw per-100g edible nutrition. No feeding verdict changes."
+    "reference_records": 29,
+    "distinct_plants": 19,
+    "notice": "Dry-matter forage measurements are separate from raw edible per-100g and never change feeding safety grades."
   }
 }
