@@ -4,6 +4,7 @@ const read=p=>JSON.parse(fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'
 const plants=read('data/plants.json');
 const exact=read('data/plant_nutrition_v56.json').plants;
 const references=read('data/plant_nutrition_reference_v1.json').records;
+const assessments=read('data/public_assessments.json');
 const ids=new Set(plants.map(p=>p.id));
 const exactIds=new Set(exact.map(p=>p.plant_id));
 const referenceIds=new Set(references.map(p=>p.plant_id));
@@ -12,6 +13,12 @@ const referenceOnly=plants.filter(p=>!exactIds.has(p.id)&&referenceIds.has(p.id)
 const orphanExact=exact.filter(p=>!ids.has(p.plant_id));
 const orphanReferences=references.filter(p=>!ids.has(p.plant_id));
 const duplicateNameGroups=[...new Set(plants.map(p=>p.ko).filter(Boolean))].map(name=>plants.filter(p=>p.ko===name)).filter(group=>group.length>1);
+const duplicateVerdictConflicts=[];
+for(const group of duplicateNameGroups){
+ const byId=new Map(group.map(p=>[p.id,assessments.filter(a=>a.plant_id===p.id)]));
+ const verdicts=new Set([...byId.values()].flat().map(a=>a.species_group+':'+a.verdict));
+ if(verdicts.size>1)duplicateVerdictConflicts.push({name:group[0].ko,ids:group.map(p=>p.id),verdicts:[...verdicts]});
+}
 const duplicateNameCollisions=duplicateNameGroups.map(group=>({
  name:group[0].ko,
  ids:group.map(p=>p.id),
@@ -43,6 +50,7 @@ const summary={
     auto_copy_nutrients:false
   })),
   duplicate_korean_names:duplicateNameCollisions,
+  duplicate_name_verdict_conflicts:duplicateVerdictConflicts,
   reference_tiers:referenceTiers,
   invalid_reference_records:invalidReferences.map(r=>r.reference_id),
   incorrectly_primary_eligible_references:conflictingPrimary.map(r=>r.reference_id),
@@ -52,4 +60,4 @@ const summary={
   reference_only:referenceOnly.map(p=>({id:p.id,ko:p.ko,scientific:p.scientific}))
 };
 console.log(JSON.stringify(summary,null,2));
-if(orphanExact.length||orphanReferences.length||invalidReferences.length||conflictingPrimary.length)process.exitCode=1;
+if(orphanExact.length||orphanReferences.length||invalidReferences.length||conflictingPrimary.length||duplicateVerdictConflicts.length)process.exitCode=1;
