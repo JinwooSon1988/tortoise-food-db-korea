@@ -34,6 +34,19 @@ def main():
                 errors.append(f"image {image['plant_id']} missing {key}")
         if image.get("part_match") not in ("match", "partial", "mismatch"):
             errors.append(f"image {image['plant_id']} invalid part_match")
+    # A photographed plant part must not contradict the part-limited feeding assessment.
+    assessments = read("data/public_assessments.json")
+    assessment_ids = {item["plant_id"] for item in assessments}
+    image_assessment_gaps = sorted(set(image_ids) - assessment_ids)
+    if image_assessment_gaps:
+        errors.append(f"images without any public assessment: {image_assessment_gaps}")
+    high_risk_image_part_conflicts = [
+        {"plant_id": x["plant_id"], "depicted_part": x.get("depicted_part"),
+         "reason": "Photograph does not represent the plant part specified in feeding assessment"}
+        for x in images
+        if x["plant_id"] in {"alfalfasprout", "barleyleaf"}
+        and x.get("part_match") == "mismatch"
+    ]
     if len(plants) != nutrition["public_plants"]:
         errors.append("public plant count differs from nutrition audit")
     if len(holds) != nutrition["held_plants"]:
@@ -79,6 +92,7 @@ def main():
         "nutrition_hold_reasons": dict(reasons),
         "duplicate_taxon_label_concepts_review_only": duplicate_concepts,
         "image_part_mismatches_needing_replacement": image_part_mismatches,
+        "high_risk_image_part_conflicts": high_risk_image_part_conflicts,
         "image_part_partial_needing_review": image_part_partial,
         "plants_without_image": plants_without_images,
         "ambiguous_alias_taxon_review_only": alias_taxon_review,
