@@ -55,9 +55,17 @@ for pid in sorted(set(source_ids) - set(translated_ids)):
     errors.append(f"EN: missing plant translation {pid}")
 for pid in sorted(set(translated_ids) - set(source_ids)):
     errors.append(f"EN: orphan translation {pid}")
+# A role is shown on the Korean card only when the plant's general assessment has one, so the English role is
+# required exactly then; name and reason are always required.
+sys.path.insert(0, str(ROOT / "scripts"))
+from public_verdict import load_assessments, by_plant, representative  # noqa: E402
+rows_by = by_plant(load_assessments())
 for item in translations:
     pid = item.get("id", "<missing>")
+    rep = representative(rows_by.get(pid, []))
     for field in ("name", "why", "role"):
+        if field == "role" and not (rep or {}).get("role"):
+            continue
         value = item.get(field)
         if not isinstance(value, str) or not value.strip():
             errors.append(f"EN: {pid} missing {field}")

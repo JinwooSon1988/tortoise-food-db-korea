@@ -1,6 +1,6 @@
 (()=>{const K='tfdblang';
 const SCRIPT=document.currentScript;const ROOT=SCRIPT?new URL('.',SCRIPT.src).href:new URL('./',location.href).href;
-const T={
+const T={'근거 확실성':'Evidence certainty','식물 과':'Family','본문으로 바로가기':'Skip to content','목록으로 바로가기':'Skip to the list',
 '이 식물, 먹여도 될까?':'Can my tortoise eat this plant?',
 '식물 이름만 검색하세요.':'Search for a plant by name.',
 '먹여도 되는지 먼저':'See the feeding verdict first',

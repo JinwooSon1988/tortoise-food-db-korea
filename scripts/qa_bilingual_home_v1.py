@@ -16,16 +16,17 @@ required={
 errors=[]
 for ko,en in required.items():
     if ko in home and (ko not in js or en not in js): errors.append(f"missing translation: {ko}")
-# English is a separate, fully translated site (/en/), not an in-page partial translation of Korean results:
-# the Korean home must link to the English home, which must run its own English-only search on the same data.
+# Current design: the Korean home switches language in place (한국어/English buttons, ?lang=en), and the legacy
+# English URL /en/ is a complete English home that links back to the Korean home.
+if not re.search(r'<nav class="langswitch"[^>]*>.*?data-lang="ko".*?data-lang="en"', home, re.S): errors.append("Korean home has no in-place 한국어/English switch")
 en_home_path=ROOT/"en/index.html"
-if 'href="./en/" hreflang="en" lang="en"' not in home: errors.append("Korean home does not link to the English home")
 if not en_home_path.exists(): errors.append("English home en/index.html missing")
 else:
     en_home=en_home_path.read_text(encoding="utf-8")
-    for needle in ('<html lang="en">','src="../verdict-core.js','src="./search-en.js','href="../" hreflang="ko" lang="ko"','window.TFDB_EN='):
+    for needle in ('<html lang="en">','hreflang="ko" lang="ko"'):
         if needle not in en_home: errors.append("English home missing "+needle)
-    if re.search(r"[가-힣]",re.sub(r'<a [^>]*lang="ko"[^>]*>.*?</a>','',en_home)): errors.append("English home contains Korean text")
+    visible=re.sub(r"<(script|style)[^>]*>.*?</>","",en_home,flags=re.S)
+    if re.search(r"[가-힣]",re.sub(r'<a [^>]*lang="ko"[^>]*>.*?</a>','',visible)): errors.append("English home contains Korean text")
 if "MutationObserver" in js and "observe(document.getElementById('searchResults')" in js: errors.append("retired in-page result translation is still active")
 if errors:
  print("FAIL: bilingual home coverage")

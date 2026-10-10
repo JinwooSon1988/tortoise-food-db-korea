@@ -477,7 +477,7 @@ def render(p):
             f'<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">'
             f'<script type="application/ld+json">{schema}</script><style>{style}{LANG_CSS}{DETAIL_ICON_CSS}</style></head>')
     body = (f'<body><a class="skiplink" href="#main-content">Skip to content</a><header class="detailnav"><nav class="detailnavlinks" aria-label="Page navigation">'
-            f'<a href="../../" aria-label="Home / 홈" title="Home / 홈" class="iconnav-home"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-7h6v7"/></svg></a><button type="button" aria-label="Back / 뒤로" title="Back / 뒤로" class="iconnav-back" onclick="if(history.length>1)history.back();else location.href=\'../../\'"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M5 12h14"/></svg></button></nav>'
+            f'<a href="../../" aria-label="Home" title="Home" class="iconnav-home"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9"/><path d="M9 21v-7h6v7"/></svg></a><button type="button" aria-label="Back" title="Back" class="iconnav-back" onclick="if(history.length>1)history.back();else location.href=\'../../\'"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M5 12h14"/></svg></button></nav>'
             f'<div class="topmeta">{lang_switch(f"../../../plant/{pid}/")}</div></header>'
             f'<main id="main-content" tabindex="-1" data-plant-id="{esc(pid)}"><div class="planthead"><div class="plantidentity"><h1>{esc(name)}</h1><div class="scientific"><i>{esc(sci)}</i></div>{alias_html}</div>{photo}</div>'
             f'{decision}{practical}{cautions}{species_html}{scope_html}{nutrition}{deep}{footer}</main>'
@@ -489,7 +489,8 @@ def catalog_entry(p):
     a = representative(rows_by.get(p["id"], []))
     why = assessment_copy((a or {}).get("why"), a)
     return {"id": p["id"], "name": p.get("en") or p["id"],
-            "why": T(why, f"{p['id']}.why") if why else "",
+            # No general assessment (only species-specific ones): same message as the Korean result card.
+            "why": T(why, f"{p['id']}.why") if why else ("" if a else "There is no public assessment for Mediterranean Testudo or tortoises in general yet."),
             "role": T((a or {}).get("role"), f"{p['id']}.role") if (a or {}).get("role") else "",
             "market": I.market_en(p.get("market")),
             "aliases": [x for x in (p.get("aliases") or []) if x and not I.HANGUL.search(x)]}

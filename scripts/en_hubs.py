@@ -95,7 +95,7 @@ def all_plants(public_count):
             '<meta http-equiv="refresh" content="0;url=../../all-plants/?lang=en">'
             '</head><body><p>Opening the shared plant catalog… '
             '<a href="../../all-plants/?lang=en">Continue to all plants</a></p>'
-            '<script>location.replace("../../all-plants/?lang=en"+location.hash)</script>'
+            "<script>location.replace('../../all-plants/?lang=en'+location.hash)</script>"
             '</body></html>')
 
 

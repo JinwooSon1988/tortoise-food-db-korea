@@ -215,11 +215,29 @@ if kc != ec:
 # 5. Language switch, canonical and reciprocal hreflang on every page pair.
 pairs = [(ROOT / "plant" / i / "index.html", ROOT / "en/plant" / i / "index.html") for i in sorted(ids)]
 pairs += [(ROOT / h / "index.html", ROOT / "en" / h / "index.html") for h in hubs]
+# Pages whose Korean version switches language in place (buttons, ?lang=en) instead of linking to /en/, and the
+# legacy English URL that only redirects to the shared page in English. Both are the current live design.
+IN_PLACE = {ROOT / "index.html", ROOT / "all-plants/index.html"}
+REDIRECT_STUBS = {ROOT / "en/all-plants/index.html": "../../all-plants/?lang=en"}
+for kf in IN_PLACE:
+    if not re.search(r'<nav class="langswitch"[^>]*>.*?data-lang="en"', read(kf), re.S) and "language-toggle.js" not in read(kf):
+        fail(f"{kf.relative_to(ROOT)}: no in-page language switch")
+for ef, target in REDIRECT_STUBS.items():
+    doc = read(ef)
+    if f"location.replace('{target}'" not in doc or 'name="robots" content="noindex' not in doc and "noindex" not in doc:
+        fail(f"{ef.relative_to(ROOT)}: legacy English URL must redirect to {target} (and not be indexed)")
 for kf, ef in pairs:
-    if not (kf.exists() and ef.exists()):
+    if not (kf.exists() and ef.exists()) or ef in REDIRECT_STUBS:
         continue
     kp, ep = parse(kf), parsed.get(ef) or parse(ef)
     kurl, eurl = SITE + rel_of(kf), SITE + rel_of(ef)
+    if kf in IN_PLACE:
+        if ep.canonical != eurl:
+            fail(f"{ef.relative_to(ROOT)}: canonical {ep.canonical} != {eurl}")
+        esw = [h for t, h, a in ep.links if t == "a" and a.get("hreflang") == "ko"]
+        if len(esw) != 1 or resolve(ef, esw[0]) != kf:
+            fail(f"{ef.relative_to(ROOT)}: language switch does not point to {kf.relative_to(ROOT)} ({esw})")
+        continue
     if kp.canonical != kurl:
         fail(f"{kf.relative_to(ROOT)}: canonical {kp.canonical} != {kurl}")
     if ep.canonical != eurl:
