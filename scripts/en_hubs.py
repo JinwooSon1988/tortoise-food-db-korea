@@ -80,9 +80,6 @@ def home(public_count, examples):
             '<span class="safetyhint">No result ≠ safe · the plant may simply not have a public assessment yet.</span></div>'
             f'<div class="examples" aria-label="Examples"><span>Try:</span>{ex}</div>'
             f'<div id="catalogCount" class="catalogcount">Search {public_count} plants with a public assessment.</div><div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>'
-            '<section class="truststrip" aria-label="How Tortoise Food DB works"><div><b>Feeding grade</b><span>Whether it can be fed, first</span></div><div><b>Reasons and cautions</b><span>Parts, exceptions and risks kept separate</span></div><div><b>Verifiable evidence</b><span>Original sources and their limits</span></div></section>'
-            '<section class="belowfold"><div><h2>All plant data</h2><p>See every published plant with its name and grade without searching.</p></div><nav class="utilitylinks" aria-label="Tortoise Food DB information"><a href="./all-plants/">View all plants</a><a href="./guides/research-method/">How we review evidence</a></nav></section>'
-            '<section class="belowfold"><div><h2>Guides</h2><p>Existing assessments grouped by topic. Being listed is not a recommendation in itself.</p></div><nav class="utilitylinks" aria-label="Guides"><a href="./guides/market-foods/">Foods you can buy</a><a href="./guides/wild-plants/">Wild and foraged plants</a><a href="./guides/caution-foods/">Foods that need caution</a></nav></section>'
             '<footer class="footer">Tortoise Food DB · An evidence-based database of tortoise food plants · Grades are for Mediterranean tortoises (Testudo) and tortoises in general unless a species note says otherwise.</footer></main>'
             f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261010-1"></script></body></html>')
 
