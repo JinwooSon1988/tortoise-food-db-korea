@@ -43,7 +43,7 @@ function updateNav(lang){const l=navLabel(lang),n=document.querySelector('.utili
 function boot(){
  ensureNav();
  let lang='ko';
- try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}
+ try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}const requested=new URLSearchParams(location.search).get('lang');if(requested==='ko'||requested==='en')lang=requested;
  const host=document.querySelector('.topmeta');
  if(host){
    const nav=document.createElement('nav');
