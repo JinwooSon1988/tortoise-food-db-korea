@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "reviewed_at": "2026-10-10",
+  "plant_id": "shepherdspurse",
+  "scientific": "Capsella bursa-pastoris",
+  "purpose": "Independent cross-country comparison; do not overwrite Korean verified source or infer feeding suitability.",
+  "records": [
+    {
+      "country": "South Korea",
+      "source": "RDA Korean Standard Food Composition DB",
+      "source_id": "R106-033000001-0000",
+      "part": "whole edible portion; root inclusion not established",
+      "state": "raw",
+      "basis": "per 100 g",
+      "calcium_mg": 322,
+      "phosphorus_mg": 81,
+      "vitamin_c_mg": 21,
+      "water_g": 87.7,
+      "source_url": "https://www.data.go.kr/data/15100065/fileData.do",
+      "registry": "data/plant_nutrition_v56.json"
+    },
+    {
+      "country": "Japan",
+      "source": "MEXT Standard Tables of Food Composition in Japan 2023",
+      "source_id": "06200",
+      "part": "leaf",
+      "state": "raw",
+      "basis": "per 100 g edible portion",
+      "calcium_mg": 290,
+      "phosphorus_mg": 92,
+      "vitamin_c_mg": 110,
+      "water_g": 86.8,
+      "source_url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=6_06200_7"
+    }
+  ],
+  "comparison": {
+    "calcium_difference_mg_per_100g": 32,
+    "vitamin_c_difference_mg_per_100g": 89,
+    "interpretation": "The raw records differ in plant part (Korean edible whole vs Japanese leaf), sampling and/or analytical conditions; the observed discrepancy is not evidence of an error in either official source.",
+    "decision": "retain existing verified RDA record; record Japanese leaf as independent part-specific reference only",
+    "promoted_to_primary_nutrition": false,
+    "feeding_verdict_changed": false
+  }
+}
