@@ -41,6 +41,17 @@ def main():
     ids = [p["id"] for p in plants]
     recs = {r["plant_id"]: r for r in load("data/plant_nutrition_v56.json").get("plants", []) if r.get("verification_status") == "verified"}
     holds = {r["plant_id"]: r for r in load("data/nutrition_hold_list_v1.json").get("records", [])}
+    # Separate exact official composition from reference-only records; do not promote reference values.
+    rda_data = load("data/rda_food_composition_v56.json")
+    rda_ids = {r["plant_id"] for r in (rda_data.get("records") or rda_data.get("plants") or [])}
+    reference_data = load("data/plant_nutrition_reference_v1.json")
+    reference_ids = {r["plant_id"] for r in reference_data.get("records", []) if r.get("status") == "reference_only" and r.get("nutrients")}
+    public_assessments = load("data/public_assessments.json")
+    published_ids = {a["plant_id"] for a in public_assessments}
+    published_ids &= set(ids)
+    official_ids = set(recs) | rda_ids
+    reference_only_ids = (reference_ids - official_ids) & published_ids
+    unlinked_ids = published_ids - official_ids - reference_ids
     dm_path = ROOT / "data" / "plant_nutrition_dm_basis_v1.json"
     dm = json.loads(dm_path.read_text(encoding="utf-8")).get("records", []) if dm_path.exists() else []
     dm_plants = sorted({r["plant_id"] for r in dm})
@@ -61,12 +72,14 @@ def main():
         else:
             h = holds.get(pid)
             row.update({"status": "held", "hold_reason_code": h["hold_reason_code"] if h else None, "dm_basis_record": pid in dm_plants})
+        row["nutrition_display_tier"] = ("verified_official" if pid in official_ids else "reference_only" if pid in reference_ids else "no_linked_data")
         per_plant.append(row)
     legacy_now = sum(1 for pid in LEGACY_69 if pid in recs)
     report = {
         "schema_version": "1.0",
         "purpose": "Descriptive nutrition coverage audit. Coverage numbers never change feeding verdicts, grades or confidence.",
         "public_plants": total,
+        "published_plant_coverage": {"total": len(published_ids), "verified_official": len(official_ids & published_ids), "reference_only": len(reference_only_ids), "no_linked_data": len(unlinked_ids), "reference_only_ids": sorted(reference_only_ids), "no_linked_data_ids": sorted(unlinked_ids), "note": "Reference-only values do not qualify as verified exact nutrition or influence feeding grades."},
         "verified_plants": len([pid for pid in ids if pid in recs]),
         "held_plants": len([pid for pid in ids if pid not in recs]),
         "coverage_percent": pct(len([pid for pid in ids if pid in recs]), total),
