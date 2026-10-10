@@ -11,6 +11,20 @@ KR = (ROOT / "index.html").read_text(encoding="utf-8")
 EN = (ROOT / "en/index.html").read_text(encoding="utf-8")
 EN_SEARCH = (ROOT / "en/search-en.js").read_text(encoding="utf-8")
 errors = []
+# Primary user experience is ONE homepage with an in-place language toggle.
+# The legacy /en/ pages are not the language switch destination.
+TOGGLE = (ROOT / "language-toggle.js").read_text(encoding="utf-8")
+if not re.search(r'<button[^>]+data-lang=["\\\']ko["\\\']', KR):
+    errors.append("KR: missing same-page Korean language button")
+if not re.search(r'<button[^>]+data-lang=["\\\']en["\\\']', KR):
+    errors.append("KR: missing same-page English language button")
+if re.search(r'<nav[^>]*class=["\\\']langswitch["\\\'][^>]*>.*?<a[^>]+href=["\\\'][^"\\\']*en/', KR, re.S):
+    errors.append("KR: language switch must not navigate to /en/")
+if "tfdblanguagechange" not in TOGGLE or "tfdblanguagechange" not in KR:
+    errors.append("KR: in-place language event must update rendered search results")
+if "data/i18n/en/catalog_en.json" not in KR:
+    errors.append("KR: shared search must load English translations")
+
 DATA = ("plants.json", "public_assessments.json", "verified_plant_images_v56.json")
 for name, html in (("KR", KR), ("EN", EN)):
     if not re.search(r'<script[^>]+src=["\'](?:\.\./|\./)?verdict-core\.js', html):
