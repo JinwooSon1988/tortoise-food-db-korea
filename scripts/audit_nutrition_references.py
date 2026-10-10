@@ -16,7 +16,7 @@ def main():
     dm_lookup = {(r["plant_id"], r["source_id"]): r for r in dm_records}
     problems = []
     ids = set()
-    allowed = {"related_part_reference", "related_species_reference", "dry_matter_reference"}
+    allowed = {"related_part_reference", "related_species_reference", "related_cultivar_reference", "dry_matter_reference"}
     for row in reference:
         rid = row.get("reference_id")
         pid = row.get("plant_id")
@@ -47,8 +47,7 @@ def main():
         for key, value in nutrients.items():
             if not isinstance(value, (int, float)) or isinstance(value, bool) or value < 0:
                 problems.append(f"{rid}: invalid {key}")
-        if row.get("display_tier") != "dry_matter_reference" and "100" not in str(row.get("basis", "")):
-            problems.append(f"{rid}: reference basis must be explicit per 100g")
+        # Reference studies may report fresh-mass g/kg or mg/kg, not only per 100g.\n        # Preserve source units; do not silently convert or relabel as per 100g.\n        if row.get("display_tier") != "dry_matter_reference" and not any(\n            token in str(row.get("basis", "")).lower()\n            for token in ("100", "g/kg", "mg/kg", "fresh mass", "fresh weight")\n        ):\n            problems.append(f"{rid}: reference basis lacks an explicit mass denominator")
         if row.get("origin_registry") == "data/plant_nutrition_dm_basis_v1.json":
             original = dm_lookup.get((pid, row.get("origin_source_id")))
             if original is None:
