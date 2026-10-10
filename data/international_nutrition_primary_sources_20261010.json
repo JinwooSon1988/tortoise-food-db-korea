@@ -1,0 +1,104 @@
+{
+  "version": "1.0",
+  "created_at": "2026-10-10",
+  "purpose": "Primary-source discovery for filling held per-100g-fresh plant-part nutrition data. No nutrient figures inferred or promoted.",
+  "source_registry": [
+    {
+      "region": "Japan",
+      "institution": "MEXT",
+      "name": "Standard Tables of Food Composition in Japan, 2023 supplement",
+      "url": "https://www.mext.go.jp/a_menu/syokuhinseibun/mext_00001.html",
+      "search_url": "https://fooddb.mext.go.jp/search.html",
+      "format": "Excel/PDF/search",
+      "status": "official_source_verified",
+      "method": "Match Japanese food description, botanical identity, plant part, raw state and units; review 2026 errata."
+    },
+    {
+      "region": "India",
+      "institution": "ICMR-NIN",
+      "name": "Indian Food Composition Tables 2017",
+      "url": "https://www.nin.res.in/ebooks/IFCT2017.pdf",
+      "format": "PDF",
+      "status": "official_source_verified",
+      "method": "Check unique food code, scientific name, food part, raw status and analytical units."
+    },
+    {
+      "region": "West Africa",
+      "institution": "FAO/INFOODS",
+      "name": "Food Composition Table for Western Africa 2019",
+      "url": "https://www.fao.org/food-composition/tables-and-databases/detail/food-composition-tables/en",
+      "data_url": "https://www.fao.org/fileadmin/user_upload/faoweb/2020/WAFCT_2019.xlsx",
+      "format": "XLSX/PDF",
+      "status": "official_source_verified",
+      "method": "Distinguish analytical vs borrowed/imputed data; verify exact taxon, part, preparation and moisture basis."
+    },
+    {
+      "region": "Global",
+      "institution": "FAO/INFOODS",
+      "name": "Food composition tables and databases directory",
+      "url": "https://www.fao.org/food-composition/tables-and-databases//10/en",
+      "format": "international directory",
+      "status": "official_source_verified",
+      "method": "Discover additional country-specific primary datasets; listing is not a FAO endorsement."
+    }
+  ],
+  "target_review_batch": [
+    {
+      "plant_id": "figleaf",
+      "scientific": "Ficus carica",
+      "required_part": "leaf",
+      "avoid": "fig fruit data"
+    },
+    {
+      "plant_id": "hibiscusleaf",
+      "scientific": "Hibiscus syriacus",
+      "required_part": "leaf",
+      "avoid": "Hibiscus sabdariffa and dry-weight substitution"
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "scientific": "Hibiscus syriacus",
+      "required_part": "flower",
+      "avoid": "Hibiscus sabdariffa calyx substitution"
+    },
+    {
+      "plant_id": "celeryleaf",
+      "scientific": "Apium graveolens",
+      "required_part": "leaf",
+      "avoid": "celery stalk"
+    },
+    {
+      "plant_id": "chickweed",
+      "scientific": "Stellaria media",
+      "required_part": "fresh aerial part",
+      "avoid": "dry matter without moisture conversion"
+    },
+    {
+      "plant_id": "timothy",
+      "scientific": "Phleum pratense",
+      "required_part": "fresh grass",
+      "avoid": "hay or seed"
+    },
+    {
+      "plant_id": "barleygrass",
+      "scientific": "Hordeum vulgare",
+      "required_part": "young green leaves",
+      "avoid": "barley grain"
+    },
+    {
+      "plant_id": "wheatgrass",
+      "scientific": "Triticum aestivum",
+      "required_part": "young green leaves",
+      "avoid": "wheat grain"
+    }
+  ],
+  "status": "source-discovery-only; no individual held record has been cleared by this file",
+  "promotion_requirements": [
+    "primary food record ID and original source URL",
+    "exact taxon or documented cultivar correspondence",
+    "assessed plant part and raw/fresh state",
+    "nutrient units, 100 g fresh basis and moisture",
+    "documented analytical or compilation methodology",
+    "recorded reviewer and verification date"
+  ]
+}
