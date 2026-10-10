@@ -10,7 +10,8 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 11
+    "pending_numeric_transcription": 9,
+    "registered_numeric_reference_plants": 4
   },
   "records": [
     {
@@ -44,7 +45,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "mint",
@@ -77,7 +79,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "chickweed",
@@ -92,7 +95,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "pumpkinleaf",
@@ -107,7 +111,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "rose",
@@ -128,7 +133,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "ryegrass",
@@ -143,7 +149,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "marigold",
@@ -164,12 +171,13 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "ribwortplantain",
       "priority": "medium",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Feedipedia",
@@ -178,8 +186,11 @@
           "hold_reason": "state (fresh/dried) not stated"
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "next_action": "Check whether a more exact plant part, cultivar and fresh-weight measurement exists; retain existing reference provenance and do not promote to primary without verification.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "feedipedia-11549-20261010"
+      ]
     },
     {
       "plant_id": "violetflower",
@@ -194,7 +205,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "waterdropwort",
@@ -208,8 +220,12 @@
           "hold_reason": "minari/waterdropwort generic-record policy hold retained"
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "one_or_more_numeric_records_in_reference_v1"
+      "next_action": "Check whether a more exact plant part, cultivar and fresh-weight measurement exists; retain existing reference provenance and do not promote to primary without verification.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "international-20261010-1",
+        "international-20261010-2"
+      ]
     },
     {
       "plant_id": "fennelleaf",
@@ -224,7 +240,8 @@
         }
       ],
       "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "numeric_status": "source_candidate_only_no_numeric_transcription",
+      "registered_reference_ids": []
     },
     {
       "plant_id": "rapeseedleaf",
@@ -238,13 +255,17 @@
           "hold_reason": "stem+leaf composite; master is leaf"
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "one_or_more_numeric_records_in_reference_v1"
+      "next_action": "Check whether a more exact plant part, cultivar and fresh-weight measurement exists; retain existing reference provenance and do not promote to primary without verification.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "international-20261010-3",
+        "feedipedia-15683-rape-forage-fresh-20261010"
+      ]
     },
     {
       "plant_id": "hibiscusrosa",
       "priority": "high",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "Feedipedia",
@@ -253,8 +274,12 @@
           "hold_reason": "aerial-part composite; master entry concerns the flower"
         }
       ],
-      "next_action": "Retrieve original primary-source numeric table; check scientific identity, analyzed part, preparation state, wet/dry basis, derived/borrowed values, and licensing before adding a reference-only record.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription"
+      "next_action": "Check whether a more exact plant part, cultivar and fresh-weight measurement exists; retain existing reference provenance and do not promote to primary without verification.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "feedipedia-12531-20261010"
+      ]
     }
-  ]
+  ],
+  "reconciliation_note": "Cross-checked queue against data/plant_nutrition_reference_v1.json; status reflects registered numeric reference, not exact-match primary verification."
 }
