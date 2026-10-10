@@ -38,9 +38,9 @@ for r in references:
         issues.append(f"{rid}: must not promote reference to verified or verdict")
     if r.get("display_tier") not in {"related_part_reference", "dry_matter_reference", "related_species_reference", "related_cultivar_reference"}:
         issues.append(f"{rid}: unknown display tier")
-    if r.get("display_tier") == "dry_matter_reference" and not any(s in r.get("basis", "").lower() for s in ("dry", "dm", "건물", "건조")):
+    if r.get("display_tier") == "dry_matter_reference" and not any(token in r.get("basis", "").lower() for token in ("dry", "dm", "건물", "건조")):
         issues.append(f"{rid}: dry matter tier lacks dry basis")
-    for name, value in r.get("nutrients", {}).items():
+    if r.get("source_url") and not r["source_url"].startswith("https://"):\n        issues.append(f"{rid}: source URL must use HTTPS")\n    for name, value in r.get("nutrients", {}).items():
         if isinstance(value, bool) or not isinstance(value, (int, float)) or value < 0:
             issues.append(f"{rid}: invalid numeric value for {name}")
     by_plant.setdefault(pid, []).append(r)
