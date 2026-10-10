@@ -29,6 +29,18 @@ def main():
                 errors.append(f"reference for {item.get('plant_id')}: missing reference ID")
             if item.get("plant_id") not in plant_ids:
                 errors.append(f"reference for unknown plant: {item.get('plant_id')}")
+    for item in references:
+        if item.get("status") != "reference_only" or not item.get("nutrients"):
+            continue
+        rid = item.get("reference_id")
+        if item.get("feeding_verdict_use") is not False:
+            errors.append(f"{rid}: reference must not influence feeding verdict")
+        if item.get("primary_eligible") is not False:
+            errors.append(f"{rid}: reference must not be promoted to primary")
+        units = item.get("nutrient_units", {})
+        for nutrient in item["nutrients"]:
+            if not units.get(nutrient):
+                errors.append(f"{rid}: missing unit for {nutrient}")
     seen = set()
     for item in queue["records"]:
         pid = item["plant_id"]
