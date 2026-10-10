@@ -50,7 +50,7 @@ esc = lambda v: html.escape(str(v or ""), quote=True)
 rich = lambda v: re.sub(r"\*([^*]+)\*", r"<i>\1</i>", esc(v))
 NEWTAB = '<span class="sr-only"> (opens in a new tab)</span>'
 
-DETAIL_ICON_CSS = (".detailnavlinks .iconnav-home,.detailnavlinks .iconnav-back{display:inline-flex;align-items:center;justify-content:center;min-width:54px;min-height:52px;padding:10px;box-sizing:border-box}.detailnavlinks svg{flex:none}.langswitch a.active{background:#286a46!important;color:#fff!important}")
+DETAIL_ICON_CSS = (".detailnavlinks .iconnav-home,.detailnavlinks .iconnav-back{display:inline-flex;align-items:center;justify-content:center;min-width:54px;min-height:52px;padding:10px;box-sizing:border-box}.detailnavlinks svg{flex:none}.detailnav .langswitch a[aria-current=\"page\"],.detailnav .langswitch a.active{background:#286a46!important;color:#fff!important}")
 
 LANG_CSS = (".langswitch{display:inline-flex;align-items:stretch;border:1px solid #c9d8cd;border-radius:12px;overflow:hidden;background:#fff}"
             ".langswitch a,.langswitch strong{display:inline-flex;align-items:center;min-height:44px;padding:0 13px;font-size:13px;font-weight:850;text-decoration:none;color:#174d32}"
