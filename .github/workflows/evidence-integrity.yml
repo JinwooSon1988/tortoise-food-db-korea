@@ -9,8 +9,10 @@ on:
       - "data/plant_nutrition_v56.json"
       - "scripts/audit_nutrition_consistency.py"
       - "data/plant_nutrition_reference_v1.json"
+      - "data/international_nutrition_reference_queue_20261010.json"
       - "data/plant_nutrition_dm_basis_v1.json"
       - "scripts/audit_nutrition_references.py"
+      - "scripts/audit_nutrition_reference_queue.py"
       - "scripts/audit_evidence_coverage.py"
       - "scripts/qa_verified_plant_images.py"
       - "scripts/plant_taxon_scope.py"
@@ -24,8 +26,10 @@ on:
       - "data/plant_nutrition_v56.json"
       - "scripts/audit_nutrition_consistency.py"
       - "data/plant_nutrition_reference_v1.json"
+      - "data/international_nutrition_reference_queue_20261010.json"
       - "data/plant_nutrition_dm_basis_v1.json"
       - "scripts/audit_nutrition_references.py"
+      - "scripts/audit_nutrition_reference_queue.py"
       - "scripts/audit_evidence_coverage.py"
       - ".github/workflows/evidence-integrity.yml"
   workflow_dispatch:
@@ -48,3 +52,5 @@ jobs:
         run: python scripts/audit_nutrition_consistency.py
       - name: Check reference-only nutrition integrity
         run: python scripts/audit_nutrition_references.py
+      - name: Check international nutrition research queue against registered references
+        run: python scripts/audit_nutrition_reference_queue.py
