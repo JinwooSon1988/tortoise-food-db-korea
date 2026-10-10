@@ -78,6 +78,14 @@ function boot(){
  ensureNav();
  let lang='ko';
  try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}const requested=new URLSearchParams(location.search).get('lang');if(requested==='ko'||requested==='en')lang=requested;
+ // Legacy plant detail pages have a separately authored full English page.
+ // Route there rather than mixing translated labels with untranslated Korean paragraphs.
+ const detailMatch=location.pathname.match(/^(.*\/tortoise-food-db-korea\/)plant\/([^/]+)\/?(?:index\.html)?$/);
+ if(detailMatch&&lang==='en'){
+   try{localStorage.setItem(K,'en')}catch(e){}
+   location.replace(detailMatch[1]+'en/plant/'+detailMatch[2]+'/?lang=en'+location.hash);
+   return;
+ }
  const host=document.querySelector('.topmeta');
  if(host){
    const nav=document.createElement('nav');
