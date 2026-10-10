@@ -99,7 +99,14 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  const p=new URLSearchParams(location.search);[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=p.get(k);if(v!=null&&(id==='q'||[...$(id).options].some(o=>o.value===v)))$(id).value=id==='q'?v.slice(0,80):v});
  const s=(p.get('sort')||'').split(':');if(s[0]&&document.querySelector('th[data-k="'+CSS.escape(s[0])+'"]')){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
  render()}
-window.addEventListener('tfdblanguagechange',()=>{localize();render()});
+function refreshCatalogLanguage(){localize();if(rows.length)render()}
+window.addEventListener('tfdblanguagechange',refreshCatalogLanguage);
+document.querySelector('.langswitch')?.addEventListener('click',e=>{
+ const b=e.target.closest('button[data-lang]');if(!b)return;
+ // Run after the shared switch handler updates <html lang>; do not require a reload.
+ queueMicrotask(refreshCatalogLanguage);
+});
+window.addEventListener('pageshow',e=>{if(e.persisted)refreshCatalogLanguage()});
 document.querySelectorAll('th[data-k]').forEach(th=>th.querySelector('button').onclick=()=>{let k=th.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=['ratio','calcium','phosphorus','fiber'].includes(k)?-1:1}render()});
 $('sort').addEventListener('change',e=>{const[k,d]=e.target.value.split(':');sortKey=k;sortDir=Number(d);render()});
 $('q').addEventListener('input',()=>{clearTimeout(qTimer);qTimer=setTimeout(render,120)});
