@@ -161,11 +161,75 @@
       },
       "source_verification": "transcribed_from_existing_2026-10-10_research_record",
       "primary_eligible": false
+    },
+    {
+      "reference_id": "feedipedia-11549-20261010",
+      "plant_id": "ribwortplantain",
+      "scientific_name": "Plantago lanceolata",
+      "source_name": "Feedipedia (INRAE/CIRAD/AFZ/FAO)",
+      "source_id": "11549",
+      "source_url": "https://www.feedipedia.org/node/11549",
+      "analyzed_part": "aerial part",
+      "preparation_state": "forage; source does not establish identical fresh samples across all nutrients",
+      "basis": "dry matter (DM); protein/fibre % DM, minerals g/kg DM; dry matter % as fed",
+      "nutrients": {
+        "dry_matter_pct_as_fed": 15.7,
+        "crude_protein_pct_dm": 20.4,
+        "crude_fibre_pct_dm": 13.6,
+        "calcium_g_per_kg_dm": 18.2,
+        "phosphorus_g_per_kg_dm": 2.8
+      },
+      "nutrient_units": {
+        "dry_matter_pct_as_fed": "% as fed",
+        "crude_protein_pct_dm": "% DM",
+        "crude_fibre_pct_dm": "% DM",
+        "calcium_g_per_kg_dm": "g/kg DM",
+        "phosphorus_g_per_kg_dm": "g/kg DM"
+      },
+      "display_tier": "dry_matter_reference",
+      "status": "reference_only",
+      "display_note_ko": "창질경이 지상부의 사료 분석 자료입니다. 단백질·섬유소는 건조물 대비 %, 칼슘·인은 건조물 kg당 g이며 생초 100g 기준 수치가 아닙니다. 성분별 표본 수가 달라 단일 시료의 조성으로 해석하지 않습니다.",
+      "reference_scope_ko": "창질경이 지상부, 건조물 기준 사료 성분",
+      "source_verification": "source_table_directly_checked_2026-10-10",
+      "primary_eligible": false,
+      "feeding_verdict_use": false
+    },
+    {
+      "reference_id": "feedipedia-12531-20261010",
+      "plant_id": "hibiscusrosa",
+      "scientific_name": "Hibiscus rosa-sinensis",
+      "source_name": "Feedipedia legacy table (FAO/Göhl source; revision pending)",
+      "source_id": "12531",
+      "source_url": "https://feedipedia.org/node/12531",
+      "analyzed_part": "aerial part, fresh forage",
+      "preparation_state": "fresh aerial forage, nutrient values on dry matter basis",
+      "basis": "dry matter (DM); protein/fibre % DM, minerals g/kg DM; dry matter % as fed",
+      "nutrients": {
+        "dry_matter_pct_as_fed": 13.1,
+        "crude_protein_pct_dm": 15.4,
+        "crude_fibre_pct_dm": 15.5,
+        "calcium_g_per_kg_dm": 16.7,
+        "phosphorus_g_per_kg_dm": 5.2
+      },
+      "nutrient_units": {
+        "dry_matter_pct_as_fed": "% as fed",
+        "crude_protein_pct_dm": "% DM",
+        "crude_fibre_pct_dm": "% DM",
+        "calcium_g_per_kg_dm": "g/kg DM",
+        "phosphorus_g_per_kg_dm": "g/kg DM"
+      },
+      "display_tier": "dry_matter_reference",
+      "status": "reference_only",
+      "display_note_ko": "하와이무궁화의 생 지상부를 분석한 오래된 사료 자료입니다. 단백질·섬유소·무기질은 건조물 기준이며 잎만의 성분이 아닙니다. Feedipedia에서 개정 대기 중인 자료이므로 최신 분석으로 간주하지 않습니다.",
+      "reference_scope_ko": "하와이무궁화 생 지상부, 건조물 기준의 과거 사료 분석",
+      "source_verification": "source_table_directly_checked_2026-10-10_legacy_revision_pending",
+      "primary_eligible": false,
+      "feeding_verdict_use": false
     }
   ],
   "coverage": {
-    "reference_records": 4,
-    "distinct_plants": 3,
-    "notice": "Counts are records, not newly verified primary plants. Values transcribed from pre-existing comparison research; recheck originals before upgrading."
+    "reference_records": 6,
+    "distinct_plants": 5,
+    "notice": "Dry-matter values are not raw edible per-100g values. Feedipedia legacy and forage tables are reference-only."
   }
 }
