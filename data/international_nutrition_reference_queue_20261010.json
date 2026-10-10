@@ -10,14 +10,14 @@
   ],
   "counts": {
     "candidate_plants": 13,
-    "pending_numeric_transcription": 7,
-    "registered_numeric_reference_plants": 6
+    "pending_numeric_transcription": 6,
+    "registered_numeric_reference_plants": 7
   },
   "records": [
     {
       "plant_id": "lettuce",
       "priority": "high",
-      "reference_numeric_already_registered": false,
+      "reference_numeric_already_registered": true,
       "candidate_sources": [
         {
           "institution": "日本食品標準成分表（八訂）増補2023年",
@@ -44,9 +44,11 @@
           "hold_reason": "lettuce type not specified"
         }
       ],
-      "next_action": "Prioritize Norwegian Matvaretabellen 06.058 Lactuca sativa L. raw leaves as related-cultivar reference; confirm official nutrient values, FoodEx2 analyzed part, whether each nutrient is measured or borrowed, and data reuse terms. Do not claim specific Korean leaf-lettuce cultivar or exact match. Independently compare IFCT C025 and MEXT 06362 before promotion.",
-      "numeric_status": "source_candidate_only_no_numeric_transcription",
-      "registered_reference_ids": []
+      "next_action": "Registered Norwegian 06.058 Lactuca sativa raw leaf reference-only with cultivar-unspecified scope and source-code notes. Obtain Korean cultivar-specific analysis before any exact-match primary promotion; never use nutrient composition to determine feeding verdict.",
+      "numeric_status": "reference_numeric_registered",
+      "registered_reference_ids": [
+        "norway-06058-lettuce-20261010"
+      ]
     },
     {
       "plant_id": "mint",
