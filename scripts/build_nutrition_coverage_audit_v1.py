@@ -43,13 +43,15 @@ def main():
     holds = {r["plant_id"]: r for r in load("data/nutrition_hold_list_v1.json").get("records", [])}
     # Separate exact official composition from reference-only records; do not promote reference values.
     rda_data = load("data/rda_food_composition_v56.json")
-    rda_ids = {r["plant_id"] for r in (rda_data.get("records") or rda_data.get("plants") or [])}
+    rda_ids = {r["plant_id"] for r in (rda_data.get("records") or rda_data.get("plants") or []) if r.get("identity_match") == "exact" and r.get("values_per_100g")}
     reference_data = load("data/plant_nutrition_reference_v1.json")
     reference_ids = {r["plant_id"] for r in reference_data.get("records", []) if r.get("status") == "reference_only" and r.get("nutrients")}
     public_assessments = load("data/public_assessments.json")
     published_ids = {a["plant_id"] for a in public_assessments}
     published_ids &= set(ids)
     official_ids = set(recs) | rda_ids
+    if not (reference_only_ids := (reference_ids - official_ids) & published_ids) and reference_ids:
+        print("NOTICE: no reference-only published plants remain")
     reference_only_ids = (reference_ids - official_ids) & published_ids
     unlinked_ids = published_ids - official_ids - reference_ids
     dm_path = ROOT / "data" / "plant_nutrition_dm_basis_v1.json"
@@ -97,6 +99,9 @@ def main():
                                "still_held": [pid for pid in LEGACY_69 if pid not in recs]},
         "plants": per_plant,
     }
+    tiers = report["published_plant_coverage"]
+    assert sum(tiers[k] for k in ("verified_official", "reference_only", "no_linked_data")) == tiers["total"], "published nutrition tiers do not sum to total"
+    assert set(tiers["reference_only_ids"]).isdisjoint(tiers["no_linked_data_ids"]), "nutrition tiers overlap"
     OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"nutrition coverage: {report['verified_plants']}/{total} verified ({report['coverage_percent']}%), held {report['held_plants']}; "
           f"legacy 69: {legacy_now}/69; DM-basis registry: {len(dm)} records / {len(dm_plants)} plants")
