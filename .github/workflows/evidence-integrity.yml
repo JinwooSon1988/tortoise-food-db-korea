@@ -16,6 +16,10 @@ on:
       - "scripts/audit_evidence_coverage.py"
       - "scripts/qa_verified_plant_images.py"
       - "scripts/plant_taxon_scope.py"
+      - "scripts/audit_bilingual_shared_contract.py"
+      - "index.html"
+      - "en/index.html"
+      - "en/search-en.js"
       - ".github/workflows/evidence-integrity.yml"
   pull_request:
     paths:
@@ -31,6 +35,10 @@ on:
       - "scripts/audit_nutrition_references.py"
       - "scripts/audit_nutrition_reference_queue.py"
       - "scripts/audit_evidence_coverage.py"
+      - "scripts/audit_bilingual_shared_contract.py"
+      - "index.html"
+      - "en/index.html"
+      - "en/search-en.js"
       - ".github/workflows/evidence-integrity.yml"
   workflow_dispatch:
 permissions:
@@ -54,3 +62,5 @@ jobs:
         run: python scripts/audit_nutrition_references.py
       - name: Check international nutrition research queue against registered references
         run: python scripts/audit_nutrition_reference_queue.py
+      - name: Check Korean and English shared-data contract
+        run: python scripts/audit_bilingual_shared_contract.py
