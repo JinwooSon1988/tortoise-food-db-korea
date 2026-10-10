@@ -124,6 +124,17 @@ function boot(){
    });
  }
  syncInternalLinks();
+ // Back/forward cache may restore a DOM in the language used before navigation.
+ // Reconcile it with the current persisted choice when the page becomes visible.
+ window.addEventListener('pageshow',event=>{
+   if(!event.persisted)return;
+   let preferred=document.documentElement.lang;
+   try{preferred=localStorage.getItem(K)==='en'?'en':'ko'}catch(_){}
+   const explicit=new URLSearchParams(location.search).get('lang');
+   if(explicit==='en'||explicit==='ko')preferred=explicit;
+   if(preferred!==document.documentElement.lang){apply(preferred);updateNav(preferred)}
+   syncInternalLinks();
+ });
  window.addEventListener('tfdblanguagechange',syncInternalLinks);
  document.addEventListener('click',e=>{
    const link=e.target.closest('a[href]');
