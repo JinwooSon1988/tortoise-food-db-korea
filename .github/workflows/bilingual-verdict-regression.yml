@@ -1,0 +1,36 @@
+name: Bilingual verdict value regression
+
+on:
+  pull_request:
+    paths:
+      - 'verdict-core.js'
+      - 'en/search-en.js'
+      - 'en/index.html'
+      - 'index.html'
+      - 'scripts/public_verdict.py'
+      - 'scripts/qa_verdict_consistency.py'
+      - 'data/public_assessments.json'
+      - 'data/plants.json'
+      - '.github/workflows/bilingual-verdict-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verdict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify every public plant verdict matches canonical JS and generated detail
+        run: python scripts/qa_verdict_consistency.py
+      - name: Verify English search uses the canonical verdict selection
+        run: |
+          node --check en/search-en.js
+          node -e "const fs=require('fs');const s=fs.readFileSync('en/search-en.js','utf8');for(const x of ['TV.representative(', 'TV.display('])if(!s.includes(x))throw Error('English search missing canonical API '+x)"
