@@ -42,6 +42,10 @@ for name, expected in PAGES.items():
         errors.append(f"{name}: expected html lang={expected['lang']}, got {parser.lang!r}")
     if expected["search"] and "searchInput" not in parser.ids:
         errors.append(f"{name}: search input missing")
+    if expected["search"]:
+        for control in ("searchInput", "searchBtn", "searchResults", "catalogCount"):
+            if control not in parser.ids:
+                errors.append(f"{name}: required search control missing: {control}")
     script_names = set()
     for src in parser.scripts:
         url = urlsplit(src)
