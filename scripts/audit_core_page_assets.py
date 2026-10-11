@@ -59,6 +59,22 @@ for name, expected in PAGES.items():
     for required in expected["scripts"] - script_names:
         errors.append(f"{name}: required script not loaded: {required}")
 
+# English search relies on these local datasets. Missing files make search silently fail.
+EN_SEARCH_DATA = (
+    "data/plants.json",
+    "data/korean_retail_name_map.json",
+    "data/public_assessments.json",
+    "data/i18n/en/catalog_en.json",
+    "data/verified_plant_images_v56.json",
+)
+english_search = (ROOT / "en/search-en.js").read_text(encoding="utf-8")
+for asset in EN_SEARCH_DATA:
+    if not (ROOT / asset).is_file():
+        errors.append(f"English search: missing dataset {asset}")
+    relative = "../" + asset
+    if relative not in english_search:
+        errors.append(f"English search: expected dataset reference {relative}")
+
 if errors:
     print("\n".join(errors), file=sys.stderr)
     sys.exit(1)
