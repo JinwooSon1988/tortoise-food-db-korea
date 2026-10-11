@@ -5,6 +5,8 @@ on:
     paths:
       - 'index.html'
       - 'en/index.html'
+      - 'plant/**'
+      - 'en/plant/**'
       - 'scripts/en_hubs.py'
       - 'scripts/test_mobile_browser_layout.cjs'
       - '.github/workflows/mobile-browser-layout.yml'
@@ -26,5 +28,5 @@ jobs:
         run: npm install --no-save --no-package-lock playwright
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
-      - name: Check Korean and English mobile layouts at 320, 375, and 390 pixels
+      - name: Check bilingual home and detail mobile layouts at 320, 375, and 390 pixels
         run: node scripts/test_mobile_browser_layout.cjs
