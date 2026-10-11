@@ -10,6 +10,9 @@ on:
       - 'guides/research-method/**'
       - 'language-toggle.js'
       - 'search-live.js'
+      - 'language-state-sync.js'
+      - 'search-en.js'
+      - 'verdict-core.js'
       - 'detail-locale-history.js'
       - '.github/workflows/core-page-stability.yml'
   workflow_dispatch:
@@ -27,3 +30,11 @@ jobs:
           python-version: '3.12'
       - name: Check critical page assets
         run: python scripts/audit_core_page_assets.py
+      - name: Check production JavaScript syntax
+        run: |
+          node --check language-toggle.js
+          node --check language-state-sync.js
+          node --check detail-locale-history.js
+          node --check search-live.js
+          node --check en/search-en.js
+          node --check verdict-core.js
