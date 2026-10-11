@@ -34,9 +34,9 @@ const server=http.createServer((req,res)=>{
      assert.ok(layout.inputWidth>=80 && layout.buttonWidth>=40,route+' '+width+'px search controls collapsed: '+JSON.stringify(layout));
      assert.ok(layout.inputLeft>=-2 && layout.inputRight<=width+2 && layout.buttonLeft>=-2 && layout.buttonRight<=width+2,route+' '+width+'px search controls clipped: '+JSON.stringify(layout));
     }
-    if(route==='/en/'){
+    if(route==='/' || route==='/en/'){
      await page.waitForFunction(()=>document.getElementById('catalogCount')?.dataset.ready==='1',{timeout:12000});
-     await page.locator('#searchInput').fill('dandelion');
+     await page.locator('#searchInput').fill(route==='/'?'민들레':'dandelion');
      await page.locator('#searchBtn').click();
      const cards=page.locator('#searchResults .resultcard');
      await cards.first().waitFor({state:'visible',timeout:10000});
