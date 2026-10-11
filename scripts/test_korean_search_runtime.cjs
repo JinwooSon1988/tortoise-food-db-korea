@@ -1,0 +1,22 @@
+// Execute the production Korean search suggestion logic against synthetic plant aliases.
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const listeners={};
+const document={addEventListener:(name,fn)=>{listeners[name]=fn}};
+const window={};
+vm.runInNewContext(fs.readFileSync('search-live.js','utf8'),{window,document},{filename:'search-live.js'});
+const {candidates,jamo,lev}=window.TortoiseKoSearch;
+assert.equal(typeof candidates,'function');
+assert.equal(jamo('민들레'),'ㅁㅣㄴㄷㅡㄹㄹㅔ');
+assert.equal(lev('abc','abd'),1);
+const rows=[{plant_id:'dandelion',aliases:['민들레']},{plant_id:'plantain',aliases:['질경이']}];
+const exact=candidates('민들레',rows);
+assert.equal(exact.length,1);
+assert.equal(exact[0].plant_id,'dandelion');
+assert.equal(exact[0].exact,true);
+const typo=candidates('민들래',rows);
+assert.ok(typo.some(x=>x.plant_id==='dandelion'&&!x.exact),'single-syllable typo suggestion');
+assert.equal(candidates('ㅁ',rows).length,0,'short query ignored');
+assert.equal(typeof listeners.DOMContentLoaded,'function','initializer attached');
+console.log('PASS: Korean search suggestion runtime, exact and typo matches, short query, initialization');
