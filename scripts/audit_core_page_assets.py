@@ -7,8 +7,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
-    "index.html": {"lang": "ko", "search": True, "scripts": {"language-toggle.js", "search-live.js"}},
-    "en/index.html": {"lang": "en", "search": True, "scripts": {"search-en.js"}},
+    "index.html": {"lang": "ko", "search": True, "scripts": {"language-toggle.js", "search-live.js", "verdict-core.js"}},
+    "en/index.html": {"lang": "en", "search": True, "scripts": {"search-en.js", "verdict-core.js"}},
     "plant/dandelion/index.html": {"lang": "ko", "search": False, "scripts": {"detail-locale-history.js"}},
     "en/plant/dandelion/index.html": {"lang": "en", "search": False, "scripts": {"detail-locale-history.js"}},
     "guides/research-method/index.html": {"lang": "ko", "search": False, "scripts": {"language-toggle.js"}},
@@ -58,6 +58,19 @@ for name, expected in PAGES.items():
         script_names.add(Path(url.path).name)
     for required in expected["scripts"] - script_names:
         errors.append(f"{name}: required script not loaded: {required}")
+
+# Both homepages must use the same verdict implementation, not separate grade rules.
+shared_verdict = ROOT / "verdict-core.js"
+if not shared_verdict.is_file():
+    errors.append("Shared verdict engine: verdict-core.js is missing")
+else:
+    verdict_source = shared_verdict.read_text(encoding="utf-8")
+    for consumer in ("en/search-en.js",):
+        consumer_source = (ROOT / consumer).read_text(encoding="utf-8")
+        if "window.TortoiseVerdict" not in consumer_source:
+            errors.append(f"{consumer}: shared verdict engine reference missing")
+    if "representative" not in verdict_source or "display" not in verdict_source:
+        errors.append("Shared verdict engine: expected public verdict API missing")
 
 # English search relies on these local datasets. Missing files make search silently fail.
 EN_SEARCH_DATA = (
