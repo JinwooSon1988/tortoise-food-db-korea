@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/audit_core_page_assets.py'
       - 'scripts/test_english_search_runtime.cjs'
+      - 'scripts/test_korean_search_runtime.cjs'
       - 'index.html'
       - 'en/**'
       - 'plant/**'
@@ -41,3 +42,5 @@ jobs:
           node --check verdict-core.js
       - name: Execute English search smoke test
         run: node scripts/test_english_search_runtime.cjs
+      - name: Execute Korean search suggestion smoke test
+        run: node scripts/test_korean_search_runtime.cjs
