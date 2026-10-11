@@ -152,6 +152,10 @@ def nav_en(rel):
             f'<div class="topmeta">{lang_switch("../../.." + rel)}</div></header>')
 
 
+def research_nav():
+    return "<header class=\"detailnav\"><nav class=\"detailnavlinks\" aria-label=\"Page navigation\"><a href=\"../../\" aria-label=\"Home\" title=\"Home\" class=\"iconnav-home\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 10 9-7 9 7\"/><path d=\"M5 9v12h14V9\"/><path d=\"M9 21v-7h6v7\"/></svg></a><button type=\"button\" aria-label=\"Back\" title=\"Back\" onclick=\"if(history.length>1)history.back();else location.href='../../'\" class=\"iconnav-back\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 19-7-7 7-7\"/><path d=\"M5 12h14\"/></svg></button></nav><div class=\"topmeta\"><nav class=\"langswitch\" aria-label=\"Language\"><a href=\"https://jinwooson1988.github.io/tortoise-food-db-korea/guides/research-method/\" hreflang=\"ko\" lang=\"ko\">한국어</a><strong aria-current=\"page\">English</strong></nav></div></header>"
+
+
 def research_page():
     rel = "/guides/research-method/"
     url = SITE_URL + "/en" + rel
@@ -192,7 +196,7 @@ def research_page():
     style = styles_of("guides/research-method/index.html")
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow">'
             f'<title>{esc(title)} | Tortoise Food DB</title><meta name="description" content="{esc(desc)}">{alternates(rel)}{og(title, desc, url, "article")}{ld(schema)}<style>{style}{LANG_CSS}</style></head>'
-            f'<body><main>{nav_en(rel)}{body}</main></body></html>')
+            f'<body><main>{research_nav()}{body}</main></body></html>')
 
 
 # English notes for the hand-curated Korean core-foods page (core-foods/index.html). The plant set is read from that page,
