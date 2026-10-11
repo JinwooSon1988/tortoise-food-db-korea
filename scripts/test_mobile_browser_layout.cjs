@@ -18,19 +18,22 @@ const server=http.createServer((req,res)=>{
  const port=server.address().port;
  const browser=await chromium.launch({headless:true});
  try{
-  for(const route of ['/','/en/']){
+  for(const route of ['/','/en/','/plant/dandelion/','/en/plant/dandelion/']){
    for(const width of [320,375,390]){
     const page=await browser.newPage({viewport:{width,height:812},deviceScaleFactor:1,isMobile:true,hasTouch:true});
     await page.goto('http://127.0.0.1:'+port+route,{waitUntil:'domcontentloaded'});
     const layout=await page.evaluate(()=>{
       const input=document.getElementById('searchInput'),button=document.getElementById('searchBtn');
       const doc=document.documentElement;
-      const ir=input.getBoundingClientRect(),br=button.getBoundingClientRect();
-      return {scrollWidth:doc.scrollWidth,innerWidth:innerWidth,inputWidth:ir.width,buttonWidth:br.width,inputLeft:ir.left,inputRight:ir.right,buttonLeft:br.left,buttonRight:br.right};
+      const ir=input?.getBoundingClientRect(),br=button?.getBoundingClientRect();
+      return {scrollWidth:doc.scrollWidth,innerWidth:innerWidth,hasSearch:!!(ir&&br),inputWidth:ir?.width,buttonWidth:br?.width,inputLeft:ir?.left,inputRight:ir?.right,buttonLeft:br?.left,buttonRight:br?.right};
     });
     assert.ok(layout.scrollWidth<=width+2,route+' '+width+'px horizontal overflow: '+JSON.stringify(layout));
-    assert.ok(layout.inputWidth>=80 && layout.buttonWidth>=40,route+' '+width+'px search controls collapsed: '+JSON.stringify(layout));
-    assert.ok(layout.inputLeft>=-2 && layout.inputRight<=width+2 && layout.buttonLeft>=-2 && layout.buttonRight<=width+2,route+' '+width+'px search controls clipped: '+JSON.stringify(layout));
+    if(route==='/' || route==='/en/'){
+     assert.ok(layout.hasSearch,route+' search controls missing');
+     assert.ok(layout.inputWidth>=80 && layout.buttonWidth>=40,route+' '+width+'px search controls collapsed: '+JSON.stringify(layout));
+     assert.ok(layout.inputLeft>=-2 && layout.inputRight<=width+2 && layout.buttonLeft>=-2 && layout.buttonRight<=width+2,route+' '+width+'px search controls clipped: '+JSON.stringify(layout));
+    }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
    }
