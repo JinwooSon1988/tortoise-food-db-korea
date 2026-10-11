@@ -34,6 +34,22 @@ const server=http.createServer((req,res)=>{
      assert.ok(layout.inputWidth>=80 && layout.buttonWidth>=40,route+' '+width+'px search controls collapsed: '+JSON.stringify(layout));
      assert.ok(layout.inputLeft>=-2 && layout.inputRight<=width+2 && layout.buttonLeft>=-2 && layout.buttonRight<=width+2,route+' '+width+'px search controls clipped: '+JSON.stringify(layout));
     }
+    if(route==='/en/'){
+     await page.waitForFunction(()=>document.getElementById('catalogCount')?.dataset.ready==='1',{timeout:12000});
+     await page.locator('#searchInput').fill('dandelion');
+     await page.locator('#searchBtn').click();
+     const cards=page.locator('#searchResults .resultcard');
+     await cards.first().waitFor({state:'visible',timeout:10000});
+     const resultLayout=await page.evaluate(()=>{
+      const cards=[...document.querySelectorAll('#searchResults .resultcard')];
+      return {scrollWidth:document.documentElement.scrollWidth,innerWidth:innerWidth,
+       cards:cards.map(c=>{const r=c.getBoundingClientRect();return {left:r.left,right:r.right,width:r.width}})};
+     });
+     assert.ok(resultLayout.cards.length>0,route+' search produced no cards');
+     assert.ok(resultLayout.scrollWidth<=width+2,route+' '+width+'px result horizontal overflow: '+JSON.stringify(resultLayout));
+     assert.ok(resultLayout.cards.every(c=>c.left>=-2&&c.right<=width+2&&c.width>100),route+' '+width+'px result card clipped: '+JSON.stringify(resultLayout));
+     console.log('PASS',route,width+'px search results',JSON.stringify(resultLayout));
+    }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
    }
