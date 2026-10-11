@@ -21,12 +21,21 @@ class PageParser(HTMLParser):
         self.lang = ""
         self.ids = set()
         self.scripts = []
+        self.viewport = None
+        self.search_input_attrs = None
+        self.search_button_attrs = None
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == "html":
             self.lang = a.get("lang", "")
         if a.get("id"):
             self.ids.add(a["id"])
+        if tag == "meta" and a.get("name", "").lower() == "viewport":
+            self.viewport = a.get("content", "")
+        if a.get("id") == "searchInput":
+            self.search_input_attrs = (tag, a)
+        if a.get("id") == "searchBtn":
+            self.search_button_attrs = (tag, a)
         if tag == "script" and a.get("src"):
             self.scripts.append(a["src"])
 
@@ -43,6 +52,14 @@ for name, expected in PAGES.items():
     if expected["search"] and "searchInput" not in parser.ids:
         errors.append(f"{name}: search input missing")
     if expected["search"]:
+        # Mobile browsers must use the device width; the input must expose a
+        # native search keyboard and the action must be an accessible button.
+        if not parser.viewport or "width=device-width" not in parser.viewport.replace(" ", ""):
+            errors.append(f"{name}: mobile viewport width=device-width missing")
+        if not parser.search_input_attrs or parser.search_input_attrs[0] != "input" or parser.search_input_attrs[1].get("type") != "search":
+            errors.append(f"{name}: search input must use native type=search")
+        if not parser.search_button_attrs or parser.search_button_attrs[0] != "button":
+            errors.append(f"{name}: search button must be a native button")
         for control in ("searchInput", "searchBtn", "searchResults", "catalogCount"):
             if control not in parser.ids:
                 errors.append(f"{name}: required search control missing: {control}")
