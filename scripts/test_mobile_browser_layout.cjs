@@ -50,6 +50,21 @@ const server=http.createServer((req,res)=>{
      assert.ok(resultLayout.cards.every(c=>c.left>=-2&&c.right<=width+2&&c.width>100),route+' '+width+'px result card clipped: '+JSON.stringify(resultLayout));
      console.log('PASS',route,width+'px search results',JSON.stringify(resultLayout));
     }
+    if(route==='/plant/dandelion/' || route==='/en/plant/dandelion/'){
+     const targetLang=route.startsWith('/en/')?'ko':'en';
+     const targetPath=targetLang==='en'?'/en/plant/dandelion/':'/plant/dandelion/';
+     const switchLink=page.locator('.detailnav .langswitch a[hreflang="'+targetLang+'"]');
+     await switchLink.waitFor({state:'visible',timeout:10000});
+     await Promise.all([
+      page.waitForURL(url=>url.pathname===targetPath&&url.searchParams.get('lang')===targetLang,{timeout:10000}),
+      switchLink.click()
+     ]);
+     assert.equal(new URL(page.url()).pathname,targetPath,'Language switch did not preserve plant identity');
+     assert.equal(await page.locator('main[data-plant-id="dandelion"]').count(),1,'Language switch lost plant detail');
+     const switchedWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+     assert.ok(switchedWidth<=width+2,'Language switch overflow at '+width+'px: '+switchedWidth);
+     console.log('PASS',route,width+'px language switch to '+targetLang);
+    }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
    }
