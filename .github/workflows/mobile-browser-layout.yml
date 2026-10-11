@@ -1,0 +1,30 @@
+name: Mobile Chromium layout regression
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'en/index.html'
+      - 'scripts/en_hubs.py'
+      - 'scripts/test_mobile_browser_layout.cjs'
+      - '.github/workflows/mobile-browser-layout.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  chromium-mobile-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install temporary browser test dependency
+        run: npm install --no-save --no-package-lock playwright
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Check Korean and English mobile layouts at 320, 375, and 390 pixels
+        run: node scripts/test_mobile_browser_layout.cjs
