@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/audit_core_page_assets.py'
+      - 'scripts/test_english_search_runtime.cjs'
       - 'index.html'
       - 'en/**'
       - 'plant/**'
@@ -38,3 +39,5 @@ jobs:
           node --check search-live.js
           node --check en/search-en.js
           node --check verdict-core.js
+      - name: Execute English search smoke test
+        run: node scripts/test_english_search_runtime.cjs
