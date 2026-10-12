@@ -97,5 +97,22 @@ const server=http.createServer((req,res)=>{
     await page.close();
    }
   }
+  // Regression: the all-plants page is a separate catalog from both home searches.
+  // A single botanical identity must appear only once on mobile.
+  for(const width of [320,375,390]){
+   const page=await browser.newPage({viewport:{width,height:812},deviceScaleFactor:1,isMobile:true,hasTouch:true});
+   try{
+    await page.goto('http://127.0.0.1:'+port+'/all-plants/',{waitUntil:'domcontentloaded'});
+    await page.waitForFunction(()=>document.getElementById('summary')?.textContent.includes('종 중'),{timeout:12000});
+    await page.locator('#q').fill('미나리');
+    await page.waitForFunction(()=>document.getElementById('summary')?.textContent.includes('1종 표시'),{timeout:10000});
+    const minariCards=page.locator('#mobilecards .mcard');
+    assert.equal(await minariCards.count(),1,'all-plants duplicated minari at '+width+'px');
+    assert.match(await minariCards.first().innerText(),/Oenanthe javanica/);
+    const scrollWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+    assert.ok(scrollWidth<=width+2,'all-plants overflow at '+width+'px: '+scrollWidth);
+    console.log('PASS /all-plants/ '+width+'px unique minari search');
+   }finally{await page.close()}
+  }
  }finally{await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1});
