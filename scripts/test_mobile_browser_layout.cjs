@@ -65,6 +65,26 @@ const server=http.createServer((req,res)=>{
      assert.ok(switchedWidth<=width+2,'Language switch overflow at '+width+'px: '+switchedWidth);
      console.log('PASS',route,width+'px language switch to '+targetLang);
     }
+    if(route==='/'){
+     const englishButton=page.locator('.langswitch button[data-lang="en"]');
+     await englishButton.click();
+     assert.equal(await page.locator('html').getAttribute('lang'),'en','Korean home did not switch to English');
+     assert.equal(await englishButton.getAttribute('aria-pressed'),'true','English toggle not marked active');
+     const englishWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+     assert.ok(englishWidth<=width+2,'English home toggle overflow '+width+'px: '+englishWidth);
+     const koreanButton=page.locator('.langswitch button[data-lang="ko"]');
+     await koreanButton.click();
+     assert.equal(await page.locator('html').getAttribute('lang'),'ko','Home did not switch back to Korean');
+     assert.equal(await koreanButton.getAttribute('aria-pressed'),'true','Korean toggle not marked active');
+     console.log('PASS',route,width+'px home language toggles');
+    }
+    if(route==='/en/'){
+     const koreanLink=page.locator('.langswitch a[hreflang="ko"]');
+     await koreanLink.click();
+     await page.waitForURL(url=>url.pathname==='/'||url.pathname==='/index.html',{timeout:10000});
+     assert.equal(await page.locator('html').getAttribute('lang'),'ko','English home Korean link failed');
+     console.log('PASS',route,width+'px Korean navigation');
+    }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
    }
