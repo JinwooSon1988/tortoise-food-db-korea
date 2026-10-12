@@ -49,17 +49,7 @@ const server=http.createServer((req,res)=>{
      assert.ok(resultLayout.scrollWidth<=width+2,route+' '+width+'px result horizontal overflow: '+JSON.stringify(resultLayout));
      assert.ok(resultLayout.cards.every(c=>c.left>=-2&&c.right<=width+2&&c.width>100),route+' '+width+'px result card clipped: '+JSON.stringify(resultLayout));
      console.log('PASS',route,width+'px search results',JSON.stringify(resultLayout));
-     const dandelion=page.locator('#searchResults .resultcard[data-plant-id="dandelion"] .detailbtn');
-     await dandelion.waitFor({state:'visible',timeout:10000});
-     const expectedDetail=route==='/'?'/plant/dandelion/':'/en/plant/dandelion/';
-     await Promise.all([
-      page.waitForURL(url=>url.pathname===expectedDetail,{timeout:10000}),
-      dandelion.click()
-     ]);
-     assert.equal(await page.locator('main[data-plant-id="dandelion"]').count(),1,'Search detail link opened wrong plant');
-     const detailWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
-     assert.ok(detailWidth<=width+2,route+' '+width+'px clicked detail overflow: '+detailWidth);
-     console.log('PASS',route,width+'px search to detail navigation');
+
 
     }
     if(route==='/plant/dandelion/' || route==='/en/plant/dandelion/'){
@@ -96,6 +86,19 @@ const server=http.createServer((req,res)=>{
      await page.waitForURL(url=>url.pathname==='/'||url.pathname==='/index.html',{timeout:10000});
      assert.equal(await page.locator('html').getAttribute('lang'),'ko','English home Korean link failed');
      console.log('PASS',route,width+'px Korean navigation');
+    }
+    if(route==='/' || route==='/en/'){
+     const dandelion=page.locator('#searchResults .resultcard[data-plant-id="dandelion"] .detailbtn');
+     await dandelion.waitFor({state:'visible',timeout:10000});
+     const expectedDetail=route==='/'?'/plant/dandelion/':'/en/plant/dandelion/';
+     await Promise.all([
+      page.waitForURL(url=>url.pathname===expectedDetail,{timeout:10000}),
+      dandelion.click()
+     ]);
+     assert.equal(await page.locator('main[data-plant-id="dandelion"]').count(),1,'Search detail link opened wrong plant');
+     const detailWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
+     assert.ok(detailWidth<=width+2,route+' '+width+'px clicked detail overflow: '+detailWidth);
+     console.log('PASS',route,width+'px search to detail navigation');
     }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
