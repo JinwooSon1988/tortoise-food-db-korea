@@ -6,7 +6,7 @@
     "candidate_count": 0,
     "research_pool_count": 182,
     "published": {
-      "verified_image": 130,
+      "verified_image": 132,
       "verified_nutrition": 63,
       "with_assessment": 182,
       "with_evidence": 182,
@@ -408,17 +408,16 @@
       "ko": "시금치",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "beetgreens",
@@ -1874,17 +1873,16 @@
       "ko": "숙주나물",
       "published": true,
       "identity_status": "verified_name",
-      "verified_image": false,
+      "verified_image": true,
       "verified_nutrition": true,
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
       "korea_alias_present": false,
       "gaps": [
-        "image",
         "korea_alias"
       ],
-      "next_action": "image"
+      "next_action": "korea_alias"
     },
     {
       "plant_id": "alfalfasprout",
