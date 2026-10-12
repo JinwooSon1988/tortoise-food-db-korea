@@ -12,6 +12,27 @@ assert len(urls) == len(set(urls)), "Duplicate sitemap URLs"
 assert BASE + "all-plants/" in urls, "Indexable all-plants catalog missing from sitemap"
 assert BASE + "en/all-plants/" not in urls, "Noindex English redirect included in sitemap"
 assert all(url and url.startswith(BASE) for url in urls), "Unexpected sitemap origin"
+# Validate multilingual alternates on all sitemap entries, not only the catalog.
+XHTML = "{http://www.w3.org/1999/xhtml}link"
+SM = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+entries = tree.findall(f".//{SM}url")
+listed = set(urls)
+for entry in entries:
+    loc = entry.findtext(f"{SM}loc")
+    alternates = {}
+    for link in entry.findall(XHTML):
+        lang, href = link.get("hreflang"), link.get("href")
+        assert lang and href, f"Malformed hreflang on {loc}"
+        assert lang not in alternates, f"Duplicate {lang} hreflang on {loc}"
+        assert href in listed, f"Alternate not indexed in sitemap: {loc} -> {href}"
+        alternates[lang] = href
+    if alternates:
+        assert alternates.get("ko") and alternates.get("en"), f"Incomplete language pair: {loc}"
+        assert alternates.get("x-default") in (alternates["ko"], alternates["en"]), f"Invalid x-default: {loc}"
+        for href in (alternates["ko"], alternates["en"]):
+            peer = next(e for e in entries if e.findtext(f"{SM}loc") == href)
+            peer_alternates = {link.get("hreflang"): link.get("href") for link in peer.findall(XHTML)}
+            assert peer_alternates == alternates, f"Nonreciprocal hreflang: {loc} <-> {href}"
 page = (ROOT / "all-plants/index.html").read_text(encoding="utf-8")
 assert '<meta name="robots" content="index,follow">' in page, "Catalog is not indexable"
 assert f'<link rel="canonical" href="{BASE}all-plants/">' in page, "Catalog canonical mismatch"
