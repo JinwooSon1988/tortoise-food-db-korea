@@ -15,10 +15,10 @@ const document = {
   activeElement:null
 };
 const fixture = {
-  '../data/plants.json':[{id:'test_leaf',ko:'시험잎',en:'Test Leaf',scientific:'Testus folia',identity_status:'verified'}],
+  '../data/plants.json':[{id:'test_leaf',ko:'시험잎',en:'Test Leaf',scientific:'Testus folia',identity_status:'verified'},{id:'test_leaf_duplicate',ko:'시험잎',en:'Test Leaf',scientific:'Testus folia',identity_status:'verified'}],
   '../data/korean_retail_name_map.json':[],
-  '../data/public_assessments.json':[{plant_id:'test_leaf',animal_taxon:'Testudo',verdict:'supported_mixed_diet',confidence:'high'}],
-  '../data/i18n/en/catalog_en.json':{plants:[{id:'test_leaf',name:'Test Leaf',aliases:['Leaf Test'],why:'Fixture evidence',role:'Mixed diet'}]},
+  '../data/public_assessments.json':[{plant_id:'test_leaf',animal_taxon:'Testudo',verdict:'supported_mixed_diet',confidence:'high'},{plant_id:'test_leaf_duplicate',animal_taxon:'Testudo',verdict:'supported_mixed_diet',confidence:'high'}],
+  '../data/i18n/en/catalog_en.json':{plants:[{id:'test_leaf',name:'Test Leaf',aliases:['Leaf Test'],why:'Fixture evidence',role:'Mixed diet'},{id:'test_leaf_duplicate',name:'Test Leaf',aliases:[],why:'Fixture evidence',role:'Mixed diet'}]},
   '../data/verified_plant_images_v56.json':{images:[]}
 };
 const core = require('../verdict-core.js');
@@ -47,6 +47,7 @@ async function main(){
   input.value='Test Leaf';button.onclick();
   assert.match(results.innerHTML,/data-plant-id="test_leaf"/);
   assert.match(results.innerHTML,/data-grade="A"/);
+  assert.equal((results.innerHTML.match(/data-plant-id=/g)||[]).length,1,'duplicate botanical identity appears once');
   input.value='시험잎';button.onclick();
   assert.match(results.innerHTML,/data-plant-id="test_leaf"/,'Korean query searches English catalog');
   input.value='not-in-catalog';button.onclick();
