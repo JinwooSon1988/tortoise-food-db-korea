@@ -8,6 +8,10 @@ const assessments=read('data/public_assessments.json');
 const ids=new Set(plants.map(p=>p.id));
 const exactIds=new Set(exact.map(p=>p.plant_id));
 const referenceIds=new Set(references.map(p=>p.plant_id));
+// A legacy alias ID is the same plant as its canonical ID; records live on the canonical ID only.
+const identityRegistry=fs.existsSync(new URL('../data/plant_identity_registry_v1.json',import.meta.url))?read('data/plant_identity_registry_v1.json'):{};
+const canonicalAliases=identityRegistry.canonical_aliases||[];
+for(const a of canonicalAliases){if(exactIds.has(a.canonical_id))exactIds.add(a.legacy_id);if(referenceIds.has(a.canonical_id))referenceIds.add(a.legacy_id)}
 const missing=plants.filter(p=>!exactIds.has(p.id)&&!referenceIds.has(p.id));
 const referenceOnly=plants.filter(p=>!exactIds.has(p.id)&&referenceIds.has(p.id));
 const orphanExact=exact.filter(p=>!ids.has(p.plant_id));
@@ -41,7 +45,8 @@ const summary={
   reference_only_plants:referenceOnly.length,
   no_linked_nutrition_plants:missing.length,
   reference_records:references.length,
-  distinct_reference_plants:referenceIds.size,
+  distinct_reference_plants:new Set(references.map(p=>p.plant_id)).size,
+  legacy_alias_ids:canonicalAliases.map(a=>a.legacy_id),
   reference_records_overlapping_exact:references.filter(r=>exactIds.has(r.plant_id)).length,
   possible_same_taxon_manual_review:possibleSameTaxon.map(group=>({
     ...group,

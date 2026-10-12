@@ -168,7 +168,8 @@ def main():
                 avg, nb = rows[lab]
                 (entry["checked"] if close(v, avg) else entry["mismatch"]).append(k if close(v, avg) else f"{k}: record {v} vs source {avg}")
                 sc = (r.get("sample_counts") or {}).get(k)
-                if sc is not None and nb is not None and sc != nb:
+                # Feedipedia prints "*" in the Nb column for values calculated by equation; the records store "equation".
+                if sc is not None and nb is not None and sc != ("equation" if nb == "*" else nb):
                     entry["sample_count_mismatch"].append(f"{k}: record n={sc} vs source n={nb}")
         else:
             if "mext" in url:

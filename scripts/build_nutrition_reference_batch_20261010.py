@@ -195,7 +195,7 @@ def from_rda(rows, code, pid, tier, sci, part, sko, sen, cko, cen):
     ko, en = note(FRESH_NOTE_KO, FRESH_NOTE_EN, cko, cen)
     return {"reference_id": f"rda-{code.lower()}-{pid}-{TODAY.replace('-', '')}", "plant_id": pid, "scientific_name": sci,
             "source_name": f"농촌진흥청 국가표준식품성분표(통합식품영양성분정보 원재료성식품) — {d['식품명']}", "source_id": code,
-            "source_url": "https://www.data.go.kr/data/15100065/fileData.do", "analyzed_part": part, "preparation_state": "raw",
+            "source_url": "https://www.data.go.kr/data/15100065/standard.do", "analyzed_part": part, "preparation_state": "raw",
             "basis": "per 100 g edible portion, raw", "nutrients": vals, "nutrient_units": {k: FRESH_UNITS[k] for k in vals},
             "source_data_generation": {"method": d.get("데이터생성방법명"), "generated": d.get("데이터생성일자"), "reference_date": d.get("데이터기준일자")},
             "display_tier": tier, "reference_scope_ko": sko, "reference_scope_en": sen, "display_note_ko": ko, "display_note_en": en,

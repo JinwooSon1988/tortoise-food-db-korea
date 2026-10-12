@@ -1,0 +1,39 @@
+name: Plant data integrity QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/plants.json'
+      - 'data/plant_identity_registry_v1.json'
+      - 'data/plant_taxonomy_audit_v1.json'
+      - 'data/plant_nutrition_v56.json'
+      - 'data/plant_nutrition_reference_v1.json'
+      - 'data/rda_food_composition_v56.json'
+      - 'data/nutrition_verified_source_check_v1.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/feeding_evidence_strength_audit_v1.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'scripts/qa_plant_identity_v1.py'
+      - 'scripts/qa_nutrition_integrity_v1.py'
+      - 'scripts/build_feeding_evidence_strength_audit_v1.py'
+      - '.github/workflows/plant-data-integrity-qa.yml'
+  push:
+    branches: [main]
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Duplicates, name and alias collisions, taxon overlaps, legacy alias IDs
+        run: python scripts/qa_plant_identity_v1.py
+      - name: Verified nutrition values equal the source-checked ledger
+        run: python scripts/qa_nutrition_integrity_v1.py
+      - name: Feeding evidence strength audit is current
+        run: python scripts/build_feeding_evidence_strength_audit_v1.py --check

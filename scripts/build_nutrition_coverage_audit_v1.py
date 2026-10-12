@@ -50,6 +50,15 @@ def main():
     published_ids = {a["plant_id"] for a in public_assessments}
     published_ids &= set(ids)
     official_ids = set(recs) | rda_ids
+    # A legacy alias ID is the same plant as its canonical ID (data/plant_identity_registry_v1.json): records are kept on
+    # the canonical ID only, and the alias row reports the same nutrition tier instead of looking like a gap.
+    registry_path = ROOT / "data" / "plant_identity_registry_v1.json"
+    aliases = {a["legacy_id"]: a["canonical_id"] for a in json.loads(registry_path.read_text(encoding="utf-8")).get("canonical_aliases", [])} if registry_path.exists() else {}
+    for legacy, canonical in aliases.items():
+        if canonical in official_ids:
+            official_ids.add(legacy)
+        if canonical in reference_ids:
+            reference_ids.add(legacy)
     reference_only_ids = (reference_ids - official_ids) & published_ids
     unlinked_ids = published_ids - official_ids - reference_ids
     dm_path = ROOT / "data" / "plant_nutrition_dm_basis_v1.json"
@@ -72,6 +81,8 @@ def main():
         else:
             h = holds.get(pid)
             row.update({"status": "held", "hold_reason_code": h["hold_reason_code"] if h else None, "dm_basis_record": pid in dm_plants})
+        if pid in aliases:
+            row["legacy_alias_of"] = aliases[pid]
         row["nutrition_display_tier"] = ("verified_official" if pid in official_ids else "reference_only" if pid in reference_ids else "no_linked_data")
         per_plant.append(row)
     legacy_now = sum(1 for pid in LEGACY_69 if pid in recs)
@@ -79,7 +90,7 @@ def main():
         "schema_version": "1.0",
         "purpose": "Descriptive nutrition coverage audit. Coverage numbers never change feeding verdicts, grades or confidence.",
         "public_plants": total,
-        "published_plant_coverage": {"total": len(published_ids), "verified_official": len(official_ids & published_ids), "reference_only": len(reference_only_ids), "no_linked_data": len(unlinked_ids), "reference_only_ids": sorted(reference_only_ids), "no_linked_data_ids": sorted(unlinked_ids), "note": "Reference-only values do not qualify as verified exact nutrition or influence feeding grades."},
+        "published_plant_coverage": {"total": len(published_ids), "verified_official": len(official_ids & published_ids), "reference_only": len(reference_only_ids), "no_linked_data": len(unlinked_ids), "reference_only_ids": sorted(reference_only_ids), "no_linked_data_ids": sorted(unlinked_ids), "legacy_alias_ids": sorted(set(aliases) & published_ids), "unique_identities": len(published_ids - set(aliases)), "note": "Reference-only values do not qualify as verified exact nutrition or influence feeding grades."},
         "verified_plants": len([pid for pid in ids if pid in recs]),
         "held_plants": len([pid for pid in ids if pid not in recs]),
         "coverage_percent": pct(len([pid for pid in ids if pid in recs]), total),

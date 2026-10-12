@@ -73,7 +73,8 @@
       "rda_food_name_ko": "비트잎",
       "identity_match": "exact",
       "preparation": "raw_or_unspecified_fresh",
-      "values_per_100g": {"water_g": 93.9, "fiber_g": 2.9, "calcium_mg": 79, "phosphorus_mg": 55}
+      "values_per_100g": {"water_g": 92.9, "calcium_mg": 57, "phosphorus_mg": 54},
+      "correction": {"corrected_at": "2026-10-12", "previous_values_per_100g": {"water_g": 93.9, "fiber_g": 2.9, "calcium_mg": 79, "phosphorus_mg": 55}, "reason": "RDA 10.4 record F095000B140a (비트, 잎, 생것) lists water 92.9 g, calcium 57 mg, phosphorus 54 mg and no dietary-fibre value; the previous numbers match no RDA beet-leaf record.", "source_checked": "https://www.nics.go.kr/food/kfi/fct/fctFoodSrch/detail?foodCodes=F095000B140a&fdNms=x&reformNo=-1&customQnt=100&onCuntNtkQntAt="}
     },
     {
       "plant_id": "parsley",

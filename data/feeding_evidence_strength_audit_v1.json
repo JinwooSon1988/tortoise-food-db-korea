@@ -1,0 +1,5916 @@
+{
+ "schema_version": "1.0",
+ "purpose": "Directness of the evidence behind each published feeding assessment. Descriptive only; verdicts, grades and confidence values are not changed by this file. Confidence and directness are separate properties.",
+ "evidence_classes_strongest_first": [
+  "same_taxon_tortoise_study",
+  "other_tortoise_study",
+  "husbandry_or_expert",
+  "other_animal_study",
+  "plant_toxicity_or_chemistry",
+  "composition_or_identity"
+ ],
+ "summary": {
+  "assessments": 186,
+  "by_strongest_evidence_class": {
+   "same_taxon_tortoise_study": 9,
+   "other_tortoise_study": 1,
+   "husbandry_or_expert": 170,
+   "composition_or_identity": 3,
+   "other_animal_study": 3
+  },
+  "flag_counts": {
+   "no_tortoise_study": 176,
+   "single_tortoise_feeding_source": 148,
+   "same_source_cited_twice": 4,
+   "no_tortoise_feeding_source": 6,
+   "do_not_feed_without_animal_or_expert_source": 1,
+   "confidence_B_or_higher_without_tortoise_study": 4,
+   "positive_verdict_without_tortoise_feeding_source": 3
+  },
+  "weakness_tiers": {
+   "none": 28,
+   "C_single_specialist_source": 148,
+   "A_no_tortoise_feeding_source": 6,
+   "B_confidence_exceeds_directness": 4
+  },
+  "confidence_by_strongest_class": {
+   "same_taxon_tortoise_study": {
+    "B+": 1,
+    "C": 1,
+    "B": 4,
+    "B-": 2,
+    "A": 1
+   },
+   "other_tortoise_study": {
+    "C-": 1
+   },
+   "husbandry_or_expert": {
+    "C+": 46,
+    "C": 113,
+    "D+": 1,
+    "C-": 6,
+    "B": 4
+   },
+   "other_animal_study": {
+    "C-": 2,
+    "C": 1
+   },
+   "composition_or_identity": {
+    "C": 3
+   }
+  }
+ },
+ "evidence_registry_checks": {
+  "evidence_records": 277,
+  "sources_registered_more_than_once": [
+   {
+    "url": "https://doi.org/10.1016/j.foodcont.2024.110930",
+    "evidence_ids": [
+     "sattler_borage_pa_2025",
+     "sattler_borago_pa_2025"
+    ]
+   },
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/pmc8257512",
+    "evidence_ids": [
+     "ceccanti_rumex_oxalate_2021",
+     "di_noia_rumex_oxalate_2021",
+     "rumex_acetosa_oxalate_2021"
+    ]
+   },
+   {
+    "url": "https://powo.science.kew.org/taxon/417792-1",
+    "evidence_ids": [
+     "kew_poa_pratensis_animal_food",
+     "kew_poa_pratensis_identity"
+    ]
+   },
+   {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33003576",
+    "evidence_ids": [
+     "piatczak_salix_alba_leaf_2020",
+     "piatczak_salix_alba_leaf_phenolics_2020"
+    ]
+   },
+   {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36924638",
+    "evidence_ids": [
+     "sattler_borage_pa_2023",
+     "sattler_borago_pa_2023"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=736",
+    "evidence_ids": [
+     "tortoise_table_harebell",
+     "ttable_campanula_rotundifolia_736"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=313",
+    "evidence_ids": [
+     "tortoise_table_calendula",
+     "tortoise_table_calendula_current"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=622",
+    "evidence_ids": [
+     "tortoise_table_broccoli",
+     "tt_broccoli_622"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=624",
+    "evidence_ids": [
+     "tt_melon_624",
+     "tt_watermelon_624"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=627",
+    "evidence_ids": [
+     "tortoise_table_squash_courgette",
+     "tortoise_table_squash_cucurbita_moschata"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
+    "evidence_ids": [
+     "tortoise_table_hawkbit",
+     "tortoise_table_hawkweed",
+     "tortoise_table_hibiscus_rosa"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all",
+    "evidence_ids": [
+     "tortoise_table_cornflower",
+     "tortoise_table_cosmos"
+    ]
+   },
+   {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples",
+    "evidence_ids": [
+     "tortoise_table_peach_tree",
+     "tortoise_table_pear_tree"
+    ]
+   },
+   {
+    "url": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+    "evidence_ids": [
+     "tortoise_trust_mediterranean_grass_context",
+     "tt_mediterranean_food"
+    ]
+   },
+   {
+    "url": "https://www.tortoisetrust.org/articles/plantfoods.html",
+    "evidence_ids": [
+     "tortoise_trust_hedge_mustard",
+     "tt_plantfoods",
+     "ttrust_lamium_album",
+     "ttrust_sisymbrium_officinale"
+    ]
+   }
+  ],
+  "records_not_cited_by_any_assessment": [
+   "tortoise_table_calendula",
+   "ttable_campanula_rotundifolia_736",
+   "ttrust_sisymbrium_officinale"
+  ],
+  "records_pointing_to_a_list_or_search_page": [
+   "tortoise_table_apple_tree",
+   "tortoise_table_birch",
+   "tortoise_table_cornflower",
+   "tortoise_table_cosmos",
+   "tortoise_table_echinacea",
+   "tortoise_table_ginkgo",
+   "tortoise_table_hawkbit",
+   "tortoise_table_hawkweed",
+   "tortoise_table_hibiscus_rosa",
+   "tortoise_table_lavender",
+   "tortoise_table_peach_tree",
+   "tortoise_table_pear_tree",
+   "tt_malva_spp_safe"
+  ],
+  "records_without_year": [
+   "bcg_chelonian_nutrition",
+   "bcg_mediterranean_care",
+   "bcg_sulcata_care",
+   "chersina_cynodon_field_diet",
+   "hermanni_foraging_italy_2015",
+   "ibera_eastern_account_2023",
+   "kbr_buddleja_davidii",
+   "kew_abutilon_indicum",
+   "kew_aeonium_arboreum",
+   "kew_buddleja_davidii",
+   "kew_commonmallow_identity",
+   "kew_dichondra_micrantha",
+   "kew_poa_pratensis_animal_food",
+   "kew_poa_pratensis_identity",
+   "kew_redclover_identity",
+   "kew_ribwortplantain_identity",
+   "kew_whiteclover_identity",
+   "korea_lambs_lettuce_identity",
+   "korean_dolnamul_identity",
+   "merck_reptile_home_plant_eaters",
+   "merck_reptile_plant_composition",
+   "naturescape_nt_tortoise_mix",
+   "rda_alfalfa_identity",
+   "rda_korean_chard_identity",
+   "tortoise_table_apple_tree",
+   "tortoise_table_astilbe",
+   "tortoise_table_basil",
+   "tortoise_table_beetroot",
+   "tortoise_table_birch",
+   "tortoise_table_borage",
+   "tortoise_table_bramble_leaf",
+   "tortoise_table_broccoli",
+   "tortoise_table_calendula",
+   "tortoise_table_calendula_current",
+   "tortoise_table_carrot",
+   "tortoise_table_cat_grass",
+   "tortoise_table_catsear",
+   "tortoise_table_cauliflower",
+   "tortoise_table_celery",
+   "tortoise_table_chamomile",
+   "tortoise_table_chard",
+   "tortoise_table_chicory",
+   "tortoise_table_chinese_cabbage",
+   "tortoise_table_chrysanthemum",
+   "tortoise_table_comfrey",
+   "tortoise_table_coreopsis",
+   "tortoise_table_coriander",
+   "tortoise_table_cornflower",
+   "tortoise_table_cosmos",
+   "tortoise_table_cucumber",
+   "tortoise_table_dahlia",
+   "tortoise_table_daisy",
+   "tortoise_table_dandelion",
+   "tortoise_table_dill",
+   "tortoise_table_dock",
+   "tortoise_table_echeveria",
+   "tortoise_table_echinacea",
+   "tortoise_table_elm",
+   "tortoise_table_erigeron_canadensis",
+   "tortoise_table_evening_primrose",
+   "tortoise_table_fennel",
+   "tortoise_table_fig_tree",
+   "tortoise_table_gerbera",
+   "tortoise_table_ginkgo",
+   "tortoise_table_grape_hyacinth",
+   "tortoise_table_grapevine",
+   "tortoise_table_harebell",
+   "tortoise_table_hawkbit",
+   "tortoise_table_hawksbeard",
+   "tortoise_table_hawkweed",
+   "tortoise_table_hawthorn",
+   "tortoise_table_hazel",
+   "tortoise_table_henbit",
+   "tortoise_table_hibiscus_rosa",
+   "tortoise_table_hibiscus_syriacus",
+   "tortoise_table_hollyhock",
+   "tortoise_table_hosta",
+   "tortoise_table_houseleek",
+   "tortoise_table_kale",
+   "tortoise_table_kohlrabi",
+   "tortoise_table_lambs_lettuce",
+   "tortoise_table_lambsquarters",
+   "tortoise_table_lavender",
+   "tortoise_table_lemon_balm",
+   "tortoise_table_linden",
+   "tortoise_table_maize_leaf",
+   "tortoise_table_mallow",
+   "tortoise_table_maple",
+   "tortoise_table_mexicanpetunia",
+   "tortoise_table_milk_thistle",
+   "tortoise_table_mint",
+   "tortoise_table_monarda",
+   "tortoise_table_mugwort",
+   "tortoise_table_mulberry",
+   "tortoise_table_mung_bean_sprout",
+   "tortoise_table_nasturtium",
+   "tortoise_table_opuntia",
+   "tortoise_table_oregano",
+   "tortoise_table_pansy",
+   "tortoise_table_parsley",
+   "tortoise_table_pea_shoots",
+   "tortoise_table_peach_tree",
+   "tortoise_table_pear_tree",
+   "tortoise_table_pelargonium",
+   "tortoise_table_perilla",
+   "tortoise_table_petunia",
+   "tortoise_table_plum_tree_related",
+   "tortoise_table_poplar",
+   "tortoise_table_primula",
+   "tortoise_table_pumpkin",
+   "tortoise_table_purslane",
+   "tortoise_table_radish",
+   "tortoise_table_raspberry",
+   "tortoise_table_rocket",
+   "tortoise_table_rosemary",
+   "tortoise_table_sage",
+   "tortoise_table_sainfoin",
+   "tortoise_table_salsify",
+   "tortoise_table_sedum",
+   "tortoise_table_shepherdspurse",
+   "tortoise_table_snapdragon",
+   "tortoise_table_sorrel",
+   "tortoise_table_spinach",
+   "tortoise_table_squash_courgette",
+   "tortoise_table_squash_cucurbita_moschata",
+   "tortoise_table_strawberry",
+   "tortoise_table_sunflower",
+   "tortoise_table_sweet_pepper",
+   "tortoise_table_sweetpotato",
+   "tortoise_table_tagetes",
+   "tortoise_table_thyme",
+   "tortoise_table_timothy",
+   "tortoise_table_tomato",
+   "tortoise_table_turnip",
+   "tortoise_table_violet",
+   "tortoise_table_water_dropwort_warning",
+   "tortoise_table_willow",
+   "tortoise_table_yarrow",
+   "tortoise_table_zinnia",
+   "tortoise_trust_mediterranean_grass_context",
+   "tt_alfalfa_251",
+   "tt_bean_leaf_494",
+   "tt_brassica_rapa_117",
+   "tt_broccoli_622",
+   "tt_chrysanthemum_94",
+   "tt_fescue_694",
+   "tt_malva_spp_safe",
+   "tt_mediterranean_food",
+   "tt_melon_624",
+   "tt_oilseed_rape_418",
+   "tt_plantfoods",
+   "tt_watermelon_624",
+   "tt_winter_feeding",
+   "ttable_abutilon_32",
+   "ttable_aeonium_530",
+   "ttable_buddleia_68",
+   "ttable_campanula_rotundifolia_736",
+   "ttable_dichondra_707",
+   "ttable_erodium_botrys_65",
+   "ttable_lamium_album_774",
+   "ttable_sisymbrium_officinale_712",
+   "ttable_vicia_310",
+   "ucdavis_herbivorous_reptile_greens",
+   "vetpharm_althaea_officinalis"
+  ]
+ },
+ "assessments": [
+  {
+   "plant_id": "dandelion",
+   "ko": "민들레",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "supported_mixed_diet",
+   "confidence": "B+",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 2,
+    "husbandry_or_expert": 5
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "iftime_ibera_dobrogea_2012",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "mitrevichin_ibera_bulgaria_2023",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "bcg_mediterranean_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii"
+    },
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "tortoise_table_dandelion",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "plantain",
+   "ko": "질경이",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 1,
+    "husbandry_or_expert": 3
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "bcg_mediterranean_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii"
+    },
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "hermanni_foraging_italy_2015",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "conference_proceedings",
+     "animal_taxon": "Testudo hermanni"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "sowthistle",
+   "ko": "방가지똥",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "supported_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 2,
+    "husbandry_or_expert": 4
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "iftime_ibera_dobrogea_2012",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "ibera_eastern_account_2023",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "specialist_group_species_account",
+     "animal_taxon": "Testudo graeca ibera and eastern Testudo graeca clades"
+    },
+    {
+     "evidence_id": "bcg_mediterranean_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii"
+    },
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "clover",
+   "ko": "클로버",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 3,
+    "husbandry_or_expert": 3
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "iftime_ibera_dobrogea_2012",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "ibera_eastern_account_2023",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "specialist_group_species_account",
+     "animal_taxon": "Testudo graeca ibera and eastern Testudo graeca clades"
+    },
+    {
+     "evidence_id": "bcg_mediterranean_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii"
+    },
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "hermanni_foraging_italy_2015",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "conference_proceedings",
+     "animal_taxon": "Testudo hermanni"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "alfalfa",
+   "ko": "알팔파",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B-",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 3,
+    "other_tortoise_study": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "iftime_ibera_dobrogea_2012",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "mitrevichin_ibera_bulgaria_2023",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "ibera_eastern_account_2023",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "specialist_group_species_account",
+     "animal_taxon": "Testudo graeca ibera and eastern Testudo graeca clades"
+    },
+    {
+     "evidence_id": "tgraeca_alfalfa_context_2019",
+     "class": "other_tortoise_study",
+     "source_type": "peer_reviewed_context",
+     "animal_taxon": "Testudo graeca"
+    },
+    {
+     "evidence_id": "rda_alfalfa_identity",
+     "class": "composition_or_identity",
+     "source_type": "official_agriculture_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "dolnamul",
+   "ko": "돌나물",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C-",
+   "strongest_evidence_class": "other_tortoise_study",
+   "evidence_class_counts": {
+    "other_tortoise_study": 1,
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "mitrevichin_ibera_bulgaria_2023",
+     "class": "other_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "tortoise_table_sedum",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "korean_dolnamul_identity",
+     "class": "composition_or_identity",
+     "source_type": "official_biodiversity_agriculture",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "romaine",
+   "ko": "로메인",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 4
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "tt_winter_feeding",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "bcg_chelonian_nutrition",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_veterinary_review",
+     "animal_taxon": "Testudo spp."
+    },
+    {
+     "evidence_id": "merck_tortoise_nutrition_2025",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual_peer_reviewed",
+     "animal_taxon": "Tortoises"
+    }
+   ]
+  },
+  {
+   "plant_id": "lettuce",
+   "ko": "상추",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 3
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "tt_winter_feeding",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "merck_tortoise_nutrition_2025",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual_peer_reviewed",
+     "animal_taxon": "Tortoises"
+    }
+   ]
+  },
+  {
+   "plant_id": "endive",
+   "ko": "엔다이브",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 5
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tt_winter_feeding",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "bcg_chelonian_nutrition",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_veterinary_review",
+     "animal_taxon": "Testudo spp."
+    },
+    {
+     "evidence_id": "merck_tortoise_nutrition_2025",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual_peer_reviewed",
+     "animal_taxon": "Tortoises"
+    },
+    {
+     "evidence_id": "merck_reptile_plant_composition",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual_table",
+     "animal_taxon": "Reptiles"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "radicchio",
+   "ko": "라디키오",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_winter_feeding",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "germ_chicory_leaf_minerals_2020",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "kale",
+   "ko": "케일",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 5
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tt_winter_feeding",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "bcg_chelonian_nutrition",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_veterinary_review",
+     "animal_taxon": "Testudo spp."
+    },
+    {
+     "evidence_id": "merck_tortoise_nutrition_2025",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual_peer_reviewed",
+     "animal_taxon": "Tortoises"
+    },
+    {
+     "evidence_id": "merck_reptile_plant_composition",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual_table",
+     "animal_taxon": "Reptiles"
+    },
+    {
+     "evidence_id": "tortoise_table_kale",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "chicory",
+   "ko": "치커리",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B-",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 1,
+    "husbandry_or_expert": 2,
+    "composition_or_identity": 1
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "mitrevichin_ibera_bulgaria_2023",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
+    },
+    {
+     "evidence_id": "tortoise_table_chicory",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "chicory_foodchem_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_review",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "rose",
+   "ko": "장미꽃",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    }
+   ]
+  },
+  {
+   "plant_id": "chickweed",
+   "ko": "별꽃",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "bcg_mediterranean_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii"
+    }
+   ]
+  },
+  {
+   "plant_id": "mulberry",
+   "ko": "뽕잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "D+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mulberry",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "mulberry_feed_review_2019",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "mulberry_feed_jfca_2025",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "bokchoy",
+   "ko": "청경채",
+   "species_group": "Herbivorous_reptile_general",
+   "verdict": "general_reptile_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "merck_reptile_home_plant_eaters",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual",
+     "animal_taxon": "Plant-eating reptiles"
+    },
+    {
+     "evidence_id": "wieczorek_pakchoi_glucosinolates_2013",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "collard",
+   "ko": "콜라드그린",
+   "species_group": "Herbivorous_reptile_general",
+   "verdict": "general_reptile_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "merck_reptile_home_plant_eaters",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual",
+     "animal_taxon": "Plant-eating reptiles"
+    },
+    {
+     "evidence_id": "stansell_collard_glucosinolates_2015",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "cabbage",
+   "ko": "양배추",
+   "species_group": "Herbivorous_reptile_general",
+   "verdict": "general_reptile_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "merck_reptile_home_plant_eaters",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_manual",
+     "animal_taxon": "Plant-eating reptiles"
+    },
+    {
+     "evidence_id": "kabouw_cabbage_glucosinolates_2010",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "dandelion",
+   "ko": "민들레",
+   "species_group": "Sulcata",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "bcg_sulcata_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Centrochelys sulcata"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "plantain",
+   "ko": "질경이",
+   "species_group": "Sulcata",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "bcg_sulcata_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Centrochelys sulcata"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "clover",
+   "ko": "클로버",
+   "species_group": "Sulcata",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "bcg_sulcata_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Centrochelys sulcata"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "chickweed",
+   "ko": "별꽃",
+   "species_group": "Sulcata",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "bcg_sulcata_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Centrochelys sulcata"
+    }
+   ]
+  },
+  {
+   "plant_id": "watercress",
+   "ko": "물냉이",
+   "species_group": "Sulcata",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "bcg_sulcata_care",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Centrochelys sulcata"
+    },
+    {
+     "evidence_id": "kyriakou_watercress_aerial_2022",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "pricklypear",
+   "ko": "천년초",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_opuntia",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "ginestra_opuntia_cladode_2009",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "sweetpotatoleaf",
+   "ko": "고구마잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C-",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sweetpotato",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "gouveia_sweetpotato_oxalate_2020",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "pumpkinleaf",
+   "ko": "호박잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pumpkin",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "mashitoa_pumpkin_leaf_antinutrients_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "hibiscusleaf",
+   "ko": "무궁화잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hibiscus_syriacus",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hibiscusflower",
+   "ko": "무궁화꽃",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hibiscus_syriacus",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "grapeleaf",
+   "ko": "포도잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_grapevine",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kedrina_grape_leaf_polyphenols_2018",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "nasturtium",
+   "ko": "한련화",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_nasturtium",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "lykkesfeldt_nasturtium_glucotropaeolin_1993",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "mustard",
+   "ko": "갓",
+   "species_group": "Herbivorous_reptile_general",
+   "verdict": "general_reptile_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "ucdavis_herbivorous_reptile_greens",
+     "class": "husbandry_or_expert",
+     "source_type": "veterinary_husbandry_guidance",
+     "animal_taxon": "Herbivorous reptiles"
+    },
+    {
+     "evidence_id": "huang_leaf_mustard_glucosinolates_2022",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "turnipgreens",
+   "ko": "순무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_turnip",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "padilla_turnip_leaf_glucosinolates_2007",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "napa",
+   "ko": "배추",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_chinese_cabbage",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "park_napa_metabolites_2019",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "arugula",
+   "ko": "루꼴라",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_rocket",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "bennett_eruca_glucosinolate_2002",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "beetgreens",
+   "ko": "비트잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_beetroot",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "simpson_beta_vulgaris_oxalate_2009",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "cilantro",
+   "ko": "고수",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_coriander",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "melo_coriander_leaf_oxalate_2008",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "celeryleaf",
+   "ko": "셀러리잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_celery",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "singh_celery_minerals_2023",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "dill",
+   "ko": "딜",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_dill",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "teuber_dill_leaf_flavonols_1978",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "spinach",
+   "ko": "시금치",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_spinach",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "heaney_spinach_calcium_1988",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_human_nutrition",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "parsley",
+   "ko": "파슬리",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "plant_toxicity_or_chemistry": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_parsley",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "chaudhary_parsley_furocoumarin_1986",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_plant_chemistry",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "manderfeld_parsley_furocoumarins_1997",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_food_chemistry",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "radishgreens",
+   "ko": "무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_radish",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "gamba_radish_systematic_review_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_systematic_review",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "chard",
+   "ko": "근대",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_chard",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "rda_korean_chard_identity",
+     "class": "composition_or_identity",
+     "source_type": "official_agriculture_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "lambs_lettuce",
+   "ko": "콘샐러드",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_lambs_lettuce",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "korea_lambs_lettuce_identity",
+     "class": "composition_or_identity",
+     "source_type": "official_botanical_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "mallow",
+   "ko": "아욱",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C-",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mallow",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "mint",
+   "ko": "민트",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_supplement",
+   "confidence": "C-",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mint",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "minari",
+   "ko": "미나리",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "do_not_feed",
+   "confidence": "C-",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_water_dropwort_warning",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "lu_oenanthe_javanica_review_2019",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_review",
+     "animal_taxon": "Mus musculus / Rattus norvegicus (toxicology context)"
+    }
+   ]
+  },
+  {
+   "plant_id": "whiteclover",
+   "ko": "화이트클로버",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tt_mediterranean_food",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean tortoises"
+    },
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "kew_whiteclover_identity",
+     "class": "composition_or_identity",
+     "source_type": "authoritative_taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "redclover",
+   "ko": "레드클로버",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "kew_redclover_identity",
+     "class": "composition_or_identity",
+     "source_type": "authoritative_taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "ribwortplantain",
+   "ko": "창질경이",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "kew_ribwortplantain_identity",
+     "class": "composition_or_identity",
+     "source_type": "authoritative_taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "commonmallow",
+   "ko": "말바",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mallow",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    },
+    {
+     "evidence_id": "kew_commonmallow_identity",
+     "class": "composition_or_identity",
+     "source_type": "authoritative_taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "broadleafplantain",
+   "ko": "왕질경이",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_plantfoods",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Herbivorous tortoises, with Mediterranean observations"
+    }
+   ]
+  },
+  {
+   "plant_id": "violetleaf",
+   "ko": "제비꽃잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_violet",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "violetflower",
+   "ko": "제비꽃",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_violet",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "geraniumleaf",
+   "ko": "제라늄잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pelargonium",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "waterdropwort",
+   "ko": "미나리",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "do_not_feed",
+   "confidence": "C-",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_water_dropwort_warning",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "lu_oenanthe_javanica_review_2019",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_review",
+     "animal_taxon": "Mus musculus / Rattus norvegicus (toxicology context)"
+    }
+   ]
+  },
+  {
+   "plant_id": "sweetpotatovine",
+   "ko": "고구마줄기",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sweetpotato",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "gouveia_sweetpotato_oxalate_2020",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "cucumberleaf",
+   "ko": "오이잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cucumber",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "grapevineleaf",
+   "ko": "머루잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_grapevine",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kedrina_grape_leaf_polyphenols_2018",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "opuntiapad",
+   "ko": "손바닥선인장패드",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_opuntia",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "wheatleaf",
+   "ko": "밀잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "barleyleaf",
+   "ko": "보리잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "oatleaf",
+   "ko": "귀리잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "sunflowerpetal",
+   "ko": "해바라기꽃잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sunflower",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "peashoot",
+   "ko": "완두순",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pea_shoots",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "santos_pea_shoot_nutrition_2014",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "pumpkinflower",
+   "ko": "호박꽃",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pumpkin",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hollyhock",
+   "ko": "접시꽃",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hollyhock",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "lemonbalm",
+   "ko": "레몬밤",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_lemon_balm",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "mencherini_melissa_fresh_leaves_2009",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "chamomile",
+   "ko": "캐모마일",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_chamomile",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "petrulova_chamomile_coumarins_2013",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "cornflower",
+   "ko": "수레국화",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cornflower",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "echinacea",
+   "ko": "에키네시아",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_echinacea",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "yarrow",
+   "ko": "서양톱풀",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_yarrow",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "orav_yarrow_oil_variation_2006",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "purslane",
+   "ko": "쇠비름",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_purslane",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "palaniswamy_purslane_oxalate_2004",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "daisy",
+   "ko": "데이지",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_daisy",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "morikawa_daisy_saponins_2008",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "hibiscusrosa",
+   "ko": "하와이무궁화",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hibiscus_rosa",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "lavender",
+   "ko": "라벤더",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_lavender",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "cosmos",
+   "ko": "코스모스",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cosmos",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "appleleaf",
+   "ko": "사과나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_apple_tree",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "liaudanskas_apple_leaf_phenolics_2014",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "fennelleaf",
+   "ko": "펜넬잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_fennel",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "senatore_fennel_leaf_oil_2013",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "sorrel",
+   "ko": "수영",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 5
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source",
+    "same_source_cited_twice"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sorrel",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "rumex_acetosa_oxalate_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "ceccanti_rumex_oxalate_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "di_noia_rumex_oxalate_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "di_gioia_rumex_oxalate_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "siener_rumex_oxalate_2006",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "dock",
+   "ko": "소리쟁이",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_dock",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "costan_rumex_defences_2023",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "panciera_rumex_sheep_1990",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_veterinary_toxicology",
+     "animal_taxon": "Ovis aries"
+    }
+   ]
+  },
+  {
+   "plant_id": "lambsquarters",
+   "ko": "명아주",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_lambsquarters",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "savage_chenopodium_oxalate_2019",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "kohlrabileaf",
+   "ko": "콜라비잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_kohlrabi",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "mbudu_kohlrabi_glucosinolate_2025",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "raspberryleaf",
+   "ko": "라즈베리잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_raspberry",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "leone_testudo_diet_2021",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry",
+     "animal_taxon": "Testudo spp."
+    }
+   ]
+  },
+  {
+   "plant_id": "strawberryleaf",
+   "ko": "딸기잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_strawberry",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "hanhineva_strawberry_leaf_2009",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "salasarias_strawberry_leaf_2023",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "oregano",
+   "ko": "오레가노",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_oregano",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "sage",
+   "ko": "세이지",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sage",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "bandoniene_sage_leaf_rosmarinic_2005",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "thyme",
+   "ko": "타임",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_thyme",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "grapehyacinth",
+   "ko": "무스카리",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_grape_hyacinth",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "asano_muscari_bulb_alkaloids_2000",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "siroka_houseplant_pet_toxicity_2023",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_veterinary_review",
+     "animal_taxon": "Companion animals (review)"
+    }
+   ]
+  },
+  {
+   "plant_id": "ginkgoleaf",
+   "ko": "은행잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_ginkgo",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "he_ginkgo_leaf_ginkgolic_2000",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "elmleaf",
+   "ko": "느릅나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_elm",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "lindenleaf",
+   "ko": "피나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_linden",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "willowleaf",
+   "ko": "버드나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1,
+    "composition_or_identity": 3
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source",
+    "same_source_cited_twice"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_willow",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "piatczak_salix_alba_leaf_2020",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "piatczak_salix_alba_leaf_phenolics_2020",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "rowell_rahier_salix_leaf_glycosides_1984",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant chemistry and herbivorous insects"
+    },
+    {
+     "evidence_id": "tawfeek_salix_phytochemistry_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_review",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "birchleaf",
+   "ko": "자작나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_birch",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "rosemary",
+   "ko": "로즈마리",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_rosemary",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "delbano_rosemary_leaf_phenolics_2003",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "pearleaf",
+   "ko": "배나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pear_tree",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "yang_pyrus_pyrifolia_leaf_phenolics_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "peachleaf",
+   "ko": "복숭아나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_peach_tree",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "koyu_peach_leaf_extract_2020",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "blackberryleaf",
+   "ko": "블랙베리잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_bramble_leaf",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "asnaashari_blackberry_leaf_2015",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "mapleleaf",
+   "ko": "단풍나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_maple",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hazelleaf",
+   "ko": "개암나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hazel",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "poplarleaf",
+   "ko": "포플러잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_poplar",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "jarega_poplar_polyphenols_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "mungbeansprout",
+   "ko": "숙주나물",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mung_bean_sprout",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "elobuike_mungbean_sprouting_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "eveningprimrose",
+   "ko": "달맞이꽃",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_evening_primrose",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "milkthistle",
+   "ko": "밀크시슬",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_milk_thistle",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hawthorn",
+   "ko": "산사나무속 잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hawthorn",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "keser_hawthorn_parts_2014",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "sainfoin",
+   "ko": "샌포인",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sainfoin",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "marais_sainfoin_polyphenols_2000",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "borage",
+   "ko": "보리지",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "plant_toxicity_or_chemistry": 2,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source",
+    "same_source_cited_twice"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_borage",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "sattler_borage_pa_2023",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "sattler_borago_pa_2025",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_plant_toxicology",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "sattler_borage_pa_2025",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_plant_toxicology",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "sattler_borago_pa_2023",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "henbit",
+   "ko": "광대나물",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_henbit",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "ghoneim_lamium_amplexicaule_aerial_2018",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "houseleek",
+   "ko": "셈페르비붐",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_houseleek",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "echeveria",
+   "ko": "에케베리아",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_echeveria",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "snapdragon",
+   "ko": "금어초",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_snapdragon",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hosta",
+   "ko": "비비추속",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hosta",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "salsify",
+   "ko": "살시피류",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_salsify",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hawksbeard",
+   "ko": "씀바귀아재비류",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hawksbeard",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hawkbit",
+   "ko": "민들레아재비류",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hawkbit",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "catsear",
+   "ko": "서양금혼초",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_catsear",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hawkweed",
+   "ko": "조밥나물류",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_hawkweed",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "shepherdspurse",
+   "ko": "냉이",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_shepherdspurse",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "petunia",
+   "ko": "페튜니아",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_petunia",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "dahlia",
+   "ko": "달리아",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_dahlia",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "gerbera",
+   "ko": "거베라",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_gerbera",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "zinnia",
+   "ko": "백일홍",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_zinnia",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "mexicanpetunia",
+   "ko": "멕시칸페튜니아",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mexicanpetunia",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "coreopsis",
+   "ko": "금계국속",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_coreopsis",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "astilbe",
+   "ko": "아스틸베",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_astilbe",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "primula",
+   "ko": "프리뮬라속",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_primula",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "christensen_primula_primin_2000",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "comfrey",
+   "ko": "컴프리",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_comfrey",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "couet_comfrey_pa_1996",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "stegemann_comfrey_pa_distribution_2019",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "monarda",
+   "ko": "모나르다속",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_monarda",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "buckwheatleaf",
+   "ko": "메밀잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "composition_or_identity",
+   "evidence_class_counts": {
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "no_tortoise_feeding_source",
+    "do_not_feed_without_animal_or_expert_source"
+   ],
+   "weakness_tier": "A_no_tortoise_feeding_source",
+   "evidence": [
+    {
+     "evidence_id": "buckwheat_leaf_fagopyrin_2019",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "alfalfasprout",
+   "ko": "알팔파새싹",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_alfalfa_251",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "rosenthal_alfalfa_sprout_canavanine_2000",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    },
+    {
+     "evidence_id": "gorski_alfalfa_seedling_saponin_canavanine_1991",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "rapeseedleaf",
+   "ko": "유채잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_oilseed_rape_418",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "melonleaf",
+   "ko": "멜론잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_melon_624",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "watermelonleaf",
+   "ko": "수박잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_watermelon_624",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "broccolileaf",
+   "ko": "브로콜리잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_broccoli",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "ares_broccoli_leaf_glucosinolates_2015",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "cauliflowerleaf",
+   "ko": "콜리플라워잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cauliflower",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "bhandari_cauliflower_glucosinolates_2015",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "figleaf",
+   "ko": "무화과잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_fig_tree",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "zaynoun_fig_photodermatitis_1984",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_human_toxicology",
+     "animal_taxon": "Human exposure"
+    }
+   ]
+  },
+  {
+   "plant_id": "carrottop",
+   "ko": "당근잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_carrot",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "cucumber",
+   "ko": "오이",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cucumber",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "zucchini",
+   "ko": "애호박",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_squash_courgette",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "bellpepper",
+   "ko": "파프리카",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sweet_pepper",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "eggink_sweet_pepper_composition_2012",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "orchard",
+   "ko": "오차드그라스",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoise_trust_mediterranean_grass_context",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean Testudo"
+    }
+   ]
+  },
+  {
+   "plant_id": "timothy",
+   "ko": "티모시",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_timothy",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoise_trust_mediterranean_grass_context",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean Testudo"
+    }
+   ]
+  },
+  {
+   "plant_id": "wheatgrass",
+   "ko": "밀싹",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoise_trust_mediterranean_grass_context",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean Testudo"
+    }
+   ]
+  },
+  {
+   "plant_id": "barleygrass",
+   "ko": "보리싹",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoise_trust_mediterranean_grass_context",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean Testudo"
+    }
+   ]
+  },
+  {
+   "plant_id": "basil",
+   "ko": "바질",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_basil",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "oatgrass",
+   "ko": "귀리싹",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoise_trust_mediterranean_grass_context",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean Testudo"
+    }
+   ]
+  },
+  {
+   "plant_id": "ryegrass",
+   "ko": "라이그라스",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study"
+   ],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_cat_grass",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoise_trust_mediterranean_grass_context",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Mediterranean Testudo"
+    }
+   ]
+  },
+  {
+   "plant_id": "calendula",
+   "ko": "금잔화",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_calendula_current",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "pansy",
+   "ko": "팬지",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pansy",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "violet",
+   "ko": "제비꽃",
+   "species_group": "Tortoise_general",
+   "verdict": "supplement_general_evidence",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_violet",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "perilla",
+   "ko": "깻잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1,
+    "plant_toxicity_or_chemistry": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_perilla",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "wilson_perilla_ketone_1977",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_toxicology",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "kerr_perilla_cattle_1986",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_veterinary_toxicology",
+     "animal_taxon": "Bos taurus (cattle)"
+    },
+    {
+     "evidence_id": "nitta_perilla_genotypes_2009",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_plant_chemistry",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "aehobakleaf",
+   "ko": "애호박잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_squash_cucurbita_moschata",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "chrysanthemumleaf",
+   "ko": "쑥갓",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_chrysanthemum",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "haouas_glebionis_leaf_oil_2016",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "geranium",
+   "ko": "제라늄",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_pelargonium",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "marigold",
+   "ko": "메리골드",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "plant_toxicity_or_chemistry": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_tagetes",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "marotti_tagetes_thiophenes_2010",
+     "class": "plant_toxicity_or_chemistry",
+     "source_type": "peer_reviewed_plant_chemistry",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "sunflowerleaf",
+   "ko": "해바라기잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_sunflower",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "fuentes_sunflower_leaf_compounds_2015",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "tomato",
+   "ko": "토마토",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_tomato",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kozukue_tomato_tomatine_2004",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "cornleaf",
+   "ko": "옥수수잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_maize_leaf",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "ssuk",
+   "ko": "쑥",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C-",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_mugwort",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "umano_artemisia_princeps_volatiles_2000",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_plant_composition",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "beanleaf",
+   "ko": "강낭콩잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_bean_leaf_494",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "chrysanthemum",
+   "ko": "국화",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_chrysanthemum_94",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "fescue",
+   "ko": "톨페스큐",
+   "species_group": "Tortoise_general",
+   "verdict": "supported_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_fescue_694",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "broccolisprout",
+   "ko": "브로콜리새싹",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_broccoli_622",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "broccoli_sprout_glucoraphanin_1997",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Plant chemistry; mammalian experimental context"
+    }
+   ]
+  },
+  {
+   "plant_id": "mizuna",
+   "ko": "미즈나",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_brassica_rapa_117",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "tatsoi",
+   "ko": "다채",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_brassica_rapa_117",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "komatsuna",
+   "ko": "코마츠나",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_brassica_rapa_117",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "mallowleaf",
+   "ko": "아욱잎",
+   "species_group": "Tortoise_general",
+   "verdict": "supported_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tt_malva_spp_safe",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "bermudagrass",
+   "ko": "우산잔디",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "supported_mixed_diet",
+   "confidence": "A",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 1,
+    "other_tortoise_study": 1
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "testudo_graeca_cynodon_field_diet_2008",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Testudo graeca"
+    },
+    {
+     "evidence_id": "chersina_cynodon_field_diet",
+     "class": "other_tortoise_study",
+     "source_type": "academic_thesis",
+     "animal_taxon": "Chersina angulata"
+    }
+   ]
+  },
+  {
+   "plant_id": "medicago_hispida",
+   "ko": "버클로버",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "wild_medicago_polymorpha_tgg_morocco",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca graeca"
+    },
+    {
+     "evidence_id": "medicago_polymorpha_saponin_species",
+     "class": "composition_or_identity",
+     "source_type": "academic_study",
+     "animal_taxon": "Not an animal feeding study"
+    }
+   ]
+  },
+  {
+   "plant_id": "conyzacanadensis",
+   "ko": "망초",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "other_animal_study": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_erigeron_canadensis",
+     "class": "husbandry_or_expert",
+     "source_type": "expert_husbandry_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "erigeron_canadensis_essential_oil_2008",
+     "class": "other_animal_study",
+     "source_type": "academic_study",
+     "animal_taxon": "HaCaT cell line; not an animal feeding study"
+    }
+   ]
+  },
+  {
+   "plant_id": "ruscus_aculeatus",
+   "ko": "부처스브룸",
+   "species_group": "Mediterranean_Testudo",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "same_taxon_tortoise_study",
+   "evidence_class_counts": {
+    "same_taxon_tortoise_study": 1,
+    "husbandry_or_expert": 1
+   },
+   "flags": [],
+   "weakness_tier": null,
+   "evidence": [
+    {
+     "evidence_id": "wild_ruscus_aculeatus_thh_italy_2011",
+     "class": "same_taxon_tortoise_study",
+     "source_type": "peer_reviewed_field_study",
+     "animal_taxon": "Testudo hermanni hermanni"
+    },
+    {
+     "evidence_id": "ruscus_ema_rhizoma_2019",
+     "class": "husbandry_or_expert",
+     "source_type": "regulatory_herbal_assessment",
+     "animal_taxon": "primarily mammalian/medicinal toxicology; not tortoise feeding"
+    }
+   ]
+  },
+  {
+   "plant_id": "plumleaf",
+   "ko": "자두나무잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "mizutani_prunus_salicina_cyanogenic_1979",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_research",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "tortoise_table_plum_tree_related",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "hedgemustard",
+   "ko": "헤지머스터드",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "confidence_B_or_higher_without_tortoise_study"
+   ],
+   "weakness_tier": "B_confidence_exceeds_directness",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_trust_hedge_mustard",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_sisymbrium_officinale_taxonomy",
+     "class": "composition_or_identity",
+     "source_type": "botanical_taxonomy",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "ttable_sisymbrium_officinale_712",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "sisymbrium_itc_2021",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_research",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "harebell",
+   "ko": "헤어벨",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "tortoise_table_harebell",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_campanula_rotundifolia",
+     "class": "composition_or_identity",
+     "source_type": "taxonomic_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "erodium_botrys",
+   "ko": "넓은잎필라리",
+   "species_group": "Tortoise_general",
+   "verdict": "supported_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "ttable_erodium_botrys_65",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_erodium_botrys",
+     "class": "composition_or_identity",
+     "source_type": "taxonomic_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "lamium_album",
+   "ko": "흰광대나물",
+   "species_group": "Tortoise_general",
+   "verdict": "supported_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "confidence_B_or_higher_without_tortoise_study"
+   ],
+   "weakness_tier": "B_confidence_exceeds_directness",
+   "evidence": [
+    {
+     "evidence_id": "ttable_lamium_album_774",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "ttrust_lamium_album",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry",
+     "animal_taxon": "Tortoise general / Testudo context"
+    }
+   ]
+  },
+  {
+   "plant_id": "dichondra_micrantha",
+   "ko": "아욱메풀",
+   "species_group": "Tortoise_general",
+   "verdict": "supported_mixed_diet",
+   "confidence": "C+",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "ttable_dichondra_707",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_dichondra_micrantha",
+     "class": "composition_or_identity",
+     "source_type": "taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "abutilon_indicum",
+   "ko": "인도아부틸론",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "ttable_abutilon_32",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_abutilon_indicum",
+     "class": "composition_or_identity",
+     "source_type": "taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "aeonium_arboreum",
+   "ko": "에오니움 아르보레움",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "ttable_aeonium_530",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_aeonium_arboreum",
+     "class": "composition_or_identity",
+     "source_type": "taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "buddleja_davidii",
+   "ko": "부들레야",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 1,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "single_tortoise_feeding_source"
+   ],
+   "weakness_tier": "C_single_specialist_source",
+   "evidence": [
+    {
+     "evidence_id": "ttable_buddleia_68",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "kew_buddleja_davidii",
+     "class": "composition_or_identity",
+     "source_type": "taxonomy_database",
+     "animal_taxon": "not_applicable"
+    },
+    {
+     "evidence_id": "kbr_buddleja_davidii",
+     "class": "composition_or_identity",
+     "source_type": "taxonomy_database",
+     "animal_taxon": "not_applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "vicia_sativa",
+   "ko": "살갈퀴",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "confidence_B_or_higher_without_tortoise_study"
+   ],
+   "weakness_tier": "B_confidence_exceeds_directness",
+   "evidence": [
+    {
+     "evidence_id": "ttable_vicia_310",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "tortoiseclub_vicia_sativa_mix",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry_guide",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "vicia_cracca",
+   "ko": "등갈퀴나물",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "B",
+   "strongest_evidence_class": "husbandry_or_expert",
+   "evidence_class_counts": {
+    "husbandry_or_expert": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "confidence_B_or_higher_without_tortoise_study"
+   ],
+   "weakness_tier": "B_confidence_exceeds_directness",
+   "evidence": [
+    {
+     "evidence_id": "ttable_vicia_310",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_plant_database",
+     "animal_taxon": "Tortoise general"
+    },
+    {
+     "evidence_id": "naturescape_nt_tortoise_mix",
+     "class": "husbandry_or_expert",
+     "source_type": "specialist_husbandry_guide",
+     "animal_taxon": "Tortoise general"
+    }
+   ]
+  },
+  {
+   "plant_id": "marshmallow",
+   "ko": "마시멜로우",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C-",
+   "strongest_evidence_class": "other_animal_study",
+   "evidence_class_counts": {
+    "other_animal_study": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "no_tortoise_feeding_source"
+   ],
+   "weakness_tier": "A_no_tortoise_feeding_source",
+   "evidence": [
+    {
+     "evidence_id": "vetpharm_althaea_officinalis",
+     "class": "other_animal_study",
+     "source_type": "veterinary_toxicology_database",
+     "animal_taxon": "Animals general"
+    },
+    {
+     "evidence_id": "althaea_carp_toxicology_2016",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_veterinary_toxicology",
+     "animal_taxon": "Cyprinus carpio"
+    }
+   ]
+  },
+  {
+   "plant_id": "kiwileaf",
+   "ko": "키위잎",
+   "species_group": "Tortoise_general",
+   "verdict": "do_not_feed",
+   "confidence": "C-",
+   "strongest_evidence_class": "other_animal_study",
+   "evidence_class_counts": {
+    "other_animal_study": 2,
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "no_tortoise_feeding_source"
+   ],
+   "weakness_tier": "A_no_tortoise_feeding_source",
+   "evidence": [
+    {
+     "evidence_id": "actinidia_deliciosa_leaf_genotoxicity_2026",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Chinese hamster ovary cells; in vitro"
+    },
+    {
+     "evidence_id": "actinidia_iridoid_distribution_2023",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Cats and plant chemistry"
+    },
+    {
+     "evidence_id": "actinidia_leaf_calcium_oxalate_1987",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Plant chemistry"
+    },
+    {
+     "evidence_id": "actinidia_leaf_phytotoxicity_2019",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Plant bioassays"
+    }
+   ]
+  },
+  {
+   "plant_id": "meadowgrass",
+   "ko": "왕포아풀",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_mixed_diet",
+   "confidence": "C",
+   "strongest_evidence_class": "composition_or_identity",
+   "evidence_class_counts": {
+    "composition_or_identity": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "no_tortoise_feeding_source",
+    "positive_verdict_without_tortoise_feeding_source",
+    "same_source_cited_twice"
+   ],
+   "weakness_tier": "A_no_tortoise_feeding_source",
+   "evidence": [
+    {
+     "evidence_id": "kew_poa_pratensis_identity",
+     "class": "composition_or_identity",
+     "source_type": "taxonomic_database",
+     "animal_taxon": "Not applicable"
+    },
+    {
+     "evidence_id": "kew_poa_pratensis_animal_food",
+     "class": "composition_or_identity",
+     "source_type": "taxonomic_database",
+     "animal_taxon": "Not applicable"
+    }
+   ]
+  },
+  {
+   "plant_id": "amaranthleaf",
+   "ko": "비름",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "composition_or_identity",
+   "evidence_class_counts": {
+    "composition_or_identity": 1
+   },
+   "flags": [
+    "no_tortoise_study",
+    "no_tortoise_feeding_source",
+    "positive_verdict_without_tortoise_feeding_source"
+   ],
+   "weakness_tier": "A_no_tortoise_feeding_source",
+   "evidence": [
+    {
+     "evidence_id": "prakash_amaranthus_leaves_1991",
+     "class": "composition_or_identity",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Plant composition"
+    }
+   ]
+  },
+  {
+   "plant_id": "soybeanleaf",
+   "ko": "콩잎",
+   "species_group": "Tortoise_general",
+   "verdict": "limited_supplement",
+   "confidence": "C",
+   "strongest_evidence_class": "other_animal_study",
+   "evidence_class_counts": {
+    "other_animal_study": 2
+   },
+   "flags": [
+    "no_tortoise_study",
+    "no_tortoise_feeding_source",
+    "positive_verdict_without_tortoise_feeding_source"
+   ],
+   "weakness_tier": "A_no_tortoise_feeding_source",
+   "evidence": [
+    {
+     "evidence_id": "soybean_leaf_nutrition_2026",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Clanis bilineata tsingtauica larvae; leaf composition"
+    },
+    {
+     "evidence_id": "soybean_leaf_trypsin_1987",
+     "class": "other_animal_study",
+     "source_type": "peer_reviewed_article",
+     "animal_taxon": "Plant chemistry; Mexican bean beetle herbivory"
+    }
+   ]
+  }
+ ]
+}

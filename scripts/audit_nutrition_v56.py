@@ -80,7 +80,7 @@ def main():
             try:
                 u = urlparse(source_url)
                 if u.scheme != 'https' or u.hostname not in {'www.nics.go.kr','koreanfood.rda.go.kr','www.data.go.kr'}: errors.append(f'{tag}: RDA source_url must use an official RDA/NICS/data.go.kr host')
-                if r_code and u.path != '/data/15100065/fileData.do': errors.append(f'{tag}: RDA R-code records must cite the data.go.kr 15100065 dataset page')
+                if r_code and u.path != '/data/15100065/standard.do': errors.append(f'{tag}: RDA R-code records must cite the data.go.kr 15100065 dataset page')
             except Exception: errors.append(f'{tag}: invalid RDA source_url')
         elif source_name in OTHER_OFFICIAL:
             # National tables added by the worldwide intake batch: fixed ID pattern, official host, explicit country.

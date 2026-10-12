@@ -1,0 +1,745 @@
+{
+ "schema_version": "1.0",
+ "created_at": "2026-10-12",
+ "purpose": "Declares every duplicate, name collision and taxon overlap in data/plants.json together with the decision taken. scripts/qa_plant_identity_v1.py fails when an undeclared collision appears. A shared scientific name alone never merges two records: different parts and growth stages stay separate. This file changes no feeding verdict.",
+ "canonical_aliases": [
+  {
+   "legacy_id": "waterdropwort",
+   "canonical_id": "minari",
+   "scientific": "Oenanthe javanica",
+   "decision": "same_plant_single_canonical_record",
+   "reason_ko": "두 ID 모두 한국명 미나리, 영문명 Water dropwort, 학명 Oenanthe javanica이며 부위·상태 구분이 없다. 급여 판정(급여 제외, C-), 근거 2건, 검증 이미지가 모두 같다. 실제로 같은 식물의 중복 등록이다.",
+   "why_minari_is_canonical_ko": "minari가 먼저 등록된 ID(기존 69종)이고, RDA 부위별 검증 기록 3건·국문 검색명 지도·내부 링크·블로그 딥링크가 minari에 연결돼 있다. 공개 목록과 검색도 minari 카드를 대표로 표시한다.",
+   "url_policy": "Both /plant/minari/ and /plant/waterdropwort/ (and /en/ equivalents) stay published so existing links keep working. The plants.json row for waterdropwort is retained for that reason.",
+   "data_policy": "Nutrition records are attached to minari only; waterdropwort reports the same nutrition tier through this alias. Verdict, confidence, evidence IDs and image must stay identical on both IDs (enforced by QA).",
+   "merged_into_canonical": {
+    "aliases": [
+     "미나리잎"
+    ],
+    "reference_records": [
+     "international-20261010-1",
+     "international-20261010-2"
+    ]
+   },
+   "handoff_for_site_owner_ko": "waterdropwort 페이지의 canonical 태그를 minari로 지정하고 사이트맵·가이드 목록에서 중복 항목을 정리하는 일은 SEO·UI 담당 영역이라 수정하지 않았다."
+  }
+ ],
+ "same_taxon_groups": [
+  {
+   "scientific": "Avena sativa",
+   "relation": "same_species_different_growth_stage",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "oatgrass",
+     "part": "young sprouts / grass stage (싹)"
+    },
+    {
+     "id": "oatleaf",
+     "part": "leaf blades of the grown plant (잎)"
+    }
+   ],
+   "note_ko": "싹(어린 새싹)과 다 자란 잎은 수확 단계가 다른 별도 먹이로 관리한다. 판정 범위도 다르다(싹: 지중해 Testudo, 잎: 육지거북 일반)."
+  },
+  {
+   "scientific": "Hordeum vulgare",
+   "relation": "same_species_different_growth_stage",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "barleygrass",
+     "part": "young sprouts / grass stage (싹)"
+    },
+    {
+     "id": "barleyleaf",
+     "part": "leaf blades of the grown plant (잎)"
+    }
+   ],
+   "note_ko": "귀리와 같은 이유로 싹과 잎을 분리한다."
+  },
+  {
+   "scientific": "Triticum aestivum",
+   "relation": "same_species_different_growth_stage",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "wheatgrass",
+     "part": "young sprouts / grass stage (싹)"
+    },
+    {
+     "id": "wheatleaf",
+     "part": "leaf blades of the grown plant (잎)"
+    }
+   ],
+   "note_ko": "귀리와 같은 이유로 싹과 잎을 분리한다."
+  },
+  {
+   "scientific": "Brassica oleracea var. italica",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "broccolileaf",
+     "part": "leaf"
+    },
+    {
+     "id": "broccolisprout",
+     "part": "sprout (seedling)"
+    }
+   ],
+   "note_ko": "새싹은 글루코시놀레이트 농도가 달라 판정이 다르다(잎: 제한 급여, 새싹: 급여 제외)."
+  },
+  {
+   "scientific": "Cucumis sativus",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "cucumber",
+     "part": "fruit"
+    },
+    {
+     "id": "cucumberleaf",
+     "part": "leaf"
+    }
+   ],
+   "note_ko": "열매와 잎은 성분과 판정 근거가 다르다."
+  },
+  {
+   "scientific": "Cucurbita moschata",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "zucchini",
+     "part": "immature fruit"
+    },
+    {
+     "id": "aehobakleaf",
+     "part": "leaf"
+    }
+   ],
+   "note_ko": "열매(급여 제외)와 잎(제한 급여)의 판정이 다르다."
+  },
+  {
+   "scientific": "Cucurbita spp.",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "pumpkinleaf",
+     "part": "leaf"
+    },
+    {
+     "id": "pumpkinflower",
+     "part": "flower"
+    }
+   ],
+   "note_ko": "잎과 꽃은 별도 부위다. 둘 다 속 수준 기록이다."
+  },
+  {
+   "scientific": "Helianthus annuus",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "sunflowerleaf",
+     "part": "leaf"
+    },
+    {
+     "id": "sunflowerpetal",
+     "part": "ray-flower petals"
+    }
+   ],
+   "note_ko": "잎과 꽃잎은 별도 부위다."
+  },
+  {
+   "scientific": "Hibiscus syriacus",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "hibiscusleaf",
+     "part": "leaf"
+    },
+    {
+     "id": "hibiscusflower",
+     "part": "flower"
+    }
+   ],
+   "note_ko": "잎과 꽃은 별도 부위다."
+  },
+  {
+   "scientific": "Ipomoea batatas",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "sweetpotatoleaf",
+     "part": "leaf blade"
+    },
+    {
+     "id": "sweetpotatovine",
+     "part": "petiole / vine stem (줄기)"
+    }
+   ],
+   "note_ko": "잎과 줄기(잎자루)는 식품성분표에서도 별도 기록이다."
+  },
+  {
+   "scientific": "Medicago sativa",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "alfalfa",
+     "part": "aerial forage (stems and leaves)"
+    },
+    {
+     "id": "alfalfasprout",
+     "part": "sprout (seedling)"
+    }
+   ],
+   "note_ko": "새싹과 건초·생초는 성분과 판정이 다르다(새싹: 급여 제외)."
+  },
+  {
+   "scientific": "Viola mandshurica",
+   "relation": "same_taxon_different_part",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "violetleaf",
+     "part": "leaf"
+    },
+    {
+     "id": "violetflower",
+     "part": "flower"
+    }
+   ],
+   "note_ko": "잎과 꽃은 별도 부위다."
+  },
+  {
+   "scientific": "Pelargonium spp.",
+   "relation": "overlapping_scope",
+   "decision": "keep_separate",
+   "members": [
+    {
+     "id": "geranium",
+     "part": "whole ornamental plant, part not specified"
+    },
+    {
+     "id": "geraniumleaf",
+     "part": "leaf"
+    }
+   ],
+   "note_ko": "두 기록 모두 속 수준이고 판정도 같다(제한 보조 C). 부위를 특정하지 않은 '제라늄'이 '제라늄잎'을 포함하므로 사실상 중복에 가깝다. 판정 문구가 서로 달라지지 않도록 함께 검토해야 하며, 통합 여부는 별도 검토 대상이다."
+  }
+ ],
+ "taxon_overlaps": [
+  {
+   "taxon": "Cucurbita",
+   "broader_ids": [
+    "pumpkinleaf",
+    "pumpkinflower"
+   ],
+   "narrower_ids": [
+    "zucchini",
+    "aehobakleaf"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "속 수준 '호박잎·호박꽃'과 종 수준 '애호박(C. moschata)' 기록이 공존한다. 속 수준 자료를 애호박의 직접 측정값으로 쓰지 않는다."
+  },
+  {
+   "taxon": "Malva",
+   "broader_ids": [
+    "mallow"
+   ],
+   "narrower_ids": [
+    "commonmallow",
+    "mallowleaf"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "'아욱(Malva spp.)'과 '아욱잎(Malva verticillata)'은 같은 국내 채소 아욱을 가리킬 가능성이 높고 같은 RDA 식품(아욱, 생것)을 쓰지만 급여 판정이 다르다(아욱: 제한 보조 C-, 지중해 Testudo / 아욱잎: 혼합식 가능 C, 육지거북 일반). 판정 정합성 검토 대상이다."
+  },
+  {
+   "taxon": "Opuntia",
+   "broader_ids": [
+    "pricklypear"
+   ],
+   "narrower_ids": [
+    "opuntiapad"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "'천년초(Opuntia spp.)'와 '손바닥선인장패드(O. ficus-indica)'는 종 범위가 다르다. 천년초가 어느 Opuntia 종인지 마스터에서 확정되지 않았으므로 O. ficus-indica 자료를 천년초의 직접 자료로 쓰지 않는다."
+  },
+  {
+   "taxon": "Plantago",
+   "broader_ids": [
+    "plantain"
+   ],
+   "narrower_ids": [
+    "ribwortplantain",
+    "broadleafplantain"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "속 수준 '질경이'와 종 수준 창질경이·왕질경이가 공존한다. 국내 표준명 질경이는 data/korea_taxon_mapping_v1.json에서 Plantago asiatica L.로 매핑돼 있다."
+  },
+  {
+   "taxon": "Trifolium",
+   "broader_ids": [
+    "clover"
+   ],
+   "narrower_ids": [
+    "whiteclover",
+    "redclover"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "속 수준 '클로버'와 종 수준 기록이 공존한다."
+  },
+  {
+   "taxon": "Viola",
+   "broader_ids": [
+    "violet"
+   ],
+   "narrower_ids": [
+    "pansy",
+    "violetleaf",
+    "violetflower"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "속 수준 '제비꽃'과 종·잡종 수준 기록이 공존한다."
+  },
+  {
+   "taxon": "Beta vulgaris",
+   "broader_ids": [
+    "beetgreens"
+   ],
+   "narrower_ids": [
+    "chard"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "비트잎(종 수준 표기)과 근대(잎채소 아종/품종군)는 같은 종의 다른 재배군이다. 성분표에서도 별도 식품이다."
+  },
+  {
+   "taxon": "Cichorium intybus",
+   "broader_ids": [
+    "chicory"
+   ],
+   "narrower_ids": [
+    "radicchio"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "치커리(종)와 라디키오(결구 적색 품종군)는 같은 종의 다른 재배군이다."
+  },
+  {
+   "taxon": "Lactuca sativa",
+   "broader_ids": [
+    "lettuce"
+   ],
+   "narrower_ids": [
+    "romaine"
+   ],
+   "decision": "keep_separate",
+   "note_ko": "상추(종)와 로메인(품종군)은 같은 종의 다른 재배군이다."
+  }
+ ],
+ "declared_name_collisions": [
+  {
+   "field": "ko",
+   "value": "제비꽃",
+   "ids": [
+    "violet",
+    "violetflower"
+   ],
+   "status": "review",
+   "note_ko": "'제비꽃'이 속 수준 기록(Viola spp.)과 제비꽃 꽃 부위 기록(Viola mandshurica)의 표시명으로 함께 쓰인다. 학명이 달라 목록에 카드 두 개가 같은 이름으로 보인다. 꽃 기록의 표시명을 '제비꽃 꽃'처럼 구분하는 방안을 권고한다(페이지 제목이 바뀌므로 사이트 담당과 협의 필요)."
+  }
+ ],
+ "nomenclature_decisions": [
+  {
+   "plant_id": "romaine",
+   "db_scientific": "Lactuca sativa var. longifolia",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_treats_as_synonym"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "lactuca sativa"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "lactuca sativa"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "GBIF와 WFO는 var. longifolia를 Lactuca sativa의 이명으로 처리한다(WCVP에는 변종 기록 없음). 로메인은 품종군으로 관리하며 종 수준 상추 기록과 구분한다."
+  },
+  {
+   "plant_id": "collard",
+   "db_scientific": "Brassica oleracea var. viridis",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "brassica oleracea"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "brassica oleracea",
+     "brassica oleracea viridis"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "같은 품종군이 자료에 따라 다른 계급(var./subsp./f.)이나 종 수준 이명으로 처리된다. 재배 품종군 표기이므로 DB 표기를 유지한다."
+  },
+  {
+   "plant_id": "napa",
+   "db_scientific": "Brassica rapa subsp. pekinensis",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "brassica rapa"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "brassica rapa",
+     "brassica rapa pekinensis"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "같은 품종군이 자료에 따라 다른 계급(var./subsp./f.)이나 종 수준 이명으로 처리된다. 재배 품종군 표기이므로 DB 표기를 유지한다."
+  },
+  {
+   "plant_id": "celeryleaf",
+   "db_scientific": "Apium graveolens",
+   "issue": [
+    "wcvp_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "apium graveolens"
+    ],
+    "wcvp": [
+     "apium graveolens",
+     "apium sellowianum"
+    ],
+    "wfo": [
+     "apium graveolens"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Apium graveolens L."
+  },
+  {
+   "plant_id": "chickweed",
+   "db_scientific": "Stellaria media",
+   "issue": [
+    "wcvp_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "stellaria media"
+    ],
+    "wcvp": [
+     "stellaria media",
+     "stellaria palustris"
+    ],
+    "wfo": [
+     "stellaria media"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Stellaria media (L.) Vill."
+  },
+  {
+   "plant_id": "dill",
+   "db_scientific": "Anethum graveolens",
+   "issue": [
+    "wcvp_homonym_ambiguous",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "anethum graveolens"
+    ],
+    "wcvp": [
+     "anethum graveolens",
+     "ridolfia segetum"
+    ],
+    "wfo": [
+     "anethum graveolens",
+     "ridolfia segetum"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Anethum graveolens L."
+  },
+  {
+   "plant_id": "chard",
+   "db_scientific": "Beta vulgaris subsp. cicla",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_treats_as_synonym"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "beta vulgaris vulgaris"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "beta vulgaris"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "GBIF는 subsp. cicla를 Beta vulgaris subsp. vulgaris의 이명으로, WFO는 Beta vulgaris의 이명으로 처리한다. USDA도 근대를 subsp. vulgaris로 표기한다. 근대는 잎채소 품종군으로 관리하며 비트잎 기록과 구분한다."
+  },
+  {
+   "plant_id": "lambs_lettuce",
+   "db_scientific": "Valerianella locusta",
+   "issue": [
+    "wcvp_treats_as_synonym",
+    "wfo_treats_as_synonym"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "valerianella locusta"
+    ],
+    "wcvp": [
+     "valeriana locusta"
+    ],
+    "wfo": [
+     "valeriana locusta"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "WCVP와 WFO는 Valerianella locusta를 Valeriana locusta L.로 옮겼고 GBIF는 Valerianella locusta를 유지한다. 자료 간 불일치이므로 DB 표기를 유지한다."
+  },
+  {
+   "plant_id": "lavender",
+   "db_scientific": "Lavandula angustifolia",
+   "issue": [
+    "wcvp_homonym_ambiguous",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "lavandula angustifolia"
+    ],
+    "wcvp": [
+     "lavandula angustifolia",
+     "lavandula latifolia"
+    ],
+    "wfo": [
+     "lavandula angustifolia",
+     "lavandula latifolia"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Lavandula angustifolia Mill."
+  },
+  {
+   "plant_id": "blackberryleaf",
+   "db_scientific": "Rubus fruticosus agg.",
+   "issue": [
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "rubus fruticosus"
+    ],
+    "wcvp": [
+     "rubus fruticosus"
+    ],
+    "wfo": [
+     "rubus fruticosus",
+     "rubus vestitus"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Rubus fruticosus L."
+  },
+  {
+   "plant_id": "lambsquarters",
+   "db_scientific": "Chenopodium album",
+   "issue": [
+    "wcvp_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "chenopodium album"
+    ],
+    "wcvp": [
+     "chenopodium album",
+     "chenopodium berlandieri boscianum"
+    ],
+    "wfo": [
+     "chenopodium album"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Chenopodium album L."
+  },
+  {
+   "plant_id": "dock",
+   "db_scientific": "Rumex crispus",
+   "issue": [
+    "wcvp_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "rumex crispus"
+    ],
+    "wcvp": [
+     "rumex crispus",
+     "rumex trisetifer"
+    ],
+    "wfo": [
+     "rumex crispus"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "저자가 다른 동명(homonym)이 있어 저자 표기 없이는 한 종으로 확정되지 않는다. DB가 가리키는 이름은 아래 intended_name이다.",
+   "intended_name": "Rumex crispus L."
+  },
+  {
+   "plant_id": "peashoot",
+   "db_scientific": "Pisum sativum",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wcvp_treats_as_synonym",
+    "wfo_treats_as_synonym"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "lathyrus oleraceus"
+    ],
+    "wcvp": [
+     "lathyrus oleraceus"
+    ],
+    "wfo": [
+     "lathyrus oleraceus"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "GBIF·WCVP·WFO 모두 Pisum sativum을 Lathyrus oleraceus Lam.의 이명으로 처리한다. 식품성분표(MEXT, USDA)와 사육자료는 여전히 Pisum sativum을 쓰므로 DB 표기는 유지하고 현재 수용명을 함께 기록한다."
+  },
+  {
+   "plant_id": "mizuna",
+   "db_scientific": "Brassica rapa var. nipposinica",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "brassica rapa"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "brassica rapa",
+     "brassica rapa nipposinica"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "같은 품종군이 자료에 따라 다른 계급(var./subsp./f.)이나 종 수준 이명으로 처리된다. 재배 품종군 표기이므로 DB 표기를 유지한다."
+  },
+  {
+   "plant_id": "tatsoi",
+   "db_scientific": "Brassica rapa subsp. narinosa",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "brassica rapa"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "brassica rapa",
+     "brassica rapa narinosa"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "같은 품종군이 자료에 따라 다른 계급(var./subsp./f.)이나 종 수준 이명으로 처리된다. 재배 품종군 표기이므로 DB 표기를 유지한다."
+  },
+  {
+   "plant_id": "komatsuna",
+   "db_scientific": "Brassica rapa var. perviridis",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wfo_treats_as_synonym"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "brassica rapa"
+    ],
+    "wcvp": [],
+    "wfo": [
+     "brassica rapa oleifera"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "GBIF는 var. perviridis를 Brassica rapa로, WFO는 Brassica rapa subsp. oleifera로 처리한다. 자료마다 다르므로 DB 표기를 유지한다."
+  },
+  {
+   "plant_id": "kiwileaf",
+   "db_scientific": "Actinidia deliciosa",
+   "issue": [
+    "gbif_treats_as_synonym",
+    "wcvp_treats_as_synonym",
+    "wfo_treats_as_synonym"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "actinidia chinensis deliciosa"
+    ],
+    "wcvp": [
+     "actinidia chinensis deliciosa"
+    ],
+    "wfo": [
+     "actinidia chinensis deliciosa"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "세 자료 모두 Actinidia deliciosa를 Actinidia chinensis var. deliciosa의 이명으로 처리한다. 종 수준 자료를 찾을 때 A. chinensis 자료와 혼동하지 않도록 변종 수준 표기를 함께 기록한다."
+  },
+  {
+   "plant_id": "fescue",
+   "db_scientific": "Schedonorus arundinaceus",
+   "issue": [
+    "gbif_homonym_ambiguous",
+    "wcvp_homonym_ambiguous",
+    "wfo_homonym_ambiguous"
+   ],
+   "accepted_by_source": {
+    "gbif": [
+     "lolium arundinaceum",
+     "scolochloa festucacea"
+    ],
+    "wcvp": [
+     "lolium arundinaceum",
+     "scolochloa festucacea"
+    ],
+    "wfo": [
+     "lolium arundinaceum",
+     "scolochloa festucacea"
+    ]
+   },
+   "decision": "keep_db_name_record_synonymy",
+   "note_ko": "Schedonorus arundinaceus는 저자가 다른 두 이름이 있다. DB가 가리키는 톨페스큐는 Schedonorus arundinaceus (Schreb.) Dumort.이며 세 자료 모두 Lolium arundinaceum (Schreb.) Darbysh.의 이명으로 처리한다. 다른 하나(Roem. & Schult.)는 Scolochloa festucacea의 이명이다. 저자 표기가 없으면 GBIF가 종을 확정하지 못한다.",
+   "intended_name": "Schedonorus arundinaceus (Schreb.) Dumort."
+  }
+ ]
+}

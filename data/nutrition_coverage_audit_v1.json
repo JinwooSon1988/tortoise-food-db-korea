@@ -5,8 +5,8 @@
   "published_plant_coverage": {
     "total": 182,
     "verified_official": 63,
-    "reference_only": 49,
-    "no_linked_data": 70,
+    "reference_only": 50,
+    "no_linked_data": 69,
     "reference_only_ids": [
       "aehobakleaf",
       "alfalfa",
@@ -33,6 +33,7 @@
       "marigold",
       "medicago_hispida",
       "melonleaf",
+      "minari",
       "mint",
       "oatgrass",
       "oatleaf",
@@ -109,7 +110,6 @@
       "meadowgrass",
       "mexicanpetunia",
       "milkthistle",
-      "minari",
       "monarda",
       "oregano",
       "peachleaf",
@@ -130,6 +130,10 @@
       "yarrow",
       "zinnia"
     ],
+    "legacy_alias_ids": [
+      "waterdropwort"
+    ],
+    "unique_identities": 181,
     "note": "Reference-only values do not qualify as verified exact nutrition or influence feeding grades."
   },
   "verified_plants": 63,
@@ -1218,7 +1222,7 @@
       "status": "held",
       "hold_reason_code": "policy_hold",
       "dm_basis_record": false,
-      "nutrition_display_tier": "no_linked_data"
+      "nutrition_display_tier": "reference_only"
     },
     {
       "plant_id": "aehobakleaf",
@@ -1717,6 +1721,7 @@
       "status": "held",
       "hold_reason_code": "policy_hold",
       "dm_basis_record": false,
+      "legacy_alias_of": "minari",
       "nutrition_display_tier": "reference_only"
     },
     {
