@@ -115,6 +115,11 @@ function filterMatch(r){if(!r.isPublic)return false;const a=best(r.plant_id);if(
 function matchRank(r,q){if(!q)return 5;const ko=norm(r.label),terms=r.terms.map(norm);if(ko===q)return 0;if(terms.some(x=>x===q))return 1;if(ko.startsWith(q))return 2;if(terms.some(x=>x.startsWith(q)))return 3;return 4}
 function search(){const q=norm(input.value);shown=PAGE;if(!q&&activeFilter==='all'){results.innerHTML='';return}
  const rows=plantCatalog.filter(r=>(!q||r.terms.some(x=>norm(x).includes(q)))&&filterMatch(r));
+ // One botanical identity, one public card. Keep both source IDs and all search aliases in the DB.
+ const unique=new Map();
+ for(const r of rows){const key=norm(r.scientific)+'|'+norm(r.label);const prev=unique.get(key);
+  if(!prev||(r.plant_id==='minari'&&prev.plant_id==='waterdropwort'))unique.set(key,r)}
+ rows.splice(0,rows.length,...unique.values());
  rows.sort((a,b)=>matchRank(a,q)-matchRank(b,q)||(a.label.length-b.label.length)||a.label.localeCompare(b.label,'ko'));render(rows)}
 async function j(u){try{const r=await fetch(u);return r.ok?await r.json():[]}catch(e){return[]}}
 async function boot(){const [plants,retail,assessmentData,enCatalog]=await Promise.all([j('./data/plants.json'),j('./data/korean_retail_name_map.json'),j('./data/public_assessments.json'),j('./data/i18n/en/catalog_en.json')]);(enCatalog?.plants||[]).forEach(e=>englishById.set(e.id,e));
