@@ -33,6 +33,32 @@ for entry in entries:
             peer = next(e for e in entries if e.findtext(f"{SM}loc") == href)
             peer_alternates = {link.get("hreflang"): link.get("href") for link in peer.findall(XHTML)}
             assert peer_alternates == alternates, f"Nonreciprocal hreflang: {loc} <-> {href}"
+# Each indexed sitemap URL must resolve to an existing, indexable, self-canonical HTML page.
+from html.parser import HTMLParser
+from urllib.parse import unquote
+
+class SEOHeadParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.canonicals = []
+        self.robots = []
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "link" and attrs.get("rel", "").lower() == "canonical":
+            self.canonicals.append(attrs.get("href", ""))
+        if tag == "meta" and attrs.get("name", "").lower() == "robots":
+            self.robots.append(attrs.get("content", "").lower())
+
+for url in urls:
+    relative = unquote(url[len(BASE):])
+    assert relative == "" or (relative.endswith("/") and ".." not in relative.split("/")), f"Unsafe sitemap path: {url}"
+    target = ROOT / relative / "index.html"
+    assert target.is_file(), f"Sitemap URL has no local HTML page: {url}"
+    parser = SEOHeadParser()
+    parser.feed(target.read_text(encoding="utf-8"))
+    assert parser.canonicals == [url], f"Canonical mismatch: {url} -> {parser.canonicals}"
+    assert not any("noindex" in value for value in parser.robots), f"Noindex page in sitemap: {url}"
+
 page = (ROOT / "all-plants/index.html").read_text(encoding="utf-8")
 assert '<meta name="robots" content="index,follow">' in page, "Catalog is not indexable"
 assert f'<link rel="canonical" href="{BASE}all-plants/">' in page, "Catalog canonical mismatch"
