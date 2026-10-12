@@ -95,6 +95,19 @@ function reset(){['q','verdict','category','family','nutrition'].forEach(id=>$(i
 const CERTAINTY_KO={"A":"높음","B+":"다소 높음","B":"중간","B-":"중간 이하","C+":"다소 낮음","C":"낮음","C-":"매우 낮음","D+":"매우 낮음","D":"매우 낮음","D-":"매우 낮음"};const CERTAINTY_EN={"A":"High","B+":"Fairly high","B":"Moderate","B-":"Below moderate","C+":"Fairly low","C":"Low","C-":"Very low","D+":"Very low","D":"Very low","D-":"Very low"};function certaintyKo(c){const k=String(c||"").trim();return document.documentElement.lang==="en"?(CERTAINTY_EN[k]||"Not assessed"):(CERTAINTY_KO[k]||"미확정")}
 async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,englishCatalog,nutritionReferences]=await Promise.all([j('../data/plants.json'),j('../data/plant_nutrition_v56.json'),j('../data/rda_food_composition_v56.json'),j('../data/public_evidence_records.json'),j('../data/public_assessments.json'),j('../data/verified_plant_images_v56.json'),j('../data/i18n/en/catalog_en.json'),j('../data/plant_nutrition_reference_v1.json')]);const englishNames=new Map((englishCatalog?.plants||[]).map(p=>[p.id,p.name]));let sets=[publicAssessments];evidenceMap=new Map((evidenceData?.records||[]).map(e=>[e.id,e]));imageMap=new Map((images?.images||[]).map(im=>[im.plant_id,im]));plants=plants||[];let amap=new Map;sets.filter(Array.isArray).flat().forEach(a=>{if(!amap.has(a.plant_id))amap.set(a.plant_id,[]);amap.get(a.plant_id).push(a)});const referenceNutritionIds=new Set((nutritionReferences?.records||[]).filter(r=>r.status==='reference_only'&&r.feeding_verdict_use===false).map(r=>r.plant_id));let nm=new Map((nut?.plants||[]).map(x=>[x.plant_id,x]));let rm=new Map((rda?.records||rda?.plants||[]).map(x=>[x.plant_id,x]));
  rows=plants.filter(p=>p.identity_status!=="candidate_name"&&(amap.get(p.id)||[]).length).map(p=>{let a=TV.representative(amap.get(p.id)||[]),g=TV.display(a).grade,u=nm.get(p.id)||rm.get(p.id)||{};return{id:p.id,ko:p.ko||p.id,en:englishNames.get(p.id)||p.en||'',scientific:p.scientific||'',aliases:p.aliases||[],searchAliases:p.search_aliases||[],family:p.family||'',category:p.category||'',verdict:g,verdictRank:VR[g]||5,confidence:a?.confidence||'',directEvidence:(a?.evidence_ids||[]).map(id=>evidenceMap.get(id)).filter(e=>e&&['direct','exact_taxon','direct_observation'].includes(e.directness)).length,hasNutrition:Object.keys(u).length>0,hasReferenceNutrition:referenceNutritionIds.has(p.id),water:n(u.water_g),fiber:n(u.fiber_g),calcium:n(u.calcium_mg),phosphorus:n(u.phosphorus_mg),ratio:n(u.calcium_phosphorus_ratio),protein:n(u.protein_g),potassium:n(u.potassium_mg),vitc:n(u.vitamin_c_mg)}});
+ // Present one card per identical botanical identity. Preserve source records for evidence reconciliation.
+ const uniquePlants=new Map();
+ for(const plant of rows){
+  const key=plant.ko.normalize('NFKC').trim().toLowerCase()+'|'+plant.scientific.normalize('NFKC').trim().toLowerCase();
+  const prev=uniquePlants.get(key);
+  if(!prev||(plant.id==='minari'&&prev.id==='waterdropwort')){
+   if(prev)plant.searchAliases=[...new Set([...plant.searchAliases,...prev.searchAliases,prev.ko,prev.en,...prev.aliases])];
+   uniquePlants.set(key,plant);
+  }else{
+   prev.searchAliases=[...new Set([...prev.searchAliases,plant.ko,plant.en,...plant.aliases,...plant.searchAliases])];
+  }
+ }
+ rows=[...uniquePlants.values()];
  fill($('verdict'),rows.map(r=>r.verdict),v=>vl(v));fill($('category'),rows.map(r=>r.category),catLabel);fill($('family'),rows.map(r=>r.family));counts();
  const p=new URLSearchParams(location.search);[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=p.get(k);if(v!=null&&(id==='q'||[...$(id).options].some(o=>o.value===v)))$(id).value=id==='q'?v.slice(0,80):v});
  const s=(p.get('sort')||'').split(':');if(s[0]&&document.querySelector('th[data-k="'+CSS.escape(s[0])+'"]')){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
