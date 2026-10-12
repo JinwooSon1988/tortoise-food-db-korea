@@ -109,6 +109,10 @@ for asset in EN_SEARCH_DATA:
     if relative not in english_search:
         errors.append(f"English search: expected dataset reference {relative}")
 
+# Ensure sitemap catalog assertions run in the existing CI asset audit.
+import runpy
+runpy.run_path(str(ROOT / "scripts/audit_sitemap_catalog.py"))
+
 if errors:
     print("\n".join(errors), file=sys.stderr)
     sys.exit(1)
