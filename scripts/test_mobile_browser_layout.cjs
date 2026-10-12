@@ -105,7 +105,7 @@ const server=http.createServer((req,res)=>{
     await page.goto('http://127.0.0.1:'+port+'/all-plants/',{waitUntil:'domcontentloaded'});
     await page.waitForFunction(()=>document.getElementById('summary')?.textContent.includes('종 중'),{timeout:12000});
     await page.locator('#q').fill('미나리');
-    await page.waitForFunction(()=>document.getElementById('summary')?.textContent.includes('1종 표시'),{timeout:10000});
+    await page.waitForFunction(()=>{const v=document.getElementById('summary')?.textContent||'';return /1종 표시/.test(v)&&document.querySelectorAll('#mobilecards .mcard').length===1},{timeout:10000});
     const minariCards=page.locator('#mobilecards .mcard');
     assert.equal(await minariCards.count(),1,'all-plants duplicated minari at '+width+'px');
     assert.match(await minariCards.first().innerText(),/Oenanthe javanica/);
