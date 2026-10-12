@@ -35,7 +35,12 @@ function render(rows){lastRows=rows;const q=(input.value||'').trim();if(!rows.le
  const more=document.getElementById('moreResults');if(more)more.onclick=()=>{shown+=PAGE*3;render(lastRows)}}
 function matchRank(r,q){const n=norm(r.name),t=r.terms.map(norm);if(n===q)return 0;if(t.some(x=>x===q))return 1;if(n.startsWith(q))return 2;if(t.some(x=>x.startsWith(q)))return 3;return 4}
 function search(){const q=norm(input.value);shown=PAGE;if(!q){results.innerHTML='';return}
- const rows=catalog.filter(r=>r.isPublic&&r.terms.some(x=>norm(x).includes(q)));rows.sort((a,b)=>matchRank(a,q)-matchRank(b,q)||(a.name.length-b.name.length)||a.name.localeCompare(b.name,'en'));render(rows)}
+ const rows=catalog.filter(r=>r.isPublic&&r.terms.some(x=>norm(x).includes(q)));
+ // Deduplicate identical botanical identities in the visible search results, not the evidence database.
+ const unique=new Map();
+ for(const r of rows){const key=norm(r.scientific)+'|'+norm(r.name);const prev=unique.get(key);
+  if(!prev||(r.id==='minari'&&prev.id==='waterdropwort'))unique.set(key,r)}
+ rows.splice(0,rows.length,...unique.values());rows.sort((a,b)=>matchRank(a,q)-matchRank(b,q)||(a.name.length-b.name.length)||a.name.localeCompare(b.name,'en'));render(rows)}
 async function j(u){try{const r=await fetch(u);return r.ok?await r.json():null}catch(e){return null}}
 async function boot(){const [plants,retail,assessmentData,cat]=await Promise.all([j('../data/plants.json'),j('../data/korean_retail_name_map.json'),j('../data/public_assessments.json'),j('../data/i18n/en/catalog_en.json')]);
  if(!plants||!assessmentData||!cat){countEl.textContent='The plant data could not be loaded. Please reload the page.';return}
