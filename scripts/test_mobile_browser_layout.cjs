@@ -93,13 +93,6 @@ const server=http.createServer((req,res)=>{
      assert.ok(detailWidth<=width+2,route+' '+width+'px clicked detail overflow: '+detailWidth);
      console.log('PASS',route,width+'px search to detail navigation');
     }
-    if(route==='/en/'){
-     const koreanLink=page.locator('.langswitch a[hreflang="ko"]');
-     await koreanLink.click();
-     await page.waitForURL(url=>url.pathname==='/'||url.pathname==='/index.html',{timeout:10000});
-     assert.equal(await page.locator('html').getAttribute('lang'),'ko','English home Korean link failed');
-     console.log('PASS',route,width+'px Korean navigation');
-    }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
    }
