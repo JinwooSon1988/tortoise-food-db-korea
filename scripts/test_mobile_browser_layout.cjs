@@ -80,13 +80,6 @@ const server=http.createServer((req,res)=>{
      assert.equal(await koreanButton.getAttribute('aria-pressed'),'true','Korean toggle not marked active');
      console.log('PASS',route,width+'px home language toggles');
     }
-    if(route==='/en/'){
-     const koreanLink=page.locator('.langswitch a[hreflang="ko"]');
-     await koreanLink.click();
-     await page.waitForURL(url=>url.pathname==='/'||url.pathname==='/index.html',{timeout:10000});
-     assert.equal(await page.locator('html').getAttribute('lang'),'ko','English home Korean link failed');
-     console.log('PASS',route,width+'px Korean navigation');
-    }
     if(route==='/' || route==='/en/'){
      const dandelion=page.locator('#searchResults .resultcard[data-plant-id="dandelion"] .detailbtn');
      await dandelion.waitFor({state:'visible',timeout:10000});
@@ -99,6 +92,13 @@ const server=http.createServer((req,res)=>{
      const detailWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
      assert.ok(detailWidth<=width+2,route+' '+width+'px clicked detail overflow: '+detailWidth);
      console.log('PASS',route,width+'px search to detail navigation');
+    }
+    if(route==='/en/'){
+     const koreanLink=page.locator('.langswitch a[hreflang="ko"]');
+     await koreanLink.click();
+     await page.waitForURL(url=>url.pathname==='/'||url.pathname==='/index.html',{timeout:10000});
+     assert.equal(await page.locator('html').getAttribute('lang'),'ko','English home Korean link failed');
+     console.log('PASS',route,width+'px Korean navigation');
     }
     console.log('PASS',route,width+'px',JSON.stringify(layout));
     await page.close();
