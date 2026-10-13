@@ -38,7 +38,9 @@ ibera_by_plant={}
 for o in ibera.get("observations",[]):
     if o.get("plant_id"): ibera_by_plant.setdefault(o["plant_id"],[]).append(o)
 images=json.loads((ROOT/"data/verified_plant_images_v56.json").read_text(encoding="utf-8")).get("images",[])
-image_by_plant={i["plant_id"]:i for i in images if i.get("identity_scope") in {"exact_species","exact_subspecies","exact_variety"}}
+# Display only images with an exact taxon identity AND a verified feeding-part match.
+# Partial matches remain in the audit dataset for replacement, not in public results.
+image_by_plant={i["plant_id"]:i for i in images if i.get("identity_scope") in {"exact_species","exact_subspecies","exact_variety"} and i.get("part_match")=="match"}
 curated_identity=json.loads((ROOT/"data/curated_identity_notes.json").read_text(encoding="utf-8")).get("notes",{})
 
 # Public detail pages: the same set the home search exposes (non-candidate + any public assessment).
