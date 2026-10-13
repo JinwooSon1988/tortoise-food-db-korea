@@ -253,7 +253,7 @@ def core_page(plants_by_id, rows_by):
 
 def build(plants, rows_by, write):
     """write(rel_path, html). Returns the list of English hub paths written."""
-    public_count = len(plants)
+    public_count = len({((p.get('ko') or p['id']).strip().casefold(), (p.get('scientific') or '').strip().casefold()) for p in plants})
     ids = {p["id"]: p for p in plants}
     examples = [ids[i]["en"] for i in ("dandelion", "chicory", "bokchoy") if i in ids and ids[i].get("en")]
     out = {"en/index.html": home(public_count, examples), "en/all-plants/index.html": all_plants(public_count),
