@@ -407,11 +407,11 @@ def render(p):
     elif nutrition_references_by_id.get(pid):
         reference_cards = []
         for ref in nutrition_references_by_id[pid]:
-            name = esc("Nutrition composition reference" if re.search(r"[가-힣]", ref.get("source_name") or "") else (ref.get("source_name") or "Source not specified"))
+            source_label = esc("Nutrition composition reference" if re.search(r"[가-힣]", ref.get("source_name") or "") else (ref.get("source_name") or "Source not specified"))
             scope = esc(ref.get("analyzed_part") or "Not specified")
             state = esc(ref.get("preparation_state") or "Not specified")
             url = ref.get("source_url") or ""
-            source = (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{name} · Open original ↗</a>' if url.startswith("https://") else name)
+            source = (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{source_label} · Open original ↗</a>' if url.startswith("https://") else source_label)
             reference_cards.append(f'<li><strong>{source}</strong><p class="small">Analyzed part: {scope} · Preparation: {state}</p><p class="small">Reference only: not a verified nutrient value for the feeding part. Values may differ by plant part and sample; this does not establish feeding safety.</p></li>')
         nbody = ('<div class="nutrition-missing"><strong>Related nutrition references available · No directly verified values</strong>'
                  '<p>Related source data exist, but cannot be substituted for verified nutrient values for this feeding part.</p>'
