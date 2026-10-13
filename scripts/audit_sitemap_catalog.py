@@ -17,6 +17,8 @@ XHTML = "{http://www.w3.org/1999/xhtml}link"
 SM = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
 entries = tree.findall(f".//{SM}url")
 listed = set(urls)
+entries_by_loc = {entry.findtext(f"{SM}loc"): entry for entry in entries}
+assert len(entries_by_loc) == len(entries), "Duplicate sitemap loc entries"
 for entry in entries:
     loc = entry.findtext(f"{SM}loc")
     alternates = {}
@@ -30,7 +32,7 @@ for entry in entries:
         assert alternates.get("ko") and alternates.get("en"), f"Incomplete language pair: {loc}"
         assert alternates.get("x-default") in (alternates["ko"], alternates["en"]), f"Invalid x-default: {loc}"
         for href in (alternates["ko"], alternates["en"]):
-            peer = next(e for e in entries if e.findtext(f"{SM}loc") == href)
+            peer = entries_by_loc[href]
             peer_alternates = {link.get("hreflang"): link.get("href") for link in peer.findall(XHTML)}
             assert peer_alternates == alternates, f"Nonreciprocal hreflang: {loc} <-> {href}"
 # Each indexed sitemap URL must resolve to an existing, indexable, self-canonical HTML page.
