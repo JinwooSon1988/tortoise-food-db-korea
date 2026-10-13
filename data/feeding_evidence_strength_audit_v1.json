@@ -24,14 +24,12 @@
    "same_source_cited_twice": 4,
    "no_tortoise_feeding_source": 6,
    "do_not_feed_without_animal_or_expert_source": 1,
-   "confidence_B_or_higher_without_tortoise_study": 4,
    "positive_verdict_without_tortoise_feeding_source": 3
   },
   "weakness_tiers": {
-   "none": 28,
+   "none": 32,
    "C_single_specialist_source": 148,
-   "A_no_tortoise_feeding_source": 6,
-   "B_confidence_exceeds_directness": 4
+   "A_no_tortoise_feeding_source": 6
   },
   "confidence_by_strongest_class": {
    "same_taxon_tortoise_study": {
@@ -45,18 +43,18 @@
     "C-": 1
    },
    "husbandry_or_expert": {
-    "C+": 46,
+    "C+": 50,
     "C": 113,
     "D+": 1,
-    "C-": 6,
-    "B": 4
+    "C-": 6
    },
    "other_animal_study": {
     "C-": 2,
     "C": 1
    },
    "composition_or_identity": {
-    "C": 3
+    "C-": 1,
+    "C": 2
    }
   }
  },
@@ -4215,7 +4213,7 @@
    "ko": "메밀잎",
    "species_group": "Tortoise_general",
    "verdict": "do_not_feed",
-   "confidence": "C",
+   "confidence": "C-",
    "strongest_evidence_class": "composition_or_identity",
    "evidence_class_counts": {
     "composition_or_identity": 1
@@ -5431,17 +5429,16 @@
    "ko": "헤지머스터드",
    "species_group": "Tortoise_general",
    "verdict": "limited_mixed_diet",
-   "confidence": "B",
+   "confidence": "C+",
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 2,
     "composition_or_identity": 2
    },
    "flags": [
-    "no_tortoise_study",
-    "confidence_B_or_higher_without_tortoise_study"
+    "no_tortoise_study"
    ],
-   "weakness_tier": "B_confidence_exceeds_directness",
+   "weakness_tier": null,
    "evidence": [
     {
      "evidence_id": "tortoise_trust_hedge_mustard",
@@ -5536,16 +5533,15 @@
    "ko": "흰광대나물",
    "species_group": "Tortoise_general",
    "verdict": "supported_mixed_diet",
-   "confidence": "B",
+   "confidence": "C+",
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 2
    },
    "flags": [
-    "no_tortoise_study",
-    "confidence_B_or_higher_without_tortoise_study"
+    "no_tortoise_study"
    ],
-   "weakness_tier": "B_confidence_exceeds_directness",
+   "weakness_tier": null,
    "evidence": [
     {
      "evidence_id": "ttable_lamium_album_774",
@@ -5696,16 +5692,15 @@
    "ko": "살갈퀴",
    "species_group": "Tortoise_general",
    "verdict": "limited_mixed_diet",
-   "confidence": "B",
+   "confidence": "C+",
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 2
    },
    "flags": [
-    "no_tortoise_study",
-    "confidence_B_or_higher_without_tortoise_study"
+    "no_tortoise_study"
    ],
-   "weakness_tier": "B_confidence_exceeds_directness",
+   "weakness_tier": null,
    "evidence": [
     {
      "evidence_id": "ttable_vicia_310",
@@ -5726,16 +5721,15 @@
    "ko": "등갈퀴나물",
    "species_group": "Tortoise_general",
    "verdict": "limited_mixed_diet",
-   "confidence": "B",
+   "confidence": "C+",
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 2
    },
    "flags": [
-    "no_tortoise_study",
-    "confidence_B_or_higher_without_tortoise_study"
+    "no_tortoise_study"
    ],
-   "weakness_tier": "B_confidence_exceeds_directness",
+   "weakness_tier": null,
    "evidence": [
     {
      "evidence_id": "ttable_vicia_310",
