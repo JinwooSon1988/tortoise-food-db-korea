@@ -46,8 +46,16 @@ class SEOHeadParser(HTMLParser):
         self.robots = []
         self.alternates = {}
         self.html_languages = []
+        self.titles = []
+        self.descriptions = []
+        self.in_title = False
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "title":
+            self.in_title = True
+            self.titles.append("")
+        if tag == "meta" and attrs.get("name", "").lower() == "description":
+            self.descriptions.append(attrs.get("content", ""))
         if tag == "html":
             self.html_languages.append(attrs.get("lang", "").lower())
         if tag == "link" and attrs.get("rel", "").lower() == "canonical":
@@ -58,6 +66,13 @@ class SEOHeadParser(HTMLParser):
             self.alternates[lang] = attrs.get("href", "")
         if tag == "meta" and attrs.get("name", "").lower() == "robots":
             self.robots.append(attrs.get("content", "").lower())
+
+    def handle_data(self, data):
+        if self.in_title:
+            self.titles[-1] += data
+    def handle_endtag(self, tag):
+        if tag == "title":
+            self.in_title = False
 
 sitemap_alternates = {
     entry.findtext(f"{SM}loc"): {link.get("hreflang"): link.get("href") for link in entry.findall(XHTML)}
@@ -71,6 +86,8 @@ for url in urls:
     parser = SEOHeadParser()
     parser.feed(target.read_text(encoding="utf-8"))
     expected_language = "en" if relative.startswith("en/") else "ko"
+    assert len(parser.titles) == 1 and parser.titles[0].strip(), f"Missing or duplicate HTML title: {url}"
+    assert len(parser.descriptions) == 1 and parser.descriptions[0].strip(), f"Missing or duplicate meta description: {url}"
     assert parser.html_languages == [expected_language], f"HTML lang mismatch: {url} -> {parser.html_languages}"
     assert parser.canonicals == [url], f"Canonical mismatch: {url} -> {parser.canonicals}"
     assert parser.alternates == sitemap_alternates[url], f"HTML/sitemap hreflang mismatch: {url} -> HTML {parser.alternates} vs XML {sitemap_alternates[url]}"
