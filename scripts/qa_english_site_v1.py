@@ -106,6 +106,18 @@ def resolve(page_path, href):
 # 1. Completeness: every public plant has a Korean and an English page, and nothing else is published under en/plant.
 plants = public_plants(json.loads(read(ROOT / "data/plants.json")), load_assessments())
 ids = {p["id"] for p in plants}
+# Guard the canonical identity in every translated page. Source citations must never
+# replace the plant name in its page title, even when nutrition is reference-only.
+for _plant in plants:
+    _pid = _plant["id"]
+    _page = ROOT / "en" / "plant" / _pid / "index.html"
+    if not _page.exists():
+        continue
+    _text = read(_page)
+    _title_match = re.search(r"<title>(.*?)</title>", _text, re.S | re.I)
+    _expected = html.escape(str(_plant.get("en") or _pid), quote=True)
+    if not _title_match or not _title_match.group(1).startswith("Can tortoises eat " + _expected + "?"):
+        fail(f"{_pid}: English page title does not identify the canonical plant name")
 ko_ids = {d.name for d in (ROOT / "plant").iterdir() if (d / "index.html").exists()}
 en_ids = {d.name for d in (ROOT / "en/plant").iterdir() if (d / "index.html").exists()}
 if ids != en_ids:
