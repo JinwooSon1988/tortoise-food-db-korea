@@ -542,7 +542,16 @@ def write_sitemap():
 
 
 def main():
-    pages = {p["id"]: render(p) for p in plants}
+    # Canonical Korean detail owns the facts. English aliases are redirects, not
+    # independently rendered plant details.
+    pages = {p["id"]: (
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        '<meta name="robots" content="noindex,follow">'
+        f'<link rel="canonical" href="{SITE_URL}/plant/{p["id"]}/">'
+        f'<meta http-equiv="refresh" content="0;url=../../../plant/{p["id"]}/?lang=en">'
+        f'</head><body><a href="../../../plant/{p["id"]}/?lang=en">'
+        'View this plant on the main site</a></body></html>'
+    ) for p in plants}
     catalog = [catalog_entry(p) for p in plants]
     if I.missing:
         out = ROOT / "data/i18n/en/_missing.json"
