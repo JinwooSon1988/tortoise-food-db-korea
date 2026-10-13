@@ -21,6 +21,22 @@ LANG_CSS = (".langswitch{display:inline-flex;align-items:stretch;border:1px soli
             "@media(max-width:380px){.detailnav{gap:6px}.detailnav a,.detailnav button{min-width:0;padding:0 11px}.langswitch a,.langswitch strong{padding:0 9px}}")
 
 
+def home_logo():
+    source = (ROOT / "index.html").read_text(encoding="utf-8")
+    match = re.search(r'<svg class="brandmark".*?</svg>', source, re.S)
+    if not match:
+        raise ValueError("Missing canonical brandmark SVG")
+    return match.group(0)
+
+
+def home_favicon():
+    source = (ROOT / "index.html").read_text(encoding="utf-8")
+    match = re.search(r'<link rel="icon"[^>]*>', source)
+    if not match:
+        raise ValueError("Missing canonical favicon")
+    return match.group(0)
+
+
 def lang_switch(ko_href):
     return f'<nav class="langswitch" aria-label="Language"><a href="{ko_href}" hreflang="ko" lang="ko">한국어</a><strong aria-current="page">English</strong></nav>'
 
@@ -68,11 +84,11 @@ def home(public_count, examples):
     schema = {"@context": "https://schema.org", "@type": "WebSite", "name": "Tortoise Food DB", "url": url, "inLanguage": "en", "description": desc,
               "potentialAction": {"@type": "SearchAction", "target": url + "?q={search_term_string}", "query-input": "required name=search_term_string"}}
     ex = "".join(f'<button type="button" data-example="{esc(x)}">{esc(x)}</button>' for x in examples)
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2f6b49">'
+    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8">{home_favicon()}<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2f6b49">'
             f'<meta name="robots" content="index,follow"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}">{alternates("/")}{og(title, desc, url)}{ld(schema)}'
             f'<style>{styles_of("index.html")}{LANG_CSS}.top{{display:flex;align-items:center;gap:10px}}</style></head>'
             '<body><a class="skiplink" href="#main-content">Skip to content</a><main id="main-content" class="wrap" tabindex="-1">'
-            f'<header class="top"><a class="brand" href="./" aria-label="Tortoise Food DB home">🐢 <span>Tortoise Food DB</span></a><div class="topmeta">{lang_switch("../")}</div></header>'
+            f'<header class="top"><a class="brand" href="./" aria-label="Tortoise Food DB home">{home_logo()} <span>Tortoise Food DB</span></a><div class="topmeta">{lang_switch("../")}</div></header>'
             '<section class="hero"><div class="eyebrow">Evidence database for tortoise food plants</div><h1>Can my tortoise eat this plant?</h1>'
             '<p>Search for a plant by name. We show <b>whether it can be fed first</b>, then why, with the papers and original sources there when you need them.</p></section>'
             '<section class="searchstage" aria-label="Search food plants"><div class="searchrow"><input id="searchInput" type="search" placeholder="e.g. ' + esc(", ".join(examples)) + '" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search food plants by name" aria-controls="searchResults" aria-describedby="searchHelp" aria-keyshortcuts="/"><button id="searchBtn" type="button" class="primary">Check grade</button></div>'
