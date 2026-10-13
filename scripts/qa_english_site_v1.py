@@ -38,13 +38,20 @@ if _probe.exists() and 'http-equiv="refresh"' in _probe.read_text(encoding="utf-
                           f'href="{_target}"'):
             if _required not in _alias:
                 errors.append(f"{_pid}: legacy redirect missing {_required}")
-        if not (ROOT / "plant" / _pid / "index.html").exists():
+        _canonical_page = ROOT / "plant" / _pid / "index.html"
+        if not _canonical_page.exists():
             errors.append(f"{_pid}: canonical detail page missing")
+        else:
+            _canonical_doc = _canonical_page.read_text(encoding="utf-8")
+            if 'language-toggle.js' not in _canonical_doc or '?lang=en' not in _canonical_doc:
+                errors.append(f"{_pid}: canonical detail missing same-page English switch")
+            if 'data-plant-id="' not in _canonical_doc:
+                errors.append(f"{_pid}: canonical detail missing plant identity")
     if errors:
         for _error in errors[:30]:
             print("FAIL:", _error)
         sys.exit(1)
-    print(f"PASS: {_ids.__len__()} legacy English plant URLs redirect to canonical plant pages with ?lang=en")
+    print(f"PASS: {len(_ids)} legacy English plant URLs redirect to canonical plant pages with ?lang=en")
     sys.exit(0)
 
 # Homepage mirrors the Korean search-first layout: three concise trust cards stay, retired example chips and guide blocks must not return.
