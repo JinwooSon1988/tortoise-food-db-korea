@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Legacy English URL compatibility redirects (en/plant/<id>/), the English home, all-plants list and guides (scripts/en_hubs.py), the
-bilingual sitemap and data/i18n/en/catalog_en.json.\n\nPlant detail content is NOT independently rendered here: /en/plant/<id>/ redirects\nto the canonical /plant/<id>/?lang=en. The canonical page must provide translation.
+bilingual sitemap and data/i18n/en/catalog_en.json.
+
+Plant detail content is NOT independently rendered here: /en/plant/<id>/ redirects
+to the canonical /plant/<id>/?lang=en. The canonical page must provide translation.
 
 Run after the Korean pipeline (generate_static_pages -> patch_curated_social_metadata -> inject_plant_detail_v56
 -> generate_guide_hubs). Facts come from the same canonical files as the Korean pages; Korean prose stored in those
