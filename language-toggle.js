@@ -8,6 +8,8 @@ const T={'근거 확실성':'Evidence certainty','식물 과':'Family','본문�
 '육지거북 먹이 근거 데이터베이스':'Evidence-based tortoise food database',
 '근거 기반 육지거북 먹이 DB':'Evidence-based tortoise food database',
 '판정 확인':'Check feeding verdict',
+'한글명·영문명·학명으로 검색하세요.':'Search by Korean, English, or scientific name.',
+'검색 결과가 없어도 안전한 식물이라는 뜻은 아닙니다.':'No search result means the plant has not been assessed; it does not mean it is safe.',
 '정확한 이름을 몰라도 됩니다. 한글명·영문명·학명 중 하나만 입력하세요.':'Search by a common name, Korean name, or scientific name.',
 '검색 결과 없음 ≠ 안전 · 아직 공개 판정을 찾지 못한 식물일 수 있습니다.':'No result does not mean safe. This plant may not yet have a published assessment.',
 '급여 판정':'Feeding verdict',
