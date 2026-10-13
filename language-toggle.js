@@ -134,9 +134,12 @@ function boot(){
      if(target.origin!==location.origin||!target.pathname.startsWith(new URL(ROOT).pathname))return;
      const base=new URL(ROOT).pathname;
      const relative=target.pathname.slice(base.length);
-     if(document.documentElement.lang==='en' && (/^guides\/research-method\/?$/.test(relative)||/^plant\/[^/]+\/?$/.test(relative))){
+     // Plant pages are canonical: never route users to an English duplicate.
+     if(/^en\/plant\/[^/]+\/?$/.test(relative)){
+       target.pathname=base+relative.replace(/^en\//,'').replace(/\/$/,'')+'/';
+     }else if(document.documentElement.lang==='en' && /^guides\/research-method\/?$/.test(relative)){
        target.pathname=base+'en/'+relative.replace(/\/$/,'')+'/';
-     }else if(document.documentElement.lang==='ko' && (/^en\/guides\/research-method\/?$/.test(relative)||/^en\/plant\/[^/]+\/?$/.test(relative))){
+     }else if(document.documentElement.lang==='ko' && /^en\/guides\/research-method\/?$/.test(relative)){
        target.pathname=base+relative.replace(/^en\//,'').replace(/\/$/,'')+'/';
      }
      target.searchParams.set('lang',document.documentElement.lang);
