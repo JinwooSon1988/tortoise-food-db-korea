@@ -978,7 +978,7 @@ for p in plants:
                         '<ul class="nutrition-reference-list">' + "".join(reference_cards) + '</ul>'
                         '<p class="small">참고자료의 수치는 급여 판정에 사용하지 않았습니다. 안전성 판단은 위의 급여 판정과 근거를 확인하세요.</p></div>')
     else:
-        nutrition_body='<div class="nutrition-missing"><strong>연결된 영양자료 없음</strong><p>현재 이 식물에 연결된 검증 영양자료나 관련 참고자료가 없습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
+        nutrition_body='<div class="nutrition-missing"><strong>연결된 영양자료 없음</strong><p>검증된 영양자료 없음 · 현재 이 식물에 연결된 검증 영양자료나 관련 참고자료가 없습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
     nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2>{nutrition_body}<p class="small">영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않습니다. 검증된 수치만 표시하며 미확인 항목을 0으로 간주하지 않습니다.</p></section>'''
     # Source-traceable variety cards must survive every static-site regeneration. Everything shown here is
     # rendered from the data files (never hand-edited HTML); QA: scripts/qa_variety_card_regeneration_v1.py.
