@@ -972,7 +972,7 @@ for p in plants:
             note=esc(ref.get("display_note_ko") or "급여 대상 부위에 직접 적용할 수 있는 검증된 수치가 아닙니다.")
             url=ref.get("source_url") or ""
             source=(f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{name} · 원문 보기 ↗</a>' if url.startswith("https://") else name)
-            reference_cards.append(f'<li><strong>{source}</strong><p class="small">분석 범위: {scope}</p><p class="small">{note}</p></li>')
+            reference_cards.append(f'<li><strong>{source}</strong><p class="small nutrition-source-citation">분석 범위: {scope}</p><p class="small nutrition-source-citation">{note}</p></li>')
         nutrition_body=('<div class="nutrition-missing"><strong>관련 영양 참고자료 있음 · 직접 적용 수치 미확인</strong>'
                         '<p>연관 자료가 있으나 해당 급여 부위의 검증된 영양 수치로 대체할 수 없습니다.</p>'
                         '<ul class="nutrition-reference-list">' + "".join(reference_cards) + '</ul>'
