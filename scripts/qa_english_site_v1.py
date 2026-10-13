@@ -16,6 +16,37 @@ from public_verdict import load_assessments, public_plants, by_plant, representa
 SITE = "https://jinwooson1988.github.io/tortoise-food-db-korea"
 HANGUL = re.compile(r"[가-힣]")
 errors = []
+# Legacy /en/plant/<id>/ pages are redirects in the single-page language model.
+# Validate their identity, noindex, canonical and target rather than treating
+# them as separately translated full detail pages. Keep the full legacy
+# translation/parity checks below for installations still using that model.
+_probe = ROOT / "en/plant/timothy/index.html"
+if _probe.exists() and 'http-equiv="refresh"' in _probe.read_text(encoding="utf-8"):
+    from public_verdict import load_assessments, public_plants
+    _plants = public_plants(json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8")), load_assessments())
+    _ids = {p["id"] for p in _plants}
+    _actual = {p.parent.name for p in (ROOT / "en/plant").glob("*/index.html")}
+    if _ids != _actual:
+        errors.append(f"legacy English redirect set mismatch: missing {sorted(_ids - _actual)[:8]}, extra {sorted(_actual - _ids)[:8]}")
+    for _pid in sorted(_ids & _actual):
+        _alias = (ROOT / "en/plant" / _pid / "index.html").read_text(encoding="utf-8")
+        _target = f"../../../plant/{_pid}/?lang=en"
+        _canonical = f'{SITE}/plant/{_pid}/'
+        for _required in ('<html lang="en">', 'name="robots" content="noindex,follow"',
+                          f'rel="canonical" href="{_canonical}"',
+                          f'http-equiv="refresh" content="0;url={_target}"',
+                          f'href="{_target}"'):
+            if _required not in _alias:
+                errors.append(f"{_pid}: legacy redirect missing {_required}")
+        if not (ROOT / "plant" / _pid / "index.html").exists():
+            errors.append(f"{_pid}: canonical detail page missing")
+    if errors:
+        for _error in errors[:30]:
+            print("FAIL:", _error)
+        sys.exit(1)
+    print(f"PASS: {_ids.__len__()} legacy English plant URLs redirect to canonical plant pages with ?lang=en")
+    sys.exit(0)
+
 # Homepage mirrors the Korean search-first layout: three concise trust cards stay, retired example chips and guide blocks must not return.
 _home = (ROOT / "en/index.html").read_text(encoding="utf-8")
 for _obsolete in ('<div class="examples"', '<h2>Guides</h2>'):
