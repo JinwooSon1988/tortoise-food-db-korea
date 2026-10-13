@@ -10,196 +10,15 @@
   ],
   "records": [
     {
-      "id": "radicchio",
-      "ko": "라디키오",
-      "en": "Radicchio",
-      "scientific": "Cichorium intybus var. foliosum",
-      "category": "leafy",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "endive",
-      "ko": "엔다이브",
-      "en": "Endive",
-      "scientific": "Cichorium endivia",
-      "category": "leafy",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "dandelion",
-      "ko": "민들레",
-      "en": "Dandelion",
-      "scientific": "Taraxacum spp.",
-      "category": "wild",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "sowthistle",
-      "ko": "방가지똥",
-      "en": "Sow thistle",
-      "scientific": "Sonchus spp.",
-      "category": "wild",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "turnipgreens",
-      "ko": "순무잎",
-      "en": "Turnip greens",
-      "scientific": "Brassica rapa subsp. rapa",
-      "category": "leafy",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "cauliflowerleaf",
-      "ko": "콜리플라워잎",
-      "en": "Cauliflower leaves",
-      "scientific": "Brassica oleracea var. botrytis",
-      "category": "leafy",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "plantain",
-      "ko": "질경이",
-      "en": "Plantain",
-      "scientific": "Plantago spp.",
-      "category": "wild",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "mulberry",
-      "ko": "뽕잎",
-      "en": "Mulberry leaf",
-      "scientific": "Morus spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "mallow",
-      "ko": "아욱",
-      "en": "Mallow",
-      "scientific": "Malva spp.",
-      "category": "leafy",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "mint",
-      "ko": "민트",
-      "en": "Mint",
-      "scientific": "Mentha spp.",
-      "category": "herb",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "clover",
-      "ko": "클로버",
-      "en": "Clover",
-      "scientific": "Trifolium spp.",
-      "category": "wild",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "pumpkinleaf",
-      "ko": "호박잎",
-      "en": "Pumpkin leaf",
-      "scientific": "Cucurbita spp.",
-      "category": "leafy",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "bellpepper",
-      "ko": "파프리카",
-      "en": "Bell pepper",
-      "scientific": "Capsicum annuum",
-      "category": "fruit_veg",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "rose",
-      "ko": "장미꽃",
-      "en": "Rose petals",
-      "scientific": "Rosa spp.",
-      "category": "flower",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "pricklypear",
-      "ko": "천년초",
-      "en": "Prickly pear cactus",
-      "scientific": "Opuntia spp.",
-      "category": "cactus",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "timothy",
-      "ko": "티모시",
-      "en": "Timothy grass",
-      "scientific": "Phleum pratense",
-      "category": "grass",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "ryegrass",
-      "ko": "라이그라스",
-      "en": "Ryegrass",
-      "scientific": "Lolium spp.",
-      "category": "grass",
-      "issue": "no_approved_image"
-    },
-    {
       "id": "barleygrass",
       "ko": "보리싹",
       "en": "Barley grass",
       "scientific": "Hordeum vulgare",
       "category": "grass",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "sunflowerleaf",
-      "ko": "해바라기잎",
-      "en": "Sunflower leaf",
-      "scientific": "Helianthus annuus",
-      "category": "leafy",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "violet",
-      "ko": "제비꽃",
-      "en": "Violet",
-      "scientific": "Viola spp.",
-      "category": "wild",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "geranium",
-      "ko": "제라늄",
-      "en": "Geranium",
-      "scientific": "Pelargonium spp.",
-      "category": "ornamental",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "pansy",
-      "ko": "팬지",
-      "en": "Pansy",
-      "scientific": "Viola × wittrockiana",
-      "category": "flower",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "marigold",
-      "ko": "메리골드",
-      "en": "Marigold",
-      "scientific": "Tagetes spp.",
-      "category": "flower",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "chard",
-      "ko": "근대",
-      "en": "Chard / Swiss Chard",
-      "scientific": "Beta vulgaris subsp. cicla",
-      "category": "leafy",
-      "issue": "no_approved_image"
+      "issue": "partial_part_match",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
       "id": "chrysanthemum",
@@ -207,55 +26,32 @@
       "en": "Chrysanthemum",
       "scientific": "Chrysanthemum morifolium",
       "category": "flower",
-      "issue": "no_approved_image"
+      "issue": "no_approved_image",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
-      "id": "sunflowerpetal",
-      "ko": "해바라기꽃잎",
-      "en": "Sunflower petal",
-      "scientific": "Helianthus annuus",
+      "id": "marigold",
+      "ko": "메리골드",
+      "en": "Marigold",
+      "scientific": "Tagetes spp.",
       "category": "flower",
-      "issue": "partial_part_match"
+      "issue": "no_approved_image",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
-      "id": "blackberryleaf",
-      "ko": "블랙베리잎",
-      "en": "Blackberry leaf",
-      "scientific": "Rubus fruticosus agg.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "geraniumleaf",
-      "ko": "제라늄잎",
-      "en": "Geranium leaf",
-      "scientific": "Pelargonium spp.",
-      "category": "leafy",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "amaranthleaf",
-      "ko": "비름",
-      "en": "Amaranth greens",
-      "scientific": "Amaranthus spp.",
-      "category": "wild",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "beanleaf",
-      "ko": "강낭콩잎",
-      "en": "Common bean leaf",
-      "scientific": "Phaseolus vulgaris",
-      "category": "leafy",
-      "issue": "partial_part_match"
-    },
-    {
-      "id": "mizuna",
-      "ko": "미즈나",
-      "en": "Mizuna",
-      "scientific": "Brassica rapa var. nipposinica",
-      "category": "leafy",
-      "issue": "no_approved_image"
+      "id": "pansy",
+      "ko": "팬지",
+      "en": "Pansy",
+      "scientific": "Viola × wittrockiana",
+      "category": "flower",
+      "issue": "no_approved_image",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
       "id": "pumpkinflower",
@@ -263,23 +59,54 @@
       "en": "Pumpkin flower",
       "scientific": "Cucurbita spp.",
       "category": "flower",
-      "issue": "no_approved_image"
+      "issue": "no_approved_image",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
-      "id": "melonleaf",
-      "ko": "멜론잎",
-      "en": "Melon leaf",
-      "scientific": "Cucumis melo",
-      "category": "leafy",
-      "issue": "no_approved_image"
+      "id": "rose",
+      "ko": "장미꽃",
+      "en": "Rose petals",
+      "scientific": "Rosa spp.",
+      "category": "flower",
+      "issue": "no_approved_image",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
-      "id": "kiwileaf",
-      "ko": "키위잎",
-      "en": "Kiwifruit leaf",
-      "scientific": "Actinidia deliciosa",
-      "category": "vine_leaf",
-      "issue": "no_approved_image"
+      "id": "ryegrass",
+      "ko": "라이그라스",
+      "en": "Ryegrass",
+      "scientific": "Lolium spp.",
+      "category": "grass",
+      "issue": "no_approved_image",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "sunflowerpetal",
+      "ko": "해바라기꽃잎",
+      "en": "Sunflower petal",
+      "scientific": "Helianthus annuus",
+      "category": "flower",
+      "issue": "partial_part_match",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "timothy",
+      "ko": "티모시",
+      "en": "Timothy grass",
+      "scientific": "Phleum pratense",
+      "category": "grass",
+      "issue": "partial_part_match",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
       "id": "wheatleaf",
@@ -287,183 +114,21 @@
       "en": "Wheat leaf",
       "scientific": "Triticum aestivum",
       "category": "grass",
-      "issue": "partial_part_match"
+      "issue": "partial_part_match",
+      "priority": "P0",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
-      "id": "lindenleaf",
-      "ko": "피나무잎",
-      "en": "Linden leaf",
-      "scientific": "Tilia spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "hazelleaf",
-      "ko": "개암나무잎",
-      "en": "Hazel leaf",
-      "scientific": "Corylus spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "birchleaf",
-      "ko": "자작나무잎",
-      "en": "Birch leaf",
-      "scientific": "Betula spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "willowleaf",
-      "ko": "버드나무잎",
-      "en": "Willow leaf",
-      "scientific": "Salix spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "poplarleaf",
-      "ko": "포플러잎",
-      "en": "Poplar leaf",
-      "scientific": "Populus spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "elmleaf",
-      "ko": "느릅나무잎",
-      "en": "Elm leaf",
-      "scientific": "Ulmus spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "mapleleaf",
-      "ko": "단풍나무잎",
-      "en": "Maple leaf",
-      "scientific": "Acer spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "eveningprimrose",
-      "ko": "달맞이꽃",
-      "en": "Evening primrose",
-      "scientific": "Oenothera spp.",
-      "category": "wild_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "hawthorn",
-      "ko": "산사나무속 잎",
-      "en": "Hawthorn leaf",
-      "scientific": "Crataegus spp.",
-      "category": "tree_leaf",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "houseleek",
-      "ko": "셈페르비붐",
-      "en": "House leek",
-      "scientific": "Sempervivum spp.",
-      "category": "succulent",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "echeveria",
-      "ko": "에케베리아",
-      "en": "Echeveria",
-      "scientific": "Echeveria spp.",
-      "category": "succulent",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "hosta",
-      "ko": "비비추속",
-      "en": "Hosta",
-      "scientific": "Hosta spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "salsify",
-      "ko": "살시피류",
-      "en": "Salsify / Goat's beard",
-      "scientific": "Tragopogon spp.",
-      "category": "wild_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "hawksbeard",
-      "ko": "씀바귀아재비류",
-      "en": "Hawksbeard",
-      "scientific": "Crepis spp.",
-      "category": "wild_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "hawkbit",
-      "ko": "민들레아재비류",
-      "en": "Hawkbit",
-      "scientific": "Leontodon spp.",
-      "category": "wild_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "hawkweed",
-      "ko": "조밥나물류",
-      "en": "Hawkweed",
-      "scientific": "Hieracium spp.",
-      "category": "wild_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "petunia",
-      "ko": "페튜니아",
-      "en": "Petunia",
-      "scientific": "Petunia spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "dahlia",
-      "ko": "달리아",
-      "en": "Dahlia",
-      "scientific": "Dahlia spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "gerbera",
-      "ko": "거베라",
-      "en": "Gerbera",
-      "scientific": "Gerbera spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "zinnia",
-      "ko": "백일홍",
-      "en": "Zinnia",
-      "scientific": "Zinnia spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "mexicanpetunia",
-      "ko": "멕시칸페튜니아",
-      "en": "Mexican Petunia",
-      "scientific": "Ruellia spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
-    },
-    {
-      "id": "coreopsis",
-      "ko": "금계국속",
-      "en": "Coreopsis",
-      "scientific": "Coreopsis spp.",
-      "category": "garden_plant",
-      "issue": "no_approved_image"
+      "id": "amaranthleaf",
+      "ko": "비름",
+      "en": "Amaranth greens",
+      "scientific": "Amaranthus spp.",
+      "category": "wild",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
       "id": "astilbe",
@@ -471,15 +136,362 @@
       "en": "Astilbe",
       "scientific": "Astilbe spp.",
       "category": "garden_plant",
-      "issue": "no_approved_image"
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
-      "id": "primula",
-      "ko": "프리뮬라속",
-      "en": "Primula",
-      "scientific": "Primula spp.",
+      "id": "beanleaf",
+      "ko": "강낭콩잎",
+      "en": "Common bean leaf",
+      "scientific": "Phaseolus vulgaris",
+      "category": "leafy",
+      "issue": "partial_part_match",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "bellpepper",
+      "ko": "파프리카",
+      "en": "Bell pepper",
+      "scientific": "Capsicum annuum",
+      "category": "fruit_veg",
+      "issue": "partial_part_match",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "birchleaf",
+      "ko": "자작나무잎",
+      "en": "Birch leaf",
+      "scientific": "Betula spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "blackberryleaf",
+      "ko": "블랙베리잎",
+      "en": "Blackberry leaf",
+      "scientific": "Rubus fruticosus agg.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "cauliflowerleaf",
+      "ko": "콜리플라워잎",
+      "en": "Cauliflower leaves",
+      "scientific": "Brassica oleracea var. botrytis",
+      "category": "leafy",
+      "issue": "partial_part_match",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "chard",
+      "ko": "근대",
+      "en": "Chard / Swiss Chard",
+      "scientific": "Beta vulgaris subsp. cicla",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "clover",
+      "ko": "클로버",
+      "en": "Clover",
+      "scientific": "Trifolium spp.",
+      "category": "wild",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "coreopsis",
+      "ko": "금계국속",
+      "en": "Coreopsis",
+      "scientific": "Coreopsis spp.",
       "category": "garden_plant",
-      "issue": "no_approved_image"
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "dahlia",
+      "ko": "달리아",
+      "en": "Dahlia",
+      "scientific": "Dahlia spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "dandelion",
+      "ko": "민들레",
+      "en": "Dandelion",
+      "scientific": "Taraxacum spp.",
+      "category": "wild",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "echeveria",
+      "ko": "에케베리아",
+      "en": "Echeveria",
+      "scientific": "Echeveria spp.",
+      "category": "succulent",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "elmleaf",
+      "ko": "느릅나무잎",
+      "en": "Elm leaf",
+      "scientific": "Ulmus spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "endive",
+      "ko": "엔다이브",
+      "en": "Endive",
+      "scientific": "Cichorium endivia",
+      "category": "leafy",
+      "issue": "partial_part_match",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "eveningprimrose",
+      "ko": "달맞이꽃",
+      "en": "Evening primrose",
+      "scientific": "Oenothera spp.",
+      "category": "wild_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "geranium",
+      "ko": "제라늄",
+      "en": "Geranium",
+      "scientific": "Pelargonium spp.",
+      "category": "ornamental",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "geraniumleaf",
+      "ko": "제라늄잎",
+      "en": "Geranium leaf",
+      "scientific": "Pelargonium spp.",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "gerbera",
+      "ko": "거베라",
+      "en": "Gerbera",
+      "scientific": "Gerbera spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "hawkbit",
+      "ko": "민들레아재비류",
+      "en": "Hawkbit",
+      "scientific": "Leontodon spp.",
+      "category": "wild_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "hawksbeard",
+      "ko": "씀바귀아재비류",
+      "en": "Hawksbeard",
+      "scientific": "Crepis spp.",
+      "category": "wild_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "hawkweed",
+      "ko": "조밥나물류",
+      "en": "Hawkweed",
+      "scientific": "Hieracium spp.",
+      "category": "wild_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "hawthorn",
+      "ko": "산사나무속 잎",
+      "en": "Hawthorn leaf",
+      "scientific": "Crataegus spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "hazelleaf",
+      "ko": "개암나무잎",
+      "en": "Hazel leaf",
+      "scientific": "Corylus spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "hosta",
+      "ko": "비비추속",
+      "en": "Hosta",
+      "scientific": "Hosta spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "houseleek",
+      "ko": "셈페르비붐",
+      "en": "House leek",
+      "scientific": "Sempervivum spp.",
+      "category": "succulent",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "kiwileaf",
+      "ko": "키위잎",
+      "en": "Kiwifruit leaf",
+      "scientific": "Actinidia deliciosa",
+      "category": "vine_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "lindenleaf",
+      "ko": "피나무잎",
+      "en": "Linden leaf",
+      "scientific": "Tilia spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "mallow",
+      "ko": "아욱",
+      "en": "Mallow",
+      "scientific": "Malva spp.",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "mapleleaf",
+      "ko": "단풍나무잎",
+      "en": "Maple leaf",
+      "scientific": "Acer spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "melonleaf",
+      "ko": "멜론잎",
+      "en": "Melon leaf",
+      "scientific": "Cucumis melo",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "mexicanpetunia",
+      "ko": "멕시칸페튜니아",
+      "en": "Mexican Petunia",
+      "scientific": "Ruellia spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "mint",
+      "ko": "민트",
+      "en": "Mint",
+      "scientific": "Mentha spp.",
+      "category": "herb",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "mizuna",
+      "ko": "미즈나",
+      "en": "Mizuna",
+      "scientific": "Brassica rapa var. nipposinica",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     },
     {
       "id": "monarda",
@@ -487,7 +499,176 @@
       "en": "Bergamot / Bee Balm",
       "scientific": "Monarda spp.",
       "category": "garden_plant",
-      "issue": "no_approved_image"
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "mulberry",
+      "ko": "뽕잎",
+      "en": "Mulberry leaf",
+      "scientific": "Morus spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "petunia",
+      "ko": "페튜니아",
+      "en": "Petunia",
+      "scientific": "Petunia spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "plantain",
+      "ko": "질경이",
+      "en": "Plantain",
+      "scientific": "Plantago spp.",
+      "category": "wild",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "poplarleaf",
+      "ko": "포플러잎",
+      "en": "Poplar leaf",
+      "scientific": "Populus spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "pricklypear",
+      "ko": "천년초",
+      "en": "Prickly pear cactus",
+      "scientific": "Opuntia spp.",
+      "category": "cactus",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "primula",
+      "ko": "프리뮬라속",
+      "en": "Primula",
+      "scientific": "Primula spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "pumpkinleaf",
+      "ko": "호박잎",
+      "en": "Pumpkin leaf",
+      "scientific": "Cucurbita spp.",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "radicchio",
+      "ko": "라디키오",
+      "en": "Radicchio",
+      "scientific": "Cichorium intybus var. foliosum",
+      "category": "leafy",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "salsify",
+      "ko": "살시피류",
+      "en": "Salsify / Goat's beard",
+      "scientific": "Tragopogon spp.",
+      "category": "wild_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "sowthistle",
+      "ko": "방가지똥",
+      "en": "Sow thistle",
+      "scientific": "Sonchus spp.",
+      "category": "wild",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "sunflowerleaf",
+      "ko": "해바라기잎",
+      "en": "Sunflower leaf",
+      "scientific": "Helianthus annuus",
+      "category": "leafy",
+      "issue": "partial_part_match",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "turnipgreens",
+      "ko": "순무잎",
+      "en": "Turnip greens",
+      "scientific": "Brassica rapa subsp. rapa",
+      "category": "leafy",
+      "issue": "partial_part_match",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "violet",
+      "ko": "제비꽃",
+      "en": "Violet",
+      "scientific": "Viola spp.",
+      "category": "wild",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "willowleaf",
+      "ko": "버드나무잎",
+      "en": "Willow leaf",
+      "scientific": "Salix spp.",
+      "category": "tree_leaf",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
+    },
+    {
+      "id": "zinnia",
+      "ko": "백일홍",
+      "en": "Zinnia",
+      "scientific": "Zinnia spp.",
+      "category": "garden_plant",
+      "issue": "no_approved_image",
+      "priority": "P1",
+      "review_status": "awaiting_verified_replacement",
+      "approved_image_url": null
     }
-  ]
+  ],
+  "policy": "Do not display images from this queue. Promote only after exact taxon, assessed part, license and URL verification; keep provenance in verified_plant_images_v56.json."
 }
