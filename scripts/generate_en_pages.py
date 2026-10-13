@@ -32,6 +32,11 @@ rows_by = by_plant(assessments)
 plants = public_plants(all_plants, assessments)
 evidence_by_id = {e["id"]: e for e in load("data/public_evidence_records.json").get("records", [])}
 nutrition_by_id = {n["plant_id"]: n for n in load("data/plant_nutrition_v56.json").get("plants", []) if n.get("verification_status") == "verified"}
+nutrition_references_by_id = {}
+for ref in load("data/plant_nutrition_reference_v1.json").get("records", []):
+    if ref.get("status") == "reference_only" and ref.get("feeding_verdict_use") is False:
+        nutrition_references_by_id.setdefault(ref["plant_id"], []).append(ref)
+
 wild_by_plant = {}
 for w in load("data/wild_feeding_evidence.json").get("records", []):
     wild_by_plant.setdefault(w.get("plant_id"), []).append(w)
@@ -396,8 +401,21 @@ def render(p):
                  f'<p class="small">{esc(nutrition_basis_en(nu.get("basis")))} · Source food name: {esc(T(nu.get("food_description"), f"{pid}.food_description"))} · Source: '
                  f'<a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'
                  + (f'<p class="small">Scope: {esc(app_note)}</p>' if app_note else "") + academic_nutrition_en(nu))
+    elif nutrition_references_by_id.get(pid):
+        reference_cards = []
+        for ref in nutrition_references_by_id[pid]:
+            name = esc(ref.get("source_name") or "Source not specified")
+            scope = esc(ref.get("analyzed_part") or "Not specified")
+            state = esc(ref.get("preparation_state") or "Not specified")
+            url = ref.get("source_url") or ""
+            source = (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{name} · Open original ↗</a>' if url.startswith("https://") else name)
+            reference_cards.append(f'<li><strong>{source}</strong><p class="small">Analyzed part: {scope} · Preparation: {state}</p><p class="small">Reference only: not a verified nutrient value for the feeding part. Values may differ by plant part and sample; this does not establish feeding safety.</p></li>')
+        nbody = ('<div class="nutrition-missing"><strong>Related nutrition references available · No directly verified values</strong>'
+                 '<p>Related source data exist, but cannot be substituted for verified nutrient values for this feeding part.</p>'
+                 '<ul class="nutrition-reference-list">' + "".join(reference_cards) + '</ul>'
+                 '<p class="small">Reference-only data were not used to determine the feeding verdict. See the feeding assessment and evidence above.</p></div>')
     else:
-        nbody = ('<div class="nutrition-missing"><strong>No verified nutrition data</strong><p>No official nutrient values matching this plant and plant part have been confirmed yet.</p>'
+        nbody = ('<div class="nutrition-missing"><strong>No linked nutrition data</strong><p>No verified nutrient values or related reference records are currently linked to this plant.</p>'
                  '<p class="small">A lack of data does not mean the plant is safe or unsafe. See the feeding assessment and evidence above.</p></div>')
     nutrition = (f'<section class="card" id="nutrition"><h2>Key nutrients and limiting compounds</h2>{nbody}{special_nutrition_en(pid)}'
                  f'<p class="small">Nutrient values support the assessment but never override feeding, veterinary, toxicity or antinutrient evidence on their own. '
