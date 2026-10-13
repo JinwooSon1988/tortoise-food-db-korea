@@ -45,8 +45,11 @@ class SEOHeadParser(HTMLParser):
         self.canonicals = []
         self.robots = []
         self.alternates = {}
+        self.html_languages = []
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "html":
+            self.html_languages.append(attrs.get("lang", "").lower())
         if tag == "link" and attrs.get("rel", "").lower() == "canonical":
             self.canonicals.append(attrs.get("href", ""))
         if tag == "link" and attrs.get("rel", "").lower() == "alternate" and attrs.get("hreflang"):
@@ -67,6 +70,8 @@ for url in urls:
     assert target.is_file(), f"Sitemap URL has no local HTML page: {url}"
     parser = SEOHeadParser()
     parser.feed(target.read_text(encoding="utf-8"))
+    expected_language = "en" if relative.startswith("en/") else "ko"
+    assert parser.html_languages == [expected_language], f"HTML lang mismatch: {url} -> {parser.html_languages}"
     assert parser.canonicals == [url], f"Canonical mismatch: {url} -> {parser.canonicals}"
     assert parser.alternates == sitemap_alternates[url], f"HTML/sitemap hreflang mismatch: {url} -> HTML {parser.alternates} vs XML {sitemap_alternates[url]}"
     assert not any("noindex" in value for value in parser.robots), f"Noindex page in sitemap: {url}"
