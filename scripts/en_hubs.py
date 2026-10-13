@@ -76,13 +76,13 @@ def home(public_count, examples):
             '<section class="hero"><div class="eyebrow">Evidence database for tortoise food plants</div><h1>Can my tortoise eat this plant?</h1>'
             '<p>Search for a plant by name. We show <b>whether it can be fed first</b>, then why, with the papers and original sources there when you need them.</p></section>'
             '<section class="searchstage" aria-label="Search food plants"><div class="searchrow"><input id="searchInput" type="search" placeholder="e.g. ' + esc(", ".join(examples)) + '" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search food plants by name" aria-controls="searchResults" aria-describedby="searchHelp" aria-keyshortcuts="/"><button id="searchBtn" type="button" class="primary">Check grade</button></div>'
-            '<div id="searchHelp" class="searchhelp"><span class="helpintro">Search by common or scientific name.</span>'
+            '<div id="searchHelp" class="searchhelp"><span class="helpintro">Search by Korean, English, or scientific name.</span>'
             '<span class="safetyhint">No search result does not mean a plant is safe.</span></div>'
             f'<div class="examples" aria-label="Examples"><span>Try:</span>{ex}</div>'
             f'<div id="catalogCount" class="catalogcount">Search {public_count} plants with a public assessment.</div><div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>'
             '<section class="belowfold"><div><h2>All plant data</h2><p>Browse all published plants and their feeding assessments without searching.</p></div><nav class="utilitylinks" aria-label="Plant catalog and research method"><a href="../all-plants/?lang=en">View all plants</a><a href="./guides/research-method/">How we review evidence</a></nav></section>'
             '<footer class="footer">Tortoise Food DB · An evidence-based database of tortoise food plants · Grades are for Mediterranean tortoises (Testudo) and tortoises in general unless a species note says otherwise.</footer></main>'
-            f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261010-1"></script></body></html>')
+            f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261013-1"></script></body></html>')
 
 
 def all_plants(public_count):
