@@ -1,0 +1,4656 @@
+{
+ "schema_version": "1.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v1.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v1.json",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "name_authority": "GBIF backbone taxonomy, species/match API",
+ "candidates": [
+  {
+   "candidate_key": "Abutilon sonneratianum",
+   "accepted_name": "Abutilon sonneratianum",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Abutilon sonneratianum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-20"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Achyranthes",
+   "accepted_name": "Achyranthes",
+   "family": "Amaranthaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Achyranthes"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Malacochersus tornieri"
+   ],
+   "evidence_ids": [
+    "crm107_tornieri_2018-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Acmispon brachycarpus",
+   "accepted_name": "Acmispon brachycarpus",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Lotus humistratus"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Albuca",
+   "accepted_name": "Albuca",
+   "family": "Asparagaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Albuca sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Allium",
+   "accepted_name": "Allium",
+   "family": "Amaryllidaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Allium spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Aloiampelos ciliaris",
+   "accepted_name": "Aloiampelos ciliaris",
+   "family": "Asphodelaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Aloe ciliaris"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Amsinckia tessellata",
+   "accepted_name": "Amsinckia tessellata",
+   "family": "Boraginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Amsinckia tessellata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Anemone coronaria",
+   "accepted_name": "Anemone coronaria",
+   "family": "Ranunculaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Anemone coronaria"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Anthemis",
+   "accepted_name": "Anthemis",
+   "family": "Asteraceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Anthemis spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Arbutus unedo",
+   "accepted_name": "Arbutus unedo",
+   "family": "Ericaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Arbutus unedo"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Artocarpus",
+   "accepted_name": "Artocarpus",
+   "family": "Moraceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Artocarpus spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Arum",
+   "accepted_name": "Arum",
+   "family": "Araceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Arum sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Asphodelus",
+   "accepted_name": "Asphodelus",
+   "family": "Asphodelaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Asphodelus spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-15"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Astragalus",
+   "accepted_name": "Astragalus",
+   "family": "Fabaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Astragalus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Astragalus didymocarpus",
+   "accepted_name": "Astragalus didymocarpus",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Astragalus didymocarpus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Astragalus layneae",
+   "accepted_name": "Astragalus layneae",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Astragalus layneae"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Bambusa",
+   "accepted_name": "Bambusa",
+   "family": "Poaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Bambusa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Manouria emys"
+   ],
+   "evidence_ids": [
+    "crm086_emys_2015-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Basella alba",
+   "accepted_name": "Basella alba",
+   "family": "Basellaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Basella rubra"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Bromus rubens",
+   "accepted_name": "Bromus rubens",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Bromus madritensis ssp. rubens"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "crm109_agassizii_2019-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Bromus tectorum",
+   "accepted_name": "Bromus tectorum",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Bromus tectorum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "crm109_agassizii_2019-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Brunsvigia gregaria",
+   "accepted_name": "Brunsvigia gregaria",
+   "family": "Amaryllidaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Brunsvigia gregaria"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Bulbine",
+   "accepted_name": "Bulbine",
+   "family": "Asphodelaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Bulbine sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Bulbine latifolia",
+   "accepted_name": "Bulbine latifolia",
+   "family": "Asphodelaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Bulbine latifolia"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Calendula arvensis",
+   "accepted_name": "Calendula arvensis",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Calendula arvensis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Campanula rapunculoides",
+   "accepted_name": "Campanula rapunculoides",
+   "family": "Campanulaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Campanula rapunculoides"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Capsella bursa-pastoris",
+   "accepted_name": "Capsella bursa-pastoris",
+   "family": "Brassicaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Capsella bursa-pastoris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [
+    "shepherdspurse"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Cardamine flexuosa",
+   "accepted_name": "Cardamine flexuosa",
+   "family": "Brassicaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cardamine flexuosa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Cardamine hirsuta",
+   "accepted_name": "Cardamine hirsuta",
+   "family": "Brassicaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cardamine hirsuta"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Centaurea cyanus",
+   "accepted_name": "Centaurea cyanus",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Centaurea cyanus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [
+    "cornflower"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Ceratocephalus",
+   "accepted_name": "Ceratocephalus",
+   "family": "Ranunculaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Ceratocephalus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo horsfieldii"
+   ],
+   "evidence_ids": [
+    "lagarde_2003-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Ceratonia",
+   "accepted_name": "Ceratonia",
+   "family": "Fabaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Ceratonia"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Chaenactis fremontii",
+   "accepted_name": "Chaenactis fremontii",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Chaenactis fremontii"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "crm109_agassizii_2019-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Chamaerops",
+   "accepted_name": "Chamaerops",
+   "family": "Arecaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Chamaerops"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-12"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Chlorophytum colubrinum",
+   "accepted_name": "Chlorophytum colubrinum",
+   "family": "Asparagaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Chlorophytum colubrinum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Chorizanthe brevicornu",
+   "accepted_name": "Chorizanthe brevicornu",
+   "family": "Polygonaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Chorizanthe brevicornu"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Chromolaena odorata",
+   "accepted_name": "Chromolaena odorata",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Chromolaena odorata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Cichorium intybus",
+   "accepted_name": "Cichorium intybus",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cichorium intybus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014",
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [
+    "chicory",
+    "radicchio"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Cistus albidus",
+   "accepted_name": "Cistus albidus",
+   "family": "Cistaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cistus albidus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Coccinia grandis",
+   "accepted_name": "Coccinia grandis",
+   "family": "Cucurbitaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Coccinia grandis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Commelina",
+   "accepted_name": "Commelina",
+   "family": "Commelinaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Commelina spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-24"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Convolvulaceae",
+   "accepted_name": "Convolvulaceae",
+   "family": "Convolvulaceae",
+   "rank": "family_or_subfamily",
+   "names_as_printed": [
+    "Convolvulaceae"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone elegans"
+   ],
+   "evidence_ids": [
+    "crm106_elegans_2018-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "Cotyledon",
+   "accepted_name": "Cotyledon",
+   "family": "Crassulaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Cotyledon sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-15"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Crassula",
+   "accepted_name": "Crassula",
+   "family": "Crassulaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Crassula sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-14"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Crassula expansa",
+   "accepted_name": "Crassula expansa",
+   "family": "Crassulaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Crassula expansa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-13"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Crepis capillaris",
+   "accepted_name": "Crepis capillaris",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Crepis capillaris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "hawksbeard"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Cucurbita pepo",
+   "accepted_name": "Cucurbita pepo",
+   "family": "Cucurbitaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cucurbita pepo"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "pumpkinflower",
+    "pumpkinleaf"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Cyanotis axillaris",
+   "accepted_name": "Cyanotis axillaris",
+   "family": "Commelinaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cyanotis axillaris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Cyanotis cristata",
+   "accepted_name": "Cyanotis cristata",
+   "family": "Commelinaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cyanotis cristata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Cyclamen persicum",
+   "accepted_name": "Cyclamen persicum",
+   "family": "Primulaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cyclamen persicum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Cynodon dactylon",
+   "accepted_name": "Cynodon dactylon",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cynodon dactylon"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [
+    "bermudagrass"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Cyperaceae",
+   "accepted_name": "Cyperaceae",
+   "family": "Cyperaceae",
+   "rank": "family_or_subfamily",
+   "names_as_printed": [
+    "Cyperaceae"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone elegans"
+   ],
+   "evidence_ids": [
+    "crm106_elegans_2018-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "Cyphostemma lovemorei",
+   "accepted_name": "Cyphostemma lovemorei",
+   "family": "Vitaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cyphostemma lovemorei"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Dianthus strictus",
+   "accepted_name": "Dianthus strictus",
+   "family": "Caryophyllaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Dianthus multipunctatus"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Digitalis",
+   "accepted_name": "Digitalis",
+   "family": "Plantaginaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Digitalis sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Digitaria ciliaris",
+   "accepted_name": "Digitaria ciliaris",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Digitaria ciliaris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Digitaria eriantha",
+   "accepted_name": "Digitaria eriantha",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Digitaria eriantha"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Dillenia",
+   "accepted_name": "Dillenia",
+   "family": "Dilleniaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Dillenia spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Dillenia pentagyna",
+   "accepted_name": "Dillenia pentagyna",
+   "family": "Dilleniaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Dillenia pentagyna"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Dioscorea communis",
+   "accepted_name": "Dioscorea communis",
+   "family": "Dioscoreaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Tamus communis"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Dittrichia viscosa",
+   "accepted_name": "Dittrichia viscosa",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Inula viscosa"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-13"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Dolichandrone spathacea",
+   "accepted_name": "Dolichandrone spathacea",
+   "family": "Bignoniaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Dolichandrone spathacea"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Drimia altissima",
+   "accepted_name": "Drimia altissima",
+   "family": "Asparagaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Urginea altissima"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Drimia maritima",
+   "accepted_name": "Drimia maritima",
+   "family": "Asparagaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Drimia maritima"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-16"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Drosanthemum hispidum",
+   "accepted_name": "Drosanthemum hispidum",
+   "family": "Aizoaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Drosanthemum hispidum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-27"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Duosperma crenatum",
+   "accepted_name": "Duosperma crenatum",
+   "family": "Acanthaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Duosperma crenatum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Eleusine indica",
+   "accepted_name": "Eleusine indica",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Eleusine indica"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [
+    "feedipedia-12130"
+   ],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Eragrostis racemosa",
+   "accepted_name": "Eragrostis racemosa",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Eragrostis racemosa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Eragrostis tenella",
+   "accepted_name": "Eragrostis tenella",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Eragrostis tenella"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Eremothera boothii",
+   "accepted_name": "Eremothera boothii",
+   "family": "Onagraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Camissonia boothii"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Eriastrum eremicum",
+   "accepted_name": "Eriastrum eremicum",
+   "family": "Polemoniaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Eriastrum eremicum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-15"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Erodium cicutarium",
+   "accepted_name": "Erodium cicutarium",
+   "family": "Geraniaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Erodium cicutarium"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-08",
+    "crm109_agassizii_2019-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Euphorbia",
+   "accepted_name": "Euphorbia",
+   "family": "Euphorbiaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Euphorbia"
+   ],
+   "name_check": "genus_kept_as_printed_backbone_status_doubtful",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-12"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Euphorbia albomarginata",
+   "accepted_name": "Euphorbia albomarginata",
+   "family": "Euphorbiaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Chamaesyce albomarginata"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Euphorbiaceae",
+   "accepted_name": "Euphorbiaceae",
+   "family": "Euphorbiaceae",
+   "rank": "family_or_subfamily",
+   "names_as_printed": [
+    "Euphorbiaceae"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone elegans"
+   ],
+   "evidence_ids": [
+    "crm106_elegans_2018-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "Fabaceae",
+   "accepted_name": "Fabaceae",
+   "family": "Fabaceae",
+   "rank": "family_or_subfamily",
+   "names_as_printed": [
+    "Papilionaceae"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Geochelone elegans"
+   ],
+   "evidence_ids": [
+    "crm106_elegans_2018-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "Ficus carica",
+   "accepted_name": "Ficus carica",
+   "family": "Moraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Ficus carica"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [
+    "figleaf"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Ficus racemosa",
+   "accepted_name": "Ficus racemosa",
+   "family": "Moraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Ficus racemosa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Ficus virens",
+   "accepted_name": "Ficus virens",
+   "family": "Moraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Ficus virens"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Galenia",
+   "accepted_name": "Galenia",
+   "family": "Aizoaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Galenia sp."
+   ],
+   "name_check": "genus_kept_as_printed_backbone_status_synonym",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-12"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Galium mollugo",
+   "accepted_name": "Galium mollugo",
+   "family": "Rubiaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Galium mollugo"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Gilia minor",
+   "accepted_name": "Gilia minor",
+   "family": "Polemoniaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Gilia minor"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-16"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Gomphrena celosioides",
+   "accepted_name": "Gomphrena celosioides",
+   "family": "Amaranthaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Gomphrena celosioides"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Hermannia althaeoides",
+   "accepted_name": "Hermannia althaeoides",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Hermannia althaeoides"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-21"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Hylodesmum repandum",
+   "accepted_name": "Hylodesmum repandum",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Desmodium repandum"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Hypochaeris glabra",
+   "accepted_name": "Hypochaeris glabra",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Hypochaeris glabra"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Hypochaeris radicata",
+   "accepted_name": "Hypochaeris radicata",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Hypochaeris radicata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [
+    "catsear"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Hypochoeris",
+   "accepted_name": "Hypochoeris",
+   "family": "Asteraceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Hypochoeris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Indigofera",
+   "accepted_name": "Indigofera",
+   "family": "Fabaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Indigofera sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-17"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Ipomoea",
+   "accepted_name": "Ipomoea",
+   "family": "Convolvulaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Ipomoea sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Koelpinia linearis",
+   "accepted_name": "Koelpinia linearis",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Koelpinia linearis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo horsfieldii"
+   ],
+   "evidence_ids": [
+    "lagarde_2003-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Lapsana communis",
+   "accepted_name": "Lapsana communis",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Lapsana communis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Lavandula",
+   "accepted_name": "Lavandula",
+   "family": "Lamiaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Lavandula"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-10"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Lavandula stoechas",
+   "accepted_name": "Lavandula stoechas",
+   "family": "Lamiaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Lavandula stoechas"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Leontodon",
+   "accepted_name": "Leontodon",
+   "family": "Asteraceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Leontodon"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "hawkbit"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Leontodon autumnalis",
+   "accepted_name": "Leontodon autumnalis",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Leontodon autumnalis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "hawkbit"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Leontodon hispidus",
+   "accepted_name": "Leontodon hispidus",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Leontodon hispidus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "hawkbit"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Leontodon tuberosus",
+   "accepted_name": "Leontodon tuberosus",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Leontodon tuberosus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "hawkbit"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Leptadenia lanceolata",
+   "accepted_name": "Leptadenia lanceolata",
+   "family": "Apocynaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Leptadenia hastata"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Lotus",
+   "accepted_name": "Lotus",
+   "family": "Fabaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Lotus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Lygodesmia exigua",
+   "accepted_name": "Lygodesmia exigua",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Prenanthella exigua"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Lysimachia arvensis",
+   "accepted_name": "Lysimachia arvensis",
+   "family": "Primulaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Anagallis arvensis"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Malacothrix glabrata",
+   "accepted_name": "Malacothrix glabrata",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Malacothrix glabrata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "crm109_agassizii_2019-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Malva",
+   "accepted_name": "Malva",
+   "family": "Malvaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Malva"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "mallow"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Malva moschata",
+   "accepted_name": "Malva moschata",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Malva moschata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014",
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "mallow"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Malva neglecta",
+   "accepted_name": "Malva neglecta",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Malva neglecta"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "mallow"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Malva sylvestris",
+   "accepted_name": "Malva sylvestris",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Malva sylvestris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [
+    "commonmallow"
+   ],
+   "existing_genus_level_plant_ids": [
+    "mallow"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Markhamia stipulata",
+   "accepted_name": "Markhamia stipulata",
+   "family": "Bignoniaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Markhamia stipulata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Medicago",
+   "accepted_name": "Medicago",
+   "family": "Fabaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Medicago"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Medicago orbicularis",
+   "accepted_name": "Medicago orbicularis",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Medicago orbicularis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Mentzelia",
+   "accepted_name": "Mentzelia",
+   "family": "Loasaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Mentzelia spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-14"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Millettia brandisiana",
+   "accepted_name": "Millettia brandisiana",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Millettia brandisiana"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Mimosa pudica",
+   "accepted_name": "Mimosa pudica",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Mimosa pudica"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Mirabilis laevis",
+   "accepted_name": "Mirabilis laevis",
+   "family": "Nyctaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Mirabilis bigelovii"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Morus",
+   "accepted_name": "Morus",
+   "family": "Moraceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Morus sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "mulberry"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Muhlenbergia porteri",
+   "accepted_name": "Muhlenbergia porteri",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Muhlenbergia porteri"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "crm109_agassizii_2019-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Muscari parviflorum",
+   "accepted_name": "Muscari parviflorum",
+   "family": "Asparagaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Muscari parviflorum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-13"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Olax psittacorum",
+   "accepted_name": "Olax psittacorum",
+   "family": "Olacaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Olax scandens"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Onobrychis viciifolia",
+   "accepted_name": "Onobrychis viciifolia",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Onobrychis viciifolia"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [
+    "sainfoin"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Opuntia",
+   "accepted_name": "Opuntia",
+   "family": "Cactaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Opuntia"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata",
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-17",
+    "crm059_hermanni_2011-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "pricklypear"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Opuntia aurantiaca",
+   "accepted_name": "Opuntia aurantiaca",
+   "family": "Cactaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Opuntia aurantiaca"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-23"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "pricklypear"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Opuntia ficus-indica",
+   "accepted_name": "Opuntia ficus-indica",
+   "family": "Cactaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Opuntia ficus-indica"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-22"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [
+    "opuntiapad"
+   ],
+   "existing_genus_level_plant_ids": [
+    "pricklypear"
+   ],
+   "forage_nutrition_record_ids": [
+    "feedipedia-11595",
+    "feedipedia-11596"
+   ],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Opuntia maxima",
+   "accepted_name": "Opuntia maxima",
+   "family": "Cactaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Opuntia maxima"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "pricklypear"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Ornithogalum tenuifolium",
+   "accepted_name": "Ornithogalum tenuifolium",
+   "family": "Asparagaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Ornithogalum tenuifolium"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-14"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Oxalis",
+   "accepted_name": "Oxalis",
+   "family": "Oxalidaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Oxalis sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-25"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Panicum",
+   "accepted_name": "Panicum",
+   "family": "Poaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Panicum sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Malacochersus tornieri"
+   ],
+   "evidence_ids": [
+    "crm107_tornieri_2018-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Panicum deustum",
+   "accepted_name": "Panicum deustum",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Panicum deustum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Papaver pavoninum",
+   "accepted_name": "Papaver pavoninum",
+   "family": "Papaveraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Papaver pavoninum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo horsfieldii"
+   ],
+   "evidence_ids": [
+    "lagarde_2003-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Pappea capensis",
+   "accepted_name": "Pappea capensis",
+   "family": "Sapindaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Pappea capensis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-28"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Parinari curatellifolia",
+   "accepted_name": "Parinari curatellifolia",
+   "family": "Chrysobalanaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Parinari curatellifolia"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Phacelia tanacetifolia",
+   "accepted_name": "Phacelia tanacetifolia",
+   "family": "Hydrophyllaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Phacelia tanacetifolia"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Pistacia lentiscus",
+   "accepted_name": "Pistacia lentiscus",
+   "family": "Anacardiaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Pistacia lentiscus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo graeca"
+   ],
+   "evidence_ids": [
+    "crm117_graeca_west_2022-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Plantago lagopus",
+   "accepted_name": "Plantago lagopus",
+   "family": "Plantaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Plantago lagopus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "plantain"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Plantago lanceolata",
+   "accepted_name": "Plantago lanceolata",
+   "family": "Plantaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Plantago lanceolata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014",
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [
+    "ribwortplantain"
+   ],
+   "existing_genus_level_plant_ids": [
+    "plantain"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Plantago major",
+   "accepted_name": "Plantago major",
+   "family": "Plantaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Plantago major"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [
+    "broadleafplantain"
+   ],
+   "existing_genus_level_plant_ids": [
+    "plantain"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Plantago media",
+   "accepted_name": "Plantago media",
+   "family": "Plantaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Plantago media"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "plantain"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Plantago ovata",
+   "accepted_name": "Plantago ovata",
+   "family": "Plantaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Plantago ovata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-13"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "plantain"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Poaceae",
+   "accepted_name": "Poaceae",
+   "family": "Poaceae",
+   "rank": "family_or_subfamily",
+   "names_as_printed": [
+    "Poaceae"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone elegans"
+   ],
+   "evidence_ids": [
+    "crm106_elegans_2018-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "Portulaca oleracea",
+   "accepted_name": "Portulaca oleracea",
+   "family": "Portulacaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Portulaca oleracea"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [
+    "purslane"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Prunella vulgaris",
+   "accepted_name": "Prunella vulgaris",
+   "family": "Lamiaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Prunella vulgaris"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Ranunculus",
+   "accepted_name": "Ranunculus",
+   "family": "Ranunculaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Ranunculus sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Rhinacanthus gracilis",
+   "accepted_name": "Rhinacanthus gracilis",
+   "family": "Acanthaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Rhinacanthus gracilis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Rosmarinus",
+   "accepted_name": "Rosmarinus",
+   "family": "Lamiaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Rosmarinus"
+   ],
+   "name_check": "genus_kept_as_printed_backbone_status_synonym",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-11"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Ruellia tuberosa",
+   "accepted_name": "Ruellia tuberosa",
+   "family": "Acanthaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Ruellia tuberosa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "mexicanpetunia"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Schotia afra",
+   "accepted_name": "Schotia afra",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Schotia afra"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-19"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Senecio scandens",
+   "accepted_name": "Senecio scandens",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Senecio scandens"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Senna obtusifolia",
+   "accepted_name": "Senna obtusifolia",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cassia obtusifolia"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Shorea robusta",
+   "accepted_name": "Shorea robusta",
+   "family": "Dipterocarpaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Shorea robusta"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-14"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Sida acuta",
+   "accepted_name": "Sida acuta",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Sida acuta"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-12"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Sida subcordata",
+   "accepted_name": "Sida subcordata",
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Sida subcordata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-13"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Sisymbrium officinale",
+   "accepted_name": "Sisymbrium officinale",
+   "family": "Brassicaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Sisymbrium officinale"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [
+    "hedgemustard"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Sonchus",
+   "accepted_name": "Sonchus",
+   "family": "Asteraceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Sonchus spp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "sowthistle"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Sonchus arvensis",
+   "accepted_name": "Sonchus arvensis",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Sonchus arvensis"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "sowthistle"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Sonchus oleraceus",
+   "accepted_name": "Sonchus oleraceus",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Sonchus oleraceus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "sowthistle"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Sporobolus",
+   "accepted_name": "Sporobolus",
+   "family": "Poaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Sporobolus sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Malacochersus tornieri"
+   ],
+   "evidence_ids": [
+    "crm107_tornieri_2018-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Stylocline micropoides",
+   "accepted_name": "Stylocline micropoides",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Stylocline micropoides"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-17"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Syagrus flexuosa",
+   "accepted_name": "Syagrus flexuosa",
+   "family": "Arecaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Syagrus flexuosa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Chelonoidis carbonarius"
+   ],
+   "evidence_ids": [
+    "wang_2011-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Synedrella nodiflora",
+   "accepted_name": "Synedrella nodiflora",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Synedrella nodiflora"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Taraxacum officinale",
+   "accepted_name": "Taraxacum officinale",
+   "family": "Asteraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Taraxacum officinale"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-12"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "dandelion"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Terminalia oliveri",
+   "accepted_name": "Terminalia oliveri",
+   "family": "Combretaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Terminalia oliveri"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Tetrapteron palmeri",
+   "accepted_name": "Tetrapteron palmeri",
+   "family": "Onagraceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Camissonia palmeri"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-18"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Themeda triandra",
+   "accepted_name": "Themeda triandra",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Themeda triandra"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Malacochersus tornieri"
+   ],
+   "evidence_ids": [
+    "crm107_tornieri_2018-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Thymus",
+   "accepted_name": "Thymus",
+   "family": "Lamiaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Thymus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo hermanni"
+   ],
+   "evidence_ids": [
+    "crm059_hermanni_2011-09"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Tragus berteronianus",
+   "accepted_name": "Tragus berteronianus",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Tragus berteronianus"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Trifolium",
+   "accepted_name": "Trifolium",
+   "family": "Fabaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Trifolium sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-18"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "clover"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Trifolium incarnatum",
+   "accepted_name": "Trifolium incarnatum",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Trifolium incarnatum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "clover"
+   ],
+   "forage_nutrition_record_ids": [
+    "feedipedia-12035"
+   ],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Trifolium pratense",
+   "accepted_name": "Trifolium pratense",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Trifolium pratense"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014",
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [
+    "redclover"
+   ],
+   "existing_genus_level_plant_ids": [
+    "clover"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Trifolium repens",
+   "accepted_name": "Trifolium repens",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Trifolium repens"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014",
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [
+    "whiteclover"
+   ],
+   "existing_genus_level_plant_ids": [
+    "clover"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Trifolium resupinatum",
+   "accepted_name": "Trifolium resupinatum",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Trifolium resupinatum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_wildflower_seed_2023"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "clover"
+   ],
+   "forage_nutrition_record_ids": [
+    "feedipedia-12450",
+    "feedipedia-14968"
+   ],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Trifolium stellatum",
+   "accepted_name": "Trifolium stellatum",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Trifolium stellatum"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-04"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [
+    "clover"
+   ],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "genus_level_record_in_database"
+  },
+  {
+   "candidate_key": "Uapaca kirkiana",
+   "accepted_name": "Uapaca kirkiana",
+   "family": "Phyllanthaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Uapaca kirkiana"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Urochloa nigropedata",
+   "accepted_name": "Urochloa nigropedata",
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Brachiaria nigropedata"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Vachellia karroo",
+   "accepted_name": "Vachellia karroo",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Acacia karroo"
+   ],
+   "name_check": "synonym_of_accepted_name",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-16"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Vicia cracca",
+   "accepted_name": "Vicia cracca",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Vicia cracca"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [
+    "vicia_cracca"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Vicia sativa",
+   "accepted_name": "Vicia sativa",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Vicia sativa"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix",
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [
+    "vicia_sativa"
+   ],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "species_already_in_database"
+  },
+  {
+   "candidate_key": "Zingiber",
+   "accepted_name": "Zingiber",
+   "family": "Zingiberaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Zingiber sp."
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Manouria emys"
+   ],
+   "evidence_ids": [
+    "crm086_emys_2015-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "Zornia glochidiata",
+   "accepted_name": "Zornia glochidiata",
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Zornia glochidiata"
+   ],
+   "name_check": "accepted",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "not_in_database"
+  },
+  {
+   "candidate_key": "printed:Amaranthus lividus",
+   "accepted_name": null,
+   "family": "Amaranthaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Amaranthus lividus"
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Asclepiadoideae",
+   "accepted_name": null,
+   "family": null,
+   "rank": "family_or_subfamily",
+   "names_as_printed": [
+    "Asclepiadoideae"
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [
+    "Geochelone elegans"
+   ],
+   "evidence_ids": [
+    "crm106_elegans_2018-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Commelina bengalensis",
+   "accepted_name": null,
+   "family": "Commelinaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Commelina bengalensis"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Commerlina benghalensis",
+   "accepted_name": null,
+   "family": "Commelinaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Commerlina benghalensis"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Convulvus arvensis",
+   "accepted_name": null,
+   "family": null,
+   "rank": "species",
+   "names_as_printed": [
+    "Convulvus arvensis"
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "naturescape_nt_tortoise_food_mix"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Cryptantha circumcissa",
+   "accepted_name": null,
+   "family": "Boraginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Cryptantha circumcissa"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Gopherus agassizii"
+   ],
+   "evidence_ids": [
+    "jennings_2002-12"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Crytococcum accrescens",
+   "accepted_name": null,
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Crytococcum accrescens"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-05"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Cynodon sp.",
+   "accepted_name": null,
+   "family": null,
+   "rank": "genus",
+   "names_as_printed": [
+    "Cynodon sp."
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [
+    "Malacochersus tornieri"
+   ],
+   "evidence_ids": [
+    "crm107_tornieri_2018-01"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Cypreus spp.",
+   "accepted_name": null,
+   "family": "Cyperaceae",
+   "rank": "genus",
+   "names_as_printed": [
+    "Cypreus spp."
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Indotestudo elongata"
+   ],
+   "evidence_ids": [
+    "crm096_elongata_2016-07"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Dactyloctenium aegyptum",
+   "accepted_name": null,
+   "family": "Poaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Dactyloctenium aegyptum"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-03"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Erythroxylum zambeziacum",
+   "accepted_name": null,
+   "family": "Erythroxylaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Erythroxylum zambeziacum"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Grewia tilaefolia",
+   "accepted_name": null,
+   "family": "Malvaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Grewia tilaefolia"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Ipomoea senensis",
+   "accepted_name": null,
+   "family": "Convolvulaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Ipomoea senensis"
+   ],
+   "name_check": "spelling_differs_from_backbone_needs_review",
+   "tortoise_taxa_with_records": [
+    "Kinixys spekii"
+   ],
+   "evidence_ids": [
+    "crm115_spekii_2021-02"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Onobrychis sativa",
+   "accepted_name": null,
+   "family": "Fabaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Onobrychis sativa"
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [],
+   "evidence_ids": [],
+   "negative_record_only": null,
+   "seed_mixture_ids": [
+    "tortoise_club_tlady_mixture_2014"
+   ],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Roselle (Malvaceae)",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "Roselle (Malvaceae)"
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Geochelone platynota"
+   ],
+   "evidence_ids": [
+    "crm057_platynota_2011-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Sonchus/Venedium spp.",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "Sonchus/Venedium spp."
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Stigmochelys pardalis"
+   ],
+   "evidence_ids": [
+    "mason_1999-26"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Thymus capitatus",
+   "accepted_name": null,
+   "family": "Lamiaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Thymus capitatus"
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [
+    "Testudo marginata"
+   ],
+   "evidence_ids": [
+    "crm122_marginata_2023-18"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:Veronica buabaumii",
+   "accepted_name": null,
+   "family": "Plantaginaceae",
+   "rank": "species",
+   "names_as_printed": [
+    "Veronica buabaumii"
+   ],
+   "name_check": "not_resolved_needs_review",
+   "tortoise_taxa_with_records": [
+    "Indotestudo travancorica"
+   ],
+   "evidence_ids": [
+    "crm054_travancorica_2011-08"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:dry grass (unidentified)",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "dry grass (unidentified)"
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Malacochersus tornieri"
+   ],
+   "evidence_ids": [
+    "crm107_tornieri_2018-06"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:grasses (unidentified)",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "grasses (unidentified)"
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Testudo horsfieldii"
+   ],
+   "evidence_ids": [
+    "lagarde_2003-04"
+   ],
+   "negative_record_only": true,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:hibiscus leaves",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "hibiscus leaves"
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-11"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:peanut hay",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "peanut hay"
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-09"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  },
+  {
+   "candidate_key": "printed:spineless Opuntia cactus pads",
+   "accepted_name": null,
+   "family": null,
+   "rank": "common_name_only",
+   "names_as_printed": [
+    "spineless Opuntia cactus pads"
+   ],
+   "name_check": "common_name_only_not_resolved",
+   "tortoise_taxa_with_records": [
+    "Centrochelys sulcata"
+   ],
+   "evidence_ids": [
+    "crm110_sulcata_2020-10"
+   ],
+   "negative_record_only": false,
+   "seed_mixture_ids": [],
+   "existing_plant_ids": [],
+   "existing_genus_level_plant_ids": [],
+   "forage_nutrition_record_ids": [],
+   "feeding_grade": null,
+   "database_status": "unresolved_name_not_a_candidate"
+  }
+ ]
+}
