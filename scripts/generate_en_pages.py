@@ -290,8 +290,11 @@ def special_nutrition_en(pid):
 
 def render(p):
     pid = p["id"]
-    name = p.get("en") or pid
+    # English display names must not inherit Korean composition-source labels.
+    # The scientific name is the canonical identity fallback, never a nutrition reference title.
+    candidate_name = str(p.get("en") or "").strip()
     sci = p.get("scientific") or "Scientific name under review"
+    name = candidate_name if candidate_name and not I.HANGUL.search(candidate_name) else (sci if sci != "Scientific name under review" else pid)
     rows = rows_by.get(pid, [])
     a = representative(rows)
     g = I.display_en(a)
