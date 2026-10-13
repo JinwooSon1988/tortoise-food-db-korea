@@ -20,6 +20,12 @@ evidence_records=json.loads((ROOT/"data/public_evidence_records.json").read_text
 evidence_by_id={e["id"]:e for e in evidence_records}
 nutrition_records=json.loads((ROOT/"data/plant_nutrition_v56.json").read_text(encoding="utf-8")).get("plants",[])
 nutrition_by_id={n["plant_id"]:n for n in nutrition_records if n.get("verification_status")=="verified"}
+nutrition_reference_records=json.loads((ROOT/"data/plant_nutrition_reference_v1.json").read_text(encoding="utf-8")).get("records",[])
+nutrition_references_by_id={}
+for reference in nutrition_reference_records:
+    if reference.get("status")=="reference_only" and reference.get("feeding_verdict_use") is False:
+        nutrition_references_by_id.setdefault(reference["plant_id"],[]).append(reference)
+
 wild_records=json.loads((ROOT/"data/wild_feeding_evidence.json").read_text(encoding="utf-8")).get("records",[])
 wild_by_plant={}
 for w in wild_records:
@@ -958,8 +964,21 @@ for p in plants:
         ratio=nu.get("calcium_phosphorus_ratio")
         nutrition_note=("칼슘과 인의 비율은 식단을 볼 때 참고할 수 있지만, 이 값 하나만으로 좋은 먹이인지 결정하지 않는다." if ratio not in (None,"","—") else "Ca:P 자료가 없으면 임의 계산하거나 추정하지 않는다.")
         nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div>{f'<div><b>건물</b><strong>{nu["dry_matter_pct"]}%</strong></div>' if nu.get("water_g") is None and nu.get("dry_matter_pct") is not None else f'<div><b>수분</b><strong>{nv("water_g"," g")}</strong></div>'}<div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 {nutrition_food_name_html(nu.get("food_description"))} · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>{f'<p class="small">적용 범위: {esc(nu.get("applicability_note_ko"))}</p>' if nu.get("applicability_note_ko") else ""}{academic_nutrition_html(nu)}'''
+    elif nutrition_references_by_id.get(pid):
+        reference_cards=[]
+        for ref in nutrition_references_by_id[pid]:
+            name=esc(ref.get("source_name") or "출처 미기재")
+            scope=esc(ref.get("reference_scope_ko") or ref.get("analyzed_part") or "분석 범위 미기재")
+            note=esc(ref.get("display_note_ko") or "급여 대상 부위에 직접 적용할 수 있는 검증된 수치가 아닙니다.")
+            url=ref.get("source_url") or ""
+            source=(f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{name} · 원문 보기 ↗</a>' if url.startswith("https://") else name)
+            reference_cards.append(f'<li><strong>{source}</strong><p class="small">분석 범위: {scope}</p><p class="small">{note}</p></li>')
+        nutrition_body=('<div class="nutrition-missing"><strong>관련 영양 참고자료 있음 · 직접 적용 수치 미확인</strong>'
+                        '<p>연관 자료가 있으나 해당 급여 부위의 검증된 영양 수치로 대체할 수 없습니다.</p>'
+                        '<ul class="nutrition-reference-list">' + "".join(reference_cards) + '</ul>'
+                        '<p class="small">참고자료의 수치는 급여 판정에 사용하지 않았습니다. 안전성 판단은 위의 급여 판정과 근거를 확인하세요.</p></div>')
     else:
-        nutrition_body='<div class="nutrition-missing"><strong>검증된 영양자료 없음</strong><p>해당 식물·부위에 일치하는 공식 영양성분 수치가 아직 확인되지 않았습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
+        nutrition_body='<div class="nutrition-missing"><strong>연결된 영양자료 없음</strong><p>현재 이 식물에 연결된 검증 영양자료나 관련 참고자료가 없습니다.</p><p class="small">자료가 없다는 사실은 안전하거나 위험하다는 뜻이 아닙니다. 급여 판정과 근거는 위에서 별도로 확인하세요.</p></div>'
     nutrition_html=f'''<section class="card" id="nutrition"><h2>핵심 영양·제한성분</h2>{nutrition_body}<p class="small">영양수치는 판정을 보조하는 근거이며, 실제 섭식·수의학·독성·항영양성분 근거보다 단독으로 우선하지 않습니다. 검증된 수치만 표시하며 미확인 항목을 0으로 간주하지 않습니다.</p></section>'''
     # Source-traceable variety cards must survive every static-site regeneration. Everything shown here is
     # rendered from the data files (never hand-edited HTML); QA: scripts/qa_variety_card_regeneration_v1.py.
