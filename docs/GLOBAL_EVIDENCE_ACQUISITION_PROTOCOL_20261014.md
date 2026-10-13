@@ -23,3 +23,13 @@ Validate source existence, botanical identity, edible part, original claim, nume
 
 ## Search approach
 For each candidate, search accepted Latin binomial and synonyms together with vernacular names in source languages; search ecology/diet, forage analyses, anti-nutrients and toxicology separately. Maintain explicit coverage gaps and avoid duplicating the same dataset republished across websites. Use original publications when possible.
+
+
+## Prepared plant forms and outdoor sowing intake (2026-10-14 extension)
+Capture fresh, hay, air-dried, oven-dried, leaf meal, flower meal and mixed cut forage separately. Store the exact processing method, harvested plant part, moisture basis (as-fed versus dry matter), laboratory method and source. Do not infer nutrient changes from comparing unrelated fresh and hay samples.
+
+For outdoor enclosure seed mixes, preserve the full label ingredient list, Latin names where verified, seed proportions where disclosed, country, seed treatment/pesticide status and invasive-plant concerns. Commercial mixes and keeper sowing diaries establish what is marketed or cultivated, not safety or suitability for tortoises.
+
+Do not prioritize grasses to the exclusion of flowers, weeds, succulents, browse, trees or regionally native plants. Source coverage must include non-English institutions and primary research worldwide.
+
+Existing reference nutrition already includes timothy fresh and hay records; reconcile against those before adding anything. Keep the existing three nutrition filter labels unchanged and enrich only the underlying records and detail content. Never assign a feeding grade from nutrient chemistry or anecdotal use alone.
