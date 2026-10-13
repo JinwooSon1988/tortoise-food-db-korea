@@ -179,8 +179,13 @@ for pid in sorted(ids & en_ids & ko_ids):
         fail(f"{pid}: nutrition section present in one language only")
     elif kn:
         strip = lambda s: html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r'<a [^>]*>.*?</a>|<(?:i|cite)>.*?</(?:i|cite)>', " ", s, flags=re.S)))
-        knums = sorted(nut_num.findall(strip(kn).replace(",", "")))
-        enums = sorted(nut_num.findall(strip(enn).replace(",", "")))
+        # Compare verified nutrient grids, not citation years or reference-only prose.
+        kgrid = re.search(r'<div class="nutgrid">.*?</div></div>', kn, re.S)
+        egrid = re.search(r'<div class="nutgrid">.*?</div></div>', enn, re.S)
+        if bool(kgrid) != bool(egrid):
+            fail(f"{pid}: verified nutrient grid present in one language only")
+        knums = sorted(nut_num.findall(strip(kgrid.group(0)).replace(",", ""))) if kgrid else []
+        enums = sorted(nut_num.findall(strip(egrid.group(0)).replace(",", ""))) if egrid else []
         if knums != enums:
             fail(f"{pid}: nutrition numbers differ ko-only={sorted(set(knums) - set(enums))[:6]} en-only={sorted(set(enums) - set(knums))[:6]}")
     kext = parse(ROOT / "plant" / pid / "index.html").ext
