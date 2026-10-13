@@ -42,13 +42,22 @@ class SEOHeadParser(HTMLParser):
         super().__init__()
         self.canonicals = []
         self.robots = []
+        self.alternates = {}
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == "link" and attrs.get("rel", "").lower() == "canonical":
             self.canonicals.append(attrs.get("href", ""))
+        if tag == "link" and attrs.get("rel", "").lower() == "alternate" and attrs.get("hreflang"):
+            lang = attrs["hreflang"]
+            assert lang not in self.alternates, f"Duplicate HTML hreflang: {lang}"
+            self.alternates[lang] = attrs.get("href", "")
         if tag == "meta" and attrs.get("name", "").lower() == "robots":
             self.robots.append(attrs.get("content", "").lower())
 
+sitemap_alternates = {
+    entry.findtext(f"{SM}loc"): {link.get("hreflang"): link.get("href") for link in entry.findall(XHTML)}
+    for entry in entries
+}
 for url in urls:
     relative = unquote(url[len(BASE):])
     assert relative == "" or (relative.endswith("/") and ".." not in relative.split("/")), f"Unsafe sitemap path: {url}"
@@ -57,6 +66,7 @@ for url in urls:
     parser = SEOHeadParser()
     parser.feed(target.read_text(encoding="utf-8"))
     assert parser.canonicals == [url], f"Canonical mismatch: {url} -> {parser.canonicals}"
+    assert parser.alternates == sitemap_alternates[url], f"HTML/sitemap hreflang mismatch: {url} -> HTML {parser.alternates} vs XML {sitemap_alternates[url]}"
     assert not any("noindex" in value for value in parser.robots), f"Noindex page in sitemap: {url}"
 
 page = (ROOT / "all-plants/index.html").read_text(encoding="utf-8")
