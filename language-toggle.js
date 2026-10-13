@@ -86,7 +86,10 @@ function bindDetailLocaleNavigation(){
   if(next!=='ko'&&next!=='en')return;
   e.preventDefault();
   try{localStorage.setItem(K,next)}catch(err){}
-  location.replace(link.href);
+  const url=new URL(location.href);url.searchParams.set('lang',next);
+  history.replaceState(history.state,'',url.pathname+url.search+url.hash);
+  apply(next);updateNav(next);
+  nav.querySelectorAll('a[hreflang]').forEach(a=>{const selected=a.getAttribute('hreflang')===next;a.classList.toggle('active',selected);if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  });
 }
 function boot(){
@@ -94,15 +97,9 @@ function boot(){
  bindDetailLocaleNavigation();
  let lang='ko';
  try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}const requested=new URLSearchParams(location.search).get('lang');if(requested==='ko'||requested==='en')lang=requested;
- // Legacy plant detail pages have a separately authored full English page.
- // Route there rather than mixing translated labels with untranslated Korean paragraphs.
+ // Canonical plant detail is the same document for both locales.
  const detailMatch=location.pathname.match(/^(.*\/tortoise-food-db-korea\/)plant\/([^/]+)\/?(?:index\.html)?$/);
  const methodMatch=location.pathname.match(/^(.*\/tortoise-food-db-korea\/)guides\/research-method\/?(?:index\.html)?$/);
- if(detailMatch&&lang==='en'){
-   try{localStorage.setItem(K,'en')}catch(e){}
-   location.replace(detailMatch[1]+'en/plant/'+detailMatch[2]+'/?lang=en'+location.hash);
-   return;
- }
  if(methodMatch&&lang==='en'){
    try{localStorage.setItem(K,'en')}catch(e){}
    location.replace(methodMatch[1]+'en/guides/research-method/?lang=en'+location.hash);
