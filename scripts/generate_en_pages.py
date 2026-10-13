@@ -404,7 +404,7 @@ def render(p):
     elif nutrition_references_by_id.get(pid):
         reference_cards = []
         for ref in nutrition_references_by_id[pid]:
-            name = esc(ref.get("source_name") or "Source not specified")
+            name = esc("Nutrition composition reference" if re.search(r"[가-힣]", ref.get("source_name") or "") else (ref.get("source_name") or "Source not specified"))
             scope = esc(ref.get("analyzed_part") or "Not specified")
             state = esc(ref.get("preparation_state") or "Not specified")
             url = ref.get("source_url") or ""
