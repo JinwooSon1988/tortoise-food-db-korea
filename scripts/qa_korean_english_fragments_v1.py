@@ -122,7 +122,7 @@ class Visible(HTMLParser):
         cls = (a.get("class") or "").split()
         if tag in self.SKIP_TAGS or "hidden" in a or a.get("aria-hidden") == "true" or (a.get("lang") or "").startswith("en"):
             return True
-        if any(c in cls for c in ("en-evidence", "ids", "sr-only", "scientific", "sci")):
+        if any(c in cls for c in ("en-evidence", "ids", "sr-only", "scientific", "sci", "nutrition-source-citation")):
             return True
         if tag == "a" and re.match(r"https?://", a.get("href") or ""):
             return True
