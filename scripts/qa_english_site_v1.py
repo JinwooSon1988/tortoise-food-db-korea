@@ -186,6 +186,20 @@ for pid in sorted(ids & en_ids & ko_ids):
         fail(f"{pid}: grade/verdict differ ko={kd.groups()} en={ed.groups()}")
     if kd.group(1) != exp["grade"]:
         fail(f"{pid}: Korean grade {kd.group(1)} differs from canonical {exp['grade']}")
+    # The English view must be the SAME plant and preserve the Korean information
+    # architecture. A separate page must not silently drop/reorder factual sections.
+    for locale, doc in (("ko", ko), ("en", en)):
+        match = re.search(r'<main\\b[^>]*data-plant-id="([^"]+)"', doc)
+        if not match or match.group(1) != pid:
+            fail(f"{pid}: {locale} page identity differs from canonical plant ID")
+    def factual_sections(doc):
+        return re.findall(r'<section\\b[^>]*\\bid="([^"]+)"', doc)
+    if factual_sections(ko) != factual_sections(en):
+        fail(f"{pid}: translated page section IDs/order differ from Korean source")
+    def image_sources(doc):
+        return sorted(re.findall(r'<img\\b[^>]*\\bsrc="([^"]+)"', doc))
+    if image_sources(ko) != image_sources(en):
+        fail(f"{pid}: translated page image sources differ from Korean source")
     kn, enn = section(ko, "nutrition"), section(en, "nutrition")
     if bool(kn) != bool(enn):
         fail(f"{pid}: nutrition section present in one language only")
