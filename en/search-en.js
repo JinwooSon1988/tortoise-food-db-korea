@@ -34,6 +34,9 @@ function render(rows){lastRows=rows;const q=(input.value||'').trim();if(!rows.le
  const rest=rows.length-shown;results.innerHTML='<p class="resultsummary"><b>'+(q?'“'+uq(q)+'”: ':'')+rows.length+' result'+(rows.length>1?'s':'')+'</b><span>Exact name matches are listed first.</span></p>'+rows.slice(0,shown).map(card).join('')+(rest>0?'<button type="button" class="morebtn" id="moreResults">Show '+rest+' more</button>':'');
  const more=document.getElementById('moreResults');if(more)more.onclick=()=>{shown+=PAGE*3;render(lastRows)}}
 function matchRank(r,q){const n=norm(r.name),t=r.terms.map(norm);if(n===q)return 0;if(t.some(x=>x===q))return 1;if(n.startsWith(q))return 2;if(t.some(x=>x.startsWith(q)))return 3;return 4}
+// Keep English search guidance localized even when an older cached HTML shell is served.
+const searchHelp=document.getElementById('searchHelp');
+if(searchHelp){const intro=searchHelp.querySelector('.helpintro'),safety=searchHelp.querySelector('.safetyhint');if(intro)intro.textContent='Search by Korean, English, or scientific name.';if(safety)safety.textContent='No search result does not mean a plant is safe.';}
 function search(){const q=norm(input.value);shown=PAGE;if(!q){results.innerHTML='';return}
  const rows=catalog.filter(r=>r.isPublic&&r.terms.some(x=>norm(x).includes(q)));
  // Deduplicate identical botanical identities in the visible search results, not the evidence database.
