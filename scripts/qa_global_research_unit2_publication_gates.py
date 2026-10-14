@@ -91,6 +91,22 @@ for r in records:
     evidence_type = r.get("evidence_type")
     if evidence_type not in allowed_provenance_types.get(directness, set()):
         errors.append(f"Contradictory provenance/evidence type: {r['evidence_id']} ({directness} / {evidence_type})")
+# Fecal seed recovery is evidence of passage through the gut, not
+# independent proof that leaves, flowers, or other plant parts were eaten.
+fecal_part_labels = {
+    "fragments in feces",
+    "small pieces in feces",
+    "seeds found in feces",
+    "fruit (seeds found in dung)",
+}
+fecal_records = [r for r in records if r.get("plant_part") in fecal_part_labels]
+if len(fecal_records) != 158:
+    errors.append(f"Unexpected fecal-evidence record count: {len(fecal_records)}")
+for r in fecal_records:
+    if r.get("feeding_grade") is not None or r.get("safety_verdict") is not None:
+        errors.append(f"Fecal observation promoted to feeding/safety verdict: {r['evidence_id']}")
+    if r.get("plant_part") not in fecal_part_labels:
+        errors.append(f"Fecal evidence part misrepresented: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
