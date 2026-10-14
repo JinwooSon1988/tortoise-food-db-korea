@@ -1,0 +1,185 @@
+{
+ "schema_version": "4.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v4.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v4.json",
+ "extends": "the v1, v2 and v3 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "note": "Statements made by sources that were read. They are not toxicity findings for tortoises.",
+ "statements": [
+  {
+   "hazard_id": "hz4-01",
+   "plant_as_printed": "Alternanthera sp.",
+   "applies_to_records_named": [
+    "Alternanthera pungens"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cyanin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-023"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-02",
+   "plant_as_printed": "Cissus spp.",
+   "applies_to_records_named": [
+    "Cissus quadrangularis",
+    "Cissus rotundifolia"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: oxalic acid",
+   "hazard_kind": "oxalate_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-043",
+    "kabigumila_2001-044"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-03",
+   "plant_as_printed": "Commelina spp.",
+   "applies_to_records_named": [
+    "Commelina africana",
+    "Commelina benghalensis",
+    "Commelina foskalaei",
+    "Commelina latifolia",
+    "Commelina petersii"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cyanin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-001",
+    "kabigumila_2001-002",
+    "kabigumila_2001-003",
+    "kabigumila_2001-004",
+    "kabigumila_2001-005"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-04",
+   "plant_as_printed": "Cucumis hirsutus",
+   "applies_to_records_named": [
+    "Cucumis hirsutus"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cucurbitacin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-028"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-05",
+   "plant_as_printed": "Euphorbia spp.",
+   "applies_to_records_named": [
+    "Euphorbia prostrata",
+    "Euphorbia hirta"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cyanin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-030",
+    "kabigumila_2001-031"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-06",
+   "plant_as_printed": "Kalanchoe sp.",
+   "applies_to_records_named": [
+    "Kalanchoe lanceolata"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cotyledontoxin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-027"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-07",
+   "plant_as_printed": "Opuntia vulgaris",
+   "applies_to_records_named": [
+    "Opuntia vulgaris"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: oxalic acid",
+   "hazard_kind": "oxalate_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-025"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-08",
+   "plant_as_printed": "Portulaca quadrifida",
+   "applies_to_records_named": [
+    "Portulaca quadrifida"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: potassium oxalate",
+   "hazard_kind": "oxalate_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-040"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  },
+  {
+   "hazard_id": "hz4-09",
+   "plant_as_printed": "Tribulus terrestris",
+   "applies_to_records_named": [
+    "Tribulus terrestris"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: sapogenin; hepatoxin (as printed). The text adds that it is said to be poisonous to sheep and to cause bloat in cattle and goats, and that it is a critical food item for leopard tortoises",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read",
+   "evidence_ids": [
+    "kabigumila_2001-046"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records leopard tortoises eating it and reports no health outcome. It also does not show that the plant is safe, and it gives no measured oxalate or toxin content."
+  }
+ ]
+}
