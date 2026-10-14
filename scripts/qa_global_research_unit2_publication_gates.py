@@ -31,6 +31,21 @@ for r in records:
         errors.append(f"Taxon or plant name missing: {r['evidence_id']}")
     if r.get("applies_to_other_tortoise_species") not in ("not established by this source", None):
         errors.append(f"Unreviewed cross-species applicability: {r['evidence_id']}")
+# Prevent secondary citations from being mislabeled as verified original studies.
+unread = [r for r in records if r["evidence_directness"] == "reported_in_source_primary_not_read"]
+if len(unread) != 6:
+    errors.append(f"Unexpected unread-primary count: {len(unread)}")
+for r in unread:
+    if r.get("verification_status") != "secondary_source_checked_primary_unread":
+        errors.append(f"Unread primary mislabeled as verified: {r['evidence_id']}")
+    if r.get("plant_accepted_name") is not None and r.get("plant_name_check") == "spelling_differs_from_backbone_needs_review":
+        errors.append(f"Unresolved secondary name prematurely accepted: {r['evidence_id']}")
+for key in ("delaossa_2009-20", "delaossa_2009-21", "delaossa_2009-22", "delaossa_2009-23", "delaossa_2009-24"):
+    r = next((x for x in records if x["evidence_id"] == key), None)
+    if r is None:
+        errors.append(f"Missing De la Ossa secondary citation: {key}")
+    elif "Secondary background citation" not in r.get("study_method", ""):
+        errors.append(f"De la Ossa secondary citation inherited captive trial method: {key}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
