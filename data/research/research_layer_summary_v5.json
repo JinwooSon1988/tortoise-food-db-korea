@@ -1,0 +1,76 @@
+{
+ "schema_version": "5.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v5.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v5.json",
+ "extends": "the v1-v4 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "summary": {
+  "unit_5_added": {
+   "sources_read": 5,
+   "sources_with_records": 4,
+   "sources_by_type": {
+    "peer_reviewed_captive_study": 2,
+    "zoo_information_page": 2
+   },
+   "evidence_records": 17,
+   "evidence_by_tier": {
+    "3_captive_feeding_trial_read": 6,
+    "4_institutional_husbandry_guideline": 11
+   },
+   "evidence_by_detection_method": {
+    "captive_feeding_record": 6,
+    "unreferenced_general_statement": 7,
+    "zoo_feeding_practice_stated": 4
+   },
+   "evidence_by_wild_or_captive": {
+    "captive": 13,
+    "wild": 4
+   },
+   "plant_names_new_against_units_1_to_4": [
+    "Medicago saliva",
+    "Vicus bengalensis",
+    "cacti",
+    "flowers",
+    "fresh grass",
+    "grasses",
+    "hay",
+    "hay flakes",
+    "leafy greens",
+    "salad",
+    "vegetables",
+    "vegetables (small amounts)",
+    "wet hay"
+   ],
+   "accepted_species_new_against_units_1_to_4": [],
+   "nutrition_records": 12,
+   "nutrition_values": 126,
+   "nutrition_by_state": {
+    "fresh": 7,
+    "hay": 5
+   },
+   "nutrition_by_match": {
+    "forage_reference_only_species_not_named_in_any_evidence_record": 9,
+    "same_species_as_a_candidate": 3
+   }
+  },
+  "duplicate_check": {
+   "sources_already_in_units_1_to_4": [],
+   "nutrition_records_already_in_units_1_to_4": []
+  },
+  "searches_without_a_usable_result": [
+   {
+    "query": "French: régime alimentaire tortue sillonnée Centrochelys sulcata milieu naturel Sénégal Ferlo",
+    "result": "only general pages and reintroduction news; no field diet study"
+   },
+   {
+    "query": "sulcata wild diet Sahel field observations Chad/Niger/Sudan/Ethiopia",
+    "result": "pet-care pages without sources; Lambert 1993 (already in unit 2); Petrozzi et al. 2017 (Oryx) on threats, read, names no food plant"
+   }
+  ],
+  "gaps_not_filled": [
+   "no field study of the wild diet of Centrochelys sulcata was found in units 1-5; the only wild observation remains Lambert 1993 (one animal eating Eleusine indica)",
+   "no tortoise-specific nutrient analysis of hay was found; the hay values added are livestock feed tables"
+  ]
+ }
+}

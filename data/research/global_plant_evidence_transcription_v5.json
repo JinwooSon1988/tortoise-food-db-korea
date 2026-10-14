@@ -1,0 +1,411 @@
+{
+ "schema_version": "5.0",
+ "created": "2026-10-14",
+ "extends": "the v1-v4 research files, which are not modified",
+ "purpose": "Unit 5 transcription: sulcata diet sources and forage (hay, clover, grass) nutrient tables.",
+ "record_columns": [
+  "tortoise_key",
+  "plant_as_printed",
+  "plant_part",
+  "offered_form",
+  "wild_or_captive",
+  "consumption_signal",
+  "quantity_as_reported",
+  "locality",
+  "primary_reference_cited_by_source",
+  "page",
+  "evidence_type",
+  "note",
+  "detection_methods"
+ ],
+ "evidence_type_codes": {
+  "5": "captive feeding described in a peer-reviewed study",
+  "8": "zoo statement or guideline"
+ },
+ "sources": {
+  "ritz_2010_sulcata_growth": {
+   "citation": "Ritz, J., Griebeler, E.M., Huber, R., Clauss, M. 2010. Body size development of captive and free-ranging African spurred tortoises (Geochelone sulcata): high plasticity in reptilian growth rates. Herpetological Journal 20:213-216.",
+   "url": "https://thebhs.org/publications/the-herpetological-journal/volume-20-number-3-july-2010/592-13-body-size-development-of-captive-and-free-ranging-african-spurred-tortoises-i-geochelone-sulcata-i-high-plasticity-in-reptilian-growth-rates",
+   "year": 2010,
+   "language": "en",
+   "study_country": "Switzerland (captive animals)",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_captive_study",
+   "evidence_class": "captive_feeding_trial",
+   "method": "growth records of three captive-bred animals weighed over almost 18 years at a private breeding facility; the diet is described in the methods, not measured",
+   "access": "full_text_read",
+   "what_was_read": "whole article (open access PDF from the society)",
+   "doi": null,
+   "records": [
+    [
+     "sulcata",
+     "fresh grass",
+     "not stated",
+     "fresh",
+     "captive",
+     "fed on",
+     null,
+     "private breeding facility, Switzerland (outdoor enclosure with grasses and shrubs in summer)",
+     null,
+     "213-214",
+     5,
+     "common name only; the diet of three animals growing much faster than wild animals, described by the authors without nutrient analysis",
+     [
+      "captive_feeding_record"
+     ]
+    ],
+    [
+     "sulcata",
+     "wet hay",
+     "not stated",
+     "hay (wetted)",
+     "captive",
+     "fed on",
+     null,
+     "private breeding facility, Switzerland (outdoor enclosure with grasses and shrubs in summer)",
+     null,
+     "213-214",
+     5,
+     "common name only; the diet of three animals growing much faster than wild animals, described by the authors without nutrient analysis",
+     [
+      "captive_feeding_record"
+     ]
+    ],
+    [
+     "sulcata",
+     "salad",
+     "not stated",
+     "fresh",
+     "captive",
+     "fed rarely",
+     null,
+     "private breeding facility, Switzerland (outdoor enclosure with grasses and shrubs in summer)",
+     null,
+     "213-214",
+     5,
+     "common name only; the diet of three animals growing much faster than wild animals, described by the authors without nutrient analysis",
+     [
+      "captive_feeding_record"
+     ]
+    ],
+    [
+     "sulcata",
+     "vegetables",
+     "not stated",
+     "fresh",
+     "captive",
+     "fed occasionally",
+     null,
+     "private breeding facility, Switzerland (outdoor enclosure with grasses and shrubs in summer)",
+     null,
+     "213-214",
+     5,
+     "common name only; the diet of three animals growing much faster than wild animals, described by the authors without nutrient analysis",
+     [
+      "captive_feeding_record"
+     ]
+    ]
+   ]
+  },
+  "mahmoud_elnaiem_1988_sulcata_sudan": {
+   "citation": "Mahmoud, Z.N., El Naiem, D.A. 1988. Studies on the growth of the desert tortoise (Testudo sulcata) in Sudan: changes in morphometrics and body weight from hatching to one year (0+). Herpetological Journal 1:280-284.",
+   "url": "https://thebhs.org/publications/the-herpetological-journal/volume-1-number-7-december-1988/1189-06-studies-on-the-growth-of-the-desert-tortoise-testudo-sulcata-in-sudan-changes-in-morphometrics-and-body-weight-from-hatching-to-one-year-0",
+   "year": 1988,
+   "language": "en",
+   "study_country": "Sudan",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_captive_study",
+   "evidence_class": "captive_feeding_trial",
+   "method": "16 hatchlings from one clutch kept in an enclosure for a year and measured; food offered every other day",
+   "access": "full_text_read",
+   "what_was_read": "methods paragraph in the PDF text layer. The scanned page image is too faint to read, so the two plant names are given as the text layer prints them and were not checked against the image",
+   "doi": null,
+   "records": [
+    [
+     "sulcata",
+     "Medicago saliva",
+     "not stated",
+     "fresh",
+     "captive",
+     "offered every other day and readily accepted",
+     null,
+     "hatchlings kept in an enclosure, Sudan",
+     null,
+     "280-281",
+     5,
+     "text layer reading; probably 'Medicago sativa', not confirmed because the page image is illegible",
+     [
+      "captive_feeding_record"
+     ]
+    ],
+    [
+     "sulcata",
+     "Vicus bengalensis",
+     "not stated",
+     "fresh",
+     "captive",
+     "offered every other day and readily accepted",
+     null,
+     "hatchlings kept in an enclosure, Sudan",
+     null,
+     "280-281",
+     5,
+     "text layer reading; the intended name could not be confirmed (the page image is illegible); not resolved",
+     [
+      "captive_feeding_record"
+     ]
+    ]
+   ]
+  },
+  "salisbury_zoo_sulcata_page": {
+   "citation": "Salisbury Zoo. African Sulcata (Spurred) Tortoise, Centrochelys sulcata (animal information page).",
+   "url": "https://salisburyzoo.org/habitats/african-sulcata-spurred-tortoise-centrochelys-sulcata/",
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (zoo information page, USA)",
+   "publisher_country": "USA",
+   "source_type": "zoo_information_page",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "public information page of a zoo; no references",
+   "access": "full_text_read",
+   "what_was_read": "whole web page; no publication year on the page",
+   "doi": null,
+   "records": [
+    [
+     "sulcata",
+     "grass",
+     "not stated",
+     "fresh",
+     "captive",
+     "fed at the zoo",
+     null,
+     "Salisbury Zoo, USA",
+     null,
+     "web page, Diet",
+     8,
+     "common name only; what this zoo feeds, stated by the zoo",
+     [
+      "zoo_feeding_practice_stated"
+     ]
+    ],
+    [
+     "sulcata",
+     "hay",
+     "not stated",
+     "hay",
+     "captive",
+     "fed at the zoo",
+     null,
+     "Salisbury Zoo, USA",
+     null,
+     "web page, Diet",
+     8,
+     "common name only; what this zoo feeds, stated by the zoo",
+     [
+      "zoo_feeding_practice_stated"
+     ]
+    ],
+    [
+     "sulcata",
+     "hay flakes",
+     "not stated",
+     "hay product",
+     "captive",
+     "fed at the zoo",
+     null,
+     "Salisbury Zoo, USA",
+     null,
+     "web page, Diet",
+     8,
+     "common name only; what this zoo feeds, stated by the zoo",
+     [
+      "zoo_feeding_practice_stated"
+     ]
+    ],
+    [
+     "sulcata",
+     "vegetables (small amounts)",
+     "not stated",
+     "fresh",
+     "captive",
+     "fed at the zoo",
+     null,
+     "Salisbury Zoo, USA",
+     null,
+     "web page, Diet",
+     8,
+     "common name only; what this zoo feeds, stated by the zoo",
+     [
+      "zoo_feeding_practice_stated"
+     ]
+    ],
+    [
+     "sulcata",
+     "grasses",
+     "not stated",
+     "growing plant",
+     "wild",
+     "said to make up most of the wild diet",
+     null,
+     "wild range, no locality",
+     null,
+     "web page, Diet",
+     8,
+     "plant group only; an unreferenced general statement, not an observation record",
+     [
+      "unreferenced_general_statement"
+     ]
+    ]
+   ]
+  },
+  "exmoor_zoo_sulcata_page": {
+   "citation": "Exmoor Zoo. African spurred tortoise, Centrochelys sulcata (animal information page).",
+   "url": "https://exmoorzoo.co.uk/animals/african-spur-thigh-tortoise",
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (zoo information page, United Kingdom)",
+   "publisher_country": "United Kingdom",
+   "source_type": "zoo_information_page",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "public education page of a zoo; no references",
+   "access": "full_text_read",
+   "what_was_read": "the Diet paragraph of the web page; no publication year on the page; the page does not say whether the diet described is wild or captive",
+   "doi": null,
+   "records": [
+    [
+     "sulcata",
+     "grasses",
+     "not stated",
+     "not stated",
+     "wild",
+     "named in a general diet description",
+     null,
+     "not stated",
+     null,
+     "web page, Diet",
+     8,
+     "food group only; the page does not separate wild and captive diet, the wild/captive value here follows the food group and is the layer's assumption; unreferenced",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "leafy greens",
+     "not stated",
+     "not stated",
+     "captive",
+     "named in a general diet description",
+     null,
+     "not stated",
+     null,
+     "web page, Diet",
+     8,
+     "food group only; the page does not separate wild and captive diet, the wild/captive value here follows the food group and is the layer's assumption; unreferenced",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "fruits",
+     "not stated",
+     "not stated",
+     "captive",
+     "named in a general diet description",
+     null,
+     "not stated",
+     null,
+     "web page, Diet",
+     8,
+     "food group only; the page does not separate wild and captive diet, the wild/captive value here follows the food group and is the layer's assumption; unreferenced",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "vegetables",
+     "not stated",
+     "not stated",
+     "captive",
+     "named in a general diet description",
+     null,
+     "not stated",
+     null,
+     "web page, Diet",
+     8,
+     "food group only; the page does not separate wild and captive diet, the wild/captive value here follows the food group and is the layer's assumption; unreferenced",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "flowers",
+     "not stated",
+     "not stated",
+     "wild",
+     "named in a general diet description",
+     null,
+     "not stated",
+     null,
+     "web page, Diet",
+     8,
+     "food group only; the page does not separate wild and captive diet, the wild/captive value here follows the food group and is the layer's assumption; unreferenced",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "cacti",
+     "not stated",
+     "not stated",
+     "wild",
+     "named in a general diet description",
+     null,
+     "not stated",
+     null,
+     "web page, Diet",
+     8,
+     "food group only; the page does not separate wild and captive diet, the wild/captive value here follows the food group and is the layer's assumption; unreferenced",
+     [
+      "unreferenced_general_statement"
+     ]
+    ]
+   ]
+  }
+ },
+ "feedipedia_targets": [
+  "Phleum pratense",
+  "Dactylis glomerata",
+  "Lolium spp.",
+  "Chloris gayana",
+  "Trifolium repens",
+  "Medicago polymorpha",
+  "Alysicarpus vaginalis",
+  "Trifolium subterraneum"
+ ],
+ "searches_without_a_usable_result": [
+  {
+   "query": "French: régime alimentaire tortue sillonnée Centrochelys sulcata milieu naturel Sénégal Ferlo",
+   "result": "only general pages and reintroduction news; no field diet study"
+  },
+  {
+   "query": "sulcata wild diet Sahel field observations Chad/Niger/Sudan/Ethiopia",
+   "result": "pet-care pages without sources; Lambert 1993 (already in unit 2); Petrozzi et al. 2017 (Oryx) on threats, read, names no food plant"
+  }
+ ],
+ "sources_read_without_records": [
+  {
+   "id": "petrozzi_2017_oryx",
+   "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/79FF1948C3DED7A4482CCBF7A7B244DE/S0030605316001125a.pdf/exploring-the-main-threats-to-the-threatened-african-spurred-tortoise-centrochelys-sulcata-in-the-west-african-sahel.pdf",
+   "reason": "Threats to the species in the Sahel (cattle density, fire, trade); names no food plant."
+  }
+ ],
+ "gaps_not_filled": [
+  "no field study of the wild diet of Centrochelys sulcata was found in units 1-5; the only wild observation remains Lambert 1993 (one animal eating Eleusine indica)",
+  "no tortoise-specific nutrient analysis of hay was found; the hay values added are livestock feed tables"
+ ]
+}

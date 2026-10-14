@@ -1,0 +1,1224 @@
+{
+ "schema_version": "5.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v5.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v5.json",
+ "extends": "the v1-v4 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "records": [
+  {
+   "record_id": "feedipedia-16887",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "16887",
+   "source_url": "https://www.feedipedia.org/node/16887",
+   "table_title_as_printed": "Timothy (Phleum pratense), aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Phleum pratense",
+   "analyzed_taxon_accepted_name": "Phleum pratense",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 27.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 13.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 34.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 4.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 8.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 19
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 1.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 0.7,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-16888",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "16888",
+   "source_url": "https://www.feedipedia.org/node/16888",
+   "table_title_as_printed": "Timothy (Phleum pratense), hay",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Phleum pratense",
+   "analyzed_taxon_accepted_name": "Phleum pratense",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 88.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 9.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 28
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 65.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 20
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 37.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 19
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 4.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 6.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_value": 11.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_value": 7.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 20.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 1.57,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "timothy hay is named in the Arizona-Sonora Desert Museum list (unit 3); hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-11991",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11991",
+   "source_url": "https://www.feedipedia.org/node/11991",
+   "table_title_as_printed": "Cocksfoot, aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Dactylis glomerata",
+   "analyzed_taxon_accepted_name": "Dactylis glomerata",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 20.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 21
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 16.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 79
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 29.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 61
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 4.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 21
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 4.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 49
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_value": 10.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_value": 5.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 4.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 31
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 30
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 28.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 27
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 3.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 2.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 29
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 1.46,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-11990",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11990",
+   "source_url": "https://www.feedipedia.org/node/11990",
+   "table_title_as_printed": "Cocksfoot hay",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Dactylis glomerata",
+   "analyzed_taxon_accepted_name": "Dactylis glomerata",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 89.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 21
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 13.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 54
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 30.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 22
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 63.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 52
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 36.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 46
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 4.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 30
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 8.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 61
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 3.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 24
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 24
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 38.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 14
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 1.44,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-12518",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12518",
+   "source_url": "https://www.feedipedia.org/node/12518",
+   "table_title_as_printed": "Rhodes grass (Chloris gayana), aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Chloris gayana",
+   "analyzed_taxon_accepted_name": "Chloris gayana",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 24.9,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 197
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 9.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 262
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 36.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 235
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 75.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 28
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 179
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 256
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 3.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 197
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 201
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 18.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 187
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 3.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 171
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 1.31,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-12519",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12519",
+   "source_url": "https://www.feedipedia.org/node/12519",
+   "table_title_as_printed": "Rhodes grass (Chloris gayana), hay",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Chloris gayana",
+   "analyzed_taxon_accepted_name": "Chloris gayana",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 86.4,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 141
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 10.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 193
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 35.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 131
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 75.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 30
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 31
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 148
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 3.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 66
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 67
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 16.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 54
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 4.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 54
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 1.19,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-12762",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12762",
+   "source_url": "https://www.feedipedia.org/node/12762",
+   "table_title_as_printed": "White clover (Trifolium repens), aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Trifolium repens",
+   "analyzed_taxon_accepted_name": "Trifolium repens",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 16.8,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 19
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 24.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 51
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 19.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 27.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 37
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 22.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 24
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 3.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 23
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 11.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 29
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_value": 3.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_value": 9.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 10.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 3.06,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "same_species_as_a_candidate",
+   "candidate_key": "Trifolium repens",
+   "why_selected": "clover is named in several husbandry records without the species",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-12763",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12763",
+   "source_url": "https://www.feedipedia.org/node/12763",
+   "table_title_as_printed": "White clover (Trifolium repens), hay",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Trifolium repens",
+   "analyzed_taxon_accepted_name": "Trifolium repens",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 82.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 22.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 23.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 29.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 28.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 3.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 12.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "calcium_to_phosphorus": null,
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "same_species_as_a_candidate",
+   "candidate_key": "Trifolium repens",
+   "why_selected": "clover is named in several husbandry records without the species",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-11903",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11903",
+   "source_url": "https://www.feedipedia.org/node/11903",
+   "table_title_as_printed": "Bur clover (Medicago polymorpha), aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Medicago polymorpha",
+   "analyzed_taxon_accepted_name": "Medicago polymorpha",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 24.3,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 23.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 21
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 17.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 41.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 20
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 27.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 20
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 6.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 14.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 16.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 4.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 3.45,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "candidate species check",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-11761",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11761",
+   "source_url": "https://www.feedipedia.org/node/11761",
+   "table_title_as_printed": "Alyce clover (Alysicarpus vaginalis), aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Alysicarpus vaginalis",
+   "analyzed_taxon_accepted_name": "Alysicarpus vaginalis",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 29.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 16.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 30.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 10.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 3.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 8.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 14.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 11.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.61,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 4.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 5.88,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "same_species_as_a_candidate",
+   "candidate_key": "Alysicarpus vaginalis",
+   "why_selected": "same species as gopher tortoise fecal-seed records (unit 2)",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-12645",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12645",
+   "source_url": "https://www.feedipedia.org/node/12645",
+   "table_title_as_printed": "Subterranean clover (Trifolium subterraneum), aerial part, fresh",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Trifolium subterraneum",
+   "analyzed_taxon_accepted_name": "Trifolium subterraneum",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 15.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 18.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 26
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 11.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 12.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 14
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 33
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 4.23,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "clover reference",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  },
+  {
+   "record_id": "feedipedia-12646",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12646",
+   "source_url": "https://www.feedipedia.org/node/12646",
+   "table_title_as_printed": "Subterranean clover (Trifolium subterraneum), hay",
+   "table_note_on_page": null,
+   "analyzed_taxon": "Trifolium subterraneum",
+   "analyzed_taxon_accepted_name": "Trifolium subterraneum",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 90.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 11.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 2.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 23.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 1.25,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "calcium_to_phosphorus": {
+    "value": 4.96,
+    "derived_by_this_layer": true,
+    "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
+   },
+   "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
+   "candidate_key": null,
+   "why_selected": "clover reference",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false,
+   "feeding_grade": null
+  }
+ ]
+}
