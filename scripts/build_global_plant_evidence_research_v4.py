@@ -82,7 +82,23 @@ def main():
     cand3 = load(RES / "plant_candidates_v3.json")["candidates"]
     ledger3 = load(RES / "primary_verification_ledger_v3.json")["records"]
     res3 = load(RES / "plant_name_resolutions_v3.json")["resolutions"]
-    held3 = {c["evidence_id"]: c for c in load(RES / "record_corrections_v3.json")["corrections"] if c["action"] == "put_on_hold"}
+    corr3 = {c["evidence_id"]: c for c in load(RES / "record_corrections_v3.json")["corrections"]}
+    held3 = {i: c for i, c in corr3.items() if c["action"] == "put_on_hold"}
+    mg_labels = tr["moorhouse_method_labels"]
+
+    def quantity_now(e):
+        c = corr3.get(e["evidence_id"])
+        return (None if c["action"] == "put_on_hold" else c["corrected_quantity"]) if c else e.get("quantity_as_reported")
+
+    def methods_for(e):
+        """Moorhouse-Gann 2022 records name their methods in the quantity text; read them from the corrected text only."""
+        if e["evidence_id"] in held3:
+            return ["not_determinable_record_on_hold"]
+        q = quantity_now(e) or ""
+        out = [mg_labels[lab] for lab, n in re.findall(r"(DNA metabarcoding|dung morphology|feeding observation) (\d+) of", q) if int(n) > 0]
+        if "stated in the article text" in q:
+            out.append("statement_in_article_text")
+        return out
     plants = load(ROOT / "data/plants.json")
 
     names = {t["tortoise_key"]: t["scientific_name"] for t in load(RES / "tortoise_species_registry_v1.json")["species"]}
@@ -160,7 +176,7 @@ def main():
     for unit, recs in enumerate(old + [evidence], 1):
         for e in recs:
             acc = e["plant_accepted_name"] or resolved.get(e["plant_name_as_printed"])
-            methods = e.get("detection_methods") or [method_category(e, by_source)]
+            methods = e.get("detection_methods") or (methods_for(e) if e["source_id"] == "moorhouse_gann_2022" else [method_category(e, by_source)])
             index.append({"evidence_id": e["evidence_id"], "unit": unit, "source_id": e["source_id"], "tortoise_key": e["tortoise_key"], "tortoise": e["tortoise_scientific_name"],
                           "species_specific": e.get("species_specific", True), "plant_name_as_printed": e["plant_name_as_printed"], "plant_accepted_name": acc,
                           "name_from": "unit_record" if e["plant_accepted_name"] else "unit_3_name_resolution" if acc else None, "plant_name_check": e["plant_name_check"],
@@ -168,6 +184,9 @@ def main():
                           "evidence_tier": e.get("evidence_tier") or v3.tier_of(e), "detection_methods": methods,
                           "detection_method_recorded_per_record": bool(e.get("detection_methods")), "evidence_directness": e["evidence_directness"],
                           "is_negative_record": e["is_negative_record"], "negative_kind": e.get("negative_kind") or ("animal_avoided_or_refused" if e["is_negative_record"] else None),
+                          "quantity_as_reported": quantity_now(e),
+                          "quantity_correction": ({"corrected_in_unit": 3, "action": corr3[e["evidence_id"]]["action"], "quantity_in_unit_record": e.get("quantity_as_reported"),
+                                                   "reason": corr3[e["evidence_id"]]["reason"]} if e["evidence_id"] in corr3 else None),
                           "unit_1_citation_status": ledger.get(e["evidence_id"]), "on_hold": e["evidence_id"] in held3, "hazard_statement_ids": sorted(hz_by_ev.get(e["evidence_id"], []))})
     live = [x for x in index if not x["on_hold"]]
 
@@ -241,7 +260,13 @@ def main():
             names_review.setdefault(x["plant_name_as_printed"], {"name_as_printed": x["plant_name_as_printed"], "name_check": x["plant_name_check"], "evidence_ids": []})["evidence_ids"].append(x["evidence_id"])
     fam_diff = [{"evidence_id": e["evidence_id"], "plant_name_as_printed": e["plant_name_as_printed"], "family_printed": e["plant_family_printed_by_source"], "family_in_backbone": e["plant_family"]}
                 for e in evidence if e["plant_family_printed_by_source"] and e["plant_family"] and e["plant_family_printed_by_source"] != e["plant_family"]]
+    genus_fams = {}
+    for x in index:
+        fam = full[x["evidence_id"]].get("plant_family")
+        if x["plant_accepted_name"] and fam and x["name_from"] == "unit_record":
+            genus_fams.setdefault(x["plant_accepted_name"].split()[0], set()).add(fam)
     queue = {
+        "genus_with_more_than_one_backbone_family": [{"genus": g, "families": sorted(f)} for g, f in sorted(genus_fams.items()) if len(f) > 1],
         "unit_1_citations_not_read": [{"v1_evidence_id": r["v1_evidence_id"], "cited": r["primary_reference_cited_by_source"], "search_status": r.get("cited_primary_search_status")}
                                       for r in ledger3 if r["status_after_unit_3"] == "secondary_citation_primary_not_read"],
         "unit_1_citations_not_supported_by_the_cited_source": [r["v1_evidence_id"] for r in ledger3 if r["status_after_unit_3"].startswith("cited_source_read") or r["status_after_unit_3"].startswith("not_in_the_cited")],
@@ -293,7 +318,7 @@ def main():
     dump(RES / "tortoise_species_registry_v4.json", {**meta, "species_added": [], "groups_not_species_specific": [{"tortoise_key": k, **g} for k, g in tr["tortoise_groups"].items()]})
     dump(RES / "tortoise_plant_evidence_v4.json", {**meta, "records": evidence})
     dump(RES / "plant_hazard_statements_v4.json", {**meta, "note": "Statements made by sources that were read. They are not toxicity findings for tortoises.", "statements": hazards})
-    dump(RES / "evidence_index_v4.json", {**meta, "note": "For units 1-3 the detection method was not recorded per record; it is derived here from the record and from a per-source table in the unit-4 transcription, and 'detection_method_recorded_per_record' is false.", "records": index})
+    dump(RES / "evidence_index_v4.json", {**meta, "note": "For units 1-3 the detection method was not recorded per record; it is derived here from the record and from a per-source table in the unit-4 transcription, and 'detection_method_recorded_per_record' is false. For Moorhouse-Gann 2022 the methods are read from each record's quantity text after the unit-3 corrections. 'quantity_as_reported' is the value after those corrections; a held record has none.", "records": index})
     dump(RES / "plant_candidates_v4.json", {**meta, "scope": "cumulative over units 1 to 4", "candidates": sorted(cands.values(), key=lambda c: c["candidate_key"])})
     dump(RES / "review_queue_v4.json", {**meta, "queue": queue})
     dump(RES / "research_layer_summary_v4.json", {**meta, "summary": summary})

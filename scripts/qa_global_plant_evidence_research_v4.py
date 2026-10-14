@@ -207,6 +207,44 @@ def main():
         if len(v) > 1:
             errors.append("duplicate records across units: %s" % ", ".join(v))
 
+    # corrected quantities, denominators, parts
+    corr = {c["evidence_id"]: c for c in d["record_corrections_v3.json"]["corrections"]}
+    dens = tr["denominators_by_source"]
+    mg = tr["moorhouse_method_labels"]
+    for x in index:
+        iid, e = x["evidence_id"], all_ev.get(x["evidence_id"])
+        if not e:
+            continue
+        c = corr.get(iid)
+        want_q = (None if c["action"] == "put_on_hold" else c["corrected_quantity"]) if c else e.get("quantity_as_reported")
+        if x["quantity_as_reported"] != want_q or bool(c) != bool(x["quantity_correction"]):
+            errors.append("index %s: quantity is not the value after the unit-3 corrections" % iid)
+        if c and x["detection_methods"] and set(x["detection_methods"]) & {"fecal_macroscopic", "fecal_detection"} and "dung morphology" not in (want_q or "").replace("dung-morphology value not determinable", ""):
+            errors.append("index %s: corrected record still counted as a dung-morphology detection" % iid)
+        if x["on_hold"] and x["detection_methods"] != ["not_determinable_record_on_hold"]:
+            errors.append("index %s: a held record must not carry a detection method" % iid)
+        if x["source_id"] == "moorhouse_gann_2022" and not x["on_hold"]:
+            labs = {mg[lab] for lab, n in re.findall(r"(DNA metabarcoding|dung morphology|feeding observation) (\d+) of", want_q or "") if int(n) > 0}
+            if "stated in the article text" in (want_q or ""):
+                labs.add("statement_in_article_text")
+            if set(x["detection_methods"]) != labs:
+                errors.append("index %s: methods %s do not follow the corrected quantity text" % (iid, x["detection_methods"]))
+        dd = dens.get(x["source_id"])
+        if dd and want_q:
+            for m in re.finditer(r"(?:(DNA metabarcoding|dung morphology|feeding observation) )?(\d+) of (?:the )?(\d+)(?: ([a-z ]+?))?(?: \(([\d.]+)%\))?(?:[;,]|$)", want_q):
+                lab, num, den, what, pct = m.group(1), int(m.group(2)), int(m.group(3)), (m.group(4) or "").strip(), m.group(5)
+                allowed = set(dd["labels"].values())
+                if num > den or den not in allowed:
+                    errors.append("index %s: '%s' has a numerator above the denominator or a denominator the source does not use" % (iid, m.group(0)))
+                elif lab and dd["labels"].get(lab) != den:
+                    errors.append("index %s: %s counted out of %d, the source uses %s" % (iid, lab, den, dd["labels"].get(lab)))
+                elif pct and dd["percent_is_count_over_denominator"] and abs(num * 100.0 / den - float(pct)) > 0.01:
+                    errors.append("index %s: %s%% is not %d/%d" % (iid, pct, num, den))
+        if re.search(r"seeds found", e["observed_consumption"]) and "seed" not in e["plant_part"]:
+            errors.append("index %s: a seed-based record must name seeds as the part" % iid)
+        if not str(e["plant_part"]).strip():
+            errors.append("index %s: plant part empty (use 'not stated')" % iid)
+
     # candidates
     cands = d["plant_candidates_v4.json"]["candidates"]
     cmap = {c["candidate_key"]: c for c in cands}
@@ -238,6 +276,8 @@ def main():
             errors.append("unit-3 candidate %s is missing or lost a link" % c3["candidate_key"])
 
     for h in d["plant_hazard_statements_v4.json"]["statements"]:
+        if sorted({all_ev[i]["plant_name_as_printed"] for i in h["evidence_ids"] if i in all_ev}) != sorted(set(h["applies_to_records_named"])):
+            errors.append("hazard %s: the linked records do not carry exactly the plant names the statement covers" % h["hazard_id"])
         if not h["evidence_ids"] or any(i not in all_ev or all_ev[i]["source_id"] != h["source_id"] for i in h["evidence_ids"]):
             errors.append("hazard %s: no evidence record from the same source behind it" % h["hazard_id"])
         if h["tested_in_tortoises_by_this_source"] is not False or not h.get("what_it_does_not_establish") or not h.get("location") or h["source_id"] not in sources:
@@ -258,6 +298,13 @@ def main():
     conflicts = {k for k, v in pairs.items() if v == {True, False}}
     if {(c["tortoise_key"], c["plant_accepted_name"]) for c in q["conflicting_records_same_tortoise_and_plant"]} != conflicts:
         errors.append("review queue: conflicting records differ from a recount")
+    gf = {}
+    for x in index:
+        fam = all_ev[x["evidence_id"]].get("plant_family")
+        if x["plant_accepted_name"] and fam and x["name_from"] == "unit_record":
+            gf.setdefault(x["plant_accepted_name"].split()[0], set()).add(fam)
+    if sorted(g["genus"] for g in q["genus_with_more_than_one_backbone_family"]) != sorted(g for g, f in gf.items() if len(f) > 1):
+        errors.append("review queue: genera mapped to more than one family differ from a recount")
     if {r["evidence_id"] for r in q["records_on_hold"]} != held or q["identical_record_groups_across_units"]:
         errors.append("review queue: holds differ from the corrections file, or identical records exist across units")
 

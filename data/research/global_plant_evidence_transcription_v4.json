@@ -3367,6 +3367,43 @@
   "asdm_tortoise_adoption_diet": "husbandry_recommendation",
   "tortoise_trust_plant_list": "keeper_organisation_statement_method_not_given"
  },
+ "denominators_by_source": {
+  "moorhouse_gann_2022": {
+   "note": "Table 3: DNA metabarcoding of 80 dung samples, dung morphology of 50, 212 feeding observations",
+   "labels": {
+    "DNA metabarcoding": 80,
+    "dung morphology": 50,
+    "feeding observation": 212
+   },
+   "percent_is_count_over_denominator": true
+  },
+  "figueroa_2024": {
+   "note": "Table 2: 207 fecal samples",
+   "labels": {
+    "fecal samples": 207
+   },
+   "percent_is_count_over_denominator": true
+  },
+  "oftedal_2002": {
+   "note": "Table 4: 15 juvenile tortoises",
+   "labels": {
+    "tortoises": 15
+   },
+   "percent_is_count_over_denominator": false
+  },
+  "kabigumila_2001": {
+   "note": "Table 2: 136 plant items in 124 feeding observations",
+   "labels": {
+    "plant items eaten": 136
+   },
+   "percent_is_count_over_denominator": false
+  }
+ },
+ "moorhouse_method_labels": {
+  "DNA metabarcoding": "fecal_dna_metabarcoding",
+  "dung morphology": "fecal_macroscopic",
+  "feeding observation": "direct_feeding_observation"
+ },
  "duplicate_datasets": [
   {
    "source": "Jennings, W.B., Berry, K.H. 2015. Desert tortoises (Gopherus agassizii) are selective herbivores that track the flowering phenology of their preferred food plants. PLoS ONE 10(1):e0116716.",

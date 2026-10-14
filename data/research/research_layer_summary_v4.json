@@ -65,11 +65,12 @@
     "account_or_review_statement_method_not_given": 9,
     "author_list_wild_and_captive_observation_not_separated": 24,
     "captive_feeding_record": 48,
-    "direct_feeding_observation": 148,
+    "direct_feeding_observation": 172,
     "direct_observation_and_fecal_analysis_not_separated": 28,
-    "fecal_detection": 217,
+    "fecal_detection": 165,
+    "fecal_dna_metabarcoding": 47,
     "fecal_histological": 57,
-    "fecal_macroscopic": 13,
+    "fecal_macroscopic": 34,
     "husbandry_recommendation": 68,
     "incidental_observation": 18,
     "keeper_organisation_statement_method_not_given": 23,
@@ -79,6 +80,7 @@
     "review_statement_method_not_given": 16,
     "secondary_citation_method_not_verified": 108,
     "secondary_reproduction_not_verified": 4,
+    "statement_in_article_text": 1,
     "unreferenced_general_statement": 4
    },
    "candidates": {
@@ -140,7 +142,10 @@
     "added_in_unit_4": 0,
     "species_specific": true,
     "by_detection_method": {
-     "fecal_detection": 52
+     "direct_feeding_observation": 24,
+     "fecal_dna_metabarcoding": 47,
+     "fecal_macroscopic": 21,
+     "statement_in_article_text": 1
     },
     "by_tier": {
      "1_wild_feeding_study_read": 52
@@ -445,6 +450,7 @@
    }
   },
   "review_queue": {
+   "genus_with_more_than_one_backbone_family": 0,
    "unit_1_citations_not_read": 74,
    "unit_1_citations_not_supported_by_the_cited_source": 7,
    "names_needing_review": 46,
