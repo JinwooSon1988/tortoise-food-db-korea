@@ -1,0 +1,47 @@
+{
+ "schema_version": "2.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v2.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v2.json",
+ "extends": "the v1 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "name_authority": "GBIF backbone taxonomy, species/match API",
+ "species_added": [
+  {
+   "tortoise_key": "darwini",
+   "scientific_name": "Chelonoidis darwini",
+   "common_name_ko": "산티아고 코끼리거북 (갈라파고스)",
+   "common_name_en": "Santiago giant tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_rank": "SPECIES",
+   "gbif_usage_key": 7758793,
+   "gbif_accepted_name": "Chelonoidis darwini",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "polyphemus",
+   "scientific_name": "Gopherus polyphemus",
+   "common_name_ko": "고퍼육지거북",
+   "common_name_en": "Gopher tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_rank": "SPECIES",
+   "gbif_usage_key": 2441812,
+   "gbif_accepted_name": "Gopherus polyphemus",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  }
+ ],
+ "names_in_sources_added_for_v1_taxa": {
+  "niger": [
+   "Chelonoidis porteri and Chelonoidis donfaustoi (Santa Cruz Island), not separated by the source"
+  ],
+  "gigantea": [
+   "Aldabrachelys gigantea, introduced on Round Island, Mauritius"
+  ]
+ }
+}

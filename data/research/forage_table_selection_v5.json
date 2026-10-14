@@ -1,0 +1,91 @@
+{
+ "schema_version": "5.0",
+ "extends": "forage_table_selection_v1.json and _v2.json",
+ "purpose": "Feedipedia fresh and hay tables for forage grasses and clovers named in husbandry records or present as candidate species. Silage tables are left out.",
+ "tables": [
+  {
+   "taxon": "Phleum pratense",
+   "node": 16887,
+   "table_name_in_datasheet": "Timothy (Phleum pratense), aerial part, fresh",
+   "datasheet": "Timothy grass (Phleum pratense)",
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value"
+  },
+  {
+   "taxon": "Phleum pratense",
+   "node": 16888,
+   "table_name_in_datasheet": "Timothy (Phleum pratense), hay",
+   "datasheet": "Timothy grass (Phleum pratense)",
+   "why_selected": "timothy hay is named in the Arizona-Sonora Desert Museum list (unit 3); hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value"
+  },
+  {
+   "taxon": "Dactylis glomerata",
+   "node": 11991,
+   "table_name_in_datasheet": "Cocksfoot, aerial part, fresh",
+   "datasheet": "Cocksfoot (Dactylis glomerata)",
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value"
+  },
+  {
+   "taxon": "Dactylis glomerata",
+   "node": 11990,
+   "table_name_in_datasheet": "Cocksfoot hay",
+   "datasheet": "Cocksfoot (Dactylis glomerata)",
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value"
+  },
+  {
+   "taxon": "Chloris gayana",
+   "node": 12518,
+   "table_name_in_datasheet": "Rhodes grass (Chloris gayana), aerial part, fresh",
+   "datasheet": "Rhodes grass (Chloris gayana)",
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value"
+  },
+  {
+   "taxon": "Chloris gayana",
+   "node": 12519,
+   "table_name_in_datasheet": "Rhodes grass (Chloris gayana), hay",
+   "datasheet": "Rhodes grass (Chloris gayana)",
+   "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value"
+  },
+  {
+   "taxon": "Trifolium repens",
+   "node": 12762,
+   "table_name_in_datasheet": "White clover (Trifolium repens), aerial part, fresh",
+   "datasheet": "White clover (Trifolium repens)",
+   "why_selected": "clover is named in several husbandry records without the species"
+  },
+  {
+   "taxon": "Trifolium repens",
+   "node": 12763,
+   "table_name_in_datasheet": "White clover (Trifolium repens), hay",
+   "datasheet": "White clover (Trifolium repens)",
+   "why_selected": "clover is named in several husbandry records without the species"
+  },
+  {
+   "taxon": "Medicago polymorpha",
+   "node": 11903,
+   "table_name_in_datasheet": "Bur clover (Medicago polymorpha), aerial part, fresh",
+   "datasheet": "Bur clover (Medicago polymorpha)",
+   "why_selected": "candidate species check"
+  },
+  {
+   "taxon": "Alysicarpus vaginalis",
+   "node": 11761,
+   "table_name_in_datasheet": "Alyce clover (Alysicarpus vaginalis), aerial part, fresh",
+   "datasheet": "Alyce clover (Alysicarpus vaginalis)",
+   "why_selected": "same species as gopher tortoise fecal-seed records (unit 2)"
+  },
+  {
+   "taxon": "Trifolium subterraneum",
+   "node": 12645,
+   "table_name_in_datasheet": "Subterranean clover (Trifolium subterraneum), aerial part, fresh",
+   "datasheet": "Subclover (Trifolium subterraneum)",
+   "why_selected": "clover reference"
+  },
+  {
+   "taxon": "Trifolium subterraneum",
+   "node": 12646,
+   "table_name_in_datasheet": "Subterranean clover (Trifolium subterraneum), hay",
+   "datasheet": "Subclover (Trifolium subterraneum)",
+   "why_selected": "clover reference"
+  }
+ ]
+}

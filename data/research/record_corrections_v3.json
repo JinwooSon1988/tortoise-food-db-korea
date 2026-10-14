@@ -1,0 +1,50 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "table_recheck": {
+  "source_id": "moorhouse_gann_2022",
+  "table": "Table 3",
+  "method": "x-positions of the text fragments in the PDF (pypdf text visitor); the table is printed rotated",
+  "column_start_positions": {
+   "metabarcoding_tortoise_count": "234-238",
+   "metabarcoding_tortoise_frequency": "269-273",
+   "metabarcoding_skink_count": "427-431",
+   "metabarcoding_skink_frequency": "462-467",
+   "morphology_count": "603-607",
+   "morphology_frequency": "638-642",
+   "observation_count": "668-673",
+   "observation_frequency": "707"
+  },
+  "printed_totals": {
+   "metabarcoding_tortoise": 47,
+   "morphology_tortoise": 21,
+   "observation_tortoise": 24
+  },
+  "result": "With the two displaced rows (Elaeodendron orientale, Latania loddigesii) left out, the dung-morphology column has 21 taxa, which equals the printed total. The unit-2 count of 23 came from reading those two rows as morphology counts.",
+  "status": "resolved_for_the_column_total; the two displaced rows remain undeterminable"
+ },
+ "corrections": [
+  {
+   "evidence_id": "moorhouse_gann_2022-40",
+   "plant_name_as_printed": "Elaeodendron orientale",
+   "action": "put_on_hold",
+   "reason": "In Table 3 the two numbers after the skink columns ('2' and '4') start at x-positions 642 and 668, which are the dung-morphology frequency column and the observation count column, not the dung-morphology count and frequency columns used by every other row (607 and 642). Read as printed they are not a valid count and frequency pair for either method, so no tortoise detection can be stated. DNA metabarcoding gives 0 of 80.",
+   "quantity_in_v2": "dung morphology 2 of 50 (4%)",
+   "corrected_quantity": null,
+   "status_after_correction": "hold_table_cell_not_determinable"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-31",
+   "plant_name_as_printed": "Latania loddigesii",
+   "action": "quantity_withdrawn",
+   "reason": "The numbers '2 0' start at x-position 642 (dung-morphology frequency column). The count cannot be determined from the PDF. The article text states that tortoises disperse the seeds of this palm, so the record stays, without a number.",
+   "quantity_in_v2": "dung morphology count 2 (frequency not legible in the text layer); DNA metabarcoding 0 of 80",
+   "corrected_quantity": "DNA metabarcoding 0 of 80; dung-morphology value not determinable from the published table; seed dispersal by tortoises is stated in the article text",
+   "status_after_correction": "kept_without_quantity"
+  }
+ ]
+}
