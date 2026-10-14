@@ -1923,6 +1923,13 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 1
+    },
+    {
+     "nutrient_name": "tannins (eq. tannic acid)",
+     "nutrient_value": 50.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
     }
    ],
    "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
@@ -2041,6 +2048,20 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 71
+    },
+    {
+     "nutrient_name": "tannins (eq. tannic acid)",
+     "nutrient_value": 23.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "tannins, condensed (eq. catechin)",
+     "nutrient_value": 27.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
     }
    ],
    "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
@@ -2219,15 +2240,29 @@
      "nutrient_name": "dry matter",
      "nutrient_unit": "% as fed",
      "mean_on_page": 20.9,
-     "sample_count_on_page": "",
-     "sample_count_from_the_shared_parser": 165
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "mean_on_page": 3.3,
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "mean_on_page": 12.7,
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
     },
     {
      "nutrient_name": "calcium",
      "nutrient_unit": "g/kg DM",
      "mean_on_page": 16.1,
-     "sample_count_on_page": "",
-     "sample_count_from_the_shared_parser": 72
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
     }
    ],
    "source_url": "https://www.feedipedia.org/node/11865",
@@ -2244,11 +2279,25 @@
    "analytical_method": "compiled feed table; average of the samples counted in sample_count",
    "values": [
     {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 21.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 165
+    },
+    {
      "nutrient_name": "lignin",
      "nutrient_value": 4.5,
      "nutrient_unit": "% DM",
      "measurement_basis": "dry matter",
      "sample_count": 66
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 72
     },
     {
      "nutrient_name": "potassium",
@@ -2582,6 +2631,20 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 2
+    },
+    {
+     "nutrient_name": "tannins (eq. tannic acid)",
+     "nutrient_value": 73.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "tannins, condensed (eq. catechin)",
+     "nutrient_value": 0.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
     }
    ],
    "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
@@ -2741,6 +2804,13 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 2
+    },
+    {
+     "nutrient_name": "tannins (eq. tannic acid)",
+     "nutrient_value": 37.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
     }
    ],
    "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",

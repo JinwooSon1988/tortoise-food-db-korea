@@ -5,7 +5,7 @@
  "extends": "the v1 and v2 research files, which are not modified",
  "layer": "research_only_not_published",
  "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
- "note": "A layout of values already in the v1 and v2 nutrition files. No oxalate, tannin or nitrate value is held yet. A nutrient value is not a safety statement.",
+ "note": "A layout of values already in the v1 and v2 nutrition files. 4 records hold a tannin, oxalate or nitrate value (Feedipedia livestock feed tables; not tortoise measurements). A nutrient value is not a safety statement.",
  "records": [
   {
    "record_id": "feedipedia-12130",
@@ -671,7 +671,8 @@
     "phosphorus [g/kg DM, dry matter]": 2.7,
     "crude fibre [% DM, dry matter]": 26.8,
     "crude protein [% DM, dry matter]": 20.5,
-    "potassium [g/kg DM, dry matter]": 46.2
+    "potassium [g/kg DM, dry matter]": 46.2,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 50.0
    },
    "calcium_to_phosphorus": {
     "value": 5.37,
@@ -695,7 +696,8 @@
     "adf [% DM, dry matter]": 25.4,
     "lignin [% DM, dry matter]": 10.8,
     "crude protein [% DM, dry matter]": 23.3,
-    "potassium [g/kg DM, dry matter]": 18.9
+    "potassium [g/kg DM, dry matter]": 18.9,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 23.8
    },
    "calcium_to_phosphorus": {
     "value": 5.1,
@@ -745,7 +747,9 @@
    "source_url": "https://www.feedipedia.org/node/11865",
    "match_to_candidate": "same_species",
    "values": {
+    "phosphorus [g/kg DM, dry matter]": 3.1,
     "lignin [% DM, dry matter]": 4.5,
+    "crude protein [% DM, dry matter]": 21.8,
     "potassium [g/kg DM, dry matter]": 15.8
    }
   },
@@ -811,7 +815,8 @@
     "adf [% DM, dry matter]": 37.0,
     "lignin [% DM, dry matter]": 13.1,
     "crude protein [% DM, dry matter]": 15.8,
-    "potassium [g/kg DM, dry matter]": 19.9
+    "potassium [g/kg DM, dry matter]": 19.9,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 73.5
    },
    "calcium_to_phosphorus": {
     "value": 5.0,
@@ -846,7 +851,8 @@
     "ndf [% DM, dry matter]": 59.6,
     "adf [% DM, dry matter]": 51.5,
     "lignin [% DM, dry matter]": 10.3,
-    "crude protein [% DM, dry matter]": 7.4
+    "crude protein [% DM, dry matter]": 7.4,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 37.4
    },
    "calcium_to_phosphorus": {
     "value": 10.09,

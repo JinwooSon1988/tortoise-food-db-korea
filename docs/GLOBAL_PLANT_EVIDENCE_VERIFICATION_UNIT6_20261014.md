@@ -90,3 +90,42 @@ python scripts/audit_feedipedia_sample_counts_v6.py --pages <원문 저장 폴�
 python scripts/build_research_gap_register_v6.py
 python scripts/qa_global_plant_evidence_research_v6.py
 ```
+
+## 8. 후속: 공용 파서 교체와 회귀 테스트 (같은 날)
+
+### 공용 파서 교체
+
+- **결함:** `verify_nutrition_reference_sources_v1.parse_feedipedia`의 정규식은 평균값 뒤의 구분자까지 소비해서 다음 행을 경계로 인식하지 못했다. 그래서 Nb가 빈 행은 다음 행 전체를 삼켜 그 행의 Nb를 가져갔고, 삼켜진 행은 결과에서 사라졌다. 이름에 마침표나 숫자가 있는 행(예: "Tannins, condensed (eq. catechin)")은 아예 읽지 못했다.
+- **교체:** 새 모듈 `scripts/feedipedia_table.py`는 각 `<tr>`의 셀에서 항목명, 단위, 평균, SD, 최소, 최대, Nb, 계산값 표시(*)를 읽는다.
+  - 열 위치는 각 구획의 머리 행(Avg, SD, Min, Max, Nb)에서 정하고, colspan은 펼친다.
+  - rowspan이 걸린 행은 추측하지 않고 표시해 결과에서 뺀다.
+  - 표 제목(예: "Rape forage, fresh")을 함께 기록해, 한 페이지에 같은 항목이 여러 표로 나오면 구분할 수 있다.
+- **공용 함수:** `parse_feedipedia`는 반환 형식을 그대로 둔 채 이 모듈을 쓴다. 감사·검증 스크립트(`audit_feedipedia_sample_counts_v6.py`, `verify_forage_nutrition_v5.py`)도 같은 모듈로 통일했다.
+
+### 회귀 테스트
+
+`scripts/test_feedipedia_table_parser.py`(23개 검사)는 11865와 같은 배치, Nb 빈칸·0·1, Nb가 있는 계산값과 없는 계산값, colspan, rowspan, 순서가 바뀐 머리 행, 두 표의 같은 항목, HTML 엔티티, 숫자가 아닌 평균을 다룬다. 같은 입력을 옛 파서에 넣으면 건물의 Nb가 165로 나오고 다음 두 행이 사라져 실패한다. 연구 QA 워크플로가 이 테스트를 먼저 실행한다.
+
+### 1~6차 전체 재생성 결과 (변경 전 → 후)
+
+| 파일 | 값 | 추가된 값(원문에 Nb 있음) |
+|---|---|---|
+| `forage_nutrition_research_v1.json` | 113 → 115 | 축합 탄닌 2(11855, 19966) |
+| `forage_nutrition_research_v2.json` | 246 → 254 | 11865 조단백질 21.8(Nb 165)·인 3.1(Nb 72), 탄닌 6(11650, 11723, 12063, 19703) |
+| `forage_nutrition_research_v5.json` | 122 → 126 | 12645 칼륨 20.0(Nb 6), 12646 조단백질 15.1(Nb 6)·회분 10.1(Nb 5), 11903 탄닌 0.1(Nb 1) |
+
+- **추가된 14개 값:** 모두 원문 행에 Nb가 인쇄된 값으로, 옛 파서가 빠뜨렸던 것이다. 바뀌거나 빠진 기존 값은 없다.
+- **연쇄 변경:** 3차 `nutrient_safety_view_v3.json`에는 이제 탄닌 값이 있는 기록이 4건이다. 이전에 '없음'으로 고정되어 있던 안내 문구도 실제 보유 건수를 적도록 고쳤다. 이 값들은 가축 사료표이며 거북 측정값이 아니다.
+- **전수 검사(`feedipedia_sample_count_audit_v6.json`):**
+  - 연구 값 360개 모두 원문 행과 일치
+  - 원문 Nb가 빈칸이라 뺀 값 8개(11865 건물·조지방·회분·칼슘, 12645 마그네슘·나트륨, 12646 건물·조지방)
+  - 공개 dm-basis 219개 일치, 공개 reference 평균 498개 일치(유채잎 포함)
+
+### 미해결이던 두 항목
+
+- **나트륨 33(12645):** 같은 표에서 바로 아래 아연 행의 평균값(33 mg/kg DM)이다. 옛 파서가 Nb 칸이 빈 나트륨 행 뒤에서 아연의 평균을 Nb로 읽었다. 제외 감사 파일에 `previous_sample_count_matches_mean_of_following_rows`로 남겼다.
+- **유채잎 15683(공개 데이터):** 페이지에 'Rape forage, fresh', 'Rape forage, silage', 'Rape straw' 세 표가 있다. 공개 기록의 다섯 값(건물 12.1, 조단백질 19.3, 조섬유 15.8, 칼슘 21.7, 인 5.8)은 'Rape forage, fresh' 표와 평균이 일치한다(그 표의 Nb 50·70·31·13·13). 공개 파일에는 Nb가 저장되어 있지 않아 Nb 일치는 평가하지 않았고, 공개 파일은 고치지 않았다.
+
+### 기존 공개 QA
+
+워크플로가 참조하는 기존 QA 스크립트 104개가 공용 파서 교체 후에도 모두 로컬 통과한다.

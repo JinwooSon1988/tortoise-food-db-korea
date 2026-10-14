@@ -1100,6 +1100,16 @@
      "record_sample_count": 1,
      "page_sample_count": "1",
      "status": "matched"
+    },
+    {
+     "nutrient_name": "tannins (eq. tannic acid)",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 0.1,
+     "page_value": 0.1,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
     }
    ],
    "record_status": "all_values_matched_saved_live_page"
@@ -1292,6 +1302,16 @@
      "record_sample_count": 14,
      "page_sample_count": "14",
      "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 20.0,
+     "page_value": 20.0,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
     }
    ],
    "record_status": "all_values_matched_saved_live_page"
@@ -1304,6 +1324,26 @@
    "page_title": "Subterranean clover (Trifolium subterraneum), hay",
    "title_matches_record": true,
    "values": [
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 15.1,
+     "page_value": 15.1,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 10.1,
+     "page_value": 10.1,
+     "record_sample_count": 5,
+     "page_sample_count": "5",
+     "status": "matched"
+    },
     {
      "nutrient_name": "calcium",
      "nutrient_unit": "g/kg DM",
@@ -1361,7 +1401,7 @@
  "totals": {
   "records": 12,
   "records_all_matched": 12,
-  "values": 122,
-  "values_matched": 122
+  "values": 126,
+  "values_matched": 126
  }
 }

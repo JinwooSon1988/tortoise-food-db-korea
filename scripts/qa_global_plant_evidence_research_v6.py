@@ -42,11 +42,19 @@ def main():
                     errors.append("%s %s %s: kept value not matched against its source row" % (f, r["record_id"], v["nutrient_name"]))
             for dv in r.get("values_dropped_no_sample_count_on_page") or []:
                 x = dropped_audit.get((f, r["record_id"], dv["nutrient_name"], dv["nutrient_unit"]))
-                if not x or x["status"] != "nb_blank_on_page_but_stored" or x.get("nb_on_page") not in (None, ""):
+                if not x or x["status"] != "excluded_nb_blank_on_page" or x.get("nb_on_page") is not None:
                     errors.append("%s %s %s: dropped value not confirmed as having no sample count on the page" % (f, r["record_id"], dv["nutrient_name"]))
     for k, x in dropped_audit.items():
-        if x["status"] != "nb_blank_on_page_but_stored":
+        if x["status"] != "excluded_nb_blank_on_page":
             errors.append("%s: excluded value has status %s" % (k, x["status"]))
+    expected_former = {("forage_nutrition_research_v2.json", "feedipedia-11865", "dry matter", "% as fed"), ("forage_nutrition_research_v2.json", "feedipedia-11865", "calcium", "g/kg DM"),
+                       ("forage_nutrition_research_v5.json", "feedipedia-12645", "magnesium", "g/kg DM"), ("forage_nutrition_research_v5.json", "feedipedia-12645", "sodium", "g/kg DM"),
+                       ("forage_nutrition_research_v5.json", "feedipedia-12646", "dry matter", "% as fed"), ("forage_nutrition_research_v5.json", "feedipedia-12646", "ether extract", "% DM")}
+    if not expected_former <= set(dropped_audit):
+        errors.append("the six values the former parser gave a wrong sample count are not all listed as excluded")
+    for k, x in checked.items():
+        if x.get("nb_on_page") is None and x["status"] == "matched":
+            errors.append("%s: matched although the page prints no sample count" % (k,))
     for row in ex.get("excluded_values", []):
         if row.get("review_status") == "source_row_verified":
             x = dropped_audit.get(("forage_nutrition_research_v5.json", row["record_id"], row["nutrient_name"], row["nutrient_unit"]))

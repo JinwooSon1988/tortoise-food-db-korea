@@ -946,6 +946,13 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 1
+    },
+    {
+     "nutrient_name": "tannins (eq. tannic acid)",
+     "nutrient_value": 0.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
     }
    ],
    "calcium_to_phosphorus": {
@@ -1123,6 +1130,13 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 14
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 20.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
     }
    ],
    "calcium_to_phosphorus": {
@@ -1136,15 +1150,15 @@
      "nutrient_name": "magnesium",
      "nutrient_unit": "g/kg DM",
      "mean_on_page": 1.7,
-     "sample_count_on_page": "",
-     "sample_count_from_the_shared_parser": 6
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
     },
     {
      "nutrient_name": "sodium",
      "nutrient_unit": "g/kg DM",
      "mean_on_page": 2.2,
-     "sample_count_on_page": "",
-     "sample_count_from_the_shared_parser": 33
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
     }
    ],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
@@ -1168,6 +1182,20 @@
    "preparation_state": "hay",
    "analytical_method": "compiled feed table; average of the samples counted in sample_count",
    "values": [
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 15.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 10.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
     {
      "nutrient_name": "calcium",
      "nutrient_value": 11.4,
@@ -1215,15 +1243,15 @@
      "nutrient_name": "dry matter",
      "nutrient_unit": "% as fed",
      "mean_on_page": 90.2,
-     "sample_count_on_page": "",
-     "sample_count_from_the_shared_parser": 6
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
     },
     {
      "nutrient_name": "ether extract",
      "nutrient_unit": "% DM",
      "mean_on_page": 2.2,
-     "sample_count_on_page": "",
-     "sample_count_from_the_shared_parser": 5
+     "sample_count_on_page": null,
+     "reason": "no sample count printed in the source row"
     }
    ],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",

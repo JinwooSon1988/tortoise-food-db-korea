@@ -25,59 +25,66 @@ ABBR = {"ndf": "neutral detergent fibre", "adf": "acid detergent fibre", "wsc": 
 SUFFIX = [("_pct_as_fed", "% as fed"), ("_pct_dm", "% DM"), ("_g_per_kg_dm", "g/kg DM"), ("_mg_per_kg_dm", "mg/kg DM"), ("_mj_per_kg_dm", "MJ/kg DM")]
 
 
-def cell(c):
-    return re.sub(r"\s+", " ", html.unescape(re.sub(r"(?s)<[^>]+>", " ", c))).strip()
+def _ft():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("feedipedia_table", Path(__file__).resolve().parent / "feedipedia_table.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+FT = _ft()
 
 
 def table_rows(page):
-    """Rows of the composition tables in page order: label, unit, mean, Nb (blank stays blank), calculated marker."""
-    rows = []
-    for tr in re.findall(r"(?s)<tr[^>]*>(.*?)</tr>", page):
-        cells = [cell(c) for c in re.findall(r"(?s)<td[^>]*>(.*?)</td>", tr)]
-        if len(cells) >= 7 and cells[1] and re.fullmatch(r"-?\d+(\.\d+)?", cells[2] or "x"):
-            rows.append({"label": cells[0], "unit": cells[1], "avg": float(cells[2]), "nb": cells[6], "calculated_marker": (cells[7] if len(cells) > 7 else "") == "*"})
-        elif len(cells) >= 2 and cells[1] == "Unit":
-            rows.append({"section": cells[0]})
-    return rows
+    """Rows read cell by cell by scripts/feedipedia_table.py (the same reader the shared parser now uses)."""
+    return FT.parse_rows(page)
 
 
-ALIASES = {"neutral detergent fibre": ["ndf"], "acid detergent fibre": ["adf"], "water-soluble carbohydrates": ["water soluble carbohydrates"],
-           "water soluble carbohydrates": ["water-soluble carbohydrates"]}
-
-
-def find(rows, label, unit):
-    names = {label.lower(), *ALIASES.get(label.lower(), [])}
-    return [i for i, r in enumerate(rows) if "label" in r and r["label"].lower() in names and r["unit"] == unit]
-
-
-def explain(rows, i, stored_nb):
-    """Where a stored Nb that is not on the row itself could have come from: the next rows of the same section."""
+def explain(rows, r, stored_nb):
+    """Where a stored Nb that is not printed on the row could have come from: an Nb or a mean printed on a following row of the same table."""
     out = []
-    for r in rows[i + 1:]:
-        if "section" in r:
-            break
-        if str(r["nb"]) == str(stored_nb):
-            out.append("%s [%s]" % (r["label"], r["unit"]))
+    after = [x for x in rows if x["table"] == r["table"] and x["row"] > r["row"]]
+    for x in after:
+        if x["nb"] is not None and str(x["nb"]) == str(stored_nb):
+            out.append("Nb of %s [%s]" % (x["label"], x["unit"]))
+        if abs(x["avg"] - float(stored_nb)) < 1e-9:
+            out.append("mean of %s [%s]" % (x["label"], x["unit"]))
     return out
 
 
-def check_value(rows, label, unit, value, nb):
-    idx = find(rows, label, unit)
-    if len(idx) != 1:
-        return {"status": "row_not_found" if not idx else "row_ambiguous"}
-    r = rows[idx[0]]
-    res = {"mean_on_page": r["avg"], "nb_on_page": r["nb"] or None, "calculated_marker_on_page": r["calculated_marker"]}
-    if abs(r["avg"] - value) > 1e-9:
+def check_value(rows, label, unit, value, nb, heading_word=None):
+    hits = FT.find(rows, label, unit, heading_word)
+    if len(hits) != 1:
+        return {"status": "row_not_found" if not hits else "row_ambiguous", "candidate_tables": sorted({h["table_heading"] or "" for h in hits})}
+    r = hits[0]
+    res = {"mean_on_page": r["avg"], "nb_on_page": r["nb"], "calculated_marker_on_page": r["calculated"], "table_heading": r["table_heading"],
+           "section": r["section"], "rowspan_in_row": r["rowspan_in_row"]}
+    if r["rowspan_in_row"]:
+        res["status"] = "row_in_rowspan_block_not_decidable"
+    elif abs(r["avg"] - value) > 1e-9:
         res["status"] = "mean_differs"
     elif nb is None:
         res["status"] = "mean_matched_nb_not_stored"
-    elif str(r["nb"]) == str(nb):
+    elif r["calculated"] and nb == "*":
+        res["status"] = "matched_calculated"
+    elif r["nb"] is not None and str(r["nb"]) == str(nb):
         res["status"] = "matched"
-    elif not r["nb"]:
-        res.update(status="nb_blank_on_page_but_stored", stored_nb_equals_nb_of_following_rows=explain(rows, idx[0], nb))
+    elif r["nb"] is None:
+        res.update(status="nb_blank_on_page_but_stored", stored_nb_found_on_following_rows=explain(rows, r, nb))
     else:
         res["status"] = "nb_differs"
     return res
+
+
+# sample counts that the former flattened-text parser attached to rows whose Nb cell is blank (found in units 2, 5 and 6)
+FORMER_PARSER_COUNTS = {("feedipedia-11865", "dry matter"): 165, ("feedipedia-11865", "calcium"): 72, ("feedipedia-12645", "magnesium"): 6,
+                        ("feedipedia-12645", "sodium"): 33, ("feedipedia-12646", "dry matter"): 6, ("feedipedia-12646", "ether extract"): 5}
+
+
+def state_word(*texts):
+    t = " ".join(x or "" for x in texts).lower()
+    return next((w for w in ("silage", "straw", "hay", "fresh", "dried", "dehydrated") if w in t), None)
 
 
 def label_of(key):
@@ -108,14 +115,20 @@ def main():
                 continue
             rows, _ = rows_for(r["source_id"])
             for v in r["values"]:
-                res = check_value(rows, v["nutrient_name"], v["nutrient_unit"], v["nutrient_value"], v["sample_count"]) if rows else {"status": "page_not_saved"}
+                res = check_value(rows, v["nutrient_name"], v["nutrient_unit"], v["nutrient_value"], v["sample_count"], state_word(r.get("table_title_as_printed"))) if rows else {"status": "page_not_saved"}
                 research.append({"file": f, "record_id": r["record_id"], "nutrient_name": v["nutrient_name"], "nutrient_unit": v["nutrient_unit"],
                                  "stored_value": v["nutrient_value"], "stored_nb": v["sample_count"], **res})
             for dv in r.get("values_dropped_no_sample_count_on_page") or []:
-                res = check_value(rows, dv["nutrient_name"], dv["nutrient_unit"], dv["mean_on_page"], dv["sample_count_from_the_shared_parser"]) if rows else {"status": "page_not_saved"}
+                former = FORMER_PARSER_COUNTS.get((r["record_id"], dv["nutrient_name"]))
+                res = check_value(rows, dv["nutrient_name"], dv["nutrient_unit"], dv["mean_on_page"], None, state_word(r.get("table_title_as_printed"))) if rows else {"status": "page_not_saved"}
+                if res.get("status") == "mean_matched_nb_not_stored":
+                    res["status"] = "excluded_nb_blank_on_page" if res["nb_on_page"] is None else "excluded_but_page_prints_nb"
+                if former is not None and rows:
+                    hit = FT.find(rows, dv["nutrient_name"], dv["nutrient_unit"], state_word(r.get("table_title_as_printed")))
+                    res["former_parser_count_found_on_following_rows"] = explain(rows, hit[0], former) if len(hit) == 1 else []
                 dropped.append({"file": f, "record_id": r["record_id"], "nutrient_name": dv["nutrient_name"], "nutrient_unit": dv["nutrient_unit"],
-                                "value": dv["mean_on_page"], "nb_given_by_shared_parser": dv["sample_count_from_the_shared_parser"], **res,
-                                "decision": "excluded: the source row prints no sample count; the number came from another row" if res.get("status") == "nb_blank_on_page_but_stored" else "excluded; see status"})
+                                "value": dv["mean_on_page"], "count_given_by_former_parser": former, **res,
+                                "decision": "excluded: the source row prints no sample count" if res.get("status") == "excluded_nb_blank_on_page" else "check: see status"})
 
     public = []
     if PUBLIC_DM.exists():
@@ -126,7 +139,7 @@ def main():
             rows, _ = rows_for(m.group(1))
             for key, v in r["values"].items():
                 lab, unit = label_of(key)
-                res = check_value(rows, lab, unit, v["value"], v.get("n")) if rows and lab else {"status": "page_not_saved" if not rows else "key_not_mapped"}
+                res = check_value(rows, lab, unit, v["value"], v.get("n"), state_word(r.get("variant"), r.get("preparation_state"))) if rows and lab else {"status": "page_not_saved" if not rows else "key_not_mapped"}
                 public.append({"file": "data/plant_nutrition_dm_basis_v1.json", "plant_id": r["plant_id"], "node": m.group(1), "key": key, "stored_value": v["value"], "stored_nb": v.get("n"), **res})
     if PUBLIC_REF.exists():
         for r in json.loads(PUBLIC_REF.read_text(encoding="utf-8"))["records"]:
@@ -136,7 +149,7 @@ def main():
             rows, _ = rows_for(m.group(1))
             for key, val in (r.get("nutrients") or {}).items():
                 lab, unit = label_of(key)
-                res = check_value(rows, lab, unit, val, None) if rows and lab else {"status": "page_not_saved" if not rows else "key_not_mapped"}
+                res = check_value(rows, lab, unit, val, None, state_word(r.get("preparation_state"), r.get("analyzed_part"))) if rows and lab else {"status": "page_not_saved" if not rows else "key_not_mapped"}
                 public.append({"file": "data/plant_nutrition_reference_v1.json", "plant_id": r["plant_id"], "node": m.group(1), "key": key, "stored_value": val, "stored_nb": None, **res})
 
     doc = {"schema_version": "6.0", "generated_by": "scripts/audit_feedipedia_sample_counts_v6.py", "pages_fetched_on": a.fetched_on,
@@ -154,12 +167,13 @@ def main():
         by = {(x["record_id"], x["nutrient_name"], x["nutrient_unit"]): x for x in dropped}
         for row in ex.get("excluded_values", []):
             hit = by.get((row["record_id"], row["nutrient_name"], row["nutrient_unit"]))
-            if not hit or hit.get("status") != "nb_blank_on_page_but_stored":
+            if not hit or hit.get("status") != "excluded_nb_blank_on_page":
                 continue
             node = row["record_id"].split("-", 1)[1]
             row.update(source_row_mean=hit["mean_on_page"], source_row_unit=row["nutrient_unit"], source_row_sample_count="",
                        source_row_sample_count_printed=False, source_row_calculated_marker=hit["calculated_marker_on_page"],
-                       previous_sample_count_matches_nb_of_following_rows=hit.get("stored_nb_equals_nb_of_following_rows") or [],
+                       previous_sample_count_matches_nb_of_following_rows=[x for x in hit.get("former_parser_count_found_on_following_rows") or [] if x.startswith("Nb of")],
+                       previous_sample_count_matches_mean_of_following_rows=[x for x in hit.get("former_parser_count_found_on_following_rows") or [] if x.startswith("mean of")],
                        exclusion_reason="source_row_prints_no_sample_count",
                        review_status="source_row_verified", verified_against="saved copy of %s fetched on %s, sha256 %s" % (row["source_url"], a.fetched_on, pages[node][1]),
                        verified_by_script="scripts/audit_feedipedia_sample_counts_v6.py")

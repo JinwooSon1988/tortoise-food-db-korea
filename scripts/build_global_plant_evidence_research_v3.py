@@ -454,7 +454,7 @@ def main():
     dump(RES / "plant_name_resolutions_v3.json", {**meta, "first_database": "GBIF backbone taxonomy", "second_database": "World Flora Online plant list (matching service)", "resolutions": resolutions})
     dump(RES / "plant_candidates_v3.json", {**meta, "scope": "cumulative over units 1 to 3", "evidence_tiers": TIER_KO, "candidates": sorted(cands.values(), key=lambda c: c["candidate_key"])})
     dump(RES / "plant_hazard_statements_v3.json", {**meta, "note": "Statements made by sources that were read. They are not toxicity findings for tortoises.", "statements": hazards})
-    dump(RES / "nutrient_safety_view_v3.json", {**meta, "note": "A layout of values already in the v1 and v2 nutrition files. No oxalate, tannin or nitrate value is held yet. A nutrient value is not a safety statement.", "records": view})
+    dump(RES / "nutrient_safety_view_v3.json", {**meta, "note": "A layout of values already in the v1 and v2 nutrition files. %d records hold a tannin, oxalate or nitrate value (Feedipedia livestock feed tables; not tortoise measurements). A nutrient value is not a safety statement." % sum(any(k.startswith(("oxalic", "tannins", "nitrate")) for k in r["values"]) for r in view), "records": view})
     dump(RES / "research_layer_summary_v3.json", {**meta, "summary": summary})
     print("unit 3: sources %d, evidence %d, resolutions %d (resolved %d), candidates %d, hazards %d, nutrient view %d"
           % (len(sources), len(evidence), len(resolutions), len(res_by_name), len(cands), len(hazards), len(view)))

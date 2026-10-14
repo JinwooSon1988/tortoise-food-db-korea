@@ -281,6 +281,9 @@ def main():
                     dropped.append({"nutrient_name": val["nutrient_name"], "nutrient_unit": val["nutrient_unit"], "mean_on_page": h[0]["avg"] if len(h) == 1 else None,
                                     "sample_count_on_page": h[0]["nb"] if len(h) == 1 else None, "sample_count_from_the_shared_parser": val["sample_count"]})
             values = kept
+            dropped += [{"nutrient_name": lab, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit], "mean_on_page": avg, "sample_count_on_page": None,
+                        "reason": "no sample count printed in the source row"}
+                       for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and nb is None and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
             if not values:
                 continue
             nutrition.append({"record_id": "feedipedia-%s" % t["node"], "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)", "source_id": str(t["node"]),
