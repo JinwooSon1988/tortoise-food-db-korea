@@ -1,0 +1,152 @@
+{
+ "schema_version": "2.0",
+ "extends": "data/research/forage_table_selection_v1.json",
+ "purpose": "Feedipedia nutrient tables selected in unit 2 for plants named at species level in the unit-2 evidence records and not yet in the published plant database.",
+ "selection_rule": "same species as a transcribed plant name and database_status not_in_database; fresh, hay, dried or straw material; silage, pods and processing waste left out. A table for a different species of the same genus is kept only when marked reference only.",
+ "not_selected": [
+  {
+   "taxon": "Cynodon dactylon",
+   "reason": "species already in the published plant database (bermudagrass); left to the existing nutrition pipeline"
+  },
+  {
+   "taxon": "Hibiscus rosa-sinensis",
+   "reason": "species already in the published plant database (hibiscusrosa); the Feedipedia table is for the aerial part while the evidence record is for flowers"
+  },
+  {
+   "taxon": "Plantago lanceolata",
+   "reason": "species already in the published plant database (ribwortplantain)"
+  },
+  {
+   "taxon": "Trifolium pratense",
+   "reason": "species already in the published plant database (redclover)"
+  },
+  {
+   "taxon": "Medicago sativa",
+   "reason": "species already in the published plant database (alfalfa)"
+  },
+  {
+   "taxon": "Leucaena leucocephala, pods",
+   "reason": "pods are a different part from the material in the evidence record"
+  },
+  {
+   "taxon": "Psidium guajava, leaves and processing waste",
+   "reason": "the evidence record is for fruit; only the fresh fruit table was selected"
+  },
+  {
+   "taxon": "Tridax procumbens, Amaranthus viridis, Plantago ovata",
+   "reason": "datasheet found but it lists no fresh, hay or dried nutrient table"
+  }
+ ],
+ "no_datasheet_found": [
+  "Digitaria horizontalis",
+  "Cenchrus echinatus",
+  "Desmodium incanum",
+  "Bidens pilosa",
+  "Guazuma ulmifolia",
+  "Ipomoea pes-caprae",
+  "Amaranthus hybridus",
+  "Urtica dioica",
+  "Achillea millefolium",
+  "Sida spinosa",
+  "Kyllinga",
+  "Passiflora edulis",
+  "Schismus",
+  "Mesembryanthemum"
+ ],
+ "tables": [
+  {
+   "taxon": "Paspalum conjugatum",
+   "node": 11897,
+   "table_name_in_datasheet": "Buffalo grass (Paspalum conjugatum), aerial part, fresh",
+   "datasheet": "Buffalo grass (Paspalum conjugatum)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Achyranthes aspera",
+   "node": 11723,
+   "table_name_in_datasheet": "Achyranthes (Achyranthes aspera), aerial part, fresh",
+   "datasheet": "Achyranthes (Achyranthes aspera)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Leucaena leucocephala",
+   "node": 11650,
+   "table_name_in_datasheet": "Leucaena leucocephala, aerial part, fresh",
+   "datasheet": "Leucaena (Leucaena leucocephala)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Themeda triandra",
+   "node": 12513,
+   "table_name_in_datasheet": "Red oat grass (Themeda triandra), aerial part, fresh",
+   "datasheet": "Red oat grass (Themeda triandra)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Themeda triandra",
+   "node": 12881,
+   "table_name_in_datasheet": "Red oat grass (Themeda triandra), hay",
+   "datasheet": "Red oat grass (Themeda triandra)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Medicago lupulina",
+   "node": 11865,
+   "table_name_in_datasheet": "Black medic (Medicago lupulina), aerial part, fresh",
+   "datasheet": "Black medic (Medicago lupulina)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Tithonia diversifolia",
+   "node": 15787,
+   "table_name_in_datasheet": "Mexican sunflower (Tithonia diversifolia), aerial part, fresh",
+   "datasheet": "Mexican sunflower (Tithonia diversifolia)",
+   "match": "same_species",
+   "part_note": "the evidence record is for flowers offered in a captive trial; this table is for leaves with stems and petioles"
+  },
+  {
+   "taxon": "Tithonia diversifolia",
+   "node": 19894,
+   "table_name_in_datasheet": "Mexican sunflower (Tithonia diversifolia), aerial part, dried",
+   "datasheet": "Mexican sunflower (Tithonia diversifolia)",
+   "match": "same_species",
+   "part_note": "the evidence record is for flowers offered in a captive trial; this table is for leaves with stems and petioles"
+  },
+  {
+   "taxon": "Desmanthus virgatus",
+   "node": 12063,
+   "table_name_in_datasheet": "Hedge lucerne (Desmanthus virgatus), aerial part, fresh",
+   "datasheet": "Hedge lucerne (Desmanthus virgatus)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Vicia faba",
+   "node": 19702,
+   "table_name_in_datasheet": "Faba bean (Vicia faba), aerial part, fresh",
+   "datasheet": "Faba bean (Vicia faba)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Vicia faba",
+   "node": 19703,
+   "table_name_in_datasheet": "Faba bean (Vicia faba), aerial part, straw",
+   "datasheet": "Faba bean (Vicia faba)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Psidium guajava",
+   "node": 20402,
+   "table_name_in_datasheet": "Guava (Psidium guajava), fruit, fresh",
+   "datasheet": "Guava (Psidium guajava)",
+   "match": "same_species"
+  },
+  {
+   "taxon": "Stenotaphrum secundatum",
+   "node": 12640,
+   "table_name_in_datasheet": "St Augustine grass (Stenotaphrum secundatum), hay",
+   "datasheet": "St Augustine grass (Stenotaphrum secundatum)",
+   "match": "same_genus_different_species_reference_only",
+   "reference_for_taxon": "Stenotaphrum dimidiatum"
+  }
+ ]
+}
