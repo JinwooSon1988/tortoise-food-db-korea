@@ -121,6 +121,18 @@ if len(unresolved_records) != 45:
 for r in unresolved_records:
     if r.get("plant_accepted_name") is not None:
         errors.append(f"Unresolved taxon assigned accepted name: {r['evidence_id']}")
+# Preserve two intentional taxonomic exceptions: an unresolved genus
+# label and a source that lists two names separately despite synonymy.
+taxonomic_exceptions = {
+    "pillajo_2020-50": ("genus_kept_as_printed_backbone_status_synonym", "Pennisetum sp.", "Pennisetum"),
+    "figueroa_2024-07": ("synonym_in_backbone_but_source_lists_both_names_kept_separate", "Euphorbia cyathophora", None),
+}
+for r in records:
+    if r.get("evidence_id") in taxonomic_exceptions:
+        expected = taxonomic_exceptions[r["evidence_id"]]
+        actual = (r.get("plant_name_check"), r.get("plant_name_as_printed"), r.get("plant_accepted_name"))
+        if actual != expected:
+            errors.append(f"Taxonomic exception overwritten: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
