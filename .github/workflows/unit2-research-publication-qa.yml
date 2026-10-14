@@ -1,0 +1,22 @@
+name: Unit 2 research publication safety QA
+on:
+  pull_request:
+    paths:
+      - 'data/research/**_v2.json'
+      - 'scripts/qa_global_research_unit2_publication_gates.py'
+      - '.github/workflows/unit2-research-publication-qa.yml'
+  push:
+    branches:
+      - 'research/global-plant-evidence-unit2-20261014'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/qa_global_research_unit2_publication_gates.py
