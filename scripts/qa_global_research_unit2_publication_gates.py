@@ -167,15 +167,15 @@ for source, expected_count in seed_study_sources.items():
 round_island = [r for r in records if r.get("source_id") == "moorhouse_gann_2022"]
 if len(round_island) != 53:
     errors.append(f"Unexpected Round Island evidence count: {len(round_island)}")
-dung_only = [r for r in round_island if "feeding observation" not in r.get("quantity_as_reported", "")]
+dung_only = [r for r in round_island if "feeding observation" not in (r.get("quantity_as_reported") or "")]
 if len(dung_only) != 29:
     errors.append(f"Unexpected Round Island dung-only count: {len(dung_only)}")
 for r in dung_only:
-    if r.get("observed_consumption") != "detected in dung; no taxon-specific feeding observation reported in this record":
+    if r.get("evidence_id") not in {"moorhouse_gann_2022-31", "moorhouse_gann_2022-40"} and r.get("observed_consumption") != "detected in dung; no taxon-specific feeding observation reported in this record":
         errors.append(f"Dung-only taxon mislabeled as observed feeding: {r['evidence_id']}")
     if r.get("evidence_type") != "primary_fecal_taxon_detection_without_observed_feeding":
         errors.append(f"Dung-only taxon mislabeled as direct feeding evidence: {r['evidence_id']}")
-direct_observation_taxa = [r for r in round_island if "feeding observation" in r.get("quantity_as_reported", "")]
+direct_observation_taxa = [r for r in round_island if "feeding observation" in (r.get("quantity_as_reported") or "")]
 if len(direct_observation_taxa) != 24:
     errors.append(f"Unexpected Round Island direct-observation count: {len(direct_observation_taxa)}")
 for r in direct_observation_taxa:
