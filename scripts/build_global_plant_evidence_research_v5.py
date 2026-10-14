@@ -125,7 +125,7 @@ def main():
         n = v1.resolve(t["taxon"], cache, a.offline)
         values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                    "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
-                  for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+                  for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and v1.has_printed_sample_count(nb) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
         values, dropped = row_check(page.read_text(encoding="utf-8", errors="replace"), values)
         dropped += [{"nutrient_name": lab, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit], "mean_on_page": avg, "sample_count_on_page": None,
                         "reason": "no sample count printed in the source row"}

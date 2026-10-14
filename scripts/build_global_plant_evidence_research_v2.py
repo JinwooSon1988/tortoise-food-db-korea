@@ -268,7 +268,7 @@ def main():
             same = t["match"] == "same_species"
             values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                        "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
-                      for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+                      for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and v1.has_printed_sample_count(nb) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
             # the shared parser can take the sample count of the next row when a row's count is blank: keep a value only when an
             # independent read of its own table row shows the same mean and a printed sample count
             page_rows = vrow.page_rows(page.read_text(encoding="utf-8", errors="replace"))

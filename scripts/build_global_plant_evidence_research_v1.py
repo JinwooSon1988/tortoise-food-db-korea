@@ -38,6 +38,12 @@ COMPOSITION_LABELS = {"dry matter", "crude protein", "crude fibre", "ndf", "adf"
 GRADE_POLICY = "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed."
 
 
+def has_printed_sample_count(nb):
+    """A composition value is kept only when its own table row prints a sample count: an int from the shared parser.
+    None is a blank Nb cell and '*' a calculated value without one; neither is kept (units 1, 2 and 5 use this rule)."""
+    return isinstance(nb, int) and not isinstance(nb, bool)
+
+
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
@@ -263,7 +269,7 @@ def main():
             n = res(t["taxon"])
             values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                        "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
-                      for (lab, unit), (avg, nb) in rows.items() if lab in COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+                      for (lab, unit), (avg, nb) in rows.items() if lab in COMPOSITION_LABELS and has_printed_sample_count(nb) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
             if not values:
                 continue
             rid = "feedipedia-%s" % t["node"]
