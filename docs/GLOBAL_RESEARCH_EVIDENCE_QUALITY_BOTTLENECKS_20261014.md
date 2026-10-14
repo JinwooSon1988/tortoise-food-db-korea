@@ -20,3 +20,9 @@ Of the 169 records, **104** have plant-part text matching `not stated`, `unknown
 5. **Publication:** retain research-only state until source checks, toxicology, nutritional context and taxon-specific limits are complete.
 
 This document changes neither public plant data nor feeding grades.
+
+## Source-check status is not the same as directness classification
+
+The 46/102/21 counts above are a snapshot of the **research JSON's evidence_directness fields**, not a count of records independently verified by this review. The separate original-PDF check of the Hermann's tortoise account is documented in `docs/GLOBAL_RESEARCH_EXISTING_SPECIES_REVIEW_20261014.md`; it verifies the account's **fruit** wording for *Ficus carica*, but **does not** upgrade the underlying cited field study to a read primary source.
+
+When independent source checks are added, record the original PDF URL, printed page/section, exact plant part and tortoise species, what the source actually asserts, and whether the underlying primary reference was opened. Never silently relabel `reported_in_account_primary_not_read` as `primary_study_read` solely because an account PDF was read.
