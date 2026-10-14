@@ -4,6 +4,7 @@ on:
     paths:
       - 'data/research/**'
       - 'data/plants.json'
+      - 'scripts/build_global_plant_evidence_research_v1.py'
       - 'scripts/qa_global_plant_evidence_research_v1.py'
       - 'scripts/qa_global_research_species_links.py'
       - 'scripts/qa_global_research_evidence_directness.py'
