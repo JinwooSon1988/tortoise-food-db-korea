@@ -46,6 +46,24 @@ else:
             if record["preparation_state"] not in row:
                 errors.append(f"{name}: preparation state missing from audit row")
 
+
+# Guard known source-part mismatches from being described as compatible.
+compatibility = doc.split("## Source-to-page compatibility decisions", 1)
+if len(compatibility) != 2:
+    errors.append("missing source-to-page compatibility review")
+else:
+    for plant_id, evidence_id, source_part, required_warning in [
+        ("figleaf", "crm059_hermanni_2011-05", "fruit", "Explicit part mismatch"),
+        ("opuntiapad", "mason_1999-22", "not stated in table", "Unverified part"),
+    ]:
+        lines = [line for line in compatibility[1].splitlines() if line.startswith(f"| \`{plant_id}\` |")]
+        if len(lines) != 1:
+            errors.append(f"{plant_id}: missing or duplicated compatibility row")
+            continue
+        row = lines[0]
+        if evidence_id not in row or source_part not in row or required_warning not in row:
+            errors.append(f"{plant_id}: evidence, source part, or warning mismatch")
+
 if errors:
     print("\n".join(errors))
     raise SystemExit(1)
