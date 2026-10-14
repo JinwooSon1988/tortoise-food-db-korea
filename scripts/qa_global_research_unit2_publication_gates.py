@@ -80,6 +80,7 @@ allowed_provenance_types = {
     "primary_study_read": {
         "direct_study_of_this_tortoise_species",
         "primary_fecal_seed_identification",
+        "primary_fecal_taxon_detection_without_observed_feeding",
         "specialist_husbandry_practice",
         "food_given_by_local_people_observed",
     },
@@ -170,6 +171,8 @@ if len(dung_only) != 29:
 for r in dung_only:
     if r.get("observed_consumption") != "detected in dung; no taxon-specific feeding observation reported in this record":
         errors.append(f"Dung-only taxon mislabeled as observed feeding: {r['evidence_id']}")
+    if r.get("evidence_type") != "primary_fecal_taxon_detection_without_observed_feeding":
+        errors.append(f"Dung-only taxon mislabeled as direct feeding evidence: {r['evidence_id']}")
 direct_observation_taxa = [r for r in round_island if "feeding observation" in r.get("quantity_as_reported", "")]
 if len(direct_observation_taxa) != 24:
     errors.append(f"Unexpected Round Island direct-observation count: {len(direct_observation_taxa)}")
