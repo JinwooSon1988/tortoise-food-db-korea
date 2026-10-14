@@ -65,6 +65,16 @@ for r in local_reports:
         errors.append(f"Local knowledge report received feeding grade: {r['evidence_id']}")
     if r.get("tortoise_scientific_name") not in ("Geochelone platynota", "Indotestudo elongata"):
         errors.append(f"Unexpected species in local-report set: {r['evidence_id']}")
+# A conservation plan's plant list is a reviewed secondary summary,
+# not 16 independent direct feeding experiments.
+review_summaries = [r for r in records if r["evidence_directness"] == "statement_of_the_source_read"]
+if len(review_summaries) != 16:
+    errors.append(f"Unexpected conservation-plan summary count: {len(review_summaries)}")
+for r in review_summaries:
+    if r.get("evidence_type") != "conservation_plan_secondary_summary":
+        errors.append(f"Conservation-plan summary mislabeled as direct study: {r['evidence_id']}")
+    if r.get("verification_status") != "verified_review_document":
+        errors.append(f"Conservation-plan source type mislabeled: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
