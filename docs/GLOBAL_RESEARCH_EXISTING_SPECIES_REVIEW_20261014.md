@@ -48,3 +48,16 @@ Source URLs: Mason et al. (1999) <https://chelonian.org/wp-content/uploads/file/
 - The account summarizes earlier field studies. The original underlying diet studies cited there have **not** been independently checked in this audit; retain the distinction between an account statement verified here and primary field observations.
 
 **Editorial decision:** `figleaf` leaf-specific claim remains blocked; negative-only aromatic-plant candidates remain observations of general rejection rather than toxicity findings. No public grade changes are authorized.
+
+## Source-to-page compatibility decisions (editorial, not public grades)
+
+The four research-linked existing public plant IDs require different publication handling:
+
+| Public plant ID | Research evidence ID | Research part | Public-page part inference | Publication gate |
+|---|---|---|---|---|
+| `bermudagrass` | `mason_1999-01` | not stated in table | Grass page may imply aerial forage | Hold any leaf/stem-specific assertion; verify Mason et al. original methods |
+| `figleaf` | `crm059_hermanni_2011-05` | **fruit** | **leaf** | **Explicit part mismatch: block as evidence for fig leaves** |
+| `opuntiapad` | `mason_1999-22` | not stated in table | **pad/cladode** | **Unverified part: block as evidence for pads** |
+| `purslane` | `crm110_sulcata_2020-07` | not stated | Plant page, part unspecified | Hold part-specific assertions and primary-study claims |
+
+This table is a **manual interpretation of the existing plant IDs**, not a verified audit of every public page's rendered content. A future integration must explicitly compare the public record's canonical part field against the research source's part field before using an observation as a page-level feeding justification. A species match alone is insufficient. The original records remain untouched.
