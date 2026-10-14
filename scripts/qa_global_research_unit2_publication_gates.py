@@ -81,6 +81,7 @@ allowed_provenance_types = {
         "direct_study_of_this_tortoise_species",
         "primary_fecal_seed_identification",
         "primary_fecal_taxon_detection_without_observed_feeding",
+        "primary_fecal_plant_fragment_identification",
         "specialist_husbandry_practice",
         "food_given_by_local_people_observed",
     },
@@ -188,6 +189,13 @@ elif (cerato.get("plant_accepted_name") is not None or
       cerato.get("plant_family") is not None or
       cerato.get("plant_name_check") != "backbone_match_conflicts_with_source_needs_review"):
     errors.append("Rejected Ceratocephalus backbone match leaked into accepted taxonomy")
+# Fecal plant fragments are distinct from two observed-foraging records.
+for n in range(1, 7):
+    evidence_id = f"moll_klemens_1996-{n:02d}"
+    item = next((r for r in records if r.get("evidence_id") == evidence_id), None)
+    expected = "primary_fecal_plant_fragment_identification" if n <= 4 else "direct_study_of_this_tortoise_species"
+    if item is None or item.get("evidence_type") != expected:
+        errors.append(f"Incorrect Moll-Klemens evidence modality: {evidence_id}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
