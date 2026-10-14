@@ -8,6 +8,8 @@ on:
       - 'scripts/qa_global_research_existing_species_review.py'
       - 'scripts/qa_global_research_new_candidate_triage.py'
       - 'docs/GLOBAL_RESEARCH_NEW_CANDIDATE_TRIAGE_20261014.md'
+      - 'docs/GLOBAL_RESEARCH_EVIDENCE_QUALITY_BOTTLENECKS_20261014.md'
+      - 'scripts/qa_global_research_evidence_quality_counts.py'
       - 'scripts/qa_global_research_publication_boundaries.py'
       - '.github/workflows/research-publication-boundary-qa.yml'
   workflow_dispatch:
@@ -24,3 +26,4 @@ jobs:
       - run: python scripts/qa_global_research_publication_boundaries.py
       - run: python scripts/qa_global_research_existing_species_review.py
       - run: python scripts/qa_global_research_new_candidate_triage.py
+      - run: python scripts/qa_global_research_evidence_quality_counts.py
