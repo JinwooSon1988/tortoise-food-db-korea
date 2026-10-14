@@ -125,7 +125,7 @@ def main():
         n = v1.resolve(t["taxon"], cache, a.offline)
         values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                    "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
-                  for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+                  for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and v1.has_printed_sample_count(nb) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
         values, dropped = row_check(page.read_text(encoding="utf-8", errors="replace"), values)
         dropped += [{"nutrient_name": lab, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit], "mean_on_page": avg, "sample_count_on_page": None,
                         "reason": "no sample count printed in the source row"}
@@ -194,7 +194,8 @@ def main():
         led = ledger.get(x["evidence_id"], {})
         sup = led.get("confirming_evidence_id") if str(led.get("status_after_unit_3", "")).startswith("confirmed") else None
         obs = bool(set(x["detection_methods"]) & OBS)
-        counts = (x["evidence_id"] not in history and not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
+        # the animal itself must be wild or semi-wild; an exception list alone (Lambert 1993) is not relied on
+        counts = (x["evidence_id"] not in history and x["wild_or_captive"] in ("wild", "semi_wild") and not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
                   and x["evidence_directness"] == "primary_study_read")
         index5.append({k: x.get(k) for k in ("evidence_id", "unit", "source_id", "tortoise_key", "tortoise", "species_specific", "plant_name_as_printed", "plant_accepted_name",
                                              "plant_part", "wild_or_captive", "evidence_tier", "detection_methods", "evidence_directness", "is_negative_record", "on_hold", "quantity_as_reported")}
