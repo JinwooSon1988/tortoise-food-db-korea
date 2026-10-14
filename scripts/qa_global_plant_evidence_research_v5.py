@@ -239,6 +239,37 @@ def main():
             all_ok = e["title_matches_record"] and all(x["status"] == "matched" for x in e["values"])
             if (e["record_status"] == "all_values_matched_saved_live_page") != bool(all_ok):
                 errors.append("%s: verification status does not follow the value checks" % r["record_id"])
+    # Excluded rows are separately tracked; never imply that their source Nb was verified.
+    exclusion_path = RES / "forage_nutrition_exclusion_audit_v5.json"
+    if not exclusion_path.exists():
+        errors.append("forage_nutrition_exclusion_audit_v5.json is missing")
+    else:
+        exclusion = json.loads(exclusion_path.read_text(encoding="utf-8"))
+        excluded_rows = exclusion.get("excluded_values", [])
+        expected_exclusions = {("feedipedia-12645", "magnesium", "g/kg DM"),
+                               ("feedipedia-12645", "sodium", "g/kg DM"),
+                               ("feedipedia-12646", "dry matter", "% as fed"),
+                               ("feedipedia-12646", "ether extract", "% DM")}
+        found_exclusions = [(r.get("record_id"), r.get("nutrient_name"), r.get("nutrient_unit")) for r in excluded_rows]
+        if len(found_exclusions) != len(expected_exclusions) or set(found_exclusions) != expected_exclusions:
+            errors.append("excluded Feedipedia rows differ from the four-item source-row audit")
+        included = {(r["record_id"], v["nutrient_name"], v["nutrient_unit"]) for r in nut for v in r["values"]}
+        if included.intersection(found_exclusions):
+            errors.append("excluded Feedipedia row is also included as a verified nutrient")
+        for row in excluded_rows:
+            status = row.get("review_status")
+            reason = row.get("exclusion_reason")
+            source_nb = row.get("source_row_sample_count")
+            source_marker = row.get("source_row_calculated_marker")
+            if status == "pending_source_row_verification":
+                if reason != "unresolved_requires_original_row_check" or source_nb is not None or source_marker is not None:
+                    errors.append("pending excluded row must not claim unverified source-row details: %s" % row.get("record_id"))
+            elif status == "source_row_verified":
+                if reason in (None, "", "unresolved_requires_original_row_check") or source_nb is None or source_marker is None:
+                    errors.append("verified excluded row lacks source-row Nb, marker, or reason: %s" % row.get("record_id"))
+            else:
+                errors.append("unknown excluded-row review status: %s" % status)
+
     report(errors, "research layer unit-5 QA ok: %d sources, %d evidence records, %d nutrition records, no source repeated from units 1-4" % (len(sources), len(ev), len(nut)))
 
 
