@@ -79,6 +79,7 @@ for r in review_summaries:
 allowed_provenance_types = {
     "primary_study_read": {
         "direct_study_of_this_tortoise_species",
+        "primary_fecal_seed_identification",
         "specialist_husbandry_practice",
         "food_given_by_local_people_observed",
     },
@@ -149,6 +150,15 @@ for r in village_provided:
     method = r.get("study_method", "")
     if "foods provided by local people" not in method or "does not independently establish direct observation" not in method:
         errors.append(f"Village-provided food conflated with direct ingestion: {r['evidence_id']}")
+# Direct primary analysis of fecal seeds must not imply witnessed feeding.
+seed_study_sources = {"pillajo_2020": 90, "figueroa_2024": 62, "ellis_soto_2017": 2}
+for source, expected_count in seed_study_sources.items():
+    group = [r for r in records if r.get("source_id") == source]
+    if len(group) != expected_count:
+        errors.append(f"Unexpected seed-study record count for {source}: {len(group)}")
+    for r in group:
+        if r.get("evidence_type") != "primary_fecal_seed_identification":
+            errors.append(f"Fecal seed study conflated with direct feeding observation: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
