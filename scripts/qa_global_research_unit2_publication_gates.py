@@ -40,6 +40,11 @@ for r in unread:
         errors.append(f"Unread primary mislabeled as verified: {r['evidence_id']}")
     if r.get("plant_accepted_name") is not None and r.get("plant_name_check") == "spelling_differs_from_backbone_needs_review":
         errors.append(f"Unresolved secondary name prematurely accepted: {r['evidence_id']}")
+moll_secondary = next((r for r in records if r["evidence_id"] == "moll_klemens_1996-07"), None)
+if moll_secondary is None:
+    errors.append("Missing Moll and Klemens secondary citation")
+elif "Secondary citation" not in moll_secondary.get("study_method", "") or "Loveridge and Williams (1957)" not in moll_secondary.get("study_method", ""):
+    errors.append("Moll and Klemens secondary citation inherited direct observation method")
 for key in ("delaossa_2009-20", "delaossa_2009-21", "delaossa_2009-22", "delaossa_2009-23", "delaossa_2009-24"):
     r = next((x for x in records if x["evidence_id"] == key), None)
     if r is None:
