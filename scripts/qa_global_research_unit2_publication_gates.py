@@ -133,6 +133,14 @@ for r in records:
         actual = (r.get("plant_name_check"), r.get("plant_name_as_printed"), r.get("plant_accepted_name"))
         if actual != expected:
             errors.append(f"Taxonomic exception overwritten: {r['evidence_id']}")
+# Routine captive foods on p.160 are not treatments in the flower trial.
+routine_foods = [r for r in records if r.get("evidence_type") == "specialist_husbandry_practice"]
+if len(routine_foods) != 9:
+    errors.append(f"Unexpected routine-captive-food count: {len(routine_foods)}")
+for r in routine_foods:
+    method = r.get("study_method", "")
+    if "routine captive feeding practice" not in method or "not individual treatments" not in method:
+        errors.append(f"Routine diet conflated with flower trial: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
