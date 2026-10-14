@@ -35,3 +35,20 @@ Scope: independent review of PR #304's research-layer documentation and record s
 ## Release decision
 
 **Not ready for automatic publication.** The existing QA proves structural consistency of the research layer, not feeding safety, primary-source verification, image accuracy or public-page correctness. No candidate should inherit a positive grade simply by appearing in the research corpus.
+
+## Explicit negative-record review queue (source-data audit)
+
+The seven records marked `is_negative_record=true` in PR #304 are listed below. These are **reported avoidance/rejection observations**, not proof that each plant is toxic, and not general feeding prohibitions for every tortoise.
+
+| Evidence ID | Tortoise | Plant as printed | Reported observation | Source status |
+|---|---|---|---|---|
+| `crm122_marginata_2023-18` | *Testudo marginata* | *Thymus capitatus* | usually avoided | peer-reviewed account |
+| `crm059_hermanni_2011-09` | *Testudo hermanni* | *Thymus* | generally rejected | peer-reviewed account |
+| `crm059_hermanni_2011-10` | *Testudo hermanni* | *Lavandula* | generally rejected | peer-reviewed account |
+| `crm059_hermanni_2011-11` | *Testudo hermanni* | *Rosmarinus* | generally rejected | peer-reviewed account |
+| `crm059_hermanni_2011-12` | *Testudo hermanni* | *Euphorbia* | generally rejected | peer-reviewed account |
+| `crm059_hermanni_2011-13` | *Testudo hermanni* | *Inula viscosa* | generally rejected | peer-reviewed account |
+| `lagarde_2003-04` | *Testudo horsfieldii* | grasses (unidentified) | avoided | original not read; held |
+
+**Integration rule:** retain the original observed behavior, tortoise species, printed plant name and source status; do not translate `avoided` into `toxic`, or `consumed` into `safe`. The unidentified-grass record cannot be mapped to a named grass species. The candidate records for all seven observations are marked `negative_record_only=true`, including synonym/printed-name variants.
+
