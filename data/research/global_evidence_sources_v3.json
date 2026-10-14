@@ -1,0 +1,320 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "sources": [
+  {
+   "source_id": "ghilardi_alho_1990",
+   "citation": "Ghilardi Jr., R., Alho, C.J.R. 1990. Produtividade sazonal da floresta e atividade de forrageamento animal em habitat de terra firme da Amazônia. Acta Amazonica 20:61-76.",
+   "url": "https://www.scielo.br/pdf/aa/v20/1809-4392-aa-20-0061.pdf",
+   "doi": "10.1590/1809-43921990201076",
+   "year": 1990,
+   "language": "pt",
+   "study_country": "Brazil",
+   "publisher_country": "Brazil",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "daily walks of four forest trails by at least two observers for 13 months (January 1986 - January 1987); every feeding session seen was noted and the food item collected for identification",
+   "access": "full_text_read",
+   "what_was_read": "results text on p. 63 and Tabela I on pp. 65-66, read from the scanned page images; the end page is inferred from a 16-page PDF starting at p. 61",
+   "plant_record_count": 18,
+   "verification_status": "verified_primary_source",
+   "rows_not_transcribed": "one row for a bracket fungus (cogumelo orelha de pau, 05 observations), which is not a plant"
+  },
+  {
+   "source_id": "meek_2010",
+   "citation": "Meek, R. 2010. Nutritional selection in Hermann's tortoise, Testudo hermanni, in Montenegro and Croatia. Testudo 7(2).",
+   "url": "https://mail.britishcheloniagroup.org.uk/testudo/v7/v7n2meek",
+   "doi": null,
+   "year": 2010,
+   "language": "en",
+   "study_country": "Montenegro, Croatia",
+   "publisher_country": "United Kingdom",
+   "source_type": "society_journal_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "re-analysis of field data from 1978-1986; samples were taken of any plant a tortoise was seen eating; 62 identified food-plant samples, as numerical frequencies",
+   "access": "full_text_read",
+   "what_was_read": "whole article on the society's web page, including Table 1; the page numbers of the printed issue are not on the web page",
+   "plant_record_count": 9,
+   "verification_status": "verified_primary_source_society_journal"
+  },
+  {
+   "source_id": "than_aye_platynota_seed_dispersal",
+   "citation": "Than Aye, Hla Toe, Myint Zu Minn. Myanmar Star Tortoises (Geochelone platynota) as Potential Agents for Seed Dispersal. Research paper held in the Myanmar Education Research and Learning Portal (MERAL), record 7456.",
+   "url": "https://meral.edu.mm/record/7456",
+   "doi": null,
+   "year": null,
+   "language": "en",
+   "study_country": "Myanmar",
+   "publisher_country": "Myanmar",
+   "source_type": "university_repository_paper",
+   "evidence_class": "wild_feeding_study",
+   "method": "seeds recovered from 97 feces collected January 2018 - December 2019, with germination tests",
+   "access": "full_text_read",
+   "what_was_read": "whole paper from the repository PDF; the journal and the year of publication are not stated in the file that was read",
+   "plant_record_count": 5,
+   "verification_status": "verified_primary_source_repository_paper"
+  },
+  {
+   "source_id": "loveridge_williams_1957",
+   "citation": "Loveridge, A., Williams, E.E. 1957. Revision of the African Tortoises and Turtles of the Suborder Cryptodira. Bulletin of the Museum of Comparative Zoology (No. 6 of its volume, as printed on the first page).",
+   "url": "https://archive.org/details/biostor-72352",
+   "doi": null,
+   "year": 1957,
+   "language": "en",
+   "study_country": "Tanzania",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_monograph",
+   "evidence_class": "wild_feeding_study",
+   "method": "taxonomic revision with field and captive notes by the first author",
+   "access": "full_text_read",
+   "what_was_read": "the 'Diet' paragraph of the Malacochersus tornieri account, read in the OCR text of the scan; the OCR text carries no page numbers, and the volume number was not confirmed",
+   "plant_record_count": 6,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "prose_wilshire_2000",
+   "citation": "Prose, D.V., Wilshire, H.G. 2000. The lasting effects of tank maneuvers on desert soils and intershrub flora. U.S. Geological Survey Open-File Report OF 00-512.",
+   "url": "https://pubs.usgs.gov/of/2000/0512/pdf/of00-512.pdf",
+   "doi": null,
+   "year": 2000,
+   "language": "en",
+   "study_country": "USA",
+   "publisher_country": "USA",
+   "source_type": "government_technical_report",
+   "evidence_class": "no_feeding_content",
+   "method": "soil and vegetation measurements in and beside 1940s and 1964 tank tracks",
+   "access": "full_text_read",
+   "what_was_read": "text layer of the whole report searched for 'tortoise' (no occurrence) and for the two plant names; Chaenactis fremontii occurs as a plant whose cover fell in tank tracks, Malacothrix glabrata does not occur",
+   "plant_record_count": 0,
+   "verification_status": "verified_document_no_feeding_content"
+  },
+  {
+   "source_id": "eaza_kleinmanni_2019",
+   "citation": "de Boer, M., Jansen, L., Stumpel, J. (eds.) 2019. EAZA Best Practice Guidelines for the Egyptian tortoise (Testudo kleinmanni). European Association of Zoos and Aquaria, Reptile Taxon Advisory Group.",
+   "url": "https://strapi.eaza.net/uploads/2019_Testudo_kleinmanni_Egyptian_tortoise_EAZA_Best_Practice_Guidelines_Approved_a99de37426.pdf",
+   "doi": null,
+   "year": 2019,
+   "language": "en",
+   "study_country": "not applicable (zoo husbandry guideline)",
+   "publisher_country": "Netherlands",
+   "source_type": "zoo_association_husbandry_guideline",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "husbandry guideline compiled by zoo staff; the feeding section cites its own references by number",
+   "access": "full_text_read",
+   "what_was_read": "section 2.2 Feeding, p. 21; the editors' names are taken from a search result and were not re-read on the title page",
+   "plant_record_count": 9,
+   "verification_status": "verified_husbandry_guideline"
+  },
+  {
+   "source_id": "asdm_tortoise_adoption_diet",
+   "citation": "Arizona-Sonora Desert Museum. Tortoise Adoption Program, Appendix III: Tortoise Diet. Care, Husbandry and Diet of the Desert Tortoise (information provided by Sonora Animal Hospital, Tucson).",
+   "url": "https://www.desertmuseum.org/programs/tap_diet.php",
+   "doi": null,
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (husbandry guideline, Arizona, USA)",
+   "publisher_country": "USA",
+   "source_type": "museum_veterinary_husbandry_guideline",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "plant lists for keepers of adopted desert tortoises; no references given",
+   "access": "full_text_read",
+   "what_was_read": "whole web page (print view); the page gives no publication year and does not name the tortoise species beyond 'Desert Tortoise'",
+   "plant_record_count": 40,
+   "verification_status": "verified_husbandry_guideline"
+  },
+  {
+   "source_id": "tortoise_trust_plant_list",
+   "citation": "Tortoise Trust. Recommended Foods for Herbivorous Tortoises (plants list, largely from observations by Lin King of tortoises feeding in the wild, mainly Greece and Turkey).",
+   "url": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "doi": null,
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (keeper organisation list; observations in Greece and Turkey)",
+   "publisher_country": "United Kingdom",
+   "source_type": "keeper_organisation_web_page",
+   "evidence_class": "keeper_organisation_statement",
+   "method": "keeper organisation's list; no methods or references given",
+   "access": "full_text_read",
+   "what_was_read": "whole web page; no publication year on the page",
+   "plant_record_count": 23,
+   "verification_status": "verified_keeper_organisation_page"
+  }
+ ],
+ "cited_primary_status": [
+  {
+   "cited_as": "Moll and Klemens 1996",
+   "status": "obtained_and_read",
+   "read_in_unit": 2
+  },
+  {
+   "cited_as": "Platt et al. 2001a",
+   "status": "obtained_and_read",
+   "read_in_unit": 2
+  },
+  {
+   "cited_as": "Bailey and Highfield 1996",
+   "status": "obtained_and_read",
+   "read_in_unit": 2
+  },
+  {
+   "cited_as": "Lambert 1993",
+   "status": "obtained_and_read",
+   "read_in_unit": 2
+  },
+  {
+   "cited_as": "van Dijk 1998; Sriprateep et al. 2013; Ihlow pers. obs.",
+   "status": "partly_obtained_and_read",
+   "read_in_unit": 2,
+   "note": "Sriprateep et al. 2013 read; van Dijk 1998 (thesis) not searched; a personal observation cannot be checked"
+  },
+  {
+   "cited_as": "Loveridge and Williams 1957",
+   "status": "obtained_and_read",
+   "read_in_unit": 3,
+   "note": "OCR text of the scan at the Internet Archive"
+  },
+  {
+   "cited_as": "Prose and Wilshire 2000",
+   "status": "obtained_and_read",
+   "read_in_unit": 3,
+   "note": "the report does not support the feeding statement it is cited for"
+  },
+  {
+   "cited_as": "El Mouden et al. 2006",
+   "status": "searched_no_open_full_text_found",
+   "note": "two web searches (units 2 and 3); the journal article is not open and no author copy was returned"
+  },
+  {
+   "cited_as": "Woodbury and Hardy 1948",
+   "status": "searched_no_open_full_text_found",
+   "note": "Ecological Monographs 18:145-200; one web search"
+  },
+  {
+   "cited_as": "Hailey et al. 1997, 2001",
+   "status": "searched_paywalled",
+   "note": "the 1997 Journal of Tropical Ecology note is behind the publisher's paywall; the 2001 African Journal of Ecology paper was not found open"
+  },
+  {
+   "cited_as": "Hailey et al. 2001",
+   "status": "searched_no_open_full_text_found",
+   "note": "African Journal of Ecology 39:10-17; one web search"
+  },
+  {
+   "cited_as": "Wanchai 2008",
+   "status": "located_download_failed",
+   "note": "thesis in the Chulalongkorn University repository; the download timed out in units 2 and 3"
+  },
+  {
+   "cited_as": "Alagar Rajan and Balasubramanian 1991",
+   "status": "blocked_by_host",
+   "note": "Biodiversity Heritage Library part 156673: HTTP 403 for the PDF and 401 for the API without a key; not worked around"
+  },
+  {
+   "cited_as": "Cobo and Andreu 1988",
+   "status": "blocked_by_host",
+   "note": "the CSIC repository search sits behind an automated-visitor check, which was not bypassed; the journal copy (Oikos) is not open"
+  },
+  {
+   "cited_as": "Bringsøe et al. 2001",
+   "status": "not_searched",
+   "note": "handbook chapter"
+  },
+  {
+   "cited_as": "Vetter 2005",
+   "status": "not_searched",
+   "note": "printed book (Edition Chimaira)"
+  },
+  {
+   "cited_as": "Di Nicola and Mezzadri 2018",
+   "status": "not_searched",
+   "note": "printed field guide"
+  },
+  {
+   "cited_as": "López-Jurado et al. 1979",
+   "status": "not_searched",
+   "note": "printed monograph (Naturalia Hispanica 17)"
+  },
+  {
+   "cited_as": "Thanda Swe 2004",
+   "status": "not_searched",
+   "note": "thesis"
+  },
+  {
+   "cited_as": "Longepierre and Grenot 1999",
+   "status": "not_searched"
+  },
+  {
+   "cited_as": "Biswas et al. 1978",
+   "status": "not_searched"
+  },
+  {
+   "cited_as": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+   "status": "not_searched"
+  },
+  {
+   "cited_as": "Lambiris et al. 1989",
+   "status": "not_searched"
+  }
+ ],
+ "on_hold": [
+  {
+   "id": "jerozolimski_2009",
+   "url": "https://doi.org/10.1007/s00442-009-1396-8",
+   "reason": "Yellow-footed tortoise seed dispersal (Oecologia). Not open; the repository link returned HTTP 404 in unit 2; a search for the author's thesis found no copy."
+  },
+  {
+   "id": "guzman_stevenson_2008",
+   "url": null,
+   "reason": "Yellow-footed tortoise seed dispersal in Peru (Amphibia-Reptilia 29:463-472). No open copy found in one search."
+  },
+  {
+   "id": "moskovits_bjorndal_1990",
+   "url": null,
+   "reason": "Herpetologica 46; no open copy found."
+  },
+  {
+   "id": "jerozolimski_congress_abstract_2003",
+   "url": "https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/17040/1/1147.pdf",
+   "reason": "Portuguese congress abstract on both forest tortoises as seed dispersers. The file holds only the last page, which names no plant."
+  },
+  {
+   "id": "guzman_stevenson_2011",
+   "url": "https://www.redalyc.org/pdf/449/44920903030.pdf",
+   "reason": "Read: a seed-predation experiment that simulates dispersal by tortoises. It records no tortoise feeding, so it adds no record."
+  },
+  {
+   "id": "luiselli_2003_kinixys",
+   "url": "https://repository.naturalis.nl/pub/534368/CTZ2003072004002.pdf",
+   "reason": "Kinixys diets in Nigeria; downloaded, abstract read, plant tables not examined in this unit."
+  },
+  {
+   "id": "znari_hichami_2018",
+   "url": "https://intechopen.com/chapters/61462",
+   "reason": "Open-access review of the Souss Valley tortoise; downloaded, not read in this unit."
+  },
+  {
+   "id": "meek_1989",
+   "url": "https://www.thebhs.org/publications/the-herpetological-journal/volume-1-number-9-december-1989/1218-06-the-comparative-population-ecology-of-hermanns-tortoise-testudo-hermanni-in-croatia-and-montenegro-yugoslavia",
+   "reason": "Landing page only; the article PDF was not opened."
+  },
+  {
+   "id": "del_vecchio_2011",
+   "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1",
+   "reason": "Still not open (see unit 2)."
+  },
+  {
+   "id": "gibson_hamilton_1983",
+   "url": "https://doi.org/10.1007/BF00378221",
+   "reason": "Still not open (see unit 2)."
+  },
+  {
+   "id": "milton_1992",
+   "url": "https://www.ajol.info/index.php/az/article/view/154181",
+   "reason": "Not attempted again in this unit."
+  }
+ ]
+}
