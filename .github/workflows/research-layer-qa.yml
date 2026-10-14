@@ -26,6 +26,13 @@ jobs:
       - name: Feedipedia table reader regression tests (blank, 0 and 1 Nb, calculated values, colspan, rowspan, duplicate tables)
         run: |
           if [ -f scripts/test_feedipedia_table_parser.py ]; then python scripts/test_feedipedia_table_parser.py; fi
+      - name: Before/after report against the PR base (fails when a record or nutrient value is silently dropped, altered or restored)
+        if: github.event_name == 'pull_request'
+        run: |
+          if [ -f scripts/diff_research_layer.py ]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            python scripts/diff_research_layer.py --base FETCH_HEAD --strict
+          fi
       - name: Run every research-layer QA script present on this branch (offline, read-only)
         run: |
           set -e

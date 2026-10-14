@@ -30,6 +30,17 @@ SAFETY_WORDS = re.compile(r"safe|safety|toxic|verdict|grade|hazard|risk", re.I)
 NAME = re.compile(r"[A-Z][a-z-]+( [a-z-]+)?( (subsp\.|var\.|f\.) [a-z-]+)?")
 # a record may sit below its source's status (primary not read); see qa_global_plant_evidence_research_v2.py
 DOWNGRADED_STATUS = {"reported_in_source_primary_not_read": "secondary_source_checked_primary_unread"}
+# detection methods of the unit-4/5 index; only observation and faecal detection in a wild or semi-wild study can count as wild evidence
+WILD_OBSERVATION_METHODS = {"direct_feeding_observation", "incidental_observation", "fecal_macroscopic", "fecal_histological", "fecal_detection",
+                            "fecal_dna_metabarcoding", "direct_observation_and_fecal_analysis_not_separated"}
+DETECTION_METHODS = WILD_OBSERVATION_METHODS | {
+    "secondary_citation_method_not_verified", "secondary_reproduction_not_verified", "account_or_review_statement_method_not_given",
+    "review_statement_method_not_given", "keeper_organisation_statement_method_not_given", "unreferenced_general_statement", "zoo_feeding_practice_stated",
+    "husbandry_recommendation", "captive_feeding_record", "provisioned_food_observed", "resident_or_hunter_report",
+    "author_list_wild_and_captive_observation_not_separated", "statement_in_article_text", "not_determinable_record_on_hold", "not_detected_by_any_method"}
+# the page audit's verification levels (scripts/audit_feedipedia_sample_counts_v6.py)
+LEVEL = {"matched": "mean_and_sample_count_verified", "matched_calculated": "mean_verified_calculated_value_without_sample_count",
+         "mean_matched_nb_not_stored": "mean_only_verified", "excluded_nb_blank_on_page": "excluded_not_used", "excluded_but_page_prints_nb": "excluded_not_used"}
 
 
 def load(name, folder=RES):
@@ -177,6 +188,38 @@ def main():
         if e and [x["tortoise_key"], x["plant_name_as_printed"], x["plant_part"], x["wild_or_captive"], x["source_id"]] != [
                 e["tortoise_key"], e["plant_name_as_printed"], e["plant_part"], e["wild_or_captive"], e["source_id"]]:
             errors.append("unit-5 index %s differs from its unit record" % x["evidence_id"])
+    # 5. kinds of evidence stay apart: wild observation, captive animal, husbandry guideline, faecal/DNA detection, nutrient analysis
+    for x in index:
+        iid, methods = x["evidence_id"], set(x["detection_methods"])
+        if not methods or not methods <= DETECTION_METHODS:
+            errors.append("unit-5 index %s: detection method missing or unknown %s" % (iid, sorted(methods - DETECTION_METHODS)))
+        if x["counts_as_independent_positive_wild_observation"] and (
+                x["wild_or_captive"] not in ("wild", "semi_wild") or x["on_hold"] or x["is_negative_record"] or x["superseded_by"]
+                or x["evidence_tier"] not in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") or x["wild_statement_not_an_observation"]
+                or not methods & WILD_OBSERVATION_METHODS or x["evidence_directness"] != "primary_study_read"):
+            errors.append("unit-5 index %s: counted as an independent wild observation but is %s / %s / %s" % (iid, x["wild_or_captive"], x["evidence_tier"], sorted(methods)))
+        if x["counts_as_captive_feeding_record"] and (x["wild_or_captive"] != "captive" or x["counts_as_independent_positive_wild_observation"]):
+            errors.append("unit-5 index %s: captive feeding record must be a captive animal and not a wild observation" % iid)
+        if x["wild_or_captive"] not in ("wild", "semi_wild") and x["counts_as_independent_positive_wild_observation"]:
+            errors.append("unit-5 index %s: a captive or previously captive animal counted as wild" % iid)
+        if x["species_specific"] != (x["tortoise_key"] in reg and not reg[x["tortoise_key"]].get("group")) or not x.get("tortoise"):
+            errors.append("unit-5 index %s: species_specific flag does not follow the tortoise key %s" % (iid, x["tortoise_key"]))
+    lam = next((x for x in index if x["evidence_id"] == "lambert_1993-01"), None)
+    if not lam or lam["counts_as_independent_positive_wild_observation"] or "previously captive" not in (lam.get("animal_history_note") or "") or lam["wild_or_captive"] == "wild":
+        errors.append("lambert_1993-01: must stay a previously captive animal, never an independent wild observation")
+    for f, d in nut.items():
+        for r in d["records"]:
+            if set(r) & {"tortoise_key", "tortoise_scientific_name", "detection_methods", "evidence_tier", "wild_or_captive"} or r["record_id"] in ev:
+                errors.append("%s %s: a nutrient analysis carries tortoise-evidence fields or an evidence id" % (f, r["record_id"]))
+    # 6. mean-only and mean-plus-sample-count verification stay distinguishable
+    for part in ("research_values", "research_values_excluded", "public_values_read_only"):
+        for x in audit[part]:
+            want = LEVEL.get(x["status"], "not_verified")
+            if x.get("verification_level") != want:
+                errors.append("audit %s %s %s: verification_level %r, expected %r" % (part, x.get("record_id") or x.get("plant_id"), x.get("nutrient_name") or x.get("key"), x.get("verification_level"), want))
+            if want == "mean_and_sample_count_verified" and not isinstance(x.get("nb_on_page"), int):
+                errors.append("audit %s %s: sample count called verified without a printed one" % (part, x.get("record_id") or x.get("plant_id")))
+
     nids = [r["record_id"] for d in nut.values() for r in d["records"]]
     if len(set(nids)) != len(nids):
         errors.append("a nutrition record id repeats across units 1, 2 and 5")

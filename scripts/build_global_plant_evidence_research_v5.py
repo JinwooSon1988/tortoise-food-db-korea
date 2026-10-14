@@ -194,7 +194,8 @@ def main():
         led = ledger.get(x["evidence_id"], {})
         sup = led.get("confirming_evidence_id") if str(led.get("status_after_unit_3", "")).startswith("confirmed") else None
         obs = bool(set(x["detection_methods"]) & OBS)
-        counts = (x["evidence_id"] not in history and not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
+        # the animal itself must be wild or semi-wild; an exception list alone (Lambert 1993) is not relied on
+        counts = (x["evidence_id"] not in history and x["wild_or_captive"] in ("wild", "semi_wild") and not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
                   and x["evidence_directness"] == "primary_study_read")
         index5.append({k: x.get(k) for k in ("evidence_id", "unit", "source_id", "tortoise_key", "tortoise", "species_specific", "plant_name_as_printed", "plant_accepted_name",
                                              "plant_part", "wild_or_captive", "evidence_tier", "detection_methods", "evidence_directness", "is_negative_record", "on_hold", "quantity_as_reported")}
