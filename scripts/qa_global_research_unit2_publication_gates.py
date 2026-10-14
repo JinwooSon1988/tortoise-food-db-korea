@@ -141,6 +141,14 @@ for r in routine_foods:
     method = r.get("study_method", "")
     if "routine captive feeding practice" not in method or "not individual treatments" not in method:
         errors.append(f"Routine diet conflated with flower trial: {r['evidence_id']}")
+# Foods provided by villagers are not 14 independently witnessed ingestion events.
+village_provided = [r for r in records if r.get("evidence_type") == "food_given_by_local_people_observed"]
+if len(village_provided) != 14:
+    errors.append(f"Unexpected village-provided-food count: {len(village_provided)}")
+for r in village_provided:
+    method = r.get("study_method", "")
+    if "foods provided by local people" not in method or "does not independently establish direct observation" not in method:
+        errors.append(f"Village-provided food conflated with direct ingestion: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
