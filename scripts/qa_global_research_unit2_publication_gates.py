@@ -179,6 +179,15 @@ if len(direct_observation_taxa) != 24:
 for r in direct_observation_taxa:
     if r.get("observed_consumption") != "detected in dung and directly observed eaten (taxon-specific feeding observation reported)":
         errors.append(f"Observed feeding taxon lacks specific evidence label: {r['evidence_id']}")
+# A rejected GBIF homonym must not leak its Asteraceae family into
+# the unresolved Ceratocephalus record.
+cerato = next((r for r in records if r.get("evidence_id") == "lagarde_2003_primary-01"), None)
+if cerato is None:
+    errors.append("Missing Ceratocephalus taxonomy conflict record")
+elif (cerato.get("plant_accepted_name") is not None or
+      cerato.get("plant_family") is not None or
+      cerato.get("plant_name_check") != "backbone_match_conflicts_with_source_needs_review"):
+    errors.append("Rejected Ceratocephalus backbone match leaked into accepted taxonomy")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
