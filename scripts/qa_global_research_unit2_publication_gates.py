@@ -53,6 +53,18 @@ for key in ("delaossa_2009-20", "delaossa_2009-21", "delaossa_2009-22", "delaoss
         errors.append(f"Missing De la Ossa secondary citation: {key}")
     elif "Secondary background citation" not in r.get("study_method", ""):
         errors.append(f"De la Ossa secondary citation inherited captive trial method: {key}")
+# A primary paper can report interviewees' local knowledge without directly
+# observing the feeding event. Preserve that distinction for all 12 records.
+local_reports = [r for r in records if r["evidence_directness"] == "local_report_recorded_in_primary_study_read"]
+if len(local_reports) != 12:
+    errors.append(f"Unexpected local-report count: {len(local_reports)}")
+for r in local_reports:
+    if r.get("evidence_type") != "local_knowledge_report":
+        errors.append(f"Interview report mislabeled as direct observation: {r['evidence_id']}")
+    if r.get("feeding_grade") is not None:
+        errors.append(f"Local knowledge report received feeding grade: {r['evidence_id']}")
+    if r.get("tortoise_scientific_name") not in ("Geochelone platynota", "Indotestudo elongata"):
+        errors.append(f"Unexpected species in local-report set: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
