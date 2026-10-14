@@ -143,7 +143,7 @@ def main():
                 errors.append("%s: duplicate nutrient %s" % (rid, name))
             names.add(name)
             vals[name] = v
-            if not isinstance(v["nutrient_value"], (int, float)) or isinstance(v["nutrient_value"], bool) or v["sample_count"] < 1:
+            if not isinstance(v["nutrient_value"], (int, float)) or isinstance(v["nutrient_value"], bool) or not isinstance(v["sample_count"], int) or v["sample_count"] < 1:
                 errors.append("%s: invalid nutrient value or sample count for %s" % (rid, name))
             expected_basis = "as fed" if name == "dry matter" else "dry matter"
             if v["measurement_basis"] != expected_basis:
@@ -185,6 +185,56 @@ def main():
                                   ("duplicate sources", sm["duplicate_check"]["sources_already_in_units_1_to_4"], [])]:
         if stored != counted:
             errors.append("summary: %s is stored as %s but recounts to %s" % (name, stored, counted))
+
+    # cross-unit checks over the units 1-5 index
+    idx5 = json.loads((RES / "evidence_index_v5.json").read_text(encoding="utf-8"))["records"]
+    ids5 = [x["evidence_id"] for x in idx5]
+    if ids5 != [x["evidence_id"] for x in idx] + [e["evidence_id"] for e in ev] or len(set(ids5)) != len(ids5):
+        errors.append("index v5: must hold every record of units 1-5 exactly once")
+    i4 = {x["evidence_id"]: x for x in idx}
+    for x in idx5:
+        iid = x["evidence_id"]
+        o = i4.get(iid)
+        if o and (o["on_hold"] != x["on_hold"] or o["detection_methods"] != x["detection_methods"] or o["quantity_as_reported"] != x["quantity_as_reported"]):
+            errors.append("index v5 %s: hold flag, methods or corrected quantity differ from the unit-4 index" % iid)
+        obs = bool(set(x["detection_methods"]) & {"direct_feeding_observation", "incidental_observation", "fecal_macroscopic", "fecal_histological", "fecal_detection",
+                                                    "fecal_dna_metabarcoding", "direct_observation_and_fecal_analysis_not_separated"})
+        if x["counts_as_independent_positive_wild_observation"] and (x["on_hold"] or x["is_negative_record"] or x["superseded_by"] or not obs
+                                                                    or x["evidence_directness"] != "primary_study_read"
+                                                                    or x["evidence_tier"] not in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read")):
+            errors.append("index v5 %s: counted as an independent positive wild observation without qualifying" % iid)
+        if x["unit"] == 5 and x["counts_as_independent_positive_wild_observation"]:
+            errors.append("index v5 %s: a unit-5 zoo or captive record counted as a wild observation" % iid)
+        if x["wild_or_captive"] == "wild" and not obs and not x["wild_statement_not_an_observation"]:
+            errors.append("index v5 %s: a wild statement that is not an observation is not flagged" % iid)
+    for iid, meth, q in (("moorhouse_gann_2022-40", ["not_determinable_record_on_hold"], None), ("moorhouse_gann_2022-31", ["statement_in_article_text"], None)):
+        x = next((y for y in idx5 if y["evidence_id"] == iid), None)
+        if not x or x["detection_methods"] != meth or x["counts_as_independent_positive_wild_observation"] or (iid.endswith("-40") and not x["on_hold"]):
+            errors.append("index v5 %s: the unit-3 correction is not kept" % iid)
+    audit = sm.get("cross_unit_audit", {})
+    if audit.get("records_on_hold") != [x["evidence_id"] for x in idx5 if x["on_hold"]] or \
+            audit.get("independent_positive_wild_observations") != sum(x["counts_as_independent_positive_wild_observation"] for x in idx5):
+        errors.append("summary: cross-unit audit differs from the index")
+
+    # source-page verification of the nutrient values (separate file written by scripts/verify_forage_nutrition_v5.py)
+    vpath = RES / "forage_nutrition_verification_v5.json"
+    if not vpath.exists():
+        errors.append("forage_nutrition_verification_v5.json is missing")
+    else:
+        ver = json.loads(vpath.read_text(encoding="utf-8"))
+        vrec = {e["record_id"]: e for e in ver["records"]}
+        for r in nut:
+            e = vrec.get(r["record_id"])
+            if not e or [(x["nutrient_name"], x["nutrient_unit"]) for x in e["values"]] != [(v["nutrient_name"], v["nutrient_unit"]) for v in r["values"]]:
+                errors.append("%s: no source-page check entry for every value" % r["record_id"])
+                continue
+            for x, v in zip(e["values"], r["values"]):
+                if x["status"] == "matched" and (x["record_value"] != v["nutrient_value"] or str(x["record_sample_count"]) != str(v["sample_count"])
+                                                 or x["page_value"] != v["nutrient_value"] or str(x["page_sample_count"]) != str(v["sample_count"])):
+                    errors.append("%s: %s marked matched but the stored and page values differ" % (r["record_id"], x["nutrient_name"]))
+            all_ok = e["title_matches_record"] and all(x["status"] == "matched" for x in e["values"])
+            if (e["record_status"] == "all_values_matched_saved_live_page") != bool(all_ok):
+                errors.append("%s: verification status does not follow the value checks" % r["record_id"])
     report(errors, "research layer unit-5 QA ok: %d sources, %d evidence records, %d nutrition records, no source repeated from units 1-4" % (len(sources), len(ev), len(nut)))
 
 

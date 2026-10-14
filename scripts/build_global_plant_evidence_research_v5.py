@@ -86,6 +86,29 @@ def main():
 
     # forage nutrient tables
     vref = module(ROOT / "scripts/verify_nutrition_reference_sources_v1.py", "verify_ref")
+    vrow = module(ROOT / "scripts/verify_forage_nutrition_v5.py", "verify_rows")
+
+    def row_check(page_html, values):
+        """Split values into those whose table row shows the same mean and the same sample count, and those whose row has no sample count."""
+        rows = vrow.page_rows(page_html)
+        keep, dropped = [], []
+        for v in values:
+            h = [x for x in rows if x["label"].lower() == v["nutrient_name"] and x["unit"] == v["nutrient_unit"]]
+            if len(h) == 1 and abs(h[0]["avg"] - v["nutrient_value"]) < 1e-9 and str(h[0]["nb"]) == str(v["sample_count"]):
+                keep.append(v)
+            else:
+                dropped.append({"nutrient_name": v["nutrient_name"], "nutrient_unit": v["nutrient_unit"], "mean_on_page": h[0]["avg"] if len(h) == 1 else None,
+                                "sample_count_on_page": h[0]["nb"] if len(h) == 1 else None, "sample_count_from_the_shared_parser": v["sample_count"]})
+        return keep, dropped
+
+    nb_audit_earlier_units = []
+    for f in ("forage_nutrition_research_v1.json", "forage_nutrition_research_v2.json"):
+        for r in load(RES / f)["records"]:
+            pg = Path(a.feedipedia_cache) / ("feedipedia_%s.html" % r["source_id"])
+            if r["record_id"].startswith("feedipedia-") and pg.exists():
+                _, bad = row_check(pg.read_text(encoding="utf-8", errors="replace"), r["values"])
+                for b in bad:
+                    nb_audit_earlier_units.append({"file": f, "record_id": r["record_id"], **b})
     sel = load(RES / "forage_table_selection_v5.json")
     accepted4 = {c["accepted_name"]: c["candidate_key"] for c in cand4 if c["accepted_name"]}
     nutrition = []
@@ -103,6 +126,7 @@ def main():
         values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                    "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
                   for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+        values, dropped = row_check(page.read_text(encoding="utf-8", errors="replace"), values)
         if not values:
             continue
         vals = {(v["nutrient_name"], v["nutrient_unit"]): v for v in values}
@@ -116,6 +140,7 @@ def main():
                                                      "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."}
                                                     if ca and ph and ph["nutrient_value"] > 0 else None),
                           "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+                          "values_dropped_no_sample_count_on_page": dropped,
                           "match_to_candidate": match, "candidate_key": accepted4.get(n["accepted_name"]), "why_selected": t["why_selected"],
                           "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses."
                                         + ("" if match.startswith("same_species") else " No evidence record names this species; the husbandry records that mention hay do not identify the grass, so this table is not that hay's value."),
@@ -138,9 +163,64 @@ def main():
                          "nutrition_records": len(nutrition), "nutrition_values": sum(len(r["values"]) for r in nutrition),
                          "nutrition_by_state": dict(sorted(Counter(r["preparation_state"] for r in nutrition).items())),
                          "nutrition_by_match": dict(sorted(Counter(r["match_to_candidate"] for r in nutrition).items()))},
+        "earlier_unit_feedipedia_values_whose_sample_count_is_not_on_the_page": nb_audit_earlier_units,
         "duplicate_check": {"sources_already_in_units_1_to_4": dup_sources, "nutrition_records_already_in_units_1_to_4": sorted(
             {r["record_id"] for r in nutrition} & {r["record_id"] for i in (1, 2) for r in load(RES / ("forage_nutrition_research_v%d.json" % i))["records"]})},
         "searches_without_a_usable_result": tr["searches_without_a_usable_result"], "gaps_not_filled": tr["gaps_not_filled"]}
+
+    # cumulative index over units 1-5: which records may count as independent positive observations
+    ledger = {r["v1_evidence_id"]: r for r in load(RES / "primary_verification_ledger_v3.json")["records"]}
+    all_sources = {s["source_id"]: s for s in old_sources + sources}
+    full = {e["evidence_id"]: e for i in (1, 2, 3, 4) for e in load(RES / ("tortoise_plant_evidence_v%d.json" % i))["records"]}
+    full.update({e["evidence_id"]: e for e in evidence})
+
+    def publication(sid):
+        c = all_sources[sid]["citation"]
+        m = re.match(r"\s*([^,.]+)", c)
+        y = re.search(r"\b(1[89]\d\d|20\d\d)\b", c)
+        return re.sub(r"\W+", "", (m.group(1) if m else c).lower()) + "_" + (y.group(1) if y else "nd")
+
+    OBS = {"direct_feeding_observation", "incidental_observation", "fecal_macroscopic", "fecal_histological", "fecal_detection", "fecal_dna_metabarcoding",
+           "direct_observation_and_fecal_analysis_not_separated"}
+    index5 = []
+    for x in index4 + [{"evidence_id": e["evidence_id"], "unit": 5, "source_id": e["source_id"], "tortoise_key": e["tortoise_key"], "tortoise": e["tortoise_scientific_name"],
+                        "species_specific": True, "plant_name_as_printed": e["plant_name_as_printed"], "plant_accepted_name": e["plant_accepted_name"], "plant_name_check": e["plant_name_check"],
+                        "plant_part": e["plant_part"], "wild_or_captive": e["wild_or_captive"], "evidence_tier": e["evidence_tier"], "detection_methods": e["detection_methods"],
+                        "evidence_directness": e["evidence_directness"], "is_negative_record": False, "on_hold": False, "quantity_as_reported": e["quantity_as_reported"]} for e in evidence]:
+        led = ledger.get(x["evidence_id"], {})
+        sup = led.get("confirming_evidence_id") if str(led.get("status_after_unit_3", "")).startswith("confirmed") else None
+        obs = bool(set(x["detection_methods"]) & OBS)
+        counts = (not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
+                  and x["evidence_directness"] == "primary_study_read")
+        index5.append({k: x.get(k) for k in ("evidence_id", "unit", "source_id", "tortoise_key", "tortoise", "species_specific", "plant_name_as_printed", "plant_accepted_name",
+                                             "plant_part", "wild_or_captive", "evidence_tier", "detection_methods", "evidence_directness", "is_negative_record", "on_hold", "quantity_as_reported")}
+                      | {"publication_id": publication(x["source_id"]), "superseded_by": sup, "counts_as_independent_positive_wild_observation": counts,
+                         "counts_as_captive_feeding_record": not x["on_hold"] and "captive_feeding_record" in x["detection_methods"],
+                         "wild_statement_not_an_observation": x["wild_or_captive"] == "wild" and not obs})
+    pubs = {}
+    for s in all_sources:
+        pubs.setdefault(publication(s), []).append(s)
+    same_pub = {p: ids for p, ids in pubs.items() if len(ids) > 1}
+    name_map = {}
+    for x in index5:
+        if x["plant_accepted_name"]:
+            name_map.setdefault(x["plant_name_as_printed"], set()).add(x["plant_accepted_name"])
+    name_conflicts = [{"plant_name_as_printed": n, "accepted_names": sorted(a)} for n, a in sorted(name_map.items()) if len(a) > 1]
+    pairs = {}
+    for x in index5:
+        if x["counts_as_independent_positive_wild_observation"] and x["plant_accepted_name"]:
+            pairs.setdefault((x["tortoise_key"], x["plant_accepted_name"]), set()).add(x["publication_id"])
+    audit = {"publications_entered_as_more_than_one_source": [{"publication_id": p, "source_ids": ids} for p, ids in sorted(same_pub.items())],
+             "printed_names_resolved_to_more_than_one_accepted_name": name_conflicts,
+             "records_superseded_by_a_read_primary_record": sum(1 for x in index5 if x["superseded_by"]),
+             "records_on_hold": [x["evidence_id"] for x in index5 if x["on_hold"]],
+             "independent_positive_wild_observations": sum(x["counts_as_independent_positive_wild_observation"] for x in index5),
+             "wild_statements_that_are_not_observations": [x["evidence_id"] for x in index5 if x["wild_statement_not_an_observation"]],
+             "tortoise_plant_pairs_with_two_or_more_independent_publications": sum(1 for v in pairs.values() if len(v) > 1)}
+    summary["cross_unit_audit"] = audit
+    dump(RES / "evidence_index_v5.json", {"schema_version": "5.0", "generated_by": "scripts/build_global_plant_evidence_research_v5.py", "scope": "units 1-5",
+                                         "note": "A record counts as an independent positive wild observation only when it is not on hold, not negative, not superseded by the primary record it cites, from a wild or semi-wild study that was read, and detected by observation or in faeces. Zoo, guideline and keeper statements never count, even when they describe the wild diet.",
+                                         "records": index5})
     meta = {"schema_version": "5.0", "generated_by": "scripts/build_global_plant_evidence_research_v5.py", "generated_from": "data/research/global_plant_evidence_transcription_v5.json",
             "extends": "the v1-v4 research files, which are not modified", "layer": "research_only_not_published", "grade_policy": v1.GRADE_POLICY}
     dump(RES / "global_evidence_sources_v5.json", {**meta, "sources": sources, "sources_read_without_records": tr["sources_read_without_records"],

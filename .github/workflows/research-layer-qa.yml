@@ -5,6 +5,7 @@ on:
       - 'data/research/**'
       - 'scripts/build_global_plant_evidence_research_v*.py'
       - 'scripts/qa_global_plant_evidence_research_v*.py'
+      - 'scripts/verify_forage_nutrition_v*.py'
       - '.github/workflows/research-layer-qa.yml'
   workflow_dispatch:
 jobs:

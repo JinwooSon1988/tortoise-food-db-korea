@@ -89,6 +89,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
@@ -215,6 +216,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "timothy hay is named in the Arizona-Sonora Desert Museum list (unit 3); hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
@@ -334,6 +336,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
@@ -453,6 +456,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
@@ -558,6 +562,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
@@ -663,6 +668,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "hay is named in unit-3 to unit-5 husbandry records (meadow hay, grass hay, timothy, bermuda, wet hay) without the grass species; this table is a reference for a common hay grass, not that hay's value",
@@ -775,6 +781,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "same_species_as_a_candidate",
    "candidate_key": "Trifolium repens",
    "why_selected": "clover is named in several husbandry records without the species",
@@ -848,6 +855,7 @@
    ],
    "calcium_to_phosphorus": null,
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "same_species_as_a_candidate",
    "candidate_key": "Trifolium repens",
    "why_selected": "clover is named in several husbandry records without the species",
@@ -946,6 +954,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "candidate species check",
@@ -1051,6 +1060,7 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [],
    "match_to_candidate": "same_species_as_a_candidate",
    "candidate_key": "Alysicarpus vaginalis",
    "why_selected": "same species as gopher tortoise fecal-seed records (unit 2)",
@@ -1113,20 +1123,6 @@
      "nutrient_unit": "g/kg DM",
      "measurement_basis": "dry matter",
      "sample_count": 14
-    },
-    {
-     "nutrient_name": "magnesium",
-     "nutrient_value": 1.7,
-     "nutrient_unit": "g/kg DM",
-     "measurement_basis": "dry matter",
-     "sample_count": 6
-    },
-    {
-     "nutrient_name": "sodium",
-     "nutrient_value": 2.2,
-     "nutrient_unit": "g/kg DM",
-     "measurement_basis": "dry matter",
-     "sample_count": 33
     }
    ],
    "calcium_to_phosphorus": {
@@ -1135,6 +1131,22 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "mean_on_page": 1.7,
+     "sample_count_on_page": "",
+     "sample_count_from_the_shared_parser": 6
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "mean_on_page": 2.2,
+     "sample_count_on_page": "",
+     "sample_count_from_the_shared_parser": 33
+    }
+   ],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "clover reference",
@@ -1156,20 +1168,6 @@
    "preparation_state": "hay",
    "analytical_method": "compiled feed table; average of the samples counted in sample_count",
    "values": [
-    {
-     "nutrient_name": "dry matter",
-     "nutrient_value": 90.2,
-     "nutrient_unit": "% as fed",
-     "measurement_basis": "as fed",
-     "sample_count": 6
-    },
-    {
-     "nutrient_name": "ether extract",
-     "nutrient_value": 2.2,
-     "nutrient_unit": "% DM",
-     "measurement_basis": "dry matter",
-     "sample_count": 5
-    },
     {
      "nutrient_name": "calcium",
      "nutrient_value": 11.4,
@@ -1212,6 +1210,22 @@
     "caution": "A quotient of two table means computed here, not printed by the source; it describes this feed table only and is not a feeding rule."
    },
    "excluded_from_this_record": "values marked as calculated (*) or printed without a sample count, silage tables, and all livestock energy and digestibility values",
+   "values_dropped_no_sample_count_on_page": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "mean_on_page": 90.2,
+     "sample_count_on_page": "",
+     "sample_count_from_the_shared_parser": 6
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "mean_on_page": 2.2,
+     "sample_count_on_page": "",
+     "sample_count_from_the_shared_parser": 5
+    }
+   ],
    "match_to_candidate": "forage_reference_only_species_not_named_in_any_evidence_record",
    "candidate_key": null,
    "why_selected": "clover reference",
