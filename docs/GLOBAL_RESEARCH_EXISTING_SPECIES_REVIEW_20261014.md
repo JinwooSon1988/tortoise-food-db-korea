@@ -37,3 +37,14 @@ The following fields are transcribed from PR #304 research JSON, not independent
 Source URLs: Mason et al. (1999) <https://chelonian.org/wp-content/uploads/file/CCB_Vol_3_Nos_1-4(1998-2000)/Mason_etal_1999.pdf>; Hermann's tortoise account (2011) <https://iucn-tftsg.org/wp-content/uploads/file/Accounts/crm_5_059_hermanni_v1_2011.pdf>; sulcata account (2020) <https://iucn-tftsg.org/wp-content/uploads/crm.5.110.sulcata.v1.2020.pdf>.
 
 **Approval state: HOLD for automated publication of these research links.** These records may inform a future, species-scoped observation section after source review, but they cannot establish a general A/B/C/D grade or a plant-part-specific safety recommendation. No public entry has been modified.
+
+## Independent source check — 2011 Hermann's tortoise account
+
+**Checked against the original accessible PDF (not merely the research JSON):** Bertolero, Cheylan, Hailey, Livoreil & Willemsen (2011), *Testudo hermanni — Hermann's Tortoise*, Chelonian Research Monographs 5, DOI: 10.3854/crm.5.059.hermanni.v1.2011, PDF page 10 (printed page 059.10), Diet section, <https://iucn-tftsg.org/wp-content/uploads/file/Accounts/crm_5_059_hermanni_v1_2011.pdf>.
+
+- The paragraph explicitly introduces a list of **fruits** and includes *Ficus carica*. This verifies the **fruit** interpretation of `crm059_hermanni_2011-05`, **not** fig leaves. Do not cite this passage as evidence of fig-leaf consumption or safety.
+- The preceding sentence says aromatic plants (including *Thymus*, *Lavandula*, *Rosmarinus*) and milky plants (including *Euphorbia*) are **generally rejected**. This is a broad account statement, not a controlled toxicology experiment and not evidence that every member of those genera is poisonous.
+- The account states that Hermann's tortoises may consume some plants considered toxic to mammals. This is **not** evidence of safety for captive tortoises, other tortoise species, or routine feeding.
+- The account summarizes earlier field studies. The original underlying diet studies cited there have **not** been independently checked in this audit; retain the distinction between an account statement verified here and primary field observations.
+
+**Editorial decision:** `figleaf` leaf-specific claim remains blocked; negative-only aromatic-plant candidates remain observations of general rejection rather than toxicity findings. No public grade changes are authorized.
