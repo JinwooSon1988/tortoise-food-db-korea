@@ -107,6 +107,20 @@ for r in fecal_records:
         errors.append(f"Fecal observation promoted to feeding/safety verdict: {r['evidence_id']}")
     if r.get("plant_part") not in fecal_part_labels:
         errors.append(f"Fecal evidence part misrepresented: {r['evidence_id']}")
+# Unresolved names must not acquire an accepted taxon by inference.
+unresolved_name_statuses = {
+    "backbone_match_conflicts_with_source_needs_review",
+    "homonyms_in_backbone_author_not_given_needs_review",
+    "common_name_only_not_resolved",
+    "spelling_differs_from_backbone_needs_review",
+    "not_resolved_needs_review",
+}
+unresolved_records = [r for r in records if r.get("plant_name_check") in unresolved_name_statuses]
+if len(unresolved_records) != 45:
+    errors.append(f"Unexpected unresolved-taxonomy record count: {len(unresolved_records)}")
+for r in unresolved_records:
+    if r.get("plant_accepted_name") is not None:
+        errors.append(f"Unresolved taxon assigned accepted name: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
