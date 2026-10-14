@@ -6,6 +6,8 @@ on:
       - 'scripts/build_global_plant_evidence_research_v1.py'
       - 'docs/GLOBAL_RESEARCH_EXISTING_SPECIES_REVIEW_20261014.md'
       - 'scripts/qa_global_research_existing_species_review.py'
+      - 'scripts/qa_global_research_new_candidate_triage.py'
+      - 'docs/GLOBAL_RESEARCH_NEW_CANDIDATE_TRIAGE_20261014.md'
       - 'scripts/qa_global_research_publication_boundaries.py'
       - '.github/workflows/research-publication-boundary-qa.yml'
   workflow_dispatch:
@@ -21,3 +23,4 @@ jobs:
           python-version: '3.12'
       - run: python scripts/qa_global_research_publication_boundaries.py
       - run: python scripts/qa_global_research_existing_species_review.py
+      - run: python scripts/qa_global_research_new_candidate_triage.py
