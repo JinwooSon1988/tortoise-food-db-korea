@@ -182,6 +182,7 @@ def main():
 
     OBS = {"direct_feeding_observation", "incidental_observation", "fecal_macroscopic", "fecal_histological", "fecal_detection", "fecal_dna_metabarcoding",
            "direct_observation_and_fecal_analysis_not_separated"}
+    history = {h["evidence_id"]: h["note"] for h in tr.get("animal_history_exclusions", [])}
     index5 = []
     for x in index4 + [{"evidence_id": e["evidence_id"], "unit": 5, "source_id": e["source_id"], "tortoise_key": e["tortoise_key"], "tortoise": e["tortoise_scientific_name"],
                         "species_specific": True, "plant_name_as_printed": e["plant_name_as_printed"], "plant_accepted_name": e["plant_accepted_name"], "plant_name_check": e["plant_name_check"],
@@ -190,11 +191,11 @@ def main():
         led = ledger.get(x["evidence_id"], {})
         sup = led.get("confirming_evidence_id") if str(led.get("status_after_unit_3", "")).startswith("confirmed") else None
         obs = bool(set(x["detection_methods"]) & OBS)
-        counts = (not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
+        counts = (x["evidence_id"] not in history and not x["on_hold"] and not x["is_negative_record"] and not sup and x["evidence_tier"] in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read") and obs
                   and x["evidence_directness"] == "primary_study_read")
         index5.append({k: x.get(k) for k in ("evidence_id", "unit", "source_id", "tortoise_key", "tortoise", "species_specific", "plant_name_as_printed", "plant_accepted_name",
                                              "plant_part", "wild_or_captive", "evidence_tier", "detection_methods", "evidence_directness", "is_negative_record", "on_hold", "quantity_as_reported")}
-                      | {"publication_id": publication(x["source_id"]), "superseded_by": sup, "counts_as_independent_positive_wild_observation": counts,
+                      | {"publication_id": publication(x["source_id"]), "superseded_by": sup, "animal_history_note": history.get(x["evidence_id"]), "counts_as_independent_positive_wild_observation": counts,
                          "counts_as_captive_feeding_record": not x["on_hold"] and "captive_feeding_record" in x["detection_methods"],
                          "wild_statement_not_an_observation": x["wild_or_captive"] == "wild" and not obs})
     pubs = {}

@@ -203,10 +203,14 @@ def main():
                                                                     or x["evidence_directness"] != "primary_study_read"
                                                                     or x["evidence_tier"] not in ("1_wild_feeding_study_read", "2_semi_wild_feeding_study_read")):
             errors.append("index v5 %s: counted as an independent positive wild observation without qualifying" % iid)
+        if x.get("animal_history_note") and x["counts_as_independent_positive_wild_observation"]:
+            errors.append("index v5 %s: an animal with a captive history is counted as a wild-population observation" % iid)
         if x["unit"] == 5 and x["counts_as_independent_positive_wild_observation"]:
             errors.append("index v5 %s: a unit-5 zoo or captive record counted as a wild observation" % iid)
         if x["wild_or_captive"] == "wild" and not obs and not x["wild_statement_not_an_observation"]:
             errors.append("index v5 %s: a wild statement that is not an observation is not flagged" % iid)
+    if {h["evidence_id"] for h in tr.get("animal_history_exclusions", [])} != {y["evidence_id"] for y in idx5 if y.get("animal_history_note")}:
+        errors.append("index v5: animal-history exclusions differ from the transcription")
     for iid, meth, q in (("moorhouse_gann_2022-40", ["not_determinable_record_on_hold"], None), ("moorhouse_gann_2022-31", ["statement_in_article_text"], None)):
         x = next((y for y in idx5 if y["evidence_id"] == iid), None)
         if not x or x["detection_methods"] != meth or x["counts_as_independent_positive_wild_observation"] or (iid.endswith("-40") and not x["on_hold"]):
