@@ -132,6 +132,27 @@ def main():
     sel = {str(t["node"]): t for t in d["forage_table_selection_v5.json"]["tables"]}
     old_nut = {r["record_id"] for f in ("forage_nutrition_research_v1.json", "forage_nutrition_research_v2.json") for r in d[f]["records"]}
     accepted4 = {c["accepted_name"]: c["candidate_key"] for c in d["plant_candidates_v4.json"]["candidates"] if c["accepted_name"]}
+    # Structural checks for Feedipedia means; not a substitute for source-page verification.
+    for r in nut:
+        rid = r["record_id"]
+        names = set()
+        vals = {}
+        for v in r["values"]:
+            name = v["nutrient_name"]
+            if name in names:
+                errors.append("%s: duplicate nutrient %s" % (rid, name))
+            names.add(name)
+            vals[name] = v
+            if not isinstance(v["nutrient_value"], (int, float)) or isinstance(v["nutrient_value"], bool) or v["sample_count"] < 1:
+                errors.append("%s: invalid nutrient value or sample count for %s" % (rid, name))
+            expected_basis = "as fed" if name == "dry matter" else "dry matter"
+            if v["measurement_basis"] != expected_basis:
+                errors.append("%s: unexpected basis for %s" % (rid, name))
+        ca, p = vals.get("calcium"), vals.get("phosphorus")
+        ratio = r.get("calcium_to_phosphorus")
+        if ratio and ca and p and p["nutrient_value"] > 0:
+            if abs(round(ca["nutrient_value"] / p["nutrient_value"], 2) - ratio["value"]) > 0.011:
+                errors.append("%s: calcium/phosphorus ratio disagrees with reported means" % rid)
     for r in nut:
         rid = r["record_id"]
         t = sel.get(r["source_id"])
