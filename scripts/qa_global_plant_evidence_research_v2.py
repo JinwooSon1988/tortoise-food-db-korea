@@ -40,8 +40,14 @@ EVIDENCE_REQUIRED = ["evidence_id", "source_id", "source_url", "source_language"
 STUDY_TYPES = {"peer_reviewed_field_study", "peer_reviewed_captive_trial", "university_thesis_field_study"}
 STATUS = {"peer_reviewed_field_study": "verified_primary_source", "peer_reviewed_captive_trial": "verified_primary_source",
           "university_thesis_field_study": "verified_primary_source_thesis", "government_conservation_plan": "verified_review_document"}
+PREVIOUSLY_CAPTIVE = "previously captive; temporarily free-ranging"
+# a record may be marked below its source's status when the plant list it carries is a citation whose primary was not read;
+# it may never be marked above it
+DOWNGRADED_STATUS = {"reported_in_source_primary_not_read": "secondary_source_checked_primary_unread"}
 CLASSES = {"wild": {"wild_feeding_study", "local_knowledge", "conservation_plan_review", "community_provisioning"}, "semi_wild": {"semi_wild_feeding_study"},
-           "captive": {"captive_feeding_trial", "husbandry_practice"}}
+           "captive": {"captive_feeding_trial", "husbandry_practice"},
+           # a record narrowed after unit 2: the transcribed note says the animal had been held in captivity (Lambert 1993)
+           PREVIOUSLY_CAPTIVE: {"field_observation_of_previously_captive_tortoise"}}
 OK_NAME = ("accepted", "synonym_of_accepted_name", "genus_kept_as_printed_backbone_status_synonym",
            "genus_kept_as_printed_backbone_status_doubtful", "exact_match_status_doubtful")
 UNITS = {("% as fed", "as fed"), ("% DM", "dry matter"), ("g/kg DM", "dry matter"), ("mg/kg DM", "dry matter")}
@@ -134,7 +140,7 @@ def main():
         if not s:
             errors.append("%s: unknown source" % eid)
             continue
-        if e["verification_status"] != s["verification_status"] or e["source_url"] != s["url"] or e["source_language"] != s["language"]:
+        if e["verification_status"] not in (s["verification_status"], DOWNGRADED_STATUS.get(e["evidence_directness"])) or e["source_url"] != s["url"] or e["source_language"] != s["language"]:
             errors.append("%s: status, URL or language differs from its source" % eid)
         if tortoises.get(e["tortoise_key"]) != e["tortoise_scientific_name"]:
             errors.append("%s: tortoise taxon not in a registry" % eid)
@@ -143,7 +149,7 @@ def main():
         row = rows.get(eid)
         if row:
             if row[1] != e["plant_name_as_printed"] or row[9] != e["source_page"] or row[0] != e["tortoise_key"] or (corrected[eid] if eid in corrected else row[6]) != e["quantity_as_reported"] \
-                    or row[2] != e["plant_part"] or row[4] != e["wild_or_captive"] or row[7] != e["locality"]:
+                    or row[2] != e["plant_part"] or row[7] != e["locality"]                     or (row[4] != e["wild_or_captive"] and not (row[4] == "wild" and e["wild_or_captive"] == PREVIOUSLY_CAPTIVE and "previously captive" in (row[11] or ""))):
                 errors.append("%s: differs from the transcription" % eid)
             if bool(re.search(r"avoid|reject", row[5])) != e["is_negative_record"]:
                 errors.append("%s: negative-record flag does not follow the transcribed consumption statement" % eid)
