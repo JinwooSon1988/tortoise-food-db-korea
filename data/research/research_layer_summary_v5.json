@@ -54,26 +54,7 @@
     "same_species_as_a_candidate": 3
    }
   },
-  "earlier_unit_feedipedia_values_whose_sample_count_is_not_on_the_page": [
-   {
-    "file": "forage_nutrition_research_v2.json",
-    "record_id": "feedipedia-11865",
-    "nutrient_name": "dry matter",
-    "nutrient_unit": "% as fed",
-    "mean_on_page": 20.9,
-    "sample_count_on_page": "",
-    "sample_count_from_the_shared_parser": 165
-   },
-   {
-    "file": "forage_nutrition_research_v2.json",
-    "record_id": "feedipedia-11865",
-    "nutrient_name": "calcium",
-    "nutrient_unit": "g/kg DM",
-    "mean_on_page": 16.1,
-    "sample_count_on_page": "",
-    "sample_count_from_the_shared_parser": 72
-   }
-  ],
+  "earlier_unit_feedipedia_values_whose_sample_count_is_not_on_the_page": [],
   "duplicate_check": {
    "sources_already_in_units_1_to_4": [],
    "nutrition_records_already_in_units_1_to_4": []

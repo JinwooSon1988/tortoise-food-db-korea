@@ -11,10 +11,18 @@
       "nutrient_value": 1.7,
       "nutrient_unit": "g/kg DM",
       "previously_transcribed_sample_count": 6,
-      "source_row_sample_count": null,
-      "source_row_calculated_marker": null,
-      "exclusion_reason": "unresolved_requires_original_row_check",
-      "review_status": "pending_source_row_verification"
+      "source_row_sample_count": "",
+      "source_row_calculated_marker": false,
+      "exclusion_reason": "source_row_prints_no_sample_count",
+      "review_status": "source_row_verified",
+      "source_row_mean": 1.7,
+      "source_row_unit": "g/kg DM",
+      "source_row_sample_count_printed": false,
+      "previous_sample_count_matches_nb_of_following_rows": [
+        "Potassium [g/kg DM]"
+      ],
+      "verified_against": "saved copy of https://www.feedipedia.org/node/12645 fetched on 2026-10-14, sha256 cb47637f604a47fe4b786417d893cdae7109fd47f381a68cad9ec71809459115",
+      "verified_by_script": "scripts/audit_feedipedia_sample_counts_v6.py"
     },
     {
       "record_id": "feedipedia-12645",
@@ -23,10 +31,16 @@
       "nutrient_value": 2.2,
       "nutrient_unit": "g/kg DM",
       "previously_transcribed_sample_count": 33,
-      "source_row_sample_count": null,
-      "source_row_calculated_marker": null,
-      "exclusion_reason": "unresolved_requires_original_row_check",
-      "review_status": "pending_source_row_verification"
+      "source_row_sample_count": "",
+      "source_row_calculated_marker": false,
+      "exclusion_reason": "source_row_prints_no_sample_count",
+      "review_status": "source_row_verified",
+      "source_row_mean": 2.2,
+      "source_row_unit": "g/kg DM",
+      "source_row_sample_count_printed": false,
+      "previous_sample_count_matches_nb_of_following_rows": [],
+      "verified_against": "saved copy of https://www.feedipedia.org/node/12645 fetched on 2026-10-14, sha256 cb47637f604a47fe4b786417d893cdae7109fd47f381a68cad9ec71809459115",
+      "verified_by_script": "scripts/audit_feedipedia_sample_counts_v6.py"
     },
     {
       "record_id": "feedipedia-12646",
@@ -35,10 +49,18 @@
       "nutrient_value": 90.2,
       "nutrient_unit": "% as fed",
       "previously_transcribed_sample_count": 6,
-      "source_row_sample_count": null,
-      "source_row_calculated_marker": null,
-      "exclusion_reason": "unresolved_requires_original_row_check",
-      "review_status": "pending_source_row_verification"
+      "source_row_sample_count": "",
+      "source_row_calculated_marker": false,
+      "exclusion_reason": "source_row_prints_no_sample_count",
+      "review_status": "source_row_verified",
+      "source_row_mean": 90.2,
+      "source_row_unit": "% as fed",
+      "source_row_sample_count_printed": false,
+      "previous_sample_count_matches_nb_of_following_rows": [
+        "Crude protein [% DM]"
+      ],
+      "verified_against": "saved copy of https://www.feedipedia.org/node/12646 fetched on 2026-10-14, sha256 bafc816682ca4372ea9937e223d8337af448da4b77a12dce5c353eb3627ade19",
+      "verified_by_script": "scripts/audit_feedipedia_sample_counts_v6.py"
     },
     {
       "record_id": "feedipedia-12646",
@@ -47,10 +69,24 @@
       "nutrient_value": 2.2,
       "nutrient_unit": "% DM",
       "previously_transcribed_sample_count": 5,
-      "source_row_sample_count": null,
-      "source_row_calculated_marker": null,
-      "exclusion_reason": "unresolved_requires_original_row_check",
-      "review_status": "pending_source_row_verification"
+      "source_row_sample_count": "",
+      "source_row_calculated_marker": false,
+      "exclusion_reason": "source_row_prints_no_sample_count",
+      "review_status": "source_row_verified",
+      "source_row_mean": 2.2,
+      "source_row_unit": "% DM",
+      "source_row_sample_count_printed": false,
+      "previous_sample_count_matches_nb_of_following_rows": [
+        "Ash [% DM]",
+        "Acid detergent fibre [% DM]",
+        "Lignin [% DM]"
+      ],
+      "verified_against": "saved copy of https://www.feedipedia.org/node/12646 fetched on 2026-10-14, sha256 bafc816682ca4372ea9937e223d8337af448da4b77a12dce5c353eb3627ade19",
+      "verified_by_script": "scripts/audit_feedipedia_sample_counts_v6.py"
     }
-  ]
+  ],
+  "source_row_check": {
+    "done_on": "2026-10-14",
+    "method": "table row read directly from the saved page; an empty Nb cell is recorded as an empty string and source_row_sample_count_printed=false"
+  }
 }

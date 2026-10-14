@@ -71,6 +71,8 @@ def main():
     ap.add_argument("--cache", required=True)
     ap.add_argument("--feedipedia-cache")
     ap.add_argument("--offline", action="store_true")
+    ap.add_argument("--nutrition-only", action="store_true",
+                    help="rewrite only forage_nutrition_research_v2.json and the nutrition counts of the summary; the evidence file is left as it is")
     a = ap.parse_args()
     cache = Path(a.cache)
     cache.mkdir(parents=True, exist_ok=True)
@@ -250,6 +252,7 @@ def main():
     sel_path = RES / "forage_table_selection_v2.json"
     if sel_path.exists() and a.feedipedia_cache:
         v = module(ROOT / "scripts/verify_nutrition_reference_sources_v1.py", "verify_ref")
+        vrow = module(ROOT / "scripts/verify_forage_nutrition_v5.py", "verify_rows")
         for t in load(sel_path)["tables"]:
             page = Path(a.feedipedia_cache) / ("feedipedia_%s.html" % t["node"])
             if not page.exists():
@@ -266,9 +269,22 @@ def main():
             values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                        "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
                       for (lab, unit), (avg, nb) in rows.items() if lab in v1.COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+            # the shared parser can take the sample count of the next row when a row's count is blank: keep a value only when an
+            # independent read of its own table row shows the same mean and a printed sample count
+            page_rows = vrow.page_rows(page.read_text(encoding="utf-8", errors="replace"))
+            kept, dropped = [], []
+            for val in values:
+                h = [x for x in page_rows if x["label"].lower() == val["nutrient_name"] and x["unit"] == val["nutrient_unit"]]
+                if len(h) == 1 and abs(h[0]["avg"] - val["nutrient_value"]) < 1e-9 and str(h[0]["nb"]) == str(val["sample_count"]):
+                    kept.append(val)
+                else:
+                    dropped.append({"nutrient_name": val["nutrient_name"], "nutrient_unit": val["nutrient_unit"], "mean_on_page": h[0]["avg"] if len(h) == 1 else None,
+                                    "sample_count_on_page": h[0]["nb"] if len(h) == 1 else None, "sample_count_from_the_shared_parser": val["sample_count"]})
+            values = kept
             if not values:
                 continue
             nutrition.append({"record_id": "feedipedia-%s" % t["node"], "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)", "source_id": str(t["node"]),
+                              "values_dropped_no_sample_count_on_page": dropped,
                               "source_url": "https://www.feedipedia.org/node/%s" % t["node"], "source_language": "en", "source_kind": "compiled_feed_table_parsed",
                               "table_title_as_printed": listed, "table_note_on_page": None if title == listed or listed.endswith(title) else title, "source_page": None,
                               "analyzed_taxon": t["taxon"], "analyzed_taxon_accepted_name": n["accepted_name"], "analyzed_taxon_name_check": n["name_check"],
@@ -324,6 +340,15 @@ def main():
 
     meta = {"schema_version": "2.0", "generated_by": "scripts/build_global_plant_evidence_research_v2.py", "generated_from": "data/research/global_plant_evidence_transcription_v2.json",
             "extends": "the v1 research files, which are not modified", "layer": "research_only_not_published", "grade_policy": v1.GRADE_POLICY}
+    if a.nutrition_only:
+        dump(RES / "forage_nutrition_research_v2.json", {**meta, "records": nutrition})
+        old = load(RES / "research_layer_summary_v2.json")
+        old["summary"]["unit_2_added"].update(nutrition_records=len(nutrition), nutrition_values=sum(len(r["values"]) for r in nutrition),
+                                              nutrition_records_by_preparation_state=dict(sorted(Counter(r["preparation_state"] for r in nutrition).items())),
+                                              nutrition_records_by_source_kind=dict(sorted(Counter(r["source_kind"] for r in nutrition).items())))
+        dump(RES / "research_layer_summary_v2.json", old)
+        print("unit 2 (nutrition only): nutrition records %d, values %d" % (len(nutrition), sum(len(r["values"]) for r in nutrition)))
+        return
     dump(RES / "global_evidence_sources_v2.json", {**meta, "sources": sources, "cited_primary_status": tr2["cited_primary_status"], "holds_resolved_from_v1": tr2["holds_resolved_from_v1"],
                                                  "on_hold": tr2["sources_on_hold"], "seed_mixtures_on_hold": tr2["seed_mixtures_on_hold"]})
     dump(RES / "tortoise_species_registry_v2.json", {**meta, "name_authority": "GBIF backbone taxonomy, species/match API", "species_added": registry,
