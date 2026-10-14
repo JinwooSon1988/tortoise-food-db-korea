@@ -90,6 +90,13 @@ def main():
     ids = [e["evidence_id"] for e in ev]
     if [x[0] for x in expected] != ids or len(set(ids)) != len(ids) or set(ids) & old_ids:
         errors.append("evidence records do not match the transcription, repeat, or collide with units 1-4")
+    # Zoo-page descriptions of wild diet are not verified wild feeding observations.
+    zoo_wild = [e for e in ev if e["wild_or_captive"] == "wild" and e["source_id"] in {"salisbury_zoo_sulcata_page", "exmoor_zoo_sulcata_page"}]
+    for e in zoo_wild:
+        if e["detection_methods"] != ["unreferenced_general_statement"] or e["evidence_tier"].startswith(("1_", "2_", "3_")):
+            errors.append("%s: zoo wild-diet prose must not be treated as a verified wild feeding observation" % e["evidence_id"])
+    if len(zoo_wild) != 4:
+        errors.append("unit-5 zoo wild-diet prose count changed: review the four unreferenced records")
     rows, seen = dict(expected), set()
     for e in ev:
         eid = e["evidence_id"]
