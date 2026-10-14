@@ -119,6 +119,12 @@ def main():
         errors.append("evidence records do not match the transcription (count or order)")
     rows = dict(expected)
     seen = set()
+    # a later unit may correct a unit-2 quantity (record_corrections_v3.json); the corrected value is then the expected one
+    corr_path = RES / "record_corrections_v3.json"
+    corrected = {}
+    if corr_path.exists():
+        for c in json.loads(corr_path.read_text(encoding="utf-8"))["corrections"]:
+            corrected[c["evidence_id"]] = None if c["action"] == "put_on_hold" else c["corrected_quantity"]
     for e in evidence:
         eid = e["evidence_id"]
         for k in EVIDENCE_REQUIRED:
@@ -136,7 +142,7 @@ def main():
             errors.append("%s: research records must not carry a feeding grade" % eid)
         row = rows.get(eid)
         if row:
-            if row[1] != e["plant_name_as_printed"] or row[9] != e["source_page"] or row[0] != e["tortoise_key"] or row[6] != e["quantity_as_reported"] \
+            if row[1] != e["plant_name_as_printed"] or row[9] != e["source_page"] or row[0] != e["tortoise_key"] or (corrected[eid] if eid in corrected else row[6]) != e["quantity_as_reported"] \
                     or row[2] != e["plant_part"] or row[4] != e["wild_or_captive"] or row[7] != e["locality"]:
                 errors.append("%s: differs from the transcription" % eid)
             if bool(re.search(r"avoid|reject", row[5])) != e["is_negative_record"]:

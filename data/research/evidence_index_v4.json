@@ -10125,7 +10125,8 @@
    "quantity_correction": {
     "corrected_in_unit": 3,
     "action": "quantity_withdrawn",
-    "quantity_in_unit_record": "dung morphology count 2 (frequency not legible in the text layer); DNA metabarcoding 0 of 80",
+    "quantity_in_unit_record": "DNA metabarcoding 0 of 80; dung-morphology value not determinable from the published table; seed dispersal by tortoises is stated in the article text",
+    "quantity_before_correction": "dung morphology count 2 (frequency not legible in the text layer); DNA metabarcoding 0 of 80",
     "reason": "The numbers '2 0' start at x-position 642 (dung-morphology frequency column). The count cannot be determined from the PDF. The article text states that tortoises disperse the seeds of this palm, so the record stays, without a number."
    },
    "unit_1_citation_status": null,
@@ -10390,7 +10391,8 @@
    "quantity_correction": {
     "corrected_in_unit": 3,
     "action": "put_on_hold",
-    "quantity_in_unit_record": "dung morphology 2 of 50 (4%)",
+    "quantity_in_unit_record": null,
+    "quantity_before_correction": "dung morphology 2 of 50 (4%)",
     "reason": "In Table 3 the two numbers after the skink columns ('2' and '4') start at x-positions 642 and 668, which are the dung-morphology frequency column and the observation count column, not the dung-morphology count and frequency columns used by every other row (607 and 642). Read as printed they are not a valid count and frequency pair for either method, so no tortoise detection can be stated. DNA metabarcoding gives 0 of 80."
    },
    "unit_1_citation_status": null,

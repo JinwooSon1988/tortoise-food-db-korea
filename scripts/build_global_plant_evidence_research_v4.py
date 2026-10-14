@@ -185,7 +185,7 @@ def main():
                           "detection_method_recorded_per_record": bool(e.get("detection_methods")), "evidence_directness": e["evidence_directness"],
                           "is_negative_record": e["is_negative_record"], "negative_kind": e.get("negative_kind") or ("animal_avoided_or_refused" if e["is_negative_record"] else None),
                           "quantity_as_reported": quantity_now(e),
-                          "quantity_correction": ({"corrected_in_unit": 3, "action": corr3[e["evidence_id"]]["action"], "quantity_in_unit_record": e.get("quantity_as_reported"),
+                          "quantity_correction": ({"corrected_in_unit": 3, "action": corr3[e["evidence_id"]]["action"], "quantity_in_unit_record": e.get("quantity_as_reported"), "quantity_before_correction": corr3[e["evidence_id"]]["quantity_in_v2"],
                                                    "reason": corr3[e["evidence_id"]]["reason"]} if e["evidence_id"] in corr3 else None),
                           "unit_1_citation_status": ledger.get(e["evidence_id"]), "on_hold": e["evidence_id"] in held3, "hazard_statement_ids": sorted(hz_by_ev.get(e["evidence_id"], []))})
     live = [x for x in index if not x["on_hold"]]
