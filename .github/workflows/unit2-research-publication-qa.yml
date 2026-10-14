@@ -4,6 +4,7 @@ on:
     paths:
       - 'data/research/**_v2.json'
       - 'scripts/qa_global_research_unit2_publication_gates.py'
+      - 'scripts/qa_global_research_unit2_taxonomy_queue.py'
       - '.github/workflows/unit2-research-publication-qa.yml'
   push:
     branches:
@@ -20,3 +21,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/qa_global_research_unit2_publication_gates.py
+      - run: python scripts/qa_global_research_unit2_taxonomy_queue.py
