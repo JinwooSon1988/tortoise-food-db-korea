@@ -249,12 +249,15 @@ def main():
 
     # corrections to unit-2 records
     corrections = []
+    # the quantity before correction comes from the unit-2 transcription, so it survives later edits of the unit-2 evidence file
+    tr2 = load(RES / "global_plant_evidence_transcription_v2.json")
+    tr2_quantity = {"%s-%02d" % (sid, i): row[6] for sid, s2 in tr2["sources"].items() for i, row in enumerate(s2["records"], 1)}
     for c in tr["record_corrections_to_v2"]:
         target = [e for e in ev2 if e["source_id"] == c["v2_source_id"] and e["plant_name_as_printed"] == c["v2_evidence_plant"]]
         if len(target) != 1:
             raise SystemExit("correction target not unique: %s" % c["v2_evidence_plant"])
         corrections.append({"evidence_id": target[0]["evidence_id"], "plant_name_as_printed": c["v2_evidence_plant"], "action": c["action"], "reason": c["reason"],
-                            "quantity_in_v2": target[0]["quantity_as_reported"], "corrected_quantity": c["corrected_quantity"],
+                            "quantity_in_v2": tr2_quantity.get(target[0]["evidence_id"], target[0]["quantity_as_reported"]), "corrected_quantity": c["corrected_quantity"],
                             "status_after_correction": "hold_table_cell_not_determinable" if c["action"] == "put_on_hold" else "kept_without_quantity"})
     on_hold_ids = {c["evidence_id"] for c in corrections if c["action"] == "put_on_hold"}
 
@@ -451,7 +454,7 @@ def main():
     dump(RES / "plant_name_resolutions_v3.json", {**meta, "first_database": "GBIF backbone taxonomy", "second_database": "World Flora Online plant list (matching service)", "resolutions": resolutions})
     dump(RES / "plant_candidates_v3.json", {**meta, "scope": "cumulative over units 1 to 3", "evidence_tiers": TIER_KO, "candidates": sorted(cands.values(), key=lambda c: c["candidate_key"])})
     dump(RES / "plant_hazard_statements_v3.json", {**meta, "note": "Statements made by sources that were read. They are not toxicity findings for tortoises.", "statements": hazards})
-    dump(RES / "nutrient_safety_view_v3.json", {**meta, "note": "A layout of values already in the v1 and v2 nutrition files. No oxalate, tannin or nitrate value is held yet. A nutrient value is not a safety statement.", "records": view})
+    dump(RES / "nutrient_safety_view_v3.json", {**meta, "note": "A layout of values already in the v1 and v2 nutrition files. %d records hold a tannin, oxalate or nitrate value (Feedipedia livestock feed tables; not tortoise measurements). A nutrient value is not a safety statement." % sum(any(k.startswith(("oxalic", "tannins", "nitrate")) for k in r["values"]) for r in view), "records": view})
     dump(RES / "research_layer_summary_v3.json", {**meta, "summary": summary})
     print("unit 3: sources %d, evidence %d, resolutions %d (resolved %d), candidates %d, hazards %d, nutrient view %d"
           % (len(sources), len(evidence), len(resolutions), len(res_by_name), len(cands), len(hazards), len(view)))

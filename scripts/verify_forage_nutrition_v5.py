@@ -20,17 +20,13 @@ RES = ROOT / "data/research"
 UNIT_MAP = {"% as fed": "% as fed", "% DM": "% DM", "g/kg DM": "g/kg DM", "mg/kg DM": "mg/kg DM"}
 
 
-def cell_text(c):
-    return re.sub(r"\s+", " ", html.unescape(re.sub(r"(?s)<[^>]+>", " ", c))).strip()
-
-
 def page_rows(page):
-    rows = []
-    for tr in re.findall(r"(?s)<tr[^>]*>(.*?)</tr>", page):
-        cells = [cell_text(c) for c in re.findall(r"(?s)<td[^>]*>(.*?)</td>", tr)]
-        if len(cells) >= 7 and cells[1] and re.fullmatch(r"-?\d+(\.\d+)?", cells[2] or "x"):
-            rows.append({"label": cells[0], "unit": cells[1], "avg": float(cells[2]), "nb": cells[6]})
-    return rows
+    """Rows read cell by cell by scripts/feedipedia_table.py; Nb is the printed string ('' when blank)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("feedipedia_table", Path(__file__).resolve().parent / "feedipedia_table.py")
+    ft = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ft)
+    return [{"label": r["label"], "unit": r["unit"], "avg": r["avg"], "nb": r["nb_raw"]} for r in ft.parse_rows(page) if not r["rowspan_in_row"]]
 
 
 def main():

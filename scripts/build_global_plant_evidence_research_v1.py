@@ -114,6 +114,7 @@ def main():
     ap.add_argument("--cache", required=True)
     ap.add_argument("--feedipedia-cache")
     ap.add_argument("--offline", action="store_true")
+    ap.add_argument("--nutrition-only", action="store_true", help="rewrite only forage_nutrition_research_v1.json")
     a = ap.parse_args()
     cache = Path(a.cache)
     cache.mkdir(parents=True, exist_ok=True)
@@ -262,7 +263,7 @@ def main():
             n = res(t["taxon"])
             values = [{"nutrient_name": lab, "nutrient_value": avg, "nutrient_unit": {"% as fed": "% as fed", "% dm": "% DM", "g/kg dm": "g/kg DM", "mg/kg dm": "mg/kg DM"}[unit],
                        "measurement_basis": "as fed" if unit == "% as fed" else "dry matter", "sample_count": nb}
-                      for (lab, unit), (avg, nb) in rows.items() if lab in COMPOSITION_LABELS and nb != "*" and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
+                      for (lab, unit), (avg, nb) in rows.items() if lab in COMPOSITION_LABELS and isinstance(nb, int) and unit in ("% as fed", "% dm", "g/kg dm", "mg/kg dm")]
             if not values:
                 continue
             rid = "feedipedia-%s" % t["node"]
@@ -279,6 +280,10 @@ def main():
 
     meta = {"schema_version": "1.0", "generated_by": "scripts/build_global_plant_evidence_research_v1.py", "generated_from": "data/research/global_plant_evidence_transcription_v1.json",
             "layer": "research_only_not_published", "grade_policy": GRADE_POLICY}
+    if a.nutrition_only:
+        dump(RES / "forage_nutrition_research_v1.json", {**meta, "records": nutrition})
+        print("unit 1 (nutrition only): nutrition records %d, values %d" % (len(nutrition), sum(len(r["values"]) for r in nutrition)))
+        return
     dump(RES / "global_evidence_sources_v1.json", {**meta, "sources": sources, "already_in_repository": tr["sources_already_in_repository"], "on_hold": tr["sources_on_hold"]})
     dump(RES / "tortoise_species_registry_v1.json", {**meta, "name_authority": "GBIF backbone taxonomy, species/match API", "species": registry})
     dump(RES / "tortoise_plant_evidence_v1.json", {**meta, "records": evidence})
