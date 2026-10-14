@@ -56,7 +56,7 @@ else:
         ("figleaf", "crm059_hermanni_2011-05", "fruit", "Explicit part mismatch"),
         ("opuntiapad", "mason_1999-22", "not stated in table", "Unverified part"),
     ]:
-        lines = [line for line in compatibility[1].splitlines() if line.startswith(f"| \`{plant_id}\` |")]
+        lines = [line for line in compatibility[1].splitlines() if line.startswith(f"| `{plant_id}` |")]
         if len(lines) != 1:
             errors.append(f"{plant_id}: missing or duplicated compatibility row")
             continue
