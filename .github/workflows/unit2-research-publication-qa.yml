@@ -5,6 +5,8 @@ on:
       - 'data/research/**_v2.json'
       - 'scripts/qa_global_research_unit2_publication_gates.py'
       - 'scripts/qa_global_research_unit2_taxonomy_queue.py'
+      - 'scripts/qa_global_research_unit2_spelling_review.py'
+      - 'docs/GLOBAL_RESEARCH_UNIT2_SPELLING_REVIEW_20261014.md'
       - '.github/workflows/unit2-research-publication-qa.yml'
   push:
     branches:
@@ -22,3 +24,4 @@ jobs:
           python-version: '3.12'
       - run: python scripts/qa_global_research_unit2_publication_gates.py
       - run: python scripts/qa_global_research_unit2_taxonomy_queue.py
+      - run: python scripts/qa_global_research_unit2_spelling_review.py
