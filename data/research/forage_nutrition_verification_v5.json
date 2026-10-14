@@ -1,0 +1,1367 @@
+{
+ "schema_version": "5.0",
+ "generated_by": "scripts/verify_forage_nutrition_v5.py",
+ "pages_fetched_on": "2026-10-14",
+ "method": "Each value of forage_nutrition_research_v5.json is looked up in the table rows of a copy of the Feedipedia page saved from the live site, using a parser separate from the build. A value is 'matched' when label, unit, mean and sample count (Nb) are identical. The page title gives the plant part and fresh/hay state.",
+ "not_checked": "Standard deviation, minimum and maximum were not stored and are not compared. The underlying samples behind each Feedipedia mean were not examined.",
+ "records": [
+  {
+   "record_id": "feedipedia-16887",
+   "source_url": "https://www.feedipedia.org/node/16887",
+   "page_saved": true,
+   "page_sha256": "a99eb3dbade29d3610d2e2c6190a352efe499d51f0198f6ca5210852cdac2d24",
+   "page_title": "Timothy (Phleum pratense), aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 27.0,
+     "page_value": 27.0,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 13.8,
+     "page_value": 13.8,
+     "record_sample_count": 18,
+     "page_sample_count": "18",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 34.2,
+     "page_value": 34.2,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.6,
+     "page_value": 4.6,
+     "record_sample_count": 5,
+     "page_sample_count": "5",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.2,
+     "page_value": 2.2,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 8.0,
+     "page_value": 8.0,
+     "record_sample_count": 19,
+     "page_sample_count": "19",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.4,
+     "page_value": 1.4,
+     "record_sample_count": 4,
+     "page_sample_count": "4",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.0,
+     "page_value": 2.0,
+     "record_sample_count": 4,
+     "page_sample_count": "4",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.5,
+     "page_value": 1.5,
+     "record_sample_count": 4,
+     "page_sample_count": "4",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-16888",
+   "source_url": "https://www.feedipedia.org/node/16888",
+   "page_saved": true,
+   "page_sha256": "f9dd6dbd877a6016ae8d61eaefaee2457535309c9eeb3e0d7a65374fe5bb540f",
+   "page_title": "Timothy (Phleum pratense), hay",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 88.0,
+     "page_value": 88.0,
+     "record_sample_count": 16,
+     "page_sample_count": "16",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 9.1,
+     "page_value": 9.1,
+     "record_sample_count": 28,
+     "page_sample_count": "28",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 65.4,
+     "page_value": 65.4,
+     "record_sample_count": 20,
+     "page_sample_count": "20",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 37.8,
+     "page_value": 37.8,
+     "record_sample_count": 19,
+     "page_sample_count": "19",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.4,
+     "page_value": 4.4,
+     "record_sample_count": 17,
+     "page_sample_count": "17",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.3,
+     "page_value": 2.3,
+     "record_sample_count": 5,
+     "page_sample_count": "5",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 6.6,
+     "page_value": 6.6,
+     "record_sample_count": 12,
+     "page_sample_count": "12",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 11.5,
+     "page_value": 11.5,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 7.5,
+     "page_value": 7.5,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.3,
+     "page_value": 3.3,
+     "record_sample_count": 7,
+     "page_sample_count": "7",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.1,
+     "page_value": 2.1,
+     "record_sample_count": 7,
+     "page_sample_count": "7",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 20.2,
+     "page_value": 20.2,
+     "record_sample_count": 4,
+     "page_sample_count": "4",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 0.1,
+     "page_value": 0.1,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.5,
+     "page_value": 1.5,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-11991",
+   "source_url": "https://www.feedipedia.org/node/11991",
+   "page_saved": true,
+   "page_sha256": "656631847947fc4161cdb1c12c3c6b839eb40b545d351c66017b13def496a65e",
+   "page_title": "Cocksfoot, aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 20.7,
+     "page_value": 20.7,
+     "record_sample_count": 21,
+     "page_sample_count": "21",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 16.3,
+     "page_value": 16.3,
+     "record_sample_count": 79,
+     "page_sample_count": "79",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 29.7,
+     "page_value": 29.7,
+     "record_sample_count": 61,
+     "page_sample_count": "61",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.5,
+     "page_value": 4.5,
+     "record_sample_count": 21,
+     "page_sample_count": "21",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.0,
+     "page_value": 4.0,
+     "record_sample_count": 18,
+     "page_sample_count": "18",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 9.7,
+     "page_value": 9.7,
+     "record_sample_count": 49,
+     "page_sample_count": "49",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 10.1,
+     "page_value": 10.1,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 5.1,
+     "page_value": 5.1,
+     "record_sample_count": 18,
+     "page_sample_count": "18",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.1,
+     "page_value": 4.1,
+     "record_sample_count": 31,
+     "page_sample_count": "31",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.8,
+     "page_value": 2.8,
+     "record_sample_count": 30,
+     "page_sample_count": "30",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 28.9,
+     "page_value": 28.9,
+     "record_sample_count": 27,
+     "page_sample_count": "27",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.4,
+     "page_value": 3.4,
+     "record_sample_count": 17,
+     "page_sample_count": "17",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.1,
+     "page_value": 2.1,
+     "record_sample_count": 29,
+     "page_sample_count": "29",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-11990",
+   "source_url": "https://www.feedipedia.org/node/11990",
+   "page_saved": true,
+   "page_sha256": "73ec86d3c57c3fa52cf37c0de0ee85c85da5daa764b9de20a32b2d8a424bf328",
+   "page_title": "Cocksfoot hay",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 89.1,
+     "page_value": 89.1,
+     "record_sample_count": 21,
+     "page_sample_count": "21",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 13.1,
+     "page_value": 13.1,
+     "record_sample_count": 54,
+     "page_sample_count": "54",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 30.2,
+     "page_value": 30.2,
+     "record_sample_count": 22,
+     "page_sample_count": "22",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 63.7,
+     "page_value": 63.7,
+     "record_sample_count": 52,
+     "page_sample_count": "52",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 36.5,
+     "page_value": 36.5,
+     "record_sample_count": 46,
+     "page_sample_count": "46",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.5,
+     "page_value": 4.5,
+     "record_sample_count": 30,
+     "page_sample_count": "30",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.3,
+     "page_value": 3.3,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 8.7,
+     "page_value": 8.7,
+     "record_sample_count": 61,
+     "page_sample_count": "61",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.9,
+     "page_value": 3.9,
+     "record_sample_count": 24,
+     "page_sample_count": "24",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.7,
+     "page_value": 2.7,
+     "record_sample_count": 24,
+     "page_sample_count": "24",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 38.6,
+     "page_value": 38.6,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 0.3,
+     "page_value": 0.3,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.7,
+     "page_value": 1.7,
+     "record_sample_count": 14,
+     "page_sample_count": "14",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-12518",
+   "source_url": "https://www.feedipedia.org/node/12518",
+   "page_saved": true,
+   "page_sha256": "9ed0937cbced74020b7c0f5266000abef03780f88ead463f2f8f227d49995fe7",
+   "page_title": "Rhodes grass (Chloris gayana), aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 24.9,
+     "page_value": 24.9,
+     "record_sample_count": 197,
+     "page_sample_count": "197",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 9.0,
+     "page_value": 9.0,
+     "record_sample_count": 262,
+     "page_sample_count": "262",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 36.9,
+     "page_value": 36.9,
+     "record_sample_count": 235,
+     "page_sample_count": "235",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 75.0,
+     "page_value": 75.0,
+     "record_sample_count": 28,
+     "page_sample_count": "28",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.2,
+     "page_value": 2.2,
+     "record_sample_count": 179,
+     "page_sample_count": "179",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 9.0,
+     "page_value": 9.0,
+     "record_sample_count": 256,
+     "page_sample_count": "256",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.8,
+     "page_value": 3.8,
+     "record_sample_count": 197,
+     "page_sample_count": "197",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.9,
+     "page_value": 2.9,
+     "record_sample_count": 201,
+     "page_sample_count": "201",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 18.7,
+     "page_value": 18.7,
+     "record_sample_count": 187,
+     "page_sample_count": "187",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.1,
+     "page_value": 3.1,
+     "record_sample_count": 16,
+     "page_sample_count": "16",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.9,
+     "page_value": 1.9,
+     "record_sample_count": 171,
+     "page_sample_count": "171",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-12519",
+   "source_url": "https://www.feedipedia.org/node/12519",
+   "page_saved": true,
+   "page_sha256": "d6a0f68c5fd7bfe6dd042239460200b524d5a5da29e69c155233c5fd07326c48",
+   "page_title": "Rhodes grass (Chloris gayana), hay",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 86.4,
+     "page_value": 86.4,
+     "record_sample_count": 141,
+     "page_sample_count": "141",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 10.1,
+     "page_value": 10.1,
+     "record_sample_count": 193,
+     "page_sample_count": "193",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 35.3,
+     "page_value": 35.3,
+     "record_sample_count": 131,
+     "page_sample_count": "131",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 75.7,
+     "page_value": 75.7,
+     "record_sample_count": 30,
+     "page_sample_count": "30",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.7,
+     "page_value": 1.7,
+     "record_sample_count": 31,
+     "page_sample_count": "31",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 9.7,
+     "page_value": 9.7,
+     "record_sample_count": 148,
+     "page_sample_count": "148",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.1,
+     "page_value": 3.1,
+     "record_sample_count": 66,
+     "page_sample_count": "66",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.6,
+     "page_value": 2.6,
+     "record_sample_count": 67,
+     "page_sample_count": "67",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 16.9,
+     "page_value": 16.9,
+     "record_sample_count": 54,
+     "page_sample_count": "54",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.1,
+     "page_value": 4.1,
+     "record_sample_count": 13,
+     "page_sample_count": "13",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.4,
+     "page_value": 1.4,
+     "record_sample_count": 54,
+     "page_sample_count": "54",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-12762",
+   "source_url": "https://www.feedipedia.org/node/12762",
+   "page_saved": true,
+   "page_sha256": "88e2bc40bc440daf2e229255537cc8ed83d82f034db897daeae855d4a275db23",
+   "page_title": "White clover (Trifolium repens), aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 16.8,
+     "page_value": 16.8,
+     "record_sample_count": 19,
+     "page_sample_count": "19",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 24.9,
+     "page_value": 24.9,
+     "record_sample_count": 51,
+     "page_sample_count": "51",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 19.6,
+     "page_value": 19.6,
+     "record_sample_count": 13,
+     "page_sample_count": "13",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 27.5,
+     "page_value": 27.5,
+     "record_sample_count": 37,
+     "page_sample_count": "37",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 22.1,
+     "page_value": 22.1,
+     "record_sample_count": 24,
+     "page_sample_count": "24",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.9,
+     "page_value": 3.9,
+     "record_sample_count": 23,
+     "page_sample_count": "23",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.7,
+     "page_value": 2.7,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 11.3,
+     "page_value": 11.3,
+     "record_sample_count": 29,
+     "page_sample_count": "29",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.2,
+     "page_value": 3.2,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 9.2,
+     "page_value": 9.2,
+     "record_sample_count": 13,
+     "page_sample_count": "13",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 10.1,
+     "page_value": 10.1,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.3,
+     "page_value": 3.3,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-12763",
+   "source_url": "https://www.feedipedia.org/node/12763",
+   "page_saved": true,
+   "page_sha256": "9fcb54207a9a654449aa9fab8d64460fb96f5fd51678e8f1208a2a15cd6928c9",
+   "page_title": "White clover (Trifolium repens), hay",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 82.7,
+     "page_value": 82.7,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 22.7,
+     "page_value": 22.7,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 23.4,
+     "page_value": 23.4,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 29.4,
+     "page_value": 29.4,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 28.8,
+     "page_value": 28.8,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.5,
+     "page_value": 3.5,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 12.3,
+     "page_value": 12.3,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-11903",
+   "source_url": "https://www.feedipedia.org/node/11903",
+   "page_saved": true,
+   "page_sha256": "654c941da604649c2f27d123f524c3b18fb9c4c4f2f6f06123d4272a86b45c22",
+   "page_title": "Bur clover (Medicago polymorpha), aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 24.3,
+     "page_value": 24.3,
+     "record_sample_count": 12,
+     "page_sample_count": "12",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 23.8,
+     "page_value": 23.8,
+     "record_sample_count": 21,
+     "page_sample_count": "21",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 17.7,
+     "page_value": 17.7,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 41.8,
+     "page_value": 41.8,
+     "record_sample_count": 20,
+     "page_sample_count": "20",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 27.7,
+     "page_value": 27.7,
+     "record_sample_count": 20,
+     "page_sample_count": "20",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 6.2,
+     "page_value": 6.2,
+     "record_sample_count": 17,
+     "page_sample_count": "17",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.6,
+     "page_value": 2.6,
+     "record_sample_count": 7,
+     "page_sample_count": "7",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 14.4,
+     "page_value": 14.4,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 16.2,
+     "page_value": 16.2,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.7,
+     "page_value": 4.7,
+     "record_sample_count": 1,
+     "page_sample_count": "1",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-11761",
+   "source_url": "https://www.feedipedia.org/node/11761",
+   "page_saved": true,
+   "page_sha256": "89d66abc562c3bdae25fada4b237ef14e9ef75dcbb70d1abd33325835933604b",
+   "page_title": "Alyce clover (Alysicarpus vaginalis), aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 29.7,
+     "page_value": 29.7,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 16.5,
+     "page_value": 16.5,
+     "record_sample_count": 12,
+     "page_sample_count": "12",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 30.6,
+     "page_value": 30.6,
+     "record_sample_count": 8,
+     "page_sample_count": "8",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 10.0,
+     "page_value": 10.0,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.5,
+     "page_value": 3.5,
+     "record_sample_count": 5,
+     "page_sample_count": "5",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 8.5,
+     "page_value": 8.5,
+     "record_sample_count": 8,
+     "page_sample_count": "8",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 14.1,
+     "page_value": 14.1,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.4,
+     "page_value": 2.4,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 11.2,
+     "page_value": 11.2,
+     "record_sample_count": 6,
+     "page_sample_count": "6",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 0.61,
+     "page_value": 0.61,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 4.2,
+     "page_value": 4.2,
+     "record_sample_count": 5,
+     "page_sample_count": "5",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-12645",
+   "source_url": "https://www.feedipedia.org/node/12645",
+   "page_saved": true,
+   "page_sha256": "b5d350e7860ca88edd8d93230d2f0767bfbc3a03eb573bbe4757c2d2a5459d38",
+   "page_title": "Subterranean clover (Trifolium subterraneum), aerial part, fresh",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "record_value": 15.1,
+     "page_value": 15.1,
+     "record_sample_count": 9,
+     "page_sample_count": "9",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 18.1,
+     "page_value": 18.1,
+     "record_sample_count": 26,
+     "page_sample_count": "26",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.3,
+     "page_value": 3.3,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "record_value": 11.2,
+     "page_value": 11.2,
+     "record_sample_count": 9,
+     "page_sample_count": "9",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 12.7,
+     "page_value": 12.7,
+     "record_sample_count": 9,
+     "page_sample_count": "9",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 3.0,
+     "page_value": 3.0,
+     "record_sample_count": 14,
+     "page_sample_count": "14",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  },
+  {
+   "record_id": "feedipedia-12646",
+   "source_url": "https://www.feedipedia.org/node/12646",
+   "page_saved": true,
+   "page_sha256": "34024221b6ade93dbb1e5c1493197ec54a4753dc9bd5e42b942f4211886b26c8",
+   "page_title": "Subterranean clover (Trifolium subterraneum), hay",
+   "title_matches_record": true,
+   "values": [
+    {
+     "nutrient_name": "calcium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 11.4,
+     "page_value": 11.4,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.3,
+     "page_value": 2.3,
+     "record_sample_count": 3,
+     "page_sample_count": "3",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 2.1,
+     "page_value": 2.1,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 23.0,
+     "page_value": 23.0,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "record_value": 1.25,
+     "page_value": 1.25,
+     "record_sample_count": 2,
+     "page_sample_count": "2",
+     "status": "matched"
+    }
+   ],
+   "record_status": "all_values_matched_saved_live_page"
+  }
+ ],
+ "totals": {
+  "records": 12,
+  "records_all_matched": 12,
+  "values": 122,
+  "values_matched": 122
+ }
+}

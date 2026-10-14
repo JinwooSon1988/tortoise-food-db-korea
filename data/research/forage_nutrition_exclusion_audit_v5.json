@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-10-14",
+  "scope": "unit5 Feedipedia values removed between baseline c7b5c940cbf89038cf34ab8faf6de54430511a30 and research/global-plant-evidence-unit5-20261014",
+  "policy": "Never assert missing Nb from an earlier transcription's sample count; source row must be separately verified.",
+  "excluded_values": [
+    {
+      "record_id": "feedipedia-12645",
+      "source_url": "https://www.feedipedia.org/node/12645",
+      "nutrient_name": "magnesium",
+      "nutrient_value": 1.7,
+      "nutrient_unit": "g/kg DM",
+      "previously_transcribed_sample_count": 6,
+      "source_row_sample_count": null,
+      "source_row_calculated_marker": null,
+      "exclusion_reason": "unresolved_requires_original_row_check",
+      "review_status": "pending_source_row_verification"
+    },
+    {
+      "record_id": "feedipedia-12645",
+      "source_url": "https://www.feedipedia.org/node/12645",
+      "nutrient_name": "sodium",
+      "nutrient_value": 2.2,
+      "nutrient_unit": "g/kg DM",
+      "previously_transcribed_sample_count": 33,
+      "source_row_sample_count": null,
+      "source_row_calculated_marker": null,
+      "exclusion_reason": "unresolved_requires_original_row_check",
+      "review_status": "pending_source_row_verification"
+    },
+    {
+      "record_id": "feedipedia-12646",
+      "source_url": "https://www.feedipedia.org/node/12646",
+      "nutrient_name": "dry matter",
+      "nutrient_value": 90.2,
+      "nutrient_unit": "% as fed",
+      "previously_transcribed_sample_count": 6,
+      "source_row_sample_count": null,
+      "source_row_calculated_marker": null,
+      "exclusion_reason": "unresolved_requires_original_row_check",
+      "review_status": "pending_source_row_verification"
+    },
+    {
+      "record_id": "feedipedia-12646",
+      "source_url": "https://www.feedipedia.org/node/12646",
+      "nutrient_name": "ether extract",
+      "nutrient_value": 2.2,
+      "nutrient_unit": "% DM",
+      "previously_transcribed_sample_count": 5,
+      "source_row_sample_count": null,
+      "source_row_calculated_marker": null,
+      "exclusion_reason": "unresolved_requires_original_row_check",
+      "review_status": "pending_source_row_verification"
+    }
+  ]
+}
