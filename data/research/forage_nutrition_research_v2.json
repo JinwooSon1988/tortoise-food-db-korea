@@ -1,0 +1,2879 @@
+{
+ "schema_version": "2.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v2.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v2.json",
+ "extends": "the v1 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "records": [
+  {
+   "record_id": "oftedal_2002_t6_01",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Camissonia claviformis",
+   "analyzed_taxon_accepted_name": "Chylismia claviformis",
+   "analyzed_taxon_name_check": "synonym_of_accepted_name",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 77.3,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 11.72,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.37,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_02",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Camissonia claviformis",
+   "analyzed_taxon_accepted_name": "Chylismia claviformis",
+   "analyzed_taxon_name_check": "synonym_of_accepted_name",
+   "analyzed_part": "young stems",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 79.9,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 8.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.73,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_03",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Plantago ovata",
+   "analyzed_taxon_accepted_name": "Plantago ovata",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 67.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 8.95,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 0.89,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_04",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Plantago ovata",
+   "analyzed_taxon_accepted_name": "Plantago ovata",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "immature fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 57.3,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 8.33,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 0.82,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_05",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Erodium cicutarium",
+   "analyzed_taxon_accepted_name": "Erodium cicutarium",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 68.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 14.35,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.51,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_06",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Erodium cicutarium",
+   "analyzed_taxon_accepted_name": "Erodium cicutarium",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "flowers and immature fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 69.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 13.46,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.61,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_07",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Malacothrix glabrata",
+   "analyzed_taxon_accepted_name": "Malacothrix glabrata",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 81.5,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 5.94,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.13,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_08",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Cryptantha angustifolia",
+   "analyzed_taxon_accepted_name": "Johnstonella angustifolia",
+   "analyzed_taxon_name_check": "synonym_of_accepted_name",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 75.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 11.49,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 3.74,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_09",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Cryptantha angustifolia",
+   "analyzed_taxon_accepted_name": "Johnstonella angustifolia",
+   "analyzed_taxon_name_check": "synonym_of_accepted_name",
+   "analyzed_part": "flowers and immature fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 75.6,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 14.05,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 3.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_10",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Schismus spp.",
+   "analyzed_taxon_accepted_name": "Schismus",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "immature fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 17.5,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 7.71,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 0.71,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_11",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Chaenactis fremontii",
+   "analyzed_taxon_accepted_name": "Chaenactis fremontii",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 81.9,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 4.18,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.51,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_12",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Loeseliastrum matthewsii",
+   "analyzed_taxon_accepted_name": "Loeseliastrum matthewsii",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 73.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 8.04,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 2.03,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_13",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Oenothera primiveris",
+   "analyzed_taxon_accepted_name": "Oenothera primiveris",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 82.9,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 6.17,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 2.22,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_14",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Phacelia crenulata",
+   "analyzed_taxon_accepted_name": "Phacelia crenulata",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 72.8,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 7.78,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "oftedal_2002_t6_15",
+   "source_name": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "source_id": "oftedal_2002",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "source_language": "en",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Table 6. The nutrient composition of plant parts eaten by tortoises",
+   "source_page": "347",
+   "analyzed_taxon": "Eriogonum inflatum",
+   "analyzed_taxon_accepted_name": "Eriogonum inflatum",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "laboratory analysis of plant parts collected at the study site; means as printed",
+   "values": [
+    {
+     "nutrient_name": "water",
+     "nutrient_value": 73.8,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 9.53,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 1.74,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "the Potassium Excretion Potential index (a calculated value) and the standard errors",
+   "use_limits": "Plant parts eaten by juvenile desert tortoises at one Mojave site in spring 1998. Not a digestibility or safety value, and not a value for other sites, seasons or tortoise species.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_01",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Achillea millefolium",
+   "analyzed_taxon_accepted_name": "Achillea millefolium",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 36.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 12.8,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 2.44,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 3.18,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.63,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_02",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Urtica dioica",
+   "analyzed_taxon_accepted_name": "Urtica dioica",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 26.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 7.37,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 4.0,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 3.07,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.37,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_03",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Plantago lanceolata",
+   "analyzed_taxon_accepted_name": "Plantago lanceolata",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 30.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 6.58,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 2.27,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.13,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.34,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_04",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Plantago maior",
+   "analyzed_taxon_accepted_name": null,
+   "analyzed_taxon_name_check": "spelling_differs_from_backbone_needs_review",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 22.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 2.76,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 3.34,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 3.04,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.4,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_05",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Trifolium pratense",
+   "analyzed_taxon_accepted_name": "Trifolium pratense",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 22.3,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 5.51,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 3.76,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.32,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_06",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Taraxacum officinale",
+   "analyzed_taxon_accepted_name": "Taraxacum officinale",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 16.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 2.11,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 2.78,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.59,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_07",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Prunus dulcis",
+   "analyzed_taxon_accepted_name": null,
+   "analyzed_taxon_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 12.8,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 1.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.37,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.1,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article. The article's scientific name for this item does not match its common name (plum); identity uncertain.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_08",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Malus sylvestris",
+   "analyzed_taxon_accepted_name": "Malus sylvestris",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 13.3,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 2.0,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.17,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 0.3,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_09",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Cucumis melo",
+   "analyzed_taxon_accepted_name": "Cucumis melo",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 10.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 0.7,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.41,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 0.9,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.1,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_10",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Musa paradisiaca",
+   "analyzed_taxon_accepted_name": "Musa paradisiaca",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 25.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 1.8,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.82,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.1,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_11",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Persica vulgaris",
+   "analyzed_taxon_accepted_name": "Prunus persica",
+   "analyzed_taxon_name_check": "synonym_of_accepted_name",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 11.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 1.9,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.43,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 0.7,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.1,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_12",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Citrullus lanatus",
+   "analyzed_taxon_accepted_name": "Citrullus lanatus",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 8.55,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.25,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_13",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Cucurbita pepo",
+   "analyzed_taxon_accepted_name": "Cucurbita pepo",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit, peeled",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 5.36,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 1.1,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.62,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.4,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_14",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Cucumis sativus",
+   "analyzed_taxon_accepted_name": "Cucumis sativus",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit, peeled",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 3.27,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 0.5,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.36,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_15",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Capsicum annuum",
+   "analyzed_taxon_accepted_name": "Capsicum annuum",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 7.79,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 3.6,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.47,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.3,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_16",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Daucus carota",
+   "analyzed_taxon_accepted_name": "Daucus carota",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "root, peeled",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 11.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 3.4,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.97,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.1,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_17",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Lycopersicon esculentum",
+   "analyzed_taxon_accepted_name": null,
+   "analyzed_taxon_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 5.5,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 1.0,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 0.5,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.0,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "dlugosz_2015_t2_18",
+   "source_name": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "source_id": "dlugosz_2015",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "source_language": "pl",
+   "source_kind": "study_table_transcribed_by_hand",
+   "table_title_as_printed": "Tabela 2. Zawartość składników pokarmowych w wybranych komponentach (%)",
+   "source_page": "4-5",
+   "analyzed_taxon": "Cichorium endivia",
+   "analyzed_taxon_accepted_name": "Cichorium endivia",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "analytical_method": "oven drying, muffle furnace ash, Kjeldahl protein, Soxhlet fat, crude fibre by leaching, as described in the article",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 8.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 1.3,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 1.3,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 1.3,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "%",
+     "measurement_basis": "not stated in the table",
+     "sample_count": null
+    }
+   ],
+   "basis_note": "The table heads every column '%' without naming the basis. Each row's components sum to less than its dry matter, which fits fresh-matter values, but the article does not say so.",
+   "sample_count_note": "the number of samples analysed is not stated",
+   "excluded_from_this_record": "nitrogen-free extract, which the article calculates by difference and does not tabulate",
+   "use_limits": "One Polish laboratory's analysis of the batches fed in the trial. Not a tortoise digestibility or safety value. The plant part analysed for vegetables is inferred from the common name and the peeling note in the article.",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "verification_status": "transcribed_by_hand_from_source_table",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11897",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11897",
+   "source_url": "https://www.feedipedia.org/node/11897",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Buffalo grass (Paspalum conjugatum), aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Paspalum conjugatum",
+   "analyzed_taxon_accepted_name": "Paspalum conjugatum",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 21.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 11.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 30.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 10.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 3.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 24.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 4.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11723",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11723",
+   "source_url": "https://www.feedipedia.org/node/11723",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Achyranthes (Achyranthes aspera), aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Achyranthes aspera",
+   "analyzed_taxon_accepted_name": "Achyranthes aspera",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 20.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 26.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 16.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 14.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 46.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 1.73,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 5.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11650",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11650",
+   "source_url": "https://www.feedipedia.org/node/11650",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Leucaena leucocephala, aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Leucaena leucocephala",
+   "analyzed_taxon_accepted_name": "Leucaena leucocephala",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 29.9,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 53
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 23.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 499
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 19.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 72
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 40.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 335
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 25.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 262
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 10.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 250
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 4.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 67
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 8.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 511
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 10.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 121
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 249
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 18.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 194
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 38
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 3.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 71
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12513",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12513",
+   "source_url": "https://www.feedipedia.org/node/12513",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Red oat grass (Themeda triandra), aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Themeda triandra",
+   "analyzed_taxon_accepted_name": "Themeda triandra",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 47.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 5.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 26
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 33.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 26
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 24
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 11.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 26
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 23
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 0.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 23
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 6.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 23
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 1.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 23
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12881",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12881",
+   "source_url": "https://www.feedipedia.org/node/12881",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Red oat grass (Themeda triandra), hay",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Themeda triandra",
+   "analyzed_taxon_accepted_name": "Themeda triandra",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 91.6,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 4.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 40.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 10.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11865",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11865",
+   "source_url": "https://www.feedipedia.org/node/11865",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Black medic (Medicago lupulina), aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Medicago lupulina",
+   "analyzed_taxon_accepted_name": "Medicago lupulina",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 20.9,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 165
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 4.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 66
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 16.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 72
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 15.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-15787",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "15787",
+   "source_url": "https://www.feedipedia.org/node/15787",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Mexican sunflower (Tithonia diversifolia), aerial part, fresh",
+   "table_note_on_page": "Includes the leaves and variable amounts of stems and petioles",
+   "source_page": null,
+   "analyzed_taxon": "Tithonia diversifolia",
+   "analyzed_taxon_accepted_name": "Tithonia diversifolia",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 19.8,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 21.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 24
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 20.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 44.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 35.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 9.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 12.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 21.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 39.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": "the evidence record is for flowers offered in a captive trial; this table is for leaves with stems and petioles",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-19894",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "19894",
+   "source_url": "https://www.feedipedia.org/node/19894",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Mexican sunflower (Tithonia diversifolia), aerial part, dried",
+   "table_note_on_page": "Includes the leaves and variable amounts of stems and petioles",
+   "source_page": null,
+   "analyzed_taxon": "Tithonia diversifolia",
+   "analyzed_taxon_accepted_name": "Tithonia diversifolia",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, dried",
+   "preparation_state": "dried",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 86.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 10
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 21.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 15
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 14.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 10
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 39.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 31.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 6.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 4.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 10
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 13.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 14
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 18.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 4.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": "the evidence record is for flowers offered in a captive trial; this table is for leaves with stems and petioles",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12063",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12063",
+   "source_url": "https://www.feedipedia.org/node/12063",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Hedge lucerne (Desmanthus virgatus), aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Desmanthus virgatus",
+   "analyzed_taxon_accepted_name": "Desmanthus virgatus",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 35.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 15.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 34.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 46.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 37.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 13.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 3.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 6.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 16.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 19.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 8.5,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-19702",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "19702",
+   "source_url": "https://www.feedipedia.org/node/19702",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Faba bean (Vicia faba), aerial part, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Vicia faba",
+   "analyzed_taxon_accepted_name": "Vicia faba",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 19.4,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 17.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 26.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-19703",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "19703",
+   "source_url": "https://www.feedipedia.org/node/19703",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Faba bean (Vicia faba), aerial part, straw",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Vicia faba",
+   "analyzed_taxon_accepted_name": "Vicia faba",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "aerial part, straw",
+   "preparation_state": "crop_residue",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 89.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 7.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 39.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 59.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 10
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 51.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 10.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 8.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 11.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 1.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 3.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-20402",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "20402",
+   "source_url": "https://www.feedipedia.org/node/20402",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "Guava (Psidium guajava), fruit, fresh",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Psidium guajava",
+   "analyzed_taxon_accepted_name": "Psidium guajava",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "fruit, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 18.6,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 6.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 15.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 49.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 44.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_value": 41.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "match_to_candidate": "same_species",
+   "reference_for_taxon": null,
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12640",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12640",
+   "source_url": "https://www.feedipedia.org/node/12640",
+   "source_language": "en",
+   "source_kind": "compiled_feed_table_parsed",
+   "table_title_as_printed": "St Augustine grass (Stenotaphrum secundatum), hay",
+   "table_note_on_page": null,
+   "source_page": null,
+   "analyzed_taxon": "Stenotaphrum secundatum",
+   "analyzed_taxon_accepted_name": "Stenotaphrum secundatum",
+   "analyzed_taxon_name_check": "accepted",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 6.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 32.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 3.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*) or prints without a sample count, and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses. Different species from the plant in the evidence record: kept as reference only and must not be shown as that plant's value.",
+   "match_to_candidate": "same_genus_different_species_reference_only",
+   "reference_for_taxon": "Stenotaphrum dimidiatum",
+   "part_note": null,
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  }
+ ]
+}
