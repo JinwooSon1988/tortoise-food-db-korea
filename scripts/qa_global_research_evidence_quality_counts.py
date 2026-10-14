@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Verify research evidence-quality bottleneck counts and editorial caveats."""
+"""Verify the dated evidence-quality audit baseline against research records.
+
+A future expansion that changes these counts intentionally fails until the
+editorial review and baseline are updated together; it does not block research
+collection itself, only this review gate.
+"""
 import json
 import re
 from collections import Counter
