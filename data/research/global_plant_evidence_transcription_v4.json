@@ -1,0 +1,3423 @@
+{
+ "schema_version": "4.0",
+ "created": "2026-10-14",
+ "extends": "the v1, v2 and v3 research files, which are not modified",
+ "purpose": "Unit 4 transcription: grazing and savanna tortoises, with the detection method recorded per record.",
+ "record_columns": [
+  "tortoise_key",
+  "plant_as_printed",
+  "plant_part",
+  "offered_form",
+  "wild_or_captive",
+  "consumption_signal",
+  "quantity_as_reported",
+  "locality",
+  "primary_reference_cited_by_source",
+  "page",
+  "evidence_type",
+  "note",
+  "detection_methods",
+  "name_queried (optional)"
+ ],
+ "evidence_type_codes": {
+  "1": "study or observation of this tortoise species",
+  "8": "institutional husbandry guideline or veterinary reference",
+  "9": "keeper organisation statement"
+ },
+ "detection_method_values": [
+  "direct_feeding_observation",
+  "incidental_observation",
+  "fecal_macroscopic",
+  "fecal_histological",
+  "not_detected_by_any_method",
+  "husbandry_recommendation",
+  "unreferenced_general_statement"
+ ],
+ "tortoise_groups": {
+  "giant_tortoises_named_as_examples": {
+   "label": "'Larger tortoises, such as Aldabra or Galapagos tortoises' (veterinary text; examples, not a species list)",
+   "label_ko": "대형 육지거북(수의 매뉴얼이 알다브라·갈라파고스를 예로 듦)",
+   "member_tortoise_keys": [],
+   "species_named_by_source": false
+  },
+  "tortoises_general_unspecified": {
+   "label": "Tortoises in general (veterinary text; no species named)",
+   "label_ko": "육지거북 일반(대상 종 미확인)",
+   "member_tortoise_keys": [],
+   "species_named_by_source": false
+  }
+ },
+ "sources": {
+  "kabigumila_2001": {
+   "citation": "Kabigumila, J. 2001. Sighting frequency and food habits of the leopard tortoise, Geochelone pardalis, in northern Tanzania. African Journal of Ecology 39(3):276-285.",
+   "url": "https://repository.udsm.ac.tz/items/17bdbbd6-251d-4354-9275-5f538749f652",
+   "doi": "10.1046/j.1365-2028.2001.00316.x",
+   "year": 2001,
+   "language": "en",
+   "study_country": "Tanzania",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "items being eaten were recorded when tortoises were seen feeding, October 1993 - June 1996; 124 feeding observations, 139 items, of which 136 were plant items",
+   "access": "full_text_read",
+   "what_was_read": "methods, results, Tables 2 and 3 (pp. 280-281, 283) from the university repository copy. The PDF text layer has no spaces: the table rows were rebuilt from text positions, and the break between genus and epithet was restored by matching each name to the GBIF backbone (three names by hand, noted on the record). The volume issue and DOI are from the repository record",
+   "records": [
+    [
+     "pardalis",
+     "Commelina africana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.3%; 3.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Commelinaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Commelina benghalensis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.1%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Commelinaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Commelina foskalaei",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.4%; 2.9% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Commelinaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Commelina latifolia",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "0.7% of the 136 plant items eaten; the table footnote says relative frequency was not recorded",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Commelinaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Commelina petersii",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "0.7% of the 136 plant items eaten; the table footnote says relative frequency was not recorded",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Commelinaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Cyperus rotundus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.7%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Cyperaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Chloris pycnothrix",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 8.2%; 2.2% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Dactyloctenium aegyptium",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 2.9% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Digitaria milanjiana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 2.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Eragrostis congesta",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.1%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Heteropogon contortus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 4.4%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Panicum atrosanguineum",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Panicum massaiense",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 2.8%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Panicum maximum",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 2.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Themeda triandra",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 12.2%; 2.2% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Tragus berteronianus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 2.0%; 2.2% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Urochloa brachyura",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.1%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Urochloa pullulans",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Poaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Justicia anselliana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 3.5%; 4.4% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Acanthaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Blepharis stuhlmanii",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Acanthaceae; spelling as printed, genus and epithet separated by hand",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Crossandra subcaulis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Acanthaceae; spelling as printed, genus and epithet separated by hand",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Dyschoriste radicans",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Acanthaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Alternanthera pungens",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.6%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Amaranthaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Achyranthes aspera",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.7%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Amaranthaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Opuntia vulgaris",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.1%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Cactaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Ipomoea mombassana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Convolvulaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Kalanchoe lanceolata",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.3%; 2.2% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Crassulaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Cucumis hirsutus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Cucurbitaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Cucurbita maxima",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "3.7% of the 136 plant items eaten; the table footnote says relative frequency was not recorded",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Cucurbitaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Euphorbia prostrata",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Euphorbiaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Euphorbia hirta",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 2.2% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Euphorbiaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Phyllanthus nummulariifolius",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Euphorbiaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Indigofera schimperi",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.1%; 8.8% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Fabaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Phaseolus vulgaris",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "0.7% of the 136 plant items eaten; the table footnote says relative frequency was not recorded",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Fabaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Tephrosia pumila",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.7%; 2.9% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Fabaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Sida ovata",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "280",
+     1,
+     "family Malvaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Glinus latoides",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.9%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Molluginaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Polygala erioptera",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.4%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Polygalaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Portulaca grandiflora",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.1%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Portulacaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Portulaca quadrifida",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 1.4%; 1.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Portulacaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Pentenisia ouranogyne",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Rubiaceae; spelling as printed, genus and epithet separated by hand",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Corchorus trilocularis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "0.7% of the 136 plant items eaten; the table footnote says relative frequency was not recorded",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Tiliaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Cissus quadrangularis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "0.7% of the 136 plant items eaten; the table footnote says relative frequency was not recorded",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Vitaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Cissus rotundifolia",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 6.2%; 23.5% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Vitaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Cyphostemma serpens",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Vitaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Tribulus terrestris",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 2.2%; 4.4% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Zygophyllaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "pardalis",
+     "Boerhavia diffusa",
+     "not stated",
+     "growing plant",
+     "wild",
+     "seen being eaten",
+     "relative frequency 0.2%; 0.7% of the 136 plant items eaten",
+     "Serengeti National Park and adjacent villages, northern Tanzania",
+     null,
+     "281",
+     1,
+     "family Nyctaginaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ]
+   ]
+  },
+  "joshua_2008": {
+   "citation": "Joshua, Q.I. 2008. Seasonal effects on the feeding ecology and habitat of Chersina angulata in the southwestern Cape. PhD thesis, University of the Western Cape.",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "year": 2008,
+   "language": "en",
+   "study_country": "South Africa",
+   "publisher_country": "South Africa",
+   "source_type": "university_thesis_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "focal observations of feeding tortoises, macroscopic and histological analysis of faeces, and incidental observations, at the West Coast National Park and on Dassen Island",
+   "access": "full_text_read",
+   "what_was_read": "title page and Table 6.5 (thesis pp. 144-146), taken from the PDF text layer by a script; 72 plant rows marked eaten and 39 marked not eaten were found, which equals the 72 diet plants stated in the abstract. The other chapters were not read",
+   "doi": null,
+   "records": [
+    [
+     "angulata",
+     "Carpobrotus edulis",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Carpobrotus quadrifidus",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Mesembryanthemum crystallinum",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Ruschia macowanii",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "fecal_macroscopic",
+      "fecal_histological",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Ruschia sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Tetragonia fruticosa",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "direct_feeding_observation",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Tetragonia sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Aizoaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Manochlamys albicans",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Amaranthaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Rhus laevigata",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Anacardiaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Rhus sp.",
+     "seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Anacardiaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Stoibrax capense",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Apiaceae",
+     [
+      "direct_feeding_observation",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Cynanchum africanum",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Apocynaceae",
+     [
+      "fecal_histological",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Zantedeschia aethiopica",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Araceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Asparagus lignosus",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asparagaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Trachyandra divaricata",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "144",
+     1,
+     "family Asphodelaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Trachyandra sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asphodelaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Chrysanthemoides monilifera",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Cotula sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Helichrysum niveum",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Lachnospermum imbricatum",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Oncosiphon suffruticosum",
+     "leaves, seeds, flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "direct_feeding_observation",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Pteronia uncinata",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Senecio burchellii",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Senecio elegans",
+     "leaves, flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Senecio maritimus",
+     "leaves, flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Senecio sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "direct_feeding_observation",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Trichogyne verticillata",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Asteraceae",
+     [
+      "fecal_macroscopic",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Amsinckia calycina",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Boraginaceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Gymnosporia buxifolia",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Celastraceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Cyperus sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "144",
+     1,
+     "family Cyperaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Ficinia nigrescens",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Cyperaceae",
+     [
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Isolepis antarctica",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "144",
+     1,
+     "family Cyperaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Aspalathus hispida",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Fabaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Psoralea repens",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Fabaceae",
+     [
+      "fecal_macroscopic",
+      "fecal_histological",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Trifolium burchellianum",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Fabaceae",
+     [
+      "fecal_histological",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Chironia baccifera",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Gentianaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Erodium moschatum",
+     "leaves, flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Geraniaceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Geranium incanum",
+     "leaves, seeds, flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Geraniaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Pelargonium myrrhifolium",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Geraniaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Pelargonium sp.",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Geraniaceae",
+     [
+      "direct_feeding_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Albuca flaccida",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "144",
+     1,
+     "family Hyacinthaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Albuca sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Hyacinthaceae",
+     [
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Septulina glauca",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Loranthaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Myoporum serratum",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Myoporaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_histological",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Oxalis pes-caprae",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Oxalidaceae",
+     [
+      "direct_feeding_observation",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Oxalis sp.",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Oxalidaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Afrolimon purpuratum",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Plumbaginaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Avena byzantina",
+     "seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Avena fatua",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Avena sp",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Bromus pectinatus",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Chaetobromus dregeanus",
+     "seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Cynodon dactylon",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Erharta villosa",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Lolium perenne",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Pennisetum setaceum",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Phalaris minor",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Poaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Nylandtia spinosa",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Polygalaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Anagalis arvensis",
+     "flowers",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Primulaceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Thamnochortus spicigerus",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Restionaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Cliffortia filifolia",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Rosaceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Osyris compressa",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Santalaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Thesidium sp.",
+     "stem",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Santalaceae",
+     [
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Hebenstretia repens",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Scrophulariaceae",
+     [
+      "fecal_histological",
+      "incidental_observation"
+     ]
+    ],
+    [
+     "angulata",
+     "Hemimeris racemosa",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Scrophulariaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Hermannia pinnata",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Sterculiaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Hermannia scabra",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Sterculiaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Passerina corymbosa",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Thymelaeaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Passerina ericoides",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Thymelaeaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Urtica urens",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Urticaceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Zygophyllum morgsana",
+     "leaves",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Zygophyllaceae",
+     [
+      "fecal_histological"
+     ]
+    ],
+    [
+     "angulata",
+     "Conicosa pugioniformis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Aizoaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Dorotheanthus sp.",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "145",
+     1,
+     "family Aizoaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Atriplex semibaccata",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Amaranthaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Chenopodium album",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Amaranthaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Haemanthus coccineus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Amaryllidaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Rhus glauca",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Anacardiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Rhus lucida",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Anacardiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Chlorophytum undulatum",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Anthericaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Torilis arvensis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Apiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Asparagus rubicundus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Asparagaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Berkheya armata",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Asteraceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Felicia hyssopifolia",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Asteraceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Sonchus oleraceus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "145",
+     1,
+     "family Asteraceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Stoebe sp.",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Asteraceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Diospyros austro-africana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Ebenaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Euphorbia burmanii",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Euphorbiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Euphorbia mauritanica",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Euphorbiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Euphorbia peplus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Euphorbiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Aspalathus sp.",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Fabaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Ornithogalum thyrsoides",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Hyacinthaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Spiloxene capensis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Hypoxidaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Babiana ringens",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Iridaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Homeria flaccida",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "146",
+     1,
+     "family Iridaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Ballota africana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Lamiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Salvia africana-lutea",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Lamiaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Malva parviflora",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Malvaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Cissampelos capensis",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Menispermaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Pharnaceum exiguum",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Molluginaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Oxalis obtusa",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Oxalidaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Avena barbata",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "Dassen Island, South Africa",
+     null,
+     "146",
+     1,
+     "family Poaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Bromus diandrus",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Poaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Phylica ericoides",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Rhamnaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Phylica thunbergiana",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Rhamnaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Agathosma sp.",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Rutaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Osyris sp.",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Santalaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Lycium sp.",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Solanaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Lycium tetrandrum",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Solanaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Lyperia lychnidea",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Solanaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Zygophyllum flexuosum",
+     "not stated",
+     "growing plant",
+     "wild",
+     "listed as a plant not eaten",
+     null,
+     "West Coast National Park, South Africa",
+     null,
+     "146",
+     1,
+     "family Zygophyllaceae; present at the site and not found in the diet by any of the four methods; not a statement that the plant is refused or harmful",
+     [
+      "not_detected_by_any_method"
+     ]
+    ],
+    [
+     "angulata",
+     "Cystocapnos vesicaria",
+     "leaves, seeds",
+     "growing plant",
+     "wild",
+     "eaten",
+     null,
+     "Dassen Island and West Coast National Park, South Africa",
+     null,
+     "144",
+     1,
+     "family Fumariceae",
+     [
+      "direct_feeding_observation",
+      "fecal_macroscopic",
+      "fecal_histological"
+     ]
+    ]
+   ]
+  },
+  "bcg_sulcata_care_sheet": {
+   "citation": "British Chelonia Group. Care sheet: Sulcata or African Giant Spurred Tortoise or Sahel Tortoise (Centrochelys [formerly Geochelone] sulcata).",
+   "url": "https://www.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (keeper organisation care sheet, United Kingdom)",
+   "publisher_country": "United Kingdom",
+   "source_type": "keeper_organisation_web_page",
+   "evidence_class": "keeper_organisation_statement",
+   "method": "care sheet; no references given",
+   "access": "full_text_read",
+   "what_was_read": "the FEEDING section of the web page; the page gives no publication year",
+   "doi": null,
+   "records": [
+    [
+     "sulcata",
+     "Meadow hay",
+     "not stated",
+     "hay",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "dandelions",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "plantains",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "clover",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "sow thistle",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "watercress",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "wild mallow",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "chickweed",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed as a food that can be tried",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "common name only; the sheet asks for roughage (hay and grass) and says the species needs up to 75% fibre",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "sulcata",
+     "grass",
+     "not stated",
+     "growing plant",
+     "wild",
+     "said to be eaten in the native range",
+     null,
+     "native range, no locality given",
+     null,
+     "web page, FEEDING: Native",
+     9,
+     "plant group only; an unreferenced general statement, not an observation record",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "various succulents",
+     "not stated",
+     "growing plant",
+     "wild",
+     "said to be eaten in the native range",
+     null,
+     "native range, no locality given",
+     null,
+     "web page, FEEDING: Native",
+     9,
+     "plant group only; an unreferenced general statement, not an observation record",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "crassulas",
+     "not stated",
+     "growing plant",
+     "wild",
+     "said to be eaten in the native range",
+     null,
+     "native range, no locality given",
+     null,
+     "web page, FEEDING: Native",
+     9,
+     "plant group only; an unreferenced general statement, not an observation record",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "thistles",
+     "not stated",
+     "growing plant",
+     "wild",
+     "said to be eaten in the native range",
+     null,
+     "native range, no locality given",
+     null,
+     "web page, FEEDING: Native",
+     9,
+     "plant group only; an unreferenced general statement, not an observation record",
+     [
+      "unreferenced_general_statement"
+     ]
+    ],
+    [
+     "sulcata",
+     "fruits",
+     "fruit",
+     "fresh",
+     "captive",
+     "allowed only as an occasional treat",
+     null,
+     "keeper advice (United Kingdom)",
+     null,
+     "web page, FEEDING: Captive",
+     9,
+     "food group only",
+     [
+      "husbandry_recommendation"
+     ]
+    ]
+   ]
+  },
+  "merck_vet_manual_tortoise_nutrition": {
+   "citation": "Nijboer, J., Fens, A. Nutrition in Tortoises. Merck Veterinary Manual, professional version (full review September 2025; peer reviewed by J. Brandão).",
+   "url": "https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises",
+   "year": 2025,
+   "language": "en",
+   "study_country": "not applicable (veterinary reference text)",
+   "publisher_country": "USA",
+   "source_type": "veterinary_reference_text",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "veterinary reference chapter; the web text gives no reference per statement",
+   "access": "full_text_read",
+   "what_was_read": "whole web chapter",
+   "doi": null,
+   "records": [
+    [
+     "giant_tortoises_named_as_examples",
+     "grass hay",
+     "not stated",
+     "hay",
+     "captive",
+     "said to be consumable, with a complete pelleted food",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; stated for 'larger tortoises, such as Aldabra or Galapagos tortoises'; the chapter says hay should be cut short",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "giant_tortoises_named_as_examples",
+     "alfalfa hay",
+     "not stated",
+     "hay",
+     "captive",
+     "said to be consumable, with a complete pelleted food",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; stated for 'larger tortoises, such as Aldabra or Galapagos tortoises'; the chapter says hay should be cut short",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "broccoli",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "green beans",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "romaine",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "green leaf lettuce",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "endive",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "kale",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "shredded carrots",
+     "not stated",
+     "fresh",
+     "captive",
+     "listed in a vegetable mix that may supplement a formulated diet",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "common name only; the chapter names no tortoise species for this mix",
+     [
+      "husbandry_recommendation"
+     ]
+    ],
+    [
+     "tortoises_general_unspecified",
+     "cultivated fruits",
+     "fruit",
+     "fresh",
+     "captive",
+     "described as poorer sources of protein, calcium and micronutrients",
+     null,
+     "captive care",
+     null,
+     "web chapter",
+     8,
+     "food group only; the chapter does not forbid fruit, it says vitamins and minerals should be added if fruit is fed in substantial amounts",
+     [
+      "husbandry_recommendation"
+     ]
+    ]
+   ]
+  }
+ },
+ "hazard_statements": [
+  {
+   "plant_as_printed": "Alternanthera sp.",
+   "applies_to_records_named": [
+    "Alternanthera pungens"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cyanin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Cissus spp.",
+   "applies_to_records_named": [
+    "Cissus quadrangularis",
+    "Cissus rotundifolia"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: oxalic acid",
+   "hazard_kind": "oxalate_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Commelina spp.",
+   "applies_to_records_named": [
+    "Commelina africana",
+    "Commelina benghalensis",
+    "Commelina foskalaei",
+    "Commelina latifolia",
+    "Commelina petersii"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cyanin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Cucumis hirsutus",
+   "applies_to_records_named": [
+    "Cucumis hirsutus"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cucurbitacin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Euphorbia spp.",
+   "applies_to_records_named": [
+    "Euphorbia prostrata",
+    "Euphorbia hirta"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cyanin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Kalanchoe sp.",
+   "applies_to_records_named": [
+    "Kalanchoe lanceolata"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: cotyledontoxin",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Opuntia vulgaris",
+   "applies_to_records_named": [
+    "Opuntia vulgaris"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: oxalic acid",
+   "hazard_kind": "oxalate_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Portulaca quadrifida",
+   "applies_to_records_named": [
+    "Portulaca quadrifida"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: potassium oxalate",
+   "hazard_kind": "oxalate_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  },
+  {
+   "plant_as_printed": "Tribulus terrestris",
+   "applies_to_records_named": [
+    "Tribulus terrestris"
+   ],
+   "tortoise_key": "pardalis",
+   "source_id": "kabigumila_2001",
+   "location": "Table 3, p. 283",
+   "statement": "listed among plant species eaten by leopard tortoises that are suspected to contain toxic substances; active secondary compound: sapogenin; hepatoxin (as printed). The text adds that it is said to be poisonous to sheep and to cause bloat in cattle and goats, and that it is a critical food item for leopard tortoises",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "compound_attribution": "the table cites Watt & Breyer-Brandwijk (1962) and Pratt & Gwynne (1977), which were not read"
+  }
+ ],
+ "method_by_source_for_units_1_to_3": {
+  "mason_1999": "direct_observation_and_fecal_analysis_not_separated",
+  "jennings_2002": "direct_feeding_observation",
+  "wang_2011": "fecal_detection",
+  "lagarde_2003": "secondary_reproduction_not_verified",
+  "lagarde_2003_primary": "direct_feeding_observation",
+  "moll_klemens_1996": "direct_feeding_observation",
+  "bayley_highfield_1996": "author_list_wild_and_captive_observation_not_separated",
+  "lambert_1993": "direct_feeding_observation",
+  "platt_2001_shwe_settaw": "resident_or_hunter_report",
+  "oftedal_2002": "direct_feeding_observation",
+  "pillajo_2020": "fecal_detection",
+  "moorhouse_gann_2022": "fecal_dna_or_morphology_and_observation_see_quantity",
+  "ellis_soto_2017": "fecal_detection",
+  "figueroa_2024": "fecal_detection",
+  "delaossa_2009": "captive_feeding_record",
+  "dlugosz_2015": "captive_feeding_record",
+  "sriprateep_2013": "direct_feeding_observation",
+  "pna_hermann_2018": "review_statement_method_not_given",
+  "ghilardi_alho_1990": "direct_feeding_observation",
+  "meek_2010": "direct_feeding_observation",
+  "than_aye_platynota_seed_dispersal": "fecal_detection",
+  "loveridge_williams_1957": "direct_feeding_observation",
+  "eaza_kleinmanni_2019": "husbandry_recommendation",
+  "asdm_tortoise_adoption_diet": "husbandry_recommendation",
+  "tortoise_trust_plant_list": "keeper_organisation_statement_method_not_given"
+ },
+ "duplicate_datasets": [
+  {
+   "source": "Jennings, W.B., Berry, K.H. 2015. Desert tortoises (Gopherus agassizii) are selective herbivores that track the flowering phenology of their preferred food plants. PLoS ONE 10(1):e0116716.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+   "same_dataset_as_source_id": "jennings_2002",
+   "evidence": "Both report spring 1992 observations at the Desert Tortoise Research Natural Area with the same total of 35,388 bites.",
+   "decision": "No record added: a second publication of the same observations is not independent evidence. Its fuller food tables were not transcribed in this unit.",
+   "note": "The citation's volume and article number were not confirmed from the article page."
+  }
+ ],
+ "sources_on_hold": [
+  {
+   "id": "loehr_2002_homopus_diet",
+   "url": "https://www.nisc.co.za/products/abstracts/36041/diet-of-the-namaqualand-speckled-padloper-homopus-signatus-signatus-in-early-spring",
+   "reason": "Abstract seen only in a search summary; full text not open."
+  },
+  {
+   "id": "rall_fairall_1993",
+   "url": null,
+   "reason": "South African Journal of Wildlife Research 23:63-70 (leopard and Kalahari tent tortoise diets); no open copy found. Kabigumila 2001 cites it for Tribulus terrestris."
+  },
+  {
+   "id": "joshua_hofmeyr_henen_2010",
+   "url": null,
+   "reason": "Journal article from the thesis read here; not open. It would be the same data set as the thesis."
+  },
+  {
+   "id": "schleicher_loehr_2006_nama_padloper",
+   "url": "https://the-eis.com/elibrary/sites/default/files/downloads/literature/Husbandry_behaviour%20and%20captive%20breeding%20of%20the%20Nama%20padloper%20from%20southwestern%20Namibia.pdf",
+   "reason": "Downloaded; the captive diet paragraph was seen but not transcribed."
+  },
+  {
+   "id": "loehr_1999_homopus_husbandry",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_3_Nos_1-4(1998-2000)/Loehr_1999a.pdf",
+   "reason": "Downloaded; scanned text is poor and the diet passage was not transcribed."
+  },
+  {
+   "id": "franz_2011_methane",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3052317/",
+   "reason": "Read in part: tortoises of several species were fed grass hay and salad; no plant species are named, so no record was made."
+  },
+  {
+   "id": "highfield_south_african_tortoises",
+   "url": "https://www.tortoisetrust.org/articles/safrica.html",
+   "reason": "Keeper organisation summary; read in part; it names no food plant species."
+  }
+ ],
+ "gaps_not_filled": [
+  "no field study of the wild diet of Centrochelys sulcata was found; the sulcata records added are a keeper organisation's care sheet",
+  "no community forum material was transcribed: the sulcata pages returned by search were retail or copied content without authorship",
+  "no hay or grass nutrient analysis was added in this unit",
+  "no seed mixture added"
+ ]
+}
