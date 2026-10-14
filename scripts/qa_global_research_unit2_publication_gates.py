@@ -38,6 +38,8 @@ if len(unread) != 6:
 for r in unread:
     if r.get("verification_status") != "secondary_source_checked_primary_unread":
         errors.append(f"Unread primary mislabeled as verified: {r['evidence_id']}")
+    if r.get("evidence_type") != "secondary_citation_of_species_diet":
+        errors.append(f"Unread primary mislabeled as direct evidence type: {r['evidence_id']}")
     if r.get("plant_accepted_name") is not None and r.get("plant_name_check") == "spelling_differs_from_backbone_needs_review":
         errors.append(f"Unresolved secondary name prematurely accepted: {r['evidence_id']}")
 moll_secondary = next((r for r in records if r["evidence_id"] == "moll_klemens_1996-07"), None)
