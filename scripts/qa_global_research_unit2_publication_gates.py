@@ -75,6 +75,22 @@ for r in review_summaries:
         errors.append(f"Conservation-plan summary mislabeled as direct study: {r['evidence_id']}")
     if r.get("verification_status") != "verified_review_document":
         errors.append(f"Conservation-plan source type mislabeled: {r['evidence_id']}")
+# Explicitly protect the complete provenance taxonomy, not just special cases.
+allowed_provenance_types = {
+    "primary_study_read": {
+        "direct_study_of_this_tortoise_species",
+        "specialist_husbandry_practice",
+        "food_given_by_local_people_observed",
+    },
+    "reported_in_source_primary_not_read": {"secondary_citation_of_species_diet"},
+    "local_report_recorded_in_primary_study_read": {"local_knowledge_report"},
+    "statement_of_the_source_read": {"conservation_plan_secondary_summary"},
+}
+for r in records:
+    directness = r.get("evidence_directness")
+    evidence_type = r.get("evidence_type")
+    if evidence_type not in allowed_provenance_types.get(directness, set()):
+        errors.append(f"Contradictory provenance/evidence type: {r['evidence_id']} ({directness} / {evidence_type})")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
