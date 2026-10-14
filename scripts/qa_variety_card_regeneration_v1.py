@@ -31,8 +31,14 @@ def nutrition_section(html):
 # ---------------------------------------------------------------- 2) content contracts (fast, run first)
 img = next(i for i in load("data/verified_plant_images_v56.json")["images"] if i["plant_id"] == "timothy")
 t = page("timothy")
-for needle in (img["image_url"], img["source_url"], img["creator"], img["license"]):
-    if needle not in t: errors.append(f"timothy: verified photo field missing from page: {needle}")
+if img.get("part_match") == "match":
+    for needle in (img["image_url"], img["source_url"], img["creator"], img["license"]):
+        if needle not in t: errors.append(f"timothy: verified photo field missing from page: {needle}")
+else:
+    # Identity-verified but feeding-part-inexact images must not be displayed.
+    # Keep provenance in the registry for future replacement.
+    for needle in (img["image_url"], img["source_url"]):
+        if needle in t: errors.append(f"timothy: non-part-matched photo must not appear in public page")
 
 for pid, path, labels in (("lettuce", "data/plant_nutrition_variety_v1.json", None),):
     data = load(path)
