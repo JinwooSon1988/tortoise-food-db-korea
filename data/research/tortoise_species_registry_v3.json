@@ -1,0 +1,50 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "name_authority": "GBIF backbone taxonomy, species/match API",
+ "species_added": [
+  {
+   "tortoise_key": "kleinmanni",
+   "scientific_name": "Testudo kleinmanni",
+   "common_name_ko": "이집트육지거북",
+   "common_name_en": "Egyptian tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441511,
+   "gbif_accepted_name": "Testudo kleinmanni",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  }
+ ],
+ "groups_not_species_specific": [
+  {
+   "tortoise_key": "carbonarius_denticulatus_combined",
+   "label": "Chelonoidis carbonarius and Chelonoidis denticulatus, not separated by the source",
+   "label_ko": "붉은발·노란발육지거북(출처가 두 종을 구분하지 않음)",
+   "member_tortoise_keys": [
+    "carbonarius",
+    "denticulatus"
+   ],
+   "species_named_by_source": true
+  },
+  {
+   "tortoise_key": "gopherus_desert_tortoise_unspecified",
+   "label": "'Desert Tortoise' kept in Arizona; the source does not name the species",
+   "label_ko": "사막거북(대상 종 미확인, 애리조나 사육 개체)",
+   "member_tortoise_keys": [],
+   "species_named_by_source": false
+  },
+  {
+   "tortoise_key": "testudo_mediterranean_unspecified",
+   "label": "'Herbivorous tortoises' observed mainly in Greece and Turkey; species not named per plant",
+   "label_ko": "지중해권 초식 육지거북(식물별 대상 종 미확인)",
+   "member_tortoise_keys": [],
+   "species_named_by_source": false
+  }
+ ]
+}
