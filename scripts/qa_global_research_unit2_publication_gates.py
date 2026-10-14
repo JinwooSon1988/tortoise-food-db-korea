@@ -159,6 +159,17 @@ for source, expected_count in seed_study_sources.items():
     for r in group:
         if r.get("evidence_type") != "primary_fecal_seed_identification":
             errors.append(f"Fecal seed study conflated with direct feeding observation: {r['evidence_id']}")
+# In the mixed-method Round Island study, only taxa with a reported
+# feeding-observation count may be described as directly seen eaten.
+round_island = [r for r in records if r.get("source_id") == "moorhouse_gann_2022"]
+if len(round_island) != 53:
+    errors.append(f"Unexpected Round Island evidence count: {len(round_island)}")
+dung_only = [r for r in round_island if "feeding observation" not in r.get("quantity_as_reported", "")]
+if len(dung_only) != 29:
+    errors.append(f"Unexpected Round Island dung-only count: {len(dung_only)}")
+for r in dung_only:
+    if r.get("observed_consumption") != "detected in dung; no taxon-specific feeding observation reported in this record":
+        errors.append(f"Dung-only taxon mislabeled as observed feeding: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
