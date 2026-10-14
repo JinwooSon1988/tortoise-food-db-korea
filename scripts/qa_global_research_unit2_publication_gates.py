@@ -82,6 +82,7 @@ allowed_provenance_types = {
         "primary_fecal_seed_identification",
         "primary_fecal_taxon_detection_without_observed_feeding",
         "primary_fecal_plant_fragment_identification",
+        "field_study_compiled_palatable_plant_list",
         "specialist_husbandry_practice",
         "food_given_by_local_people_observed",
     },
@@ -196,6 +197,14 @@ for n in range(1, 7):
     expected = "primary_fecal_plant_fragment_identification" if n <= 4 else "direct_study_of_this_tortoise_species"
     if item is None or item.get("evidence_type") != expected:
         errors.append(f"Incorrect Moll-Klemens evidence modality: {evidence_id}")
+# Bayley-Highfield's Table 1 compiles mixed observation/report sources;
+# no row may be promoted to an individually witnessed feeding event.
+morocco_list = [r for r in records if r.get("source_id") == "bayley_highfield_1996"]
+if len(morocco_list) != 24:
+    errors.append(f"Unexpected Moroccan compiled plant-list count: {len(morocco_list)}")
+for r in morocco_list:
+    if r.get("evidence_type") != "field_study_compiled_palatable_plant_list":
+        errors.append(f"Compiled palatability list mislabeled as direct feeding: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
