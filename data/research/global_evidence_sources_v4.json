@@ -1,0 +1,125 @@
+{
+ "schema_version": "4.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v4.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v4.json",
+ "extends": "the v1, v2 and v3 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "sources": [
+  {
+   "source_id": "kabigumila_2001",
+   "citation": "Kabigumila, J. 2001. Sighting frequency and food habits of the leopard tortoise, Geochelone pardalis, in northern Tanzania. African Journal of Ecology 39(3):276-285.",
+   "url": "https://repository.udsm.ac.tz/items/17bdbbd6-251d-4354-9275-5f538749f652",
+   "doi": "10.1046/j.1365-2028.2001.00316.x",
+   "year": 2001,
+   "language": "en",
+   "study_country": "Tanzania",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "items being eaten were recorded when tortoises were seen feeding, October 1993 - June 1996; 124 feeding observations, 139 items, of which 136 were plant items",
+   "access": "full_text_read",
+   "what_was_read": "methods, results, Tables 2 and 3 (pp. 280-281, 283) from the university repository copy. The PDF text layer has no spaces: the table rows were rebuilt from text positions, and the break between genus and epithet was restored by matching each name to the GBIF backbone (three names by hand, noted on the record). The volume issue and DOI are from the repository record",
+   "plant_record_count": 47,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "joshua_2008",
+   "citation": "Joshua, Q.I. 2008. Seasonal effects on the feeding ecology and habitat of Chersina angulata in the southwestern Cape. PhD thesis, University of the Western Cape.",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "doi": null,
+   "year": 2008,
+   "language": "en",
+   "study_country": "South Africa",
+   "publisher_country": "South Africa",
+   "source_type": "university_thesis_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "focal observations of feeding tortoises, macroscopic and histological analysis of faeces, and incidental observations, at the West Coast National Park and on Dassen Island",
+   "access": "full_text_read",
+   "what_was_read": "title page and Table 6.5 (thesis pp. 144-146), taken from the PDF text layer by a script; 72 plant rows marked eaten and 39 marked not eaten were found, which equals the 72 diet plants stated in the abstract. The other chapters were not read",
+   "plant_record_count": 111,
+   "verification_status": "verified_primary_source_thesis"
+  },
+  {
+   "source_id": "bcg_sulcata_care_sheet",
+   "citation": "British Chelonia Group. Care sheet: Sulcata or African Giant Spurred Tortoise or Sahel Tortoise (Centrochelys [formerly Geochelone] sulcata).",
+   "url": "https://www.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "doi": null,
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (keeper organisation care sheet, United Kingdom)",
+   "publisher_country": "United Kingdom",
+   "source_type": "keeper_organisation_web_page",
+   "evidence_class": "keeper_organisation_statement",
+   "method": "care sheet; no references given",
+   "access": "full_text_read",
+   "what_was_read": "the FEEDING section of the web page; the page gives no publication year",
+   "plant_record_count": 13,
+   "verification_status": "verified_keeper_organisation_page"
+  },
+  {
+   "source_id": "merck_vet_manual_tortoise_nutrition",
+   "citation": "Nijboer, J., Fens, A. Nutrition in Tortoises. Merck Veterinary Manual, professional version (full review September 2025; peer reviewed by J. Brandão).",
+   "url": "https://www.merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises",
+   "doi": null,
+   "year": 2025,
+   "language": "en",
+   "study_country": "not applicable (veterinary reference text)",
+   "publisher_country": "USA",
+   "source_type": "veterinary_reference_text",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "veterinary reference chapter; the web text gives no reference per statement",
+   "access": "full_text_read",
+   "what_was_read": "whole web chapter",
+   "plant_record_count": 10,
+   "verification_status": "verified_veterinary_reference"
+  }
+ ],
+ "duplicate_datasets": [
+  {
+   "source": "Jennings, W.B., Berry, K.H. 2015. Desert tortoises (Gopherus agassizii) are selective herbivores that track the flowering phenology of their preferred food plants. PLoS ONE 10(1):e0116716.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+   "same_dataset_as_source_id": "jennings_2002",
+   "evidence": "Both report spring 1992 observations at the Desert Tortoise Research Natural Area with the same total of 35,388 bites.",
+   "decision": "No record added: a second publication of the same observations is not independent evidence. Its fuller food tables were not transcribed in this unit.",
+   "note": "The citation's volume and article number were not confirmed from the article page."
+  }
+ ],
+ "on_hold": [
+  {
+   "id": "loehr_2002_homopus_diet",
+   "url": "https://www.nisc.co.za/products/abstracts/36041/diet-of-the-namaqualand-speckled-padloper-homopus-signatus-signatus-in-early-spring",
+   "reason": "Abstract seen only in a search summary; full text not open."
+  },
+  {
+   "id": "rall_fairall_1993",
+   "url": null,
+   "reason": "South African Journal of Wildlife Research 23:63-70 (leopard and Kalahari tent tortoise diets); no open copy found. Kabigumila 2001 cites it for Tribulus terrestris."
+  },
+  {
+   "id": "joshua_hofmeyr_henen_2010",
+   "url": null,
+   "reason": "Journal article from the thesis read here; not open. It would be the same data set as the thesis."
+  },
+  {
+   "id": "schleicher_loehr_2006_nama_padloper",
+   "url": "https://the-eis.com/elibrary/sites/default/files/downloads/literature/Husbandry_behaviour%20and%20captive%20breeding%20of%20the%20Nama%20padloper%20from%20southwestern%20Namibia.pdf",
+   "reason": "Downloaded; the captive diet paragraph was seen but not transcribed."
+  },
+  {
+   "id": "loehr_1999_homopus_husbandry",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_3_Nos_1-4(1998-2000)/Loehr_1999a.pdf",
+   "reason": "Downloaded; scanned text is poor and the diet passage was not transcribed."
+  },
+  {
+   "id": "franz_2011_methane",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3052317/",
+   "reason": "Read in part: tortoises of several species were fed grass hay and salad; no plant species are named, so no record was made."
+  },
+  {
+   "id": "highfield_south_african_tortoises",
+   "url": "https://www.tortoisetrust.org/articles/safrica.html",
+   "reason": "Keeper organisation summary; read in part; it names no food plant species."
+  }
+ ]
+}

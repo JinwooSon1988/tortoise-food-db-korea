@@ -1,0 +1,157 @@
+{
+ "schema_version": "2.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v2.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v2.json",
+ "extends": "the v1 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "summary": {
+  "unit_1": {
+   "sources_with_plant_records": 16,
+   "evidence": {
+    "records": 169,
+    "by_tortoise": {
+     "Centrochelys sulcata": 11,
+     "Chelonoidis carbonarius": 1,
+     "Geochelone elegans": 6,
+     "Geochelone platynota": 10,
+     "Gopherus agassizii": 24,
+     "Indotestudo elongata": 14,
+     "Indotestudo travancorica": 9,
+     "Kinixys spekii": 11,
+     "Malacochersus tornieri": 6,
+     "Manouria emys": 2,
+     "Stigmochelys pardalis": 28,
+     "Testudo graeca": 12,
+     "Testudo hermanni": 13,
+     "Testudo horsfieldii": 4,
+     "Testudo marginata": 18
+    },
+    "by_directness": {
+     "primary_study_read": 46,
+     "reported_in_account_primary_not_read": 102,
+     "statement_of_the_source_read": 21
+    },
+    "by_wild_or_captive": {
+     "captive": 6,
+     "wild": 163
+    },
+    "negative_records": 7
+   },
+   "candidates": {
+    "plant_names": 199,
+    "new_candidates_not_in_database": 129,
+    "new_candidates_species_level": 95,
+    "new_candidates_genus_level": 34,
+    "species_already_in_database": 17,
+    "genus_level_record_in_database": 25,
+    "unresolved_not_a_candidate": 28
+   },
+   "tortoise_taxa_with_evidence": 15,
+   "seed_mixtures": 6,
+   "nutrition_records": 11,
+   "nutrition_values": 113
+  },
+  "unit_2_added": {
+   "sources_with_plant_records": 14,
+   "sources_by_language": {
+    "en": 10,
+    "es": 2,
+    "fr": 1,
+    "pl": 1
+   },
+   "sources_by_study_country": {
+    "Colombia": 1,
+    "Ecuador": 2,
+    "France": 1,
+    "Mali": 1,
+    "Mauritius": 1,
+    "Morocco": 1,
+    "Myanmar": 1,
+    "Poland": 1,
+    "Tanzania": 1,
+    "Thailand": 1,
+    "USA": 2,
+    "Uzbekistan": 1
+   },
+   "evidence": {
+    "records": 357,
+    "by_tortoise": {
+     "Aldabrachelys gigantea": 53,
+     "Centrochelys sulcata": 1,
+     "Chelonoidis carbonarius": 24,
+     "Chelonoidis darwini": 90,
+     "Chelonoidis niger": 2,
+     "Geochelone platynota": 6,
+     "Gopherus agassizii": 16,
+     "Gopherus polyphemus": 62,
+     "Indotestudo elongata": 28,
+     "Malacochersus tornieri": 7,
+     "Testudo graeca": 24,
+     "Testudo hermanni": 16,
+     "Testudo horsfieldii": 28
+    },
+    "by_directness": {
+     "local_report_recorded_in_primary_study_read": 12,
+     "primary_study_read": 323,
+     "reported_in_source_primary_not_read": 6,
+     "statement_of_the_source_read": 16
+    },
+    "by_wild_or_captive": {
+     "captive": 37,
+     "semi_wild": 16,
+     "wild": 304
+    },
+    "negative_records": 6
+   },
+   "evidence_by_class": {
+    "captive_feeding_trial": 28,
+    "community_provisioning": 14,
+    "conservation_plan_review": 16,
+    "husbandry_practice": 9,
+    "local_knowledge": 12,
+    "semi_wild_feeding_study": 16,
+    "wild_feeding_study": 262
+   },
+   "tortoise_taxa_added_to_registry": 2,
+   "seed_mixtures": 0,
+   "nutrition_records": 46,
+   "nutrition_values": 254,
+   "nutrition_records_by_preparation_state": {
+    "crop_residue": 1,
+    "dried": 1,
+    "fresh": 42,
+    "hay": 2
+   },
+   "nutrition_records_by_source_kind": {
+    "compiled_feed_table_parsed": 13,
+    "study_table_transcribed_by_hand": 33
+   },
+   "sources_on_hold": 12,
+   "seed_mixtures_on_hold": 3
+  },
+  "cumulative": {
+   "evidence_records": 526,
+   "tortoise_taxa_with_evidence": 19,
+   "candidates": {
+    "plant_names": 483,
+    "new_candidates_not_in_database": 347,
+    "new_candidates_species_level": 293,
+    "new_candidates_genus_level": 54,
+    "species_already_in_database": 32,
+    "genus_level_record_in_database": 34,
+    "unresolved_not_a_candidate": 70
+   },
+   "primary_study_read_records": 369
+  },
+  "unit_1_records_after_primary_check": {
+   "confirmed_in_primary": 19,
+   "confirmed_with_difference": 5,
+   "not_in_the_cited_source_read_other_cited_sources_unread": 5,
+   "primary_read_in_unit_1": 46,
+   "secondary_citation_primary_not_read": 77,
+   "statement_of_the_source_no_primary_cited": 17
+  },
+  "unit_1_records_with_an_independent_primary_record": 9
+ }
+}

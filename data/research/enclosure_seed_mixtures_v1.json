@@ -1,0 +1,727 @@
+{
+ "schema_version": "1.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v1.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v1.json",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "mixtures": [
+  {
+   "mixture_id": "naturescape_nt_tortoise_food_mix",
+   "name": "NT Tortoise Food Mix",
+   "supplier": "Naturescape Wildflower Farm",
+   "country": "United Kingdom",
+   "language": "en",
+   "source_url": "https://www.naturescape.co.uk/product/nt-tortoise-food-mix/",
+   "source_type": "commercial_product_page",
+   "access": "full_page_read",
+   "target_tortoise_species": "not stated",
+   "ratios_basis": "percent of mix as listed by the supplier",
+   "cultivation_notes": "Supplier text: sow outside at 20 g per square metre or into trays inside at 50 g per square metre; about 3 weeks between tray sowings.",
+   "seed_treatment": "not stated",
+   "observed_consumption": "not stated",
+   "note": "The supplier lists 21 species totalling 100%. 'Convulvus' is the supplier's spelling.",
+   "existing_evidence_id": "naturescape_nt_tortoise_mix",
+   "component_count": 21,
+   "components": [
+    {
+     "scientific_name_as_printed": "Capsella bursa-pastoris",
+     "common_name_as_printed": "Shepherd's Purse",
+     "ratio_as_printed": "4%",
+     "accepted_name": "Capsella bursa-pastoris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Cichorium intybus",
+     "common_name_as_printed": "Chicory",
+     "ratio_as_printed": "8%",
+     "accepted_name": "Cichorium intybus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Convulvus arvensis",
+     "common_name_as_printed": "Field Bindweed",
+     "ratio_as_printed": "7%",
+     "accepted_name": null,
+     "name_check": "not_resolved_needs_review"
+    },
+    {
+     "scientific_name_as_printed": "Hypochaeris radicata",
+     "common_name_as_printed": "Common Catsear",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Hypochaeris radicata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Lapsana communis",
+     "common_name_as_printed": "Nipplewort",
+     "ratio_as_printed": "3%",
+     "accepted_name": "Lapsana communis",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Leontodon autumnalis",
+     "common_name_as_printed": "Autumn Hawkbit",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Leontodon autumnalis",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Leontodon hispidus",
+     "common_name_as_printed": "Rough Hawkbit",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Leontodon hispidus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Malva moschata",
+     "common_name_as_printed": "Musk Mallow",
+     "ratio_as_printed": "4%",
+     "accepted_name": "Malva moschata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Malva sylvestris",
+     "common_name_as_printed": "Common Mallow",
+     "ratio_as_printed": "4%",
+     "accepted_name": "Malva sylvestris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Onobrychis viciifolia",
+     "common_name_as_printed": "Sainfoin",
+     "ratio_as_printed": "8%",
+     "accepted_name": "Onobrychis viciifolia",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Plantago lanceolata",
+     "common_name_as_printed": "Ribwort Plantain",
+     "ratio_as_printed": "8%",
+     "accepted_name": "Plantago lanceolata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Plantago major",
+     "common_name_as_printed": "Greater Plantain",
+     "ratio_as_printed": "4%",
+     "accepted_name": "Plantago major",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Plantago media",
+     "common_name_as_printed": "Hoary Plantain",
+     "ratio_as_printed": "4%",
+     "accepted_name": "Plantago media",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Sisymbrium officinale",
+     "common_name_as_printed": "Hedge Mustard",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Sisymbrium officinale",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Sonchus arvensis",
+     "common_name_as_printed": "Corn Sowthistle",
+     "ratio_as_printed": "4%",
+     "accepted_name": "Sonchus arvensis",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Sonchus oleraceus",
+     "common_name_as_printed": "Smooth Sowthistle",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Sonchus oleraceus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Taraxacum officinale",
+     "common_name_as_printed": "Dandelion",
+     "ratio_as_printed": "6%",
+     "accepted_name": "Taraxacum officinale",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium pratense",
+     "common_name_as_printed": "Red Clover",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Trifolium pratense",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium repens",
+     "common_name_as_printed": "White Clover",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Trifolium repens",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Vicia cracca",
+     "common_name_as_printed": "Tufted Vetch",
+     "ratio_as_printed": "3%",
+     "accepted_name": "Vicia cracca",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Vicia sativa",
+     "common_name_as_printed": "Common Vetch",
+     "ratio_as_printed": "7%",
+     "accepted_name": "Vicia sativa",
+     "name_check": "accepted"
+    }
+   ],
+   "verification_status": "composition_transcribed_from_source",
+   "safety_statement": "A supplier or club listing a plant in a tortoise seed mix is not evidence that the plant is safe. Each component needs its own evidence."
+  },
+  {
+   "mixture_id": "tortoise_club_tlady_mixture_2014",
+   "name": "Tlady mixture (Tortoise Food - Growing from Seed Guide, Autumn 2014)",
+   "supplier": "The Tortoise Club",
+   "country": "United Kingdom",
+   "language": "en",
+   "source_url": "https://emma-jackson-w2z7.squarespace.com/s/5TORTOISE_FOOD_GROW_GUIDE.pdf",
+   "source_type": "keeper_club_guide",
+   "access": "full_text_read",
+   "target_tortoise_species": "not stated; the guide mentions juvenile tortoises",
+   "ratios_basis": "percent as listed in the guide",
+   "cultivation_notes": "Guide text: use normal unfertilised garden soil or sterilised loam, because some of the plants can accumulate excessive nitrates from artificially enriched soils; allow some plants to flower; graze sections in rotation.",
+   "seed_treatment": "not stated",
+   "observed_consumption": "not stated",
+   "note": "The guide says 'Twenty One of the following species are included' and prints sainfoin twice (2% each time); it is entered once here. The listed percentages do not add up to 100%.",
+   "existing_evidence_id": "tortoiseclub_vicia_sativa_mix",
+   "component_count": 21,
+   "components": [
+    {
+     "scientific_name_as_printed": "Taraxacum officinale",
+     "common_name_as_printed": "Dandelion",
+     "ratio_as_printed": "10%",
+     "accepted_name": "Taraxacum officinale",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Hypochoeris",
+     "common_name_as_printed": "Catsear",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Hypochoeris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Leontodon",
+     "common_name_as_printed": "Hawkbit",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Leontodon",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Crepis capillaris",
+     "common_name_as_printed": "Smooth Hawk's-beard",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Crepis capillaris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Lapsana communis",
+     "common_name_as_printed": "Nipplewort",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Lapsana communis",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Cichorium intybus",
+     "common_name_as_printed": "Chicory",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Cichorium intybus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Sonchus oleraceus",
+     "common_name_as_printed": "Smooth Sow thistle",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Sonchus oleraceus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Plantago major",
+     "common_name_as_printed": "Great Plantain",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Plantago major",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Plantago media",
+     "common_name_as_printed": "Hoary Plantain",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Plantago media",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Vicia sativa",
+     "common_name_as_printed": "Common Vetch",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Vicia sativa",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Onobrychis sativa",
+     "common_name_as_printed": "Sainfoin",
+     "ratio_as_printed": "2%",
+     "accepted_name": null,
+     "name_check": "not_resolved_needs_review"
+    },
+    {
+     "scientific_name_as_printed": "Plantago lanceolata",
+     "common_name_as_printed": "Ribwort Plantain",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Plantago lanceolata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Malva sylvestris",
+     "common_name_as_printed": "Common Mallow",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Malva sylvestris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Malva moschata",
+     "common_name_as_printed": "Musk Mallow",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Malva moschata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Malva neglecta",
+     "common_name_as_printed": "Dwarf Mallow",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Malva neglecta",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Capsella bursa-pastoris",
+     "common_name_as_printed": "Shepherd's purse",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Capsella bursa-pastoris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Cardamine hirsuta",
+     "common_name_as_printed": "Hairy Bittercress",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Cardamine hirsuta",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Cardamine flexuosa",
+     "common_name_as_printed": "Wavy Bittercress",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Cardamine flexuosa",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium repens",
+     "common_name_as_printed": "White/Dutch clover",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Trifolium repens",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium pratense",
+     "common_name_as_printed": "Red clover",
+     "ratio_as_printed": "5%",
+     "accepted_name": "Trifolium pratense",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Campanula rapunculoides",
+     "common_name_as_printed": "Creeping Bell-flower",
+     "ratio_as_printed": "2%",
+     "accepted_name": "Campanula rapunculoides",
+     "name_check": "accepted"
+    }
+   ],
+   "verification_status": "composition_transcribed_from_source",
+   "safety_statement": "A supplier or club listing a plant in a tortoise seed mix is not evidence that the plant is safe. Each component needs its own evidence."
+  },
+  {
+   "mixture_id": "tortoise_club_wildflower_seed_2023",
+   "name": "Tortoise seed mix (Growing Wildflower Plants from Seed for Tortoise Food)",
+   "supplier": "The Tortoise Club",
+   "country": "United Kingdom",
+   "language": "en",
+   "source_url": "https://www.tortoiseclub.org/wp-content/uploads/2026/05/5_GROWINGWILDFLOWERPLANTSFROMSEEDFORTORTOISEFOOD_23.pdf",
+   "source_type": "keeper_club_guide",
+   "access": "full_text_read",
+   "target_tortoise_species": "not stated",
+   "ratios_basis": "not given",
+   "cultivation_notes": "Guide text: sow in early spring or early autumn; use top soil, not compost, so plants do not grow too rich; a 7 g bag covers 1 square metre; do not feed young plants especially to hatchlings; allow some plants to flower.",
+   "seed_treatment": "not stated",
+   "observed_consumption": "The guide describes the mix as based on plants grazed in the wild and readily eaten in captivity; no observation data are given.",
+   "note": "The guide says 'Ten of the following species are included in seed mix' and lists exactly ten.",
+   "existing_evidence_id": null,
+   "component_count": 10,
+   "components": [
+    {
+     "scientific_name_as_printed": "Plantago lanceolata",
+     "common_name_as_printed": "Ribwort Plantain",
+     "ratio_as_printed": null,
+     "accepted_name": "Plantago lanceolata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Cichorium intybus",
+     "common_name_as_printed": "Chicory",
+     "ratio_as_printed": null,
+     "accepted_name": "Cichorium intybus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Centaurea cyanus",
+     "common_name_as_printed": "Cornflower",
+     "ratio_as_printed": null,
+     "accepted_name": "Centaurea cyanus",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Malva moschata",
+     "common_name_as_printed": "Musk Mallow",
+     "ratio_as_printed": null,
+     "accepted_name": "Malva moschata",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Prunella vulgaris",
+     "common_name_as_printed": "Self Heal",
+     "ratio_as_printed": null,
+     "accepted_name": "Prunella vulgaris",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Galium mollugo",
+     "common_name_as_printed": "Hedge Bedstraw",
+     "ratio_as_printed": null,
+     "accepted_name": "Galium mollugo",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium resupinatum",
+     "common_name_as_printed": "Blue Persian Clover",
+     "ratio_as_printed": null,
+     "accepted_name": "Trifolium resupinatum",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium incarnatum",
+     "common_name_as_printed": "Kardinal Crimson Clover",
+     "ratio_as_printed": null,
+     "accepted_name": "Trifolium incarnatum",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium repens",
+     "common_name_as_printed": "White/Dutch Clover",
+     "ratio_as_printed": null,
+     "accepted_name": "Trifolium repens",
+     "name_check": "accepted"
+    },
+    {
+     "scientific_name_as_printed": "Trifolium pratense",
+     "common_name_as_printed": "Red Clover",
+     "ratio_as_printed": null,
+     "accepted_name": "Trifolium pratense",
+     "name_check": "accepted"
+    }
+   ],
+   "verification_status": "composition_transcribed_from_source",
+   "safety_statement": "A supplier or club listing a plant in a tortoise seed mix is not evidence that the plant is safe. Each component needs its own evidence."
+  },
+  {
+   "mixture_id": "gardenlawncareguy_tortoise_seed_mix",
+   "name": "Nutritious Tortoise Seed Mix",
+   "supplier": "Garden Lawncare Guy",
+   "country": "United Kingdom",
+   "language": "en",
+   "source_url": "https://gardenlawncareguy.com/shop/wild-flowers/turtle-seed-mix-o/",
+   "source_type": "commercial_product_page",
+   "access": "full_page_read",
+   "target_tortoise_species": "not stated",
+   "ratios_basis": "not given",
+   "cultivation_notes": "Supplier text: seed only, must be germinated before feeding; for outdoor pens, runs and garden areas.",
+   "seed_treatment": "not stated",
+   "observed_consumption": "not stated",
+   "note": "The page says 'Typical Analysis includes' these seven names; scientific names and the complete composition are not given.",
+   "existing_evidence_id": null,
+   "component_count": 7,
+   "components": [
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Timothy",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Ribwort Plantain",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Sainfoin",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Chicory",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Crimson Clover",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Strong Creeping Fescue",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Common Vetch",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    }
+   ],
+   "verification_status": "composition_transcribed_from_source",
+   "safety_statement": "A supplier or club listing a plant in a tortoise seed mix is not evidence that the plant is safe. Each component needs its own evidence."
+  },
+  {
+   "mixture_id": "buzzard_herbie_mix_fibre_lawn",
+   "name": "Herbie Mix - Tortoise Fibre / Lawn mix",
+   "supplier": "Buzzard Reptile (seed mixes supplied by Shelled Warriors)",
+   "country": "United Kingdom",
+   "language": "en",
+   "source_url": "https://buzzardreptile.co.uk/product/herbie-mix-tortoise-fibre-lawn-mix/",
+   "source_type": "commercial_product_page",
+   "access": "full_page_read",
+   "target_tortoise_species": "not stated",
+   "ratios_basis": "not given",
+   "cultivation_notes": "Supplier text: identify plants before feeding because of seeds naturally found in soil.",
+   "seed_treatment": "not stated",
+   "observed_consumption": "not stated",
+   "note": "Common names only.",
+   "existing_evidence_id": null,
+   "component_count": 10,
+   "components": [
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Plantain",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "White Clover",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Crimson Clover",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Timothy grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Meadow fescue grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Cocksfoot grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Sheeps fescue grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Tall fescue grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Creeping red fescue grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "Red fescue grass",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    }
+   ],
+   "verification_status": "composition_transcribed_from_source",
+   "safety_statement": "A supplier or club listing a plant in a tortoise seed mix is not evidence that the plant is safe. Each component needs its own evidence."
+  },
+  {
+   "mixture_id": "prorep_tortoise_feed_mini_kit",
+   "name": "ProRep Tortoise Feed Mini Kit seed mix",
+   "supplier": "ProRep / Peregrine Livefoods",
+   "country": "United Kingdom",
+   "language": "en",
+   "source_url": "https://peregrine.co.uk/product/pr-tortoise-feed-mini-kit/",
+   "source_type": "commercial_product_page",
+   "access": "full_page_read",
+   "target_tortoise_species": "not confirmed from the page text that was read",
+   "ratios_basis": "not given",
+   "cultivation_notes": "not transcribed",
+   "seed_treatment": "not stated",
+   "observed_consumption": "not stated",
+   "note": "Common names only, from the 'Seed Mix:' line of the product page.",
+   "existing_evidence_id": null,
+   "component_count": 11,
+   "components": [
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "White clover",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "crimson clover",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "red clover",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "vetch",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "hawkbit",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "nipplewort",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "dandelion",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "plantain",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "shepherd's purse",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "sainfoin",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    },
+    {
+     "scientific_name_as_printed": null,
+     "common_name_as_printed": "hedge mustard",
+     "ratio_as_printed": null,
+     "accepted_name": null,
+     "name_check": "common_name_only_not_resolved"
+    }
+   ],
+   "verification_status": "composition_transcribed_from_source",
+   "safety_statement": "A supplier or club listing a plant in a tortoise seed mix is not evidence that the plant is safe. Each component needs its own evidence."
+  }
+ ],
+ "on_hold": [
+  {
+   "name": "Du Bio pour ma Tortue, 75 g (Truffaut)",
+   "country": "France",
+   "url": "https://www.truffaut.com/melange-graines-semer-bio-pour-ma-pour-tortue-75g-937928.html",
+   "reason": "HTTP 403 to the fetch tool; composition seen only in a search summary."
+  },
+  {
+   "name": "Mélange de fleurs pour tortues terrestres (Vilmorin, sold by Truffaut)",
+   "country": "France",
+   "url": "https://www.truffaut.com/sachet-de-graines-melanges-de-fleurs-pour-tortues-terrestres-10m-3359633.html",
+   "reason": "HTTP 403 to the fetch tool; species list not seen."
+  },
+  {
+   "name": "Testumix",
+   "country": "Italy",
+   "url": null,
+   "reason": "Seen only in a search summary without a product page."
+  },
+  {
+   "name": "ProRep Tortoise Feed Growing Kit (Hugglepets listing)",
+   "country": "United Kingdom",
+   "url": "https://www.hugglepets.co.uk/?p=4036",
+   "reason": "HTTP 403 to the fetch tool."
+  }
+ ]
+}

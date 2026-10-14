@@ -1,0 +1,846 @@
+{
+ "schema_version": "4.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v4.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v4.json",
+ "extends": "the v1, v2 and v3 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "queue": {
+  "genus_with_more_than_one_backbone_family": [],
+  "unit_1_citations_not_read": [
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-01",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-02",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-03",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-04",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-06",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-07",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm110_sulcata_2020-08",
+    "cited": "Vetter 2005",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm057_platynota_2011-01",
+    "cited": "Thanda Swe 2004",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm057_platynota_2011-02",
+    "cited": "Thanda Swe 2004",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm057_platynota_2011-03",
+    "cited": "Thanda Swe 2004",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm106_elegans_2018-01",
+    "cited": "Alagar Rajan and Balasubramanian 1991",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm106_elegans_2018-02",
+    "cited": "Alagar Rajan and Balasubramanian 1991",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm106_elegans_2018-03",
+    "cited": "Alagar Rajan and Balasubramanian 1991",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm106_elegans_2018-04",
+    "cited": "Alagar Rajan and Balasubramanian 1991",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm106_elegans_2018-05",
+    "cited": "Alagar Rajan and Balasubramanian 1991",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm106_elegans_2018-06",
+    "cited": "Alagar Rajan and Balasubramanian 1991",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-01",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-02",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-03",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-04",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-05",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-06",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-07",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-08",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-09",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-10",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-11",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-12",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-13",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-14",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-15",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-16",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-17",
+    "cited": "Di Nicola and Mezzadri 2018",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm122_marginata_2023-18",
+    "cited": "Bringsøe et al. 2001",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm059_hermanni_2011-01",
+    "cited": "Longepierre and Grenot 1999",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm059_hermanni_2011-02",
+    "cited": "Longepierre and Grenot 1999",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm059_hermanni_2011-03",
+    "cited": "Longepierre and Grenot 1999",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm059_hermanni_2011-04",
+    "cited": "Longepierre and Grenot 1999",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-01",
+    "cited": "El Mouden et al. 2006",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-02",
+    "cited": "El Mouden et al. 2006",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-03",
+    "cited": "El Mouden et al. 2006",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-04",
+    "cited": "El Mouden et al. 2006",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-05",
+    "cited": "El Mouden et al. 2006",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-07",
+    "cited": "Cobo and Andreu 1988",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-08",
+    "cited": "Cobo and Andreu 1988",
+    "search_status": "blocked_by_host"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-09",
+    "cited": "López-Jurado et al. 1979",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-10",
+    "cited": "López-Jurado et al. 1979",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-11",
+    "cited": "López-Jurado et al. 1979",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm117_graeca_west_2022-12",
+    "cited": "López-Jurado et al. 1979",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm096_elongata_2016-14",
+    "cited": "Biswas et al. 1978",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-01",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-02",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-03",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-04",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-05",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-06",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-07",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm054_travancorica_2011-08",
+    "cited": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-01",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-02",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-03",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-04",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-05",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-06",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-07",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-08",
+    "cited": "Lambiris et al. 1989",
+    "search_status": "not_searched"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-09",
+    "cited": "Hailey et al. 1997, 2001",
+    "search_status": "searched_paywalled"
+   },
+   {
+    "v1_evidence_id": "crm115_spekii_2021-10",
+    "cited": "Hailey et al. 2001",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm086_emys_2015-01",
+    "cited": "Wanchai 2008",
+    "search_status": "located_download_failed"
+   },
+   {
+    "v1_evidence_id": "crm086_emys_2015-02",
+    "cited": "Wanchai 2008",
+    "search_status": "located_download_failed"
+   },
+   {
+    "v1_evidence_id": "crm109_agassizii_2019-01",
+    "cited": "Woodbury and Hardy 1948",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm109_agassizii_2019-02",
+    "cited": "Woodbury and Hardy 1948",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm109_agassizii_2019-03",
+    "cited": "Woodbury and Hardy 1948",
+    "search_status": "searched_no_open_full_text_found"
+   },
+   {
+    "v1_evidence_id": "crm109_agassizii_2019-04",
+    "cited": "Woodbury and Hardy 1948",
+    "search_status": "searched_no_open_full_text_found"
+   }
+  ],
+  "unit_1_citations_not_supported_by_the_cited_source": [
+   "crm096_elongata_2016-03",
+   "crm096_elongata_2016-05",
+   "crm096_elongata_2016-06",
+   "crm096_elongata_2016-08",
+   "crm096_elongata_2016-09",
+   "crm109_agassizii_2019-05",
+   "crm109_agassizii_2019-06"
+  ],
+  "names_needing_review": [
+   {
+    "name_as_printed": "Anagalis arvensis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "joshua_2008-059"
+    ]
+   },
+   {
+    "name_as_printed": "Asclepiadoideae",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "crm106_elegans_2018-01"
+    ]
+   },
+   {
+    "name_as_printed": "Avena sp",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "joshua_2008-050"
+    ]
+   },
+   {
+    "name_as_printed": "Bagassa guianenesis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "delaossa_2009-24"
+    ]
+   },
+   {
+    "name_as_printed": "Ballota africana",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "joshua_2008-095"
+    ]
+   },
+   {
+    "name_as_printed": "Blepharis stuhlmanii",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "kabigumila_2001-020"
+    ]
+   },
+   {
+    "name_as_printed": "Clematis vitella",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "meek_2010-03"
+    ]
+   },
+   {
+    "name_as_printed": "Commelina foskalaei",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "kabigumila_2001-003"
+    ]
+   },
+   {
+    "name_as_printed": "Commerlina benghalensis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "crm057_platynota_2011-01"
+    ]
+   },
+   {
+    "name_as_printed": "Conicosa pugioniformis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "joshua_2008-072"
+    ]
+   },
+   {
+    "name_as_printed": "Crossandra subcaulis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "kabigumila_2001-021"
+    ]
+   },
+   {
+    "name_as_printed": "Crytococcum accrescens",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "crm096_elongata_2016-05"
+    ]
+   },
+   {
+    "name_as_printed": "Cynodon sp.",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "crm107_tornieri_2018-01",
+     "moll_klemens_1996-01"
+    ]
+   },
+   {
+    "name_as_printed": "Cypreus spp.",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "crm096_elongata_2016-07"
+    ]
+   },
+   {
+    "name_as_printed": "Cystocapnos vesicaria",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "joshua_2008-111"
+    ]
+   },
+   {
+    "name_as_printed": "Desmodium triflorum",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "figueroa_2024-37"
+    ]
+   },
+   {
+    "name_as_printed": "Diospyros austro-africana",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "joshua_2008-086"
+    ]
+   },
+   {
+    "name_as_printed": "Duquetia surinamensis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "delaossa_2009-20"
+    ]
+   },
+   {
+    "name_as_printed": "Erharta villosa",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "joshua_2008-054"
+    ]
+   },
+   {
+    "name_as_printed": "Erythroxylum zambeziacum",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "crm115_spekii_2021-09"
+    ]
+   },
+   {
+    "name_as_printed": "Euphorbia burmanii",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "joshua_2008-087"
+    ]
+   },
+   {
+    "name_as_printed": "Euphorbia cyathophora",
+    "name_check": "synonym_in_backbone_but_source_lists_both_names_kept_separate",
+    "evidence_ids": [
+     "figueroa_2024-07"
+    ]
+   },
+   {
+    "name_as_printed": "Eustachys petrea",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "figueroa_2024-46"
+    ]
+   },
+   {
+    "name_as_printed": "Ioxa cocinea",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "delaossa_2009-03"
+    ]
+   },
+   {
+    "name_as_printed": "Ipomoea senensis",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "crm115_spekii_2021-02"
+    ]
+   },
+   {
+    "name_as_printed": "Kyllinga brevifolia",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "pillajo_2020-71"
+    ]
+   },
+   {
+    "name_as_printed": "Launaea residifolia",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "bayley_highfield_1996-06"
+    ]
+   },
+   {
+    "name_as_printed": "Linaria incarta",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "bayley_highfield_1996-08"
+    ]
+   },
+   {
+    "name_as_printed": "Oncosiphon suffruticosum",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "joshua_2008-021"
+    ]
+   },
+   {
+    "name_as_printed": "Pentenisia ouranogyne",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "kabigumila_2001-041"
+    ]
+   },
+   {
+    "name_as_printed": "Periskia bleo",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "delaossa_2009-16"
+    ]
+   },
+   {
+    "name_as_printed": "Physalis walterii",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "figueroa_2024-32"
+    ]
+   },
+   {
+    "name_as_printed": "Pictis spp.",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "tortoise_trust_plant_list-04"
+    ]
+   },
+   {
+    "name_as_printed": "Plantago maior",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "dlugosz_2015-04"
+    ]
+   },
+   {
+    "name_as_printed": "Prunus dulcis",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "dlugosz_2015-07"
+    ]
+   },
+   {
+    "name_as_printed": "Rhus glauca",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "joshua_2008-077"
+    ]
+   },
+   {
+    "name_as_printed": "Rhus laevigata",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "joshua_2008-009"
+    ]
+   },
+   {
+    "name_as_printed": "Rhus lucida",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "joshua_2008-078"
+    ]
+   },
+   {
+    "name_as_printed": "Rhynchospora grayii",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "figueroa_2024-54"
+    ]
+   },
+   {
+    "name_as_printed": "Roemeria sp.",
+    "name_check": "homonyms_in_backbone_author_not_given_needs_review",
+    "evidence_ids": [
+     "lagarde_2003_primary-04"
+    ]
+   },
+   {
+    "name_as_printed": "Spondia lutea",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "delaossa_2009-22"
+    ]
+   },
+   {
+    "name_as_printed": "Taraxacum officianale",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "tortoise_trust_plant_list-01"
+    ]
+   },
+   {
+    "name_as_printed": "Thymus capitatus",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "crm122_marginata_2023-18"
+    ]
+   },
+   {
+    "name_as_printed": "Tournefortia rufo-sericea",
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "evidence_ids": [
+     "pillajo_2020-13"
+    ]
+   },
+   {
+    "name_as_printed": "Veronica buabaumii",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "crm054_travancorica_2011-08"
+    ]
+   },
+   {
+    "name_as_printed": "Vicina spp.",
+    "name_check": "not_resolved_needs_review",
+    "evidence_ids": [
+     "tortoise_trust_plant_list-09"
+    ]
+   }
+  ],
+  "family_printed_differs_from_backbone_unit_4": [
+   {
+    "evidence_id": "kabigumila_2001-032",
+    "plant_name_as_printed": "Phyllanthus nummulariifolius",
+    "family_printed": "Euphorbiaceae",
+    "family_in_backbone": "Phyllanthaceae"
+   },
+   {
+    "evidence_id": "kabigumila_2001-042",
+    "plant_name_as_printed": "Corchorus trilocularis",
+    "family_printed": "Tiliaceae",
+    "family_in_backbone": "Malvaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-041",
+    "plant_name_as_printed": "Albuca flaccida",
+    "family_printed": "Hyacinthaceae",
+    "family_in_backbone": "Asparagaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-042",
+    "plant_name_as_printed": "Albuca sp.",
+    "family_printed": "Hyacinthaceae",
+    "family_in_backbone": "Asparagaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-044",
+    "plant_name_as_printed": "Myoporum serratum",
+    "family_printed": "Myoporaceae",
+    "family_in_backbone": "Scrophulariaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-063",
+    "plant_name_as_printed": "Thesidium sp.",
+    "family_printed": "Santalaceae",
+    "family_in_backbone": "Thesiaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-066",
+    "plant_name_as_printed": "Hermannia pinnata",
+    "family_printed": "Sterculiaceae",
+    "family_in_backbone": "Malvaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-067",
+    "plant_name_as_printed": "Hermannia scabra",
+    "family_printed": "Sterculiaceae",
+    "family_in_backbone": "Malvaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-079",
+    "plant_name_as_printed": "Chlorophytum undulatum",
+    "family_printed": "Anthericaceae",
+    "family_in_backbone": "Asparagaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-091",
+    "plant_name_as_printed": "Ornithogalum thyrsoides",
+    "family_printed": "Hyacinthaceae",
+    "family_in_backbone": "Asparagaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-109",
+    "plant_name_as_printed": "Lyperia lychnidea",
+    "family_printed": "Solanaceae",
+    "family_in_backbone": "Scrophulariaceae"
+   },
+   {
+    "evidence_id": "joshua_2008-111",
+    "plant_name_as_printed": "Cystocapnos vesicaria",
+    "family_printed": "Fumariceae",
+    "family_in_backbone": "Papaveraceae"
+   }
+  ],
+  "conflicting_records_same_tortoise_and_plant": [],
+  "records_on_hold": [
+   {
+    "evidence_id": "moorhouse_gann_2022-40",
+    "reason": "In Table 3 the two numbers after the skink columns ('2' and '4') start at x-positions 642 and 668, which are the dung-morphology frequency column and the observation count column, not the dung-morphology count and frequency columns used by every other row (607 and 642). Read as printed they are not a valid count and frequency pair for either method, so no tortoise detection can be stated. DNA metabarcoding gives 0 of 80."
+   }
+  ],
+  "identical_record_groups_across_units": [],
+  "duplicate_datasets_not_added": [
+   {
+    "source": "Jennings, W.B., Berry, K.H. 2015. Desert tortoises (Gopherus agassizii) are selective herbivores that track the flowering phenology of their preferred food plants. PLoS ONE 10(1):e0116716.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+    "same_dataset_as_source_id": "jennings_2002",
+    "evidence": "Both report spring 1992 observations at the Desert Tortoise Research Natural Area with the same total of 35,388 bites.",
+    "decision": "No record added: a second publication of the same observations is not independent evidence. Its fuller food tables were not transcribed in this unit.",
+    "note": "The citation's volume and article number were not confirmed from the article page."
+   }
+  ],
+  "sources_on_hold_unit_4": [
+   {
+    "id": "loehr_2002_homopus_diet",
+    "url": "https://www.nisc.co.za/products/abstracts/36041/diet-of-the-namaqualand-speckled-padloper-homopus-signatus-signatus-in-early-spring",
+    "reason": "Abstract seen only in a search summary; full text not open."
+   },
+   {
+    "id": "rall_fairall_1993",
+    "url": null,
+    "reason": "South African Journal of Wildlife Research 23:63-70 (leopard and Kalahari tent tortoise diets); no open copy found. Kabigumila 2001 cites it for Tribulus terrestris."
+   },
+   {
+    "id": "joshua_hofmeyr_henen_2010",
+    "url": null,
+    "reason": "Journal article from the thesis read here; not open. It would be the same data set as the thesis."
+   },
+   {
+    "id": "schleicher_loehr_2006_nama_padloper",
+    "url": "https://the-eis.com/elibrary/sites/default/files/downloads/literature/Husbandry_behaviour%20and%20captive%20breeding%20of%20the%20Nama%20padloper%20from%20southwestern%20Namibia.pdf",
+    "reason": "Downloaded; the captive diet paragraph was seen but not transcribed."
+   },
+   {
+    "id": "loehr_1999_homopus_husbandry",
+    "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_3_Nos_1-4(1998-2000)/Loehr_1999a.pdf",
+    "reason": "Downloaded; scanned text is poor and the diet passage was not transcribed."
+   },
+   {
+    "id": "franz_2011_methane",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3052317/",
+    "reason": "Read in part: tortoises of several species were fed grass hay and salad; no plant species are named, so no record was made."
+   },
+   {
+    "id": "highfield_south_african_tortoises",
+    "url": "https://www.tortoisetrust.org/articles/safrica.html",
+    "reason": "Keeper organisation summary; read in part; it names no food plant species."
+   }
+  ]
+ }
+}

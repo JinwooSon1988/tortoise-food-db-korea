@@ -1,0 +1,49 @@
+name: Research layer QA (global plant evidence)
+on:
+  pull_request:
+    paths:
+      - 'data/research/**'
+      - 'scripts/build_global_plant_evidence_research_v*.py'
+      - 'scripts/qa_global_plant_evidence_research_v*.py'
+      - 'scripts/verify_forage_nutrition_v*.py'
+      - 'scripts/audit_feedipedia_sample_counts_v*.py'
+      - 'scripts/feedipedia_table.py'
+      - 'scripts/test_feedipedia_table_parser.py'
+      - 'scripts/verify_nutrition_reference_sources_v1.py'
+      - 'scripts/build_research_gap_register_v*.py'
+      - 'data/plant_nutrition_reference_v1.json'
+      - 'data/plant_nutrition_dm_basis_v1.json'
+      - '.github/workflows/research-layer-qa.yml'
+  workflow_dispatch:
+jobs:
+  research-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Feedipedia table reader regression tests (blank, 0 and 1 Nb, calculated values, colspan, rowspan, duplicate tables)
+        run: |
+          if [ -f scripts/test_feedipedia_table_parser.py ]; then python scripts/test_feedipedia_table_parser.py; fi
+      - name: Before/after report against the PR base (fails when a record or nutrient value is silently dropped, altered or restored)
+        if: github.event_name == 'pull_request'
+        run: |
+          if [ -f scripts/diff_research_layer.py ]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            python scripts/diff_research_layer.py --base FETCH_HEAD --strict
+          fi
+      - name: Run every research-layer QA script present on this branch (offline, read-only)
+        run: |
+          set -e
+          found=0
+          for v in 1 2 3 4 5 6 7 8 9; do
+            f="scripts/qa_global_plant_evidence_research_v${v}.py"
+            if [ -f "$f" ]; then
+              found=1
+              echo "::group::$f"
+              python "$f"
+              echo "::endgroup::"
+            fi
+          done
+          if [ "$found" = 0 ]; then echo "no research-layer QA script on this branch"; fi
