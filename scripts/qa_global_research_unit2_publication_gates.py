@@ -170,6 +170,12 @@ if len(dung_only) != 29:
 for r in dung_only:
     if r.get("observed_consumption") != "detected in dung; no taxon-specific feeding observation reported in this record":
         errors.append(f"Dung-only taxon mislabeled as observed feeding: {r['evidence_id']}")
+direct_observation_taxa = [r for r in round_island if "feeding observation" in r.get("quantity_as_reported", "")]
+if len(direct_observation_taxa) != 24:
+    errors.append(f"Unexpected Round Island direct-observation count: {len(direct_observation_taxa)}")
+for r in direct_observation_taxa:
+    if r.get("observed_consumption") != "detected in dung and directly observed eaten (taxon-specific feeding observation reported)":
+        errors.append(f"Observed feeding taxon lacks specific evidence label: {r['evidence_id']}")
 by_id = {r["evidence_id"]: r for r in records}
 for key in ("lagarde_2003_primary-01", "lagarde_2003_primary-02"):
     if key not in by_id:
