@@ -1,0 +1,48 @@
+{
+ "schema_version": "1.0",
+ "reviewed_at": "2026-10-16",
+ "scope": "Apple leaf (appleleaf, Malus domestica leaves): add the wilted-leaf cyanic-compound caution of the cited specialist source. Verdict (limited_supplement, C) and confidence (C) are unchanged; no evidence record changes.",
+ "source_read": {
+  "source": "The Tortoise Table — Apple (Tree), Malus domestica",
+  "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=23",
+  "checked_at": "2026-10-16",
+  "level": "original page read (also read 2026-10-15; text unchanged)",
+  "classification": "Feed Sparingly",
+  "quote": "The pips/seeds from the apple contain cyanide and should be avoided.  The leaves, as they get older and wilt, produce a cyanic compound, so although your tortoise will come to no harm if he accidentally nibbles a few fallen leaves, it is wise to prevent him from doing so if possible."
+ },
+ "comparison": {
+  "plant_id": "peachleaf",
+  "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=615",
+  "note": "The peach-tree entry carries the same wilted-leaf wording and data/public_assessments.json already states it in peachleaf's limits and why. appleleaf, citing the same kind of entry, did not."
+ },
+ "update": {
+  "file": "data/public_assessments.json",
+  "plant_id": "appleleaf",
+  "species_group": "Tortoise_general",
+  "field": "limits",
+  "before": [
+   "Malus domestica 잎에만 적용하며, 열매·씨앗 판정과 같게 보지 않음",
+   "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음",
+   "추가한 원논문은 사과나무(Malus domestica) 잎의 성분 분석 자료이며, 육지거북에게 먹여 본 시험이나 독성 시험이 아님",
+   "성분이 들어 있다는 사실만으로 육지거북에게 해롭다거나 급여하면 안 된다고 판단하지 않음",
+   "이 자료로 안전량·독성량·급여 빈도를 정하지 않음"
+  ],
+  "after": [
+   "Malus domestica 잎에만 적용하며, 열매·씨앗 판정과 같게 보지 않음",
+   "단독 주식·고정 급여비율·무제한 급여 근거로 확대하지 않음",
+   "추가한 원논문은 사과나무(Malus domestica) 잎의 성분 분석 자료이며, 육지거북에게 먹여 본 시험이나 독성 시험이 아님",
+   "성분이 들어 있다는 사실만으로 육지거북에게 해롭다거나 급여하면 안 된다고 판단하지 않음",
+   "이 자료로 안전량·독성량·급여 빈도를 정하지 않음",
+   "원문은 사과나무 잎이 오래되어 시들면 시안 화합물이 생긴다고 설명한다. 떨어진 잎 몇 장을 우연히 뜯어 먹어도 해는 없지만 가능하면 먹지 못하게 하라고 권하므로, 오래되거나 시든 잎·떨어진 잎은 급여하지 않음"
+  ],
+  "english": "The source explains that apple leaves produce a cyanic compound as they get older and wilt. It says a few fallen leaves nibbled by accident do no harm but advises preventing this where possible, so older, wilted or fallen leaves are not fed",
+  "reason": "The cited source's own caution about older and wilted leaves was missing from the public limits. Added as written by the source: it distinguishes an accidental nibble (no harm) from leaves that are best not eaten; it is not a toxic dose and not a grade change."
+ },
+ "not_changed": [
+  "verdict limited_supplement (grade C)",
+  "confidence C",
+  "evidence records",
+  "why, role and applicability note",
+  "the seed/pip caution of the source is outside this leaf record's scope (limits already keep fruit and seed verdicts separate)"
+ ]
+}
