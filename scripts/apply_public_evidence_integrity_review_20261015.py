@@ -8,8 +8,8 @@ audit for the records whose listing-page link was replaced. No record is deleted
 
 A field is written only while it still holds the review's "before" value. A field edited after the review (a
 value that is neither "before" nor "after") is left as it is and listed as skipped, so a re-run never undoes a
-later correction. CI does not re-run this script; the guarantees it set up are checked by
-scripts/qa_public_evidence_integrity_v1.py.
+later correction. A link audit entry is rewritten only while it still holds the listing-page link. CI does not
+re-run this script; the guarantees it set up are checked by scripts/qa_public_evidence_integrity_v1.py.
 """
 import json
 import sys
@@ -66,11 +66,12 @@ def main():
             continue
         v = upd["verification"]
         a = audit[upd["id"]]
-        if a["url"] not in (v["url"], upd["before"]["url"]):
+        if a["url"] == v["url"]:
+            continue
+        if a["url"] != upd["before"]["url"]:
             skipped.append(f"link audit {upd['id']}")
             continue
-        if a["url"] != v["url"]:
-            a["previous_url"] = a["url"]
+        a["previous_url"] = a["url"]
         a.update({"checked_at": v["checked_at"], "url": v["url"], "name": v["page_name"], "latin": v["page_latin"], "classification": v["page_classification"]})
         a.pop("note", None)
         a["correction"] = "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
