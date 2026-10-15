@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build the unit-2 research data sets from data/research/global_plant_evidence_transcription_v2.json.
 
+Reviewed record corrections in data/research/record_corrections_v2_editorial.json are applied to the built evidence records.
+
 Unit 2 only adds files. The v1 research files are read and never rewritten.
 
 Writes, in data/research:
@@ -171,6 +173,18 @@ def main():
                 "applies_to_other_tortoise_species": "not established by this source",
                 "limitations": LIMIT + (" " + r["note"][0].upper() + r["note"][1:] + "." if r["note"] else ""),
                 "verification_status": status, "feeding_grade": None})
+
+    # reviewed corrections first made in the generated file; applied only over the value they were reviewed against
+    by_id = {e["evidence_id"]: e for e in evidence}
+    stale = []
+    for c in load(RES / "record_corrections_v2_editorial.json")["corrections"]:
+        e = by_id[c["evidence_id"]]
+        if e[c["field"]] == c["built_value"]:
+            e[c["field"]] = c["corrected_value"]
+        elif e[c["field"]] != c["corrected_value"]:
+            stale.append("%s %s (%s)" % (c["evidence_id"], c["field"], c["commit"]))
+    if stale:
+        sys.exit("the transcription changed under %d reviewed corrections; review record_corrections_v2_editorial.json:\n  %s" % (len(stale), "\n  ".join(stale)))
 
     # ledger: every unit-1 evidence record against the primary publication it cites
     v2_by_plant = {(e["source_id"], e["plant_name_as_printed"]): e["evidence_id"] for e in evidence if e["tortoise_key"] != "elongata" or e["source_id"] != "platt_2001_shwe_settaw"}

@@ -207,6 +207,30 @@ def main():
     lam = next((x for x in index if x["evidence_id"] == "lambert_1993-01"), None)
     if not lam or lam["counts_as_independent_positive_wild_observation"] or "previously captive" not in (lam.get("animal_history_note") or "") or lam["wild_or_captive"] == "wild":
         errors.append("lambert_1993-01: must stay a previously captive animal, never an independent wild observation")
+    # a tier names the animal's setting, so it has to agree with wild_or_captive (lambert_1993-01 kept the wild tier after it was narrowed)
+    tier_status = {"1_wild_feeding_study_read": "wild", "2_semi_wild_feeding_study_read": "semi_wild",
+                   "2b_previously_captive_animal_field_observation_read": "previously captive; temporarily free-ranging"}
+    tiers = {}
+    for name in ("evidence_index_v4.json", "evidence_index_v5.json"):
+        for x in load(name)["records"]:
+            tiers[x["evidence_id"]] = x["evidence_tier"]
+            if x["evidence_tier"] in tier_status and x["wild_or_captive"] != tier_status[x["evidence_tier"]]:
+                errors.append("%s %s: tier %s but the animal is %r" % (name, x["evidence_id"], x["evidence_tier"], x["wild_or_captive"]))
+    for name in ("plant_candidates_v3.json", "plant_candidates_v4.json"):
+        for c in load(name)["candidates"]:
+            if c.get("best_evidence_tier") == "1_wild_feeding_study_read" and not any(tiers.get(i) == "1_wild_feeding_study_read" for i in c["evidence_ids"]):
+                errors.append("%s %s: best tier is a wild feeding study but no record of it is" % (name, c["candidate_key"]))
+    # reviewed unit-2 corrections stay in the evidence file the unit-2 build writes
+    ev2 = {e["evidence_id"]: e for e in load("tortoise_plant_evidence_v2.json")["records"]}
+    for c in load("record_corrections_v2_editorial.json")["corrections"]:
+        if ev2[c["evidence_id"]].get(c["field"]) != c["corrected_value"]:
+            errors.append("%s %s: reviewed correction (%s) is not in tortoise_plant_evidence_v2.json" % (c["evidence_id"], c["field"], c["commit"]))
+    # summary counts follow the nutrition files they describe
+    s2 = load("research_layer_summary_v2.json")["summary"]
+    for key, f in (("unit_1", NUTRITION[0]), ("unit_2_added", NUTRITION[1])):
+        n = sum(len(r["values"]) for r in nut[f]["records"])
+        if s2[key]["nutrition_values"] != n:
+            errors.append("research_layer_summary_v2 %s: %d nutrition values, %s keeps %d" % (key, s2[key]["nutrition_values"], f, n))
     for f, d in nut.items():
         for r in d["records"]:
             if set(r) & {"tortoise_key", "tortoise_scientific_name", "detection_methods", "evidence_tier", "wild_or_captive"} or r["record_id"] in ev:

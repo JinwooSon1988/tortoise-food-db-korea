@@ -75,6 +75,8 @@ def tier_of(e):
         return "3_captive_feeding_trial_read"
     if cls == "semi_wild_feeding_study":
         return "2_semi_wild_feeding_study_read"
+    if cls == "field_observation_of_previously_captive_tortoise":
+        return "2b_previously_captive_animal_field_observation_read"
     if direct == "primary_study_read":
         return "1_wild_feeding_study_read"
     return "9_review_or_account_statement"
