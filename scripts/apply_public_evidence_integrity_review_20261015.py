@@ -5,6 +5,11 @@ The decision record is data/public_evidence_integrity_review_20261015.json (each
 verification level actually reached and the value before). This script writes exactly those changes, then gives
 every public evidence record its `source_id` (scripts/evidence_sources.py), and updates the Tortoise Table link
 audit for the records whose listing-page link was replaced. No record is deleted; verdicts are not changed.
+
+A field is written only while it still holds the review's "before" value. A field edited after the review (a
+value that is neither "before" nor "after") is left as it is and listed as skipped, so a re-run never undoes a
+later correction. CI does not re-run this script; the guarantees it set up are checked by
+scripts/qa_public_evidence_integrity_v1.py.
 """
 import json
 import sys
@@ -29,17 +34,30 @@ def with_source_fields(r):
     return out
 
 
+def apply_fields(target, upd, label, skipped):
+    """Write each reviewed field that still holds its "before" value; leave later edits alone."""
+    for k, new in upd["after"].items():
+        cur = target.get(k)
+        if cur == new:
+            continue
+        if cur == upd["before"].get(k):
+            target[k] = new
+        else:
+            skipped.append(f"{label}.{k}")
+
+
 def main():
     assess = json.loads(A_PATH.read_text(encoding="utf-8"))
     evid = json.loads(E_PATH.read_text(encoding="utf-8"))
     links = json.loads(L_PATH.read_text(encoding="utf-8"))
     by_id = {r["id"]: r for r in evid["records"]}
+    skipped = []
     for upd in REVIEW["evidence_updates"]:
-        by_id[upd["id"]].update(upd["after"])
+        apply_fields(by_id[upd["id"]], upd, upd["id"], skipped)
     for item in REVIEW["assessment_updates"]:
         rows = [a for a in assess if a["plant_id"] == item["plant_id"] and a["species_group"] == item["species_group"]]
         assert len(rows) == 1, item["plant_id"]
-        rows[0].update(item["after"])
+        apply_fields(rows[0], item, f"{item['plant_id']}|{item['species_group']}", skipped)
     evid["records"] = [with_source_fields(r) for r in evid["records"]]
 
     audit = {r["record_id"]: r for r in links["records"]}
@@ -48,6 +66,9 @@ def main():
             continue
         v = upd["verification"]
         a = audit[upd["id"]]
+        if a["url"] not in (v["url"], upd["before"]["url"]):
+            skipped.append(f"link audit {upd['id']}")
+            continue
         if a["url"] != v["url"]:
             a["previous_url"] = a["url"]
         a.update({"checked_at": v["checked_at"], "url": v["url"], "name": v["page_name"], "latin": v["page_latin"], "classification": v["page_classification"]})
@@ -60,6 +81,8 @@ def main():
     L_PATH.write_text(json.dumps(links, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("applied:", len(REVIEW["evidence_updates"]), "evidence updates,", len(REVIEW["assessment_updates"]), "assessment updates;",
           len({r["source_id"] for r in evid["records"]}), "sources for", len(evid["records"]), "records")
+    if skipped:
+        print("left unchanged (edited after the review):", ", ".join(skipped))
 
 
 if __name__ == "__main__":
