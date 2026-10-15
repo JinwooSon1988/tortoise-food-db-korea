@@ -17,3 +17,5 @@ jobs:
         with:
           python-version: '3.x'
       - run: python scripts/qa_korean_english_fragments_v1.py
+      - name: Korean and English pages show the same evidence (no generic fallback, same cards, same scientific names)
+        run: python scripts/qa_ko_en_evidence_parity_v1.py

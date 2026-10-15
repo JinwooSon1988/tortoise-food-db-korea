@@ -281,10 +281,12 @@ assert not ibera_violations, 'Ibera used as a reference point in reader-facing j
 # Data-driven localization gate: every populated public evidence limitation must have a Korean reader-facing rendering.
 limit_values = sorted({str(e.get('does_not_support') or '').strip() for e in evidence_records if str(e.get('does_not_support') or '').strip()})
 # Execute only the pure display helpers from the generator so this audit tests runtime-equivalent output without generating pages.
+# The helpers read the generator's Korean evidence text table (data/i18n/ko/evidence_text_ko.json) as the generator does.
+ko_evidence_text = {(x['field'], x['en']): x['ko'] for x in json.loads((root / 'data/i18n/ko/evidence_text_ko.json').read_text(encoding='utf-8'))['entries']}
 helper_start = generator.index('def evidence_support_display')
 helper_end = generator.find('\ndef ', generator.index('def evidence_limit_display') + 1)
 helper_src = generator[helper_start:] if helper_end < 0 else generator[helper_start:helper_end]
-helper_ns = {'re': re}
+helper_ns = {'re': re, 'ko_evidence_text': ko_evidence_text}
 exec(helper_src, helper_ns)
 render_limit = helper_ns['evidence_limit_display']
 render_support = helper_ns['evidence_support_display']
@@ -337,7 +339,7 @@ assert all(re.search(r'[가-힣]', render_source_kind({'source_type': raw})[1]) 
 # Metadata localization gate: values rendered in the Korean evidence cards must not leak raw English/code labels.
 meta_start = generator.index('def animal_taxon_display')
 meta_end = generator.index('\ndef evidence_support_display', meta_start)
-meta_ns = {'re': re}
+meta_ns = {'re': re, 'ko_evidence_text': ko_evidence_text}
 exec(generator[meta_start:meta_end], meta_ns)
 render_animal = meta_ns['animal_taxon_display']
 render_part = meta_ns['part_state_display']
