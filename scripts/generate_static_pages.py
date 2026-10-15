@@ -25,6 +25,9 @@ nutrition_references_by_id={}
 for reference in nutrition_reference_records:
     if reference.get("status")=="reference_only" and reference.get("feeding_verdict_use") is False:
         nutrition_references_by_id.setdefault(reference["plant_id"],[]).append(reference)
+# A legacy alias ID (data/plant_identity_registry_v1.json canonical_aliases) is the same plant as its canonical ID and
+# reports the canonical ID's nutrition records; the records themselves stay on the canonical ID only.
+nutrition_owner={x["legacy_id"]:x["canonical_id"] for x in json.loads((ROOT/"data/plant_identity_registry_v1.json").read_text(encoding="utf-8")).get("canonical_aliases",[])}
 
 wild_records=json.loads((ROOT/"data/wild_feeding_evidence.json").read_text(encoding="utf-8")).get("records",[])
 wild_by_plant={}
@@ -958,7 +961,8 @@ for p in plants:
     evidence_detail=f'''<details class="evidencefold"><summary>원문 근거 {detail_count}건 자세히 보기</summary><div class="evidence-list">{evidence_cards_html}{wild_section}</div></details>''' if detail_count else evidence_cards_html
     deep_html=f'''<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">근거 상세히 알아보기</div><h2>판정 근거</h2><div class="evidence-core"><h3>근거 구성</h3>{summary_chips}</div>{conflict_html}{evidence_detail}</section>'''
 
-    nu=nutrition_by_id.get(pid)
+    npid=nutrition_owner.get(pid,pid)
+    nu=nutrition_by_id.get(npid)
     if nu:
         def nv(key,unit=""):
             v=nu.get(key)
@@ -966,9 +970,9 @@ for p in plants:
         ratio=nu.get("calcium_phosphorus_ratio")
         nutrition_note=("칼슘과 인의 비율은 식단을 볼 때 참고할 수 있지만, 이 값 하나만으로 좋은 먹이인지 결정하지 않는다." if ratio not in (None,"","—") else "Ca:P 자료가 없으면 임의 계산하거나 추정하지 않는다.")
         nutrition_body=f'''<div class="nutgrid"><div><b>Ca:P</b><strong>{nv("calcium_phosphorus_ratio")}</strong></div><div><b>칼슘</b><strong>{nv("calcium_mg"," mg")}</strong></div><div><b>인</b><strong>{nv("phosphorus_mg"," mg")}</strong></div><div><b>식이섬유</b><strong>{nv("fiber_g"," g")}</strong></div>{f'<div><b>건물</b><strong>{nu["dry_matter_pct"]}%</strong></div>' if nu.get("water_g") is None and nu.get("dry_matter_pct") is not None else f'<div><b>수분</b><strong>{nv("water_g"," g")}</strong></div>'}<div><b>단백질</b><strong>{nv("protein_g"," g")}</strong></div></div><p class="nutmeaning"><b>판정에서 어떻게 보나</b><br>{esc(nutrition_note)} 옥살산염·질산염·배당체 같은 제한성분과 실제 육지거북 섭식 근거는 아래 상세 근거에서 별도로 확인한다.</p><p class="small">{esc(nutrition_basis_ko(nu.get("basis")))} · 원자료 식품명 {nutrition_food_name_html(nu.get("food_description"))} · 출처 <a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>{f'<p class="small">적용 범위: {esc(nu.get("applicability_note_ko"))}</p>' if nu.get("applicability_note_ko") else ""}{academic_nutrition_html(nu)}'''
-    elif nutrition_references_by_id.get(pid):
+    elif nutrition_references_by_id.get(npid):
         reference_cards=[]
-        for ref in nutrition_references_by_id[pid]:
+        for ref in nutrition_references_by_id[npid]:
             name=esc(ref.get("source_name") or "출처 미기재")
             scope=esc(ref.get("reference_scope_ko") or ref.get("analyzed_part") or "분석 범위 미기재")
             note=esc(ref.get("display_note_ko") or "급여 대상 부위에 직접 적용할 수 있는 검증된 수치가 아닙니다.")

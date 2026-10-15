@@ -36,6 +36,9 @@ nutrition_references_by_id = {}
 for ref in load("data/plant_nutrition_reference_v1.json").get("records", []):
     if ref.get("status") == "reference_only" and ref.get("feeding_verdict_use") is False:
         nutrition_references_by_id.setdefault(ref["plant_id"], []).append(ref)
+# A legacy alias ID (data/plant_identity_registry_v1.json canonical_aliases) is the same plant as its canonical ID and
+# reports the canonical ID's nutrition records; the records themselves stay on the canonical ID only.
+nutrition_owner = {x["legacy_id"]: x["canonical_id"] for x in load("data/plant_identity_registry_v1.json").get("canonical_aliases", [])}
 
 wild_by_plant = {}
 for w in load("data/wild_feeding_evidence.json").get("records", []):
@@ -384,7 +387,8 @@ def render(p):
                       f'<p>A Korean retail or common name is only a search hint, not a species identification. Confirm the scientific name of any product, cultivated plant or foraged plant.</p>{cur_html}</div></section>')
 
     # Nutrition
-    nu = nutrition_by_id.get(pid)
+    npid = nutrition_owner.get(pid, pid)
+    nu = nutrition_by_id.get(npid)
     if nu:
         def nv(k, unit=""):
             v = nu.get(k)
@@ -402,9 +406,9 @@ def render(p):
                  f'<p class="small">{esc(nutrition_basis_en(nu.get("basis")))} · Source food name: {esc(T(nu.get("food_description"), f"{pid}.food_description"))} · Source: '
                  f'<a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'
                  + (f'<p class="small">Scope: {esc(app_note)}</p>' if app_note else "") + academic_nutrition_en(nu))
-    elif nutrition_references_by_id.get(pid):
+    elif nutrition_references_by_id.get(npid):
         reference_cards = []
-        for ref in nutrition_references_by_id[pid]:
+        for ref in nutrition_references_by_id[npid]:
             # Same fields as the Korean card (generate_static_pages.py): source, analysed scope and the record's own caveat,
             # translated through strings_en.json so that a caveat edited in Korean cannot silently disappear in English.
             source_label = esc(T(ref.get("source_name"), f"{pid}.nutrition_reference.source_name") or "Source not specified")

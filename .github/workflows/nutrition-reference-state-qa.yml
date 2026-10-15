@@ -6,6 +6,14 @@ on:
       - 'data/plant_nutrition_reference_v1.json'
       - 'data/plant_nutrition_v56.json'
       - 'scripts/qa_nutrition_three_states_v1.py'
+      - 'data/plant_identity_registry_v1.json'
+      - 'scripts/qa_alias_nutrition_parity_v1.py'
+      - 'scripts/generate_static_pages.py'
+      - 'scripts/generate_en_pages.py'
+      - 'plant/minari/index.html'
+      - 'plant/waterdropwort/index.html'
+      - 'en/plant/minari/index.html'
+      - 'en/plant/waterdropwort/index.html'
       - '.github/workflows/nutrition-reference-state-qa.yml'
   workflow_dispatch:
 permissions:
@@ -19,3 +27,5 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/qa_nutrition_three_states_v1.py
+      - name: Legacy alias IDs show the canonical ID's nutrition state and sources (Korean and English)
+        run: python scripts/qa_alias_nutrition_parity_v1.py
