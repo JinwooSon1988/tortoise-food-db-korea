@@ -463,6 +463,110 @@
    "kept_in_database": true
   }
  ],
+ "other_citations_not_read": [
+  {
+   "cited_as": "Moskovits 1981",
+   "records": 5,
+   "evidence_ids": [
+    "delaossa_2009-20",
+    "delaossa_2009-21",
+    "delaossa_2009-22",
+    "delaossa_2009-23",
+    "delaossa_2009-24"
+   ],
+   "tortoise_species": [
+    "Chelonoidis carbonarius"
+   ],
+   "plants_as_printed": [
+    "Annona sp.",
+    "Bagassa guianenesis",
+    "Duquetia surinamensis",
+    "Genipa americana",
+    "Spondia lutea"
+   ],
+   "status": [
+    "secondary_citation_primary_not_read"
+   ],
+   "notes": [],
+   "audit_document": "docs/GLOBAL_RESEARCH_UNIT2_MOSKOVITS_CITATION_AUDIT_20261014.md",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "kept_in_database": true
+  },
+  {
+   "cited_as": "van Dijk 1998; Sriprateep et al. 2013; Ihlow pers. obs.",
+   "records": 5,
+   "evidence_ids": [
+    "crm096_elongata_2016-03",
+    "crm096_elongata_2016-05",
+    "crm096_elongata_2016-06",
+    "crm096_elongata_2016-08",
+    "crm096_elongata_2016-09"
+   ],
+   "tortoise_species": [
+    "Indotestudo elongata"
+   ],
+   "plants_as_printed": [
+    "Chromolaena odorata",
+    "Crytococcum accrescens",
+    "Cyanotis cristata",
+    "Dillenia spp.",
+    "Ficus racemosa"
+   ],
+   "status": [
+    "not_in_the_cited_source_read_other_cited_sources_unread"
+   ],
+   "notes": [
+    "Chromolaena odorata is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read",
+    "Crytococcum accrescens is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read",
+    "Cyanotis cristata is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read",
+    "Dillenia spp. is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read",
+    "Ficus racemosa is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read"
+   ],
+   "audit_document": null,
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "kept_in_database": true
+  },
+  {
+   "cited_as": "Loveridge and Williams 1957",
+   "records": 1,
+   "evidence_ids": [
+    "moll_klemens_1996-07"
+   ],
+   "tortoise_species": [
+    "Malacochersus tornieri"
+   ],
+   "plants_as_printed": [
+    "dry grass (unidentified)"
+   ],
+   "status": [
+    "secondary_citation_primary_not_read"
+   ],
+   "notes": [],
+   "audit_document": null,
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "kept_in_database": true
+  }
+ ],
+ "unit_1_citations_read_not_supporting": [
+  {
+   "evidence_id": "crm109_agassizii_2019-05",
+   "cited_as": "Prose and Wilshire 2000",
+   "tortoise_species": "Gopherus agassizii",
+   "plant_as_printed": "Malacothrix glabrata",
+   "note": "Malacothrix glabrata does not occur in the report and the report never mentions tortoises; the account's citation must refer to the effect of vehicle tracks on annual plants, not to feeding",
+   "on_hold": true,
+   "status": "the cited source was read and does not support the account's statement; on hold, not counted as feeding evidence; the account's wording is kept"
+  },
+  {
+   "evidence_id": "crm109_agassizii_2019-06",
+   "cited_as": "Prose and Wilshire 2000",
+   "tortoise_species": "Gopherus agassizii",
+   "plant_as_printed": "Chaenactis fremontii",
+   "note": "Chaenactis fremontii occurs in the report only as an annual whose cover fell in tank tracks; the report never mentions tortoises",
+   "on_hold": true,
+   "status": "the cited source was read and does not support the account's statement; on hold, not counted as feeding evidence; the account's wording is kept"
+  }
+ ],
  "unresolved_plant_names": [
   {
    "name_as_printed": "Anagalis arvensis",
@@ -1586,6 +1690,9 @@
    "searched_paywalled": 1,
    "searched_unit_6_no_copy_found": 2
   },
+  "other_citation_groups": 3,
+  "other_citation_records": 11,
+  "citations_read_not_supporting": 2,
   "unresolved_names": 48,
   "unresolved_names_unit_1_to_4": 46,
   "unresolved_names_unit_5": 2

@@ -171,6 +171,9 @@ def main():
     # one index over units 1-4
     resolved = {r["name_as_printed"]: r["resolved_name"] for r in res3 if r["resolved_name"]}
     ledger = {r["v1_evidence_id"]: r["status_after_unit_3"] for r in ledger3}
+    # unit-1 records whose cited publication was read (unit 3) and does not contain the statement: held, so they are not
+    # counted as feeding evidence; the record and the account's wording stay in the database
+    held_unsupported = {r["v1_evidence_id"]: r for r in ledger3 if r["status_after_unit_3"] == "cited_source_read_does_not_support_the_statement"}
     by_source = tr["method_by_source_for_units_1_to_3"]
     index = []
     for unit, recs in enumerate(old + [evidence], 1):
@@ -187,7 +190,7 @@ def main():
                           "quantity_as_reported": quantity_now(e),
                           "quantity_correction": ({"corrected_in_unit": 3, "action": corr3[e["evidence_id"]]["action"], "quantity_in_unit_record": e.get("quantity_as_reported"), "quantity_before_correction": corr3[e["evidence_id"]]["quantity_in_v2"],
                                                    "reason": corr3[e["evidence_id"]]["reason"]} if e["evidence_id"] in corr3 else None),
-                          "unit_1_citation_status": ledger.get(e["evidence_id"]), "on_hold": e["evidence_id"] in held3, "hazard_statement_ids": sorted(hz_by_ev.get(e["evidence_id"], []))})
+                          "unit_1_citation_status": ledger.get(e["evidence_id"]), "on_hold": e["evidence_id"] in held3 or e["evidence_id"] in held_unsupported, "hazard_statement_ids": sorted(hz_by_ev.get(e["evidence_id"], []))})
     live = [x for x in index if not x["on_hold"]]
 
     # duplicates and conflicts across units
@@ -273,7 +276,11 @@ def main():
         "names_needing_review": sorted(names_review.values(), key=lambda n: n["name_as_printed"]),
         "family_printed_differs_from_backbone_unit_4": fam_diff,
         "conflicting_records_same_tortoise_and_plant": conflicts,
-        "records_on_hold": [{"evidence_id": i, "reason": c["reason"]} for i, c in held3.items()],
+        "records_on_hold": [{"evidence_id": i, "hold_kind": "table_cell_not_determinable", "reason": c["reason"]} for i, c in held3.items()]
+                           + [{"evidence_id": i, "hold_kind": "cited_source_read_does_not_support_the_statement", "cited_as": r["primary_reference_cited_by_source"],
+                               "cited_source_id": r["primary_source_id"], "checked_in_unit": r["checked_in_unit"],
+                               "reason": "the account cites %s for this statement; that publication was read and does not support it: %s" % (r["primary_reference_cited_by_source"], r["note"])}
+                              for i, r in sorted(held_unsupported.items())],
         "identical_record_groups_across_units": same_record_groups,
         "duplicate_datasets_not_added": tr["duplicate_datasets"],
         "sources_on_hold_unit_4": tr["sources_on_hold"],

@@ -4578,7 +4578,7 @@
    "quantity_as_reported": null,
    "quantity_correction": null,
    "unit_1_citation_status": "cited_source_read_does_not_support_the_statement",
-   "on_hold": false,
+   "on_hold": true,
    "hazard_statement_ids": []
   },
   {
@@ -4606,7 +4606,7 @@
    "quantity_as_reported": null,
    "quantity_correction": null,
    "unit_1_citation_status": "cited_source_read_does_not_support_the_statement",
-   "on_hold": false,
+   "on_hold": true,
    "hazard_statement_ids": []
   },
   {
@@ -5918,8 +5918,8 @@
    "plant_name_check": "accepted",
    "plant_part": "leaves",
    "preparation_state": "growing plant",
-   "wild_or_captive": "wild",
-   "evidence_tier": "1_wild_feeding_study_read",
+   "wild_or_captive": "previously captive; temporarily free-ranging",
+   "evidence_tier": "2b_previously_captive_animal_field_observation_read",
    "detection_methods": [
     "direct_feeding_observation"
    ],

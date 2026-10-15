@@ -107,5 +107,19 @@ check("non-numeric means are not read as values", len(re_) == 1)
 # 8. title and the former title behaviour
 check("dc:title is read", ft.title(p11865) == "Test feed, aerial part, fresh")
 
+# 9. the keep rule of the unit 1, 2 and 5 builders: a value whose own row prints no Nb is never kept, even when the next row has one
+b1 = load("build_v1", HERE / "build_global_plant_evidence_research_v1.py")
+kept = {k for k, (avg, nb) in leg.items() if b1.has_printed_sample_count(nb)}
+check("keep rule: blank-Nb rows (dry matter, calcium) are not kept", not kept & {("dry matter", "% as fed"), ("calcium", "g/kg dm")})
+check("keep rule: calculated values ('*') are not kept", not kept & {("crude fibre", "% dm"), ("neutral detergent fibre", "% dm")})
+check("keep rule: rows with their own Nb are kept", {("crude protein", "% dm"), ("phosphorus", "g/kg dm")} <= kept)
+check("keep rule: Nb 0 is a printed count, None/''/'*'/True are not",
+      b1.has_printed_sample_count(0) and not any(b1.has_printed_sample_count(x) for x in (None, "", "*", "6", True)))
+# the 12645 layout: sodium's Nb cell is blank and the zinc row below prints mean 33; the former parser stored 33 as sodium's Nb
+p12645 = page(HEAD % "Minerals" + row("Potassium", "g/kg DM", "20.0", "1.0", "18.5", "21.4", "6") + row("Sodium", "g/kg DM", "2.2")
+              + row("Zinc", "mg/kg DM", "33", "8", "22", "41", "5"))
+l12645, _ = shared.parse_feedipedia(p12645)
+check("12645 layout: sodium Nb stays blank (not zinc's mean 33)", l12645[("sodium", "g/kg dm")] == (2.2, None) and not b1.has_printed_sample_count(l12645[("sodium", "g/kg dm")][1]))
+
 print("%d failed" % len(FAILS))
 sys.exit(1 if FAILS else 0)

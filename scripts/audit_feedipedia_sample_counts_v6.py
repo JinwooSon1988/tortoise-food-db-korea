@@ -77,6 +77,15 @@ def check_value(rows, label, unit, value, nb, heading_word=None):
     return res
 
 
+# what a status lets a reader rely on: the mean and the sample count, the mean alone, or nothing
+LEVEL = {"matched": "mean_and_sample_count_verified", "matched_calculated": "mean_verified_calculated_value_without_sample_count",
+         "mean_matched_nb_not_stored": "mean_only_verified", "excluded_nb_blank_on_page": "excluded_not_used", "excluded_but_page_prints_nb": "excluded_not_used"}
+
+
+def level(status):
+    return LEVEL.get(status, "not_verified")
+
+
 # sample counts that the former flattened-text parser attached to rows whose Nb cell is blank (found in units 2, 5 and 6)
 FORMER_PARSER_COUNTS = {("feedipedia-11865", "dry matter"): 165, ("feedipedia-11865", "calcium"): 72, ("feedipedia-12645", "magnesium"): 6,
                         ("feedipedia-12645", "sodium"): 33, ("feedipedia-12646", "dry matter"): 6, ("feedipedia-12646", "ether extract"): 5}
@@ -117,7 +126,7 @@ def main():
             for v in r["values"]:
                 res = check_value(rows, v["nutrient_name"], v["nutrient_unit"], v["nutrient_value"], v["sample_count"], state_word(r.get("table_title_as_printed"))) if rows else {"status": "page_not_saved"}
                 research.append({"file": f, "record_id": r["record_id"], "nutrient_name": v["nutrient_name"], "nutrient_unit": v["nutrient_unit"],
-                                 "stored_value": v["nutrient_value"], "stored_nb": v["sample_count"], **res})
+                                 "stored_value": v["nutrient_value"], "stored_nb": v["sample_count"], **res, "verification_level": level(res.get("status"))})
             for dv in r.get("values_dropped_no_sample_count_on_page") or []:
                 former = FORMER_PARSER_COUNTS.get((r["record_id"], dv["nutrient_name"]))
                 res = check_value(rows, dv["nutrient_name"], dv["nutrient_unit"], dv["mean_on_page"], None, state_word(r.get("table_title_as_printed"))) if rows else {"status": "page_not_saved"}
@@ -128,7 +137,8 @@ def main():
                     res["former_parser_count_found_on_following_rows"] = explain(rows, hit[0], former) if len(hit) == 1 else []
                 dropped.append({"file": f, "record_id": r["record_id"], "nutrient_name": dv["nutrient_name"], "nutrient_unit": dv["nutrient_unit"],
                                 "value": dv["mean_on_page"], "count_given_by_former_parser": former, **res,
-                                "decision": "excluded: the source row prints no sample count" if res.get("status") == "excluded_nb_blank_on_page" else "check: see status"})
+                                "decision": "excluded: the source row prints no sample count" if res.get("status") == "excluded_nb_blank_on_page" else "check: see status",
+                                "verification_level": level(res.get("status"))})
 
     public = []
     if PUBLIC_DM.exists():
@@ -140,7 +150,7 @@ def main():
             for key, v in r["values"].items():
                 lab, unit = label_of(key)
                 res = check_value(rows, lab, unit, v["value"], v.get("n"), state_word(r.get("variant"), r.get("preparation_state"))) if rows and lab else {"status": "page_not_saved" if not rows else "key_not_mapped"}
-                public.append({"file": "data/plant_nutrition_dm_basis_v1.json", "plant_id": r["plant_id"], "node": m.group(1), "key": key, "stored_value": v["value"], "stored_nb": v.get("n"), **res})
+                public.append({"file": "data/plant_nutrition_dm_basis_v1.json", "plant_id": r["plant_id"], "node": m.group(1), "key": key, "stored_value": v["value"], "stored_nb": v.get("n"), **res, "verification_level": level(res.get("status"))})
     if PUBLIC_REF.exists():
         for r in json.loads(PUBLIC_REF.read_text(encoding="utf-8"))["records"]:
             m = re.search(r"feedipedia\.org/node/(\d+)", r.get("source_url", "") or "")
@@ -150,16 +160,19 @@ def main():
             for key, val in (r.get("nutrients") or {}).items():
                 lab, unit = label_of(key)
                 res = check_value(rows, lab, unit, val, None, state_word(r.get("preparation_state"), r.get("analyzed_part"))) if rows and lab else {"status": "page_not_saved" if not rows else "key_not_mapped"}
-                public.append({"file": "data/plant_nutrition_reference_v1.json", "plant_id": r["plant_id"], "node": m.group(1), "key": key, "stored_value": val, "stored_nb": None, **res})
+                public.append({"file": "data/plant_nutrition_reference_v1.json", "plant_id": r["plant_id"], "node": m.group(1), "key": key, "stored_value": val, "stored_nb": None, **res, "verification_level": level(res.get("status"))})
 
     doc = {"schema_version": "6.0", "generated_by": "scripts/audit_feedipedia_sample_counts_v6.py", "pages_fetched_on": a.fetched_on,
-           "method": "Each stored Feedipedia value is looked up in the table rows of a copy of the source page saved from the live site. 'matched' means the same label, unit, mean and Nb. 'nb_blank_on_page_but_stored' means the page row has no Nb but the file holds one; the audit names the following row(s) whose Nb equals the stored number.",
+           "method": "Each stored Feedipedia value is looked up in the table rows of a copy of the source page saved from the live site. 'matched' means the same label, unit, mean and Nb. 'nb_blank_on_page_but_stored' means the page row has no Nb but the file holds one; the audit names the following row(s) whose Nb equals the stored number. 'verification_level' separates values whose mean and sample count were both compared ('mean_and_sample_count_verified') from values whose mean alone was compared because no sample count is stored ('mean_only_verified').",
            "cause": "verify_nutrition_reference_sources_v1.parse_feedipedia reads a flattened text in which blank cells disappear, so a row with a blank Nb takes the Nb printed on the next row.",
            "pages": {n: h for n, (_, h) in sorted(pages.items())},
            "research_values": research, "research_values_excluded": dropped, "public_values_read_only": public,
            "totals": {"research_values": len(research), "research_by_status": dict(sorted(Counter(x["status"] for x in research).items())),
                       "research_excluded": len(dropped), "research_excluded_by_status": dict(sorted(Counter(x["status"] for x in dropped).items())),
-                      "public_values": len(public), "public_by_status": dict(sorted(Counter(x["status"] for x in public).items()))}}
+                      "public_values": len(public), "public_by_status": dict(sorted(Counter(x["status"] for x in public).items())),
+                      "research_by_verification_level": dict(sorted(Counter(x["verification_level"] for x in research).items())),
+                      "public_by_verification_level": dict(sorted(Counter(x["verification_level"] for x in public).items())),
+                      "public_mean_only_whose_page_row_prints_no_sample_count": sum(1 for x in public if x["verification_level"] == "mean_only_verified" and x.get("nb_on_page") is None)}}
     # fill the source-row fields of the unit-5 exclusion audit (keys kept as its author defined them)
     ex_path = RES / "forage_nutrition_exclusion_audit_v5.json"
     if ex_path.exists():

@@ -43,8 +43,9 @@
    "evidence_records": 636,
    "evidence_records_on_hold_after_correction": 1,
    "evidence_by_tier": {
-    "1_wild_feeding_study_read": 334,
+    "1_wild_feeding_study_read": 333,
     "2_semi_wild_feeding_study_read": 16,
+    "2b_previously_captive_animal_field_observation_read": 1,
     "3_captive_feeding_trial_read": 28,
     "4_institutional_husbandry_guideline": 49,
     "5_husbandry_practice_reported": 19,
@@ -102,7 +103,7 @@
     "records": 12,
     "species_specific": true,
     "by_tier": {
-     "1_wild_feeding_study_read": 1,
+     "2b_previously_captive_animal_field_observation_read": 1,
      "5_husbandry_practice_reported": 3,
      "8_secondary_citation_primary_not_read": 8
     },

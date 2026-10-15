@@ -4233,7 +4233,7 @@
    ],
    "evidence_directness": "reported_in_account_primary_not_read",
    "is_negative_record": false,
-   "on_hold": false,
+   "on_hold": true,
    "quantity_as_reported": null,
    "publication_id": "berry_2019",
    "superseded_by": null,
@@ -4259,7 +4259,7 @@
    ],
    "evidence_directness": "reported_in_account_primary_not_read",
    "is_negative_record": false,
-   "on_hold": false,
+   "on_hold": true,
    "quantity_as_reported": null,
    "publication_id": "berry_2019",
    "superseded_by": null,
@@ -5474,8 +5474,8 @@
    "plant_name_as_printed": "Eleusine indica",
    "plant_accepted_name": "Eleusine indica",
    "plant_part": "leaves",
-   "wild_or_captive": "wild",
-   "evidence_tier": "1_wild_feeding_study_read",
+   "wild_or_captive": "previously captive; temporarily free-ranging",
+   "evidence_tier": "2b_previously_captive_animal_field_observation_read",
    "detection_methods": [
     "direct_feeding_observation"
    ],

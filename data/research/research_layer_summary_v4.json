@@ -49,16 +49,17 @@
   },
   "cumulative": {
    "evidence_records": 817,
-   "evidence_records_on_hold": 1,
+   "evidence_records_on_hold": 3,
    "evidence_by_tier": {
-    "1_wild_feeding_study_read": 492,
+    "1_wild_feeding_study_read": 491,
     "2_semi_wild_feeding_study_read": 16,
+    "2b_previously_captive_animal_field_observation_read": 1,
     "3_captive_feeding_trial_read": 28,
     "4_institutional_husbandry_guideline": 59,
     "5_husbandry_practice_reported": 19,
     "6_keeper_organisation_statement": 36,
     "7_local_or_community_report": 26,
-    "8_secondary_citation_primary_not_read": 108,
+    "8_secondary_citation_primary_not_read": 106,
     "9_review_or_account_statement": 32
    },
    "evidence_by_detection_method": {
@@ -78,7 +79,7 @@
     "provisioned_food_observed": 14,
     "resident_or_hunter_report": 12,
     "review_statement_method_not_given": 16,
-    "secondary_citation_method_not_verified": 108,
+    "secondary_citation_method_not_verified": 106,
     "secondary_reproduction_not_verified": 4,
     "statement_in_article_text": 1,
     "unreferenced_general_statement": 4
@@ -163,7 +164,7 @@
      "unreferenced_general_statement": 4
     },
     "by_tier": {
-     "1_wild_feeding_study_read": 1,
+     "2b_previously_captive_animal_field_observation_read": 1,
      "5_husbandry_practice_reported": 3,
      "6_keeper_organisation_statement": 13,
      "8_secondary_citation_primary_not_read": 8
@@ -262,17 +263,17 @@
     }
    },
    "Gopherus agassizii": {
-    "records": 40,
+    "records": 38,
     "added_in_unit_4": 0,
     "species_specific": true,
     "by_detection_method": {
      "direct_feeding_observation": 34,
-     "secondary_citation_method_not_verified": 6
+     "secondary_citation_method_not_verified": 4
     },
     "by_tier": {
      "1_wild_feeding_study_read": 18,
      "2_semi_wild_feeding_study_read": 16,
-     "8_secondary_citation_primary_not_read": 6
+     "8_secondary_citation_primary_not_read": 4
     }
    },
    "Gopherus polyphemus": {
@@ -456,7 +457,7 @@
    "names_needing_review": 46,
    "family_printed_differs_from_backbone_unit_4": 12,
    "conflicting_records_same_tortoise_and_plant": 0,
-   "records_on_hold": 1,
+   "records_on_hold": 3,
    "identical_record_groups_across_units": 0,
    "duplicate_datasets_not_added": 1,
    "sources_on_hold_unit_4": 7
