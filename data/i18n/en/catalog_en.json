@@ -397,9 +397,7 @@
    "why": "A specialist tortoise plant database (The Tortoise Table) explains that the fruit of squashes, including Cucurbita moschata, is not toxic to tortoises, but does not recommend feeding the fruit to tortoises other than naturally fruit-eating species such as the red-footed tortoise. It separately says the leaves can be fed in small amounts and the flowers in moderation. No feeding trials in tortoises that would overturn this view have been found. Korean zucchini fruit is therefore excluded from the planned diet. This does not mean that eating a little Korean zucchini causes poisoning, and it is not a claim that a toxic dose has been established. The young leaves of Korean zucchini and pumpkin flowers are assessed in separate entries.",
    "role": "Fruit not recommended for planned feeding (except for fruit-eating species)",
    "market": "supermarket, online",
-   "aliases": [
-    "zucchini"
-   ]
+   "aliases": []
   },
   {
    "id": "cucumber",
@@ -937,10 +935,12 @@
   {
    "id": "waterdropwort",
    "name": "Water dropwort",
-   "why": "Plants of the genus Oenanthe are excluded from planned feeding unless the exact species and its safety are confirmed. Specialist plant sources warn of a strong toxicity risk for Oenanthe plants (including the hemlock water dropwort group), but mammalian toxicity research on the Korean water dropwort itself, Oenanthe javanica, shows that the risk of other Oenanthe species cannot be applied to it directly. That research does not, on the other hand, prove safety in tortoises. With feeding safety in tortoises unresolved at species level, it is conservatively excluded from planned feeding.",
+   "why": "A specialist tortoise database regards plants of the genus Oenanthe (including the hemlock water dropwort group) as plants to avoid. Data on O. javanica itself include both observations of no toxicity in mammals and toxicity signals at high doses or from extracts, so the toxicity of other Oenanthe species cannot be applied to it directly. With no direct safety evidence in Testudo, it is excluded from planned feeding.",
    "role": "Excluded from planned feeding",
    "market": "supermarket, market",
-   "aliases": []
+   "aliases": [
+    "water dropwort"
+   ]
   },
   {
    "id": "fennelleaf",

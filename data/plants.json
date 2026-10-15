@@ -622,12 +622,13 @@
     "family": "Cucurbitaceae",
     "category": "fruit_veg",
     "market": "마트/온라인",
-    "aliases": [
+    "aliases": [],
+    "identity_status": "verified_name",
+    "suitability_status": "reviewed",
+    "search_aliases": [
       "주키니",
       "zucchini"
-    ],
-    "identity_status": "verified_name",
-    "suitability_status": "reviewed"
+    ]
   },
   {
     "id": "cucumber",
@@ -1506,6 +1507,7 @@
     "category": "leafy",
     "market": "마트/시장",
     "aliases": [
+      "water dropwort",
       "미나리잎"
     ],
     "identity_status": "verified_name",

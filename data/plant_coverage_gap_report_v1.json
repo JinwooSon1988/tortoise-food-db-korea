@@ -10,8 +10,8 @@
       "verified_nutrition": 63,
       "with_assessment": 182,
       "with_evidence": 182,
-      "with_korea_alias": 10,
-      "fully_complete_current_schema": 3
+      "with_korea_alias": 11,
+      "fully_complete_current_schema": 4
     }
   },
   "published_plants": [
@@ -666,11 +666,9 @@
       "assessment_count": 1,
       "exact_species_taxa": [],
       "evidence_record_present": true,
-      "korea_alias_present": false,
-      "gaps": [
-        "korea_alias"
-      ],
-      "next_action": "korea_alias"
+      "korea_alias_present": true,
+      "gaps": [],
+      "next_action": "complete_current_schema"
     },
     {
       "plant_id": "cucumber",
