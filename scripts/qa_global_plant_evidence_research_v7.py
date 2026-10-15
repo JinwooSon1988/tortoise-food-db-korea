@@ -225,6 +225,14 @@ def main():
     for c in load("record_corrections_v2_editorial.json")["corrections"]:
         if ev2[c["evidence_id"]].get(c["field"]) != c["corrected_value"]:
             errors.append("%s %s: reviewed correction (%s) is not in tortoise_plant_evidence_v2.json" % (c["evidence_id"], c["field"], c["commit"]))
+    # every live record whose original is unread is listed in the gap register (11 were missing: crm096, De la Ossa, Moll and Klemens)
+    gap = load("research_gap_register_v6.json")
+    listed = {i for k in ("unit_1_citations_not_read", "other_citations_not_read") for c in gap.get(k, []) for i in c["evidence_ids"]}
+    listed |= {c["evidence_id"] for c in gap.get("unit_1_citations_read_not_supporting", [])}
+    for x in index:
+        if x["evidence_directness"] in DOWNGRADED_STATUS or x["evidence_directness"] == "reported_in_account_primary_not_read":
+            if not x["on_hold"] and not x["superseded_by"] and x["evidence_id"] not in listed:
+                errors.append("%s: original unread but missing from research_gap_register_v6.json" % x["evidence_id"])
     # summary counts follow the nutrition files they describe
     s2 = load("research_layer_summary_v2.json")["summary"]
     for key, f in (("unit_1", NUTRITION[0]), ("unit_2_added", NUTRITION[1])):

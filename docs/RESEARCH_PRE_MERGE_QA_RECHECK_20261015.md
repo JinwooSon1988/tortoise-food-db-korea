@@ -37,14 +37,31 @@ a row only while the built value still equals the recorded one; if the transcrip
   (removed from the evidence record in 92114f34; *Ceratocephala* is Ranunculaceae in units 3 and 4).
 * Tier counts in `research_layer_summary_v3/v4` (one record moves from tier 1 to tier 2b).
 
+### 4. The gap register left out 13 live records whose citation is open
+
+`research_gap_register_v6.json` listed only unit-1 records still marked `secondary_citation_primary_not_read` (74 in 16 groups).
+Not listed were 87 − 74 = 13 live records whose evidence still rests on an unread or non-supporting original:
+
+* 5 × `crm096_elongata_2016` — Sriprateep et al. 2013 was read and does not name the plant; van Dijk 1998 and Ihlow pers. obs. are unread;
+* 5 × `delaossa_2009-20..24` (cited as Moskovits 1981; see the unit-2 Moskovits citation audit) and `moll_klemens_1996-07`
+  (Loveridge and Williams 1957) — unit-2 secondary citations;
+* 2 × `crm109_agassizii_2019-05/06` — Prose and Wilshire 2000 was read in unit 3 and does not support the statement
+  (the report never mentions tortoises). These remain live, not on hold, as the account's claim only.
+
+The register now has `other_citations_not_read` (3 groups, 11 records) and `unit_1_citations_read_not_supporting` (2 records);
+the existing section and its totals are unchanged. The 21 unread-primary records not listed are confirmed in their primary and superseded.
+Unresolved scientific names: 48, unchanged; the 130 index records without an accepted name and outside the register are all
+`common_name_only` ("dry grass" etc.), not unresolved scientific names.
+
 ### New guards (`qa_global_plant_evidence_research_v7.py`)
 
 * tiers 1, 2 and 2b must agree with `wild_or_captive` in both evidence indexes;
 * a candidate's best tier cannot be a wild feeding study unless one of its records is;
 * every reviewed unit-2 correction must be present in the evidence file;
-* the v2 summary's nutrition value counts must equal the nutrition files.
+* the v2 summary's nutrition value counts must equal the nutrition files;
+* every live record whose original is unread or non-supporting is listed in the gap register.
 
-They fail on the data before this change (3 errors) and pass after it.
+They fail on the data before this change (3 and 13 errors) and pass after it.
 
 ## Rechecks with no change needed
 
