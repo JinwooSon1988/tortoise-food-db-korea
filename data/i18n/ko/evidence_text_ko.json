@@ -1,0 +1,1567 @@
+{
+ "schema_version": "1.0",
+ "created_at": "2026-10-16",
+ "purpose": "Korean text for English evidence-card fields of data/public_evidence_records.json that the Korean page generator could not localize and replaced with one generic sentence, while the English page showed the specific text. Each entry is a direct translation of the English field value (field + en); it adds nothing the English text does not say. Scientific names, numbers and units are kept as written. scripts/generate_static_pages.py uses an entry only while the record still holds exactly that English text; scripts/qa_ko_en_evidence_parity_v1.py fails on stale or unused entries and on any card that falls back to a generic sentence.",
+ "entries": [
+  {
+   "field": "supports",
+   "en": "A 2025 Food Control study directly quantified pyrrolizidine alkaloids in 106 borage leaf samples and 33 flower samples. Microgreens had the highest PA contents, pre-flowering leaves often exceeded the EU food maximum, and all analyzed flowers contained PA; flowers generally contained more PA than corresponding leaves.",
+   "ko": "2025년 Food Control 연구는 보리지 잎 시료 106개와 꽃 시료 33개에서 피롤리지딘 알칼로이드를 직접 정량했다. PA 함량은 마이크로그린이 가장 높았고, 개화 전 잎은 유럽연합 식품 최대 기준을 자주 넘었으며, 분석한 꽃은 모두 PA를 함유했다. 꽃은 대체로 해당 잎보다 PA가 많았다."
+  },
+  {
+   "field": "supports",
+   "en": "A veterinary field case linked heavy exposure to growing curly dock with acute oxalate toxicosis in sheep; sampled Rumex contained 6.6–11.1% oxalic acid on a dry-weight basis, with hypocalcemia and renal lesions in affected animals.",
+   "ko": "수의학 현장 사례는 자라는 소리쟁이(‘curly dock’)에 많이 노출된 양의 급성 옥살산 중독을 보고했다. 채취한 Rumex의 옥살산은 건물 기준 6.6–11.1%였고, 영향을 받은 동물에서 저칼슘혈증과 신장 병변이 나타났다."
+  },
+  {
+   "field": "supports",
+   "en": "A veterinary review of house-plant hazards includes Muscari armeniacum among alkaloid-containing ornamental plants and notes that, in the discussed bulb-plant group, active constituents are usually most concentrated in bulbs.",
+   "ko": "실내 식물 위험에 관한 수의학 종설은 Muscari armeniacum을 알칼로이드를 함유한 관상식물에 넣고, 다룬 알뿌리 식물군에서는 활성 성분이 보통 알뿌리에 가장 많이 모여 있다고 적는다."
+  },
+  {
+   "field": "supports",
+   "en": "An HPLC-enzyme-reactor method quantified oxalate in raw edible plants that accumulate oxalate, including cultivated sorrel Rumex acetosa L. var. hortensis. This provides exact-taxon-family composition evidence that oxalate is a genuine limiting constituent of sorrel used as food.",
+   "ko": "HPLC 효소 반응기 방법으로 옥살산을 축적하는 날것의 식용 식물에서 옥살산을 정량했고, 재배 수영 Rumex acetosa L. var. hortensis가 포함됐다. 식품으로 쓰는 수영에서 옥살산이 실제 제한 성분임을 보여 주는, 분류군 수준이 정확히 맞는 성분 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "Commercially grown alfalfa sprouts contained appreciable L-canavanine, ranging from 1.3 to 2.4% of dry matter depending on source. The study identifies a non-protein amino acid/arginine antimetabolite in the exact sprout food concept.",
+   "ko": "상업 재배 알팔파 새싹에는 L-카나바닌이 상당량 들어 있었고, 공급원에 따라 건물의 1.3–2.4%였다. 이 연구는 정확히 같은 새싹 식품에서 비단백질 아미노산이자 아르기닌 길항 대사물질을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "Comparative work on European Salix species showed that willow leaves differ substantially in secondary chemistry, including phenolic glycosides. This supports treating Salix leaf chemistry as species-dependent rather than assuming all willow leaves are compositionally equivalent.",
+   "ko": "유럽 Salix 종들을 비교한 연구에서 버드나무 잎은 페놀 배당체를 포함한 2차 대사 화학이 크게 달랐다. 모든 버드나무 잎의 성분이 같다고 가정하지 않고 Salix 잎 화학을 종에 따라 다르게 다루는 근거가 된다."
+  },
+  {
+   "field": "supports",
+   "en": "Confirms Abutilon indicum (L.) Sweet as an accepted species in Malvaceae.",
+   "ko": "Abutilon indicum (L.) Sweet가 아욱과(Malvaceae)의 인정되는 종임을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "Confirms Aeonium arboreum (L.) Webb & Berthel. as an accepted species in Crassulaceae.",
+   "ko": "Aeonium arboreum (L.) Webb & Berthel.이 돌나물과(Crassulaceae)의 인정되는 종임을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "Confirms Buddleja davidii Franch. as an accepted species in Scrophulariaceae.",
+   "ko": "Buddleja davidii Franch.가 현삼과(Scrophulariaceae)의 인정되는 종임을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "Confirms Dichondra micrantha Urb. as an accepted species in Convolvulaceae and records introduction into Korea.",
+   "ko": "Dichondra micrantha Urb.가 메꽃과(Convolvulaceae)의 인정되는 종임을 확인하고, 한국에 도입된 기록을 남긴다."
+  },
+  {
+   "field": "supports",
+   "en": "Documents glucosinolates and release of volatile isothiocyanates from Sisymbrium officinale tissues, supporting a biologically relevant Brassicaceae exposure signal.",
+   "ko": "Sisymbrium officinale 조직에서 글루코시놀레이트와 휘발성 이소티오시아네이트 방출을 기록해, 생물학적으로 의미 있는 배추과 노출 신호를 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "GC-TOFMS and HPLC profiling directly characterized primary metabolites, glucosinolates, phenolics and carotenoids in two Chinese-cabbage phenotypes, providing exact-subspecies edible-leaf chemistry.",
+   "ko": "GC-TOFMS와 HPLC 분석으로 배추 표현형 2종의 1차 대사물질·글루코시놀레이트·페놀·카로티노이드를 직접 분석했다. 아종이 정확히 맞는 먹는 잎의 화학 자료다."
+  },
+  {
+   "field": "supports",
+   "en": "Glucosinolate levels were directly determined in leaves of turnip-green Brassica rapa material; sixteen glucosinolates were identified and profiles varied among varieties.",
+   "ko": "순무 잎 Brassica rapa 재료의 잎에서 글루코시놀레이트 수준을 직접 측정했다. 글루코시놀레이트 16종이 확인됐고, 구성은 품종마다 달랐다."
+  },
+  {
+   "field": "supports",
+   "en": "HPLC measurement found total oxalate of 1112.4 mg/100 g dry matter in raw Chenopodium album leaves; boiling and wok cooking reduced total oxalate. This directly supports the presence and magnitude of a limiting compound in the exact plant and leaf part.",
+   "ko": "HPLC 측정에서 날것의 Chenopodium album 잎의 총 옥살산은 건물 기준 1112.4 mg/100 g이었고, 끓이기와 웍 조리로 총 옥살산이 줄었다. 정확히 같은 식물과 잎 부위에 제한 성분이 있고 그 양이 어느 정도인지를 직접 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "In growing alfalfa seedlings, canavanine reached 3.2% of dry mass on day 6 and then declined; saponins followed a different time course, reaching 1.8% in shoots on day 8 before declining. This demonstrates that limiting compounds are present in the exact seedling stage and vary substantially with age.",
+   "ko": "자라는 알팔파 싹에서 카나바닌은 6일째 건물의 3.2%에 이른 뒤 줄었다. 사포닌은 다른 시간 경과를 보여, 8일째 순에서 1.8%에 이른 뒤 줄었다. 정확히 같은 싹 단계에 제한 성분이 있고 그 양이 나이에 따라 크게 달라짐을 보여 준다."
+  },
+  {
+   "field": "supports",
+   "en": "Includes Common Vetch (Vicia sativa) at 5% in a tortoise food growing mixture, supporting use as one component of a diverse forage planting.",
+   "ko": "육지거북 먹이 재배용 혼합물에 살갈퀴(‘Common Vetch’, Vicia sativa)를 5% 넣어, 다양한 먹이 식재의 한 구성 요소로 쓰는 것을 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "Includes Vicia sativa at 7% and Vicia cracca at 3% in a 21-species tortoise food seed mixture, supporting their use as minority components of diverse forage.",
+   "ko": "21종으로 된 육지거북 먹이 씨앗 혼합물에 Vicia sativa 7%와 Vicia cracca 3%를 넣어, 다양한 먹이 풀 가운데 소수 구성 요소로 쓰는 것을 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "Includes White Dead Nettle (Lamium album) among wild foods offered to tortoises and notes its usefulness as a winter-growing addition.",
+   "ko": "육지거북에게 주는 야생 먹이에 흰광대나물(‘White Dead Nettle’, Lamium album)을 포함하고, 겨울에도 자라는 보충 먹이로 유용하다고 적는다."
+  },
+  {
+   "field": "supports",
+   "en": "Kew POWO accepts Campanula rotundifolia L. and records harebell as an English common name.",
+   "ko": "Kew POWO는 Campanula rotundifolia L.을 인정되는 종으로 등재하고, 영어 일반명 ‘harebell’을 기록한다."
+  },
+  {
+   "field": "supports",
+   "en": "Kew POWO accepts Erodium botrys (Cav.) Bertol. and records its native range in Macaronesia and the Mediterranean.",
+   "ko": "Kew POWO는 Erodium botrys (Cav.) Bertol.을 인정되는 종으로 등재하고, 원산지를 마카로네시아와 지중해 지역으로 기록한다."
+  },
+  {
+   "field": "supports",
+   "en": "LC-MS/MS analysis quantified pyrrolizidine alkaloids in Borago officinalis leaves, flowers and microgreens. All analyzed flowers contained PA; flowers generally contained more than corresponding leaves, while microgreens and pre-flowering leaves showed particularly high concentrations. This confirms toxicologically relevant PA in the exact plant and the same aerial parts considered for feeding.",
+   "ko": "LC-MS/MS 분석으로 Borago officinalis의 잎·꽃·마이크로그린에서 피롤리지딘 알칼로이드를 정량했다. 분석한 꽃은 모두 PA를 함유했고, 꽃은 대체로 해당 잎보다 많이 함유했으며, 마이크로그린과 개화 전 잎은 특히 높은 농도를 보였다. 정확히 같은 식물과 급여 대상으로 고려되는 같은 지상부에 독성학적으로 의미 있는 PA가 있음을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "LC/MS, LC/MS/MS and NMR identified 4-mercaptobutyl glucosinolate as the major glucosinolate in Eruca sativa leaves, with additional glucosinolates also present. This confirms that the limiting-compound discussion for rocket leaves has a direct plant-chemistry basis.",
+   "ko": "LC/MS, LC/MS/MS와 NMR로 Eruca sativa 잎의 주된 글루코시놀레이트가 4-머캅토부틸 글루코시놀레이트임을 확인했고, 다른 글루코시놀레이트도 함께 있었다. 루콜라 잎의 제한 성분 논의가 직접적인 식물 화학 근거에 기반함을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "Leaf analyses across six Populus species and three hybrids identified flavonoids and salicylic compounds and confirmed compounds including salicortin and tremulacin depending on species or hybrid. This directly supports that Populus leaves contain taxon-variable salicylate-related phenolic chemistry.",
+   "ko": "Populus 6종과 잡종 3종의 잎 분석에서 플라보노이드와 살리실 화합물이 확인됐고, 종이나 잡종에 따라 살리코르틴과 트레물라신 같은 화합물이 확인됐다. Populus 잎에 분류군마다 다른 살리실산 관련 페놀 화학이 있음을 직접 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "Links the Korean common name for Buddleja davidii Franch. to the same botanical taxon in a Korean biodiversity resource.",
+   "ko": "국내 생물다양성 자료에서 Buddleja davidii Franch.의 한국 일반명을 같은 식물 분류군에 연결한다."
+  },
+  {
+   "field": "supports",
+   "en": "Measured high soluble oxalate in Beta vulgaris var. cicla leaves, with regrowth tissue reaching 7267 ± 307 mg/100 g dry matter and soluble oxalate comprising 58–89% of total oxalate depending on maturity. This supports treating oxalate as a real leaf-specific limiting factor.",
+   "ko": "Beta vulgaris var. cicla 잎에서 수용성 옥살산이 높게 측정됐다. 다시 자란 조직은 건물 기준 7267 ± 307 mg/100 g에 이르렀고, 성숙도에 따라 수용성 옥살산이 총 옥살산의 58–89%를 차지했다. 옥살산을 잎에 특이적인 실제 제한 요인으로 다루는 근거가 된다."
+  },
+  {
+   "field": "supports",
+   "en": "Prunasin was detected in vegetative tissues of examined Prunus species including P. salicina; among vegetative tissues, roots had the highest concentrations, followed by stems and leaves. This establishes a cyanogenic-glycoside hazard signal in the exact plant taxon/leaf context.",
+   "ko": "P. salicina를 포함해 조사한 Prunus 종들의 영양 조직에서 프루나신이 검출됐다. 영양 조직 가운데 뿌리의 농도가 가장 높았고, 줄기와 잎이 뒤를 이었다. 정확히 같은 식물 분류군·잎 맥락에서 시안 배당체 위험 신호를 확인한 것이다."
+  },
+  {
+   "field": "supports",
+   "en": "Rosmarinic acid was directly separated, identified and quantified in Salvia officinalis leaves, providing exact-species and leaf-specific chemistry.",
+   "ko": "Salvia officinalis 잎에서 로즈마린산을 직접 분리·동정·정량했다. 정확히 같은 종과 잎에 특이적인 화학 자료다."
+  },
+  {
+   "field": "supports",
+   "en": "Rumex acetosa leaves were directly analyzed for oxalate under wild and cultivated conditions. The study reported high leaf oxalate, with open-field cultivated leaves reaching about 8.5 mg oxalate/g fresh weight, confirming a substantial leaf-specific calcium-binding antinutrient burden.",
+   "ko": "야생과 재배 조건의 Rumex acetosa 잎을 직접 분석해 옥살산을 측정했다. 연구는 잎의 옥살산이 높다고 보고했고, 노지 재배 잎은 생체중 1 g당 옥살산 약 8.5 mg에 이르렀다. 잎에 특이적인, 칼슘과 결합하는 항영양 성분 부담이 상당함을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "Specialist tortoise guidance for a related plum taxon advises preventing access to leaves where possible and notes increased concern as leaves age and wilt; fruit stones are separately avoided.",
+   "ko": "근연 자두 분류군에 대한 육지거북 전문 지침은 가능하면 잎에 접근하지 못하게 하라고 권하고, 잎이 오래되고 시들수록 우려가 커진다고 적는다. 열매 씨는 따로 피하도록 한다."
+  },
+  {
+   "field": "supports",
+   "en": "States that flowers and leaves of Vicia spp., explicitly including Vicia sativa and Vicia cracca, are suitable as a small part of a varied tortoise diet.",
+   "ko": "Vicia spp.의 꽃과 잎이 다양한 육지거북 식단의 작은 부분으로 적합하다고 하며, Vicia sativa와 Vicia cracca를 명시적으로 포함한다."
+  },
+  {
+   "field": "supports",
+   "en": "The review documents extensive bioactive secondary metabolites across Salix and notes that leaves mainly contain flavonoids, phenolic acids/derivatives and phenolic glycosides; salicinoids are characteristic Salix metabolites and many phenolic glycosides have been identified in leaves.",
+   "ko": "이 종설은 Salix 전반에 생물활성 2차 대사물질이 많음을 정리하고, 잎에는 주로 플라보노이드, 페놀산과 그 유도체, 페놀 배당체가 있다고 적는다. 살리시노이드는 Salix의 특징적인 대사물질이며, 잎에서 많은 페놀 배당체가 확인됐다."
+  },
+  {
+   "field": "supports",
+   "en": "The study analytically characterized fagopyrins in common buckwheat (Fagopyrum esculentum) green plant material and supports that photosensitizing fagopyrin compounds occur in the above-ground edible/forage plant rather than being inferred from the grain alone.",
+   "ko": "이 연구는 메밀(Fagopyrum esculentum)의 녹색 식물체에서 파고피린을 분석으로 확인했다. 광과민성 파고피린 화합물이 곡물에서 추정한 것이 아니라, 먹거나 사료로 쓰는 지상부 식물체에 실제로 있다는 점을 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study confirms organ-specific pyrrolizidine-alkaloid biology in Symphytum officinale: roots are an established biosynthetic site, specialized young leaves can activate alkaloid production, and PAs accumulate in flowers during a defined developmental stage.",
+   "ko": "이 연구는 Symphytum officinale의 기관별 피롤리지딘 알칼로이드 생물학을 확인한다. 뿌리는 확립된 생합성 부위이고, 특화된 어린잎은 알칼로이드 생산을 활성화할 수 있으며, PA는 정해진 발달 단계 동안 꽃에 축적된다."
+  },
+  {
+   "field": "supports",
+   "en": "The study developed a specific HPLC-ESI-MS method and directly identified ginkgolic acids in Ginkgo biloba leaves, providing exact-species and leaf-specific chemistry evidence.",
+   "ko": "이 연구는 특정 HPLC-ESI-MS 방법을 개발해 Ginkgo biloba 잎에서 깅콜산을 직접 확인했다. 정확히 같은 종과 잎에 특이적인 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly analyzed Artemisia princeps leaves and identified 192 volatile compounds. Major constituents varied with extraction method; alpha-thujone was measured among the major leaf volatiles, alongside borneol, 1,8-cineole and other terpenoids. This provides exact-species, leaf-specific chemistry rather than relying only on a genus-level Artemisia entry.",
+   "ko": "이 연구는 Artemisia princeps 잎을 직접 분석해 휘발성 화합물 192종을 확인했다. 주요 성분은 추출 방법에 따라 달랐고, 알파-투존이 보르네올·1,8-시네올 등 다른 테르페노이드와 함께 주요 잎 휘발 성분으로 측정됐다. 속 수준 Artemisia 항목에만 의존하지 않는, 정확히 같은 종의 잎에 특이적인 화학 자료다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly analyzed essential oils from Glebionis coronaria leaves and flowers from three natural populations and identified substantial organ- and population-dependent chemical variation. It supplies exact-species, leaf-specific chemistry for crown daisy.",
+   "ko": "이 연구는 자연 개체군 3곳의 Glebionis coronaria 잎과 꽃에서 정유를 직접 분석해 기관과 개체군에 따른 화학적 차이가 크다는 점을 확인했다. 쑥갓에 대한 정확히 같은 종의 잎에 특이적인 화학 자료다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly analyzed essential oils obtained from fennel leaves and documented leaf volatile composition across cultivars and fertilization treatments, providing relevant leaf-specific composition evidence.",
+   "ko": "이 연구는 펜넬 잎에서 얻은 정유를 직접 분석해 품종과 시비 처리에 따른 잎 휘발 성분 구성을 기록했다. 잎에 특이적인 관련 성분 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly analyzed leaf extracts from Pyrus pyrifolia accessions, providing exact-species and leaf-specific phytochemical evidence rather than relying only on a genus-level pear-tree record.",
+   "ko": "이 연구는 Pyrus pyrifolia 계통의 잎 추출물을 직접 분석했다. 속 수준 배나무 기록에만 의존하지 않는, 정확히 같은 종과 잎에 특이적인 식물 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly assayed glucosinolates in harvested collard leaves across a large set of landraces and cultivars and demonstrated substantial variation in leaf glucosinolate profiles.",
+   "ko": "이 연구는 많은 재래종과 품종의 수확한 콜라드 잎에서 글루코시놀레이트를 직접 분석했고, 잎의 글루코시놀레이트 구성이 크게 달라짐을 보였다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized Opuntia ficus-indica cladodes and demonstrated abundant calcium oxalate crystals as well as sugars and flavonoid glycosides, providing exact-species, pad-specific composition evidence.",
+   "ko": "이 연구는 Opuntia ficus-indica 줄기마디를 직접 분석해 옥살산칼슘 결정이 많고 당과 플라보노이드 배당체도 있음을 보였다. 정확히 같은 종의 줄기마디(패드)에 특이적인 성분 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized Pisum sativum pea shoots as the edible young aerial tissue, measuring macronutrients, minerals, vitamins, carotenoids and flavonoids. It provides plant-part-matched composition evidence rather than substituting mature pea seeds for shoots.",
+   "ko": "이 연구는 먹는 어린 지상부 조직인 완두(Pisum sativum) 순을 직접 분석해 다량 영양소·무기질·비타민·카로티노이드·플라보노이드를 측정했다. 다 익은 완두 씨앗을 순 대신 쓰지 않고, 식물 부위가 맞는 성분 근거를 제공한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized a supercritical-CO2 extract from Helianthus annuus leaves and identified numerous metabolites, including sesquiterpene lactones, diterpenes and flavonoids, providing exact-species leaf chemistry evidence.",
+   "ko": "이 연구는 Helianthus annuus 잎의 초임계 CO2 추출물을 직접 분석해 세스퀴테르펜 락톤·디테르펜·플라보노이드 등 많은 대사물질을 확인했다. 정확히 같은 종의 잎 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized fresh Melissa officinalis leaves and stems and identified caffeic acid, rosmarinic acid and other constituents, providing exact-species evidence from fresh aerial material.",
+   "ko": "이 연구는 신선한 Melissa officinalis 잎과 줄기를 직접 분석해 카페산·로즈마린산 등 성분을 확인했다. 신선한 지상부에서 얻은 정확히 같은 종의 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized glucosinolate profiles in pak choi and detected aliphatic glucosinolates in mature leaves, while also showing substantial cultivar and developmental-stage variation. This supplies exact-taxon, edible-leaf composition evidence for bok choy.",
+   "ko": "이 연구는 청경채의 글루코시놀레이트 구성을 직접 분석해 다 자란 잎에서 지방족 글루코시놀레이트를 검출했고, 품종과 발달 단계에 따른 차이도 크다는 점을 보였다. 청경채의 먹는 잎에 대한, 분류군이 정확히 맞는 성분 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized metabolites from Fragaria × ananassa leaves using NMR and UPLC-qTOF-MS/MS, providing exact-hybrid, leaf-specific phytochemical evidence.",
+   "ko": "이 연구는 NMR과 UPLC-qTOF-MS/MS로 Fragaria × ananassa 잎의 대사물질을 직접 분석했다. 잡종이 정확히 맞는, 잎에 특이적인 식물 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized phenolic composition in healthy Vitis vinifera leaves and showed differences between leaf sectors and cultivars, providing exact-species leaf chemistry.",
+   "ko": "이 연구는 건강한 Vitis vinifera 잎의 페놀 조성을 직접 분석했고, 잎의 부위와 품종에 따라 차이가 있음을 보였다. 정확히 같은 종의 잎 화학 자료다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized phenolic compounds in Malus domestica leaves, providing exact-species and leaf-specific plant chemistry evidence.",
+   "ko": "이 연구는 Malus domestica 잎의 페놀 화합물을 직접 분석했다. 정확히 같은 종과 잎에 특이적인 식물 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized polyphenols and condensed tannins from Onobrychis viciifolia and showed that sainfoin tannin composition can vary substantially, providing exact-species phytochemical evidence for this forage plant.",
+   "ko": "이 연구는 Onobrychis viciifolia의 폴리페놀과 축합 탄닌을 직접 분석했고, 세인포인 탄닌 조성이 크게 달라질 수 있음을 보였다. 이 사료 식물에 대한 정확히 같은 종의 식물 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly characterized volatile and non-volatile chemistry in mature fresh sweet-pepper fruits across multiple Capsicum annuum genotypes. It supports treating sweet/bell pepper fruit as a distinct non-pungent food-type Capsicum concept rather than automatically transferring chemistry from hot chilli cultivars.",
+   "ko": "이 연구는 여러 Capsicum annuum 유전형의 다 익은 신선한 단고추 열매에서 휘발성·비휘발성 화학을 직접 분석했다. 매운 고추 품종의 화학을 자동으로 옮기지 않고, 단고추·파프리카 열매를 맵지 않은 별도의 식품형 Capsicum 개념으로 다루는 근거가 된다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly compared polyphenol profiles of Fragaria × ananassa cv. Festival leaves and fruits and found markedly different phytochemical profiles, reinforcing that fruit evidence should not substitute for leaf evidence.",
+   "ko": "이 연구는 Fragaria × ananassa cv. Festival 잎과 열매의 폴리페놀 구성을 직접 비교해 식물 화학 구성이 뚜렷이 다르다는 결과를 얻었다. 열매 근거를 잎 근거 대신 쓰면 안 된다는 점을 뒷받침한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly examined benzylglucosinolate (glucotropaeolin) in Tropaeolum majus across development and tissues and identified green leaves as the primary synthesis site.",
+   "ko": "이 연구는 Tropaeolum majus의 발달 단계와 조직에 걸쳐 벤질글루코시놀레이트(글루코트로페올린)를 직접 조사하고, 녹색 잎을 주된 합성 부위로 확인했다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly examined extracts prepared from Prunus persica leaves, providing exact-species and leaf-specific evidence that peach foliage contains bioactive extractable compounds.",
+   "ko": "이 연구는 Prunus persica 잎으로 만든 추출물을 직접 조사했다. 복숭아 잎에 추출 가능한 생물활성 화합물이 있다는, 정확히 같은 종과 잎에 특이적인 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly identified and quantified coumarin-related compounds in German chamomile leaves and flower heads, including herniarin, umbelliferone and additional coumarin glycosides/aglycones.",
+   "ko": "이 연구는 저먼 캐모마일 잎과 두상화에서 헤르니아린·움벨리페론과 다른 쿠마린 배당체·비배당체를 포함한 쿠마린 관련 화합물을 직접 확인하고 정량했다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly isolated and identified multiple flavonol glycosides from Anethum graveolens leaves, providing exact-species and leaf-specific phytochemical evidence.",
+   "ko": "이 연구는 Anethum graveolens 잎에서 여러 플라보놀 배당체를 직접 분리·동정했다. 정확히 같은 종과 잎에 특이적인 식물 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly isolated multiple acylated triterpene saponins from Bellis perennis flowers, including seven newly characterized perennisosides and known saponins. This provides exact-species, flower-specific evidence that daisy flowers contain triterpene saponins.",
+   "ko": "이 연구는 Bellis perennis 꽃에서 새로 규명된 페레니소사이드 7종과 알려진 사포닌을 포함한 여러 아실화 트리테르펜 사포닌을 직접 분리했다. 데이지 꽃에 트리테르펜 사포닌이 있다는, 정확히 같은 종의 꽃에 특이적인 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured antinutrients and phenolic characteristics in Cucurbita moschata leaves, providing species- and leaf-specific composition evidence for an edible pumpkin leaf.",
+   "ko": "이 연구는 Cucurbita moschata 잎의 항영양 성분과 페놀 특성을 직접 측정했다. 먹는 호박잎에 대한 종과 잎에 특이적인 성분 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured glucosinolate profiles in white cabbage and found substantial within-species, environmental and developmental variation in shoot chemistry. It provides exact-variety-group composition evidence relevant to cabbage aerial edible tissues.",
+   "ko": "이 연구는 양배추의 글루코시놀레이트 구성을 직접 측정해 순 화학에 종 내·환경·발달에 따른 차이가 크다는 결과를 얻었다. 양배추의 먹는 지상부 조직과 관련해, 품종군이 정확히 맞는 성분 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured intact glucosinolates in broccoli leaves. Nine glucosinolates were detected across all three cultivars, with concentrations varying substantially among cultivars. This establishes leaf-specific glucosinolate exposure and cultivar variability rather than inferring leaf chemistry from florets.",
+   "ko": "이 연구는 브로콜리 잎에서 온전한 글루코시놀레이트를 직접 측정했다. 3개 품종 모두에서 글루코시놀레이트 9종이 검출됐고, 농도는 품종에 따라 크게 달랐다. 꽃송이에서 잎의 화학을 추정하지 않고, 잎에 특이적인 글루코시놀레이트 노출과 품종 간 차이를 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured mineral accumulation and physiological responses in leaves of red chicory, providing exact-variety-group leaf evidence for the radicchio record.",
+   "ko": "이 연구는 붉은 치커리 잎의 무기질 축적과 생리 반응을 직접 측정했다. 라디키오 기록에 대해 품종군이 정확히 맞는 잎 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured oxalates, phenols and tannins as major secondary metabolites in leaves and roots of Rumex crispus alongside two other Rumex species, providing exact-species evidence that oxalate is part of curly dock leaf chemical defence.",
+   "ko": "이 연구는 Rumex crispus와 다른 Rumex 2종의 잎과 뿌리에서 주요 2차 대사물질인 옥살산·페놀·탄닌을 직접 측정했다. 옥살산이 소리쟁이(‘curly dock’) 잎의 화학적 방어 성분의 일부라는, 정확히 같은 종의 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured oxalic acid in fully expanded Portulaca oleracea leaves and showed substantial variation with harvest stage and nitrate:ammonium nutrition; later-harvest leaves and ammonium-containing treatments had markedly lower concentrations. This provides exact-species, leaf-specific evidence that oxalic-acid content is real but condition-dependent.",
+   "ko": "이 연구는 다 펼쳐진 Portulaca oleracea 잎에서 옥살산을 직접 측정했고, 수확 단계와 질산태:암모늄태 질소 비율에 따라 크게 달라짐을 보였다. 늦게 수확한 잎과 암모늄을 포함한 처리에서 농도가 뚜렷이 낮았다. 옥살산 함량이 실제로 있지만 조건에 따라 달라진다는, 정확히 같은 종의 잎에 특이적인 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured phytate, oxalate, trypsin inhibitor, raffinose and stachyose across 24–120 h of mungbean sprouting. These antinutritional factors generally decreased with longer sprouting, demonstrating that germination stage materially changes sprouted Vigna radiata composition.",
+   "ko": "이 연구는 녹두를 24–120시간 발아시키는 동안 피트산·옥살산·트립신 저해제·라피노스·스타키오스를 직접 측정했다. 이 항영양 인자들은 발아 시간이 길수록 대체로 줄어, 발아 단계가 Vigna radiata 새싹의 성분을 실질적으로 바꾼다는 점을 보여 준다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly measured the distribution of carnosic acid, carnosol, rosmarinic acid and other phenolics across Rosmarinus officinalis organs and development, providing exact-species leaf chemistry.",
+   "ko": "이 연구는 Rosmarinus officinalis의 기관과 발달 단계에 걸쳐 카르노스산·카르노솔·로즈마린산 등 페놀 성분의 분포를 직접 측정했다. 정확히 같은 종의 잎 화학 자료다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly prepared and analyzed extracts from Rubus fruticosus leaves, supplying leaf-specific phytochemical/antioxidant evidence relevant to the Rubus fruticosus aggregate record.",
+   "ko": "이 연구는 Rubus fruticosus 잎으로 추출물을 직접 만들어 분석했다. Rubus fruticosus 집합종 기록과 관련된, 잎에 특이적인 식물 화학·항산화 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly profiled glucosinolates, isothiocyanates and polyphenolics in watercress aerial tissues, providing exact-species and relevant edible-part composition evidence.",
+   "ko": "이 연구는 물냉이 지상부 조직에서 글루코시놀레이트·이소티오시아네이트·폴리페놀을 직접 분석해, 정확히 같은 종과 관련 먹는 부위의 성분 근거를 제공한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly quantified dehydrotomatine and alpha-tomatine across tomato fruits at different maturity stages and multiple vegetative tissues, including leaves and stems. It provides exact-species evidence that glycoalkaloid exposure depends strongly on plant part and fruit maturity rather than being uniform across the tomato plant.",
+   "ko": "이 연구는 성숙 단계가 다른 토마토 열매와 잎·줄기를 포함한 여러 영양 조직에서 데히드로토마틴과 알파-토마틴을 직접 정량했다. 글리코알칼로이드 노출이 토마토 식물 전체에서 같지 않고 부위와 열매 성숙도에 크게 좌우된다는, 정확히 같은 종의 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly quantified oxalate in fresh coriander leaves and evaluated changes after cooking, providing exact-species and edible-leaf evidence for the oxalate rationale.",
+   "ko": "이 연구는 신선한 고수 잎의 옥살산을 직접 정량하고 조리 후 변화를 평가했다. 옥살산을 이유로 든 판단에 대한, 정확히 같은 종과 먹는 잎의 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly quantified primin and its precursor miconidin in Primula obconica. Primin was measured in leaves/stems and flowers, and low-level primin emission was also detected from intact undamaged plants. This provides species- and plant-part-specific evidence for the contact-allergen chemistry of P. obconica.",
+   "ko": "이 연구는 Primula obconica에서 프리민과 그 전구체 미코니딘을 직접 정량했다. 프리민은 잎·줄기와 꽃에서 측정됐고, 손상되지 않은 온전한 식물에서도 낮은 수준의 프리민 방출이 검출됐다. P. obconica의 접촉 알레르겐 화학에 대한 종과 부위에 특이적인 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study directly quantified total, soluble and insoluble calcium oxalate in sweet potato shoots across eight accessions and water-stress conditions, providing exact-species evidence for above-ground shoot tissue and showing that oxalate composition varies with accession and growing condition.",
+   "ko": "이 연구는 8개 계통과 수분 스트레스 조건에서 고구마 순의 총·수용성·불용성 옥살산칼슘을 직접 정량했다. 지상부 순 조직에 대한 정확히 같은 종의 근거이며, 옥살산 조성이 계통과 재배 조건에 따라 달라짐을 보여 준다."
+  },
+  {
+   "field": "supports",
+   "en": "The study identified 102 essential-oil components in Achillea millefolium samples from multiple European countries and showed strong geographic chemical variation. Reported quantitatively important constituents included alpha- and beta-thujone, 1,8-cineole, camphor and other terpenoids, but profiles differed substantially among origins.",
+   "ko": "이 연구는 여러 유럽 국가의 Achillea millefolium 시료에서 정유 성분 102종을 확인하고, 지역에 따른 화학적 차이가 크다는 점을 보였다. 양적으로 중요한 성분으로 알파·베타-투존, 1,8-시네올, 캠퍼 등 테르페노이드가 보고됐지만, 성분 구성은 산지마다 크게 달랐다."
+  },
+  {
+   "field": "supports",
+   "en": "The study investigated the phototoxic basis of Ficus carica and identified photoactive furocoumarin constituents associated with fig-induced photodermatitis, providing exact-species evidence for a biologically active sap/leaf exposure hazard in humans.",
+   "ko": "이 연구는 Ficus carica의 광독성 원인을 조사해 무화과로 인한 광피부염과 관련된 광활성 푸로쿠마린 성분을 확인했다. 사람에서 생물학적으로 활성인 수액·잎 노출 위험에 대한 정확히 같은 종의 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study isolated and identified multiple secondary metabolites from the aerial parts of Lamium amplexicaule, supplying exact-species and relevant aerial-part chemistry evidence.",
+   "ko": "이 연구는 Lamium amplexicaule 지상부에서 여러 2차 대사물질을 분리·동정했다. 정확히 같은 종과 관련 지상부의 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study isolated four new polyhydroxylated pyrrolizidine alkaloids (hyacinthacines A1, A2, A3 and B3) from Muscari armeniacum bulbs and evaluated their glycosidase-inhibitory activity, providing exact-species and exact-bulb phytochemical evidence.",
+   "ko": "이 연구는 Muscari armeniacum 알뿌리에서 새로운 폴리히드록시 피롤리지딘 알칼로이드 4종(히아신타신 A1·A2·A3·B3)을 분리하고 글리코시드 분해효소 저해 활성을 평가했다. 정확히 같은 종과 같은 알뿌리 부위의 식물 화학 근거다."
+  },
+  {
+   "field": "supports",
+   "en": "The study measured glucosinolates across 60 Brassica juncea mustard resources and directly compared organs, including leaves, showing large genotype- and organ-dependent variation.",
+   "ko": "이 연구는 Brassica juncea 갓 자원 60종에서 글루코시놀레이트를 측정하고 잎을 포함한 기관들을 직접 비교해, 유전형과 기관에 따라 크게 달라짐을 보였다."
+  },
+  {
+   "field": "supports",
+   "en": "The study measured macro- and micronutrients in 20 celery genotypes with leaves, stalks and seeds separated. It provides exact-species, leaf-specific mineral data and shows substantial tissue and genotype variation rather than supporting a single universal celery nutrient value.",
+   "ko": "이 연구는 셀러리 유전형 20종의 잎·줄기·씨앗을 나누어 다량·미량 영양소를 측정했다. 정확히 같은 종의 잎에 특이적인 무기질 자료이며, 셀러리 영양값을 하나로 정할 수 있다기보다 조직과 유전형에 따른 차이가 크다는 점을 보여 준다."
+  },
+  {
+   "field": "supports",
+   "en": "The study measured nitrate and oxalate directly in Rumex acetosa leaves under wild and several cultivation conditions and found substantial oxalate, with the highest R. acetosa value reported in open-field cultivated leaves. This confirms a leaf-specific limiting compound in the exact species.",
+   "ko": "이 연구는 야생과 여러 재배 조건의 Rumex acetosa 잎에서 질산염과 옥살산을 직접 측정해 상당한 옥살산을 확인했고, R. acetosa에서 가장 높은 값은 노지 재배 잎에서 보고됐다. 정확히 같은 종에서 잎에 특이적인 제한 성분을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study measured nitrate and oxalate in Rumex acetosa leaves under wild and cultivation conditions. Open-field R. acetosa leaves reached 8.5 mg oxalate/g fresh weight, confirming substantial oxalate in the exact species and leaf part.",
+   "ko": "이 연구는 야생과 재배 조건의 Rumex acetosa 잎에서 질산염과 옥살산을 측정했다. 노지 재배 R. acetosa 잎은 생체중 1 g당 옥살산 8.5 mg에 이르러, 정확히 같은 종과 잎 부위에 상당한 옥살산이 있음을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study measured nitrate and oxalate in Rumex acetosa leaves under wild and several cultivation conditions. Open-field leaves reached 8.50 ± 0.21 mg oxalate/g fresh weight, confirming that oxalate can be a substantial leaf-specific limiting factor and varies with cultivation.",
+   "ko": "이 연구는 야생과 여러 재배 조건의 Rumex acetosa 잎에서 질산염과 옥살산을 측정했다. 노지 재배 잎은 생체중 1 g당 옥살산 8.50 ± 0.21 mg에 이르러, 옥살산이 잎에 특이적인 상당한 제한 요인일 수 있고 재배 방식에 따라 달라짐을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study measured pyrrolizidine alkaloids in Symphytum officinale, compared levels among plant parts and preparations, separated parent alkaloids from their N-oxides, and found that plant part materially affects alkaloid exposure. It also performed a human-cell-line mutagenicity bioassay on separated fractions.",
+   "ko": "이 연구는 Symphytum officinale의 피롤리지딘 알칼로이드를 측정해 식물 부위와 제품 사이의 농도를 비교하고, 모 알칼로이드와 그 N-산화물을 분리했으며, 식물 부위가 알칼로이드 노출에 실질적으로 영향을 준다는 결과를 얻었다. 분리한 분획으로 사람 세포주 돌연변이 유발성 시험도 했다."
+  },
+  {
+   "field": "supports",
+   "en": "The study profiled glucosinolates across tissues of Brassica crops including cauliflower and provides plant-part-specific evidence that glucosinolate composition and concentration vary by tissue rather than being uniform across the plant.",
+   "ko": "이 연구는 콜리플라워를 포함한 배추속 작물의 조직별 글루코시놀레이트를 분석했고, 글루코시놀레이트의 조성과 농도가 식물 전체에서 같지 않고 조직마다 다르다는 부위 특이적 근거를 제공한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study profiled glucosinolates and their hydrolysis products across nine kohlrabi tissues and found leaf tissues rich in glucoraphanin, directly confirming glucosinolate chemistry in kohlrabi leaves.",
+   "ko": "이 연구는 콜라비 조직 9종에서 글루코시놀레이트와 그 가수분해 산물을 분석했고, 잎 조직에 글루코라파닌이 많음을 확인해 콜라비 잎의 글루코시놀레이트 화학을 직접 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "The study separately analyzed leaves, flowers and ripened fruits of Crataegus monogyna subsp. monogyna and identified flavonoids including rutin, apigenin, myricetin, quercetin, naringenin and kaempferol, while also showing part-dependent differences in measured phenolic/flavonoid and antioxidant properties.",
+   "ko": "이 연구는 Crataegus monogyna subsp. monogyna의 잎·꽃·익은 열매를 따로 분석해 루틴·아피게닌·미리세틴·퀘르세틴·나린제닌·캠페롤 등 플라보노이드를 확인했고, 측정한 페놀·플라보노이드와 항산화 특성이 부위에 따라 다름도 보였다."
+  },
+  {
+   "field": "supports",
+   "en": "UHPLC-QToF profiling and a validated LC-MS/MS method identified and quantified multiple pyrrolizidine alkaloids and their N-oxides in Borago officinalis leaf material. This confirms that borage leaves themselves contain a class of compounds relevant to safety assessment.",
+   "ko": "UHPLC-QToF 분석과 검증된 LC-MS/MS 방법으로 Borago officinalis 잎에서 여러 피롤리지딘 알칼로이드와 그 N-산화물을 확인하고 정량했다. 보리지 잎 자체에 안전성 평가와 관련된 화합물군이 들어 있음을 확인한다."
+  },
+  {
+   "field": "supports",
+   "en": "UHPLC-QToF/LC-MS/MS profiling and a validated quantitative method detected pyrrolizidine alkaloids and their N-oxides in Borago officinalis leaf material; acetylated forms were among the quantitatively important compounds in the tested samples.",
+   "ko": "UHPLC-QToF/LC-MS/MS 분석과 검증된 정량 방법으로 Borago officinalis 잎에서 피롤리지딘 알칼로이드와 그 N-산화물을 검출했다. 시험한 시료에서는 아세틸화된 형태가 양적으로 중요한 화합물에 속했다."
+  },
+  {
+   "field": "supports",
+   "en": "UPLC-PDA-Q/TOF-MS identified 29 phenolic compounds in Salix alba leaves and demonstrated a substantial leaf phenolic profile. The paper provides exact-species, leaf-specific chemistry relevant to interpreting why willow foliage should not be treated as nutritionally neutral.",
+   "ko": "UPLC-PDA-Q/TOF-MS로 Salix alba 잎에서 페놀 화합물 29종을 확인하고, 잎의 페놀 구성이 상당함을 보였다. 정확히 같은 종의 잎에 특이적인 화학 자료로, 버드나무 잎을 영양적으로 중립인 먹이로 취급하면 안 되는 이유를 해석하는 데 쓰인다."
+  },
+  {
+   "field": "supports",
+   "en": "UPLC-PDA-Q/TOF-MS identified numerous phenolic compounds in Salix alba leaves and quantified a high total phenolic content. This provides exact-species leaf chemistry showing that willow foliage contains biologically active phenolic constituents.",
+   "ko": "UPLC-PDA-Q/TOF-MS로 Salix alba 잎에서 많은 페놀 화합물을 확인하고 높은 총 페놀 함량을 정량했다. 버드나무 잎에 생물활성 페놀 성분이 있음을 정확히 같은 종의 잎 화학으로 보여 준다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Commercial forage-mix composition is not a controlled feeding trial and does not establish pod or seed safety, toxic dose, or the percentage actually eaten by tortoises.",
+   "ko": "상업용 사료 혼합물의 구성은 통제된 급여 시험이 아니며, 꼬투리나 씨앗의 안전성, 독성 용량, 육지거북이 실제로 먹는 비율을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a controlled long-term feeding ratio, unrestricted monodiet use, or safety of plants exposed to lawn herbicides.",
+   "ko": "통제된 장기 급여 비율, 무제한 단일 식단 급여, 잔디 제초제에 노출된 식물의 안전성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a controlled tortoise thyroid dose-response, a precise safe percentage, or prove that a single small feeding causes thyroid disease.",
+   "ko": "통제된 육지거북 갑상선 용량-반응, 정확한 안전 비율을 정하지 않으며, 한 번 조금 먹인 것이 갑상선 질환을 일으킨다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific diet percentage, fixed frequency or unlimited use. Mature seeds are not equivalent to young grass; the source says not to allow tortoises to eat the seeds because they are too high in protein.",
+   "ko": "종별 식단 비율, 정해진 빈도, 무제한 급여를 정하지 않는다. 다 익은 씨앗은 어린 풀과 같지 않으며, 출처는 단백질이 너무 많으므로 육지거북이 씨앗을 먹지 않게 하라고 말한다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer beyond the stated taxon and plant-part scope.",
+   "ko": "종별 용량, 정해진 식단 비율, 독성 용량, 무제한 급여 허용을 정하지 않는다. 밝힌 분류군과 식물 부위 범위 밖으로 옮기지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict beyond the stated taxon and plant-part scope.",
+   "ko": "종별 용량, 정해진 식단 비율, 독성 용량, 무제한 급여 허용을 정하지 않는다. 판정을 밝힌 분류군과 식물 부위 범위 밖으로 옮기지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific dose, fixed diet percentage, toxic dose, or unlimited feeding allowance; do not transfer the verdict to unlisted plant parts or related taxa.",
+   "ko": "종별 용량, 정해진 식단 비율, 독성 용량, 무제한 급여 허용을 정하지 않는다. 판정을 출처에 없는 부위나 근연 분류군에 옮기지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance. Apply only within the stated taxon and plant-part scope.",
+   "ko": "종별 용량, 정해진 빈도, 식단 비율, 독성 용량, 무제한 급여 허용을 정하지 않는다. 밝힌 분류군과 식물 부위 범위 안에서만 적용한다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific dose, fixed frequency, diet percentage, toxic dose, or unlimited feeding allowance; apply only within the stated taxon and plant-part scope.",
+   "ko": "종별 용량, 정해진 빈도, 식단 비율, 독성 용량, 무제한 급여 허용을 정하지 않는다. 밝힌 분류군과 식물 부위 범위 안에서만 적용한다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific dose, fixed frequency, or equivalence to other Salvia species.",
+   "ko": "종별 용량, 정해진 빈도, 다른 Salvia 종과의 동등성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific feeding percentage or fixed frequency. Dry seed heads are not equivalent to the grass or hay; the source advises removing them because they may cause eye or mouth injury.",
+   "ko": "종별 급여 비율이나 정해진 빈도를 정하지 않는다. 마른 씨 이삭은 풀이나 건초와 같지 않으며, 출처는 눈이나 입을 다치게 할 수 있으니 제거하라고 권한다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific intake percentage or prove every cultivar/endophyte state equivalent.",
+   "ko": "종별 섭취 비율을 정하지 않으며, 모든 품종·내생균 상태가 같다는 점도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific percentage, fixed frequency or unlimited use. The source itself cautions against overfeeding because of the possible laxative effect.",
+   "ko": "종별 비율, 정해진 빈도, 무제한 급여를 정하지 않는다. 출처 스스로 완하 작용이 있을 수 있으므로 과다 급여하지 말라고 주의한다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific percentage, fixed frequency, essential-oil safety, or unlimited intake.",
+   "ko": "종별 비율, 정해진 빈도, 정유의 안전성, 무제한 섭취를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a species-specific toxic dose or prove identical hazard magnitude for every Muscari species and plant part.",
+   "ko": "종별 독성 용량을 정하지 않으며, 모든 Muscari 종과 식물 부위의 위험 크기가 같다는 점도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a the relevant tortoise species toxic dose, clinical poisoning threshold, or that an accidental bite causes poisoning.",
+   "ko": "해당 육지거북 종의 독성 용량, 임상 중독 기준을 정하지 않으며, 실수로 한 입 먹으면 중독된다는 점도 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish a tortoise toxic dose, probability of poisoning from a single bite, or a safe captive-feeding threshold.",
+   "ko": "육지거북 독성 용량, 한 입 먹었을 때 중독될 확률, 사육 시 안전한 급여 기준을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish an Aeonium arboreum-specific tortoise dose-response, exact oxalate concentration, or a precise safe percentage of the diet.",
+   "ko": "Aeonium arboreum에 특이적인 육지거북 용량-반응, 정확한 옥살산 농도, 식단의 정확한 안전 비율을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish an exact a specific Testudo species feeding percentage, long-term dose-response, or separate safety thresholds for leaves, flowers and fruit.",
+   "ko": "특정 Testudo 종의 정확한 급여 비율, 장기 용량-반응, 잎·꽃·열매별 안전 기준을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish an species-specific dose, controlled long-term feeding outcome, or a precise percentage of the total diet.",
+   "ko": "종별 용량, 통제된 장기 급여 결과, 전체 식단 중 정확한 비율을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish an species-specific percentage or frequency and must not be transferred to true Geranium species merely because both may be called geranium.",
+   "ko": "종별 비율이나 빈도를 정하지 않으며, 둘 다 ‘제라늄’으로 불릴 수 있다는 이유만으로 진짜 Geranium 종에 옮기면 안 된다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish safety for tortoise, a tortoise feeding dose or fixed frequency, or justify transferring toxicity of other Oenanthe species to O. javanica. It also does not prove that O. javanica is safe as a captive tortoise food.",
+   "ko": "육지거북에 대한 안전성, 육지거북 급여 용량이나 정해진 빈도를 정하지 않으며, 다른 Oenanthe 종의 독성을 O. javanica에 옮기는 근거도 아니다. O. javanica가 사육 육지거북 먹이로 안전하다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish that every Poaceae species is safe, nor an species-specific grass percentage, fixed frequency, unlimited use, or equivalence between young grass and mature grain/seed.",
+   "ko": "모든 벼과(Poaceae) 종이 안전하다는 것도, 종별 풀 급여 비율·정해진 빈도·무제한 급여나 어린 풀과 다 익은 곡물·씨앗의 동등성도 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not establish that the entire plant is systemically toxic to the relevant tortoise species. Leaf/sap irritation and the separate high-sugar fruit issue must not be conflated.",
+   "ko": "식물 전체가 해당 육지거북 종에게 전신 독성을 띤다는 점을 정하지 않는다. 잎·수액의 자극과 별개의 문제인 고당분 열매 문제를 섞으면 안 된다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not prove identical chemistry or a toxic dose in P. salicina, and does not establish an species-specific dose or single-bite toxicity.",
+   "ko": "P. salicina에서 같은 화학 성분이나 독성 용량을 증명하지 않으며, 종별 용량이나 한 입 독성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not provide a controlled a specific Testudo species trial, exact feeding proportion, toxicology threshold or explicit plant-part boundary.",
+   "ko": "특정 Testudo 종을 대상으로 한 통제된 시험, 정확한 급여 비율, 독성 기준, 명시적인 식물 부위 경계를 제공하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not quantify a safe or toxic dose for young broccoli microgreens or the relevant tortoise species.",
+   "ko": "어린 브로콜리 마이크로그린이나 해당 육지거북 종의 안전 용량·독성 용량을 정량하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Does not support feeding pods or beans, unlimited feeding, or an species-specific quantitative dose.",
+   "ko": "꼬투리나 콩 급여, 무제한 급여, 종별 정량 용량을 뒷받침하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Essential-oil composition is not a tortoise feeding or toxicity trial and concentrated oil chemistry is not equivalent to eating intact aerial plant material. The study does not establish a Testudo toxic dose, does not show that every yarrow population contains the same thujone concentration, and does not prove that a small accidental nibble causes poisoning.",
+   "ko": "정유 성분 구성은 육지거북 급여 시험이나 독성 시험이 아니며, 농축된 정유의 화학은 온전한 지상부 식물체를 먹는 것과 같지 않다. 이 연구는 Testudo 독성 용량을 정하지 않고, 모든 서양톱풀 개체군의 투존 농도가 같다는 것을 보이지 않으며, 실수로 조금 뜯어 먹으면 중독된다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Excludes pyrethrin-rich C. cinerariifolium and C. coccineum; does not establish an species-specific dose.",
+   "ko": "피레트린이 많은 C. cinerariifolium과 C. coccineum은 제외한다. 종별 용량을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Genus-level guidance does not establish a species-specific percentage, fixed frequency, refined essential-oil safety, or unlimited intake.",
+   "ko": "속 수준 지침은 종별 비율, 정해진 빈도, 정제 정유의 안전성, 무제한 섭취를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Genus-level husbandry guidance does not constitute an Abutilon indicum-specific controlled trial and does not establish equal safety for seeds, roots, or every plant part.",
+   "ko": "속 수준의 사육 지침은 Abutilon indicum을 대상으로 한 통제된 시험이 아니며, 씨앗·뿌리나 모든 식물 부위가 똑같이 안전하다는 점을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Genus-level husbandry guidance does not establish a Buddleja davidii-specific controlled trial, exact safe percentage, or unrestricted regular feeding.",
+   "ko": "속 수준의 사육 지침은 Buddleja davidii를 대상으로 한 통제된 시험, 정확한 안전 비율, 제한 없는 정기 급여를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Human photodermatitis is not a tortoise feeding or systemic-toxicity trial. It does not establish that Ficus carica leaves cause the same reaction in tortoises, define a Testudo toxic dose, or prove that a small accidental nibble causes poisoning.",
+   "ko": "사람의 광피부염은 육지거북 급여 시험이나 전신 독성 시험이 아니다. Ficus carica 잎이 육지거북에게 같은 반응을 일으킨다는 점을 정하지 않고, Testudo 독성 용량을 정하지 않으며, 실수로 조금 뜯어 먹으면 중독된다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Human-food chemistry and in-vitro sensory receptor activity do not establish tortoise thyroid toxicity, an species-specific toxic dose, or a safe captive-feeding percentage.",
+   "ko": "사람 식품 화학과 시험관 내 감각 수용체 활성은 육지거북 갑상선 독성, 종별 독성 용량, 사육 시 안전한 급여 비율을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Korean-name mapping does not establish tortoise feeding safety, toxicity, dose, frequency, or edible plant parts.",
+   "ko": "한국명 연결은 육지거북 급여 안전성, 독성, 용량, 빈도, 먹을 수 있는 부위를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Leaf volatile composition is not a tortoise feeding or toxicity trial, and an analytical extract is not equivalent to the dose obtained by eating intact fresh leaves. Detection of alpha-thujone does not by itself establish a Testudo toxic dose, prove that all Artemisia species have identical chemistry, or show that a small accidental nibble causes poisoning.",
+   "ko": "잎의 휘발 성분 구성은 육지거북 급여 시험이나 독성 시험이 아니며, 분석용 추출물은 온전한 신선한 잎을 먹어서 얻는 양과 같지 않다. 알파-투존이 검출됐다는 것만으로 Testudo 독성 용량을 정하거나, 모든 Artemisia 종의 화학이 같다고 증명하거나, 실수로 조금 뜯어 먹으면 중독된다는 것을 보이지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Master concept is Taraxacum spp.; this record must not be generalized to every Taraxacum species and does not establish species-specific dose, percentage, or fixed frequency.",
+   "ko": "기준 식물 개념은 Taraxacum spp.이다. 이 기록을 모든 Taraxacum 종으로 일반화하면 안 되며, 종별 용량·비율·정해진 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Must not be transferred to Tagetes marigolds; does not establish species-specific percentage, fixed frequency, or unlimited use.",
+   "ko": "Tagetes 메리골드에 옮기면 안 된다. 종별 비율, 정해진 빈도, 무제한 급여를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "No species-specific dose, fixed diet percentage, or unlimited feeding allowance.",
+   "ko": "종별 용량, 정해진 식단 비율, 무제한 급여 허용을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Not a controlled the relevant tortoise species trial; does not establish an exact percentage, fixed frequency, toxic dose, or unlimited use.",
+   "ko": "해당 육지거북 종을 대상으로 한 통제된 시험이 아니며, 정확한 비율, 정해진 빈도, 독성 용량, 무제한 급여를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Seed-mixture inclusion does not establish unrestricted feeding, seed or pod safety, a toxicological threshold, or a controlled long-term tortoise trial.",
+   "ko": "씨앗 혼합물에 들어 있다는 사실은 무제한 급여, 씨앗이나 꼬투리의 안전성, 독성 기준, 통제된 장기 육지거북 시험을 뜻하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Sheep are not tortoises and the exposure was substantial field ingestion. This cannot be converted into a Testudo toxic dose, safe amount, fixed frequency, or a claim that one accidental bite causes poisoning.",
+   "ko": "양은 육지거북이 아니며, 노출은 들판에서 상당량을 먹은 경우였다. 이를 Testudo 독성 용량, 안전량, 정해진 빈도, 또는 실수로 한 입 먹으면 중독된다는 주장으로 바꿀 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Specialist plant-database guidance is not a controlled the relevant tortoise species feeding or toxicity trial. It does not establish an exact captive percentage, fixed frequency, unlimited use, or safety equivalence for unlisted plant parts or related taxa.",
+   "ko": "전문 식물 DB 지침은 해당 육지거북 종을 대상으로 한 통제된 급여·독성 시험이 아니다. 사육 시 정확한 급여 비율, 정해진 빈도, 무제한 급여, 또는 출처에 없는 부위·근연 분류군의 동등한 안전성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Taxonomic acceptance and distribution do not establish tortoise feeding safety, dose, frequency or edible plant parts.",
+   "ko": "분류학적 인정과 분포는 육지거북 급여 안전성, 용량, 빈도, 먹을 수 있는 부위를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Taxonomic acceptance and distribution do not establish tortoise feeding safety, dose, frequency, or plant-part safety.",
+   "ko": "분류학적 인정과 분포는 육지거북 급여 안전성, 용량, 빈도, 식물 부위별 안전성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Taxonomic acceptance and recorded human or animal uses do not establish tortoise feeding safety, safe dose, frequency, or interchangeable safety of all plant parts.",
+   "ko": "분류학적 인정과 기록된 사람·동물 이용은 육지거북 급여 안전성, 안전 용량, 빈도, 모든 식물 부위의 같은 안전성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Taxonomic acceptance does not establish tortoise feeding safety, laxative threshold, oxalate exposure, or feeding frequency.",
+   "ko": "분류학적 인정은 육지거북 급여 안전성, 완하 작용 기준, 옥살산 노출, 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Taxonomic acceptance does not establish tortoise feeding safety, toxic dose, safe diet percentage, or plant-part equivalence.",
+   "ko": "분류학적 인정은 육지거북 급여 안전성, 독성 용량, 안전한 식단 비율, 식물 부위 사이의 동등성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "Taxonomy does not establish tortoise feeding safety, dose or edible plant parts.",
+   "ko": "분류학은 육지거북 급여 안전성, 용량, 먹을 수 있는 부위를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The biological assays were not tortoise feeding trials. These concentrations cannot be converted into a tortoise toxic dose, exact safe percentage, or fixed feeding interval, and seedling age materially changes composition.",
+   "ko": "생물 검정은 육지거북 급여 시험이 아니었다. 이 농도를 육지거북 독성 용량, 정확한 안전 비율, 정해진 급여 간격으로 바꿀 수 없으며, 싹의 나이에 따라 성분이 크게 달라진다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The mechanism discussion is not a the relevant tortoise species dose-response or harm trial. The record does not independently establish a tortoise toxic dose or convert the composition rationale into proven poisoning.",
+   "ko": "작용 기전 논의는 해당 육지거북 종의 용량-반응 시험이나 위해 시험이 아니다. 이 기록만으로 육지거북 독성 용량을 정하거나, 성분상 이유를 입증된 중독으로 바꾸지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The paper's common-name wording is inconsistent ('raspberry' while reporting Rubus fruticosus), and the DB taxon is an aggregate; therefore it must not be treated as exact aggregate-wide evidence. Solvent-extract antioxidant activity is not a tortoise feeding or toxicity result.",
+   "ko": "논문의 일반명 표기가 일관되지 않고(Rubus fruticosus를 보고하면서 ‘raspberry’라고 씀), DB 분류군은 집합종이다. 따라서 집합종 전체에 정확히 들어맞는 근거로 보면 안 된다. 용매 추출물의 항산화 활성은 육지거북 급여나 독성 결과가 아니다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The plants were experimentally foliar-treated with iodine and selenium, so their concentrations must not be treated as baseline composition of ordinary market radicchio. This is not a tortoise feeding or toxicity trial and establishes no Testudo dose or feeding frequency.",
+   "ko": "식물에 실험적으로 요오드와 셀레늄을 잎에 뿌려 처리했으므로, 측정 농도를 일반 시판 라디키오의 기본 성분으로 보면 안 된다. 육지거북 급여 시험이나 독성 시험이 아니며, Testudo 용량이나 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The source explicitly warns that seeds contain cyanogenic glycoside and advises avoiding pods; it does not establish a controlled long-term feeding percentage.",
+   "ko": "출처는 씨앗에 시안 배당체가 있다고 명시적으로 경고하고 꼬투리를 피하라고 권한다. 통제된 장기 급여 비율은 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The studied taxon is silver beet/chard within Beta vulgaris, not a controlled tortoise feeding study of every beet cultivar. It does not define a tortoise toxic dose, exact safe serving size, or feeding frequency.",
+   "ko": "연구 대상 분류군은 Beta vulgaris에 속하는 근대(‘silver beet/chard’)이며, 모든 비트 품종을 대상으로 한 통제된 육지거북 급여 연구가 아니다. 육지거북 독성 용량, 정확한 안전 급여량, 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The study concerns plant composition and human-food interpretation, not tortoise feeding. It does not establish a tortoise toxic dose, exact safe portion, fixed feeding frequency, or prove that a small accidental ingestion causes poisoning.",
+   "ko": "이 연구는 식물 성분과 사람 식품 해석을 다루며, 육지거북 급여를 다루지 않는다. 육지거북 독성 용량, 정확한 안전 급여량, 정해진 급여 빈도를 정하지 않으며, 실수로 조금 먹은 것이 중독을 일으킨다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "The study evaluates edible-plant composition, not tortoise feeding. It does not define a tortoise toxic dose, safe serving size, frequency, or demonstrate clinical poisoning after incidental ingestion.",
+   "ko": "이 연구는 식용 식물의 성분을 평가하며, 육지거북 급여를 다루지 않는다. 육지거북 독성 용량, 안전 급여량, 빈도를 정하지 않으며, 우연히 먹은 뒤의 임상 중독도 보이지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "These hyacinthacines are polyhydroxylated pyrrolizidines studied for glycosidase inhibition; the paper does not establish the hepatotoxicity classically associated with unsaturated pyrrolizidine alkaloids, nor does it test tortoise feeding or define a Testudo toxic dose, safe percentage, or feeding frequency.",
+   "ko": "이 히아신타신들은 글리코시드 분해효소 저해를 연구한 폴리히드록시 피롤리지딘이다. 논문은 불포화 피롤리지딘 알칼로이드에서 전형적으로 알려진 간독성을 확인하지 않았고, 육지거북 급여를 시험하거나 Testudo 독성 용량, 안전 비율, 급여 빈도를 정하지도 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This chemical-ecology study is not a tortoise feeding or toxicity trial and does not show that every comfrey organ has the same PA concentration or hazard. It cannot define a Testudo toxic dose, safe amount, or feeding frequency.",
+   "ko": "이 화학생태학 연구는 육지거북 급여 시험이나 독성 시험이 아니며, 컴프리의 모든 기관이 같은 PA 농도나 위험을 가진다는 점을 보이지 않는다. Testudo 독성 용량, 안전량, 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is Salix alba chemistry, not a tortoise feeding/toxicity trial and not proof that every Salix species has the same profile or hazard. It does not establish a tortoise toxic dose, safe frequency, or show that a small accidental bite is poisonous.",
+   "ko": "Salix alba의 화학이며, 육지거북 급여·독성 시험이 아니고, 모든 Salix 종의 성분 구성이나 위험이 같다는 증거도 아니다. 육지거북 독성 용량, 안전 빈도를 정하지 않으며, 실수로 조금 먹으면 중독된다는 것도 보이지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is a food-safety and plant-chemistry study, not a tortoise feeding or toxicity trial. Human regulatory limits and margin-of-exposure calculations cannot be converted into a tortoise toxic dose, safe serving size, or prediction that a single accidental bite will cause poisoning.",
+   "ko": "식품 안전과 식물 화학 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 사람 대상 규제 기준과 노출 안전역 계산을 육지거북 독성 용량, 안전 급여량, 또는 실수로 한 입 먹으면 중독된다는 예측으로 바꿀 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is a genus-level caution, not an Oenanthe javanica-specific the relevant tortoise species toxicity study or dose-response experiment. It does not establish a tortoise toxic dose for Korean minari.",
+   "ko": "속 수준의 주의이며, Oenanthe javanica를 대상으로 한 해당 육지거북 종의 독성 연구나 용량-반응 실험이 아니다. 국내 미나리의 육지거북 독성 용량을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is a genus-level phytochemical review, not a tortoise feeding or toxicity trial and not proof that every Salix species or leaf has the same concentration. It cannot define a tortoise toxic dose, safe percentage, or feeding frequency.",
+   "ko": "속 수준의 식물 화학 종설이며, 육지거북 급여 시험이나 독성 시험이 아니고, 모든 Salix 종이나 잎의 농도가 같다는 증거도 아니다. 육지거북 독성 용량, 안전 비율, 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is a human-food composition and postharvest study, not a tortoise feeding, phytate-toxicity, calcium-absorption, or dose-response trial. It does not prove pea shoots are toxic to tortoises or establish a Testudo toxic dose, safe percentage, or feeding frequency.",
+   "ko": "사람 식품 성분과 수확 후 관리 연구이며, 육지거북 급여·피트산 독성·칼슘 흡수·용량-반응 시험이 아니다. 완두 순이 육지거북에게 독성이 있다는 것을 증명하지 않으며, Testudo 독성 용량, 안전 비율, 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is a human-food plant-composition study using flour prepared from sprouted material, not a tortoise feeding or toxicity trial and not a direct analysis of retail fresh sprouts as fed. It does not prove mungbean sprouts are toxic to tortoises or define a Testudo toxic dose, safe percentage, or feeding frequency.",
+   "ko": "발아시킨 재료로 만든 가루를 쓴 사람 식품 성분 연구이며, 육지거북 급여·독성 시험이 아니고, 실제로 급여하는 시판 신선 숙주를 직접 분석한 것도 아니다. 숙주가 육지거북에게 독성이 있다는 것을 증명하거나, Testudo 독성 용량, 안전 비율, 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is a plant-composition study, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, safe percentage, feeding frequency, or prove that a small accidental ingestion causes poisoning.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 육지거북 독성 용량, 안전 비율, 급여 빈도를 정하지 않으며, 실수로 조금 먹은 것이 중독을 일으킨다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is analytical plant chemistry, not a tortoise feeding or toxicity trial. Rosmarinic-acid content does not establish a Testudo safe dose, toxic dose, or fixed feeding frequency.",
+   "ko": "분석적 식물 화학이며, 육지거북 급여 시험이나 독성 시험이 아니다. 로즈마린산 함량은 Testudo 안전 용량, 독성 용량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is analytical plant-composition research, not a tortoise feeding or thyroid-outcome study. Detecting glucosinolates in broccoli leaves does not by itself establish goiter, hypothyroidism, a Testudo toxic dose, or a fixed safe/unsafe feeding frequency. Cultivar variation also prevents treating every broccoli leaf as chemically identical.",
+   "ko": "분석적 식물 성분 연구이며, 육지거북 급여 연구나 갑상선 결과 연구가 아니다. 브로콜리 잎에서 글루코시놀레이트를 검출했다는 것만으로 갑상선종, 갑상선 기능 저하, Testudo 독성 용량, 정해진 안전·위험 급여 빈도를 정하지 않는다. 품종 차이 때문에 모든 브로콜리 잎의 화학이 같다고 볼 수도 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is concentrated leaf-extract chemistry and plant bioassay research, not a tortoise feeding or toxicity study. Extract phytotoxicity must not be equated with toxicity from eating fresh sunflower leaves, and the study establishes no Testudo safe or toxic dose.",
+   "ko": "농축 잎 추출물의 화학과 식물 생물 검정 연구이며, 육지거북 급여 연구나 독성 연구가 아니다. 추출물의 식물 독성을 신선한 해바라기 잎을 먹었을 때의 독성과 같게 보면 안 되며, 이 연구는 Testudo 안전 용량이나 독성 용량을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is concentrated-extract cell and antimicrobial research, not a tortoise feeding or cyanogenic-toxicity trial. Extract cytotoxicity cannot be equated with fresh-leaf ingestion, and it establishes no Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "농축 추출물의 세포·항균 연구이며, 육지거북 급여 시험이나 시안 독성 시험이 아니다. 추출물의 세포 독성을 신선한 잎 섭취와 같게 볼 수 없으며, Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is essential-oil composition research, not a tortoise feeding or toxicity trial. Concentrated essential-oil chemistry cannot be treated as exposure-equivalent to eating fresh leaves and does not establish a Testudo toxic dose, safe percentage, or fixed feeding frequency.",
+   "ko": "정유 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 농축 정유의 화학을 신선한 잎을 먹는 것과 같은 노출로 볼 수 없으며, Testudo 독성 용량, 안전 비율, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is extract/composition research with cell-model bioactivity, not a tortoise feeding or toxicity trial. Extract antioxidant or antiproliferative activity does not establish fresh-leaf toxicity or a Testudo dose.",
+   "ko": "세포 모델 생물활성을 포함한 추출물·성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 추출물의 항산화·항증식 활성은 신선한 잎의 독성이나 Testudo 용량을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is food-composition research, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, exact safe amount, or prove that accidental small ingestion causes poisoning.",
+   "ko": "식품 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 육지거북 독성 용량, 정확한 안전량을 정하지 않으며, 실수로 조금 먹은 것이 중독을 일으킨다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is food/plant composition research, not a tortoise feeding, calcium-balance or toxicity trial. Leaf oxalate concentration alone does not establish a Testudo toxic dose, calcium deficiency threshold, safe percentage, or fixed feeding frequency.",
+   "ko": "식품·식물 성분 연구이며, 육지거북 급여·칼슘 균형·독성 시험이 아니다. 잎의 옥살산 농도만으로 Testudo 독성 용량, 칼슘 결핍 기준, 안전 비율, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is food/plant composition research, not a tortoise feeding, digestibility or toxicity trial. Antinutrient measurements do not establish a Testudo toxic dose, safe percentage, or fixed feeding frequency, and the plant record covers Cucurbita spp. more broadly than this single species.",
+   "ko": "식품·식물 성분 연구이며, 육지거북 급여·소화율·독성 시험이 아니다. 항영양 성분 측정값은 Testudo 독성 용량, 안전 비율, 정해진 급여 빈도를 정하지 않으며, 식물 기록은 이 한 종보다 넓게 Cucurbita spp.를 다룬다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is hydroponic plant-composition research, not a tortoise feeding or toxicity trial. It does not establish a Testudo toxic dose, prove that a small accidental intake causes poisoning, or justify treating every purslane plant as having one fixed oxalate concentration.",
+   "ko": "수경재배 식물 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. Testudo 독성 용량을 정하지 않고, 실수로 조금 먹으면 중독된다는 것을 증명하지 않으며, 모든 쇠비름의 옥살산 농도가 하나로 정해져 있다고 볼 근거도 아니다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is leaf chemistry and food-safety analysis, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, one-bite poisoning risk, safe percentage, or feeding frequency.",
+   "ko": "잎 화학과 식품 안전 분석이며, 육지거북 급여 시험이나 독성 시험이 아니다. 육지거북 독성 용량, 한 입 중독 위험, 안전 비율, 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is leaf essential-oil chemistry, not a whole-leaf tortoise feeding or toxicity study. Concentrated essential-oil composition must not be treated as an exposure-equivalent to eating fresh leaves, and the paper does not establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "잎 정유의 화학이며, 잎 전체를 먹인 육지거북 급여 연구나 독성 연구가 아니다. 농축 정유의 구성을 신선한 잎을 먹는 것과 같은 노출로 보면 안 되며, 논문은 Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is not a Mediterranean Testudo or the relevant tortoise species feeding trial and does not establish a Brassica juncea-specific percentage, frequency or unrestricted use.",
+   "ko": "지중해 Testudo나 해당 육지거북 종의 급여 시험이 아니며, Brassica juncea에 특이적인 비율·빈도·무제한 급여를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is not a the relevant tortoise species feeding-safety study and does not establish tortoise-specific safety, dose, frequency, percentage, or a single composition value for unidentified Korean-market mulberry leaves.",
+   "ko": "해당 육지거북 종의 급여 안전성 연구가 아니며, 육지거북에 특이적인 안전성·용량·빈도·비율이나, 동정되지 않은 국내 유통 뽕잎의 단일 성분값을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is not a tortoise feeding or dose-response study. Its cell bioassay and plant-part chemistry cannot be converted into a Testudo toxic dose, safe percentage, feeding frequency, or a claim that one accidental bite causes liver injury.",
+   "ko": "육지거북 급여 연구나 용량-반응 연구가 아니다. 세포 생물 검정과 부위별 식물 화학을 Testudo 독성 용량, 안전 비율, 급여 빈도, 또는 실수로 한 입 먹으면 간 손상이 생긴다는 주장으로 바꿀 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is not a tortoise feeding or toxicity study. Concentrated methanolic extracts and isolated saponin fractions are not equivalent to eating intact fresh daisy, and the mouse pharmacology reported in the study cannot be converted into a Testudo toxic dose, safe percentage, or fixed feeding frequency.",
+   "ko": "육지거북 급여 연구나 독성 연구가 아니다. 농축 메탄올 추출물과 분리한 사포닌 분획은 온전한 신선한 데이지를 먹는 것과 같지 않으며, 연구에 보고된 생쥐 약리 결과를 Testudo 독성 용량, 안전 비율, 정해진 급여 빈도로 바꿀 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is not a tortoise feeding or toxicity trial and Salix alba is only one species within Salix. It does not demonstrate that all willow species have identical chemistry, establish a tortoise toxic dose, or by itself prove that willow leaves must be excluded.",
+   "ko": "육지거북 급여 시험이나 독성 시험이 아니며, Salix alba는 Salix의 한 종일 뿐이다. 모든 버드나무 종의 화학이 같다는 점을 보이지 않고, 육지거북 독성 용량을 정하지 않으며, 이것만으로 버드나무 잎을 반드시 제외해야 한다는 것을 증명하지도 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is not a tortoise feeding or toxicity trial. The measured canavanine concentration does not establish a tortoise toxic dose, safe serving size, feeding frequency, or prove that a small accidental ingestion causes clinical toxicity.",
+   "ko": "육지거북 급여 시험이나 독성 시험이 아니다. 측정한 카나바닌 농도는 육지거북 독성 용량, 안전 급여량, 급여 빈도를 정하지 않으며, 실수로 조금 먹은 것이 임상 독성을 일으킨다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is phytochemical and antimicrobial research, not a tortoise feeding or toxicity study. Extract activity cannot be translated into fresh-plant toxicity, a Testudo safe dose, or fixed feeding frequency.",
+   "ko": "식물 화학과 항균 연구이며, 육지거북 급여 연구나 독성 연구가 아니다. 추출물의 활성을 신선한 식물의 독성, Testudo 안전 용량, 정해진 급여 빈도로 옮길 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is phytochemical and antioxidant research, not a tortoise feeding or toxicity trial. The presence of bioactive flavonoids or differences among plant parts does not prove hawthorn is toxic to tortoises and cannot define a Testudo toxic dose, safe percentage, or feeding frequency.",
+   "ko": "식물 화학과 항산화 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 생물활성 플라보노이드가 있거나 부위 사이에 차이가 있다는 것이 산사나무가 육지거북에게 독성이 있다는 증거는 아니며, Testudo 독성 용량, 안전 비율, 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant analytical chemistry, not a tortoise feeding or toxicity study. It does not establish the exposure from eating a fresh leaf, a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "분석적 식물 화학이며, 육지거북 급여 연구나 독성 연구가 아니다. 신선한 잎을 먹었을 때의 노출량, Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant biochemistry, not a tortoise feeding or toxicity trial. Glucosinolate presence does not establish a Testudo toxic dose, clinical harm, safe percentage, or fixed feeding frequency.",
+   "ko": "식물 생화학이며, 육지거북 급여 시험이나 독성 시험이 아니다. 글루코시놀레이트가 있다는 것은 Testudo 독성 용량, 임상적 해, 안전 비율, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemical-ecology research, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, safe percentage, feeding frequency, or prove that a small accidental nibble causes poisoning.",
+   "ko": "식물 화학생태학 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 육지거북 독성 용량, 안전 비율, 급여 빈도를 정하지 않으며, 실수로 조금 뜯어 먹은 것이 중독을 일으킨다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry focused on airborne/contact-allergen exposure, not a tortoise feeding or oral-toxicity trial. It cannot be converted into a Testudo toxic dose, does not establish oral systemic toxicity in tortoises, and must not be generalized to all Primula species because allergen chemistry varies among species and cultivars.",
+   "ko": "공기 중·접촉 알레르겐 노출에 초점을 둔 식물 화학이며, 육지거북 급여 시험이나 경구 독성 시험이 아니다. Testudo 독성 용량으로 바꿀 수 없고, 육지거북의 경구 전신 독성을 정하지 않으며, 알레르겐 화학은 종과 품종마다 다르므로 모든 Primula 종으로 일반화하면 안 된다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry plus a human skin model, not a tortoise feeding or toxicity trial. Extract or skin-irritation findings cannot establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "식물 화학과 사람 피부 모델 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 추출물이나 피부 자극 결과로 Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry, not a tortoise feeding or thyroid study. It does not establish a Testudo toxic dose, hypothyroidism threshold, safe percentage, or fixed feeding frequency, and cultivar variation argues against treating every cabbage sample as chemically identical.",
+   "ko": "식물 화학이며, 육지거북 급여 연구나 갑상선 연구가 아니다. Testudo 독성 용량, 갑상선 기능 저하 기준, 안전 비율, 정해진 급여 빈도를 정하지 않으며, 품종 차이를 보면 모든 양배추 시료의 화학이 같다고 볼 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry, not a tortoise feeding or toxicity study. It cannot establish a Testudo toxic dose, thyroid effect, safe percentage, or fixed feeding frequency.",
+   "ko": "식물 화학이며, 육지거북 급여 연구나 독성 연구가 아니다. Testudo 독성 용량, 갑상선 영향, 안전 비율, 정해진 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry, not a tortoise feeding or toxicity trial. Flavonol occurrence does not establish a Testudo safe dose, toxic dose, or fixed feeding frequency.",
+   "ko": "식물 화학이며, 육지거북 급여 시험이나 독성 시험이 아니다. 플라보놀이 있다는 것은 Testudo 안전 용량, 독성 용량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry, not a tortoise feeding or toxicity trial. Leaf metabolites do not establish a Testudo safe dose, toxic dose, or fixed feeding frequency.",
+   "ko": "식물 화학이며, 육지거북 급여 시험이나 독성 시험이 아니다. 잎의 대사물질은 Testudo 안전 용량, 독성 용량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant chemistry, not a tortoise feeding, digestibility or toxicity trial. Tannin presence and variability do not establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "식물 화학이며, 육지거북 급여·소화율·독성 시험이 아니다. 탄닌이 있고 그 양이 달라진다는 것은 Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant composition and antioxidant research, not a tortoise feeding or toxicity trial. Phenolic composition does not establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "식물 성분과 항산화 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 페놀 구성은 Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant composition and antioxidant research, not a tortoise feeding or toxicity trial. Phenolic distribution does not establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "식물 성분과 항산화 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 페놀 분포는 Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant composition, not a tortoise feeding or toxicity trial. Polyphenol profiles do not establish a Testudo safe dose, toxic dose, or fixed feeding frequency.",
+   "ko": "식물 성분 자료이며, 육지거북 급여 시험이나 독성 시험이 아니다. 폴리페놀 구성은 Testudo 안전 용량, 독성 용량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant composition, not a tortoise feeding study. The measured oxalate level cannot be converted into a tortoise toxic dose, fixed safe serving, or proof that accidental small ingestion causes poisoning.",
+   "ko": "식물 성분 자료이며, 육지거북 급여 연구가 아니다. 측정한 옥살산 수치를 육지거북 독성 용량, 정해진 안전 급여량, 또는 실수로 조금 먹으면 중독된다는 증거로 바꿀 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant composition, not a tortoise thyroid, feeding or toxicity trial. Differences in glucosinolates or other metabolites do not establish a Testudo toxic dose, safe percentage or fixed feeding frequency.",
+   "ko": "식물 성분 자료이며, 육지거북 갑상선·급여·독성 시험이 아니다. 글루코시놀레이트나 다른 대사물질의 차이는 Testudo 독성 용량, 안전 비율, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant composition, not a tortoise thyroid, feeding or toxicity trial. Glucosinolate detection does not establish a Testudo toxic dose, safe percentage or fixed feeding frequency.",
+   "ko": "식물 성분 자료이며, 육지거북 갑상선·급여·독성 시험이 아니다. 글루코시놀레이트 검출은 Testudo 독성 용량, 안전 비율, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant mineral-composition research, not a tortoise feeding, oxalate, or toxicity trial. It does not prove celery leaves are toxic, does not validate a tortoise toxic dose, and cannot by itself establish a safe percentage or feeding frequency.",
+   "ko": "식물 무기질 성분 연구이며, 육지거북 급여·옥살산·독성 시험이 아니다. 셀러리 잎이 독성이 있다는 것을 증명하지 않고, 육지거북 독성 용량을 확인하지 않으며, 이것만으로 안전 비율이나 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant toxicology/food-safety evidence, not a tortoise feeding trial. Human food regulatory limits cannot be converted into a tortoise toxic dose, one-bite poisoning claim, exact safe percentage, or species-specific clinical threshold.",
+   "ko": "식물 독성학·식품 안전 근거이며, 육지거북 급여 시험이 아니다. 사람 식품 규제 기준을 육지거북 독성 용량, 한 입 중독 주장, 정확한 안전 비율, 종별 임상 기준으로 바꿀 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-chemistry and food-safety evidence, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, a one-bite poisoning threshold, or the clinical outcome of accidental ingestion.",
+   "ko": "식물 화학과 식품 안전 근거이며, 육지거북 급여 시험이나 독성 시험이 아니다. 육지거북 독성 용량, 한 입 중독 기준, 실수로 먹었을 때의 임상 결과를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition and sensory research, not a tortoise feeding or toxicity trial. It does not establish that bell pepper is an optimal staple, a Testudo safe dose, a fixed feeding frequency, or that every Capsicum annuum cultivar has identical chemistry.",
+   "ko": "식물 성분과 관능 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 파프리카가 최적의 주식이라는 점, Testudo 안전 용량, 정해진 급여 빈도, 모든 Capsicum annuum 품종의 화학이 같다는 점을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition evidence and does not establish a tortoise toxic dose, exact safe feeding frequency, clinical poisoning threshold, or prove that a small accidental bite causes harm.",
+   "ko": "식물 성분 근거이며, 육지거북 독성 용량, 정확한 안전 급여 빈도, 임상 중독 기준을 정하지 않고, 실수로 조금 먹으면 해롭다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or phototoxicity trial. It does not establish a Testudo toxic dose, safe intake, exposure threshold, or prove that a small accidental bite of fresh leaf causes clinical photosensitization.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 시험이나 광독성 시험이 아니다. Testudo 독성 용량, 안전 섭취량, 노출 기준을 정하지 않으며, 신선한 잎을 실수로 조금 먹었을 때 임상적 광과민증이 생긴다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or thyroid study. Glucosinolate measurements cannot by themselves establish tortoise toxicity, a goiter threshold, a safe percentage, or fixed feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 연구나 갑상선 연구가 아니다. 글루코시놀레이트 측정값만으로 육지거북 독성, 갑상선종 기준, 안전 비율, 정해진 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or thyroid-outcome study. It does not establish a Testudo toxic dose, goiter threshold, safe percentage, or fixed feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 연구나 갑상선 결과 연구가 아니다. Testudo 독성 용량, 갑상선종 기준, 안전 비율, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or thyroid-outcome study. Tissue glucosinolate measurements do not establish a Testudo toxic dose, hypothyroidism threshold, safe percentage, or fixed feeding frequency, and cannot by themselves classify cauliflower leaves as acutely toxic.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 연구나 갑상선 결과 연구가 아니다. 조직별 글루코시놀레이트 측정값은 Testudo 독성 용량, 갑상선 기능 저하 기준, 안전 비율, 정해진 급여 빈도를 정하지 않으며, 이것만으로 콜리플라워 잎을 급성 독성으로 분류할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or toxicity trial. Detection of salicylic/phenolic compounds does not by itself prove that Populus leaves are toxic to tortoises and cannot define a Testudo toxic dose, safe percentage, or feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 살리실·페놀 화합물이 검출됐다는 것만으로 Populus 잎이 육지거북에게 독성이 있다는 것을 증명하지 않으며, Testudo 독성 용량, 안전 비율, 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or toxicity trial. Glycoalkaloid measurements cannot be converted into a Testudo toxic dose, do not make ripe fruit equivalent to leaves or unripe fruit, and do not prove that a small accidental intake causes poisoning.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 글리코알칼로이드 측정값을 Testudo 독성 용량으로 바꿀 수 없고, 익은 열매를 잎이나 덜 익은 열매와 같게 보지 않으며, 실수로 조금 먹으면 중독된다는 것도 증명하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or toxicity trial. Phenolic/flavonoid measurements and antioxidant assays do not establish a Testudo safe dose, toxic dose, or fixed feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 페놀·플라보노이드 측정과 항산화 분석은 Testudo 안전 용량, 독성 용량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding or toxicity trial. Shoots are composite above-ground tissue rather than a controlled tortoise-fed leaf-versus-stem comparison, so the data cannot prove leaf or vine toxicity, define a Testudo toxic dose, or establish a safe percentage or feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여 시험이나 독성 시험이 아니다. 순은 여러 지상부 조직이 섞인 것이며, 육지거북에게 잎과 줄기를 따로 먹인 통제 비교가 아니다. 따라서 이 자료로 잎이나 덩굴의 독성을 증명하거나, Testudo 독성 용량을 정하거나, 안전 비율이나 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding, allergy, toxicity or dose-response study. It does not establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여·알레르기·독성·용량-반응 연구가 아니다. Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding, laxation, calcium-bioavailability or toxicity trial. Calcium oxalate crystals in cladodes do not by themselves establish a Testudo toxic dose, safe amount, or fixed feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여·배변·칼슘 생체이용률·독성 시험이 아니다. 줄기마디의 옥살산칼슘 결정만으로 Testudo 독성 용량, 안전량, 정해진 급여 빈도를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding, thyroid, or toxicity trial. It does not show that glucosinolate presence alone makes kohlrabi leaves toxic to tortoises, and it cannot define a toxic dose, safe percentage, or feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여·갑상선·독성 시험이 아니다. 글루코시놀레이트가 있다는 사실만으로 콜라비 잎이 육지거북에게 독성이 있다는 점을 보이지 않으며, 독성 용량, 안전 비율, 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This is plant-composition research, not a tortoise feeding, thyroid-outcome, or toxicity study. Glucosinolate detection cannot by itself establish goiter, a Testudo toxic dose, a safe percentage, or a fixed feeding frequency.",
+   "ko": "식물 성분 연구이며, 육지거북 급여·갑상선 결과·독성 연구가 아니다. 글루코시놀레이트 검출만으로 갑상선종, Testudo 독성 용량, 안전 비율, 정해진 급여 빈도를 정할 수 없다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This migrated record preserves the existing assessment/source scope. It is not a controlled the relevant tortoise species feeding/toxicity trial and does not establish an exact percentage, fixed frequency, toxic dose, unlimited use, or safety equivalence across unlisted plant parts/taxa.",
+   "ko": "이 이전된 기록은 기존 판정과 출처의 범위를 그대로 유지한다. 해당 육지거북 종을 대상으로 한 통제된 급여·독성 시험이 아니며, 정확한 비율, 정해진 빈도, 독성 용량, 무제한 급여, 또는 출처에 없는 부위·분류군 사이의 동등한 안전성을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish species-specific dose, frequency, percentage, or unlimited use.",
+   "ko": "이 기록을 밝힌 근거 범위 밖으로 쓰면 안 된다. 식물 동정이나 화학 근거 자체가 육지거북 급여 안전성을 증명하지는 않으며, 근연 분류군의 사육 지침은 종별 용량·빈도·비율이나 무제한 급여를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This review is not a tortoise-specific exposure or dose-response study and does not establish a Muscari armeniacum toxic dose in Testudo. It also should not be read as proof that every alkaloid in M. armeniacum has the same toxicology as lycorine-type alkaloids in other bulb plants.",
+   "ko": "이 종설은 육지거북에 특이적인 노출 연구나 용량-반응 연구가 아니며, Testudo에서 Muscari armeniacum의 독성 용량을 정하지 않는다. M. armeniacum의 모든 알칼로이드가 다른 알뿌리 식물의 리코린형 알칼로이드와 같은 독성을 가진다는 증거로 읽어서도 안 된다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This specialist database entry is not a controlled the relevant tortoise species feeding/toxicity trial. Do not convert its category into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.",
+   "ko": "이 전문 DB 항목은 해당 육지거북 종을 대상으로 한 통제된 급여·독성 시험이 아니다. 그 분류를 사육 시 정확한 비율, 정해진 빈도, 독성 용량, 무제한 급여 주장, 또는 출처에 없는 부위·근연 분류군의 동등한 안전성으로 바꾸지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This specialist database entry is not a controlled the relevant tortoise species feeding/toxicity trial. Its category must not be converted into an exact captive percentage, fixed frequency, toxic dose, unlimited-use claim, or safety equivalence for unlisted plant parts or related taxa.",
+   "ko": "이 전문 DB 항목은 해당 육지거북 종을 대상으로 한 통제된 급여·독성 시험이 아니다. 그 분류를 사육 시 정확한 비율, 정해진 빈도, 독성 용량, 무제한 급여 주장, 또는 출처에 없는 부위·근연 분류군의 동등한 안전성으로 바꾸면 안 된다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This specialist database entry is not a controlled tortoise feeding or toxicity trial. Its category must not be converted into an exact captive percentage, fixed frequency, toxic dose, or unlimited-use claim. The entry's husbandry caution should be kept separate from direct evidence of thyroid disease.",
+   "ko": "이 전문 DB 항목은 육지거북을 대상으로 한 통제된 급여·독성 시험이 아니다. 그 분류를 사육 시 정확한 비율, 정해진 빈도, 독성 용량, 무제한 급여 주장으로 바꾸면 안 된다. 항목의 사육상 주의는 갑상선 질환에 대한 직접 근거와 구분해야 한다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This specialist plant-database entry is not a controlled the relevant tortoise species feeding or toxicity trial. Common-name similarity must not be used to transfer the verdict to a different genus or species, and the category does not define an exact captive percentage, fixed frequency or unlimited use.",
+   "ko": "이 전문 식물 DB 항목은 해당 육지거북 종을 대상으로 한 통제된 급여·독성 시험이 아니다. 일반명이 비슷하다는 이유로 판정을 다른 속이나 종에 옮기면 안 되며, 이 분류는 사육 시 정확한 비율, 정해진 빈도, 무제한 급여를 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This specialist verdict is not a the relevant tortoise species toxicity trial. It does not establish a tortoise toxic dose, identical susceptibility to mammals, or identical perilla-ketone content across edible cultivars.",
+   "ko": "이 전문가 판정은 해당 육지거북 종의 독성 시험이 아니다. 육지거북 독성 용량, 포유류와 같은 감수성, 식용 품종 사이의 같은 페릴라케톤 함량을 정하지 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This study concerns willow chemistry and herbivorous insects, not tortoises. It does not establish that phenolic glycosides make willow leaves toxic to tortoises, nor does it define a tortoise toxic dose or justify a genus-wide poisoning claim.",
+   "ko": "이 연구는 버드나무 화학과 초식 곤충을 다루며, 육지거북을 다루지 않는다. 페놀 배당체 때문에 버드나무 잎이 육지거북에게 독성이 있다는 점을 정하지 않고, 육지거북 독성 용량을 정하거나 속 전체에 대한 중독 주장을 정당화하지도 않는다."
+  },
+  {
+   "field": "does_not_support",
+   "en": "This study identifies leaf glucosinolates; it does not test thyroid function, toxicity, palatability, or safe intake in tortoises and therefore cannot by itself define a feeding percentage or frequency.",
+   "ko": "이 연구는 잎의 글루코시놀레이트를 확인한다. 육지거북의 갑상선 기능, 독성, 기호성, 안전 섭취량을 시험하지 않았으므로, 이것만으로 급여 비율이나 빈도를 정할 수 없다."
+  },
+  {
+   "field": "plant_taxon",
+   "en": "Capsicum spp. / Capsicum annuum food concept",
+   "ko": "Capsicum spp. / Capsicum annuum 식품 범위"
+  },
+  {
+   "field": "plant_taxon",
+   "en": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "ko": "출처가 이름을 든 민들레·질경이·클로버·별꽃·물냉이 등 사료 식물"
+  },
+  {
+   "field": "plant_taxon",
+   "en": "Rubus fruticosus (as reported by the paper; current DB record is Rubus fruticosus agg.)",
+   "ko": "Rubus fruticosus (논문 표기; 현재 DB 기록은 Rubus fruticosus agg.)"
+  },
+  {
+   "field": "plant_taxon",
+   "en": "Solanum lycopersicum (reported as Lycopersicon esculentum)",
+   "ko": "Solanum lycopersicum (논문 표기 Lycopersicon esculentum)"
+  },
+  {
+   "field": "plant_taxon",
+   "en": "Solanum lycopersicum (source uses Solanum lycopersicon; syn. Lycopersicon esculentum)",
+   "ko": "Solanum lycopersicum (출처 표기 Solanum lycopersicon; 이명 Lycopersicon esculentum)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "106 leaf samples including microgreens and 33 flower samples across developmental stages",
+   "ko": "마이크로그린을 포함한 잎 시료 106개와 여러 생장 단계의 꽃 시료 33개"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "106 leaf samples including microgreens and multiple developmental stages; 33 flower samples",
+   "ko": "마이크로그린과 여러 생장 단계를 포함한 잎 시료 106개, 꽃 시료 33개"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "Chinese cabbage edible leafy heads; two phenotypes",
+   "ko": "배추의 먹는 결구 잎 — 표현형 2종"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "Korean name and identity only",
+   "ko": "한국명과 식물 동정만 해당"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "above-ground plant; young shoots and flowers discussed",
+   "ko": "지상부 — 어린 순과 꽃을 논의"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "aerial parts",
+   "ko": "지상부"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "aerial parts including leaves, stems and flowers",
+   "ko": "잎·줄기·꽃을 포함한 지상부"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "aerial plant material / essential oils from multiple European origins",
+   "ko": "여러 유럽 산지의 지상부 식물체와 정유"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "bulbs",
+   "ko": "알뿌리"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "commercially grown sprouts; seeds also analysed",
+   "ko": "상업 재배 새싹 — 씨앗도 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "different plant parts and comfrey preparations",
+   "ko": "여러 부위와 컴프리 제품"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "dried Hayward leaves; leaf extracts",
+   "ko": "말린 Hayward 품종 잎과 잎 추출물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "field-grown foliage",
+   "ko": "노지 재배한 잎(경엽)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "flowers and leaves; pods/seeds excluded",
+   "ko": "꽃과 잎 — 꼬투리·씨앗은 제외"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "flowers; methanolic extract and saponin fraction",
+   "ko": "꽃 — 메탄올 추출물과 사포닌 분획"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fodder plant extract; aerial forage context",
+   "ko": "사료 식물 추출물 — 지상부 사료 맥락"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "foliage",
+   "ko": "잎(경엽)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "forage seed mixture",
+   "ko": "사료 식물 씨앗 혼합물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fresh and lyophilized cladodes (green stems/pads)",
+   "ko": "신선한 줄기마디와 동결건조한 줄기마디(녹색 줄기·패드)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fresh coriander leaves",
+   "ko": "신선한 고수 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fresh leaves and stems; centrifuged product and dried-plant extract",
+   "ko": "신선한 잎과 줄기 — 원심분리 산물과 건조 식물 추출물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fresh plant tissues, seeds and flowers studied in food preparations",
+   "ko": "식품 조리에 쓰인 신선한 식물 조직·씨앗·꽃을 연구"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fruit at different maturity stages plus calyxes, flowers, leaves, roots and stems",
+   "ko": "성숙 단계가 다른 열매와 꽃받침·꽃·잎·뿌리·줄기"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "fully expanded leaves at 8- and 16-true-leaf harvest stages",
+   "ko": "본잎 8장·16장 수확 단계의 다 펼쳐진 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "green plant material / leaves and developmental plant material analyzed for fagopyrins",
+   "ko": "파고피린을 분석한 녹색 식물체·잎과 생장 단계별 식물체"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "growing plant material",
+   "ko": "자라고 있는 식물체"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "growing seedlings; roots and shoots across early development",
+   "ko": "자라는 싹 — 초기 생장 단계의 뿌리와 순"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "harvested leaves from collard landraces and cultivars",
+   "ko": "콜라드 재래종과 품종에서 수확한 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "healthy leaves; blades and veins analyzed separately across six cultivars",
+   "ko": "건강한 잎 — 6개 품종에서 잎몸과 잎맥을 따로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaf mustard resources; leaves included in organ-specific profiling",
+   "ko": "갓 자원 — 기관별 분석에 잎 포함"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaf tissue included in tissue-specific glucosinolate profiling",
+   "ko": "조직별 글루코시놀레이트 분석에 포함된 잎 조직"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaf tissues among nine kohlrabi tissues",
+   "ko": "콜라비 조직 9종 가운데 잎 조직"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and anthodia (flower heads)",
+   "ko": "잎과 두상화(꽃송이)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and bark analyzed separately",
+   "ko": "잎과 나무껍질을 따로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and bark; leaf results separable",
+   "ko": "잎과 나무껍질 — 잎 결과를 따로 볼 수 있음"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and flowers; essential oils analyzed separately",
+   "ko": "잎과 꽃 — 정유를 따로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and flowers; rhizomatous roots excluded",
+   "ko": "잎과 꽃 — 뿌리줄기는 제외"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and fruits; leaf extracts analyzed separately",
+   "ko": "잎과 열매 — 잎 추출물을 따로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and fruits; leaf ginkgolic acids directly analyzed",
+   "ko": "잎과 열매 — 잎의 깅콜산을 직접 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and latex / sap exposure context",
+   "ko": "잎과 유액(수액) 노출 맥락"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and other plant parts; leaf chemistry discussed separately",
+   "ko": "잎과 다른 부위 — 잎 성분은 따로 논의"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves and roots",
+   "ko": "잎과 뿌리"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves at different maturity stages",
+   "ko": "성숙 단계가 다른 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves from multiple apple cultivars",
+   "ko": "여러 사과 품종의 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves from two Florence fennel cultivars",
+   "ko": "플로렌스 펜넬 2개 품종의 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves, flowers and ripened fruits analyzed separately as aqueous and ethanol extracts",
+   "ko": "잎·꽃·익은 열매를 물 추출물과 에탄올 추출물로 따로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves, flowers, stems and roots across development; leaf distribution explicitly studied",
+   "ko": "생장 단계별 잎·꽃·줄기·뿌리 — 잎의 분포를 명시적으로 조사"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves, stalks and seeds analyzed separately; 20 genotypes",
+   "ko": "잎·줄기·씨앗을 따로 분석, 유전형 20종"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves, stems, roots and fruits examined; vegetative tissues distinguished",
+   "ko": "잎·줄기·뿌리·열매를 조사하고 영양 조직을 구분"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves/stems and flowers (including pedicel and calyx), plus intact-plant emission",
+   "ko": "잎·줄기와 꽃(꽃자루·꽃받침 포함), 그리고 식물체 전체의 방출 성분"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; fifteen leaf samples from three cultivars",
+   "ko": "잎 — 3개 품종의 잎 시료 15개"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; leaf flavonol glycosides isolated and identified",
+   "ko": "잎 — 잎의 플라보놀 배당체를 분리·동정"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; methanolic extract analyzed by HPLC-UV-MS",
+   "ko": "잎 — 메탄올 추출물을 HPLC-UV-MS로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; raw and processed",
+   "ko": "잎 — 날것과 가공한 것"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; solvent extracts",
+   "ko": "잎 — 용매 추출물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; supercritical CO2 and solvent extracts",
+   "ko": "잎 — 초임계 CO2 추출물과 용매 추출물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; supercritical CO2 extract",
+   "ko": "잎 — 초임계 CO2 추출물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; volatile extracts analyzed by GC and GC-MS",
+   "ko": "잎 — 휘발성 추출물을 GC와 GC-MS로 분석"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; wild and cultivated",
+   "ko": "잎 — 야생과 재배"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "leaves; wild and multiple cultivation systems",
+   "ko": "잎 — 야생과 여러 재배 방식"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "mature fresh fruits",
+   "ko": "다 익은 신선한 열매"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "mature leaves and sprouts from 13 pak choi cultivars",
+   "ko": "청경채 13개 품종의 다 자란 잎과 새싹"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "mature plant tissues; green leaves identified as primary synthesis site",
+   "ko": "다 자란 식물 조직 — 녹색 잎을 주된 합성 부위로 확인"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "mature vine leaf blades across the growing season",
+   "ko": "생육기 전반에 걸친 다 자란 포도 잎몸"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "minimally processed young aerial pea shoots (baby-leaf vegetable)",
+   "ko": "최소 가공한 어린 완두 지상부 순(어린잎 채소)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "not_applicable",
+   "ko": "해당 없음"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "plant extract added to feed; not equivalent to fresh tortoise forage",
+   "ko": "사료에 섞은 식물 추출물 — 육지거북이 먹는 신선한 풀과 같지 않음"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "plant listed as wild food; exact part not specified",
+   "ko": "야생 먹이로 기록된 식물 — 정확한 부위는 명시되지 않음"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "plant; flowers specifically mentioned",
+   "ko": "식물체 — 꽃을 따로 언급"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "plant; included in tortoise diet",
+   "ko": "식물체 — 육지거북 식단에 포함"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "plant; moderation guidance",
+   "ko": "식물체 — 적당량 급여 지침"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "plant; source recommends moderation",
+   "ko": "식물체 — 출처는 적당량 급여를 권함"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "pumpkin leaves; raw and domestically cooked",
+   "ko": "호박잎 — 날것과 가정에서 조리한 것"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "raw edible portion",
+   "ko": "날것의 먹는 부위"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "red chicory leaves",
+   "ko": "붉은 치커리 잎"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "roots, specialized young leaves and floral parts discussed; floral distribution experimentally examined",
+   "ko": "뿌리·특화된 어린잎·꽃 부위를 논의하고, 꽃의 분포는 실험으로 조사"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "seed mixture intended to establish tortoise forage",
+   "ko": "육지거북 먹이 풀밭 조성용 씨앗 혼합물"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "seeds sprouted for 24–120 h, then processed as flour",
+   "ko": "24–120시간 발아시킨 뒤 가루로 가공한 씨앗"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "shoot/aerial tissues of white cabbage cultivars",
+   "ko": "양배추 품종들의 순·지상부 조직"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "shoots (above-ground tissue; leaves not isolated as a separate feeding treatment)",
+   "ko": "순(지상부 조직 — 잎만 따로 떼어 급여 처리하지 않음)"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "succulent plant; small part of varied diet",
+   "ko": "다육식물 — 다양한 식단의 작은 부분"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "tree blossom, leaves, fruit stones distinguished; older/wilted leaves specifically cautioned",
+   "ko": "나무의 꽃·잎·열매 씨를 구분하고, 오래되거나 시든 잎은 따로 주의"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "turnip-green leaves; 113 varieties grown at two sites",
+   "ko": "순무 잎 — 두 지역에서 재배한 113개 품종"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "whole above-ground plant; source does not quantify individual parts",
+   "ko": "지상부 전체 — 출처는 부위별 양을 제시하지 않음"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "whole plant context; bulb-group discussion",
+   "ko": "식물 전체 맥락 — 알뿌리 식물군 논의"
+  },
+  {
+   "field": "plant_part_state",
+   "en": "young plants",
+   "ko": "어린 식물"
+  },
+  {
+   "field": "animal_taxon",
+   "en": "Companion animals (review)",
+   "ko": "반려동물(종설)"
+  },
+  {
+   "field": "animal_taxon",
+   "en": "Plant chemistry",
+   "ko": "식물 화학"
+  },
+  {
+   "field": "animal_taxon",
+   "en": "Plant chemistry and herbivorous insects",
+   "ko": "식물 화학과 초식 곤충"
+  },
+  {
+   "field": "animal_taxon",
+   "en": "Plant chemistry; Mexican bean beetle herbivory",
+   "ko": "식물 화학 — 멕시코콩무당벌레(‘Mexican bean beetle’)의 섭식"
+  },
+  {
+   "field": "animal_taxon",
+   "en": "Tortoise general / Testudo context",
+   "ko": "육지거북 일반 / Testudo 맥락"
+  }
+ ]
+}

@@ -75,7 +75,8 @@
         "MEXT",
         "Souci-Fachmann-Kraut",
         "BLS",
-        "Vetpharm"
+        "Vetpharm",
+        "Food Control"
       ]
     },
     "abbreviations": {
@@ -99,13 +100,28 @@
         "kg",
         "g",
         "IU",
-        "HaCaT"
+        "HaCaT",
+        "NMR",
+        "GC",
+        "GC-MS",
+        "GC-TOFMS",
+        "LC/MS",
+        "LC/MS/MS",
+        "LC-MS/MS",
+        "HPLC-UV-MS",
+        "HPLC-ESI-MS",
+        "UHPLC-QToF",
+        "UHPLC-QToF/LC-MS/MS",
+        "UPLC-PDA-Q/TOF-MS",
+        "UPLC-qTOF-MS/MS",
+        "CO2"
       ]
     },
     "cultivar_and_trade_names": {
       "description_ko": "품종명·원문 표기를 그대로 보여야 하는 이름",
       "items": [
-        "Hayward"
+        "Hayward",
+        "Festival"
       ]
     },
     "image_licenses": {

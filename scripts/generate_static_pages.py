@@ -35,6 +35,8 @@ for o in ibera.get("observations",[]):
 images=json.loads((ROOT/"data/verified_plant_images_v56.json").read_text(encoding="utf-8")).get("images",[])
 image_by_plant={i["plant_id"]:i for i in images if i.get("identity_scope") in {"exact_species","exact_subspecies","exact_variety"}}
 curated_identity=json.loads((ROOT/"data/curated_identity_notes.json").read_text(encoding="utf-8")).get("notes",{})
+# Korean text for English evidence-card fields that the display functions below cannot localize (direct translations).
+ko_evidence_text={(e["field"],e["en"]):e["ko"] for e in json.loads((ROOT/"data/i18n/ko/evidence_text_ko.json").read_text(encoding="utf-8"))["entries"]}
 
 # Public detail pages: the same set the home search exposes (non-candidate + any public assessment).
 plants=public_plants(all_plants,assessments)
@@ -99,6 +101,8 @@ def source_kind(e):
 
 def animal_taxon_display(value):
     v=str(value or "").strip()
+    if ("animal_taxon",v) in ko_evidence_text:
+        return ko_evidence_text[("animal_taxon",v)]
     exact={
         "Mediterranean Testudo":"지중해 Testudo 육지거북",
         "Mediterranean tortoises":"지중해 육지거북",
@@ -146,6 +150,8 @@ def animal_taxon_display(value):
 
 def plant_taxon_display(value):
     v=str(value or "").strip()
+    if ("plant_taxon",v) in ko_evidence_text:
+        return ko_evidence_text[("plant_taxon",v)]
     exact={
         "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study":"연구에서 보고된 Taraxacum·Sonchus·Trifolium·Medicago 분류군",
         "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported":"보고된 Cichorium·Taraxacum·Medicago·Potentilla·Sedum 분류군",
@@ -164,6 +170,8 @@ def plant_taxon_display(value):
 
 def part_state_display(value):
     v=str(value or "").strip()
+    if ("plant_part_state",v) in ko_evidence_text:
+        return ko_evidence_text[("plant_part_state",v)]
     exact={
         "leaves":"잎",
         "young leaves":"어린잎",
@@ -280,6 +288,8 @@ def part_state_display(value):
 
 def evidence_support_display(value):
     v=str(value or "").strip()
+    if ("supports",v) in ko_evidence_text:
+        return ko_evidence_text[("supports",v)]
     mixed_ko={
         "The assessment records the Korean crop identity 근대 as Beta vulgaris subsp. cicla, linking the domestic food concept to the chard taxonomic scope.":"평가 기록은 국내 작물명 ‘근대’를 Beta vulgaris subsp. cicla로 확인하여 국내 식품 개념을 근대(chard)의 분류학적 범위와 연결한다.",
     }
@@ -588,6 +598,8 @@ def evidence_support_display(value):
 
 def evidence_limit_display(value):
     v=str(value or "").strip()
+    if ("does_not_support",v) in ko_evidence_text:
+        return ko_evidence_text[("does_not_support",v)]
     mixed_ko={
         "This does not establish an exact feeding percentage, fixed frequency, unlimited use, or equivalence with unrelated plants called mallow. The Korean retail concept 아욱 still needs species-level mapping before an exact-taxon conclusion.":"이 자료는 구체적인 급여 비율·정해진 급여 빈도·무제한 급여를 확정하지 않으며, ‘mallow’라고 불리는 무관한 식물까지 같은 판정을 적용할 근거도 없다. 국내 유통명 ‘아욱’은 정확한 분류군 결론을 내리기 전에 종 수준의 확인이 더 필요하다.",
         "The conclusion must not be expanded to Mentha spp. as a whole. The same source separately excludes peppermint (Mentha × piperita) and pennyroyal (Mentha pulegium); therefore a generic Korean '민트' product requires species identification before a feeding conclusion.":"이 결론을 Mentha속 전체로 확대하면 안 된다. 같은 출처는 페퍼민트(Mentha × piperita)와 페니로열(Mentha pulegium)을 별도로 제외하므로, 국내에서 ‘민트’라는 일반명으로 판매되는 제품은 급여 결론 전에 종 확인이 필요하다.",
