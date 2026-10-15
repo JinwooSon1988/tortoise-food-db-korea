@@ -10,6 +10,8 @@
   },
   "record_fields": {
     "id": "stable evidence record id",
+    "source_id": "identity of the cited original, derived from DOI > PMID > PMCID > The Tortoise Table plant number > normalized URL (scripts/evidence_sources.py); records citing one original share it and count as one source",
+    "same_finding_as": "optional: id of a record of the same source whose finding this record restates; the record is kept but shown on that record's card and counted once",
     "plant_ids": "master plant ids to which the record is relevant",
     "source_title": "human-readable source title",
     "source_type": "academic_study | specialist_plant_database | specialist_husbandry_source | official_composition_database | other",

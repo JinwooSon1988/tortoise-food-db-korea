@@ -1,0 +1,808 @@
+{
+ "schema_version": "1.0",
+ "reviewed_at": "2026-10-15",
+ "scope": "All 277 public evidence records and 186 public assessments (data/public_evidence_records.json, data/public_assessments.json).",
+ "rules": [
+  "No record is deleted. Records restating the same finding of the same original are folded into one card and counted once; records with different findings stay separate but the original counts once.",
+  "A verification status is raised only when the original (or, for identifiers, its PubMed record) was actually obtained and read; the level reached is stated per item.",
+  "Lack of evidence is not treated as proof of toxicity. Verdict grades and certainty are not changed in this review; changes are listed as proposals."
+ ],
+ "evidence_updates": [
+  {
+   "id": "tortoise_table_apple_tree",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=23",
+    "page_name": "Apple (Tree)",
+    "page_latin": "Malus domestica",
+    "page_classification": "Feed Sparingly",
+    "sha256": "0f2136b6a6fcb727a64aa8efd2fa1e688b7521cbe6a09430110b562ddaf45296"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=db&searchtxt="
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=23"
+   }
+  },
+  {
+   "id": "tortoise_table_birch",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=643",
+    "page_name": "Birch (Silver Birch, White Birch, Paper Birch, Yellow Birch)",
+    "page_latin": "Betula spp.",
+    "page_classification": "Feed in Moderation",
+    "sha256": "81f01137238fa8627f2669d4f129ab737c368149d8ea8501eba1101c5ce25343"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=oak+tree+varieties"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=643"
+   }
+  },
+  {
+   "id": "tortoise_table_cornflower",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=104",
+    "page_name": "Cornflower (Wild)",
+    "page_latin": "Centaurea cyanus",
+    "page_classification": "Feed in Moderation",
+    "sha256": "ae1c7c1d2463f8ddc32e7af84326b5815a07d520788d136c55074addf175ae26"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=104"
+   }
+  },
+  {
+   "id": "tortoise_table_cosmos",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=491",
+    "page_name": "Cosmos (Cosmea, Mexican Aster)",
+    "page_latin": "Cosmos spp.",
+    "page_classification": "Feed in Moderation",
+    "sha256": "ab3e4228bd13da9c34e3d7e58c3184529af8ccc4bcaa72f838c05acba2d60352"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=491"
+   }
+  },
+  {
+   "id": "tortoise_table_echinacea",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=101",
+    "page_name": "Coneflower (Echinacea)",
+    "page_latin": "Echinacea",
+    "page_classification": "Safe to Feed",
+    "sha256": "d311213224686c05b39621c14d957a337f5fee85dc46fcb3a81c47a326e5414f"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=c"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=101"
+   }
+  },
+  {
+   "id": "tortoise_table_ginkgo",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=650",
+    "page_name": "Ginkgo (Maidenhair Tree, Gingko, Ginko, Ginkgo Biloba)",
+    "page_latin": "Ginkgo biloba; syn. Salisburia adiantifolia",
+    "page_classification": "Feed Sparingly",
+    "sha256": "bb2fd2337e1462904fa9b6bd220fc379a045c74721c5d14ee10ad06a9c61b6e7"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=-+name"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=650"
+   }
+  },
+  {
+   "id": "tortoise_table_hawkbit",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=127",
+    "page_name": "Hawkbit (False Dandelion, Desert Chicory)",
+    "page_latin": "Leontodon spp.",
+    "page_classification": "Safe to Feed",
+    "sha256": "9ce51a97805ad313a40bef2042c26648d6a3426bc7ae7808d511d6ffee78b39f"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=127"
+   }
+  },
+  {
+   "id": "tortoise_table_hawkweed",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=640",
+    "page_name": "Hawkweed (Hieracium)",
+    "page_latin": "Hieracium spp.",
+    "page_classification": "Feed in Moderation",
+    "sha256": "722eb55eda0ed3dd7bcd15583e61a20c67cdea2d4930186d0785ca0e544ac6bb"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=640"
+   }
+  },
+  {
+   "id": "tortoise_table_hibiscus_rosa",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=711",
+    "page_name": "Hibiscus (China Rose, Shoeblackplant, Chinese Hibiscus, Mediterranean Hibiscus, Shoe Flower)",
+    "page_latin": "Hibiscus rosa-sinensis",
+    "page_classification": "Safe to Feed",
+    "sha256": "e847bf8cf687700c446a52059fcee8bd12fba59bb2addbc5656f87236b606bcc"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=711"
+   }
+  },
+  {
+   "id": "tortoise_table_lavender",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=218",
+    "page_name": "Lavender",
+    "page_latin": "Lavandula spp.",
+    "page_classification": "Feed in Moderation",
+    "sha256": "777c9f91025da3130a7b5e29483146ffa5528326e6d0eea315e8fd238019c0aa"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=enclosure&x=0&y=0"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=218"
+   }
+  },
+  {
+   "id": "tortoise_table_peach_tree",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=615",
+    "page_name": "Peach Tree",
+    "page_latin": "Prunus persica",
+    "page_classification": "Feed Sparingly",
+    "sha256": "353ac44ebe6d47b0fc747cf86e6791463ad27c7eb17ce81055c3d63a99b139f7"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=615"
+   }
+  },
+  {
+   "id": "tortoise_table_pear_tree",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=606",
+    "page_name": "Pear Tree",
+    "page_latin": "Pyrus spp.",
+    "page_classification": "Feed Sparingly",
+    "sha256": "def2baa5ead8056bdc6971da05a3c96878916d55596e8356d93b6809d86435b6"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples"
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=606"
+   }
+  },
+  {
+   "id": "tt_malva_spp_safe",
+   "kind": "listing_page_replaced",
+   "reason": "The record pointed at a listing or search page of The Tortoise Table, not at a plant entry. The plant's own entry was taken from the site's A-Z list (a link published by the site, not a constructed address) and read. The old summary said Mallow was 'included on a Mediterranean tortoise suitable-plant list'; the Mallow entry does not say this, so the summary now states only what the entry says.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read (one request per 1.5 s)",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=363",
+    "page_name": "Mallow",
+    "page_latin": "Malva spp.",
+    "page_classification": "Safe to Feed",
+    "sha256": "47206ff54ed231372d03bbefc09766e3611249e32457a9b884f596e5c6d155b3"
+   },
+   "before": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Mallow&x=0&y=0",
+    "source_title": "The Tortoise Table. Mallow (Malva spp.).",
+    "supports": "Mallow (Malva spp.) is listed as safe to feed and is included on a Mediterranean tortoise suitable-plant list.",
+    "does_not_support": "Does not provide a Malva verticillata-specific intake percentage or an species-specific quantitative trial."
+   },
+   "after": {
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=363",
+    "source_title": "The Tortoise Table. Mallow.",
+    "supports": "The Tortoise Table의 ‘Mallow’ 항목은 Malva속(Malva spp.) 전체를 급여 가능으로 분류하고, 육지거북이 아욱속 식물의 꽃과 잎을 즐겨 먹는다고 설명한다. 이 항목은 Malva verticillata(한국 아욱)를 따로 언급하지 않는다.",
+    "does_not_support": "속 수준 전문 사육자료이며 Malva verticillata에 대한 육지거북 급여 기록이나 시험이 아니다. 한국 아욱의 정확한 급여 비율·빈도·무제한 급여 허용 범위를 정하지 않는다."
+   }
+  },
+  {
+   "id": "costan_rumex_defences_2023",
+   "kind": "identifier_corrected",
+   "reason": "The DOI 10.1007/s10886-023-01417-2 belongs to a different article of the same journal issue (PMID 36920582). The record's title and PMID 37121960 agree with each other; PubMed lists 10.1007/s10886-023-01427-0 for PMID 37121960.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esummary for the PMID and esearch for the old DOI",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37121960/",
+    "old_doi_belongs_to": "https://pubmed.ncbi.nlm.nih.gov/36920582/"
+   },
+   "before": {
+    "doi": "10.1007/s10886-023-01417-2"
+   },
+   "after": {
+    "doi": "10.1007/s10886-023-01427-0"
+   }
+  },
+  {
+   "id": "bhandari_cauliflower_glucosinolates_2015",
+   "kind": "identifier_corrected",
+   "reason": "The DOI 10.3390/molecules200915842 belongs to a different article of the same journal issue (PMID 26334265). The record's title and PMID 26334264 agree with each other; PubMed lists 10.3390/molecules200915827 for PMID 26334264.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esummary for the PMID and esearch for the old DOI",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26334264/",
+    "old_doi_belongs_to": "https://pubmed.ncbi.nlm.nih.gov/26334265/"
+   },
+   "before": {
+    "doi": "10.3390/molecules200915842"
+   },
+   "after": {
+    "doi": "10.3390/molecules200915827"
+   }
+  },
+  {
+   "id": "tgraeca_alfalfa_context_2019",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31824759/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "31824759"
+   }
+  },
+  {
+   "id": "marotti_tagetes_thiophenes_2010",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/20394003/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "20394003"
+   }
+  },
+  {
+   "id": "actinidia_deliciosa_leaf_genotoxicity_2026",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42043151/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "42043151"
+   }
+  },
+  {
+   "id": "actinidia_leaf_calcium_oxalate_1987",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33873907/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "33873907"
+   }
+  },
+  {
+   "id": "padilla_turnip_leaf_glucosinolates_2007",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/17187832/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "17187832"
+   }
+  },
+  {
+   "id": "rumex_acetosa_oxalate_2021",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33150483/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "33150483"
+   }
+  },
+  {
+   "id": "di_noia_rumex_oxalate_2021",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33150483/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "33150483"
+   }
+  },
+  {
+   "id": "di_gioia_rumex_oxalate_2021",
+   "kind": "identifier_added",
+   "reason": "PMID added: PubMed indexes the record's DOI under exactly this PMID, with the same title.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esearch <doi>[doi] and esummary",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33150483/"
+   },
+   "before": {
+    "pmid": null
+   },
+   "after": {
+    "pmid": "33150483"
+   }
+  },
+  {
+   "id": "ceccanti_rumex_oxalate_2021",
+   "kind": "identifier_added",
+   "reason": "DOI and PMID added: the record linked only PMC8257512, which PubMed lists for this DOI and PMID.",
+   "verification": {
+    "status": "bibliographic_record_checked",
+    "checked_at": "2026-10-15",
+    "method": "NCBI E-utilities esummary (PMID 33150483 lists PMC8257512)",
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33150483/"
+   },
+   "before": {
+    "doi": null,
+    "pmid": null
+   },
+   "after": {
+    "doi": "10.1007/s12011-020-02467-3",
+    "pmid": "33150483"
+   }
+  },
+  {
+   "id": "tortoise_table_strawberry",
+   "kind": "species_scope_corrected",
+   "reason": "The record named Fragaria × ananassa as the taxon the source covers; the Strawberry entry (plant=293) is a genus entry (Fragaria spp.) and does not name the cultivated species. The taxon field now states the genus scope; the summary already follows the entry's text.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=293",
+    "page_name": "Strawberry",
+    "page_latin": "Fragaria spp.",
+    "page_classification": "Feed Sparingly",
+    "sha256": "a262d46bffbc9bb3cbc94d6e2994f06344073285744f1638901b5a86fc87ae65"
+   },
+   "before": {
+    "plant_taxon": "Fragaria × ananassa"
+   },
+   "after": {
+    "plant_taxon": "Fragaria spp. — 출처는 딸기속 전체 항목이며 재배 딸기(Fragaria × ananassa)를 따로 언급하지 않는다"
+   }
+  },
+  {
+   "id": "tt_melon_624",
+   "kind": "shared_entry_disclosed",
+   "reason": "Plant 624 is one combined Melon entry that names both Citrullus lanatus and Cucumis melo; one sentence covers the leaves and flowers of both. The record now says so, so that melon leaf and watermelon leaf are not read as two independent sources.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=624",
+    "page_name": "Melon (Cantaloupe, Muskmelon, Watermelon, Ogen Melon, Honeydew, Galia)",
+    "page_latin": "Citrullus lanatis spp., Cucumis melo spp.",
+    "page_classification": "Feed Sparingly",
+    "sha256": "7c94d18bd686ae96bd1a04c1c667981d128442db1cf5517408c40c9fc6850c48"
+   },
+   "before": {
+    "source_title": "The Tortoise Table. Melon.",
+    "plant_taxon": "Cucumis melo",
+    "supports": "Leaves and flowers may be nibbled but should be fed sparingly."
+   },
+   "after": {
+    "source_title": "The Tortoise Table. Melon (Cantaloupe, Muskmelon, Watermelon, Ogen Melon, Honeydew, Galia).",
+    "plant_taxon": "Cucumis melo — 출처는 Citrullus lanatus(수박)와 함께 한 항목(‘Melon’)으로 다룬다",
+    "supports": "The Tortoise Table은 멜론류(Cucumis melo)와 수박(Citrullus lanatus)을 ‘Melon’ 한 항목으로 묶어 소량·드물게 급여로 분류하고, 멜론류의 잎과 꽃은 조금 먹을 수 있으나 드물게 줘야 한다고 설명한다. 멜론잎만 따로 다룬 문장은 없으며, 수박잎 판정과 같은 문장 하나가 근거다."
+   }
+  },
+  {
+   "id": "tt_watermelon_624",
+   "kind": "shared_entry_disclosed",
+   "reason": "Plant 624 is one combined Melon entry that names both Citrullus lanatus and Cucumis melo; one sentence covers the leaves and flowers of both (the common name lists Watermelon; the Latin name reads 'Citrullus lanatis spp., Cucumis melo spp.'). The watermelon record is therefore not melon evidence moved to watermelon, but it is not independent watermelon evidence either: it is the same sentence as the melon record.",
+   "verification": {
+    "status": "original_read",
+    "checked_at": "2026-10-15",
+    "method": "page fetched and read",
+    "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=624",
+    "page_name": "Melon (Cantaloupe, Muskmelon, Watermelon, Ogen Melon, Honeydew, Galia)",
+    "page_latin": "Citrullus lanatis spp., Cucumis melo spp.",
+    "page_classification": "Feed Sparingly",
+    "sha256": "7c94d18bd686ae96bd1a04c1c667981d128442db1cf5517408c40c9fc6850c48"
+   },
+   "before": {
+    "source_title": "The Tortoise Table. Melon.",
+    "plant_taxon": "Citrullus lanatus",
+    "supports": "Leaves and flowers may be nibbled but should be fed sparingly."
+   },
+   "after": {
+    "source_title": "The Tortoise Table. Melon (Cantaloupe, Muskmelon, Watermelon, Ogen Melon, Honeydew, Galia).",
+    "plant_taxon": "Citrullus lanatus — 출처는 Cucumis melo(멜론)와 함께 한 항목(‘Melon’)으로 다룬다",
+    "supports": "The Tortoise Table은 수박(Citrullus lanatus)과 멜론류(Cucumis melo)를 ‘Melon’ 한 항목으로 묶어 소량·드물게 급여로 분류하고, 멜론류의 잎과 꽃은 조금 먹을 수 있으나 드물게 줘야 한다고 설명한다. 수박잎만 따로 다룬 문장이나 독립 자료는 없으며, 멜론잎 판정과 같은 문장 하나가 근거다."
+   }
+  },
+  {
+   "id": "ceccanti_rumex_oxalate_2021",
+   "kind": "same_finding_folded",
+   "reason": "Restates the finding of rumex_acetosa_oxalate_2021 from the same original (doi:10.1007/s12011-020-02467-3). Kept, not deleted; shown on that record's card and counted once.",
+   "verification": {
+    "status": "original_read",
+    "what": "full text (PMC8257512, about 7,000 words): Table 5 and discussion",
+    "checked_at": "2026-10-15",
+    "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
+   },
+   "before": {
+    "same_finding_as": null
+   },
+   "after": {
+    "same_finding_as": "rumex_acetosa_oxalate_2021"
+   }
+  },
+  {
+   "id": "di_noia_rumex_oxalate_2021",
+   "kind": "same_finding_folded",
+   "reason": "Restates the finding of rumex_acetosa_oxalate_2021 from the same original (doi:10.1007/s12011-020-02467-3). Kept, not deleted; shown on that record's card and counted once.",
+   "verification": {
+    "status": "original_read",
+    "what": "full text (PMC8257512, about 7,000 words): Table 5 and discussion",
+    "checked_at": "2026-10-15",
+    "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
+   },
+   "before": {
+    "same_finding_as": null
+   },
+   "after": {
+    "same_finding_as": "rumex_acetosa_oxalate_2021"
+   }
+  },
+  {
+   "id": "di_gioia_rumex_oxalate_2021",
+   "kind": "same_finding_folded",
+   "reason": "Restates the finding of rumex_acetosa_oxalate_2021 from the same original (doi:10.1007/s12011-020-02467-3). Kept, not deleted; shown on that record's card and counted once.",
+   "verification": {
+    "status": "original_read",
+    "what": "full text (PMC8257512, about 7,000 words): Table 5 and discussion",
+    "checked_at": "2026-10-15",
+    "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
+   },
+   "before": {
+    "same_finding_as": null
+   },
+   "after": {
+    "same_finding_as": "rumex_acetosa_oxalate_2021"
+   }
+  },
+  {
+   "id": "kew_poa_pratensis_animal_food",
+   "kind": "same_finding_folded",
+   "reason": "Restates the finding of kew_poa_pratensis_identity from the same original (url:powo.science.kew.org/taxon/417792-1). Kept, not deleted; shown on that record's card and counted once.",
+   "verification": {
+    "status": "record_text_identical_original_not_reread",
+    "checked_at": "2026-10-15",
+    "link": "https://powo.science.kew.org/taxon/417792-1"
+   },
+   "before": {
+    "same_finding_as": null
+   },
+   "after": {
+    "same_finding_as": "kew_poa_pratensis_identity"
+   }
+  },
+  {
+   "id": "sattler_borage_pa_2023",
+   "kind": "same_finding_folded",
+   "reason": "Restates the finding of sattler_borago_pa_2023 from the same original (doi:10.1016/j.talanta.2023.124425). Kept, not deleted; shown on that record's card and counted once.",
+   "verification": {
+    "status": "abstract_read",
+    "checked_at": "2026-10-15",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/36924638/"
+   },
+   "before": {
+    "same_finding_as": null
+   },
+   "after": {
+    "same_finding_as": "sattler_borago_pa_2023"
+   }
+  }
+ ],
+ "assessment_updates": [
+  {
+   "plant_id": "melonleaf",
+   "species_group": "Tortoise_general",
+   "reason": "Disclose that the only source is a combined melon/watermelon entry shared with the watermelon-leaf assessment. Verdict and certainty unchanged.",
+   "before": {
+    "limits": [
+     "Cucumis melo의 잎·꽃 범위",
+     "과육 판정과 혼동 금지",
+     "고정 비율 없음"
+    ],
+    "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다."
+   },
+   "after": {
+    "limits": [
+     "Cucumis melo의 잎·꽃 범위",
+     "과육 판정과 혼동 금지",
+     "고정 비율 없음",
+     "근거는 멜론과 수박을 한 항목으로 묶은 The Tortoise Table ‘Melon’ 페이지의 문장 하나이며, 수박잎 판정과 같은 출처다. 멜론잎만 따로 다룬 자료는 없음"
+    ],
+    "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다. 멜론과 수박을 함께 다룬 전문 DB 항목 하나가 유일한 근거다."
+   }
+  },
+  {
+   "plant_id": "watermelonleaf",
+   "species_group": "Tortoise_general",
+   "reason": "The source names watermelon in a combined entry, so the verdict is not borrowed from melon; but there is no independent watermelon-leaf source. Verdict and certainty unchanged (see proposals).",
+   "before": {
+    "limits": [
+     "Citrullus lanatus의 잎·꽃 범위",
+     "과육 판정과 혼동 금지",
+     "고정 비율 없음"
+    ],
+    "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다."
+   },
+   "after": {
+    "limits": [
+     "Citrullus lanatus의 잎·꽃 범위",
+     "과육 판정과 혼동 금지",
+     "고정 비율 없음",
+     "근거는 수박과 멜론을 한 항목으로 묶은 The Tortoise Table ‘Melon’ 페이지의 문장 하나이며, 수박잎만 따로 다룬 독립 자료는 없음"
+    ],
+    "applicability_note": "잎·꽃에 한정된 일반 육지거북 전문 근거다. 수박과 멜론을 함께 다룬 전문 DB 항목 하나가 유일한 근거이며, 수박잎만 다룬 자료는 없다."
+   }
+  },
+  {
+   "plant_id": "mallowleaf",
+   "species_group": "Tortoise_general",
+   "reason": "The summary now says plainly that the only source is genus-level (Malva spp.) and does not name Malva verticillata. Verdict and certainty unchanged (see proposals).",
+   "before": {
+    "why": "아욱잎은 다양한 잎채소·야생초 혼합식의 한 구성으로 사용할 수 있다. 아욱은 Malva속 식물이며 전문 육지거북 식물자료는 Malva spp.를 육지거북 급여 가능 식물로 분류한다. 다만 Malva verticillata 자체의 정확한 급여 비율을 정하거나 육지거북에게 먹여 본 정량 시험은 아니다. 따라서 정확히 아욱으로 동정된 깨끗한 잎을 여러 적합한 식물과 섞는 혼합식 재료로 사용한다.",
+    "applicability_note": "Malva속에 관한 전문 육지거북 사육근거를 한국의 아욱(Malva verticillata)에 적용한 판정이다."
+   },
+   "after": {
+    "why": "아욱잎은 다양한 잎채소·야생초 혼합식의 한 구성으로 사용할 수 있다. 다만 이 판정의 근거는 Malva속 전체를 ‘급여 가능’으로 분류한 전문 육지거북 식물자료 1곳(The Tortoise Table)뿐이다. 한국 아욱(Malva verticillata) 자체를 육지거북에게 먹인 기록이나 시험은 확인되지 않았고, 그 자료도 이 종을 따로 언급하지 않는다. 따라서 정확히 아욱으로 동정된 깨끗한 잎을 여러 적합한 식물과 섞는 혼합식 재료로만 사용한다.",
+    "applicability_note": "Malva속 전체에 관한 전문 육지거북 사육자료 1곳을 한국 아욱(Malva verticillata)에 적용한 판정이다. 종 수준의 직접 근거는 없다."
+   }
+  }
+ ],
+ "same_source_relations": [
+  {
+   "source_id": "doi:10.1007/s12011-020-02467-3",
+   "assessment": [
+    "sorrel",
+    "Tortoise_general"
+   ],
+   "relation": "same_finding",
+   "primary": "rumex_acetosa_oxalate_2021",
+   "folded": [
+    "ceccanti_rumex_oxalate_2021",
+    "di_noia_rumex_oxalate_2021",
+    "di_gioia_rumex_oxalate_2021"
+   ],
+   "finding": "Rumex acetosa leaves, open-field cultivation: 8.50 ± 0.21 mg oxalate/g fresh weight (Table 5). The four records restate this one result.",
+   "verification": {
+    "status": "original_read",
+    "what": "full text (PMC8257512, about 7,000 words): Table 5 and discussion",
+    "checked_at": "2026-10-15",
+    "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
+   },
+   "note": "Ceccanti C, Brizzi A, Landi M, Incrocci L, Pardossi A, Guidi L. 2021. Biol Trace Elem Res 199:3553-3561. The record ids di_noia_* and di_gioia_* do not name an author of this paper; the ids are kept because assessments refer to them."
+  },
+  {
+   "source_id": "url:powo.science.kew.org/taxon/417792-1",
+   "assessment": [
+    "meadowgrass",
+    "Tortoise_general"
+   ],
+   "relation": "same_finding",
+   "primary": "kew_poa_pratensis_identity",
+   "folded": [
+    "kew_poa_pratensis_animal_food"
+   ],
+   "finding": "Both records carry the same text (accepted name Poa pratensis L.; use recorded as animal food).",
+   "verification": {
+    "status": "record_text_identical_original_not_reread",
+    "checked_at": "2026-10-15",
+    "link": "https://powo.science.kew.org/taxon/417792-1"
+   }
+  },
+  {
+   "source_id": "doi:10.1016/j.talanta.2023.124425",
+   "assessment": [
+    "borage",
+    "Tortoise_general"
+   ],
+   "relation": "same_finding",
+   "primary": "sattler_borago_pa_2023",
+   "folded": [
+    "sattler_borage_pa_2023"
+   ],
+   "finding": "LC-MS/MS profiling and a validated method quantified pyrrolizidine alkaloids and their N-oxides in Borago officinalis leaves; acetylated forms were among the quantitatively most relevant. The folded record states a subset of this.",
+   "verification": {
+    "status": "abstract_read",
+    "checked_at": "2026-10-15",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/36924638/"
+   }
+  },
+  {
+   "source_id": "doi:10.1016/j.foodcont.2024.110930",
+   "assessment": [
+    "borage",
+    "Tortoise_general"
+   ],
+   "relation": "overlapping_findings_original_unread",
+   "records": [
+    "sattler_borago_pa_2025",
+    "sattler_borage_pa_2025"
+   ],
+   "finding": "Both records describe PA in leaves, flowers and microgreens; sattler_borage_pa_2025 adds sample numbers and EU maximum exceedance. Neither the abstract nor the full text could be obtained (Crossref holds no abstract; the journal is paywalled), so the records are not folded.",
+   "verification": {
+    "status": "original_not_read",
+    "checked_at": "2026-10-15",
+    "link": "https://doi.org/10.1016/j.foodcont.2024.110930"
+   }
+  },
+  {
+   "source_id": "doi:10.3390/biom10101391",
+   "assessment": [
+    "willowleaf",
+    "Tortoise_general"
+   ],
+   "relation": "distinct_findings",
+   "records": [
+    "piatczak_salix_alba_leaf_2020",
+    "piatczak_salix_alba_leaf_phenolics_2020"
+   ],
+   "finding": "One record holds the identification result (29 phenolic compounds in leaves), the other the quantification (total phenolic content 5575.96 mg/100 g DW in leaves). Both stay as cards; the paper counts as one source.",
+   "verification": {
+    "status": "abstract_read",
+    "checked_at": "2026-10-15",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/33003576/"
+   }
+  }
+ ],
+ "proposals_not_applied": [
+  {
+   "plant_id": "mallowleaf",
+   "proposal": "certainty C -> C-, or decide mallowleaf (Malva verticillata, A / C) and mallow (Malva spp., C / C-) together",
+   "reason": "Both rest on the same genus-level The Tortoise Table entry (plant=363). There is no species-level evidence for Malva verticillata, and no risk evidence either. A grade or certainty change needs owner approval (also listed in PR #287)."
+  },
+  {
+   "plant_id": "melonleaf, watermelonleaf",
+   "proposal": "certainty C+ -> C",
+   "reason": "One combined specialist entry and one sentence, shared by both assessments; other single-entry specialist verdicts are C."
+  },
+  {
+   "plant_id": "appleleaf",
+   "proposal": "add the source's leaf caution to the limits",
+   "reason": "The Apple (Tree) entry (plant=23) says older, wilting leaves produce a cyanic compound and that it is wise to keep tortoises from eating fallen leaves. The peach-leaf assessment already carries this caution; the apple-leaf one does not."
+  }
+ ]
+}

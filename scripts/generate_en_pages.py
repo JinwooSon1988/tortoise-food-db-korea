@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from public_verdict import load_assessments, representative, species_notes, by_plant, public_plants
 from feeding_cautions import classify, dedupe, localize_specialist_labels
 from assessment_copy import assessment_copy
+from evidence_sources import shown_records, folded_into, same_source_others, distinct_sources
 import i18n_en as I
 import en_hubs
 
@@ -404,7 +405,9 @@ def render(p):
                  f'Only verified values are shown, and missing values are never treated as 0.</p></section>')
 
     # Evidence
-    ordered = sorted(linked, key=lambda e: source_kind_en(e)[0])
+    # Same rule as the Korean page: a record restating another linked record of the same source shares its card.
+    shown = shown_records(linked)
+    ordered = sorted(shown, key=lambda e: source_kind_en(e)[0])
     cards = []
     for e in ordered:
         url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
@@ -412,6 +415,9 @@ def render(p):
         link = (f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="Open the source: {esc(title)} (opens in a new tab)">Open source <span aria-hidden="true">↗</span></a>' if url else "")
         rank, kind = source_kind_en(e)
         ids = " · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""), (f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""), (esc(e.get("year")) if e.get("year") else "")) if x)
+        n_folded = len(folded_into(e, linked)); n_same = len(same_source_others(e, shown))
+        same_source_note = ((f'<p class="ids">{n_folded} more record{"s" if n_folded != 1 else ""} with the same finding from this source {"are" if n_folded != 1 else "is"} shown as this one card.</p>' if n_folded else "")
+                            + (f'<p class="ids">This source has {n_same} more record{"s" if n_same != 1 else ""} with a different finding. It is counted as one source.</p>' if n_same else ""))
         cards.append(f'<article class="evcard" data-evidence-id="{esc(e.get("id"))}"><div class="evhead"><span class="{"paper" if rank == 0 else ""}">{esc(kind)}</span><span class="directness">{esc(I.DIRECTNESS_EN.get(e.get("directness"), "Indirect evidence"))}</span></div>'
                      f'<div class="evsummary"><strong>What the source says</strong><p>{rich(en_text(e.get("supports"), e["id"] + ".supports"))}</p></div>'
                      f'<p class="evidence-meaning"><b>Role in this assessment</b><br>{esc(evidence_role_en(e))}</p>'
@@ -419,13 +425,15 @@ def render(p):
                      f'<div class="evsource"><h3>{esc(title)}</h3><dl class="evmeta"><dt>Animals studied</dt><dd>{esc(en_text(e.get("animal_taxon"), "animal_taxon") or "Not stated")}</dd>'
                      f'<dt>Plant scope</dt><dd>{rich(en_text(e.get("plant_taxon"), e["id"] + ".plant_taxon") or "Not stated")}</dd>'
                      f'<dt>Part / state</dt><dd>{rich(en_text(e.get("plant_part_state"), e["id"] + ".part") or "Not stated")}</dd></dl>'
-                     + (f'<p class="ids">{ids}</p>' if ids else "") + f'{link}</div></article>')
+                     + (f'<p class="ids">{ids}</p>' if ids else "") + f'{same_source_note}{link}</div></article>')
     cards_html = "".join(cards) or "<p>No individual evidence records are linked yet. Do not feed this plant until evidence that it is safe has been found.</p>"
-    direct = sum(1 for e in linked if e.get("directness") == "direct")
-    husbandry = sum(1 for e in linked if e.get("directness") == "expert_husbandry")
-    chips = (f'<div class="evcountnote"><b>Evidence at a glance</b><div class="evstats"><div><span>Linked sources</span><strong>{len(linked)}</strong></div>'
+    # Counts are of distinct original sources: several records citing one paper or page count once.
+    n_sources = distinct_sources(linked)
+    direct = distinct_sources([e for e in linked if e.get("directness") == "direct"])
+    husbandry = distinct_sources([e for e in linked if e.get("directness") == "expert_husbandry"])
+    chips = (f'<div class="evcountnote"><b>Evidence at a glance</b><div class="evstats"><div><span>Linked sources</span><strong>{n_sources}</strong></div>'
              f'<div><span>Direct evidence</span><strong>{direct}</strong></div><div><span>Husbandry sources</span><strong>{husbandry}</strong></div></div>'
-             f'<small>The number of sources is not a safety grade, and sources can overlap.</small>'
+             f'<small>The number of sources is not a safety grade. Records from the same original source are counted once.</small>'
              f'<p class="certaintyline">Evidence certainty <b>{esc(I.certainty_en((a or {}).get("confidence")))}</b> · separate from the A–D feeding grade, this shows how direct and sufficient the evidence behind the assessment is. '
              f'<a href="../../guides/research-method/#certainty">What this means</a></p></div>')
     wild = wild_by_plant.get(pid, []); risk = risk_by_plant.get(pid); ib = ibera_by_plant.get(pid, [])
@@ -454,7 +462,7 @@ def render(p):
                           f'<dl class="evmeta"><dt>Tortoise</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>Period</dt><dd>{esc(en_text(s.get("study_period"), "ibera.period") or "To be confirmed")}</dd>'
                           f'<dt>Part eaten</dt><dd>{esc(en_text(o.get("observed_part"), "ibera.part") or "To be confirmed")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>')
     wild_section = (f'<h3 style="margin-top:18px">What did tortoises actually eat in the wild?</h3><p class="small">Being eaten in the wild is important evidence, but it does not mean a captive feeding proportion, daily feeding or unlimited safety.</p>{"".join(wild_cards)}' if wild_cards else "")
-    n_detail = len(linked) + len(wild_cards)
+    n_detail = len(shown) + len(wild_cards)
     detail = (f'<details class="evidencefold"><summary>Show {n_detail} source record{"s" if n_detail != 1 else ""}</summary><div class="evidence-list">{cards_html}{wild_section}</div></details>' if n_detail else cards_html)
     deep = (f'<section class="card evidence-deep" id="evidence"><div class="sectioneyebrow">The evidence in detail</div><h2>Evidence behind the assessment</h2>'
             f'<div class="evidence-core"><h3>What the evidence consists of</h3>{chips}</div>{conflict}{detail}</section>')
