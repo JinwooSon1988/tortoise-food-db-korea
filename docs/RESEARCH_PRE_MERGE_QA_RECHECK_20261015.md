@@ -78,6 +78,11 @@ Each entry gives the search status, the next step and the records with no indepe
 Every entry is `awaiting_original`. A record leaves the queue only when its original is read in a unit build; reading it never raises
 the account's record, and an observation found in the original becomes a new record from that original.
 
+Relation to `data/research/primary_reference_review_queue_20261014.csv` (PR #306/#307): that file is a fixed per-record worksheet of the
+102 unit-1 records that were unread citations in unit 1, with empty reviewer fields. 79 of its rows are in this queue; the other 23 are
+settled (21 confirmed in their primary in units 2–3 and superseded by the primary record, 2 on hold above). This queue adds the 6
+unit-2 secondary citations (De la Ossa ×5, Moll and Klemens ×1) that the unit-1 worksheet cannot contain. Neither file changes a status.
+
 ### New guards (`qa_global_plant_evidence_research_v7.py`)
 
 * tiers 1, 2 and 2b must agree with `wild_or_captive` in both evidence indexes;
