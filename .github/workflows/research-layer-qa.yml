@@ -11,6 +11,7 @@ on:
       - 'scripts/test_feedipedia_table_parser.py'
       - 'scripts/verify_nutrition_reference_sources_v1.py'
       - 'scripts/build_research_gap_register_v*.py'
+      - 'scripts/build_primary_verification_queue_v*.py'
       - 'data/plant_nutrition_reference_v1.json'
       - 'data/plant_nutrition_dm_basis_v1.json'
       - '.github/workflows/research-layer-qa.yml'
@@ -33,6 +34,12 @@ jobs:
             git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
             python scripts/diff_research_layer.py --base FETCH_HEAD --strict
           fi
+      - name: Gap register and verification queue are reproducible from the committed research files
+        run: |
+          for f in scripts/build_research_gap_register_v6.py scripts/build_primary_verification_queue_v6.py; do
+            if [ -f "$f" ]; then python "$f"; fi
+          done
+          git diff --exit-code -- data/research/research_gap_register_v6.json data/research/primary_verification_queue_v6.json
       - name: Run every research-layer QA script present on this branch (offline, read-only)
         run: |
           set -e

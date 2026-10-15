@@ -175,7 +175,10 @@ def main():
     # index over units 1-4
     index = d["evidence_index_v4.json"]["records"]
     all_ev = {**old_ev, **{e["evidence_id"]: e for e in ev4}}
-    held = {c["evidence_id"] for c in d["record_corrections_v3.json"]["corrections"] if c["action"] == "put_on_hold"}
+    held_cell = {c["evidence_id"] for c in d["record_corrections_v3.json"]["corrections"] if c["action"] == "put_on_hold"}
+    # unit-1 records whose cited publication was read and does not contain the statement are held as well (not counted as feeding evidence)
+    held_unsupported = {r["v1_evidence_id"] for r in d["primary_verification_ledger_v3.json"]["records"] if r["status_after_unit_3"] == "cited_source_read_does_not_support_the_statement"}
+    held = held_cell | held_unsupported
     if [x["evidence_id"] for x in index] != list(all_ev):
         errors.append("index: must hold every record of units 1-4 exactly once, in order")
     ledger = {r["v1_evidence_id"]: r["status_after_unit_3"] for r in d["primary_verification_ledger_v3.json"]["records"]}
@@ -223,7 +226,7 @@ def main():
             errors.append("index %s: quantity is not the value after the unit-3 corrections" % iid)
         if c and x["detection_methods"] and set(x["detection_methods"]) & {"fecal_macroscopic", "fecal_detection"} and "dung morphology" not in (want_q or "").replace("dung-morphology value not determinable", ""):
             errors.append("index %s: corrected record still counted as a dung-morphology detection" % iid)
-        if x["on_hold"] and x["detection_methods"] != ["not_determinable_record_on_hold"]:
+        if (iid in held_cell) and x["detection_methods"] != ["not_determinable_record_on_hold"]:
             errors.append("index %s: a held record must not carry a detection method" % iid)
         if x["source_id"] == "moorhouse_gann_2022" and not x["on_hold"]:
             labs = {mg[lab] for lab, n in re.findall(r"(DNA metabarcoding|dung morphology|feeding observation) (\d+) of", want_q or "") if int(n) > 0}
@@ -307,7 +310,7 @@ def main():
             gf.setdefault(x["plant_accepted_name"].split()[0], set()).add(fam)
     if sorted(g["genus"] for g in q["genus_with_more_than_one_backbone_family"]) != sorted(g for g, f in gf.items() if len(f) > 1):
         errors.append("review queue: genera mapped to more than one family differ from a recount")
-    if {r["evidence_id"] for r in q["records_on_hold"]} != held or q["identical_record_groups_across_units"]:
+    if {r["evidence_id"] for r in q["records_on_hold"]} != held or q["identical_record_groups_across_units"] or             {r["evidence_id"] for r in q["records_on_hold"] if r.get("hold_kind") == "cited_source_read_does_not_support_the_statement" and r.get("cited_source_id") and r.get("reason")} != held_unsupported:
         errors.append("review queue: holds differ from the corrections file, or identical records exist across units")
 
     sm = d["research_layer_summary_v4.json"]["summary"]

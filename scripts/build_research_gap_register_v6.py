@@ -74,7 +74,7 @@ def main():
         for cit, rows in sorted(others.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
     not_supporting = [{"evidence_id": r["v1_evidence_id"], "cited_as": r["primary_reference_cited_by_source"], "tortoise_species": r["tortoise_scientific_name"],
                        "plant_as_printed": r["plant_name_as_printed"], "note": r["note"], "on_hold": idx[r["v1_evidence_id"]]["on_hold"],
-                       "status": "the cited source was read and does not support the account's statement; kept as the account's claim only"}
+                       "status": "the cited source was read and does not support the account's statement; on hold, not counted as feeding evidence; the account's wording is kept"}
                       for r in ledger if r["status_after_unit_3"] == "cited_source_read_does_not_support_the_statement"]
 
     names = []

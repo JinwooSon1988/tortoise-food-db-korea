@@ -46,12 +46,42 @@ Not listed were 87 − 74 = 13 live records whose evidence still rests on an unr
 * 5 × `delaossa_2009-20..24` (cited as Moskovits 1981; see the unit-2 Moskovits citation audit) and `moll_klemens_1996-07`
   (Loveridge and Williams 1957) — unit-2 secondary citations;
 * 2 × `crm109_agassizii_2019-05/06` — Prose and Wilshire 2000 was read in unit 3 and does not support the statement
-  (the report never mentions tortoises). These remain live, not on hold, as the account's claim only.
+  (the report never mentions tortoises). Now on hold (section 5).
 
 The register now has `other_citations_not_read` (3 groups, 11 records) and `unit_1_citations_read_not_supporting` (2 records);
 the existing section and its totals are unchanged. The 21 unread-primary records not listed are confirmed in their primary and superseded.
 Unresolved scientific names: 48, unchanged; the 130 index records without an accepted name and outside the register are all
 `common_name_only` ("dry grass" etc.), not unresolved scientific names.
+
+### 5. crm109: the cited source does not support the statement — on hold
+
+Berry and Murphy (2019, CRM 5.109, *Gopherus agassizii*) write that the cover "of some annual forbs consumed by tortoises, e.g., desert
+dandelion (*Malacothrix glabrata*) and Fremont's pincushion (*Chaenactis fremontii*) was lower in tank tracks (Prose and Wilshire 2000)".
+The citation belongs to the tank-track cover finding; the clause "consumed by tortoises" has no citation of its own.
+Prose and Wilshire 2000 (USGS Open-File Report 00-512) was read in unit 3 and read again for this check
+(https://pubs.usgs.gov/of/2000/0512/pdf/of00-512.pdf, fetched 2026-10-15, SHA-256 5407fec988dbea96…, 11,616 words in the text layer):
+"tortoise" does not occur, *Malacothrix* does not occur, and *Chaenactis fremontii* occurs only as an annual whose cover fell in tank tracks.
+
+`crm109_agassizii_2019-05` and `-06` are therefore on hold in `evidence_index_v4/v5` (`build_global_plant_evidence_research_v4.py`
+holds every unit-1 record whose ledger status is `cited_source_read_does_not_support_the_statement`). `review_queue_v4.records_on_hold`
+lists them with the cited publication, the source id that was read, and the ledger's finding. They no longer count in tiers, detection
+methods or per-tortoise totals; the records and the account's wording stay in the database. The two plants keep their independent
+primary records (Oftedal 2002, `oftedal_2002-04` and `-07`), so the candidates now show only those as live evidence.
+
+### 6. Verification queue for the unread originals
+
+`data/research/primary_verification_queue_v6.json` (`scripts/build_primary_verification_queue_v6.py`) lists the 19 cited publications
+whose original has not been read, with the 85 live records that rest on them: 16 unit-1 citations (74 records) and 3 other citations
+(11 records: Moskovits 1981, van Dijk 1998 with Sriprateep et al. 2013 and a personal observation, Loveridge and Williams 1957).
+The earlier "87" counted the two crm109 records as well; their original was read, so they are on hold rather than queued.
+Each entry gives the search status, the next step and the records with no independent primary record (81 of 85), which sets the order.
+Every entry is `awaiting_original`. A record leaves the queue only when its original is read in a unit build; reading it never raises
+the account's record, and an observation found in the original becomes a new record from that original.
+
+Relation to `data/research/primary_reference_review_queue_20261014.csv` (PR #306/#307): that file is a fixed per-record worksheet of the
+102 unit-1 records that were unread citations in unit 1, with empty reviewer fields. 79 of its rows are in this queue; the other 23 are
+settled (21 confirmed in their primary in units 2–3 and superseded by the primary record, 2 on hold above). This queue adds the 6
+unit-2 secondary citations (De la Ossa ×5, Moll and Klemens ×1) that the unit-1 worksheet cannot contain. Neither file changes a status.
 
 ### New guards (`qa_global_plant_evidence_research_v7.py`)
 
@@ -59,9 +89,12 @@ Unresolved scientific names: 48, unchanged; the 130 index records without an acc
 * a candidate's best tier cannot be a wild feeding study unless one of its records is;
 * every reviewed unit-2 correction must be present in the evidence file;
 * the v2 summary's nutrition value counts must equal the nutrition files;
-* every live record whose original is unread or non-supporting is listed in the gap register.
+* every live record whose original is unread or non-supporting is listed in the gap register;
+* a record whose cited source was read and does not support it is on hold;
+* the verification queue holds exactly the register's unread citations, every entry is `awaiting_original`, and every queued record is
+  still a live tier-8 secondary citation (none raised or held without a read original).
 
-They fail on the data before this change (3 and 13 errors) and pass after it.
+They fail on the data before this change (3 and 13 errors) and pass after it; the hold and queue guards were checked the same way.
 
 ## Rechecks with no change needed
 

@@ -5391,10 +5391,11 @@
    "feeding_grade": null,
    "database_status": "not_in_database",
    "first_seen_in_unit": 1,
-   "evidence_ids_on_hold": [],
+   "evidence_ids_on_hold": [
+    "crm109_agassizii_2019-06"
+   ],
    "evidence_by_tier": {
-    "2_semi_wild_feeding_study_read": 1,
-    "8_secondary_citation_primary_not_read": 1
+    "2_semi_wild_feeding_study_read": 1
    },
    "tortoise_scope": [
     {
@@ -5402,18 +5403,15 @@
      "tortoise": "Gopherus agassizii",
      "species_specific": true,
      "tiers": [
-      "8_secondary_citation_primary_not_read",
       "2_semi_wild_feeding_study_read"
      ],
      "parts": [
-      "not stated",
       "see Table 4 of the source for bites by plant part"
      ],
      "detection_methods": [
-      "secondary_citation_method_not_verified",
       "direct_feeding_observation"
      ],
-     "eaten_records": 2,
+     "eaten_records": 1,
      "not_eaten_or_avoided_records": 0
     }
    ],
@@ -5421,8 +5419,7 @@
    "hazard_statement_ids": [],
    "generalisation_note": "Evidence is listed per tortoise taxon. A record for one tortoise taxon is not evidence for another.",
    "evidence_by_detection_method": {
-    "direct_feeding_observation": 1,
-    "secondary_citation_method_not_verified": 1
+    "direct_feeding_observation": 1
    }
   },
   {
@@ -17727,10 +17724,11 @@
    "feeding_grade": null,
    "database_status": "not_in_database",
    "first_seen_in_unit": 1,
-   "evidence_ids_on_hold": [],
+   "evidence_ids_on_hold": [
+    "crm109_agassizii_2019-05"
+   ],
    "evidence_by_tier": {
-    "2_semi_wild_feeding_study_read": 1,
-    "8_secondary_citation_primary_not_read": 1
+    "2_semi_wild_feeding_study_read": 1
    },
    "tortoise_scope": [
     {
@@ -17738,18 +17736,15 @@
      "tortoise": "Gopherus agassizii",
      "species_specific": true,
      "tiers": [
-      "8_secondary_citation_primary_not_read",
       "2_semi_wild_feeding_study_read"
      ],
      "parts": [
-      "not stated",
       "see Table 4 of the source for bites by plant part"
      ],
      "detection_methods": [
-      "secondary_citation_method_not_verified",
       "direct_feeding_observation"
      ],
-     "eaten_records": 2,
+     "eaten_records": 1,
      "not_eaten_or_avoided_records": 0
     }
    ],
@@ -17757,8 +17752,7 @@
    "hazard_statement_ids": [],
    "generalisation_note": "Evidence is listed per tortoise taxon. A record for one tortoise taxon is not evidence for another.",
    "evidence_by_detection_method": {
-    "direct_feeding_observation": 1,
-    "secondary_citation_method_not_verified": 1
+    "direct_feeding_observation": 1
    }
   },
   {

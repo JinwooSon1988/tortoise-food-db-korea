@@ -791,7 +791,24 @@
   "records_on_hold": [
    {
     "evidence_id": "moorhouse_gann_2022-40",
+    "hold_kind": "table_cell_not_determinable",
     "reason": "In Table 3 the two numbers after the skink columns ('2' and '4') start at x-positions 642 and 668, which are the dung-morphology frequency column and the observation count column, not the dung-morphology count and frequency columns used by every other row (607 and 642). Read as printed they are not a valid count and frequency pair for either method, so no tortoise detection can be stated. DNA metabarcoding gives 0 of 80."
+   },
+   {
+    "evidence_id": "crm109_agassizii_2019-05",
+    "hold_kind": "cited_source_read_does_not_support_the_statement",
+    "cited_as": "Prose and Wilshire 2000",
+    "cited_source_id": "prose_wilshire_2000",
+    "checked_in_unit": 3,
+    "reason": "the account cites Prose and Wilshire 2000 for this statement; that publication was read and does not support it: Malacothrix glabrata does not occur in the report and the report never mentions tortoises; the account's citation must refer to the effect of vehicle tracks on annual plants, not to feeding"
+   },
+   {
+    "evidence_id": "crm109_agassizii_2019-06",
+    "hold_kind": "cited_source_read_does_not_support_the_statement",
+    "cited_as": "Prose and Wilshire 2000",
+    "cited_source_id": "prose_wilshire_2000",
+    "checked_in_unit": 3,
+    "reason": "the account cites Prose and Wilshire 2000 for this statement; that publication was read and does not support it: Chaenactis fremontii occurs in the report only as an annual whose cover fell in tank tracks; the report never mentions tortoises"
    }
   ],
   "identical_record_groups_across_units": [],
