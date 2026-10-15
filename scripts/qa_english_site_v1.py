@@ -16,43 +16,12 @@ from public_verdict import load_assessments, public_plants, by_plant, representa
 SITE = "https://jinwooson1988.github.io/tortoise-food-db-korea"
 HANGUL = re.compile(r"[가-힣]")
 errors = []
-# Legacy /en/plant/<id>/ pages are redirects in the single-page language model.
-# Validate their identity, noindex, canonical and target rather than treating
-# them as separately translated full detail pages. Keep the full legacy
-# translation/parity checks below for installations still using that model.
-_probe = ROOT / "en/plant/timothy/index.html"
-if _probe.exists() and 'http-equiv="refresh"' in _probe.read_text(encoding="utf-8"):
-    from public_verdict import load_assessments, public_plants
-    _plants = public_plants(json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8")), load_assessments())
-    _ids = {p["id"] for p in _plants}
-    _actual = {p.parent.name for p in (ROOT / "en/plant").glob("*/index.html")}
-    if _ids != _actual:
-        errors.append(f"legacy English redirect set mismatch: missing {sorted(_ids - _actual)[:8]}, extra {sorted(_actual - _ids)[:8]}")
-    for _pid in sorted(_ids & _actual):
-        _alias = (ROOT / "en/plant" / _pid / "index.html").read_text(encoding="utf-8")
-        _target = f"../../../plant/{_pid}/?lang=en"
-        _canonical = f'{SITE}/plant/{_pid}/'
-        for _required in ('<html lang="en">', 'name="robots" content="noindex,follow"',
-                          f'rel="canonical" href="{_canonical}"',
-                          f'http-equiv="refresh" content="0;url={_target}"',
-                          f'href="{_target}"'):
-            if _required not in _alias:
-                errors.append(f"{_pid}: legacy redirect missing {_required}")
-        _canonical_page = ROOT / "plant" / _pid / "index.html"
-        if not _canonical_page.exists():
-            errors.append(f"{_pid}: canonical detail page missing")
-        else:
-            _canonical_doc = _canonical_page.read_text(encoding="utf-8")
-            if 'language-toggle.js' not in _canonical_doc or '?lang=en' not in _canonical_doc:
-                errors.append(f"{_pid}: canonical detail missing same-page English switch")
-            if 'data-plant-id="' not in _canonical_doc:
-                errors.append(f"{_pid}: canonical detail missing plant identity")
-    if errors:
-        for _error in errors[:30]:
-            print("FAIL:", _error)
-        sys.exit(1)
-    print(f"PASS: {len(_ids)} legacy English plant URLs redirect to canonical plant pages with ?lang=en")
-    sys.exit(0)
+# English plant pages are full translations of the Korean pages (same plant ID, grade, evidence, nutrition, images and
+# section order; checked below). A redirect stub in place of the translation is a failure, not a passing mode: the
+# Korean page cannot translate its plant-specific prose in the browser.
+for _alias in sorted((ROOT / "en/plant").glob("*/index.html")):
+    if 'http-equiv="refresh"' in _alias.read_text(encoding="utf-8"):
+        errors.append(f"{_alias.parent.name}: English plant page is a redirect stub, not a translated page")
 
 # Homepage mirrors the Korean search-first layout: three concise trust cards stay, retired example chips and guide blocks must not return.
 _home = (ROOT / "en/index.html").read_text(encoding="utf-8")
@@ -227,15 +196,15 @@ for pid in sorted(ids & en_ids & ko_ids):
     # The English view must be the SAME plant and preserve the Korean information
     # architecture. A separate page must not silently drop/reorder factual sections.
     for locale, doc in (("ko", ko), ("en", en)):
-        match = re.search(r'<main\\b[^>]*data-plant-id="([^"]+)"', doc)
+        match = re.search(r'<main\b[^>]*data-plant-id="([^"]+)"', doc)
         if not match or match.group(1) != pid:
             fail(f"{pid}: {locale} page identity differs from canonical plant ID")
     def factual_sections(doc):
-        return re.findall(r'<section\\b[^>]*\\bid="([^"]+)"', doc)
+        return re.findall(r'<section\b[^>]*\bid="([^"]+)"', doc)
     if factual_sections(ko) != factual_sections(en):
         fail(f"{pid}: translated page section IDs/order differ from Korean source")
     def image_sources(doc):
-        return sorted(re.findall(r'<img\\b[^>]*\\bsrc="([^"]+)"', doc))
+        return sorted(re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', doc))
     if image_sources(ko) != image_sources(en):
         fail(f"{pid}: translated page image sources differ from Korean source")
     kn, enn = section(ko, "nutrition"), section(en, "nutrition")
@@ -248,6 +217,12 @@ for pid in sorted(ids & en_ids & ko_ids):
         egrid = re.search(r'<div class="nutgrid">.*?</div></div>', enn, re.S)
         if bool(kgrid) != bool(egrid):
             fail(f"{pid}: verified nutrient grid present in one language only")
+        # Reference-only cards: same records, each with its analysed scope and its own caveat in both languages.
+        refs = lambda s: re.findall(r'<li><strong>.*?</li>', (re.search(r'<ul class="nutrition-reference-list">(.*?)</ul>', s, re.S) or [None, ""])[1], re.S)
+        if len(refs(kn)) != len(refs(enn)):
+            fail(f"{pid}: nutrition reference cards differ ko={len(refs(kn))} en={len(refs(enn))}")
+        elif any(item.count("nutrition-source-citation") != 2 for item in refs(kn) + refs(enn)):
+            fail(f"{pid}: a nutrition reference card lacks its analysed scope or caveat")
         knums = sorted(nut_num.findall(strip(kgrid.group(0)).replace(",", ""))) if kgrid else []
         enums = sorted(nut_num.findall(strip(egrid.group(0)).replace(",", ""))) if egrid else []
         if knums != enums:

@@ -28,3 +28,17 @@
 - 양방향 언어 전환 및 수치·판정·근거 일치 회귀 검사를 추가하고 기존 URL/검색 유입을 검증한다.
 
 이 문서는 계획/검증 계약이며, 현재 구현 완료를 의미하지 않는다.
+
+## 2026-10-15 검증 결과와 조치 (PR #303)
+- PR #303은 `/en/plant/<id>/`를 noindex 리디렉션으로 바꾸고, 한국어 상세페이지에서 `language-toggle.js`의 고정 문구 사전으로 같은 화면을 번역하도록 했다.
+  브라우저 검증 결과 `/plant/dandelion/?lang=en`에 한글 232단어가 남았고(main의 영어 페이지는 0단어), 문서 제목은 홈 제목("Can my tortoise eat this plant?")으로 바뀌었다.
+  고정 문구 사전은 식물별 판정·근거·영양 문장을 번역하지 못하므로 완료 판정 기준 1·2를 충족하지 못한다.
+- 같은 변경으로 sitemap.xml에 noindex 리디렉션 URL 182개가 `<loc>`와 hreflang 대체 링크로 남았고, `<title>`·description이 없는 페이지가 생겨
+  `audit_core_page_assets`, `audit_global_seo_indexability`, `audit_language_switch_links`, `qa_detail_language_navigation`이 실패했다.
+  마지막 커밋(07b20b5c)은 봇 커밋이라 CI가 승인 대기(action_required)로 실행되지 않았다.
+- 조치: 식물 상세의 언어 라우팅만 main의 방식으로 되돌렸다. `/en/plant/<id>/`는 `strings_en.json`으로 번역한 완전한 영어 페이지이며,
+  한국어 페이지와 hreflang 쌍으로 연결된다. 언어 전환은 같은 식물 ID를 유지하고(`/plant/<id>/` ↔ `/en/plant/<id>/`), 두 언어의 등급·근거 ID·출처 URL·
+  영양 수치·이미지·섹션 순서·영양 참고자료 카드가 같은지 `qa_english_site_v1.py`가 검사한다.
+  PR #303의 나머지 변경(영양 참고자료 표시, 급여 부위가 일치하지 않는 사진 제외)은 유지하고 영어 페이지에도 같은 규칙을 적용했다.
+- 같은 화면 로케일 전환(이행 순서 3)은 정규 페이지가 식물별 문장의 영어 번역을 함께 담을 수 있게 된 뒤에만 다시 시도한다.
+  그 전에는 리디렉션 스텁이 영어 번역 페이지를 대신하면 `qa_english_site_v1.py`가 실패한다.
