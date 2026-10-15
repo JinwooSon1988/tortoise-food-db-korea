@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-"""Legacy English URL compatibility redirects (en/plant/<id>/), the English home, all-plants list and guides (scripts/en_hubs.py), the
+"""English site: plant detail pages (en/plant/<id>/), the English home, all-plants list and guides (scripts/en_hubs.py), the
 bilingual sitemap and data/i18n/en/catalog_en.json.
-
-Plant detail content is NOT independently rendered here: /en/plant/<id>/ redirects
-to the canonical /plant/<id>/?lang=en. The canonical page must provide translation.
 
 Run after the Korean pipeline (generate_static_pages -> patch_curated_social_metadata -> inject_plant_detail_v56
 -> generate_guide_hubs). Facts come from the same canonical files as the Korean pages; Korean prose stored in those
@@ -50,7 +47,8 @@ ibera_by_plant = {}
 for o in ibera.get("observations", []):
     if o.get("plant_id"):
         ibera_by_plant.setdefault(o["plant_id"], []).append(o)
-image_by_plant = {i["plant_id"]: i for i in load("data/verified_plant_images_v56.json").get("images", []) if i.get("identity_scope") in {"exact_species", "exact_subspecies", "exact_variety"}}
+# Same rule as the Korean pages (generate_static_pages.py): an exact taxon identity AND a verified feeding-part match.
+image_by_plant = {i["plant_id"]: i for i in load("data/verified_plant_images_v56.json").get("images", []) if i.get("identity_scope") in {"exact_species", "exact_subspecies", "exact_variety"} and i.get("part_match") == "match"}
 curated_identity = load("data/curated_identity_notes.json").get("notes", {})
 retail_by_id = {r["plant_id"]: r for r in load("data/korean_retail_name_map.json")}
 
@@ -407,12 +405,14 @@ def render(p):
     elif nutrition_references_by_id.get(pid):
         reference_cards = []
         for ref in nutrition_references_by_id[pid]:
-            source_label = esc("Nutrition composition reference" if re.search(r"[가-힣]", ref.get("source_name") or "") else (ref.get("source_name") or "Source not specified"))
-            scope = esc(ref.get("analyzed_part") or "Not specified")
-            state = esc(ref.get("preparation_state") or "Not specified")
+            # Same fields as the Korean card (generate_static_pages.py): source, analysed scope and the record's own caveat,
+            # translated through strings_en.json so that a caveat edited in Korean cannot silently disappear in English.
+            source_label = esc(T(ref.get("source_name"), f"{pid}.nutrition_reference.source_name") or "Source not specified")
+            scope = esc(T(ref.get("reference_scope_ko"), f"{pid}.nutrition_reference.scope") or ref.get("analyzed_part") or "Analysed scope not specified")
+            note = esc(T(ref.get("display_note_ko"), f"{pid}.nutrition_reference.note") or "This is not a verified value that can be applied directly to the feeding part.")
             url = ref.get("source_url") or ""
             source = (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{source_label} · Open original ↗</a>' if url.startswith("https://") else source_label)
-            reference_cards.append(f'<li><strong>{source}</strong><p class="small">Analyzed part: {scope} · Preparation: {state}</p><p class="small">Reference only: not a verified nutrient value for the feeding part. Values may differ by plant part and sample; this does not establish feeding safety.</p></li>')
+            reference_cards.append(f'<li><strong>{source}</strong><p class="small nutrition-source-citation">Analysed scope: {scope}</p><p class="small nutrition-source-citation">{note}</p></li>')
         nbody = ('<div class="nutrition-missing"><strong>Related nutrition references available · No directly verified values</strong>'
                  '<p>Related source data exist, but cannot be substituted for verified nutrient values for this feeding part.</p>'
                  '<ul class="nutrition-reference-list">' + "".join(reference_cards) + '</ul>'
@@ -545,16 +545,7 @@ def write_sitemap():
 
 
 def main():
-    # Canonical Korean detail owns the facts. English aliases are redirects, not
-    # independently rendered plant details.
-    pages = {p["id"]: (
-        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
-        '<meta name="robots" content="noindex,follow">'
-        f'<link rel="canonical" href="{SITE_URL}/plant/{p["id"]}/">'
-        f'<meta http-equiv="refresh" content="0;url=../../../plant/{p["id"]}/?lang=en">'
-        f'</head><body><a href="../../../plant/{p["id"]}/?lang=en">'
-        'View this plant on the main site</a></body></html>'
-    ) for p in plants}
+    pages = {p["id"]: render(p) for p in plants}
     catalog = [catalog_entry(p) for p in plants]
     if I.missing:
         out = ROOT / "data/i18n/en/_missing.json"
