@@ -1,0 +1,319 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "summary": {
+  "unit_3_added": {
+   "sources_read": 8,
+   "sources_with_plant_records": 7,
+   "sources_by_language": {
+    "en": 7,
+    "pt": 1
+   },
+   "sources_by_type": {
+    "government_technical_report": 1,
+    "keeper_organisation_web_page": 1,
+    "museum_veterinary_husbandry_guideline": 1,
+    "peer_reviewed_field_study": 1,
+    "peer_reviewed_monograph": 1,
+    "society_journal_field_study": 1,
+    "university_repository_paper": 1,
+    "zoo_association_husbandry_guideline": 1
+   },
+   "evidence_records": 110,
+   "evidence_by_tier": {
+    "1_wild_feeding_study_read": 33,
+    "4_institutional_husbandry_guideline": 49,
+    "5_husbandry_practice_reported": 5,
+    "6_keeper_organisation_statement": 23
+   },
+   "evidence_species_specific": 38,
+   "evidence_not_species_specific": 72,
+   "negative_records_by_kind": {
+    "animal_avoided_or_refused": 1,
+    "source_advises_against": 1
+   },
+   "hazard_statements": 17,
+   "record_corrections": 2
+  },
+  "cumulative": {
+   "evidence_records": 636,
+   "evidence_records_on_hold_after_correction": 1,
+   "evidence_by_tier": {
+    "1_wild_feeding_study_read": 333,
+    "2_semi_wild_feeding_study_read": 16,
+    "2b_previously_captive_animal_field_observation_read": 1,
+    "3_captive_feeding_trial_read": 28,
+    "4_institutional_husbandry_guideline": 49,
+    "5_husbandry_practice_reported": 19,
+    "6_keeper_organisation_statement": 23,
+    "7_local_or_community_report": 26,
+    "8_secondary_citation_primary_not_read": 108,
+    "9_review_or_account_statement": 32
+   },
+   "tortoise_taxa_or_groups_with_evidence": 23,
+   "candidates": {
+    "plant_names": 565,
+    "new_candidates_not_in_database": 378,
+    "new_candidates_species_level": 316,
+    "new_candidates_genus_level": 62,
+    "species_already_in_database": 32,
+    "genus_level_record_in_database": 36,
+    "unresolved_not_a_candidate": 119
+   },
+   "candidates_in_unit_2": {
+    "plant_names": 483,
+    "new_candidates_not_in_database": 347,
+    "new_candidates_species_level": 293,
+    "new_candidates_genus_level": 54,
+    "species_already_in_database": 32,
+    "genus_level_record_in_database": 34,
+    "unresolved_not_a_candidate": 70
+   }
+  },
+  "per_tortoise": {
+   "'Desert Tortoise' kept in Arizona; the source does not name the species": {
+    "records": 40,
+    "species_specific": false,
+    "by_tier": {
+     "4_institutional_husbandry_guideline": 40
+    },
+    "added_in_unit_3": 40
+   },
+   "'Herbivorous tortoises' observed mainly in Greece and Turkey; species not named per plant": {
+    "records": 14,
+    "species_specific": false,
+    "by_tier": {
+     "6_keeper_organisation_statement": 14
+    },
+    "added_in_unit_3": 14
+   },
+   "Aldabrachelys gigantea": {
+    "records": 52,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 52
+    },
+    "added_in_unit_3": 0
+   },
+   "Centrochelys sulcata": {
+    "records": 12,
+    "species_specific": true,
+    "by_tier": {
+     "2b_previously_captive_animal_field_observation_read": 1,
+     "5_husbandry_practice_reported": 3,
+     "8_secondary_citation_primary_not_read": 8
+    },
+    "added_in_unit_3": 0
+   },
+   "Chelonoidis carbonarius": {
+    "records": 25,
+    "species_specific": true,
+    "by_tier": {
+     "3_captive_feeding_trial_read": 10,
+     "5_husbandry_practice_reported": 9,
+     "8_secondary_citation_primary_not_read": 5,
+     "9_review_or_account_statement": 1
+    },
+    "added_in_unit_3": 0
+   },
+   "Chelonoidis carbonarius and Chelonoidis denticulatus, not separated by the source": {
+    "records": 18,
+    "species_specific": false,
+    "by_tier": {
+     "1_wild_feeding_study_read": 18
+    },
+    "added_in_unit_3": 18
+   },
+   "Chelonoidis darwini": {
+    "records": 90,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 90
+    },
+    "added_in_unit_3": 0
+   },
+   "Chelonoidis niger": {
+    "records": 2,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 2
+    },
+    "added_in_unit_3": 0
+   },
+   "Geochelone elegans": {
+    "records": 6,
+    "species_specific": true,
+    "by_tier": {
+     "8_secondary_citation_primary_not_read": 6
+    },
+    "added_in_unit_3": 0
+   },
+   "Geochelone platynota": {
+    "records": 21,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 5,
+     "5_husbandry_practice_reported": 2,
+     "7_local_or_community_report": 6,
+     "8_secondary_citation_primary_not_read": 8
+    },
+    "added_in_unit_3": 5
+   },
+   "Gopherus agassizii": {
+    "records": 40,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 18,
+     "2_semi_wild_feeding_study_read": 16,
+     "8_secondary_citation_primary_not_read": 6
+    },
+    "added_in_unit_3": 0
+   },
+   "Gopherus polyphemus": {
+    "records": 62,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 62
+    },
+    "added_in_unit_3": 0
+   },
+   "Indotestudo elongata": {
+    "records": 42,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 8,
+     "7_local_or_community_report": 20,
+     "8_secondary_citation_primary_not_read": 14
+    },
+    "added_in_unit_3": 0
+   },
+   "Indotestudo travancorica": {
+    "records": 9,
+    "species_specific": true,
+    "by_tier": {
+     "8_secondary_citation_primary_not_read": 8,
+     "9_review_or_account_statement": 1
+    },
+    "added_in_unit_3": 0
+   },
+   "Kinixys spekii": {
+    "records": 11,
+    "species_specific": true,
+    "by_tier": {
+     "8_secondary_citation_primary_not_read": 10,
+     "9_review_or_account_statement": 1
+    },
+    "added_in_unit_3": 0
+   },
+   "Malacochersus tornieri": {
+    "records": 19,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 7,
+     "5_husbandry_practice_reported": 5,
+     "8_secondary_citation_primary_not_read": 7
+    },
+    "added_in_unit_3": 6
+   },
+   "Manouria emys": {
+    "records": 2,
+    "species_specific": true,
+    "by_tier": {
+     "8_secondary_citation_primary_not_read": 2
+    },
+    "added_in_unit_3": 0
+   },
+   "Stigmochelys pardalis": {
+    "records": 28,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 28
+    },
+    "added_in_unit_3": 0
+   },
+   "Testudo graeca": {
+    "records": 36,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 24,
+     "8_secondary_citation_primary_not_read": 12
+    },
+    "added_in_unit_3": 0
+   },
+   "Testudo hermanni": {
+    "records": 43,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 9,
+     "6_keeper_organisation_statement": 5,
+     "8_secondary_citation_primary_not_read": 4,
+     "9_review_or_account_statement": 25
+    },
+    "added_in_unit_3": 14
+   },
+   "Testudo horsfieldii": {
+    "records": 32,
+    "species_specific": true,
+    "by_tier": {
+     "1_wild_feeding_study_read": 10,
+     "3_captive_feeding_trial_read": 18,
+     "9_review_or_account_statement": 4
+    },
+    "added_in_unit_3": 0
+   },
+   "Testudo kleinmanni": {
+    "records": 9,
+    "species_specific": true,
+    "by_tier": {
+     "4_institutional_husbandry_guideline": 9
+    },
+    "added_in_unit_3": 9
+   },
+   "Testudo marginata": {
+    "records": 22,
+    "species_specific": true,
+    "by_tier": {
+     "6_keeper_organisation_statement": 4,
+     "8_secondary_citation_primary_not_read": 18
+    },
+    "added_in_unit_3": 4
+   }
+  },
+  "unit_1_records_after_unit_3": {
+   "cited_source_read_does_not_support_the_statement": 2,
+   "confirmed_in_primary": 20,
+   "confirmed_with_difference": 5,
+   "not_in_the_cited_source_read_other_cited_sources_unread": 5,
+   "primary_read_in_unit_1": 46,
+   "secondary_citation_primary_not_read": 74,
+   "statement_of_the_source_no_primary_cited": 17
+  },
+  "name_resolution": {
+   "names_reviewed": 43,
+   "by_decision": {
+    "resolved_by_second_database": 2,
+    "resolved_by_source_context": 1,
+    "resolved_homonym_by_author_printed_in_source": 1,
+    "resolved_orthographic_variant": 9,
+    "spelling_variant_identified_accepted_name_not_agreed": 4,
+    "still_unresolved": 26
+   }
+  },
+  "nutrient_view": {
+   "records": 57,
+   "with_calcium_and_phosphorus": 18,
+   "with_oxalate_or_tannin_values": 4
+  },
+  "gaps_not_filled": [
+   "no species-specific wild diet record for Chelonoidis denticulatus (the Tucuruí study pools it with C. carbonarius)",
+   "no new wild diet study for Centrochelys sulcata, Geochelone elegans or Testudo marginata",
+   "no oxalate, tannin or other antinutrient measurements were found for the candidate plants",
+   "no German or Italian original source",
+   "no seed mixture added"
+  ]
+ }
+}

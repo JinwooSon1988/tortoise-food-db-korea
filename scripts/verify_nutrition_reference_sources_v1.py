@@ -67,20 +67,13 @@ def fetch_name(url):
 
 
 def parse_feedipedia(page):
-    t = flat(page)
-    rows = {}
-    for m in re.finditer(r"\|([A-Za-z][A-Za-z ()\-,]+?)\|(% as fed|% DM|g/kg DM|mg/kg DM|MJ/kg DM|kcal/kg DM)\|([0-9.]+)\|(.*?)(?=\|[A-Za-z][A-Za-z ()\-,]+?\|(?:% as fed|% DM|g/kg DM|mg/kg DM|MJ/kg DM|kcal/kg DM|%|h-1)\||\|[A-Z][a-z ]+\|Unit\||\|The asterisk)", t):
-        label, unit, avg, rest = m.group(1).strip().lower(), m.group(2).lower(), float(m.group(3)), m.group(4)
-        parts = [p for p in rest.split("|") if p]
-        nb = None
-        if parts:
-            if parts[-1] == "*":
-                nb = "*"
-            elif re.fullmatch(r"\d+", parts[-1]):
-                nb = int(parts[-1])
-        rows.setdefault((label, unit), (avg, nb))
-    title = re.search(r"Would you consider donating\?.*?\|([^|]+)\|Main analysis", t, re.S)
-    return rows, (title.group(1).strip() if title else None)
+    """Feedipedia composition rows, read cell by cell from each table row (scripts/feedipedia_table.py).
+    The former flattened-text regex let a row with a blank Nb take the Nb of the next row and drop that row."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("feedipedia_table", Path(__file__).resolve().parent / "feedipedia_table.py")
+    ft = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ft)
+    return ft.legacy(page)
 
 
 def parse_mext(page):
