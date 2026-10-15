@@ -181,6 +181,7 @@ def main():
             back.setdefault((code, ko), set()).add(en)
     errors += ["%s Korean label %s used for %s" % (c, ko, sorted(v)) for (c, ko), v in back.items() if len(v) > 1]
     index = load("evidence_index_v5.json")["records"]
+    ix = {x["evidence_id"]: x for x in index}
     if sorted(x["evidence_id"] for x in index) != sorted(ev):
         errors.append("unit-5 index does not hold every evidence record exactly once")
     for x in index:
@@ -233,6 +234,24 @@ def main():
         if x["evidence_directness"] in DOWNGRADED_STATUS or x["evidence_directness"] == "reported_in_account_primary_not_read":
             if not x["on_hold"] and not x["superseded_by"] and x["evidence_id"] not in listed:
                 errors.append("%s: original unread but missing from research_gap_register_v6.json" % x["evidence_id"])
+    # a cited source that was read and does not support the statement puts the record on hold (crm109_agassizii_2019-05/06)
+    for c in gap.get("unit_1_citations_read_not_supporting", []):
+        if not ix[c["evidence_id"]]["on_hold"] or not c["on_hold"]:
+            errors.append("%s: the cited source was read and does not support it, but the record is live" % c["evidence_id"])
+    # verification queue: exactly the unread citations of the register; queued records stay secondary citations until the original is read
+    vq = load("primary_verification_queue_v6.json")
+    unread = {i for k in ("unit_1_citations_not_read", "other_citations_not_read") for c in gap.get(k, []) for i in c["evidence_ids"]}
+    queued = [r["evidence_id"] for e in vq["queue"] for r in e["evidence_records"]]
+    if sorted(queued) != sorted(unread) or len(vq["queue"]) != sum(len(gap.get(k, [])) for k in ("unit_1_citations_not_read", "other_citations_not_read")):
+        errors.append("primary_verification_queue_v6: records or citations differ from the gap register's unread citations")
+    for e in vq["queue"]:
+        if e["verification_status"] not in vq["allowed_verification_status"]:
+            errors.append("primary_verification_queue_v6 %s: status %r without a read original" % (e["cited_as"], e["verification_status"]))
+        for r in e["evidence_records"]:
+            x = ix.get(r["evidence_id"])
+            if not x or x["on_hold"] or x["evidence_tier"] != "8_secondary_citation_primary_not_read" or not x["evidence_directness"].endswith("_primary_not_read") \
+                    or x["counts_as_independent_positive_wild_observation"] or r["evidence_tier_now"] != x["evidence_tier"]:
+                errors.append("primary_verification_queue_v6 %s: a queued record is not a live secondary citation (raised or held without a read original)" % r["evidence_id"])
     # summary counts follow the nutrition files they describe
     s2 = load("research_layer_summary_v2.json")["summary"]
     for key, f in (("unit_1", NUTRITION[0]), ("unit_2_added", NUTRITION[1])):
