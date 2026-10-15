@@ -166,6 +166,54 @@ def main():
         if pid in by_id and d.get("db_scientific") != by_id[pid]["scientific"]:
             err("nomenclature decision for %s refers to %r, plants.json has %r" % (pid, d.get("db_scientific"), by_id[pid]["scientific"]))
 
+    # --- 7. a term that names one taxon (zucchini = Cucurbita pepo) is not shown as a name of another taxon
+    catalog = {c["id"]: c for c in load("data/i18n/en/catalog_en.json")["plants"]}
+    retail = {r["plant_id"]: r for r in load("data/korean_search_name_map_v1.json")["records"]}
+    notes = load("data/curated_identity_notes.json")["notes"]
+
+    def covers(sci, taxon):
+        if genus_level(sci):
+            return norm(sci.split()[0]) == norm(taxon.split()[0])
+        return species_key(sci) == species_key(taxon)
+    for b in reg.get("taxon_bound_terms", []):
+        t = norm(b["term"])
+        for p in plants:
+            if covers(p["scientific"], b["taxon"]):
+                continue
+            c, r = catalog.get(p["id"]) or {}, retail.get(p["id"]) or {}
+            shown = [p["ko"], p["en"], c.get("name")] + list(p.get("aliases") or []) + list(c.get("aliases") or []) + \
+                list(r.get("retail_terms") or []) + list(r.get("aliases") or [])
+            if t in {norm(x) for x in shown if x}:
+                err("%s (%s) shows %r as a name, but that term names %s" % (p["id"], p["scientific"], b["term"], b["taxon"]))
+            if t in {norm(x) for x in p.get("search_aliases") or []}:
+                note = notes.get(p["id"])
+                text = norm(" ".join([note["headline"]] + note.get("items", [])).replace("*", "")) if note else ""
+                warned = r.get("mapping_status") == "name_candidate_only" or p.get("identity_status") == "needs_species_level_mapping"
+                if not (warned and norm(b["taxon"]) in text):
+                    err("%s keeps %r as a search term but its page has no identity note naming %s" % (p["id"], b["term"], b["taxon"]))
+
+    # --- 8. legacy alias IDs show the same explanation as the canonical ID (Korean assessment and English catalog)
+    for legacy, canonical in aliases.items():
+        rows = {pid: {a["species_group"]: {k: v for k, v in a.items() if k != "plant_id"} for a in assessments[pid]} for pid in (legacy, canonical)}
+        if rows[legacy] != rows[canonical]:
+            err("alias %s -> %s: public assessment text differs (why, limits or applicability note)" % (legacy, canonical))
+        for f in ("why", "role"):
+            if (catalog.get(legacy) or {}).get(f) != (catalog.get(canonical) or {}).get(f):
+                err("alias %s -> %s: English catalog %s differs" % (legacy, canonical, f))
+
+    # --- 9. parts and growth stages kept separate are assessed separately: no copied explanation across members
+    for g in reg["same_taxon_groups"]:
+        if g.get("decision") != "keep_separate":
+            continue
+        seen = {}
+        for m in g["members"]:
+            for a in assessments.get(m["id"], []):
+                k = (a["species_group"], norm(a.get("why")))
+                if a.get("why") and k in seen and seen[k] != m["id"]:
+                    err("same_taxon_group %s: %s and %s carry the same %s explanation; parts are assessed separately"
+                        % ([x["id"] for x in g["members"]], seen[k], m["id"], a["species_group"]))
+                seen.setdefault(k, m["id"])
+
     if errors:
         print("plant identity QA failed (%d):" % len(errors))
         for e in errors:

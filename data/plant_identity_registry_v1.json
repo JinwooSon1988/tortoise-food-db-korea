@@ -21,7 +21,8 @@
      "international-20261010-2"
     ]
    },
-   "handoff_for_site_owner_ko": "waterdropwort 페이지의 canonical 태그를 minari로 지정하고 사이트맵·가이드 목록에서 중복 항목을 정리하는 일은 SEO·UI 담당 영역이라 수정하지 않았다."
+   "handoff_for_site_owner_ko": "waterdropwort 페이지의 canonical 태그를 minari로 지정하고 사이트맵·가이드 목록에서 중복 항목을 정리하는 일은 SEO·UI 담당 영역이라 수정하지 않았다.",
+   "text_policy": "Since 2026-10-16 the public why, limits and applicability note (Korean) and the English why are identical on both IDs (data/plant_identity_search_review_20261016.json; enforced by QA)."
   }
  ],
  "same_taxon_groups": [
@@ -741,5 +742,29 @@
    "note_ko": "Schedonorus arundinaceus는 저자가 다른 두 이름이 있다. DB가 가리키는 톨페스큐는 Schedonorus arundinaceus (Schreb.) Dumort.이며 세 자료 모두 Lolium arundinaceum (Schreb.) Darbysh.의 이명으로 처리한다. 다른 하나(Roem. & Schult.)는 Scolochloa festucacea의 이명이다. 저자 표기가 없으면 GBIF가 종을 확정하지 못한다.",
    "intended_name": "Schedonorus arundinaceus (Schreb.) Dumort."
   }
- ]
+ ],
+ "taxon_bound_terms": [
+  {
+   "term": "zucchini",
+   "taxon": "Cucurbita pepo",
+   "source": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=637",
+   "checked_at": "2026-10-16",
+   "observed": "Common Name: Courgette (Zucchini, Baby Marrow); Latin Name: Cucurbita pepo. The Squash entry (plant=627) also lists Zucchini under Cucurbita pepo."
+  },
+  {
+   "term": "courgette",
+   "taxon": "Cucurbita pepo",
+   "source": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=637",
+   "checked_at": "2026-10-16",
+   "observed": "Common Name: Courgette (Zucchini, Baby Marrow); Latin Name: Cucurbita pepo."
+  },
+  {
+   "term": "주키니",
+   "taxon": "Cucurbita pepo",
+   "source": "Korean loanword for zucchini; follows the zucchini entry above",
+   "checked_at": "2026-10-16",
+   "observed": "No Korean-language source was read for this binding; it rests on the English name it transliterates."
+  }
+ ],
+ "taxon_bound_terms_policy": "A term listed here names one taxon. scripts/qa_plant_identity_v1.py fails when a plant of another taxon shows the term as its name or as an alias (Korean or English page). It may stay a search-only term (plants.json search_aliases) only when that plant's page shows an identity note (data/curated_identity_notes.json) that names the other taxon."
 }

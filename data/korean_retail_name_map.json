@@ -152,5 +152,17 @@
       "알팔파",
       "자주개자리"
     ]
+  },
+  {
+    "plant_id": "zucchini",
+    "retail_terms": [
+      "애호박"
+    ],
+    "master_scientific": "Cucurbita moschata",
+    "mapping_status": "name_candidate_only",
+    "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+    "aliases": [
+      "애호박"
+    ]
   }
 ]

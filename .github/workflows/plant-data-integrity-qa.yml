@@ -5,6 +5,12 @@ on:
     paths:
       - 'data/plants.json'
       - 'data/plant_identity_registry_v1.json'
+      - 'data/plant_identity_search_review_20261016.json'
+      - 'data/curated_identity_notes.json'
+      - 'data/korean_search_name_map_v1.json'
+      - 'data/korean_retail_name_map.json'
+      - 'data/i18n/en/catalog_en.json'
+      - 'scripts/apply_plant_identity_search_review_20261016.py'
       - 'data/plant_taxonomy_audit_v1.json'
       - 'data/plant_nutrition_v56.json'
       - 'data/plant_nutrition_reference_v1.json'

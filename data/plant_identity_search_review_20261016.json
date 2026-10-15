@@ -1,0 +1,203 @@
+{
+ "schema_version": "1.0",
+ "reviewed_at": "2026-10-16",
+ "scope": "Plant identity and search accuracy: Korean zucchini (애호박, Cucurbita moschata) versus zucchini/courgette (Cucurbita pepo); the minari / waterdropwort duplicate. No verdict, grade or confidence is changed; no record is deleted.",
+ "sources_read": [
+  {
+   "source": "The Tortoise Table — Courgette (Zucchini, Baby Marrow)",
+   "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=637",
+   "checked_at": "2026-10-16",
+   "level": "original page read",
+   "observed": "Common Name: Courgette (Zucchini, Baby Marrow); Latin Name: Cucurbita pepo; classification Feed in Moderation."
+  },
+  {
+   "source": "The Tortoise Table — Squash",
+   "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=627",
+   "checked_at": "2026-10-16",
+   "level": "original page read",
+   "observed": "Latin Name: Cucurbita spp. esp. Cucurbita pepo; Cucurbita maxima; Cucurbita moschata. Lists 'Cucurbita pepo (Summer Squashes -- Pumpkins, Acorn, Courgette, Marrow, Zucchini, Spaghetti)' and 'Cucurbita moschata (Butternut Squash, etc)'."
+  },
+  {
+   "source": "RDA Korean Food Composition Table record 호박_애호박_생것 (R106-198050001-0000)",
+   "level": "repository record, not re-read in this review",
+   "observed": "data/plant_nutrition_v56.json keeps the verified record and its note that the RDA 10.4 workbook lists 애호박 raw young fruit as Cucurbita moschata; scripts/qa_usda_nutrition_batch1_v1.py records that USDA FDC 169291 (C. pepo zucchini) was removed for that reason."
+  },
+  {
+   "source": "data/plant_identity_registry_v1.json canonical_aliases (waterdropwort -> minari)",
+   "level": "repository decision",
+   "observed": "same plant, one canonical record; both URLs stay published."
+  }
+ ],
+ "not_changed": [
+  "feeding verdicts, grades and confidence of every plant",
+  "evidence records",
+  "part-separated records (zucchini fruit vs aehobakleaf leaf stay separate; registry same_taxon_groups)",
+  "detail URLs /plant/zucchini/, /plant/minari/, /plant/waterdropwort/ and their /en/ pages",
+  "no Cucurbita pepo plant or assessment is added"
+ ],
+ "updates": [
+  {
+   "file": "data/plants.json",
+   "target": {
+    "id": "zucchini"
+   },
+   "field": "aliases",
+   "before": [
+    "주키니",
+    "zucchini"
+   ],
+   "after": [],
+   "reason": "‘주키니’·‘zucchini’는 Cucurbita pepo의 이름이다(The Tortoise Table Courgette 항목). C. moschata 애호박의 ‘다른 이름’으로 표시하지 않는다."
+  },
+  {
+   "file": "data/plants.json",
+   "target": {
+    "id": "zucchini"
+   },
+   "field": "search_aliases",
+   "before": null,
+   "after": [
+    "주키니",
+    "zucchini"
+   ],
+   "reason": "기존 검색어 ‘주키니’·‘zucchini’로 이 항목을 계속 찾을 수 있게 검색 전용 용어로 옮긴다. 상세 페이지의 식물동정 주의가 두 종의 차이를 설명한다."
+  },
+  {
+   "file": "data/i18n/en/catalog_en.json",
+   "target": {
+    "id": "zucchini"
+   },
+   "field": "aliases",
+   "before": [
+    "zucchini"
+   ],
+   "after": [],
+   "reason": "영어 상세 페이지의 ‘Also known as · zucchini’를 한국어와 같은 이유로 뺀다. 영어 검색은 plants.json의 search_aliases로 계속 찾는다."
+  },
+  {
+   "file": "data/korean_search_name_map_v1.json",
+   "target": {
+    "plant_id": "zucchini"
+   },
+   "field": "mapping_status",
+   "before": "canonical_search_name_only",
+   "after": "name_candidate_only",
+   "reason": "상품명 ‘애호박’·‘주키니’만으로는 C. moschata와 C. pepo를 가를 수 없다. 이 상태가 한국어·영어 상세 페이지와 한국어 검색의 식물동정 주의를 켠다."
+  },
+  {
+   "file": "data/korean_search_name_map_v1.json",
+   "target": {
+    "plant_id": "zucchini"
+   },
+   "field": "rule",
+   "before": "식물 DB의 표준 한국명 검색어. 실제 유통 상품명·학명 동일성을 확정하지 않음.",
+   "after": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+   "reason": "name_candidate_only 항목의 공통 규칙 문구."
+  },
+  {
+   "file": "data/korean_retail_name_map.json",
+   "target": {
+    "plant_id": "zucchini"
+   },
+   "field": "row",
+   "before": null,
+   "after": {
+    "plant_id": "zucchini",
+    "retail_terms": [
+     "애호박"
+    ],
+    "master_scientific": "Cucurbita moschata",
+    "mapping_status": "name_candidate_only",
+    "rule": "한국 유통명 검색 후보. 상품명만으로 학명 동일성 확정 금지.",
+    "aliases": [
+     "애호박"
+    ]
+   },
+   "reason": "상세 페이지 생성기와 한·영 홈 검색은 이 파일의 name_candidate_only 행으로 식물동정 주의를 켠다. data/korean_search_name_map_v1.json의 같은 행과 내용을 맞춘다(다른 10개 행과 같은 방식)."
+  },
+  {
+   "file": "data/curated_identity_notes.json",
+   "target": {
+    "notes": "zucchini"
+   },
+   "field": "note",
+   "before": null,
+   "after": {
+    "headline": "‘애호박’ 항목은 *Cucurbita moschata*의 어린 열매다. 서양 주키니(courgette, zucchini)는 *Cucurbita pepo*로 다른 종이다.",
+    "items": [
+     "육지거북 전문 식물자료(The Tortoise Table)는 주키니(Courgette, Zucchini)를 *Cucurbita pepo* 항목으로 따로 다룬다. 이 판정의 근거인 Squash 항목은 *C. pepo*·*C. maxima*·*C. moschata*를 함께 다룬다.",
+     "국내 애호박 성분값은 농촌진흥청 국가표준식품성분표의 애호박 기록을 쓰며, 서양 주키니(*C. pepo*) 수치와 섞지 않는다.",
+     "‘주키니’로 검색해도 이 항목이 나오지만, 이 판정을 *C. pepo* 주키니에 그대로 적용하지 않는다. 주키니(*C. pepo*)는 이 DB에서 따로 판정하지 않았다.",
+     "식물동정이 해결되었다고 급여 안전성이 자동으로 해결되는 것은 아니다."
+    ]
+   },
+   "reason": "애호박(C. moschata)과 주키니(C. pepo)의 차이와, 이 판정을 C. pepo에 옮기지 않는다는 점을 한·영 상세 페이지에 밝힌다."
+  },
+  {
+   "file": "data/public_assessments.json",
+   "target": {
+    "plant_id": "waterdropwort",
+    "species_group": "Mediterranean_Testudo"
+   },
+   "field": "why",
+   "before": "미나리속(Oenanthe) 식물은 정확한 종과 안전성이 확인되지 않으면 계획 급여에서 제외한다. Oenanthe속 식물(독미나리 무리 포함)은 전문 식물자료에서 강한 독성 위험이 경고되지만, 국내 미나리 Oenanthe javanica 자체의 포유류 독성 연구는 다른 Oenanthe종의 위험을 그대로 적용할 수 없음을 보여준다. 반대로 그 연구 역시 육지거북에서의 안전성을 입증하지 않는다. 종 수준의 거북 급여 안전성이 해결되지 않은 상태이므로 계획 급여에서는 보수적으로 제외한다.",
+   "after": "전문 육지거북 DB는 Oenanthe속(독미나리 무리 포함) 식물을 피해야 할 대상으로 본다. O. javanica 자체 자료에는 포유류의 무독성 관찰과 고용량·추출물 독성 신호가 함께 있어 다른 Oenanthe 종의 독성을 그대로 적용할 수 없다. Testudo 직접 안전성 근거가 없어 계획 급여에서는 제외한다.",
+   "reason": "waterdropwort는 minari의 이전 ID다(data/plant_identity_registry_v1.json canonical_aliases). 등급·확실성·근거 ID는 이미 같고 설명 문구만 달라, 같은 식물의 두 주소가 서로 다른 설명을 보여 줬다. 대표 ID(minari)의 문구로 맞춘다."
+  },
+  {
+   "file": "data/public_assessments.json",
+   "target": {
+    "plant_id": "waterdropwort",
+    "species_group": "Mediterranean_Testudo"
+   },
+   "field": "limits",
+   "before": [
+    "Oenanthe속 경고와 O. javanica 종수준 비파충류 독성자료를 구분",
+    "특정 종 독성 용량을 단정하지 않음"
+   ],
+   "after": [
+    "Oenanthe속 수준의 육지거북 전문 DB 위험 경고와 O. javanica 종수준 비파충류 독성자료를 구분함",
+    "O. javanica의 포유류 시험은 특정 육지거북 종 안전성·독성 용량을 확립하지 않음",
+    "다른 Oenanthe 종의 강한 독성을 미나리(O. javanica)에 그대로 적용하지 않음",
+    "미나리와 유사 산형과 식물의 오동정 주의"
+   ],
+   "reason": "waterdropwort는 minari의 이전 ID다(data/plant_identity_registry_v1.json canonical_aliases). 등급·확실성·근거 ID는 이미 같고 설명 문구만 달라, 같은 식물의 두 주소가 서로 다른 설명을 보여 줬다. 대표 ID(minari)의 문구로 맞춘다."
+  },
+  {
+   "file": "data/public_assessments.json",
+   "target": {
+    "plant_id": "waterdropwort",
+    "species_group": "Mediterranean_Testudo"
+   },
+   "field": "applicability_note",
+   "before": "연결된 근거가 다룬 식물 분류군과 부위를 넘겨 적용하지 않는다.",
+   "after": "Oenanthe속 전체에 대한 전문 사육자료의 위험 경고와, 미나리(O. javanica) 자체를 다룬 포유류 독성 자료를 함께 참고한 판정이다. 육지거북 종을 대상으로 한 급여 안전성은 아직 확인되지 않았다.",
+   "reason": "waterdropwort는 minari의 이전 ID다(data/plant_identity_registry_v1.json canonical_aliases). 등급·확실성·근거 ID는 이미 같고 설명 문구만 달라, 같은 식물의 두 주소가 서로 다른 설명을 보여 줬다. 대표 ID(minari)의 문구로 맞춘다."
+  },
+  {
+   "file": "data/i18n/en/catalog_en.json",
+   "target": {
+    "id": "waterdropwort"
+   },
+   "field": "why",
+   "before": "Plants of the genus Oenanthe are excluded from planned feeding unless the exact species and its safety are confirmed. Specialist plant sources warn of a strong toxicity risk for Oenanthe plants (including the hemlock water dropwort group), but mammalian toxicity research on the Korean water dropwort itself, Oenanthe javanica, shows that the risk of other Oenanthe species cannot be applied to it directly. That research does not, on the other hand, prove safety in tortoises. With feeding safety in tortoises unresolved at species level, it is conservatively excluded from planned feeding.",
+   "after": "A specialist tortoise database regards plants of the genus Oenanthe (including the hemlock water dropwort group) as plants to avoid. Data on O. javanica itself include both observations of no toxicity in mammals and toxicity signals at high doses or from extracts, so the toxicity of other Oenanthe species cannot be applied to it directly. With no direct safety evidence in Testudo, it is excluded from planned feeding.",
+   "reason": "영어 설명도 대표 ID(minari)와 같게 맞춘다."
+  },
+  {
+   "file": "data/plants.json",
+   "target": {
+    "id": "waterdropwort"
+   },
+   "field": "aliases",
+   "before": [
+    "미나리잎"
+   ],
+   "after": [
+    "water dropwort",
+    "미나리잎"
+   ],
+   "reason": "한국어 상세 페이지의 ‘다른 이름’도 대표 ID(minari)와 같게 맞춘다."
+  }
+ ]
+}
