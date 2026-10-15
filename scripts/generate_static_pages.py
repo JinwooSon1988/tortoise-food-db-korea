@@ -6,6 +6,7 @@ from public_verdict import load_assessments, representative, display, species_no
 from feeding_cautions import group_limits, localize_specialist_labels
 from evidence_certainty import certainty_ko
 from assessment_copy import assessment_copy
+from evidence_sources import shown_records, folded_into, same_source_others, distinct_sources
 
 ROOT=Path(__file__).resolve().parents[1]
 SITE_URL="https://jinwooson1988.github.io/tortoise-food-db-korea"
@@ -789,9 +790,11 @@ for p in plants:
     identity_warning=bool((r and r.get("mapping_status")=="name_candidate_only") or p.get("identity_status")=="needs_species_level_mapping")
     role=(a or {}).get("role"); limits=[assessment_copy(x, a) for x in ((a or {}).get("limits") or [])]
     linked_evidence=[evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids") or []) if eid in evidence_by_id]
-    direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
-    husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
-    indirect_count=len(linked_evidence)-direct_count-husbandry_count
+    # Counts are of distinct original sources: several records citing one paper or page count once.
+    source_count=distinct_sources(linked_evidence)
+    direct_count=distinct_sources([e for e in linked_evidence if e.get("directness")=="direct"])
+    husbandry_count=distinct_sources([e for e in linked_evidence if e.get("directness")=="expert_husbandry"])
+    indirect_count=source_count-direct_count-husbandry_count
     part_values=[part_state_display(e.get("plant_part_state")) for e in linked_evidence if e.get("plant_part_state")]
     # Reader-facing part scope: show actual edible plant parts only. Evidence qualifiers stay below.
     def concise_part(v):
@@ -906,7 +909,9 @@ for p in plants:
     scope_html=(f'''<section class="card scopecard" id="scope">{identity_html}</section>''' if identity_warning else "")
 
     # 5) Deep evidence: papers first, then specialist sources; each item says what it supports and what it cannot.
-    ordered=sorted(linked_evidence,key=lambda e:source_kind(e)[0])
+    # A record that only restates another linked record of the same source is folded into that record's card.
+    shown_evidence=shown_records(linked_evidence)
+    ordered=sorted(shown_evidence,key=lambda e:source_kind(e)[0])
     evidence_cards=[]
     for e in ordered:
         url=e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
@@ -923,10 +928,12 @@ for p in plants:
         source_link=f'<a class="sourceopen" href="{esc(url)}" target="_blank" rel="noopener noreferrer" aria-label="{title_html} 원문 보기 (새 창)">원문 보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 창)</span></a>' if url else ""
         rank,kind=source_kind(e)
         ids=" · ".join(x for x in ((f'DOI {esc(e["doi"])}' if e.get("doi") else ""),(f'PMID {esc(e["pmid"])}' if e.get("pmid") else ""),(esc(e.get("year")) if e.get("year") else "")) if x)
-        evidence_cards.append(f'''<article class="evcard" data-evidence-id="{esc(e.get('id'))}"><div class="evhead"><span class="{"paper" if rank==0 else ""}">{esc(kind)}</span><span class="directness">{esc(directness_ko.get(e.get("directness"), "간접 근거"))}</span></div><div class="evsummary"><strong>핵심 내용 요약</strong><p>{esc(evidence_support_display(e.get("supports")))}</p></div><p class="evidence-meaning"><b>거북밥 판정에서의 의미</b><br>{esc(evidence_role(e))}</p><p class="limit"><b>이 자료만으로는 알 수 없는 것</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p><div class="evsource"><h3>{title_html}</h3><dl class="evmeta"><dt>연구·자료 대상</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물 범위</dt><dd>{esc(plant_taxon_display(e.get("plant_taxon")))}</dd><dt>확인 부위</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl>{f'<p class="ids">{ids}</p>' if ids else ''}{source_link}</div></article>''')
+        n_folded=len(folded_into(e,linked_evidence)); n_same=len(same_source_others(e,shown_evidence))
+        same_source_note=(f'<p class="ids">같은 원문의 같은 결과를 담은 기록 {n_folded}건을 이 카드 하나로 표시했습니다.</p>' if n_folded else "")+(f'<p class="ids">같은 원문에서 나온 다른 결과 기록이 {n_same}건 더 있습니다. 출처 수는 1곳으로 셉니다.</p>' if n_same else "")
+        evidence_cards.append(f'''<article class="evcard" data-evidence-id="{esc(e.get('id'))}"><div class="evhead"><span class="{"paper" if rank==0 else ""}">{esc(kind)}</span><span class="directness">{esc(directness_ko.get(e.get("directness"), "간접 근거"))}</span></div><div class="evsummary"><strong>핵심 내용 요약</strong><p>{esc(evidence_support_display(e.get("supports")))}</p></div><p class="evidence-meaning"><b>거북밥 판정에서의 의미</b><br>{esc(evidence_role(e))}</p><p class="limit"><b>이 자료만으로는 알 수 없는 것</b><br>{esc(evidence_limit_display(e.get("does_not_support")))}</p><div class="evsource"><h3>{title_html}</h3><dl class="evmeta"><dt>연구·자료 대상</dt><dd>{esc(animal_taxon_display(e.get("animal_taxon")))}</dd><dt>식물 범위</dt><dd>{esc(plant_taxon_display(e.get("plant_taxon")))}</dd><dt>확인 부위</dt><dd>{esc(part_state_display(e.get("plant_part_state")))}</dd></dl>{f'<p class="ids">{ids}</p>' if ids else ''}{same_source_note}{source_link}</div></article>''')
     evidence_cards_html="".join(evidence_cards) or '<p>현재 연결된 개별 근거자료가 없다. 먹여도 안전하다고 판단할 근거가 확보되기 전에는 급여하지 않는다.</p>'
     papers=sum(1 for e in linked_evidence if source_kind(e)[0]==0)
-    summary_chips=f'<div class="evcountnote"><b>근거 한눈에 보기</b><div class="evstats"><div><span>연결된 출처</span><strong>{len(linked_evidence)}건</strong></div><div><span>직접 근거</span><strong>{direct_count}건</strong></div><div><span>전문 사육자료</span><strong>{husbandry_count}건</strong></div></div><small>출처 수는 안전성 등급이 아닙니다. 항목은 서로 중복될 수 있습니다.</small><p class="certaintyline">근거 확실성 <b>{esc(certainty_ko((a or {}).get("confidence")))}</b> · 급여 등급(A–D)과 별개로, 판정을 뒷받침하는 근거가 얼마나 직접적이고 충분한지 나타냅니다. <a href="../../guides/research-method/#certainty">뜻 보기</a></p></div>'
+    summary_chips=f'<div class="evcountnote"><b>근거 한눈에 보기</b><div class="evstats"><div><span>연결된 출처</span><strong>{source_count}건</strong></div><div><span>직접 근거</span><strong>{direct_count}건</strong></div><div><span>전문 사육자료</span><strong>{husbandry_count}건</strong></div></div><small>출처 수는 안전성 등급이 아닙니다. 같은 원문에서 나온 기록은 1건으로 셉니다.</small><p class="certaintyline">근거 확실성 <b>{esc(certainty_ko((a or {}).get("confidence")))}</b> · 급여 등급(A–D)과 별개로, 판정을 뒷받침하는 근거가 얼마나 직접적이고 충분한지 나타냅니다. <a href="../../guides/research-method/#certainty">뜻 보기</a></p></div>'
 
     # Wild feeding records (one place: static wild data + direct Ibera observations).
     wild=wild_by_plant.get(pid,[]); risk=risk_by_plant.get(pid); ib=ibera_by_plant.get(pid,[])
@@ -944,7 +951,7 @@ for p in plants:
         wild_cards.append(f'''<article class="evcard wildcard" data-ibera-direct data-evidence-id="{esc(o.get('source_id'))}"><div class="evhead"><span>그리스육지거북 야생 직접 관찰</span><span>{esc(scope_txt)}</span></div><h3><i>{esc(o.get("source_plant"))}</i> · {esc(s.get("location") or "지역 확인 필요")}</h3><dl class="evmeta"><dt>대상</dt><dd><i>{esc(s.get("taxon") or "Testudo graeca ibera")}</i></dd><dt>기간</dt><dd>{esc(s.get("study_period") or "확인 필요")}</dd><dt>섭식 부위</dt><dd>{esc(part_state_display(o.get("observed_part")) or "확인 필요")}</dd></dl><p class="ids">{esc(s.get("citation"))} {link}</p></article>''')
     wild_section=(f'''<h3 style="margin-top:18px">야생에서는 실제로 어떻게 먹었나?</h3><p class="small">야생에서 먹었다는 사실은 중요한 근거지만, 사육 급여 비율·매일 급여·무제한 안전성을 뜻하지 않는다.</p>{"".join(wild_cards)}''' if wild_cards else "")
 
-    detail_count=len(linked_evidence)+len(wild_cards)
+    detail_count=len(shown_evidence)+len(wild_cards)
     # Only the long per-source cards are folded. The safety-conflict warning and the evidence count stay visible
     # (the count is shown once, in the core block).
     evidence_detail=f'''<details class="evidencefold"><summary>원문 근거 {detail_count}건 자세히 보기</summary><div class="evidence-list">{evidence_cards_html}{wild_section}</div></details>''' if detail_count else evidence_cards_html

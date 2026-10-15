@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from public_verdict import load_assessments, by_plant, representative, display, species_notes, public_plants, is_species_only, GRADES
+from evidence_sources import shown_records
 
 ROOT = Path(__file__).resolve().parents[1]
 errors = []
@@ -203,7 +204,8 @@ for p in public:
     if high_risk and not has_alert:
         errors.append(f"{pid}: identity risk in data but no strong identity warning")
 
-    linked = [evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids", [])) if eid in evidence_by_id]
+    # One card per finding: a record restating another linked record of the same source shares that record's card.
+    linked = shown_records([evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids", [])) if eid in evidence_by_id])
     if linked and text.count('class="sourceopen"') < len(linked):
         errors.append(f"{pid}: every linked evidence card must expose a clear original-source action")
     if linked and text.count("이 자료만으로는 알 수 없는 것") < len(linked):

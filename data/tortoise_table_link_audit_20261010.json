@@ -7,7 +7,8 @@
     "records": 134,
     "corrected_urls": 19,
     "corrected_supports": 1,
-    "review_notes": 2
+    "review_notes": 2,
+    "listing_pages_replaced_20261015": 13
   },
   "records": [
     {
@@ -654,24 +655,26 @@
       "plant_ids": [
         "cornflower"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=104",
+      "name": "Cornflower (Wild)",
+      "latin": "Centaurea cyanus",
+      "classification": "Feed in Moderation",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_echinacea",
       "plant_ids": [
         "echinacea"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=c",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=101",
+      "name": "Coneflower (Echinacea)",
+      "latin": "Echinacea",
+      "classification": "Safe to Feed",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=c",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_yarrow",
@@ -711,48 +714,52 @@
       "plant_ids": [
         "hibiscusrosa"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=711",
+      "name": "Hibiscus (China Rose, Shoeblackplant, Chinese Hibiscus, Mediterranean Hibiscus, Shoe Flower)",
+      "latin": "Hibiscus rosa-sinensis",
+      "classification": "Safe to Feed",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_lavender",
       "plant_ids": [
         "lavender"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=enclosure&x=0&y=0",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=218",
+      "name": "Lavender",
+      "latin": "Lavandula spp.",
+      "classification": "Feed in Moderation",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=enclosure&x=0&y=0",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_cosmos",
       "plant_ids": [
         "cosmos"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=491",
+      "name": "Cosmos (Cosmea, Mexican Aster)",
+      "latin": "Cosmos spp.",
+      "classification": "Feed in Moderation",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_apple_tree",
       "plant_ids": [
         "appleleaf"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=db&searchtxt=",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=23",
+      "name": "Apple (Tree)",
+      "latin": "Malus domestica",
+      "classification": "Feed Sparingly",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=db&searchtxt=",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_fennel",
@@ -923,12 +930,13 @@
       "plant_ids": [
         "ginkgoleaf"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=-+name",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=650",
+      "name": "Ginkgo (Maidenhair Tree, Gingko, Ginko, Ginkgo Biloba)",
+      "latin": "Ginkgo biloba; syn. Salisburia adiantifolia",
+      "classification": "Feed Sparingly",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=-+name",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_elm",
@@ -968,12 +976,13 @@
       "plant_ids": [
         "birchleaf"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=oak+tree+varieties",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=643",
+      "name": "Birch (Silver Birch, White Birch, Paper Birch, Yellow Birch)",
+      "latin": "Betula spp.",
+      "classification": "Feed in Moderation",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=oak+tree+varieties",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_rosemary",
@@ -991,24 +1000,26 @@
       "plant_ids": [
         "pearleaf"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=606",
+      "name": "Pear Tree",
+      "latin": "Pyrus spp.",
+      "classification": "Feed Sparingly",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_peach_tree",
       "plant_ids": [
         "peachleaf"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=615",
+      "name": "Peach Tree",
+      "latin": "Prunus persica",
+      "classification": "Feed Sparingly",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_bramble_leaf",
@@ -1258,12 +1269,13 @@
       "plant_ids": [
         "hawkbit"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=127",
+      "name": "Hawkbit (False Dandelion, Desert Chicory)",
+      "latin": "Leontodon spp.",
+      "classification": "Safe to Feed",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_catsear",
@@ -1281,12 +1293,13 @@
       "plant_ids": [
         "hawkweed"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=640",
+      "name": "Hawkweed (Hieracium)",
+      "latin": "Hieracium spp.",
+      "classification": "Feed in Moderation",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_shepherdspurse",
@@ -1515,12 +1528,13 @@
       "plant_ids": [
         "mallowleaf"
       ],
-      "checked_at": "2026-10-10",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Mallow&x=0&y=0",
-      "name": null,
-      "latin": null,
-      "classification": null,
-      "note": "category or listing page, not a single-plant entry"
+      "checked_at": "2026-10-15",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=363",
+      "name": "Mallow",
+      "latin": "Malva spp.",
+      "classification": "Safe to Feed",
+      "previous_url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Mallow&x=0&y=0",
+      "correction": "2026-10-15: listing/search page replaced by the plant's own entry (link taken from the site's A-Z list); see data/public_evidence_integrity_review_20261015.json"
     },
     {
       "record_id": "tortoise_table_erigeron_canadensis",

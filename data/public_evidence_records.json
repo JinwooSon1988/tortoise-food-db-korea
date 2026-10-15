@@ -3,6 +3,7 @@
   "records": [
     {
       "id": "iftime_ibera_dobrogea_2012",
+      "source_id": "doi:10.13128/acta_herpetol-9800",
       "plant_ids": [
         "dandelion",
         "sowthistle",
@@ -25,6 +26,7 @@
     },
     {
       "id": "mitrevichin_ibera_bulgaria_2023",
+      "source_id": "doi:10.5281/zenodo.12807900",
       "plant_ids": [
         "dandelion",
         "alfalfa",
@@ -47,6 +49,7 @@
     },
     {
       "id": "tortoise_table_grapevine",
+      "source_id": "thetortoisetable:plant=138",
       "plant_ids": [
         "grapeleaf",
         "grapevineleaf"
@@ -67,6 +70,7 @@
     },
     {
       "id": "tortoise_table_hibiscus_syriacus",
+      "source_id": "thetortoisetable:plant=237",
       "plant_ids": [
         "hibiscusleaf",
         "hibiscusflower"
@@ -87,6 +91,7 @@
     },
     {
       "id": "tortoise_table_mulberry",
+      "source_id": "thetortoisetable:plant=257",
       "plant_ids": [
         "mulberry"
       ],
@@ -106,6 +111,7 @@
     },
     {
       "id": "tortoise_table_nasturtium",
+      "source_id": "thetortoisetable:plant=258",
       "plant_ids": [
         "nasturtium"
       ],
@@ -125,6 +131,7 @@
     },
     {
       "id": "bcg_mediterranean_care",
+      "source_id": "url:archive.britishcheloniagroup.org.uk/caresheets/caremed",
       "plant_ids": [
         "dandelion",
         "plantain",
@@ -148,6 +155,7 @@
     },
     {
       "id": "bcg_chelonian_nutrition",
+      "source_id": "url:archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
       "plant_ids": [
         "romaine",
         "endive",
@@ -169,6 +177,7 @@
     },
     {
       "id": "tt_mediterranean_food",
+      "source_id": "url:tortoisetrust.org/articles/basicmedfood.htm",
       "plant_ids": [
         "dandelion",
         "sowthistle",
@@ -194,6 +203,7 @@
     },
     {
       "id": "tt_winter_feeding",
+      "source_id": "url:tortoisetrust.org/enews2/index.html",
       "plant_ids": [
         "romaine",
         "lettuce",
@@ -217,6 +227,7 @@
     },
     {
       "id": "tt_plantfoods",
+      "source_id": "url:tortoisetrust.org/articles/plantfoods.html",
       "plant_ids": [
         "dandelion",
         "plantain",
@@ -243,6 +254,7 @@
     },
     {
       "id": "merck_tortoise_nutrition_2025",
+      "source_id": "url:merckvetmanual.com/management-and-nutrition/nutrition-exotic-and-zoo-animals/nutrition-in-tortoises",
       "plant_ids": [
         "romaine",
         "lettuce",
@@ -265,6 +277,7 @@
     },
     {
       "id": "merck_reptile_plant_composition",
+      "source_id": "url:merckvetmanual.com/multimedia/table/composition-of-plant-foods-that-may-be-offered-to-reptiles",
       "plant_ids": [
         "endive",
         "kale"
@@ -285,6 +298,7 @@
     },
     {
       "id": "merck_reptile_home_plant_eaters",
+      "source_id": "url:merckvetmanual.com/all-other-pets/reptiles/providing-a-home-for-a-reptile",
       "plant_ids": [
         "bokchoy",
         "collard",
@@ -306,6 +320,7 @@
     },
     {
       "id": "ibera_eastern_account_2023",
+      "source_id": "doi:10.3854/crm.5.120.eastern.graeca.v1.2023",
       "plant_ids": [
         "sowthistle",
         "clover",
@@ -327,6 +342,7 @@
     },
     {
       "id": "tgraeca_alfalfa_context_2019",
+      "source_id": "doi:10.7717/peerj.8076",
       "plant_ids": [
         "alfalfa"
       ],
@@ -341,11 +357,12 @@
       "does_not_support": "This source does not by itself establish an exact captive feeding percentage, fixed frequency, unlimited use, or safety equivalence beyond the animal taxon, plant identity and plant part actually covered by the source.",
       "year": 2019,
       "doi": "10.7717/peerj.8076",
-      "pmid": null,
+      "pmid": "31824759",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6894431/"
     },
     {
       "id": "hermanni_foraging_italy_2015",
+      "source_id": "url:iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
       "plant_ids": [
         "plantain",
         "clover"
@@ -366,6 +383,7 @@
     },
     {
       "id": "tortoise_table_sedum",
+      "source_id": "thetortoisetable:plant=593",
       "plant_ids": [
         "dolnamul"
       ],
@@ -385,6 +403,7 @@
     },
     {
       "id": "tortoise_table_chicory",
+      "source_id": "thetortoisetable:plant=87",
       "plant_ids": [
         "chicory"
       ],
@@ -404,6 +423,7 @@
     },
     {
       "id": "tortoise_table_spinach",
+      "source_id": "thetortoisetable:plant=608",
       "plant_ids": [
         "spinach"
       ],
@@ -423,6 +443,7 @@
     },
     {
       "id": "tortoise_table_parsley",
+      "source_id": "thetortoisetable:plant=355",
       "plant_ids": [
         "parsley"
       ],
@@ -442,6 +463,7 @@
     },
     {
       "id": "tortoise_table_radish",
+      "source_id": "thetortoisetable:plant=610",
       "plant_ids": [
         "radishgreens"
       ],
@@ -461,6 +483,7 @@
     },
     {
       "id": "tortoise_table_timothy",
+      "source_id": "thetortoisetable:plant=726",
       "plant_ids": [
         "timothy"
       ],
@@ -480,6 +503,7 @@
     },
     {
       "id": "tortoise_table_cat_grass",
+      "source_id": "thetortoisetable:plant=687",
       "plant_ids": [
         "oatgrass",
         "wheatgrass",
@@ -506,6 +530,7 @@
     },
     {
       "id": "tortoise_table_opuntia",
+      "source_id": "thetortoisetable:plant=262",
       "plant_ids": [
         "pricklypear",
         "opuntiapad"
@@ -526,6 +551,7 @@
     },
     {
       "id": "tortoise_table_sweetpotato",
+      "source_id": "thetortoisetable:plant=740",
       "plant_ids": [
         "sweetpotatoleaf",
         "sweetpotatovine"
@@ -546,6 +572,7 @@
     },
     {
       "id": "rda_alfalfa_identity",
+      "source_id": "url:nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=209500&menuId=PS65142",
       "plant_ids": [
         "alfalfa"
       ],
@@ -565,6 +592,7 @@
     },
     {
       "id": "korean_dolnamul_identity",
+      "source_id": "url:bris.go.kr/portal/book/nativeCropsDetailPopup.do?biorsrcMngNo=MANUIP3300200040&menuId=81",
       "plant_ids": [
         "dolnamul"
       ],
@@ -584,6 +612,7 @@
     },
     {
       "id": "bcg_sulcata_care",
+      "source_id": "url:archive.britishcheloniagroup.org.uk/caresheets/sulcata",
       "plant_ids": [
         "dandelion",
         "plantain",
@@ -607,6 +636,7 @@
     },
     {
       "id": "marotti_tagetes_thiophenes_2010",
+      "source_id": "doi:10.1002/jsfa.3950",
       "plant_ids": [
         "marigold"
       ],
@@ -621,11 +651,12 @@
       "does_not_support": "This record must not be used beyond its stated evidence domain. Plant identity or chemistry evidence does not itself prove tortoise feeding safety; related-taxon husbandry does not establish species-specific dose, frequency, percentage, or unlimited use.",
       "year": 2010,
       "doi": "10.1002/jsfa.3950",
-      "pmid": null,
+      "pmid": "20394003",
       "url": "https://doi.org/10.1002/jsfa.3950"
     },
     {
       "id": "heaney_spinach_calcium_1988",
+      "source_id": "doi:10.1093/ajcn/47.4.707",
       "plant_ids": [
         "spinach"
       ],
@@ -645,6 +676,7 @@
     },
     {
       "id": "chaudhary_parsley_furocoumarin_1986",
+      "source_id": "doi:10.1055/s-2007-969254",
       "plant_ids": [
         "parsley"
       ],
@@ -664,6 +696,7 @@
     },
     {
       "id": "manderfeld_parsley_furocoumarins_1997",
+      "source_id": "doi:10.4315/0362-028x-60.1.72",
       "plant_ids": [
         "parsley"
       ],
@@ -683,6 +716,7 @@
     },
     {
       "id": "gamba_radish_systematic_review_2021",
+      "source_id": "doi:10.1016/j.tifs.2021.04.045",
       "plant_ids": [
         "radishgreens"
       ],
@@ -702,6 +736,7 @@
     },
     {
       "id": "chicory_foodchem_2021",
+      "source_id": "doi:10.1016/j.foodchem.2020.127676",
       "plant_ids": [
         "chicory"
       ],
@@ -721,6 +756,7 @@
     },
     {
       "id": "mulberry_feed_review_2019",
+      "source_id": "doi:10.5713/ajas.18.0671",
       "plant_ids": [
         "mulberry"
       ],
@@ -740,6 +776,7 @@
     },
     {
       "id": "wilson_perilla_ketone_1977",
+      "source_id": "doi:10.1126/science.877573",
       "plant_ids": [
         "perilla"
       ],
@@ -759,6 +796,7 @@
     },
     {
       "id": "tortoise_table_basil",
+      "source_id": "thetortoisetable:plant=515",
       "plant_ids": [
         "basil"
       ],
@@ -778,6 +816,7 @@
     },
     {
       "id": "tortoise_table_beetroot",
+      "source_id": "thetortoisetable:plant=788",
       "plant_ids": [
         "beetgreens"
       ],
@@ -797,6 +836,7 @@
     },
     {
       "id": "tortoise_table_broccoli",
+      "source_id": "thetortoisetable:plant=622",
       "plant_ids": [
         "broccolileaf"
       ],
@@ -816,6 +856,7 @@
     },
     {
       "id": "tortoise_table_carrot",
+      "source_id": "thetortoisetable:plant=619",
       "plant_ids": [
         "carrottop"
       ],
@@ -835,6 +876,7 @@
     },
     {
       "id": "tortoise_table_cauliflower",
+      "source_id": "thetortoisetable:plant=623",
       "plant_ids": [
         "cauliflowerleaf"
       ],
@@ -854,6 +896,7 @@
     },
     {
       "id": "tortoise_table_celery",
+      "source_id": "thetortoisetable:plant=620",
       "plant_ids": [
         "celeryleaf"
       ],
@@ -873,6 +916,7 @@
     },
     {
       "id": "tortoise_table_chinese_cabbage",
+      "source_id": "thetortoisetable:plant=231",
       "plant_ids": [
         "napa"
       ],
@@ -892,6 +936,7 @@
     },
     {
       "id": "tortoise_table_coriander",
+      "source_id": "thetortoisetable:plant=551",
       "plant_ids": [
         "cilantro"
       ],
@@ -911,6 +956,7 @@
     },
     {
       "id": "tortoise_table_dill",
+      "source_id": "thetortoisetable:plant=672",
       "plant_ids": [
         "dill"
       ],
@@ -930,6 +976,7 @@
     },
     {
       "id": "tortoise_table_cucumber",
+      "source_id": "thetortoisetable:plant=160",
       "plant_ids": [
         "cucumber",
         "cucumberleaf"
@@ -950,6 +997,7 @@
     },
     {
       "id": "tortoise_table_rocket",
+      "source_id": "thetortoisetable:plant=175",
       "plant_ids": [
         "arugula"
       ],
@@ -969,6 +1017,7 @@
     },
     {
       "id": "tortoise_table_turnip",
+      "source_id": "thetortoisetable:plant=823",
       "plant_ids": [
         "turnipgreens"
       ],
@@ -988,6 +1037,7 @@
     },
     {
       "id": "tortoise_table_tomato",
+      "source_id": "thetortoisetable:plant=448",
       "plant_ids": [
         "tomato"
       ],
@@ -1007,6 +1057,7 @@
     },
     {
       "id": "tortoise_table_calendula",
+      "source_id": "thetortoisetable:plant=313",
       "plant_ids": [
         "calendula"
       ],
@@ -1026,6 +1077,7 @@
     },
     {
       "id": "tortoise_table_pansy",
+      "source_id": "thetortoisetable:plant=212",
       "plant_ids": [
         "pansy"
       ],
@@ -1045,6 +1097,7 @@
     },
     {
       "id": "tortoise_table_violet",
+      "source_id": "thetortoisetable:plant=227",
       "plant_ids": [
         "violet",
         "violetleaf",
@@ -1066,6 +1119,7 @@
     },
     {
       "id": "tortoise_table_tagetes",
+      "source_id": "thetortoisetable:plant=314",
       "plant_ids": [
         "marigold"
       ],
@@ -1085,6 +1139,7 @@
     },
     {
       "id": "kerr_perilla_cattle_1986",
+      "source_id": "pmid:3776081",
       "plant_ids": [
         "perilla"
       ],
@@ -1104,6 +1159,7 @@
     },
     {
       "id": "nitta_perilla_genotypes_2009",
+      "source_id": "doi:10.1016/j.fct.2009.10.009",
       "plant_ids": [
         "perilla"
       ],
@@ -1123,6 +1179,7 @@
     },
     {
       "id": "mulberry_feed_jfca_2025",
+      "source_id": "doi:10.1016/j.jfca.2025.107213",
       "plant_ids": [
         "mulberry"
       ],
@@ -1142,6 +1199,7 @@
     },
     {
       "id": "tortoise_table_chard",
+      "source_id": "thetortoisetable:plant=176",
       "plant_ids": [
         "chard"
       ],
@@ -1161,6 +1219,7 @@
     },
     {
       "id": "tortoise_table_lambs_lettuce",
+      "source_id": "thetortoisetable:plant=686",
       "plant_ids": [
         "lambs_lettuce"
       ],
@@ -1180,6 +1239,7 @@
     },
     {
       "id": "tortoise_table_maize_leaf",
+      "source_id": "thetortoisetable:plant=625",
       "plant_ids": [
         "cornleaf"
       ],
@@ -1199,6 +1259,7 @@
     },
     {
       "id": "tortoise_table_sunflower",
+      "source_id": "thetortoisetable:plant=367",
       "plant_ids": [
         "sunflowerleaf",
         "sunflowerpetal"
@@ -1219,6 +1280,7 @@
     },
     {
       "id": "tortoise_table_pumpkin",
+      "source_id": "thetortoisetable:plant=229",
       "plant_ids": [
         "pumpkinleaf",
         "pumpkinflower"
@@ -1239,6 +1301,7 @@
     },
     {
       "id": "tortoise_table_squash_cucurbita_moschata",
+      "source_id": "thetortoisetable:plant=627",
       "plant_ids": [
         "aehobakleaf"
       ],
@@ -1258,6 +1321,7 @@
     },
     {
       "id": "tortoise_table_squash_courgette",
+      "source_id": "thetortoisetable:plant=627",
       "plant_ids": [
         "zucchini"
       ],
@@ -1277,6 +1341,7 @@
     },
     {
       "id": "tortoise_table_sweet_pepper",
+      "source_id": "thetortoisetable:plant=632",
       "plant_ids": [
         "bellpepper"
       ],
@@ -1296,6 +1361,7 @@
     },
     {
       "id": "tortoise_table_chrysanthemum",
+      "source_id": "thetortoisetable:plant=94",
       "plant_ids": [
         "chrysanthemumleaf"
       ],
@@ -1315,6 +1381,7 @@
     },
     {
       "id": "tortoise_table_fig_tree",
+      "source_id": "thetortoisetable:plant=180",
       "plant_ids": [
         "figleaf"
       ],
@@ -1334,6 +1401,7 @@
     },
     {
       "id": "tortoise_table_mugwort",
+      "source_id": "thetortoisetable:plant=502",
       "plant_ids": [
         "ssuk"
       ],
@@ -1353,6 +1421,7 @@
     },
     {
       "id": "tortoise_table_pea_shoots",
+      "source_id": "thetortoisetable:plant=705",
       "plant_ids": [
         "peashoot"
       ],
@@ -1372,6 +1441,7 @@
     },
     {
       "id": "tortoise_table_pelargonium",
+      "source_id": "thetortoisetable:plant=239",
       "plant_ids": [
         "geranium",
         "geraniumleaf"
@@ -1392,6 +1462,7 @@
     },
     {
       "id": "tortoise_table_perilla",
+      "source_id": "thetortoisetable:plant=507",
       "plant_ids": [
         "perilla"
       ],
@@ -1411,6 +1482,7 @@
     },
     {
       "id": "tortoise_trust_mediterranean_grass_context",
+      "source_id": "url:tortoisetrust.org/articles/basicmedfood.htm",
       "plant_ids": [
         "orchard",
         "timothy",
@@ -1435,6 +1507,7 @@
     },
     {
       "id": "ucdavis_herbivorous_reptile_greens",
+      "source_id": "url:healthtopics.vetmed.ucdavis.edu/tags/reptiles",
       "plant_ids": [
         "mustard"
       ],
@@ -1454,6 +1527,7 @@
     },
     {
       "id": "korea_lambs_lettuce_identity",
+      "source_id": "url:forest.go.kr/newkfsweb/cmm/fms/BoardFileDown.do?atchFileId=FILE_000000000713430&bbsId=&dwldHistYn=&fileSn=0&fn=Invasive+Alien+Plants+in+South+Korea.pdf",
       "plant_ids": [
         "lambs_lettuce"
       ],
@@ -1473,6 +1547,7 @@
     },
     {
       "id": "rda_korean_chard_identity",
+      "source_id": "url:nongsaro.go.kr/portal/ps/psz/psza/contentSub.ps?cntntsNo=101954&menuId=PS03796&sSeCode=374005&totalSearchYn=Y",
       "plant_ids": [
         "chard"
       ],
@@ -1492,6 +1567,7 @@
     },
     {
       "id": "tortoise_table_mallow",
+      "source_id": "thetortoisetable:plant=363",
       "plant_ids": [
         "mallow",
         "commonmallow"
@@ -1512,6 +1588,7 @@
     },
     {
       "id": "tortoise_table_mint",
+      "source_id": "thetortoisetable:plant=506",
       "plant_ids": [
         "mint"
       ],
@@ -1531,6 +1608,7 @@
     },
     {
       "id": "tortoise_table_water_dropwort_warning",
+      "source_id": "thetortoisetable:plant=828",
       "plant_ids": [
         "minari",
         "waterdropwort"
@@ -1551,6 +1629,7 @@
     },
     {
       "id": "tortoise_table_kale",
+      "source_id": "thetortoisetable:plant=529",
       "plant_ids": [
         "kale"
       ],
@@ -1570,6 +1649,7 @@
     },
     {
       "id": "tortoise_table_dandelion",
+      "source_id": "thetortoisetable:plant=5",
       "plant_ids": [
         "dandelion"
       ],
@@ -1589,6 +1669,7 @@
     },
     {
       "id": "tortoise_table_calendula_current",
+      "source_id": "thetortoisetable:plant=313",
       "plant_ids": [
         "calendula"
       ],
@@ -1608,6 +1689,7 @@
     },
     {
       "id": "lu_oenanthe_javanica_review_2019",
+      "source_id": "doi:10.1155/2019/6495819",
       "plant_ids": [
         "minari",
         "waterdropwort"
@@ -1628,6 +1710,7 @@
     },
     {
       "id": "leone_testudo_diet_2021",
+      "source_id": "url:gardenstatetortoise.com/post/tortoise-diet-testudo-species",
       "plant_ids": [
         "plantain",
         "sowthistle",
@@ -1660,6 +1743,7 @@
     },
     {
       "id": "kew_whiteclover_identity",
+      "source_id": "url:powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A523626-1",
       "plant_ids": [
         "whiteclover"
       ],
@@ -1679,6 +1763,7 @@
     },
     {
       "id": "kew_redclover_identity",
+      "source_id": "url:powo.science.kew.org/taxon/523575-1",
       "plant_ids": [
         "redclover"
       ],
@@ -1698,6 +1783,7 @@
     },
     {
       "id": "kew_ribwortplantain_identity",
+      "source_id": "url:powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A321285-2",
       "plant_ids": [
         "ribwortplantain"
       ],
@@ -1717,6 +1803,7 @@
     },
     {
       "id": "kew_commonmallow_identity",
+      "source_id": "url:powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A561932-1",
       "plant_ids": [
         "commonmallow"
       ],
@@ -1736,6 +1823,7 @@
     },
     {
       "id": "tortoise_table_hollyhock",
+      "source_id": "thetortoisetable:plant=157",
       "plant_ids": [
         "hollyhock"
       ],
@@ -1755,6 +1843,7 @@
     },
     {
       "id": "tortoise_table_lemon_balm",
+      "source_id": "thetortoisetable:plant=219",
       "plant_ids": [
         "lemonbalm"
       ],
@@ -1774,6 +1863,7 @@
     },
     {
       "id": "tortoise_table_chamomile",
+      "source_id": "thetortoisetable:plant=570",
       "plant_ids": [
         "chamomile"
       ],
@@ -1793,6 +1883,7 @@
     },
     {
       "id": "tortoise_table_cornflower",
+      "source_id": "thetortoisetable:plant=104",
       "plant_ids": [
         "cornflower"
       ],
@@ -1808,10 +1899,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=104"
     },
     {
       "id": "tortoise_table_echinacea",
+      "source_id": "thetortoisetable:plant=101",
       "plant_ids": [
         "echinacea"
       ],
@@ -1827,10 +1919,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=c"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=101"
     },
     {
       "id": "tortoise_table_yarrow",
+      "source_id": "thetortoisetable:plant=403",
       "plant_ids": [
         "yarrow"
       ],
@@ -1850,6 +1943,7 @@
     },
     {
       "id": "tortoise_table_purslane",
+      "source_id": "thetortoisetable:plant=321",
       "plant_ids": [
         "purslane"
       ],
@@ -1869,6 +1963,7 @@
     },
     {
       "id": "tortoise_table_daisy",
+      "source_id": "thetortoisetable:plant=364",
       "plant_ids": [
         "daisy"
       ],
@@ -1888,6 +1983,7 @@
     },
     {
       "id": "tortoise_table_hibiscus_rosa",
+      "source_id": "thetortoisetable:plant=711",
       "plant_ids": [
         "hibiscusrosa"
       ],
@@ -1903,10 +1999,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=711"
     },
     {
       "id": "tortoise_table_lavender",
+      "source_id": "thetortoisetable:plant=218",
       "plant_ids": [
         "lavender"
       ],
@@ -1922,10 +2019,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtxt=enclosure&x=0&y=0"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=218"
     },
     {
       "id": "tortoise_table_cosmos",
+      "source_id": "thetortoisetable:plant=491",
       "plant_ids": [
         "cosmos"
       ],
@@ -1941,10 +2039,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/colour/?colour=all"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=491"
     },
     {
       "id": "tortoise_table_apple_tree",
+      "source_id": "thetortoisetable:plant=23",
       "plant_ids": [
         "appleleaf"
       ],
@@ -1960,10 +2059,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=db&searchtxt="
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=23"
     },
     {
       "id": "tortoise_table_fennel",
+      "source_id": "thetortoisetable:plant=725",
       "plant_ids": [
         "fennelleaf"
       ],
@@ -1983,6 +2083,7 @@
     },
     {
       "id": "tortoise_table_sorrel",
+      "source_id": "thetortoisetable:plant=131",
       "plant_ids": [
         "sorrel"
       ],
@@ -2002,6 +2103,7 @@
     },
     {
       "id": "tortoise_table_dock",
+      "source_id": "thetortoisetable:plant=134",
       "plant_ids": [
         "dock"
       ],
@@ -2021,6 +2123,7 @@
     },
     {
       "id": "tortoise_table_lambsquarters",
+      "source_id": "thetortoisetable:plant=20",
       "plant_ids": [
         "lambsquarters"
       ],
@@ -2040,6 +2143,7 @@
     },
     {
       "id": "tortoise_table_kohlrabi",
+      "source_id": "thetortoisetable:plant=655",
       "plant_ids": [
         "kohlrabileaf"
       ],
@@ -2059,6 +2163,7 @@
     },
     {
       "id": "tortoise_table_raspberry",
+      "source_id": "thetortoisetable:plant=723",
       "plant_ids": [
         "raspberryleaf"
       ],
@@ -2078,6 +2183,7 @@
     },
     {
       "id": "tortoise_table_strawberry",
+      "source_id": "thetortoisetable:plant=293",
       "plant_ids": [
         "strawberryleaf"
       ],
@@ -2085,7 +2191,7 @@
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Fragaria × ananassa",
+      "plant_taxon": "Fragaria spp. — 출처는 딸기속 전체 항목이며 재배 딸기(Fragaria × ananassa)를 따로 언급하지 않는다",
       "plant_part_state": "young leaves; older leaves and fruit excluded by the source",
       "directness": "contextual",
       "supports": "Feed Sparingly. The source says older leaves develop toxins, so only young leaves should be offered as part of a varied diet, and never the fruit unless the tortoise is a tropical fruit-eating species; it also notes that the plant contains tannins.",
@@ -2097,6 +2203,7 @@
     },
     {
       "id": "tortoise_table_oregano",
+      "source_id": "thetortoisetable:plant=742",
       "plant_ids": [
         "oregano"
       ],
@@ -2116,6 +2223,7 @@
     },
     {
       "id": "tortoise_table_sage",
+      "source_id": "thetortoisetable:plant=388",
       "plant_ids": [
         "sage"
       ],
@@ -2135,6 +2243,7 @@
     },
     {
       "id": "tortoise_table_thyme",
+      "source_id": "thetortoisetable:plant=518",
       "plant_ids": [
         "thyme"
       ],
@@ -2154,6 +2263,7 @@
     },
     {
       "id": "tortoise_table_grape_hyacinth",
+      "source_id": "thetortoisetable:plant=374",
       "plant_ids": [
         "grapehyacinth"
       ],
@@ -2173,6 +2283,7 @@
     },
     {
       "id": "tortoise_table_ginkgo",
+      "source_id": "thetortoisetable:plant=650",
       "plant_ids": [
         "ginkgoleaf"
       ],
@@ -2188,10 +2299,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=-+name"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=650"
     },
     {
       "id": "tortoise_table_elm",
+      "source_id": "thetortoisetable:plant=755",
       "plant_ids": [
         "elmleaf"
       ],
@@ -2211,6 +2323,7 @@
     },
     {
       "id": "tortoise_table_linden",
+      "source_id": "thetortoisetable:plant=649",
       "plant_ids": [
         "lindenleaf"
       ],
@@ -2230,6 +2343,7 @@
     },
     {
       "id": "tortoise_table_willow",
+      "source_id": "thetortoisetable:plant=660",
       "plant_ids": [
         "willowleaf"
       ],
@@ -2249,6 +2363,7 @@
     },
     {
       "id": "tortoise_table_birch",
+      "source_id": "thetortoisetable:plant=643",
       "plant_ids": [
         "birchleaf"
       ],
@@ -2264,10 +2379,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=oak+tree+varieties"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=643"
     },
     {
       "id": "tortoise_table_rosemary",
+      "source_id": "thetortoisetable:plant=287",
       "plant_ids": [
         "rosemary"
       ],
@@ -2287,6 +2403,7 @@
     },
     {
       "id": "tortoise_table_pear_tree",
+      "source_id": "thetortoisetable:plant=606",
       "plant_ids": [
         "pearleaf"
       ],
@@ -2302,10 +2419,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=606"
     },
     {
       "id": "tortoise_table_peach_tree",
+      "source_id": "thetortoisetable:plant=615",
       "plant_ids": [
         "peachleaf"
       ],
@@ -2321,10 +2439,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=anywords&searchtxt=apple+tree+with+apples"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=615"
     },
     {
       "id": "tortoise_table_bramble_leaf",
+      "source_id": "thetortoisetable:plant=63",
       "plant_ids": [
         "blackberryleaf"
       ],
@@ -2344,6 +2463,7 @@
     },
     {
       "id": "tortoise_table_maple",
+      "source_id": "thetortoisetable:plant=4",
       "plant_ids": [
         "mapleleaf"
       ],
@@ -2363,6 +2483,7 @@
     },
     {
       "id": "tortoise_table_hazel",
+      "source_id": "thetortoisetable:plant=730",
       "plant_ids": [
         "hazelleaf"
       ],
@@ -2382,6 +2503,7 @@
     },
     {
       "id": "tortoise_table_poplar",
+      "source_id": "thetortoisetable:plant=599",
       "plant_ids": [
         "poplarleaf"
       ],
@@ -2401,6 +2523,7 @@
     },
     {
       "id": "tortoise_table_mung_bean_sprout",
+      "source_id": "thetortoisetable:plant=812",
       "plant_ids": [
         "mungbeansprout"
       ],
@@ -2420,6 +2543,7 @@
     },
     {
       "id": "tortoise_table_evening_primrose",
+      "source_id": "thetortoisetable:plant=18",
       "plant_ids": [
         "eveningprimrose"
       ],
@@ -2439,6 +2563,7 @@
     },
     {
       "id": "tortoise_table_milk_thistle",
+      "source_id": "thetortoisetable:plant=447",
       "plant_ids": [
         "milkthistle"
       ],
@@ -2458,6 +2583,7 @@
     },
     {
       "id": "tortoise_table_hawthorn",
+      "source_id": "thetortoisetable:plant=133",
       "plant_ids": [
         "hawthorn"
       ],
@@ -2477,6 +2603,7 @@
     },
     {
       "id": "tortoise_table_sainfoin",
+      "source_id": "thetortoisetable:plant=353",
       "plant_ids": [
         "sainfoin"
       ],
@@ -2496,6 +2623,7 @@
     },
     {
       "id": "tortoise_table_borage",
+      "source_id": "thetortoisetable:plant=450",
       "plant_ids": [
         "borage"
       ],
@@ -2515,6 +2643,7 @@
     },
     {
       "id": "tortoise_table_henbit",
+      "source_id": "thetortoisetable:plant=153",
       "plant_ids": [
         "henbit"
       ],
@@ -2534,6 +2663,7 @@
     },
     {
       "id": "tortoise_table_houseleek",
+      "source_id": "thetortoisetable:plant=478",
       "plant_ids": [
         "houseleek"
       ],
@@ -2553,6 +2683,7 @@
     },
     {
       "id": "tortoise_table_echeveria",
+      "source_id": "thetortoisetable:plant=480",
       "plant_ids": [
         "echeveria"
       ],
@@ -2572,6 +2703,7 @@
     },
     {
       "id": "tortoise_table_snapdragon",
+      "source_id": "thetortoisetable:plant=316",
       "plant_ids": [
         "snapdragon"
       ],
@@ -2591,6 +2723,7 @@
     },
     {
       "id": "tortoise_table_hosta",
+      "source_id": "thetortoisetable:plant=166",
       "plant_ids": [
         "hosta"
       ],
@@ -2610,6 +2743,7 @@
     },
     {
       "id": "tortoise_table_salsify",
+      "source_id": "thetortoisetable:plant=435",
       "plant_ids": [
         "salsify"
       ],
@@ -2629,6 +2763,7 @@
     },
     {
       "id": "tortoise_table_hawksbeard",
+      "source_id": "thetortoisetable:plant=146",
       "plant_ids": [
         "hawksbeard"
       ],
@@ -2648,6 +2783,7 @@
     },
     {
       "id": "tortoise_table_hawkbit",
+      "source_id": "thetortoisetable:plant=127",
       "plant_ids": [
         "hawkbit"
       ],
@@ -2663,10 +2799,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=127"
     },
     {
       "id": "tortoise_table_catsear",
+      "source_id": "thetortoisetable:plant=81",
       "plant_ids": [
         "catsear"
       ],
@@ -2686,6 +2823,7 @@
     },
     {
       "id": "tortoise_table_hawkweed",
+      "source_id": "thetortoisetable:plant=640",
       "plant_ids": [
         "hawkweed"
       ],
@@ -2701,10 +2839,11 @@
       "year": null,
       "doi": null,
       "pmid": null,
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/a-z/?l=h"
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=640"
     },
     {
       "id": "tortoise_table_shepherdspurse",
+      "source_id": "thetortoisetable:plant=297",
       "plant_ids": [
         "shepherdspurse"
       ],
@@ -2724,6 +2863,7 @@
     },
     {
       "id": "tortoise_table_petunia",
+      "source_id": "thetortoisetable:plant=235",
       "plant_ids": [
         "petunia"
       ],
@@ -2743,6 +2883,7 @@
     },
     {
       "id": "tortoise_table_dahlia",
+      "source_id": "thetortoisetable:plant=538",
       "plant_ids": [
         "dahlia"
       ],
@@ -2762,6 +2903,7 @@
     },
     {
       "id": "tortoise_table_gerbera",
+      "source_id": "thetortoisetable:plant=15",
       "plant_ids": [
         "gerbera"
       ],
@@ -2781,6 +2923,7 @@
     },
     {
       "id": "tortoise_table_zinnia",
+      "source_id": "thetortoisetable:plant=402",
       "plant_ids": [
         "zinnia"
       ],
@@ -2800,6 +2943,7 @@
     },
     {
       "id": "tortoise_table_mexicanpetunia",
+      "source_id": "thetortoisetable:plant=778",
       "plant_ids": [
         "mexicanpetunia"
       ],
@@ -2819,6 +2963,7 @@
     },
     {
       "id": "tortoise_table_coreopsis",
+      "source_id": "thetortoisetable:plant=578",
       "plant_ids": [
         "coreopsis"
       ],
@@ -2838,6 +2983,7 @@
     },
     {
       "id": "tortoise_table_astilbe",
+      "source_id": "thetortoisetable:plant=781",
       "plant_ids": [
         "astilbe"
       ],
@@ -2857,6 +3003,7 @@
     },
     {
       "id": "tortoise_table_primula",
+      "source_id": "thetortoisetable:plant=278",
       "plant_ids": [
         "primula"
       ],
@@ -2876,6 +3023,7 @@
     },
     {
       "id": "tortoise_table_comfrey",
+      "source_id": "thetortoisetable:plant=99",
       "plant_ids": [
         "comfrey"
       ],
@@ -2895,6 +3043,7 @@
     },
     {
       "id": "tortoise_table_monarda",
+      "source_id": "thetortoisetable:plant=523",
       "plant_ids": [
         "monarda"
       ],
@@ -2914,6 +3063,7 @@
     },
     {
       "id": "buckwheat_leaf_fagopyrin_2019",
+      "source_id": "doi:10.3390/antiox8060160",
       "plant_ids": [
         "buckwheatleaf"
       ],
@@ -2933,6 +3083,7 @@
     },
     {
       "id": "tt_alfalfa_251",
+      "source_id": "thetortoisetable:plant=251",
       "plant_ids": [
         "alfalfasprout"
       ],
@@ -2952,6 +3103,7 @@
     },
     {
       "id": "tt_oilseed_rape_418",
+      "source_id": "thetortoisetable:plant=418",
       "plant_ids": [
         "rapeseedleaf"
       ],
@@ -2971,17 +3123,18 @@
     },
     {
       "id": "tt_melon_624",
+      "source_id": "thetortoisetable:plant=624",
       "plant_ids": [
         "melonleaf"
       ],
-      "source_title": "The Tortoise Table. Melon.",
+      "source_title": "The Tortoise Table. Melon (Cantaloupe, Muskmelon, Watermelon, Ogen Melon, Honeydew, Galia).",
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Cucumis melo",
+      "plant_taxon": "Cucumis melo — 출처는 Citrullus lanatus(수박)와 함께 한 항목(‘Melon’)으로 다룬다",
       "plant_part_state": "leaves and flowers",
       "directness": "expert_husbandry",
-      "supports": "Leaves and flowers may be nibbled but should be fed sparingly.",
+      "supports": "The Tortoise Table은 멜론류(Cucumis melo)와 수박(Citrullus lanatus)을 ‘Melon’ 한 항목으로 묶어 소량·드물게 급여로 분류하고, 멜론류의 잎과 꽃은 조금 먹을 수 있으나 드물게 줘야 한다고 설명한다. 멜론잎만 따로 다룬 문장은 없으며, 수박잎 판정과 같은 문장 하나가 근거다.",
       "does_not_support": "No species-specific dose, fixed diet percentage, or unlimited feeding allowance.",
       "year": null,
       "doi": null,
@@ -2990,17 +3143,18 @@
     },
     {
       "id": "tt_watermelon_624",
+      "source_id": "thetortoisetable:plant=624",
       "plant_ids": [
         "watermelonleaf"
       ],
-      "source_title": "The Tortoise Table. Melon.",
+      "source_title": "The Tortoise Table. Melon (Cantaloupe, Muskmelon, Watermelon, Ogen Melon, Honeydew, Galia).",
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "tortoise_general",
-      "plant_taxon": "Citrullus lanatus",
+      "plant_taxon": "Citrullus lanatus — 출처는 Cucumis melo(멜론)와 함께 한 항목(‘Melon’)으로 다룬다",
       "plant_part_state": "leaves and flowers",
       "directness": "expert_husbandry",
-      "supports": "Leaves and flowers may be nibbled but should be fed sparingly.",
+      "supports": "The Tortoise Table은 수박(Citrullus lanatus)과 멜론류(Cucumis melo)를 ‘Melon’ 한 항목으로 묶어 소량·드물게 급여로 분류하고, 멜론류의 잎과 꽃은 조금 먹을 수 있으나 드물게 줘야 한다고 설명한다. 수박잎만 따로 다룬 문장이나 독립 자료는 없으며, 멜론잎 판정과 같은 문장 하나가 근거다.",
       "does_not_support": "No species-specific dose, fixed diet percentage, or unlimited feeding allowance.",
       "year": null,
       "doi": null,
@@ -3009,6 +3163,7 @@
     },
     {
       "id": "tt_bean_leaf_494",
+      "source_id": "thetortoisetable:plant=494",
       "plant_ids": [
         "beanleaf"
       ],
@@ -3028,6 +3183,7 @@
     },
     {
       "id": "tt_chrysanthemum_94",
+      "source_id": "thetortoisetable:plant=94",
       "plant_ids": [
         "chrysanthemum"
       ],
@@ -3047,6 +3203,7 @@
     },
     {
       "id": "tt_fescue_694",
+      "source_id": "thetortoisetable:plant=694",
       "plant_ids": [
         "fescue"
       ],
@@ -3066,6 +3223,7 @@
     },
     {
       "id": "tt_broccoli_622",
+      "source_id": "thetortoisetable:plant=622",
       "plant_ids": [
         "broccolisprout"
       ],
@@ -3082,6 +3240,7 @@
     },
     {
       "id": "broccoli_sprout_glucoraphanin_1997",
+      "source_id": "pmid:9294217",
       "plant_ids": [
         "broccolisprout"
       ],
@@ -3100,6 +3259,7 @@
     },
     {
       "id": "tt_brassica_rapa_117",
+      "source_id": "thetortoisetable:plant=117",
       "plant_ids": [
         "mizuna",
         "tatsoi",
@@ -3118,22 +3278,24 @@
     },
     {
       "id": "tt_malva_spp_safe",
+      "source_id": "thetortoisetable:plant=363",
       "plant_ids": [
         "mallowleaf"
       ],
-      "source_title": "The Tortoise Table. Mallow (Malva spp.).",
+      "source_title": "The Tortoise Table. Mallow.",
       "source_type": "specialist_plant_database",
       "animal_taxon": "Tortoise general",
       "applicability": "taxon_group",
       "plant_taxon": "Malva spp.",
       "plant_part_state": "plant material",
       "directness": "expert_husbandry",
-      "supports": "Mallow (Malva spp.) is listed as safe to feed and is included on a Mediterranean tortoise suitable-plant list.",
-      "does_not_support": "Does not provide a Malva verticillata-specific intake percentage or an species-specific quantitative trial.",
-      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/search/?searchchoice=exactwords&searchtogglestatus=&searchtxt=Mallow&x=0&y=0"
+      "supports": "The Tortoise Table의 ‘Mallow’ 항목은 Malva속(Malva spp.) 전체를 급여 가능으로 분류하고, 육지거북이 아욱속 식물의 꽃과 잎을 즐겨 먹는다고 설명한다. 이 항목은 Malva verticillata(한국 아욱)를 따로 언급하지 않는다.",
+      "does_not_support": "속 수준 전문 사육자료이며 Malva verticillata에 대한 육지거북 급여 기록이나 시험이 아니다. 한국 아욱의 정확한 급여 비율·빈도·무제한 급여 허용 범위를 정하지 않는다.",
+      "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=363"
     },
     {
       "id": "testudo_graeca_cynodon_field_diet_2008",
+      "source_id": "doi:10.1080/21564574.2008.9635573",
       "plant_ids": [
         "bermudagrass"
       ],
@@ -3152,6 +3314,7 @@
     },
     {
       "id": "chersina_cynodon_field_diet",
+      "source_id": "url:uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
       "plant_ids": [
         "bermudagrass"
       ],
@@ -3168,6 +3331,7 @@
     },
     {
       "id": "kew_poa_pratensis_identity",
+      "source_id": "url:powo.science.kew.org/taxon/417792-1",
       "plant_ids": [
         "meadowgrass"
       ],
@@ -3184,6 +3348,7 @@
     },
     {
       "id": "vetpharm_althaea_officinalis",
+      "source_id": "url:vetpharm.uzh.ch/GIFTDB/PFLANZEN/0471_bot.htm",
       "plant_ids": [
         "marshmallow"
       ],
@@ -3200,6 +3365,7 @@
     },
     {
       "id": "actinidia_deliciosa_leaf_genotoxicity_2026",
+      "source_id": "doi:10.3390/toxics14040324",
       "plant_ids": [
         "kiwileaf"
       ],
@@ -3214,10 +3380,12 @@
       "does_not_support": "세포배양에 메탄올 추출물을 처리한 시험관 연구이지 육지거북이 신선한 잎을 먹은 급여시험이 아니다. 소화·흡수·장기 섭취 안전성, 영양 적합성, 급여량·빈도를 정할 수 없으며 ‘유전독성 없음’을 ‘먹이로 안전함’과 동일시할 수 없다.",
       "year": 2026,
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13119791/",
-      "doi": "10.3390/toxics14040324"
+      "doi": "10.3390/toxics14040324",
+      "pmid": "42043151"
     },
     {
       "id": "actinidia_iridoid_distribution_2023",
+      "source_id": "doi:10.1016/j.isci.2023.107848",
       "plant_ids": [
         "kiwileaf"
       ],
@@ -3237,6 +3405,8 @@
     },
     {
       "id": "kew_poa_pratensis_animal_food",
+      "source_id": "url:powo.science.kew.org/taxon/417792-1",
+      "same_finding_as": "kew_poa_pratensis_identity",
       "plant_ids": [
         "meadowgrass"
       ],
@@ -3253,6 +3423,7 @@
     },
     {
       "id": "wild_medicago_polymorpha_tgg_morocco",
+      "source_id": "doi:10.1016/j.jaridenv.2005.06.010",
       "plant_ids": [
         "medicago_hispida"
       ],
@@ -3272,6 +3443,7 @@
     },
     {
       "id": "medicago_polymorpha_saponin_species",
+      "source_id": "pmid:22908560",
       "plant_ids": [
         "medicago_hispida"
       ],
@@ -3291,6 +3463,7 @@
     },
     {
       "id": "tortoise_table_erigeron_canadensis",
+      "source_id": "thetortoisetable:plant=472",
       "plant_ids": [
         "conyzacanadensis"
       ],
@@ -3310,6 +3483,7 @@
     },
     {
       "id": "erigeron_canadensis_essential_oil_2008",
+      "source_id": "url:kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001235807",
       "plant_ids": [
         "conyzacanadensis"
       ],
@@ -3329,6 +3503,7 @@
     },
     {
       "id": "wild_ruscus_aculeatus_thh_italy_2011",
+      "source_id": "doi:10.1655/herpetologica-d-10-00064.1",
       "plant_ids": [
         "ruscus_aculeatus"
       ],
@@ -3349,6 +3524,7 @@
     },
     {
       "id": "ruscus_ema_rhizoma_2019",
+      "source_id": "url:ema.europa.eu/en/documents/herbal-report/final-assessment-report-ruscus-aculeatus-l-rhizoma-revision-1_en.pdf",
       "plant_ids": [
         "ruscus_aculeatus"
       ],
@@ -3366,6 +3542,7 @@
     },
     {
       "id": "mizutani_prunus_salicina_cyanogenic_1979",
+      "source_id": "url:eurekamag.com/research/000/769/000769486.php",
       "plant_ids": [
         "plumleaf"
       ],
@@ -3385,6 +3562,7 @@
     },
     {
       "id": "tortoise_table_plum_tree_related",
+      "source_id": "thetortoisetable:plant=596",
       "plant_ids": [
         "plumleaf"
       ],
@@ -3404,6 +3582,7 @@
     },
     {
       "id": "tortoise_trust_hedge_mustard",
+      "source_id": "url:tortoisetrust.org/articles/plantfoods.html",
       "plant_ids": [
         "hedgemustard"
       ],
@@ -3423,6 +3602,7 @@
     },
     {
       "id": "kew_sisymbrium_officinale_taxonomy",
+      "source_id": "url:powo.science.kew.org/taxon/urn:lsid:ipni.org:names:289589-1",
       "plant_ids": [
         "hedgemustard"
       ],
@@ -3442,6 +3622,7 @@
     },
     {
       "id": "tortoise_table_harebell",
+      "source_id": "thetortoisetable:plant=736",
       "plant_ids": [
         "harebell"
       ],
@@ -3461,6 +3642,7 @@
     },
     {
       "id": "ttable_erodium_botrys_65",
+      "source_id": "thetortoisetable:plant=65",
       "plant_ids": [
         "erodium_botrys"
       ],
@@ -3480,6 +3662,7 @@
     },
     {
       "id": "kew_erodium_botrys",
+      "source_id": "url:powo.science.kew.org/taxon/urn:lsid:ipni.org:names:372185-1",
       "plant_ids": [
         "erodium_botrys"
       ],
@@ -3499,6 +3682,7 @@
     },
     {
       "id": "ttable_lamium_album_774",
+      "source_id": "thetortoisetable:plant=774",
       "plant_ids": [
         "lamium_album"
       ],
@@ -3518,6 +3702,7 @@
     },
     {
       "id": "ttrust_lamium_album",
+      "source_id": "url:tortoisetrust.org/articles/plantfoods.html",
       "plant_ids": [
         "lamium_album"
       ],
@@ -3537,6 +3722,7 @@
     },
     {
       "id": "ttable_campanula_rotundifolia_736",
+      "source_id": "thetortoisetable:plant=736",
       "plant_ids": [
         "harebell"
       ],
@@ -3556,6 +3742,7 @@
     },
     {
       "id": "kew_campanula_rotundifolia",
+      "source_id": "url:powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30036649-2",
       "plant_ids": [
         "harebell"
       ],
@@ -3575,6 +3762,7 @@
     },
     {
       "id": "ttrust_sisymbrium_officinale",
+      "source_id": "url:tortoisetrust.org/articles/plantfoods.html",
       "plant_ids": [
         "hedgemustard"
       ],
@@ -3594,6 +3782,7 @@
     },
     {
       "id": "ttable_sisymbrium_officinale_712",
+      "source_id": "thetortoisetable:plant=712",
       "plant_ids": [
         "hedgemustard"
       ],
@@ -3613,6 +3802,7 @@
     },
     {
       "id": "sisymbrium_itc_2021",
+      "source_id": "doi:10.3390/foods10020308",
       "plant_ids": [
         "hedgemustard"
       ],
@@ -3632,6 +3822,7 @@
     },
     {
       "id": "ttable_dichondra_707",
+      "source_id": "thetortoisetable:plant=707",
       "plant_ids": [
         "dichondra_micrantha"
       ],
@@ -3651,6 +3842,7 @@
     },
     {
       "id": "kew_dichondra_micrantha",
+      "source_id": "url:powo.science.kew.org/taxon/urn:lsid:ipni.org:names:79457-2",
       "plant_ids": [
         "dichondra_micrantha"
       ],
@@ -3670,6 +3862,7 @@
     },
     {
       "id": "ttable_abutilon_32",
+      "source_id": "thetortoisetable:plant=32",
       "plant_ids": [
         "abutilon_indicum"
       ],
@@ -3689,6 +3882,7 @@
     },
     {
       "id": "kew_abutilon_indicum",
+      "source_id": "url:powo.science.kew.org/taxon/1101632-2",
       "plant_ids": [
         "abutilon_indicum"
       ],
@@ -3708,6 +3902,7 @@
     },
     {
       "id": "ttable_aeonium_530",
+      "source_id": "thetortoisetable:plant=530",
       "plant_ids": [
         "aeonium_arboreum"
       ],
@@ -3727,6 +3922,7 @@
     },
     {
       "id": "kew_aeonium_arboreum",
+      "source_id": "url:powo.science.kew.org/taxon/urn:lsid:ipni.org:names:272194-1",
       "plant_ids": [
         "aeonium_arboreum"
       ],
@@ -3746,6 +3942,7 @@
     },
     {
       "id": "ttable_buddleia_68",
+      "source_id": "thetortoisetable:plant=68",
       "plant_ids": [
         "buddleja_davidii"
       ],
@@ -3765,6 +3962,7 @@
     },
     {
       "id": "kew_buddleja_davidii",
+      "source_id": "url:powo.science.kew.org/taxon/urn:lsid:ipni.org:names:545734-1",
       "plant_ids": [
         "buddleja_davidii"
       ],
@@ -3784,6 +3982,7 @@
     },
     {
       "id": "kbr_buddleja_davidii",
+      "source_id": "url:kbr.go.kr/man/home/rsc/rsc01003v.do?clsGbnCd=LOCAL&clsNo=0&commGroup=VP&gbifnubTxnId=0&tempClsSno=9702",
       "plant_ids": [
         "buddleja_davidii"
       ],
@@ -3803,6 +4002,7 @@
     },
     {
       "id": "ttable_vicia_310",
+      "source_id": "thetortoisetable:plant=310",
       "plant_ids": [
         "vicia_sativa",
         "vicia_cracca"
@@ -3823,6 +4023,7 @@
     },
     {
       "id": "tortoiseclub_vicia_sativa_mix",
+      "source_id": "url:emma-jackson-w2z7.squarespace.com/s/5TORTOISE_FOOD_GROW_GUIDE.pdf",
       "plant_ids": [
         "vicia_sativa"
       ],
@@ -3842,6 +4043,7 @@
     },
     {
       "id": "naturescape_nt_tortoise_mix",
+      "source_id": "url:naturescape.co.uk/product/nt-tortoise-food-mix",
       "plant_ids": [
         "vicia_sativa",
         "vicia_cracca"
@@ -3862,6 +4064,7 @@
     },
     {
       "id": "althaea_carp_toxicology_2016",
+      "source_id": "doi:10.1080/10454438.2016.1172285",
       "plant_ids": [
         "marshmallow"
       ],
@@ -3880,6 +4083,7 @@
     },
     {
       "id": "actinidia_leaf_calcium_oxalate_1987",
+      "source_id": "doi:10.1111/j.1469-8137.1987.tb00885.x",
       "plant_ids": [
         "kiwileaf"
       ],
@@ -3894,10 +4098,12 @@
       "does_not_support": "식물 잎의 무기질 형태를 분석한 연구로 육지거북의 실제 칼슘 흡수율이나 옥살산염 독성을 측정하지 않았다. 이 비율을 육지거북의 결석 위험이나 안전 급여량으로 직접 환산할 수 없다.",
       "year": 1987,
       "doi": "10.1111/j.1469-8137.1987.tb00885.x",
-      "url": "https://doi.org/10.1111/j.1469-8137.1987.tb00885.x"
+      "url": "https://doi.org/10.1111/j.1469-8137.1987.tb00885.x",
+      "pmid": "33873907"
     },
     {
       "id": "actinidia_leaf_phytotoxicity_2019",
+      "source_id": "doi:10.1016/j.scienta.2019.02.029",
       "plant_ids": [
         "kiwileaf"
       ],
@@ -3916,6 +4122,7 @@
     },
     {
       "id": "prakash_amaranthus_leaves_1991",
+      "source_id": "doi:10.1002/jsfa.2740570410",
       "plant_ids": [
         "amaranthleaf"
       ],
@@ -3934,6 +4141,7 @@
     },
     {
       "id": "soybean_leaf_nutrition_2026",
+      "source_id": "doi:10.3390/ijms27083442",
       "plant_ids": [
         "soybeanleaf"
       ],
@@ -3953,6 +4161,7 @@
     },
     {
       "id": "soybean_leaf_trypsin_1987",
+      "source_id": "doi:10.1093/jee/80.1.237",
       "plant_ids": [
         "soybeanleaf"
       ],
@@ -3971,6 +4180,7 @@
     },
     {
       "id": "savage_chenopodium_oxalate_2019",
+      "source_id": "doi:10.3390/foods8010002",
       "plant_ids": [
         "lambsquarters"
       ],
@@ -3990,6 +4200,7 @@
     },
     {
       "id": "simpson_beta_vulgaris_oxalate_2009",
+      "source_id": "doi:10.1021/jf902124w",
       "plant_ids": [
         "beetgreens"
       ],
@@ -4009,6 +4220,7 @@
     },
     {
       "id": "bennett_eruca_glucosinolate_2002",
+      "source_id": "doi:10.1016/s0031-9422(02)00203-0",
       "plant_ids": [
         "arugula"
       ],
@@ -4028,6 +4240,7 @@
     },
     {
       "id": "rosenthal_alfalfa_sprout_canavanine_2000",
+      "source_id": "doi:10.1076/1388-0209(200001)3811-bft001",
       "plant_ids": [
         "alfalfasprout"
       ],
@@ -4047,6 +4260,7 @@
     },
     {
       "id": "gorski_alfalfa_seedling_saponin_canavanine_1991",
+      "source_id": "doi:10.1007/bf01402939",
       "plant_ids": [
         "alfalfasprout"
       ],
@@ -4066,6 +4280,8 @@
     },
     {
       "id": "sattler_borage_pa_2023",
+      "source_id": "doi:10.1016/j.talanta.2023.124425",
+      "same_finding_as": "sattler_borago_pa_2023",
       "plant_ids": [
         "borage"
       ],
@@ -4085,6 +4301,7 @@
     },
     {
       "id": "rumex_acetosa_oxalate_2021",
+      "source_id": "doi:10.1007/s12011-020-02467-3",
       "plant_ids": [
         "sorrel"
       ],
@@ -4099,11 +4316,12 @@
       "does_not_support": "The study concerns plant composition and human-food interpretation, not tortoise feeding. It does not establish a tortoise toxic dose, exact safe portion, fixed feeding frequency, or prove that a small accidental ingestion causes poisoning.",
       "year": 2021,
       "doi": "10.1007/s12011-020-02467-3",
-      "pmid": null,
+      "pmid": "33150483",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
     },
     {
       "id": "piatczak_salix_alba_leaf_2020",
+      "source_id": "doi:10.3390/biom10101391",
       "plant_ids": [
         "willowleaf"
       ],
@@ -4123,6 +4341,8 @@
     },
     {
       "id": "ceccanti_rumex_oxalate_2021",
+      "source_id": "doi:10.1007/s12011-020-02467-3",
+      "same_finding_as": "rumex_acetosa_oxalate_2021",
       "plant_ids": [
         "sorrel"
       ],
@@ -4136,12 +4356,13 @@
       "supports": "The study measured nitrate and oxalate directly in Rumex acetosa leaves under wild and several cultivation conditions and found substantial oxalate, with the highest R. acetosa value reported in open-field cultivated leaves. This confirms a leaf-specific limiting compound in the exact species.",
       "does_not_support": "The study evaluates edible-plant composition, not tortoise feeding. It does not define a tortoise toxic dose, safe serving size, frequency, or demonstrate clinical poisoning after incidental ingestion.",
       "year": 2021,
-      "doi": null,
-      "pmid": null,
+      "doi": "10.1007/s12011-020-02467-3",
+      "pmid": "33150483",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
     },
     {
       "id": "piatczak_salix_alba_leaf_phenolics_2020",
+      "source_id": "doi:10.3390/biom10101391",
       "plant_ids": [
         "willowleaf"
       ],
@@ -4161,6 +4382,8 @@
     },
     {
       "id": "di_noia_rumex_oxalate_2021",
+      "source_id": "doi:10.1007/s12011-020-02467-3",
+      "same_finding_as": "rumex_acetosa_oxalate_2021",
       "plant_ids": [
         "sorrel"
       ],
@@ -4175,11 +4398,12 @@
       "does_not_support": "This is plant composition, not a tortoise feeding study. The measured oxalate level cannot be converted into a tortoise toxic dose, fixed safe serving, or proof that accidental small ingestion causes poisoning.",
       "year": 2021,
       "doi": "10.1007/s12011-020-02467-3",
-      "pmid": null,
+      "pmid": "33150483",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
     },
     {
       "id": "rowell_rahier_salix_leaf_glycosides_1984",
+      "source_id": "doi:10.1007/bf00377368",
       "plant_ids": [
         "willowleaf"
       ],
@@ -4199,6 +4423,7 @@
     },
     {
       "id": "sattler_borago_pa_2025",
+      "source_id": "doi:10.1016/j.foodcont.2024.110930",
       "plant_ids": [
         "borage"
       ],
@@ -4218,6 +4443,7 @@
     },
     {
       "id": "sattler_borage_pa_2025",
+      "source_id": "doi:10.1016/j.foodcont.2024.110930",
       "plant_ids": [
         "borage"
       ],
@@ -4237,6 +4463,8 @@
     },
     {
       "id": "di_gioia_rumex_oxalate_2021",
+      "source_id": "doi:10.1007/s12011-020-02467-3",
+      "same_finding_as": "rumex_acetosa_oxalate_2021",
       "plant_ids": [
         "sorrel"
       ],
@@ -4251,11 +4479,12 @@
       "does_not_support": "This is plant-composition evidence and does not establish a tortoise toxic dose, exact safe feeding frequency, clinical poisoning threshold, or prove that a small accidental bite causes harm.",
       "year": 2021,
       "doi": "10.1007/s12011-020-02467-3",
-      "pmid": null,
+      "pmid": "33150483",
       "url": "https://doi.org/10.1007/s12011-020-02467-3"
     },
     {
       "id": "sattler_borago_pa_2023",
+      "source_id": "doi:10.1016/j.talanta.2023.124425",
       "plant_ids": [
         "borage"
       ],
@@ -4275,6 +4504,7 @@
     },
     {
       "id": "siener_rumex_oxalate_2006",
+      "source_id": "doi:10.1016/j.foodchem.2005.05.059",
       "plant_ids": [
         "sorrel"
       ],
@@ -4294,6 +4524,7 @@
     },
     {
       "id": "tawfeek_salix_phytochemistry_2021",
+      "source_id": "doi:10.3389/fphar.2021.593856",
       "plant_ids": [
         "willowleaf"
       ],
@@ -4313,6 +4544,7 @@
     },
     {
       "id": "mbudu_kohlrabi_glucosinolate_2025",
+      "source_id": "doi:10.1016/j.foodchem.2024.142032",
       "plant_ids": [
         "kohlrabileaf"
       ],
@@ -4332,6 +4564,7 @@
     },
     {
       "id": "costan_rumex_defences_2023",
+      "source_id": "doi:10.1007/s10886-023-01427-0",
       "plant_ids": [
         "dock"
       ],
@@ -4345,12 +4578,13 @@
       "supports": "The study directly measured oxalates, phenols and tannins as major secondary metabolites in leaves and roots of Rumex crispus alongside two other Rumex species, providing exact-species evidence that oxalate is part of curly dock leaf chemical defence.",
       "does_not_support": "This is plant chemical-ecology research, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, safe percentage, feeding frequency, or prove that a small accidental nibble causes poisoning.",
       "year": 2023,
-      "doi": "10.1007/s10886-023-01417-2",
+      "doi": "10.1007/s10886-023-01427-0",
       "pmid": "37121960",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37121960/"
     },
     {
       "id": "panciera_rumex_sheep_1990",
+      "source_id": "pmid:2365622",
       "plant_ids": [
         "dock"
       ],
@@ -4370,6 +4604,7 @@
     },
     {
       "id": "gouveia_sweetpotato_oxalate_2020",
+      "source_id": "doi:10.1002/jsfa.10185",
       "plant_ids": [
         "sweetpotatoleaf",
         "sweetpotatovine"
@@ -4390,6 +4625,7 @@
     },
     {
       "id": "singh_celery_minerals_2023",
+      "source_id": "doi:10.1007/s12011-022-03359-4",
       "plant_ids": [
         "celeryleaf"
       ],
@@ -4409,6 +4645,7 @@
     },
     {
       "id": "jarega_poplar_polyphenols_2021",
+      "source_id": "doi:10.1002/cbdv.202100227",
       "plant_ids": [
         "poplarleaf"
       ],
@@ -4428,6 +4665,7 @@
     },
     {
       "id": "elobuike_mungbean_sprouting_2021",
+      "source_id": "doi:10.1002/leg3.100",
       "plant_ids": [
         "mungbeansprout"
       ],
@@ -4447,6 +4685,7 @@
     },
     {
       "id": "keser_hawthorn_parts_2014",
+      "source_id": "doi:10.5455/jice.20140120103320",
       "plant_ids": [
         "hawthorn"
       ],
@@ -4466,6 +4705,7 @@
     },
     {
       "id": "asano_muscari_bulb_alkaloids_2000",
+      "source_id": "doi:10.1016/s0957-4166(99)00508-x",
       "plant_ids": [
         "grapehyacinth"
       ],
@@ -4485,6 +4725,7 @@
     },
     {
       "id": "siroka_houseplant_pet_toxicity_2023",
+      "source_id": "doi:10.3390/toxins15050346",
       "plant_ids": [
         "grapehyacinth"
       ],
@@ -4504,6 +4745,7 @@
     },
     {
       "id": "santos_pea_shoot_nutrition_2014",
+      "source_id": "doi:10.1016/j.foodres.2014.02.011",
       "plant_ids": [
         "peashoot"
       ],
@@ -4523,6 +4765,7 @@
     },
     {
       "id": "palaniswamy_purslane_oxalate_2004",
+      "source_id": "doi:10.1016/j.scienta.2004.01.006",
       "plant_ids": [
         "purslane"
       ],
@@ -4542,6 +4785,7 @@
     },
     {
       "id": "couet_comfrey_pa_1996",
+      "source_id": "doi:10.1002/19960404nt3",
       "plant_ids": [
         "comfrey"
       ],
@@ -4561,6 +4805,7 @@
     },
     {
       "id": "stegemann_comfrey_pa_distribution_2019",
+      "source_id": "doi:10.1007/s10886-018-0990-9",
       "plant_ids": [
         "comfrey"
       ],
@@ -4580,6 +4825,7 @@
     },
     {
       "id": "zaynoun_fig_photodermatitis_1984",
+      "source_id": "doi:10.1111/j.1600-0536.1984.tb00164.x",
       "plant_ids": [
         "figleaf"
       ],
@@ -4599,6 +4845,7 @@
     },
     {
       "id": "kozukue_tomato_tomatine_2004",
+      "source_id": "doi:10.1021/jf0306845",
       "plant_ids": [
         "tomato"
       ],
@@ -4618,6 +4865,7 @@
     },
     {
       "id": "umano_artemisia_princeps_volatiles_2000",
+      "source_id": "doi:10.1021/jf0001738",
       "plant_ids": [
         "ssuk"
       ],
@@ -4637,6 +4885,7 @@
     },
     {
       "id": "orav_yarrow_oil_variation_2006",
+      "source_id": "doi:10.1080/14786410500510849",
       "plant_ids": [
         "yarrow"
       ],
@@ -4656,6 +4905,7 @@
     },
     {
       "id": "morikawa_daisy_saponins_2008",
+      "source_id": "doi:10.1021/np8000333",
       "plant_ids": [
         "daisy"
       ],
@@ -4675,6 +4925,7 @@
     },
     {
       "id": "christensen_primula_primin_2000",
+      "source_id": "doi:10.1034/j.1600-0536.2000.042003149.x",
       "plant_ids": [
         "primula"
       ],
@@ -4694,6 +4945,7 @@
     },
     {
       "id": "ares_broccoli_leaf_glucosinolates_2015",
+      "source_id": "doi:10.1016/j.foodres.2015.06.037",
       "plant_ids": [
         "broccolileaf"
       ],
@@ -4713,6 +4965,7 @@
     },
     {
       "id": "bhandari_cauliflower_glucosinolates_2015",
+      "source_id": "doi:10.3390/molecules200915827",
       "plant_ids": [
         "cauliflowerleaf"
       ],
@@ -4726,12 +4979,13 @@
       "supports": "The study profiled glucosinolates across tissues of Brassica crops including cauliflower and provides plant-part-specific evidence that glucosinolate composition and concentration vary by tissue rather than being uniform across the plant.",
       "does_not_support": "This is plant-composition research, not a tortoise feeding or thyroid-outcome study. Tissue glucosinolate measurements do not establish a Testudo toxic dose, hypothyroidism threshold, safe percentage, or fixed feeding frequency, and cannot by themselves classify cauliflower leaves as acutely toxic.",
       "year": 2015,
-      "doi": "10.3390/molecules200915842",
+      "doi": "10.3390/molecules200915827",
       "pmid": "26334264",
       "url": "https://pubmed.ncbi.nlm.nih.gov/26334264/"
     },
     {
       "id": "eggink_sweet_pepper_composition_2012",
+      "source_id": "doi:10.1016/j.foodchem.2011.10.081",
       "plant_ids": [
         "bellpepper"
       ],
@@ -4751,6 +5005,7 @@
     },
     {
       "id": "wieczorek_pakchoi_glucosinolates_2013",
+      "source_id": "doi:10.1021/jf303970k",
       "plant_ids": [
         "bokchoy"
       ],
@@ -4770,6 +5025,7 @@
     },
     {
       "id": "kabouw_cabbage_glucosinolates_2010",
+      "source_id": "doi:10.1021/jf902835k",
       "plant_ids": [
         "cabbage"
       ],
@@ -4789,6 +5045,7 @@
     },
     {
       "id": "stansell_collard_glucosinolates_2015",
+      "source_id": "doi:10.1111/pbr.12263",
       "plant_ids": [
         "collard"
       ],
@@ -4808,6 +5065,7 @@
     },
     {
       "id": "kyriakou_watercress_aerial_2022",
+      "source_id": "doi:10.3389/fpls.2022.998755",
       "plant_ids": [
         "watercress"
       ],
@@ -4827,6 +5085,7 @@
     },
     {
       "id": "huang_leaf_mustard_glucosinolates_2022",
+      "source_id": "doi:10.3390/agronomy12102287",
       "plant_ids": [
         "mustard"
       ],
@@ -4846,6 +5105,7 @@
     },
     {
       "id": "petrulova_chamomile_coumarins_2013",
+      "source_id": "doi:10.1016/j.foodchem.2013.03.004",
       "plant_ids": [
         "chamomile"
       ],
@@ -4865,6 +5125,7 @@
     },
     {
       "id": "senatore_fennel_leaf_oil_2013",
+      "source_id": "doi:10.1016/j.fitote.2013.07.021",
       "plant_ids": [
         "fennelleaf"
       ],
@@ -4884,6 +5145,7 @@
     },
     {
       "id": "lykkesfeldt_nasturtium_glucotropaeolin_1993",
+      "source_id": "doi:10.1104/pp.102.2.609",
       "plant_ids": [
         "nasturtium"
       ],
@@ -4903,6 +5165,7 @@
     },
     {
       "id": "he_ginkgo_leaf_ginkgolic_2000",
+      "source_id": "doi:10.1093/chromsci/38.4.169",
       "plant_ids": [
         "ginkgoleaf"
       ],
@@ -4922,6 +5185,7 @@
     },
     {
       "id": "yang_pyrus_pyrifolia_leaf_phenolics_2021",
+      "source_id": "url:kci.go.kr/kciportal/landing/article.kci?arti_id=ART002761315",
       "plant_ids": [
         "pearleaf"
       ],
@@ -4941,6 +5205,7 @@
     },
     {
       "id": "ghoneim_lamium_amplexicaule_aerial_2018",
+      "source_id": "doi:10.4103/pm.pm_541_17",
       "plant_ids": [
         "henbit"
       ],
@@ -4960,6 +5225,7 @@
     },
     {
       "id": "fuentes_sunflower_leaf_compounds_2015",
+      "source_id": "doi:10.1021/acs.jafc.5b02261",
       "plant_ids": [
         "sunflowerleaf"
       ],
@@ -4979,6 +5245,7 @@
     },
     {
       "id": "ginestra_opuntia_cladode_2009",
+      "source_id": "doi:10.1021/jf9022096",
       "plant_ids": [
         "pricklypear"
       ],
@@ -4998,6 +5265,7 @@
     },
     {
       "id": "marais_sainfoin_polyphenols_2000",
+      "source_id": "doi:10.1021/jf000388h",
       "plant_ids": [
         "sainfoin"
       ],
@@ -5017,6 +5285,7 @@
     },
     {
       "id": "melo_coriander_leaf_oxalate_2008",
+      "source_id": "doi:10.1111/j.1745-4557.2008.00195.x",
       "plant_ids": [
         "cilantro"
       ],
@@ -5036,6 +5305,7 @@
     },
     {
       "id": "haouas_glebionis_leaf_oil_2016",
+      "source_id": "doi:10.1002/cbdv.201600026",
       "plant_ids": [
         "chrysanthemumleaf"
       ],
@@ -5055,6 +5325,7 @@
     },
     {
       "id": "mashitoa_pumpkin_leaf_antinutrients_2021",
+      "source_id": "doi:10.1007/s10068-021-00916-w",
       "plant_ids": [
         "pumpkinleaf"
       ],
@@ -5074,6 +5345,7 @@
     },
     {
       "id": "liaudanskas_apple_leaf_phenolics_2014",
+      "source_id": "doi:10.1155/2014/306217",
       "plant_ids": [
         "appleleaf"
       ],
@@ -5093,6 +5365,7 @@
     },
     {
       "id": "padilla_turnip_leaf_glucosinolates_2007",
+      "source_id": "doi:10.1016/j.phytochem.2006.11.017",
       "plant_ids": [
         "turnipgreens"
       ],
@@ -5107,11 +5380,12 @@
       "does_not_support": "This is plant composition, not a tortoise thyroid, feeding or toxicity trial. Glucosinolate detection does not establish a Testudo toxic dose, safe percentage or fixed feeding frequency.",
       "year": 2007,
       "doi": "10.1016/j.phytochem.2006.11.017",
-      "pmid": null,
+      "pmid": "17187832",
       "url": "https://doi.org/10.1016/j.phytochem.2006.11.017"
     },
     {
       "id": "park_napa_metabolites_2019",
+      "source_id": "doi:10.3390/foods8110587",
       "plant_ids": [
         "napa"
       ],
@@ -5131,6 +5405,7 @@
     },
     {
       "id": "germ_chicory_leaf_minerals_2020",
+      "source_id": "doi:10.3390/plants9121766",
       "plant_ids": [
         "radicchio"
       ],
@@ -5150,6 +5425,7 @@
     },
     {
       "id": "teuber_dill_leaf_flavonols_1978",
+      "source_id": "doi:10.1007/bf01136136",
       "plant_ids": [
         "dill"
       ],
@@ -5169,6 +5445,7 @@
     },
     {
       "id": "kedrina_grape_leaf_polyphenols_2018",
+      "source_id": "doi:10.1021/acs.jafc.8b03418",
       "plant_ids": [
         "grapeleaf",
         "grapevineleaf"
@@ -5189,6 +5466,7 @@
     },
     {
       "id": "koyu_peach_leaf_extract_2020",
+      "source_id": "doi:10.1007/s11033-019-05163-1",
       "plant_ids": [
         "peachleaf"
       ],
@@ -5208,6 +5486,7 @@
     },
     {
       "id": "mencherini_melissa_fresh_leaves_2009",
+      "source_id": "doi:10.1021/np9003195",
       "plant_ids": [
         "lemonbalm"
       ],
@@ -5227,6 +5506,7 @@
     },
     {
       "id": "bandoniene_sage_leaf_rosmarinic_2005",
+      "source_id": "doi:10.1093/chromsci/43.7.372",
       "plant_ids": [
         "sage"
       ],
@@ -5246,6 +5526,7 @@
     },
     {
       "id": "delbano_rosemary_leaf_phenolics_2003",
+      "source_id": "doi:10.1021/jf0300745",
       "plant_ids": [
         "rosemary"
       ],
@@ -5265,6 +5546,7 @@
     },
     {
       "id": "hanhineva_strawberry_leaf_2009",
+      "source_id": "doi:10.1002/pca.1133",
       "plant_ids": [
         "strawberryleaf"
       ],
@@ -5284,6 +5566,7 @@
     },
     {
       "id": "salasarias_strawberry_leaf_2023",
+      "source_id": "doi:10.3390/molecules28041865",
       "plant_ids": [
         "strawberryleaf"
       ],
@@ -5303,6 +5586,7 @@
     },
     {
       "id": "asnaashari_blackberry_leaf_2015",
+      "source_id": "doi:10.1007/s13197-014-1564-7",
       "plant_ids": [
         "blackberryleaf"
       ],
