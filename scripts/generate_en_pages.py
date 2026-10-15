@@ -32,6 +32,11 @@ rows_by = by_plant(assessments)
 plants = public_plants(all_plants, assessments)
 evidence_by_id = {e["id"]: e for e in load("data/public_evidence_records.json").get("records", [])}
 nutrition_by_id = {n["plant_id"]: n for n in load("data/plant_nutrition_v56.json").get("plants", []) if n.get("verification_status") == "verified"}
+nutrition_references_by_id = {}
+for ref in load("data/plant_nutrition_reference_v1.json").get("records", []):
+    if ref.get("status") == "reference_only" and ref.get("feeding_verdict_use") is False:
+        nutrition_references_by_id.setdefault(ref["plant_id"], []).append(ref)
+
 wild_by_plant = {}
 for w in load("data/wild_feeding_evidence.json").get("records", []):
     wild_by_plant.setdefault(w.get("plant_id"), []).append(w)
@@ -42,7 +47,8 @@ ibera_by_plant = {}
 for o in ibera.get("observations", []):
     if o.get("plant_id"):
         ibera_by_plant.setdefault(o["plant_id"], []).append(o)
-image_by_plant = {i["plant_id"]: i for i in load("data/verified_plant_images_v56.json").get("images", []) if i.get("identity_scope") in {"exact_species", "exact_subspecies", "exact_variety"}}
+# Same rule as the Korean pages (generate_static_pages.py): an exact taxon identity AND a verified feeding-part match.
+image_by_plant = {i["plant_id"]: i for i in load("data/verified_plant_images_v56.json").get("images", []) if i.get("identity_scope") in {"exact_species", "exact_subspecies", "exact_variety"} and i.get("part_match") == "match"}
 curated_identity = load("data/curated_identity_notes.json").get("notes", {})
 retail_by_id = {r["plant_id"]: r for r in load("data/korean_retail_name_map.json")}
 
@@ -396,8 +402,23 @@ def render(p):
                  f'<p class="small">{esc(nutrition_basis_en(nu.get("basis")))} · Source food name: {esc(T(nu.get("food_description"), f"{pid}.food_description"))} · Source: '
                  f'<a href="{esc(nu.get("source_url"))}" target="_blank" rel="noopener noreferrer">{esc(nu.get("source_name"))} {esc(nu.get("source_id"))}</a></p>'
                  + (f'<p class="small">Scope: {esc(app_note)}</p>' if app_note else "") + academic_nutrition_en(nu))
+    elif nutrition_references_by_id.get(pid):
+        reference_cards = []
+        for ref in nutrition_references_by_id[pid]:
+            # Same fields as the Korean card (generate_static_pages.py): source, analysed scope and the record's own caveat,
+            # translated through strings_en.json so that a caveat edited in Korean cannot silently disappear in English.
+            source_label = esc(T(ref.get("source_name"), f"{pid}.nutrition_reference.source_name") or "Source not specified")
+            scope = esc(T(ref.get("reference_scope_ko"), f"{pid}.nutrition_reference.scope") or ref.get("analyzed_part") or "Analysed scope not specified")
+            note = esc(T(ref.get("display_note_ko"), f"{pid}.nutrition_reference.note") or "This is not a verified value that can be applied directly to the feeding part.")
+            url = ref.get("source_url") or ""
+            source = (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer">{source_label} · Open original ↗</a>' if url.startswith("https://") else source_label)
+            reference_cards.append(f'<li><strong>{source}</strong><p class="small nutrition-source-citation">Analysed scope: {scope}</p><p class="small nutrition-source-citation">{note}</p></li>')
+        nbody = ('<div class="nutrition-missing"><strong>Related nutrition references available · No directly verified values</strong>'
+                 '<p>Related source data exist, but cannot be substituted for verified nutrient values for this feeding part.</p>'
+                 '<ul class="nutrition-reference-list">' + "".join(reference_cards) + '</ul>'
+                 '<p class="small">Reference-only data were not used to determine the feeding verdict. See the feeding assessment and evidence above.</p></div>')
     else:
-        nbody = ('<div class="nutrition-missing"><strong>No verified nutrition data</strong><p>No official nutrient values matching this plant and plant part have been confirmed yet.</p>'
+        nbody = ('<div class="nutrition-missing"><strong>No linked nutrition data</strong><p>No verified nutrient values or related reference records are currently linked to this plant.</p>'
                  '<p class="small">A lack of data does not mean the plant is safe or unsafe. See the feeding assessment and evidence above.</p></div>')
     nutrition = (f'<section class="card" id="nutrition"><h2>Key nutrients and limiting compounds</h2>{nbody}{special_nutrition_en(pid)}'
                  f'<p class="small">Nutrient values support the assessment but never override feeding, veterinary, toxicity or antinutrient evidence on their own. '

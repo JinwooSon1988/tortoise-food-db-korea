@@ -16,6 +16,13 @@ from public_verdict import load_assessments, public_plants, by_plant, representa
 SITE = "https://jinwooson1988.github.io/tortoise-food-db-korea"
 HANGUL = re.compile(r"[가-힣]")
 errors = []
+# English plant pages are full translations of the Korean pages (same plant ID, grade, evidence, nutrition, images and
+# section order; checked below). A redirect stub in place of the translation is a failure, not a passing mode: the
+# Korean page cannot translate its plant-specific prose in the browser.
+for _alias in sorted((ROOT / "en/plant").glob("*/index.html")):
+    if 'http-equiv="refresh"' in _alias.read_text(encoding="utf-8"):
+        errors.append(f"{_alias.parent.name}: English plant page is a redirect stub, not a translated page")
+
 # Homepage mirrors the Korean search-first layout: three concise trust cards stay, retired example chips and guide blocks must not return.
 _home = (ROOT / "en/index.html").read_text(encoding="utf-8")
 for _obsolete in ('<div class="examples"', '<h2>Guides</h2>'):
@@ -106,6 +113,18 @@ def resolve(page_path, href):
 # 1. Completeness: every public plant has a Korean and an English page, and nothing else is published under en/plant.
 plants = public_plants(json.loads(read(ROOT / "data/plants.json")), load_assessments())
 ids = {p["id"] for p in plants}
+# Guard the canonical identity in every translated page. Source citations must never
+# replace the plant name in its page title, even when nutrition is reference-only.
+for _plant in plants:
+    _pid = _plant["id"]
+    _page = ROOT / "en" / "plant" / _pid / "index.html"
+    if not _page.exists():
+        continue
+    _text = read(_page)
+    _title_match = re.search(r"<title>(.*?)</title>", _text, re.S | re.I)
+    _expected = html.escape(str(_plant.get("en") or _pid), quote=True)
+    if not _title_match or not _title_match.group(1).startswith("Can tortoises eat " + _expected + "?"):
+        fail(f"{_pid}: English page title does not identify the canonical plant name")
 ko_ids = {d.name for d in (ROOT / "plant").iterdir() if (d / "index.html").exists()}
 en_ids = {d.name for d in (ROOT / "en/plant").iterdir() if (d / "index.html").exists()}
 if ids != en_ids:
@@ -174,13 +193,38 @@ for pid in sorted(ids & en_ids & ko_ids):
         fail(f"{pid}: grade/verdict differ ko={kd.groups()} en={ed.groups()}")
     if kd.group(1) != exp["grade"]:
         fail(f"{pid}: Korean grade {kd.group(1)} differs from canonical {exp['grade']}")
+    # The English view must be the SAME plant and preserve the Korean information
+    # architecture. A separate page must not silently drop/reorder factual sections.
+    for locale, doc in (("ko", ko), ("en", en)):
+        match = re.search(r'<main\b[^>]*data-plant-id="([^"]+)"', doc)
+        if not match or match.group(1) != pid:
+            fail(f"{pid}: {locale} page identity differs from canonical plant ID")
+    def factual_sections(doc):
+        return re.findall(r'<section\b[^>]*\bid="([^"]+)"', doc)
+    if factual_sections(ko) != factual_sections(en):
+        fail(f"{pid}: translated page section IDs/order differ from Korean source")
+    def image_sources(doc):
+        return sorted(re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', doc))
+    if image_sources(ko) != image_sources(en):
+        fail(f"{pid}: translated page image sources differ from Korean source")
     kn, enn = section(ko, "nutrition"), section(en, "nutrition")
     if bool(kn) != bool(enn):
         fail(f"{pid}: nutrition section present in one language only")
     elif kn:
         strip = lambda s: html.unescape(re.sub(r"<[^>]+>", " ", re.sub(r'<a [^>]*>.*?</a>|<(?:i|cite)>.*?</(?:i|cite)>', " ", s, flags=re.S)))
-        knums = sorted(nut_num.findall(strip(kn).replace(",", "")))
-        enums = sorted(nut_num.findall(strip(enn).replace(",", "")))
+        # Compare verified nutrient grids, not citation years or reference-only prose.
+        kgrid = re.search(r'<div class="nutgrid">.*?</div></div>', kn, re.S)
+        egrid = re.search(r'<div class="nutgrid">.*?</div></div>', enn, re.S)
+        if bool(kgrid) != bool(egrid):
+            fail(f"{pid}: verified nutrient grid present in one language only")
+        # Reference-only cards: same records, each with its analysed scope and its own caveat in both languages.
+        refs = lambda s: re.findall(r'<li><strong>.*?</li>', (re.search(r'<ul class="nutrition-reference-list">(.*?)</ul>', s, re.S) or [None, ""])[1], re.S)
+        if len(refs(kn)) != len(refs(enn)):
+            fail(f"{pid}: nutrition reference cards differ ko={len(refs(kn))} en={len(refs(enn))}")
+        elif any(item.count("nutrition-source-citation") != 2 for item in refs(kn) + refs(enn)):
+            fail(f"{pid}: a nutrition reference card lacks its analysed scope or caveat")
+        knums = sorted(nut_num.findall(strip(kgrid.group(0)).replace(",", ""))) if kgrid else []
+        enums = sorted(nut_num.findall(strip(egrid.group(0)).replace(",", ""))) if egrid else []
         if knums != enums:
             fail(f"{pid}: nutrition numbers differ ko-only={sorted(set(knums) - set(enums))[:6]} en-only={sorted(set(enums) - set(knums))[:6]}")
     kext = parse(ROOT / "plant" / pid / "index.html").ext

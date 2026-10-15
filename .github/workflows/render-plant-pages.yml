@@ -38,6 +38,37 @@ permissions:
   contents: read
 
 jobs:
+  sync_pr303:
+    if: github.event_name == 'pull_request' && github.event.pull_request.number == 303 && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'fix/nutrition-reference-state-detail-20261013'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate and verify PR artifacts
+        run: |
+          python scripts/generate_static_pages.py
+          python scripts/patch_curated_social_metadata.py
+          python scripts/inject_plant_detail_v56.py
+          python scripts/generate_guide_hubs.py
+          python scripts/generate_en_pages.py
+          python scripts/qa_variety_card_regeneration_v1.py
+          python scripts/audit_plant_detail_v56.py
+          python scripts/qa_english_site_v1.py
+      - name: Commit generated artifacts to PR branch only
+        run: |
+          git add -A -- plant en guides sitemap.xml data/i18n/en/catalog_en.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: synchronize generated static pages'
+          git push origin HEAD:fix/nutrition-reference-state-detail-20261013
   verify:
     runs-on: ubuntu-latest
     steps:

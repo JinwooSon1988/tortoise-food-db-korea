@@ -98,7 +98,9 @@ for image in registry['images']:
     assert image['image_url'].startswith('https://commons.wikimedia.org/wiki/Special:Redirect/file/'), pid
     assert image['license'], pid
     assert image['creator'], pid
-    if pid in public_ids:
+    if pid in public_ids and image.get('part_match') == 'match':
+        # Only exact taxon + feeding-part matched photos are published.
+        # Partial/mismatched photos stay in the verified registry for replacement.
         # Pages HTML-escape attribute values (an apostrophe in a Commons file name becomes &#x27;).
         assert html.escape(image['image_url'], quote=True) in pages[pid] and html.escape(image['license']) in pages[pid], f'{pid}: verified image or licence missing'
         caption = {'exact_species': '정확한 종으로 검증된', 'exact_subspecies': '정확한 아종으로 검증된', 'exact_variety': '정확한 변종으로 검증된'}[image['identity_scope']]
