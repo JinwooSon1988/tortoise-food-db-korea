@@ -1,11 +1,7 @@
 name: Join GBIF candidates with evidence
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - 'scripts/join_gbif_candidates_with_evidence.py'
-      - '.github/workflows/join-gbif-evidence.yml'
-      - 'research/evidence_leads/**'
+
 permissions:
   actions: read
   contents: read
