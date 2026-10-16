@@ -9,6 +9,8 @@ on:
       - 'scripts/test_audit_publication_readiness.py'
       - 'scripts/audit_evidence_linkage_provenance.py'
       - 'scripts/build_ttt_independent_evidence_queue.py'
+      - 'scripts/link_global_literature_plant_leads.py'
+      - 'research/evidence_leads/**'
       - 'research/intake_batches/**'
       - '.github/workflows/bulk-plant-intake-qa.yml'
   workflow_dispatch:
@@ -29,6 +31,7 @@ jobs:
           python scripts/test_audit_publication_readiness.py
           python scripts/audit_evidence_linkage_provenance.py
           python scripts/build_ttt_independent_evidence_queue.py
+          python scripts/link_global_literature_plant_leads.py
           python - <<'PY'
           import glob, subprocess, sys
           batches = sorted(glob.glob("research/intake_batches/*.json"))
