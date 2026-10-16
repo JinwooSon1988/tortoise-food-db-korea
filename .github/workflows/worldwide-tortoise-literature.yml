@@ -1,0 +1,45 @@
+name: Worldwide tortoise diet bibliography intake
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/collect_worldwide_tortoise_literature.py'
+      - '.github/workflows/worldwide-tortoise-literature.yml'
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - shard: mediterranean
+            genera: 'Testudo,Agrionemys'
+          - shard: african
+            genera: 'Centrochelys,Stigmochelys,Kinixys,Homopus,Chersina,Psammobates,Malacochersus'
+          - shard: asian
+            genera: 'Geochelone,Indotestudo,Manouria'
+          - shard: americas
+            genera: 'Gopherus,Chelonoidis'
+          - shard: islands
+            genera: 'Aldabrachelys,Astrochelys,Pyxis'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect worldwide scholarly literature
+        env:
+          OPENALEX_EMAIL: ${{ secrets.OPENALEX_EMAIL }}
+        run: |
+          python scripts/collect_worldwide_tortoise_literature.py \
+            --genera "${{ matrix.genera }}" \
+            --pages 2 --per-page 50 \
+            --out "research/generated/worldwide_tortoise_literature_${{ matrix.shard }}.json"
+      - name: Upload research leads (not feeding verdicts)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: worldwide-tortoise-literature-${{ matrix.shard }}
+          path: research/generated/worldwide_tortoise_literature_${{ matrix.shard }}.json
+          retention-days: 30
+          if-no-files-found: warn
