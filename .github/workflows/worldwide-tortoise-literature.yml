@@ -1,10 +1,7 @@
 name: Worldwide tortoise diet bibliography intake
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - 'scripts/collect_worldwide_tortoise_literature.py'
-      - '.github/workflows/worldwide-tortoise-literature.yml'
+
 permissions:
   contents: read
 jobs:
