@@ -1,0 +1,36 @@
+name: Join GBIF candidates with evidence
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/join_gbif_candidates_with_evidence.py'
+      - '.github/workflows/join-gbif-evidence.yml'
+      - 'research/evidence_leads/**'
+permissions:
+  actions: read
+  contents: read
+jobs:
+  join:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download already collected GBIF candidates
+        uses: actions/download-artifact@v4
+        with:
+          pattern: gbif-global-taxonomy-candidates-*
+          path: research/generated/gbif_batches
+          merge-multiple: true
+          run-id: 38837601795
+          github-token: ${{ github.token }}
+      - name: Link candidate taxa with existing evidence leads
+        run: |
+          python scripts/join_gbif_candidates_with_evidence.py \
+            --batches research/generated/gbif_batches/*.json \
+            --out research/generated/gbif_candidate_evidence_join.json
+      - name: Publish candidate-to-evidence mapping artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbif-candidate-evidence-join
+          path: research/generated/gbif_candidate_evidence_join.json
+          retention-days: 30
