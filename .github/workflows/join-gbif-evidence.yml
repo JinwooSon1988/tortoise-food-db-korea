@@ -20,13 +20,13 @@ jobs:
         with:
           pattern: gbif-global-taxonomy-candidates-*
           path: research/generated/gbif_batches
-          merge-multiple: true
+          merge-multiple: false
           run-id: 38837601795
           github-token: ${{ github.token }}
       - name: Link candidate taxa with existing evidence leads
         run: |
           python scripts/join_gbif_candidates_with_evidence.py \
-            --batches research/generated/gbif_batches/*.json \
+            --batches research/generated/gbif_batches/gbif-global-taxonomy-candidates-*/gbif_global_taxa_sample.json \
             --out research/generated/gbif_candidate_evidence_join.json
       - name: Publish candidate-to-evidence mapping artifact
         uses: actions/upload-artifact@v4
