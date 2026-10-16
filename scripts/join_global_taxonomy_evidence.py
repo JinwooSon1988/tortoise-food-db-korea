@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def load(name):return json.loads((ROOT/name).read_text(encoding="utf-8"))
 def taxon(name):
-    m=re.match(r"^([A-Z][a-z-]+) ([a-z][a-z-]+)(?:\\b|$)",str(name or ""))
+    m=re.match(r"^([A-Z][a-z-]+) ([a-z][a-z-]+)(?:\b|$)",str(name or ""))
     return (m.group(1)+" "+m.group(2)).casefold() if m else ""
 def main():
     payload=load("data/global_taxonomy_candidates.json")
@@ -41,7 +41,7 @@ def main():
             "feeding_safety_status":"not_assessed","safety_grade":None}
         out.append(item)
     dest=ROOT/"data/global_taxonomy_evidence_join.json"
-    dest.write_text(json.dumps({"schema_version":"1.0","record_count":len(out),"records":out},ensure_ascii=False,separators=(",",":"))+"\\n",encoding="utf-8")
-    (ROOT/"data/global_taxonomy_evidence_join_audit.json").write_text(json.dumps({"input_records":len(rows),"matched_reviewed_plants":sum(bool(x["matched_reviewed_plant_id"]) for x in out),"feeding_record_under_review":sum(x["feeding_record_status"]=="record_under_review" for x in out),"ambiguous_matches":audits},ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    dest.write_text(json.dumps({"schema_version":"1.0","record_count":len(out),"records":out},ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    (ROOT/"data/global_taxonomy_evidence_join_audit.json").write_text(json.dumps({"input_records":len(rows),"matched_reviewed_plants":sum(bool(x["matched_reviewed_plant_id"]) for x in out),"feeding_record_under_review":sum(x["feeding_record_status"]=="record_under_review" for x in out),"ambiguous_matches":audits},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("joined",len(out),"feeding records under review",sum(x["feeding_record_status"]=="record_under_review" for x in out))
 if __name__=="__main__":main()
