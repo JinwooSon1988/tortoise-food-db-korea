@@ -74,7 +74,7 @@ function n(v){return v==null?null:Number(v)}function val(v,d=2){return v==null?'
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function fill(sel,vals,labelFn=null){const seen=new Set;[...new Set(vals.filter(Boolean))].sort((a,b)=>String(a).localeCompare(String(b),'ko')).forEach(v=>{const label=labelFn?labelFn(v):v;if(seen.has(label))return;seen.add(label);let o=document.createElement('option');o.value=v;o.textContent=label;sel.appendChild(o)})}
 function relabel(sel,labelFn){[...sel.options].forEach(o=>{if(o.value)o.textContent=labelFn(o.value)})}
-function filtered(){let term=$('q').value.trim().toLowerCase(),v=$('verdict').value,c=$('category').value,f=$('family').value,nu=$('nutrition').value;return rows.filter(r=>(!term||[r.ko,r.en,r.scientific,...(r.aliases||[]),...(r.searchAliases||[])].join(' ').toLowerCase().includes(term))&&(!v||r.verdict===v)&&(!c||r.category===c)&&(!f||r.family===f)&&(!nu||(nu==='yes'&&r.hasNutrition)||(nu==='reference'&&!r.hasNutrition&&r.hasReferenceNutrition)||(nu==='no'&&!r.hasNutrition&&!r.hasReferenceNutrition)))}
+function filtered(){let term=$('q').value.trim().toLowerCase(),v=$('verdict').value,c=$('category').value,f=$('family').value,nu=$('nutrition').value;return rows.filter(r=>(!term||[r.ko,r.en,r.scientific,...(r.aliases||[]),...(r.searchAliases||[])].join(' ').toLowerCase().includes(term))&&(!v||(v==='feeding_pending'?r.feedingRecordPending:r.verdict===v))&&(!c||r.category===c)&&(!f||r.family===f)&&(!nu||(nu==='yes'&&r.hasNutrition)||(nu==='reference'&&!r.hasNutrition&&r.hasReferenceNutrition)||(nu==='no'&&!r.hasNutrition&&!r.hasReferenceNutrition)))}
 function cmp(a,b){let x=sortKey==='name'?(en()?(a.en||a.ko):a.ko):a[sortKey],y=sortKey==='name'?(en()?(b.en||b.ko):b.ko):b[sortKey];if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return-1;if(typeof x==='number'&&typeof y==='number')return(x-y)*sortDir||a.ko.localeCompare(b.ko,'ko');return String(x).localeCompare(String(y),'ko',{numeric:true})*sortDir||a.ko.localeCompare(b.ko,'ko')}
 function thumb(r){const im=imageMap.get(r.id);if(!im)return '<figure class="mthumb empty" aria-hidden="true">'+(en()?'Verified photo pending':'검증된 이미지 준비 중')+'</figure>';return '<figure class="mthumb"><img src="'+esc(im.image_url+'?width=160')+'" alt="" loading="lazy" decoding="async" width="160" height="160" title="'+esc((en()?'Photo ':'사진 ')+im.creator+' · '+im.license)+'"></figure>'}
 function hint(g){return g==='A'?(en()?'Can be a main part of a varied diet':'다양한 식단의 주요 구성으로 활용'):g==='B'?(en()?'Use in limited amounts mixed with other foods':'다른 먹이와 섞어 제한적으로 활용'):g==='C'?(en()?'Occasional supplement, not a staple':'주식이 아닌 제한 급여'):g==='D'?(en()?'Exclude from planned feeding':'계획 식단에서는 제외'):(en()?'Assessment pending':'근거 확인 전 급여 판단 보류')}
@@ -89,7 +89,7 @@ function render(){let out=filtered().sort(cmp);const active=['q','verdict','cate
  document.querySelectorAll('th[data-k]').forEach(th=>{th.querySelector('.sortmark')?.remove();if(th.dataset.k===sortKey){th.setAttribute('aria-sort',sortDir===1?'ascending':'descending');let s=document.createElement('span');s.className='sortmark';s.setAttribute('aria-hidden','true');s.textContent=sortDir===1?'▲':'▼';th.querySelector('button').appendChild(s)}else th.removeAttribute('aria-sort')});
  const so=$('sort'),key=sortKey+':'+sortDir;if([...so.options].some(o=>o.value===key))so.value=key;
  syncUrl()}
-function localize(){const q=$('q');if(q)q.placeholder=en()?'Search by common or scientific name':'한글명·영문명·학명 검색';document.querySelectorAll('[data-en]').forEach(el=>{if(!el.dataset.ko)el.dataset.ko=el.textContent;el.textContent=en()?el.dataset.en:el.dataset.ko});relabel($('category'),catLabel);relabel($('verdict'),v=>vl(v))}
+function localize(){const q=$('q');if(q)q.placeholder=en()?'Search by common or scientific name':'한글명·영문명·학명 검색';document.querySelectorAll('[data-en]').forEach(el=>{if(!el.dataset.ko)el.dataset.ko=el.textContent;el.textContent=en()?el.dataset.en:el.dataset.ko});relabel($('category'),catLabel);relabel($('verdict'),v=>v==='feeding_pending'?(en()?'Feeding records found (under review)':'급여 기록 있음 (검증 중)'):vl(v))}
 function counts(){const c={};rows.forEach(r=>c[r.verdict]=(c[r.verdict]||0)+1);document.querySelectorAll('[data-count]').forEach(e=>{e.textContent=c[e.dataset.count]||0})}
 function reset(){['q','verdict','category','family','nutrition'].forEach(id=>$(id).value='');render();$('q').focus()}
 const CERTAINTY_KO={"A":"높음","B+":"다소 높음","B":"중간","B-":"중간 이하","C+":"다소 낮음","C":"낮음","C-":"매우 낮음","D+":"매우 낮음","D":"매우 낮음","D-":"매우 낮음"};const CERTAINTY_EN={"A":"High","B+":"Fairly high","B":"Moderate","B-":"Below moderate","C+":"Fairly low","C":"Low","C-":"Very low","D+":"Very low","D":"Very low","D-":"Very low"};function certaintyKo(c){const k=String(c||"").trim();return document.documentElement.lang==="en"?(CERTAINTY_EN[k]||"Not assessed"):(CERTAINTY_KO[k]||"미확정")}
@@ -108,6 +108,15 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
   }
  }
  rows=[...uniquePlants.values()];
+ // Existing assessed plants keep their A–D grade. Wild observations are evidence,
+ // not a substitute for a feeding verdict.
+ const wild=await j('../data/wild_feeding_evidence.json');
+ const wildIds=new Set((wild?.records||[]).filter(w=>w.plant_id&&w.source_id&&w.tortoise_taxon).map(w=>w.plant_id));
+ rows.forEach(r=>{r.feedingRecordPending=r.verdict==='보류'&&wildIds.has(r.id)});
+ const pendingOption=document.createElement('option');
+ pendingOption.value='feeding_pending';
+ pendingOption.textContent=en()?'Feeding records found (under review)':'급여 기록 있음 (검증 중)';
+ $('verdict').appendChild(pendingOption);
  ['A','B','C','D','보류'].filter(v=>rows.some(r=>r.verdict===v)).forEach(v=>{const option=document.createElement('option');option.value=v;option.textContent=vl(v);$('verdict').appendChild(option)});fill($('category'),rows.map(r=>r.category),catLabel);fill($('family'),rows.map(r=>r.family));counts();
  const p=new URLSearchParams(location.search);[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=p.get(k);if(v!=null&&(id==='q'||[...$(id).options].some(o=>o.value===v)))$(id).value=id==='q'?v.slice(0,80):v});
  const s=(p.get('sort')||'').split(':');if(s[0]&&document.querySelector('th[data-k="'+CSS.escape(s[0])+'"]')){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
