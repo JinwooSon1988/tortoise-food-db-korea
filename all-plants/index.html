@@ -110,9 +110,12 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  rows=[...uniquePlants.values()];
  // Existing assessed plants keep their A–D grade. Wild observations are evidence,
  // not a substitute for a feeding verdict.
- const wild=await j('../data/wild_feeding_evidence.json');
+ const [wild,links]=await Promise.all([j('../data/wild_feeding_evidence.json'),j('../data/plant_feeding_evidence_links.json')]);
  const wildIds=new Set((wild?.records||[]).filter(w=>w.plant_id&&w.source_id&&w.tortoise_taxon).map(w=>w.plant_id));
- rows.forEach(r=>{r.feedingRecordPending=r.verdict==='보류'&&wildIds.has(r.id)});
+ // Evidence types are not interchangeable: nutrition/toxicity records cannot
+ // trigger the feeding-observation filter.
+ const feedingIds=new Set((links?.records||[]).filter(item=>(item.evidence||[]).some(e=>e.type==='wild_feeding'&&e.source_id&&e.tortoise_taxon)).map(item=>item.plant_id));
+ rows.forEach(r=>{r.feedingRecordPending=r.verdict==='보류'&&(feedingIds.has(r.id)||wildIds.has(r.id))});
  const pendingOption=document.createElement('option');
  pendingOption.value='feeding_pending';
  pendingOption.textContent=en()?'Feeding records found (under review)':'급여 기록 있음 (검증 중)';
