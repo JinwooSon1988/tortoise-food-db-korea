@@ -853,7 +853,24 @@ for p in plants:
     summary_display=summary_display.replace("정해진 것으로 해석하지 않는다", "정해졌다는 뜻은 아니다")
     summary_display=summary_display.replace("속 수준 판정을 넘겨 해석하지 않고", "속 수준 자료가 말하는 범위를 넘기지 않고")
 
-    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="verdictline"><div class="verdict">{f'<span class="verdictbadge">{esc(grade)}</span><span class="verdictlabel">{esc(label)}</span>' if grade in "ABCD" else esc(label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p><a class="evidencelink" href="#evidence">판정의 학술 근거 확인 ↓</a></section>'''
+    # Evidence availability is independent of nutrient-composition completeness.
+    # These badges summarize only sources actually linked to the current assessment.
+    source_tiers = []
+    if any(source_kind(e)[0] == 0 for e in linked_evidence):
+        source_tiers.append("학술·연구자료")
+    if any(e.get("directness") == "expert_husbandry" for e in linked_evidence):
+        source_tiers.append("전문 사육자료")
+    if any(e.get("directness") == "direct" and source_kind(e)[0] != 0 for e in linked_evidence):
+        source_tiers.append("직접 관찰·급여 근거")
+    source_status = " · ".join(source_tiers) if source_tiers else "연결 근거 추가 확인 필요"
+    nutrition_status = "영양성분 자료 확인" if pid in nutrition_by_id else "영양성분 자료 보강 중"
+    verdict_source_html = (f'<p class="ko-evidence" data-evidence-availability="true"><b>판정 근거 현황</b> '
+                           f'{esc(source_status)} · {esc(nutrition_status)}'
+                           f' — 영양성분의 유무는 급여 등급과 별개입니다.</p>'
+                           f'<p class="en-evidence" hidden data-evidence-availability-en="true">'
+                           f'<b>Evidence status</b> See linked feeding sources below. '
+                           f'Nutrition composition is evaluated separately from feeding suitability.</p>')
+    decision_html=f'''<section class="card {tone} decision" data-grade="{esc(grade)}" data-verdict="{esc((a or {}).get("verdict") or "none")}" aria-label="급여 판정 · {esc(grade)} {esc(label)}"><div class="verdictline"><div class="verdict">{f'<span class="verdictbadge">{esc(grade)}</span><span class="verdictlabel">{esc(label)}</span>' if grade in "ABCD" else esc(label)}</div></div><p class="meaning">{esc(meaning)}</p><p class="decisionwhy ko-evidence"><b>왜 이렇게 판정했나</b>{esc(summary_display)}</p><p class="en-evidence" hidden>{esc(en_pending)}</p>{verdict_source_html}<a class="evidencelink" href="#evidence">판정의 학술 근거 확인 ↓</a></section>'''
 
     # 2) Practical reading: translate evidence boundaries into an immediate husbandry action.
     if grade=="A":
