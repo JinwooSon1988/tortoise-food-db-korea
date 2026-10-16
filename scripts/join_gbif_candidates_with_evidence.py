@@ -22,6 +22,11 @@ def main():
     known = {norm(p["scientific"]): p for p in plants if p.get("scientific")}
     lead_path = ROOT / "research/evidence_leads/global_direct_evidence_20261016_01.json"
     leads = json.loads(lead_path.read_text(encoding="utf-8"))["records"]
+    existing_evidence = json.loads((ROOT / "data/public_evidence_records.json").read_text(encoding="utf-8"))["records"]
+    by_plant_id = {}
+    for evidence in existing_evidence:
+        for pid in evidence.get("plant_ids", []):
+            by_plant_id.setdefault(pid, []).append(evidence)
     mentions = {}
     for lead in leads:
         for taxon in lead.get("plant_taxa", []):
@@ -45,9 +50,13 @@ def main():
         scientific = c["scientific"]
         existing = known.get(norm(scientific))
         sources = mentions.get(norm(scientific),[])
+        linked_evidence = by_plant_id.get(existing["id"], []) if existing else []
         rows.append({"gbif_taxon_key":key,"scientific":scientific,
                      "family":c.get("family"),"gbif_url":c.get("source",{}).get("url"),
                      "existing_plant_id":existing["id"] if existing else None,
+                     "existing_evidence_ids":[e["id"] for e in linked_evidence],
+                     "existing_evidence_source_urls":[e.get("url") for e in linked_evidence],
+                     "existing_evidence_linkage_scope":"catalog_plant_id_only_not_independent_taxon_verification" if linked_evidence else None,
                      "evidence_lead_ids":[s["id"] for s in sources],
                      "evidence_lead_urls":[s["url"] for s in sources],
                      "status":"literature_lead_requires_full_text_review" if sources else
@@ -56,7 +65,9 @@ def main():
                      "site_publishable":False})
     counts = Counter(r["status"] for r in rows)
     result = {"summary":{"batch_files":len(batches),"unique_gbif_candidates":len(rows),
-                          "statuses":dict(counts)},
+                          "statuses":dict(counts),
+                          "existing_evidence_links":sum(len(r["existing_evidence_ids"]) for r in rows),
+                          "literature_lead_links":sum(len(r["evidence_lead_ids"]) for r in rows)},
               "warning":"Taxonomy is not feeding evidence. Full text, animal species and plant part must be verified before publication.",
               "batches":batches,"rows":rows}
     args.out.parent.mkdir(parents=True,exist_ok=True)
