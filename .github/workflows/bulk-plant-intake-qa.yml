@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'scripts/validate_bulk_plant_intake.py'
+      - 'scripts/import_gbif_global_taxa.py'
+      - 'scripts/test_import_gbif_global_taxa.py'
       - 'research/intake_batches/**'
       - '.github/workflows/bulk-plant-intake-qa.yml'
   workflow_dispatch:
@@ -18,7 +20,8 @@ jobs:
           python-version: '3.12'
       - name: Validate all research intake batches
         run: |
-          python -m py_compile scripts/validate_bulk_plant_intake.py
+          python -m py_compile scripts/validate_bulk_plant_intake.py scripts/import_gbif_global_taxa.py
+          python scripts/test_import_gbif_global_taxa.py
           python - <<'PY'
           import glob, subprocess, sys
           batches = sorted(glob.glob("research/intake_batches/*.json"))
