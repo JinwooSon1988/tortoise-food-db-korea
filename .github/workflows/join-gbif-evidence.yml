@@ -23,6 +23,10 @@ jobs:
           merge-multiple: false
           run-id: 38837601795
           github-token: ${{ github.token }}
+      - name: Verify at least one archived batch was downloaded
+        run: |
+          find research/generated/gbif_batches -name gbif_global_taxa_sample.json -print
+          test $(find research/generated/gbif_batches -name gbif_global_taxa_sample.json | wc -l) -ge 1
       - name: Link candidate taxa with existing evidence leads
         run: |
           python scripts/join_gbif_candidates_with_evidence.py \
