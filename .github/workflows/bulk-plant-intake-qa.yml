@@ -1,18 +1,5 @@
 name: Bulk plant intake contract QA
 on:
-  pull_request:
-    paths:
-      - 'scripts/validate_bulk_plant_intake.py'
-      - 'scripts/import_gbif_global_taxa.py'
-      - 'scripts/test_import_gbif_global_taxa.py'
-      - 'scripts/audit_publication_readiness.py'
-      - 'scripts/test_audit_publication_readiness.py'
-      - 'scripts/audit_evidence_linkage_provenance.py'
-      - 'scripts/build_ttt_independent_evidence_queue.py'
-      - 'scripts/link_global_literature_plant_leads.py'
-      - 'research/evidence_leads/**'
-      - 'research/intake_batches/**'
-      - '.github/workflows/bulk-plant-intake-qa.yml'
   workflow_dispatch:
 permissions:
   contents: read
