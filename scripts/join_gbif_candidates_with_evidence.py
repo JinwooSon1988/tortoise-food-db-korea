@@ -63,13 +63,20 @@ def main():
                               "existing_catalog_match" if existing else "taxonomy_only",
                      "feeding_verdict":None,
                      "site_publishable":False})
+    # GBIF acquisition deliberately excludes existing catalog taxa; report those separately.
+    existing_catalog_evidence = [{"plant_id":p["id"],"scientific":p.get("scientific"),
+        "evidence_ids":[e["id"] for e in by_plant_id.get(p["id"],[])],
+        "source_urls":[e.get("url") for e in by_plant_id.get(p["id"],[])]}
+        for p in plants]
     counts = Counter(r["status"] for r in rows)
     result = {"summary":{"batch_files":len(batches),"unique_gbif_candidates":len(rows),
                           "statuses":dict(counts),
+                          "existing_catalog_plants":len(existing_catalog_evidence),
+                          "existing_catalog_evidence_links":sum(len(r["evidence_ids"]) for r in existing_catalog_evidence),
                           "existing_evidence_links":sum(len(r["existing_evidence_ids"]) for r in rows),
                           "literature_lead_links":sum(len(r["evidence_lead_ids"]) for r in rows)},
               "warning":"Taxonomy is not feeding evidence. Full text, animal species and plant part must be verified before publication.",
-              "batches":batches,"rows":rows}
+              "batches":batches,"existing_catalog_evidence":existing_catalog_evidence,"rows":rows}
     args.out.parent.mkdir(parents=True,exist_ok=True)
     args.out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(result["summary"],ensure_ascii=False))
