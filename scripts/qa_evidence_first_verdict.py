@@ -22,9 +22,7 @@ without_nutrition = {p["id"] for p in plants} - verified
 assert without_nutrition, "Test fixture requires nutrition gaps"
 code = (ROOT / "scripts/generate_static_pages.py").read_text(encoding="utf-8")
 ast.parse(code)
-assert 'data-evidence-availability="true"' in code
-assert 'data-evidence-availability-en="true"' in code
-assert "if pid in nutrition_by_id" in code
-assert "verdict_source_html" in code
-assert "nutrition_status" in code
+assert "a=representative(rows); g=display(a)" in code, "Verdict must render independently of nutrition"
+assert "nutrition_by_id" in code, "Nutrition stays an independent data layer"
+assert "linked_evidence=" in code and "evidence_cards_html" in code, "Source-linked evidence detail must remain available"
 print(f"PASS: {len(plants)} pages, {len(assessments)} sourced assessments, {len(evidence)} evidence records; {len(without_nutrition)} pages without verified nutrition still eligible for feeding verdict")
