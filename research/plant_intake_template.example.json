@@ -1,0 +1,23 @@
+[
+  {
+    "id": "example_taxon_replace_before_use",
+    "ko": "조사 대상 식물명",
+    "en": "Research candidate plant",
+    "scientific": "Genus species",
+    "family": "Familyaceae",
+    "publication_status": "research_only",
+    "feeding_verdict": "unassessed",
+    "nutrition_status": "not_linked",
+    "sources": [
+      {
+        "title": "REPLACE WITH VERIFIED SOURCE TITLE",
+        "url": "https://example.org/replace-with-real-source",
+        "source_type": "academic_study",
+        "claim": "REPLACE WITH EXACT SOURCE-SUPPORTED CLAIM",
+        "plant_part": "not established",
+        "animal_taxon": "not established",
+        "limitations": "No tortoise feeding safety conclusion established"
+      }
+    ]
+  }
+]
