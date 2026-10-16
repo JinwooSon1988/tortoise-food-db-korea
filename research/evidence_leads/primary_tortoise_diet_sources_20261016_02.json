@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "source_scope": "verified source excerpts, not captive feeding approval",
+  "records": [
+    {
+      "source_id": "morocco_2006",
+      "animal_taxon": "Testudo graeca graeca",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "source_url": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "observed_plant_taxa": [
+        "Leontodon saxatilis",
+        "Malva parviflora",
+        "Astragalus cruciatus",
+        "Medicago hispida",
+        "Lotus arenarius",
+        "Scorpiurus sulcata"
+      ],
+      "method": "faecal analysis",
+      "notes": "Five leading taxa accounted for approximately 70% of identified dietary material; Scorpiurus also recorded",
+      "feeding_verdict": null
+    },
+    {
+      "source_id": "mojave_2015",
+      "animal_taxon": "Gopherus agassizii",
+      "doi": "10.1371/journal.pone.0116716",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+      "observed_plant_taxa": [
+        "Acmispon brachycarpus",
+        "Allium fimbriatum",
+        "Lupinus odoratus",
+        "Calycoseris parryi",
+        "Tropidocarpum gracile",
+        "Acmispon layneae",
+        "Stephanomeria parryi",
+        "Lomatium mohavense"
+      ],
+      "method": "direct field feeding observation",
+      "feeding_verdict": null
+    },
+    {
+      "source_id": "mojave_2023",
+      "animal_taxon": "Gopherus agassizii",
+      "doi": "10.3389/famrs.2023.1283255",
+      "source_url": "https://www.frontiersin.org/journals/amphibian-and-reptile-science/articles/10.3389/famrs.2023.1283255/full",
+      "observed_plant_taxa": [
+        "Acmispon brachycarpus",
+        "Prenanthella exigua"
+      ],
+      "method": "field observations including consumed plant parts",
+      "feeding_verdict": null
+    },
+    {
+      "source_id": "aldabra_1982",
+      "animal_taxon": "Aldabrachelys gigantea",
+      "doi": "10.1016/S0140-1963(18)31545-3",
+      "source_url": "https://doi.org/10.1016/S0140-1963(18)31545-3",
+      "observed_plant_taxa": [
+        "Sporobolus virginicus"
+      ],
+      "method": "feeding and digestion study",
+      "feeding_verdict": null
+    }
+  ]
+}
