@@ -11,7 +11,7 @@ def main():
     seen_names=set();seen_keys=set();total=0
     for entry in manifest["shards"]:
         name=entry["file"]
-        if not re.fullmatch(r"taxa-\\d{2}\\.json",name):raise ValueError("unsafe shard filename")
+        if not re.fullmatch(r"taxa-\d{2}\.json",name):raise ValueError("unsafe shard filename")
         raw=(BASE/name).read_bytes()
         digest=hashlib.sha256(raw).hexdigest()
         if digest!=entry["sha256"]:raise ValueError(f"hash mismatch: {name}")
@@ -21,7 +21,7 @@ def main():
         for r in records:
             scientific=r["scientific_name"];taxon=r["taxon_id"]
             if scientific.casefold() in seen_names or taxon in seen_keys:raise ValueError("duplicate taxon")
-            if not re.fullmatch(r"gbif:\\d+",taxon):raise ValueError("invalid GBIF id")
+            if not re.fullmatch(r"gbif:\d+",taxon):raise ValueError("invalid GBIF id")
             if r.get("safety_grade") not in (None,"") or r.get("feeding_safety_status") not in ("not_assessed",None):
                 raise ValueError("unreviewed candidate given feeding grade")
             if r.get("feeding_record_status") in ("record_under_review","verified") and not r.get("feeding_record_evidence"):
