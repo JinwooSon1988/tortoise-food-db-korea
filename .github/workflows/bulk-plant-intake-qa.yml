@@ -1,0 +1,28 @@
+name: Bulk plant intake contract QA
+on:
+  pull_request:
+    paths:
+      - 'scripts/validate_bulk_plant_intake.py'
+      - 'research/intake_batches/**'
+      - '.github/workflows/bulk-plant-intake-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate all research intake batches
+        run: |
+          python -m py_compile scripts/validate_bulk_plant_intake.py
+          python - <<'PY'
+          import glob, subprocess, sys
+          batches = sorted(glob.glob("research/intake_batches/*.json"))
+          for batch in batches:
+              subprocess.run([sys.executable, "scripts/validate_bulk_plant_intake.py", batch], check=True)
+          print(f"PASS: {len(batches)} research batches validated")
+          PY
