@@ -1,11 +1,7 @@
 name: Global taxonomy intake sample
 on:
-  pull_request:
-    paths:
-      - 'scripts/import_gbif_global_taxa.py'
-      - 'scripts/audit_publication_readiness.py'
-      - '.github/workflows/global-taxonomy-intake-sample.yml'
   workflow_dispatch:
+
 permissions:
   contents: read
 jobs:
