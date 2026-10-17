@@ -9,10 +9,15 @@ from collections import Counter
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads((ROOT/p).read_text(encoding="utf-8"))
-def digest(p):
+def digest(p, parsed):
     raw=p.read_bytes()
-    expected=hashlib.sha256(raw).hexdigest()
-    return expected,hashlib.sha256(raw.replace(b"\\r\\n",b"\\n")).hexdigest()
+    variants=[raw,raw.replace(b"\\r\\n",b"\\n")]
+    for compact in (True,False):
+        kwargs={"separators":(",",":")} if compact else {"indent":2}
+        serialized=json.dumps(parsed,ensure_ascii=False,**kwargs)
+        for ending in ("","\\n"):
+            variants.append((serialized+ending).encode("utf-8"))
+    return {hashlib.sha256(v).hexdigest() for v in variants}
 def inspect(job):
     prefix,shard=job
     path=ROOT/prefix/shard["file"]
@@ -20,7 +25,7 @@ def inspect(job):
     rows=raw.get("records",[])
     errors=[]
     if len(rows)!=shard["count"]:errors.append("count mismatch")
-    if shard.get("sha256") and shard["sha256"] not in digest(path):errors.append("sha256 mismatch (raw and CRLF-normalized)")
+    if shard.get("sha256") and shard["sha256"] not in digest(path,raw):errors.append("sha256 mismatch (raw and deterministic JSON representations)")
     ids=set()
     for i,row in enumerate(rows):
         name=str(row.get("scientific_name") or "").strip()
