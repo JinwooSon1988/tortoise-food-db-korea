@@ -22,11 +22,11 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--workers',type=int,default=8);p.add_argument('--limit',type=int,default=0);p.add_argument('--output',default='data/original-source-discovery');args=p.parse_args()
     if not 1<=args.workers<=20:p.error('workers must be 1..20')
     names=[]
-    idx=json.loads((ROOT/'data/taxonomy-shards/index.json').read_text())
+    idx=json.loads((ROOT/'data/taxonomy-shards/index.json').read_text(encoding='utf-8'))
     for shard in idx['shards']:
-        rows=json.loads((ROOT/'data/taxonomy-shards'/shard['file']).read_text()).get('records',[])
+        rows=json.loads((ROOT/'data/taxonomy-shards'/shard['file']).read_text(encoding='utf-8')).get('records',[])
         names.extend(r.get('scientific_name','').strip() for r in rows)
-    names.extend(r.get('scientific_name','').strip() for r in json.loads((ROOT/'data/diverse_taxonomy_candidates.json').read_text()).get('records',[]))
+    names.extend(r.get('scientific_name','').strip() for r in json.loads((ROOT/'data/diverse_taxonomy_candidates.json').read_text(encoding='utf-8')).get('records',[]))
     names=list(dict.fromkeys(n for n in names if len(n.split())>=2))
     if args.limit:names=names[:args.limit]
     out=ROOT/args.output;out.mkdir(parents=True,exist_ok=True)
@@ -35,12 +35,12 @@ def main():
         dest=out/(key+'.json')
         if dest.exists():
             try:
-                previous=json.loads(dest.read_text())
+                previous=json.loads(dest.read_text(encoding='utf-8'))
                 if previous.get('status')=='searched':return 'cached'
             except (ValueError,OSError):pass
         result=fetch(name)
         temp=out/(key+'.tmp')
-        temp.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+        temp.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         temp.replace(dest)
         return result['status']
     from collections import Counter
