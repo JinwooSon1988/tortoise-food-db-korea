@@ -1,0 +1,27 @@
+name: Feeding record verification QA
+on:
+  pull_request:
+    paths:
+      - 'data/feeding_record_verification_v1.json'
+      - 'data/plant_feeding_evidence_links.json'
+      - 'data/wild_feeding_evidence.json'
+      - 'data/species_evidence_primary_source_audit_v56.json'
+      - 'data/evidence-first-queue/**'
+      - 'data/public_assessments.json'
+      - 'data/plants.json'
+      - 'all-plants/index.html'
+      - 'scripts/build_feeding_record_verification.py'
+      - 'scripts/qa_feeding_record_verification.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ledger reproducible, pending rule, grades unchanged, catalog wiring
+        run: python scripts/qa_feeding_record_verification.py

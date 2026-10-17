@@ -111,10 +111,10 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  rows=[...uniquePlants.values()];
  // Existing assessed plants keep their A–D grade. Wild observations are evidence,
  // not a substitute for a feeding verdict.
- const links=await j('../data/plant_feeding_evidence_links.json');
- // Evidence types are not interchangeable: nutrition/toxicity records cannot
- // trigger the feeding-observation filter.
- const feedingIds=new Set((links?.records||[]).filter(item=>(item.evidence||[]).some(e=>e.type==='wild_feeding'&&e.source_id&&e.tortoise_taxon)).map(item=>item.plant_id));
+ // feeding_pending comes only from the original-source ledger: a verified observed feeding of the exact
+ // species on a plant without an A–D grade. Leads, recommendations and nutrition/toxicity records never count.
+ const ledger=await j('../data/feeding_record_verification_v1.json');
+ const feedingIds=new Set(ledger?.site_feeding_pending||[]);
  rows.forEach(r=>{r.feedingRecordPending=r.verdict==='보류'&&feedingIds.has(r.id)});
  const manifest=await j('../data/taxonomy-shards/index.json');
  if(manifest?.count===9995&&Array.isArray(manifest.shards)&&manifest.shards.length===20){
