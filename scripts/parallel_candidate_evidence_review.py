@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def load(p):return json.loads(p.read_text(encoding="utf-8"))
 def norm(s):
-    m=re.match(r"^([A-Z][a-z-]+)\\s+([a-z][a-z-]+)(?=\\s|$)",str(s or "").strip())
+    m=re.match(r"^([A-Z][a-z-]+)\s+([a-z][a-z-]+)(?=\s|$)",str(s or "").strip())
     return " ".join(m.groups()).casefold() if m else None
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--workers",type=int,default=12)
