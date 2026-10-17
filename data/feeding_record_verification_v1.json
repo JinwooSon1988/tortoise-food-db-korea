@@ -1,0 +1,3457 @@
+{
+ "schema_version": "1.0",
+ "scope": "Original-source check of tortoise feeding records. Not a safety verdict; A-D grades are unchanged.",
+ "rules": [
+  "A candidate is a lead, not a feeding record.",
+  "Only originals actually opened, or the existing verified_primary audit, count as verified.",
+  "Recommendations in care sheets are not feeding records.",
+  "Genus-level or group mentions never become species records.",
+  "feeding_pending = verified observed feeding of the exact species (or accepted synonym) on a plant with no A-D grade.",
+  "Feeding details are filled only when the original states them; otherwise null (not reported)."
+ ],
+ "checked_at": "2026-10-17",
+ "counts": {
+  "candidates": 90,
+  "originals_opened_in_this_ledger": 14,
+  "original_confirmed_in_this_ledger": 2,
+  "prior_primary_audit_verified": 2,
+  "original_inaccessible_or_not_naming_taxon": 7,
+  "recommendation_not_feeding_record": 5,
+  "not_verified": 74,
+  "direct_feeding_verified_exact_species": 2,
+  "site_feeding_pending_plants": 0
+ },
+ "site_feeding_pending": [],
+ "records": [
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "10.7717/peerj.8076",
+   "source_type": "peer_reviewed_context",
+   "evidence_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "astragalus_cruciatus",
+   "plant_scientific_name": "Astragalus crenatus Schult.",
+   "plant_taxon_reported": "Astragalus cruciatus",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_astragalus_cruciatus"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "original_inaccessible",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": null,
+   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "barleygrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hordeum vulgare",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "bermudagrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cynodon dactylon",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "doi:10.1080/21564574.2008.9635573",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "rouag2008_cynodon_dactylon",
+    "testudo_graeca_cynodon_field_diet_2008"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue",
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "original_does_not_name_taxon",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "publisher abstract (NISC); full text not accessible",
+   "citation": "Rouag, R. et al. (2008) Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca. African Journal of Herpetology 57(2):103-113",
+   "original_locator": "Abstract",
+   "original_summary": "The abstract names plant families only (Fabaceae, Asteraceae, Primulaceae, Caryophyllaceae); Cynodon is not named. The species-level claim needs the full text.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "bermudagrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cynodon dactylon",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "tortoise_taxon": "Chersina angulata",
+   "source": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "source_type": "academic_thesis",
+   "evidence_ids": [
+    "chersina_cynodon_field_diet"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "original_confirmed",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "institutional repository record with author abstract",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "original_locator": "Abstract",
+   "original_summary": "Wild Chersina angulata: Cynodon dactylon was a principal food item in three of four seasons in West Coast National Park.",
+   "observation_type": "wild_diet_study",
+   "direct_observation": true,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": "principal food in 3 of 4 seasons (West Coast National Park)"
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "verified_feeding_record"
+  },
+  {
+   "plant_id": "broadleafplantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago major",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "chickweed",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Stellaria media",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "chickweed",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Stellaria media",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": "FEEDING, Captive",
+   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
+   "observation_type": "husbandry_recommendation",
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "chicory",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium intybus",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "chicory",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium intybus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": "FEEDING, Captive",
+   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
+   "observation_type": "husbandry_recommendation",
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "commonmallow",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Malva sylvestris",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "prior_primary_audit_verified",
+   "verified_by": "species_evidence_primary_source_audit_v56 (not reopened)",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": "Acta Herpetologica 7(1):105-110 reports >500 wild T. graeca observed in Dobrogea over 2000-2010 and explicitly states a predilection for young leaves including Taraxacum.",
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": true,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "prior_primary_audit_verified",
+   "verified_by": "species_evidence_primary_source_audit_v56 (not reopened)",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": "ZooNotes 228 explicitly lists Taraxacum sp. among plants observed being consumed by Testudo graeca ibera in south-western Bulgaria.",
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": true,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": "FEEDING, Captive",
+   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
+   "observation_type": "husbandry_recommendation",
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "dolnamul",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sedum sarmentosum",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "endive",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium endivia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "endive",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium endivia",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "endive",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium endivia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "hedgemustard",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sisymbrium officinale (L.) Scop.",
+   "plant_taxon_reported": "Sisymbrium officinale",
+   "tortoise_taxon": "Tortoise general / Testudo context",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "ttrust_sisymbrium_officinale"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "hibiscusflower",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hibiscus syriacus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "hibiscusleaf",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hibiscus syriacus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "hibiscusrosa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hibiscus rosa-sinensis",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "kale",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Brassica oleracea var. sabellica",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "kale",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Brassica oleracea var. sabellica",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "lamium_album",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lamium album L.",
+   "plant_taxon_reported": "Lamium album",
+   "tortoise_taxon": "Tortoise general / Testudo context",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "ttrust_lamium_album"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "leontodon_saxatilis",
+   "plant_scientific_name": "Leontodon saxatilis Lam.",
+   "plant_taxon_reported": "Leontodon saxatilis",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_leontodon_saxatilis"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "original_inaccessible",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": null,
+   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "lettuce",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "lettuce",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "lotus_arenarius",
+   "plant_scientific_name": "Lotus arenarius Brot.",
+   "plant_taxon_reported": "Lotus arenarius",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_lotus_arenarius"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "original_inaccessible",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": null,
+   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "mallow",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Malva spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "malva_parviflora",
+   "plant_scientific_name": "Malva parviflora L.",
+   "plant_taxon_reported": "Malva parviflora",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_malva_parviflora"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "original_inaccessible",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": null,
+   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago hispida",
+   "plant_taxon_reported": "Medicago hispida",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "wild_medicago_polymorpha_tgg_morocco"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "original_inaccessible",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": null,
+   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago taxa",
+   "plant_taxon_reported": "Medicago taxa",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "medicago_hispida",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago polymorpha L.",
+   "plant_taxon_reported": "Medicago polymorpha",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "10.1016/j.jaridenv.2005.06.010",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "wild_medicago_polymorpha_tgg_morocco",
+    "elmouden2006_medicago_hispida"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue",
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "exact_species",
+   "verification_status": "original_inaccessible",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": null,
+   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "mulberry",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Morus spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Multiple identified",
+   "plant_taxon_reported": "Multiple identified",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "oatgrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Avena sativa",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "oatleaf",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Avena sativa",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "orchard",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Dactylis glomerata",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": "FEEDING, Captive",
+   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
+   "observation_type": "husbandry_recommendation",
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Potentilla and",
+   "plant_taxon_reported": "Potentilla and",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "https://doi.org/10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "radicchio",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium intybus var. foliosum",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "raspberryleaf",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Rubus idaeus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "redclover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium pratense",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "ribwortplantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago lanceolata",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "romaine",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa var. longifolia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "romaine",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa var. longifolia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "romaine",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa var. longifolia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "rose",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Rosa spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "C",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "ruscus_aculeatus",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Ruscus aculeatus L.",
+   "plant_taxon_reported": "Ruscus aculeatus L.",
+   "tortoise_taxon": "Testudo hermanni hermanni",
+   "source": "10.1655/HERPETOLOGICA-D-10-00064.1",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_ids": [
+    "wild_ruscus_aculeatus_thh_italy_2011"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "original_confirmed",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "publisher page (BioOne), abstract only; full text is subscriber-only",
+   "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
+   "original_locator": "Abstract",
+   "original_summary": "Wild Testudo hermanni hermanni switched to flowers and unripe fruit of Ruscus aculeatus in autumn as these became available.",
+   "observation_type": "wild_diet_study",
+   "direct_observation": true,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": "flowers and unripe fruit",
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": "autumn"
+   },
+   "review_note": "The abstract does not mention leaves; the stored link lists leaves too. Leaves stay unconfirmed here.",
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "verified_feeding_record"
+  },
+  {
+   "plant_id": "ryegrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lolium spp.",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sedum taxa",
+   "plant_taxon_reported": "Sedum taxa",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "https://doi.org/10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "https://doi.org/10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "10.7717/peerj.8076",
+   "source_type": "peer_reviewed_context",
+   "evidence_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6894431/",
+   "source_type": "public_evidence",
+   "evidence_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": null,
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "A",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "timothy",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Phleum pratense",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "watercress",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Nasturtium officinale",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "this ledger (original opened 2026-10-17)",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": "FEEDING, Captive",
+   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
+   "observation_type": "husbandry_recommendation",
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "보류",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "wheatgrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Triticum aestivum",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "whiteclover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium repens",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  },
+  {
+   "plant_id": "whiteclover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium repens",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "observation_type": null,
+   "direct_observation": false,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "plant_part": null,
+    "fresh_or_dried": null,
+    "cutting_method": null,
+    "season": null
+   },
+   "review_note": null,
+   "existing_grade": "B",
+   "grade_changed": false,
+   "feeding_record_status": "assessment_hold"
+  }
+ ]
+}
