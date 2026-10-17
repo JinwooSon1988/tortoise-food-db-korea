@@ -1,0 +1,318 @@
+{
+ "schema_version": "1.0",
+ "scope": "Feeding records read from the full text of the original (not the title or abstract). Hand-extracted; every value carries a page or table locator. Fields the original does not state are null (not reported). Not a safety verdict.",
+ "extracted_at": "2026-10-17",
+ "identity_rule": "A reported plant name is linked only through an unambiguous GBIF exact match (single usage, no homonym) or a GBIF synonym whose author is stated in the original. Genus-level names (sp., spp.) are never linked to a species.",
+ "sources": [
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise_ko": "앵귤레이트육지거북 (Chersina angulata)",
+   "tortoise_en": "Angulate tortoise (Chersina angulata)",
+   "method": "faecal_histology",
+   "method_ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+   "method_en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)",
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "method_locator": "Chapter 5, section 5.3.1, p. 84",
+   "sites": {
+    "WCNP": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)",
+     "locator": "Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring)"
+    },
+    "DI": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)",
+     "locator": "Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+    }
+   }
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise_ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+   "tortoise_en": "Ibera Greek tortoise (Testudo graeca ibera)",
+   "method": "direct_observation",
+   "method_ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+   "method_en": "Wild tortoises watched and photographed while feeding",
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "method_locator": "p. 106, methods paragraph",
+   "sites": {
+    "DOBROGEA": {
+     "ko": "루마니아 도브루자 (야생)",
+     "en": "Dobrogea, Romania (wild)",
+     "locator": "Table 1, p. 106 (species, consumed part, frequency of consumption)"
+    }
+   }
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "url": "https://doi.org/10.5281/zenodo.12807900",
+   "full_text": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "source_type": "academic_study",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise_ko": "이베라 그리스육지거북 (Testudo graeca ibera; 본문 표기 T. graeca)",
+   "tortoise_en": "Ibera Greek tortoise (Testudo graeca ibera; the results say T. graeca)",
+   "method": "direct_observation",
+   "method_ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+   "method_en": "Wild tortoises watched and photographed while feeding",
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2020-2023년 활동기, T. graeca 309마리·T. hermanni 1034마리 관찰",
+    "en": "active seasons 2020-2023; 309 T. graeca and 1034 T. hermanni seen"
+   },
+   "method_locator": "p. 1, Materials and Methods",
+   "sites": {
+    "KRESNA": {
+     "ko": "불가리아 크레스나 협곡 (야생)",
+     "en": "Kresna Gorge, Bulgaria (wild)",
+     "locator": "p. 2, Results"
+    }
+   }
+  }
+ ],
+ "records": [
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "WCNP",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "gbif_key": 6109637,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": {
+    "ko": "주로 꽃차례 포엽 (분변 표피 조각 기준)",
+    "en": "Mainly inflorescence bracts (from epidermal fragments in scats)",
+    "locator": "Discussion, p. 120"
+   },
+   "observed": {
+    "ko": "가을 54.8%, 연간 24.0% (분변 조각 비율)",
+    "en": "54.8% in autumn, 24.0% over the year (share of scat fragments)",
+    "locator": "Table 5.1 p. 91; Table 6.1 p. 137"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "WCNP",
+   "plant_taxon_reported": "Avena fatua",
+   "gbif_key": 2705297,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "여름 1.8%, 연간 0.5% (분변 조각 비율)",
+    "en": "1.8% in summer, 0.5% over the year (share of scat fragments)",
+    "locator": "Table 5.1, p. 91"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "WCNP",
+   "plant_taxon_reported": "Lolium perenne",
+   "gbif_key": 2706241,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "가을 8.1%, 연간 2.7% (분변 조각 비율)",
+    "en": "8.1% in autumn, 2.7% over the year (share of scat fragments)",
+    "locator": "Table 5.1, p. 92"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "WCNP",
+   "plant_taxon_reported": "Ficinia nigrescens",
+   "gbif_key": 2711375,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "봄 0.5%, 연간 0.1% (분변 조각 비율)",
+    "en": "0.5% in spring, 0.1% over the year (share of scat fragments)",
+    "locator": "Table 5.1, p. 91"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "WCNP",
+   "plant_taxon_reported": "Thamnochortus spicigerus",
+   "gbif_key": 2707769,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "분변 시료 1개에서만 검출 (겨울)",
+    "en": "Found in one scat only (winter)",
+    "locator": "Table 5.1 p. 92; section 5.4.1.1 p. 88"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "DI",
+   "plant_taxon_reported": "Avena byzantina",
+   "gbif_key": 2705292,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "봄 11.5%, 연간 6.7% (분변 조각 비율)",
+    "en": "11.5% in spring, 6.7% over the year (share of scat fragments)",
+    "locator": "Table 5.3, p. 99"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "DI",
+   "plant_taxon_reported": "Ficinia nigrescens",
+   "gbif_key": 2711375,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "봄 48.8%, 연간 12.2% (분변 조각 비율)",
+    "en": "48.8% in spring, 12.2% over the year (share of scat fragments)",
+    "locator": "Table 5.3, p. 99"
+   }
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "site": "DI",
+   "plant_taxon_reported": "Isolepis antarctica",
+   "gbif_key": 2713229,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": {
+    "ko": "봄 1.3%, 연간 0.3% (분변 조각 비율)",
+    "en": "1.3% in spring, 0.3% over the year (share of scat fragments)",
+    "locator": "Table 5.3, p. 99"
+   }
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "site": "DOBROGEA",
+   "plant_taxon_reported": "Taraxacum officinale",
+   "gbif_key": 5394163,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": {
+    "ko": "잎, 꽃",
+    "en": "Leaves, flowers",
+    "locator": "Table 1, p. 106"
+   },
+   "observed": {
+    "ko": "관찰된 섭식의 5-10% (보통)",
+    "en": "5-10% of observed feeding (moderate)",
+    "locator": "Table 1, p. 106"
+   }
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "site": "DOBROGEA",
+   "plant_taxon_reported": "Vitis vinifera",
+   "gbif_key": 5372392,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves",
+    "locator": "Table 1, p. 106"
+   },
+   "observed": {
+    "ko": "관찰된 섭식의 1-5% (낮음)",
+    "en": "1-5% of observed feeding (low)",
+    "locator": "Table 1, p. 106"
+   }
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "site": "DOBROGEA",
+   "plant_taxon_reported": "Dactylis glomerata",
+   "gbif_key": 2705308,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves",
+    "locator": "Table 1, p. 106"
+   },
+   "observed": {
+    "ko": "관찰된 섭식의 1-5% (낮음)",
+    "en": "1-5% of observed feeding (low)",
+    "locator": "Table 1, p. 106"
+   }
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "site": "DOBROGEA",
+   "plant_taxon_reported": "Festuca arundinacea",
+   "gbif_key": null,
+   "gbif_match": "HIGHERRANK: three homonyms (Schreb., Lilj., Vill.) with different accepted species; the original gives no author",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves",
+    "locator": "Table 1, p. 106"
+   },
+   "observed": {
+    "ko": "다른 Festuca sp.와 합산 1-5%",
+    "en": "1-5%, pooled with other Festuca sp.",
+    "locator": "Table 1, p. 106"
+   }
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "site": "KRESNA",
+   "plant_taxon_reported": "Cichorium intybus",
+   "gbif_key": 5392252,
+   "gbif_match": "EXACT, accepted, single usage",
+   "plant_part": null,
+   "observed": null
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "site": "KRESNA",
+   "plant_taxon_reported": "Plantago lanceolata",
+   "gbif_key": 8208358,
+   "gbif_match": "EXACT, accepted, single usage",
+   "tortoise": {
+    "taxon": "Testudo hermanni boettgeri",
+    "ko": "동부 헤르만육지거북 (Testudo hermanni boettgeri; 본문 표기 T. hermanni)",
+    "en": "Eastern Hermann's tortoise (Testudo hermanni boettgeri; the results say T. hermanni)"
+   },
+   "plant_part": null,
+   "observed": null
+  }
+ ],
+ "species_in_full_text_not_in_catalog": {
+  "note": "Species-level food plants named in the same full texts that match neither a reviewed plant nor a displayed taxonomy candidate. Counted, not linked.",
+  "10.13128/acta_herpetol-9800": [
+   "Ranunculus ficaria",
+   "Lotus corniculatus",
+   "Teucrium polium",
+   "Cornus mas"
+  ],
+  "10.5281/zenodo.12807900": [
+   "Arum maculatum",
+   "Trifolium campestre",
+   "Crepis sancta",
+   "Rumex acetosella",
+   "Paliurus spina-christi",
+   "Sedum rubens",
+   "Sedum album"
+  ],
+  "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5": "the remaining species-level diet items of Tables 5.1 and 5.3",
+  "tortoise_note": "ZooNotes: Arum maculatum, Trifolium campestre, Crepis sancta, Rumex acetosella, Paliurus spina-christi were eaten by T. hermanni; Sedum rubens and S. album by T. graeca."
+ }
+}
