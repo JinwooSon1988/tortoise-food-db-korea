@@ -15,7 +15,7 @@ STOP={"Tortoise","Testudo","Geochelone","Centrochelys","Stigmochelys","Chelonoid
 def load(path):return json.loads((ROOT/path).read_text(encoding="utf-8"))
 def canonical(s):
     m=PAT.search(str(s or ""))
-    if not m or m.group(1) in STOP:return None
+    if not m or m.group(1) in STOP or m.group(2) in ("spp","sp","subsp","var","cf","aff"):return None
     return " ".join(m.groups())
 def main():
     ap=argparse.ArgumentParser()
@@ -48,7 +48,7 @@ def main():
             if not isinstance(raw,str):continue
             for match in PAT.finditer(raw):
                 name=" ".join(match.groups())
-                if match.group(1) not in STOP:
+                if match.group(1) not in STOP and match.group(2) not in ("spp","sp","subsp","var","cf","aff"):
                     out.append({"name":name,"field":field})
         return out
     def source_job(job):
@@ -89,6 +89,7 @@ def main():
             "review_fields":["tortoise_species","plant_part","mixed_with","feeding_frequency","feeding_amount","presentation","cutting_method","source_quote_or_locator"]})
     folder=ROOT/"data/evidence-first-queue";folder.mkdir(exist_ok=True)
     manifest_out=[];counts=Counter()
+    for stale in folder.glob("queue-*.json"):stale.unlink()
     for i in range(0,len(out),100):
         batch=out[i:i+100];fname="queue-"+str(i//100+1).zfill(3)+".json"
         raw=json.dumps({"schema_version":"1.0","count":len(batch),"records":batch},ensure_ascii=False,indent=2)+"\n"
