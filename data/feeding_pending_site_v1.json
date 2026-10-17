@@ -1,0 +1,272 @@
+{
+ "schema_version": "1.0",
+ "source": "data/feeding_record_verification_v1.json",
+ "scope": "Original-source check of tortoise feeding records. Not a safety verdict; A-D grades are unchanged.",
+ "site_feeding_pending": [
+  "gbif:2705292",
+  "gbif:2705297",
+  "gbif:2706241",
+  "gbif:2707769",
+  "gbif:2711375",
+  "gbif:2713229"
+ ],
+ "records": {
+  "gbif:2705292": [
+   {
+    "plant_taxon_reported": "Avena byzantina",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 11.5%, 연간 6.7% (분변 조각 비율)",
+     "en": "11.5% in spring, 6.7% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ],
+  "gbif:2705297": [
+   {
+    "plant_taxon_reported": "Avena fatua",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "여름 1.8%, 연간 0.5% (분변 조각 비율)",
+     "en": "1.8% in summer, 0.5% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91"
+   }
+  ],
+  "gbif:2706241": [
+   {
+    "plant_taxon_reported": "Lolium perenne",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "가을 8.1%, 연간 2.7% (분변 조각 비율)",
+     "en": "8.1% in autumn, 2.7% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 92"
+   }
+  ],
+  "gbif:2707769": [
+   {
+    "plant_taxon_reported": "Thamnochortus spicigerus",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "분변 시료 1개에서만 검출 (겨울)",
+     "en": "Found in one scat only (winter)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 92; section 5.4.1.1 p. 88"
+   }
+  ],
+  "gbif:2711375": [
+   {
+    "plant_taxon_reported": "Ficinia nigrescens",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 0.5%, 연간 0.1% (분변 조각 비율)",
+     "en": "0.5% in spring, 0.1% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91"
+   },
+   {
+    "plant_taxon_reported": "Ficinia nigrescens",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 48.8%, 연간 12.2% (분변 조각 비율)",
+     "en": "48.8% in spring, 12.2% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ],
+  "gbif:2713229": [
+   {
+    "plant_taxon_reported": "Isolepis antarctica",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 1.3%, 연간 0.3% (분변 조각 비율)",
+     "en": "1.3% in spring, 0.3% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ]
+ }
+}

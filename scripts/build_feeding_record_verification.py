@@ -3,17 +3,19 @@
 
 Run: python scripts/build_feeding_record_verification.py   (writes data/feeding_record_verification_v1.json)
 
-Candidates are evidence rows from the reviewed-plant links (182 plants), the evidence-first queue (130 taxa) and
-the wild feeding records that name a specific tortoise taxon. A candidate is a lead, not a feeding record.
+Inputs
+- Candidates: evidence rows naming a specific tortoise taxon in the reviewed-plant links (182 plants), the
+  evidence-first queue (130 taxa) and the wild feeding records. A candidate is a lead, not a feeding record.
+- data/feeding_record_fulltext_extracts_v1.json: records read from the FULL TEXT of an original, with locators.
+- CHECKS below: originals opened that do not give a full-text feeding record (abstract only, inaccessible,
+  recommendation, secondary citation).
 
-Verification statuses are taken only from CHECKS (originals opened for this ledger) or from the existing
-primary-source audit (data/species_evidence_primary_source_audit_v56.json, status verified_primary; not reopened
-here). Everything else stays not_verified. Feeding details (mixture, frequency, amount, plant part, fresh/dried,
-cutting) are filled only from CHECKS when the original states them; otherwise they are null.
+A feeding record counts as verified only when it is in the full-text extracts. A title or abstract never
+confirms one. Feeding details (part, mixture, frequency, amount, fresh/dried, preparation) come only from the
+extracts; anything the original does not state is null.
 
-feeding_pending is assigned only when all hold:
-  verified original, an observed feeding fact (not a recommendation), the exact plant species or an accepted
-  synonym, and no existing A-D grade (the plant is on hold). A-D grades are never read for change, only for this test.
+feeding_pending (shown inside the catalog's existing grade filter) = a verified full-text feeding record whose
+plant name resolves unambiguously to a catalog entry that has no A-D grade. A-D grades are only read.
 """
 import json, re, sys
 from pathlib import Path
@@ -23,6 +25,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import public_verdict as pv  # noqa: E402
 
 OUT = ROOT / "data/feeding_record_verification_v1.json"
+SITE = ROOT / "data/feeding_pending_site_v1.json"
 CHECKED_AT = "2026-10-17"
 TORTOISE = re.compile(r"\b(Testudo|Chersina|Centrochelys|Geochelone|Stigmochelys|Chelonoidis|Kinixys|Agrionemys|"
                       r"Astrochelys|Indotestudo|Gopherus|Homopus|Psammobates)\b|Mediterranean (tortoises|Testudo)|"
@@ -32,46 +35,52 @@ TORTOISE = re.compile(r"\b(Testudo|Chersina|Centrochelys|Geochelone|Stigmochelys
 FEEDING_TYPES = {"wild_feeding", "academic_study", "peer_reviewed_article", "academic_thesis", "peer_reviewed_field_study",
                  "conference_proceedings", "peer_reviewed_context", "specialist_group_species_account", "expert_husbandry",
                  "specialist_husbandry", "specialist_husbandry_guide", "specialist_veterinary_review", "public_evidence"}
+GRADED = ("A", "B", "C", "D")
 
-# Originals opened for this ledger. key: (normalised source, plant binomial or "*" for every plant of that source).
-# summary is a paraphrase of what the original says; no quotation beyond a few words.
+# Originals opened that do not yield a full-text feeding record. key: (normalised source, plant binomial or "*").
 CHECKS = {
-    ("uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5", "cynodon dactylon"): {
-        "status": "original_confirmed", "opened": "institutional repository record with author abstract",
-        "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the "
-                    "South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
-        "locator": "Abstract", "observation": "wild_diet_study", "direct_observation": True,
-        "summary": "Wild Chersina angulata: Cynodon dactylon was a principal food item in three of four seasons in West "
-                   "Coast National Park.",
-        "details": {"season": "principal food in 3 of 4 seasons (West Coast National Park)"}},
-    ("10.1655/herpetologica-d-10-00064.1", "ruscus aculeatus"): {
-        "status": "original_confirmed", "opened": "publisher page (BioOne), abstract only; full text is subscriber-only",
+    ("10.1655/herpetologica-d-10-00064.1", "*"): {
+        "status": "abstract_only_not_confirmed",
+        "opened": "BioOne abstract; full text subscriber-only; no open copy (Unpaywall: not OA; IRIS record 403)",
         "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the "
                     "diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
-        "locator": "Abstract", "observation": "wild_diet_study", "direct_observation": True,
-        "summary": "Wild Testudo hermanni hermanni switched to flowers and unripe fruit of Ruscus aculeatus in autumn as "
-                   "these became available.",
-        "details": {"plant_part": "flowers and unripe fruit", "season": "autumn"},
-        "note": "The abstract does not mention leaves; the stored link lists leaves too. Leaves stay unconfirmed here."},
-    ("10.1080/21564574.2008.9635573", "cynodon dactylon"): {
-        "status": "original_does_not_name_taxon", "opened": "publisher abstract (NISC); full text not accessible",
+        "summary": "The abstract says wild T. h. hermanni switched to Ruscus aculeatus flowers and unripe fruit in autumn. "
+                   "An abstract does not confirm a feeding record here; the full text is needed (see QA-FR-002)."},
+    ("10.1080/21564574.2008.9635573", "*"): {
+        "status": "original_does_not_name_taxon",
+        "opened": "publisher abstract (NISC); full text not accessible",
         "citation": "Rouag, R. et al. (2008) Food choice of an Algerian population of the spur-thighed tortoise, Testudo "
                     "graeca. African Journal of Herpetology 57(2):103-113",
-        "locator": "Abstract", "observation": None, "direct_observation": False,
-        "summary": "The abstract names plant families only (Fabaceae, Asteraceae, Primulaceae, Caryophyllaceae); "
-                   "Cynodon is not named. The species-level claim needs the full text."},
+        "summary": "The abstract names plant families only; no species. The species claims need the full text."},
     ("10.1016/j.jaridenv.2005.06.010", "*"): {
-        "status": "original_inaccessible", "opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+        "status": "original_inaccessible",
+        "opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
         "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo "
                     "graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
-        "locator": None, "observation": None, "direct_observation": False,
-        "summary": "Original not opened. The plant list could not be checked; records stay quarantined."},
+        "summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001)."},
+    ("iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_sisvet_2015.pdf", "*"): {
+        "status": "original_inaccessible", "opened": "the PDF URL returns a bot-check page; not bypassed",
+        "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)", "summary": "Original not read."},
     ("archive.britishcheloniagroup.org.uk/caresheets/sulcata", "*"): {
         "status": "recommendation_not_feeding_record", "opened": "British Chelonia Group care sheet, FEEDING > Captive",
         "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
-        "locator": "FEEDING, Captive", "observation": "husbandry_recommendation", "direct_observation": False,
-        "summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, "
-                   "watercress, wild mallow, chickweed). This is advice, not a record of feeding."},
+        "summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding."},
+    ("archive.britishcheloniagroup.org.uk/caresheets/caremed", "*"): {
+        "status": "husbandry_guidance_not_feeding_record", "opened": "British Chelonia Group Mediterranean care sheet",
+        "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+        "summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record."},
+    ("tortoisetrust.org/articles/plantfoods.html", "*"): {
+        "status": "recommendation_not_feeding_record", "opened": "Tortoise Trust article",
+        "citation": "Tortoise Trust. Plant foods article",
+        "summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations."},
+    ("10.7717/peerj.8076", "*"): {
+        "status": "secondary_citation_not_feeding_record", "opened": "PMC full text (PMC6894431)",
+        "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
+        "summary": "Parasite-network study; plants are named only when citing earlier diet studies."},
+    ("pmc.ncbi.nlm.nih.gov/articles/pmc6894431", "*"): {
+        "status": "secondary_citation_not_feeding_record", "opened": "PMC full text",
+        "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
+        "summary": "Parasite-network study; plants are named only when citing earlier diet studies."},
 }
 
 
@@ -86,7 +95,7 @@ def binomial(s):
 
 def norm_source(s):
     s = str(s or "").strip().lower()
-    s = re.sub(r"^(https?://)?(dx\.)?(doi\.org/)?", "", s)
+    s = re.sub(r"^(https?://)?(www\.)?(dx\.)?(doi\.org/)?", "", s)
     s = re.sub(r"^doi:", "", s)
     return s.rstrip("/")
 
@@ -101,14 +110,78 @@ def plant_match(reported, target):
     return "exact_species" if b == target else "other_name"
 
 
+def catalog_targets(plants, grade):
+    """Every catalog entry a full-text record could be linked to: reviewed plants and displayed taxonomy candidates."""
+    by_binomial, by_genus = {}, {}
+    for p in plants:
+        sci = str(p.get("scientific") or "")
+        if p.get("identity_status") == "candidate_name" or p["id"] not in grade:
+            continue
+        if re.search(r"\bspp?\.", sci):
+            by_genus.setdefault(sci.split(" ")[0].casefold(), []).append(p["id"])
+        elif binomial(sci):
+            by_binomial.setdefault(binomial(sci), []).append(p["id"])
+    manifest = load("data/taxonomy-shards/index.json")
+    candidates = {}
+    for s in manifest["shards"]:
+        for r in load("data/taxonomy-shards/" + s["file"])["records"]:
+            candidates[r["taxon_id"]] = r["scientific_name"]
+    return by_binomial, by_genus, candidates
+
+
+def fulltext_records(extracts, plants, grade):
+    by_binomial, by_genus, candidates = catalog_targets(plants, grade)
+    known_plant_bins = set(by_binomial)
+    sources = {s["source_key"]: s for s in extracts["sources"]}
+    out = []
+    for r in extracts["records"]:
+        s = sources[r["source_key"]]
+        b = binomial(r["plant_taxon_reported"])
+        links = []
+        if r["gbif_key"] is not None:
+            for pid in by_binomial.get(b, []):
+                links.append({"id": pid, "kind": "reviewed_plant", "match": "exact_species", "grade": grade[pid]})
+            for pid in by_genus.get(b.split(" ")[0], []):
+                links.append({"id": pid, "kind": "reviewed_plant", "match": "species_within_genus_level_plant", "grade": grade[pid]})
+            tid = "gbif:%d" % r["gbif_key"]
+            if tid in candidates and b not in known_plant_bins:
+                links.append({"id": tid, "kind": "taxonomy_candidate", "match": "gbif_exact_accepted", "grade": None})
+        tort = r.get("tortoise") or {"taxon": s["tortoise_taxon"], "ko": s["tortoise_ko"], "en": s["tortoise_en"]}
+        site = s["sites"][r["site"]]
+        out.append({
+            "source_key": r["source_key"], "citation": s["citation"], "url": s["url"], "full_text": s["full_text"],
+            "source_type": s["source_type"], "verification_status": "full_text_confirmed",
+            "plant_taxon_reported": r["plant_taxon_reported"], "gbif_key": r["gbif_key"], "gbif_match": r["gbif_match"],
+            "identity_resolved": r["gbif_key"] is not None,
+            "tortoise_taxon": tort["taxon"], "tortoise": {"ko": tort["ko"], "en": tort["en"]},
+            "method": s["method"], "method_text": {"ko": s["method_ko"], "en": s["method_en"]},
+            "direct_observation": s["direct_observation"], "feeding_fact_confirmed": s["feeding_fact_confirmed"],
+            "context": s["context"], "period": s["period"],
+            "location": {"ko": site["ko"], "en": site["en"]},
+            # Method, table and per-value locators; a value locator already contained in the table locator is dropped.
+            "locator": "; ".join(dict.fromkeys([s["method_locator"], site["locator"]] + [
+                x for x in ((r.get("observed") or {}).get("locator"), (r.get("plant_part") or {}).get("locator"))
+                if x and x not in site["locator"]])),
+            "plant_part": None if r["plant_part"] is None else {"ko": r["plant_part"]["ko"], "en": r["plant_part"]["en"]},
+            "observed_share": None if r["observed"] is None else {"ko": r["observed"]["ko"], "en": r["observed"]["en"]},
+            # Wild diet studies report what was eaten, not how keepers feed; these stay null unless stated.
+            "feeding_details": {"mixed_with": None, "feeding_frequency": None, "feeding_amount": None,
+                                "fresh_or_dried": None, "preparation": None},
+            "links": links,
+        })
+    return out
+
+
 def main():
     plants = load("data/plants.json")
     by_id = {p["id"]: p for p in plants}
-    assessments = pv.by_plant(pv.load_assessments())
-    grade = {pid: pv.display(pv.representative(rows))["grade"] for pid, rows in assessments.items()}
+    grade = {pid: pv.display(pv.representative(rows))["grade"] for pid, rows in pv.by_plant(pv.load_assessments()).items()}
     audit = {r["record_id"]: r for r in load("data/species_evidence_primary_source_audit_v56.json")["records"]}
     wild = {r["id"]: r for r in load("data/wild_feeding_evidence.json")["records"]}
     quarantined = {r["id"] for r in load("data/plant_feeding_evidence_links.json").get("quarantined_wild_records", [])}
+    extracts = load("data/feeding_record_fulltext_extracts_v1.json")
+    records_ft = fulltext_records(extracts, plants, grade)
+    ft_sources = {s["source_key"] for s in extracts["sources"]}
 
     rows = []
     for item in load("data/plant_feeding_evidence_links.json")["records"]:
@@ -116,7 +189,7 @@ def main():
             rows.append(("reviewed_plant_links", item["plant_id"], item.get("scientific_name"), e.get("evidence_id"),
                          e.get("type"), e.get("tortoise_taxon"), e.get("plant_taxon_reported"), e.get("source_id")))
     q = load("data/evidence-first-queue/index.json")
-    for s in q["shards"] if isinstance(q["shards"], list) else []:
+    for s in q["shards"]:
         for r in load("data/evidence-first-queue/" + s["file"])["records"]:
             for m in r["mentions"]:
                 rows.append(("evidence_first_queue", r.get("reviewed_plant_id") or r.get("candidate_taxon_id"),
@@ -158,64 +231,73 @@ def main():
             match = "identity_unresolved"
         chk = CHECKS.get((src, target)) or CHECKS.get((src, "*"))
         # An audit entry verifies one taxon in a source, not every plant linked to that source: it counts only when
-        # its text names this plant's genus.
+        # its text names this plant's genus. It was not reopened here and never confirms a record on its own.
         genus = target.split(" ")[0] if target else ""
         prior = [audit[e] for e in c["evidence_ids"] if e in audit and audit[e]["status"] == "verified_primary"
                  and c["plant_id"] and genus and genus in audit[e]["verification"].lower()]
-        if chk:
-            status, by = chk["status"], "this ledger (original opened " + CHECKED_AT + ")"
+        ft = [r for r in records_ft if r["source_key"] == src and any(l["id"] == c["plant_id"] for l in r["links"])]
+        if ft:
+            status, by = "full_text_confirmed", "full-text extract (data/feeding_record_fulltext_extracts_v1.json)"
+        elif src in ft_sources:
+            status, by = "full_text_read_no_species_record_for_this_plant", "full text read " + CHECKED_AT
+        elif chk:
+            status, by = chk["status"], "original opened " + CHECKED_AT
         elif prior:
-            status, by = "prior_primary_audit_verified", "species_evidence_primary_source_audit_v56 (not reopened)"
+            status, by = "prior_primary_audit_only", "species_evidence_primary_source_audit_v56 (not reopened)"
         else:
             status, by = "not_verified", None
-        direct = bool(chk["direct_observation"]) if chk else (bool(prior) and c["source_type"] in (
-            "academic_study", "peer_reviewed_field_study", "wild_feeding", "peer_reviewed_article"))
-        verified = status in ("original_confirmed", "prior_primary_audit_verified")
-        g = grade.get(c["plant_id"]) if c["plant_id"] else None
-        on_hold = c["plant_id"] is not None and g not in ("A", "B", "C", "D")
-        exact = match in ("exact_species", "accepted_synonym")
-        pending = verified and direct and exact and on_hold
-        d = (chk or {}).get("details", {})
         records.append({
             **c,
             "quarantined_wild_record": any(e in quarantined for e in c["evidence_ids"]),
             "plant_match": match,
             "verification_status": status, "verified_by": by,
-            "original_opened": (chk or {}).get("opened"), "citation": (chk or {}).get("citation"),
-            "original_locator": (chk or {}).get("locator") or (prior[0]["verification"] if prior else None),
+            "original_opened": (chk or {}).get("opened") or (ft[0]["full_text"] if ft else None),
+            "citation": (chk or {}).get("citation") or (ft[0]["citation"] if ft else None),
+            "original_locator": ft[0]["locator"] if ft else (prior[0]["verification"] if prior else None),
             "original_summary": (chk or {}).get("summary"),
-            "observation_type": (chk or {}).get("observation"),
-            "direct_observation": direct,
-            "feeding_details": {k: d.get(k) for k in ("mixed_with", "feeding_frequency", "feeding_amount", "plant_part",
-                                                      "fresh_or_dried", "cutting_method", "season")},
-            "review_note": (chk or {}).get("note"),
-            "existing_grade": g, "grade_changed": False,
-            "feeding_record_status": "feeding_pending" if pending else
-                                     ("verified_feeding_record" if verified and direct and exact else "assessment_hold"),
+            "existing_grade": grade.get(c["plant_id"]) if c["plant_id"] else None, "grade_changed": False,
         })
 
-    pending = sorted({r["plant_id"] for r in records if r["feeding_record_status"] == "feeding_pending"})
+    pending, site_records = set(), {}
+    for r in records_ft:
+        for l in r["links"]:
+            l["feeding_pending"] = bool(r["feeding_fact_confirmed"] and r["identity_resolved"] and l["grade"] not in GRADED)
+            if l["feeding_pending"]:
+                pending.add(l["id"])
+                site_records.setdefault(l["id"], []).append({k: r[k] for k in (
+                    "plant_taxon_reported", "tortoise", "method_text", "direct_observation", "location", "period",
+                    "plant_part", "observed_share", "feeding_details", "citation", "url", "locator")})
+
+    statuses = {}
+    for r in records:
+        statuses[r["verification_status"]] = statuses.get(r["verification_status"], 0) + 1
     counts = {
         "candidates": len(records),
-        "originals_opened_in_this_ledger": sum(r["verified_by"] is not None and r["verified_by"].startswith("this ledger") for r in records),
-        "original_confirmed_in_this_ledger": sum(r["verification_status"] == "original_confirmed" for r in records),
-        "prior_primary_audit_verified": sum(r["verification_status"] == "prior_primary_audit_verified" for r in records),
-        "original_inaccessible_or_not_naming_taxon": sum(r["verification_status"] in ("original_inaccessible", "original_does_not_name_taxon") for r in records),
-        "recommendation_not_feeding_record": sum(r["verification_status"] == "recommendation_not_feeding_record" for r in records),
-        "not_verified": sum(r["verification_status"] == "not_verified" for r in records),
-        "direct_feeding_verified_exact_species": sum(r["feeding_record_status"] in ("verified_feeding_record", "feeding_pending") for r in records),
-        "site_feeding_pending_plants": len(pending),
+        "candidates_by_status": dict(sorted(statuses.items())),
+        "full_text_sources_read": len(extracts["sources"]),
+        "verified_feeding_records_full_text": sum(r["feeding_fact_confirmed"] for r in records_ft),
+        "verified_records_identity_resolved": sum(r["feeding_fact_confirmed"] and r["identity_resolved"] for r in records_ft),
+        "verified_records_on_graded_plants": sum(any(l["kind"] == "reviewed_plant" for l in r["links"]) for r in records_ft),
+        "site_feeding_pending": len(pending),
+        "unverified_candidates": sum(r["verification_status"] not in ("full_text_confirmed",) for r in records),
     }
-    out = {"schema_version": "1.0",
+    out = {"schema_version": "2.0",
            "scope": "Original-source check of tortoise feeding records. Not a safety verdict; A-D grades are unchanged.",
            "rules": ["A candidate is a lead, not a feeding record.",
-                     "Only originals actually opened, or the existing verified_primary audit, count as verified.",
-                     "Recommendations in care sheets are not feeding records.",
-                     "Genus-level or group mentions never become species records.",
-                     "feeding_pending = verified observed feeding of the exact species (or accepted synonym) on a plant with no A-D grade.",
+                     "A feeding record is verified only from the full text of the original; a title or abstract never confirms it.",
+                     "Recommendations in care sheets and citations of other studies are not feeding records.",
+                     "Genus-level names never become species records; names with unresolved homonyms are not linked.",
+                     "feeding_pending = verified full-text feeding record linked unambiguously to a catalog entry with no A-D grade.",
                      "Feeding details are filled only when the original states them; otherwise null (not reported)."],
-           "checked_at": CHECKED_AT, "counts": counts, "site_feeding_pending": pending, "records": records}
+           "checked_at": CHECKED_AT, "counts": counts,
+           "site_feeding_pending": sorted(pending), "site_feeding_records": dict(sorted(site_records.items())),
+           "fulltext_records": records_ft, "records": records}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    # The catalog loads only this small file: the pending ids and the records it displays for them.
+    SITE.write_text(json.dumps({"schema_version": "1.0", "source": "data/feeding_record_verification_v1.json",
+                                "scope": out["scope"], "site_feeding_pending": out["site_feeding_pending"],
+                                "records": out["site_feeding_records"]}, ensure_ascii=False, indent=1) + "\n",
+                    encoding="utf-8")
     print(json.dumps(counts, ensure_ascii=False))
 
 

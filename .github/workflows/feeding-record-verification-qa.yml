@@ -3,6 +3,10 @@ on:
   pull_request:
     paths:
       - 'data/feeding_record_verification_v1.json'
+      - 'data/feeding_pending_site_v1.json'
+      - 'data/feeding_record_fulltext_extracts_v1.json'
+      - 'data/feeding_record_source_qa_issues_v1.json'
+      - 'data/taxonomy-shards/**'
       - 'data/plant_feeding_evidence_links.json'
       - 'data/wild_feeding_evidence.json'
       - 'data/species_evidence_primary_source_audit_v56.json'
