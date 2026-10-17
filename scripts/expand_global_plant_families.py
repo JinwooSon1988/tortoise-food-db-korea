@@ -45,7 +45,7 @@ def family_records(family,limit):
     rows=[];offset=0;scanned=0
     # Offset pagination is bounded to avoid infinite/expensive crawling.
     while len(rows)<limit and offset<10000:
-        data=get("/species/search",{"highertaxon_key":key,"rank":"SPECIES","status":"ACCEPTED","limit":300,"offset":offset})
+        data=get("/species/search",{"higherTaxonKey":key,"rank":"SPECIES","status":"ACCEPTED","limit":300,"offset":offset})
         batch=data.get("results",[])
         if not batch:break
         scanned+=len(batch);offset+=len(batch)
