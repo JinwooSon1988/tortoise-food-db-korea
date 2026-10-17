@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "disclaimer": "Evidence mentions are leads, not verified feeding records, feeding frequency, amount, or safety.",
+  "workers": 20,
+  "counts": {
+    "source_rows_processed": 640,
+    "taxon_mentions": 729,
+    "unique_taxa_mentioned": 186,
+    "matched_taxonomy_candidates": 5,
+    "matched_reviewed_plants": 129,
+    "identity_check_needed": 52
+  },
+  "shards": [
+    {
+      "file": "queue-001.json",
+      "count": 100,
+      "sha256": "7befb366344080a61b0619397a443c5228ceeb229c61e5676e62a57ce0ae1025"
+    },
+    {
+      "file": "queue-002.json",
+      "count": 86,
+      "sha256": "7639c8f6c342f363e48a8c883bb2342d47548110fb48a5b53776dcd2f048faf3"
+    }
+  ]
+}
