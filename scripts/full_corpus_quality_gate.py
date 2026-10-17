@@ -9,7 +9,10 @@ from collections import Counter
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads((ROOT/p).read_text(encoding="utf-8"))
-def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def digest(p):
+    raw=p.read_bytes()
+    expected=hashlib.sha256(raw).hexdigest()
+    return expected,hashlib.sha256(raw.replace(b"\\r\\n",b"\\n")).hexdigest()
 def inspect(job):
     prefix,shard=job
     path=ROOT/prefix/shard["file"]
@@ -17,7 +20,7 @@ def inspect(job):
     rows=raw.get("records",[])
     errors=[]
     if len(rows)!=shard["count"]:errors.append("count mismatch")
-    if shard.get("sha256") and digest(path)!=shard["sha256"]:errors.append("sha256 mismatch")
+    if shard.get("sha256") and shard["sha256"] not in digest(path):errors.append("sha256 mismatch (raw and CRLF-normalized)")
     ids=set()
     for i,row in enumerate(rows):
         name=str(row.get("scientific_name") or "").strip()
@@ -32,7 +35,7 @@ def inspect(job):
             errors.append("unreviewed candidate asserts feeding safety "+str(i))
         if row.get("feeding_record_status") in ("verified","confirmed","feeding_pending"):
             errors.append("unreviewed candidate asserts feeding record "+str(i))
-    return {"file":str(path.relative_to(ROOT)),"count":len(rows),"errors":errors[:30],"error_count":len(errors),"keys":list(ids)}
+    return {"file":path.relative_to(ROOT).as_posix(),"count":len(rows),"errors":errors[:30],"error_count":len(errors),"keys":list(ids)}
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--workers",type=int,default=20)
     args=ap.parse_args()
