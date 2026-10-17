@@ -12,7 +12,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def read(path):
     return json.loads((ROOT/path).read_text(encoding="utf-8"))
 def binomial(value):
-    m=re.match(r"^([A-Z][a-z-]+) ([a-z][a-z-]+)(?:\\b|$)",str(value or "").strip())
+    m=re.match(r"^([A-Z][a-z-]+) ([a-z][a-z-]+)(?=$|[^a-z])",str(value or "").strip())
     return " ".join(m.groups()).casefold() if m else ""
 def details(e):
     # These are explicit metadata fields only; never interpret source title as dosage.
