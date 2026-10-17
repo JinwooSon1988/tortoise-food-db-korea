@@ -39,7 +39,7 @@ def existing():
     return out
 def family_records(family,limit):
     match=get("/species/match",{"name":family,"rank":"FAMILY","strict":"true"})
-    if match.get("rank")!="FAMILY" or match.get("matchType")=="NONE" or match.get("scientificName","").split()[0].casefold()!=family.casefold():
+    if match.get("rank")!="FAMILY" or match.get("matchType")=="NONE" or str(match.get("scientificName","")).split()[0].casefold()!=family.casefold():
         raise ValueError(f"family match not verified: {family}: {match}")
     key=match["usageKey"]
     rows=[];offset=0;scanned=0
@@ -56,6 +56,7 @@ def family_records(family,limit):
             words=canonical.split()
             if len(words)!=2 or not words[0][:1].isupper() or not words[1][:1].islower():continue
             if not isinstance(r.get("key"),int):continue
+            if r.get("kingdom")!="Plantae":continue
             rows.append({"scientific_name":canonical,"family":family,
                 "source_taxon_url":f"https://www.gbif.org/species/{r['key']}",
                 "taxon_id":f"gbif:{r['key']}","identity_status":"taxonomy_candidate",
@@ -84,11 +85,13 @@ def main():
         dest=ROOT/"data/diverse_taxonomy_errors.json"
         dest.write_text(json.dumps(errors,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         raise SystemExit(f"{len(errors)} family queries failed; no output promoted; see {dest}")
+    if not result:raise SystemExit("No accepted taxa returned; refusing empty output")
     unique={};dupes=0
     for r in sorted(result,key=lambda x:(x["scientific_name"].casefold(),x["taxon_id"])):
         key=r["scientific_name"].casefold()
         if key in known or key in unique:dupes+=1;continue
         unique[key]=r
+    if not unique:raise SystemExit("No new unique taxa; refusing empty output")
     payload={"schema_version":"1.0","source":"GBIF species API; taxonomy only",
         "record_count":len(unique),"records":list(unique.values())}
     path=ROOT/"data/diverse_taxonomy_candidates.json"
