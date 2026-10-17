@@ -11,12 +11,10 @@ ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads((ROOT/p).read_text(encoding="utf-8"))
 def digest(p, parsed):
     raw=p.read_bytes()
-    variants=[raw,raw.replace(b"\\r\\n",b"\\n")]
-    for compact in (True,False):
-        kwargs={"separators":(",",":")} if compact else {"indent":2}
-        serialized=json.dumps(parsed,ensure_ascii=False,**kwargs)
-        for ending in ("","\\n"):
-            variants.append((serialized+ending).encode("utf-8"))
+    variants=[raw, raw.replace(bytes([13,10]),bytes([10]))]
+    # Match the shard builder's compact UTF-8 JSON with one LF.
+    canonical=json.dumps(parsed,ensure_ascii=False,separators=(",",":")).encode("utf-8")
+    variants.extend([canonical,canonical+bytes([10])])
     return {hashlib.sha256(v).hexdigest() for v in variants}
 def inspect(job):
     prefix,shard=job
