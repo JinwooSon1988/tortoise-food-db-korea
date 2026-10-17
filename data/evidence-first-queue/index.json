@@ -4,22 +4,22 @@
   "workers": 20,
   "counts": {
     "source_rows_processed": 640,
-    "taxon_mentions": 729,
-    "unique_taxa_mentioned": 186,
+    "taxon_mentions": 579,
+    "unique_taxa_mentioned": 130,
     "matched_taxonomy_candidates": 5,
-    "matched_reviewed_plants": 129,
-    "identity_check_needed": 52
+    "matched_reviewed_plants": 96,
+    "identity_check_needed": 29
   },
   "shards": [
     {
       "file": "queue-001.json",
       "count": 100,
-      "sha256": "7befb366344080a61b0619397a443c5228ceeb229c61e5676e62a57ce0ae1025"
+      "sha256": "184800e7191f0e550dfe5c30925e1be2f1c9f6816723d63982463841b3e2f489"
     },
     {
       "file": "queue-002.json",
-      "count": 86,
-      "sha256": "7639c8f6c342f363e48a8c883bb2342d47548110fb48a5b53776dcd2f048faf3"
+      "count": 30,
+      "sha256": "40ce930d925e127c4a783cf263608e0112bad5f877e1c05ebf5fb7f9b2ca3448"
     }
   ]
 }
