@@ -119,7 +119,7 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  const manifest=await j('../data/taxonomy-shards/index.json');
  if(manifest?.count===9995&&Array.isArray(manifest.shards)&&manifest.shards.length===20){
   const parts=await Promise.all(manifest.shards.map(x=>j('../data/taxonomy-shards/'+x.file)));
-  if(parts.every((p,i)=>Array.isArray(p?.records)&&p.records.length===manifest.shards[i].count)){
+  if(parts.every((p,i)=>Array.isArray(p?.records)&&p.records.length===manifest.shards[i].count)&&parts.reduce((sum,p)=>sum+p.records.length,0)===9995){
    const known=new Set(rows.map(r=>r.scientific.trim().toLowerCase()));
    for(const p of parts)for(const t of p.records){const sci=String(t.scientific_name||'').trim();if(!sci||known.has(sci.toLowerCase()))continue;known.add(sci.toLowerCase());
     rows.push({id:t.taxon_id,ko:sci,en:sci,scientific:sci,aliases:[],searchAliases:[],family:t.family||'',category:'',verdict:'보류',verdictRank:5,confidence:'',directEvidence:0,hasNutrition:false,hasReferenceNutrition:false,water:null,fiber:null,calcium:null,phosphorus:null,ratio:null,protein:null,potassium:null,vitc:null,isCandidate:true,source_taxon_url:t.source_taxon_url,feedingRecordPending:false})
