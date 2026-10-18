@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-18",
+  "scope": "Claim-level P1 verification checklist. No original claim upgraded and no taxonomy synonymy assumed.",
+  "candidate_count": 9,
+  "claims": [
+    {
+      "evidence_ids": [
+        "elmouden2006_astragalus_cruciatus"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "plant_id": null,
+      "plant_scientific_name": "Astragalus crenatus Schult.",
+      "plant_taxon_reported": "Astragalus cruciatus",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "plant_match": "identity_unresolved",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "plant_id": "clover",
+      "plant_scientific_name": "Trifolium spp.",
+      "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+      "tortoise_taxon": "Testudo hermanni",
+      "plant_match": "genus_or_group",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_leontodon_saxatilis"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "plant_id": null,
+      "plant_scientific_name": "Leontodon saxatilis Lam.",
+      "plant_taxon_reported": "Leontodon saxatilis",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "plant_match": "identity_unresolved",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_lotus_arenarius"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "plant_id": null,
+      "plant_scientific_name": "Lotus arenarius Brot.",
+      "plant_taxon_reported": "Lotus arenarius",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "plant_match": "identity_unresolved",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_malva_parviflora"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "plant_id": null,
+      "plant_scientific_name": "Malva parviflora L.",
+      "plant_taxon_reported": "Malva parviflora",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "plant_match": "identity_unresolved",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "wild_medicago_polymorpha_tgg_morocco"
+      ],
+      "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "plant_id": null,
+      "plant_scientific_name": "Medicago hispida",
+      "plant_taxon_reported": "Medicago hispida",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "plant_match": "identity_unresolved",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "wild_medicago_polymorpha_tgg_morocco",
+        "elmouden2006_medicago_hispida"
+      ],
+      "source": "10.1016/j.jaridenv.2005.06.010",
+      "plant_id": "medicago_hispida",
+      "plant_scientific_name": "Medicago polymorpha L.",
+      "plant_taxon_reported": "Medicago polymorpha",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "plant_match": "exact_species",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "plant_id": "plantain",
+      "plant_scientific_name": "Plantago spp.",
+      "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+      "tortoise_taxon": "Testudo hermanni",
+      "plant_match": "genus_or_group",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "plant_id": null,
+      "plant_scientific_name": "See linked",
+      "plant_taxon_reported": "See linked",
+      "tortoise_taxon": "Testudo hermanni",
+      "plant_match": "identity_unresolved",
+      "status": "original_inaccessible",
+      "required": [
+        "Locate primary full text and page/table/figure",
+        "Check taxon as literally reported",
+        "Determine observed feeding vs recommendations or secondary citations",
+        "Record direct observation vs faecal inference",
+        "Resolve botanical identity with taxonomic authority if needed",
+        "Do not infer captive feeding safety or grade"
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "evidence_id": "elmouden2006_astragalus_cruciatus",
+      "flag": "Reported Astragalus cruciatus differs from candidate Astragalus crenatus; do not link until independently resolved."
+    },
+    {
+      "evidence_id": "wild_medicago_polymorpha_tgg_morocco",
+      "flag": "Multiple representations of Medicago hispida / M. polymorpha appear; resolve synonymy and deduplicate claim identity before promotion."
+    },
+    {
+      "evidence_id": "hermanni_foraging_italy_2015",
+      "flag": "Three linked candidate rows have only genus/group or placeholder plant identification. No species-specific claim can be inferred."
+    }
+  ]
+}
