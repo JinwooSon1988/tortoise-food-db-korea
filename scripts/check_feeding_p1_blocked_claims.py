@@ -38,6 +38,13 @@ def source_key(value):
 
 site = json.loads((ROOT / "data/feeding_pending_site_v1.json").read_text(encoding="utf-8"))
 blocked_sources = {source_key(r["source"]) for r in manifest["blocked_claims"]}
+# Negative controls: all DOI spellings must match a held source, while
+# unrelated DOIs and URLs must not be blocked.
+assert source_key("doi:10.1016/j.jaridenv.2005.06.010") in blocked_sources
+assert source_key("https://doi.org/10.1016/j.jaridenv.2005.06.010") in blocked_sources
+assert source_key("10.1016/j.jaridenv.2005.06.010") in blocked_sources
+assert source_key("https://doi.org/10.0000/unrelated") not in blocked_sources
+assert source_key("https://example.org/unrelated") not in blocked_sources
 for plant_id, feed_records in site["records"].items():
     for feed_record in feed_records:
         assert source_key(feed_record["url"]) not in blocked_sources, (
