@@ -20,3 +20,27 @@ def identity(r):
 assert sorted(map(repr, map(identity, blocked))) == sorted(map(repr, map(identity, manifest["blocked_claims"]))), "Blocked claim identity drift"
 assert all(r["status"] == "hold" for r in manifest["blocked_claims"]), "Non-hold blocked claim"
 print(f"PASS: {len(blocked)} original-inaccessible records held; no missing or mismatched claims")
+
+# Check that unverified P1 sources are not presented as confirmed feeding
+# records in the public pending feed. Compare canonical DOI/URL identifiers.
+from urllib.parse import urlsplit
+
+def source_key(value):
+    value = value.strip().lower()
+    if value.startswith("doi:"):
+        return "doi:" + value[4:]
+    if value.startswith("https://doi.org/") or value.startswith("http://doi.org/"):
+        return "doi:" + value.split("doi.org/", 1)[1]
+    if value.startswith("10."):
+        return "doi:" + value
+    parts = urlsplit(value)
+    return parts.netloc + parts.path.rstrip("/") if parts.scheme else value
+
+site = json.loads((ROOT / "data/feeding_pending_site_v1.json").read_text(encoding="utf-8"))
+blocked_sources = {source_key(r["source"]) for r in manifest["blocked_claims"]}
+for plant_id, feed_records in site["records"].items():
+    for feed_record in feed_records:
+        assert source_key(feed_record["url"]) not in blocked_sources, (
+            f"Unverified P1 source leaked into public feeding records: {plant_id}"
+        )
+print(f"PASS: no P1 blocked sources in {len(site['records'])} public feeding plant entries")
