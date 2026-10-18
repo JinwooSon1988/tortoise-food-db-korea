@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-18",
+  "scope": "Deterministic machine-readable hold manifest for P1 candidate feeding claims; NOT a runtime enforcement mechanism.",
+  "source_file": "data/feeding_record_verification_v1.json",
+  "source_verification_status": "original_inaccessible",
+  "blocked_claim_count": 9,
+  "blocked_claims": [
+    {
+      "evidence_ids": [
+        "elmouden2006_astragalus_cruciatus"
+      ],
+      "plant_id": null,
+      "reported_taxon": "Astragalus cruciatus",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "plant_id": "clover",
+      "reported_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "tortoise_taxon": "Testudo hermanni",
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_leontodon_saxatilis"
+      ],
+      "plant_id": null,
+      "reported_taxon": "Leontodon saxatilis",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_lotus_arenarius"
+      ],
+      "plant_id": null,
+      "reported_taxon": "Lotus arenarius",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_malva_parviflora"
+      ],
+      "plant_id": null,
+      "reported_taxon": "Malva parviflora",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "wild_medicago_polymorpha_tgg_morocco"
+      ],
+      "plant_id": null,
+      "reported_taxon": "Medicago hispida",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "wild_medicago_polymorpha_tgg_morocco",
+        "elmouden2006_medicago_hispida"
+      ],
+      "plant_id": "medicago_hispida",
+      "reported_taxon": "Medicago polymorpha",
+      "tortoise_taxon": "Testudo graeca graeca",
+      "source": "10.1016/j.jaridenv.2005.06.010",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "plant_id": "plantain",
+      "reported_taxon": "See linked plant concept(s); source scope preserved from evidence registry",
+      "tortoise_taxon": "Testudo hermanni",
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "plant_id": null,
+      "reported_taxon": "See linked",
+      "tortoise_taxon": "Testudo hermanni",
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "reason": "Original page/table locator not independently verified",
+      "status": "hold"
+    }
+  ],
+  "required_to_release": [
+    "Primary source original inspected",
+    "Exact claim locator and method recorded",
+    "Botanical identity checked",
+    "Tortoise species applicability confirmed",
+    "Independent review recorded"
+  ],
+  "safety_note": "No evidence or grade promotion is authorized by this manifest. CI passing does not verify original scientific claims."
+}
