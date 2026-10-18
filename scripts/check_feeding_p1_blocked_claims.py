@@ -45,6 +45,9 @@ assert source_key("https://doi.org/10.1016/j.jaridenv.2005.06.010") in blocked_s
 assert source_key("10.1016/j.jaridenv.2005.06.010") in blocked_sources
 assert source_key("https://doi.org/10.0000/unrelated") not in blocked_sources
 assert source_key("https://example.org/unrelated") not in blocked_sources
+# Check source normalization itself, including case and DOI resolver variants.
+assert source_key("HTTPS://DOI.ORG/10.1016/J.JARIDENV.2005.06.010") == source_key("doi:10.1016/j.jaridenv.2005.06.010")
+assert source_key("https://www.tortoisetrust.org/articles/basicmedfood.htm") != source_key("https://www.tortoisetrust.org/enews2/index.html")
 for plant_id, feed_records in site["records"].items():
     for feed_record in feed_records:
         assert source_key(feed_record["url"]) not in blocked_sources, (
