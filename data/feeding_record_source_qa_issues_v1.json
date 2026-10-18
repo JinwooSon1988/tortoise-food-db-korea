@@ -40,14 +40,15 @@
   {
    "id": "QA-FR-002",
    "kind": "plant_part_unconfirmed",
-   "status": "partially_mitigated_fulltext_pending",
+   "status": "resolved_with_fulltext_table",
    "severity": "evidence_detail",
    "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
    "record": "wild_ruscus_aculeatus_thh_italy_2011",
    "stored": "flowers, unripe fruit, leaves / wild fresh plant",
    "observed": "The publisher abstract names flowers and unripe fruit of Ruscus aculeatus (autumn). Leaves are not mentioned. The full text (BioOne) is subscriber-only and was not read, so 'leaves' is unconfirmed rather than shown to be wrong.",
    "evidence": [
-    "BioOne abstract page, Herpetologica 67(3):236-249"
+    "BioOne abstract page, Herpetologica 67(3):236-249",
+    "Del Vecchio et al. (2011), Herpetologica 67(3), Table 1, p. 240, full-text displayed on ResearchGate; publisher abstract at DOI 10.1655/HERPETOLOGICA-D-10-00064.1"
    ],
    "locations": [
     {
@@ -67,7 +68,7 @@
     }
    ],
    "proposed_fix": "Read Table 1 of the full text. If leaves are absent, change the part to flowers and unripe fruit; otherwise add the table locator.",
-   "resolution": "Removed unsupported leaf claim from data/plant_feeding_evidence_links.json; flowers and unripe fruit supported by secondary botanical review of Del Vecchio et al. (2011); original Table 1 still unverified."
+   "resolution": "Del Vecchio et al. 2011 Table 1 lists Ruscus aculeatus plant parts as 'Fruits, seeds' (p. 240); abstract separately states flowers and unripe fruit in autumn. Leaves are not reported in either. Updated data/plant_feeding_evidence_links.json accordingly. No captive feeding safety inferred."
   }
  ]
 }
