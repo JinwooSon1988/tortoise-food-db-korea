@@ -4,12 +4,14 @@ on:
   pull_request:
     paths:
       - 'data/feeding_record_verification_v1.json'
+      - 'data/feeding_pending_site_v1.json'
       - 'data/feeding_p1_blocked_claim_manifest_20261018.json'
       - 'scripts/check_feeding_p1_blocked_claims.py'
       - '.github/workflows/p1-feeding-claim-hold.yml'
   push:
     paths:
       - 'data/feeding_record_verification_v1.json'
+      - 'data/feeding_pending_site_v1.json'
       - 'data/feeding_p1_blocked_claim_manifest_20261018.json'
       - 'scripts/check_feeding_p1_blocked_claims.py'
       - '.github/workflows/p1-feeding-claim-hold.yml'
