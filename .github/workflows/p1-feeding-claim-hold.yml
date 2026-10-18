@@ -1,0 +1,28 @@
+name: P1 Feeding Claim Hold Consistency
+
+on:
+  pull_request:
+    paths:
+      - 'data/feeding_record_verification_v1.json'
+      - 'data/feeding_p1_blocked_claim_manifest_20261018.json'
+      - 'scripts/check_feeding_p1_blocked_claims.py'
+      - '.github/workflows/p1-feeding-claim-hold.yml'
+  push:
+    paths:
+      - 'data/feeding_record_verification_v1.json'
+      - 'data/feeding_p1_blocked_claim_manifest_20261018.json'
+      - 'scripts/check_feeding_p1_blocked_claims.py'
+      - '.github/workflows/p1-feeding-claim-hold.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-p1-feeding-hold:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate blocked claim manifest against original verification records
+        run: python3 scripts/check_feeding_p1_blocked_claims.py
