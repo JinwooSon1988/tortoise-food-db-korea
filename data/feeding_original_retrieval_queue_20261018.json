@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-18",
+  "source_file": "data/feeding_record_verification_v1.json",
+  "scope": "Prioritized retrieval worklist based solely on existing candidate records. No external source retrieval or scientific verification performed.",
+  "record_count": 51,
+  "unique_source_count": 10,
+  "priorities": [
+    {
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "priority": "P1_FULLTEXT_ACCESS",
+      "records": 4,
+      "statuses": [
+        "original_inaccessible"
+      ],
+      "plants": [
+        null
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca graeca"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "priority": "P1_FULLTEXT_ACCESS",
+      "records": 3,
+      "statuses": [
+        "original_inaccessible"
+      ],
+      "plants": [
+        "clover",
+        "plantain",
+        null
+      ],
+      "tortoise_taxa": [
+        "Testudo hermanni"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "priority": "P1_FULLTEXT_ACCESS",
+      "records": 1,
+      "statuses": [
+        "original_inaccessible"
+      ],
+      "plants": [
+        null
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca graeca"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "10.1016/j.jaridenv.2005.06.010",
+      "priority": "P1_FULLTEXT_ACCESS",
+      "records": 1,
+      "statuses": [
+        "original_inaccessible"
+      ],
+      "plants": [
+        "medicago_hispida"
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca graeca"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+      "priority": "P2_ORIGINAL_RETRIEVAL",
+      "records": 14,
+      "statuses": [
+        "not_verified"
+      ],
+      "plants": [
+        "barleygrass",
+        "clover",
+        "dandelion",
+        "lettuce",
+        "oatgrass",
+        "orchard",
+        "romaine",
+        "rose",
+        "ryegrass",
+        null,
+        "sowthistle",
+        "timothy",
+        "wheatgrass",
+        "whiteclover"
+      ],
+      "tortoise_taxa": [
+        "Mediterranean Testudo",
+        "Mediterranean tortoises"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+      "priority": "P2_ORIGINAL_RETRIEVAL",
+      "records": 14,
+      "statuses": [
+        "not_verified"
+      ],
+      "plants": [
+        "chicory",
+        "clover",
+        "dandelion",
+        "endive",
+        "hibiscusflower",
+        "hibiscusleaf",
+        "hibiscusrosa",
+        "mallow",
+        "mulberry",
+        null,
+        "oatleaf",
+        "plantain",
+        "raspberryleaf",
+        "sowthistle"
+      ],
+      "tortoise_taxa": [
+        "Testudo spp."
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://www.tortoisetrust.org/enews2/index.html",
+      "priority": "P2_ORIGINAL_RETRIEVAL",
+      "records": 6,
+      "statuses": [
+        "not_verified"
+      ],
+      "plants": [
+        "endive",
+        "kale",
+        "lettuce",
+        "radicchio",
+        "romaine",
+        null
+      ],
+      "tortoise_taxa": [
+        "Mediterranean tortoises"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+      "priority": "P2_ORIGINAL_RETRIEVAL",
+      "records": 4,
+      "statuses": [
+        "not_verified"
+      ],
+      "plants": [
+        "endive",
+        "kale",
+        "romaine",
+        null
+      ],
+      "tortoise_taxa": [
+        "Testudo spp."
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "priority": "P2_ORIGINAL_RETRIEVAL",
+      "records": 3,
+      "statuses": [
+        "not_verified"
+      ],
+      "plants": [
+        "alfalfa",
+        "clover",
+        "sowthistle"
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca ibera and eastern Testudo graeca clades"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    },
+    {
+      "source": "https://doi.org/10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "priority": "P2_ORIGINAL_RETRIEVAL",
+      "records": 1,
+      "statuses": [
+        "not_verified"
+      ],
+      "plants": [
+        null
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca ibera and eastern Testudo graeca clades"
+      ],
+      "action": "Locate original full text and exact table/page evidence; verify plant identity and tortoise taxon before any upgrade."
+    }
+  ],
+  "policy": [
+    "Bibliographic lead is not feeding evidence.",
+    "Read original text and capture page/table locator.",
+    "Do not equate genus-level observation with species-level evidence.",
+    "Do not infer captive feeding safety or change A-D grades."
+  ]
+}
