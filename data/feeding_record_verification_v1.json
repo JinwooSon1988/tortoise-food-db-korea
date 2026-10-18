@@ -1,27 +1,1096 @@
 {
- "schema_version": "1.0",
+ "schema_version": "2.0",
  "scope": "Original-source check of tortoise feeding records. Not a safety verdict; A-D grades are unchanged.",
  "rules": [
   "A candidate is a lead, not a feeding record.",
-  "Only originals actually opened, or the existing verified_primary audit, count as verified.",
-  "Recommendations in care sheets are not feeding records.",
-  "Genus-level or group mentions never become species records.",
-  "feeding_pending = verified observed feeding of the exact species (or accepted synonym) on a plant with no A-D grade.",
+  "A feeding record is verified only from the full text of the original; a title or abstract never confirms it.",
+  "Recommendations in care sheets and citations of other studies are not feeding records.",
+  "Genus-level names never become species records; names with unresolved homonyms are not linked.",
+  "feeding_pending = verified full-text feeding record linked unambiguously to a catalog entry with no A-D grade.",
   "Feeding details are filled only when the original states them; otherwise null (not reported)."
  ],
  "checked_at": "2026-10-17",
  "counts": {
   "candidates": 90,
-  "originals_opened_in_this_ledger": 14,
-  "original_confirmed_in_this_ledger": 2,
-  "prior_primary_audit_verified": 2,
-  "original_inaccessible_or_not_naming_taxon": 7,
-  "recommendation_not_feeding_record": 5,
-  "not_verified": 74,
-  "direct_feeding_verified_exact_species": 2,
-  "site_feeding_pending_plants": 0
+  "candidates_by_status": {
+   "abstract_only_not_confirmed": 1,
+   "full_text_confirmed": 3,
+   "full_text_read_no_species_record_for_this_plant": 9,
+   "husbandry_guidance_not_feeding_record": 6,
+   "not_verified": 42,
+   "original_does_not_name_taxon": 1,
+   "original_inaccessible": 9,
+   "recommendation_not_feeding_record": 16,
+   "secondary_citation_not_feeding_record": 3
+  },
+  "full_text_sources_read": 3,
+  "verified_feeding_records_full_text": 14,
+  "verified_records_identity_resolved": 13,
+  "verified_records_on_graded_plants": 7,
+  "site_feeding_pending": 6,
+  "unverified_candidates": 87
  },
- "site_feeding_pending": [],
+ "site_feeding_pending": [
+  "gbif:2705292",
+  "gbif:2705297",
+  "gbif:2706241",
+  "gbif:2707769",
+  "gbif:2711375",
+  "gbif:2713229"
+ ],
+ "site_feeding_records": {
+  "gbif:2705292": [
+   {
+    "plant_taxon_reported": "Avena byzantina",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 11.5%, 연간 6.7% (분변 조각 비율)",
+     "en": "11.5% in spring, 6.7% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ],
+  "gbif:2705297": [
+   {
+    "plant_taxon_reported": "Avena fatua",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "여름 1.8%, 연간 0.5% (분변 조각 비율)",
+     "en": "1.8% in summer, 0.5% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91"
+   }
+  ],
+  "gbif:2706241": [
+   {
+    "plant_taxon_reported": "Lolium perenne",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "가을 8.1%, 연간 2.7% (분변 조각 비율)",
+     "en": "8.1% in autumn, 2.7% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 92"
+   }
+  ],
+  "gbif:2707769": [
+   {
+    "plant_taxon_reported": "Thamnochortus spicigerus",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "분변 시료 1개에서만 검출 (겨울)",
+     "en": "Found in one scat only (winter)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 92; section 5.4.1.1 p. 88"
+   }
+  ],
+  "gbif:2711375": [
+   {
+    "plant_taxon_reported": "Ficinia nigrescens",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 0.5%, 연간 0.1% (분변 조각 비율)",
+     "en": "0.5% in spring, 0.1% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91"
+   },
+   {
+    "plant_taxon_reported": "Ficinia nigrescens",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 48.8%, 연간 12.2% (분변 조각 비율)",
+     "en": "48.8% in spring, 12.2% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ],
+  "gbif:2713229": [
+   {
+    "plant_taxon_reported": "Isolepis antarctica",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 1.3%, 연간 0.3% (분변 조각 비율)",
+     "en": "1.3% in spring, 0.3% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ]
+ },
+ "fulltext_records": [
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "gbif_key": 6109637,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 91; Table 6.1 p. 137; Discussion, p. 120",
+   "plant_part": {
+    "ko": "주로 꽃차례 포엽 (분변 표피 조각 기준)",
+    "en": "Mainly inflorescence bracts (from epidermal fragments in scats)"
+   },
+   "observed_share": {
+    "ko": "가을 54.8%, 연간 24.0% (분변 조각 비율)",
+    "en": "54.8% in autumn, 24.0% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "bermudagrass",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "A",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Avena fatua",
+   "gbif_key": 2705297,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "여름 1.8%, 연간 0.5% (분변 조각 비율)",
+    "en": "1.8% in summer, 0.5% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2705297",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Lolium perenne",
+   "gbif_key": 2706241,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 92",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "가을 8.1%, 연간 2.7% (분변 조각 비율)",
+    "en": "8.1% in autumn, 2.7% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "ryegrass",
+     "kind": "reviewed_plant",
+     "match": "species_within_genus_level_plant",
+     "grade": "B",
+     "feeding_pending": false
+    },
+    {
+     "id": "gbif:2706241",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Ficinia nigrescens",
+   "gbif_key": 2711375,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 0.5%, 연간 0.1% (분변 조각 비율)",
+    "en": "0.5% in spring, 0.1% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2711375",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Thamnochortus spicigerus",
+   "gbif_key": 2707769,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 92; section 5.4.1.1 p. 88",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "분변 시료 1개에서만 검출 (겨울)",
+    "en": "Found in one scat only (winter)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2707769",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Avena byzantina",
+   "gbif_key": 2705292,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 다센섬 (야생)",
+    "en": "Dassen Island, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 11.5%, 연간 6.7% (분변 조각 비율)",
+    "en": "11.5% in spring, 6.7% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2705292",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Ficinia nigrescens",
+   "gbif_key": 2711375,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 다센섬 (야생)",
+    "en": "Dassen Island, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 48.8%, 연간 12.2% (분변 조각 비율)",
+    "en": "48.8% in spring, 12.2% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2711375",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Isolepis antarctica",
+   "gbif_key": 2713229,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 다센섬 (야생)",
+    "en": "Dassen Island, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 1.3%, 연간 0.3% (분변 조각 비율)",
+    "en": "1.3% in spring, 0.3% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2713229",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Taraxacum officinale",
+   "gbif_key": 5394163,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎, 꽃",
+    "en": "Leaves, flowers"
+   },
+   "observed_share": {
+    "ko": "관찰된 섭식의 5-10% (보통)",
+    "en": "5-10% of observed feeding (moderate)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "dandelion",
+     "kind": "reviewed_plant",
+     "match": "species_within_genus_level_plant",
+     "grade": "A",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Vitis vinifera",
+   "gbif_key": 5372392,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves"
+   },
+   "observed_share": {
+    "ko": "관찰된 섭식의 1-5% (낮음)",
+    "en": "1-5% of observed feeding (low)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "grapeleaf",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "C",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Dactylis glomerata",
+   "gbif_key": 2705308,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves"
+   },
+   "observed_share": {
+    "ko": "관찰된 섭식의 1-5% (낮음)",
+    "en": "1-5% of observed feeding (low)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "orchard",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "B",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Festuca arundinacea",
+   "gbif_key": null,
+   "gbif_match": "HIGHERRANK: three homonyms (Schreb., Lilj., Vill.) with different accepted species; the original gives no author",
+   "identity_resolved": false,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves"
+   },
+   "observed_share": {
+    "ko": "다른 Festuca sp.와 합산 1-5%",
+    "en": "1-5%, pooled with other Festuca sp."
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": []
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "url": "https://doi.org/10.5281/zenodo.12807900",
+   "full_text": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Cichorium intybus",
+   "gbif_key": 5392252,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera; 본문 표기 T. graeca)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera; the results say T. graeca)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2020-2023년 활동기, T. graeca 309마리·T. hermanni 1034마리 관찰",
+    "en": "active seasons 2020-2023; 309 T. graeca and 1034 T. hermanni seen"
+   },
+   "location": {
+    "ko": "불가리아 크레스나 협곡 (야생)",
+    "en": "Kresna Gorge, Bulgaria (wild)"
+   },
+   "locator": "p. 1, Materials and Methods; p. 2, Results",
+   "plant_part": null,
+   "observed_share": null,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "chicory",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "B",
+     "feeding_pending": false
+    },
+    {
+     "id": "radicchio",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "C",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "url": "https://doi.org/10.5281/zenodo.12807900",
+   "full_text": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Plantago lanceolata",
+   "gbif_key": 8208358,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo hermanni boettgeri",
+   "tortoise": {
+    "ko": "동부 헤르만육지거북 (Testudo hermanni boettgeri; 본문 표기 T. hermanni)",
+    "en": "Eastern Hermann's tortoise (Testudo hermanni boettgeri; the results say T. hermanni)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2020-2023년 활동기, T. graeca 309마리·T. hermanni 1034마리 관찰",
+    "en": "active seasons 2020-2023; 309 T. graeca and 1034 T. hermanni seen"
+   },
+   "location": {
+    "ko": "불가리아 크레스나 협곡 (야생)",
+    "en": "Kresna Gorge, Bulgaria (wild)"
+   },
+   "locator": "p. 1, Materials and Methods; p. 2, Results",
+   "plant_part": null,
+   "observed_share": null,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "ribwortplantain",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "B",
+     "feeding_pending": false
+    },
+    {
+     "id": "plantain",
+     "kind": "reviewed_plant",
+     "match": "species_within_genus_level_plant",
+     "grade": "B",
+     "feeding_pending": false
+    }
+   ]
+  }
+ ],
  "records": [
   {
    "plant_id": "alfalfa",
@@ -39,27 +1108,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "alfalfa",
@@ -83,21 +1139,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "alfalfa",
@@ -115,27 +1158,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "alfalfa",
@@ -153,27 +1183,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "PMC full text (PMC6894431)",
+   "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Parasite-network study; plants are named only when citing earlier diet studies.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -192,26 +1209,13 @@
    "quarantined_wild_record": true,
    "plant_match": "identity_unresolved",
    "verification_status": "original_inaccessible",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
    "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
    "original_locator": null,
-   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "barleygrass",
@@ -235,21 +1239,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "bermudagrass",
@@ -271,26 +1262,13 @@
    "quarantined_wild_record": false,
    "plant_match": "exact_species",
    "verification_status": "original_does_not_name_taxon",
-   "verified_by": "this ledger (original opened 2026-10-17)",
+   "verified_by": "original opened 2026-10-17",
    "original_opened": "publisher abstract (NISC); full text not accessible",
    "citation": "Rouag, R. et al. (2008) Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca. African Journal of Herpetology 57(2):103-113",
-   "original_locator": "Abstract",
-   "original_summary": "The abstract names plant families only (Fabaceae, Asteraceae, Primulaceae, Caryophyllaceae); Cynodon is not named. The species-level claim needs the full text.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_locator": null,
+   "original_summary": "The abstract names plant families only; no species. The species claims need the full text.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "bermudagrass",
@@ -309,27 +1287,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "exact_species",
-   "verification_status": "original_confirmed",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "institutional repository record with author abstract",
+   "verification_status": "full_text_confirmed",
+   "verified_by": "full-text extract (data/feeding_record_fulltext_extracts_v1.json)",
+   "original_opened": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
-   "original_locator": "Abstract",
-   "original_summary": "Wild Chersina angulata: Cynodon dactylon was a principal food item in three of four seasons in West Coast National Park.",
-   "observation_type": "wild_diet_study",
-   "direct_observation": true,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": "principal food in 3 of 4 seasons (West Coast National Park)"
-   },
-   "review_note": null,
+   "original_locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 91; Table 6.1 p. 137; Discussion, p. 120",
+   "original_summary": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "verified_feeding_record"
+   "grade_changed": false
   },
   {
    "plant_id": "broadleafplantain",
@@ -347,27 +1312,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "chickweed",
@@ -385,27 +1337,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "chickweed",
@@ -424,26 +1363,13 @@
    "quarantined_wild_record": false,
    "plant_match": "not_named",
    "verification_status": "recommendation_not_feeding_record",
-   "verified_by": "this ledger (original opened 2026-10-17)",
+   "verified_by": "original opened 2026-10-17",
    "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
    "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
-   "original_locator": "FEEDING, Captive",
-   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
-   "observation_type": "husbandry_recommendation",
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "chicory",
@@ -461,27 +1387,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
-   "original_locator": null,
+   "verification_status": "full_text_confirmed",
+   "verified_by": "full-text extract (data/feeding_record_fulltext_extracts_v1.json)",
+   "original_opened": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "original_locator": "p. 1, Materials and Methods; p. 2, Results",
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "chicory",
@@ -505,21 +1418,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "clover",
@@ -537,27 +1437,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "clover",
@@ -581,21 +1468,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "clover",
@@ -613,27 +1487,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "clover",
@@ -652,26 +1513,38 @@
    "quarantined_wild_record": false,
    "plant_match": "not_named",
    "verification_status": "recommendation_not_feeding_record",
-   "verified_by": "this ledger (original opened 2026-10-17)",
+   "verified_by": "original opened 2026-10-17",
    "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
    "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
-   "original_locator": "FEEDING, Captive",
-   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
-   "observation_type": "husbandry_recommendation",
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
   },
   {
    "plant_id": "clover",
@@ -689,65 +1562,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "original_inaccessible",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "the PDF URL returns a bot-check page; not bypassed",
+   "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
-  },
-  {
-   "plant_id": "clover",
-   "candidate_taxon": null,
-   "plant_scientific_name": "Trifolium spp.",
-   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
-   "tortoise_taxon": "Testudo spp.",
-   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
-   "source_type": "expert_husbandry",
-   "evidence_ids": [
-    "leone_testudo_diet_2021"
-   ],
-   "found_in": [
-    "reviewed_plant_links"
-   ],
-   "quarantined_wild_record": false,
-   "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
-   "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
-   "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "clover",
@@ -771,21 +1593,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "commonmallow",
@@ -803,27 +1612,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -841,27 +1637,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "prior_primary_audit_verified",
-   "verified_by": "species_evidence_primary_source_audit_v56 (not reopened)",
-   "original_opened": null,
-   "citation": null,
-   "original_locator": "Acta Herpetologica 7(1):105-110 reports >500 wild T. graeca observed in Dobrogea over 2000-2010 and explicitly states a predilection for young leaves including Taraxacum.",
+   "verification_status": "full_text_confirmed",
+   "verified_by": "full-text extract (data/feeding_record_fulltext_extracts_v1.json)",
+   "original_opened": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "original_locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": true,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -879,27 +1662,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "prior_primary_audit_verified",
-   "verified_by": "species_evidence_primary_source_audit_v56 (not reopened)",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": "ZooNotes 228 explicitly lists Taraxacum sp. among plants observed being consumed by Testudo graeca ibera in south-western Bulgaria.",
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": true,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -917,27 +1687,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -956,26 +1713,13 @@
    "quarantined_wild_record": false,
    "plant_match": "not_named",
    "verification_status": "recommendation_not_feeding_record",
-   "verified_by": "this ledger (original opened 2026-10-17)",
+   "verified_by": "original opened 2026-10-17",
    "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
    "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
-   "original_locator": "FEEDING, Captive",
-   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
-   "observation_type": "husbandry_recommendation",
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -999,21 +1743,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -1037,21 +1768,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dandelion",
@@ -1069,27 +1787,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "dolnamul",
@@ -1107,27 +1812,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "endive",
@@ -1151,21 +1843,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "endive",
@@ -1189,21 +1868,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "endive",
@@ -1227,21 +1893,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "hedgemustard",
@@ -1260,27 +1913,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "exact_species",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "hibiscusflower",
@@ -1304,21 +1944,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "hibiscusleaf",
@@ -1342,21 +1969,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "hibiscusrosa",
@@ -1380,21 +1994,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "kale",
@@ -1418,21 +2019,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "kale",
@@ -1456,21 +2044,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "lamium_album",
@@ -1489,27 +2064,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "exact_species",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -1528,26 +2090,13 @@
    "quarantined_wild_record": true,
    "plant_match": "identity_unresolved",
    "verification_status": "original_inaccessible",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
    "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
    "original_locator": null,
-   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "lettuce",
@@ -1571,21 +2120,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "lettuce",
@@ -1609,21 +2145,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -1642,26 +2165,13 @@
    "quarantined_wild_record": true,
    "plant_match": "identity_unresolved",
    "verification_status": "original_inaccessible",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
    "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
    "original_locator": null,
-   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "mallow",
@@ -1685,21 +2195,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -1718,26 +2215,13 @@
    "quarantined_wild_record": true,
    "plant_match": "identity_unresolved",
    "verification_status": "original_inaccessible",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
    "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
    "original_locator": null,
-   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -1756,26 +2240,13 @@
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
    "verification_status": "original_inaccessible",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
    "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
    "original_locator": null,
-   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -1793,27 +2264,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "medicago_hispida",
@@ -1835,26 +2293,13 @@
    "quarantined_wild_record": true,
    "plant_match": "exact_species",
    "verification_status": "original_inaccessible",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "ScienceDirect returned 403; Crossref and Europe PMC carry no abstract",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
    "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
    "original_locator": null,
-   "original_summary": "Original not opened. The plant list could not be checked; records stay quarantined.",
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "mulberry",
@@ -1878,21 +2323,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -1916,21 +2348,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "oatgrass",
@@ -1954,21 +2373,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "oatleaf",
@@ -1992,21 +2398,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "orchard",
@@ -2030,21 +2423,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "plantain",
@@ -2062,27 +2442,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "plantain",
@@ -2101,64 +2468,13 @@
    "quarantined_wild_record": false,
    "plant_match": "not_named",
    "verification_status": "recommendation_not_feeding_record",
-   "verified_by": "this ledger (original opened 2026-10-17)",
+   "verified_by": "original opened 2026-10-17",
    "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
    "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
-   "original_locator": "FEEDING, Captive",
-   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
-   "observation_type": "husbandry_recommendation",
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
-   "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
-  },
-  {
-   "plant_id": "plantain",
-   "candidate_taxon": null,
-   "plant_scientific_name": "Plantago spp.",
-   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
-   "tortoise_taxon": "Testudo hermanni",
-   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
-   "source_type": "conference_proceedings",
-   "evidence_ids": [
-    "hermanni_foraging_italy_2015"
-   ],
-   "found_in": [
-    "reviewed_plant_links"
-   ],
-   "quarantined_wild_record": false,
-   "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "plantain",
@@ -2182,21 +2498,33 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "original_inaccessible",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "the PDF URL returns a bot-check page; not bypassed",
+   "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
+   "original_locator": null,
+   "original_summary": "Original not read.",
+   "existing_grade": "B",
+   "grade_changed": false
   },
   {
    "plant_id": "plantain",
@@ -2214,27 +2542,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2252,27 +2567,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "radicchio",
@@ -2296,21 +2598,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "raspberryleaf",
@@ -2334,21 +2623,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "redclover",
@@ -2366,27 +2642,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "ribwortplantain",
@@ -2404,27 +2667,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "romaine",
@@ -2448,21 +2698,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "romaine",
@@ -2486,21 +2723,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "romaine",
@@ -2524,21 +2748,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "rose",
@@ -2562,21 +2773,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "C",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "ruscus_aculeatus",
@@ -2595,27 +2793,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "exact_species",
-   "verification_status": "original_confirmed",
-   "verified_by": "this ledger (original opened 2026-10-17)",
-   "original_opened": "publisher page (BioOne), abstract only; full text is subscriber-only",
+   "verification_status": "abstract_only_not_confirmed",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "BioOne abstract; full text subscriber-only; no open copy (Unpaywall: not OA; IRIS record 403)",
    "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
-   "original_locator": "Abstract",
-   "original_summary": "Wild Testudo hermanni hermanni switched to flowers and unripe fruit of Ruscus aculeatus in autumn as these became available.",
-   "observation_type": "wild_diet_study",
-   "direct_observation": true,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": "flowers and unripe fruit",
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": "autumn"
-   },
-   "review_note": "The abstract does not mention leaves; the stored link lists leaves too. Leaves stay unconfirmed here.",
+   "original_locator": null,
+   "original_summary": "The abstract says wild T. h. hermanni switched to Ruscus aculeatus flowers and unripe fruit in autumn. An abstract does not confirm a feeding record here; the full text is needed (see QA-FR-002).",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "verified_feeding_record"
+   "grade_changed": false
   },
   {
    "plant_id": "ryegrass",
@@ -2639,21 +2824,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2671,27 +2843,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2715,21 +2874,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2747,27 +2893,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "PMC full text (PMC6894431)",
+   "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Parasite-network study; plants are named only when citing earlier diet studies.",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2785,27 +2918,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2829,21 +2949,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2861,27 +2968,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "original_inaccessible",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "the PDF URL returns a bot-check page; not bypassed",
+   "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Original not read.",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2899,27 +2993,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "PMC full text",
+   "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Parasite-network study; plants are named only when citing earlier diet studies.",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2943,21 +3024,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -2975,27 +3043,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "identity_unresolved",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": null,
@@ -3019,21 +3074,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": null,
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "sowthistle",
@@ -3051,27 +3093,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
    "original_opened": null,
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "sowthistle",
@@ -3095,21 +3124,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "sowthistle",
@@ -3127,27 +3143,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "sowthistle",
@@ -3171,21 +3174,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "sowthistle",
@@ -3209,21 +3199,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "sowthistle",
@@ -3241,27 +3218,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "A",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "timothy",
@@ -3285,21 +3249,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "watercress",
@@ -3318,26 +3269,13 @@
    "quarantined_wild_record": false,
    "plant_match": "not_named",
    "verification_status": "recommendation_not_feeding_record",
-   "verified_by": "this ledger (original opened 2026-10-17)",
+   "verified_by": "original opened 2026-10-17",
    "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
    "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
-   "original_locator": "FEEDING, Captive",
-   "original_summary": "Lists foods that can be tried in captivity (meadow hay, dandelions, plantains, clover, sow thistle, watercress, wild mallow, chickweed). This is advice, not a record of feeding.",
-   "observation_type": "husbandry_recommendation",
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
    "existing_grade": "보류",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "wheatgrass",
@@ -3361,21 +3299,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "whiteclover",
@@ -3399,21 +3324,8 @@
    "citation": null,
    "original_locator": null,
    "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   },
   {
    "plant_id": "whiteclover",
@@ -3431,27 +3343,14 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "genus_or_group",
-   "verification_status": "not_verified",
-   "verified_by": null,
-   "original_opened": null,
-   "citation": null,
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
    "original_locator": null,
-   "original_summary": null,
-   "observation_type": null,
-   "direct_observation": false,
-   "feeding_details": {
-    "mixed_with": null,
-    "feeding_frequency": null,
-    "feeding_amount": null,
-    "plant_part": null,
-    "fresh_or_dried": null,
-    "cutting_method": null,
-    "season": null
-   },
-   "review_note": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
    "existing_grade": "B",
-   "grade_changed": false,
-   "feeding_record_status": "assessment_hold"
+   "grade_changed": false
   }
  ]
 }
