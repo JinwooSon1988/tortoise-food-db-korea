@@ -16,7 +16,8 @@ import audit_evidence_conflicts as A  # noqa: E402
 FILES = ["data/plants.json", "data/public_assessments.json", "data/public_evidence_records.json",
          "data/plant_feeding_evidence_links.json", "data/reviewed_plant_reverse_evidence_index.json",
          "data/feeding_record_verification_v1.json", "data/feeding_record_fulltext_extracts_v1.json",
-         "data/verified_plant_images_v56.json", "data/i18n/en/strings_en.json", "data/source_access_check_20261019.json"]
+         "data/verified_plant_images_v56.json", "data/i18n/en/strings_en.json", "data/source_access_check_20261019.json",
+         "data/feeding_p1_blocked_claim_manifest_20261018.json"]
 RUSCUS = "wild_ruscus_aculeatus_thh_italy_2011"
 
 
@@ -72,6 +73,9 @@ CASES = [
      lambda d: d["records"].append({**pub_rec(d, RUSCUS), "id": RUSCUS + "_copy"})),
     ("R1_unknown_plant_id", "data/public_evidence_records.json",
      lambda d: pub_rec(d, RUSCUS).update(plant_ids=["ruscus_aculeatus", "no_such_plant"])),
+    ("R15_held_source_shown_as_direct_without_disclosure", "data/public_evidence_records.json",
+     lambda d: pub_rec(d, "wild_medicago_polymorpha_tgg_morocco").update(
+         supports=pub_rec(d, "wild_medicago_polymorpha_tgg_morocco")["supports"].split(" 다만 이 출처의")[0])),
     ("R11_image_master_name_drift", "data/verified_plant_images_v56.json",
      lambda d: d["images"][0].update(master_scientific="Wrongus name")),
 ]

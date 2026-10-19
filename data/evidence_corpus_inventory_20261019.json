@@ -15,11 +15,11 @@
   "fulltext_extract_records": 14,
   "verified_images": 132,
   "rejected_image_candidates": 41,
-  "translation_entries": 971,
+  "translation_entries": 972,
   "taxonomy_candidates_tracked": 9995,
   "evidence_first_queue": 130,
-  "unique_sources": 351,
-  "unique_sources_with_doi": 124,
+  "unique_sources": 353,
+  "unique_sources_with_doi": 126,
   "unique_sources_by_level": {
    "contextual_non_tortoise": 22,
    "direct_tortoise": 5,
@@ -28,9 +28,9 @@
    "mixed:direct_tortoise+indirect_tortoise": 3,
    "mixed:toxicology_context+unclassified": 4,
    "toxicology_context": 4,
-   "unclassified": 174
+   "unclassified": 176
   },
-  "tracked_data_files_with_doi": 54
+  "tracked_data_files_with_doi": 56
  },
  "local_candidate_pools": {
   "original_source_discovery_files": 22004,
@@ -634,9 +634,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:pumpkinleaf:mashitoa_pumpkin_leaf_antinutrients_2021",
     "public_evidence_records:mashitoa_pumpkin_leaf_antinutrients_2021"
    ]
@@ -672,6 +673,22 @@
    ]
   },
   {
+   "key": "doi:10.1007/s10886-023-01417-2",
+   "levels": [
+    "unclassified"
+   ],
+   "plant_ids": [],
+   "record_ids": [],
+   "titles": [],
+   "years": [],
+   "animal_taxa": [],
+   "source_types": [],
+   "occurrence_count": 1,
+   "occurrences": [
+    "data/fulltext_claim_check_20261019.json"
+   ]
+  },
+  {
    "key": "doi:10.1007/s10886-023-01427-0",
    "levels": [
     "unclassified"
@@ -694,9 +711,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:dock:costan_rumex_defences_2023",
     "public_evidence_records:costan_rumex_defences_2023"
    ]
@@ -754,9 +772,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 5,
+   "occurrence_count": 6,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
+    "data/fulltext_claim_check_20261019.json",
     "data/risk_literature.json",
     "data/source_verification_2026-09-13.json",
     "plant_feeding_evidence_links:sorrel:rumex_acetosa_oxalate_2021",
@@ -816,9 +835,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:blackberryleaf:asnaashari_blackberry_leaf_2015",
     "public_evidence_records:asnaashari_blackberry_leaf_2015"
    ]
@@ -1204,9 +1224,10 @@
    "source_types": [
     "peer_reviewed_article"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:kiwileaf:actinidia_iridoid_distribution_2023",
     "public_evidence_records:actinidia_iridoid_distribution_2023"
    ]
@@ -1512,10 +1533,11 @@
    "source_types": [
     "peer_reviewed_systematic_review"
    ],
-   "occurrence_count": 5,
+   "occurrence_count": 6,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
     "data/evidence.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:radishgreens:gamba_radish_systematic_review_2021",
     "public_evidence_records:gamba_radish_systematic_review_2021",
     "reviewed_plant_reverse_evidence_index:radishgreens:gamba_radish_systematic_review_2021"
@@ -1880,9 +1902,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:cabbage:kabouw_cabbage_glucosinolates_2010",
     "public_evidence_records:kabouw_cabbage_glucosinolates_2010"
    ]
@@ -2755,13 +2778,14 @@
    "source_types": [
     "academic_study"
    ],
-   "occurrence_count": 28,
+   "occurrence_count": 29,
    "occurrences": [
     "data/academic_evidence_registry_v56.json",
     "data/evidence-first-queue/queue-001.json",
     "data/evidence.json",
     "data/evidence_matrix_v56.json",
     "data/feeding_evidence_scope_audit_20261018.json",
+    "data/fulltext_claim_check_20261019.json",
     "data/ibera_direct_feeding_evidence_v56.json",
     "data/ibera_field_food_candidates.json",
     "data/medicago_species_evidence_v56.json",
@@ -2934,8 +2958,9 @@
    "source_types": [
     "peer_reviewed_review"
    ],
-   "occurrence_count": 2,
+   "occurrence_count": 3,
    "occurrences": [
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:willowleaf:tawfeek_salix_phytochemistry_2021",
     "public_evidence_records:tawfeek_salix_phytochemistry_2021"
    ]
@@ -2963,9 +2988,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:watercress:kyriakou_watercress_aerial_2022",
     "public_evidence_records:kyriakou_watercress_aerial_2022"
    ]
@@ -3040,9 +3066,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:buckwheatleaf:buckwheat_leaf_fagopyrin_2019",
     "public_evidence_records:buckwheat_leaf_fagopyrin_2019"
    ]
@@ -3070,9 +3097,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:willowleaf:piatczak_salix_alba_leaf_2020",
     "public_evidence_records:piatczak_salix_alba_leaf_2020"
    ]
@@ -3100,9 +3128,10 @@
    "source_types": [
     "peer_reviewed_research"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:hedgemustard:sisymbrium_itc_2021",
     "public_evidence_records:sisymbrium_itc_2021"
    ]
@@ -3167,9 +3196,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:lambsquarters:savage_chenopodium_oxalate_2019",
     "public_evidence_records:savage_chenopodium_oxalate_2019"
    ]
@@ -3197,9 +3227,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:napa:park_napa_metabolites_2019",
     "public_evidence_records:park_napa_metabolites_2019"
    ]
@@ -3227,9 +3258,10 @@
    "source_types": [
     "peer_reviewed_article"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:soybeanleaf:soybean_leaf_nutrition_2026",
     "public_evidence_records:soybean_leaf_nutrition_2026"
    ]
@@ -3278,11 +3310,28 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:cauliflowerleaf:bhandari_cauliflower_glucosinolates_2015",
     "public_evidence_records:bhandari_cauliflower_glucosinolates_2015"
+   ]
+  },
+  {
+   "key": "doi:10.3390/molecules200915842",
+   "levels": [
+    "unclassified"
+   ],
+   "plant_ids": [],
+   "record_ids": [],
+   "titles": [],
+   "years": [],
+   "animal_taxa": [],
+   "source_types": [],
+   "occurrence_count": 1,
+   "occurrences": [
+    "data/fulltext_claim_check_20261019.json"
    ]
   },
   {
@@ -3428,15 +3477,17 @@
    "source_types": [
     "specialist_group_species_account"
    ],
-   "occurrence_count": 18,
+   "occurrence_count": 20,
    "occurrences": [
     "data/academic_evidence_registry_v56.json",
+    "data/bulk_verification_report_20261019.json",
     "data/evidence-first-queue/queue-002.json",
     "data/evidence.json",
     "data/evidence_matrix_batch2_v56.json",
     "data/feeding_evidence_scope_audit_20261018.json",
     "data/feeding_original_retrieval_queue_20261018.json",
     "data/feeding_original_retrieval_queue_dedup_20261018.json",
+    "data/fulltext_claim_check_20261019.json",
     "feeding_record_verification_v1:None",
     "feeding_record_verification_v1:alfalfa",
     "feeding_record_verification_v1:clover",
@@ -3605,9 +3656,10 @@
    "source_types": [
     "peer_reviewed_plant_composition"
    ],
-   "occurrence_count": 3,
+   "occurrence_count": 4,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:hawthorn:keser_hawthorn_parts_2014",
     "public_evidence_records:keser_hawthorn_parts_2014"
    ]
@@ -3651,10 +3703,11 @@
    "source_types": [
     "peer_reviewed"
    ],
-   "occurrence_count": 5,
+   "occurrence_count": 6,
    "occurrences": [
     "data/evidence-first-queue/queue-001.json",
     "data/evidence.json",
+    "data/fulltext_claim_check_20261019.json",
     "plant_feeding_evidence_links:mulberry:mulberry_feed_review_2019",
     "public_evidence_records:mulberry_feed_review_2019",
     "reviewed_plant_reverse_evidence_index:mulberry:mulberry_feed_review_2019"
@@ -3702,10 +3755,11 @@
    "source_types": [
     "peer_reviewed_context"
    ],
-   "occurrence_count": 6,
+   "occurrence_count": 7,
    "occurrences": [
     "data/evidence-first-queue/queue-002.json",
     "data/evidence.json",
+    "data/fulltext_claim_check_20261019.json",
     "feeding_record_verification_v1:None",
     "feeding_record_verification_v1:alfalfa",
     "plant_feeding_evidence_links:alfalfa:tgraeca_alfalfa_context_2019",

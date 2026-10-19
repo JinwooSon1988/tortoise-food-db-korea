@@ -301,6 +301,19 @@ def audit(root=None):
             if len(ids) > 1:
                 hit("R14_duplicate_source_records", "error", ",".join(sorted(ids)), f"{pid}: DOI {d} stored {len(ids)} times")
 
+    # R15 held originals (P1 manifest): a public direct record built on a held source must say so on the page.
+    manifest_p = DATA_ROOT / "data/feeding_p1_blocked_claim_manifest_20261018.json"
+    held = set()
+    if manifest_p.exists():
+        for c in json.loads(manifest_p.read_text(encoding="utf-8"))["blocked_claims"]:
+            if c.get("status") == "hold":
+                held.update(c["evidence_ids"])
+    for eid in sorted(held):
+        p = pub.get(eid)
+        if p and p.get("directness") == "direct" and "원문 확인 보류(P1)" not in (p.get("supports") or ""):
+            hit("R15_held_source_shown_as_direct_without_disclosure", "error", eid,
+                f"P1-held source is public direct evidence for {p['plant_ids']} without the hold disclosure")
+
     return findings
 
 

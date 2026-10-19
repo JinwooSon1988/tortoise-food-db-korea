@@ -105,10 +105,22 @@
    "count": 46,
    "fixed": 0,
    "reason": "preserved untracked research data; read around, not modified"
+  },
+  {
+   "kind": "p1_held_source_shown_as_direct_without_disclosure",
+   "count": 2,
+   "fixed": 2,
+   "ids": [
+    "hermanni_foraging_italy_2015 (plantain, clover)",
+    "wild_medicago_polymorpha_tgg_morocco (medicago_hispida)"
+   ],
+   "fix": "hold disclosure added to public supports and a medicago_hispida limit; directness and grades unchanged",
+   "from": "data/qa_blocked_public_evidence_overlap_20261019.json"
   }
  ],
  "unresolved": [
   "melo_coriander_leaf_oxalate_2008: stored DOI is an unrelated bread paper; no matching record found; owner must supply the identifier.",
+  "P1-held originals still unread: SISVET 2015 proceedings PDF returns 403 to the pipeline; El Mouden et al. 2006 has no open copy (OpenAlex closed, web search found none). Release requires owner review per the P1 manifest.",
   "ruscus_aculeatus ledger stays full_text_reviewed_not_extracted until an extract with site and period locators exists.",
   "bhandari_cauliflower_glucosinolates_2015: corrected DOI's full text not obtained.",
   "Review findings in data/evidence_conflict_audit_20261019.json (grade/scope/placeholder/image items) need owner judgement; no grade was changed.",
@@ -126,8 +138,8 @@
  },
  "grades_changed": 0,
  "totals": {
-  "errors_detected": 64,
-  "errors_fixed": 17,
+  "errors_detected": 66,
+  "errors_fixed": 19,
   "errors_unresolved": 47,
   "review_findings_open": 35
  }

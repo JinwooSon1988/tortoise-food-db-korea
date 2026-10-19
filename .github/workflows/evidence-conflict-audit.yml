@@ -12,6 +12,7 @@ on:
       - 'data/verified_plant_images_v56.json'
       - 'data/i18n/en/strings_en.json'
       - 'data/source_access_check_20261019.json'
+      - 'data/feeding_p1_blocked_claim_manifest_20261018.json'
       - 'scripts/audit_evidence_conflicts.py'
       - 'scripts/test_audit_evidence_conflicts.py'
       - 'scripts/build_feeding_record_verification.py'
