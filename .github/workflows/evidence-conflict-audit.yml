@@ -1,0 +1,45 @@
+name: Evidence conflict audit
+on:
+  pull_request:
+    paths:
+      - 'data/plants.json'
+      - 'data/public_assessments.json'
+      - 'data/public_evidence_records.json'
+      - 'data/plant_feeding_evidence_links.json'
+      - 'data/reviewed_plant_reverse_evidence_index.json'
+      - 'data/feeding_record_verification_v1.json'
+      - 'data/feeding_record_fulltext_extracts_v1.json'
+      - 'data/verified_plant_images_v56.json'
+      - 'data/i18n/en/strings_en.json'
+      - 'data/source_access_check_20261019.json'
+      - 'scripts/audit_evidence_conflicts.py'
+      - 'scripts/test_audit_evidence_conflicts.py'
+      - 'scripts/build_feeding_record_verification.py'
+      - '.github/workflows/evidence-conflict-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Ledger is reproducible from the builder
+        run: |
+          cp data/feeding_record_verification_v1.json /tmp/ledger.json
+          cp data/feeding_pending_site_v1.json /tmp/pending.json
+          python scripts/build_feeding_record_verification.py
+          diff -q /tmp/ledger.json data/feeding_record_verification_v1.json
+          diff -q /tmp/pending.json data/feeding_pending_site_v1.json
+      - name: No error-level conflicts across the canonical data
+        run: python scripts/audit_evidence_conflicts.py --check
+      - name: Committed audit report is current
+        run: |
+          cp data/evidence_conflict_audit_20261019.json /tmp/audit.json
+          python scripts/audit_evidence_conflicts.py
+          diff -q /tmp/audit.json data/evidence_conflict_audit_20261019.json
+      - name: Rule regression tests
+        run: python scripts/test_audit_evidence_conflicts.py
