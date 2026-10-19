@@ -73,8 +73,8 @@ CHECKS = {
                    "13 dicot and 3 monocot species eaten, vegetative tissue above reproductive tissue, and dicot families "
                    "over 70% of fragments. It names no plant species, so the Cynodon dactylon figures need the full text."},
     ("10.1016/j.jaridenv.2005.06.010", "*"): {
-        "status": "abstract_only_not_confirmed", "checked_at": "2026-10-19",
-        "opened": "authors' abstract in the HAL record hal-00184868 (metadata only, no file). Full text not accessible: "
+        "status": "original_inaccessible", "checked_at": "2026-10-19",
+        "opened": "full text not read (subscription only); only the authors' abstract in the HAL record hal-00184868 (metadata only, no file). Full text not accessible: "
                   "ScienceDirect 403, Unpaywall/OpenAlex/Semantic Scholar closed, the ISTEX link needs a French "
                   "institutional login",
         "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo "

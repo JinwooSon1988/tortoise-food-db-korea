@@ -2,12 +2,12 @@
  "schema_version": "1.0",
  "scope": "Rule hits across the canonical data. Errors are contradictions between stored fields; reviews need a person to judge against the original. Grades are never changed by this audit.",
  "counts": {
-  "findings": 10,
+  "findings": 6,
   "errors": 1,
-  "reviews": 9,
+  "reviews": 5,
   "errors_unaccepted": 0,
   "by_rule": {
-   "R11_image_part_not_matched": 7,
+   "R11_image_part_not_matched": 3,
    "R1_direct_evidence_placeholder_taxon": 2,
    "R8_title_differs_from_doi_record": 1
   }
@@ -37,12 +37,6 @@
   {
    "rule": "R11_image_part_not_matched",
    "severity": "review",
-   "ref": "bellpepper",
-   "detail": "part_match=partial depicted=botanical illustration (shoot with fruit)"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
    "ref": "turnipgreens",
    "detail": "part_match=partial depicted=harvested turnip roots with attached greens"
   },
@@ -51,24 +45,6 @@
    "severity": "review",
    "ref": "cauliflowerleaf",
    "detail": "part_match=partial depicted=curd with surrounding leaves"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "sunflowerleaf",
-   "detail": "part_match=partial depicted=whole plant with leaves and flower head"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "sunflowerpetal",
-   "detail": "part_match=partial depicted=flower heads in field (ray florets visible)"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "beanleaf",
-   "detail": "part_match=partial depicted=leaf with flower"
   },
   {
    "rule": "R11_image_part_not_matched",

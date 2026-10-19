@@ -247,12 +247,13 @@
   {
    "ref": "wild_medicago_polymorpha_tgg_morocco",
    "doi": "10.1016/j.jaridenv.2005.06.010",
-   "status": "abstract_only_not_confirmed",
+   "status": "original_inaccessible",
    "checked": "2026-10-19: authors' abstract read in HAL record hal-00184868 (metadata only, no file). ScienceDirect 403; Unpaywall, OpenAlex and Semantic Scholar list no open copy; the ISTEX link needs a French institutional login",
    "not_read": true,
    "abstract_confirms": "faecal analysis; five main species (Leontodon saxatilis, Malva parviflora, Astragalus cruciatus, Medicago hispida, Lotus arenarius) are 70% of identified material and highly preferred",
    "still_unconfirmed": "per-species share, plant part, page and table locators",
-   "public_change": "supports restated from the abstract with the P1 hold; medicago_hispida limit added"
+   "public_change": "supports restated from the abstract with the P1 hold; medicago_hispida limit added",
+   "note": "Ledger status stays original_inaccessible (full text unread) so the P1 blocked-claim manifest keeps holding all El Mouden records; the abstract check is recorded in the ledger summary."
   },
   {
    "ref": "testudo_graeca_cynodon_field_diet_2008",
