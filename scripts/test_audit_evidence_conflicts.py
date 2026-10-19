@@ -75,7 +75,7 @@ CASES = [
      lambda d: pub_rec(d, RUSCUS).update(plant_ids=["ruscus_aculeatus", "no_such_plant"])),
     ("R15_held_source_shown_as_direct_without_disclosure", "data/public_evidence_records.json",
      lambda d: pub_rec(d, "wild_medicago_polymorpha_tgg_morocco").update(
-         supports=pub_rec(d, "wild_medicago_polymorpha_tgg_morocco")["supports"].split(" 다만 이 출처의")[0])),
+         supports=pub_rec(d, "wild_medicago_polymorpha_tgg_morocco")["supports"].replace("원문 확인 보류(P1)", "검토 중"))),
     ("R11_image_master_name_drift", "data/verified_plant_images_v56.json",
      lambda d: d["images"][0].update(master_scientific="Wrongus name")),
     # Review-level rules: the injected finding must be new compared with the clean copy.

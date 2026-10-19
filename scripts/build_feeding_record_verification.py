@@ -64,20 +64,32 @@ CHECKS = {
                    "herbivorous, young leaves of Taraxacum, Trifolium, Medicago, Sonchus and others. It reports no observation of "
                    "its own; the feeding records belong to Iftime and Iftime 2012 (a full-text extract source)."},
     ("10.1080/21564574.2008.9635573", "*"): {
-        "status": "original_does_not_name_taxon",
-        "opened": "publisher abstract (NISC); full text not accessible",
+        "status": "original_does_not_name_taxon", "checked_at": "2026-10-19",
+        "opened": "publisher abstract (NISC; same text in the OpenAlex record). Full text not accessible: Taylor & Francis "
+                  "and Sabinet return 403, Unpaywall and Semantic Scholar list it as closed (2026-10-19)",
         "citation": "Rouag, R. et al. (2008) Food choice of an Algerian population of the spur-thighed tortoise, Testudo "
                     "graeca. African Journal of Herpetology 57(2):103-113",
-        "summary": "The abstract names plant families only; no species. The species claims need the full text."},
+        "summary": "The abstract confirms faecal-pellet analysis of 4422 fragments from 20 males, 16 females and 8 juveniles, "
+                   "13 dicot and 3 monocot species eaten, vegetative tissue above reproductive tissue, and dicot families "
+                   "over 70% of fragments. It names no plant species, so the Cynodon dactylon figures need the full text."},
     ("10.1016/j.jaridenv.2005.06.010", "*"): {
-        "status": "original_inaccessible",
-        "opened": "ScienceDirect 403; Crossref and Europe PMC carry no abstract; no open copy found",
+        "status": "abstract_only_not_confirmed", "checked_at": "2026-10-19",
+        "opened": "authors' abstract in the HAL record hal-00184868 (metadata only, no file). Full text not accessible: "
+                  "ScienceDirect 403, Unpaywall/OpenAlex/Semantic Scholar closed, the ISTEX link needs a French "
+                  "institutional login",
         "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo "
                     "graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
-        "summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001)."},
+        "summary": "The abstract states that faecal analysis of T. g. graeca in the central Jbilets found five main plant "
+                   "species (Leontodon saxatilis, Malva parviflora, Astragalus cruciatus, Medicago hispida, Lotus arenarius) "
+                   "making up 70% of identified material and highly preferred. No page, table, plant part or per-species "
+                   "share is given, so no record is confirmed from the full text (QA-FR-001)."},
     ("iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_sisvet_2015.pdf", "*"): {
-        "status": "original_inaccessible", "opened": "the PDF URL returns a bot-check page; not bypassed",
-        "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)", "summary": "Original not read."},
+        "status": "original_inaccessible", "checked_at": "2026-10-19",
+        "opened": "the PDF URL and the IRIS item and bitstream pages return a bot-check page (403); not bypassed. The IRIS "
+                  "OAI-PMH endpoint was reachable, but harvesting sets col_2318_1500038 and com_2318_1500068 (286,118 "
+                  "records) found no SISVET 2015 Testudo hermanni foraging record",
+        "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
+        "summary": "Original not read. The Fabaceae/Plantaginaceae selection summary comes from the evidence registry only."},
     ("archive.britishcheloniagroup.org.uk/caresheets/sulcata", "*"): {
         "status": "recommendation_not_feeding_record", "opened": "British Chelonia Group care sheet, FEEDING > Captive",
         "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",

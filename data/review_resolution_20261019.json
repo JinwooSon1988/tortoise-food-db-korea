@@ -3,8 +3,8 @@
  "date": "2026-10-19",
  "scope": "Resolution of the 35 review findings in data/qa_independent_bulk_review_triage_20261019.json, plus the coriander DOI and the P1 held sources. No A-D grade or confidence changed.",
  "counts": {
-  "fixed": 11,
-  "held": 9,
+  "fixed": 15,
+  "held": 5,
   "rule_false_positive": 15
  },
  "findings": [
@@ -30,13 +30,13 @@
    "ref": "hermanni_foraging_italy_2015/plantain",
    "rule": "R1_direct_evidence_placeholder_taxon",
    "outcome": "held",
-   "action": "SISVET 2015 PDF still returns HTTP 403 on 2026-10-19 (not bypassed). The taxon cannot be filled from an unread original; the public record keeps its P1 hold disclosure."
+   "action": "SISVET 2015 PDF and the IRIS item/bitstream pages return a bot-check page (403; not bypassed). The IRIS OAI-PMH harvest of sets col_2318_1500038 and com_2318_1500068 (286,118 records, 2026-10-19/20) found no record of this presentation. The taxon cannot be filled from an unread original; supports now attributes the Fabaceae/Plantaginaceae summary to the evidence registry and keeps the P1 hold disclosure."
   },
   {
    "ref": "hermanni_foraging_italy_2015/clover",
    "rule": "R1_direct_evidence_placeholder_taxon",
    "outcome": "held",
-   "action": "SISVET 2015 PDF still returns HTTP 403 on 2026-10-19 (not bypassed). The taxon cannot be filled from an unread original; the public record keeps its P1 hold disclosure."
+   "action": "SISVET 2015 PDF and the IRIS item/bitstream pages return a bot-check page (403; not bypassed). The IRIS OAI-PMH harvest of sets col_2318_1500038 and com_2318_1500068 (286,118 records, 2026-10-19/20) found no record of this presentation. The taxon cannot be filled from an unread original; supports now attributes the Fabaceae/Plantaginaceae summary to the evidence registry and keeps the P1 hold disclosure."
   },
   {
    "ref": "mint",
@@ -179,44 +179,48 @@
   {
    "ref": "bellpepper",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (D-grade plant; botanical illustration shows the fruit) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Starr-200618-7757-Capsicum_annuum-red_bell_pepper_harvest_from_veggie_garden-Hawea_Pl_Olinda-Maui_(50336359752).jpg: Commons category names the species, creator and licence checked, thumbnail viewed and the food part is the main subject; part_match set to 'match'.",
+   "resolved_on": "2026-10-19"
   },
   {
    "ref": "turnipgreens",
    "rule": "R11_image_part_not_matched",
    "outcome": "held",
-   "action": "Food part is visible (greens visible with roots) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "action": "Food part is visible (greens visible with roots) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines. Rechecked 2026-10-19: no Commons file with a species-level category and the food part as sole subject was accepted."
   },
   {
    "ref": "cauliflowerleaf",
    "rule": "R11_image_part_not_matched",
    "outcome": "held",
-   "action": "Food part is visible (leaves visible around the curd) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "action": "Food part is visible (leaves visible around the curd) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines. Rechecked 2026-10-19: no Commons file with a species-level category and the food part as sole subject was accepted."
   },
   {
    "ref": "sunflowerleaf",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (leaves visible on whole plant) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Helianthus_annuus_leaf-9-16-04.jpg: Commons category names the species, creator and licence checked, thumbnail viewed and the food part is the main subject; part_match set to 'match'.",
+   "resolved_on": "2026-10-19"
   },
   {
    "ref": "sunflowerpetal",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (ray florets visible in the field photo) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Close-up_of_a_Common_Sunflower.jpg: Commons category names the species, creator and licence checked, thumbnail viewed and the food part is the main subject; part_match set to 'match'.",
+   "resolved_on": "2026-10-19"
   },
   {
    "ref": "beanleaf",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (leaf is the subject, with a flower) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Starr-081031-0360-Phaseolus_vulgaris-leaves-Makawao-Maui_(24631143760).jpg: Commons category names the species, creator and licence checked, thumbnail viewed and the food part is the main subject; part_match set to 'match'.",
+   "resolved_on": "2026-10-19"
   },
   {
    "ref": "timothy",
    "rule": "R11_image_part_not_matched",
    "outcome": "held",
-   "action": "Food part is visible (leaves visible with seedheads) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+   "action": "Food part is visible (leaves visible with seedheads) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines. Rechecked 2026-10-19: no Commons file with a species-level category and the food part as sole subject was accepted."
   }
  ],
  "citations": [
@@ -236,28 +240,40 @@
    "ref": "hermanni_foraging_italy_2015",
    "url": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
    "status": "original_inaccessible",
-   "checked": "2026-10-19 HTTP 403 with a browser user agent; web search found no other copy",
-   "not_read": true
+   "checked": "2026-10-19/20: the PDF URL and IRIS item/bitstream pages return a Cloudflare bot-check (403, not bypassed); the AperTO mirror and IRIS search are behind the same check; IRIS OAI-PMH harvest (286,118 records) found no record of this presentation; web search found no other copy",
+   "not_read": true,
+   "public_change": "supports attributes the selection summary to the evidence registry; plantain why and limits disclose the hold"
   },
   {
    "ref": "wild_medicago_polymorpha_tgg_morocco",
    "doi": "10.1016/j.jaridenv.2005.06.010",
-   "status": "original_inaccessible",
-   "checked": "2026-10-19 OpenAlex lists no open-access location; subscription only",
-   "not_read": true
+   "status": "abstract_only_not_confirmed",
+   "checked": "2026-10-19: authors' abstract read in HAL record hal-00184868 (metadata only, no file). ScienceDirect 403; Unpaywall, OpenAlex and Semantic Scholar list no open copy; the ISTEX link needs a French institutional login",
+   "not_read": true,
+   "abstract_confirms": "faecal analysis; five main species (Leontodon saxatilis, Malva parviflora, Astragalus cruciatus, Medicago hispida, Lotus arenarius) are 70% of identified material and highly preferred",
+   "still_unconfirmed": "per-species share, plant part, page and table locators",
+   "public_change": "supports restated from the abstract with the P1 hold; medicago_hispida limit added"
   },
   {
    "ref": "testudo_graeca_cynodon_field_diet_2008",
    "doi": "10.1080/21564574.2008.9635573",
-   "status": "full_text_not_accessible",
-   "checked": "ledger: publisher abstract only; OpenAlex lists no open copy",
-   "not_read": true
+   "status": "original_does_not_name_taxon",
+   "checked": "2026-10-19: publisher abstract (NISC; same text in OpenAlex) read. Taylor & Francis and Sabinet 403; Unpaywall and Semantic Scholar list it as closed",
+   "not_read": true,
+   "abstract_confirms": "faecal pellets of 20 males, 16 females and 8 juveniles; 4,422 fragments; 13 dicot and 3 monocot species; vegetative above reproductive tissue",
+   "still_unconfirmed": "the Cynodon dactylon leaf and stem percentages (abstract names no species)",
+   "public_change": "supports attributes the Cynodon figures to the evidence registry; bermudagrass why and limits disclose the hold"
   }
  ],
  "image_check": {
   "files_checked_via_commons_api": 132,
   "missing_files": 0,
-  "replaced": 3,
-  "note": "Every image file page exists; creator and licence agree with the registry (format differences only)."
- }
+  "replaced": 7,
+  "note": "Every image file page exists; creator and licence agree with the registry (format differences only).",
+  "rejected_candidates": [
+   "File:Brassica leaf.jpg (microscope close-up, not the food part as eaten)"
+  ]
+ },
+ "updated": "2026-10-20",
+ "false_positive_regression": "The 15 rule_false_positive findings stay out of the error set: audit_evidence_conflicts --check reports 6 findings, 0 unaccepted errors, and test_audit_evidence_conflicts passes (rank-aware R11, NEG_KO, R15 disclosure cases)."
 }
