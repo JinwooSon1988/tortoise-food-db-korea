@@ -2,44 +2,20 @@
  "schema_version": "1.0",
  "scope": "Rule hits across the canonical data. Errors are contradictions between stored fields; reviews need a person to judge against the original. Grades are never changed by this audit.",
  "counts": {
-  "findings": 37,
-  "errors": 2,
-  "reviews": 35,
+  "findings": 10,
+  "errors": 1,
+  "reviews": 9,
   "errors_unaccepted": 0,
   "by_rule": {
-   "R11_image_not_exact_species": 14,
-   "R11_image_part_not_matched": 10,
-   "R1_direct_evidence_placeholder_taxon": 5,
-   "R2_link_without_public_record": 1,
-   "R4_safety_claim_in_evidence_text": 1,
-   "R6_ab_grade_without_tortoise_evidence": 1,
-   "R7_species_group_without_matching_evidence": 3,
-   "R8_title_differs_from_doi_record": 2
+   "R11_image_part_not_matched": 7,
+   "R1_direct_evidence_placeholder_taxon": 2,
+   "R8_title_differs_from_doi_record": 1
   }
  },
  "accepted_errors": {
-  "R8_title_differs_from_doi_record|teuber_dill_leaf_flavonols_1978": "DOI record carries the German original title (Flavonolglykoside der Blätter und Früchte des Dills); same paper.",
-  "R8_title_differs_from_doi_record|melo_coriander_leaf_oxalate_2008": "Stored DOI resolves to an unrelated bread paper; no matching record found in Crossref or Europe PMC on 2026-10-19. Owner must supply the correct identifier (see data/evidence_conflict_audit_20261019.json, unresolved)."
+  "R8_title_differs_from_doi_record|teuber_dill_leaf_flavonols_1978": "DOI record carries the German original title (Flavonolglykoside der Blätter und Früchte des Dills); same paper."
  },
  "findings": [
-  {
-   "rule": "R1_direct_evidence_placeholder_taxon",
-   "severity": "review",
-   "ref": "ibera_eastern_account_2023",
-   "detail": "direct evidence linked to sowthistle stores no reported plant taxon"
-  },
-  {
-   "rule": "R1_direct_evidence_placeholder_taxon",
-   "severity": "review",
-   "ref": "ibera_eastern_account_2023",
-   "detail": "direct evidence linked to clover stores no reported plant taxon"
-  },
-  {
-   "rule": "R1_direct_evidence_placeholder_taxon",
-   "severity": "review",
-   "ref": "ibera_eastern_account_2023",
-   "detail": "direct evidence linked to alfalfa stores no reported plant taxon"
-  },
   {
    "rule": "R1_direct_evidence_placeholder_taxon",
    "severity": "review",
@@ -53,48 +29,6 @@
    "detail": "direct evidence linked to clover stores no reported plant taxon"
   },
   {
-   "rule": "R2_link_without_public_record",
-   "severity": "review",
-   "ref": "rouag2008_cynodon_dactylon",
-   "detail": "bermudagrass: link row has no public evidence record"
-  },
-  {
-   "rule": "R4_safety_claim_in_evidence_text",
-   "severity": "review",
-   "ref": "althaea_carp_toxicology_2016",
-   "detail": "따라서 ‘천연 식물이라 무제한 안전하다’는 가정은 피해야 한다는 용량 의존적 독성 맥락을 제공한다."
-  },
-  {
-   "rule": "R7_species_group_without_matching_evidence",
-   "severity": "review",
-   "ref": "mint",
-   "detail": "Mediterranean_Testudo with no Testudo/Mediterranean evidence"
-  },
-  {
-   "rule": "R7_species_group_without_matching_evidence",
-   "severity": "review",
-   "ref": "minari",
-   "detail": "Mediterranean_Testudo with no Testudo/Mediterranean evidence"
-  },
-  {
-   "rule": "R7_species_group_without_matching_evidence",
-   "severity": "review",
-   "ref": "waterdropwort",
-   "detail": "Mediterranean_Testudo with no Testudo/Mediterranean evidence"
-  },
-  {
-   "rule": "R6_ab_grade_without_tortoise_evidence",
-   "severity": "review",
-   "ref": "meadowgrass",
-   "detail": "limited_mixed_diet with only non-tortoise evidence"
-  },
-  {
-   "rule": "R8_title_differs_from_doi_record",
-   "severity": "error",
-   "ref": "melo_coriander_leaf_oxalate_2008",
-   "detail": "stored 'Removal of oxalate from coriander leaves (Coriandrum sativum L.) using cooking methods' / DOI record 'EFFECT OF PENTOSANASE ON DOUGH AND BREAD PROPERTIES PRODUCED BY DIFFERENT TYPES OF FLOURS'"
-  },
-  {
    "rule": "R8_title_differs_from_doi_record",
    "severity": "error",
    "ref": "teuber_dill_leaf_flavonols_1978",
@@ -103,44 +37,8 @@
   {
    "rule": "R11_image_part_not_matched",
    "severity": "review",
-   "ref": "endive",
-   "detail": "part_match=partial depicted=flowering plant"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "romaine",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "bokchoy",
-   "detail": "identity_scope=exact_subspecies"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
    "ref": "bellpepper",
    "detail": "part_match=partial depicted=botanical illustration (shoot with fruit)"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "carrottop",
-   "detail": "identity_scope=exact_subspecies"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "kale",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "broccolileaf",
-   "detail": "identity_scope=exact_variety"
   },
   {
    "rule": "R11_image_part_not_matched",
@@ -149,46 +47,10 @@
    "detail": "part_match=partial depicted=harvested turnip roots with attached greens"
   },
   {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "turnipgreens",
-   "detail": "identity_scope=exact_subspecies"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "barleygrass",
-   "detail": "part_match=partial depicted=mature barley crop with awned spikes and vegetative parts"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "collard",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "cabbage",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "napa",
-   "detail": "identity_scope=exact_subspecies"
-  },
-  {
    "rule": "R11_image_part_not_matched",
    "severity": "review",
    "ref": "cauliflowerleaf",
    "detail": "part_match=partial depicted=curd with surrounding leaves"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "cauliflowerleaf",
-   "detail": "identity_scope=exact_variety"
   },
   {
    "rule": "R11_image_part_not_matched",
@@ -207,36 +69,6 @@
    "severity": "review",
    "ref": "beanleaf",
    "detail": "part_match=partial depicted=leaf with flower"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "broccolisprout",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "kohlrabileaf",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "tatsoi",
-   "detail": "identity_scope=exact_subspecies"
-  },
-  {
-   "rule": "R11_image_not_exact_species",
-   "severity": "review",
-   "ref": "komatsuna",
-   "detail": "identity_scope=exact_variety"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "wheatleaf",
-   "detail": "part_match=partial depicted=mature wheat ears with some leaves"
   },
   {
    "rule": "R11_image_part_not_matched",

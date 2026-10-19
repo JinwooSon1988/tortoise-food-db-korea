@@ -64,18 +64,19 @@
     {
       "plant_id": "endive",
       "scientific": "Cichorium endivia",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cichorium%20endivia%20kz04.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_endivia_kz04.jpg",
-      "creator": "Krzysztof Ziarnek, Kenraiz",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Krop%20andijvie%202025.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Krop_andijvie_2025.jpg",
+      "creator": "JopkeB",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "identity_scope": "exact_species",
-      "verified_at": "2026-09-16",
+      "verified_at": "2026-10-19",
       "master_scientific": "Cichorium endivia",
-      "taxon_evidence": "commons_category: Cichorium endivia",
-      "depicted_part": "flowering plant",
-      "part_match": "partial",
-      "last_verified_at": "2026-10-06"
+      "taxon_evidence": "commons_category: Cichorium endivia; file description 'Krop andijvie, bijna 300 gram' (head of endive)",
+      "depicted_part": "harvested leaf head",
+      "part_match": "match",
+      "last_verified_at": "2026-10-19",
+      "verification_note": "Replacement 2026-10-19: Commons file page, category, creator and license checked through the Commons API and the photo viewed; it shows the food part named by the record. A photo does not imply feeding suitability."
     },
     {
       "plant_id": "watercress",
@@ -613,19 +614,19 @@
     {
       "plant_id": "barleygrass",
       "scientific": "Hordeum vulgare",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hordeum%20vulgare.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Hordeum_vulgare.jpg",
-      "creator": "Tumi-1983",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Hordeum%20vulgare%20six-row%20winter%20barley%2C%20zesrijige%20wintergerst%20%281%29.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hordeum_vulgare_six-row_winter_barley,_zesrijige_wintergerst_(1).jpg",
+      "creator": "Rasbak",
       "license": "CC BY-SA 3.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
       "identity_scope": "exact_species",
-      "verified_at": "2026-09-22",
+      "verified_at": "2026-10-19",
       "master_scientific": "Hordeum vulgare",
-      "verification_note": "Existing record describes whole crop plants visible, including vegetative parts; not an appropriate primary illustration of young barley grass. Partial match only.",
-      "taxon_evidence": "commons_category: Hordeum vulgare",
-      "depicted_part": "mature barley crop with awned spikes and vegetative parts",
-      "part_match": "partial",
-      "last_verified_at": "2026-10-10"
+      "verification_note": "Replacement 2026-10-19: Commons file page, category, creator and license checked through the Commons API and the photo viewed; it shows the food part named by the record. A photo does not imply feeding suitability.",
+      "taxon_evidence": "commons_category: Hordeum vulgare (seedlings); file description 'six-row winter barley'",
+      "depicted_part": "young barley seedlings (leaves)",
+      "part_match": "match",
+      "last_verified_at": "2026-10-19"
     },
     {
       "plant_id": "collard",
@@ -1657,19 +1658,19 @@
     {
       "plant_id": "wheatleaf",
       "scientific": "Triticum aestivum",
-      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bl%C3%A9%20tendre%20%28EPHOROS%29-14-cliche%20Jean%20Weber%20%2824000546341%29.jpg",
-      "source_url": "https://commons.wikimedia.org/wiki/File:Bl%C3%A9_tendre_(EPHOROS)-14-cliche_Jean_Weber_(24000546341).jpg",
-      "creator": "INRA DIST from France",
-      "license": "CC BY 2.0",
-      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Triticum%20aestivum%20seedlings%20%282%29.jpg",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Triticum_aestivum_seedlings_(2).jpg",
+      "creator": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
       "identity_scope": "exact_species",
-      "verified_at": "2026-10-06",
+      "verified_at": "2026-10-19",
       "master_scientific": "Triticum aestivum",
-      "taxon_evidence": "commons_category: Triticum aestivum (file description checked for conflicting identification)",
-      "depicted_part": "mature wheat ears with some leaves",
-      "part_match": "partial",
-      "last_verified_at": "2026-10-10",
-      "verification_note": "Existing record describes ears WITH some leaves; the food-target leaf part is present but not dominant. Partial match; seek foliage-focused image."
+      "taxon_evidence": "commons_category: Triticum aestivum (seedlings); file description 'Triticum aestivum winterwheat seedlings'",
+      "depicted_part": "young wheat seedlings (leaves)",
+      "part_match": "match",
+      "last_verified_at": "2026-10-19",
+      "verification_note": "Replacement 2026-10-19: Commons file page, category, creator and license checked through the Commons API and the photo viewed; it shows the food part named by the record. A photo does not imply feeding suitability."
     },
     {
       "plant_id": "barleyleaf",
@@ -2468,6 +2469,29 @@
       "candidate_scientific": "Cichorium intybus var. foliosum",
       "master_scientific": "Cichorium intybus var. foliosum",
       "reason": "re-collection 2026-10-06: no Commons category or file documents var. foliosum"
+    }
+  ],
+  "replaced_images": [
+    {
+      "plant_id": "endive",
+      "previous_source_url": "https://commons.wikimedia.org/wiki/File:Cichorium_endivia_kz04.jpg",
+      "previous_depicted_part": "flowering plant",
+      "replaced_at": "2026-10-19",
+      "reason": "previous photo showed the food part only partially"
+    },
+    {
+      "plant_id": "barleygrass",
+      "previous_source_url": "https://commons.wikimedia.org/wiki/File:Hordeum_vulgare.jpg",
+      "previous_depicted_part": "mature barley crop with awned spikes and vegetative parts",
+      "replaced_at": "2026-10-19",
+      "reason": "previous photo showed the food part only partially"
+    },
+    {
+      "plant_id": "wheatleaf",
+      "previous_source_url": "https://commons.wikimedia.org/wiki/File:Bl%C3%A9_tendre_(EPHOROS)-14-cliche_Jean_Weber_(24000546341).jpg",
+      "previous_depicted_part": "mature wheat ears with some leaves",
+      "replaced_at": "2026-10-19",
+      "reason": "previous photo showed the food part only partially"
     }
   ]
 }

@@ -1,0 +1,263 @@
+{
+ "schema_version": "1.0",
+ "date": "2026-10-19",
+ "scope": "Resolution of the 35 review findings in data/qa_independent_bulk_review_triage_20261019.json, plus the coriander DOI and the P1 held sources. No A-D grade or confidence changed.",
+ "counts": {
+  "fixed": 11,
+  "held": 9,
+  "rule_false_positive": 15
+ },
+ "findings": [
+  {
+   "ref": "ibera_eastern_account_2023/sowthistle",
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "outcome": "fixed",
+   "action": "Open PDF of the species account read (p. 20): plant_taxon set to the genera it summarises (Trifolium, Sonchus, Medicago) and part to young leaves; year 2023. Ledger keeps it as a secondary citation of Iftime & Iftime 2012."
+  },
+  {
+   "ref": "ibera_eastern_account_2023/clover",
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "outcome": "fixed",
+   "action": "Open PDF of the species account read (p. 20): plant_taxon set to the genera it summarises (Trifolium, Sonchus, Medicago) and part to young leaves; year 2023. Ledger keeps it as a secondary citation of Iftime & Iftime 2012."
+  },
+  {
+   "ref": "ibera_eastern_account_2023/alfalfa",
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "outcome": "fixed",
+   "action": "Open PDF of the species account read (p. 20): plant_taxon set to the genera it summarises (Trifolium, Sonchus, Medicago) and part to young leaves; year 2023. Ledger keeps it as a secondary citation of Iftime & Iftime 2012."
+  },
+  {
+   "ref": "hermanni_foraging_italy_2015/plantain",
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "outcome": "held",
+   "action": "SISVET 2015 PDF still returns HTTP 403 on 2026-10-19 (not bypassed). The taxon cannot be filled from an unread original; the public record keeps its P1 hold disclosure."
+  },
+  {
+   "ref": "hermanni_foraging_italy_2015/clover",
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "outcome": "held",
+   "action": "SISVET 2015 PDF still returns HTTP 403 on 2026-10-19 (not bypassed). The taxon cannot be filled from an unread original; the public record keeps its P1 hold disclosure."
+  },
+  {
+   "ref": "mint",
+   "rule": "R7_species_group_without_matching_evidence",
+   "outcome": "fixed",
+   "action": "All linked evidence is general-tortoise or non-reptile; species_group set to Tortoise_general (assessment_scope general_tortoise). Guide cards for minari and waterdropwort no longer say 'Mediterranean Testudo evidence'. Verdict and confidence unchanged."
+  },
+  {
+   "ref": "minari",
+   "rule": "R7_species_group_without_matching_evidence",
+   "outcome": "fixed",
+   "action": "All linked evidence is general-tortoise or non-reptile; species_group set to Tortoise_general (assessment_scope general_tortoise). Guide cards for minari and waterdropwort no longer say 'Mediterranean Testudo evidence'. Verdict and confidence unchanged."
+  },
+  {
+   "ref": "waterdropwort",
+   "rule": "R7_species_group_without_matching_evidence",
+   "outcome": "fixed",
+   "action": "All linked evidence is general-tortoise or non-reptile; species_group set to Tortoise_general (assessment_scope general_tortoise). Guide cards for minari and waterdropwort no longer say 'Mediterranean Testudo evidence'. Verdict and confidence unchanged."
+  },
+  {
+   "ref": "meadowgrass",
+   "rule": "R6_ab_grade_without_tortoise_evidence",
+   "outcome": "fixed",
+   "action": "Iftime & Iftime 2012 full text (open access) Table 1, p. 106 records Poa sp. leaves at 5-10% of observed feeding by wild T. g. ibera. Linked as genus-level direct evidence and disclosed as not species-level for P. pratensis. Duplicate Kew record removed. Grade B / confidence C unchanged."
+  },
+  {
+   "ref": "rouag2008_cynodon_dactylon",
+   "rule": "R2_link_without_public_record",
+   "outcome": "fixed",
+   "action": "Dangling duplicate link row of the same DOI as testudo_graeca_cynodon_field_diet_2008 removed. The ledger shows the Rouag 2008 full text is closed and its abstract names families only, so the public record now discloses that its species figures await the original. Grade A unchanged."
+  },
+  {
+   "ref": "althaea_carp_toxicology_2016",
+   "rule": "R4_safety_claim_in_evidence_text",
+   "outcome": "rule_false_positive",
+   "action": "The sentence says the 'natural so unlimited-safe' assumption should be avoided; it is a caution, not a safety claim. Rule now treats 피해야/피할 as negation; a regression case keeps real safety claims detected."
+  },
+  {
+   "ref": "romaine",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "bokchoy",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at subsp. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same subsp. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "carrottop",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at subsp. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same subsp. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "kale",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "broccolileaf",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "turnipgreens",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at subsp. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same subsp. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "collard",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "cabbage",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "napa",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at subsp. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same subsp. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "cauliflowerleaf",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "broccolisprout",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "kohlrabileaf",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "tatsoi",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at subsp. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same subsp. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "komatsuna",
+   "rule": "R11_image_not_exact_species",
+   "outcome": "rule_false_positive",
+   "action": "Master name is at var. rank and the image policy requires identity_scope to equal that rank; the Commons file page (checked through the API on 2026-10-19) names the same var. taxon. The rule now compares with the master rank."
+  },
+  {
+   "ref": "endive",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "fixed",
+   "action": "Replaced with File:Krop_andijvie_2025.jpg: category names the species, creator and licence checked, photo viewed and shows the food part."
+  },
+  {
+   "ref": "barleygrass",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "fixed",
+   "action": "Replaced with File:Hordeum_vulgare_six-row_winter_barley,_zesrijige_wintergerst_(1).jpg: category names the species, creator and licence checked, photo viewed and shows the food part."
+  },
+  {
+   "ref": "wheatleaf",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "fixed",
+   "action": "Replaced with File:Triticum_aestivum_seedlings_(2).jpg: category names the species, creator and licence checked, photo viewed and shows the food part."
+  },
+  {
+   "ref": "bellpepper",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (D-grade plant; botanical illustration shows the fruit) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  },
+  {
+   "ref": "turnipgreens",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (greens visible with roots) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  },
+  {
+   "ref": "cauliflowerleaf",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (leaves visible around the curd) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  },
+  {
+   "ref": "sunflowerleaf",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (leaves visible on whole plant) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  },
+  {
+   "ref": "sunflowerpetal",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (ray florets visible in the field photo) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  },
+  {
+   "ref": "beanleaf",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (leaf is the subject, with a flower) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  },
+  {
+   "ref": "timothy",
+   "rule": "R11_image_part_not_matched",
+   "outcome": "held",
+   "action": "Food part is visible (leaves visible with seedheads) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines."
+  }
+ ],
+ "citations": [
+  {
+   "ref": "melo_coriander_leaf_oxalate_2008",
+   "outcome": "removed_unverifiable",
+   "action": "Stored DOI 10.1111/j.1745-4557.2008.00195.x is Koyuncu et al. 2008 (pentosanase, bread; Journal of Food Quality). No record with the stored title was found in Crossref, OpenAlex, Europe PMC or a web search on 2026-10-19. The record was removed from public evidence, links, reverse index and the cilantro assessment; the cilantro page says why. Replaced by Radek & Savage 2008, Int J Food Sci Nutr 59(3):246-260, doi:10.1080/09637480701791176, PMID 18335334 (metadata matched in Crossref and Europe PMC), used at abstract level only and labelled so."
+  },
+  {
+   "ref": "iftime_ibera_dobrogea_2012",
+   "outcome": "fixed",
+   "action": "Stored title 'Diet and feeding ecology of Testudo graeca ibera in Dobrogea' did not exist; replaced with the published title read in the full text. Table 1 taxa and parts added."
+  }
+ ],
+ "held_sources": [
+  {
+   "ref": "hermanni_foraging_italy_2015",
+   "url": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "status": "original_inaccessible",
+   "checked": "2026-10-19 HTTP 403 with a browser user agent; web search found no other copy",
+   "not_read": true
+  },
+  {
+   "ref": "wild_medicago_polymorpha_tgg_morocco",
+   "doi": "10.1016/j.jaridenv.2005.06.010",
+   "status": "original_inaccessible",
+   "checked": "2026-10-19 OpenAlex lists no open-access location; subscription only",
+   "not_read": true
+  },
+  {
+   "ref": "testudo_graeca_cynodon_field_diet_2008",
+   "doi": "10.1080/21564574.2008.9635573",
+   "status": "full_text_not_accessible",
+   "checked": "ledger: publisher abstract only; OpenAlex lists no open copy",
+   "not_read": true
+  }
+ ],
+ "image_check": {
+  "files_checked_via_commons_api": 132,
+  "missing_files": 0,
+  "replaced": 3,
+  "note": "Every image file page exists; creator and licence agree with the registry (format differences only)."
+ }
+}

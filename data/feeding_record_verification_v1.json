@@ -11,10 +11,10 @@
  ],
  "checked_at": "2026-10-17",
  "counts": {
-  "candidates": 90,
+  "candidates": 91,
   "candidates_by_status": {
    "full_text_confirmed": 3,
-   "full_text_read_no_species_record_for_this_plant": 9,
+   "full_text_read_no_species_record_for_this_plant": 10,
    "full_text_reviewed_not_extracted": 1,
    "husbandry_guidance_not_feeding_record": 6,
    "not_verified": 38,
@@ -28,7 +28,7 @@
   "verified_records_identity_resolved": 13,
   "verified_records_on_graded_plants": 7,
   "site_feeding_pending": 6,
-  "unverified_candidates": 87
+  "unverified_candidates": 88
  },
  "site_feeding_pending": [
   "gbif:2705292",
@@ -1096,7 +1096,7 @@
    "plant_id": "alfalfa",
    "candidate_taxon": null,
    "plant_scientific_name": "Medicago sativa",
-   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
    "tortoise_taxon": "Testudo graeca ibera",
    "source": "10.13128/Acta_Herpetol-9800",
    "source_type": "academic_study",
@@ -1121,7 +1121,7 @@
    "plant_id": "alfalfa",
    "candidate_taxon": null,
    "plant_scientific_name": "Medicago sativa",
-   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "plant_taxon_reported": "Trifolium, Sonchus and Medicago taxa (genus names summarised from Iftime & Iftime 2012; account p. 20)",
    "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
    "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
    "source_type": "specialist_group_species_account",
@@ -1248,11 +1248,11 @@
    "plant_scientific_name": "Cynodon dactylon",
    "plant_taxon_reported": "Cynodon dactylon",
    "tortoise_taxon": "Testudo graeca",
-   "source": "doi:10.1080/21564574.2008.9635573",
-   "source_type": "wild_feeding",
+   "source": "10.1080/21564574.2008.9635573",
+   "source_type": "peer_reviewed_article",
    "evidence_ids": [
-    "rouag2008_cynodon_dactylon",
-    "testudo_graeca_cynodon_field_diet_2008"
+    "testudo_graeca_cynodon_field_diet_2008",
+    "rouag2008_cynodon_dactylon"
    ],
    "found_in": [
     "reviewed_plant_links",
@@ -1425,7 +1425,7 @@
    "plant_id": "clover",
    "candidate_taxon": null,
    "plant_scientific_name": "Trifolium spp.",
-   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
    "tortoise_taxon": "Testudo graeca ibera",
    "source": "10.13128/Acta_Herpetol-9800",
    "source_type": "academic_study",
@@ -1450,7 +1450,7 @@
    "plant_id": "clover",
    "candidate_taxon": null,
    "plant_scientific_name": "Trifolium spp.",
-   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "plant_taxon_reported": "Trifolium, Sonchus and Medicago taxa (genus names summarised from Iftime & Iftime 2012; account p. 20)",
    "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
    "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
    "source_type": "specialist_group_species_account",
@@ -1625,7 +1625,7 @@
    "plant_id": "dandelion",
    "candidate_taxon": null,
    "plant_scientific_name": "Taraxacum spp.",
-   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
    "tortoise_taxon": "Testudo graeca ibera",
    "source": "10.13128/Acta_Herpetol-9800",
    "source_type": "academic_study",
@@ -2221,6 +2221,31 @@
    "original_locator": null,
    "original_summary": "Original not read; records stay quarantined. Stored citations name other authors (QA-FR-001).",
    "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "meadowgrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Poa pratensis",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
    "grade_changed": false
   },
   {
@@ -3081,7 +3106,7 @@
    "plant_id": "sowthistle",
    "candidate_taxon": null,
    "plant_scientific_name": "Sonchus spp.",
-   "plant_taxon_reported": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
    "tortoise_taxon": "Testudo graeca ibera",
    "source": "10.13128/Acta_Herpetol-9800",
    "source_type": "academic_study",
@@ -3106,7 +3131,7 @@
    "plant_id": "sowthistle",
    "candidate_taxon": null,
    "plant_scientific_name": "Sonchus spp.",
-   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "plant_taxon_reported": "Trifolium, Sonchus and Medicago taxa (genus names summarised from Iftime & Iftime 2012; account p. 20)",
    "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
    "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
    "source_type": "specialist_group_species_account",

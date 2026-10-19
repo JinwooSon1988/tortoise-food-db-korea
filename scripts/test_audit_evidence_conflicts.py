@@ -78,12 +78,22 @@ CASES = [
          supports=pub_rec(d, "wild_medicago_polymorpha_tgg_morocco")["supports"].split(" 다만 이 출처의")[0])),
     ("R11_image_master_name_drift", "data/verified_plant_images_v56.json",
      lambda d: d["images"][0].update(master_scientific="Wrongus name")),
+    # Review-level rules: the injected finding must be new compared with the clean copy.
+    ("R11_image_not_exact_species", "data/verified_plant_images_v56.json",
+     lambda d: next(i for i in d["images"] if i["plant_id"] == "kale").update(identity_scope="exact_species")),
+    ("R4_safety_claim_in_evidence_text", "data/public_evidence_records.json",
+     lambda d: pub_rec(d, "althaea_carp_toxicology_2016").update(
+         supports=pub_rec(d, "althaea_carp_toxicology_2016")["supports"] + " 따라서 육지거북에게도 안전하다.")),
 ]
 
 
 def errors(tmp):
     findings = A.audit(tmp)
     return {(f["rule"], f["ref"]) for f in findings if f["severity"] == "error" and f"{f['rule']}|{f['ref']}" not in A.ACCEPTED}
+
+
+def all_findings(tmp):
+    return {(f["rule"], f["ref"], f.get("detail")) for f in A.audit(tmp)}
 
 
 def main():
@@ -93,11 +103,12 @@ def main():
         copy(base)
         if errors(base):
             failed.append(f"clean copy reports errors: {sorted(errors(base))[:5]}")
+        baseline = all_findings(base)
         for i, (rule, rel, fn) in enumerate(CASES):
             tmp = Path(t) / f"case{i}"
             copy(tmp)
             edit(tmp, rel, fn)
-            got = {r for r, _ in errors(tmp)}
+            got = {r for r, _ in errors(tmp)} | {r for r, _, _ in all_findings(tmp) - baseline}
             if rule not in got:
                 failed.append(f"case {i}: expected {rule}, got {sorted(got) or 'no error'}")
     for f in failed:

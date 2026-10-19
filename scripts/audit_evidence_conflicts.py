@@ -22,9 +22,6 @@ DATA_ROOT = ROOT  # the regression tests point this at a mutated copy
 ACCEPTED = {
     "R8_title_differs_from_doi_record|teuber_dill_leaf_flavonols_1978":
         "DOI record carries the German original title (Flavonolglykoside der Blätter und Früchte des Dills); same paper.",
-    "R8_title_differs_from_doi_record|melo_coriander_leaf_oxalate_2008":
-        "Stored DOI resolves to an unrelated bread paper; no matching record found in Crossref or Europe PMC on 2026-10-19. "
-        "Owner must supply the correct identifier (see data/evidence_conflict_audit_20261019.json, unresolved).",
 }
 
 TORT = re.compile(r"Testudo|Chersina|Centrochelys|Geochelone|Stigmochelys|Chelonoidis|Kinixys|Agrionemys|Astrochelys|"
@@ -41,7 +38,7 @@ PART_EN = [(r"\brhizomes?\b", "rhizome"), (r"\broots?\b", "root"),
            (r"\bseeds?\b", "seed"), (r"\bstems?\b|\bstalks?\b|\bshoots?\b", "stem")]
 GENERIC_PART = re.compile(r"aerial|whole|plant material|as described|as specified|distinctions are preserved|not_applicable|"
                           r"taxonomic identity|culinary herb|mixed", re.I)
-NEG_KO = re.compile(r"않|아니|아님|없|못|불가|금지|말아야|말 것|제외")
+NEG_KO = re.compile(r"않|아니|아님|없|못|불가|금지|말아야|말 것|제외|피해야|피할")
 FEED_KO = re.compile(r"섭식|먹었|먹는|먹은|이용했|이용하고|이용한|채식")
 SAFE_KO = re.compile(r"안전(하다|함|한 것으로|성이 확인|성을 확인|성이 입증|성을 입증)")
 CAPTIVE_CLAIM_KO = re.compile(r"사육[^.]{0,30}(급여해도 된다|안전하다|적합하다|권장된다)")
@@ -261,8 +258,12 @@ def audit(root=None):
             hit("R11_image_master_name_drift", "error", im["plant_id"], f"image master {im.get('master_scientific')} / plant {p['scientific']}")
         if im.get("part_match") not in ("match", "exact", True):
             hit("R11_image_part_not_matched", "review", im["plant_id"], f"part_match={im.get('part_match')} depicted={im.get('depicted_part')}")
-        if im.get("identity_scope") != "exact_species":
-            hit("R11_image_not_exact_species", "review", im["plant_id"], f"identity_scope={im.get('identity_scope')}")
+        # identity_scope must equal the rank of the master name (policy identity_scope_rules).
+        sci = str(p["scientific"])
+        rank = ("unresolved" if re.search(r"\b(spp?|agg|aggr|s\.l)\.", sci) else "exact_subspecies" if " subsp. " in sci
+                else "exact_variety" if re.search(r" (var|convar|f)\. ", sci) else "exact_species")
+        if im.get("identity_scope") != rank:
+            hit("R11_image_not_exact_species", "review", im["plant_id"], f"identity_scope={im.get('identity_scope')} / master rank {rank}")
 
     # R12 ledger: confirmed only through a full-text extract; owner-reviewed sources stay below confirmed.
     extract_keys = {s["source_key"] for s in load("data/feeding_record_fulltext_extracts_v1.json")["sources"]}

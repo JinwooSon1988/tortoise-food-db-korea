@@ -13,24 +13,23 @@
   "assessments": 186,
   "by_strongest_evidence_class": {
    "same_taxon_tortoise_study": 9,
-   "other_tortoise_study": 1,
+   "other_tortoise_study": 2,
    "husbandry_or_expert": 170,
-   "composition_or_identity": 3,
+   "composition_or_identity": 2,
    "other_animal_study": 3
   },
   "flag_counts": {
-   "no_tortoise_study": 176,
-   "single_tortoise_feeding_source": 148,
-   "no_tortoise_feeding_source": 6,
+   "no_tortoise_study": 175,
+   "single_tortoise_feeding_source": 149,
+   "no_tortoise_feeding_source": 5,
    "do_not_feed_without_animal_or_expert_source": 1,
    "confidence_B_or_higher_without_tortoise_study": 4,
-   "positive_verdict_without_tortoise_feeding_source": 3,
-   "same_source_cited_twice": 1
+   "positive_verdict_without_tortoise_feeding_source": 2
   },
   "weakness_tiers": {
    "none": 28,
-   "C_single_specialist_source": 148,
-   "A_no_tortoise_feeding_source": 6,
+   "C_single_specialist_source": 149,
+   "A_no_tortoise_feeding_source": 5,
    "B_confidence_exceeds_directness": 4
   },
   "confidence_by_strongest_class": {
@@ -42,7 +41,8 @@
     "A": 1
    },
    "other_tortoise_study": {
-    "C-": 1
+    "C-": 1,
+    "C": 1
    },
    "husbandry_or_expert": {
     "C+": 46,
@@ -56,20 +56,13 @@
     "C": 1
    },
    "composition_or_identity": {
-    "C": 3
+    "C": 2
    }
   }
  },
  "evidence_registry_checks": {
-  "evidence_records": 271,
+  "evidence_records": 270,
   "sources_registered_more_than_once": [
-   {
-    "url": "https://powo.science.kew.org/taxon/417792-1",
-    "evidence_ids": [
-     "kew_poa_pratensis_animal_food",
-     "kew_poa_pratensis_identity"
-    ]
-   },
    {
     "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=736",
     "evidence_ids": [
@@ -170,14 +163,12 @@
    "bcg_sulcata_care",
    "chersina_cynodon_field_diet",
    "hermanni_foraging_italy_2015",
-   "ibera_eastern_account_2023",
    "kbr_buddleja_davidii",
    "kew_abutilon_indicum",
    "kew_aeonium_arboreum",
    "kew_buddleja_davidii",
    "kew_commonmallow_identity",
    "kew_dichondra_micrantha",
-   "kew_poa_pratensis_animal_food",
    "kew_poa_pratensis_identity",
    "kew_redclover_identity",
    "kew_ribwortplantain_identity",
@@ -1560,7 +1551,7 @@
      "animal_taxon": "Tortoise general"
     },
     {
-     "evidence_id": "melo_coriander_leaf_oxalate_2008",
+     "evidence_id": "radek_savage_indian_leafy_oxalate_2008",
      "class": "composition_or_identity",
      "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
@@ -1822,7 +1813,7 @@
   {
    "plant_id": "mint",
    "ko": "민트",
-   "species_group": "Mediterranean_Testudo",
+   "species_group": "Tortoise_general",
    "verdict": "limited_supplement",
    "confidence": "C-",
    "strongest_evidence_class": "husbandry_or_expert",
@@ -1846,7 +1837,7 @@
   {
    "plant_id": "minari",
    "ko": "미나리",
-   "species_group": "Mediterranean_Testudo",
+   "species_group": "Tortoise_general",
    "verdict": "do_not_feed",
    "confidence": "C-",
    "strongest_evidence_class": "husbandry_or_expert",
@@ -2107,7 +2098,7 @@
   {
    "plant_id": "waterdropwort",
    "ko": "미나리",
-   "species_group": "Mediterranean_Testudo",
+   "species_group": "Tortoise_general",
    "verdict": "do_not_feed",
    "confidence": "C-",
    "strongest_evidence_class": "husbandry_or_expert",
@@ -5762,17 +5753,15 @@
    "species_group": "Tortoise_general",
    "verdict": "limited_mixed_diet",
    "confidence": "C",
-   "strongest_evidence_class": "composition_or_identity",
+   "strongest_evidence_class": "other_tortoise_study",
    "evidence_class_counts": {
-    "composition_or_identity": 2
+    "other_tortoise_study": 1,
+    "composition_or_identity": 1
    },
    "flags": [
-    "no_tortoise_study",
-    "no_tortoise_feeding_source",
-    "positive_verdict_without_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
-   "weakness_tier": "A_no_tortoise_feeding_source",
+   "weakness_tier": "C_single_specialist_source",
    "evidence": [
     {
      "evidence_id": "kew_poa_pratensis_identity",
@@ -5781,10 +5770,10 @@
      "animal_taxon": "Not applicable"
     },
     {
-     "evidence_id": "kew_poa_pratensis_animal_food",
-     "class": "composition_or_identity",
-     "source_type": "taxonomic_database",
-     "animal_taxon": "Not applicable"
+     "evidence_id": "iftime_ibera_dobrogea_2012",
+     "class": "other_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
     }
    ]
   },
