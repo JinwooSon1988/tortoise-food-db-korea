@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-19",
+  "scope": "Independent read-only consistency audit; source content correctness and captive feeding safety are out of scope.",
+  "inputs": [
+    "data/public_evidence_records.json",
+    "data/reviewed_plant_reverse_evidence_index.json",
+    "data/plant_feeding_evidence_links.json",
+    "data/feeding_record_verification_v1.json",
+    "data/feeding_record_fulltext_extracts_v1.json"
+  ],
+  "counts": {
+    "public_evidence_records": 277,
+    "reverse_index_plants": 182,
+    "plant_evidence_link_plants": 182,
+    "verification_candidates": 90,
+    "full_text_confirmed_candidates": 3,
+    "extracted_fulltext_records": 14
+  },
+  "checks": {
+    "reverse_reference_missing_public_id": 0,
+    "reverse_plant_not_in_public_plant_ids": 0,
+    "public_plant_missing_reverse_reference": 0,
+    "full_text_confirmed_missing_original_locator_or_opened_record": 0
+  },
+  "limitations": [
+    "Only existing reviewed plants in reverse index were checked for reverse-link symmetry.",
+    "No verification of scientific claims against original full text was performed.",
+    "Held source overlaps are separately recorded in data/qa_blocked_public_evidence_overlap_20261019.json.",
+    "Results reflect the checked branch state; rerun after Claude bulk changes."
+  ]
+}
