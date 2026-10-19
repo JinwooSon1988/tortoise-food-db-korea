@@ -21,11 +21,11 @@
   "flag_counts": {
    "no_tortoise_study": 176,
    "single_tortoise_feeding_source": 148,
-   "same_source_cited_twice": 4,
    "no_tortoise_feeding_source": 6,
    "do_not_feed_without_animal_or_expert_source": 1,
    "confidence_B_or_higher_without_tortoise_study": 4,
-   "positive_verdict_without_tortoise_feeding_source": 3
+   "positive_verdict_without_tortoise_feeding_source": 3,
+   "same_source_cited_twice": 1
   },
   "weakness_tiers": {
    "none": 28,
@@ -61,42 +61,13 @@
   }
  },
  "evidence_registry_checks": {
-  "evidence_records": 277,
+  "evidence_records": 271,
   "sources_registered_more_than_once": [
-   {
-    "url": "https://doi.org/10.1016/j.foodcont.2024.110930",
-    "evidence_ids": [
-     "sattler_borage_pa_2025",
-     "sattler_borago_pa_2025"
-    ]
-   },
-   {
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/pmc8257512",
-    "evidence_ids": [
-     "ceccanti_rumex_oxalate_2021",
-     "di_noia_rumex_oxalate_2021",
-     "rumex_acetosa_oxalate_2021"
-    ]
-   },
    {
     "url": "https://powo.science.kew.org/taxon/417792-1",
     "evidence_ids": [
      "kew_poa_pratensis_animal_food",
      "kew_poa_pratensis_identity"
-    ]
-   },
-   {
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33003576",
-    "evidence_ids": [
-     "piatczak_salix_alba_leaf_2020",
-     "piatczak_salix_alba_leaf_phenolics_2020"
-    ]
-   },
-   {
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36924638",
-    "evidence_ids": [
-     "sattler_borage_pa_2023",
-     "sattler_borago_pa_2023"
     ]
    },
    {
@@ -2800,12 +2771,11 @@
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 1,
-    "composition_or_identity": 5
+    "composition_or_identity": 2
    },
    "flags": [
     "no_tortoise_study",
-    "single_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
    "weakness_tier": "C_single_specialist_source",
    "evidence": [
@@ -2817,24 +2787,6 @@
     },
     {
      "evidence_id": "rumex_acetosa_oxalate_2021",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "ceccanti_rumex_oxalate_2021",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "di_noia_rumex_oxalate_2021",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "di_gioia_rumex_oxalate_2021",
      "class": "composition_or_identity",
      "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
@@ -3219,12 +3171,11 @@
    "evidence_class_counts": {
     "husbandry_or_expert": 1,
     "other_animal_study": 1,
-    "composition_or_identity": 3
+    "composition_or_identity": 2
    },
    "flags": [
     "no_tortoise_study",
-    "single_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
    "weakness_tier": "C_single_specialist_source",
    "evidence": [
@@ -3236,12 +3187,6 @@
     },
     {
      "evidence_id": "piatczak_salix_alba_leaf_2020",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "piatczak_salix_alba_leaf_phenolics_2020",
      "class": "composition_or_identity",
      "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
@@ -3637,13 +3582,12 @@
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 1,
-    "plant_toxicity_or_chemistry": 2,
-    "composition_or_identity": 2
+    "plant_toxicity_or_chemistry": 1,
+    "composition_or_identity": 1
    },
    "flags": [
     "no_tortoise_study",
-    "single_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
    "weakness_tier": "C_single_specialist_source",
    "evidence": [
@@ -3660,21 +3604,9 @@
      "animal_taxon": "Plant composition"
     },
     {
-     "evidence_id": "sattler_borago_pa_2025",
-     "class": "plant_toxicity_or_chemistry",
-     "source_type": "peer_reviewed_plant_toxicology",
-     "animal_taxon": "Plant composition"
-    },
-    {
      "evidence_id": "sattler_borage_pa_2025",
      "class": "plant_toxicity_or_chemistry",
      "source_type": "peer_reviewed_plant_toxicology",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "sattler_borago_pa_2023",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
     }
    ]

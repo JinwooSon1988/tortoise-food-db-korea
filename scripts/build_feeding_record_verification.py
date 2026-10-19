@@ -39,18 +39,30 @@ GRADED = ("A", "B", "C", "D")
 
 # Originals opened that do not yield a full-text feeding record. key: (normalised source, plant binomial or "*").
 CHECKS = {
-    # Table 1 was read from a ResearchGate full-text display (QA-FR-002) but has not been extracted with method and
-    # site locators, so it stays out of the full-text extracts and is not counted as confirmed.
+    # The owner reviewed an author-uploaded full text (data/ruscus_primary_fulltext_review_20261019.json). It has not
+    # been extracted with site and period locators and the pipeline could not reopen it, so it is not counted as confirmed.
     ("10.1655/herpetologica-d-10-00064.1", "*"): {
-        "status": "full_text_table_cited_not_extracted", "checked_at": "2026-10-18",
-        "opened": "BioOne abstract (2026-10-17); Table 1, p. 240 read from a ResearchGate full-text display (2026-10-18, "
-                  "QA-FR-002). Publisher copy subscriber-only; Unpaywall/OpenAlex closed; IRIS/CRIS records 403",
+        "status": "full_text_reviewed_not_extracted", "checked_at": "2026-10-19",
+        "opened": "BioOne abstract (2026-10-17); author-uploaded full text on ResearchGate reviewed by the owner (2026-10-19, "
+                  "data/ruscus_primary_fulltext_review_20261019.json). Not reopened by this pipeline: publisher copy "
+                  "subscriber-only, Unpaywall/OpenAlex closed, ResearchGate and IRIS/CRIS return 403",
         "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the "
                     "diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
-        "locator": "Table 1, p. 240 (Ruscus aculeatus: fruits, seeds); abstract (flowers and unripe fruit in autumn)",
-        "summary": "Table 1 (p. 240) lists Ruscus aculeatus fruits and seeds; the abstract says wild T. h. hermanni switched "
-                   "to its flowers and unripe fruit in autumn. Leaves are reported in neither. Not yet a full-text extract "
-                   "(method and site locators missing), so not counted as a confirmed feeding record (see QA-FR-002)."},
+        "locator": "Table 1, p. 240 and Table 2, p. 241 (Ruscus aculeatus: fruits, seeds; faecal remains); Discussion, p. 245 "
+                   "(leaves eaten in autumn); abstract (flowers and unripe fruit in autumn)",
+        "summary": "Faecal tables list Ruscus aculeatus fruits and seeds (Table 1 p. 240; Table 2 p. 241: spring 1/28, autumn "
+                   "21/21). The Discussion (p. 245) states the tortoises also ate the leaves in autumn; leaves are not in the "
+                   "tables. The abstract mentions flowers and unripe fruit in autumn. Not yet a full-text extract (site and "
+                   "period locators missing), so not counted as a confirmed feeding record (see QA-FR-002)."},
+    ("10.3854/crm.5.120.eastern.graeca.v1.2023", "*"): {
+        "status": "secondary_citation_not_feeding_record", "checked_at": "2026-10-19",
+        "opened": "open PDF of the Chelonian Research Monographs species account (OpenAlex OA location), p. 20",
+        "citation": "Türkozan, O., Javanbakht, H., Mazanaeva, L. F., Meiri, S. et al. (2023) Testudo graeca Linnaeus 1758 (Eastern "
+                    "Subspecies Clades). Chelonian Research Monographs 5(15):120",
+        "locator": "p. 20 (diet paragraph citing Iftime and Iftime 2012)",
+        "summary": "The diet paragraph summarises Iftime and Iftime (2012): about 500 wild T. g. ibera over 10 years, 96.5% "
+                   "herbivorous, young leaves of Taraxacum, Trifolium, Medicago, Sonchus and others. It reports no observation of "
+                   "its own; the feeding records belong to Iftime and Iftime 2012 (a full-text extract source)."},
     ("10.1080/21564574.2008.9635573", "*"): {
         "status": "original_does_not_name_taxon",
         "opened": "publisher abstract (NISC); full text not accessible",

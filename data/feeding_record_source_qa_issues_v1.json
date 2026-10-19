@@ -40,7 +40,7 @@
     {
       "id": "QA-FR-002",
       "kind": "plant_part_unconfirmed",
-      "status": "reopened_discussion_leaf_record",
+      "status": "resolved_parts_distinguished_pending_extract",
       "severity": "evidence_detail",
       "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
       "record": "wild_ruscus_aculeatus_thh_italy_2011",
@@ -70,7 +70,8 @@
       ],
       "proposed_fix": "Read Table 1 of the full text. If leaves are absent, change the part to flowers and unripe fruit; otherwise add the table locator.",
       "resolution": "REOPENED: previous leaf-exclusion conclusion is contradicted by the Discussion (p. 245). Review and correct public evidence, feeding ledger, plant-part references and bilingual copy. Do not infer captive safety or alter A-D grades from wild ingestion.",
-      "ledger_status": "Current ledger status full_text_table_cited_not_extracted is insufficient to represent the Discussion leaf passage; reconcile through source extraction and QA, retaining method/site limitations."
+      "ledger_status": "Current ledger status full_text_table_cited_not_extracted is insufficient to represent the Discussion leaf passage; reconcile through source extraction and QA, retaining method/site limitations.",
+      "integration": "2026-10-19: public evidence, links, reverse index, assessment text, staging notes and translations now separate fruits/seeds (Table 1 p. 240, Table 2 p. 241, faecal remains), leaves (Discussion p. 245) and flowers/unripe fruit (abstract). Access level: owner review of an author-uploaded ResearchGate full text (data/ruscus_primary_fulltext_review_20261019.json); the pipeline could not reopen it (403, closed access). Ledger stays below full_text_confirmed until an extract with method and site locators exists. Grade B unchanged."
     }
   ]
 }

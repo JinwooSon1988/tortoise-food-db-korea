@@ -2917,7 +2917,7 @@
       "plant_ids": [
         "buckwheatleaf"
       ],
-      "source_title": "Fagopyrins and flavonoids in common and Tartary buckwheat sprouts and plants",
+      "source_title": "Antioxidant and Rutin Content Analysis of Leaves of the Common Buckwheat (Fagopyrum esculentum Moench) Grown in the United Kingdom: A Case Study",
       "source_type": "peer_reviewed_plant_composition",
       "animal_taxon": "Plant composition",
       "applicability": "composition_only",
@@ -3341,9 +3341,9 @@
       "animal_taxon": "Testudo hermanni hermanni",
       "applicability": "mediterranean_testudo",
       "plant_taxon": "Ruscus aculeatus L.",
-      "plant_part_state": "fruits and seeds (Table 1); flowers and unripe fruit (abstract); leaves not reported",
+      "plant_part_state": "fruits and seeds (Table 1, p. 240; Table 2, p. 241; faecal remains); leaves (Discussion, p. 245, autumn; not listed in the tables); flowers and unripe fruit (abstract, autumn)",
       "directness": "direct",
-      "supports": "이탈리아 중부 야생 헤르만육지거북(T. hermanni hermanni)의 계절별 식단을 조사한 현장연구다. Ruscus aculeatus는 야생 섭식 식물로 보고됐다. 원문 Table 1(p. 240)에는 열매와 종자가 기재되어 있으며 초록에는 꽃과 미숙과가 언급된다. 잎 섭식은 해당 근거에서 확인되지 않는다. 이는 야생 섭식 기록이지 사육환경에서의 안전성이나 권장 급여량을 입증하는 자료는 아니다.",
+      "supports": "이탈리아 중부 야생 헤르만육지거북(T. hermanni hermanni)의 계절별 식단을 주로 분변 분석으로 조사한 현장연구다. Ruscus aculeatus는 야생 섭식 식물로 보고됐다. 분변 잔여물을 정리한 원문 Table 1(p. 240)과 Table 2(p. 241)의 부위 항목에는 열매와 종자가 기재되어 있고, Table 2에는 봄 28건 중 1건, 가을 21건 중 21건으로 기록됐다. 잎은 표에는 없지만 Discussion(p. 245)에서 잎이 단단하고 끝이 가시처럼 뾰족한데도 가을에 잎을 먹었다고 서술된다. 초록에는 가을철 꽃과 미숙과 이용이 언급된다. 이는 야생 섭식 기록이지 사육환경에서의 안전성이나 권장 급여량을 입증하는 자료는 아니다.",
       "does_not_support": "헤르만육지거북의 야생 섭식 기록이므로 그리스육지거북에서 동일한 안전성·선호도가 직접 확인됐다는 뜻은 아니다. 야생에서 먹었다는 사실만으로 사육환경의 급여량·빈도·장기 안전성·상시 주식 사용을 정할 수 없으며, 부위별 위험이 동일하다고 일반화할 수도 없다.",
       "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1"
     },
@@ -4122,63 +4122,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/33003576/"
     },
     {
-      "id": "ceccanti_rumex_oxalate_2021",
-      "plant_ids": [
-        "sorrel"
-      ],
-      "source_title": "Evaluation of Major Minerals and Trace Elements in Wild and Domesticated Edible Herbs Traditionally Used in the Mediterranean Area",
-      "source_type": "peer_reviewed_plant_composition",
-      "animal_taxon": "Plant composition",
-      "applicability": "composition_only",
-      "plant_taxon": "Rumex acetosa",
-      "plant_part_state": "leaves; wild and cultivated",
-      "directness": "composition_only",
-      "supports": "The study measured nitrate and oxalate directly in Rumex acetosa leaves under wild and several cultivation conditions and found substantial oxalate, with the highest R. acetosa value reported in open-field cultivated leaves. This confirms a leaf-specific limiting compound in the exact species.",
-      "does_not_support": "The study evaluates edible-plant composition, not tortoise feeding. It does not define a tortoise toxic dose, safe serving size, frequency, or demonstrate clinical poisoning after incidental ingestion.",
-      "year": 2021,
-      "doi": null,
-      "pmid": null,
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
-    },
-    {
-      "id": "piatczak_salix_alba_leaf_phenolics_2020",
-      "plant_ids": [
-        "willowleaf"
-      ],
-      "source_title": "Identification and Accumulation of Phenolic Compounds in the Leaves and Bark of Salix alba (L.) and Their Biological Potential",
-      "source_type": "peer_reviewed_plant_composition",
-      "animal_taxon": "Plant composition",
-      "applicability": "composition_only",
-      "plant_taxon": "Salix alba",
-      "plant_part_state": "leaves and bark; leaf results separable",
-      "directness": "composition_only",
-      "supports": "UPLC-PDA-Q/TOF-MS identified numerous phenolic compounds in Salix alba leaves and quantified a high total phenolic content. This provides exact-species leaf chemistry showing that willow foliage contains biologically active phenolic constituents.",
-      "does_not_support": "This is Salix alba chemistry, not a tortoise feeding/toxicity trial and not proof that every Salix species has the same profile or hazard. It does not establish a tortoise toxic dose, safe frequency, or show that a small accidental bite is poisonous.",
-      "year": 2020,
-      "doi": "10.3390/biom10101391",
-      "pmid": "33003576",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/33003576/"
-    },
-    {
-      "id": "di_noia_rumex_oxalate_2021",
-      "plant_ids": [
-        "sorrel"
-      ],
-      "source_title": "Evaluation of Major Minerals and Trace Elements in Wild and Domesticated Edible Herbs Traditionally Used in the Mediterranean Area",
-      "source_type": "peer_reviewed_plant_composition",
-      "animal_taxon": "Plant composition",
-      "applicability": "composition_only",
-      "plant_taxon": "Rumex acetosa",
-      "plant_part_state": "leaves; wild and cultivated",
-      "directness": "composition_only",
-      "supports": "The study measured nitrate and oxalate in Rumex acetosa leaves under wild and cultivation conditions. Open-field R. acetosa leaves reached 8.5 mg oxalate/g fresh weight, confirming substantial oxalate in the exact species and leaf part.",
-      "does_not_support": "This is plant composition, not a tortoise feeding study. The measured oxalate level cannot be converted into a tortoise toxic dose, fixed safe serving, or proof that accidental small ingestion causes poisoning.",
-      "year": 2021,
-      "doi": "10.1007/s12011-020-02467-3",
-      "pmid": null,
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8257512/"
-    },
-    {
       "id": "rowell_rahier_salix_leaf_glycosides_1984",
       "plant_ids": [
         "willowleaf"
@@ -4198,25 +4141,6 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/28310733/"
     },
     {
-      "id": "sattler_borago_pa_2025",
-      "plant_ids": [
-        "borage"
-      ],
-      "source_title": "Pyrrolizidine alkaloid contents and profiles in Borago officinalis leaves, flowers and microgreens: Implications for safety",
-      "source_type": "peer_reviewed_plant_toxicology",
-      "animal_taxon": "Plant composition",
-      "applicability": "composition_only",
-      "plant_taxon": "Borago officinalis",
-      "plant_part_state": "106 leaf samples including microgreens and 33 flower samples across developmental stages",
-      "directness": "composition_only",
-      "supports": "LC-MS/MS analysis quantified pyrrolizidine alkaloids in Borago officinalis leaves, flowers and microgreens. All analyzed flowers contained PA; flowers generally contained more than corresponding leaves, while microgreens and pre-flowering leaves showed particularly high concentrations. This confirms toxicologically relevant PA in the exact plant and the same aerial parts considered for feeding.",
-      "does_not_support": "This is a food-safety and plant-chemistry study, not a tortoise feeding or toxicity trial. Human regulatory limits and margin-of-exposure calculations cannot be converted into a tortoise toxic dose, safe serving size, or prediction that a single accidental bite will cause poisoning.",
-      "year": 2025,
-      "doi": "10.1016/j.foodcont.2024.110930",
-      "pmid": null,
-      "url": "https://doi.org/10.1016/j.foodcont.2024.110930"
-    },
-    {
       "id": "sattler_borage_pa_2025",
       "plant_ids": [
         "borage"
@@ -4234,44 +4158,6 @@
       "doi": "10.1016/j.foodcont.2024.110930",
       "pmid": null,
       "url": "https://doi.org/10.1016/j.foodcont.2024.110930"
-    },
-    {
-      "id": "di_gioia_rumex_oxalate_2021",
-      "plant_ids": [
-        "sorrel"
-      ],
-      "source_title": "Evaluation of Major Minerals and Trace Elements in Wild and Domesticated Edible Herbs Traditionally Used in the Mediterranean Area",
-      "source_type": "peer_reviewed_plant_composition",
-      "animal_taxon": "Plant composition",
-      "applicability": "composition_only",
-      "plant_taxon": "Rumex acetosa",
-      "plant_part_state": "leaves; wild and multiple cultivation systems",
-      "directness": "composition_only",
-      "supports": "Rumex acetosa leaves were directly analyzed for oxalate under wild and cultivated conditions. The study reported high leaf oxalate, with open-field cultivated leaves reaching about 8.5 mg oxalate/g fresh weight, confirming a substantial leaf-specific calcium-binding antinutrient burden.",
-      "does_not_support": "This is plant-composition evidence and does not establish a tortoise toxic dose, exact safe feeding frequency, clinical poisoning threshold, or prove that a small accidental bite causes harm.",
-      "year": 2021,
-      "doi": "10.1007/s12011-020-02467-3",
-      "pmid": null,
-      "url": "https://doi.org/10.1007/s12011-020-02467-3"
-    },
-    {
-      "id": "sattler_borago_pa_2023",
-      "plant_ids": [
-        "borage"
-      ],
-      "source_title": "Pyrrolizidine alkaloids in borage (Borago officinalis): Comprehensive profiling and development of a validated LC-MS/MS method for quantification",
-      "source_type": "peer_reviewed_plant_composition",
-      "animal_taxon": "Plant composition",
-      "applicability": "composition_only",
-      "plant_taxon": "Borago officinalis",
-      "plant_part_state": "leaves",
-      "directness": "composition_only",
-      "supports": "UHPLC-QToF/LC-MS/MS profiling and a validated quantitative method detected pyrrolizidine alkaloids and their N-oxides in Borago officinalis leaf material; acetylated forms were among the quantitatively important compounds in the tested samples.",
-      "does_not_support": "This is leaf chemistry and food-safety analysis, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, one-bite poisoning risk, safe percentage, or feeding frequency.",
-      "year": 2023,
-      "doi": "10.1016/j.talanta.2023.124425",
-      "pmid": "36924638",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/36924638/"
     },
     {
       "id": "siener_rumex_oxalate_2006",
@@ -4345,7 +4231,7 @@
       "supports": "The study directly measured oxalates, phenols and tannins as major secondary metabolites in leaves and roots of Rumex crispus alongside two other Rumex species, providing exact-species evidence that oxalate is part of curly dock leaf chemical defence.",
       "does_not_support": "This is plant chemical-ecology research, not a tortoise feeding or toxicity trial. It does not establish a tortoise toxic dose, safe percentage, feeding frequency, or prove that a small accidental nibble causes poisoning.",
       "year": 2023,
-      "doi": "10.1007/s10886-023-01417-2",
+      "doi": "10.1007/s10886-023-01427-0",
       "pmid": "37121960",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37121960/"
     },
@@ -4517,9 +4403,9 @@
       "supports": "The study directly characterized Pisum sativum pea shoots as the edible young aerial tissue, measuring macronutrients, minerals, vitamins, carotenoids and flavonoids. It provides plant-part-matched composition evidence rather than substituting mature pea seeds for shoots.",
       "does_not_support": "This is a human-food composition and postharvest study, not a tortoise feeding, phytate-toxicity, calcium-absorption, or dose-response trial. It does not prove pea shoots are toxic to tortoises or establish a Testudo toxic dose, safe percentage, or feeding frequency.",
       "year": 2014,
-      "doi": "10.1016/j.foodres.2014.02.011",
+      "doi": "10.1016/j.foodres.2014.01.062",
       "pmid": null,
-      "url": "https://doi.org/10.1016/j.foodres.2014.02.011"
+      "url": "https://doi.org/10.1016/j.foodres.2014.01.062"
     },
     {
       "id": "palaniswamy_purslane_oxalate_2004",
@@ -4716,7 +4602,7 @@
       "plant_ids": [
         "cauliflowerleaf"
       ],
-      "source_title": "Glucosinolate profiles in different tissues of nine brassica crops",
+      "source_title": "Comparison of Glucosinolate Profiles in Different Tissues of Nine Brassica Crops",
       "source_type": "peer_reviewed_plant_composition",
       "animal_taxon": "Plant composition",
       "applicability": "composition_only",
@@ -4726,7 +4612,7 @@
       "supports": "The study profiled glucosinolates across tissues of Brassica crops including cauliflower and provides plant-part-specific evidence that glucosinolate composition and concentration vary by tissue rather than being uniform across the plant.",
       "does_not_support": "This is plant-composition research, not a tortoise feeding or thyroid-outcome study. Tissue glucosinolate measurements do not establish a Testudo toxic dose, hypothyroidism threshold, safe percentage, or fixed feeding frequency, and cannot by themselves classify cauliflower leaves as acutely toxic.",
       "year": 2015,
-      "doi": "10.3390/molecules200915842",
+      "doi": "10.3390/molecules200915827",
       "pmid": "26334264",
       "url": "https://pubmed.ncbi.nlm.nih.gov/26334264/"
     },

@@ -271,7 +271,7 @@
       "family": "Asparagaceae",
       "group": "지중해 Testudo 야생 먹이식물",
       "stage": "promoted",
-      "source_hint": "Del Vecchio et al. (2011), wild Testudo hermanni hermanni in central Italy: Table 1 (p. 240) lists Ruscus aculeatus fruits and seeds and the abstract reports autumn use of flowers and unripe fruit; leaves not reported; DOI 10.1655/HERPETOLOGICA-D-10-00064.1.",
+      "source_hint": "Del Vecchio et al. (2011), wild Testudo hermanni hermanni in central Italy: Table 1 (p. 240) and Table 2 (p. 241) list Ruscus aculeatus fruits and seeds from faecal remains; Discussion (p. 245) reports autumn leaf consumption; abstract reports autumn use of flowers and unripe fruit; DOI 10.1655/HERPETOLOGICA-D-10-00064.1.",
       "feeding_grade": "B",
       "public": true,
       "accepted_name": "Ruscus aculeatus L.",
@@ -281,7 +281,7 @@
       "publication_blocker": null,
       "evidence_review": {
         "status": "direct_wild_Testudo_evidence_with_part_specific_toxicology_boundary",
-        "note": "2011 Herpetologica study directly documents wild T. h. hermanni switching to R. aculeatus flowers and unripe fruit in autumn; Table 1 (p. 240) lists fruits and seeds; leaf consumption is not reported. EMA assessment concerns medicinal rhizome/root preparations and cannot be used as an aerial-part tortoise toxic dose.",
+        "note": "2011 Herpetologica study directly documents wild T. h. hermanni eating R. aculeatus: fruits and seeds in the faecal tables (Table 1 p. 240, Table 2 p. 241), leaves in the Discussion (p. 245, autumn), flowers and unripe fruit in the abstract. EMA assessment concerns medicinal rhizome/root preparations and cannot be used as an aerial-part tortoise toxic dose.",
         "primary_feeding_source": {
           "title": "Seasonal changes in the diet of Testudo hermanni hermanni in central Italy",
           "authors": "Del Vecchio S.; Burke R.L.; Rugiero L.; Capula M.; Luiselli L.",
@@ -292,10 +292,11 @@
           "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
           "animal_taxon": "Testudo hermanni hermanni",
           "parts_observed": [
-            "flowers",
-            "unripe fruit",
-            "fruits",
-            "seeds"
+            "fruits (Table 1-2)",
+            "seeds (Table 1-2)",
+            "leaves (Discussion p. 245)",
+            "flowers (abstract)",
+            "unripe fruit (abstract)"
           ],
           "directness": "subspecies_wild_observation"
         },
