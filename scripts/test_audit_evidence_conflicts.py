@@ -57,7 +57,7 @@ CASES = [
     ("R2_part_drift_links_vs_public", "data/plant_feeding_evidence_links.json",
      lambda d: next(e for r in d["records"] for e in r["evidence"] if e["evidence_id"] == RUSCUS).update(plant_part="leaves")),
     ("R13_ruscus_parts_not_distinguished", "data/public_assessments.json",
-     lambda d: ruscus_assessment(d).update(why=ruscus_assessment(d)["why"].replace("Discussion(p. 245)", "본문"))),
+     lambda d: ruscus_assessment(d).update(why=ruscus_assessment(d)["why"].replace("고찰(p. 245)", "본문"))),
     ("R13_ruscus_grade_changed", "data/public_assessments.json", lambda d: ruscus_assessment(d).update(confidence="C")),
     ("R13_ruscus_ledger_overstated", "data/feeding_record_verification_v1.json",
      lambda d: ledger_ruscus(d).update(verification_status="full_text_confirmed")),

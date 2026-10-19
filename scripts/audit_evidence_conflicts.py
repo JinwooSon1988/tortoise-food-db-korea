@@ -279,7 +279,7 @@ def audit(root=None):
             if need not in part:
                 hit("R13_ruscus_parts_not_distinguished", "error", rp["id"], f"plant_part_state lacks {need!r}")
         for label, text in (("supports", rp.get("supports")), ("why", ra["why"])):
-            if not ("잎" in text and "Discussion(p. 245)" in text and "Table 1" in text):
+            if not ("잎" in text and "고찰(p. 245)" in text and "Table 1" in text):
                 hit("R13_ruscus_parts_not_distinguished", "error", "ruscus_aculeatus", f"{label} must name the leaf passage and the tables")
             en = T(strings, text)
             if en.startswith("[[untranslated") or not re.search(r"\bleaves\b", en) or "Discussion (p. 245)" not in en:
