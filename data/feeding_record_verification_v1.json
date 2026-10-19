@@ -13,9 +13,9 @@
  "counts": {
   "candidates": 90,
   "candidates_by_status": {
-   "abstract_only_not_confirmed": 1,
    "full_text_confirmed": 3,
    "full_text_read_no_species_record_for_this_plant": 9,
+   "full_text_table_cited_not_extracted": 1,
    "husbandry_guidance_not_feeding_record": 6,
    "not_verified": 42,
    "original_does_not_name_taxon": 1,
@@ -2793,12 +2793,12 @@
    ],
    "quarantined_wild_record": false,
    "plant_match": "exact_species",
-   "verification_status": "abstract_only_not_confirmed",
-   "verified_by": "original opened 2026-10-17",
-   "original_opened": "BioOne abstract; full text subscriber-only; no open copy (Unpaywall: not OA; IRIS record 403)",
+   "verification_status": "full_text_table_cited_not_extracted",
+   "verified_by": "original opened 2026-10-18",
+   "original_opened": "BioOne abstract (2026-10-17); Table 1, p. 240 read from a ResearchGate full-text display (2026-10-18, QA-FR-002). Publisher copy subscriber-only; Unpaywall/OpenAlex closed; IRIS/CRIS records 403",
    "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
-   "original_locator": null,
-   "original_summary": "The abstract says wild T. h. hermanni switched to Ruscus aculeatus flowers and unripe fruit in autumn. An abstract does not confirm a feeding record here; the full text is needed (see QA-FR-002).",
+   "original_locator": "Table 1, p. 240 (Ruscus aculeatus: fruits, seeds); abstract (flowers and unripe fruit in autumn)",
+   "original_summary": "Table 1 (p. 240) lists Ruscus aculeatus fruits and seeds; the abstract says wild T. h. hermanni switched to its flowers and unripe fruit in autumn. Leaves are reported in neither. Not yet a full-text extract (method and site locators missing), so not counted as a confirmed feeding record (see QA-FR-002).",
    "existing_grade": "B",
    "grade_changed": false
   },

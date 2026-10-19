@@ -68,7 +68,8 @@
     }
    ],
    "proposed_fix": "Read Table 1 of the full text. If leaves are absent, change the part to flowers and unripe fruit; otherwise add the table locator.",
-   "resolution": "Del Vecchio et al. 2011 Table 1 lists Ruscus aculeatus plant parts as 'Fruits, seeds' (p. 240); abstract separately states flowers and unripe fruit in autumn. Leaves are not reported in either. Updated data/plant_feeding_evidence_links.json accordingly. No captive feeding safety inferred."
+   "resolution": "Del Vecchio et al. 2011 Table 1 lists Ruscus aculeatus plant parts as 'Fruits, seeds' (p. 240); abstract separately states flowers and unripe fruit in autumn. Leaves are not reported in either. Updated data/plant_feeding_evidence_links.json accordingly. No captive feeding safety inferred.",
+   "ledger_status": "data/feeding_record_verification_v1.json records this source as full_text_table_cited_not_extracted (2026-10-18): the observation above (2026-10-17, abstract only) is superseded by the Table 1 reading, but the record is not counted as full_text_confirmed until it is added to data/feeding_record_fulltext_extracts_v1.json with method and site locators."
   }
  ]
 }

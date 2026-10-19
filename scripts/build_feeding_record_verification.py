@@ -39,13 +39,18 @@ GRADED = ("A", "B", "C", "D")
 
 # Originals opened that do not yield a full-text feeding record. key: (normalised source, plant binomial or "*").
 CHECKS = {
+    # Table 1 was read from a ResearchGate full-text display (QA-FR-002) but has not been extracted with method and
+    # site locators, so it stays out of the full-text extracts and is not counted as confirmed.
     ("10.1655/herpetologica-d-10-00064.1", "*"): {
-        "status": "abstract_only_not_confirmed",
-        "opened": "BioOne abstract; full text subscriber-only; no open copy (Unpaywall: not OA; IRIS record 403)",
+        "status": "full_text_table_cited_not_extracted", "checked_at": "2026-10-18",
+        "opened": "BioOne abstract (2026-10-17); Table 1, p. 240 read from a ResearchGate full-text display (2026-10-18, "
+                  "QA-FR-002). Publisher copy subscriber-only; Unpaywall/OpenAlex closed; IRIS/CRIS records 403",
         "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the "
                     "diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
-        "summary": "The abstract says wild T. h. hermanni switched to Ruscus aculeatus flowers and unripe fruit in autumn. "
-                   "An abstract does not confirm a feeding record here; the full text is needed (see QA-FR-002)."},
+        "locator": "Table 1, p. 240 (Ruscus aculeatus: fruits, seeds); abstract (flowers and unripe fruit in autumn)",
+        "summary": "Table 1 (p. 240) lists Ruscus aculeatus fruits and seeds; the abstract says wild T. h. hermanni switched "
+                   "to its flowers and unripe fruit in autumn. Leaves are reported in neither. Not yet a full-text extract "
+                   "(method and site locators missing), so not counted as a confirmed feeding record (see QA-FR-002)."},
     ("10.1080/21564574.2008.9635573", "*"): {
         "status": "original_does_not_name_taxon",
         "opened": "publisher abstract (NISC); full text not accessible",
@@ -241,7 +246,7 @@ def main():
         elif src in ft_sources:
             status, by = "full_text_read_no_species_record_for_this_plant", "full text read " + CHECKED_AT
         elif chk:
-            status, by = chk["status"], "original opened " + CHECKED_AT
+            status, by = chk["status"], "original opened " + chk.get("checked_at", CHECKED_AT)
         elif prior:
             status, by = "prior_primary_audit_only", "species_evidence_primary_source_audit_v56 (not reopened)"
         else:
@@ -253,7 +258,7 @@ def main():
             "verification_status": status, "verified_by": by,
             "original_opened": (chk or {}).get("opened") or (ft[0]["full_text"] if ft else None),
             "citation": (chk or {}).get("citation") or (ft[0]["citation"] if ft else None),
-            "original_locator": ft[0]["locator"] if ft else (prior[0]["verification"] if prior else None),
+            "original_locator": ft[0]["locator"] if ft else ((chk or {}).get("locator") or (prior[0]["verification"] if prior else None)),
             "original_summary": (chk or {}).get("summary"),
             "existing_grade": grade.get(c["plant_id"]) if c["plant_id"] else None, "grade_changed": False,
         })
