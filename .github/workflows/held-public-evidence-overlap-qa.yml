@@ -1,0 +1,28 @@
+name: Held Public Evidence Overlap QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/feeding_p1_blocked_claim_manifest_20261018.json'
+      - 'data/public_evidence_records.json'
+      - 'data/reviewed_plant_reverse_evidence_index.json'
+      - 'scripts/audit_public_evidence_blocked_overlap.py'
+      - 'scripts/test_audit_public_evidence_blocked_overlap.py'
+      - '.github/workflows/held-public-evidence-overlap-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression tests
+        run: python -m unittest discover -s scripts -p 'test_audit_public_evidence_blocked_overlap.py' -v
+      - name: Check held source exposure (nonblocking pending review)
+        run: python scripts/audit_public_evidence_blocked_overlap.py
