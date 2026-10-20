@@ -50,7 +50,7 @@ const CTX={wild:['야생','Wild'],captive:['사육·급여 실험','Captive or f
 const RS={evidence_checked_in_full_text:['원문으로 확인한 급여 기록 있음','Feeding records checked in full text'],evidence_leads_only:['문헌 단서만 있음 (원문 재확인 필요)','Literature leads only (originals need rechecking)'],reviewed_not_feeding_evidence:['거북 문헌에 이름은 나오지만 먹이 기록은 아님','Named in tortoise papers that were read, but not as food'],no_record_found:['자료 미확보','No data found']};
 function idFromUrl(){const v=new URLSearchParams(location.search).get('id')||'';return /^gbif:\d{1,12}$/.test(v)?v:null}
 async function j(u){try{const r=await fetch(u);return r.ok?await r.json():null}catch(e){return null}}
-function title(r){const ko=(r.common_names.ko[0]||{}).name,e=(r.common_names.en[0]||{}).name;return en()?(e||r.scientific):(ko||r.scientific)}
+function title(r){const names=r.common_names||{},ko=((names.ko||[])[0]||{}).name,e=((names.en||[])[0]||{}).name;return en()?(e||r.scientific):(ko||r.scientific)}
 function evHTML(x){const L=en()?'en':'ko',NR=T('원문 미기재','Not reported in the original'),v=VER[x.verification]||[x.verification,x.verification];
  const c=CTX[x.context],nr=x.name_resolution;
  return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b><span class="tag">'+esc(en()?v[1]:v[0])+'</span>'+(c?'<span class="tag">'+esc(en()?c[1]:c[0])+'</span>':'')+'</p>'+
