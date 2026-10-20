@@ -1,0 +1,2388 @@
+{
+ "schema_version": "1.0",
+ "built": "2026-10-20",
+ "scope": "Feeding evidence for plant-catalog species, read from open-access full texts or marked as leads. Observation and keeper-practice records only: never a feeding grade, safe-to-feed verdict, nutrient value or toxicity judgement. Linked to a catalog entry only when the reported name is an exact accepted GBIF species.",
+ "verification_levels": {
+  "full_text_verified": "the stated table or section of the original was read and names the plant with the finding",
+  "literature_lead_not_reverified": "abstract only, or a repository summary whose original was not re-read"
+ },
+ "sources": [
+  {
+   "source_key": "jennings_berry_2015",
+   "citation": "Jennings, W. B. & Berry, K. H. (2015) Desert tortoises (Gopherus agassizii) are selective herbivores that track the flowering phenology of their preferred food plants. PLoS ONE 10(1): e0116716",
+   "url": "https://doi.org/10.1371/journal.pone.0116716",
+   "full_text": "https://europepmc.org/article/PMC/PMC4312072",
+   "license": "CC0 (Europe PMC)",
+   "tortoise_taxon": "Gopherus agassizii",
+   "context": "wild",
+   "read": "Europe PMC full-text XML, tables 6, 8, 10 and 11"
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "citation": "Jennings, W. B. & Berry, K. H. (2023) Selection of microhabitats, plants, and plant parts eaten by a threatened tortoise: observations during a superbloom. Frontiers in Amphibian and Reptile Science 1: 1283255",
+   "url": "https://doi.org/10.3389/famrs.2023.1283255",
+   "full_text": "https://www.frontiersin.org/journals/amphibian-and-reptile-science/articles/10.3389/famrs.2023.1283255/full",
+   "license": "CC BY 4.0",
+   "tortoise_taxon": "Gopherus agassizii",
+   "context": "wild",
+   "read": "publisher full text, tables 2-4 (same 1992 field observations as Jennings & Berry 2015, re-analysed by plant part)"
+  },
+  {
+   "source_key": "figueroa_2024",
+   "citation": "Figueroa, A. et al. (2024) Precipitation drives frugivory in a subtropical generalist herbivore, the gopher tortoise, and alters its functional role as a seed disperser. Ecology and Evolution 14: e70585",
+   "url": "https://doi.org/10.1002/ece3.70585",
+   "full_text": "https://europepmc.org/article/PMC/PMC11573422",
+   "license": "CC BY",
+   "tortoise_taxon": "Gopherus polyphemus",
+   "context": "wild",
+   "read": "Europe PMC full-text XML, Table 2 and Methods (scat collection and dissection)"
+  },
+  {
+   "source_key": "rogers_2025",
+   "citation": "Rogers, G. (2025) Botanical assessment of disturbed urban population of threatened gopher tortoise (Gopherus polyphemus) habitat in SE Florida during drought. Biology 14: 1038",
+   "url": "https://doi.org/10.3390/biology14081038",
+   "full_text": "https://europepmc.org/article/PMC/PMC12383494",
+   "license": "CC BY",
+   "tortoise_taxon": "Gopherus polyphemus",
+   "context": "wild",
+   "read": "Europe PMC full-text XML, sections 2.1 and 4"
+  },
+  {
+   "source_key": "kirchner_2023",
+   "citation": "Kirchner, R. et al. (2023) Biogenic elements and heavy metals in Hermann's tortoises (Testudo hermanni): effect on serum biochemistry and oxidative status parameters. Animals 13: 2218",
+   "url": "https://doi.org/10.3390/ani13132218",
+   "full_text": "https://europepmc.org/article/PMC/PMC10340051",
+   "license": "CC BY",
+   "tortoise_taxon": "Testudo hermanni",
+   "context": "captive",
+   "read": "Europe PMC full-text XML, section 2 (Materials and Methods)"
+  },
+  {
+   "source_key": "tortoise_table_mulberry",
+   "citation": "The Tortoise Table plant database: Mulberry Tree (Mulberry Bush, Paper Mulberry)",
+   "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=257",
+   "full_text": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=257",
+   "license": "linked only; content not copied",
+   "tortoise_taxon": "Tortoise general",
+   "context": "keeper",
+   "read": "entry page read 2026-10-20; its Latin name line lists Broussonetia papyrifera"
+  },
+  {
+   "source_key": "tortoise_table_mint",
+   "citation": "The Tortoise Table plant database: Mint (Garden Mint, Spearmint, Apple Mint)",
+   "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=506",
+   "full_text": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?plant=506",
+   "license": "linked only; content not copied",
+   "tortoise_taxon": "Tortoise general",
+   "context": "keeper",
+   "read": "entry page read 2026-10-20; lists Mentha spicata and Mentha suaveolens"
+  },
+  {
+   "source_key": "barboza_1995",
+   "citation": "Barboza, P. S. (1995) Digesta passage and functional anatomy of the digestive tract in the desert tortoise (Xerobates agassizii). J. Comp. Physiol. B 165: 193-202",
+   "url": "https://doi.org/10.1007/BF00260810",
+   "full_text": null,
+   "license": "abstract only (Europe PMC)",
+   "tortoise_taxon": "Gopherus agassizii",
+   "context": "captive",
+   "read": "abstract only; full text not available to this review"
+  },
+  {
+   "source_key": "richardson_stiling_2019",
+   "citation": "Richardson, J. C. & Stiling, P. (2019) Gopher tortoise herbivory increases plant species richness and diversity. Plant Ecology 220: 383-391",
+   "url": "https://doi.org/10.1007/s11258-019-00921-4",
+   "full_text": null,
+   "license": "abstract only",
+   "tortoise_taxon": "Gopherus polyphemus",
+   "context": "wild",
+   "read": "abstract only; full text not available to this review"
+  },
+  {
+   "source_key": "del_vecchio_2011",
+   "citation": "Del Vecchio, S. et al. (2011) Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3): 236-249",
+   "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1",
+   "full_text": null,
+   "license": "not accessed",
+   "tortoise_taxon": "Testudo hermanni hermanni",
+   "context": "wild",
+   "read": "named in the repository summary data/poaceae_testudo_evidence_v56.json; original not re-read"
+  }
+ ],
+ "records": [
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Acmispon brachycarpus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 10,512회 섭취 (전체 35,388회 중 29.70%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "10,512 bites (29.70% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Mirabilis laevis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 3,820회 섭취 (전체 35,388회 중 10.79%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "3,820 bites (10.79% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Chamaesyce albomarginata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 3,801회 섭취 (전체 35,388회 중 10.74%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "3,801 bites (10.74% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Astragalus layneae",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 2,902회 섭취 (전체 35,388회 중 8.20%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "2,902 bites (8.20% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Prenanthella exigua",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 1,977회 섭취 (전체 35,388회 중 5.59%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "1,977 bites (5.59% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Astragalus didymocarpus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 1,623회 섭취 (전체 35,388회 중 4.59%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "1,623 bites (4.59% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Erodium cicutarium",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 1,391회 섭취 (전체 35,388회 중 3.93%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "1,391 bites (3.93% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Eremothera boothii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 1,367회 섭취 (전체 35,388회 중 3.86%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "1,367 bites (3.86% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Chorizanthe brevicornu",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 919회 섭취 (전체 35,388회 중 2.60%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "919 bites (2.60% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Phacelia tanacetifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 710회 섭취 (전체 35,388회 중 2.01%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "710 bites (2.01% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Amsinckia tessellata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 683회 섭취 (전체 35,388회 중 1.93%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "683 bites (1.93% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Cryptantha circumcissa",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 561회 섭취 (전체 35,388회 중 1.59%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "561 bites (1.59% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Eriastrum eremicum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 516회 섭취 (전체 35,388회 중 1.46%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "516 bites (1.46% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Plantago ovata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 430회 섭취 (전체 35,388회 중 1.22%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "430 bites (1.22% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Gilia minor",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 342회 섭취 (전체 35,388회 중 0.97%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "342 bites (0.97% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Stylocline psilocarphoides",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 334회 섭취 (전체 35,388회 중 0.94%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "334 bites (0.94% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Tetrapteron palmeri",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 266회 섭취 (전체 35,388회 중 0.75%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "266 bites (0.75% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Schismus barbatus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 244회 섭취 (전체 35,388회 중 0.69%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "244 bites (0.69% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Malacothrix coulteri",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 217회 섭취 (전체 35,388회 중 0.61%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "217 bites (0.61% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Lupinus odoratus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 211회 섭취 (전체 35,388회 중 0.60%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "211 bites (0.60% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Stephanomeria parryi",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 131회 섭취 (전체 35,388회 중 0.37%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "131 bites (0.37% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Malacothrix glabrata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 125회 섭취 (전체 35,388회 중 0.35%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "125 bites (0.35% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Chaenactis fremontii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 119회 섭취 (전체 35,388회 중 0.34%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "119 bites (0.34% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Loeseliastrum schottii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 79회 섭취 (전체 35,388회 중 0.22%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "79 bites (0.22% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Tropidocarpum gracile",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 75회 섭취 (전체 35,388회 중 0.21%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "75 bites (0.21% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Linanthus dichotomus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 66회 섭취 (전체 35,388회 중 0.19%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "66 bites (0.19% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Allium fimbriatum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 25회 섭취 (전체 35,388회 중 0.07%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "25 bites (0.07% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Oxytheca perfoliata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 25회 섭취 (전체 35,388회 중 0.07%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "25 bites (0.07% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Pholistoma membranaceum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 14회 섭취 (전체 35,388회 중 0.04%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "14 bites (0.04% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Chorizanthe rigida",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 12회 섭취 (전체 35,388회 중 0.03%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "12 bites (0.03% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Eriogonum gracillimum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 12회 섭취 (전체 35,388회 중 0.03%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "12 bites (0.03% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Eriogonum pusillum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 12회 섭취 (전체 35,388회 중 0.03%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "12 bites (0.03% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Bromus madritensis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 9회 섭취 (전체 35,388회 중 0.03%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "9 bites (0.03% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Caulanthus inflatus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 8회 섭취 (전체 35,388회 중 0.02%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "8 bites (0.02% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Calycoseris parryi",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 7회 섭취 (전체 35,388회 중 0.02%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "7 bites (0.02% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Astragalus acutirostris",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 5회 섭취 (전체 35,388회 중 0.01%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "5 bites (0.01% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Ambrosia salsola",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 4회 섭취 (전체 35,388회 중 0.01%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "4 bites (0.01% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Linanthus parryae",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 4회 섭취 (전체 35,388회 중 0.01%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "4 bites (0.01% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Lomatium mohavense",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 2회 섭취 (전체 35,388회 중 0.01%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "2 bites (0.01% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Chaenactis carphoclinia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 11 (periods: Tables 6, 8, 10)",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 성체 사막거북 섭식 관찰에서 1회 섭취 (전체 35,388회 중 0.00%), 미국 캘리포니아 Desert Tortoise Research Natural Area, 1992년 봄",
+    "en": "1 bites (0.00% of 35,388) in direct foraging observations of wild adult desert tortoises, Desert Tortoise Research Natural Area, California, spring 1992"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Mirabilis laevis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매",
+    "en": "flowers, leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Astragalus layneae",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Astragalus didymocarpus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Eremothera boothii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Phacelia tanacetifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Amsinckia tessellata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Gilia minor",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매",
+    "en": "flowers, leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Erodium cicutarium",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Tetrapteron palmeri",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "잎, 줄기, 열매",
+    "en": "leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Stylocline psilocarphoides",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Malacothrix coulteri",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Lupinus odoratus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "잎",
+    "en": "leaves"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Acmispon brachycarpus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매",
+    "en": "flowers, leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Stephanomeria parryi",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Malacothrix glabrata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Chaenactis fremonti",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Cryptantha circumcissa",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Loeseliastrum schotti",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "잎",
+    "en": "leaves"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Plantago ovata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매",
+    "en": "flowers, leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Tropidocarpus gracile",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "잎, 줄기, 열매",
+    "en": "leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Linanthus dichotomus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 열매",
+    "en": "flowers, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Schismus barbatus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Allium fimbriatum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "줄기",
+    "en": "stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Pholistoma membranaceum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Chorizanthe rigida",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "잎",
+    "en": "leaves"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Eriogonum gracillimum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "줄기",
+    "en": "stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Eriogonum pusillum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기",
+    "en": "flowers, leaves, stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Bromus madritensis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃",
+    "en": "flowers"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Prenanthella exigua",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매",
+    "en": "flowers, leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Calycoseris parryi",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃, 잎",
+    "en": "flowers, leaves"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Chorizanthe brevicornu",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2, Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Lomatium mohavense",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃",
+    "en": "flowers"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Chaenactis carphoclinia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "꽃",
+    "en": "flowers"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Chamaesyce albomarginata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매",
+    "en": "flowers, leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Caulanthus inflatus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 3",
+   "plant_part": {
+    "ko": "줄기",
+    "en": "stems"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Astragalus acutirostris",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 3",
+   "plant_part": {
+    "ko": "잎, 줄기, 열매",
+    "en": "leaves, stems, fruits"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Eriastrum eremicum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 3, Table 4",
+   "plant_part": {
+    "ko": "꽃, 잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "flowers, leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Oxytheca perfoliata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 4",
+   "plant_part": {
+    "ko": "잎, 줄기, 열매 (마른 식물 포함)",
+    "en": "leaves, stems, fruits (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Linanthus parryae",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 4",
+   "plant_part": {
+    "ko": "잎, 줄기 (마른 식물 포함)",
+    "en": "leaves, stems (including dried plants)"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Ambrosia salsola",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 4",
+   "plant_part": {
+    "ko": "꽃",
+    "en": "flowers"
+   },
+   "finding": {
+    "ko": "야생 성체 사막거북이 먹은 식물 부위 기록 (먹은 개체마다 부위 기록, 1992년 봄, 캘리포니아)",
+    "en": "Plant parts eaten by wild adult desert tortoises (parts recorded for each plant eaten, spring 1992, California)"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Andropogon glomeratus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 2개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (2 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Casuarina equesitifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 30개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (30 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Schizachyrium gracile",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Buchnera americana",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1000개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1000 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Chamaecrista deeringiana",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Euphorbia cyathophora",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 8개에서 종자 확인 (온전한 종자 68개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 8 of 207 faecal samples of wild gopher tortoises (68 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Euphorbia heterophylla",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 2개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (2 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Euphorbia hirta",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 60개에서 종자 확인 (온전한 종자 3373개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 60 of 207 faecal samples of wild gopher tortoises (3373 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Euphorbia hypericifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 29개에서 종자 확인 (온전한 종자 1407개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 29 of 207 faecal samples of wild gopher tortoises (1407 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Indigofera spicata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 17개에서 종자 확인 (온전한 종자 65개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 17 of 207 faecal samples of wild gopher tortoises (65 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Indigofera suffruticosa",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 5개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (5 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Leucaena leucocephala",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Malvastrum coromandelianum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 6개에서 종자 확인 (온전한 종자 12개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 6 of 207 faecal samples of wild gopher tortoises (12 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Melanthera parvifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 4개에서 종자 확인 (온전한 종자 13개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 4 of 207 faecal samples of wild gopher tortoises (13 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Piloblephis rigida",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Richardia grandiflora",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 19개에서 종자 확인 (온전한 종자 240개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 19 of 207 faecal samples of wild gopher tortoises (240 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Richardia scabra",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 4개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (4 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Vachellia farnesiana",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 2개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (2 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Waltheria indica",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 5개에서 종자 확인 (온전한 종자 68개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 5 of 207 faecal samples of wild gopher tortoises (68 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Byrsonima lucida",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 7개에서 종자 확인 (온전한 종자 563개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 7 of 207 faecal samples of wild gopher tortoises (563 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Cassytha filiformis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 3개에서 종자 확인 (온전한 종자 3개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 3 of 207 faecal samples of wild gopher tortoises (3 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Coccothrinax argentata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 3개에서 종자 확인 (온전한 종자 41개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 3 of 207 faecal samples of wild gopher tortoises (41 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Guettarda scabra",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 3개에서 종자 확인 (온전한 종자 63개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 3 of 207 faecal samples of wild gopher tortoises (63 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Lantana camara",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 9개에서 종자 확인 (온전한 종자 60개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 9 of 207 faecal samples of wild gopher tortoises (60 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Metopium toxiferum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 0개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (0 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Miconia bicolor",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 5개에서 종자 확인 (온전한 종자 1129개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 5 of 207 faecal samples of wild gopher tortoises (1129 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Momordica charantia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 3개에서 종자 확인 (온전한 종자 24개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 3 of 207 faecal samples of wild gopher tortoises (24 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Morinda royoc",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Mosiera longipes",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 1000개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (1000 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Opuntia austrina",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 12개에서 종자 확인 (온전한 종자 272개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 12 of 207 faecal samples of wild gopher tortoises (272 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Physalis walterii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 10개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (10 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Sabal palmetto",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 17개에서 종자 확인 (온전한 종자 48개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 17 of 207 faecal samples of wild gopher tortoises (48 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Serenoa repens",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 35개에서 종자 확인 (온전한 종자 477개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 35 of 207 faecal samples of wild gopher tortoises (477 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Vaccinium myrsinites",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 18개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (18 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Desmodium incanum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 8개에서 종자 확인 (온전한 종자 55개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 8 of 207 faecal samples of wild gopher tortoises (55 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Desmodium triflorum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 6개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (6 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Sida acuta",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 7개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (7 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Sida rhombifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 8개에서 종자 확인 (온전한 종자 51개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 8 of 207 faecal samples of wild gopher tortoises (51 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Sida ulmifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 9개에서 종자 확인 (온전한 종자 49개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 9 of 207 faecal samples of wild gopher tortoises (49 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Stylosanthes hamata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 8개에서 종자 확인 (온전한 종자 72개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 8 of 207 faecal samples of wild gopher tortoises (72 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Alysicarpus vaginalis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 43개에서 종자 확인 (온전한 종자 791개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 43 of 207 faecal samples of wild gopher tortoises (791 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Dactyloctenium aegyptium",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 17개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (17 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Dichanthelium aciculare",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 122개에서 종자 확인 (온전한 종자 2057개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 122 of 207 faecal samples of wild gopher tortoises (2057 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Digitaria ciliaris",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 8개에서 종자 확인 (온전한 종자 50개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 8 of 207 faecal samples of wild gopher tortoises (50 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Eustachys petrea",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 23개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (23 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Panicum maximum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 31개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (31 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Paspalum caespitosum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 5개에서 종자 확인 (온전한 종자 6개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 5 of 207 faecal samples of wild gopher tortoises (6 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Paspalum malacophyllum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 6개에서 종자 확인 (온전한 종자 28개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 6 of 207 faecal samples of wild gopher tortoises (28 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Paspalum monostachyum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Paspalum notatum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 5개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (5 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Paspalum setaceum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Rhynchospora floridensis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Rhynchospora grayii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 2개에서 종자 확인 (온전한 종자 1개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 2 of 207 faecal samples of wild gopher tortoises (1 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Spermacoce verticillata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 5개에서 종자 확인 (온전한 종자 18개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 5 of 207 faecal samples of wild gopher tortoises (18 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Tripsacum floridanum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 1개에서 종자 확인 (온전한 종자 7개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 1 of 207 faecal samples of wild gopher tortoises (7 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Cyperus filiculmis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 3개에서 종자 확인 (온전한 종자 89개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 3 of 207 faecal samples of wild gopher tortoises (89 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Croton linearis",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 4개에서 종자 확인 (온전한 종자 23개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 4 of 207 faecal samples of wild gopher tortoises (23 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Turnera ulmifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 6개에서 종자 확인 (온전한 종자 24개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 6 of 207 faecal samples of wild gopher tortoises (24 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Quercus pumila",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "Table 2",
+   "plant_part": {
+    "ko": "종자 (분변에서 회수)",
+    "en": "seeds (recovered from faeces)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북 분변 207개 중 3개에서 종자 확인 (온전한 종자 0개), 미국 플로리다 Richmond Tract, 2021-2022년",
+    "en": "Seeds in 3 of 207 faecal samples of wild gopher tortoises (0 intact seeds), Richmond Tract, Florida, 2021-2022"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Richardia grandiflora",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "2.1 Study Site",
+   "plant_part": {
+    "ko": "지상부 (뜯어먹음)",
+    "en": "groundcover foliage (grazed)"
+   },
+   "finding": {
+    "ko": "도시 서식지의 야생 고퍼거북이 강하게 뜯어먹은 지피식물 3종 중 하나로 기록됨, 미국 플로리다 남동부, 2025년 가뭄기",
+    "en": "One of three groundcover species reported as strongly grazed by wild gopher tortoises at an urban site, SE Florida, 2025 drought"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Paspalum setaceum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "2.1 Study Site",
+   "plant_part": {
+    "ko": "지상부 (뜯어먹음)",
+    "en": "groundcover foliage (grazed)"
+   },
+   "finding": {
+    "ko": "도시 서식지의 야생 고퍼거북이 강하게 뜯어먹은 지피식물 3종 중 하나로 기록됨, 미국 플로리다 남동부, 2025년 가뭄기",
+    "en": "One of three groundcover species reported as strongly grazed by wild gopher tortoises at an urban site, SE Florida, 2025 drought"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Phyla nodiflora",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "2.1 Study Site",
+   "plant_part": {
+    "ko": "지상부 (뜯어먹음)",
+    "en": "groundcover foliage (grazed)"
+   },
+   "finding": {
+    "ko": "도시 서식지의 야생 고퍼거북이 강하게 뜯어먹은 지피식물 3종 중 하나로 기록됨, 미국 플로리다 남동부, 2025년 가뭄기",
+    "en": "One of three groundcover species reported as strongly grazed by wild gopher tortoises at an urban site, SE Florida, 2025 drought"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Smilax auriculata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": {
+    "ko": "덩굴 (숲 가장자리)",
+    "en": "vine (forest edge)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북이 드물게 숲 가장자리 덩굴로 먹이를 보충한 사례로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as a forest-edge vine that wild gopher tortoises infrequently added to their grazing, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Cissus verticillata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": {
+    "ko": "덩굴 (숲 가장자리)",
+    "en": "vine (forest edge)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북이 드물게 숲 가장자리 덩굴로 먹이를 보충한 사례로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as a forest-edge vine that wild gopher tortoises infrequently added to their grazing, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Vitis rotundifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": {
+    "ko": "덩굴 (숲 가장자리)",
+    "en": "vine (forest edge)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북이 드물게 숲 가장자리 덩굴로 먹이를 보충한 사례로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as a forest-edge vine that wild gopher tortoises infrequently added to their grazing, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Parthenocissus quinquefolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": {
+    "ko": "덩굴 (숲 가장자리)",
+    "en": "vine (forest edge)"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북이 드물게 숲 가장자리 덩굴로 먹이를 보충한 사례로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as a forest-edge vine that wild gopher tortoises infrequently added to their grazing, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Ambrosia artemisiifolia",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 고퍼거북이 가끔 먹은 추가 식물로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as an additional species occasionally eaten by wild gopher tortoises, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Lepidium virginicum",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": {
+    "ko": "어린 개체",
+    "en": "seedlings"
+   },
+   "finding": {
+    "ko": "야생 고퍼거북이 가끔 먹은 추가 식물로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as an additional species occasionally eaten by wild gopher tortoises, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Chamaecrista fasciculata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 고퍼거북이 가끔 먹은 추가 식물로 기록됨, 미국 플로리다 남동부",
+    "en": "Recorded as an additional species occasionally eaten by wild gopher tortoises, SE Florida"
+   }
+  },
+  {
+   "source_key": "rogers_2025",
+   "reported_name": "Fimbristylis cymosa",
+   "type": "wild_diet_not_detected",
+   "verification": "full_text_verified",
+   "locator": "4. Discussion",
+   "plant_part": null,
+   "finding": {
+    "ko": "저자는 거북이 이 사초의 잎을 먹는 것을 한 번도 보지 못했다고 기록함 (선행 연구에서도 비선호종)",
+    "en": "The author never saw a tortoise eat its foliage; earlier studies also list it as not preferred"
+   }
+  },
+  {
+   "source_key": "kirchner_2023",
+   "reported_name": "Lolium perenne",
+   "type": "captive_feeding_record",
+   "verification": "full_text_verified",
+   "locator": "2. Materials and Methods",
+   "plant_part": {
+    "ko": "풀",
+    "en": "grass"
+   },
+   "finding": {
+    "ko": "슬로바키아 사육 헤르만육지거북 16마리의 먹이 중 풀이 약 70%였고 그 풀로 Lolium perenne와 Festuca가 기재됨 (연구 개체의 사육 조건 기록이며 급여 권고가 아님)",
+    "en": "Grasses, named as Lolium perenne and Festuca, made up about 70% of the feed of 16 captive Hermann's tortoises in Slovakia (study husbandry, not a recommendation)"
+   }
+  },
+  {
+   "source_key": "tortoise_table_mulberry",
+   "reported_name": "Broussonetia papyrifera",
+   "type": "husbandry_recommendation",
+   "verification": "full_text_verified",
+   "locator": "Mulberry entry, Latin name line",
+   "plant_part": {
+    "ko": "잎",
+    "en": "leaves"
+   },
+   "finding": {
+    "ko": "사육자용 식물 데이터베이스가 뽕나무 항목에 이 종을 함께 올리고, 잎은 다양한 식단의 일부로 급여할 수 있다고 분류함 (열매는 과일을 먹는 종에만)",
+    "en": "A keeper plant database lists this species under its mulberry entry and classes the leaves as fine within a varied diet (fruit only for fruit-eating species)"
+   }
+  },
+  {
+   "source_key": "tortoise_table_mint",
+   "reported_name": "Mentha spicata",
+   "type": "husbandry_recommendation",
+   "verification": "full_text_verified",
+   "locator": "Mint entry, Latin name line and photo captions",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육자용 식물 데이터베이스가 민트 항목에 이 종을 올리고, 사육장에 심어도 되며 조금 뜯어먹어도 해가 없다고 분류함",
+    "en": "A keeper plant database lists this species under its mint entry and classes it as fine to plant in the enclosure and harmless if nibbled"
+   }
+  },
+  {
+   "source_key": "tortoise_table_mint",
+   "reported_name": "Mentha suaveolens",
+   "type": "husbandry_recommendation",
+   "verification": "full_text_verified",
+   "locator": "Mint entry, Latin name line and photo captions",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육자용 식물 데이터베이스가 민트 항목에 이 종을 올리고, 사육장에 심어도 되며 조금 뜯어먹어도 해가 없다고 분류함",
+    "en": "A keeper plant database lists this species under its mint entry and classes it as fine to plant in the enclosure and harmless if nibbled"
+   }
+  },
+  {
+   "source_key": "barboza_1995",
+   "reported_name": "Schismus barbatus",
+   "type": "captive_feeding_record",
+   "verification": "literature_lead_not_reverified",
+   "locator": "Abstract",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 사막거북 소화 실험 식단 중 하나로 초록에 기재됨",
+    "en": "Named in the abstract as one of the experimental diets fed to captive desert tortoises"
+   }
+  },
+  {
+   "source_key": "barboza_1995",
+   "reported_name": "Sphaeralcea ambigua",
+   "type": "captive_feeding_record",
+   "verification": "literature_lead_not_reverified",
+   "locator": "Abstract",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 사막거북 소화 실험 식단 중 하나로 초록에 기재됨",
+    "en": "Named in the abstract as one of the experimental diets fed to captive desert tortoises"
+   }
+  },
+  {
+   "source_key": "richardson_stiling_2019",
+   "reported_name": "Heliotropium polyphyllum",
+   "type": "wild_feeding_observation",
+   "verification": "literature_lead_not_reverified",
+   "locator": "Abstract",
+   "plant_part": null,
+   "finding": {
+    "ko": "초록에서 현지 고퍼거북이 가장 선호한 식물로 보고됨 (섭식 선호 실험과 배제구 비교)",
+    "en": "Reported in the abstract as the local species most preferred by gopher tortoises (cafeteria trials and exclosures)"
+   }
+  },
+  {
+   "source_key": "del_vecchio_2011",
+   "reported_name": "Avena barbata",
+   "type": "wild_feeding_observation",
+   "verification": "literature_lead_not_reverified",
+   "locator": null,
+   "plant_part": null,
+   "finding": null
+  },
+  {
+   "source_key": "del_vecchio_2011",
+   "reported_name": "Catapodium rigidum",
+   "type": "wild_feeding_observation",
+   "verification": "literature_lead_not_reverified",
+   "locator": null,
+   "plant_part": null,
+   "finding": null
+  },
+  {
+   "source_key": "del_vecchio_2011",
+   "reported_name": "Brachypodium sylvaticum",
+   "type": "wild_feeding_observation",
+   "verification": "literature_lead_not_reverified",
+   "locator": null,
+   "plant_part": null,
+   "finding": null
+  }
+ ],
+ "held_not_species": [
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Mentzelia spp.",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  },
+  {
+   "source_key": "jennings_berry_2015",
+   "reported_name": "Pectocarya spp.",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Mentzelia spp.",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  },
+  {
+   "source_key": "jennings_berry_2023",
+   "reported_name": "Pectocarya spp.",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Chamaecrista nictitans var aspera",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Croton glandulosus var septentrionalis",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  },
+  {
+   "source_key": "figueroa_2024",
+   "reported_name": "Piriqueta cistoides subsp caroliniana",
+   "reason": "not a species binomial (genus, infraspecific or unidentified)"
+  }
+ ]
+}
