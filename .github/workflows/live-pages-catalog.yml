@@ -1,0 +1,50 @@
+name: Live Pages plant catalog verification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/plant-catalog/**'
+      - 'all-plants/**'
+      - 'taxon/**'
+      - '.github/workflows/live-pages-catalog.yml'
+permissions:
+  contents: read
+jobs:
+  live-catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify published Pages catalog and search
+        env:
+          BASE: https://jinwooson1988.github.io/tortoise-food-db-korea
+        run: |
+          python - <<'PY'
+          import json, os, time, urllib.request
+          base=os.environ['BASE']
+          def get(path):
+              req=urllib.request.Request(base+path,headers={'User-Agent':'geobukbap-live-catalog-qa/1.0','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=20) as r:
+                  return r.read()
+          last=None
+          for attempt in range(20):
+              try:
+                  index=json.loads(get('/data/plant-catalog/index.json'))
+                  assert index['count']>=22045, f"published count {index['count']}"
+                  assert len(index['shards'])==40
+                  search=json.loads(get('/data/plant-catalog/search.json'))
+                  assert len(search['rows'])==index['count'], f"search {len(search['rows'])} vs catalog {index['count']}"
+                  assert all(len(row)>=6 for row in search['rows'][:100])
+                  html=get('/all-plants/').decode('utf-8')
+                  assert 'data/plant-catalog/search.json' in html
+                  detail=get('/taxon/?id=gbif:2685360').decode('utf-8')
+                  assert '급여 안전성 미확정' in detail
+                  print(f"PASS LIVE Pages: {index['count']} catalog entries, {len(search['rows'])} search rows, list and detail reachable")
+                  break
+              except Exception as e:
+                  last=e
+                  print(f"attempt {attempt+1}/20: {type(e).__name__}: {e}",flush=True)
+                  if attempt<19: time.sleep(25)
+          else:
+              raise SystemExit(f"LIVE Pages verification FAILED: {last}")
+          PY
