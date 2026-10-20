@@ -50,6 +50,17 @@ jobs:
           python scripts/inject_plant_detail_v56.py
           python scripts/generate_guide_hubs.py
           python scripts/generate_en_pages.py
+      - name: Verify English homepage redirects to canonical bilingual home
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          page = Path('en/index.html').read_text(encoding='utf-8')
+          assert 'location.replace("../?lang=en"+location.hash)' in page, 'Legacy English home must redirect'
+          assert 'Search for a plant by name. We show whether' not in page, 'Legacy English homepage still rendered'
+          guide = Path('en/guides/research-method/index.html').read_text(encoding='utf-8')
+          assert 'href="../../../?lang=en" aria-label="Home"' in guide, 'English guide home routes to obsolete page'
+          print('Canonical English homepage and guide navigation verified')
+          PY
       - name: Block obsolete English homepage sections before deployment
         run: |
           python - <<'PY'
