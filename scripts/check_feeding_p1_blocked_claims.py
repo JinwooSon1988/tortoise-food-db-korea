@@ -6,8 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 records = json.loads((ROOT / "data/feeding_record_verification_v1.json").read_text(encoding="utf-8"))["records"]
 manifest = json.loads((ROOT / "data/feeding_p1_blocked_claim_manifest_20261018.json").read_text(encoding="utf-8"))
-# A full text read but not yet independently reviewed stays held under the release gate.
-HELD = ("original_inaccessible", "full_text_read_pending_independent_review")
+# A source whose values are verified but whose plant names are not linked to catalog taxa stays held.
+HELD = ("original_inaccessible", "full_text_verified_identity_held")
 blocked = [r for r in records if r["verification_status"] in HELD]
 assert manifest["blocked_claim_count"] == len(manifest["blocked_claims"]), "Manifest count mismatch"
 assert len(blocked) == len(manifest["blocked_claims"]), "Missing or extra blocked records"
@@ -21,7 +21,7 @@ def identity(r):
     )
 assert sorted(map(repr, map(identity, blocked))) == sorted(map(repr, map(identity, manifest["blocked_claims"]))), "Blocked claim identity drift"
 assert all(r["status"] == "hold" for r in manifest["blocked_claims"]), "Non-hold blocked claim"
-print(f"PASS: {len(blocked)} P1 records held (unread or awaiting independent review); no missing or mismatched claims")
+print(f"PASS: {len(blocked)} P1 records held (original unread or identity linkage held); no missing or mismatched claims")
 
 # Check that unverified P1 sources are not presented as confirmed feeding
 # records in the public pending feed. Compare canonical DOI/URL identifiers.

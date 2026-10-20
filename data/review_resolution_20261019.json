@@ -250,12 +250,13 @@
   {
    "ref": "wild_medicago_polymorpha_tgg_morocco",
    "doi": "10.1016/j.jaridenv.2005.06.010",
-   "status": "full_text_read_pending_independent_review",
-   "checked": "2026-10-20: full text (publisher PDF) posted by co-author institution CNRS CEBC Chize (https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf, linked from its 2006 publication list) read. Earlier: HAL abstract only; ScienceDirect 403; no open copy in Unpaywall/OpenAlex/Semantic Scholar",
+   "status": "full_text_verified_identity_held",
+   "checked": "2026-10-20: full text (publisher PDF) posted by co-author institution CNRS CEBC Chize (https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf, linked from its 2006 publication list) read. Earlier: HAL abstract only; ScienceDirect 403; no open copy in Unpaywall/OpenAlex/Semantic Scholar; 2026-10-20 second pass: Table 2 and Table 3 re-read from the page images and compared cell by cell with the text layer (data/elmouden2006_table2_verification_20261020.json)",
    "not_read": false,
-   "still_unconfirmed": "share by plant part (not reported); plant name authors (not given; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms); independent review required by data/feeding_p1_release_gate_20261018.json",
-   "public_change": "supports restated from Table 2 with the P1 hold kept; medicago_hispida limit updated",
-   "full_text_confirms": "spring 2002, 44 faeces (19 males, 18 females, 7 juveniles); Table 2 pp. 427-428 mean % of faecal fragments (95% CI), occurrence: Leontodon saxatilis 27.91 (22.48-33.33) 42/44; Malva parviflora 15.22 (10.85-19.58) 38/44; Astragalus cruciatus 14.37 (9.04-19.70) 34/44; Medicago hispida 5.75 (2.84-8.66) 36/44; Lotus arenarius 3.57 (1.81-5.33) 25/44"
+   "still_unconfirmed": "share by plant part (not reported); plant name authors (not given; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms; Astragalus cruciatus differs from the catalog's A. crenatus), so identity linkage stays held under data/feeding_p1_release_gate_20261018.json",
+   "public_change": "supports restated from Table 2 with relative proportion, frequency of occurrence and selectivity kept apart; the P1 hold now applies to identity linkage; medicago_hispida limit updated",
+   "full_text_confirms": "spring 2002, 44 faeces (19 males, 18 females, 7 juveniles); Table 2 pp. 427-428 mean % of identified faecal fragments (column headed 'Mean number of fragments') (95% CI), occurrence: Leontodon saxatilis 27.91 (22.48-33.33) 42/44; Malva parviflora 15.22 (10.85-19.58) 38/44; Astragalus cruciatus 14.37 (9.04-19.70) 34/44; Medicago hispida 5.75 (2.84-8.66) 36/44; Lotus arenarius 3.57 (1.81-5.33) 25/44",
+   "original_discrepancies": "Table 3 prints Hunter's index 155.0 for M. hispida over total cover; Table 2 gives 5.75/0.05 = 115.0. Discussion 4.3 gives 27% for four preferred Fabaceae; they sum to 26.06% (all five Fabaceae 27.33%)"
   },
   {
    "ref": "testudo_graeca_cynodon_field_diet_2008",

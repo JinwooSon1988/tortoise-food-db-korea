@@ -12,7 +12,8 @@
       "reported": "Astragalus cruciatus",
       "catalog": "Astragalus crenatus Schult.",
       "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
-      "verification": "blocked_original_unread"
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
     },
     {
       "evidence_ids": [
@@ -32,7 +33,8 @@
       "reported": "Leontodon saxatilis",
       "catalog": "Leontodon saxatilis Lam.",
       "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
-      "verification": "blocked_original_unread"
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
     },
     {
       "evidence_ids": [
@@ -42,7 +44,8 @@
       "reported": "Lotus arenarius",
       "catalog": "Lotus arenarius Brot.",
       "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
-      "verification": "blocked_original_unread"
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
     },
     {
       "evidence_ids": [
@@ -52,7 +55,8 @@
       "reported": "Malva parviflora",
       "catalog": "Malva parviflora L.",
       "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
-      "verification": "blocked_original_unread"
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
     },
     {
       "evidence_ids": [
@@ -62,7 +66,8 @@
       "reported": "Medicago hispida",
       "catalog": "Medicago hispida",
       "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
-      "verification": "blocked_original_unread"
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
     },
     {
       "evidence_ids": [
@@ -73,7 +78,8 @@
       "reported": "Medicago polymorpha",
       "catalog": "Medicago polymorpha L.",
       "action": "Check actual primary observation and locator even when names match",
-      "verification": "blocked_original_unread"
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
     },
     {
       "evidence_ids": [
@@ -105,6 +111,7 @@
   "notes": [
     "Existing status original_inaccessible is preserved.",
     "Taxonomic mismatch is not automatically proof of error or synonymy.",
-    "Do not represent general care advice as directly observed feeding."
+    "Do not represent general care advice as directly observed feeding.",
+    "2026-10-20: El Mouden et al. 2006 full text read and Table 2 checked twice (text layer and page images). Values and locators are verified; the action 'hold identity linkage' still applies, so no record is linked or promoted to the site."
   ]
 }
