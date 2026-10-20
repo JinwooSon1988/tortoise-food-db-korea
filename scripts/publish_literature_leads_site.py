@@ -15,6 +15,10 @@ def main():
  if not src.exists():p.error('Bulk literature output missing; finish the search first')
  data=json.loads(src.read_text(encoding='utf-8'))
  if not data.get('records'):p.error('No research records in input; refusing empty publish')
+ expected=data.get('counts',{}); total=len(data['records'])
+ if total<1000:p.error(f'Only {total} taxa searched; refusing premature mass publication')
+ if expected and sum(int(expected.get(k,0)) for k in ('leads_found','no_leads_found','search_error'))!=total:p.error('Search counts do not match record count')
+ if any(r.get('status')=='search_error' for r in data['records']):print('NOTICE: Some searches failed; those taxa require retries',file=sys.stderr)
  if a.max_per_taxon<1 or a.max_per_taxon>100:p.error('max-per-taxon must be 1..100')
  failed=sum(x.get('status')=='search_error' for x in data['records'])
  if failed:print(f'WARNING: {failed} taxon searches failed; do not treat absent leads as no evidence',file=sys.stderr)
@@ -33,7 +37,9 @@ def main():
    seen.add(url)
    items.append({'title':title[:400],'year':str(x.get('pubYear') or '')[:8],'url':url,'verification':'search_hit_unreviewed','feeding_safety_status':'unassessed'})
    if len(items)>=a.max_per_taxon:break
-  if items:taxa[key]={'literature_leads':items,'community_mentions':[]};lit+=len(items)
+  if items:
+   taxa[key]={'literature_leads':items,'community_mentions':[]}
+   lit+=len(items)
  community_file=pathlib.Path(a.community)
  if community_file.exists():
   c=json.loads(community_file.read_text(encoding='utf-8'))
@@ -53,6 +59,7 @@ def main():
    record['community_mentions'].append({'source_url':url,'source_type':x.get('source_type'),'verification':'community_claim_not_independently_verified','feeding_safety_status':'unassessed'})
    comm+=1
  output={'schema_version':'1.0','warning':'Search leads and community mentions only; not proof of safe feeding.','taxa':taxa}
+ if not taxa:p.error('No valid matched literature or community sources; refusing to replace index')
  target=pathlib.Path(a.output);target.parent.mkdir(parents=True,exist_ok=True)
  target.write_text(json.dumps(output,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
  print('Indexed taxa:',len(taxa),'Literature leads:',lit,'Community mentions:',comm,'Bytes:',target.stat().st_size)
