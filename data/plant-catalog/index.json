@@ -3,14 +3,14 @@
  "generated": "2026-10-20",
  "scope": "Plant taxa confirmed in the GBIF Backbone Taxonomy. A taxon being valid is not feeding evidence; no entry has a feeding grade (feeding_safety_status unassessed = 급여 안전성 미확정).",
  "shard_rule": "taxon_key % 40",
- "count": 10000,
+ "count": 12000,
  "counts": {
-  "entries": 10000,
+  "entries": 12000,
   "with_feeding_evidence": 57,
-  "feeding_safety_unassessed": 10000,
+  "feeding_safety_unassessed": 12000,
   "with_safety_grade": 0,
-  "with_english_name": 3487,
-  "with_korean_name": 210,
+  "with_english_name": 4116,
+  "with_korean_name": 235,
   "evidence_by_type": {
    "wild_diet_not_detected": 6,
    "wild_feeding_observation": 63,
@@ -32,203 +32,203 @@
  "shards": [
   {
    "file": "taxa-00.json",
-   "count": 263,
-   "sha256": "fca5d3d3a6016c0e4e7b89423e64248a1b39453396e8ff11577cf2d7ab62ec6e"
+   "count": 317,
+   "sha256": "c920106a3f0820824415bd6dea93f5585c28192453713678c989afeee4a8084f"
   },
   {
    "file": "taxa-01.json",
-   "count": 255,
-   "sha256": "1387d0dbecb929d72bced152aed7fefce2415e0206bc806f4f6ef2dce0e9885c"
+   "count": 312,
+   "sha256": "979ef03fd51124544df688fc56f2d8b141810051ec71cb50f7a5bcf3c191db44"
   },
   {
    "file": "taxa-02.json",
-   "count": 239,
-   "sha256": "43ccc897f071d704a765537ea516725aee2ab6592b4d5669345248b1b621076e"
+   "count": 281,
+   "sha256": "501989e8045a3f0f22aed84e07e4a6917865ebda3c9263ebc22fd73fed3d54b3"
   },
   {
    "file": "taxa-03.json",
-   "count": 258,
-   "sha256": "94f20eadd8bdccf99989a8aca0cd914a78ba0ec185f3dcce753b846064289549"
+   "count": 306,
+   "sha256": "b85a179a1370bf14d7db10589a263029c8902f6ce7666f9ebf9968719a150994"
   },
   {
    "file": "taxa-04.json",
-   "count": 228,
-   "sha256": "e2d6fbfe856564e9c6d3e24003b6a3fae41753ce42c65c1340739c72d70094cf"
+   "count": 264,
+   "sha256": "b84af93917a69ea6c8f421a542b42c1659a79caf3f1fae4a0c3eafe733ed1443"
   },
   {
    "file": "taxa-05.json",
-   "count": 241,
-   "sha256": "b9eea66e63edf16aef4ac403cf5aac866816a54a887c871c37469f45db307419"
+   "count": 293,
+   "sha256": "112ddb981a6ed2157b352e0a10f75ff4b4774bbba916690727a3db6e5b82793f"
   },
   {
    "file": "taxa-06.json",
-   "count": 235,
-   "sha256": "79edec7dd8cfb10b5605fd0ace21cddd24e619d1aacaf78be3686ac67684870e"
+   "count": 288,
+   "sha256": "ae908ea448a8e58b9f25d17fb32517222ad353479696884ede6f36abc2cdde55"
   },
   {
    "file": "taxa-07.json",
-   "count": 238,
-   "sha256": "e4c2aa77e4db82bce43dec3f7eef3bd53c18dfae14d2e4eabed3bac268bc78c9"
+   "count": 298,
+   "sha256": "5ca08bebf79809e01cd563d42a9df88cde762eb3523f043ca7fc08c55728908b"
   },
   {
    "file": "taxa-08.json",
-   "count": 232,
-   "sha256": "f29c5b750fdf3ca46dfbeed135b204609c5a514e0a715e12c6e1b0139fc05cca"
+   "count": 285,
+   "sha256": "08600cdeed7a2ef4e5177f4b1d426d4733ca2d39bd27a47b3fc5c3a651f39d14"
   },
   {
    "file": "taxa-09.json",
-   "count": 236,
-   "sha256": "61b44520b0da3cdc30745868242fa7c2fcc2ddf7f0d19c6ddc0cb9a725dfda49"
+   "count": 281,
+   "sha256": "b058b68b4a103703389095c9f3eb7a04bcffe2ca9a2feb256d44bcf8a7ae77c9"
   },
   {
    "file": "taxa-10.json",
-   "count": 251,
-   "sha256": "d1906a2e9f5bc92acd55422483718f5c80f5976377b0ca0670d0e48671f15418"
+   "count": 286,
+   "sha256": "792043860bf15b7c827b57f3da9e67cff9a0e3022acd4d0392806a986592adcf"
   },
   {
    "file": "taxa-11.json",
-   "count": 249,
-   "sha256": "9dcf89e654cc23d3166ffd98a9bf6348c498ed1a605ac7a6726897e55a0e9fe3"
+   "count": 300,
+   "sha256": "81a55bf77736219d8b19cf9ebb7cf4bca6ee171e64dc220fc08f85fa7b6e7673"
   },
   {
    "file": "taxa-12.json",
-   "count": 234,
-   "sha256": "da4833182f031523f232a4fda54c64d0d4f3f3d957423ab1b7a32e27ef52781a"
+   "count": 283,
+   "sha256": "85bcf161b329112a5a99173cdb79170eaa1fdba3ee105038b0fbabc6677b19f8"
   },
   {
    "file": "taxa-13.json",
-   "count": 242,
-   "sha256": "0814e0d21e3c076f08689d3fe94a6c1f5467f5b609db2fd85243c0d38a2de322"
+   "count": 295,
+   "sha256": "fd1bc580a8b24ee7fa7777f788f24ce16e4cbb281a381e1889f8a3fe2c18a472"
   },
   {
    "file": "taxa-14.json",
-   "count": 249,
-   "sha256": "24ad28c130d5203a941b9fa43dd509b7c1f15bae98c961e44b5e70f91b343c12"
+   "count": 298,
+   "sha256": "4e1ad47f808d8eb9c9c8a21b5e9bb7a03f3aa33c290fa27fef8c206a72adef8d"
   },
   {
    "file": "taxa-15.json",
-   "count": 237,
-   "sha256": "ff0f9be5aa662cf90fca5c51d70620245a8f82eccfbf5a7ae02eea8648833e33"
+   "count": 273,
+   "sha256": "3c8abb49a2638b1a93c2b089f54333aa1fb7af6ac39668435e74ad3a5161c187"
   },
   {
    "file": "taxa-16.json",
-   "count": 251,
-   "sha256": "1adc0cc573e1565c9cbd818a35a568cde8a50a3dae28320964c3bb36dbd7fc69"
+   "count": 296,
+   "sha256": "cfeab2660372ff3228695af361ccf2780d3a9b3a97cb53031d264c0d074e51fe"
   },
   {
    "file": "taxa-17.json",
-   "count": 229,
-   "sha256": "fe182cca5086fa401e97fb560c68dbe636976a9a9ba7ac682a487405f45fd29b"
+   "count": 273,
+   "sha256": "ff1057b7c9af83e43f8dd458dab30c12c6a25f8f550478b9f757e7698f0d82c3"
   },
   {
    "file": "taxa-18.json",
-   "count": 235,
-   "sha256": "65c7437947d5be9bb12c13f78ea406bf5e5dadab0df06ed30bd67b16209784cc"
+   "count": 286,
+   "sha256": "90ce143df5d822dbcc7913638c39c0ed1411f736bffeecc5efce8dfeb5913a9a"
   },
   {
    "file": "taxa-19.json",
-   "count": 221,
-   "sha256": "ceb9fdca5763e4b80999a3e220ed4784718a83e9c252f0cfc264c3468addf582"
+   "count": 274,
+   "sha256": "84183eed9d179d74ac51cfd65c01b24b90e6ce9192efc5cf18a22b19115328fe"
   },
   {
    "file": "taxa-20.json",
-   "count": 259,
-   "sha256": "e715301670e5e2f5eb58ec72013b1b08f59024d082d72b5f1960871bd5b1452f"
+   "count": 311,
+   "sha256": "b6103c860c74eafffa3b2067bf5debf7ee13ff1b98271d9f7a467740602b7197"
   },
   {
    "file": "taxa-21.json",
-   "count": 260,
-   "sha256": "d7704fa75bb997ce5406f4090990286bc71f87406907753ea933d5d0a85997e3"
+   "count": 309,
+   "sha256": "b87c6b0323170e55f233a5fc60f5e5a4aa89538b95ca21e689b51b958c415bb8"
   },
   {
    "file": "taxa-22.json",
-   "count": 231,
-   "sha256": "09b2fec46a42c7eaecfea7d6503f2707b6ff478444fa051b746f3ab7cb48bdf3"
+   "count": 278,
+   "sha256": "810fd97951f1ca0f3ac1ff75383b1f989b2ba47c737781de30f7e33714c663dc"
   },
   {
    "file": "taxa-23.json",
-   "count": 252,
-   "sha256": "b3de2feb6e13a53e2938fc726a33a4ee2b80a9b14d33b235800cc94182aa34ed"
+   "count": 306,
+   "sha256": "7c075ed3b628844e6366c4a5ab7183e5965f8dc4719020e2ef7e71c4378aefe2"
   },
   {
    "file": "taxa-24.json",
-   "count": 251,
-   "sha256": "89fd4ceed6f9d2e357c1ecdeab49df465b94b22494178d25068f851bf5793083"
+   "count": 310,
+   "sha256": "5c295b1601bc9457c6c623bae2de0dd3c5829ac5892ce5e87cb2dc06bf8d9175"
   },
   {
    "file": "taxa-25.json",
-   "count": 239,
-   "sha256": "db60505297c4ff06eb0c2c4ce5fee557d680e40d0cc70798e97a7e40325e3b3b"
+   "count": 298,
+   "sha256": "10643b93689553eae4b3d06829ef17ae0eca759ea7a57d3e3d28de0eebe869ad"
   },
   {
    "file": "taxa-26.json",
-   "count": 269,
-   "sha256": "8e1d1788f15ff8b49c4c083a3a40761b6dc9517456b5147ac62b5cf9fe3fabba"
+   "count": 330,
+   "sha256": "ed44bca74ba70400e599c8e388272f3caa9a85110e12e7842b37d8205f461b15"
   },
   {
    "file": "taxa-27.json",
-   "count": 233,
-   "sha256": "8052b0096f98d16648ea39eec5f20fb29d977ec0e77fe3c8144cb257d8eea679"
+   "count": 278,
+   "sha256": "08b0c4ab7cd3d347d8a1aac037cb3799cd30eef935b0d59a8bbeefb05160d964"
   },
   {
    "file": "taxa-28.json",
-   "count": 270,
-   "sha256": "06b5f025a02f8282eb92ccff4aab756199aff35d51db097b43ae7648194e3f34"
+   "count": 315,
+   "sha256": "ffdc605c167098dcbd3f0ef97236dac67acbcca870293b12a4e89abef6d957b3"
   },
   {
    "file": "taxa-29.json",
-   "count": 261,
-   "sha256": "aee6f6d365d3eed46fcfbc4815d2d34ed00a1337ef8dae9cb42430ec21309f19"
+   "count": 311,
+   "sha256": "268b24148aa89da3c226abc24a60ef9b30a9ee7af089c26d0ac43d5eeee72b82"
   },
   {
    "file": "taxa-30.json",
-   "count": 255,
-   "sha256": "1935d9e4f2e22695f0b7f07d8499168919b16932030bb0c52bdd37ff49a4960e"
+   "count": 309,
+   "sha256": "cff172396b7f36d4bfddc67509b26c79b9173ac7b2786d8086134abdccb41cd5"
   },
   {
    "file": "taxa-31.json",
-   "count": 263,
-   "sha256": "5095a69666c3c6b359299c9620fd2e2082a7899fb7d8d8f757766c15e016f15d"
+   "count": 322,
+   "sha256": "ab5b939201fcb275df75585b43ec4c9258a677292ccc9ae72a51e787fd9a62b4"
   },
   {
    "file": "taxa-32.json",
-   "count": 265,
-   "sha256": "554f4b608424264edc6c51010a76eaf2fc5be96b3fe082d0618edf822653f0d9"
+   "count": 313,
+   "sha256": "d7505c98ee458ad33a6e8a7ec3d5f0976fd1929b84619395ba6b085071b8100d"
   },
   {
    "file": "taxa-33.json",
-   "count": 254,
-   "sha256": "3dd435f42144a313e8caf349ba76c302ccacb5ed2aa7c56058cc2e81d45bd27c"
+   "count": 301,
+   "sha256": "f1ad547a15577547dad8d378dd616ebb8ea46495f0b6f4c1f8f0c064d6d3280b"
   },
   {
    "file": "taxa-34.json",
-   "count": 266,
-   "sha256": "cd490206202b83cf211aa3406d71dcd854babf61c07ce3e6079cb5d35e4d176e"
+   "count": 318,
+   "sha256": "811ddef7140d941720369ccaf0aa9b78c7d6199705851d465864c66259ddb921"
   },
   {
    "file": "taxa-35.json",
-   "count": 272,
-   "sha256": "c124c5e575e2a6ecb82e5a4cd42438f946f38b4358585809f00900acfc19fb51"
+   "count": 328,
+   "sha256": "c61373406f8ac9ce27c4f3b998df6f4f7637492641d17bc28ee73765e01910a1"
   },
   {
    "file": "taxa-36.json",
-   "count": 283,
-   "sha256": "7407e0bf6026f57be1461a1aaa0a2c50a6e2aebd03d03ad1c357d7fd1584a002"
+   "count": 335,
+   "sha256": "d3539d70e071fbc2b69a8d247dcbefff9951376bf16981a630755c3b2d4dca32"
   },
   {
    "file": "taxa-37.json",
-   "count": 296,
-   "sha256": "2b44ebf24ae5f40cc01e0195cedc8b03c97a50dee0313043bf1e1f4dc1134c7b"
+   "count": 348,
+   "sha256": "67139f7ad5f1afc29e1e28b9f3767db1dac085099cd5484fdc4612e67f69efd7"
   },
   {
    "file": "taxa-38.json",
-   "count": 246,
-   "sha256": "f98a3e99242bebf42e40f2f35829580dc70583fcd2d2a61175b873f3b65f94c0"
+   "count": 296,
+   "sha256": "cf1ba7f437027c9ae7e28323da8e9a4044150d86553d30bd93566f5618589f00"
   },
   {
    "file": "taxa-39.json",
-   "count": 252,
-   "sha256": "f738cf9612aa9879966f7d69f99f7697abd1ea061f3a04cbeec078b12de8ed4d"
+   "count": 295,
+   "sha256": "c2aa8efba0818d61b9a18dbe4fffd72bc8e28582d0786df57b5e061ec5e18e3d"
   }
  ]
 }
