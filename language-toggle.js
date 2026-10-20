@@ -2,9 +2,7 @@
 const SCRIPT=document.currentScript;const ROOT=SCRIPT?new URL('.',SCRIPT.src).href:new URL('./',location.href).href;
 const T={'근거 확실성':'Evidence certainty','급여 안전성 미확정':'Feeding safety not established','식물 과':'Family','본문으로 바로가기':'Skip to content','목록으로 바로가기':'Skip to the list',
 '이 식물, 먹여도 될까?':'Can my tortoise eat this plant?',
-'식물 이름만 검색하세요.':'Search for a plant by name.',
-'먹여도 되는지 먼저':'See the feeding verdict first',
-'보여드리고, 왜 그런지와 논문·원자료는 필요할 때 확인할 수 있습니다.':'and explore the reasoning and original research whenever you need more detail.',
+'식물 이름을 검색하면 급여 가능 여부와 그 이유를 먼저 알려드립니다. 더 자세한 내용은 학술 근거와 원문 자료로 확인할 수 있습니다.':'Search for a plant to check its feeding assessment and the reasons behind it. Explore the supporting research and original sources for more details.',
 '육지거북 먹이 근거 데이터베이스':'Evidence-based tortoise food database',
 '근거 기반 육지거북 먹이 DB':'Evidence-based tortoise food database',
 '판정 확인':'Check feeding verdict',
