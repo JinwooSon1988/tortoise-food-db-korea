@@ -62,6 +62,14 @@ def tfdb_en():
 
 
 def home(public_count, examples):
+    # One canonical bilingual homepage: never serve a divergent English copy.
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<meta name="robots" content="noindex,follow">'
+            '<link rel="canonical" href="../?lang=en">'
+            '<script>try{localStorage.setItem("tfdblang","en")}catch(e){}'
+            'location.replace("../?lang=en"+location.hash)</script>'
+            '</head><body><p><a href="../?lang=en">Open Tortoise Food DB in English</a></p></body></html>')
     url = SITE_URL + "/en/"
     title = "Can my tortoise eat this plant? Tortoise food database | Tortoise Food DB"
     desc = "Search tortoise food plants by English or scientific name and see the feeding grade first, then the reasons, cautions and evidence."
@@ -152,7 +160,7 @@ def nav_en(rel):
 
 
 def research_nav():
-    return "<header class=\"detailnav\"><nav class=\"detailnavlinks\" aria-label=\"Page navigation\"><a href=\"../../\" aria-label=\"Home\" title=\"Home\" class=\"iconnav-home\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 10 9-7 9 7\"/><path d=\"M5 9v12h14V9\"/><path d=\"M9 21v-7h6v7\"/></svg></a><button type=\"button\" aria-label=\"Back\" title=\"Back\" onclick=\"if(history.length>1)history.back();else location.href='../../'\" class=\"iconnav-back\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 19-7-7 7-7\"/><path d=\"M5 12h14\"/></svg></button></nav><div class=\"topmeta\"><nav class=\"langswitch\" aria-label=\"Language\"><a href=\"https://jinwooson1988.github.io/tortoise-food-db-korea/guides/research-method/?lang=ko\" hreflang=\"ko\" lang=\"ko\">한국어</a><strong aria-current=\"page\">English</strong></nav></div></header>"
+    return "<header class=\"detailnav\"><nav class=\"detailnavlinks\" aria-label=\"Page navigation\"><a href=\"../../../?lang=en\" aria-label=\"Home\" title=\"Home\" class=\"iconnav-home\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 10 9-7 9 7\"/><path d=\"M5 9v12h14V9\"/><path d=\"M9 21v-7h6v7\"/></svg></a><button type=\"button\" aria-label=\"Back\" title=\"Back\" onclick=\"if(history.length>1)history.back();else location.href='../../../?lang=en'\" class=\"iconnav-back\"><svg aria-hidden=\"true\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m12 19-7-7 7-7\"/><path d=\"M5 12h14\"/></svg></button></nav><div class=\"topmeta\"><nav class=\"langswitch\" aria-label=\"Language\"><a href=\"https://jinwooson1988.github.io/tortoise-food-db-korea/guides/research-method/?lang=ko\" hreflang=\"ko\" lang=\"ko\">한국어</a><strong aria-current=\"page\">English</strong></nav></div></header>"
 
 
 def research_page():
@@ -167,13 +175,13 @@ def research_page():
         '<section class="hero"><div class="eyebrow">EVIDENCE &amp; REVIEW</div><h1>How does Tortoise Food DB assess a plant?</h1>'
         '<p>The A, B, C and D grades in the search results are not simply a tally of “people online say they feed it”. Before a grade is published we review separately '
         'the exact identity of the plant, the plant part actually covered, the animal group the evidence concerns and the nature of each source.</p></section>'
-        '<section class="grid"><article class="card"><h2>1. Identify the plant exactly</h2><p>The scientific name and taxonomic rank come first. A source that cannot be pinned to a species '
-        'is never silently swapped in as the image or evidence for a different species.</p></article>'
-        '<article class="card"><h2>2. Separate “which part?”</h2><p>Leaves, flowers, fruit, roots and seeds are not automatically treated as the same feeding evidence. Where the photo '
+        '<section class="grid"><article class="card"><h2>1. Identify the plant exactly</h2><p>The scientific name and taxonomic rank come first. If a source does not reliably identify the plant, it '
+        'is not used as a photograph or feeding evidence for another species.</p></article>'
+        '<article class="card"><h2>2. Check which plant part is involved</h2><p>Leaves, flowers, fruit, roots and seeds are not automatically treated as the same feeding evidence. Where the photo '
         'shows a different part from the one fed, the detail page says so.</p></article>'
         '<article class="card"><h2>3. Check what the evidence applies to</h2><p>Direct tortoise data, specialist husbandry sources, related-taxon data, data on herbivorous reptiles in general, '
         'and plant composition or toxicity data are not mixed with equal weight. Each page shows what each source can and cannot establish.</p></article>'
-        '<article class="card"><h2>4. Say so when the evidence is weak</h2><p>An observation of wild feeding can show that a plant is eaten in nature, but it does not automatically set a '
+        '<article class="card"><h2>4. Make evidence limitations clear</h2><p>An observation of wild feeding can show that a plant is eaten in nature, but it does not automatically set a '
         'recommended feeding proportion in captivity. A lack of evidence is not read as safety.</p></article></section>'
         '<section class="note"><h2>The core questions</h2><p><span class="label">Is there strong direct evidence?</span> → Check whether the source actually studied the tortoises and the plant concerned.</p>'
         '<p><span class="label">If the source is something else, what does it add?</span> → Keep the roles of veterinary, husbandry, wild-ecology, botanical and composition sources distinct.</p>'
