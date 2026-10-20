@@ -61,18 +61,16 @@ jobs:
           assert 'href="../../../?lang=en" aria-label="Home"' in guide, 'English guide home routes to obsolete page'
           print('Canonical English homepage and guide navigation verified')
           PY
-      - name: Block obsolete English homepage sections before deployment
+      - name: Verify generated English research wording
         run: |
           python - <<'PY'
           from pathlib import Path
-          home = Path('en/index.html').read_text(encoding='utf-8')
-          for obsolete in ('<h2>Guides</h2>',):
-              if obsolete in home:
-                  raise SystemExit('DEPLOY BLOCKED: obsolete English home section: '+obsolete)
-          for required in ('href="../all-plants/?lang=en"', 'href="./guides/research-method/"'):
-              if required not in home:
-                  raise SystemExit('DEPLOY BLOCKED: missing English home navigation: '+required)
-          print('English homepage regression and navigation checks passed')
+          guide = Path('en/guides/research-method/index.html').read_text(encoding='utf-8')
+          for outdated in ('silently swapped in', 'Separate “which part?”', 'Say so when the evidence is weak'):
+              assert outdated not in guide, 'Outdated English research wording: ' + outdated
+          for required in ('If a source does not reliably identify the plant', 'Check which plant part is involved', 'Make evidence limitations clear'):
+              assert required in guide, 'Missing English research wording: ' + required
+          print('Generated English research copy verified')
           PY
       - name: Verify full searchable catalog before upload
         run: |
