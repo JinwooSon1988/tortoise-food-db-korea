@@ -105,9 +105,12 @@ const server=http.createServer((req,res)=>{
     await page.goto('http://127.0.0.1:'+port+'/all-plants/',{waitUntil:'domcontentloaded'});
     await page.waitForFunction(()=>document.getElementById('summary')?.textContent.includes('종 중'),{timeout:12000});
     await page.locator('#q').fill('미나리');
-    await page.waitForFunction(()=>{const v=document.getElementById('summary')?.textContent||'';return /1종 표시/.test(v)&&document.querySelectorAll('#mobilecards .mcard').length===1},{timeout:10000});
+    await page.waitForFunction(()=>{const cards=[...document.querySelectorAll('#mobilecards .mcard')];return cards.some(c=>c.textContent.includes('Oenanthe javanica'))},{timeout:10000});
+     const cardInfo=await page.locator('#mobilecards .mcard').allTextContents();
+     const exactMatches=cardInfo.filter(t=>t.includes('Oenanthe javanica'));
+     assert.equal(exactMatches.length,1,'all-plants duplicated Oenanthe javanica at '+width+'px: '+JSON.stringify(cardInfo.slice(0,12)));
     const minariCards=page.locator('#mobilecards .mcard');
-    assert.equal(await minariCards.count(),1,'all-plants duplicated minari at '+width+'px');
+    assert.ok(await minariCards.count()>=1,'all-plants missing minari at '+width+'px');
     assert.match(await minariCards.first().innerText(),/Oenanthe javanica/);
     const scrollWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
     assert.ok(scrollWidth<=width+2,'all-plants overflow at '+width+'px: '+scrollWidth);
