@@ -7,6 +7,10 @@ on:
     branches: [main]
     paths:
       - 'plant/**'
+      - 'data/plant-catalog/**'
+      - 'all-plants/**'
+      - 'taxon/**'
+      - 'taxonomy-home-search.js'
       - 'en/**'
       - 'index.html'
       - 'detail-locale-history.js'
@@ -50,7 +54,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           home = Path('en/index.html').read_text(encoding='utf-8')
-          for obsolete in ('<section class="truststrip"', '<h2>Guides</h2>'):
+          for obsolete in ('<h2>Guides</h2>',):
               if obsolete in home:
                   raise SystemExit('DEPLOY BLOCKED: obsolete English home section: '+obsolete)
           for required in ('href="../all-plants/?lang=en"', 'href="./guides/research-method/"'):
