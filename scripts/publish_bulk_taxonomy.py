@@ -52,6 +52,10 @@ def execute(input_path, staged_path, html_path, plants_path, minimum=0, search_p
     staged_path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     html_path.write_text(markup, encoding="utf-8")
     if search_path is not None:
+        if search_path.resolve() == (ROOT / "data/plant-catalog/search.json").resolve():
+            raise ValueError("Existing sharded plant catalog owns search.json; do not overwrite it with a standalone taxonomy export")
+        if search_path.exists():
+            raise FileExistsError(f"Refusing to overwrite existing catalog export: {search_path}")
         search_path.parent.mkdir(parents=True, exist_ok=True)
         search_path.write_text(json.dumps(search_data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     return report
