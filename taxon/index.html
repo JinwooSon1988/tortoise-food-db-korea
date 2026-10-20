@@ -61,9 +61,10 @@ function render(){const view=$('view');$('navlist').textContent=T('전체 식물
  const r=rec,name=title(r);document.title=name+(name!==r.scientific?' ('+r.scientific+')':'')+T(' | 거북밥 DB',' | Geobukbap DB');
  const groups=TYPES.map(([k,ko,e])=>{const items=r.feeding_evidence.filter(x=>x.type===k);if(!items.length)return '';return '<div class="evtype"><h3>'+(en()?e:ko)+'</h3>'+items.map(evHTML).join('')+'</div>'}).join('');
  const feed=(pending&&pending[r.id])||[];
- const checked=r.feeding_evidence.filter(x=>x.verification==='full_text_verified').length+feed.length;
+ const checked=r.feeding_evidence.filter(x=>x.verification==='full_text_verified').length;
  const preliminary=r.feeding_evidence.filter(x=>x.verification!=='full_text_verified').length;
- const evidenceSummary=checked||preliminary?'<div class="evidence-summary"><strong>'+T('근거 검증 현황','Evidence verification')+'</strong><span>'+T('원문 확인 ','Original checked ')+checked+T('건 · 재확인 필요 ',' · Needs rechecking ')+preliminary+T('건','')+'</span><small>'+T('원문 확인은 급여 안전성 승인과 다릅니다. 검증 중인 기록은 등급 산정에 사용하지 않습니다.','Checking a source is not a feeding safety approval. Records under review do not establish a feeding grade.')+'</small></div>':'';
+ const pendingReview=feed.length;
+ const evidenceSummary=checked||preliminary?'<div class="evidence-summary"><strong>'+T('근거 검증 현황','Evidence verification')+'</strong><span>'+T('원문 확인 ','Original checked ')+checked+T('건 · 재확인 필요 ',' · Needs rechecking ')+preliminary+T('건 · 급여 기록 검토 중 ',' · Feeding records under review ')+pendingReview+T('건','')+'</span><small>'+T('원문 확인은 급여 안전성 승인과 다릅니다. 검증 중인 기록은 등급 산정에 사용하지 않습니다.','Checking a source is not a feeding safety approval. Records under review do not establish a feeding grade.')+'</small></div>':'';
  view.innerHTML='<article class="hero"><div class="photo" role="img" aria-label="'+T('검증된 이미지 준비 중','Verified photo pending')+'">'+T('검증된 이미지 준비 중','Verified photo pending')+'</div><div><h1>'+esc(name)+'</h1><p class="sub"><span class="sci" lang="la">'+esc(r.scientific)+'</span>'+(r.authorship?' '+esc(r.authorship):'')+(r.family?' · '+esc(r.family):'')+'</p>'+
  '<span class="status"><b>—</b>'+T('급여 안전성 미확정','Feeding safety not established')+'</span>'+
  '<p class="lead">'+T('이 식물은 아직 육지거북 급여 안전성을 평가하지 않아 급여 등급(A~D)이 없습니다. 분류학적으로 확인된 식물이라는 사실은 먹여도 된다는 근거가 아닙니다.','This plant has not been assessed for tortoise feeding safety, so it has no feeding grade (A–D). Being a confirmed plant species is not evidence that it can be fed.')+'</p></div></article>'+
