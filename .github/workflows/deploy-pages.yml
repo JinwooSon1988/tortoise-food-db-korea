@@ -10,6 +10,8 @@ on:
       - 'data/plant-catalog/**'
       - 'data/feeding_pending_site_v1.json'
       - 'all-plants/**'
+      - 'guides/**'
+      - 'scripts/generate_guide_hubs.py'
       - 'taxon/**'
       - 'taxonomy-home-search.js'
       - 'en/**'
