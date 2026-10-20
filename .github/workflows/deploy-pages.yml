@@ -9,6 +9,7 @@ on:
       - 'plant/**'
       - 'data/plant-catalog/**'
       - 'data/feeding_pending_site_v1.json'
+      - 'data/community_source_leads_v1.json'
       - 'all-plants/**'
       - 'guides/**'
       - 'scripts/generate_guide_hubs.py'
