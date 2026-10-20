@@ -41,11 +41,12 @@ def main():
  p.add_argument('--cache',default='data/research-cache/europepmc')
  p.add_argument('--workers',type=int,default=6)
  p.add_argument('--timeout',type=int,default=18)
- p.add_argument('--limit',type=int,default=1000)
+ p.add_argument('--limit',type=int,default=0,help='0 means all records in input')
  a=p.parse_args()
+ if a.limit<0:p.error('limit must be >= 0')
  if not 1<=a.workers<=8: p.error('workers must be 1..8 to avoid overloading public API')
  data=json.loads(pathlib.Path(a.input).read_text(encoding='utf-8'))
- items=data['records'][:a.limit]
+ items=data['records'] if a.limit==0 else data['records'][:a.limit]
  cache=pathlib.Path(a.cache);cache.mkdir(parents=True,exist_ok=True)
  results=[]
  with concurrent.futures.ThreadPoolExecutor(max_workers=a.workers) as pool:
