@@ -105,6 +105,6 @@ async function boot(){state='loading';render();const id=idFromUrl();if(!id){stat
  rec=shard.records.find(x=>x.id===id)||null;pending=feed?.records||{};corpus=idx?.research_corpus||[];community=communityData?.records||[];state='done';render()}
 window.addEventListener('tfdblanguagechange',render);
 document.querySelector('.langswitch')?.addEventListener('click',e=>{if(e.target.closest('button[data-lang]'))queueMicrotask(render)});
-boot();
+boot().catch(err=>{console.error('Plant detail initialization failed:',err);state='error';render()});
 })();
 </script></body></html>
