@@ -14,11 +14,12 @@ from pathlib import Path
 
 from build_bulk_taxon_catalog import read_rows, stage
 from build_taxonomy_directory import build
+from export_public_taxonomy_search import export
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def execute(input_path, staged_path, html_path, plants_path, minimum=0):
+def execute(input_path, staged_path, html_path, plants_path, minimum=0, search_path=None):
     plants = json.loads(plants_path.read_text(encoding="utf-8"))
     rows = read_rows(input_path)
     staged, rejected = stage(rows, plants)
@@ -29,6 +30,7 @@ def execute(input_path, staged_path, html_path, plants_path, minimum=0):
         )
     # Generate and validate HTML before touching output paths.
     markup = build(staged)
+    search_data = export(staged)
     report = {
         "source_file": input_path.name,
         "existing_reviewed_records": len(plants),
@@ -49,6 +51,9 @@ def execute(input_path, staged_path, html_path, plants_path, minimum=0):
     html_path.parent.mkdir(parents=True, exist_ok=True)
     staged_path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     html_path.write_text(markup, encoding="utf-8")
+    if search_path is not None:
+        search_path.parent.mkdir(parents=True, exist_ok=True)
+        search_path.write_text(json.dumps(search_data, ensure_ascii=False, separators=(",", ":")) + "\\n", encoding="utf-8")
     return report
 
 
@@ -59,10 +64,11 @@ def main():
     ap.add_argument("--html", type=Path, default=ROOT / "taxonomy/index.html")
     ap.add_argument("--plants", type=Path, default=ROOT / "data/plants.json")
     ap.add_argument("--minimum", type=int, default=0)
+    ap.add_argument("--search", type=Path, help="Export to existing all-plants catalog search JSON")
     args = ap.parse_args()
     if args.minimum < 0:
         ap.error("--minimum must be nonnegative")
-    result = execute(args.input, args.staged, args.html, args.plants, args.minimum)
+    result = execute(args.input, args.staged, args.html, args.plants, args.minimum, args.search)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
