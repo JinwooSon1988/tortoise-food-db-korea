@@ -102,6 +102,14 @@ def evidence_sources():
                 items.append((n, {"type": "wild_feeding_observation", "tortoise": s["tortoise_taxon"], "source": s["citation"],
                                   "url": s["url"], "locator": None, "verification": "full_text_named_not_extracted",
                                   "context": s["context"], "plant_part": None, "finding": None}))
+    # Open-access full texts and keeper database entries read for catalog species (records carry their own verification level).
+    ft = load("data/catalog_feeding_evidence_fulltext_20261020.json")
+    src = {s["source_key"]: s for s in ft["sources"]}
+    for r in ft["records"]:
+        s = src[r["source_key"]]
+        items.append((r["reported_name"], {"type": r["type"], "tortoise": s["tortoise_taxon"], "source": s["citation"], "url": s["url"],
+                                           "locator": r["locator"], "verification": r["verification"], "context": s["context"],
+                                           "plant_part": r["plant_part"], "finding": r["finding"]}))
     for f in sorted((ROOT / "research/evidence_leads").glob("*.json")):
         for r in json.loads(f.read_text(encoding="utf-8"))["records"]:
             names = r.get("observed_plant_taxa") or r.get("plant_taxa") or []
@@ -201,7 +209,8 @@ def main():
             "family": g.get("family"), "order": g.get("order"), "genus": g.get("genus"),
             "common_names": {"en": pick("eng"), "ko": pick("kor")},
             "taxonomy": {"source": "GBIF Backbone Taxonomy", "taxon_key": int(key), "url": "https://www.gbif.org/species/" + key,
-                         "rank": "SPECIES", "status": "ACCEPTED", "kingdom": "Plantae", "checked": CHECKED, "candidate_list": origin},
+                         "rank": "SPECIES", "status": "ACCEPTED", "kingdom": "Plantae", "checked": CHECKED,
+                         "candidate_list": prev.get(tid, {}).get("taxonomy", {}).get("candidate_list") or origin},
             "feeding_safety_status": "unassessed", "safety_grade": None,
             "feeding_evidence_status": "linked" if evidence else "none_found",
             "feeding_evidence": evidence,
