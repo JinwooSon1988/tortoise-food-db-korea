@@ -3,8 +3,8 @@
  "date": "2026-10-19",
  "scope": "Resolution of the 35 review findings in data/qa_independent_bulk_review_triage_20261019.json, plus the coriander DOI and the P1 held sources. No A-D grade or confidence changed.",
  "counts": {
-  "fixed": 15,
-  "held": 5,
+  "fixed": 18,
+  "held": 2,
   "rule_false_positive": 15
  },
  "findings": [
@@ -186,14 +186,16 @@
   {
    "ref": "turnipgreens",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (greens visible with roots) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines. Rechecked 2026-10-19: no Commons file with a species-level category and the food part as sole subject was accepted."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Raapstelen_Brassica_campestris_greens.jpg (Rasbak, CC BY-SA 3.0): Commons category names the taxon, thumbnail viewed, depicted part 'leaves (turnip greens, no roots)'; part_match set to 'match'. Rejected alternatives are listed in rejected_candidates.",
+   "resolved_on": "2026-10-20"
   },
   {
    "ref": "cauliflowerleaf",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (leaves visible around the curd) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines. Rechecked 2026-10-19: no Commons file with a species-level category and the food part as sole subject was accepted."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Cauliflower-plant.JPG (Edukeralam,( Navaneeth Krishnan S), CC BY-SA 3.0): Commons category names the taxon, thumbnail viewed, depicted part 'leaves of a young plant before the curd forms'; part_match set to 'match'. Rejected alternatives are listed in rejected_candidates.",
+   "resolved_on": "2026-10-20"
   },
   {
    "ref": "sunflowerleaf",
@@ -219,8 +221,9 @@
   {
    "ref": "timothy",
    "rule": "R11_image_part_not_matched",
-   "outcome": "held",
-   "action": "Food part is visible (leaves visible with seedheads) but not the sole subject; no better verified candidate was selected in this pass. part_match stays 'partial' as the policy defines. Rechecked 2026-10-19: no Commons file with a species-level category and the food part as sole subject was accepted."
+   "outcome": "fixed",
+   "action": "Replaced with https://commons.wikimedia.org/wiki/File:Phleum_pratense_culm.jpg (Kostka Martin, CC BY-SA 4.0): Commons category names the taxon, thumbnail viewed, depicted part 'fresh leaf blade, sheath and stem (close-up with numbered labels; no seedhead)'; part_match set to 'match'. Rejected alternatives are listed in rejected_candidates.",
+   "resolved_on": "2026-10-20"
   }
  ],
  "citations": [
@@ -240,26 +243,25 @@
    "ref": "hermanni_foraging_italy_2015",
    "url": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
    "status": "original_inaccessible",
-   "checked": "2026-10-19/20: the PDF URL and IRIS item/bitstream pages return a Cloudflare bot-check (403, not bypassed); the AperTO mirror and IRIS search are behind the same check; IRIS OAI-PMH harvest (286,118 records) found no record of this presentation; web search found no other copy",
+   "checked": "2026-10-19/20: the PDF URL and IRIS item/bitstream pages return a Cloudflare bot-check (403, not bypassed); the AperTO mirror and IRIS search are behind the same check; IRIS OAI-PMH harvest (286,118 records) found no record of this presentation; web search found no other copy; 2026-10-20: Italian and English web searches found no other copy",
    "not_read": true,
    "public_change": "supports attributes the selection summary to the evidence registry; plantain why and limits disclose the hold"
   },
   {
    "ref": "wild_medicago_polymorpha_tgg_morocco",
    "doi": "10.1016/j.jaridenv.2005.06.010",
-   "status": "original_inaccessible",
-   "checked": "2026-10-19: authors' abstract read in HAL record hal-00184868 (metadata only, no file). ScienceDirect 403; Unpaywall, OpenAlex and Semantic Scholar list no open copy; the ISTEX link needs a French institutional login",
-   "not_read": true,
-   "abstract_confirms": "faecal analysis; five main species (Leontodon saxatilis, Malva parviflora, Astragalus cruciatus, Medicago hispida, Lotus arenarius) are 70% of identified material and highly preferred",
-   "still_unconfirmed": "per-species share, plant part, page and table locators",
-   "public_change": "supports restated from the abstract with the P1 hold; medicago_hispida limit added",
-   "note": "Ledger status stays original_inaccessible (full text unread) so the P1 blocked-claim manifest keeps holding all El Mouden records; the abstract check is recorded in the ledger summary."
+   "status": "full_text_read_pending_independent_review",
+   "checked": "2026-10-20: full text (publisher PDF) posted by co-author institution CNRS CEBC Chize (https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf, linked from its 2006 publication list) read. Earlier: HAL abstract only; ScienceDirect 403; no open copy in Unpaywall/OpenAlex/Semantic Scholar",
+   "not_read": false,
+   "still_unconfirmed": "share by plant part (not reported); plant name authors (not given; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms); independent review required by data/feeding_p1_release_gate_20261018.json",
+   "public_change": "supports restated from Table 2 with the P1 hold kept; medicago_hispida limit updated",
+   "full_text_confirms": "spring 2002, 44 faeces (19 males, 18 females, 7 juveniles); Table 2 pp. 427-428 mean % of faecal fragments (95% CI), occurrence: Leontodon saxatilis 27.91 (22.48-33.33) 42/44; Malva parviflora 15.22 (10.85-19.58) 38/44; Astragalus cruciatus 14.37 (9.04-19.70) 34/44; Medicago hispida 5.75 (2.84-8.66) 36/44; Lotus arenarius 3.57 (1.81-5.33) 25/44"
   },
   {
    "ref": "testudo_graeca_cynodon_field_diet_2008",
    "doi": "10.1080/21564574.2008.9635573",
    "status": "original_does_not_name_taxon",
-   "checked": "2026-10-19: publisher abstract (NISC; same text in OpenAlex) read. Taylor & Francis and Sabinet 403; Unpaywall and Semantic Scholar list it as closed",
+   "checked": "2026-10-19: publisher abstract (NISC; same text in OpenAlex) read. Taylor & Francis and Sabinet 403; Unpaywall and Semantic Scholar list it as closed; 2026-10-20: no open full text found again. Related lead only: Annaba university catalogue abstract of Ferrah's 2008 magister thesis (co-author; spring 2007, El Kala) names Cynodon dactylon and Hordeum murinum among predominant foods, without figures; the thesis file is not online. The UMMTO DSpace PDF found by search is a different doctoral thesis (Benelkadi)",
    "not_read": true,
    "abstract_confirms": "faecal pellets of 20 males, 16 females and 8 juveniles; 4,422 fragments; 13 dicot and 3 monocot species; vegetative above reproductive tissue",
    "still_unconfirmed": "the Cynodon dactylon leaf and stem percentages (abstract names no species)",
@@ -269,12 +271,12 @@
  "image_check": {
   "files_checked_via_commons_api": 132,
   "missing_files": 0,
-  "replaced": 7,
+  "replaced": 10,
   "note": "Every image file page exists; creator and licence agree with the registry (format differences only).",
   "rejected_candidates": [
    "File:Brassica leaf.jpg (microscope close-up, not the food part as eaten)"
   ]
  },
  "updated": "2026-10-20",
- "false_positive_regression": "The 15 rule_false_positive findings stay out of the error set: audit_evidence_conflicts --check reports 6 findings, 0 unaccepted errors, and test_audit_evidence_conflicts passes (rank-aware R11, NEG_KO, R15 disclosure cases)."
+ "false_positive_regression": "The 15 rule_false_positive findings stay out of the error set: audit_evidence_conflicts --check reports 3 findings, 0 unaccepted errors, and test_audit_evidence_conflicts passes."
 }

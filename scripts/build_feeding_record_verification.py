@@ -71,23 +71,36 @@ CHECKS = {
                     "graeca. African Journal of Herpetology 57(2):103-113",
         "summary": "The abstract confirms faecal-pellet analysis of 4422 fragments from 20 males, 16 females and 8 juveniles, "
                    "13 dicot and 3 monocot species eaten, vegetative tissue above reproductive tissue, and dicot families "
-                   "over 70% of fragments. It names no plant species, so the Cynodon dactylon figures need the full text."},
+                   "over 70% of fragments. It names no plant species, so the Cynodon dactylon figures need the full text. "
+                   "Related lead (2026-10-20, not the original): the Annaba university catalogue abstract of the 2008 "
+                   "magister thesis by Ferrah (a co-author; spring 2007, El Kala dune belt, 16 plant species) names "
+                   "Cynodon dactylon and Hordeum murinum among the predominant foods, with no figures; the thesis file "
+                   "itself is not online."},
+    # Full text read on 2026-10-20 from the copy posted by a co-author's institution. The P1 release gate
+    # (data/feeding_p1_release_gate_20261018.json) still needs an independent review, so it stays on hold and
+    # is not a full-text extract yet.
     ("10.1016/j.jaridenv.2005.06.010", "*"): {
-        "status": "original_inaccessible", "checked_at": "2026-10-19",
-        "opened": "full text not read (subscription only); only the authors' abstract in the HAL record hal-00184868 (metadata only, no file). Full text not accessible: "
-                  "ScienceDirect 403, Unpaywall/OpenAlex/Semantic Scholar closed, the ISTEX link needs a French "
-                  "institutional login",
+        "status": "full_text_read_pending_independent_review", "checked_at": "2026-10-20",
+        "opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication "
+                  "list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf. Earlier routes: HAL "
+                  "hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
         "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo "
                     "graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
-        "summary": "The abstract states that faecal analysis of T. g. graeca in the central Jbilets found five main plant "
-                   "species (Leontodon saxatilis, Malva parviflora, Astragalus cruciatus, Medicago hispida, Lotus arenarius) "
-                   "making up 70% of identified material and highly preferred. No page, table, plant part or per-species "
-                   "share is given, so no record is confirmed from the full text (QA-FR-001)."},
+        "locator": "sections 2.2-2.3, pp. 424-425 (spring 2002, 44 faeces); Results 3.2, p. 426; Table 2, pp. 427-428",
+        "summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 "
+                   "males, 18 females, 7 juveniles); 34 plant species. Table 2 mean % of fragments (95% CI) and faeces "
+                   "containing the item: Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 "
+                   "(10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 "
+                   "(2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. Fragments were matched to a leaf and "
+                   "stem epidermis reference; no share by plant part is given. Names are given without authors; "
+                   "Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms. Held until the independent review "
+                   "the P1 release gate requires."},
     ("iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_sisvet_2015.pdf", "*"): {
         "status": "original_inaccessible", "checked_at": "2026-10-19",
         "opened": "the PDF URL and the IRIS item and bitstream pages return a bot-check page (403); not bypassed. The IRIS "
                   "OAI-PMH endpoint was reachable, but harvesting sets col_2318_1500038 and com_2318_1500068 (286,118 "
-                  "records) found no SISVET 2015 Testudo hermanni foraging record",
+                  "records) found no SISVET 2015 Testudo hermanni foraging record. Web searches on 2026-10-20 (Italian "
+                  "and English titles) found no other copy",
         "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
         "summary": "Original not read. The Fabaceae/Plantaginaceae selection summary comes from the evidence registry only."},
     ("archive.britishcheloniagroup.org.uk/caresheets/sulcata", "*"): {

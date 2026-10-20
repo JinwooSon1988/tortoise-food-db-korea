@@ -2,12 +2,11 @@
  "schema_version": "1.0",
  "scope": "Rule hits across the canonical data. Errors are contradictions between stored fields; reviews need a person to judge against the original. Grades are never changed by this audit.",
  "counts": {
-  "findings": 6,
+  "findings": 3,
   "errors": 1,
-  "reviews": 5,
+  "reviews": 2,
   "errors_unaccepted": 0,
   "by_rule": {
-   "R11_image_part_not_matched": 3,
    "R1_direct_evidence_placeholder_taxon": 2,
    "R8_title_differs_from_doi_record": 1
   }
@@ -33,24 +32,6 @@
    "severity": "error",
    "ref": "teuber_dill_leaf_flavonols_1978",
    "detail": "stored 'Flavonol glycosides of leaves and fruits of dill (Anethum graveolens L.). II. Phenolics of spices' / DOI record 'Flavonolglykoside der Bl�tter und Fr�chte des Dills (Anethum graveolens L.)'"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "turnipgreens",
-   "detail": "part_match=partial depicted=harvested turnip roots with attached greens"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "cauliflowerleaf",
-   "detail": "part_match=partial depicted=curd with surrounding leaves"
-  },
-  {
-   "rule": "R11_image_part_not_matched",
-   "severity": "review",
-   "ref": "timothy",
-   "detail": "part_match=partial depicted=living grass with seedheads and leaves"
   }
  ]
 }
