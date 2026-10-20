@@ -3,7 +3,9 @@
 
 Checks, offline: shard integrity and the shard rule; one entry per GBIF key and per name; required fields;
 taxonomy recorded separately from feeding evidence; no feeding grade and status unassessed on every entry;
-evidence typed, sourced and never from a P1-held name; no overlap with the reviewed plants (by name without
+evidence typed, sourced, tied to a study and never from a P1-held name; a link under another name only through a recorded
+GBIF synonym or spelling variant; a research status on every entry that agrees with its evidence; corpus batch records
+typed and sourced, and their held names never linked; no overlap with the reviewed plants (by name without
 authors and by the stored GBIF keys); the reviewed plants and their grades unchanged; feeding_pending ids still
 listed; the search index and taxon sitemap match the shards; the catalog page, detail page and both home
 searches load the catalog; data sizes stay small enough for the static site.
@@ -17,8 +19,12 @@ import public_verdict as pv  # noqa: E402
 from build_bulk_taxon_catalog import bare  # noqa: E402
 
 CAT = ROOT / "data/plant-catalog"
-TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity", "wild_diet_not_detected"}
-VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified"}
+TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity", "wild_diet_not_detected",
+         "offered_not_eaten"}
+VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified", "review_full_text_verified"}
+CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified"}
+RESEARCH = {"evidence_checked_in_full_text", "evidence_leads_only", "reviewed_not_feeding_evidence", "no_record_found"}
+NAME_BASIS = {"gbif_synonym", "orthographic_variant"}
 P1_HELD = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
 errors = []
 load = lambda p: json.loads(Path(p).read_text(encoding="utf-8"))
@@ -65,12 +71,42 @@ for r in records:
             errors.append(f"{r['id']}: evidence item missing type, verification, source or tortoise")
         if e["reported_name"] in P1_HELD:
             errors.append(f"{r['id']}: evidence from a P1-held name {e['reported_name']}")
-        if e["reported_name"] != r["scientific"]:
+        nr = e.get("name_resolution")
+        if e["reported_name"] != r["scientific"] and not (nr and nr.get("basis") in NAME_BASIS and nr.get("reported") == e["reported_name"]
+                                                        and nr.get("accepted") == r["scientific"]):
             errors.append(f"{r['id']}: evidence reported as {e['reported_name']} linked to {r['scientific']}")
+        if nr and e["reported_name"] == r["scientific"]:
+            errors.append(f"{r['id']}: name_resolution on an exact-name link")
+        if not e.get("study"):
+            errors.append(f"{r['id']}: evidence item without a study id")
+    research = r.get("research") or {}
+    expect_status = ("evidence_checked_in_full_text" if any(e["verification"] in CHECKED for e in r["feeding_evidence"])
+                     else "evidence_leads_only" if r["feeding_evidence"] else None)
+    if research.get("status") not in RESEARCH or not research.get("corpus") or \
+            (expect_status and research["status"] != expect_status) or (not expect_status and research["status"].startswith("evidence")):
+        errors.append(f"{r['id']}: research status missing or inconsistent with the evidence")
     for lang in ("en", "ko"):
         for n in r["common_names"][lang]:
             if not n.get("name") or not n.get("source"):
                 errors.append(f"{r['id']}: common name without source")
+
+# Corpus evidence batches: typed, sourced records; held names never reach the catalog; the corpus searched is described.
+linked_reported = {e["reported_name"] for r in records for e in r["feeding_evidence"]}
+batch_files = sorted((ROOT / "data/catalog-evidence").glob("batch-*.json"))
+for f in batch_files:
+    b = load(f)
+    src = {s["source_key"]: s for s in b["sources"]}
+    for x in b["records"]:
+        s = src.get(x["source_key"])
+        if not s or not s.get("citation") or not s.get("url") or not s.get("study_id") or x["type"] not in TYPES or x["verification"] not in VERIFICATION:
+            errors.append(f"{f.name}: record {x['reported_name']} lacks a typed, sourced study")
+        if not re.fullmatch(r"[A-Z][a-z-]+ [a-z][a-z-]+", x["reported_name"]):
+            errors.append(f"{f.name}: record name {x['reported_name']} is not a binomial")
+    for h in b.get("held_not_linked", []):
+        if h["reported_name"] in linked_reported:
+            errors.append(f"{f.name}: held name {h['reported_name']} is linked in the catalog")
+if batch_files and [c["id"] for c in index.get("research_corpus", [])] != [load(f)["corpus"]["id"] for f in batch_files]:
+    errors.append("index.json research_corpus does not describe the evidence batches")
 
 plants = load(ROOT / "data/plants.json")
 reviewed_names = {bare(p["scientific"]).casefold() for p in plants if bare(p["scientific"])}
@@ -112,7 +148,8 @@ pages = {
     "all-plants/index.html": ["../data/plant-catalog/search.json", "../taxon/?id=", "급여 안전성 미확정", "Feeding safety not established",
                               "feedingRecordPending:feedingIds.has(t.taxon_id)"],
     "taxon/index.html": ["../data/plant-catalog/taxa-", "급여 안전성 미확정", "Feeding safety not established", "검증된 이미지 준비 중",
-                         "Verified photo pending", "../language-toggle.js", "const SHARDS=%d;" % shards],
+                         "Verified photo pending", "../language-toggle.js", "const SHARDS=%d;" % shards, "조사 현황", "Research status",
+                         "자료 미확보", "No data found"] + sorted(TYPES | VERIFICATION),
     "taxonomy-home-search.js": ["data/plant-catalog/search.json", "taxon/?id=", "급여 안전성 미확정"],
     "index.html": ["taxonomy-home-search.js"],
     "en/index.html": ["../taxonomy-home-search.js"],
