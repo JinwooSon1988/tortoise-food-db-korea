@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-18",
+  "scope": "Public web access and searchable-text check for P1 sources; not verification of candidate feeding claims.",
+  "checks": [
+    {
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "result": "pdf_accessible",
+      "pages": 457,
+      "search_terms": [
+        "Testudo hermanni",
+        "Testudo",
+        "Plantago",
+        "Trifolium",
+        "tartarug"
+      ],
+      "search_result": "No matches in available extracted text for these terms. May be irrelevant source, OCR/scanned sections, or extraction gaps; do not conclude absence without manual inspection.",
+      "linked_candidates": 3,
+      "verification": "unverified",
+      "next_action": "Inspect the exact cited abstract or page, identify its title/authors, and verify whether it actually discusses tortoise ingestion."
+    },
+    {
+      "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "result": "doi_resolver_not_accessible_in_web_fetch",
+      "linked_candidates": 6,
+      "verification": "unverified",
+      "next_action": "Obtain full article through publisher/institutional repository and check exact plant names, methods and tables."
+    }
+  ],
+  "rules": [
+    "PDF availability does not establish any feeding claim.",
+    "No species-level plant claims or A-D safety grades changed.",
+    "Preserve original_inaccessible candidate status until matching page/table evidence is obtained."
+  ]
+}

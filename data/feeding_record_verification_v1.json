@@ -1,0 +1,3382 @@
+{
+ "schema_version": "2.0",
+ "scope": "Original-source check of tortoise feeding records. Not a safety verdict; A-D grades are unchanged.",
+ "rules": [
+  "A candidate is a lead, not a feeding record.",
+  "A feeding record is verified only from the full text of the original; a title or abstract never confirms it.",
+  "Recommendations in care sheets and citations of other studies are not feeding records.",
+  "Genus-level names never become species records; names with unresolved homonyms are not linked.",
+  "feeding_pending = verified full-text feeding record linked unambiguously to a catalog entry with no A-D grade.",
+  "Feeding details are filled only when the original states them; otherwise null (not reported)."
+ ],
+ "checked_at": "2026-10-17",
+ "counts": {
+  "candidates": 91,
+  "candidates_by_status": {
+   "full_text_confirmed": 3,
+   "full_text_read_no_species_record_for_this_plant": 10,
+   "full_text_reviewed_not_extracted": 1,
+   "full_text_verified_identity_held": 6,
+   "husbandry_guidance_not_feeding_record": 6,
+   "not_verified": 38,
+   "original_does_not_name_taxon": 1,
+   "original_inaccessible": 3,
+   "recommendation_not_feeding_record": 16,
+   "secondary_citation_not_feeding_record": 7
+  },
+  "full_text_sources_read": 3,
+  "verified_feeding_records_full_text": 14,
+  "verified_records_identity_resolved": 13,
+  "verified_records_on_graded_plants": 7,
+  "site_feeding_pending": 6,
+  "unverified_candidates": 88
+ },
+ "site_feeding_pending": [
+  "gbif:2705292",
+  "gbif:2705297",
+  "gbif:2706241",
+  "gbif:2707769",
+  "gbif:2711375",
+  "gbif:2713229"
+ ],
+ "site_feeding_records": {
+  "gbif:2705292": [
+   {
+    "plant_taxon_reported": "Avena byzantina",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 11.5%, 연간 6.7% (분변 조각 비율)",
+     "en": "11.5% in spring, 6.7% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ],
+  "gbif:2705297": [
+   {
+    "plant_taxon_reported": "Avena fatua",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "여름 1.8%, 연간 0.5% (분변 조각 비율)",
+     "en": "1.8% in summer, 0.5% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91"
+   }
+  ],
+  "gbif:2706241": [
+   {
+    "plant_taxon_reported": "Lolium perenne",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "가을 8.1%, 연간 2.7% (분변 조각 비율)",
+     "en": "8.1% in autumn, 2.7% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 92"
+   }
+  ],
+  "gbif:2707769": [
+   {
+    "plant_taxon_reported": "Thamnochortus spicigerus",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "분변 시료 1개에서만 검출 (겨울)",
+     "en": "Found in one scat only (winter)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 92; section 5.4.1.1 p. 88"
+   }
+  ],
+  "gbif:2711375": [
+   {
+    "plant_taxon_reported": "Ficinia nigrescens",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+     "en": "West Coast National Park, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 0.5%, 연간 0.1% (분변 조각 비율)",
+     "en": "0.5% in spring, 0.1% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91"
+   },
+   {
+    "plant_taxon_reported": "Ficinia nigrescens",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 48.8%, 연간 12.2% (분변 조각 비율)",
+     "en": "48.8% in spring, 12.2% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ],
+  "gbif:2713229": [
+   {
+    "plant_taxon_reported": "Isolepis antarctica",
+    "tortoise": {
+     "ko": "앵귤레이트육지거북 (Chersina angulata)",
+     "en": "Angulate tortoise (Chersina angulata)"
+    },
+    "method_text": {
+     "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+     "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+    },
+    "direct_observation": false,
+    "location": {
+     "ko": "남아프리카공화국 다센섬 (야생)",
+     "en": "Dassen Island, South Africa (wild)"
+    },
+    "period": {
+     "ko": "1999년 3월 - 2000년 2월, 네 계절",
+     "en": "March 1999 - February 2000, four seasons"
+    },
+    "plant_part": null,
+    "observed_share": {
+     "ko": "봄 1.3%, 연간 0.3% (분변 조각 비율)",
+     "en": "1.3% in spring, 0.3% over the year (share of scat fragments)"
+    },
+    "feeding_details": {
+     "mixed_with": null,
+     "feeding_frequency": null,
+     "feeding_amount": null,
+     "fresh_or_dried": null,
+     "preparation": null
+    },
+    "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+    "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+    "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)"
+   }
+  ]
+ },
+ "fulltext_records": [
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "gbif_key": 6109637,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 91; Table 6.1 p. 137; Discussion, p. 120",
+   "plant_part": {
+    "ko": "주로 꽃차례 포엽 (분변 표피 조각 기준)",
+    "en": "Mainly inflorescence bracts (from epidermal fragments in scats)"
+   },
+   "observed_share": {
+    "ko": "가을 54.8%, 연간 24.0% (분변 조각 비율)",
+    "en": "54.8% in autumn, 24.0% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "bermudagrass",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "A",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Avena fatua",
+   "gbif_key": 2705297,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "여름 1.8%, 연간 0.5% (분변 조각 비율)",
+    "en": "1.8% in summer, 0.5% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2705297",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Lolium perenne",
+   "gbif_key": 2706241,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 92",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "가을 8.1%, 연간 2.7% (분변 조각 비율)",
+    "en": "8.1% in autumn, 2.7% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "ryegrass",
+     "kind": "reviewed_plant",
+     "match": "species_within_genus_level_plant",
+     "grade": "B",
+     "feeding_pending": false
+    },
+    {
+     "id": "gbif:2706241",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Ficinia nigrescens",
+   "gbif_key": 2711375,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1, p. 91",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 0.5%, 연간 0.1% (분변 조각 비율)",
+    "en": "0.5% in spring, 0.1% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2711375",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Thamnochortus spicigerus",
+   "gbif_key": 2707769,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 웨스트코스트 국립공원 (야생)",
+    "en": "West Coast National Park, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 92; section 5.4.1.1 p. 88",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "분변 시료 1개에서만 검출 (겨울)",
+    "en": "Found in one scat only (winter)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2707769",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Avena byzantina",
+   "gbif_key": 2705292,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 다센섬 (야생)",
+    "en": "Dassen Island, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 11.5%, 연간 6.7% (분변 조각 비율)",
+    "en": "11.5% in spring, 6.7% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2705292",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Ficinia nigrescens",
+   "gbif_key": 2711375,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 다센섬 (야생)",
+    "en": "Dassen Island, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 48.8%, 연간 12.2% (분변 조각 비율)",
+    "en": "48.8% in spring, 12.2% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2711375",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "url": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "full_text": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "source_type": "academic_thesis",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Isolepis antarctica",
+   "gbif_key": 2713229,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Chersina angulata",
+   "tortoise": {
+    "ko": "앵귤레이트육지거북 (Chersina angulata)",
+    "en": "Angulate tortoise (Chersina angulata)"
+   },
+   "method": "faecal_histology",
+   "method_text": {
+    "ko": "야생 개체 분변의 조직학적 분석 (섭식 흔적 확인, 직접 목격 아님)",
+    "en": "Histological analysis of wild tortoise scats (ingestion shown in faeces, not watched directly)"
+   },
+   "direct_observation": false,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "1999년 3월 - 2000년 2월, 네 계절",
+    "en": "March 1999 - February 2000, four seasons"
+   },
+   "location": {
+    "ko": "남아프리카공화국 다센섬 (야생)",
+    "en": "Dassen Island, South Africa (wild)"
+   },
+   "locator": "Chapter 5, section 5.3.1, p. 84; Table 5.3, p. 99 (100 fragments per scat; 15 scats per season)",
+   "plant_part": null,
+   "observed_share": {
+    "ko": "봄 1.3%, 연간 0.3% (분변 조각 비율)",
+    "en": "1.3% in spring, 0.3% over the year (share of scat fragments)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "gbif:2713229",
+     "kind": "taxonomy_candidate",
+     "match": "gbif_exact_accepted",
+     "grade": null,
+     "feeding_pending": true
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Taraxacum officinale",
+   "gbif_key": 5394163,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎, 꽃",
+    "en": "Leaves, flowers"
+   },
+   "observed_share": {
+    "ko": "관찰된 섭식의 5-10% (보통)",
+    "en": "5-10% of observed feeding (moderate)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "dandelion",
+     "kind": "reviewed_plant",
+     "match": "species_within_genus_level_plant",
+     "grade": "A",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Vitis vinifera",
+   "gbif_key": 5372392,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves"
+   },
+   "observed_share": {
+    "ko": "관찰된 섭식의 1-5% (낮음)",
+    "en": "1-5% of observed feeding (low)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "grapeleaf",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "C",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Dactylis glomerata",
+   "gbif_key": 2705308,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves"
+   },
+   "observed_share": {
+    "ko": "관찰된 섭식의 1-5% (낮음)",
+    "en": "1-5% of observed feeding (low)"
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "orchard",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "B",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.13128/acta_herpetol-9800",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "url": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "full_text": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Festuca arundinacea",
+   "gbif_key": null,
+   "gbif_match": "HIGHERRANK: three homonyms (Schreb., Lilj., Vill.) with different accepted species; the original gives no author",
+   "identity_resolved": false,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2000-2010년 3-10월, 500마리 이상 관찰",
+    "en": "March - October, 2000-2010; more than 500 tortoises"
+   },
+   "location": {
+    "ko": "루마니아 도브루자 (야생)",
+    "en": "Dobrogea, Romania (wild)"
+   },
+   "locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "plant_part": {
+    "ko": "잎",
+    "en": "Leaves"
+   },
+   "observed_share": {
+    "ko": "다른 Festuca sp.와 합산 1-5%",
+    "en": "1-5%, pooled with other Festuca sp."
+   },
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": []
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "url": "https://doi.org/10.5281/zenodo.12807900",
+   "full_text": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Cichorium intybus",
+   "gbif_key": 5392252,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo graeca ibera",
+   "tortoise": {
+    "ko": "이베라 그리스육지거북 (Testudo graeca ibera; 본문 표기 T. graeca)",
+    "en": "Ibera Greek tortoise (Testudo graeca ibera; the results say T. graeca)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2020-2023년 활동기, T. graeca 309마리·T. hermanni 1034마리 관찰",
+    "en": "active seasons 2020-2023; 309 T. graeca and 1034 T. hermanni seen"
+   },
+   "location": {
+    "ko": "불가리아 크레스나 협곡 (야생)",
+    "en": "Kresna Gorge, Bulgaria (wild)"
+   },
+   "locator": "p. 1, Materials and Methods; p. 2, Results",
+   "plant_part": null,
+   "observed_share": null,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "chicory",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "B",
+     "feeding_pending": false
+    },
+    {
+     "id": "radicchio",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "C",
+     "feeding_pending": false
+    }
+   ]
+  },
+  {
+   "source_key": "10.5281/zenodo.12807900",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "url": "https://doi.org/10.5281/zenodo.12807900",
+   "full_text": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "source_type": "academic_study",
+   "verification_status": "full_text_confirmed",
+   "plant_taxon_reported": "Plantago lanceolata",
+   "gbif_key": 8208358,
+   "gbif_match": "EXACT, accepted, single usage",
+   "identity_resolved": true,
+   "tortoise_taxon": "Testudo hermanni boettgeri",
+   "tortoise": {
+    "ko": "동부 헤르만육지거북 (Testudo hermanni boettgeri; 본문 표기 T. hermanni)",
+    "en": "Eastern Hermann's tortoise (Testudo hermanni boettgeri; the results say T. hermanni)"
+   },
+   "method": "direct_observation",
+   "method_text": {
+    "ko": "야생 개체가 먹는 모습을 직접 관찰·사진 기록",
+    "en": "Wild tortoises watched and photographed while feeding"
+   },
+   "direct_observation": true,
+   "feeding_fact_confirmed": true,
+   "context": "wild",
+   "period": {
+    "ko": "2020-2023년 활동기, T. graeca 309마리·T. hermanni 1034마리 관찰",
+    "en": "active seasons 2020-2023; 309 T. graeca and 1034 T. hermanni seen"
+   },
+   "location": {
+    "ko": "불가리아 크레스나 협곡 (야생)",
+    "en": "Kresna Gorge, Bulgaria (wild)"
+   },
+   "locator": "p. 1, Materials and Methods; p. 2, Results",
+   "plant_part": null,
+   "observed_share": null,
+   "feeding_details": {
+    "mixed_with": null,
+    "feeding_frequency": null,
+    "feeding_amount": null,
+    "fresh_or_dried": null,
+    "preparation": null
+   },
+   "links": [
+    {
+     "id": "ribwortplantain",
+     "kind": "reviewed_plant",
+     "match": "exact_species",
+     "grade": "B",
+     "feeding_pending": false
+    },
+    {
+     "id": "plantain",
+     "kind": "reviewed_plant",
+     "match": "species_within_genus_level_plant",
+     "grade": "B",
+     "feeding_pending": false
+    }
+   ]
+  }
+ ],
+ "records": [
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "Trifolium, Sonchus and Medicago taxa (genus names summarised from Iftime & Iftime 2012; account p. 20)",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "open PDF of the Chelonian Research Monographs species account (OpenAlex OA location), p. 20",
+   "citation": "Türkozan, O., Javanbakht, H., Mazanaeva, L. F., Meiri, S. et al. (2023) Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades). Chelonian Research Monographs 5(15):120",
+   "original_locator": "p. 20 (diet paragraph citing Iftime and Iftime 2012)",
+   "original_summary": "The diet paragraph summarises Iftime and Iftime (2012): about 500 wild T. g. ibera over 10 years, 96.5% herbivorous, young leaves of Taraxacum, Trifolium, Medicago, Sonchus and others. It reports no observation of its own; the feeding records belong to Iftime and Iftime 2012 (a full-text extract source).",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "alfalfa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "10.7717/peerj.8076",
+   "source_type": "peer_reviewed_context",
+   "evidence_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "PMC full text (PMC6894431)",
+   "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
+   "original_locator": null,
+   "original_summary": "Parasite-network study; plants are named only when citing earlier diet studies.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "astragalus_cruciatus",
+   "plant_scientific_name": "Astragalus crenatus Schult.",
+   "plant_taxon_reported": "Astragalus cruciatus",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_astragalus_cruciatus"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_verified_identity_held",
+   "verified_by": "original opened 2026-10-20",
+   "original_opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf (sha256 ac4d25a3...). Earlier routes: HAL hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": "sections 2.2-2.4, pp. 424-425 (spring 2002, 44 faeces, definitions); Results 3.2, p. 426; Table 2, pp. 427-428; Table 3, pp. 429-430",
+   "original_summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 males, 18 females, 7 juveniles); 34 plant species. Table 2 diet column (headed 'Mean number of fragments'; defined in Methods 2.4 as the mean % of identified epidermis fragments, a relative proportion) with 95% CI, and faeces containing the item (frequency of occurrence): Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 (10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 (2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. All five were eaten significantly more than their plant cover (Table 2 boldface; Hunter's index > 1 in Table 3). The reference collection was upper and lower leaf and 'caudal' epidermis; no share by plant part is given. Names are given without authors; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms, so the names are not linked to catalog taxa (P1 release gate).",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "barleygrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hordeum vulgare",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "bermudagrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cynodon dactylon",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "10.1080/21564574.2008.9635573",
+   "source_type": "peer_reviewed_article",
+   "evidence_ids": [
+    "testudo_graeca_cynodon_field_diet_2008",
+    "rouag2008_cynodon_dactylon"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue",
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "original_does_not_name_taxon",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "publisher abstract (NISC; same text in the OpenAlex record). Full text not accessible: Taylor & Francis and Sabinet return 403, Unpaywall and Semantic Scholar list it as closed (2026-10-19)",
+   "citation": "Rouag, R. et al. (2008) Food choice of an Algerian population of the spur-thighed tortoise, Testudo graeca. African Journal of Herpetology 57(2):103-113",
+   "original_locator": null,
+   "original_summary": "The abstract confirms faecal-pellet analysis of 4422 fragments from 20 males, 16 females and 8 juveniles, 13 dicot and 3 monocot species eaten, vegetative tissue above reproductive tissue, and dicot families over 70% of fragments. It names no plant species, so the Cynodon dactylon figures need the full text. Related lead (2026-10-20, not the original): the Annaba university catalogue abstract of the 2008 magister thesis by Ferrah (a co-author; spring 2007, El Kala dune belt, 16 plant species) names Cynodon dactylon and Hordeum murinum among the predominant foods, with no figures; the thesis file itself is not online.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "bermudagrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cynodon dactylon",
+   "plant_taxon_reported": "Cynodon dactylon",
+   "tortoise_taxon": "Chersina angulata",
+   "source": "https://uwcscholar.uwc.ac.za/items/de444336-a9f0-4654-99a4-39b8d4ca8bb5",
+   "source_type": "academic_thesis",
+   "evidence_ids": [
+    "chersina_cynodon_field_diet"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "full_text_confirmed",
+   "verified_by": "full-text extract (data/feeding_record_fulltext_extracts_v1.json)",
+   "original_opened": "open PDF (Joshu_PHD_2008.pdf) from the repository record; read 2026-10-17",
+   "citation": "Joshua, Q. I. (2008) Seasonal effects on the feeding ecology and habitat of Chersina angulata in the South Western Cape. PhD thesis, University of the Western Cape. hdl:10566/16869",
+   "original_locator": "Chapter 5, section 5.3.1, p. 84; Table 5.1, pp. 91-92 (200 fragments per scat; 15 scats per season, 12 in spring); Table 5.1 p. 91; Table 6.1 p. 137; Discussion, p. 120",
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "broadleafplantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago major",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "chickweed",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Stellaria media",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+   "original_locator": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "chickweed",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Stellaria media",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "chicory",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium intybus",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_confirmed",
+   "verified_by": "full-text extract (data/feeding_record_fulltext_extracts_v1.json)",
+   "original_opened": "open PDF (Zenodo record 12807900); read 2026-10-17",
+   "citation": "Mitrevichin, E., Sakelarieva, L., Peshev, H. & Pulev, A. (2023) Notes on the diet of Testudo hermanni boettgeri and T. graeca ibera in south-western Bulgaria with first cases of geophagy and myrmecophagy from the country. ZooNotes 228:1-4",
+   "original_locator": "p. 1, Materials and Methods; p. 2, Results",
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "chicory",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium intybus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Trifolium, Sonchus and Medicago taxa (genus names summarised from Iftime & Iftime 2012; account p. 20)",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "open PDF of the Chelonian Research Monographs species account (OpenAlex OA location), p. 20",
+   "citation": "Türkozan, O., Javanbakht, H., Mazanaeva, L. F., Meiri, S. et al. (2023) Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades). Chelonian Research Monographs 5(15):120",
+   "original_locator": "p. 20 (diet paragraph citing Iftime and Iftime 2012)",
+   "original_summary": "The diet paragraph summarises Iftime and Iftime (2012): about 500 wild T. g. ibera over 10 years, 96.5% herbivorous, young leaves of Taraxacum, Trifolium, Medicago, Sonchus and others. It reports no observation of its own; the feeding records belong to Iftime and Iftime 2012 (a full-text extract source).",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+   "original_locator": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "original_inaccessible",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "the PDF URL and the IRIS item and bitstream pages return a bot-check page (403); not bypassed. The IRIS OAI-PMH endpoint was reachable, but harvesting sets col_2318_1500038 and com_2318_1500068 (286,118 records) found no SISVET 2015 Testudo hermanni foraging record. Web searches on 2026-10-20 (Italian and English titles) found no other copy",
+   "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
+   "original_locator": null,
+   "original_summary": "Original not read. The Fabaceae/Plantaginaceae selection summary comes from the evidence registry only.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "clover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "commonmallow",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Malva sylvestris",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_confirmed",
+   "verified_by": "full-text extract (data/feeding_record_fulltext_extracts_v1.json)",
+   "original_opened": "open access PDF (oaj.fupress.net); read 2026-10-17",
+   "citation": "Iftime, A. & Iftime, O. (2012) Long term observations on the alimentation of wild Eastern Greek Tortoises Testudo graeca ibera in Dobrogea, Romania. Acta Herpetologica 7(1):105-110",
+   "original_locator": "p. 106, methods paragraph; Table 1, p. 106 (species, consumed part, frequency of consumption)",
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": "ZooNotes 228 explicitly lists Taraxacum sp. among plants observed being consumed by Testudo graeca ibera in south-western Bulgaria.",
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+   "original_locator": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dandelion",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Taraxacum spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "dolnamul",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sedum sarmentosum",
+   "plant_taxon_reported": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "endive",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium endivia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "endive",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium endivia",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "endive",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium endivia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "hedgemustard",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sisymbrium officinale (L.) Scop.",
+   "plant_taxon_reported": "Sisymbrium officinale",
+   "tortoise_taxon": "Tortoise general / Testudo context",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "ttrust_sisymbrium_officinale"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "hibiscusflower",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hibiscus syriacus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "hibiscusleaf",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hibiscus syriacus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "hibiscusrosa",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Hibiscus rosa-sinensis",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "kale",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Brassica oleracea var. sabellica",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "kale",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Brassica oleracea var. sabellica",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "lamium_album",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lamium album L.",
+   "plant_taxon_reported": "Lamium album",
+   "tortoise_taxon": "Tortoise general / Testudo context",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "ttrust_lamium_album"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "leontodon_saxatilis",
+   "plant_scientific_name": "Leontodon saxatilis Lam.",
+   "plant_taxon_reported": "Leontodon saxatilis",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_leontodon_saxatilis"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_verified_identity_held",
+   "verified_by": "original opened 2026-10-20",
+   "original_opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf (sha256 ac4d25a3...). Earlier routes: HAL hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": "sections 2.2-2.4, pp. 424-425 (spring 2002, 44 faeces, definitions); Results 3.2, p. 426; Table 2, pp. 427-428; Table 3, pp. 429-430",
+   "original_summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 males, 18 females, 7 juveniles); 34 plant species. Table 2 diet column (headed 'Mean number of fragments'; defined in Methods 2.4 as the mean % of identified epidermis fragments, a relative proportion) with 95% CI, and faeces containing the item (frequency of occurrence): Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 (10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 (2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. All five were eaten significantly more than their plant cover (Table 2 boldface; Hunter's index > 1 in Table 3). The reference collection was upper and lower leaf and 'caudal' epidermis; no share by plant part is given. Names are given without authors; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms, so the names are not linked to catalog taxa (P1 release gate).",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "lettuce",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "lettuce",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "lotus_arenarius",
+   "plant_scientific_name": "Lotus arenarius Brot.",
+   "plant_taxon_reported": "Lotus arenarius",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_lotus_arenarius"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_verified_identity_held",
+   "verified_by": "original opened 2026-10-20",
+   "original_opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf (sha256 ac4d25a3...). Earlier routes: HAL hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": "sections 2.2-2.4, pp. 424-425 (spring 2002, 44 faeces, definitions); Results 3.2, p. 426; Table 2, pp. 427-428; Table 3, pp. 429-430",
+   "original_summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 males, 18 females, 7 juveniles); 34 plant species. Table 2 diet column (headed 'Mean number of fragments'; defined in Methods 2.4 as the mean % of identified epidermis fragments, a relative proportion) with 95% CI, and faeces containing the item (frequency of occurrence): Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 (10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 (2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. All five were eaten significantly more than their plant cover (Table 2 boldface; Hunter's index > 1 in Table 3). The reference collection was upper and lower leaf and 'caudal' epidermis; no share by plant part is given. Names are given without authors; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms, so the names are not linked to catalog taxa (P1 release gate).",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "mallow",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Malva spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": "malva_parviflora",
+   "plant_scientific_name": "Malva parviflora L.",
+   "plant_taxon_reported": "Malva parviflora",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "doi:10.1016/j.jaridenv.2005.06.010",
+   "source_type": "wild_feeding",
+   "evidence_ids": [
+    "elmouden2006_malva_parviflora"
+   ],
+   "found_in": [
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_verified_identity_held",
+   "verified_by": "original opened 2026-10-20",
+   "original_opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf (sha256 ac4d25a3...). Earlier routes: HAL hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": "sections 2.2-2.4, pp. 424-425 (spring 2002, 44 faeces, definitions); Results 3.2, p. 426; Table 2, pp. 427-428; Table 3, pp. 429-430",
+   "original_summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 males, 18 females, 7 juveniles); 34 plant species. Table 2 diet column (headed 'Mean number of fragments'; defined in Methods 2.4 as the mean % of identified epidermis fragments, a relative proportion) with 95% CI, and faeces containing the item (frequency of occurrence): Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 (10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 (2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. All five were eaten significantly more than their plant cover (Table 2 boldface; Hunter's index > 1 in Table 3). The reference collection was upper and lower leaf and 'caudal' epidermis; no share by plant part is given. Names are given without authors; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms, so the names are not linked to catalog taxa (P1 release gate).",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "meadowgrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Poa pratensis",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago hispida",
+   "plant_taxon_reported": "Medicago hispida",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "wild_medicago_polymorpha_tgg_morocco"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_verified_identity_held",
+   "verified_by": "original opened 2026-10-20",
+   "original_opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf (sha256 ac4d25a3...). Earlier routes: HAL hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": "sections 2.2-2.4, pp. 424-425 (spring 2002, 44 faeces, definitions); Results 3.2, p. 426; Table 2, pp. 427-428; Table 3, pp. 429-430",
+   "original_summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 males, 18 females, 7 juveniles); 34 plant species. Table 2 diet column (headed 'Mean number of fragments'; defined in Methods 2.4 as the mean % of identified epidermis fragments, a relative proportion) with 95% CI, and faeces containing the item (frequency of occurrence): Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 (10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 (2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. All five were eaten significantly more than their plant cover (Table 2 boldface; Hunter's index > 1 in Table 3). The reference collection was upper and lower leaf and 'caudal' epidermis; no share by plant part is given. Names are given without authors; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms, so the names are not linked to catalog taxa (P1 release gate).",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago taxa",
+   "plant_taxon_reported": "Medicago taxa",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "https://doi.org/10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "medicago_hispida",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Medicago polymorpha L.",
+   "plant_taxon_reported": "Medicago polymorpha",
+   "tortoise_taxon": "Testudo graeca graeca",
+   "source": "10.1016/j.jaridenv.2005.06.010",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "wild_medicago_polymorpha_tgg_morocco",
+    "elmouden2006_medicago_hispida"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue",
+    "wild_feeding_evidence"
+   ],
+   "quarantined_wild_record": true,
+   "plant_match": "exact_species",
+   "verification_status": "full_text_verified_identity_held",
+   "verified_by": "original opened 2026-10-20",
+   "original_opened": "full text (publisher PDF) posted by a co-author's institution, CNRS CEBC Chize, in its 2006 publication list: https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf (sha256 ac4d25a3...). Earlier routes: HAL hal-00184868 abstract only; ScienceDirect 403; Unpaywall/OpenAlex/Semantic Scholar closed",
+   "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+   "original_locator": "sections 2.2-2.4, pp. 424-425 (spring 2002, 44 faeces, definitions); Results 3.2, p. 426; Table 2, pp. 427-428; Table 3, pp. 429-430",
+   "original_summary": "Faecal epidermis analysis of wild T. g. graeca, central Jbilets, Morocco, May-June 2002; 44 faeces (19 males, 18 females, 7 juveniles); 34 plant species. Table 2 diet column (headed 'Mean number of fragments'; defined in Methods 2.4 as the mean % of identified epidermis fragments, a relative proportion) with 95% CI, and faeces containing the item (frequency of occurrence): Leontodon saxatilis 27.91 (22.48-33.33), 42/44; Malva parviflora 15.22 (10.85-19.58), 38/44; Astragalus cruciatus 14.37 (9.04-19.70), 34/44; Medicago hispida 5.75 (2.84-8.66), 36/44; Lotus arenarius 3.57 (1.81-5.33), 25/44. All five were eaten significantly more than their plant cover (Table 2 boldface; Hunter's index > 1 in Table 3). The reference collection was upper and lower leaf and 'caudal' epidermis; no share by plant part is given. Names are given without authors; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms, so the names are not linked to catalog taxa (P1 release gate).",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "mulberry",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Morus spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Multiple identified",
+   "plant_taxon_reported": "Multiple identified",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "oatgrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Avena sativa",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "oatleaf",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Avena sativa",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "orchard",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Dactylis glomerata",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+   "original_locator": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "original_inaccessible",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "the PDF URL and the IRIS item and bitstream pages return a bot-check page (403); not bypassed. The IRIS OAI-PMH endpoint was reachable, but harvesting sets col_2318_1500038 and com_2318_1500068 (286,118 records) found no SISVET 2015 Testudo hermanni foraging record. Web searches on 2026-10-20 (Italian and English titles) found no other copy",
+   "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
+   "original_locator": null,
+   "original_summary": "Original not read. The Fabaceae/Plantaginaceae selection summary comes from the evidence registry only.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "plantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Potentilla and",
+   "plant_taxon_reported": "Potentilla and",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "https://doi.org/10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "radicchio",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Cichorium intybus var. foliosum",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "raspberryleaf",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Rubus idaeus",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "redclover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium pratense",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "ribwortplantain",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Plantago lanceolata",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "romaine",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa var. longifolia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "romaine",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa var. longifolia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "romaine",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lactuca sativa var. longifolia",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "rose",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Rosa spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "C",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "ruscus_aculeatus",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Ruscus aculeatus L.",
+   "plant_taxon_reported": "Ruscus aculeatus L.",
+   "tortoise_taxon": "Testudo hermanni hermanni",
+   "source": "10.1655/HERPETOLOGICA-D-10-00064.1",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_ids": [
+    "wild_ruscus_aculeatus_thh_italy_2011"
+   ],
+   "found_in": [
+    "reviewed_plant_links",
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "exact_species",
+   "verification_status": "full_text_reviewed_not_extracted",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "BioOne abstract (2026-10-17); author-uploaded full text on ResearchGate reviewed by the owner (2026-10-19, data/ruscus_primary_fulltext_review_20261019.json). Not reopened by this pipeline: publisher copy subscriber-only, Unpaywall/OpenAlex closed, ResearchGate and IRIS/CRIS return 403",
+   "citation": "Del Vecchio, S., Burke, R. L., Rugiero, L., Capula, M. & Luiselli, L. (2011) Seasonal changes in the diet of Testudo hermanni hermanni in central Italy. Herpetologica 67(3):236-249",
+   "original_locator": "Table 1, p. 240 and Table 2, p. 241 (Ruscus aculeatus: fruits, seeds; faecal remains); Discussion, p. 245 (leaves eaten in autumn); abstract (flowers and unripe fruit in autumn)",
+   "original_summary": "Faecal tables list Ruscus aculeatus fruits and seeds (Table 1 p. 240; Table 2 p. 241: spring 1/28, autumn 21/21). The Discussion (p. 245) states the tortoises also ate the leaves in autumn; leaves are not in the tables. The abstract mentions flowers and unripe fruit in autumn. Not yet a full-text extract (site and period locators missing), so not counted as a confirmed feeding record (see QA-FR-002).",
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "ryegrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Lolium spp.",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sedum taxa",
+   "plant_taxon_reported": "Sedum taxa",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "https://doi.org/10.5281/zenodo.12807900",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "mitrevichin_ibera_bulgaria_2023"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "https://doi.org/10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "open PDF of the Chelonian Research Monographs species account (OpenAlex OA location), p. 20",
+   "citation": "Türkozan, O., Javanbakht, H., Mazanaeva, L. F., Meiri, S. et al. (2023) Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades). Chelonian Research Monographs 5(15):120",
+   "original_locator": "p. 20 (diet paragraph citing Iftime and Iftime 2012)",
+   "original_summary": "The diet paragraph summarises Iftime and Iftime (2012): about 500 wild T. g. ibera over 10 years, 96.5% herbivorous, young leaves of Taraxacum, Trifolium, Medicago, Sonchus and others. It reports no observation of its own; the feeding records belong to Iftime and Iftime 2012 (a full-text extract source).",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "10.7717/peerj.8076",
+   "source_type": "peer_reviewed_context",
+   "evidence_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "PMC full text (PMC6894431)",
+   "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
+   "original_locator": null,
+   "original_summary": "Parasite-network study; plants are named only when citing earlier diet studies.",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+   "original_locator": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+   "source_type": "specialist_veterinary_review",
+   "evidence_ids": [
+    "bcg_chelonian_nutrition"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo hermanni",
+   "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+   "source_type": "conference_proceedings",
+   "evidence_ids": [
+    "hermanni_foraging_italy_2015"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "original_inaccessible",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "the PDF URL and the IRIS item and bitstream pages return a bot-check page (403); not bypassed. The IRIS OAI-PMH endpoint was reachable, but harvesting sets col_2318_1500038 and com_2318_1500068 (286,118 records) found no SISVET 2015 Testudo hermanni foraging record. Web searches on 2026-10-20 (Italian and English titles) found no other copy",
+   "citation": "SISVET 2015 proceedings (Testudo hermanni foraging, Italy)",
+   "original_locator": null,
+   "original_summary": "Original not read. The Fabaceae/Plantaginaceae selection summary comes from the evidence registry only.",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Testudo graeca",
+   "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6894431/",
+   "source_type": "public_evidence",
+   "evidence_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "PMC full text",
+   "citation": "Benitez-Malvido, J. et al. (2019) PeerJ 7:e8076",
+   "original_locator": null,
+   "original_summary": "Parasite-network study; plants are named only when citing earlier diet studies.",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": null,
+   "candidate_taxon": null,
+   "plant_scientific_name": "See linked",
+   "plant_taxon_reported": "See linked",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/enews2/index.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_winter_feeding"
+   ],
+   "found_in": [
+    "evidence_first_queue"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "identity_unresolved",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": null,
+   "grade_changed": false
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "Taraxacum officinale; Sonchus sp.; Trifolium sp.; Medicago sp.; Poa sp. (Table 1, p. 106)",
+   "tortoise_taxon": "Testudo graeca ibera",
+   "source": "10.13128/Acta_Herpetol-9800",
+   "source_type": "academic_study",
+   "evidence_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "full_text_read_no_species_record_for_this_plant",
+   "verified_by": "full text read 2026-10-17",
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "Trifolium, Sonchus and Medicago taxa (genus names summarised from Iftime & Iftime 2012; account p. 20)",
+   "tortoise_taxon": "Testudo graeca ibera and eastern Testudo graeca clades",
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "source_type": "specialist_group_species_account",
+   "evidence_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "secondary_citation_not_feeding_record",
+   "verified_by": "original opened 2026-10-19",
+   "original_opened": "open PDF of the Chelonian Research Monographs species account (OpenAlex OA location), p. 20",
+   "citation": "Türkozan, O., Javanbakht, H., Mazanaeva, L. F., Meiri, S. et al. (2023) Testudo graeca Linnaeus 1758 (Eastern Subspecies Clades). Chelonian Research Monographs 5(15):120",
+   "original_locator": "p. 20 (diet paragraph citing Iftime and Iftime 2012)",
+   "original_summary": "The diet paragraph summarises Iftime and Iftime (2012): about 500 wild T. g. ibera over 10 years, 96.5% herbivorous, young leaves of Taraxacum, Trifolium, Medicago, Sonchus and others. It reports no observation of its own; the feeding records belong to Iftime and Iftime 2012 (a full-text extract source).",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Testudo graeca, T. hermanni, T. marginata, T. horsfieldii",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/caremed",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_mediterranean_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "husbandry_guidance_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group Mediterranean care sheet",
+   "citation": "British Chelonia Group. Mediterranean tortoises care sheet",
+   "original_locator": null,
+   "original_summary": "General statement that a garden tortoise forages on listed weeds; no observer, place or species record.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+   "tortoise_taxon": "Testudo spp.",
+   "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+   "source_type": "expert_husbandry",
+   "evidence_ids": [
+    "leone_testudo_diet_2021"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "sowthistle",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Sonchus spp.",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "A",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "timothy",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Phleum pratense",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "watercress",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Nasturtium officinale",
+   "plant_taxon_reported": "Dandelion, plantain, clover, chickweed, watercress and other named forage plants listed by the source",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "source": "https://archive.britishcheloniagroup.org.uk/caresheets/sulcata",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "bcg_sulcata_care"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "not_named",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "British Chelonia Group care sheet, FEEDING > Captive",
+   "citation": "British Chelonia Group. Sulcata care sheet (Centrochelys sulcata)",
+   "original_locator": null,
+   "original_summary": "Lists foods that can be tried in captivity, including watercress. Advice, not a record of feeding.",
+   "existing_grade": "보류",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "wheatgrass",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Triticum aestivum",
+   "plant_taxon_reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+   "tortoise_taxon": "Mediterranean Testudo",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tortoise_trust_mediterranean_grass_context"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "whiteclover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium repens",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Mediterranean tortoises",
+   "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_mediterranean_food"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "not_verified",
+   "verified_by": null,
+   "original_opened": null,
+   "citation": null,
+   "original_locator": null,
+   "original_summary": null,
+   "existing_grade": "B",
+   "grade_changed": false
+  },
+  {
+   "plant_id": "whiteclover",
+   "candidate_taxon": null,
+   "plant_scientific_name": "Trifolium repens",
+   "plant_taxon_reported": "See linked plant concept(s); source scope preserved from evidence registry",
+   "tortoise_taxon": "Herbivorous tortoises, with Mediterranean observations",
+   "source": "https://www.tortoisetrust.org/articles/plantfoods.html",
+   "source_type": "specialist_husbandry",
+   "evidence_ids": [
+    "tt_plantfoods"
+   ],
+   "found_in": [
+    "reviewed_plant_links"
+   ],
+   "quarantined_wild_record": false,
+   "plant_match": "genus_or_group",
+   "verification_status": "recommendation_not_feeding_record",
+   "verified_by": "original opened 2026-10-17",
+   "original_opened": "Tortoise Trust article",
+   "citation": "Tortoise Trust. Plant foods article",
+   "original_locator": null,
+   "original_summary": "Lamium album and Sisymbrium officinale appear in a keeper's list of foods offered, not as observations.",
+   "existing_grade": "B",
+   "grade_changed": false
+  }
+ ]
+}

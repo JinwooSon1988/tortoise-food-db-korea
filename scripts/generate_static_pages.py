@@ -227,6 +227,9 @@ def part_state_display(value):
         "pads and fruit":"패드형 줄기·열매",
         "sprouted shoots":"발아 새싹",
         "young plant material; exact part varies by observation":"어린 식물체 — 관찰마다 실제 부위가 다름",
+        "leaves and flowers (Taraxacum officinale, Trifolium sp.); leaves (Sonchus sp., Medicago sp., Poa sp.); Table 1, p. 106":"잎·꽃(Taraxacum officinale, Trifolium sp.), 잎(Sonchus sp., Medicago sp., Poa sp.) — 원문 표 1(106쪽)",
+        "young leaves (account p. 20, summarising Iftime & Iftime 2012)":"어린잎 — 종 해설 20쪽이 2012년 야생 관찰 연구를 요약한 내용",
+        "leaves (leafy vegetable samples; abstract only)":"잎 — 잎채소 시료, 초록으로만 확인",
         "mature aerial plant material":"성숙한 지상부 식물체",
         "feeding-trial plant material; flowering/seed stage discussed":"급여시험 식물체 — 개화·결실 단계를 구분해 언급",
 

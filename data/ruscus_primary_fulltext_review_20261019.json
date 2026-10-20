@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-10-19",
+  "source": {
+    "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+    "citation": "Del Vecchio et al. (2011), Seasonal Changes in the Diet of Testudo hermanni hermanni in Central Italy, Herpetologica 67(3):236-249",
+    "full_text_url": "https://www.researchgate.net/publication/235844850_SEASONAL_CHANGES_IN_THE_DIET_OF_TESTUDO_HERMANNI_HERMANNI_IN_CENTRAL_ITALY",
+    "publisher_abstract_url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1",
+    "access_note": "Author-uploaded public full-text transcription on ResearchGate; not a publisher-hosted full-text download."
+  },
+  "observations": [
+    {
+      "locator": "Table 1, p. 240, Family Ruscaceae, Ruscus aculeatus",
+      "plant_part": "fruits, seeds",
+      "method": "fecal-pellet identifiable remains",
+      "males_positive": 13,
+      "males_total": 27,
+      "females_positive": 9,
+      "females_total": 21
+    },
+    {
+      "locator": "Table 2, p. 241, Family Ruscaceae, Ruscus aculeatus",
+      "plant_part": "fruit, seeds",
+      "spring_positive": 1,
+      "spring_total": 28,
+      "autumn_positive": 21,
+      "autumn_total": 21
+    },
+    {
+      "locator": "Discussion, p. 245, paragraph beginning 'In a similar way'",
+      "plant_part": "leaves",
+      "reported": "Tortoises also consumed leaves of this plant in autumn, even though the leaves are stiff and spine-tipped.",
+      "qualification": "Discussion explicitly reports leaf consumption; Table 1 and Table 2 plant-part column lists fruits and seeds, not leaves. Preserve this distinction."
+    }
+  ],
+  "interpretation": "Wild Testudo hermanni hermanni ingestion evidence, predominantly fecal-pellet analysis; does not establish captive safety, suitable quantities, frequency, or applicability to other tortoise species.",
+  "qa_correction": "Previous QA-FR-002 conclusion 'leaves not reported' is contradicted by discussion p. 245. Re-review evidence ledger, public evidence, plant-part notes and translations; do not auto-change feeding grade.",
+  "status": "source_text_reviewed_pending_integration"
+}

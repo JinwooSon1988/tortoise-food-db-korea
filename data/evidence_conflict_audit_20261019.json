@@ -1,0 +1,37 @@
+{
+ "schema_version": "1.0",
+ "scope": "Rule hits across the canonical data. Errors are contradictions between stored fields; reviews need a person to judge against the original. Grades are never changed by this audit.",
+ "counts": {
+  "findings": 3,
+  "errors": 1,
+  "reviews": 2,
+  "errors_unaccepted": 0,
+  "by_rule": {
+   "R1_direct_evidence_placeholder_taxon": 2,
+   "R8_title_differs_from_doi_record": 1
+  }
+ },
+ "accepted_errors": {
+  "R8_title_differs_from_doi_record|teuber_dill_leaf_flavonols_1978": "DOI record carries the German original title (Flavonolglykoside der Blätter und Früchte des Dills); same paper."
+ },
+ "findings": [
+  {
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "severity": "review",
+   "ref": "hermanni_foraging_italy_2015",
+   "detail": "direct evidence linked to plantain stores no reported plant taxon"
+  },
+  {
+   "rule": "R1_direct_evidence_placeholder_taxon",
+   "severity": "review",
+   "ref": "hermanni_foraging_italy_2015",
+   "detail": "direct evidence linked to clover stores no reported plant taxon"
+  },
+  {
+   "rule": "R8_title_differs_from_doi_record",
+   "severity": "error",
+   "ref": "teuber_dill_leaf_flavonols_1978",
+   "detail": "stored 'Flavonol glycosides of leaves and fruits of dill (Anethum graveolens L.). II. Phenolics of spices' / DOI record 'Flavonolglykoside der Bl�tter und Fr�chte des Dills (Anethum graveolens L.)'"
+  }
+ ]
+}

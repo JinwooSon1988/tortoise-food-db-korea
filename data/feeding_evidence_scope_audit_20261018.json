@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-10-18",
+  "source": "data/feeding_record_verification_v1.json",
+  "scope": "Machine-readable secondary audit of existing repository classifications only; NOT independent original-text validation or a feeding safety verdict.",
+  "counts": {
+    "candidates": 90,
+    "candidates_by_status": {
+      "abstract_only_not_confirmed": 1,
+      "full_text_confirmed": 3,
+      "full_text_read_no_species_record_for_this_plant": 9,
+      "husbandry_guidance_not_feeding_record": 6,
+      "not_verified": 42,
+      "original_does_not_name_taxon": 1,
+      "original_inaccessible": 9,
+      "recommendation_not_feeding_record": 16,
+      "secondary_citation_not_feeding_record": 3
+    },
+    "full_text_sources_read": 3,
+    "verified_feeding_records_full_text": 14,
+    "verified_records_identity_resolved": 13,
+    "verified_records_on_graded_plants": 7,
+    "site_feeding_pending": 6,
+    "unverified_candidates": 87
+  },
+  "review_priority": [
+    {
+      "issue": "species_level_overreach_guard",
+      "count": 6,
+      "items": [
+        {
+          "plant_id": "alfalfa",
+          "reported_taxon": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+          "tortoise_taxon": "Testudo graeca ibera",
+          "source": "10.13128/Acta_Herpetol-9800"
+        },
+        {
+          "plant_id": "alfalfa",
+          "reported_taxon": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+          "tortoise_taxon": "Testudo graeca ibera",
+          "source": "10.5281/zenodo.12807900"
+        },
+        {
+          "plant_id": "clover",
+          "reported_taxon": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+          "tortoise_taxon": "Testudo graeca ibera",
+          "source": "10.13128/Acta_Herpetol-9800"
+        },
+        {
+          "plant_id": "dandelion",
+          "reported_taxon": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+          "tortoise_taxon": "Testudo graeca ibera",
+          "source": "10.5281/zenodo.12807900"
+        },
+        {
+          "plant_id": "dolnamul",
+          "reported_taxon": "Cichorium, Taraxacum, Medicago, Potentilla and Sedum taxa reported",
+          "tortoise_taxon": "Testudo graeca ibera",
+          "source": "10.5281/zenodo.12807900"
+        },
+        {
+          "plant_id": "sowthistle",
+          "reported_taxon": "Taraxacum / Sonchus / Trifolium / Medicago taxa reported in the study",
+          "tortoise_taxon": "Testudo graeca ibera",
+          "source": "10.13128/Acta_Herpetol-9800"
+        }
+      ],
+      "action": "Keep genus/group observation distinct from species-specific feeding evidence; do not upgrade to species claim."
+    },
+    {
+      "issue": "original_inaccessible",
+      "count": 9,
+      "items": [
+        {
+          "plant_id": null,
+          "reported": "Astragalus cruciatus",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo graeca graeca",
+          "source": "doi:10.1016/j.jaridenv.2005.06.010"
+        },
+        {
+          "plant_id": "clover",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo hermanni",
+          "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf"
+        },
+        {
+          "plant_id": null,
+          "reported": "Leontodon saxatilis",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo graeca graeca",
+          "source": "doi:10.1016/j.jaridenv.2005.06.010"
+        },
+        {
+          "plant_id": null,
+          "reported": "Lotus arenarius",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo graeca graeca",
+          "source": "doi:10.1016/j.jaridenv.2005.06.010"
+        },
+        {
+          "plant_id": null,
+          "reported": "Malva parviflora",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo graeca graeca",
+          "source": "doi:10.1016/j.jaridenv.2005.06.010"
+        },
+        {
+          "plant_id": null,
+          "reported": "Medicago hispida",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo graeca graeca",
+          "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010"
+        },
+        {
+          "plant_id": "medicago_hispida",
+          "reported": "Medicago polymorpha",
+          "match": "exact_species",
+          "tortoise": "Testudo graeca graeca",
+          "source": "10.1016/j.jaridenv.2005.06.010"
+        },
+        {
+          "plant_id": "plantain",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo hermanni",
+          "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf"
+        },
+        {
+          "plant_id": null,
+          "reported": "See linked",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo hermanni",
+          "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf"
+        }
+      ],
+      "action": "Obtain full text and page/table locator before verification."
+    },
+    {
+      "issue": "not_verified",
+      "count": 42,
+      "items": [
+        {
+          "plant_id": "alfalfa",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo graeca ibera and eastern Testudo graeca clades",
+          "source": "10.3854/crm.5.120.eastern.graeca.v1.2023"
+        },
+        {
+          "plant_id": "barleygrass",
+          "reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean Testudo",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "chicory",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "clover",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo graeca ibera and eastern Testudo graeca clades",
+          "source": "10.3854/crm.5.120.eastern.graeca.v1.2023"
+        },
+        {
+          "plant_id": "clover",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "clover",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "dandelion",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "dandelion",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "endive",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows"
+        },
+        {
+          "plant_id": "endive",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "endive",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/enews2/index.html"
+        },
+        {
+          "plant_id": "hibiscusflower",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "hibiscusleaf",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "hibiscusrosa",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "kale",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows"
+        },
+        {
+          "plant_id": "kale",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/enews2/index.html"
+        },
+        {
+          "plant_id": "lettuce",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "lettuce",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/enews2/index.html"
+        },
+        {
+          "plant_id": "mallow",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "mulberry",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": null,
+          "reported": "Multiple identified",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "oatgrass",
+          "reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean Testudo",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "oatleaf",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "orchard",
+          "reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean Testudo",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "plantain",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "radicchio",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/enews2/index.html"
+        },
+        {
+          "plant_id": "raspberryleaf",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "romaine",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows"
+        },
+        {
+          "plant_id": "romaine",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "romaine",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/enews2/index.html"
+        },
+        {
+          "plant_id": "rose",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "ryegrass",
+          "reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean Testudo",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": null,
+          "reported": "See linked",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo graeca ibera and eastern Testudo graeca clades",
+          "source": "https://doi.org/10.3854/crm.5.120.eastern.graeca.v1.2023"
+        },
+        {
+          "plant_id": null,
+          "reported": "See linked",
+          "match": "identity_unresolved",
+          "tortoise": "Testudo spp.",
+          "source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows"
+        },
+        {
+          "plant_id": null,
+          "reported": "See linked",
+          "match": "identity_unresolved",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": null,
+          "reported": "See linked",
+          "match": "identity_unresolved",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/enews2/index.html"
+        },
+        {
+          "plant_id": "sowthistle",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Testudo graeca ibera and eastern Testudo graeca clades",
+          "source": "10.3854/crm.5.120.eastern.graeca.v1.2023"
+        },
+        {
+          "plant_id": "sowthistle",
+          "reported": "Multiple identified Testudo food plants; species-level applicability varies by item",
+          "match": "genus_or_group",
+          "tortoise": "Testudo spp.",
+          "source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+        },
+        {
+          "plant_id": "sowthistle",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "timothy",
+          "reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean Testudo",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "wheatgrass",
+          "reported": "Grasses as a broad dietary/context category; exact grass taxa require separate evidence",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean Testudo",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        },
+        {
+          "plant_id": "whiteclover",
+          "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+          "match": "genus_or_group",
+          "tortoise": "Mediterranean tortoises",
+          "source": "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+        }
+      ],
+      "action": "Prioritize original-source retrieval; no grade changes."
+    }
+  ],
+  "limitations": [
+    "Existing source file reports 14 full-text records from 3 sources, 13 identity-resolved and 6 site-feeding-pending; these figures were not independently reverified in this audit.",
+    "Wild feeding observations are not captive feeding safety or recommended serving ratios.",
+    "No A-D grades or public feeding verdicts changed."
+  ]
+}

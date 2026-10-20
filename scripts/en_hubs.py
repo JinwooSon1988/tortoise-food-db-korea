@@ -81,7 +81,7 @@ def home(public_count, examples):
             f'<div id="catalogCount" class="catalogcount">Search {public_count} plants with a public assessment.</div><div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>'
             '<section class="truststrip" aria-label="Our principles"><div><b>Feeding assessment</b><span>Check whether a plant can be fed</span></div><div><b>Reasons and precautions</b><span>Plant parts, exceptions, and risks</span></div><div><b>Traceable evidence</b><span>Original sources and limitations</span></div></section><section class="belowfold"><div><h2>All plant data</h2><p>Browse all published plants and their feeding assessments without searching.</p></div><nav class="utilitylinks" aria-label="Plant catalog and research method"><a href="../all-plants/?lang=en">View all plants</a><a href="./guides/research-method/">How we review evidence</a></nav></section>'
             '<footer class="footer">Tortoise Food DB · An evidence-based database of tortoise food plants</footer></main>'
-            f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261013-2"></script></body></html>')
+            f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261013-2"></script><script src="../taxonomy-home-search.js?v=20261020-1" defer></script></body></html>')
 
 
 def all_plants(public_count):

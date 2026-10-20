@@ -1,0 +1,146 @@
+{
+ "schema_version": "1.0",
+ "date": "2026-10-19",
+ "branch": "feat/feeding-fullread-integration-20261018",
+ "scope": "Whole-database batch check. Collection, access, claim checks and conflict rules are kept separate; nothing unread is promoted.",
+ "candidate_pools": {
+  "discovery_search_taxa_local": 22004,
+  "feeding_triage_records_local": 22004,
+  "bibliographic_leads_local": 624,
+  "taxonomy_candidates_tracked": 9995,
+  "evidence_first_queue": 130,
+  "ledger_candidates": 90,
+  "unique_reviewed_sources": 351,
+  "note": "Candidate pools overlap and are leads, not evidence; they are counted, not reviewed."
+ },
+ "checked": {
+  "access_lookups": 871,
+  "reviewed_sources_access_checked": 351,
+  "lead_dois_access_checked": 520,
+  "conflict_audit_scope": {
+   "plants": 182,
+   "assessments": 186,
+   "public_evidence_records": 271,
+   "link_rows": 357,
+   "ledger_rows": 90,
+   "translation_entries": 971,
+   "images": 132
+  }
+ },
+ "fulltext": {
+  "attempts_last_run": 43,
+  "obtained_distinct_over_two_runs": 22,
+  "cited_paper_texts": 20,
+  "claims_checked_consistent": 20,
+  "wrong_doi_texts": 2,
+  "access_classes_last_run": {
+   "bibliographic_lead": {
+    "closed_or_subscription": 37,
+    "open_access_listed": 483
+   },
+   "reviewed_source": {
+    "closed_or_subscription": 58,
+    "open_access_listed": 22,
+    "oa_listed_but_fulltext_not_obtained": 24,
+    "fulltext_obtained_open_route": 19,
+    "metadata_lookup_failed": 1,
+    "landing_page_reachable": 188,
+    "landing_page_failed": 24,
+    "landing_page_forbidden": 15
+   }
+  },
+  "ruscus": "Owner reviewed an author-uploaded full text (data/ruscus_primary_fulltext_review_20261019.json); this pipeline could not reopen it (403, closed access) and does not count it as pipeline-verified."
+ },
+ "errors_detected": [
+  {
+   "kind": "ruscus_parts_not_distinguished",
+   "count": 1,
+   "fixed": true,
+   "where": "public evidence, links, reverse index, assessment why/limits, staging notes, ledger, QA-FR-002, 3 translations, ko/en pages"
+  },
+  {
+   "kind": "doi_resolves_to_unrelated_paper",
+   "count": 4,
+   "fixed": 3,
+   "ids": [
+    "costan_rumex_defences_2023",
+    "santos_pea_shoot_nutrition_2014",
+    "bhandari_cauliflower_glucosinolates_2015",
+    "melo_coriander_leaf_oxalate_2008 (unresolved)"
+   ]
+  },
+  {
+   "kind": "stored_title_of_other_paper",
+   "count": 2,
+   "fixed": 2,
+   "ids": [
+    "buckwheat_leaf_fagopyrin_2019",
+    "bhandari_cauliflower_glucosinolates_2015"
+   ]
+  },
+  {
+   "kind": "same_paper_duplicate_public_records",
+   "count": 6,
+   "fixed": 6,
+   "plants": [
+    "sorrel",
+    "willowleaf",
+    "borage"
+   ]
+  },
+  {
+   "kind": "translation_part_generalised",
+   "count": 1,
+   "fixed": 1,
+   "ref": "879c92287a34bfdb (fresh leaves)"
+  },
+  {
+   "kind": "ledger_secondary_account_left_not_verified",
+   "count": 4,
+   "fixed": 4,
+   "source": "10.3854/crm.5.120.eastern.graeca.v1.2023"
+  },
+  {
+   "kind": "local_untracked_json_with_trailing_literal_backslash_n",
+   "count": 46,
+   "fixed": 0,
+   "reason": "preserved untracked research data; read around, not modified"
+  },
+  {
+   "kind": "p1_held_source_shown_as_direct_without_disclosure",
+   "count": 2,
+   "fixed": 2,
+   "ids": [
+    "hermanni_foraging_italy_2015 (plantain, clover)",
+    "wild_medicago_polymorpha_tgg_morocco (medicago_hispida)"
+   ],
+   "fix": "hold disclosure added to public supports and a medicago_hispida limit; directness and grades unchanged",
+   "from": "data/qa_blocked_public_evidence_overlap_20261019.json"
+  }
+ ],
+ "unresolved": [
+  "melo_coriander_leaf_oxalate_2008: stored DOI is an unrelated bread paper; no matching record found; owner must supply the identifier.",
+  "P1-held originals still unread: SISVET 2015 proceedings PDF returns 403 to the pipeline; El Mouden et al. 2006 has no open copy (OpenAlex closed, web search found none). Release requires owner review per the P1 manifest.",
+  "ruscus_aculeatus ledger stays full_text_reviewed_not_extracted until an extract with site and period locators exists.",
+  "bhandari_cauliflower_glucosinolates_2015: corrected DOI's full text not obtained.",
+  "Review findings in data/evidence_conflict_audit_20261019.json (grade/scope/placeholder/image items) need owner judgement; no grade was changed.",
+  "Reviewed sources without an obtainable full text are listed by access class in data/source_access_check_20261019.json."
+ ],
+ "review_findings_by_rule": {
+  "R11_image_not_exact_species": 14,
+  "R11_image_part_not_matched": 10,
+  "R1_direct_evidence_placeholder_taxon": 5,
+  "R2_link_without_public_record": 1,
+  "R4_safety_claim_in_evidence_text": 1,
+  "R6_ab_grade_without_tortoise_evidence": 1,
+  "R7_species_group_without_matching_evidence": 3,
+  "R8_title_differs_from_doi_record": 2
+ },
+ "grades_changed": 0,
+ "totals": {
+  "errors_detected": 66,
+  "errors_fixed": 19,
+  "errors_unresolved": 47,
+  "review_findings_open": 35
+ }
+}

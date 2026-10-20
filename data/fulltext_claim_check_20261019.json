@@ -1,0 +1,291 @@
+{
+ "schema_version": "1.0",
+ "checked_at": "2026-10-19",
+ "scope": "Stored public claims checked by reading located passages and values in full texts obtained through open routes (data/source_access_check_20261019.json). Composition and context sources are checked for the claim they are cited for; none of this changes a grade.",
+ "rules": [
+  "Only texts obtained without bypassing access controls are used.",
+  "A verdict covers the stored claim of the listed public records, not the safety of feeding.",
+  "Feeding-ledger status changes only through scripts/build_feeding_record_verification.py."
+ ],
+ "counts": {
+  "fulltexts_obtained_distinct": 22,
+  "cited_paper_fulltexts": 20,
+  "claims_consistent": 20,
+  "wrong_doi_detected": 2
+ },
+ "records": [
+  {
+   "source": "doi:10.1007/s10068-021-00916-w",
+   "public_record_ids": [
+    "mashitoa_pumpkin_leaf_antinutrients_2021"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "Cucurbita moschata leaves",
+    "raw and cooked",
+    "tannins, oxalates, phytates measured"
+   ],
+   "locator": "Abstract; Table (antinutritive compounds)"
+  },
+  {
+   "source": "doi:10.1007/s12011-020-02467-3",
+   "public_record_ids": [
+    "rumex_acetosa_oxalate_2021"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "Rumex acetosa leaves, wild and three domestications",
+    "open-field oxalate 8.50 ± 0.21 mg/g FW"
+   ],
+   "locator": "Abstract p. 1; oxalate table; Discussion p. 7",
+   "note": "Authors are Ceccanti et al.; three more public ids for the same paper (two with wrong author names) were removed as duplicates."
+  },
+  {
+   "source": "doi:10.1016/j.tifs.2021.04.045",
+   "public_record_ids": [
+    "gamba_radish_systematic_review_2021"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "63 included studies",
+    "leaves covered",
+    "glucosinolates"
+   ],
+   "locator": "Abstract; Methods p. 2"
+  },
+  {
+   "source": "doi:10.1021/jf902835k",
+   "public_record_ids": [
+    "kabouw_cabbage_glucosinolates_2010"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "white cabbage cultivars",
+    "shoot glucosinolate variation"
+   ],
+   "locator": "Title page; Introduction p. 2"
+  },
+  {
+   "source": "doi:10.13128/acta_herpetol-9800",
+   "public_record_ids": [
+    "iftime_ibera_dobrogea_2012"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "over 95% plant matter",
+    "25 plant species",
+    "Taraxacum officinale leaves and flowers; Trifolium sp., Medicago sp., Sonchus sp. (genus level)"
+   ],
+   "locator": "Abstract; Table 1 p. 2",
+   "note": "Already a full-text extract source in the feeding ledger; genus-level rows stay non-species records."
+  },
+  {
+   "source": "doi:10.3389/fphar.2021.593856",
+   "public_record_ids": [
+    "tawfeek_salix_phytochemistry_2021"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "Salix review",
+    "leaf flavonoids and phenolic glycosides"
+   ],
+   "locator": "Review text"
+  },
+  {
+   "source": "doi:10.3389/fpls.2022.998755",
+   "public_record_ids": [
+    "kyriakou_watercress_aerial_2022"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "Nasturtium officinale aerial parts",
+    "glucosinolates, isothiocyanates, polyphenolics"
+   ],
+   "locator": "Title; Introduction p. 2"
+  },
+  {
+   "source": "doi:10.3390/antiox8060160",
+   "public_record_ids": [
+    "buckwheat_leaf_fagopyrin_2019"
+   ],
+   "verdict": "title_corrected_claim_consistent",
+   "checked": [
+    "F. esculentum leaves",
+    "fagopyrin levels analysed"
+   ],
+   "locator": "Abstract; Keywords",
+   "note": "Stored title belonged to a different paper; replaced with the DOI record's title. Claim about fagopyrins in leaves is in this paper."
+  },
+  {
+   "source": "doi:10.3390/biom10101391",
+   "public_record_ids": [
+    "piatczak_salix_alba_leaf_2020"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "29 phenolic compounds in leaves",
+    "leaves and bark separate"
+   ],
+   "locator": "Abstract",
+   "note": "Duplicate public id piatczak_salix_alba_leaf_phenolics_2020 removed."
+  },
+  {
+   "source": "doi:10.3390/ijms27083442",
+   "public_record_ids": [
+    "soybean_leaf_nutrition_2026"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "crude protein 242.51 g/kg",
+    "crude fibre 9.68%",
+    "Ca 3.41 g/kg",
+    "P 2.38 g/kg",
+    "trypsin inhibitor and phytic acid"
+   ],
+   "locator": "Abstract; composition table"
+  },
+  {
+   "source": "doi:10.3854/crm.5.120.eastern.graeca.v1.2023",
+   "public_record_ids": [
+    "ibera_eastern_account_2023"
+   ],
+   "verdict": "claim_consistent_secondary",
+   "checked": [
+    "about 500 wild T. g. ibera over 10 years",
+    "96.5% herbivorous",
+    "young leaves of Trifolium, Medicago, Sonchus"
+   ],
+   "locator": "p. 20",
+   "note": "Summary of Iftime and Iftime 2012; ledger now records it as a secondary citation, not a feeding record."
+  },
+  {
+   "source": "doi:10.5455/jice.20140120103320",
+   "public_record_ids": [
+    "keser_hawthorn_parts_2014"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "leaves, flowers, ripened fruits analysed separately",
+    "rutin, apigenin, myricetin, quercetin, naringenin, kaempferol"
+   ],
+   "locator": "Abstract; Methods p. 2"
+  },
+  {
+   "source": "doi:10.5713/ajas.18.0671",
+   "public_record_ids": [
+    "mulberry_feed_review_2019"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "mulberry leaf as animal feed supplement review"
+   ],
+   "locator": "Title; Abstract"
+  },
+  {
+   "source": "doi:10.7717/peerj.8076",
+   "public_record_ids": [
+    "tgraeca_alfalfa_context_2019"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "mentions alfalfa in T. graeca diet citing earlier studies"
+   ],
+   "locator": "Introduction"
+  },
+  {
+   "source": "doi:10.1007/s10886-023-01427-0",
+   "public_record_ids": [
+    "costan_rumex_defences_2023"
+   ],
+   "verdict": "doi_corrected_claim_consistent",
+   "checked": [
+    "oxalates, phenols, tannins in leaves and roots",
+    "R. crispus among three Rumex species"
+   ],
+   "locator": "Abstract",
+   "note": "Stored DOI 10.1007/s10886-023-01417-2 resolved to a firefly pheromone paper; corrected via PMID 37121960."
+  },
+  {
+   "source": "doi:10.1007/s13197-014-1564-7",
+   "public_record_ids": [
+    "asnaashari_blackberry_leaf_2015"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "Rubus fruticosus leaf extracts"
+   ],
+   "locator": "Abstract"
+  },
+  {
+   "source": "doi:10.1016/j.isci.2023.107848",
+   "public_record_ids": [
+    "actinidia_iridoid_distribution_2023"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "little to no bioactive iridoids (<3 μg/g) in A. deliciosa leaves",
+    "iridoids in roots"
+   ],
+   "locator": "Results (other Actinidia species); Discussion"
+  },
+  {
+   "source": "doi:10.3390/foods10020308",
+   "public_record_ids": [
+    "sisymbrium_itc_2021"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "Sisymbrium officinale glucosinolates and volatile isothiocyanates"
+   ],
+   "locator": "Abstract"
+  },
+  {
+   "source": "doi:10.3390/foods8010002",
+   "public_record_ids": [
+    "savage_chenopodium_oxalate_2019"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "raw leaf total oxalate 1112.4 mg/100 g DM",
+    "boiling and wok-frying reduce oxalate"
+   ],
+   "locator": "Abstract; oxalate table"
+  },
+  {
+   "source": "doi:10.3390/foods8110587",
+   "public_record_ids": [
+    "park_napa_metabolites_2019"
+   ],
+   "verdict": "claim_consistent",
+   "checked": [
+    "two Chinese cabbage phenotypes",
+    "glucosinolates, phenolics, carotenoids"
+   ],
+   "locator": "Abstract"
+  },
+  {
+   "source": "doi:10.1007/s10886-023-01417-2",
+   "public_record_ids": [
+    "costan_rumex_defences_2023"
+   ],
+   "verdict": "wrong_doi_detected",
+   "checked": [
+    "open text was an unrelated firefly paper"
+   ],
+   "locator": "title page",
+   "note": "Fixed to 10.1007/s10886-023-01427-0."
+  },
+  {
+   "source": "doi:10.3390/molecules200915842",
+   "public_record_ids": [
+    "bhandari_cauliflower_glucosinolates_2015"
+   ],
+   "verdict": "wrong_doi_detected",
+   "checked": [
+    "open text was an unrelated p38 MAPK paper"
+   ],
+   "locator": "title page",
+   "note": "Fixed to 10.3390/molecules200915827 (PMID 26334264) and title corrected; the corrected paper's full text was not obtained."
+  }
+ ]
+}

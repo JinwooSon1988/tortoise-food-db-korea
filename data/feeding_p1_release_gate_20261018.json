@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-18",
+  "basis": "data/feeding_p1_claim_review_20261018.json",
+  "scope": "Review decisions based on repository metadata only, not on original full text.",
+  "records": [
+    {
+      "evidence_ids": [
+        "elmouden2006_astragalus_cruciatus"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reported": "Astragalus cruciatus",
+      "catalog": "Astragalus crenatus Schult.",
+      "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+      "catalog": "Trifolium spp.",
+      "action": "Keep genus/group only; no species assertion",
+      "verification": "blocked_original_unread"
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_leontodon_saxatilis"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reported": "Leontodon saxatilis",
+      "catalog": "Leontodon saxatilis Lam.",
+      "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_lotus_arenarius"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reported": "Lotus arenarius",
+      "catalog": "Lotus arenarius Brot.",
+      "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
+    },
+    {
+      "evidence_ids": [
+        "elmouden2006_malva_parviflora"
+      ],
+      "source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "reported": "Malva parviflora",
+      "catalog": "Malva parviflora L.",
+      "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
+    },
+    {
+      "evidence_ids": [
+        "wild_medicago_polymorpha_tgg_morocco"
+      ],
+      "source": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "reported": "Medicago hispida",
+      "catalog": "Medicago hispida",
+      "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
+    },
+    {
+      "evidence_ids": [
+        "wild_medicago_polymorpha_tgg_morocco",
+        "elmouden2006_medicago_hispida"
+      ],
+      "source": "10.1016/j.jaridenv.2005.06.010",
+      "reported": "Medicago polymorpha",
+      "catalog": "Medicago polymorpha L.",
+      "action": "Check actual primary observation and locator even when names match",
+      "verification": "locator_verified_identity_held",
+      "verified": "2026-10-20: Table 2 (pp. 427-428) read from the full text; see data/elmouden2006_table2_verification_20261020.json"
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "reported": "See linked plant concept(s); source scope preserved from evidence registry",
+      "catalog": "Plantago spp.",
+      "action": "Keep genus/group only; no species assertion",
+      "verification": "blocked_original_unread"
+    },
+    {
+      "evidence_ids": [
+        "hermanni_foraging_italy_2015"
+      ],
+      "source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf",
+      "reported": "See linked",
+      "catalog": "See linked",
+      "action": "Hold identity linkage until taxonomic evidence resolves mismatch",
+      "verification": "blocked_original_unread"
+    }
+  ],
+  "release_gate": {
+    "feeding_safety_grades": "unchanged",
+    "site_feeding_pending": "no_new_promotions",
+    "scientific_verification": "blocked_until_original_locators",
+    "merge": "hold"
+  },
+  "notes": [
+    "Existing status original_inaccessible is preserved.",
+    "Taxonomic mismatch is not automatically proof of error or synonymy.",
+    "Do not represent general care advice as directly observed feeding.",
+    "2026-10-20: El Mouden et al. 2006 full text read and Table 2 checked twice (text layer and page images). Values and locators are verified; the action 'hold identity linkage' still applies, so no record is linked or promoted to the site."
+  ]
+}

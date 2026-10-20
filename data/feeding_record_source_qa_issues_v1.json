@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "scope": "Problems found in existing source data while checking originals for the feeding record ledger. Recorded only; the stored data is not changed here. Each item needs an owner decision.",
+  "checked_at": "2026-10-17",
+  "issues": [
+    {
+      "id": "QA-FR-001",
+      "kind": "author_attribution",
+      "status": "corrected_primary_citation",
+      "severity": "citation",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "stored": "Slimani & El Hassani 2006 / \"Slimani T, El Hassani MS. Feeding ecology of Testudo graeca graeca in an arid and overgrazed zone in Morocco\"",
+      "observed": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. J. Arid Environ. 64:422-435",
+      "evidence": [
+        "Crossref metadata for the DOI (authors and title)",
+        "ZooNotes 228 (2023) reference list, p. 4",
+        "Rouag et al. 2008 author list includes El Mouden"
+      ],
+      "locations": [
+        {
+          "file": "data/evidence.json",
+          "record": "slimani2006",
+          "field": "citation"
+        },
+        {
+          "file": "data/species_evidence_primary_source_audit_v56.json",
+          "record": "SLIMANI_EL_MOUDEN_2006_PLANTAGO_AMPLEXICAULIS",
+          "field": "verification"
+        },
+        {
+          "file": "data/curated_identity_notes.json",
+          "field": "text (\"Slimani et al. 2006\")",
+          "note": "Second author as first; first author is El Mouden"
+        }
+      ],
+      "not_affected": "The plant and tortoise claims are not judged here; the original full text was not accessible (ScienceDirect 403).",
+      "proposed_fix": "Correct the author list and title to the Crossref record; keep record ids for linkage stability.",
+      "resolution": "data/evidence.json citation corrected against original CNRS-hosted article PDF; other listed references require separate review."
+    },
+    {
+      "id": "QA-FR-002",
+      "kind": "plant_part_unconfirmed",
+      "status": "resolved_parts_distinguished_pending_extract",
+      "severity": "evidence_detail",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "record": "wild_ruscus_aculeatus_thh_italy_2011",
+      "stored": "flowers, unripe fruit, leaves / wild fresh plant",
+      "observed": "Publisher abstract mentions flowers and unripe fruit in autumn. Table 1 (p. 240) lists fruits and seeds, but the paper's Discussion (p. 245) also explicitly reports autumn consumption of Ruscus aculeatus leaves. Previous assertion 'leaves not reported' was incomplete.",
+      "evidence": [
+        "BioOne abstract page, Herpetologica 67(3):236-249",
+        "Del Vecchio et al. (2011), Herpetologica 67(3), Table 1, p. 240, full-text displayed on ResearchGate; publisher abstract at DOI 10.1655/HERPETOLOGICA-D-10-00064.1",
+        "Primary full-text review with Table 1 p. 240, Table 2 p. 241, and Discussion p. 245: data/ruscus_primary_fulltext_review_20261019.json"
+      ],
+      "locations": [
+        {
+          "file": "data/plant_feeding_evidence_links.json",
+          "record": "wild_ruscus_aculeatus_thh_italy_2011",
+          "field": "plant_part"
+        },
+        {
+          "file": "data/public_evidence_records.json",
+          "record": "wild_ruscus_aculeatus_thh_italy_2011",
+          "field": "plant_part_state"
+        },
+        {
+          "file": "data/reviewed_plant_reverse_evidence_index.json",
+          "record": "wild_ruscus_aculeatus_thh_italy_2011",
+          "field": "plant_part_reported"
+        }
+      ],
+      "proposed_fix": "Read Table 1 of the full text. If leaves are absent, change the part to flowers and unripe fruit; otherwise add the table locator.",
+      "resolution": "REOPENED: previous leaf-exclusion conclusion is contradicted by the Discussion (p. 245). Review and correct public evidence, feeding ledger, plant-part references and bilingual copy. Do not infer captive safety or alter A-D grades from wild ingestion.",
+      "ledger_status": "Current ledger status full_text_table_cited_not_extracted is insufficient to represent the Discussion leaf passage; reconcile through source extraction and QA, retaining method/site limitations.",
+      "integration": "2026-10-19: public evidence, links, reverse index, assessment text, staging notes and translations now separate fruits/seeds (Table 1 p. 240, Table 2 p. 241, faecal remains), leaves (Discussion p. 245) and flowers/unripe fruit (abstract). Access level: owner review of an author-uploaded ResearchGate full text (data/ruscus_primary_fulltext_review_20261019.json); the pipeline could not reopen it (403, closed access). Ledger stays below full_text_confirmed until an extract with method and site locators exists. Grade B unchanged."
+    }
+  ]
+}
