@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_bulk_taxon_catalog import BINOMIAL, stage
+from build_bulk_taxon_catalog import BINOMIAL, bare, stage
 
 
 def row(name, *, rank="species", status="accepted", kingdom="Plantae", key="123"):
@@ -48,9 +48,32 @@ class BulkCatalogTests(unittest.TestCase):
         self.assertEqual(rejected["missing_traceable_taxon_source"], 1)
 
     def test_subspecies_is_distinct_from_species(self):
-        rows = [row("Plantago major"), row("Plantago major subsp. intermedia", rank="subspecies")]
+        rows = [row("Plantago major"), row("Plantago major subsp. intermedia", rank="subspecies", key="124")]
         got, _ = stage(rows, [])
         self.assertEqual(len(got), 2)
+
+    def test_gbif_api_rows(self):
+        """GBIF species API rows: authors in scientificName, canonicalName, existing names with authors, keys."""
+        def api(**k):
+            base = {"taxonRank": "SPECIES", "taxonomicStatus": "ACCEPTED", "kingdom": "Plantae", "key": "1",
+                    "sourceUrl": "https://www.gbif.org/species/1"}
+            base.update(k)
+            return base
+        existing = [{"scientific": "Medicago polymorpha L."}]
+        cases = [
+            ([api(scientificName="Abies alba Mill.")], 1, {}),
+            ([api(canonicalName="Abies alba", scientificName="Abies alba Mill.")], 1, {}),
+            ([api(canonicalName="Brassica rapa subsp. rapa", taxonRank="SUBSPECIES")], 1, {}),
+            ([api(canonicalName="Medicago polymorpha")], 0, {"already_in_public_catalog": 1}),
+            ([api(canonicalName="Medicago hispida", key="9")], 0, {"already_in_public_catalog": 1}),
+            ([api(canonicalName="Abies alba", key="1"), api(canonicalName="Abies albus", key="1")], 1, {"duplicate_taxon": 1}),
+            ([api(canonicalName="Abies", taxonRank="GENUS")], 0, {"unresolved_scientific_name": 1}),
+        ]
+        for rows, n, rejected in cases:
+            got, rej = stage(rows, existing, existing_keys=["9"])
+            self.assertEqual((len(got), rej), (n, rejected), rows)
+        self.assertEqual(bare("Medicago polymorpha L."), "Medicago polymorpha")
+        self.assertEqual(bare("Brassica rapa subsp. rapa (L.) Metzg."), "Brassica rapa subsp. rapa")
 
 
 if __name__ == "__main__":

@@ -5,6 +5,10 @@ on:
     paths:
       - 'index.html'
       - 'plant/**'
+      - 'all-plants/**'
+      - 'taxon/**'
+      - 'taxonomy-home-search.js'
+      - 'data/plant-catalog/**'
       - 'scripts/qa_browser_smoke_playwright.py'
       - '.github/workflows/browser-smoke-qa.yml'
   push:
@@ -12,6 +16,10 @@ on:
     paths:
       - 'index.html'
       - 'plant/**'
+      - 'all-plants/**'
+      - 'taxon/**'
+      - 'taxonomy-home-search.js'
+      - 'data/plant-catalog/**'
       - 'scripts/qa_browser_smoke_playwright.py'
       - '.github/workflows/browser-smoke-qa.yml'
 permissions:

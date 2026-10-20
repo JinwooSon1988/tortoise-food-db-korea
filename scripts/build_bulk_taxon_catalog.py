@@ -5,10 +5,12 @@ Usage:
  python scripts/build_bulk_taxon_catalog.py --input path/to/gbif.csv --output data/bulk_taxon_catalog.json
  python scripts/build_bulk_taxon_catalog.py --input path/to/gbif.json --output data/bulk_taxon_catalog.json
 
-Input columns: scientificName (or scientific), taxonRank, taxonomicStatus,
-acceptedScientificName, family, kingdom, gbifID/key, sourceUrl, datasetKey.
+Input columns: canonicalName (or scientificName / scientific), taxonRank, taxonomicStatus,
+acceptedScientificName, acceptedKey, family, kingdom, gbifID/key, sourceUrl, datasetKey.
+Also reads JSON lines (one GBIF species record per line).
 Only accepted species or infraspecific taxa with traceable taxon identifiers
-are eligible. Existing plants and duplicate accepted names are excluded.
+are eligible. Existing plants (compared without name authors) and duplicate
+accepted names or taxon keys are excluded.
 """
 import argparse
 import csv
@@ -18,12 +20,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BINOMIAL = re.compile(r"^[A-Z][a-z-]+ [a-z][a-z-]+(?: (?:subsp\.|ssp\.|var\.) [a-z][a-z-]+)?$")
+# Leading name without authors: "Medicago polymorpha L." -> "Medicago polymorpha".
+LEADING = re.compile(r"^([A-Z][a-z-]+ [a-z][a-z-]+(?: (?:subsp\.|ssp\.|var\.) [a-z][a-z-]+)?)(?=$| )")
 RANKS = {"species", "subspecies", "variety"}
 ACCEPTED = {"accepted", "valid"}
 PLANT_KINGDOM = {"plantae"}
 
 def norm(value):
     return " ".join(str(value or "").strip().split()).casefold()
+
+def bare(value):
+    """Scientific name without authors, or "" when the text does not start with a binomial."""
+    m = LEADING.match(" ".join(str(value or "").split()))
+    return m.group(1) if m else ""
 
 def get(row, *names):
     for name in names:
@@ -33,6 +42,8 @@ def get(row, *names):
     return ""
 
 def read_rows(path):
+    if path.suffix.lower() == ".jsonl":
+        return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
     if path.suffix.lower() == ".csv":
         with path.open(encoding="utf-8-sig", newline="") as f:
             return list(csv.DictReader(f))
@@ -44,9 +55,10 @@ def read_rows(path):
             return data[key]
     raise ValueError("Expected a JSON list or records/candidates/results/taxa list")
 
-def stage(rows, existing):
-    existing_names = {norm(p.get("scientific")) for p in existing}
-    used_names = set()
+def stage(rows, existing, existing_keys=()):
+    existing_names = {norm(bare(p.get("scientific")) or p.get("scientific")) for p in existing}
+    existing_keys = {str(k) for k in existing_keys}
+    used_names, used_keys = set(), set()
     accepted_rows = []
     rejected = {}
     def reject(reason):
@@ -54,7 +66,7 @@ def stage(rows, existing):
     for row in rows:
         if not isinstance(row, dict):
             reject("not_object"); continue
-        name = get(row, "acceptedScientificName", "accepted_scientific_name", "scientificName", "scientific")
+        name = get(row, "canonicalName", "canonical_name") or bare(get(row, "scientificName", "scientific"))
         rank = norm(get(row, "taxonRank", "rank"))
         status = norm(get(row, "taxonomicStatus", "status"))
         kingdom = norm(get(row, "kingdom"))
@@ -71,11 +83,12 @@ def stage(rows, existing):
         if not taxon_id or not (source_url or get(row, "datasetKey", "dataset_key")):
             reject("missing_traceable_taxon_source"); continue
         key = norm(name)
-        if key in existing_names:
+        if key in existing_names or taxon_id in existing_keys:
             reject("already_in_public_catalog"); continue
-        if key in used_names:
+        if key in used_names or taxon_id in used_keys:
             reject("duplicate_taxon"); continue
         used_names.add(key)
+        used_keys.add(taxon_id)
         accepted_rows.append({
             "scientific": name,
             "family": get(row, "family") or None,
@@ -97,10 +110,12 @@ def main():
     ap.add_argument("--input", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--plants", type=Path, default=ROOT / "data/plants.json")
+    ap.add_argument("--existing-keys", type=Path, help="JSON list of taxon ids (accepted and synonym) already in the catalog")
     args = ap.parse_args()
     existing = json.loads(args.plants.read_text(encoding="utf-8"))
+    existing_keys = json.loads(args.existing_keys.read_text(encoding="utf-8")) if args.existing_keys else ()
     rows = read_rows(args.input)
-    staged, rejected = stage(rows, existing)
+    staged, rejected = stage(rows, existing, existing_keys)
     payload = {
         "schema_version": "1.0",
         "source_file": args.input.name,
