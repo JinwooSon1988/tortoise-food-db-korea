@@ -1,0 +1,135 @@
+#!/usr/bin/env python3
+"""QA for the searchable plant catalog (data/plant-catalog/) and its pages.
+
+Checks, offline: shard integrity and the shard rule; one entry per GBIF key and per name; required fields;
+taxonomy recorded separately from feeding evidence; no feeding grade and status unassessed on every entry;
+evidence typed, sourced and never from a P1-held name; no overlap with the reviewed plants (by name without
+authors and by the stored GBIF keys); the reviewed plants and their grades unchanged; feeding_pending ids still
+listed; the search index and taxon sitemap match the shards; the catalog page, detail page and both home
+searches load the catalog; data sizes stay small enough for the static site.
+"""
+import hashlib, json, re, sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import public_verdict as pv  # noqa: E402
+from build_bulk_taxon_catalog import bare  # noqa: E402
+
+CAT = ROOT / "data/plant-catalog"
+TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity", "wild_diet_not_detected"}
+VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified"}
+P1_HELD = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
+errors = []
+load = lambda p: json.loads(Path(p).read_text(encoding="utf-8"))
+
+index = load(CAT / "index.json")
+shards = int(re.fullmatch(r"taxon_key % (\d+)", index["shard_rule"]).group(1))
+records = []
+for i, s in enumerate(index["shards"]):
+    raw = (CAT / s["file"]).read_text(encoding="utf-8")
+    if hashlib.sha256(raw.encode()).hexdigest() != s["sha256"]:
+        errors.append(f"{s['file']}: sha256 mismatch")
+    rows = json.loads(raw)["records"]
+    if len(rows) != s["count"] or s["file"] != f"taxa-{i:02d}.json":
+        errors.append(f"{s['file']}: count or name mismatch")
+    for r in rows:
+        if r["taxonomy"]["taxon_key"] % shards != i:
+            errors.append(f"{r['id']}: in the wrong shard")
+    records += rows
+if len(records) != index["count"]:
+    errors.append(f"index count {index['count']} != {len(records)} records")
+
+ids, names = set(), set()
+for r in records:
+    key = r["taxonomy"]["taxon_key"]
+    if r["id"] != f"gbif:{key}" or r["id"] in ids:
+        errors.append(f"{r['id']}: bad or duplicate id")
+    if not re.fullmatch(r"[A-Z][a-z-]+ [a-z][a-z-]+", r["scientific"]) or r["scientific"].casefold() in names:
+        errors.append(f"{r['id']}: bad or duplicate scientific name {r['scientific']}")
+    ids.add(r["id"]); names.add(r["scientific"].casefold())
+    t = r["taxonomy"]
+    if (t["source"], t["rank"], t["status"], t["kingdom"]) != ("GBIF Backbone Taxonomy", "SPECIES", "ACCEPTED", "Plantae") \
+            or t["url"] != f"https://www.gbif.org/species/{key}" or not t.get("checked"):
+        errors.append(f"{r['id']}: taxonomy source incomplete")
+    if not r.get("family"):
+        errors.append(f"{r['id']}: family missing")
+    if r["feeding_safety_status"] != "unassessed" or r["safety_grade"] is not None:
+        errors.append(f"{r['id']}: a catalog entry carries a feeding grade or a status other than unassessed")
+    if r["image"] is not None:
+        errors.append(f"{r['id']}: image set without the verified image registry")
+    if r["feeding_evidence_status"] != ("linked" if r["feeding_evidence"] else "none_found"):
+        errors.append(f"{r['id']}: feeding_evidence_status does not match the evidence")
+    for e in r["feeding_evidence"]:
+        if e["type"] not in TYPES or e["verification"] not in VERIFICATION or not e.get("source") or not e.get("tortoise"):
+            errors.append(f"{r['id']}: evidence item missing type, verification, source or tortoise")
+        if e["reported_name"] in P1_HELD:
+            errors.append(f"{r['id']}: evidence from a P1-held name {e['reported_name']}")
+        if e["reported_name"] != r["scientific"]:
+            errors.append(f"{r['id']}: evidence reported as {e['reported_name']} linked to {r['scientific']}")
+    for lang in ("en", "ko"):
+        for n in r["common_names"][lang]:
+            if not n.get("name") or not n.get("source"):
+                errors.append(f"{r['id']}: common name without source")
+
+plants = load(ROOT / "data/plants.json")
+reviewed_names = {bare(p["scientific"]).casefold() for p in plants if bare(p["scientific"])}
+match = load(CAT / "reviewed_gbif_match.json")
+reviewed_keys = {f"gbif:{m[k]}" for m in match.values() if m.get("matchType") == "EXACT"
+                 for k in ("usageKey", "acceptedUsageKey", "speciesKey") if m.get(k)}
+if names & reviewed_names or ids & reviewed_keys:
+    errors.append(f"catalog repeats reviewed plants: {sorted(names & reviewed_names)[:5]} {sorted(ids & reviewed_keys)[:5]}")
+missing_match = {p["scientific"] for p in plants} - set(match)
+if missing_match:
+    errors.append(f"reviewed plants without a stored GBIF match: {sorted(missing_match)[:5]}")
+
+baseline = load(CAT / "reviewed_grade_baseline.json")
+grade = {pid: pv.display(pv.representative(rows))["grade"] for pid, rows in pv.by_plant(pv.load_assessments()).items()}
+now = {p["id"]: grade.get(p["id"]) for p in plants}
+if len(plants) != baseline["plants"] or now != baseline["grades"]:
+    changed = sorted(k for k in set(now) | set(baseline["grades"]) if now.get(k) != baseline["grades"].get(k))
+    errors.append(f"reviewed plants or grades changed: {changed[:10]}")
+
+pending = load(ROOT / "data/feeding_pending_site_v1.json")["site_feeding_pending"]
+lost = [p for p in pending if p not in ids and p not in now]
+if lost:
+    errors.append(f"feeding_pending entries no longer listed: {lost}")
+
+search = load(CAT / "search.json")
+expect = [[r["id"], r["scientific"], r["family"] or "", (r["common_names"]["en"] or [{"name": ""}])[0]["name"],
+           (r["common_names"]["ko"] or [{"name": ""}])[0]["name"], 1 if r["feeding_evidence"] else 0, 1 if r["feeding_pending"] else 0]
+          for r in sorted(records, key=lambda r: r["scientific"])]
+if search["rows"] != expect:
+    errors.append("search.json does not match the shards")
+sitemap = (ROOT / "sitemap-taxa.xml").read_text(encoding="utf-8")
+locs = re.findall(r"<loc>(.*?)</loc>", sitemap)
+if len(locs) != len(records) or len(set(locs)) != len(locs) or len(locs) > 50000:
+    errors.append(f"sitemap-taxa.xml has {len(locs)} URLs for {len(records)} entries")
+if "sitemap-taxa.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
+    errors.append("robots.txt does not list sitemap-taxa.xml")
+
+pages = {
+    "all-plants/index.html": ["../data/plant-catalog/search.json", "../taxon/?id=", "급여 안전성 미확정", "Feeding safety not established",
+                              "feedingRecordPending:feedingIds.has(t.taxon_id)"],
+    "taxon/index.html": ["../data/plant-catalog/taxa-", "급여 안전성 미확정", "Feeding safety not established", "검증된 이미지 준비 중",
+                         "Verified photo pending", "../language-toggle.js", "const SHARDS=%d;" % shards],
+    "taxonomy-home-search.js": ["data/plant-catalog/search.json", "taxon/?id=", "급여 안전성 미확정"],
+    "index.html": ["taxonomy-home-search.js"],
+    "en/index.html": ["../taxonomy-home-search.js"],
+}
+for page, needles in pages.items():
+    text = (ROOT / page).read_text(encoding="utf-8")
+    for n in needles:
+        if n not in text:
+            errors.append(f"{page}: missing {n}")
+for f, limit in [(CAT / "search.json", 3_000_000)] + [(CAT / s["file"], 1_000_000) for s in index["shards"]]:
+    if f.stat().st_size > limit:
+        errors.append(f"{f.name}: {f.stat().st_size} bytes exceeds {limit}")
+
+if errors:
+    print("FAIL plant catalog:")
+    for e in errors[:40]:
+        print(" -", e)
+    sys.exit(1)
+print(f"PASS plant catalog: {len(records)} entries, {sum(1 for r in records if r['feeding_evidence'])} with feeding evidence, "
+      f"0 grades; {len(plants)} reviewed plants and grades unchanged; search index, shards and sitemap agree")

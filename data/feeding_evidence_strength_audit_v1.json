@@ -13,24 +13,23 @@
   "assessments": 186,
   "by_strongest_evidence_class": {
    "same_taxon_tortoise_study": 9,
-   "other_tortoise_study": 1,
+   "other_tortoise_study": 2,
    "husbandry_or_expert": 170,
-   "composition_or_identity": 3,
+   "composition_or_identity": 2,
    "other_animal_study": 3
   },
   "flag_counts": {
-   "no_tortoise_study": 176,
-   "single_tortoise_feeding_source": 148,
-   "same_source_cited_twice": 4,
-   "no_tortoise_feeding_source": 6,
+   "no_tortoise_study": 175,
+   "single_tortoise_feeding_source": 149,
+   "no_tortoise_feeding_source": 5,
    "do_not_feed_without_animal_or_expert_source": 1,
    "confidence_B_or_higher_without_tortoise_study": 4,
-   "positive_verdict_without_tortoise_feeding_source": 3
+   "positive_verdict_without_tortoise_feeding_source": 2
   },
   "weakness_tiers": {
    "none": 28,
-   "C_single_specialist_source": 148,
-   "A_no_tortoise_feeding_source": 6,
+   "C_single_specialist_source": 149,
+   "A_no_tortoise_feeding_source": 5,
    "B_confidence_exceeds_directness": 4
   },
   "confidence_by_strongest_class": {
@@ -42,7 +41,8 @@
     "A": 1
    },
    "other_tortoise_study": {
-    "C-": 1
+    "C-": 1,
+    "C": 1
    },
    "husbandry_or_expert": {
     "C+": 46,
@@ -56,49 +56,13 @@
     "C": 1
    },
    "composition_or_identity": {
-    "C": 3
+    "C": 2
    }
   }
  },
  "evidence_registry_checks": {
-  "evidence_records": 277,
+  "evidence_records": 270,
   "sources_registered_more_than_once": [
-   {
-    "url": "https://doi.org/10.1016/j.foodcont.2024.110930",
-    "evidence_ids": [
-     "sattler_borage_pa_2025",
-     "sattler_borago_pa_2025"
-    ]
-   },
-   {
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/pmc8257512",
-    "evidence_ids": [
-     "ceccanti_rumex_oxalate_2021",
-     "di_noia_rumex_oxalate_2021",
-     "rumex_acetosa_oxalate_2021"
-    ]
-   },
-   {
-    "url": "https://powo.science.kew.org/taxon/417792-1",
-    "evidence_ids": [
-     "kew_poa_pratensis_animal_food",
-     "kew_poa_pratensis_identity"
-    ]
-   },
-   {
-    "url": "https://pubmed.ncbi.nlm.nih.gov/33003576",
-    "evidence_ids": [
-     "piatczak_salix_alba_leaf_2020",
-     "piatczak_salix_alba_leaf_phenolics_2020"
-    ]
-   },
-   {
-    "url": "https://pubmed.ncbi.nlm.nih.gov/36924638",
-    "evidence_ids": [
-     "sattler_borage_pa_2023",
-     "sattler_borago_pa_2023"
-    ]
-   },
    {
     "url": "https://www.thetortoisetable.org.uk/plant-database/viewplants/?c=6&plant=736",
     "evidence_ids": [
@@ -199,14 +163,12 @@
    "bcg_sulcata_care",
    "chersina_cynodon_field_diet",
    "hermanni_foraging_italy_2015",
-   "ibera_eastern_account_2023",
    "kbr_buddleja_davidii",
    "kew_abutilon_indicum",
    "kew_aeonium_arboreum",
    "kew_buddleja_davidii",
    "kew_commonmallow_identity",
    "kew_dichondra_micrantha",
-   "kew_poa_pratensis_animal_food",
    "kew_poa_pratensis_identity",
    "kew_redclover_identity",
    "kew_ribwortplantain_identity",
@@ -1589,7 +1551,7 @@
      "animal_taxon": "Tortoise general"
     },
     {
-     "evidence_id": "melo_coriander_leaf_oxalate_2008",
+     "evidence_id": "radek_savage_indian_leafy_oxalate_2008",
      "class": "composition_or_identity",
      "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
@@ -1851,7 +1813,7 @@
   {
    "plant_id": "mint",
    "ko": "민트",
-   "species_group": "Mediterranean_Testudo",
+   "species_group": "Tortoise_general",
    "verdict": "limited_supplement",
    "confidence": "C-",
    "strongest_evidence_class": "husbandry_or_expert",
@@ -1875,7 +1837,7 @@
   {
    "plant_id": "minari",
    "ko": "미나리",
-   "species_group": "Mediterranean_Testudo",
+   "species_group": "Tortoise_general",
    "verdict": "do_not_feed",
    "confidence": "C-",
    "strongest_evidence_class": "husbandry_or_expert",
@@ -2136,7 +2098,7 @@
   {
    "plant_id": "waterdropwort",
    "ko": "미나리",
-   "species_group": "Mediterranean_Testudo",
+   "species_group": "Tortoise_general",
    "verdict": "do_not_feed",
    "confidence": "C-",
    "strongest_evidence_class": "husbandry_or_expert",
@@ -2800,12 +2762,11 @@
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 1,
-    "composition_or_identity": 5
+    "composition_or_identity": 2
    },
    "flags": [
     "no_tortoise_study",
-    "single_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
    "weakness_tier": "C_single_specialist_source",
    "evidence": [
@@ -2817,24 +2778,6 @@
     },
     {
      "evidence_id": "rumex_acetosa_oxalate_2021",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "ceccanti_rumex_oxalate_2021",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "di_noia_rumex_oxalate_2021",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "di_gioia_rumex_oxalate_2021",
      "class": "composition_or_identity",
      "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
@@ -3219,12 +3162,11 @@
    "evidence_class_counts": {
     "husbandry_or_expert": 1,
     "other_animal_study": 1,
-    "composition_or_identity": 3
+    "composition_or_identity": 2
    },
    "flags": [
     "no_tortoise_study",
-    "single_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
    "weakness_tier": "C_single_specialist_source",
    "evidence": [
@@ -3236,12 +3178,6 @@
     },
     {
      "evidence_id": "piatczak_salix_alba_leaf_2020",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "piatczak_salix_alba_leaf_phenolics_2020",
      "class": "composition_or_identity",
      "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
@@ -3637,13 +3573,12 @@
    "strongest_evidence_class": "husbandry_or_expert",
    "evidence_class_counts": {
     "husbandry_or_expert": 1,
-    "plant_toxicity_or_chemistry": 2,
-    "composition_or_identity": 2
+    "plant_toxicity_or_chemistry": 1,
+    "composition_or_identity": 1
    },
    "flags": [
     "no_tortoise_study",
-    "single_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
    "weakness_tier": "C_single_specialist_source",
    "evidence": [
@@ -3660,21 +3595,9 @@
      "animal_taxon": "Plant composition"
     },
     {
-     "evidence_id": "sattler_borago_pa_2025",
-     "class": "plant_toxicity_or_chemistry",
-     "source_type": "peer_reviewed_plant_toxicology",
-     "animal_taxon": "Plant composition"
-    },
-    {
      "evidence_id": "sattler_borage_pa_2025",
      "class": "plant_toxicity_or_chemistry",
      "source_type": "peer_reviewed_plant_toxicology",
-     "animal_taxon": "Plant composition"
-    },
-    {
-     "evidence_id": "sattler_borago_pa_2023",
-     "class": "composition_or_identity",
-     "source_type": "peer_reviewed_plant_composition",
      "animal_taxon": "Plant composition"
     }
    ]
@@ -5830,17 +5753,15 @@
    "species_group": "Tortoise_general",
    "verdict": "limited_mixed_diet",
    "confidence": "C",
-   "strongest_evidence_class": "composition_or_identity",
+   "strongest_evidence_class": "other_tortoise_study",
    "evidence_class_counts": {
-    "composition_or_identity": 2
+    "other_tortoise_study": 1,
+    "composition_or_identity": 1
    },
    "flags": [
-    "no_tortoise_study",
-    "no_tortoise_feeding_source",
-    "positive_verdict_without_tortoise_feeding_source",
-    "same_source_cited_twice"
+    "single_tortoise_feeding_source"
    ],
-   "weakness_tier": "A_no_tortoise_feeding_source",
+   "weakness_tier": "C_single_specialist_source",
    "evidence": [
     {
      "evidence_id": "kew_poa_pratensis_identity",
@@ -5849,10 +5770,10 @@
      "animal_taxon": "Not applicable"
     },
     {
-     "evidence_id": "kew_poa_pratensis_animal_food",
-     "class": "composition_or_identity",
-     "source_type": "taxonomic_database",
-     "animal_taxon": "Not applicable"
+     "evidence_id": "iftime_ibera_dobrogea_2012",
+     "class": "other_tortoise_study",
+     "source_type": "academic_study",
+     "animal_taxon": "Testudo graeca ibera"
     }
    ]
   },

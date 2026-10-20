@@ -1,0 +1,83 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="description" content="식물 분류 정보와 육지거북 급여 근거를 구분해 보여주는 거북밥 DB 식물 상세. 급여 안전성이 평가되지 않은 식물은 등급 없이 '급여 안전성 미확정'으로 표시한다."><link rel="canonical" href="https://jinwooson1988.github.io/tortoise-food-db-korea/taxon/"><title>식물 상세 | 거북밥 DB</title><style>
+:root{--bg:#f4f7f3;--card:#fff;--text:#17231b;--muted:#5f6b63;--line:#dce5dd;--accent:#286a46;--forest:#174d32;--gh:#5b6670;--gh-bg:#eef1f3;--gh-ink:#353f47}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:var(--text);line-height:1.55;letter-spacing:-.01em}
+.skiplink{position:fixed;left:12px;top:8px;z-index:1000;transform:translateY(-160%);background:#fff;color:var(--text);border:2px solid var(--accent);border-radius:10px;padding:10px 14px;font-weight:900;text-decoration:none}.skiplink:focus{transform:translateY(0)}
+.wrap{max-width:900px;margin:auto;padding:18px 16px 40px}
+a{color:#1c5a38}a:focus-visible,button:focus-visible{outline:3px solid #2f8a57;outline-offset:2px}
+.detailnav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 14px;padding:4px 2px 12px;border-bottom:1px solid var(--line);font-size:13px}.detailnavlinks{display:flex;gap:6px}
+.detailnav a,.detailnav button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;min-width:54px;padding:0 12px;border:1px solid #205c3d;border-radius:12px;background:#286a46;color:#fff;font:inherit;font-weight:900;text-decoration:none;cursor:pointer}
+.langswitch{display:flex;gap:4px}.langswitch button{min-width:0;background:#fff;color:#205438;border-color:#bccfc1}.langswitch button.active{background:#286a46;color:#fff}
+.hero{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-left:6px solid var(--gh);border-radius:18px;padding:16px}
+@media (max-width:560px){.hero{grid-template-columns:1fr}.photo{width:100%;max-width:220px}}
+.photo{width:120px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;text-align:center;padding:8px;border-radius:14px;border:1px solid var(--line);font-size:12px;color:var(--muted);background:repeating-linear-gradient(135deg,#f3f6f3 0 8px,#edf2ee 8px 16px)}
+h1{margin:0;font-size:clamp(24px,5vw,34px);line-height:1.2;letter-spacing:-.035em;overflow-wrap:anywhere}.sci{font-style:italic}.sub{margin:4px 0 0;color:var(--muted);overflow-wrap:anywhere}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:4px 12px 4px 4px;border-radius:11px;background:var(--gh-bg);color:var(--gh-ink);font-weight:900}.status b{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:30px;border-radius:8px;background:var(--gh);color:#fff}
+.lead{margin:10px 0 0;font-size:15px}
+section.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0}
+section.panel h2{margin:0 0 10px;font-size:19px;letter-spacing:-.02em}
+dl.kv{display:grid;grid-template-columns:minmax(110px,30%) minmax(0,1fr);gap:6px 12px;margin:0}dl.kv dt{color:var(--muted)}dl.kv dd{margin:0;overflow-wrap:anywhere}
+@media (max-width:560px){dl.kv{grid-template-columns:1fr;gap:0}dl.kv dt{margin-top:8px;font-size:13px}}
+.evtype{border-top:1px solid var(--line);padding:10px 0}.evtype:first-of-type{border-top:0}.evtype h3{margin:0 0 6px;font-size:15px}
+.evtype .none{margin:0;color:var(--muted);font-size:14px}
+.ev{margin:8px 0;padding:10px 12px;border:1px dashed #9cc3a9;border-radius:12px;background:#f4faf6;font-size:14px}.ev p{margin:2px 0}.ev .src{color:var(--muted);overflow-wrap:anywhere}
+.tag{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;background:#e8f3eb;color:#205438;font-size:12px;font-weight:800}
+.note{font-size:13px;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.links a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid #c7dece;border-radius:11px;background:#e8f3eb;color:#205438;font-weight:800;text-decoration:none}
+[hidden]{display:none!important}
+</style></head><body><a class="skiplink" href="#main">본문으로 바로가기</a><main class="wrap" id="main"><header class="detailnav"><nav class="detailnavlinks" aria-label="Page navigation"><a href="../index.html" aria-label="Home" title="Home">⌂</a><a href="../all-plants/" id="navlist">전체 식물</a></nav><nav class="langswitch" aria-label="언어 / Language"><button type="button" data-lang="ko" aria-pressed="true" class="active">한국어</button><button type="button" data-lang="en" aria-pressed="false" lang="en">English</button></nav></header>
+<div id="view" aria-live="polite"><p id="loading">불러오는 중...</p></div>
+</main><script src="../language-toggle.js?v=20261013-12" defer></script><script>
+(()=>{'use strict';
+const SHARDS=40;
+const en=()=>document.documentElement.lang==='en';
+const T=(ko,e)=>en()?e:ko;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=id=>document.getElementById(id);
+let rec=null,pending=null,state='loading';
+const TYPES=[
+ ['wild_feeding_observation','야생 섭식 관찰','Wild feeding observations'],
+ ['captive_feeding_record','사육 환경 급여 기록','Captive feeding records'],
+ ['husbandry_recommendation','사육 자료의 급여 권장','Husbandry recommendations'],
+ ['nutrition','영양성분 자료','Nutrient composition'],
+ ['toxicity','독성·위험 연구','Toxicity and risk studies'],
+ ['wild_diet_not_detected','야생 식이 연구에서 미검출','Not found in a wild diet study']];
+const VER={full_text_verified:['원문 확인','Checked in the original'],full_text_named_not_extracted:['원문에 먹이 식물로 언급 (수치 미추출)','Named as a food plant in the original (no values extracted)'],literature_lead_not_reverified:['문헌 단서 (원문 재확인 전)','Literature lead (original not rechecked)']};
+function idFromUrl(){const v=new URLSearchParams(location.search).get('id')||'';return /^gbif:\d{1,12}$/.test(v)?v:null}
+async function j(u){try{const r=await fetch(u);return r.ok?await r.json():null}catch(e){return null}}
+function title(r){const ko=(r.common_names.ko[0]||{}).name,e=(r.common_names.en[0]||{}).name;return en()?(e||r.scientific):(ko||r.scientific)}
+function evHTML(x){const L=en()?'en':'ko',NR=T('원문 미기재','Not reported in the original'),v=VER[x.verification]||[x.verification,x.verification];
+ return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b><span class="tag">'+esc(en()?v[1]:v[0])+'</span></p>'+
+ '<p>'+T('원문 표기','Name in the source')+': <i lang="la">'+esc(x.reported_name)+'</i></p>'+
+ (x.finding?'<p>'+esc(x.finding[L])+'</p>':'')+
+ '<p>'+T('먹은 부위','Plant part')+': '+(x.plant_part?esc(x.plant_part[L]):NR)+'</p>'+
+ '<p class="src">'+esc(x.source)+(x.locator?' · '+esc(x.locator):'')+(x.url&&/^https?:\/\//.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 보기 ↗','Open the source ↗')+'</a>':'')+'</p></div>'}
+function names(list){return list.length?list.map(n=>esc(n.name)+' <span class="note">('+esc(n.source)+')</span>').join('<br>'):'<span class="note">'+T('확인된 이름 없음','No confirmed name')+'</span>'}
+function render(){const view=$('view');$('navlist').textContent=T('전체 식물','All plants');
+ if(state==='loading'){view.innerHTML='<p>'+T('불러오는 중...','Loading...')+'</p>';return}
+ if(!rec){document.title=T('식물을 찾을 수 없음 | 거북밥 DB','Plant not found | Geobukbap DB');view.innerHTML='<section class="panel"><h1>'+T('등록된 식물을 찾을 수 없습니다','Plant not found')+'</h1><p>'+T('주소가 잘못되었거나 아직 등록되지 않은 식물입니다. 목록에 없다고 안전하다는 뜻은 아닙니다.','The address is wrong or the plant is not listed yet. A plant that is not listed is not a safe plant.')+'</p><div class="links"><a href="../all-plants/">'+T('전체 식물 목록','All plants')+'</a></div></section>';return}
+ const r=rec,name=title(r);document.title=name+(name!==r.scientific?' ('+r.scientific+')':'')+T(' | 거북밥 DB',' | Geobukbap DB');
+ const groups=TYPES.map(([k,ko,e])=>{const items=r.feeding_evidence.filter(x=>x.type===k);if(!items.length&&k==='wild_diet_not_detected')return '';return '<div class="evtype"><h3>'+(en()?e:ko)+'</h3>'+(items.length?items.map(evHTML).join(''):'<p class="none">'+T('연결된 자료 없음','No linked source')+'</p>')+'</div>'}).join('');
+ const feed=(pending&&pending[r.id])||[];
+ view.innerHTML='<article class="hero"><div class="photo" role="img" aria-label="'+T('검증된 이미지 준비 중','Verified photo pending')+'">'+T('검증된 이미지 준비 중','Verified photo pending')+'</div><div><h1>'+esc(name)+'</h1><p class="sub"><span class="sci" lang="la">'+esc(r.scientific)+'</span>'+(r.authorship?' '+esc(r.authorship):'')+(r.family?' · '+esc(r.family):'')+'</p>'+
+ '<span class="status"><b>—</b>'+T('급여 안전성 미확정','Feeding safety not established')+'</span>'+
+ '<p class="lead">'+T('이 식물은 아직 육지거북 급여 안전성을 평가하지 않아 급여 등급(A~D)이 없습니다. 분류학적으로 확인된 식물이라는 사실은 먹여도 된다는 근거가 아닙니다.','This plant has not been assessed for tortoise feeding safety, so it has no feeding grade (A–D). Being a confirmed plant species is not evidence that it can be fed.')+'</p></div></article>'+
+ '<section class="panel" aria-labelledby="ev-h"><h2 id="ev-h">'+T('급여 근거','Feeding evidence')+'</h2><p class="note">'+T('근거는 종류별로 나눠 표시합니다. 야생 섭식 관찰은 사육 환경의 급여 권장이 아니며, 급여량·빈도를 정하지 않습니다.','Evidence is grouped by type. A wild feeding observation is not a captive feeding recommendation and sets no amount or frequency.')+'</p>'+groups+
+ (feed.length?'<div class="evtype"><h3>'+T('원문 검증 급여 기록 (검증 중)','Feeding records checked in the original (under review)')+'</h3>'+feed.map(x=>{const L=en()?'en':'ko';return '<div class="ev"><p><b>'+esc(x.tortoise[L])+'</b> · '+esc(x.location[L])+' · '+esc(x.period[L])+'</p><p>'+esc(x.method_text[L])+'</p><p>'+T('먹은 부위','Plant part')+': '+(x.plant_part?esc(x.plant_part[L]):T('원문 미기재','Not reported in the original'))+'</p>'+(x.observed_share?'<p>'+esc(x.observed_share[L])+'</p>':'')+'<p class="src">'+esc(x.citation)+' · '+esc(x.locator)+' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('원문 보기 ↗','Open the original ↗')+'</a></p></div>'}).join('')+'</div>':'')+
+ '</section>'+
+ '<section class="panel" aria-labelledby="tx-h"><h2 id="tx-h">'+T('이름과 분류','Names and taxonomy')+'</h2><dl class="kv">'+
+ '<dt>'+T('학명','Scientific name')+'</dt><dd><i lang="la">'+esc(r.scientific)+'</i>'+(r.authorship?' '+esc(r.authorship):'')+'</dd>'+
+ '<dt>'+T('영문 일반명','English names')+'</dt><dd lang="en">'+names(r.common_names.en)+'</dd>'+
+ '<dt>'+T('한국어 이름','Korean names')+'</dt><dd lang="ko">'+names(r.common_names.ko)+'</dd>'+
+ '<dt>'+T('과 · 목 · 속','Family · order · genus')+'</dt><dd>'+esc([r.family,r.order,r.genus].filter(Boolean).join(' · '))+'</dd>'+
+ '<dt>'+T('분류 출처','Taxonomy source')+'</dt><dd>'+esc(r.taxonomy.source)+' · '+T('수용명','accepted name')+' · '+T('종','species')+' · '+T('확인일 ','checked ')+esc(r.taxonomy.checked)+' <a href="'+esc(r.taxonomy.url)+'" target="_blank" rel="noopener noreferrer">GBIF ↗</a></dd>'+
+ '<dt>'+T('사진','Photo')+'</dt><dd>'+T('검증된 이미지 준비 중 (종 동정이 확인된 사진만 표시)','Verified photo pending (only photos with a confirmed species identification are shown)')+'</dd>'+
+ '</dl><p class="note">'+T('분류 정보는 이 식물이 실제 종이라는 것만 확인합니다. 급여 근거와는 별개입니다.','Taxonomy only confirms that this is a real species. It is separate from feeding evidence.')+'</p></section>'+
+ '<div class="links"><a href="../all-plants/'+(en()?'?lang=en':'')+'">'+T('전체 식물 목록','All plants')+'</a><a href="../index.html">'+T('먹이 검색','Search foods')+'</a></div>'}
+async function boot(){const id=idFromUrl();if(!id){state='done';render();return}
+ const key=Number(id.split(':')[1]);const [shard,feed]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/feeding_pending_site_v1.json')]);
+ rec=(shard?.records||[]).find(x=>x.id===id)||null;pending=feed?.records||{};state='done';render()}
+window.addEventListener('tfdblanguagechange',render);
+document.querySelector('.langswitch')?.addEventListener('click',e=>{if(e.target.closest('button[data-lang]'))queueMicrotask(render)});
+boot();
+})();
+</script></body></html>

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-19",
+  "audit_type": "independent_followup_read_only",
+  "branch": "feat/feeding-fullread-integration-20261018",
+  "counts": {
+    "blocked_evidence_ids": 7,
+    "public_overlap_records": 2,
+    "affected_plant_ids": 3,
+    "workflow_checks_passed_on_commit_9a15683": 49
+  },
+  "unresolved": [
+    {
+      "evidence_id": "hermanni_foraging_italy_2015",
+      "plants": [
+        "plantain",
+        "clover"
+      ],
+      "public_directness": "direct",
+      "blocked_reason": "Original page/table locator not independently verified"
+    },
+    {
+      "evidence_id": "wild_medicago_polymorpha_tgg_morocco",
+      "plants": [
+        "medicago_hispida"
+      ],
+      "public_directness": "direct",
+      "blocked_reason": "Original page/table locator not independently verified"
+    }
+  ],
+  "verification_note": "Existing CI is nonblocking for held-source overlaps; success is not scientific validation. No source claim was altered by this audit.",
+  "next_review": "Confirm primary page/table locators, then synchronize hold manifest, public evidence, reverse index and regenerated pages in one batch."
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-18",
+  "source": "data/feeding_original_retrieval_queue_20261018.json",
+  "scope": "Deduplicated source identifiers only. No source newly retrieved, read, or verified.",
+  "candidate_records": 51,
+  "raw_source_identifiers": 10,
+  "canonical_source_count": 7,
+  "sources": [
+    {
+      "canonical_source": "doi:10.1016/j.jaridenv.2005.06.010",
+      "aliases": [
+        "doi:10.1016/j.jaridenv.2005.06.010",
+        "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+        "10.1016/j.jaridenv.2005.06.010"
+      ],
+      "records": 6,
+      "plant_ids": [
+        "medicago_hispida"
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca graeca"
+      ],
+      "priority": "P1_FULLTEXT_ACCESS"
+    },
+    {
+      "canonical_source": "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_sisvet_2015.pdf",
+      "aliases": [
+        "https://iris.unito.it/retrieve/e27ce42a-913a-2581-e053-d805fe0acbaa/atti_SISVET_2015.pdf"
+      ],
+      "records": 3,
+      "plant_ids": [
+        "clover",
+        "plantain"
+      ],
+      "tortoise_taxa": [
+        "Testudo hermanni"
+      ],
+      "priority": "P1_FULLTEXT_ACCESS"
+    },
+    {
+      "canonical_source": "https://www.tortoisetrust.org/articles/basicmedfood.htm",
+      "aliases": [
+        "https://www.tortoisetrust.org/articles/basicmedfood.htm"
+      ],
+      "records": 14,
+      "plant_ids": [
+        "barleygrass",
+        "clover",
+        "dandelion",
+        "lettuce",
+        "oatgrass",
+        "orchard",
+        "romaine",
+        "rose",
+        "ryegrass",
+        "sowthistle",
+        "timothy",
+        "wheatgrass",
+        "whiteclover"
+      ],
+      "tortoise_taxa": [
+        "Mediterranean Testudo",
+        "Mediterranean tortoises"
+      ],
+      "priority": "P2_ORIGINAL_RETRIEVAL"
+    },
+    {
+      "canonical_source": "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species",
+      "aliases": [
+        "https://www.gardenstatetortoise.com/post/tortoise-diet-testudo-species"
+      ],
+      "records": 14,
+      "plant_ids": [
+        "chicory",
+        "clover",
+        "dandelion",
+        "endive",
+        "hibiscusflower",
+        "hibiscusleaf",
+        "hibiscusrosa",
+        "mallow",
+        "mulberry",
+        "oatleaf",
+        "plantain",
+        "raspberryleaf",
+        "sowthistle"
+      ],
+      "tortoise_taxa": [
+        "Testudo spp."
+      ],
+      "priority": "P2_ORIGINAL_RETRIEVAL"
+    },
+    {
+      "canonical_source": "https://www.tortoisetrust.org/enews2/index.html",
+      "aliases": [
+        "https://www.tortoisetrust.org/enews2/index.html"
+      ],
+      "records": 6,
+      "plant_ids": [
+        "endive",
+        "kale",
+        "lettuce",
+        "radicchio",
+        "romaine"
+      ],
+      "tortoise_taxa": [
+        "Mediterranean tortoises"
+      ],
+      "priority": "P2_ORIGINAL_RETRIEVAL"
+    },
+    {
+      "canonical_source": "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows",
+      "aliases": [
+        "https://archive.britishcheloniagroup.org.uk/testudo/v5/v5n3barrows"
+      ],
+      "records": 4,
+      "plant_ids": [
+        "endive",
+        "kale",
+        "romaine"
+      ],
+      "tortoise_taxa": [
+        "Testudo spp."
+      ],
+      "priority": "P2_ORIGINAL_RETRIEVAL"
+    },
+    {
+      "canonical_source": "doi:10.3854/crm.5.120.eastern.graeca.v1.2023",
+      "aliases": [
+        "10.3854/crm.5.120.eastern.graeca.v1.2023",
+        "https://doi.org/10.3854/crm.5.120.eastern.graeca.v1.2023"
+      ],
+      "records": 4,
+      "plant_ids": [
+        "alfalfa",
+        "clover",
+        "sowthistle"
+      ],
+      "tortoise_taxa": [
+        "Testudo graeca ibera and eastern Testudo graeca clades"
+      ],
+      "priority": "P2_ORIGINAL_RETRIEVAL"
+    }
+  ],
+  "verification_policy": [
+    "Distinct records sharing a source remain distinct candidate claims.",
+    "Care guidance is not proof of wild ingestion or captive safety.",
+    "Full text and exact locator required before changing evidence verification status.",
+    "No A-D feeding grade changes."
+  ]
+}

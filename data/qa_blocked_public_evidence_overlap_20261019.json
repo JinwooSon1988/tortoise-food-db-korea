@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-19",
+  "purpose": "Independent read-only batch audit of held original-source claims against public evidence and reverse index; findings are not automatic removals or feeding-grade decisions.",
+  "sources": [
+    "data/feeding_p1_blocked_claim_manifest_20261018.json",
+    "data/public_evidence_records.json",
+    "data/reviewed_plant_reverse_evidence_index.json",
+    "data/plant_feeding_evidence_links.json",
+    "data/feeding_record_verification_v1.json"
+  ],
+  "counts": {
+    "blocked_claim_rows": 9,
+    "unique_blocked_evidence_ids": 7,
+    "public_record_overlap": 2,
+    "reverse_index_joins_affected": 3,
+    "plant_feeding_evidence_link_overlaps": 0
+  },
+  "findings": [
+    {
+      "id": "hermanni_foraging_italy_2015",
+      "plant_ids": [
+        "plantain",
+        "clover"
+      ],
+      "public_directness": "direct",
+      "blocked_reason": "Original page/table locator not independently verified",
+      "affected_reverse_index_joins": 2,
+      "required_review": "Check public supports and directness against original-source verification; distinguish unverified citation from verified direct feeding evidence."
+    },
+    {
+      "id": "wild_medicago_polymorpha_tgg_morocco",
+      "plant_ids": [
+        "medicago_hispida"
+      ],
+      "public_directness": "direct",
+      "blocked_reason": "Original page/table locator not independently verified",
+      "affected_reverse_index_joins": 1,
+      "required_review": "Verify original feeding record and botanical synonym mapping before retaining direct public claim."
+    }
+  ],
+  "safety_note": "An overlap flags a provenance conflict, not proof the biological claim is false. Do not infer tortoise captive safety or change A-D feeding grades.",
+  "handoff": "Claude's bulk repair should integrate these findings with full-corpus QA, not patch each item in isolation."
+}

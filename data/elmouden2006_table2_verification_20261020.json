@@ -1,0 +1,1942 @@
+{
+ "schema_version": "1.0",
+ "checked_at": "2026-10-20",
+ "scope": "Second-pass verification of Table 2 of El Mouden et al. 2006 against the PDF. Values are copied as printed; nothing is inferred. Not a feeding-safety verdict; A-D grades are not read or changed.",
+ "source": {
+  "doi": "10.1016/j.jaridenv.2005.06.010",
+  "citation": "El Mouden, E. H., Slimani, T., Ben Kaddour, K., Lagarde, F., Ouhammou, A. & Bonnet, X. (2006) Testudo graeca graeca feeding ecology in an arid and overgrazed zone in Morocco. Journal of Arid Environments 64:422-435",
+  "pdf_url": "https://www.cebc.cnrs.fr/wp-content/uploads/publipdf/2006/EJAE64.pdf",
+  "access_path": "publication list of CNRS CEBC Chize (affiliation of co-authors F. Lagarde and X. Bonnet), https://www.cebc.cnrs.fr/publications-2006/ -> EJAE64.pdf. Publisher PDF marked 'ARTICLE IN PRESS', 18 PDF pages, journal pp. 422-435",
+  "retrieved": "2026-10-20 (downloaded again for this check)",
+  "sha256": "ac4d25a3ac337499c64843bd85717c1a0fb7114f2141298d004592679fb3645e",
+  "not_used": "ScienceDirect (403); HAL hal-00184868 (abstract only)"
+ },
+ "method": {
+  "first_pass": "2026-10-20: text layer extracted with pdftotext; five main species entered in the ledger summary",
+  "second_pass": "2026-10-20: Table 2 (PDF pp. 6-7) and Table 3 (PDF pp. 8-9) rendered as page images at 130 and 240 dpi and read cell by cell; the whole table re-parsed from the text layer and the two readings compared; abstract, Methods 2.2-2.4, Results 3.2 and Discussion 4.2-4.3 re-read for the cross-checks",
+  "reviewer": "Claude (AI assistant), at the repository owner's request in the PR #326 session. Not a human reviewer; the second pass used a different reading method from the first.",
+  "result": "Every Table 2 cell agrees between the page images and the text layer (two text-layer merges fixed from the image: the Anacyclus radiatus zeros and the Brachypodium distachyum first cell). Values stored for this source agree with the PDF; wording and citation errors are listed under stored_values."
+ },
+ "table_2": {
+  "locator": "Table 2, p. 427 (Aizoon hispanicum to Medicago laciniata) and p. 428 'Table 2 (continued)' (Astragalus cruciatus to Others); printed sideways",
+  "caption": "Mean (±SD) plant availability (% of total vegetation cover) in the study site and percentage of species in the diet of Testudo graeca graeca during the spring 2002",
+  "column_headings": [
+   "Taxon",
+   "% of plant cover / Total plant cover",
+   "% of plant cover / Under jujube",
+   "% of plant cover / Out Jujube",
+   "Faecal samples / Mean number of fragments",
+   "Faecal samples / Occurrence",
+   "Faecal samples / % of occurrence"
+  ],
+  "cell_format": "mean ± SD (95% CI lower-upper); a lone 0 or 0.00 is printed without SD or CI",
+  "footnote_summary": "Brackets are 95% confidence intervals; Occurrence is the number of faecal samples containing the item; an availability value is in boldface when it differs significantly from the species' percentage in the diet; data from 43 quadrats (34 out of and 9 under the jujube) and 44 faecal samples of wild foraging tortoises.",
+  "row_count": 35,
+  "rows": [
+   {
+    "taxon": "Aizoon hispanicum",
+    "family_heading": "Aizoaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 1.15,
+      "sd": 6.8,
+      "ci95": [
+       -0.89,
+       3.18
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.02,
+      "sd": 2.47,
+      "ci95": [
+       -0.06,
+       2.63
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.08,
+      "sd": 0.42,
+      "ci95": [
+       -0.06,
+       0.23
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.03,
+     "sd": 0.12,
+     "ci95": [
+      0.0,
+      0.07
+     ]
+    },
+    "occurrence_faeces_of_44": 3,
+    "occurrence_pct": 6.8,
+    "hunter_index_table3": {
+     "total": 0.03,
+     "under_jujube": 0.03,
+     "out_jujube": 0.38
+    }
+   },
+   {
+    "taxon": "Aizoon canariense",
+    "family_heading": "Aizoaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 26.11,
+      "sd": 27.92,
+      "ci95": [
+       17.76,
+       34.45
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.53,
+      "sd": 4.05,
+      "ci95": [
+       -0.12,
+       5.17
+      ]
+     },
+     "out_jujube": {
+      "mean": 32.32,
+      "sd": 28.78,
+      "ci95": [
+       22.65,
+       42.0
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": 0
+    }
+   },
+   {
+    "taxon": "Spergula flaccida",
+    "family_heading": "Alsinoideae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 3.53,
+      "sd": 7.06,
+      "ci95": [
+       1.42,
+       5.64
+      ]
+     },
+     "under_jujube": {
+      "mean": 8.8,
+      "sd": 10.25,
+      "ci95": [
+       2.11,
+       15.5
+      ]
+     },
+     "out_jujube": {
+      "mean": 1.75,
+      "sd": 3.0,
+      "ci95": [
+       0.74,
+       2.76
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.1,
+     "sd": 0.41,
+     "ci95": [
+      -0.02,
+      0.22
+     ]
+    },
+    "occurrence_faeces_of_44": 5,
+    "occurrence_pct": 11.4,
+    "hunter_index_table3": {
+     "total": 0.03,
+     "under_jujube": 0.01,
+     "out_jujube": 0.06
+    }
+   },
+   {
+    "taxon": "Fagonia cretica",
+    "family_heading": "Caryophyllaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 1.06,
+      "sd": 4.0,
+      "ci95": [
+       -0.13,
+       2.26
+      ]
+     },
+     "under_jujube": {
+      "mean": 5.25,
+      "sd": 9.34,
+      "ci95": [
+       -0.85,
+       11.35
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.03,
+     "sd": 0.2,
+     "ci95": [
+      -0.03,
+      0.09
+     ]
+    },
+    "occurrence_faeces_of_44": 1,
+    "occurrence_pct": 2.3,
+    "hunter_index_table3": {
+     "total": 0.03,
+     "under_jujube": 0.01,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Spergularia marginata",
+    "family_heading": "Caryophyllaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 2.75,
+      "sd": 7.1,
+      "ci95": [
+       0.63,
+       4.87
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.13,
+      "sd": 5.12,
+      "ci95": [
+       -1.21,
+       5.48
+      ]
+     },
+     "out_jujube": {
+      "mean": 3.07,
+      "sd": 8.05,
+      "ci95": [
+       0.36,
+       5.77
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 7.3,
+     "sd": 11.26,
+     "ci95": [
+      3.97,
+      10.63
+     ]
+    },
+    "occurrence_faeces_of_44": 36,
+    "occurrence_pct": 81.8,
+    "hunter_index_table3": {
+     "total": 2.66,
+     "under_jujube": 3.43,
+     "out_jujube": 2.38
+    }
+   },
+   {
+    "taxon": "Chenopodium murale",
+    "family_heading": "Chenopodiaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.27,
+      "sd": 0.76,
+      "ci95": [
+       0.05,
+       0.5
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.77,
+      "sd": 2.49,
+      "ci95": [
+       0.14,
+       3.39
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.02,
+      "sd": 0.12,
+      "ci95": [
+       -0.02,
+       0.06
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.02,
+     "sd": 0.11,
+     "ci95": [
+      -0.02,
+      0.05
+     ]
+    },
+    "occurrence_faeces_of_44": 1,
+    "occurrence_pct": 2.3,
+    "hunter_index_table3": {
+     "total": 0.07,
+     "under_jujube": 0.01,
+     "out_jujube": 1.0
+    }
+   },
+   {
+    "taxon": "Anacyclus radiatus",
+    "family_heading": "Asteraceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 1.51,
+      "sd": 2.73,
+      "ci95": [
+       0.69,
+       2.33
+      ]
+     },
+     "under_jujube": {
+      "mean": 8.05,
+      "sd": 11.76,
+      "ci95": [
+       0.37,
+       15.73
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.74,
+      "sd": 0.99,
+      "ci95": [
+       0.41,
+       1.08
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": 0
+    }
+   },
+   {
+    "taxon": "Calendula algeriensis",
+    "family_heading": "Asteraceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.38,
+      "sd": 1.21,
+      "ci95": [
+       0.02,
+       0.75
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.52,
+      "sd": 2.37,
+      "ci95": [
+       -0.02,
+       3.07
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.09,
+      "sd": 0.38,
+      "ci95": [
+       -0.03,
+       0.22
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.05,
+     "sd": 0.34,
+     "ci95": [
+      -0.05,
+      0.15
+     ]
+    },
+    "occurrence_faeces_of_44": 1,
+    "occurrence_pct": 2.3,
+    "hunter_index_table3": {
+     "total": 0.13,
+     "under_jujube": 0.03,
+     "out_jujube": 0.56
+    }
+   },
+   {
+    "taxon": "Leontodon saxatilis",
+    "family_heading": "Asteraceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.99,
+      "sd": 2.56,
+      "ci95": [
+       0.23,
+       1.76
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.14,
+      "sd": 3.42,
+      "ci95": [
+       -1.09,
+       3.37
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.97,
+      "sd": 2.31,
+      "ci95": [
+       0.19,
+       1.74
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 27.91,
+     "sd": 18.37,
+     "ci95": [
+      22.48,
+      33.33
+     ]
+    },
+    "occurrence_faeces_of_44": 42,
+    "occurrence_pct": 95.5,
+    "hunter_index_table3": {
+     "total": 28.08,
+     "under_jujube": 24.48,
+     "out_jujube": 28.77
+    }
+   },
+   {
+    "taxon": "Scolymus hispanicus",
+    "family_heading": "Asteraceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.65,
+      "sd": 1.91,
+      "ci95": [
+       0.08,
+       1.22
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.31,
+      "sd": 3.37,
+      "ci95": [
+       0.1,
+       4.51
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.23,
+      "sd": 1.13,
+      "ci95": [
+       -0.15,
+       0.61
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": 0
+    }
+   },
+   {
+    "taxon": "Asteraceae sp",
+    "family_heading": "Asteraceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.46,
+      "sd": 2.05,
+      "ci95": [
+       -0.15,
+       1.07
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.19,
+      "sd": 4.21,
+      "ci95": [
+       -0.56,
+       4.94
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Convolvulus althaeoides",
+    "family_heading": "Convolvulaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.22,
+      "sd": 1.13,
+      "ci95": [
+       -0.12,
+       0.56
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.08,
+      "sd": 2.41,
+      "ci95": [
+       -0.49,
+       2.66
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Biscutella didyma",
+    "family_heading": "Brassicaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.38,
+      "sd": 1.72,
+      "ci95": [
+       -0.13,
+       0.89
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.81,
+      "sd": 2.06,
+      "ci95": [
+       -0.54,
+       2.15
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.03,
+      "sd": 0.15,
+      "ci95": [
+       -0.02,
+       0.08
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 1.21,
+     "sd": 4.37,
+     "ci95": [
+      -0.08,
+      2.5
+     ]
+    },
+    "occurrence_faeces_of_44": 14,
+    "occurrence_pct": 31.8,
+    "hunter_index_table3": {
+     "total": 3.19,
+     "under_jujube": 1.49,
+     "out_jujube": 40.33
+    }
+   },
+   {
+    "taxon": "Sinapsis arvensis",
+    "family_heading": "Brassicaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.37,
+      "sd": 1.57,
+      "ci95": [
+       -0.01,
+       0.84
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.66,
+      "sd": 4.83,
+      "ci95": [
+       -0.5,
+       5.81
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Notoceras bicorne",
+    "family_heading": "Brassicaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 1.14,
+      "sd": 1.56,
+      "ci95": [
+       0.67,
+       1.6
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.76,
+      "sd": 2.04,
+      "ci95": [
+       0.42,
+       3.09
+      ]
+     },
+     "out_jujube": {
+      "mean": 1.12,
+      "sd": 1.5,
+      "ci95": [
+       0.62,
+       1.63
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 2.92,
+     "sd": 4.19,
+     "ci95": [
+      1.69,
+      4.16
+     ]
+    },
+    "occurrence_faeces_of_44": 32,
+    "occurrence_pct": 72.7,
+    "hunter_index_table3": {
+     "total": 2.57,
+     "under_jujube": 1.66,
+     "out_jujube": 2.61
+    }
+   },
+   {
+    "taxon": "Erodium guttatum",
+    "family_heading": "Geraniaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.27,
+      "sd": 1.16,
+      "ci95": [
+       -0.08,
+       0.62
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.25,
+      "sd": 2.49,
+      "ci95": [
+       -0.38,
+       2.88
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.02,
+      "sd": 0.13,
+      "ci95": [
+       -0.02,
+       0.07
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.01,
+     "sd": 0.06,
+     "ci95": [
+      -0.01,
+      0.03
+     ]
+    },
+    "occurrence_faeces_of_44": 1,
+    "occurrence_pct": 2.3,
+    "hunter_index_table3": {
+     "total": 0.04,
+     "under_jujube": 0.01,
+     "out_jujube": 0.5
+    }
+   },
+   {
+    "taxon": "Medicago hispida",
+    "family_heading": "Fabaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.05,
+      "sd": 0.2,
+      "ci95": [
+       -0.01,
+       0.11
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.11,
+      "sd": 0.25,
+      "ci95": [
+       -0.05,
+       0.27
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.04,
+      "sd": 0.22,
+      "ci95": [
+       -0.04,
+       0.11
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 5.75,
+     "sd": 9.85,
+     "ci95": [
+      2.84,
+      8.66
+     ]
+    },
+    "occurrence_faeces_of_44": 36,
+    "occurrence_pct": 81.8,
+    "hunter_index_table3": {
+     "total": 155.0,
+     "under_jujube": 52.27,
+     "out_jujube": 143.75
+    }
+   },
+   {
+    "taxon": "Medicago laciniata",
+    "family_heading": "Fabaceae",
+    "page": 427,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 12.52,
+      "sd": 14.59,
+      "ci95": [
+       8.16,
+       16.88
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.61,
+      "sd": 3.3,
+      "ci95": [
+       0.46,
+       4.77
+      ]
+     },
+     "out_jujube": {
+      "mean": 14.29,
+      "sd": 16.7,
+      "ci95": [
+       8.68,
+       19.9
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 1.27,
+     "sd": 5.33,
+     "ci95": [
+      -0.3,
+      2.85
+     ]
+    },
+    "occurrence_faeces_of_44": 5,
+    "occurrence_pct": 11.4,
+    "hunter_index_table3": {
+     "total": 0.1,
+     "under_jujube": 0.49,
+     "out_jujube": 0.09
+    }
+   },
+   {
+    "taxon": "Astragalus cruciatus",
+    "family_heading": "Fabaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.02,
+      "sd": 0.11,
+      "ci95": [
+       -0.01,
+       0.06
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.08,
+      "sd": 0.24,
+      "ci95": [
+       -0.08,
+       0.23
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.01,
+      "sd": 0.05,
+      "ci95": [
+       -0.01,
+       0.03
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 14.37,
+     "sd": 18.02,
+     "ci95": [
+      9.04,
+      19.7
+     ]
+    },
+    "occurrence_faeces_of_44": 34,
+    "occurrence_pct": 77.3,
+    "hunter_index_table3": {
+     "total": 718.5,
+     "under_jujube": 179.63,
+     "out_jujube": 1437.0
+    }
+   },
+   {
+    "taxon": "Lotus arenarius",
+    "family_heading": "Fabaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.09,
+      "sd": 0.36,
+      "ci95": [
+       -0.02,
+       0.2
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.0
+     },
+     "out_jujube": {
+      "mean": 0.12,
+      "sd": 0.42,
+      "ci95": [
+       -0.02,
+       0.27
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 3.57,
+     "sd": 5.96,
+     "ci95": [
+      1.81,
+      5.33
+     ]
+    },
+    "occurrence_faeces_of_44": 25,
+    "occurrence_pct": 56.8,
+    "hunter_index_table3": {
+     "total": 39.67,
+     "under_jujube": null,
+     "out_jujube": 29.75
+    }
+   },
+   {
+    "taxon": "Scorpiurus sulcata",
+    "family_heading": "Fabaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.06,
+      "sd": 0.29,
+      "ci95": [
+       -0.03,
+       0.14
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.0
+     },
+     "out_jujube": {
+      "mean": 0.07,
+      "sd": 0.32,
+      "ci95": [
+       -0.04,
+       0.18
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 2.37,
+     "sd": 5.58,
+     "ci95": [
+      0.72,
+      4.01
+     ]
+    },
+    "occurrence_faeces_of_44": 18,
+    "occurrence_pct": 40.9,
+    "hunter_index_table3": {
+     "total": 39.5,
+     "under_jujube": null,
+     "out_jujube": 33.86
+    }
+   },
+   {
+    "taxon": "Malva parviflora",
+    "family_heading": "Malvaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 1.09,
+      "sd": 4.62,
+      "ci95": [
+       -0.29,
+       2.47
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.34,
+      "sd": 2.74,
+      "ci95": [
+       0.55,
+       4.13
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.96,
+      "sd": 5.15,
+      "ci95": [
+       -0.77,
+       2.69
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 15.22,
+     "sd": 14.79,
+     "ci95": [
+      10.85,
+      19.58
+     ]
+    },
+    "occurrence_faeces_of_44": 38,
+    "occurrence_pct": 86.4,
+    "hunter_index_table3": {
+     "total": 13.96,
+     "under_jujube": 6.5,
+     "out_jujube": 15.85
+    }
+   },
+   {
+    "taxon": "Eryngium ilicifolium",
+    "family_heading": "Ombellifereae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 20.21,
+      "sd": 16.68,
+      "ci95": [
+       15.23,
+       25.2
+      ]
+     },
+     "under_jujube": {
+      "mean": 7.83,
+      "sd": 6.68,
+      "ci95": [
+       3.46,
+       12.19
+      ]
+     },
+     "out_jujube": {
+      "mean": 23.33,
+      "sd": 18.16,
+      "ci95": [
+       17.22,
+       29.43
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": 0
+    }
+   },
+   {
+    "taxon": "Ammi majus",
+    "family_heading": "Ombellifereae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.4,
+      "sd": 1.61,
+      "ci95": [
+       -0.08,
+       0.88
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.92,
+      "sd": 3.22,
+      "ci95": [
+       -0.18,
+       4.02
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.27,
+     "sd": 0.64,
+     "ci95": [
+      0.08,
+      0.45
+     ]
+    },
+    "occurrence_faeces_of_44": 12,
+    "occurrence_pct": 27.3,
+    "hunter_index_table3": {
+     "total": 0.68,
+     "under_jujube": 0.14,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Plantago amplexicaulis",
+    "family_heading": "Plantaginaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.15,
+      "sd": 0.64,
+      "ci95": [
+       -0.04,
+       0.34
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.24,
+      "sd": 2.62,
+      "ci95": [
+       -0.47,
+       2.95
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 2.82,
+     "sd": 4.84,
+     "ci95": [
+      1.39,
+      4.25
+     ]
+    },
+    "occurrence_faeces_of_44": 28,
+    "occurrence_pct": 63.6,
+    "hunter_index_table3": {
+     "total": 18.8,
+     "under_jujube": 2.27,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Emex spinosus",
+    "family_heading": "Polygonaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 7.2,
+      "sd": 10.3,
+      "ci95": [
+       4.12,
+       10.28
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.92,
+      "sd": 3.74,
+      "ci95": [
+       0.47,
+       5.36
+      ]
+     },
+     "out_jujube": {
+      "mean": 8.93,
+      "sd": 11.29,
+      "ci95": [
+       5.13,
+       12.73
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.4,
+     "sd": 1.2,
+     "ci95": [
+      0.05,
+      0.76
+     ]
+    },
+    "occurrence_faeces_of_44": 11,
+    "occurrence_pct": 25.0,
+    "hunter_index_table3": {
+     "total": 0.06,
+     "under_jujube": 0.14,
+     "out_jujube": 0.04
+    }
+   },
+   {
+    "taxon": "Linaria sagittata",
+    "family_heading": "Scrophulariaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.49,
+      "sd": 3.24,
+      "ci95": [
+       -0.47,
+       1.46
+      ]
+     },
+     "under_jujube": {
+      "mean": 2.36,
+      "sd": 7.08,
+      "ci95": [
+       -2.26,
+       6.98
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Linaria bipartita",
+    "family_heading": "Scrophulariaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.4,
+      "sd": 0.91,
+      "ci95": [
+       0.13,
+       0.67
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.0
+     },
+     "out_jujube": {
+      "mean": 0.54,
+      "sd": 1.08,
+      "ci95": [
+       0.18,
+       0.91
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.11,
+     "sd": 0.76,
+     "ci95": [
+      -0.11,
+      0.34
+     ]
+    },
+    "occurrence_faeces_of_44": 1,
+    "occurrence_pct": 2.3,
+    "hunter_index_table3": {
+     "total": 0.14,
+     "under_jujube": 0.03,
+     "out_jujube": 0.61
+    }
+   },
+   {
+    "taxon": "Solanum nigrum",
+    "family_heading": "Solanaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.58,
+      "sd": 3.77,
+      "ci95": [
+       -0.55,
+       1.7
+      ]
+     },
+     "under_jujube": {
+      "mean": 4.27,
+      "sd": 12.82,
+      "ci95": [
+       -4.1,
+       12.65
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.0
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": null
+    }
+   },
+   {
+    "taxon": "Festuca sp.",
+    "family_heading": "Poaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 3.19,
+      "sd": 5.84,
+      "ci95": [
+       1.45,
+       4.94
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.06,
+      "sd": 0.13,
+      "ci95": [
+       -0.03,
+       0.15
+      ]
+     },
+     "out_jujube": {
+      "mean": 3.75,
+      "sd": 5.29,
+      "ci95": [
+       1.98,
+       5.53
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 1.01,
+     "sd": 2.34,
+     "ci95": [
+      0.32,
+      1.7
+     ]
+    },
+    "occurrence_faeces_of_44": 12,
+    "occurrence_pct": 27.3,
+    "hunter_index_table3": {
+     "total": 0.32,
+     "under_jujube": 16.83,
+     "out_jujube": 0.27
+    }
+   },
+   {
+    "taxon": "Brachypodium distachyum",
+    "family_heading": "Poaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 2.36,
+      "sd": 6.38,
+      "ci95": [
+       0.46,
+       4.27
+      ]
+     },
+     "under_jujube": {
+      "mean": 10.99,
+      "sd": 13.36,
+      "ci95": [
+       2.27,
+       19.72
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.14,
+      "sd": 0.46,
+      "ci95": [
+       -0.01,
+       0.3
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 3.52,
+     "sd": 3.86,
+     "ci95": [
+      2.38,
+      4.66
+     ]
+    },
+    "occurrence_faeces_of_44": 34,
+    "occurrence_pct": 77.3,
+    "hunter_index_table3": {
+     "total": 1.49,
+     "under_jujube": 0.32,
+     "out_jujube": 25.14
+    }
+   },
+   {
+    "taxon": "Cynodon dactylon",
+    "family_heading": "Poaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 1.11,
+      "sd": 7.26,
+      "ci95": [
+       -1.06,
+       3.28
+      ]
+     },
+     "under_jujube": {
+      "mean": 0.0
+     },
+     "out_jujube": {
+      "mean": 0.26,
+      "sd": 1.52,
+      "ci95": [
+       -0.25,
+       0.77
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": null,
+     "out_jujube": 0
+    }
+   },
+   {
+    "taxon": "Stipa retorta",
+    "family_heading": "Poaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 0.01,
+      "sd": 6.62,
+      "ci95": [
+       -0.22,
+       3.74
+      ]
+     },
+     "under_jujube": {
+      "mean": 7.05,
+      "sd": 13.49,
+      "ci95": [
+       -1.76,
+       15.87
+      ]
+     },
+     "out_jujube": {
+      "mean": 0.13,
+      "sd": 0.38,
+      "ci95": [
+       0.0,
+       0.26
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.0
+    },
+    "occurrence_faeces_of_44": 0,
+    "occurrence_pct": 0.0,
+    "hunter_index_table3": {
+     "total": 0,
+     "under_jujube": 0,
+     "out_jujube": 0
+    }
+   },
+   {
+    "taxon": "Asphodelus tenuifolius",
+    "family_heading": "Liliaceae",
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 2.34,
+      "sd": 5.12,
+      "ci95": [
+       0.81,
+       3.87
+      ]
+     },
+     "under_jujube": {
+      "mean": 1.34,
+      "sd": 1.57,
+      "ci95": [
+       0.31,
+       2.37
+      ]
+     },
+     "out_jujube": {
+      "mean": 2.56,
+      "sd": 5.56,
+      "ci95": [
+       0.69,
+       4.43
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 0.79,
+     "sd": 1.84,
+     "ci95": [
+      0.25,
+      1.33
+     ]
+    },
+    "occurrence_faeces_of_44": 19,
+    "occurrence_pct": 43.2,
+    "hunter_index_table3": {
+     "total": 0.34,
+     "under_jujube": 0.59,
+     "out_jujube": 0.31
+    }
+   },
+   {
+    "taxon": "Others",
+    "family_heading": null,
+    "page": 428,
+    "plant_cover_pct": {
+     "total": {
+      "mean": 4.74,
+      "sd": 5.99,
+      "ci95": [
+       2.95,
+       6.53
+      ]
+     },
+     "under_jujube": {
+      "mean": 10.61,
+      "sd": 9.57,
+      "ci95": [
+       4.36,
+       16.86
+      ]
+     },
+     "out_jujube": {
+      "mean": 4.42,
+      "sd": 4.21,
+      "ci95": [
+       3.0,
+       5.83
+      ]
+     }
+    },
+    "faecal_mean_pct_of_fragments": {
+     "mean": 6.76,
+     "sd": 3.5,
+     "ci95": [
+      5.72,
+      7.79
+     ]
+    },
+    "occurrence_faeces_of_44": null,
+    "occurrence_pct": null
+   }
+  ]
+ },
+ "value_types": {
+  "faecal_mean_pct_of_fragments": "Relative proportion, not frequency. The column is headed 'Mean number of fragments', but the caption says 'percentage of species in the diet' and Methods 2.4 (p. 425) define p_i as the percentage of epidermis fragments of species i among all fragments counted, then averaged; Results 3.2 (p. 426) report L. saxatilis as 28% from the 27.91 value. Unit: % of identified epidermis fragments, mean over faeces.",
+  "occurrence_faeces_of_44, occurrence_pct": "Frequency of occurrence: number and % of the 44 faeces containing the item (Methods 2.4, p. 425).",
+  "plant_cover_pct": "Availability q_i: the species' % of plant cover relative to total cover per 1 m2 quadrat, mean over the quadrats (Methods 2.2 and 2.4, pp. 424-425).",
+  "hunter_index_table3": "Selectivity index H_i = p_i / q_i (Table 3, pp. 429-430); H_i > 1 preferred, < 1 avoided (Methods 2.4, p. 425). Significance comes from non-overlapping 95% CIs of p_i and q_i, shown as boldface in Table 2, not from H_i."
+ },
+ "main_species": [
+  {
+   "taxon": "Leontodon saxatilis",
+   "family_heading": "Asteraceae",
+   "faecal_mean_pct_of_fragments": {
+    "mean": 27.91,
+    "sd": 18.37,
+    "ci95": [
+     22.48,
+     33.33
+    ]
+   },
+   "occurrence": "42/44 (95.5%)",
+   "total_plant_cover_pct": {
+    "mean": 0.99,
+    "sd": 2.56,
+    "ci95": [
+     0.23,
+     1.76
+    ]
+   },
+   "hunter_index_table3": {
+    "total": 28.08,
+    "under_jujube": 24.48,
+    "out_jujube": 28.77
+   },
+   "boldface_in_table2": "availability in all three communities (page image)",
+   "page": 427
+  },
+  {
+   "taxon": "Malva parviflora",
+   "family_heading": "Malvaceae",
+   "faecal_mean_pct_of_fragments": {
+    "mean": 15.22,
+    "sd": 14.79,
+    "ci95": [
+     10.85,
+     19.58
+    ]
+   },
+   "occurrence": "38/44 (86.4%)",
+   "total_plant_cover_pct": {
+    "mean": 1.09,
+    "sd": 4.62,
+    "ci95": [
+     -0.29,
+     2.47
+    ]
+   },
+   "hunter_index_table3": {
+    "total": 13.96,
+    "under_jujube": 6.5,
+    "out_jujube": 15.85
+   },
+   "boldface_in_table2": "availability in all three communities (page image)",
+   "page": 428
+  },
+  {
+   "taxon": "Astragalus cruciatus",
+   "family_heading": "Fabaceae",
+   "faecal_mean_pct_of_fragments": {
+    "mean": 14.37,
+    "sd": 18.02,
+    "ci95": [
+     9.04,
+     19.7
+    ]
+   },
+   "occurrence": "34/44 (77.3%)",
+   "total_plant_cover_pct": {
+    "mean": 0.02,
+    "sd": 0.11,
+    "ci95": [
+     -0.01,
+     0.06
+    ]
+   },
+   "hunter_index_table3": {
+    "total": 718.5,
+    "under_jujube": 179.63,
+    "out_jujube": 1437.0
+   },
+   "boldface_in_table2": "availability in all three communities (page image)",
+   "page": 428
+  },
+  {
+   "taxon": "Medicago hispida",
+   "family_heading": "Fabaceae",
+   "faecal_mean_pct_of_fragments": {
+    "mean": 5.75,
+    "sd": 9.85,
+    "ci95": [
+     2.84,
+     8.66
+    ]
+   },
+   "occurrence": "36/44 (81.8%)",
+   "total_plant_cover_pct": {
+    "mean": 0.05,
+    "sd": 0.2,
+    "ci95": [
+     -0.01,
+     0.11
+    ]
+   },
+   "hunter_index_table3": {
+    "total": 155.0,
+    "under_jujube": 52.27,
+    "out_jujube": 143.75
+   },
+   "boldface_in_table2": "availability in all three communities (page image)",
+   "page": 427
+  },
+  {
+   "taxon": "Lotus arenarius",
+   "family_heading": "Fabaceae",
+   "faecal_mean_pct_of_fragments": {
+    "mean": 3.57,
+    "sd": 5.96,
+    "ci95": [
+     1.81,
+     5.33
+    ]
+   },
+   "occurrence": "25/44 (56.8%)",
+   "total_plant_cover_pct": {
+    "mean": 0.09,
+    "sd": 0.36,
+    "ci95": [
+     -0.02,
+     0.2
+    ]
+   },
+   "hunter_index_table3": {
+    "total": 39.67,
+    "under_jujube": null,
+    "out_jujube": 29.75
+   },
+   "boldface_in_table2": "availability in all three communities (page image)",
+   "page": 428
+  }
+ ],
+ "medicago_hispida": {
+  "relative_proportion": "5.75 ± 9.85 % of identified fragments (95% CI 2.84-8.66), Table 2 p. 427",
+  "frequency_of_occurrence": "36 of 44 faeces (81.8%), Table 2 p. 427",
+  "availability": "0.05 ± 0.20 % of plant cover overall (95% CI -0.01-0.11); 0.11 under and 0.04 out of the jujube; all in boldface, i.e. significantly different from the diet share",
+  "selectivity": "Hunter's index printed 155.0 overall, 52.27 under and 143.75 out of the jujube (Table 3, p. 429). 5.75/0.11 = 52.27 and 5.75/0.04 = 143.75 reproduce the printed values; 5.75/0.05 = 115.0 does not reproduce the printed 155.0 (see discrepancies_in_original).",
+  "text": "One of the five main species (about 70% of identified material) for which T. g. graeca showed marked preferences (Results 3.2, p. 426); 'highly preferred' in the abstract (p. 422).",
+  "not_in_original": "plant part eaten, name authorities (no plant name in the paper has an author citation), amounts, or anything about captive feeding"
+ },
+ "cross_checks": [
+  {
+   "check": "Results 3.2 (p. 426): five main species about 70% of identified material; abstract (p. 422) and Discussion 4.2 (p. 431): 70%",
+   "table_value": "sum of the five Table 2 means = 66.82%",
+   "result": "consistent with the authors' rounded 'about 70%'"
+  },
+  {
+   "check": "Results 3.2: L. saxatilis 28%, M. parviflora and A. cruciatus 15% each",
+   "table_value": "27.91, 15.22, 14.37",
+   "result": "consistent (rounded)"
+  },
+  {
+   "check": "Results 3.2: these three in more than 75% of faeces",
+   "table_value": "95.5%, 86.4%, 77.3%",
+   "result": "consistent"
+  },
+  {
+   "check": "Abstract (p. 422): Fabaceae 27% of the diet; Discussion 4.3 (p. 431): four significantly preferred Fabaceae 27% of the total diet",
+   "table_value": "all five Fabaceae rows = 27.33%; the four with H_i > 1 (M. hispida, A. cruciatus, L. arenarius, S. sulcata) = 26.06%",
+   "result": "the abstract matches all five Fabaceae; the Discussion wording is slightly off (see discrepancies_in_original)"
+  },
+  {
+   "check": "Results 3.2: 34 plant species in the diet",
+   "table_value": "23 named rows with a non-zero diet share, the rest pooled as 'Others' (6.76%)",
+   "result": "not checkable from Table 2 alone"
+  },
+  {
+   "check": "Sum of all Table 2 diet means",
+   "table_value": "97.81%",
+   "result": "about 100% (means of per-faeces percentages need not add to exactly 100)"
+  },
+  {
+   "check": "% of occurrence = occurrence / 44 for every row",
+   "result": "consistent"
+  },
+  {
+   "check": "Table 3 Hunter's index = Table 2 diet mean / cover mean (main five and S. sulcata, three communities)",
+   "table_value": [
+    {
+     "taxon": "Leontodon saxatilis",
+     "community": "total",
+     "printed": 28.08,
+     "recomputed_p_over_q": 28.19,
+     "agrees": true
+    },
+    {
+     "taxon": "Leontodon saxatilis",
+     "community": "under_jujube",
+     "printed": 24.48,
+     "recomputed_p_over_q": 24.48,
+     "agrees": true
+    },
+    {
+     "taxon": "Leontodon saxatilis",
+     "community": "out_jujube",
+     "printed": 28.77,
+     "recomputed_p_over_q": 28.77,
+     "agrees": true
+    },
+    {
+     "taxon": "Malva parviflora",
+     "community": "total",
+     "printed": 13.96,
+     "recomputed_p_over_q": 13.96,
+     "agrees": true
+    },
+    {
+     "taxon": "Malva parviflora",
+     "community": "under_jujube",
+     "printed": 6.5,
+     "recomputed_p_over_q": 6.5,
+     "agrees": true
+    },
+    {
+     "taxon": "Malva parviflora",
+     "community": "out_jujube",
+     "printed": 15.85,
+     "recomputed_p_over_q": 15.85,
+     "agrees": true
+    },
+    {
+     "taxon": "Astragalus cruciatus",
+     "community": "total",
+     "printed": 718.5,
+     "recomputed_p_over_q": 718.5,
+     "agrees": true
+    },
+    {
+     "taxon": "Astragalus cruciatus",
+     "community": "under_jujube",
+     "printed": 179.63,
+     "recomputed_p_over_q": 179.62,
+     "agrees": true
+    },
+    {
+     "taxon": "Astragalus cruciatus",
+     "community": "out_jujube",
+     "printed": 1437.0,
+     "recomputed_p_over_q": 1437.0,
+     "agrees": true
+    },
+    {
+     "taxon": "Medicago hispida",
+     "community": "total",
+     "printed": 155.0,
+     "recomputed_p_over_q": 115.0,
+     "agrees": false
+    },
+    {
+     "taxon": "Medicago hispida",
+     "community": "under_jujube",
+     "printed": 52.27,
+     "recomputed_p_over_q": 52.27,
+     "agrees": true
+    },
+    {
+     "taxon": "Medicago hispida",
+     "community": "out_jujube",
+     "printed": 143.75,
+     "recomputed_p_over_q": 143.75,
+     "agrees": true
+    },
+    {
+     "taxon": "Lotus arenarius",
+     "community": "total",
+     "printed": 39.67,
+     "recomputed_p_over_q": 39.67,
+     "agrees": true
+    },
+    {
+     "taxon": "Lotus arenarius",
+     "community": "under_jujube",
+     "printed": null,
+     "recomputed_p_over_q": null,
+     "agrees": true
+    },
+    {
+     "taxon": "Lotus arenarius",
+     "community": "out_jujube",
+     "printed": 29.75,
+     "recomputed_p_over_q": 29.75,
+     "agrees": true
+    },
+    {
+     "taxon": "Scorpiurus sulcata",
+     "community": "total",
+     "printed": 39.5,
+     "recomputed_p_over_q": 39.5,
+     "agrees": true
+    },
+    {
+     "taxon": "Scorpiurus sulcata",
+     "community": "under_jujube",
+     "printed": null,
+     "recomputed_p_over_q": null,
+     "agrees": true
+    },
+    {
+     "taxon": "Scorpiurus sulcata",
+     "community": "out_jujube",
+     "printed": 33.86,
+     "recomputed_p_over_q": 33.86,
+     "agrees": true
+    }
+   ],
+   "result": "all agree except Medicago hispida (total); L. saxatilis overall 28.08 vs 28.19 is within rounding of the cover mean"
+  }
+ ],
+ "discrepancies_in_original": [
+  "Table 3 (p. 429) prints Hunter's index 155.0 for Medicago hispida over total plant cover, but Table 2 gives 5.75 / 0.05 = 115.0, while the under- and out-of-jujube values reproduce exactly. Probably a typesetting error. The printed value is kept here and is not used in public text.",
+  "Table 2 heads the diet column 'Mean number of fragments', while the caption and Methods define the value as a percentage of fragments. Recorded as a relative proportion (%).",
+  "Discussion 4.3 (p. 431) gives 27% for four significantly preferred Fabaceae; those four sum to 26.06% and all five Fabaceae rows to 27.33%."
+ ],
+ "stored_values": [
+  {
+   "file": "data/public_evidence_records.json",
+   "record": "wild_medicago_polymorpha_tgg_morocco",
+   "stored": "5.75% (95% CI 2.84-8.66%), 36/44 (81.8%), Table 2 p. 427; five main species about 70% (p. 426); spring 2002 (May-June); 44 faeces (19 males, 18 females, 7 juveniles)",
+   "result": "agrees"
+  },
+  {
+   "file": "scripts/build_feeding_record_verification.py",
+   "record": "CHECKS, El Mouden summary",
+   "stored": "five main species with means, 95% CIs and occurrences",
+   "result": "values agree. Wording corrected: the value type is now stated against the printed column heading, and the reference collection is given as in the original (upper and lower leaf and 'caudal' epidermis, p. 425) instead of 'leaf and stem epidermis'"
+  },
+  {
+   "file": "data/public_assessments.json",
+   "record": "medicago_hispida limits",
+   "stored": "5.75% mean; no share by plant part",
+   "result": "agrees; the limit saying the page/table locator was not independently confirmed is replaced"
+  },
+  {
+   "file": "data/academic_evidence_registry_v56.json",
+   "record": "elmouden_graeca_morocco_2006",
+   "stored": "34 species; five main species about 70%; M. parviflora about 15%; L. saxatilis most commonly consumed",
+   "result": "agrees"
+  },
+  {
+   "file": "data/claim_ledger.json; data/ibera_research_records.json",
+   "record": "graeca_morocco_2006",
+   "stored": "34 species; five species about 70%; the five marked as major and preferred",
+   "result": "agrees"
+  },
+  {
+   "file": "data/evidence.json",
+   "record": "slimani2006",
+   "stored": "M. parviflora one of the five main species, about 15%, strong preference",
+   "result": "agrees (15.22%, H_i 13.96, boldface)"
+  },
+  {
+   "file": "data/poaceae_testudo_evidence_v56.json",
+   "record": "slimani_graeca_morocco_2006",
+   "stored": "five principal species 70%, Fabaceae 27%; citation 'Slimani T, El Hassani MS'",
+   "result": "values agree with the abstract; citation authors wrong (title page, p. 422), corrected"
+  },
+  {
+   "file": "data/plantago_species_evidence_v56.json",
+   "record": "SLIMANI_EL_MOUDEN_2006_PLANTAGO_AMPLEXICAULIS",
+   "stored": "Plantago amplexicaulis in the diet of wild T. g. graeca",
+   "result": "agrees (2.82%, 28/44, Table 2 p. 428)"
+  },
+  {
+   "file": "data/species_evidence_primary_source_audit_v56.json",
+   "record": "SLIMANI_EL_MOUDEN_2006_PLANTAGO_AMPLEXICAULIS",
+   "stored": "'Slimani & El Hassani 2006'",
+   "result": "claim agrees; author attribution corrected"
+  },
+  {
+   "file": "data/curated_identity_notes.json",
+   "record": "Malva verticillata note",
+   "stored": "'Slimani et al. 2006'",
+   "result": "claim agrees; first author is El Mouden, corrected"
+  },
+  {
+   "file": "data/wild_feeding_evidence.json",
+   "record": "elmouden2006_* (5 records)",
+   "stored": "plant_part 미상; feeding_signal '5대 주요 식물 중 하나'; season '연구기간 원문 상세 확인 필요'",
+   "result": "part and signal agree; season filled from the original (spring 2002, May-June)"
+  },
+  {
+   "file": "data/korean_mallow_identity_evidence_v56.json",
+   "record": "slimani2006",
+   "stored": "M. parviflora wild feeding, related-species context only",
+   "result": "agrees"
+  },
+  {
+   "file": "research/evidence_leads/primary_tortoise_diet_sources_20261016_02.json",
+   "record": "morocco_2006",
+   "stored": "five leading taxa about 70%; Scorpiurus also recorded",
+   "result": "agrees (S. sulcata 2.37%, 18/44); research lead file left unchanged"
+  }
+ ],
+ "verification_decision": {
+  "confirmed_from_full_text": "Table 2 locator and values above; method (faecal epidermis analysis of wild T. g. graeca), place (central Jbilets, Morocco), period (spring 2002, May-June) and sample (44 faeces).",
+  "still_held": "identity linkage of the reported names to catalog taxa. The original gives no name authorities; Astragalus cruciatus differs from the catalog's Astragalus crenatus; Leontodon saxatilis and Astragalus cruciatus have GBIF homonyms; Medicago hispida = Medicago polymorpha is the catalog's taxonomic decision, not a statement in the original. The P1 release gate keeps identity linkage on hold and allows no new site feeding_pending promotions.",
+  "ledger_status": "full_text_verified_identity_held"
+ }
+}

@@ -1,0 +1,40 @@
+name: Global taxonomy intake sample
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        offset: [0, 5000, 10000, 15000]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch global plant taxonomy chunk
+        run: |
+          python scripts/import_gbif_global_taxa.py --limit 1000 --pages 5 --offset ${{ matrix.offset }} --output research/generated/gbif_global_taxa_sample.json
+          python - <<'PY'
+          import json
+          p = json.load(open("research/generated/gbif_global_taxa_sample.json", encoding="utf-8"))
+          n = len(p["candidates"])
+          print(f"ACTUAL TAXONOMY CANDIDATES: {n}")
+          assert n > 0, "No global taxonomic candidates retrieved"
+          assert all(x["feeding_verdict"] is None for x in p["candidates"])
+          PY
+      - name: Link taxonomy candidates to existing assessment and evidence inventory
+        run: |
+          python scripts/audit_publication_readiness.py --taxonomy-batch research/generated/gbif_global_taxa_sample.json --output research/generated/publication_readiness_audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gbif-global-taxonomy-candidates-${{ matrix.offset }}
+          path: |
+            research/generated/gbif_global_taxa_sample.json
+            research/generated/publication_readiness_audit.json
+          retention-days: 14

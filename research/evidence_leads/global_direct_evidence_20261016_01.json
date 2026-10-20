@@ -1,0 +1,79 @@
+{
+  "batch_id": "global_direct_evidence_20261016_01",
+  "status": "source_checked_pending_editorial_integration",
+  "publication_policy": "No feeding verdict or site publication without species/plant-part scope review.",
+  "records": [
+    {
+      "id": "gopherus_mojave_foraging_2015",
+      "source_title": "Desert Tortoises (Gopherus agassizii) Are Selective Herbivores that Track the Flowering Phenology of Their Preferred Food Plants",
+      "source_type": "peer_reviewed_field_observation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+      "animal_taxon": "Gopherus agassizii",
+      "region": "Mojave Desert, USA",
+      "plant_taxa": [
+        "Astragalus brachycarpus",
+        "Allium fimbriatum",
+        "Lupinus odoratus",
+        "Calycoseris parryi",
+        "Tropidocarpum gracile",
+        "Astragalus layneae",
+        "Stephanomeria parryi",
+        "Lomatium mohavense"
+      ],
+      "plant_part": "succulent herbaceous material; individual species part not established in abstract",
+      "supports": "Wild G. agassizii consumed these listed taxa in field foraging observations; foraging selectivity varied by phenology.",
+      "does_not_support": "Captive feeding safety, dosing, feeding frequency, or transfer to Testudo/other tortoises.",
+      "evidence_directness": "wild_consumption_observation",
+      "identity_review_required": true
+    },
+    {
+      "id": "testudo_hermanni_captive_feed_2023",
+      "source_title": "Biogenic Elements and Heavy Metals in Hermann’s Tortoises—Testudo hermanni: Effect on Serum Biochemistry and Oxidative Status Parameters",
+      "source_type": "peer_reviewed_husbandry_methods",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10340051/",
+      "animal_taxon": "Testudo hermanni",
+      "region": "Slovakia",
+      "plant_taxa": [
+        "Lolium perenne",
+        "Festuca spp.",
+        "Taraxacum spp.",
+        "Plantago spp."
+      ],
+      "plant_part": "grass and herbaceous plants, species-specific part not specified",
+      "supports": "Study methods report captive feed comprised approximately 70% grasses (Lolium perenne and Festuca), 25% herbs (dandelion and plantain), and 5% other plant materials.",
+      "does_not_support": "Optimal diet ratio or proven safety for every named plant species; diet is husbandry description, not feeding trial.",
+      "evidence_directness": "captive_diet_documentation",
+      "identity_review_required": true
+    },
+    {
+      "id": "testudo_grasses_weeds_survey_2018",
+      "source_title": "Nutrition and husbandry conditions of Palearctic tortoises (Testudo spp.) in captivity",
+      "source_type": "peer_reviewed_survey",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29609473/",
+      "doi": "10.1080/10888705.2018.1453814",
+      "animal_taxon": "Testudo spp.",
+      "region": "Europe",
+      "plant_taxa": [],
+      "supports": "Survey of 1075 respondents describes association between housing/diet pattern and pyramidal growth; >80% grasses and weeds in summer was used as a diet category.",
+      "does_not_support": "Causal proof or individual plant safety; not a species-level feeding observation.",
+      "evidence_directness": "survey_association",
+      "identity_review_required": false
+    },
+    {
+      "id": "aldabra_wild_feeding_1983",
+      "source_title": "Feeding ecology and seasonal movements of giant tortoises on Aldabra atoll",
+      "source_type": "peer_reviewed_field_observation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28310773/",
+      "animal_taxon": "Aldabrachelys gigantea (historical Geochelone gigantea)",
+      "region": "Aldabra, Seychelles",
+      "plant_taxa": [
+        "Sporobolus virginicus"
+      ],
+      "supports": "Seasonal field observations found tortoise turf dominated feeding observations; Sporobolus virginicus coastal sward was used by tortoises.",
+      "does_not_support": "Safety of all grasses or universal suitability for other tortoise species.",
+      "evidence_directness": "wild_consumption_observation",
+      "identity_review_required": true
+    }
+  ],
+  "summary": "Four independently retrievable publications, with source-specific limitations. Plant names need canonical taxonomy reconciliation before import."
+}

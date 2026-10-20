@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "evidence_stage": "bibliographic_or_source_text_review_not_feeding_safety",
+  "source_count": 9,
+  "records": [
+    {
+      "id": "morocco_graeca_2006",
+      "animal_taxon": "Testudo graeca graeca",
+      "doi": "10.1016/j.jaridenv.2005.06.010",
+      "url": "https://doi.org/10.1016/j.jaridenv.2005.06.010",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "34 dietary plant species detected by faecal analysis; five major taxa account for 70 percent",
+      "plant_taxa": [
+        "Leontodon saxatilis",
+        "Malva parviflora",
+        "Astragalus cruciatus",
+        "Medicago hispida",
+        "Lotus arenarius"
+      ],
+      "plant_taxa_status": "source_text_named_not_taxonomic_synonym_verified",
+      "feeding_verdict": null
+    },
+    {
+      "id": "algeria_graeca_2008",
+      "animal_taxon": "Testudo graeca",
+      "doi": "10.1080/21564574.2008.9635573",
+      "url": "https://doi.org/10.1080/21564574.2008.9635573",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Faecal study of 44 tortoises and 4422 fragments; 16 plant species consumed",
+      "plant_taxa": [],
+      "plant_taxa_status": "not_extracted",
+      "feeding_verdict": null
+    },
+    {
+      "id": "italy_hermanni_2011",
+      "animal_taxon": "Testudo hermanni hermanni",
+      "doi": "10.1655/HERPETOLOGICA-D-10-00064.1",
+      "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Seasonal shifts: legume leaves and grasses in spring; Ruscus flowers and unripe fruits in autumn",
+      "plant_taxa": [
+        "Ruscus aculeatus"
+      ],
+      "plant_taxa_status": "source_text_named_not_taxonomic_synonym_verified",
+      "feeding_verdict": null
+    },
+    {
+      "id": "aldabra_seasonal_1983",
+      "animal_taxon": "Aldabrachelys gigantea",
+      "doi": "10.1007/BF00378221",
+      "url": "https://doi.org/10.1007/BF00378221",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Tortoise turf accounted for 61 percent of feeding observations; coastal Sporobolus sward visited",
+      "plant_taxa": [
+        "Sporobolus virginicus"
+      ],
+      "plant_taxa_status": "source_text_named_not_taxonomic_synonym_verified",
+      "feeding_verdict": null
+    },
+    {
+      "id": "aldabra_digestion_1982",
+      "animal_taxon": "Aldabrachelys gigantea",
+      "doi": "10.1016/S0140-1963(18)31545-3",
+      "url": "https://doi.org/10.1016/S0140-1963(18)31545-3",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Digestion and passage time compared between turf and coastal grass",
+      "plant_taxa": [
+        "Sporobolus virginicus"
+      ],
+      "plant_taxa_status": "source_text_named_not_taxonomic_synonym_verified",
+      "feeding_verdict": null
+    },
+    {
+      "id": "aldabra_dispersal_1978",
+      "animal_taxon": "Aldabrachelys gigantea",
+      "doi": "10.1007/BF00348060",
+      "url": "https://doi.org/10.1007/BF00348060",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "28 plant species germinated from faeces; species list not verified from abstract",
+      "plant_taxa": [],
+      "plant_taxa_status": "not_extracted",
+      "feeding_verdict": null
+    },
+    {
+      "id": "aldabra_heterophylly_2004",
+      "animal_taxon": "Aldabrachelys gigantea",
+      "doi": "10.1111/j.1365-2699.2004.01092.x",
+      "url": "https://doi.org/10.1111/j.1365-2699.2004.01092.x",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Plant leaf morphology and tortoise feeding response; plant identities require full-text review",
+      "plant_taxa": [],
+      "plant_taxa_status": "not_extracted",
+      "feeding_verdict": null
+    },
+    {
+      "id": "mojave_superbloom_2023",
+      "animal_taxon": "Gopherus agassizii",
+      "doi": "10.3389/famrs.2023.1283255",
+      "url": "https://doi.org/10.3389/famrs.2023.1283255",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Direct feeding observations and tables of species, bite counts, plant parts",
+      "plant_taxa": [
+        "Mirabilis laevis",
+        "Astragalus layneae",
+        "Astragalus didymocarpus",
+        "Acmispon brachycarpus",
+        "Prenanthella exigua",
+        "Chamaesyce albomarginata",
+        "Erodium cicutarium",
+        "Plantago ovata",
+        "Chorizanthe brevicornu",
+        "Cryptantha circumcissa",
+        "Eremothera boothii",
+        "Amsinckia tessellata",
+        "Eriastrum eremicum",
+        "Schismus barbatus",
+        "Stylocline psilocarphoides",
+        "Phacelia tanacetifolia",
+        "Oxytheca perfoliata",
+        "Linanthus parryae",
+        "Ambrosia salsola",
+        "Caulanthus inflatus",
+        "Astragalus acutirostris"
+      ],
+      "plant_taxa_status": "source_text_named_not_taxonomic_synonym_verified",
+      "feeding_verdict": null
+    },
+    {
+      "id": "aldabra_vegetation_1976",
+      "animal_taxon": "Aldabrachelys gigantea",
+      "doi": "10.1016/0006-3207(76)90051-3",
+      "url": "https://doi.org/10.1016/0006-3207(76)90051-3",
+      "abstract_verified": true,
+      "full_text_verified": false,
+      "summary": "Grazing impacts and browse lines, but no species-specific diet list in abstract",
+      "plant_taxa": [],
+      "plant_taxa_status": "not_extracted",
+      "feeding_verdict": null
+    }
+  ]
+}

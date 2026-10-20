@@ -1,0 +1,55 @@
+name: Plant Catalog QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/plant-catalog/**'
+      - 'data/plants.json'
+      - 'data/public_assessments.json'
+      - 'data/feeding_pending_site_v1.json'
+      - 'all-plants/index.html'
+      - 'taxon/index.html'
+      - 'taxonomy-home-search.js'
+      - 'index.html'
+      - 'en/index.html'
+      - 'sitemap-taxa.xml'
+      - 'robots.txt'
+      - 'scripts/build_bulk_taxon_catalog.py'
+      - 'scripts/test_build_bulk_taxon_catalog.py'
+      - 'scripts/qa_plant_catalog_v1.py'
+      - '.github/workflows/plant-catalog-qa.yml'
+  push:
+    paths:
+      - 'data/plant-catalog/**'
+      - 'data/plants.json'
+      - 'data/public_assessments.json'
+      - 'data/feeding_pending_site_v1.json'
+      - 'all-plants/index.html'
+      - 'taxon/index.html'
+      - 'taxonomy-home-search.js'
+      - 'index.html'
+      - 'en/index.html'
+      - 'sitemap-taxa.xml'
+      - 'robots.txt'
+      - 'scripts/build_bulk_taxon_catalog.py'
+      - 'scripts/test_build_bulk_taxon_catalog.py'
+      - 'scripts/qa_plant_catalog_v1.py'
+      - '.github/workflows/plant-catalog-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  plant-catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Bulk taxon staging regression tests
+        run: python scripts/test_build_bulk_taxon_catalog.py
+      - name: Catalog shards, search index, sitemap, no grades, reviewed plants unchanged
+        run: python scripts/qa_plant_catalog_v1.py

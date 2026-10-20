@@ -1,0 +1,45 @@
+name: Bulk taxonomy pipeline QA
+
+on:
+  push:
+    branches:
+      - 'feat/feeding-fullread-integration-20261018'
+      - main
+    paths:
+      - 'scripts/build_bulk_taxon_catalog.py'
+      - 'scripts/build_taxonomy_directory.py'
+      - 'scripts/publish_bulk_taxonomy.py'
+      - 'scripts/export_public_taxonomy_search.py'
+      - 'scripts/test_build_bulk_taxon_catalog.py'
+      - 'scripts/test_build_taxonomy_directory.py'
+      - 'scripts/test_publish_bulk_taxonomy.py'
+      - 'scripts/test_export_public_taxonomy_search.py'
+      - 'scripts/test_bulk_taxonomy_scale.py'
+      - '.github/workflows/bulk-taxonomy-qa.yml'
+  pull_request:
+    paths:
+      - 'scripts/build_bulk_taxon_catalog.py'
+      - 'scripts/build_taxonomy_directory.py'
+      - 'scripts/publish_bulk_taxonomy.py'
+      - 'scripts/export_public_taxonomy_search.py'
+      - 'scripts/test_*taxonomy*.py'
+      - 'scripts/test_export_public_taxonomy_search.py'
+      - '.github/workflows/bulk-taxonomy-qa.yml'
+  workflow_dispatch:
+
+jobs:
+  taxonomy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run bulk taxonomy correctness and 10k synthetic scale tests
+        run: |
+          python -m unittest discover -s scripts -p 'test_build_bulk_taxon_catalog.py' -v
+          python -m unittest discover -s scripts -p 'test_build_taxonomy_directory.py' -v
+          python -m unittest discover -s scripts -p 'test_publish_bulk_taxonomy.py' -v
+          python -m unittest discover -s scripts -p 'test_export_public_taxonomy_search.py' -v
+          python -m unittest discover -s scripts -p 'test_bulk_taxonomy_scale.py' -v
