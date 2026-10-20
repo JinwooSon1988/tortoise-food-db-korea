@@ -8,6 +8,7 @@ on:
     paths:
       - 'plant/**'
       - 'data/plant-catalog/**'
+      - 'data/feeding_pending_site_v1.json'
       - 'all-plants/**'
       - 'taxon/**'
       - 'taxonomy-home-search.js'
@@ -61,6 +62,20 @@ jobs:
               if required not in home:
                   raise SystemExit('DEPLOY BLOCKED: missing English home navigation: '+required)
           print('English homepage regression and navigation checks passed')
+          PY
+      - name: Verify full searchable catalog before upload
+        run: |
+          python scripts/qa_plant_catalog_v1.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/plant-catalog')
+          i=json.loads((p/'index.json').read_text(encoding='utf-8'))
+          s=json.loads((p/'search.json').read_text(encoding='utf-8'))
+          assert i['count'] >= 22045, i['count']
+          assert len(s['rows']) == i['count'], (len(s['rows']),i['count'])
+          assert (Path('taxon/index.html')).exists()
+          print('Release gate passed:',i['count'],'searchable taxa')
           PY
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
