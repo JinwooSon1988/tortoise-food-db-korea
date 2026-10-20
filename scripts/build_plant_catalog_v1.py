@@ -17,7 +17,10 @@ authors, or by GBIF usage/accepted/species key of an exact match) are not added 
 
 Taxonomy and feeding evidence are separate. Being a valid taxon is never feeding evidence. Every entry has
 feeding_safety_status "unassessed" (급여 안전성 미확정) and no A-D grade. Feeding evidence is attached only from
-repository sources, by type, and only where the reported name is an exact accepted GBIF species.
+repository sources (including data/catalog-evidence/batch-*.json), by type, and only where the reported name is an exact
+accepted GBIF species, a GBIF synonym of an accepted species, or an orthographic variant (doubled i, gender ending); such
+links keep the printed name and record name_resolution. Every entry records its research status for the searched corpus;
+"no_record_found" is never a safety or toxicity finding.
 
 --max caps the number of entries (batches are appended in candidate order; earlier entries are kept).
 """
@@ -36,6 +39,10 @@ from build_bulk_taxon_catalog import bare  # noqa: E402
 # El Mouden et al. 2006 names whose catalog linkage is held by the P1 release gate.
 P1_HELD_NAMES = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
 EVIDENCE_TYPES = ("wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity")
+BATCH_DIR = "data/catalog-evidence"
+SYNONYM_STATUS = ("SYNONYM", "HOMOTYPIC_SYNONYM", "HETEROTYPIC_SYNONYM")
+# Verification levels where the record was read in a full text (the rest are leads to recheck).
+CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified")
 
 
 def load(p):
@@ -75,7 +82,7 @@ def evidence_sources():
         n, pct = r["occurrence_faeces_of_44"], r["faecal_mean_pct_of_fragments"]["mean"]
         base = {"type": "wild_feeding_observation", "tortoise": "Testudo graeca graeca", "source": cite,
                 "url": "https://doi.org/10.1016/j.jaridenv.2005.06.010", "locator": "Table 2, p. %d" % r["page"],
-                "verification": "full_text_verified", "plant_part": None, "context": "wild"}
+                "verification": "full_text_verified", "plant_part": None, "context": "wild", "study": "elmouden_2006_central_morocco"}
         if n:
             items.append((name, dict(base, finding={
                 "ko": "야생 개체 분변 44개 중 %d개에서 검출, 식별된 분변 조각의 평균 %s%% (모로코 중부, 2002년 봄)" % (n, pct),
@@ -93,7 +100,7 @@ def evidence_sources():
             "source": s["citation"], "url": s["url"], "locator": s["sites"][r["site"]]["locator"],
             "verification": "full_text_verified", "context": s["context"],
             "plant_part": r["plant_part"] and {"ko": r["plant_part"]["ko"], "en": r["plant_part"]["en"]},
-            "finding": r["observed"] and {"ko": r["observed"]["ko"], "en": r["observed"]["en"]}}))
+            "finding": r["observed"] and {"ko": r["observed"]["ko"], "en": r["observed"]["en"]}, "study": r["source_key"]}))
     named = ext["species_in_full_text_not_in_catalog"]
     for key, names in named.items():
         if key in src and isinstance(names, list):
@@ -101,15 +108,19 @@ def evidence_sources():
             for n in names:
                 items.append((n, {"type": "wild_feeding_observation", "tortoise": s["tortoise_taxon"], "source": s["citation"],
                                   "url": s["url"], "locator": None, "verification": "full_text_named_not_extracted",
-                                  "context": s["context"], "plant_part": None, "finding": None}))
-    # Open-access full texts and keeper database entries read for catalog species (records carry their own verification level).
-    ft = load("data/catalog_feeding_evidence_fulltext_20261020.json")
-    src = {s["source_key"]: s for s in ft["sources"]}
-    for r in ft["records"]:
-        s = src[r["source_key"]]
-        items.append((r["reported_name"], {"type": r["type"], "tortoise": s["tortoise_taxon"], "source": s["citation"], "url": s["url"],
-                                           "locator": r["locator"], "verification": r["verification"], "context": s["context"],
-                                           "plant_part": r["plant_part"], "finding": r["finding"]}))
+                                  "context": s["context"], "plant_part": None, "finding": None, "study": key}))
+    # Open-access full texts, keeper database entries and corpus batches (records carry their own verification level).
+    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json"))]:
+        ft = load(f)
+        src = {s["source_key"]: s for s in ft["sources"]}
+        for r in ft["records"]:
+            s = src[r["source_key"]]
+            item = {"type": r["type"], "tortoise": r.get("tortoise") or s["tortoise_taxon"], "source": s["citation"], "url": s["url"],
+                    "locator": r["locator"], "verification": r["verification"], "context": s["context"],
+                    "plant_part": r["plant_part"], "finding": r["finding"], "study": s.get("study_id") or r["source_key"]}
+            if s.get("method"):
+                item["method"] = s["method"]
+            items.append((r["reported_name"], item))
     for f in sorted((ROOT / "research/evidence_leads").glob("*.json")):
         for r in json.loads(f.read_text(encoding="utf-8"))["records"]:
             names = r.get("observed_plant_taxa") or r.get("plant_taxa") or []
@@ -119,8 +130,42 @@ def evidence_sources():
                 items.append((n, {"type": typ, "tortoise": r.get("animal_taxon"), "source": r.get("source_title") or r.get("id") or r.get("source_id"),
                                   "url": r.get("url") or r.get("source_url") or ("https://doi.org/" + r["doi"] if r.get("doi") else None),
                                   "locator": None, "verification": "literature_lead_not_reverified", "context": "wild" if typ.startswith("wild") else "captive",
-                                  "plant_part": None, "finding": None}))
+                                  "plant_part": None, "finding": None, "study": r.get("id") or r.get("source_id") or r.get("doi") or f.stem}))
     return items
+
+
+def orthographic_variant(a, b):
+    """True when two binomials share the genus and their epithets differ only by a doubled final i or a Latin gender ending."""
+    (ga, ea), (gb, eb) = a.split(" ", 1), b.split(" ", 1)
+    if ga != gb or ea == eb:
+        return False
+    for group in (("ii", "i"), ("us", "a", "um"), ("is", "e")):
+        for x in group:
+            for y in group:
+                if x != y and ea.endswith(x) and eb.endswith(y) and ea[:-len(x)] == eb[:-len(y)]:
+                    return True
+    return False
+
+
+def resolve(n, m):
+    """(catalog key, basis) for a reported name, or (None, None). basis None means an exact accepted species match."""
+    if m.get("rank") != "SPECIES" or not m.get("usageKey"):
+        return None, None
+    if m.get("matchType") == "EXACT" and m.get("status") == "ACCEPTED" and m.get("canonicalName") == n:
+        return str(m["usageKey"]), None
+    if m.get("matchType") == "EXACT" and m.get("status") in SYNONYM_STATUS and m.get("canonicalName") == n and m.get("acceptedUsageKey"):
+        return str(m["acceptedUsageKey"]), "gbif_synonym"
+    if m.get("matchType") == "FUZZY" and m.get("status") == "ACCEPTED" and orthographic_variant(n, m.get("canonicalName") or ""):
+        return str(m["usageKey"]), "orthographic_variant"
+    return None, None
+
+
+def research_status(evidence, rejected):
+    if any(e["verification"] in CHECKED_LEVELS for e in evidence):
+        return "evidence_checked_in_full_text"
+    if evidence:
+        return "evidence_leads_only"
+    return "reviewed_not_feeding_evidence" if rejected else "no_record_found"
 
 
 def main():
@@ -137,6 +182,10 @@ def main():
     existing_names = {bare(p["scientific"]).casefold() for p in plants if bare(p["scientific"])}
     for p in plants:
         existing_names.update(t.casefold() for t in re.findall(r"\b([A-Z][a-z]+ [a-z][a-z-]+)\b", p.get("taxonomy_note") or ""))
+        # The species of a reviewed subspecies or variety (e.g. carrot top, Daucus carota subsp. sativus) is not listed again.
+        sp = re.match(r"([A-Z][a-z]+ [a-z][a-z-]+) (?:subsp|var|f)\.", p["scientific"])
+        if sp:
+            existing_names.add(sp.group(1).casefold())
     existing_keys = set()
     for m in existing_match.values():
         if m.get("matchType") == "EXACT":
@@ -148,22 +197,40 @@ def main():
     cands += [(r["scientific_name"], r["taxon_id"].split(":")[1], "diverse_taxonomy_candidates")
               for r in load("data/diverse_taxonomy_candidates.json")["records"]]
 
-    # Evidence names resolved by exact, accepted GBIF match; ambiguous or synonym names are not linked.
+    # Evidence names resolved by an exact accepted GBIF species match, a GBIF synonym of an accepted species, or an
+    # orthographic variant (doubled i, gender ending); the name printed in the source is kept as reported_name.
     ev = evidence_sources()
-    match = gbif_match({n for n, _ in ev if re.fullmatch(r"[A-Z][a-z]+ [a-z][a-z-]+", n)}, a.gbif_dir / "evidence_match.json")
-    ev_by_key, ev_unlinked = {}, Counter()
+    batches = [load(str(p.relative_to(ROOT))) for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json"))]
+    rejected_names = {n for b in batches for x in b.get("reviewed_not_feeding_evidence", []) for n in x["names"]}
+    binomial = lambda n: re.fullmatch(r"[A-Z][a-z]+ [a-z][a-z-]+", n)
+    match = gbif_match({n for n, _ in ev if binomial(n)} | {n for n in rejected_names if binomial(n)}, a.gbif_dir / "evidence_match.json")
+    ev_by_key, ev_unlinked, resolved_by = {}, Counter(), Counter()
     for n, item in ev:
-        m = match.get(n) or {}
         if n in P1_HELD_NAMES:
             ev_unlinked["p1_identity_hold"] += 1; continue
-        if m.get("matchType") != "EXACT" or m.get("status") != "ACCEPTED" or m.get("rank") != "SPECIES" or m.get("canonicalName") != n:
+        key, basis = resolve(n, match.get(n) or {})
+        if key is None:
             ev_unlinked["no_exact_accepted_gbif_species"] += 1; continue
         item = dict(item, reported_name=n)
-        lst = ev_by_key.setdefault(str(m["usageKey"]), [])
+        if basis:
+            item["name_resolution"] = {"basis": basis, "reported": n, "gbif_usage_key": (match[n] or {}).get("usageKey")}
+            resolved_by[basis] += 1
+        lst = ev_by_key.setdefault(key, [])
         if item not in lst:
             lst.append(item)
+    corpus_id = batches[-1]["corpus"]["id"] if batches else None
+    rejected_keys = {k for n in rejected_names for k, b in [resolve(n, match.get(n) or {})] if k and b is None}
     # Species named in feeding sources come first, so every batch carries the entries that have evidence.
     by_key = {str(m["usageKey"]): n for n, m in match.items() if m.get("usageKey")}
+    for k in ev_by_key:
+        if (species.get(k) or {}).get("canonicalName"):
+            by_key[k] = species[k]["canonicalName"]  # accepted name for keys reached through a synonym or variant
+        elif k not in by_key or any(e.get("name_resolution") for e in ev_by_key[k]):
+            by_key[k] = "(GBIF record not fetched yet)"
+    unfetched = sorted(k for k in ev_by_key if k not in species)
+    if unfetched:
+        (a.gbif_dir / "missing_keys.txt").write_text("\n".join(unfetched) + "\n", encoding="utf-8")
+        raise SystemExit(f"{len(unfetched)} evidence keys have no GBIF species record yet; listed in {a.gbif_dir / 'missing_keys.txt'}")
     cands = [(by_key[k], k, "feeding_source_name") for k in sorted(ev_by_key)] + [c for c in cands if c[1] not in ev_by_key]
     prev = {}
     if (OUT / "index.json").exists():
@@ -202,7 +269,8 @@ def main():
                 if x.get("l") == lang and v and v.casefold() not in {o["name"].casefold() for o in out}:
                     out.append({"name": v[:1].upper() + v[1:] if lang == "eng" else v, "source": x.get("s") or "GBIF"})
             return out[:4]
-        evidence = ev_by_key.get(key, [])
+        evidence = [dict(e, name_resolution=dict(e["name_resolution"], accepted=name)) if e.get("name_resolution") else e
+                    for e in ev_by_key.get(key, [])]
         tid = "gbif:" + key
         records.append({
             "id": tid, "scientific": name, "authorship": g.get("authorship") or None,
@@ -214,6 +282,7 @@ def main():
             "feeding_safety_status": "unassessed", "safety_grade": None,
             "feeding_evidence_status": "linked" if evidence else "none_found",
             "feeding_evidence": evidence,
+            "research": {"status": research_status(evidence, key in rejected_keys), "corpus": corpus_id},
             "feeding_pending": tid in pending["site_feeding_pending"],
             "image": None,
             "batch": prev.get(tid, {}).get("batch") or a.batch_label,
@@ -250,11 +319,23 @@ def main():
         "with_korean_name": sum(1 for r in records if r["common_names"]["ko"]),
         "evidence_by_type": dict(Counter(e["type"] for r in records for e in r["feeding_evidence"])),
         "evidence_by_verification": dict(Counter(e["verification"] for r in records for e in r["feeding_evidence"])),
+        "evidence_studies": len({e["study"] for r in records for e in r["feeding_evidence"]}),
+        "evidence_linked_by_name_resolution": dict(Counter(e["name_resolution"]["basis"] for r in records for e in r["feeding_evidence"] if e.get("name_resolution"))),
+        "research_status": dict(Counter(r["research"]["status"] for r in records)),
     }
+    linked_keys = {r["taxonomy"]["taxon_key"] for r in records}
+    ev_unlinked["species_not_in_catalog"] = sum(len(v) for k, v in ev_by_key.items() if int(k) not in linked_keys)
     index = {"schema_version": "1.0", "generated": CHECKED, "scope": "Plant taxa confirmed in the GBIF Backbone Taxonomy. A taxon "
              "being valid is not feeding evidence; no entry has a feeding grade (feeding_safety_status unassessed = 급여 안전성 미확정).",
              "shard_rule": f"taxon_key % {SHARDS}", "count": len(records), "counts": counts,
-             "rejected_in_candidate_order": dict(rejected), "evidence_names_not_linked": dict(ev_unlinked), "shards": meta}
+             "rejected_in_candidate_order": dict(rejected), "evidence_names_not_linked": dict(ev_unlinked),
+             "research_corpus": [dict(b["corpus"], batch=b["batch"]) for b in batches],
+             "research_status_meaning": {
+                 "evidence_checked_in_full_text": "at least one feeding record read in a full text (original study, review or species account)",
+                 "evidence_leads_only": "only literature leads not yet rechecked in the original",
+                 "reviewed_not_feeding_evidence": "named in a tortoise paper that was read, but not as food (e.g. habitat or plant availability)",
+                 "no_record_found": "no feeding record found in the searched corpus; this is not a safety or toxicity finding"},
+             "shards": meta}
     # GBIF matches of the reviewed plants, kept so QA can recheck the overlap offline.
     (OUT / "reviewed_gbif_match.json").write_text(json.dumps(dict(sorted(existing_match.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     base = "https://jinwooson1988.github.io/tortoise-food-db-korea/taxon/?id="
