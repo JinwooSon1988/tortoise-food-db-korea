@@ -17,7 +17,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BINOMIAL = re.compile(r"^[A-Z][a-z-]+ [a-z][a-z-]+(?: (?:subsp\\.|ssp\\.|var\\.) [a-z][a-z-]+)?$")
+BINOMIAL = re.compile(r"^[A-Z][a-z-]+ [a-z][a-z-]+(?: (?:subsp\.|ssp\.|var\.) [a-z][a-z-]+)?$")
 RANKS = {"species", "subspecies", "variety"}
 ACCEPTED = {"accepted", "valid"}
 PLANT_KINGDOM = {"plantae"}
