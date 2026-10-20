@@ -15,6 +15,9 @@ def main():
  if not src.exists():p.error('Bulk literature output missing; finish the search first')
  data=json.loads(src.read_text(encoding='utf-8'))
  if not data.get('records'):p.error('No research records in input; refusing empty publish')
+ if a.max_per_taxon<1 or a.max_per_taxon>100:p.error('max-per-taxon must be 1..100')
+ failed=sum(x.get('status')=='search_error' for x in data['records'])
+ if failed:print(f'WARNING: {failed} taxon searches failed; do not treat absent leads as no evidence',file=sys.stderr)
  taxa={};lit=0;comm=0
  for r in data['records']:
   key=str(r.get('taxon_id',''))
@@ -26,7 +29,7 @@ def main():
    pid=str(x.get('pmid') or '').strip()
    url='https://doi.org/'+doi if doi else ('https://europepmc.org/article/'+source+'/'+pid if pid else '')
    title=str(x.get('title') or '').strip()
-   if not url or not title or url in seen:continue
+   if not url or not title or url in seen or not url.startswith('https://'):continue
    seen.add(url)
    items.append({'title':title[:400],'year':str(x.get('pubYear') or '')[:8],'url':url,'verification':'search_hit_unreviewed','feeding_safety_status':'unassessed'})
    if len(items)>=a.max_per_taxon:break
