@@ -7,6 +7,8 @@ on:
       - 'data/plant-catalog/**'
       - 'all-plants/**'
       - 'taxon/**'
+      - 'taxonomy-home-search.js'
+      - 'data/feeding_pending_site_v1.json'
       - '.github/workflows/live-pages-catalog.yml'
 permissions:
   contents: read
@@ -34,11 +36,17 @@ jobs:
                   assert len(index['shards'])==40
                   search=json.loads(get('/data/plant-catalog/search.json'))
                   assert len(search['rows'])==index['count'], f"search {len(search['rows'])} vs catalog {index['count']}"
-                  assert all(len(row)>=6 for row in search['rows'][:100])
+                  assert all(len(row)==7 for row in search['rows']), 'malformed search row'
+                  ids=[row[0] for row in search['rows']]
+                  assert len(set(ids))==len(ids), 'duplicate taxon IDs'
+                  assert all(row[0].startswith('gbif:') and row[1] for row in search['rows']), 'missing GBIF ID or scientific name'
                   html=get('/all-plants/').decode('utf-8')
                   assert 'data/plant-catalog/search.json' in html
                   detail=get('/taxon/?id=gbif:2685360').decode('utf-8')
                   assert '급여 안전성 미확정' in detail
+                  assert '원문 확인' in detail and '재확인 필요' in detail, 'evidence verification labels missing'
+                  assert '다시 불러오기' in detail, 'load-error retry missing'
+                  assert 'data/plant-catalog/search.json' in get('/').decode('utf-8') or 'taxonomy-home-search.js' in get('/').decode('utf-8'), 'homepage catalog search missing'
                   print(f"PASS LIVE Pages: {index['count']} catalog entries, {len(search['rows'])} search rows, list and detail reachable")
                   break
               except Exception as e:
