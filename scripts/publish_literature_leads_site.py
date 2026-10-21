@@ -22,10 +22,19 @@ def main():
  if a.max_per_taxon<1 or a.max_per_taxon>100:p.error('max-per-taxon must be 1..100')
  failed=sum(x.get('status')=='search_error' for x in data['records'])
  if failed:print(f'WARNING: {failed} taxon searches failed; do not treat absent leads as no evidence',file=sys.stderr)
- taxa={};lit=0;comm=0
+ # Only publish records for real catalog taxa; do not trust arbitrary external IDs.
+ catalog=pathlib.Path('data/plant-catalog')
+ known_ids=set()
+ for shard in sorted(catalog.glob('taxa-*.json')):
+  for plant in json.loads(shard.read_text(encoding='utf-8')).get('records',[]):
+   known_ids.add(str(plant.get('id','')))
+ if not known_ids:p.error('Plant catalog is unavailable; refusing publication')
+ taxa={};lit=0;comm=0;unknown_ids=0
  for r in data['records']:
   key=str(r.get('taxon_id',''))
-  if not key.startswith('gbif:'):continue
+  if key not in known_ids:
+   unknown_ids+=1
+   continue
   items=[];seen=set()
   for x in r.get('literature_leads',[]):
    doi=str(x.get('doi') or '').strip()
@@ -62,7 +71,7 @@ def main():
  if not taxa:p.error('No valid matched literature or community sources; refusing to replace index')
  target=pathlib.Path(a.output);target.parent.mkdir(parents=True,exist_ok=True)
  target.write_text(json.dumps(output,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8')
- print('Indexed taxa:',len(taxa),'Literature leads:',lit,'Community mentions:',comm,'Bytes:',target.stat().st_size)
+ print('Indexed taxa:',len(taxa),'Literature leads:',lit,'Community mentions:',comm,'Unmatched IDs:',unknown_ids,'Bytes:',target.stat().st_size)
  if a.git_commit:
   subprocess.run(['git','add','--',str(target).replace('\\','/')],check=True)
   diff=subprocess.run(['git','diff','--cached','--quiet','--',str(target).replace('\\','/')])
