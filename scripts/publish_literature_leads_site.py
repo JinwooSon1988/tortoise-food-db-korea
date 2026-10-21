@@ -25,14 +25,21 @@ def main():
  # Only publish records for real catalog taxa; do not trust arbitrary external IDs.
  catalog=pathlib.Path('data/plant-catalog')
  known_ids=set()
+ catalog_names={}
  for shard in sorted(catalog.glob('taxa-*.json')):
   for plant in json.loads(shard.read_text(encoding='utf-8')).get('records',[]):
    known_ids.add(str(plant.get('id','')))
+   catalog_names[str(plant.get('id',''))]=str(plant.get('scientific','')).strip().casefold()
  if not known_ids:p.error('Plant catalog is unavailable; refusing publication')
  taxa={};lit=0;comm=0;unknown_ids=0
  for r in data['records']:
   key=str(r.get('taxon_id',''))
   if key not in known_ids:
+   unknown_ids+=1
+   continue
+  # A valid GBIF ID is insufficient: reject a candidate assigned to a different species.
+  claimed=str(r.get('scientific_name') or r.get('scientific') or r.get('name') or '').strip().casefold()
+  if claimed and claimed!=catalog_names[key]:
    unknown_ids+=1
    continue
   items=[];seen=set()
