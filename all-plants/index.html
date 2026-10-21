@@ -133,7 +133,7 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  const catalog=await j('../data/plant-catalog/search.json');
  if(Array.isArray(catalog?.rows)){
   const known=new Set(rows.map(r=>r.scientific.trim().toLowerCase()));
-  for(const c of catalog.rows){const t={taxon_id:c[0],scientific_name:c[1],family:c[2],en:c[3],ko:c[4],evidence:c[5]};const sci=String(t.scientific_name||'').trim();if(!sci||known.has(sci.toLowerCase()))continue;known.add(sci.toLowerCase());
+  for(const c of catalog.rows){if(!c[5])continue;const t={taxon_id:c[0],scientific_name:c[1],family:c[2],en:c[3],ko:c[4],evidence:c[5]};const sci=String(t.scientific_name||'').trim();if(!sci||known.has(sci.toLowerCase()))continue;known.add(sci.toLowerCase());
    rows.push({id:t.taxon_id,ko:t.ko||sci,en:t.en||sci,scientific:sci,aliases:[t.ko,t.en].filter(Boolean),searchAliases:[],family:t.family||'',category:'',verdict:UNA,verdictRank:t.evidence?5.5:6,confidence:'',directEvidence:0,hasNutrition:false,hasReferenceNutrition:false,water:null,fiber:null,calcium:null,phosphorus:null,ratio:null,protein:null,potassium:null,vitc:null,isCandidate:true,hasEvidence:!!t.evidence,feedingRecordPending:feedingIds.has(t.taxon_id)})
   }
  }
