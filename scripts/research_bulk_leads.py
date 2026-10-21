@@ -92,14 +92,25 @@ def main():
                       'workers': args.workers, 'output': str(args.output)},
                      ensure_ascii=False), flush=True)
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
-    # Keep only a small window of requests in flight. This prevents a 22k-item
-    # future queue from exhausting memory and makes checkpointing predictable.
+    # Rolling bounded queue: slow requests never hold up the next 4*workers batch.
+    # Only the main thread writes the checkpoint, preserving JSONL integrity.
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+        iterator = iter(taxa)
+        pending = set()
+        def submit_next():
+            try:
+                taxon = next(iterator)
+            except StopIteration:
+                return False
+            pending.add(pool.submit(query, taxon))
+            return True
+        for _ in range(min(len(taxa), args.workers * 4)):
+            submit_next()
         with args.output.open('a', encoding='utf-8') as stream:
-            for offset in range(0, len(taxa), args.workers * 4):
-                chunk = taxa[offset:offset + args.workers * 4]
-                futures = [pool.submit(query, taxon) for taxon in chunk]
-                for future in concurrent.futures.as_completed(futures):
+            while pending:
+                done, pending = concurrent.futures.wait(
+                    pending, return_when=concurrent.futures.FIRST_COMPLETED)
+                for future in done:
                     row = future.result()
                     stream.write(json.dumps(row, ensure_ascii=False) + '\n')
                     stream.flush()
@@ -107,6 +118,7 @@ def main():
                     counts['hit_leads'] += len(row['hits'])
                     if (counts['searched'] + counts['retry_needed']) % 100 == 0:
                         print(json.dumps(counts, ensure_ascii=False), flush=True)
+                    submit_next()
     print(json.dumps({'previously_completed': len(completed), **counts}, ensure_ascii=False))
 if __name__ == '__main__':
     main()
