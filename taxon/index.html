@@ -105,9 +105,11 @@ function render(){const view=$('view');$('navlist').textContent=T('전체 식물
  '</dl><p class="note">'+T('분류 정보는 이 식물이 실제 종이라는 것만 확인합니다. 급여 근거와는 별개입니다.','Taxonomy only confirms that this is a real species. It is separate from feeding evidence.')+'</p></section>'+
  '<div class="links"><a href="../all-plants/'+(en()?'?lang=en':'')+'">'+T('전체 식물 목록','All plants')+'</a><a href="../index.html">'+T('먹이 검색','Search foods')+'</a></div>'}
 async function boot(){state='loading';render();const id=idFromUrl();if(!id){state='done';render();return}
- const key=Number(id.split(':')[1]);const [shard,feed,idx,communityData,leadData]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/feeding_pending_site_v1.json'),j('../data/plant-catalog/index.json'),j('../data/community_source_leads_v1.json'),j('../data/research_source_leads_index.json').catch(()=>({taxa:{}}))]);
+ const key=Number(id.split(':')[1]);const [shard,feed,idx,communityData]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/feeding_pending_site_v1.json'),j('../data/plant-catalog/index.json'),j('../data/community_source_leads_v1.json')]);
  if(!shard||!Array.isArray(shard.records)){state='error';render();return}
- rec=shard.records.find(x=>x.id===id)||null;pending=feed?.records||{};corpus=idx?.research_corpus||[];community=communityData?.records||[];researchLeads=leadData?.taxa||{};state='done';render()}
+ rec=shard.records.find(x=>x.id===id)||null;pending=feed?.records||{};corpus=idx?.research_corpus||[];community=communityData?.records||[];state='done';render();
+ // Optional bulk literature index must never delay the primary plant result.
+ j('../data/research_source_leads_index.json').then(leadData=>{if(rec?.id===id){researchLeads=leadData?.taxa||{};render()}}).catch(err=>console.warn('Optional literature index unavailable',err))}
 window.addEventListener('tfdblanguagechange',render);
 document.querySelector('.langswitch')?.addEventListener('click',e=>{if(e.target.closest('button[data-lang]'))queueMicrotask(render)});
 boot().catch(err=>{console.error('Plant detail initialization failed:',err);state='error';render()});
