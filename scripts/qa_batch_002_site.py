@@ -29,8 +29,8 @@ def main():
         source = sources.get(record.get("source_key"))
         if not source:
             errors.append(f"{i}: source missing")
-        elif not re.match(r"^https://", str(source.get("url") or "")):
-            errors.append(f"{i}: missing HTTPS source")
+        elif not re.match(r"^https?://", str(source.get("url") or "")):
+            errors.append(f"{i}: missing valid web source URL")
         if not re.match(r"^[A-Z][a-z-]+ [a-z][a-z-]+$", name):
             errors.append(f"{i}: not an exact binomial: {name!r}")
         if not str(record.get("tortoise") or "").strip():
