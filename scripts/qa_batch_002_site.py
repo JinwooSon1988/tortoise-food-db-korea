@@ -44,7 +44,7 @@ def main():
         by_verification[record.get("verification")] += 1
         names.add(name.casefold())
     page = PAGE.read_text(encoding="utf-8")
-    for marker in ("batch002HTML(r)", "batch-002-20261021.json", "reported_name", "source_key"):
+    for marker in ("batch002HTML(r)", "batch-002-site-index.json", "by_scientific_name", "reported_name", "source_key"):
         if marker not in page:
             errors.append(f"Site integration missing {marker}")
     print(json.dumps({
