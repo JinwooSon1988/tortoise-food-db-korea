@@ -175,7 +175,7 @@ async function boot(){
  if(!shard||!Array.isArray(shard.records)){state='error';render();return}
  rec=shard.records.find(x=>x.id===id)||null;
  // Taxonomy-only entries are not published as food profiles.
- if(rec && !(Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length) && !(rec.research&&rec.research.status&&rec.research.status!=='no_evidence'))rec=null;
+ if(rec && !(Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length))rec=null;
  if(!rec){state='done';render();return}
  state='done';render();
  // Load optional evidence independently; failure of one dataset must not hide others.
