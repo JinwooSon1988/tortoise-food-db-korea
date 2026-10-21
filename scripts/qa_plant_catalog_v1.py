@@ -100,7 +100,7 @@ for r in records:
 
 # Corpus evidence batches: typed, sourced records; held names never reach the catalog; the corpus searched is described.
 linked_reported = {e["reported_name"] for r in records for e in r["feeding_evidence"]}
-batch_files = sorted((ROOT / "data/catalog-evidence").glob("batch-*.json"))
+batch_files = [p for p in sorted((ROOT / "data/catalog-evidence").glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]  # not the site index
 for f in batch_files:
     b = load(f)
     src = {s["source_key"]: s for s in b["sources"]}
