@@ -65,11 +65,14 @@ function researchLeadHTML(r){
  const entries=(researchLeads[r.id]||{}).literature_leads||[];
  if(!entries.length)return '';
  const related=/(tortoise|testudo|gopherus|chelonoidis|geochelone|agrionemys|astrochelys|aldabrachelys|kinixys|malacochersus|homopus|psammobates|stigmochelys|manouria|indotestudo|hermann.?s|herbivor|grazing|forag|feeding ecology|dietary|food plant)/i;
- const priority=entries.filter(x=>related.test(String(x.title||'').replace(/<[^>]*>/g,' ')));
- const other=entries.filter(x=>!related.test(String(x.title||'').replace(/<[^>]*>/g,' ')));
+ const species=String(r.scientific||'').trim().toLowerCase();
+ const highSignal=/(tortoise|testudo|gopherus|chelonoidis|geochelone|agrionemys|astrochelys|aldabrachelys|kinixys|malacochersus|homopus|psammobates|stigmochelys|manouria|indotestudo)/i;
+ const priority=entries.filter(x=>{const title=String(x.title||'').replace(/<[^>]*>/g,' ').replace(/&lt;[^&]*&gt;/g,' ').toLowerCase();return highSignal.test(title)||(species&&title.includes(species)&&related.test(title));});
+ const priorityUrls=new Set(priority.map(x=>x.url));
+ const other=entries.filter(x=>!priorityUrls.has(x.url));
  const item=x=>'<div class="ev"><p><b>'+esc(x.title||T('제목 미확인','Title unavailable'))+'</b>'+(x.year?' · '+esc(x.year):'')+'</p><p>'+T('검증 상태: 원문 검토 전','Status: original not reviewed')+'</p>'+(x.url&&/^https:\/\//.test(x.url)?'<p class="src"><a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('논문 확인 ↗','View paper ↗')+'</a></p>':'')+'</div>';
  return '<section class="panel" aria-labelledby="literature-leads-h"><h2 id="literature-leads-h">'+T('추가 문헌 검색 결과','Additional literature search results')+' ('+entries.length+')</h2><p class="note">'+T('자동 검색된 후보이며 식물의 급여 안전성이나 실제 섭식 사실을 입증하지 않습니다. 제목의 키워드만으로 우선 검토 대상을 구분했으며, 원문 검증 전에는 급여 등급에 반영하지 않습니다.','Automated search hits do not establish feeding safety or actual consumption. Title keywords only prioritize review; none is used for feeding grades without source verification.')+'</p>'+
- (priority.length?'<h3>'+T('육지거북·섭식 관련 키워드 포함','Tortoise or feeding keywords in title')+' ('+priority.length+')</h3>'+priority.map(item).join(''):'')+
+ (priority.length?'<h3>'+T('육지거북 관련 용어 또는 해당 식물명과 섭식 용어 포함','Tortoise terms or species name with feeding terms in title')+' ('+priority.length+')</h3>'+priority.map(item).join(''):'')+
  (other.length?'<details><summary>'+T('그 밖의 미검증 검색 결과','Other unverified search hits')+' ('+other.length+')</summary>'+other.map(item).join('')+'</details>':'')+'</section>';
 }
 function communityHTML(r){
