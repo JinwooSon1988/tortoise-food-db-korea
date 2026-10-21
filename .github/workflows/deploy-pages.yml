@@ -91,6 +91,8 @@ jobs:
           assert (Path('taxon/index.html')).exists()
           print('Release gate passed:',i['count'],'searchable taxa')
           PY
+      - name: Validate plant detail JavaScript and taxon routing
+        run: python scripts/qa_taxon_page_js.py
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
