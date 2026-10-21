@@ -3,6 +3,7 @@ import json
 
 M = lambda ko, en: {"ko": ko, "en": en}
 EX_TERMS = {"exclude": True, "exclude_reason": "site terms forbid electronic storage or processing (testudo-farm.de)"}
+EX_ZOLW = {"exclude": True, "exclude_reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"}
 T = {
  "lagarde2003_ecography": {"exclude": True, "exclude_reason": "publisher PDF re-hosted on a keeper site; not an authorised open copy"},
  "testudo_farm_wegehaupt": EX_TERMS,
@@ -44,6 +45,10 @@ T = {
 F = {
  "fz_de_wegehaupt_habitat": EX_TERMS, "fz_de_testudofarm_futterpflanzen": EX_TERMS, "fz_de_testudofarm_ernaehrung": EX_TERMS, "fz_de_testudofarm_garrigue": EX_TERMS,
  "fz_ru_cherepahi_rasteniya": {"exclude": True, "exclude_reason": "translation of The Tortoise Table, whose terms forbid reuse"},
+ # Terms checked 2026-10-22 (licence review): zolw.info rules section 14 bar copying or distributing posted articles in any form
+ # without the authors' consent; the IGSN Impressum allows downloads and copies for private, non-commercial use only.
+ "fz_pl_zolwinfo_rosliny": EX_ZOLW, "fz_pl_zolwinfo_trujace": EX_ZOLW, "fz_pl_zolwinfo_horsfieldii": EX_ZOLW,
+ "fz_de_igsn_futterpflanzen": {"exclude": True, "exclude_reason": "site Impressum (schildkroeten-schutz.de) allows downloads and copies for private, non-commercial use only"},
  "fz_es_vertebrados_thermanni": {"exclude": True, "exclude_reason": "same page extracted in the Testudo pass"},
  "fz_es_vertebrados_tgraeca": {"exclude": True, "exclude_reason": "same page extracted in the Testudo pass"},
  "fz_ja_zootime": {"study_id": "zootime_2020_blog", "verification": "community_report_unverified", "context": "keeper",

@@ -98,7 +98,7 @@
    "government": 4
   },
   "leads_not_accessed": 155,
-  "not_accessible": "Reddit (robots.txt disallows all; the API needs OAuth), Instagram and Facebook (login), tortoiseforum.org (bot challenge), The Tortoise Table and testudo-farm.de (terms forbid reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), paywalled journals and pages behind bot challenges. Nothing was bypassed.",
+  "not_accessible": "Reddit (robots.txt disallows all; the API needs OAuth), Instagram and Facebook (login), tortoiseforum.org (bot challenge), The Tortoise Table, testudo-farm.de, zolw.info and schildkroeten-schutz.de (terms limit copying or reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), paywalled journals and pages behind bot challenges. Nothing was bypassed.",
   "screening": "Seven research passes saved every document used as text; each record carries a verbatim quote that a script re-found in the saved text, together with the plant name. Records whose quote or name could not be re-found, names printed only as common names or to genus, and keeper, forum or video posts without a scientific name are held, not linked.",
   "summary": {
    "ko": "동물원·정부·수의학 사육지침, 학위논문, 종 설명서, 영양·독성 자료, 사육자 커뮤니티와 공개 영상 정보를 다국어(영·불·독·서·포·러·중·일·한 등)로 조사해 문서 194건을 저장·확인했습니다. 학명이 원문에 인쇄된 기록만 연결했고, 커뮤니티·영상 자료는 검증 연구와 구분해 참고용으로 표시합니다. 로그인·약관·robots 제한이 있는 Reddit·Instagram·Facebook 등은 수집하지 않았습니다.",
@@ -129,6 +129,14 @@
    "en": "Five captive adults fed only these pods for three days showed no disorder (the source also notes that strongly toxic alkaloids have been reported in some Prosopis species; a short test, not proof of safety)"
   }
  },
+ "common_names": [
+  "Arizona cottontop",
+  "Bermuda grass",
+  "Meadow hay",
+  "Orchard grass",
+  "Sweet potato",
+  "Wild clematis"
+ ],
  "manual_ok": [
   "richard1994_cuadherpetol|Prosopis alpataco|captive_feeding_record"
  ],
@@ -650,6 +658,22 @@
   "fz_ru_cherepahi_rasteniya": {
    "exclude": true,
    "exclude_reason": "translation of The Tortoise Table, whose terms forbid reuse"
+  },
+  "fz_pl_zolwinfo_rosliny": {
+   "exclude": true,
+   "exclude_reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"
+  },
+  "fz_pl_zolwinfo_trujace": {
+   "exclude": true,
+   "exclude_reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"
+  },
+  "fz_pl_zolwinfo_horsfieldii": {
+   "exclude": true,
+   "exclude_reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"
+  },
+  "fz_de_igsn_futterpflanzen": {
+   "exclude": true,
+   "exclude_reason": "site Impressum (schildkroeten-schutz.de) allows downloads and copies for private, non-commercial use only"
   },
   "fz_es_vertebrados_thermanni": {
    "exclude": true,

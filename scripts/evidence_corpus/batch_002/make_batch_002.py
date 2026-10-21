@@ -56,12 +56,30 @@ def part(p):
     return {"ko": str(p), "en": str(p)}  # kept verbatim from the source when not in the vocabulary
 
 
+def prior_links(root):
+    """(study id, printed name, record type) already linked by the repository's earlier evidence files, so that a study read
+    again in this batch (e.g. the same species account or thesis) does not add the same plant twice."""
+    out = set()
+    ext = json.loads((root / "data/feeding_record_fulltext_extracts_v1.json").read_text(encoding="utf-8"))
+    out.update((r["source_key"], r["plant_taxon_reported"], "wild_feeding_observation") for r in ext["records"])
+    for key, names in ext["species_in_full_text_not_in_catalog"].items():
+        if isinstance(names, list):
+            out.update((key, n, "wild_feeding_observation") for n in names)
+    for f in [root / "data/catalog_feeding_evidence_fulltext_20261020.json"] + sorted((root / "data/catalog-evidence").glob("batch-*.json")):
+        if f.resolve() == OUT.resolve():
+            continue
+        d = json.loads(f.read_text(encoding="utf-8")); st = {s["source_key"]: s.get("study_id") or s["source_key"] for s in d["sources"]}
+        out.update((st[r["source_key"]], r["reported_name"], r["type"]) for r in d["records"])
+    return out
+
+
+PRIOR = prior_links(OUT.resolve().parents[2])
 srcs = {}
 for f in B2.glob("*/sources.jsonl"):
     for line in f.read_text(encoding="utf-8").splitlines():
         if line.strip():
             s = json.loads(line); srcs[(f.parent.name, s["source_id"])] = s
-records, held, seen, used, excluded = [], [], set(), collections.OrderedDict(), {}
+records, held, seen, used, excluded, prior_only = [], [], set(), collections.OrderedDict(), {}, {}
 stats = collections.Counter()
 for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
     r = json.loads(line)
@@ -77,7 +95,7 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
     if ab:
         printed = ab.group(1)
     name = CFG.get("ocr_corrections", {}).get(printed, printed)
-    m = re.match(r"([A-Z][a-z-]+) ([a-z][a-z-]+)(?![a-z-])", name)  # drop the authority printed after the binomial
+    m = re.match(r"([A-Z][a-z-]+) ([a-z][a-z-]+)(?![\w-])", name)  # drop the authority printed after the binomial (not a word cut at an accent)
     if m and m.group(2) not in ("x",):
         name = m.group(0)
     typ = {"community_report": "community_report", "video_observation": "video_observation"}.get(r["record_type"], r["record_type"])
@@ -91,6 +109,8 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
         reason = CFG["hold_names"][name]
     elif not ok_check:
         reason = "quote_not_verified_in_saved_text"
+    elif name in CFG.get("common_names", []):
+        reason = "identification_common_name_only"
     elif not BIN.fullmatch(name) or name.split()[1] in ("sp", "spp", "cf", "aff"):
         reason = "no_species_level_scientific_name"
     elif typ in ("community_report", "video_observation") and r.get("identification", "binomial_in_source") != "binomial_in_source":
@@ -108,6 +128,8 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
         continue
     if cfg.get("skip_names_file") and name in json.loads((Path(sys.argv[2]).parent / cfg["skip_names_file"]).read_text(encoding="utf-8")):
         stats["already_linked_from_same_study"] += 1; continue
+    if (cfg.get("study_id") or r["source_id"], name, typ) in PRIOR:
+        stats["already_linked_from_same_study"] += 1; prior_only.setdefault(r["source_id"], s); continue
     v = ver(s, cfg, typ)
     p = part(r.get("plant_part"))
     dk = (cfg.get("study_id") or r["source_id"], name, typ, json.dumps(p), r.get("tortoise"))
@@ -119,6 +141,8 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
         loc += " (the quoted sentence refers to the plant named in the previous sentence; checked by hand on the page image)"
     elif printed in CFG.get("ocr_corrections", {}) or r["check"] == "name_not_in_quote":
         loc += " (OCR text of the source spells the name differently; read as " + name + ")"
+    elif r.get("plant_name_expanded") and (r.get("plant_reported") or "").split()[1:2] != name.split()[1:2]:
+        loc += " (the source prints '" + r["plant_reported"] + "'; read as " + name + ")"
     x = {"source_key": r["source_id"], "reported_name": name, "tortoise": r.get("tortoise"), "type": typ, "verification": v,
          "context": r.get("context") if r.get("context") in ("wild", "captive", "keeper", "lab") else None, "locator": loc,
          "plant_part": p, "finding": CFG.get("finding_overrides", {}).get("|".join((r["source_id"], name, r["record_type"])))
@@ -138,6 +162,11 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
     records.append(x); used[r["source_id"]] = (r["folder"], s, cfg)
     stats["linked_candidate:" + v] += 1
 
+for sid, s in prior_only.items():
+    if sid not in used:
+        excluded.setdefault(sid, {"source_key": sid, "citation": CFG["sources"].get(sid, {}).get("citation") or s.get("citation"),
+                                  "url": CFG["sources"].get(sid, {}).get("url") or s.get("url"),
+                                  "reason": "every record repeats a plant already linked from the same study in an earlier evidence file"})
 sources = []
 for sid, (folder, s, cfg) in used.items():
     sources.append({k: v for k, v in {

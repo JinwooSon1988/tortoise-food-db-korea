@@ -37,7 +37,7 @@ cfg = {
     "services": "web search; public pages where robots.txt and site terms allow"}],
   "documents_read": n, "documents_by_class": dict(classes), "leads_not_accessed": leads,
   "not_accessible": "Reddit (robots.txt disallows all; the API needs OAuth), Instagram and Facebook (login), tortoiseforum.org (bot challenge), "
-                    "The Tortoise Table and testudo-farm.de (terms forbid reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), "
+                    "The Tortoise Table, testudo-farm.de, zolw.info and schildkroeten-schutz.de (terms limit copying or reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), "
                     "paywalled journals and pages behind bot challenges. Nothing was bypassed.",
   "screening": "Seven research passes saved every document used as text; each record carries a verbatim quote that a script re-found in the saved "
                "text, together with the plant name. Records whose quote or name could not be re-found, names printed only as common names or to genus, "
@@ -63,6 +63,8 @@ cfg = {
  "finding_overrides": {"richard1994_cuadherpetol|Prosopis alpataco|captive_feeding_record": {
    "ko": "사육 성체 5마리에게 이 꼬투리만 3일간 주었을 때 이상이 관찰되지 않았다고 기록 (원문은 일부 Prosopis 종에 강한 독성 알칼로이드가 보고되었다고 함께 적음; 짧은 시험이며 안전성 입증이 아님)",
    "en": "Five captive adults fed only these pods for three days showed no disorder (the source also notes that strongly toxic alkaloids have been reported in some Prosopis species; a short test, not proof of safety)"}},
+ # English common names printed with a capital (they pass the binomial pattern but are not scientific names).
+ "common_names": ["Arizona cottontop", "Bermuda grass", "Meadow hay", "Orchard grass", "Sweet potato", "Wild clematis"],
  "manual_ok": ["richard1994_cuadherpetol|Prosopis alpataco|captive_feeding_record"],
  "ocr_ok": ["Cynodon dactylon", "Opuntia ficus-indica", "Abutilon sonneratianum", "Bulbine abyssinica"],
  "sources": src,
