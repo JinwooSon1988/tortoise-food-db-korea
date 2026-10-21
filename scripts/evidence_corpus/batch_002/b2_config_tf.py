@@ -8,7 +8,7 @@ T = {
  "lagarde2003_ecography": {"exclude": True, "exclude_reason": "publisher PDF re-hosted on a keeper site; not an authorised open copy"},
  "testudo_farm_wegehaupt": EX_TERMS,
  "jia2011_azr": {"study_id": "jia_2011_huocheng_horsfieldii", "context": "wild", "tortoise_taxon": "Testudo horsfieldii (Agrionemys horsfieldii)",
-  "citation": "Jia, F., Li, Z., Jin, X. & Zhang, W. (2011) Analysis on plant species composition and structure in the Testudo horsfieldi reserve, Yili, Xinjiang [贾风勤 등, 新疆伊犁四爪陆龟保护区植物组成及其结构分析]. Arid Zone Research 28(6):1020-1024, doi:10.13866/j.azr.2011.06.015",
+  "citation": "Jia, F., Li, Z., Jin, X. & Zhang, W. (2011) Analysis on plant species composition and structure in the Testudo horsfieldi reserve, Yili, Xinjiang [贾风勤 等, 新疆伊犁四爪陆龟保护区植物组成及其结构分析]. Arid Zone Research 28(6):1020-1024, doi:10.13866/j.azr.2011.06.015",
   "url": "https://doi.org/10.13866/j.azr.2011.06.015",
   "method": M("중국 신장 훠청 러시아육지거북 보호구역의 식물 65종을 거북이 먹는 빈도에 따라 즐겨 먹음·보통·가끔·먹지 않음으로 분류한 표 1 (관찰 방법은 원문에 기술되지 않음; 글꼴이 깨진 PDF라 쪽 이미지에서 옮겨 적고 텍스트층과 대조)",
               "Table 1 classes the 65 plant species of the Testudo horsfieldii reserve in Huocheng, Xinjiang, China by how often the tortoises eat them: favoured, general, occasional or not eaten (the paper does not describe how this was observed; the PDF has scrambled fonts, so the table was transcribed from the page image and checked against the text layer)"),

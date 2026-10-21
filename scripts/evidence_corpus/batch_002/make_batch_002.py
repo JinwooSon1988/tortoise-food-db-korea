@@ -42,6 +42,20 @@ def ver(src, cfg, typ):
             "vet": "guideline_full_text_verified"}.get(src.get("source_class"), "full_text_verified")
 
 
+# Part descriptions kept from the source (with its own code) and their Korean rendering, so Korean pages show no English.
+PART_TEXT = {
+    "fruit (fr: frutos)": "열매 (원문 부호 fr: frutos)", "leaf (hv: hojas verdes)": "잎 (원문 부호 hv: 푸른 잎)", "leaf (h: hojas)": "잎 (원문 부호 h: hojas)",
+    "f (legend: frondes; possibly flowers - ambiguous)": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)", "aerial part (pa: parte aérea)": "지상부 (원문 부호 pa)",
+    "leaf (FO = foglie)": "잎 (원문 부호 FO)", "stem (ta: tallos)": "줄기 (원문 부호 ta)", "seed (s: semillas)": "씨앗 (원문 부호 s)",
+    "fruit (FR = frutti)": "열매 (원문 부호 FR)", "whole plant (aerial parts)": "식물 전체 (지상부)", "fruit (whole)": "열매 (통째)",
+    "leaf (tender)": "잎 (연한 잎)", "hay": "건초", "b (code not defined in legend)": "b (원문 범례에 정의되지 않은 부호)",
+    "fruit (immature)": "열매 (덜 익은)", "leaf and petiole": "잎과 잎자루", "flower (as printed)": "꽃 (원문 표기대로)", "fruit (fallen)": "열매 (떨어진 것)",
+    "fruit (chopped)": "열매 (잘게 썬 것)", "whole plant (young plants)": "식물 전체 (어린 개체)", "shoot, leaf (tender) and fruit": "새순, 연한 잎, 열매",
+    "fe (code not defined in legend)": "fe (원문 범례에 정의되지 않은 부호)", "hs (code not defined in legend)": "hs (원문 범례에 정의되지 않은 부호)",
+    "t (code not defined in legend)": "t (원문 범례에 정의되지 않은 부호)", "pad/cladode (hojas)": "줄기마디(패드) (원문 표기 hojas)", "tuber (root)": "덩이뿌리",
+    "leaf (only when totally dry)": "잎 (완전히 마른 경우에만)", "shoot (new needles)": "새순 (새 바늘잎)", "needles": "바늘잎", "seed (SE = semi)": "씨앗 (원문 부호 SE)"}
+
+
 def part(p):
     if not p:
         return None
@@ -53,7 +67,7 @@ def part(p):
     bits = [b.strip() for b in re.split(r"[,/;+]| and ", k) if b.strip()]
     if bits and all(b in PART for b in bits):
         return {"ko": ", ".join(PART[b][0] for b in bits), "en": ", ".join(PART[b][1] for b in bits)}
-    return {"ko": str(p), "en": str(p)}  # kept verbatim from the source when not in the vocabulary
+    return {"ko": PART_TEXT.get(str(p), str(p)), "en": str(p)}  # kept as in the source when not in the vocabulary
 
 
 def prior_links(root):
