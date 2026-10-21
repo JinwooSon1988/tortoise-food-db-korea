@@ -45,6 +45,10 @@ def build(input_path, existing_path):
                 for x in leads}
         for hit in row.get('hits') or []:
             title = (hit.get('title') or '').strip()
+            # 'Tortoise beetle' is an insect, not a tortoise feeding record.
+            if 'tortoise beetle' in title.casefold():
+                stats['excluded_tortoise_beetle_false_positives'] += 1
+                continue
             url = hit.get('doi') or hit.get('source_url') or hit.get('openalex_id')
             if not title or not isinstance(url, str) or not url.startswith('https://'):
                 continue
