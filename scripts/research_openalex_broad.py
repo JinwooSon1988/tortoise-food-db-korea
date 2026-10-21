@@ -67,6 +67,36 @@ def fetch_page(query, page, timeout=30):
             return {'status': 'retry_needed', 'query': query, 'page': page,
                     'error': type(error).__name__, 'works': []}
 
+def fetch_europe_pmc(query, page, timeout=30):
+    """Independent public literature endpoint; no OpenAlex credentials required."""
+    params = urllib.parse.urlencode({
+        'query': query, 'format': 'json', 'pageSize': 100, 'page': page,
+        'resultType': 'core',
+    })
+    url = 'https://www.ebi.ac.uk/europepmc/webservices/rest/search?' + params
+    try:
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'GeobukbapResearch/0.3 (literature discovery)',
+            'Accept': 'application/json'})
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            data = json.load(response)
+        works = []
+        for item in data.get('resultList', {}).get('result', []):
+            doi = item.get('doi')
+            works.append({
+                'title': item.get('title'),
+                'doi': 'https://doi.org/' + doi if doi else None,
+                'id': 'https://europepmc.org/article/' +
+                      str(item.get('source', 'MED')) + '/' + str(item.get('id', '')),
+                'publication_year': item.get('pubYear'),
+            })
+        return {'status': 'searched', 'query': query, 'page': page,
+                'source': 'europe_pmc', 'works': works}
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError) as error:
+        return {'status': 'retry_needed', 'query': query, 'page': page,
+                'source': 'europe_pmc', 'error': type(error).__name__,
+                'works': []}
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--pages', type=int, default=5)
@@ -94,6 +124,11 @@ def main():
                 if (query, page) in done:
                     continue
                 result = fetch_page(query, page)
+                if result['status'] != 'searched':
+                    original_error = result.get('error')
+                    result = fetch_europe_pmc(query, page)
+                    if result['status'] != 'searched':
+                        result['openalex_error'] = original_error
                 leads = []
                 for work in result.pop('works', []):
                     title = work.get('title') or ''
@@ -104,7 +139,8 @@ def main():
                                       'doi': work.get('doi'), 'year': work.get('publication_year'),
                                       'status': 'title_match_unreviewed'})
                 result['matched_title_leads'] = leads
-                result['retrieved_works'] = 200 if result['status'] == 'searched' else 0
+                result['retrieved_works'] = len(leads)
+                result['match_scope'] = 'title_only_unreviewed'
                 stream.write(json.dumps(result, ensure_ascii=False) + '\n')
                 stream.flush()
                 print(json.dumps({'query': query, 'page': page, 'status': result['status'],
