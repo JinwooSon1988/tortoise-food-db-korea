@@ -171,11 +171,12 @@ async function boot(){
  state='loading';render();const id=idFromUrl();if(!id){state='done';render();return}
  const key=Number(id.split(':')[1]);
  // The catalog shard alone is sufficient to show the plant identity immediately.
- const shard=await j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json');
+ const [shard, batchIndex]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/catalog-evidence/batch-002-site-index.json')]);
+ batch002=batchIndex;
  if(!shard||!Array.isArray(shard.records)){state='error';render();return}
  rec=shard.records.find(x=>x.id===id)||null;
  // Taxonomy-only entries are not published as food profiles.
- if(rec && !(Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length))rec=null;
+ if(rec && !(Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length) && !(batch002?.by_scientific_name?.[String(rec.scientific||'').trim().toLowerCase()]||[]).length)rec=null;
  if(!rec){state='done';render();return}
  state='done';render();
  // Load optional evidence independently; failure of one dataset must not hide others.
@@ -184,7 +185,7 @@ async function boot(){
   j('../data/plant-catalog/index.json').then(x=>{corpus=x?.research_corpus||[];render()}),
   j('../data/community_source_leads_v1.json').then(x=>{community=x?.records||[];render()}),
   j('../data/research_source_leads_index.json').then(x=>{researchLeads=x?.taxa||{};render()}),
-  j('../data/catalog-evidence/batch-002-site-index.json').then(x=>{batch002=x;render()})
+  Promise.resolve()
  ];
  await Promise.allSettled(tasks);
 }
