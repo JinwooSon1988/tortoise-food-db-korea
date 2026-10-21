@@ -104,12 +104,24 @@ function render(){const view=$('view');$('navlist').textContent=T('전체 식물
  '<dt>'+T('사진','Photo')+'</dt><dd>'+T('검증된 이미지 준비 중 (종 동정이 확인된 사진만 표시)','Verified photo pending (only photos with a confirmed species identification are shown)')+'</dd>'+
  '</dl><p class="note">'+T('분류 정보는 이 식물이 실제 종이라는 것만 확인합니다. 급여 근거와는 별개입니다.','Taxonomy only confirms that this is a real species. It is separate from feeding evidence.')+'</p></section>'+
  '<div class="links"><a href="../all-plants/'+(en()?'?lang=en':'')+'">'+T('전체 식물 목록','All plants')+'</a><a href="../index.html">'+T('먹이 검색','Search foods')+'</a></div>'}
-async function boot(){state='loading';render();const id=idFromUrl();if(!id){state='done';render();return}
- const key=Number(id.split(':')[1]);const [shard,feed,idx,communityData]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/feeding_pending_site_v1.json'),j('../data/plant-catalog/index.json'),j('../data/community_source_leads_v1.json')]);
+async function boot(){
+ state='loading';render();const id=idFromUrl();if(!id){state='done';render();return}
+ const key=Number(id.split(':')[1]);
+ // The catalog shard alone is sufficient to show the plant identity immediately.
+ const shard=await j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json');
  if(!shard||!Array.isArray(shard.records)){state='error';render();return}
- rec=shard.records.find(x=>x.id===id)||null;pending=feed?.records||{};corpus=idx?.research_corpus||[];community=communityData?.records||[];state='done';render();
- // Optional bulk literature index must never delay the primary plant result.
- j('../data/research_source_leads_index.json').then(leadData=>{if(rec?.id===id){researchLeads=leadData?.taxa||{};render()}}).catch(err=>console.warn('Optional literature index unavailable',err))}
+ rec=shard.records.find(x=>x.id===id)||null;
+ if(!rec){state='done';render();return}
+ state='done';render();
+ // Load optional evidence independently; failure of one dataset must not hide others.
+ const tasks=[
+  j('../data/feeding_pending_site_v1.json').then(x=>{pending=x?.records||{};render()}),
+  j('../data/plant-catalog/index.json').then(x=>{corpus=x?.research_corpus||[];render()}),
+  j('../data/community_source_leads_v1.json').then(x=>{community=x?.records||[];render()}),
+  j('../data/research_source_leads_index.json').then(x=>{researchLeads=x?.taxa||{};render()})
+ ];
+ await Promise.allSettled(tasks);
+}
 window.addEventListener('tfdblanguagechange',render);
 document.querySelector('.langswitch')?.addEventListener('click',e=>{if(e.target.closest('button[data-lang]'))queueMicrotask(render)});
 boot().catch(err=>{console.error('Plant detail initialization failed:',err);state='error';render()});
