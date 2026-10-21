@@ -93,6 +93,16 @@ jobs:
           PY
       - name: Validate plant detail JavaScript and taxon routing
         run: python scripts/qa_taxon_page_js.py
+      - name: Publish complete bulk literature leads when available
+        run: |
+          if [ -f data/literature_leads_all.json ]; then
+            python scripts/publish_literature_leads_site.py --input data/literature_leads_all.json
+          else
+            echo "Bulk literature result not yet committed; preserve current catalog."
+          fi
+          if [ -f data/research_source_leads_index.json ]; then
+            python scripts/qa_research_source_leads.py
+          fi
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
