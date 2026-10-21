@@ -43,7 +43,7 @@ def fetch_page(query, page, timeout=30):
         'select': 'id,doi,title,publication_year,primary_location',
     })
     url = 'https://api.openalex.org/works?' + params
-    for attempt in range(4):
+    for attempt in range(2):
         try:
             req = urllib.request.Request(url, headers={
                 'User-Agent': 'GeobukbapResearch/0.2 (public literature discovery)',
@@ -53,10 +53,13 @@ def fetch_page(query, page, timeout=30):
             return {'status': 'searched', 'query': query, 'page': page,
                     'works': data.get('results') or []}
         except urllib.error.HTTPError as error:
-            if error.code in (429, 503) and attempt < 3:
-                wait = error.headers.get('Retry-After', '')
-                delay = int(wait) if wait.isdigit() else 30 * (attempt + 1)
-                time.sleep(min(180, max(5, delay)) + random.random())
+            # 429 is a quota/rate-limit signal. Retrying the same provider
+            # blocks the fallback for minutes without improving throughput.
+            if error.code == 429:
+                return {'status': 'retry_needed', 'query': query, 'page': page,
+                        'error': 'http_429', 'works': []}
+            if error.code == 503 and attempt < 1:
+                time.sleep(3 + random.random())
                 continue
             return {'status': 'retry_needed', 'query': query, 'page': page,
                     'error': 'http_' + str(error.code), 'works': []}
