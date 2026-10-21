@@ -8,7 +8,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
     "index.html": {"lang": "ko", "search": True, "scripts": {"language-toggle.js", "search-live.js", "verdict-core.js"}},
-    "en/index.html": {"lang": "en", "search": True, "scripts": {"search-en.js", "verdict-core.js"}},
+    # /en/ redirects to the shared homepage in English (../?lang=en); search is checked on index.html above.
+    "en/index.html": {"lang": "en", "search": False, "scripts": set(), "redirect": "../?lang=en"},
     "plant/dandelion/index.html": {"lang": "ko", "search": False, "scripts": {"detail-locale-history.js"}},
     "en/plant/dandelion/index.html": {"lang": "en", "search": False, "scripts": {"detail-locale-history.js"}},
     "guides/research-method/index.html": {"lang": "ko", "search": False, "scripts": {"language-toggle.js"}},
@@ -47,6 +48,8 @@ for name, expected in PAGES.items():
         continue
     parser = PageParser()
     parser.feed(path.read_text(encoding="utf-8"))
+    if expected.get("redirect") and f'location.replace("{expected["redirect"]}"' not in path.read_text(encoding="utf-8"):
+        errors.append(f"{name}: must redirect to {expected['redirect']}")
     if parser.lang != expected["lang"]:
         errors.append(f"{name}: expected html lang={expected['lang']}, got {parser.lang!r}")
     if expected["search"] and "searchInput" not in parser.ids:

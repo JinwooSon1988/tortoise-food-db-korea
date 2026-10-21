@@ -99,4 +99,11 @@ assert f'<link rel="canonical" href="{BASE}all-plants/">' in page, "Catalog cano
 redirect = (ROOT / "en/all-plants/index.html").read_text(encoding="utf-8")
 assert 'content="noindex,follow"' in redirect, "English redirect indexability changed; revisit sitemap policy"
 assert 'hreflang="en"' not in page, "Indexable catalog advertises English noindex redirect"
+# The homepage follows the same policy: one bilingual page, /en/ is a noindex redirect to it.
+home = (ROOT / "index.html").read_text(encoding="utf-8")
+assert f'<link rel="canonical" href="{BASE}">' in home, "Homepage canonical mismatch"
+en_home = (ROOT / "en/index.html").read_text(encoding="utf-8")
+assert 'content="noindex,follow"' in en_home, "English homepage redirect indexability changed; revisit sitemap policy"
+assert 'hreflang="en"' not in home, "Indexable homepage advertises English noindex redirect"
+assert f"{BASE}en/" not in urls, "Noindex English homepage redirect is in sitemap"
 print(f"PASS: {len(urls)} sitemap URLs, canonical catalog and redirect policy")
