@@ -79,10 +79,10 @@ function render(){const view=$('view');$('navlist').textContent=T('전체 식물
  const r=rec,name=title(r);document.title=name+(name!==r.scientific?' ('+r.scientific+')':'')+T(' | 거북밥 DB',' | Geobukbap DB');
  const groups=TYPES.map(([k,ko,e])=>{const items=(Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).filter(x=>x.type===k);if(!items.length)return '';return '<div class="evtype"><h3>'+(en()?e:ko)+'</h3>'+items.map(evHTML).join('')+'</div>'}).join('');
  const feed=(pending&&pending[r.id])||[];
- const checked=r.feeding_evidence.filter(x=>x.verification==='full_text_verified').length;
- const preliminary=r.feeding_evidence.filter(x=>x.verification!=='full_text_verified').length;
+ const checked=(Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).filter(x=>x.verification==='full_text_verified').length;
+ const preliminary=(Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).filter(x=>x.verification!=='full_text_verified').length;
  const pendingReview=feed.length;
- const studies=new Set(r.feeding_evidence.map(x=>x.study||x.source)).size;
+ const studies=new Set((Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).map(x=>x.study||x.source)).size;
  const rs=r.research&&RS[r.research.status],cor=(corpus||[]).find(c=>r.research&&c.id===r.research.corpus);
  const research=rs?'<section class="panel" aria-labelledby="rs-h"><h2 id="rs-h">'+T('조사 현황','Research status')+'</h2><p><b>'+esc(en()?rs[1]:rs[0])+'</b></p>'+
  (cor?'<p class="note">'+T('조사 범위: '+esc(cor.searched)+' 기준 Europe PMC·OpenAlex 오픈액세스 문헌 검색, 원문 '+((cor.full_texts_read_by_machine||{}).europe_pmc_jats_xml+(cor.full_texts_read_by_machine||{}).openalex_open_access_pdf)+'편을 기계로 선별한 뒤 거북 식성 논문은 사람이 원문을 확인. 유료 논문·도서·사육자 커뮤니티는 아직 포함되지 않았습니다.',
