@@ -40,6 +40,13 @@ from build_bulk_taxon_catalog import bare  # noqa: E402
 P1_HELD_NAMES = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
 EVIDENCE_TYPES = ("wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity")
 BATCH_DIR = "data/catalog-evidence"
+
+
+def batch_files():
+    """Corpus batch files (batch-NNN-YYYYMMDD.json); other files in the folder, such as a site index, are not batches."""
+    return [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
+
+
 SYNONYM_STATUS = ("SYNONYM", "HOMOTYPIC_SYNONYM", "HETEROTYPIC_SYNONYM")
 # Verification levels where the record was read in a full text (the rest are leads to recheck).
 CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified")
@@ -112,7 +119,7 @@ def evidence_sources():
                                   "url": s["url"], "locator": None, "verification": "full_text_named_not_extracted",
                                   "context": s["context"], "plant_part": None, "finding": None, "study": key}))
     # Open-access full texts, keeper database entries and corpus batches (records carry their own verification level).
-    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json"))]:
+    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted(batch_files())]:
         ft = load(f)
         src = {s["source_key"]: s for s in ft["sources"]}
         for r in ft["records"]:
@@ -210,7 +217,7 @@ def main():
     # Evidence names resolved by an exact accepted GBIF species match, a GBIF synonym of an accepted species, or an
     # orthographic variant (doubled i, gender ending); the name printed in the source is kept as reported_name.
     ev = evidence_sources()
-    batches = [load(str(p.relative_to(ROOT))) for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json"))]
+    batches = [load(str(p.relative_to(ROOT))) for p in sorted(batch_files())]
     rejected_names = {n for b in batches for x in b.get("reviewed_not_feeding_evidence", []) for n in x["names"]}
     binomial = lambda n: re.fullmatch(r"[A-Z][a-z]+ [a-z][a-z-]+", n)
     match = gbif_match({n for n, _ in ev if binomial(n)} | {n for n in rejected_names if binomial(n)}, a.gbif_dir / "evidence_match.json")

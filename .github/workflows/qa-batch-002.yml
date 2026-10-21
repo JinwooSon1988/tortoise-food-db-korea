@@ -1,0 +1,42 @@
+name: Batch 002 evidence QA
+on:
+  pull_request:
+    paths:
+      - 'data/catalog-evidence/**'
+      - 'data/plant-catalog/taxa-*.json'
+      - 'scripts/qa_batch_002_site.py'
+      - 'scripts/audit_batch_002_catalog_match.py'
+      - 'taxon/index.html'
+      - '.github/workflows/qa-batch-002.yml'
+  push:
+    branches:
+      - 'feat/evidence-batch-002-20261021'
+    paths:
+      - 'data/catalog-evidence/**'
+      - 'data/plant-catalog/taxa-*.json'
+      - 'scripts/qa_batch_002_site.py'
+      - 'scripts/audit_batch_002_catalog_match.py'
+      - 'taxon/index.html'
+      - '.github/workflows/qa-batch-002.yml'
+  workflow_dispatch:
+jobs:
+  evidence-integrity:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate citations, records and site lookup
+        run: python scripts/qa_batch_002_site.py
+      - name: Audit exact taxon matches
+        run: python scripts/audit_batch_002_catalog_match.py
+      - name: Upload audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: batch-002-catalog-match-audit
+          path: data/catalog-evidence/batch-002-match-audit.json
+          if-no-files-found: warn
