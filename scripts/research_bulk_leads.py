@@ -80,17 +80,21 @@ def main():
                 pass
     taxa = [t for t in load_taxa() if t['name'].casefold() not in completed][:args.limit]
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
+    # Keep only a small window of requests in flight. This prevents a 22k-item
+    # future queue from exhausting memory and makes checkpointing predictable.
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        pending = {pool.submit(query, t): t for t in taxa}
         with args.output.open('a', encoding='utf-8') as stream:
-            for future in concurrent.futures.as_completed(pending):
-                row = future.result()
-                stream.write(json.dumps(row, ensure_ascii=False) + '\n')
-                stream.flush()
-                counts[row['status']] += 1
-                counts['hit_leads'] += len(row['hits'])
-                if (counts['searched'] + counts['retry_needed']) % 100 == 0:
-                    print(json.dumps(counts, ensure_ascii=False), flush=True)
+            for offset in range(0, len(taxa), args.workers * 4):
+                chunk = taxa[offset:offset + args.workers * 4]
+                futures = [pool.submit(query, taxon) for taxon in chunk]
+                for future in concurrent.futures.as_completed(futures):
+                    row = future.result()
+                    stream.write(json.dumps(row, ensure_ascii=False) + '\n')
+                    stream.flush()
+                    counts[row['status']] += 1
+                    counts['hit_leads'] += len(row['hits'])
+                    if (counts['searched'] + counts['retry_needed']) % 100 == 0:
+                        print(json.dumps(counts, ensure_ascii=False), flush=True)
     print(json.dumps({'previously_completed': len(completed), **counts}, ensure_ascii=False))
 if __name__ == '__main__':
     main()
