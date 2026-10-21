@@ -55,6 +55,14 @@ def query(taxon, timeout=20):
                 })
             return {**taxon, 'status': 'searched', 'query': f'"{name}" {SEARCH}',
                     'hits': hits, 'searched_at_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
+        except urllib.error.HTTPError as exc:
+            if exc.code in (429, 503) and attempt < 3:
+                retry_after = exc.headers.get('Retry-After', '')
+                delay = int(retry_after) if retry_after.isdigit() else 2 ** (attempt + 2)
+                time.sleep(min(120, max(1, delay)) + random.random())
+                continue
+            return {**taxon, 'status': 'retry_needed',
+                    'error': f'http_{exc.code}', 'hits': []}
         except (urllib.error.URLError, TimeoutError, ValueError) as exc:
             if attempt == 3:
                 return {**taxon, 'status': 'retry_needed', 'error': type(exc).__name__,
