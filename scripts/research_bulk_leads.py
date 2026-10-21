@@ -86,7 +86,11 @@ def main():
                     completed.add(row['name'].casefold())
             except (ValueError, KeyError):
                 pass
+    # Deduplicate work within a run and retry only unresolved names.
     taxa = [t for t in load_taxa() if t['name'].casefold() not in completed][:args.limit]
+    print(json.dumps({'catalog_candidates': len(taxa), 'already_searched': len(completed),
+                      'workers': args.workers, 'output': str(args.output)},
+                     ensure_ascii=False), flush=True)
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
     # Keep only a small window of requests in flight. This prevents a 22k-item
     # future queue from exhausting memory and makes checkpointing predictable.
