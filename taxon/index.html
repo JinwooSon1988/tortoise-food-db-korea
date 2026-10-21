@@ -36,7 +36,7 @@ const en=()=>document.documentElement.lang==='en';
 const T=(ko,e)=>en()?e:ko;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id);
-let rec=null,pending=null,corpus=null,community=[],researchLeads={},state='loading';
+let rec=null,pending=null,corpus=null,community=[],researchLeads={},batch002=null,state='loading';
 const TYPES=[
  ['wild_feeding_observation','야생 섭식 관찰','Wild feeding observations'],
  ['captive_feeding_record','사육 환경 급여 기록','Captive feeding records'],
@@ -72,6 +72,22 @@ function evHTML(x){const L=en()?'en':'ko',NR=T('원문 미기재','Not reported 
  (tx?'<p>'+T('대상 동물','Test animal')+': '+esc(tx.test_animal[L]||tx.test_animal)+'</p><p>'+T('실험·사례 조건','Conditions')+': '+esc(tx.conditions[L]||tx.conditions)+'</p>':'')+
  '<p class="src">'+esc(x.source)+(x.locator?' · '+esc(x.locator):'')+(x.url&&/^https?:\/\//.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 보기 ↗','Open the source ↗')+'</a>':'')+'</p></div>'}
 function names(list){return list.length?list.map(n=>esc(n.name)+' <span class="note">('+esc(n.source)+')</span>').join('<br>'):'<span class="note">'+T('확인된 이름 없음','No confirmed name')+'</span>'}
+function batch002HTML(r){
+ if(!batch002||!Array.isArray(batch002.records))return '';
+ const species=String(r.scientific||'').trim().toLowerCase();
+ const items=batch002.records.filter(x=>String(x.reported_name||'').trim().toLowerCase()===species);
+ if(!items.length)return '';
+ const sources=Object.fromEntries((batch002.sources||[]).map(x=>[x.source_key,x]));
+ const ko=!en();
+ const lines=items.slice(0,50).map(x=>{
+  const s=sources[x.source_key]||{};
+  const finding=x.finding?(ko?x.finding.ko:x.finding.en):'';
+  const part=x.plant_part?(ko?x.plant_part.ko:x.plant_part.en):'';
+  const verification=x.verification||'unassessed';
+  return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b> · '+esc(verification)+'</p><p>'+esc(finding)+'</p><p>'+T('식물 부위: ','Plant part: ')+esc(part||T('미기재','not specified'))+'</p><p>'+T('원문 위치: ','Source location: ')+esc(x.locator||'')+'</p><p class="src">'+esc(s.citation||x.source_key)+(s.url&&/^https:\/\//.test(s.url)?' <a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 확인 ↗','View source ↗')+'</a>':'')+'</p></div>';
+ }).join('');
+ return '<section class="panel"><h2>'+T('추가 검토 자료 (Batch 002)','Additional reviewed records (Batch 002)')+' ('+items.length+')</h2><p class="note">'+T('원문에 기재된 정확한 식물 학명으로만 연결했습니다. 섭식 관찰, 사육지침, 커뮤니티 기록은 근거 수준이 다르며 이 목록만으로 안전성이나 권장 급여량을 판단하지 않습니다.','Matched only exact scientific plant names printed in the sources. Observations, guidelines and community reports have different evidence strength; these records alone do not establish safety or recommended amounts.')+'</p>'+lines+(items.length>50?'<p>'+T('표시 상한 50건','Showing first 50 records')+'</p>':'')+'</section>';
+}
 function researchLeadHTML(r){
  const entries=(researchLeads[r.id]||{}).literature_leads||[];
  if(!entries.length)return '';
@@ -118,7 +134,7 @@ function render(){const view=$('view');const nl=$('navlist');if(nl)nl.textConten
  '<p class="lead">'+T('이 식물은 아직 육지거북 급여 안전성을 평가하지 않아 급여 등급(A~D)이 없습니다. 분류학적으로 확인된 식물이라는 사실은 먹여도 된다는 근거가 아닙니다.','This plant has not been assessed for tortoise feeding safety, so it has no feeding grade (A–D). Being a confirmed plant species is not evidence that it can be fed.')+'</p></div></article>'+
  '<section class="panel" aria-labelledby="ev-h"><h2 id="ev-h">'+T('급여 근거','Feeding evidence')+'</h2>'+evidenceSummary+(r.feeding_evidence.length||feed.length?'<p class="evidence-count">'+T('연결된 근거 ','Linked sources ')+(r.feeding_evidence.length+feed.length)+(studies>1?T('건 (서로 다른 연구 '+studies+'건)',' (from '+studies+' separate studies)'):T('건',''))+T(' · 자료의 검증 상태와 적용 종을 확인하세요.',' · Check verification status and applicable tortoise species.')+'</p>':'<div class="evidence-empty"><b>'+T('현재 연결된 급여 연구·사육 자료가 없습니다.','No feeding research or husbandry sources are linked yet.')+'</b><p>'+T('자료가 없다는 것은 안전하다는 뜻도, 독성이 입증되었다는 뜻도 아닙니다. 식물 동정만으로 급여를 결정하지 마세요.','Lack of linked evidence does not establish safety or toxicity. Do not make feeding decisions from plant identification alone.')+'</p></div>')+'<p class="note">'+T('근거는 종류별로 나눠 표시합니다. 야생 섭식 관찰은 사육 환경의 급여 권장이 아니며, 급여량·빈도를 정하지 않습니다.','Evidence is grouped by type. A wild feeding observation is not a captive feeding recommendation and sets no amount or frequency.')+'</p>'+groups+
  (feed.length?'<div class="evtype"><h3>'+T('원문 검증 급여 기록 (검증 중)','Feeding records checked in the original (under review)')+'</h3>'+feed.map(x=>{const L=en()?'en':'ko';return '<div class="ev"><p><b>'+esc(x.tortoise[L])+'</b> · '+esc(x.location[L])+' · '+esc(x.period[L])+'</p><p>'+esc(x.method_text[L])+'</p><p>'+T('먹은 부위','Plant part')+': '+(x.plant_part?esc(x.plant_part[L]):T('원문 미기재','Not reported in the original'))+'</p>'+(x.observed_share?'<p>'+esc(x.observed_share[L])+'</p>':'')+'<p class="src">'+esc(x.citation)+' · '+esc(x.locator)+(x.url&&/^https?:\/\//i.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('원문 보기 ↗','Open the original ↗')+'</a>':'')+'</p></div>'}).join('')+'</div>':'')+
- '</section>'+communityHTML(r)+researchLeadHTML(r)+research+
+ '</section>'+batch002HTML(r)+communityHTML(r)+researchLeadHTML(r)+research+
  '<section class="panel" aria-labelledby="tx-h"><h2 id="tx-h">'+T('이름과 분류','Names and taxonomy')+'</h2><dl class="kv">'+
  '<dt>'+T('학명','Scientific name')+'</dt><dd><i lang="la">'+esc(r.scientific)+'</i>'+(r.authorship?' '+esc(r.authorship):'')+'</dd>'+
  '<dt>'+T('영문 일반명','English names')+'</dt><dd lang="en">'+names(r.common_names.en)+'</dd>'+
@@ -142,7 +158,8 @@ async function boot(){
   j('../data/feeding_pending_site_v1.json').then(x=>{pending=x?.records||{};render()}),
   j('../data/plant-catalog/index.json').then(x=>{corpus=x?.research_corpus||[];render()}),
   j('../data/community_source_leads_v1.json').then(x=>{community=x?.records||[];render()}),
-  j('../data/research_source_leads_index.json').then(x=>{researchLeads=x?.taxa||{};render()})
+  j('../data/research_source_leads_index.json').then(x=>{researchLeads=x?.taxa||{};render()}),
+  j('../data/catalog-evidence/batch-002-20261021.json').then(x=>{batch002=x;render()})
  ];
  await Promise.allSettled(tasks);
 }
