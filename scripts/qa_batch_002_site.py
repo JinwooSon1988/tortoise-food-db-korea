@@ -43,6 +43,19 @@ def main():
             errors.append(f"{i}: unsupported safety grade")
         by_verification[record.get("verification")] += 1
         names.add(name.casefold())
+    index_path = ROOT / "data/catalog-evidence/batch-002-site-index.json"
+    index = json.loads(index_path.read_text(encoding="utf-8"))
+    grouped = collections.defaultdict(list)
+    for record in records:
+        grouped[record["reported_name"].strip().casefold()].append(record)
+    if index.get("by_scientific_name") != dict(grouped):
+        errors.append("Site index does not match source records exactly")
+    if index.get("sources") != data["sources"]:
+        errors.append("Site index source metadata differs from corpus")
+    if index.get("stats", {}).get("records") != len(records):
+        errors.append("Site index record count differs from corpus")
+    if index.get("stats", {}).get("distinct_reported_names") != len(grouped):
+        errors.append("Site index unique-name count differs from corpus")
     page = PAGE.read_text(encoding="utf-8")
     for marker in ("batch002HTML(r)", "batch-002-site-index.json", "by_scientific_name", "reported_name", "source_key"):
         if marker not in page:
