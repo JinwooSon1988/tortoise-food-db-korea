@@ -84,7 +84,7 @@ function batch002HTML(r){
   const finding=x.finding?(ko?x.finding.ko:x.finding.en):'';
   const part=x.plant_part?(ko?x.plant_part.ko:x.plant_part.en):'';
   const verification=x.verification||'unassessed';
-  return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b> · '+esc(verification)+'</p><p>'+esc(finding)+'</p><p>'+T('식물 부위: ','Plant part: ')+esc(part||T('미기재','not specified'))+'</p><p>'+T('원문 위치: ','Source location: ')+esc(x.locator||'')+'</p><p class="src">'+esc(s.citation||x.source_key)+(s.url&&/^https:\/\//.test(s.url)?' <a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 확인 ↗','View source ↗')+'</a>':'')+'</p></div>';
+  return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b> · '+esc(verification)+'</p><p>'+esc(finding)+'</p><p>'+T('식물 부위: ','Plant part: ')+esc(part||T('미기재','not specified'))+'</p><p>'+T('원문 위치: ','Source location: ')+esc(x.locator||'')+'</p><p class="src">'+esc(s.citation||x.source_key)+(s.url&&/^https?:\/\//.test(s.url)?' <a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 확인 ↗','View source ↗')+'</a>':'')+'</p></div>';
  }).join('');
  return '<section class="panel"><h2>'+T('추가 검토 자료 (Batch 002)','Additional reviewed records (Batch 002)')+' ('+items.length+')</h2><p class="note">'+T('원문에 기재된 정확한 식물 학명으로만 연결했습니다. 섭식 관찰, 사육지침, 커뮤니티 기록은 근거 수준이 다르며 이 목록만으로 안전성이나 권장 급여량을 판단하지 않습니다.','Matched only exact scientific plant names printed in the sources. Observations, guidelines and community reports have different evidence strength; these records alone do not establish safety or recommended amounts.')+'</p>'+lines+(items.length>50?'<p>'+T('표시 상한 50건','Showing first 50 records')+'</p>':'')+'</section>';
 }
