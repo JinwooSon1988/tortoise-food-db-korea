@@ -80,6 +80,8 @@ def prior_links(root):
         if isinstance(names, list):
             out.update((key, n, "wild_feeding_observation") for n in names)
     for f in [root / "data/catalog_feeding_evidence_fulltext_20261020.json"] + sorted((root / "data/catalog-evidence").glob("batch-*.json")):
+        if not re.fullmatch(r"batch-\d{3}-\d{8}\.json", f.name):  # the site index is not a batch
+            continue
         if f.resolve() == OUT.resolve():
             continue
         d = json.loads(f.read_text(encoding="utf-8")); st = {s["source_key"]: s.get("study_id") or s["source_key"] for s in d["sources"]}
