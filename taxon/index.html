@@ -73,9 +73,9 @@ function evHTML(x){const L=en()?'en':'ko',NR=T('원문 미기재','Not reported 
  '<p class="src">'+esc(x.source)+(x.locator?' · '+esc(x.locator):'')+(x.url&&/^https?:\/\//.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 보기 ↗','Open the source ↗')+'</a>':'')+'</p></div>'}
 function names(list){return list.length?list.map(n=>esc(n.name)+' <span class="note">('+esc(n.source)+')</span>').join('<br>'):'<span class="note">'+T('확인된 이름 없음','No confirmed name')+'</span>'}
 function batch002HTML(r){
- if(!batch002||!Array.isArray(batch002.records))return '';
+ if(!batch002||!batch002.by_scientific_name)return '';
  const species=String(r.scientific||'').trim().toLowerCase();
- const items=batch002.records.filter(x=>String(x.reported_name||'').trim().toLowerCase()===species);
+ const items=batch002.by_scientific_name[species]||[];
  if(!items.length)return '';
  const sources=Object.fromEntries((batch002.sources||[]).map(x=>[x.source_key,x]));
  const ko=!en();
@@ -159,7 +159,7 @@ async function boot(){
   j('../data/plant-catalog/index.json').then(x=>{corpus=x?.research_corpus||[];render()}),
   j('../data/community_source_leads_v1.json').then(x=>{community=x?.records||[];render()}),
   j('../data/research_source_leads_index.json').then(x=>{researchLeads=x?.taxa||{};render()}),
-  j('../data/catalog-evidence/batch-002-20261021.json').then(x=>{batch002=x;render()})
+  j('../data/catalog-evidence/batch-002-site-index.json').then(x=>{batch002=x;render()})
  ];
  await Promise.allSettled(tasks);
 }
