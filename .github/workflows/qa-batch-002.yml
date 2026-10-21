@@ -8,6 +8,16 @@ on:
       - 'scripts/audit_batch_002_catalog_match.py'
       - 'taxon/index.html'
       - '.github/workflows/qa-batch-002.yml'
+  push:
+    branches:
+      - 'feat/evidence-batch-002-20261021'
+    paths:
+      - 'data/catalog-evidence/**'
+      - 'data/plant-catalog/taxa-*.json'
+      - 'scripts/qa_batch_002_site.py'
+      - 'scripts/audit_batch_002_catalog_match.py'
+      - 'taxon/index.html'
+      - '.github/workflows/qa-batch-002.yml'
   workflow_dispatch:
 jobs:
   evidence-integrity:
