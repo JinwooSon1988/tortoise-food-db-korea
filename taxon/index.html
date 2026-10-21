@@ -79,12 +79,33 @@ function batch002HTML(r){
  if(!items.length)return '';
  const sources=Object.fromEntries((batch002.sources||[]).map(x=>[x.source_key,x]));
  const ko=!en();
+ const typeLabels={
+  wild_feeding_observation:['야생 섭식 관찰','Wild feeding observation'],
+  wild_diet_not_detected:['야생 식이 분석에서 미검출','Not detected in wild diet'],
+  captive_feeding_record:['사육 중 급여 기록','Captive feeding record'],
+  community_report:['사육자 경험담 (미검증)','Keeper report (unverified)'],
+  offered_not_eaten:['제공했으나 먹지 않음','Offered but not eaten'],
+  husbandry_recommendation:['사육 지침의 권장','Husbandry recommendation'],
+  nutrition:['영양 자료','Nutrition data'],
+  toxicity:['독성 자료','Toxicity data'],
+  video_observation:['영상 관찰 (미검증)','Video observation (unverified)']
+ };
+ const verifyLabels={
+  full_text_verified:['원문 확인','Full text checked'],
+  review_full_text_verified:['종설 원문 확인','Review full text checked'],
+  guideline_full_text_verified:['사육지침 원문 확인','Guideline full text checked'],
+  abstract_checked:['초록만 확인','Abstract only'],
+  literature_lead_not_reverified:['재검증되지 않은 문헌 후보','Literature lead not reverified'],
+  community_report_unverified:['커뮤니티 기록 (미검증)','Community report (unverified)'],
+  video_observation_unverified:['영상 기록 (미검증)','Video report (unverified)']
+ };
  const lines=items.slice(0,50).map(x=>{
   const s=sources[x.source_key]||{};
   const finding=x.finding?(ko?x.finding.ko:x.finding.en):'';
   const part=x.plant_part?(ko?x.plant_part.ko:x.plant_part.en):'';
-  const verification=x.verification||'unassessed';
-  return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b> · '+esc(verification)+'</p><p>'+esc(finding)+'</p><p>'+T('식물 부위: ','Plant part: ')+esc(part||T('미기재','not specified'))+'</p><p>'+T('원문 위치: ','Source location: ')+esc(x.locator||'')+'</p><p class="src">'+esc(s.citation||x.source_key)+(s.url&&/^https?:\/\//.test(s.url)?' <a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 확인 ↗','View source ↗')+'</a>':'')+'</p></div>';
+  const verification=(verifyLabels[x.verification]||[x.verification||'미확인',x.verification||'Unassessed'])[ko?0:1];
+  const recordType=(typeLabels[x.type]||[x.type||'기록 유형 미상',x.type||'Unknown record type'])[ko?0:1];
+  return '<div class="ev"><p><b>'+esc(x.tortoise||'')+'</b> · '+esc(recordType)+' · '+esc(verification)+'</p><p>'+esc(finding)+'</p><p>'+T('식물 부위: ','Plant part: ')+esc(part||T('미기재','not specified'))+'</p><p>'+T('원문 위치: ','Source location: ')+esc(x.locator||'')+'</p><p class="src">'+esc(s.citation||x.source_key)+(s.url&&/^https?:\/\//.test(s.url)?' <a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 확인 ↗','View source ↗')+'</a>':'')+'</p></div>';
  }).join('');
  return '<section class="panel"><h2>'+T('추가 출처 자료 (Batch 002)','Additional source records (Batch 002)')+' ('+items.length+')</h2><p class="note">'+T('원문에 기재된 정확한 식물 학명으로만 연결했습니다. 섭식 관찰, 사육지침, 커뮤니티 기록은 근거 수준이 다르며 이 목록만으로 안전성이나 권장 급여량을 판단하지 않습니다.','Matched only exact scientific plant names printed in the sources. Observations, guidelines and community reports have different evidence strength; these records alone do not establish safety or recommended amounts.')+'</p>'+lines+(items.length>50?'<p>'+T('표시 상한 50건','Showing first 50 records')+'</p>':'')+'</section>';
 }
