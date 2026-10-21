@@ -165,7 +165,8 @@ pages = {
                          "자료 미확보", "No data found"] + sorted(TYPES | VERIFICATION),
     "taxonomy-home-search.js": ["data/plant-catalog/search.json", "taxon/?id=", "급여 안전성 미확정"],
     "index.html": ["taxonomy-home-search.js"],
-    "en/index.html": ["../taxonomy-home-search.js"],
+    # the English homepage now redirects to the bilingual homepage, which loads the catalog search
+    "en/index.html": ["../?lang=en"],
 }
 for page, needles in pages.items():
     text = (ROOT / page).read_text(encoding="utf-8")
