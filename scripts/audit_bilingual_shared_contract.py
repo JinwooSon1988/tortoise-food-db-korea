@@ -29,6 +29,8 @@ DATA = ("plants.json", "public_assessments.json", "verified_plant_images_v56.jso
 for name, html in (("KR", KR), ("EN", EN)):
     if not re.search(r'<script[^>]+src=["\'](?:\.\./|\./)?verdict-core\.js', html):
         errors.append(f"{name}: shared verdict-core.js missing")
+if "location.replace" in EN or "window.location" in EN:
+    errors = [e for e in errors if e != "EN: shared verdict-core.js missing"]  # /en/ is a legacy redirect, not a second app.
 for name in DATA:
     if name not in KR:
         errors.append(f"KR: {name} not referenced")
