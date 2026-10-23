@@ -56,7 +56,17 @@ def main():
         errors.append("Site index record count differs from corpus")
     if index.get("stats", {}).get("distinct_reported_names") != len(grouped):
         errors.append("Site index unique-name count differs from corpus")
+    # Publication contract: only evidence-linked catalog taxa may appear in the
+    # public catalog or resolve to a public detail page. Keep the reviewed
+    # assessment catalog independent of these ungraded taxonomy candidates.
+    listing = (ROOT / "all-plants/index.html").read_text(encoding="utf-8")
+    if "for(const c of catalog.rows){if(!c[5])continue;" not in listing:
+        errors.append("Public catalog must exclude taxonomy-only species")
     page = PAGE.read_text(encoding="utf-8")
+    if "batch002=batchIndex;" not in page or "batch002?.by_scientific_name?" not in page:
+        errors.append("Batch 002 must load before detail-page evidence visibility check")
+    if "Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length" not in page:
+        errors.append("Detail page must reject taxa without feeding records")
     for marker in ("batch002HTML(r)", "batch-002-site-index.json", "by_scientific_name", "reported_name", "source_key"):
         if marker not in page:
             errors.append(f"Site integration missing {marker}")
