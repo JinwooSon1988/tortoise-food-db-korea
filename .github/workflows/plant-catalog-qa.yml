@@ -6,6 +6,8 @@ on:
       - 'data/plant-catalog/**'
       - 'data/catalog-evidence/**'
       - 'scripts/build_plant_catalog_v1.py'
+      - 'scripts/polite_http.py'
+      - 'scripts/test_polite_http.py'
       - 'data/plants.json'
       - 'data/public_assessments.json'
       - 'data/feeding_pending_site_v1.json'
@@ -25,6 +27,8 @@ on:
       - 'data/plant-catalog/**'
       - 'data/catalog-evidence/**'
       - 'scripts/build_plant_catalog_v1.py'
+      - 'scripts/polite_http.py'
+      - 'scripts/test_polite_http.py'
       - 'data/plants.json'
       - 'data/public_assessments.json'
       - 'data/feeding_pending_site_v1.json'
@@ -55,5 +59,7 @@ jobs:
           python-version: '3.12'
       - name: Bulk taxon staging regression tests
         run: python scripts/test_build_bulk_taxon_catalog.py
+      - name: Polite collection client (robots.txt, spacing, retries, checkpoint) offline tests
+        run: python scripts/test_polite_http.py
       - name: Catalog shards, search index, sitemap, no grades, reviewed plants unchanged
         run: python scripts/qa_plant_catalog_v1.py
