@@ -114,17 +114,35 @@ def main():
         print('WARNING: limit above 500 may exhaust OpenAlex quota; prefer literature-first extraction.', flush=True)
     taxa = [t for t in load_taxa() if t['name'].casefold() not in completed][:args.limit]
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
+    # Bounded submissions: never queue all 22k requests before the first result.
+    # Once OpenAlex returns 429, stop scheduling and leave the rest for a later run.
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        pending = {pool.submit(query, t): t for t in taxa}
+        source = iter(taxa)
+        pending = {}
         with args.output.open('a', encoding='utf-8') as stream:
-            for future in concurrent.futures.as_completed(pending):
-                row = future.result()
-                stream.write(json.dumps(row, ensure_ascii=False) + '\n')
-                stream.flush()
-                counts[row['status']] += 1
-                counts['hit_leads'] += len(row['hits'])
-                if (counts['searched'] + counts['retry_needed']) % 100 == 0:
-                    print(json.dumps(counts, ensure_ascii=False), flush=True)
+            while not _RATE_LIMITED.is_set() and len(pending) < args.workers:
+                t = next(source, None)
+                if t is None:
+                    break
+                pending[pool.submit(query, t)] = t
+            while pending:
+                done, _ = concurrent.futures.wait(pending, return_when=concurrent.futures.FIRST_COMPLETED)
+                for future in done:
+                    pending.pop(future)
+                    row = future.result()
+                    stream.write(json.dumps(row, ensure_ascii=False) + '\n')
+                    stream.flush()
+                    counts[row['status']] += 1
+                    counts['hit_leads'] += len(row['hits'])
+                    if (counts['searched'] + counts['retry_needed']) % 100 == 0:
+                        print(json.dumps(counts, ensure_ascii=False), flush=True)
+                while not _RATE_LIMITED.is_set() and len(pending) < args.workers:
+                    t = next(source, None)
+                    if t is None:
+                        break
+                    pending[pool.submit(query, t)] = t
+    if _RATE_LIMITED.is_set():
+        print('HTTP 429: stopped further submissions; retry after provider cooldown.', flush=True)
     print(json.dumps({'previously_completed': len(completed), **counts}, ensure_ascii=False))
 if __name__ == '__main__':
     main()
