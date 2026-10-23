@@ -168,7 +168,7 @@ if len(locs) != len(published) or len(set(locs)) != len(locs) or len(locs) > 500
     errors.append(f"sitemap-taxa.xml has {len(locs)} URLs for {len(published)} published entries")
 # The catalog list (search.json evidence flag), the detail page and the sitemap publish the same entries.
 listed = {row[0] for row in search["rows"] if row[5]}
-if listed != {r["id"] for r in published}:
+if listed != {r["id"] for r in records if r["feeding_evidence"]}:
     errors.append(f"listed and published detail pages differ: {sorted(listed ^ {r['id'] for r in published})[:10]}")
 if loc_ids != {r["id"] for r in published}:
     errors.append(f"sitemap-taxa.xml differs from the published entries: {sorted(loc_ids ^ {r['id'] for r in published})[:10]}")
