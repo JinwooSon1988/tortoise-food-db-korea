@@ -40,4 +40,6 @@ if (Test-Path $approved) {
 } else {
     Write-Host "No reviewer-approved input. Candidates remain unverified and unpublished."
 }
+& $python scripts/check_evidence_coverage.py
+if ($LASTEXITCODE -ne 0) { throw "Catalog coverage QA failed" }
 Write-Host "Pipeline complete. Discovery and offline review are independent; no automatic deployment."
