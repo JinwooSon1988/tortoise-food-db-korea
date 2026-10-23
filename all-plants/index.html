@@ -152,9 +152,9 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
    feedRecords[taxon.id]=(feedRecords[taxon.id]||[]).concat(feeding.map(e=>({
      plant_taxon_reported:e.reported_name||taxon.scientific,
      tortoise:{ko:e.tortoise||'원문 미기재',en:e.tortoise||'Not stated'},
-     method_text:{ko:e.type==='wild_feeding_observation'?'야생 섭식 기록':e.type==='captive_feeding_record'?'사육 급여 기록':'사육자·영상 섭식 보고',en:e.type==='wild_feeding_observation'?'Wild feeding observation':e.type==='captive_feeding_record'?'Captive feeding record':'Keeper or video report'},
-     location:{ko:e.location||'원문 미기재',en:e.location||'Not stated'},
-     period:{ko:e.period||'원문 미기재',en:e.period||'Not stated'},
+     method_text:e.method&&typeof e.method==='object'?e.method:{ko:e.type==='wild_feeding_observation'?'야생 섭식 기록':e.type==='captive_feeding_record'?'사육 급여 기록':'사육자·영상 섭식 보고',en:e.type==='wild_feeding_observation'?'Wild feeding observation':e.type==='captive_feeding_record'?'Captive feeding record':'Keeper or video report'},
+     location:e.location&&typeof e.location==='object'?e.location:{ko:e.location||'원문 미기재',en:e.location||'Not stated'},
+     period:e.period&&typeof e.period==='object'?e.period:{ko:e.period||'원문 미기재',en:e.period||'Not stated'},
      plant_part:e.plant_part&&typeof e.plant_part==='object'?e.plant_part:typeof e.plant_part==='string'?{ko:e.plant_part,en:e.plant_part}:null,
      observed_share:null,citation:(e.study||e.source||'')+' ['+(e.verification||'unverified')+']',locator:e.locator||'',url:e.url||''
    })));
