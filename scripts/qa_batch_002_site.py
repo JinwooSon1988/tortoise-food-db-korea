@@ -63,7 +63,8 @@ def main():
     if "for(const c of catalog.rows){if(!c[5])continue;" not in listing:
         errors.append("Public catalog must exclude taxonomy-only species")
     page = PAGE.read_text(encoding="utf-8")
-    if "batch002=batchIndex;" not in page or "batch002?.by_scientific_name?" not in page:
+    # Entries without embedded evidence wait for the Batch 002 index before visibility is decided (non-blocking otherwise).
+    if not re.search(r"if\(rec&&!directEvidence\)\{\s*batch002=await j\('\.\./data/catalog-evidence/batch-002-site-index\.json'\);", page)             or "batch002?.by_scientific_name?" not in page:
         errors.append("Batch 002 must load before detail-page evidence visibility check")
     if "Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length" not in page:
         errors.append("Detail page must reject taxa without feeding records")

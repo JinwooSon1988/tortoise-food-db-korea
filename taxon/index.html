@@ -99,13 +99,18 @@ function evHTML(x){const L=en()?'en':'ko',NR=T('원문 미기재','Not reported 
  (tx?'<p>'+T('대상 동물','Test animal')+': '+esc(tx.test_animal[L]||tx.test_animal)+'</p><p>'+T('실험·사례 조건','Conditions')+': '+esc(tx.conditions[L]||tx.conditions)+'</p>':'')+
  '<p class="src">'+esc(x.source)+(x.locator?' · '+esc(x.locator):'')+(x.url&&/^https?:\/\//.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('출처 보기 ↗','Open the source ↗')+'</a>':'')+'</p></div>'}
 function names(list){return list.length?list.map(n=>esc(n.name)+' <span class="note">('+esc(n.source)+')</span>').join('<br>'):'<span class="note">'+T('확인된 이름 없음','No confirmed name')+'</span>'}
-function batch002HTML(r){
- if(!batch002||!batch002.by_scientific_name)return '';
+// Batch 002 records not already shown under the catalog's feeding evidence (same source, printed name and type).
+function batch002Extra(r){
+ if(!batch002||!batch002.by_scientific_name)return [];
  const species=String(r.scientific||'').trim().toLowerCase();
  const sources=Object.fromEntries((batch002.sources||[]).map(x=>[x.source_key,x]));
- // Records the catalog already shows under feeding evidence (same source, printed name and type) are not repeated here.
  const shown=new Set((Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).map(e=>[e.source,e.reported_name,e.type].join('|')));
- const items=(batch002.by_scientific_name[species]||[]).filter(x=>!shown.has([(sources[x.source_key]||{}).citation,x.reported_name,x.type].join('|')));
+ return (batch002.by_scientific_name[species]||[]).filter(x=>!shown.has([(sources[x.source_key]||{}).citation,x.reported_name,x.type].join('|')));
+}
+function batch002HTML(r){
+ if(!batch002||!batch002.by_scientific_name)return '';
+ const sources=Object.fromEntries((batch002.sources||[]).map(x=>[x.source_key,x]));
+ const items=batch002Extra(r);
  if(!items.length)return '';
  const ko=!en();
  const typeLabels={
@@ -160,8 +165,21 @@ function communityHTML(r){
 }
 function render(){const view=$('view');const nl=$('navlist');if(nl)nl.textContent=T('전체 식물','All plants');
  if(state==='loading'){view.innerHTML='<p>'+T('불러오는 중...','Loading...')+'</p>';return}
+ // Unavailable or unpublished profiles must never be advertised for indexing.
+ if(state==='error'||(state==='done'&&!rec)){
+  let robots=document.querySelector('meta[name="robots"]');
+  if(!robots){robots=document.createElement('meta');robots.name='robots';document.head.appendChild(robots)}
+  robots.content='noindex,follow';
+ }
  if(state==='error'){view.innerHTML='<section class="panel" role="alert"><h1>'+T('자료를 불러오지 못했습니다','Could not load plant data')+'</h1><p>'+T('일시적인 네트워크 또는 데이터 파일 오류일 수 있습니다. 잠시 후 다시 시도하세요.','This may be a temporary network or data-file error. Please retry.')+'</p><button type="button" id="retry-data" class="retry-data">'+T('다시 불러오기','Retry loading')+'</button></section>';view.querySelector('#retry-data').onclick=boot;return}
  if(!rec){document.title=T('식물을 찾을 수 없음 | 거북밥 DB','Plant not found | Geobukbap DB');view.innerHTML='<section class="panel"><h1>'+T('등록된 식물을 찾을 수 없습니다','Plant not found')+'</h1><p>'+T('주소가 잘못되었거나 아직 등록되지 않은 식물입니다. 목록에 없다고 안전하다는 뜻은 아닙니다.','The address is wrong or the plant is not listed yet. A plant that is not listed is not a safe plant.')+'</p><div class="links"><a href="../all-plants/">'+T('전체 식물 목록','All plants')+'</a></div></section>';return}
+ // Keep metadata synchronized with the selected plant and display language.
+ const meta=document.querySelector('meta[name="description"]');
+ const canonical=document.querySelector('link[rel="canonical"]')||document.head.appendChild(Object.assign(document.createElement('link'),{rel:'canonical'}));
+ canonical.href=location.origin+location.pathname+'?id='+encodeURIComponent(rec.id);
+ const description=T('육지거북 먹이 자료: ','Tortoise feeding evidence: ')+String(rec.scientific||'')+T('. 원문 근거, 관찰된 거북 종과 급여 안전성 검토 상태를 확인하세요.','. Review source evidence, tortoise species and feeding safety assessment status.');
+ if(meta)meta.content=description;
+ document.documentElement.lang=en()?'en':'ko';
  const r=rec,name=title(r);
  if(!Array.isArray(r.feeding_evidence))r.feeding_evidence=[];document.title=name+(name!==r.scientific?' ('+r.scientific+')':'')+T(' | 거북밥 DB',' | Geobukbap DB');
  const groups=TYPES.map(([k,ko,e])=>{const items=(Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).filter(x=>x.type===k);if(!items.length)return '';return '<div class="evtype"><h3>'+(en()?e:ko)+'</h3>'+items.map(evHTML).join('')+'</div>'}).join('');
@@ -184,7 +202,7 @@ function render(){const view=$('view');const nl=$('navlist');if(nl)nl.textConten
  view.innerHTML='<article class="hero"><div class="photo" role="img" aria-label="'+T('검증된 이미지 준비 중','Verified photo pending')+'">'+T('검증된 이미지 준비 중','Verified photo pending')+'</div><div><h1>'+esc(name)+'</h1><p class="sub"><span class="sci" lang="la">'+esc(r.scientific)+'</span>'+(r.authorship?' '+esc(r.authorship):'')+(r.family?' · '+esc(r.family):'')+'</p>'+
  '<span class="status"><b>—</b>'+T('급여 안전성 미확정','Feeding safety not established')+'</span>'+
  '<p class="lead">'+T('이 식물은 아직 육지거북 급여 안전성을 평가하지 않아 급여 등급(A~D)이 없습니다. 분류학적으로 확인된 식물이라는 사실은 먹여도 된다는 근거가 아닙니다.','This plant has not been assessed for tortoise feeding safety, so it has no feeding grade (A–D). Being a confirmed plant species is not evidence that it can be fed.')+'</p></div></article>'+
- glanceHTML(r,ev,(batch002?.by_scientific_name?.[String(r.scientific||'').trim().toLowerCase()]||[]))+
+ glanceHTML(r,ev,batch002Extra(r))+
  '<section class="panel" aria-labelledby="ev-h"><h2 id="ev-h">'+T('급여 근거','Feeding evidence')+'</h2>'+evidenceSummary+(r.feeding_evidence.length||feed.length?'<p class="evidence-count">'+T('연결된 근거 ','Linked sources ')+(r.feeding_evidence.length+feed.length)+(studies>1?T('건 (서로 다른 연구 '+studies+'건)',' (from '+studies+' separate studies)'):T('건',''))+T(' · 자료의 검증 상태와 적용 종을 확인하세요.',' · Check verification status and applicable tortoise species.')+'</p>':'<div class="evidence-empty"><b>'+T('현재 연결된 급여 연구·사육 자료가 없습니다.','No feeding research or husbandry sources are linked yet.')+'</b><p>'+T('자료가 없다는 것은 안전하다는 뜻도, 독성이 입증되었다는 뜻도 아닙니다. 식물 동정만으로 급여를 결정하지 마세요.','Lack of linked evidence does not establish safety or toxicity. Do not make feeding decisions from plant identification alone.')+'</p></div>')+'<p class="note">'+T('근거는 종류별로 나눠 표시합니다. 야생 섭식 관찰은 사육 환경의 급여 권장이 아니며, 급여량·빈도를 정하지 않습니다.','Evidence is grouped by type. A wild feeding observation is not a captive feeding recommendation and sets no amount or frequency.')+'</p>'+groups+
  (feed.length?'<div class="evtype"><h3>'+T('원문 검증 급여 기록 (검증 중)','Feeding records checked in the original (under review)')+'</h3>'+feed.map(x=>{const L=en()?'en':'ko';return '<div class="ev"><p><b>'+esc(x.tortoise[L])+'</b> · '+esc(x.location[L])+' · '+esc(x.period[L])+'</p><p>'+esc(x.method_text[L])+'</p><p>'+T('먹은 부위','Plant part')+': '+(x.plant_part?esc(x.plant_part[L]):T('원문 미기재','Not reported in the original'))+'</p>'+(x.observed_share?'<p>'+esc(x.observed_share[L])+'</p>':'')+'<p class="src">'+esc(x.citation)+' · '+esc(x.locator)+(x.url&&/^https?:\/\//i.test(x.url)?' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+T('원문 보기 ↗','Open the original ↗')+'</a>':'')+'</p></div>'}).join('')+'</div>':'')+
  '</section>'+batch002HTML(r)+communityHTML(r)+researchLeadHTML(r)+research+
@@ -201,12 +219,16 @@ async function boot(){
  state='loading';render();const id=idFromUrl();if(!id){state='done';render();return}
  const key=Number(id.split(':')[1]);
  // The catalog shard alone is sufficient to show the plant identity immediately.
- const [shard, batchIndex]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/catalog-evidence/batch-002-site-index.json')]);
- batch002=batchIndex;
+ // Load the small, identity-specific shard first. The optional batch index must not
+ // block detail pages whose feeding evidence is already embedded in the shard.
+ const shard=await j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json');
  if(!shard||!Array.isArray(shard.records)){state='error';render();return}
  rec=shard.records.find(x=>x.id===id)||null;
- // Taxonomy-only entries are not published as food profiles.
- if(rec && !(Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length) && !(batch002?.by_scientific_name?.[String(rec.scientific||'').trim().toLowerCase()]||[]).length)rec=null;
+ const directEvidence=rec&&Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length>0;
+ if(rec&&!directEvidence){
+  batch002=await j('../data/catalog-evidence/batch-002-site-index.json');
+  if(!(batch002?.by_scientific_name?.[String(rec.scientific||'').trim().toLowerCase()]||[]).length)rec=null;
+ }
  if(!rec){state='done';render();return}
  state='done';render();
  // Load optional evidence independently; failure of one dataset must not hide others.
