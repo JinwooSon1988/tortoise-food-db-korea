@@ -87,7 +87,7 @@ function hint(g){if(g===UNA)return en()?'Not assessed: no feeding grade. A valid
 /* feeding_pending: verified full-text feeding record, no grade yet. Order: summary → details → original link. */
 function feedHTML(r){if(!r.feedingRecordPending)return '';const recs=feedRecords[r.id]||[];if(!recs.length)return '';const L=en()?'en':'ko',NR=en()?'Not reported in the original':'원문 미기재',v=x=>x?esc(x[L]):'<span class="na">'+NR+'</span>';
  const torts=[...new Set(recs.map(x=>x.tortoise[L]))].join(', ');
- const sum=en()?'Confirmed in the original: '+torts+' ate this plant in the wild. Its safety has not been assessed yet, so it has no feeding grade.':'원문 확인: '+torts+' 야생 개체가 이 식물을 먹은 기록이 있습니다. 아직 안전성 평가 전이라 급여 등급은 없습니다.';
+ const sum=en()?'Feeding or ingestion was reported for '+torts+'. Verification varies by source. This is not a safety grade.':torts+'에 대한 급여·섭식 기록이 연결되어 있습니다. 출처별 확인 수준은 다르며, 안전성 판정은 아닙니다.';
  const row=(k,val)=>'<dt>'+k+'</dt><dd>'+val+'</dd>';
  const body=recs.map(x=>'<dl>'+row(en()?'Name in the original':'원문 표기','<i lang="la">'+esc(x.plant_taxon_reported)+'</i>')+row(en()?'Tortoise':'육지거북 종',esc(x.tortoise[L]))+row(en()?'Where and when':'관찰 장소·시기',esc(x.location[L])+' · '+esc(x.period[L]))+row(en()?'How it was shown':'확인 방법',esc(x.method_text[L]))+row(en()?'Plant part eaten':'먹은 부위',v(x.plant_part))+row(en()?'Observed share':'관찰 비율',v(x.observed_share))+row(en()?'Mixture, frequency, amount, fresh/dried, preparation':'혼합·빈도·양·생/건조·손질',NR+(en()?' (wild diet data, not a captive feeding method)':' (야생 섭식 자료이며 사육 급여법이 아님)'))+'</dl><p class="feedsrc">'+esc(x.citation)+' · '+esc(x.locator)+' <a href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+(en()?'Open the original ↗':'원문 보기 ↗')+'</a></p>').join('');
  return '<div class="feedrec"><p class="feedsum"><b>'+(en()?'Feeding records found (under review)':'급여 기록 있음 (검증 중)')+'</b> '+esc(sum)+'</p><details><summary>'+(en()?'Evidence details and original ('+recs.length+')':'상세 근거와 원문 ('+recs.length+'건)')+'</summary>'+body+'</details></div>'}
@@ -155,8 +155,8 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
      method_text:{ko:e.type==='wild_feeding_observation'?'야생 섭식 기록':e.type==='captive_feeding_record'?'사육 급여 기록':'사육자·영상 섭식 보고',en:e.type==='wild_feeding_observation'?'Wild feeding observation':e.type==='captive_feeding_record'?'Captive feeding record':'Keeper or video report'},
      location:{ko:e.location||'원문 미기재',en:e.location||'Not stated'},
      period:{ko:e.period||'원문 미기재',en:e.period||'Not stated'},
-     plant_part:e.plant_part&&typeof e.plant_part==='object'?e.plant_part:null,
-     observed_share:null,citation:e.study||e.source||'',locator:e.locator||'',url:e.url||e.source||''
+     plant_part:e.plant_part&&typeof e.plant_part==='object'?e.plant_part:typeof e.plant_part==='string'?{ko:e.plant_part,en:e.plant_part}:null,
+     observed_share:null,citation:(e.study||e.source||'')+' ['+(e.verification||'unverified')+']',locator:e.locator||'',url:e.url||''
    })));
  }}
  const pendingOption=document.createElement('option');
