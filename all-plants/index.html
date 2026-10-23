@@ -137,6 +137,28 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
    rows.push({id:t.taxon_id,ko:t.ko||sci,en:t.en||sci,scientific:sci,aliases:[t.ko,t.en].filter(Boolean),searchAliases:[],family:t.family||'',category:'',verdict:UNA,verdictRank:t.evidence?5.5:6,confidence:'',directEvidence:0,hasNutrition:false,hasReferenceNutrition:false,water:null,fiber:null,calcium:null,phosphorus:null,ratio:null,protein:null,potassium:null,vitc:null,isCandidate:true,hasEvidence:!!t.evidence,feedingRecordPending:feedingIds.has(t.taxon_id)})
   }
  }
+ // Enrich the existing feeding-record filter with actual feeding observations
+ // from verified taxon shards; nutrition and toxicity records do not qualify.
+ const feedTypes=new Set(['wild_feeding_observation','captive_feeding_record','community_report','video_observation']);
+ const taxonRows=rows.filter(x=>x.isCandidate);
+ const shardIds=[...new Set(taxonRows.map(x=>Number(x.id.split(':')[1])%40))];
+ const shardData=await Promise.all(shardIds.map(n=>j('../data/plant-catalog/taxa-'+String(n).padStart(2,'0')+'.json')));
+ const byId=new Map(rows.map(x=>[x.id,x]));
+ for(const shard of shardData){for(const taxon of (shard?.records||[])){
+   const item=byId.get(taxon.id);if(!item)continue;
+   const feeding=(taxon.feeding_evidence||[]).filter(e=>feedTypes.has(e.type));
+   if(!feeding.length)continue;
+   item.feedingRecordPending=true;
+   feedRecords[taxon.id]=(feedRecords[taxon.id]||[]).concat(feeding.map(e=>({
+     plant_taxon_reported:e.reported_name||taxon.scientific,
+     tortoise:{ko:e.tortoise||'원문 미기재',en:e.tortoise||'Not stated'},
+     method_text:{ko:e.type==='wild_feeding_observation'?'야생 섭식 기록':e.type==='captive_feeding_record'?'사육 급여 기록':'사육자·영상 섭식 보고',en:e.type==='wild_feeding_observation'?'Wild feeding observation':e.type==='captive_feeding_record'?'Captive feeding record':'Keeper or video report'},
+     location:{ko:e.location||'원문 미기재',en:e.location||'Not stated'},
+     period:{ko:e.period||'원문 미기재',en:e.period||'Not stated'},
+     plant_part:e.plant_part&&typeof e.plant_part==='object'?e.plant_part:null,
+     observed_share:null,citation:e.study||e.source||'',locator:e.locator||'',url:e.url||e.source||''
+   })));
+ }}
  const pendingOption=document.createElement('option');
  pendingOption.value='feeding_pending';
  pendingOption.textContent=en()?'Feeding records found (under review)':'급여 기록 있음 (검증 중)';
