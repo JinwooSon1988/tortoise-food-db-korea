@@ -36,14 +36,35 @@ if ($needTriage) {
     Write-Host "Candidate matches unchanged: reusing previous review queue."
 }
 
+# Avoid rescanning identical local documents every 30 minutes.
+# New or modified source files trigger a fresh candidate scan; the approval draft is preserved otherwise.
+$candidateOutput = "worker-output/evidence-candidates.json"
+$draftOutput = "worker-output/approval-drafts.json"
+$scanSources = @($corpus) + @(Get-ChildItem -Path "worker-output" -Filter "docs*.jsonl" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })
+if (Test-Path "worker-output/evidence_match.json") { $scanSources += "worker-output/evidence_match.json" }
+$needCandidateScan = !(Test-Path $candidateOutput) -or !(Test-Path $draftOutput)
+if (!$needCandidateScan) {
+    $lastScan = (Get-Item $candidateOutput).LastWriteTimeUtc
+    foreach ($source in $scanSources) {
+        if ((Test-Path $source) -and (Get-Item $source).LastWriteTimeUtc -gt $lastScan) {
+            $needCandidateScan = $true
+            break
+        }
+    }
+}
+
 # Full-text and synonym-aware candidates from every saved document (no network; runs during any API cooldown).
 # Writes worker-output/evidence-candidates.json and approval drafts ("reviewed": false) for a person to complete.
 $docs = Get-ChildItem -Path "worker-output" -Filter "docs*.jsonl" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
 $candArgs = @("scripts/build_evidence_candidates.py", "--bibliography", $corpus)
 if ($docs) { $candArgs += @("--docs") + $docs }
 if (Test-Path "worker-output/evidence_match.json") { $candArgs += @("--gbif-cache", "worker-output/evidence_match.json") }
-& $python @candArgs
-if ($LASTEXITCODE -ne 0) { Write-Warning "Full-text candidate scan failed; bibliography triage results are still available." }
+if ($needCandidateScan) {
+    & $python @candArgs
+    if ($LASTEXITCODE -ne 0) { Write-Warning "Full-text candidate scan failed; bibliography triage results are still available." }
+} else {
+    Write-Host "Evidence candidates unchanged: preserving existing approval drafts and skipping duplicate scan."
+}
 
 if (Test-Path $approved) {
     & $python scripts/promote_reviewed_feeding_evidence.py
