@@ -1,0 +1,48 @@
+name: Evidence discovery and review queue
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2 * * *'
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: evidence-discovery
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/evidence-batch-003-20261022
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Analyze existing bibliography without assigning safety
+        run: |
+          python scripts/match_bibliography_taxa_offline.py
+          python scripts/triage_bibliography_evidence_offline.py
+      - name: Summarize review queue
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('worker-output/evidence-triage.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          Path('worker-output/evidence-review-summary.json').write_text(json.dumps({
+            'total_candidates':d['total_candidates'],
+            'priority_counts':d['priority_counts'],
+            'note':'Unverified research leads, not feeding safety decisions'
+          },ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidence-review-queue
+          path: |
+            worker-output/bibliography-taxon-candidates.json
+            worker-output/evidence-triage.json
+            worker-output/evidence-review-summary.json
+          retention-days: 30
