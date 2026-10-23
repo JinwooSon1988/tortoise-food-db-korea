@@ -25,7 +25,12 @@ def main():
                 catalog.setdefault((parts[0] + " " + parts[1]).casefold(), []).append({
                     "taxon_id": row.get("id"), "scientific": scientific
                 })
-    bibliography = json.loads(Path(args.bibliography).read_text(encoding="utf-8"))
+    if not Path(args.bibliography).exists():
+        # No downloaded bibliography yet (e.g. a fresh CI checkout or an API cooldown): an empty queue, not an error.
+        bibliography = {"works": []}
+        print(f"No bibliography at {args.bibliography}; writing an empty candidate list.")
+    else:
+        bibliography = json.loads(Path(args.bibliography).read_text(encoding="utf-8"))
     works = bibliography.get("works", [])
     output = []
     seen = set()

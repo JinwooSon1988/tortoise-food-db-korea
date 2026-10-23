@@ -54,7 +54,8 @@ card_markup = card_fn[card_fn.index("return '<article"):]
 order = [card_markup.find(x) for x in ('<h3>', 'gradepill', 'class="decisionline"', 'class="why"', '+noteHtml+', 'class="detailbtn"')]
 assert -1 not in order and order == sorted(order), 'result card order must be name → grade → plain-language decision → why → species note → detail'
 assert "const decisionKo=g.grade==='A'?'급여 가능'" in card_fn and "const decision=isEn()?englishGrade(g)[1]:decisionKo" in card_fn, 'letter grades must be translated into an immediate feeding decision (in both languages)'
-assert "enText('상세 근거 보기',' evidence details')+'\" href=\"./plant/'" in card_fn
+# The detail link follows the page language: the Korean page, or the English page (its own title and canonical).
+assert "enText('상세 근거 보기',' evidence details')+'\" href=\"'+(isEn()?'./en/plant/':'./plant/')+" in card_fn, 'result cards must open the detail page in the current language'
 assert "aria-label=\"'+esc(displayLabel)+' · '+esc(g.grade)+' '+esc(displayGrade)+'\"" in card_fn, 'result cards must expose textual verdicts to assistive technology'
 assert '종별 특이사항 있음' in card_fn and '기본 판정과 분리해 확인' in card_fn, 'species notes must stay subordinate to the default verdict'
 for noisy in ('directCount', 'confidenceLabel', '근거수준', 'applicability_note'):
