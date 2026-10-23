@@ -148,6 +148,20 @@ function render(){const view=$('view');const nl=$('navlist');if(nl)nl.textConten
  const description=T('육지거북 먹이 자료: ','Tortoise feeding evidence: ')+String(rec.scientific||'')+T('. 원문 근거, 관찰된 거북 종과 급여 안전성 검토 상태를 확인하세요.','. Review source evidence, tortoise species and feeding safety assessment status.');
  if(meta)meta.content=description;
  document.documentElement.lang=en()?'en':'ko';
+ // Structured identity metadata: taxonomy and evidence provenance, never a safety claim.
+ let ld=document.getElementById('taxon-jsonld');
+ if(!ld){ld=document.createElement('script');ld.id='taxon-jsonld';ld.type='application/ld+json';document.head.appendChild(ld)}
+ const identity={ '@context':'https://schema.org','@type':'Dataset',
+  name:String(rec.scientific||''),
+  description:description,
+  url:canonical.href,
+  inLanguage:en()?'en':'ko',
+  isAccessibleForFree:true,
+  creator:{'@type':'Organization',name:'Geobukbap'},
+  variableMeasured:['Taxonomic identity','Reported tortoise feeding evidence','Evidence verification status'],
+  measurementTechnique:'Literature and source record review; not a feeding safety certification'
+ };
+ ld.textContent=JSON.stringify(identity).replace(/</g,'\\u003c');
  const r=rec,name=title(r);
  if(!Array.isArray(r.feeding_evidence))r.feeding_evidence=[];document.title=name+(name!==r.scientific?' ('+r.scientific+')':'')+T(' | 거북밥 DB',' | Geobukbap DB');
  const groups=TYPES.map(([k,ko,e])=>{const items=(Array.isArray(r.feeding_evidence)?r.feeding_evidence:[]).filter(x=>x.type===k);if(!items.length)return '';return '<div class="evtype"><h3>'+(en()?e:ko)+'</h3>'+items.map(evHTML).join('')+'</div>'}).join('');
