@@ -8,7 +8,6 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
     "index.html": {"lang": "ko", "search": True, "scripts": {"language-toggle.js", "search-live.js", "verdict-core.js"}},
-    "en/index.html": {"lang": "en", "search": True, "scripts": {"search-en.js", "verdict-core.js"}},
     "plant/dandelion/index.html": {"lang": "ko", "search": False, "scripts": {"detail-locale-history.js"}},
     "en/plant/dandelion/index.html": {"lang": "en", "search": False, "scripts": {"detail-locale-history.js"}},
     "guides/research-method/index.html": {"lang": "ko", "search": False, "scripts": {"language-toggle.js"}},
@@ -80,7 +79,14 @@ for name, expected in PAGES.items():
     for required in expected["scripts"] - script_names:
         errors.append(f"{name}: required script not loaded: {required}")
 
-# Both homepages must use the same verdict implementation, not separate grade rules.
+# The English homepage URL only redirects to the bilingual homepage in English (no separate English copy).
+en_home = (ROOT / "en/index.html").read_text(encoding="utf-8")
+if 'location.replace("../?lang=en"' not in en_home or 'content="noindex,follow"' not in en_home:
+    errors.append("en/index.html: must be a noindex redirect to ../?lang=en")
+if "searchInput" in en_home:
+    errors.append("en/index.html: a separate English homepage must not return")
+
+# Both languages must use the same verdict implementation, not separate grade rules.
 shared_verdict = ROOT / "verdict-core.js"
 if not shared_verdict.is_file():
     errors.append("Shared verdict engine: verdict-core.js is missing")

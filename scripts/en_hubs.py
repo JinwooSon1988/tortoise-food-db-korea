@@ -62,34 +62,18 @@ def tfdb_en():
 
 
 def home(public_count, examples):
-    # One canonical bilingual homepage: never serve a divergent English copy.
+    """One canonical bilingual homepage (index.html, English in place with ?lang=en): /en/ only redirects there.
+    Like the English catalog URL it is noindex, has no hreflang pair and is left out of the sitemap."""
     return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,follow">'
+            '<title>Tortoise Food DB</title>'
             '<link rel="canonical" href="../?lang=en">'
+            '<meta http-equiv="refresh" content="0;url=../?lang=en">'
             '<script>try{localStorage.setItem("tfdblang","en")}catch(e){}'
             'location.replace("../?lang=en"+location.hash)</script>'
-            '</head><body><p><a href="../?lang=en">Open Tortoise Food DB in English</a></p></body></html>')
-    url = SITE_URL + "/en/"
-    title = "Can my tortoise eat this plant? Tortoise food database | Tortoise Food DB"
-    desc = "Search tortoise food plants by English or scientific name and see the feeding grade first, then the reasons, cautions and evidence."
-    schema = {"@context": "https://schema.org", "@type": "WebSite", "name": "Tortoise Food DB", "url": url, "inLanguage": "en", "description": desc,
-              "potentialAction": {"@type": "SearchAction", "target": url + "?q={search_term_string}", "query-input": "required name=search_term_string"}}
-    ex = "".join(f'<button type="button" data-example="{esc(x)}">{esc(x)}</button>' for x in examples)
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2f6b49">'
-            f'<meta name="robots" content="index,follow"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}">{alternates("/")}{og(title, desc, url)}{ld(schema)}'
-            f'<style>{styles_of("index.html")}{LANG_CSS}.top{{display:flex;align-items:center;gap:10px}}</style></head>'
-            '<body><a class="skiplink" href="#main-content">Skip to content</a><main id="main-content" class="wrap" tabindex="-1">'
-            f'<header class="top"><a class="brand" href="./" aria-label="Tortoise Food DB home"><span>Tortoise Food DB</span></a><div class="topmeta">{lang_switch("../")}</div></header>'
-            '<section class="hero"><div class="eyebrow">Evidence database for tortoise food plants</div><h1>Can my tortoise eat this plant?</h1>'
-            '<p>Search for a plant by name. We show <b>whether it can be fed first</b>, then why, with the papers and original sources there when you need them.</p></section>'
-            '<section class="searchstage" aria-label="Search food plants"><div class="searchrow"><input id="searchInput" type="search" placeholder="e.g. ' + esc(", ".join(examples)) + '" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search food plants by name" aria-controls="searchResults" aria-describedby="searchHelp" aria-keyshortcuts="/"><button id="searchBtn" type="button" class="primary">Check grade</button></div>'
-            '<div id="searchHelp" class="searchhelp"><span class="helpintro">Search by Korean, English, or scientific name.</span>'
-            '<span class="safetyhint">No search result does not mean a plant is safe.</span></div>'
-            f'<div id="catalogCount" class="catalogcount">Search {public_count} plants with a public assessment.</div><div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>'
-            '<section class="truststrip" aria-label="Our principles"><div><b>Feeding assessment</b><span>Check whether a plant can be fed</span></div><div><b>Reasons and precautions</b><span>Plant parts, exceptions, and risks</span></div><div><b>Traceable evidence</b><span>Original sources and limitations</span></div></section><section class="belowfold"><div><h2>All plant data</h2><p>Browse all published plants and their feeding assessments without searching.</p></div><nav class="utilitylinks" aria-label="Plant catalog and research method"><a href="../all-plants/?lang=en">View all plants</a><a href="./guides/research-method/">How we review evidence</a></nav></section>'
-            '<footer class="footer">Tortoise Food DB · An evidence-based database of tortoise food plants</footer></main>'
-            f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261013-2"></script><script src="../taxonomy-home-search.js?v=20261023-1" defer></script></body></html>')
+            '</head><body><p><a href="../?lang=en">Open Tortoise Food DB in English</a></p>'
+            '<p><a href="../" hreflang="ko" lang="ko">한국어</a></p></body></html>')
 
 
 def all_plants(public_count):
@@ -175,8 +159,8 @@ def research_page():
         '<section class="hero"><div class="eyebrow">EVIDENCE &amp; REVIEW</div><h1>How does Tortoise Food DB assess a plant?</h1>'
         '<p>The A, B, C and D grades in the search results are not simply a tally of “people online say they feed it”. Before a grade is published we review separately '
         'the exact identity of the plant, the plant part actually covered, the animal group the evidence concerns and the nature of each source.</p></section>'
-        '<section class="grid"><article class="card"><h2>1. Identify the plant exactly</h2><p>The scientific name and taxonomic rank come first. If a source does not reliably identify the plant, it '
-        'is not used as a photograph or feeding evidence for another species.</p></article>'
+        '<section class="grid"><article class="card"><h2>1. Identify the plant exactly</h2><p>The scientific name and taxonomic rank come first. If a source does not reliably identify the plant, we '
+        'do not use it as a photograph or feeding evidence for another species.</p></article>'
         '<article class="card"><h2>2. Check which plant part is involved</h2><p>Leaves, flowers, fruit, roots and seeds are not automatically treated as the same feeding evidence. Where the photo '
         'shows a different part from the one fed, the detail page says so.</p></article>'
         '<article class="card"><h2>3. Check what the evidence applies to</h2><p>Direct tortoise data, specialist husbandry sources, related-taxon data, data on herbivorous reptiles in general, '
