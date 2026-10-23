@@ -7,8 +7,10 @@ Input: a JSON file {"records":[{"reviewed":true,"reviewer":"...","original_inspe
 "finding":{"ko":"...","en":"..."},"source_class":"peer_reviewed"}]}
 (scripts/build_evidence_candidates.py writes drafts in this shape with "reviewed": false).
 
-Only records a person approved after reading the original are accepted: reviewed and original_inspected true, a
-reviewer name, an exact binomial, an http(s) source URL, a tortoise species, a locator, the plant part and the
+Only records a person approved after reading the original are accepted (and a batch with any rejected record
+publishes nothing): reviewed and original_inspected true, a
+reviewer name, an exact binomial already resolved to a catalog or reviewed plant, an explicit source class (keeper or
+community sources only as community_report, kept unverified), an http(s) source URL, a tortoise species, a locator, the plant part and the
 finding in Korean and English, and for nutrition / toxicity the basis or test conditions. Record types are the
 site's own (see TYPES); earlier names (captive_feeding_report, husbandry_guidance, nutritional_analysis,
 toxicity_report) are mapped to them and the mapping is reported. Bibliography candidates are never promoted.
@@ -26,10 +28,23 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity",
-         "offered_not_eaten", "wild_diet_not_detected"}
+         "offered_not_eaten", "wild_diet_not_detected", "community_report"}
 LEGACY = {"captive_feeding_report": "captive_feeding_record", "husbandry_guidance": "husbandry_recommendation",
           "nutritional_analysis": "nutrition", "toxicity_report": "toxicity"}
-SOURCE_CLASSES = {"peer_reviewed", "thesis", "zoo_guideline", "government", "vet", "book", "nutrition_db", "other"}
+SOURCE_CLASSES = {"peer_reviewed", "thesis", "zoo_guideline", "government", "vet", "book", "nutrition_db", "keeper_community", "other"}
+
+
+def known_names():
+    """Names whose identity is already resolved: catalog species (and synonyms or spelling variants recorded on their
+    evidence) and reviewed plants (scientific name and taxonomy note). Anything else needs identity resolution first."""
+    names = set()
+    for f in sorted((ROOT / "data/plant-catalog").glob("taxa-*.json")):
+        for r in json.loads(f.read_text(encoding="utf-8"))["records"]:
+            names.add(r["scientific"].casefold())
+            names.update(e["name_resolution"]["reported"].casefold() for e in r["feeding_evidence"] if e.get("name_resolution"))
+    for p in json.loads((ROOT / "data/plants.json").read_text(encoding="utf-8")):
+        names.update(n.casefold() for n in re.findall(r"\b([A-Z][a-z]+ [a-z][a-z-]+)\b", (p.get("scientific") or "") + " " + (p.get("taxonomy_note") or "")))
+    return names
 NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
 
 
@@ -47,7 +62,7 @@ def empty_batch():
             "sources": [], "records": [], "held_not_linked": [], "sources_not_used": [], "reviewed_not_feeding_evidence": []}
 
 
-def check(record):
+def check(record, names):
     if record.get("reviewed") is not True or not str(record.get("reviewer", "")).strip():
         raise ValueError("explicit reviewer approval required")
     if record.get("original_inspected") is not True:
@@ -56,6 +71,12 @@ def check(record):
     scientific = " ".join(scientific.split()[:2]) if re.fullmatch(r"[A-Z][a-z-]+ [a-z][a-z-]+(?: .*)?", scientific) else scientific
     if not re.fullmatch(r"[A-Z][a-z-]+ [a-z][a-z-]+", scientific):
         raise ValueError("exact binomial required")
+    if scientific.casefold() not in names:
+        raise ValueError("scientific name not resolved to a catalog or reviewed plant; identity resolution required")
+    if record.get("source_class") not in SOURCE_CLASSES:
+        raise ValueError("source_class must be explicit")
+    if (record["source_class"] == "keeper_community") != (LEGACY.get(record.get("type"), record.get("type")) == "community_report"):
+        raise ValueError("keeper/community sources are promoted only as community_report (and only they)")
     if not valid_url(str(record.get("source_url") or "")):
         raise ValueError("http(s) source URL required")
     typ = record.get("type")
@@ -94,10 +115,11 @@ def main():
     out = Path(args.output)
     batch = json.loads(out.read_text(encoding="utf-8")) if out.exists() else empty_batch()
     sources = {s["source_key"]: s for s in batch["sources"]}
+    names = known_names()
     promoted, rejected, mapped_types = [], [], []
     for n, record in enumerate(records):
         try:
-            scientific, typ = check(record)
+            scientific, typ = check(record, names)
             if typ != record["type"]:
                 mapped_types.append({"record": n, "from": record["type"], "to": typ})
             url = str(record["source_url"])
@@ -106,17 +128,22 @@ def main():
                 raise ValueError("source key collision")
             sources.setdefault(key, {"source_key": key, "citation": record["citation"], "url": url,
                                      "language": record.get("language", "en"),
-                                     "source_class": record.get("source_class") if record.get("source_class") in SOURCE_CLASSES else "other",
+                                     "source_class": record["source_class"],
                                      "tortoise_taxon": record["tortoise"], "context": record.get("context", "wild"),
                                      "study_id": record.get("study_id") or key, "read": "reviewer-approved after reading the original",
                                      "collected_by": "reviewed-import"})
+            community = typ == "community_report"
             entry = {"source_key": key, "reported_name": scientific, "tortoise": record["tortoise"], "type": typ,
-                     "verification": "reviewed_source_record", "context": record.get("context", "wild"),
+                     # a keeper report stays a keeper report after review: never "checked in the original"
+                     "verification": "community_report_unverified" if community else "reviewed_source_record",
+                     "context": record.get("context", "keeper" if community else "wild"),
                      "locator": record["locator"], "plant_part": record["plant_part"], "finding": record["finding"],
                      "reviewer": record["reviewer"]}
             for k in ("nutrition", "toxicity"):
                 if record.get(k):
                     entry[k] = record[k]
+            if community:
+                entry["identification"] = "binomial_in_source"
             if any(x["source_key"] == key and x["reported_name"] == scientific and x["type"] == typ and x["locator"] == entry["locator"]
                    for x in batch["records"]):
                 continue
@@ -125,11 +152,13 @@ def main():
         except (KeyError, ValueError, TypeError) as exc:
             rejected.append({"record": n, "reason": str(exc)})
     batch["sources"] = sorted(sources.values(), key=lambda x: x["source_key"])
-    if promoted:
+    # Atomic: one rejected record publishes nothing from this input.
+    if promoted and not rejected:
         import time
         batch["built"] = batch["corpus"]["searched"] = time.strftime("%Y-%m-%d")
         out.write_text(json.dumps(batch, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    report = {"promoted": len(promoted), "rejected": len(rejected), "type_names_mapped": mapped_types,
+    report = {"promoted": len(promoted) if not rejected else 0, "rejected": len(rejected), "type_names_mapped": mapped_types,
+              "atomic": "No records are published when any input record is rejected.",
               "promoted_records": promoted, "rejections": rejected, "output": str(out),
               "next": "rebuild the catalog (scripts/build_plant_catalog_v1.py) and run scripts/qa_plant_catalog_v1.py",
               "warning": "Review approval must be based on original source inspection, not title/abstract matching."}

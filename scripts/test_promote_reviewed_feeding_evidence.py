@@ -15,7 +15,7 @@ SCRIPT = ROOT / "scripts/promote_reviewed_feeding_evidence.py"
 GOOD = {"reviewed": True, "reviewer": "Test Reviewer", "original_inspected": True, "scientific": "Opuntia ficus-indica",
         "source_url": "https://doi.org/10.0000/example", "citation": "Example, A. (2020) Diet of tortoises. J. Test 1:1-9",
         "tortoise": "Testudo graeca", "type": "captive_feeding_report", "locator": "Table 2, p. 4",
-        "plant_part": {"ko": "줄기마디(패드)", "en": "pad"}, "finding": {"ko": "사육 개체가 먹음", "en": "Eaten by captive tortoises"}}
+        "plant_part": {"ko": "줄기마디(패드)", "en": "pad"}, "finding": {"ko": "사육 개체가 먹음", "en": "Eaten by captive tortoises"}, "source_class": "peer_reviewed"}
 
 
 class PromoteTests(unittest.TestCase):
@@ -41,11 +41,23 @@ class PromoteTests(unittest.TestCase):
     def test_unreviewed_or_not_read_or_incomplete_rejected(self):
         bad = [dict(GOOD, reviewed=False), dict(GOOD, original_inspected=False), dict(GOOD, reviewer=""),
                dict(GOOD, tortoise="tortoise"), dict(GOOD, plant_part={"ko": "", "en": "pad"}), dict(GOOD, source_url="ftp://x/y"),
-               dict(GOOD, type="nutritional_analysis"), dict(GOOD, type="safe_to_feed"), dict(GOOD, scientific="Opuntia")]
+               dict(GOOD, type="nutritional_analysis"), dict(GOOD, type="safe_to_feed"), dict(GOOD, scientific="Opuntia"),
+               dict(GOOD, scientific="Notaplant inventedii"), dict(GOOD, source_class=None), dict(GOOD, source_class="keeper_community")]
         code, report, batch = self.run_with(bad)
         self.assertEqual(code, 2)
         self.assertEqual((report["promoted"], report["rejected"]), (0, len(bad)))
         self.assertIsNone(batch)
+
+    def test_one_rejected_record_publishes_nothing(self):
+        code, report, batch = self.run_with([GOOD, dict(GOOD, reviewed=False)])
+        self.assertEqual((code, report["promoted"], report["rejected"]), (2, 0, 1))
+        self.assertIsNone(batch)
+
+    def test_keeper_report_stays_unverified(self):
+        code, report, batch = self.run_with([dict(GOOD, source_class="keeper_community", type="community_report")])
+        self.assertEqual(code, 0)
+        rec = batch["records"][0]
+        self.assertEqual((rec["type"], rec["verification"], rec["identification"]), ("community_report", "community_report_unverified", "binomial_in_source"))
 
     def test_batch_002_index_untouched(self):
         idx = ROOT / "data/catalog-evidence/batch-002-site-index.json"
