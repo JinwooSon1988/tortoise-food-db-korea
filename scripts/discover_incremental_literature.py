@@ -19,7 +19,7 @@ def main():
     tasks=[(g,t) for g in GENERA for t in TOPICS]
     success=0; added=0
     for offset in range(min(args.queries,len(tasks))):
-        cursor=(state["cursor"]+offset)%len(tasks)
+        cursor=state["cursor"]%len(tasks)
         genus,topic=tasks[cursor]
         try:
             hits=list(search(genus+" "+topic,args.pages,args.per_page,os.environ.get("OPENALEX_EMAIL")))
