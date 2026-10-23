@@ -47,6 +47,7 @@ if (Test-Path $approved) {
     & $python scripts/promote_reviewed_feeding_evidence.py
     if ($LASTEXITCODE -ne 0) { throw "Evidence promotion rejected input; see promotion-report.json" }
     Write-Host "Approved records are in data/catalog-evidence/reviewed-records.json. Rebuild the catalog (build_plant_catalog_v1.py) and run qa_plant_catalog_v1.py before committing."
+    Write-Warning "Do not count approved records as published until the catalog shards, search index, sitemap and QA are rebuilt successfully."
 } else {
     Write-Host "No reviewer-approved input. Candidates remain unverified and unpublished."
 }
