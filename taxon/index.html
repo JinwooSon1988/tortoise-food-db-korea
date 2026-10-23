@@ -180,12 +180,16 @@ async function boot(){
  state='loading';render();const id=idFromUrl();if(!id){state='done';render();return}
  const key=Number(id.split(':')[1]);
  // The catalog shard alone is sufficient to show the plant identity immediately.
- const [shard, batchIndex]=await Promise.all([j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json'),j('../data/catalog-evidence/batch-002-site-index.json')]);
- batch002=batchIndex;
+ // Load the small, identity-specific shard first. The optional batch index must not
+ // block detail pages whose feeding evidence is already embedded in the shard.
+ const shard=await j('../data/plant-catalog/taxa-'+String(key%SHARDS).padStart(2,'0')+'.json');
  if(!shard||!Array.isArray(shard.records)){state='error';render();return}
  rec=shard.records.find(x=>x.id===id)||null;
- // Taxonomy-only entries are not published as food profiles.
- if(rec && !(Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length) && !(batch002?.by_scientific_name?.[String(rec.scientific||'').trim().toLowerCase()]||[]).length)rec=null;
+ const directEvidence=rec&&Array.isArray(rec.feeding_evidence)&&rec.feeding_evidence.length>0;
+ if(rec&&!directEvidence){
+  batch002=await j('../data/catalog-evidence/batch-002-site-index.json');
+  if(!(batch002?.by_scientific_name?.[String(rec.scientific||'').trim().toLowerCase()]||[]).length)rec=null;
+ }
  if(!rec){state='done';render();return}
  state='done';render();
  // Load optional evidence independently; failure of one dataset must not hide others.
