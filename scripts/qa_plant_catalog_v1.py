@@ -23,9 +23,10 @@ TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recomm
          "offered_not_eaten", "community_report", "video_observation"}
 VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified", "review_full_text_verified",
                 "community_report_unverified", "guideline_full_text_verified", "video_observation_unverified", "abstract_checked",
-                "full_text_auto_extracted"}
+                "full_text_auto_extracted", "reviewed_source_record"}
 COMMUNITY = {"community_report_unverified", "video_observation_unverified"}
-CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified"}
+CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified",
+           "reviewed_source_record"}
 RESEARCH = {"evidence_checked_in_full_text", "evidence_auto_extracted", "evidence_leads_only", "community_reports_only", "reviewed_not_feeding_evidence", "no_record_found"}
 NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
 NAME_BASIS = {"gbif_synonym", "orthographic_variant"}
@@ -106,7 +107,8 @@ for r in records:
 
 # Corpus evidence batches: typed, sourced records; held names never reach the catalog; the corpus searched is described.
 linked_reported = {e["reported_name"] for r in records for e in r["feeding_evidence"]}
-batch_files = [p for p in sorted((ROOT / "data/catalog-evidence").glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]  # not the site index
+from build_plant_catalog_v1 import batch_files as _batch_files  # noqa: E402
+batch_files = _batch_files()  # numbered corpus batches and the reviewer-approved batch; not the site index
 for f in batch_files:
     b = load(f)
     src = {s["source_key"]: s for s in b["sources"]}

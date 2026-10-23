@@ -82,13 +82,17 @@ def evidence_first_priority(names, evidence_names):
 
 
 def batch_files():
-    """Corpus batch files (batch-NNN-YYYYMMDD.json); other files in the folder, such as a site index, are not batches."""
-    return [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
+    """Corpus batch files (batch-NNN-YYYYMMDD.json) and the reviewer-approved batch (reviewed-records.json, written by
+    promote_reviewed_feeding_evidence.py); other files in the folder, such as a site index, are not batches."""
+    files = [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
+    reviewed = ROOT / BATCH_DIR / "reviewed-records.json"
+    return files + ([reviewed] if reviewed.exists() else [])
 
 
 SYNONYM_STATUS = ("SYNONYM", "HOMOTYPIC_SYNONYM", "HETEROTYPIC_SYNONYM")
 # Verification levels where the record was read in a full text (the rest are leads to recheck).
-CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified")
+CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified",
+                  "reviewed_source_record")
 # Keeper experience and uploader-described videos are shown as references only, apart from leads and checked records.
 COMMUNITY_LEVELS = ("community_report_unverified", "video_observation_unverified")
 # Found by the batch 004 extractor in an open full text and re-found verbatim; not read by a person.
@@ -163,7 +167,7 @@ def evidence_sources():
                                   "url": s["url"], "locator": None, "verification": "full_text_named_not_extracted",
                                   "context": s["context"], "plant_part": None, "finding": None, "study": key}))
     # Open-access full texts, keeper database entries and corpus batches (records carry their own verification level).
-    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted(batch_files())]:
+    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in batch_files()]:
         ft = load(f)
         src = {s["source_key"]: s for s in ft["sources"]}
         for r in ft["records"]:
@@ -273,7 +277,7 @@ def main():
     # Evidence names resolved by an exact accepted GBIF species match, a GBIF synonym of an accepted species, or an
     # orthographic variant (doubled i, gender ending); the name printed in the source is kept as reported_name.
     ev = evidence_sources()
-    batches = [load(str(p.relative_to(ROOT))) for p in sorted(batch_files())]
+    batches = [load(str(p.relative_to(ROOT))) for p in batch_files()]
     rejected_names = {n for b in batches for x in b.get("reviewed_not_feeding_evidence", []) for n in x["names"]}
     binomial = lambda n: re.fullmatch(r"[A-Z][a-z]+ [a-z][a-z-]+", n)
     match = gbif_match({n for n, _ in ev if binomial(n)} | {n for n in rejected_names if binomial(n)}, a.gbif_dir / "evidence_match.json")
@@ -291,7 +295,8 @@ def main():
         lst = ev_by_key.setdefault(key, [])
         if item not in lst:
             lst.append(item)
-    corpus_id = batches[-1]["corpus"]["id"] if batches else None
+    numbered = [b for b in batches if b.get("batch") != "reviewed"]
+    corpus_id = numbered[-1]["corpus"]["id"] if numbered else None
     rejected_keys = {k for n in rejected_names for k, b in [resolve(n, match.get(n) or {})] if k and b is None}
     # Species named in feeding sources come first, so every batch carries the entries that have evidence.
     by_key = {str(m["usageKey"]): n for n, m in match.items() if m.get("usageKey")}

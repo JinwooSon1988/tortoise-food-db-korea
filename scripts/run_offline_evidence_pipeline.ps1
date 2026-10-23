@@ -34,9 +34,19 @@ if ($needTriage) {
     Write-Host "Candidate matches unchanged: reusing previous review queue."
 }
 
+# Full-text and synonym-aware candidates from every saved document (no network; runs during any API cooldown).
+# Writes worker-output/evidence-candidates.json and approval drafts ("reviewed": false) for a person to complete.
+$docs = Get-ChildItem -Path "worker-output" -Filter "docs*.jsonl" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
+$candArgs = @("scripts/build_evidence_candidates.py", "--bibliography", $corpus)
+if ($docs) { $candArgs += @("--docs") + $docs }
+if (Test-Path "worker-output/evidence_match.json") { $candArgs += @("--gbif-cache", "worker-output/evidence_match.json") }
+& $python @candArgs
+if ($LASTEXITCODE -ne 0) { Write-Warning "Full-text candidate scan failed; bibliography triage results are still available." }
+
 if (Test-Path $approved) {
     & $python scripts/promote_reviewed_feeding_evidence.py
     if ($LASTEXITCODE -ne 0) { throw "Evidence promotion rejected input; see promotion-report.json" }
+    Write-Host "Approved records are in data/catalog-evidence/reviewed-records.json. Rebuild the catalog (build_plant_catalog_v1.py) and run qa_plant_catalog_v1.py before committing."
 } else {
     Write-Host "No reviewer-approved input. Candidates remain unverified and unpublished."
 }

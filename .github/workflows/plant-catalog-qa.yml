@@ -8,6 +8,10 @@ on:
       - 'scripts/build_plant_catalog_v1.py'
       - 'scripts/polite_http.py'
       - 'scripts/test_polite_http.py'
+      - 'scripts/promote_reviewed_feeding_evidence.py'
+      - 'scripts/test_promote_reviewed_feeding_evidence.py'
+      - 'scripts/build_evidence_candidates.py'
+      - 'scripts/test_build_evidence_candidates.py'
       - 'data/plants.json'
       - 'data/public_assessments.json'
       - 'data/feeding_pending_site_v1.json'
@@ -29,6 +33,10 @@ on:
       - 'scripts/build_plant_catalog_v1.py'
       - 'scripts/polite_http.py'
       - 'scripts/test_polite_http.py'
+      - 'scripts/promote_reviewed_feeding_evidence.py'
+      - 'scripts/test_promote_reviewed_feeding_evidence.py'
+      - 'scripts/build_evidence_candidates.py'
+      - 'scripts/test_build_evidence_candidates.py'
       - 'data/plants.json'
       - 'data/public_assessments.json'
       - 'data/feeding_pending_site_v1.json'
@@ -61,5 +69,9 @@ jobs:
         run: python scripts/test_build_bulk_taxon_catalog.py
       - name: Polite collection client (robots.txt, spacing, retries, checkpoint) offline tests
         run: python scripts/test_polite_http.py
+      - name: Reviewer-approved promotion (no unreviewed records, site types, Batch 002 index untouched)
+        run: python scripts/test_promote_reviewed_feeding_evidence.py
+      - name: Offline evidence candidates (classes and readiness; nothing promoted)
+        run: python scripts/test_build_evidence_candidates.py
       - name: Catalog shards, search index, sitemap, no grades, reviewed plants unchanged
         run: python scripts/qa_plant_catalog_v1.py
