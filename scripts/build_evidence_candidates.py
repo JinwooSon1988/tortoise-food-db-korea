@@ -80,6 +80,48 @@ def species_of(t):
     return (m.group(1) + " " + m.group(2)).lower() if m else None
 
 
+def readiness(c, held):
+    """What a candidate still lacks before a reviewer can approve it (empty list = ready)."""
+    missing = []
+    if c["evidence_class"] not in READY_CLASSES:
+        missing.append("evidence class " + c["evidence_class"])
+    if not c["full_text"]:
+        missing.append("full text (title or abstract only)")
+    if not species_of(c["tortoise"]):
+        missing.append("tortoise species")
+    if not c["plant_part"]:
+        missing.append("plant part")
+    if not str(c.get("url") or "").startswith("http"):
+        missing.append("source URL")
+    if c["full_text"] and not c.get("quote_refound"):
+        missing.append("quote re-found in the saved text")
+    if c["reported_name"] in held:
+        missing.append("name held in an earlier batch (identity doubt)")
+    return missing
+
+
+LOCATOR_GENERIC = {"title", "abstract", "body text"}
+
+
+def completeness(c):
+    """Sort key among duplicates: a full text over a title or abstract, then a re-found quote, a stated plant part,
+    a specific locator (table or page over a section over title/abstract/body text), fewer missing items."""
+    loc = str(c.get("locator") or "")
+    specific = 2 if re.search(r"(?i)\b(table|tabla|tabela|fig(?:ure)?\.?|p\.\s*\d|page)\b", loc) else 0 if loc in LOCATOR_GENERIC or not loc else 1
+    return (bool(c["full_text"]), bool(c.get("quote_refound")), bool(c["plant_part"]), specific, -len(c["missing"]))
+
+
+def prior_reviews(base):
+    """(doc_id, reported name, evidence class) -> decision from <base>/reviewed-*/review-decisions.jsonl."""
+    out = {}
+    for f in sorted(Path(base).glob("reviewed-*/review-decisions.jsonl")):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                d = json.loads(line)
+                out[(d["doc_id"], d["reported_name"], d["evidence_class"])] = {k: d.get(k) for k in ("decision", "reason", "reviewed", "reviewer")}
+    return out
+
+
 def held_names():
     """Names held as names in earlier batches (doubtful GBIF synonym or other identity doubt): never linkable here."""
     out = set()
@@ -137,6 +179,7 @@ def main():
     ap.add_argument("--gbif-cache")
     ap.add_argument("--output", default="worker-output/evidence-candidates.json")
     ap.add_argument("--drafts", default="worker-output/approval-drafts.json")
+    ap.add_argument("--reviews-dir", default=str(ROOT / "research/evidence-queue"), help="folder with reviewed-*/review-decisions.jsonl")
     a = ap.parse_args()
     idx = taxon_index(a.gbif_cache)
     held = held_names()
@@ -178,39 +221,46 @@ def main():
                 out.append(dict(c, doc_id=doc["doc_id"], citation=doc.get("citation"), url=url, source="full_text",
                                 quote_refound=norm(c["quote"]) in whole))
 
-    # readiness and de-duplication (one candidate per target x tortoise x source x class)
-    seen, final = set(), []
+    # Readiness first, then de-duplication: one candidate per target x tortoise x source x class, keeping the most
+    # complete one (see completeness()); a candidate without a tortoise species is a duplicate when the same target,
+    # source and class also has one with a species. Earlier review decisions are carried over, never re-queued.
+    prior = prior_reviews(a.reviews_dir)
     for c in out:
-        sid = source_id(c.get("url"))
-        key = (c["target"], species_of(c["tortoise"]), sid, c["evidence_class"])
-        if key in seen:
-            counts["duplicate_candidates"] += 1
+        c["sid"] = source_id(c.get("url"))
+        c["missing"] = readiness(c, held)
+    groups = {}
+    for c in out:
+        groups.setdefault((c["target"], species_of(c["tortoise"]), c["sid"], c["evidence_class"]), []).append(c)
+    with_species = {(t, s, k) for (t, sp, s, k) in groups if sp}
+    best = []
+    for key, items in groups.items():
+        if key[1] is None and (key[0], key[2], key[3]) in with_species:
+            counts["duplicate_candidates"] += len(items)
+            counts["duplicate_without_tortoise_species"] += len(items)
             continue
-        seen.add(key)
-        missing = []
-        if c["evidence_class"] not in READY_CLASSES:
-            missing.append("evidence class " + c["evidence_class"])
-        if not c["full_text"]:
-            missing.append("full text (title or abstract only)")
-        if not species_of(c["tortoise"]):
-            missing.append("tortoise species")
-        if not c["plant_part"]:
-            missing.append("plant part")
-        if not str(c.get("url") or "").startswith("http"):
-            missing.append("source URL")
-        if c["full_text"] and not c.get("quote_refound"):
-            missing.append("quote re-found in the saved text")
+        items.sort(key=completeness, reverse=True)
+        keep = items[0]
+        keep["alternate_locators"] = sorted({x["locator"] for x in items[1:] if x["locator"] != keep["locator"]})[:10]
+        counts["duplicate_candidates"] += len(items) - 1
+        if any(not x["full_text"] for x in items[1:]) and keep["full_text"]:
+            counts["duplicate_full_text_preferred"] += 1
+        best.append(keep)
+    final = []
+    for c in best:
+        sid, missing = c.pop("sid"), c["missing"]
         if (c["reported_name"], sid) in P1_HELD_CLAIMS:
             missing.append("P1 identity hold")
-        if c["reported_name"] in held:
-            missing.append("name held in an earlier batch (identity doubt)")
         if ((c["target"], species_of(c["tortoise"]), sid) in links
                 or (c["target"], species_of(c["tortoise"]), "cite:" + squash(c.get("citation"))) in links):
             c["already_linked"] = True
             counts["already_linked"] += 1
             continue
-        c["state"] = "ready_for_reviewer" if not missing else "needs_human_review"
-        c["missing"] = missing
+        decision = prior.get((c["doc_id"], c["reported_name"], c["evidence_class"]))
+        if decision:
+            c["prior_review"] = decision  # kept as decided; a rescan never re-queues or re-approves it
+            c["state"] = "previously_reviewed"
+        else:
+            c["state"] = "ready_for_reviewer" if not missing else "needs_human_review"
         c["verified_feeding_evidence"] = False
         counts[c["state"]] += 1
         counts["class_" + c["evidence_class"]] += 1
