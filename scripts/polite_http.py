@@ -7,6 +7,8 @@ checkpoints and a bounded worker pool. Standard library only.
 - Spacing: every host has a minimum interval between request starts and a concurrency cap (HOST_POLICIES); unknown
   hosts get 1 request at a time, 1 s apart. API hosts carry the terms page their limits come from.
 - Retries: 429, 5xx and network errors back off exponentially (Retry-After honoured, capped); other 4xx are final.
+  A 429 whose Retry-After exceeds the cap, or a 429 on the last try, opens a circuit for the host: no further
+  requests are sent to it in this run (a quota is not retried around).
 - Provenance: every request (and every robots refusal) is appended to a JSONL log with time, status, final URL,
   size and SHA-256 of the body, the robots decision and the policy applied, so each saved document is traceable.
 - Checkpoint: a JSONL file keyed by task id; the last line per key wins, "ok" and "final" keys are skipped on resume,
@@ -89,6 +91,7 @@ class _Host:
         self.slots = threading.BoundedSemaphore(policy.max_concurrency)
         self.robots = None           # RobotFileParser, or "deny" / "allow"
         self.robots_lock = threading.Lock()
+        self.circuit_open = False    # set after a rate-limit quota response; no further requests to the host
 
 
 class PoliteClient:
@@ -179,6 +182,10 @@ class PoliteClient:
             self.stats["robots_blocked"] += 1
             self._log({"kind": "fetch", "url": url, "status": None, "robots": "disallowed", "purpose": purpose})
             raise RobotsDisallowed(url)
+        if h.circuit_open:
+            self.stats["failed"] += 1
+            self._log({"kind": "fetch", "url": url, "status": None, "purpose": purpose, "error": "rate-limit circuit open for this host"})
+            raise FetchError(url, 429, "rate-limit circuit open for this host (quota exhausted)", final=False)
         last = None
         for attempt in range(self.retries + 1):
             self.stats["requests"] += 1
@@ -203,6 +210,12 @@ class PoliteClient:
                     self.stats["failed"] += 1
                     raise FetchError(url, e.code, str(e.reason), final=True)
                 wait = _retry_after(e.headers.get("Retry-After") if e.headers else None)
+                # A quota (Retry-After beyond the backoff cap, or 429 on the last try) stops all requests to the host.
+                if e.code == 429 and ((wait is not None and wait > MAX_BACKOFF) or attempt == self.retries):
+                    h.circuit_open = True
+                    self.stats["failed"] += 1
+                    self._log({"kind": "circuit", "url": url, "status": 429, "retry_after": wait, "purpose": purpose})
+                    raise FetchError(url, 429, "rate limited; circuit opened for this host", final=False)
             except (urllib.error.URLError, TimeoutError, OSError) as e:
                 last = e
                 self._log({"kind": "fetch", "url": url, "status": None, "attempt": attempt, "purpose": purpose,

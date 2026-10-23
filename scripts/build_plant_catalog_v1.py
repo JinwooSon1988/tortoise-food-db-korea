@@ -91,6 +91,8 @@ SYNONYM_STATUS = ("SYNONYM", "HOMOTYPIC_SYNONYM", "HETEROTYPIC_SYNONYM")
 CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified")
 # Keeper experience and uploader-described videos are shown as references only, apart from leads and checked records.
 COMMUNITY_LEVELS = ("community_report_unverified", "video_observation_unverified")
+# Found by the batch 004 extractor in an open full text and re-found verbatim; not read by a person.
+AUTO_LEVELS = ("full_text_auto_extracted",)
 
 
 def load(p):
@@ -230,6 +232,8 @@ def resolve(n, m):
 def research_status(evidence, rejected):
     if any(e["verification"] in CHECKED_LEVELS for e in evidence):
         return "evidence_checked_in_full_text"
+    if any(e["verification"] in AUTO_LEVELS for e in evidence):
+        return "evidence_auto_extracted"
     if any(e["verification"] not in COMMUNITY_LEVELS for e in evidence):
         return "evidence_leads_only"
     if evidence:
@@ -404,6 +408,7 @@ def main():
              "research_corpus": [dict(b["corpus"], batch=b["batch"]) for b in batches],
              "research_status_meaning": {
                  "evidence_checked_in_full_text": "at least one feeding record read in a full text (original study, review or species account)",
+                 "evidence_auto_extracted": "feeding records found automatically in an open full text and re-found verbatim; not yet read by a person",
                  "evidence_leads_only": "only literature leads not yet rechecked in the original",
                  "community_reports_only": "only keeper, community or video reports (a reference, not verified research)",
                  "reviewed_not_feeding_evidence": "named in a tortoise paper that was read, but not as food (e.g. habitat or plant availability)",

@@ -35,6 +35,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             Handler.flaky["n"] += 1
             if Handler.flaky["n"] == 1:
                 self.send_response(429); self.send_header("Retry-After", "0.2"); self.end_headers(); return
+        if self.path.startswith("/quota"):
+            self.send_response(429); self.send_header("Retry-After", "86400"); self.end_headers(); return
         if self.path == "/missing":
             self.send_response(404); self.end_headers(); return
         self.send_response(200); self.send_header("Content-Type", "application/json"); self.end_headers()
@@ -88,6 +90,16 @@ class PoliteTests(unittest.TestCase):
             self.client.get(self.base + "/missing")
         self.assertTrue(cm.exception.final)
         self.assertEqual(sum(1 for p, _ in HITS if p == "/missing"), 1)
+
+    def test_quota_429_opens_circuit_without_waiting(self):
+        t0 = time.monotonic()
+        with self.assertRaises(ph.FetchError):
+            self.client.get(self.base + "/quota/1")
+        with self.assertRaises(ph.FetchError):
+            self.client.get(self.base + "/a")  # same host: refused locally, no request sent
+        self.assertLess(time.monotonic() - t0, 10)
+        self.assertEqual(sum(1 for p, _ in HITS if p.startswith("/quota")), 1)
+        self.assertNotIn("/a", [p for p, _ in HITS])
 
     def test_default_spacing_one_second_for_unknown_hosts(self):
         Handler.robots = "User-agent: *\nAllow: /\n"

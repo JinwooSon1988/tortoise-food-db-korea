@@ -22,10 +22,11 @@ CAT = ROOT / "data/plant-catalog"
 TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity", "wild_diet_not_detected",
          "offered_not_eaten", "community_report", "video_observation"}
 VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified", "review_full_text_verified",
-                "community_report_unverified", "guideline_full_text_verified", "video_observation_unverified", "abstract_checked"}
+                "community_report_unverified", "guideline_full_text_verified", "video_observation_unverified", "abstract_checked",
+                "full_text_auto_extracted"}
 COMMUNITY = {"community_report_unverified", "video_observation_unverified"}
 CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified"}
-RESEARCH = {"evidence_checked_in_full_text", "evidence_leads_only", "community_reports_only", "reviewed_not_feeding_evidence", "no_record_found"}
+RESEARCH = {"evidence_checked_in_full_text", "evidence_auto_extracted", "evidence_leads_only", "community_reports_only", "reviewed_not_feeding_evidence", "no_record_found"}
 NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
 NAME_BASIS = {"gbif_synonym", "orthographic_variant"}
 from build_plant_catalog_v1 import P1_HELD_CLAIMS, HANGUL, source_id  # noqa: E402
@@ -90,10 +91,11 @@ for r in records:
             errors.append(f"{r['id']}: toxicity record without test animal and conditions")
     research = r.get("research") or {}
     expect_status = ("evidence_checked_in_full_text" if any(e["verification"] in CHECKED for e in r["feeding_evidence"])
+                     else "evidence_auto_extracted" if any(e["verification"] == "full_text_auto_extracted" for e in r["feeding_evidence"])
                      else "evidence_leads_only" if any(e["verification"] not in COMMUNITY for e in r["feeding_evidence"])
                      else "community_reports_only" if r["feeding_evidence"] else None)
     if research.get("status") not in RESEARCH or not research.get("corpus") or \
-            (expect_status and research["status"] != expect_status) or (not expect_status and research["status"] in ("evidence_checked_in_full_text", "evidence_leads_only", "community_reports_only")):
+            (expect_status and research["status"] != expect_status) or (not expect_status and research["status"] in ("evidence_checked_in_full_text", "evidence_auto_extracted", "evidence_leads_only", "community_reports_only")):
         errors.append(f"{r['id']}: research status missing or inconsistent with the evidence")
     for lang in ("en", "ko"):
         for n in r["common_names"][lang]:
