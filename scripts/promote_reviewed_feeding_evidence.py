@@ -9,6 +9,7 @@ Input is a JSON file with {"records":[{"reviewed":true,"reviewer":"...",
 Unreviewed bibliography candidates are never promoted.
 """
 import argparse
+import copy
 import json
 import re
 from pathlib import Path
@@ -35,8 +36,10 @@ def main():
         raise ValueError("records must be an array")
     idxpath = Path(args.index)
     index = json.loads(idxpath.read_text(encoding="utf-8"))
-    sources = {s["source_key"]:s for s in index.get("sources", [])}
-    by_name = index["by_scientific_name"]
+    # Stage updates so a rejected record cannot partially publish a batch.
+    staged = copy.deepcopy(index)
+    sources = {s["source_key"]:s for s in staged.get("sources", [])}
+    by_name = staged["by_scientific_name"]
     promoted, rejected = [], []
     for n, record in enumerate(records):
         try:
@@ -76,11 +79,12 @@ def main():
                 promoted.append({"scientific":scientific,"source":url})
         except (KeyError,ValueError,TypeError) as exc:
             rejected.append({"record":n,"reason":str(exc)})
-    index["sources"] = sorted(sources.values(), key=lambda x:x["source_key"])
-    if promoted:
-        idxpath.write_text(json.dumps(index,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
-    report = {"promoted":len(promoted),"rejected":len(rejected),"promoted_records":promoted,"rejections":rejected,
-              "warning":"Review approval must be based on original source inspection, not title/abstract matching."}
+    staged["sources"] = sorted(sources.values(), key=lambda x:x["source_key"])
+    if promoted and not rejected:
+        idxpath.write_text(json.dumps(staged,ensure_ascii=False,separators=(",",":"))+"\n",encoding="utf-8")
+    report = {"promoted":len(promoted) if not rejected else 0,"rejected":len(rejected),"promoted_records":promoted,"rejections":rejected,
+              "warning":"Review approval must be based on original source inspection, not title/abstract matching.",
+              "atomic": "No records published when any input record is rejected."}
     dest = Path(args.report)
     dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
