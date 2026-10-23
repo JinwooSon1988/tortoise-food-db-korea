@@ -1,5 +1,5 @@
 param(
-  [int]$IntervalMinutes = 180,
+  [int]$IntervalMinutes = 30,
   [switch]$Once
 )
 $ErrorActionPreference = "Stop"
