@@ -167,7 +167,7 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  $('verdict').appendChild(pendingOption);
  ['A','B','C','D','보류',UNA].filter(v=>rows.some(r=>r.verdict===v)).forEach(v=>{const option=document.createElement('option');option.value=v;option.textContent=vl(v);$('verdict').appendChild(option)});fill($('category'),rows.map(r=>r.category),catLabel);fill($('family'),rows.map(r=>r.family));counts();
  const p=new URLSearchParams(location.search);[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=p.get(k);if(v!=null&&(id==='q'||[...$(id).options].some(o=>o.value===v)))$(id).value=id==='q'?v.slice(0,80):v});
- const s=(p.get('sort')||'').split(':');if(s[0]&&['ko','verdictRank','confidence','ratio','calcium','fiber'].includes(s[0])){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
+ currentPage=Math.max(1,Math.min(100000,Number.parseInt(p.get('page')||'1',10)||1));const s=(p.get('sort')||'').split(':');if(s[0]&&['ko','verdictRank','confidence','ratio','calcium','fiber'].includes(s[0])){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
  $('sort').value=sortKey+':'+sortDir;
  render()}
 function refreshCatalogLanguage(){localize();if(rows.length){counts();render()}}
