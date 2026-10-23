@@ -506,10 +506,9 @@ def write_sitemap():
         rel = l[len(SITE_URL):] if l.startswith(SITE_URL) else None
         if rel is None:
             continue
-        if rel == "/all-plants/":
-            # The English catalog is a noindex redirect, not an indexable translation.
-            continue
-        if (ROOT / ("en" + rel) / "index.html").exists():
+        en_page = ROOT / ("en" + rel) / "index.html"
+        # The English home and catalog are noindex redirects to the shared page, not indexable translations.
+        if en_page.exists() and 'content="noindex' not in en_page.read_text(encoding="utf-8"):
             en_for[l] = SITE_URL + "/en" + rel
     out = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
     for l in ko_locs:

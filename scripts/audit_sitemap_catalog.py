@@ -29,9 +29,16 @@ for entry in entries:
         assert href in listed, f"Alternate not indexed in sitemap: {loc} -> {href}"
         alternates[lang] = href
     if alternates:
-        assert alternates.get("ko") and alternates.get("en"), f"Incomplete language pair: {loc}"
-        assert alternates.get("x-default") in (alternates["ko"], alternates["en"]), f"Invalid x-default: {loc}"
-        for href in (alternates["ko"], alternates["en"]):
+        if "en" not in alternates:
+            assert alternates.get("ko") == loc and set(alternates).issubset({"ko", "x-default"}), f"Invalid single-page language alternates: {loc}"
+            assert alternates.get("x-default", loc) == loc, f"Invalid x-default: {loc}"
+        else:
+            assert alternates.get("ko") and alternates.get("en"), f"Incomplete language pair: {loc}"
+        if "en" in alternates:
+            assert alternates.get("x-default") in (alternates["ko"], alternates["en"]), f"Invalid x-default: {loc}"
+        for href in (alternates["ko"], alternates.get("en")):
+            if not href:
+                continue
             peer = entries_by_loc[href]
             peer_alternates = {link.get("hreflang"): link.get("href") for link in peer.findall(XHTML)}
             assert peer_alternates == alternates, f"Nonreciprocal hreflang: {loc} <-> {href}"

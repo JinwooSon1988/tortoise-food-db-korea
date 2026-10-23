@@ -42,6 +42,20 @@ def ver(src, cfg, typ):
             "vet": "guideline_full_text_verified"}.get(src.get("source_class"), "full_text_verified")
 
 
+# Part descriptions kept from the source (with its own code) and their Korean rendering, so Korean pages show no English.
+PART_TEXT = {
+    "fruit (fr: frutos)": "열매 (원문 부호 fr: frutos)", "leaf (hv: hojas verdes)": "잎 (원문 부호 hv: 푸른 잎)", "leaf (h: hojas)": "잎 (원문 부호 h: hojas)",
+    "f (legend: frondes; possibly flowers - ambiguous)": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)", "aerial part (pa: parte aérea)": "지상부 (원문 부호 pa)",
+    "leaf (FO = foglie)": "잎 (원문 부호 FO)", "stem (ta: tallos)": "줄기 (원문 부호 ta)", "seed (s: semillas)": "씨앗 (원문 부호 s)",
+    "fruit (FR = frutti)": "열매 (원문 부호 FR)", "whole plant (aerial parts)": "식물 전체 (지상부)", "fruit (whole)": "열매 (통째)",
+    "leaf (tender)": "잎 (연한 잎)", "hay": "건초", "b (code not defined in legend)": "b (원문 범례에 정의되지 않은 부호)",
+    "fruit (immature)": "열매 (덜 익은)", "leaf and petiole": "잎과 잎자루", "flower (as printed)": "꽃 (원문 표기대로)", "fruit (fallen)": "열매 (떨어진 것)",
+    "fruit (chopped)": "열매 (잘게 썬 것)", "whole plant (young plants)": "식물 전체 (어린 개체)", "shoot, leaf (tender) and fruit": "새순, 연한 잎, 열매",
+    "fe (code not defined in legend)": "fe (원문 범례에 정의되지 않은 부호)", "hs (code not defined in legend)": "hs (원문 범례에 정의되지 않은 부호)",
+    "t (code not defined in legend)": "t (원문 범례에 정의되지 않은 부호)", "pad/cladode (hojas)": "줄기마디(패드) (원문 표기 hojas)", "tuber (root)": "덩이뿌리",
+    "leaf (only when totally dry)": "잎 (완전히 마른 경우에만)", "shoot (new needles)": "새순 (새 바늘잎)", "needles": "바늘잎", "seed (SE = semi)": "씨앗 (원문 부호 SE)"}
+
+
 def part(p):
     if not p:
         return None
@@ -53,15 +67,35 @@ def part(p):
     bits = [b.strip() for b in re.split(r"[,/;+]| and ", k) if b.strip()]
     if bits and all(b in PART for b in bits):
         return {"ko": ", ".join(PART[b][0] for b in bits), "en": ", ".join(PART[b][1] for b in bits)}
-    return {"ko": str(p), "en": str(p)}  # kept verbatim from the source when not in the vocabulary
+    return {"ko": PART_TEXT.get(str(p), str(p)), "en": str(p)}  # kept as in the source when not in the vocabulary
 
 
+def prior_links(root):
+    """(study id, printed name, record type) already linked by the repository's earlier evidence files, so that a study read
+    again in this batch (e.g. the same species account or thesis) does not add the same plant twice."""
+    out = set()
+    ext = json.loads((root / "data/feeding_record_fulltext_extracts_v1.json").read_text(encoding="utf-8"))
+    out.update((r["source_key"], r["plant_taxon_reported"], "wild_feeding_observation") for r in ext["records"])
+    for key, names in ext["species_in_full_text_not_in_catalog"].items():
+        if isinstance(names, list):
+            out.update((key, n, "wild_feeding_observation") for n in names)
+    for f in [root / "data/catalog_feeding_evidence_fulltext_20261020.json"] + sorted((root / "data/catalog-evidence").glob("batch-*.json")):
+        if not re.fullmatch(r"batch-\d{3}-\d{8}\.json", f.name):  # the site index is not a batch
+            continue
+        if f.resolve() == OUT.resolve():
+            continue
+        d = json.loads(f.read_text(encoding="utf-8")); st = {s["source_key"]: s.get("study_id") or s["source_key"] for s in d["sources"]}
+        out.update((st[r["source_key"]], r["reported_name"], r["type"]) for r in d["records"])
+    return out
+
+
+PRIOR = prior_links(OUT.resolve().parents[2])
 srcs = {}
 for f in B2.glob("*/sources.jsonl"):
     for line in f.read_text(encoding="utf-8").splitlines():
         if line.strip():
             s = json.loads(line); srcs[(f.parent.name, s["source_id"])] = s
-records, held, seen, used, excluded = [], [], set(), collections.OrderedDict(), {}
+records, held, seen, used, excluded, prior_only = [], [], set(), collections.OrderedDict(), {}, {}
 stats = collections.Counter()
 for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
     r = json.loads(line)
@@ -77,7 +111,7 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
     if ab:
         printed = ab.group(1)
     name = CFG.get("ocr_corrections", {}).get(printed, printed)
-    m = re.match(r"([A-Z][a-z-]+) ([a-z][a-z-]+)(?![a-z-])", name)  # drop the authority printed after the binomial
+    m = re.match(r"([A-Z][a-z-]+) ([a-z][a-z-]+)(?![\w-])", name)  # drop the authority printed after the binomial (not a word cut at an accent)
     if m and m.group(2) not in ("x",):
         name = m.group(0)
     typ = {"community_report": "community_report", "video_observation": "video_observation"}.get(r["record_type"], r["record_type"])
@@ -91,6 +125,8 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
         reason = CFG["hold_names"][name]
     elif not ok_check:
         reason = "quote_not_verified_in_saved_text"
+    elif name in CFG.get("common_names", []):
+        reason = "identification_common_name_only"
     elif not BIN.fullmatch(name) or name.split()[1] in ("sp", "spp", "cf", "aff"):
         reason = "no_species_level_scientific_name"
     elif typ in ("community_report", "video_observation") and r.get("identification", "binomial_in_source") != "binomial_in_source":
@@ -108,6 +144,8 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
         continue
     if cfg.get("skip_names_file") and name in json.loads((Path(sys.argv[2]).parent / cfg["skip_names_file"]).read_text(encoding="utf-8")):
         stats["already_linked_from_same_study"] += 1; continue
+    if (cfg.get("study_id") or r["source_id"], name, typ) in PRIOR:
+        stats["already_linked_from_same_study"] += 1; prior_only.setdefault(r["source_id"], s); continue
     v = ver(s, cfg, typ)
     p = part(r.get("plant_part"))
     dk = (cfg.get("study_id") or r["source_id"], name, typ, json.dumps(p), r.get("tortoise"))
@@ -119,6 +157,8 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
         loc += " (the quoted sentence refers to the plant named in the previous sentence; checked by hand on the page image)"
     elif printed in CFG.get("ocr_corrections", {}) or r["check"] == "name_not_in_quote":
         loc += " (OCR text of the source spells the name differently; read as " + name + ")"
+    elif r.get("plant_name_expanded") and (r.get("plant_reported") or "").split()[1:2] != name.split()[1:2]:
+        loc += " (the source prints '" + r["plant_reported"] + "'; read as " + name + ")"
     x = {"source_key": r["source_id"], "reported_name": name, "tortoise": r.get("tortoise"), "type": typ, "verification": v,
          "context": r.get("context") if r.get("context") in ("wild", "captive", "keeper", "lab") else None, "locator": loc,
          "plant_part": p, "finding": CFG.get("finding_overrides", {}).get("|".join((r["source_id"], name, r["record_type"])))
@@ -138,6 +178,11 @@ for line in (B2 / "verified.jsonl").read_text(encoding="utf-8").splitlines():
     records.append(x); used[r["source_id"]] = (r["folder"], s, cfg)
     stats["linked_candidate:" + v] += 1
 
+for sid, s in prior_only.items():
+    if sid not in used:
+        excluded.setdefault(sid, {"source_key": sid, "citation": CFG["sources"].get(sid, {}).get("citation") or s.get("citation"),
+                                  "url": CFG["sources"].get(sid, {}).get("url") or s.get("url"),
+                                  "reason": "every record repeats a plant already linked from the same study in an earlier evidence file"})
 sources = []
 for sid, (folder, s, cfg) in used.items():
     sources.append({k: v for k, v in {

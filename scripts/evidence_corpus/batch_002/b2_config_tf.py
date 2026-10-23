@@ -3,11 +3,12 @@ import json
 
 M = lambda ko, en: {"ko": ko, "en": en}
 EX_TERMS = {"exclude": True, "exclude_reason": "site terms forbid electronic storage or processing (testudo-farm.de)"}
+EX_ZOLW = {"exclude": True, "exclude_reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"}
 T = {
  "lagarde2003_ecography": {"exclude": True, "exclude_reason": "publisher PDF re-hosted on a keeper site; not an authorised open copy"},
  "testudo_farm_wegehaupt": EX_TERMS,
  "jia2011_azr": {"study_id": "jia_2011_huocheng_horsfieldii", "context": "wild", "tortoise_taxon": "Testudo horsfieldii (Agrionemys horsfieldii)",
-  "citation": "Jia, F., Li, Z., Jin, X. & Zhang, W. (2011) Analysis on plant species composition and structure in the Testudo horsfieldi reserve, Yili, Xinjiang [贾风勤 등, 新疆伊犁四爪陆龟保护区植物组成及其结构分析]. Arid Zone Research 28(6):1020-1024, doi:10.13866/j.azr.2011.06.015",
+  "citation": "Jia, F., Li, Z., Jin, X. & Zhang, W. (2011) Analysis on plant species composition and structure in the Testudo horsfieldi reserve, Yili, Xinjiang [贾风勤 等, 新疆伊犁四爪陆龟保护区植物组成及其结构分析]. Arid Zone Research 28(6):1020-1024, doi:10.13866/j.azr.2011.06.015",
   "url": "https://doi.org/10.13866/j.azr.2011.06.015",
   "method": M("중국 신장 훠청 러시아육지거북 보호구역의 식물 65종을 거북이 먹는 빈도에 따라 즐겨 먹음·보통·가끔·먹지 않음으로 분류한 표 1 (관찰 방법은 원문에 기술되지 않음; 글꼴이 깨진 PDF라 쪽 이미지에서 옮겨 적고 텍스트층과 대조)",
               "Table 1 classes the 65 plant species of the Testudo horsfieldii reserve in Huocheng, Xinjiang, China by how often the tortoises eat them: favoured, general, occasional or not eaten (the paper does not describe how this was observed; the PDF has scrambled fonts, so the table was transcribed from the page image and checked against the text layer)"),
@@ -44,6 +45,10 @@ T = {
 F = {
  "fz_de_wegehaupt_habitat": EX_TERMS, "fz_de_testudofarm_futterpflanzen": EX_TERMS, "fz_de_testudofarm_ernaehrung": EX_TERMS, "fz_de_testudofarm_garrigue": EX_TERMS,
  "fz_ru_cherepahi_rasteniya": {"exclude": True, "exclude_reason": "translation of The Tortoise Table, whose terms forbid reuse"},
+ # Terms checked 2026-10-22 (licence review): zolw.info rules section 14 bar copying or distributing posted articles in any form
+ # without the authors' consent; the IGSN Impressum allows downloads and copies for private, non-commercial use only.
+ "fz_pl_zolwinfo_rosliny": EX_ZOLW, "fz_pl_zolwinfo_trujace": EX_ZOLW, "fz_pl_zolwinfo_horsfieldii": EX_ZOLW,
+ "fz_de_igsn_futterpflanzen": {"exclude": True, "exclude_reason": "site Impressum (schildkroeten-schutz.de) allows downloads and copies for private, non-commercial use only"},
  "fz_es_vertebrados_thermanni": {"exclude": True, "exclude_reason": "same page extracted in the Testudo pass"},
  "fz_es_vertebrados_tgraeca": {"exclude": True, "exclude_reason": "same page extracted in the Testudo pass"},
  "fz_ja_zootime": {"study_id": "zootime_2020_blog", "verification": "community_report_unverified", "context": "keeper",

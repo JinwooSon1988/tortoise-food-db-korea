@@ -24,7 +24,7 @@ links keep the printed name and record name_resolution. Every entry records its 
 
 --max caps the number of entries (batches are appended in candidate order; earlier entries are kept).
 """
-import argparse, hashlib, json, re, sys, urllib.parse, urllib.request
+import argparse, hashlib, json, re, sys, urllib.parse
 from collections import Counter
 from pathlib import Path
 
@@ -37,21 +37,66 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from build_bulk_taxon_catalog import bare  # noqa: E402
 
 # El Mouden et al. 2006 names whose catalog linkage is held by the P1 release gate.
-P1_HELD_NAMES = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
+P1_MANIFEST = "data/feeding_p1_blocked_claim_manifest_20261018.json"
+HANGUL = re.compile(r"[가-힣]")
+
+
+def source_id(value):
+    """DOI or host+path of a source, so every spelling of the same source compares equal."""
+    v = str(value or "").strip().lower()
+    for prefix in ("https://doi.org/", "http://doi.org/", "https://dx.doi.org/", "doi:"):
+        if v.startswith(prefix):
+            return "doi:" + v[len(prefix):]
+    if v.startswith("10."):
+        return "doi:" + v
+    u = urllib.parse.urlsplit(v)
+    # publisher pages that carry the DOI in the path (e.g. .../articles/10.3389/x.2023.1/full)
+    d = re.search(r"/(10\.\d{4,9}/[^?#]+?)(?:/(?:full|abstract|pdf))?/?$", u.path) if u.scheme else None
+    if d:
+        return "doi:" + d.group(1)
+    return u.netloc + u.path.rstrip("/") if u.scheme else v
+
+
+def p1_held_claims():
+    """(reported name, source) pairs held by the P1 manifest. The hold covers that source's claim only: the same
+    plant reported by an independent source is linked as usual."""
+    m = json.loads((ROOT / P1_MANIFEST).read_text(encoding="utf-8"))
+    return {(c.get("plant_taxon_reported") or c.get("reported_taxon"), source_id(c["source"])) for c in m["blocked_claims"]}
+
+
+P1_HELD_CLAIMS = p1_held_claims()
 EVIDENCE_TYPES = ("wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity")
 BATCH_DIR = "data/catalog-evidence"
 
 
+def evidence_first_priority(names, evidence_names):
+    """Stable ordering: source-mentioned plants first; taxonomy-only candidates last.
+
+    Names are compared after whitespace/case normalization only. This function
+    never resolves synonyms or creates feeding evidence.
+    """
+    def key(name):
+        return " ".join(str(name).casefold().split())
+    evidence_keys = {key(n) for n in evidence_names}
+    return sorted(names, key=lambda n: (key(n) not in evidence_keys, key(n)))
+
+
 def batch_files():
-    """Corpus batch files (batch-NNN-YYYYMMDD.json); other files in the folder, such as a site index, are not batches."""
-    return [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
+    """Corpus batch files (batch-NNN-YYYYMMDD.json) and the reviewer-approved batch (reviewed-records.json, written by
+    promote_reviewed_feeding_evidence.py); other files in the folder, such as a site index, are not batches."""
+    files = [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
+    reviewed = ROOT / BATCH_DIR / "reviewed-records.json"
+    return files + ([reviewed] if reviewed.exists() else [])
 
 
 SYNONYM_STATUS = ("SYNONYM", "HOMOTYPIC_SYNONYM", "HETEROTYPIC_SYNONYM")
 # Verification levels where the record was read in a full text (the rest are leads to recheck).
-CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified")
+CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified",
+                  "reviewed_source_record")
 # Keeper experience and uploader-described videos are shown as references only, apart from leads and checked records.
 COMMUNITY_LEVELS = ("community_report_unverified", "video_observation_unverified")
+# Found by the batch 004 extractor in an open full text and re-found verbatim; not read by a person.
+AUTO_LEVELS = ("full_text_auto_extracted",)
 
 
 def load(p):
@@ -70,11 +115,14 @@ def jsonl(p):
 
 def gbif_match(names, cache_path):
     cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
-    for n in sorted(set(names) - set(cache)):
-        u = "https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": n, "kingdom": "Plantae", "strict": "true"})
-        with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "geobukbap-taxonomy-check/1.0"}), timeout=30) as r:
-            d = json.load(r)
-        cache[n] = {k: d.get(k) for k in ("usageKey", "acceptedUsageKey", "canonicalName", "rank", "status", "matchType", "note")}
+    new = sorted(set(names) - set(cache))
+    if new:
+        from polite_http import PoliteClient  # robots.txt, GBIF request spacing, retries, provenance log
+        client = PoliteClient(provenance=cache_path.parent / "gbif_requests.jsonl")
+        for n in new:
+            u = "https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": n, "kingdom": "Plantae", "strict": "true"})
+            d, _ = client.get_json(u, purpose="gbif name match")
+            cache[n] = {k: d.get(k) for k in ("usageKey", "acceptedUsageKey", "canonicalName", "rank", "status", "matchType", "note")}
     cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
     return cache
 
@@ -119,7 +167,7 @@ def evidence_sources():
                                   "url": s["url"], "locator": None, "verification": "full_text_named_not_extracted",
                                   "context": s["context"], "plant_part": None, "finding": None, "study": key}))
     # Open-access full texts, keeper database entries and corpus batches (records carry their own verification level).
-    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted(batch_files())]:
+    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in batch_files()]:
         ft = load(f)
         src = {s["source_key"]: s for s in ft["sources"]}
         for r in ft["records"]:
@@ -142,10 +190,20 @@ def evidence_sources():
             kind = r.get("evidence_directness") or ""
             typ = "captive_feeding_record" if "captive" in kind else "wild_feeding_observation"
             for n in names:
-                items.append((n, {"type": typ, "tortoise": r.get("animal_taxon"), "source": r.get("source_title") or r.get("id") or r.get("source_id"),
+                items.append((n, {"type": typ, "tortoise": r.get("animal_taxon"), "source": r.get("source_title"),
                                   "url": r.get("url") or r.get("source_url") or ("https://doi.org/" + r["doi"] if r.get("doi") else None),
                                   "locator": None, "verification": "literature_lead_not_reverified", "context": "wild" if typ.startswith("wild") else "captive",
                                   "plant_part": None, "finding": None, "study": r.get("id") or r.get("source_id") or r.get("doi") or f.stem}))
+    # Leads without a title get the citation of another record from the same source (same DOI or URL), else the DOI or
+    # URL itself, so an internal lead id is never shown as a citation.
+    cited = {}
+    for _, it in items:
+        if it["source"] and it.get("url"):
+            cited.setdefault(source_id(it["url"]), it["source"])
+    for _, it in items:
+        if not it["source"]:
+            sid = source_id(it.get("url"))
+            it["source"] = cited.get(sid) or (("DOI " + sid[4:]) if sid.startswith("doi:") else it.get("url") or it["study"])
     return items
 
 
@@ -178,6 +236,8 @@ def resolve(n, m):
 def research_status(evidence, rejected):
     if any(e["verification"] in CHECKED_LEVELS for e in evidence):
         return "evidence_checked_in_full_text"
+    if any(e["verification"] in AUTO_LEVELS for e in evidence):
+        return "evidence_auto_extracted"
     if any(e["verification"] not in COMMUNITY_LEVELS for e in evidence):
         return "evidence_leads_only"
     if evidence:
@@ -217,13 +277,13 @@ def main():
     # Evidence names resolved by an exact accepted GBIF species match, a GBIF synonym of an accepted species, or an
     # orthographic variant (doubled i, gender ending); the name printed in the source is kept as reported_name.
     ev = evidence_sources()
-    batches = [load(str(p.relative_to(ROOT))) for p in sorted(batch_files())]
+    batches = [load(str(p.relative_to(ROOT))) for p in batch_files()]
     rejected_names = {n for b in batches for x in b.get("reviewed_not_feeding_evidence", []) for n in x["names"]}
     binomial = lambda n: re.fullmatch(r"[A-Z][a-z]+ [a-z][a-z-]+", n)
     match = gbif_match({n for n, _ in ev if binomial(n)} | {n for n in rejected_names if binomial(n)}, a.gbif_dir / "evidence_match.json")
     ev_by_key, ev_unlinked, resolved_by = {}, Counter(), Counter()
     for n, item in ev:
-        if n in P1_HELD_NAMES:
+        if (n, source_id(item.get("url"))) in P1_HELD_CLAIMS:
             ev_unlinked["p1_identity_hold"] += 1; continue
         key, basis = resolve(n, match.get(n) or {})
         if key is None:
@@ -235,7 +295,8 @@ def main():
         lst = ev_by_key.setdefault(key, [])
         if item not in lst:
             lst.append(item)
-    corpus_id = batches[-1]["corpus"]["id"] if batches else None
+    numbered = [b for b in batches if b.get("batch") != "reviewed"]
+    corpus_id = numbered[-1]["corpus"]["id"] if numbered else None
     rejected_keys = {k for n in rejected_names for k, b in [resolve(n, match.get(n) or {})] if k and b is None}
     # Species named in feeding sources come first, so every batch carries the entries that have evidence.
     by_key = {str(m["usageKey"]): n for n, m in match.items() if m.get("usageKey")}
@@ -283,6 +344,9 @@ def main():
             out = []
             for x in names:
                 v = " ".join(str(x.get("n") or "").split())
+                # Korean names must be written in Hangul; romanized entries (e.g. "gaeyanggwibi") are not shown as Korean.
+                if lang == "kor" and not HANGUL.search(v):
+                    continue
                 if x.get("l") == lang and v and v.casefold() not in {o["name"].casefold() for o in out}:
                     out.append({"name": v[:1].upper() + v[1:] if lang == "eng" else v, "source": x.get("s") or "GBIF"})
             return out[:4]
@@ -349,6 +413,7 @@ def main():
              "research_corpus": [dict(b["corpus"], batch=b["batch"]) for b in batches],
              "research_status_meaning": {
                  "evidence_checked_in_full_text": "at least one feeding record read in a full text (original study, review or species account)",
+                 "evidence_auto_extracted": "feeding records found automatically in an open full text and re-found verbatim; not yet read by a person",
                  "evidence_leads_only": "only literature leads not yet rechecked in the original",
                  "community_reports_only": "only keeper, community or video reports (a reference, not verified research)",
                  "reviewed_not_feeding_evidence": "named in a tortoise paper that was read, but not as food (e.g. habitat or plant availability)",
@@ -357,8 +422,14 @@ def main():
     # GBIF matches of the reviewed plants, kept so QA can recheck the overlap offline.
     (OUT / "reviewed_gbif_match.json").write_text(json.dumps(dict(sorted(existing_match.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     base = "https://jinwooson1988.github.io/tortoise-food-db-korea/taxon/?id="
+    # Only entries whose detail page is published (linked feeding evidence, or a Batch 002 record matched by exact name);
+    # taxonomy-only entries are not food profiles, so taxon/index.html hides them and they stay out of the sitemap.
+    b2 = ROOT / BATCH_DIR / "batch-002-site-index.json"
+    b2_names = set(json.loads(b2.read_text(encoding="utf-8"))["by_scientific_name"]) if b2.exists() else set()
     urls = []
     for r in ordered:
+        if not r["feeding_evidence"] and r["scientific"].strip().lower() not in b2_names:
+            continue
         u = base + urllib.parse.quote(r["id"], safe="")
         urls.append('<url><loc>%s</loc><xhtml:link rel="alternate" hreflang="ko" href="%s"/>'
                     '<xhtml:link rel="alternate" hreflang="en" href="%s&amp;lang=en"/></url>\n' % (u, u, u))

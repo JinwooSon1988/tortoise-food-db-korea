@@ -1,0 +1,29 @@
+name: Batch 004 automatic extraction QA
+
+on:
+  pull_request:
+    paths:
+      - 'data/catalog-evidence/**'
+      - 'data/plant-catalog/**'
+      - 'research/evidence-queue/batch-004/**'
+      - 'scripts/qa_batch_004.py'
+      - 'scripts/evidence_corpus/batch_004/**'
+      - '.github/workflows/qa-batch-004.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  batch-004:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Batch 004 records sourced, quoted, typed, deduplicated, never counted as checked
+        run: python scripts/qa_batch_004.py
+      - name: Polite collection client offline tests
+        run: python scripts/test_polite_http.py

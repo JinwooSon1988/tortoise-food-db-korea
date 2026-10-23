@@ -1,0 +1,80 @@
+{
+ "batch": "batch-003",
+ "built": "2026-10-22",
+ "work_queue": {
+  "catalog_species_at_start": 22565,
+  "queued": 22565,
+  "processed": 18283,
+  "not_processed": 4282,
+  "failed_after_retries": 0,
+  "retries": 42,
+  "stopped": "the queue process was stopped by the host when the computer ran low on memory; it is restartable from queue_results.jsonl"
+ },
+ "search": {
+  "species_searched_europe_pmc": 18283,
+  "species_with_hits": 978,
+  "total_hits": 2273,
+  "open_access_full_texts_scanned": 566,
+  "species_named_in_an_open_full_text": 603,
+  "species_named_next_to_a_tortoise_and_feeding_words": 11,
+  "europe_pmc_records_accepted_after_reading": 2
+ },
+ "documents": {
+  "read_and_saved": 61,
+  "sources_with_records": 44,
+  "leads_not_accessed": 79
+ },
+ "records": {
+  "in_batch": 551,
+  "held_not_linked": 140,
+  "held_by_reason": {
+   "no_species_level_scientific_name": 133,
+   "quote_not_verified_in_saved_text": 3,
+   "gbif_synonym_doubtful": 3,
+   "nutrition_value_without_page_label": 1
+  },
+  "by_verification": {
+   "review_full_text_verified": 151,
+   "full_text_verified": 349,
+   "abstract_checked": 35,
+   "community_report_unverified": 16
+  },
+  "by_type": {
+   "wild_feeding_observation": 479,
+   "captive_feeding_record": 33,
+   "offered_not_eaten": 2,
+   "wild_diet_not_detected": 16,
+   "toxicity": 1,
+   "nutrition": 4,
+   "community_report": 16
+  }
+ },
+ "duplicates": {
+  "same_record_dropped": 2,
+  "already_linked_from_same_study": 0,
+  "note": "TFTSG species accounts read by two agents were merged by source key"
+ },
+ "species": {
+  "with_batch_003_evidence": 336,
+  "with_batch_003_evidence_checked_in_an_original_or_review": 317,
+  "with_batch_003_evidence_checked_in_an_original_only": 223,
+  "with_only_abstract_or_community_batch_003_evidence": 19,
+  "new_catalog_entries": 195,
+  "newly_with_any_evidence": 247,
+  "newly_checked_in_full_text": 235
+ },
+ "catalog": {
+  "before": {
+   "entries": 22565,
+   "with_evidence": 699,
+   "checked_in_full_text": 671
+  },
+  "after": {
+   "entries": 22760,
+   "with_evidence": 946,
+   "checked_in_full_text": 906
+  },
+  "safety_grades_after": 0,
+  "no_record_found_after": 21810
+ }
+}

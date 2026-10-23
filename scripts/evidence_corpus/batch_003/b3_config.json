@@ -1,0 +1,258 @@
+{
+ "batch": "batch-003",
+ "built": "2026-10-22",
+ "corpus": {
+  "id": "corpus-2026-10-22-b3",
+  "searched": "2026-10-22",
+  "searches": [
+   {
+    "area": "Every catalog species with land-tortoise terms",
+    "languages": [
+     "en"
+    ],
+    "services": "Europe PMC REST search; open-access full texts (JATS XML) of the hits scanned for the species name"
+   },
+   {
+    "area": "North American tortoises (Gopherus)",
+    "languages": [
+     "en",
+     "es"
+    ],
+    "services": "web search; Desert Tortoise Council proceedings 1976-2003; repositories"
+   },
+   {
+    "area": "IUCN/SSC TFTSG species accounts (all Testudinidae)",
+    "languages": [
+     "en"
+    ],
+    "services": "iucn-tftsg.org; chelonian.org"
+   },
+   {
+    "area": "South American and Galapagos tortoises",
+    "languages": [
+     "pt",
+     "es",
+     "en"
+    ],
+    "services": "web search; SciELO; repositories; PMC"
+   },
+   {
+    "area": "Madagascar, Indian Ocean, Africa and Asia (radiated tortoise priority)",
+    "languages": [
+     "en",
+     "fr"
+    ],
+    "services": "web search; HAL; open journals"
+   },
+   {
+    "area": "Mediterranean Testudo and Russian tortoise",
+    "languages": [
+     "en",
+     "fr",
+     "tr",
+     "ru",
+     "zh",
+     "es",
+     "it"
+    ],
+    "services": "web search; theses; BCG journal archive"
+   },
+   {
+    "area": "Sulcata and leopard tortoises",
+    "languages": [
+     "en",
+     "fr",
+     "zh",
+     "id"
+    ],
+    "services": "web search; OpenAlex; university repositories"
+   }
+  ],
+  "species_searched_in_europe_pmc": 18283,
+  "species_with_europe_pmc_hits": 978,
+  "open_access_full_texts_scanned": 566,
+  "documents_read": 61,
+  "documents_by_class": {
+   "peer_reviewed": 32,
+   "other": 20,
+   "thesis": 8,
+   "keeper_community": 1
+  },
+  "leads_not_accessed": 79,
+  "not_accessible": "Paywalled journals without an open copy, hosts behind bot challenges, robots.txt-disallowed paths and scanned PDFs without a text layer. Nothing was bypassed.",
+  "summary": {
+   "ko": "카탈로그 식물 18283종을 Europe PMC에서 육지거북 용어와 함께 검색해 978종에서 문헌을 찾았고, 오픈액세스 원문 566편에서 학명이 나오는 위치를 확인했습니다. 또한 미국 사막거북 학회 발표집, IUCN 종 설명서, 남미·갈라파고스·마다가스카르·인도양·지중해·중앙아시아 연구와 학위논문 등 문서 61건을 저장해 표와 본문을 확인했습니다. 학명이 원문에 인쇄된 기록만 연결했고, 종 설명서·리뷰를 거친 기록은 1차 연구 미확인으로 표시합니다.",
+   "en": "18283 catalog species were searched in Europe PMC together with land-tortoise terms (hits for 978), and the species name was located in 566 open-access full texts. 61 further documents (Desert Tortoise Council proceedings, IUCN species accounts, South American, Galapagos, Madagascar, Indian Ocean, Mediterranean and Central Asian studies and theses) were saved and their tables and text checked. Only names printed in the source are linked; records taken from species accounts or reviews are marked as such (primary study not read)."
+  }
+ },
+ "scope": "Feeding, diet, nutrition and toxicity records for catalog species from sources not used in batches 001-002. A record links a plant to a tortoise taxon as printed in the source; it is not a feeding grade and is not generalised to other tortoises.",
+ "verification_levels": {
+  "full_text_verified": "original paper, thesis or symposium paper read; the record is in the stated table or passage",
+  "review_full_text_verified": "read in a review, species account or compilation; the primary study was not read",
+  "guideline_full_text_verified": "read in a professional husbandry guideline",
+  "abstract_checked": "only an abstract was read",
+  "literature_lead_not_reverified": "only a title or citation was seen",
+  "community_report_unverified": "keeper, forum or informant report; a reference, not verified research",
+  "video_observation_unverified": "feeding as stated in a public video's title or description"
+ },
+ "ocr_corrections": {
+  "Hibiscus rosa–sinensis": "Hibiscus rosa-sinensis"
+ },
+ "hold_names": {
+  "Ceratocephalus falcatus": "gbif_synonym_is_a_homonym: GBIF resolves this name to Achillea falcata (Asteraceae), but the source means the buttercup Ceratocephala falcata (Ranunculaceae)",
+  "Malcolmia lacera": "gbif_synonym_doubtful: GBIF resolves this name to Raphanus raphanistrum",
+  "Areca lutescens": "misapplied_name: GBIF resolves Areca lutescens Bory to Hyophorbe indica",
+  "Citrus sinensis": "gbif_synonym_doubtful: GBIF resolves sweet orange to Citrus aurantium (sour orange); most floras keep Citrus x sinensis separate",
+  "Tridens pilosus": "gbif_synonym_doubtful: GBIF resolves this name to Tridentopsis mutica; it is usually treated as Erioneuron pilosum",
+  "Tournefortia argentea": "gbif_synonym_doubtful: GBIF resolves this name to Heliotropium velutinum; it is usually treated as Heliotropium arboreum"
+ },
+ "common_names": [],
+ "finding_overrides": {},
+ "manual_ok": [
+  "tftsg_crm5_117_western_graeca|Lavandula stoechas|captive_feeding_record",
+  "tftsg_crm5_122_marginata|Drimia maritima|wild_feeding_observation",
+  "B3G-milton1992phd|Indigofera pungens|wild_feeding_observation",
+  "B3G-milton1992phd|Medicago polymorpha|wild_feeding_observation",
+  "B3G-milton1992phd|Malva parviflora|wild_feeding_observation",
+  "B3G-milton1992phd|Enneapogon devauxii|wild_feeding_observation",
+  "B3G-milton1992phd|Cuspidia cernua|wild_feeding_observation",
+  "delaossa2009_unisucre_carbonaria_flowers|Hibiscus rosa-sinensis|captive_feeding_record",
+  "cortesgomez2015_univscient_table3|Psidium galapageium|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Protium tenuifolium|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Alexa grandiflora|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Theobroma speciosum|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Maximiliana martiana|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Bertholletia excelsa|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Geissospermum sericeum|wild_feeding_observation",
+  "ghilardi1990_actaamazonica_tucurui|Prieurella cuneifolia|wild_feeding_observation",
+  "falcon2018_biorxiv_chelonian_frugivory|Cecropia sciadophylla|wild_feeding_observation",
+  "falcon2018_biorxiv_chelonian_frugivory|Hippomane mancinella|wild_feeding_observation",
+  "falcon2018_biorxiv_chelonian_frugivory|Psidium galapageium|wild_feeding_observation",
+  "falcon2018_biorxiv_chelonian_frugivory|Solanum siparunoides|wild_feeding_observation",
+  "moorhouse-gann2022_roundisland|Ipomoea pes-caprae|wild_feeding_observation",
+  "pawlowski_gerlach2019_phelsuma27|Scaevola sericea|captive_feeding_record"
+ ],
+ "ocr_ok": [],
+ "sources": {
+  "tftsg_crm5_028_arnoldi": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_061_hololissa": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_030_angulata": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_106_elegans": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_109_agassizii": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_142_berlandieri": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_086_emys": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_120_eastern_graeca": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_117_western_graeca": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_059_hermanni": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_122_marginata": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_070_homeana": {
+   "verification": "review_full_text_verified"
+  },
+  "tftsg_crm5_084_erosa": {
+   "verification": "review_full_text_verified"
+  },
+  "bailey1986_bcg_testudo": {
+   "verification": "review_full_text_verified"
+  },
+  "joseph2024_ppp3_aldabrachelys": {
+   "verification": "review_full_text_verified"
+  },
+  "falcon2018_biorxiv_chelonian_frugivory": {
+   "verification": "review_full_text_verified"
+  },
+  "cortesgomez2015_univscient_table3": {
+   "verification": "review_full_text_verified"
+  },
+  "sobralsouza2017_pecon_rewilding": {
+   "verification": "review_full_text_verified"
+  },
+  "epmc_PMC11405292": {
+   "verification": "review_full_text_verified"
+  },
+  "B3-GOPH-006": {
+   "verification": "abstract_checked",
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-009": {
+   "verification": "abstract_checked",
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-010": {
+   "verification": "abstract_checked",
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-013": {
+   "verification": "abstract_checked",
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-015": {
+   "verification": "abstract_checked",
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-001": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-002": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-003": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-004": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-005": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-007": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-008": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "B3-GOPH-014": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)"
+  },
+  "lagarde2003_ecography": {
+   "read": "PDF in the publication archive of the authors' institute (CNRS Centre d'Etudes Biologiques de Chize, cebc.cnrs.fr); batch 002 excluded only a copy re-hosted on a keeper site"
+  },
+  "B3-GOPH-011": {
+   "read": "OCR scan of the Desert Tortoise Council symposium proceedings (deserttortoise.org); the table rows were transcribed from the page images because the OCR text layer is garbled (two tables checked against the images)",
+   "toxicity": {
+    "Sapium biloculare": {
+     "test_animal": {
+      "ko": "야생 사막거북 사체 4마리의 위장 내용물과 쥐 뇌세포막을 이용한 시험관 생물검정(포볼에스터 유사 활성)",
+      "en": "gut contents of 4 dead wild desert tortoises and an in-vitro bioassay with rat brain membranes (phorbol-ester-like activity)"
+     },
+     "conditions": {
+      "ko": "가뭄기에 떨어진 잎·열매 등을 먹던 개체; 식물의 모든 부위에서 활성이 나왔고 4마리 중 2마리의 위장에서 이 식물이 확인됨. 저자는 폐사에 기여했을 가능성을 제시했으나 결과는 결론적이지 않다고 적음 (학회 발표 원고)",
+      "en": "tortoises eating fallen litter during a drought; all plant parts were bioactive and the plant was found in the guts of 2 of 4 dead tortoises; the author suggests a possible contribution to mortality but calls the results inconclusive (symposium paper)"
+     }
+    }
+   }
+  }
+ },
+ "reviewed_not_feeding_evidence": []
+}

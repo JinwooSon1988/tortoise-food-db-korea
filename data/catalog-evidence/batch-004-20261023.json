@@ -1,0 +1,1012 @@
+{
+ "schema_version": "1.0",
+ "batch": "batch-004",
+ "built": "2026-10-23",
+ "corpus": {
+  "id": "corpus-2026-10-23-b4",
+  "searched": "2026-10-23",
+  "searches": [
+   {
+    "area": "Every full text saved by batches 001-003, reprocessed",
+    "services": "Europe PMC JATS XML; batch 002-003 PDF text"
+   },
+   {
+    "area": "Europe PMC open-access subset: land tortoises x diet, faeces, herbivory, captivity, nutrition, toxicity",
+    "services": "Europe PMC REST search (cursor paging) and fullTextXML"
+   }
+  ],
+  "documents": 4261,
+  "documents_with_records": 16,
+  "summary": {
+   "ko": "저장된 원문 전체와 Europe PMC 오픈액세스 원문에서 거북 섭식 문장·표에 함께 나온 학명을 자동 추출하고, 인용 문장을 원문에서 다시 찾은 기록만 연결했습니다. 사람이 읽기 전 단계입니다.",
+   "en": "Scientific names printed with tortoise feeding wording in sentences or diet tables of saved and newly fetched open full texts, extracted automatically; only records whose quoted passage was re-found are linked. Not yet read by a person."
+  }
+ },
+ "scope": "Machine-extracted feeding records (not safety verdicts). One record = plant x tortoise taxon as printed x source x record type.",
+ "verification_levels": {
+  "full_text_auto_extracted": "the passage naming the plant next to tortoise feeding wording was found automatically in an open full text and re-found verbatim; not yet read by a person"
+ },
+ "sources": [
+  {
+   "source_key": "b4_PMC11573422",
+   "citation": "Figueroa A, Chernyavskiy P, Greenacre M, Herrera A, Cuni L, Villate J, Galetti M, Liu H, Whitfield S (2024) Precipitation Drives Frugivory in a Subtropical Generalist Herbivore, the Gopher Tortoise, and Alters Its Functional Role as a Seed Disperser Ecology and evolution",
+   "url": "https://doi.org/10.1002/ece3.70585",
+   "doi": "10.1002/ece3.70585",
+   "language": null,
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Gopherus polyphemus",
+   "context": "wild",
+   "study_id": "b4_PMC11573422",
+   "read": "Europe PMC open-access subset (fullTextXML endpoint)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": "cc by"
+  },
+  {
+   "source_key": "b4_PMC11884760",
+   "citation": "Garcia RA, Clusella-Trullas S (2025) Microclimatic changes caused by plant invasions and warming: uncovering thermal costs and benefits to a tortoise Conservation physiology",
+   "url": "https://doi.org/10.1093/conphys/coaf016",
+   "doi": "10.1093/conphys/coaf016",
+   "language": null,
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Homopus areolatus",
+   "context": "wild",
+   "study_id": "b4_PMC11884760",
+   "read": "Europe PMC open-access subset (fullTextXML endpoint)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": "cc by"
+  },
+  {
+   "source_key": "b4_PMC13113303",
+   "citation": "Afsar M, Çelik Ç, Cağlar M, Durmuş P, Afsar B (2026) Ecological and Ethological Assessment of Captive &lt;i&gt;Testudo graeca&lt;/i&gt; in an Urban Bazaar: A Case of High-Constraint Wildlife Tourism in Kastamonu, Northern Anatolia Animals : an open access journal from MDPI",
+   "url": "https://doi.org/10.3390/ani16081141",
+   "doi": "10.3390/ani16081141",
+   "language": null,
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Testudo graeca",
+   "context": "captive",
+   "study_id": "b4_PMC13113303",
+   "read": "Europe PMC open-access subset (fullTextXML endpoint)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": "cc by"
+  },
+  {
+   "source_key": "b4_PMC7363059",
+   "citation": "Hanish, C. J., Velez, S., Moore, J. A., Anderson, C. D. & Traveset, A. (2020) Endozoochory of Chrysobalanus icaco (Cocoplum) by Gopherus polyphemus (Gopher Tortoise) facilitates rapid germination and colonization in a suburban nature preserve. AoB PLANTS 12(4): plaa024",
+   "url": "https://doi.org/10.1093/aobpla/plaa024",
+   "doi": "10.1093/aobpla/plaa024",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Gopherus polyphemus",
+   "context": "wild",
+   "study_id": "epmc_PMC7363059",
+   "read": "Europe PMC open-access subset (fullTextXML endpoint)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": "cc by"
+  },
+  {
+   "source_key": "b4_b2__africa__tftsg_sulcata_2020",
+   "citation": "Petrozzi, F. et al. (2020) Centrochelys sulcata (Miller 1779) - African Spurred Tortoise, Sulcata Tortoise. Chelonian Research Monographs 5 (IUCN/SSC TFTSG), doi:10.3854/crm.5.110.sulcata.v1.2020",
+   "url": "https://iucn-tftsg.org/wp-content/uploads/crm.5.110.sulcata.v1.2020.pdf",
+   "doi": "10.3854/crm.5.110.sulcata.v1.2020",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Centrochelys sulcata",
+   "context": "wild",
+   "study_id": "tftsg_2020_sulcata_account",
+   "read": "Open-access PDF on IUCN TFTSG website",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b2__americas-theses__gtc2021_abstracts",
+   "citation": "Gopher Tortoise Council 2021. Meeting abstracts. Incl. Figueroa, A., Lange, J. & Whitfield, S. 'Seed consumption by gopher tortoises at the southern limit of their range'.",
+   "url": "https://gophertortoisecouncil.org/pdf/2021_meeting_docs/GTC%202021%20Abstracts_Final3.pdf",
+   "doi": null,
+   "language": null,
+   "source_class": "other",
+   "tortoise_taxon": "Gopherus polyphemus",
+   "context": "wild",
+   "study_id": "gtc2021_abstracts",
+   "read": "Public PDF on Gopher Tortoise Council website; robots.txt allows /pdf/",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b2__americas-theses__jennings2002_ccb",
+   "citation": "Jennings, W. B. (2002) Diet selection by the desert tortoise in relation to the flowering phenology of ephemeral plants. Chelonian Conservation and Biology 4(2):353-358",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Jennings_2002.pdf",
+   "doi": null,
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Gopherus agassizii",
+   "context": "wild",
+   "study_id": "jennings_berry_1992_drtna_field",
+   "read": "Free PDF posted by Chelonian Research Foundation (chelonian.org); robots.txt allows",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b2__asia-madagascar__AM-RRJZS-2017-NANDU",
+   "citation": "Nandu, V. S. & Arora, B. M. (2017) Study on the foraging behavior and diet preferences of Indian star tortoises (Geochelone elegans) in Chinnar Wildlife Sanctuary, Kerala. Research & Reviews: Journal of Zoological Sciences",
+   "url": "https://www.rroij.com/open-access/study-on-the-foraging-behavior-and-diet-preferences-of-indian-startortoises-geochelone-elegans-in-chinnar-wildlife-sanctuarykerala-.pdf",
+   "doi": null,
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Geochelone elegans",
+   "context": "wild",
+   "study_id": "nandu_arora_2017_chinnar_elegans",
+   "read": "Open-access PDF from rroij.com (publisher site; note: publisher is on predatory-journal lists, treat quality with caution)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b2__forums-zoo__fz_es_vertebrados_tgraeca",
+   "citation": "Díaz-Paniagua, C. & Andreu, A. C. (2015) Tortuga mora - Testudo graeca. Ecología trófica. In: Salvador, A. & Marco, A. (eds.) Enciclopedia Virtual de los Vertebrados Españoles. Museo Nacional de Ciencias Naturales (CSIC), Madrid",
+   "url": "https://www.vertebradosibericos.org/reptiles/trofico/tesgratr.html",
+   "doi": null,
+   "language": "es",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Testudo graeca",
+   "context": "wild",
+   "study_id": "andreu_1987_donana_graeca_via_mncn",
+   "read": "public web page, robots.txt checked, fetched with curl-like urllib (UA geobukbap-evidence-research/0.2), 2026-10-21",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "citation": "Oftedal, O. T., Hillard, S. & Morafka, D. J. (2002) Selective spring foraging by juvenile desert tortoises (Gopherus agassizii) in the Mojave Desert: evidence of an adaptive nutritional strategy. Chelonian Conservation and Biology 4(2):341-352",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "doi": null,
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Gopherus agassizii (juveniles)",
+   "context": "wild",
+   "study_id": "oftedal_2002_juvenile_agassizii",
+   "read": "Open PDF hosted by Chelonian Research Foundation (chelonian.org); robots.txt allows",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-009",
+   "citation": "Wirt, E. B. (1993) Sapium biloculare (Mexican jumping bean) as a possible cause of mortality for Gopherus agassizii (desert tortoise) in the Maricopa Mountains, Maricopa Co., Arizona. In: Proceedings of the Desert Tortoise Council Symposium 1993, pp. 18-20. Desert Tortoise Council.",
+   "url": "https://deserttortoise.org/ocr_DTCdocs/1993DTCProceedings-OCR.pdf",
+   "doi": null,
+   "language": "en",
+   "source_class": "other",
+   "tortoise_taxon": "desert tortoise (Gopherus agassizii)",
+   "context": "captive",
+   "study_id": "B3-GOPH-011",
+   "read": "Open PDF (OCR scan) posted by the Desert Tortoise Council at deserttortoise.org/annual-symposium/symposium-proceedings/ ; robots.txt allows all (crawl-delay 10 s respected)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-012",
+   "citation": "Hardenbrook, D. B. (c. 1988-1991 volume) Results from the Trout Canyon desert tortoise study plot, Clark County [Nevada]. In: Proceedings of the Desert Tortoise Council Symposia 1987-1991, pp. 116-125 approx. Desert Tortoise Council.",
+   "url": "https://deserttortoise.org/ocr_DTCdocs/1987-1991DTCProceedings-OCR.pdf",
+   "doi": null,
+   "language": "en",
+   "source_class": "other",
+   "tortoise_taxon": "desert tortoise (Gopherus agassizii)",
+   "context": "wild",
+   "study_id": "B3-GOPH-012",
+   "read": "Open PDF (OCR scan) posted by the Desert Tortoise Council at deserttortoise.org/annual-symposium/symposium-proceedings/ ; robots.txt allows all (crawl-delay 10 s respected)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-016",
+   "citation": "Snider, J. R. (1993 printing) Foraging ecology and sheltersite characteristics of Sonoran desert tortoises. In: Proceedings of the Desert Tortoise Council Symposium 1992, pp. 82-96. Desert Tortoise Council.",
+   "url": "https://deserttortoise.org/ocr_DTCdocs/1992DTCProceedings-OCR.pdf",
+   "doi": null,
+   "language": "en",
+   "source_class": "other",
+   "tortoise_taxon": "desert tortoise (Gopherus agassizii)",
+   "context": "wild",
+   "study_id": "B3-GOPH-003",
+   "read": "Open PDF (OCR scan) posted by the Desert Tortoise Council at deserttortoise.org/annual-symposium/symposium-proceedings/ ; robots.txt allows all (crawl-delay 10 s respected)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-017",
+   "citation": "Oftedal, O. T., Hillard, S. & Morafka, D. (2001 printing) Juvenile desert tortoises enhance nutritional status by foraging choice: data from the 1998 El Nino at the Fort Irwin Study Site [abstract]. In: Proceedings of the Desert Tortoise Council Symposia 2000-2001, pp. 30-31.",
+   "url": "https://deserttortoise.org/ocr_DTCdocs/2000-2001DTCProceedings-OCR.pdf",
+   "doi": null,
+   "language": null,
+   "source_class": "other",
+   "tortoise_taxon": "juvenile desert tortoises (Gopherus agassizii)",
+   "context": "captive",
+   "study_id": "B3-GOPH-017",
+   "read": "Open PDF (OCR scan) posted by the Desert Tortoise Council at deserttortoise.org/annual-symposium/symposium-proceedings/ ; robots.txt allows all (crawl-delay 10 s respected)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b3__latam__falcon2018_biorxiv_chelonian_frugivory",
+   "citation": "Falcón, W., Moll, D. & Hansen, D. M. 2018. Frugivory and seed dispersal by chelonians: a review and synthesis. bioRxiv preprint 379933 (v1, posted 30 July 2018); published 2020 in Biological Reviews 95: 142-166.",
+   "url": "https://www.biorxiv.org/content/10.1101/379933v1.full.pdf",
+   "doi": "10.1101/379933",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Chelonoidis carbonarius",
+   "context": "wild",
+   "study_id": "falcon2018_biorxiv_chelonian_frugivory",
+   "read": "bioRxiv open preprint (CC-BY-NC-ND 4.0) downloaded with curl, robots.txt crawl-delay respected",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  },
+  {
+   "source_key": "b4_b3__madagascar_africa_asia__joseph2024_ppp3_aldabrachelys",
+   "citation": "Joseph, G.S., Rakotoarivelo, A.R., Pedrono, M. & Seymour, C.L. (2024) Can rewilding with giant tortoises increase woody habitat and limit fire across Madagascar's grasslands? Plants, People, Planet 6(3): 570-586",
+   "url": "https://hal.science/hal-05183161/document",
+   "doi": "10.1002/ppp3.10474",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Aldabrachelys gigantea",
+   "context": "wild",
+   "study_id": "joseph2024_ppp3_aldabrachelys",
+   "read": "CC BY-NC-ND 4.0 open-access PDF deposited in HAL (hal.science)",
+   "collected_by": "batch-004 automatic extraction",
+   "license": null
+  }
+ ],
+ "records": [
+  {
+   "source_key": "b4_PMC11573422",
+   "reported_name": "Chamaecrista nictitans",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "TABLE 2 (Summary table listing all seeds that were identified to the species level along with their taxonomic family, dispersal s)",
+   "plant_part": null,
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   }
+  },
+  {
+   "source_key": "b4_PMC11573422",
+   "reported_name": "Croton glandulosus",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "TABLE 2 (Summary table listing all seeds that were identified to the species level along with their taxonomic family, dispersal s)",
+   "plant_part": null,
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   }
+  },
+  {
+   "source_key": "b4_PMC11573422",
+   "reported_name": "Euphorbia cyathophora",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "TABLE 2 (Summary table listing all seeds that were identified to the species level along with their taxonomic family, dispersal s)",
+   "plant_part": null,
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   }
+  },
+  {
+   "source_key": "b4_PMC11573422",
+   "reported_name": "Piriqueta cistoides",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "TABLE 2 (Summary table listing all seeds that were identified to the species level along with their taxonomic family, dispersal s)",
+   "plant_part": null,
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   }
+  },
+  {
+   "source_key": "b4_PMC11884760",
+   "reported_name": "Acacia saligna",
+   "tortoise": "Homopus areolatus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "section \"Assessing the long-term balance between positive and negative effects\"",
+   "plant_part": {
+    "ko": "잎",
+    "en": "leaf"
+   },
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   },
+   "reported_as": "A. saligna"
+  },
+  {
+   "source_key": "b4_PMC13113303",
+   "reported_name": "Cucumis sativus",
+   "tortoise": "Testudo graeca",
+   "type": "captive_feeding_record",
+   "verification": "full_text_auto_extracted",
+   "context": "captive",
+   "locator": "Table 5 (Analytical Ethogram and Time-Budget Analysis of the Bazaar Population (N = 42). Note: BC: Behavioral Category; C: Code; )",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 개체가 먹었거나 급여받은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by or fed to captive tortoises"
+   }
+  },
+  {
+   "source_key": "b4_PMC13113303",
+   "reported_name": "Lactuca sativa",
+   "tortoise": "Testudo graeca",
+   "type": "captive_feeding_record",
+   "verification": "full_text_auto_extracted",
+   "context": "captive",
+   "locator": "Table 5 (Analytical Ethogram and Time-Budget Analysis of the Bazaar Population (N = 42). Note: BC: Behavioral Category; C: Code; )",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 개체가 먹었거나 급여받은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by or fed to captive tortoises"
+   }
+  },
+  {
+   "source_key": "b4_PMC7363059",
+   "reported_name": "Licania michauxii",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "section \"Spatial distribution of Cocoplum\"",
+   "plant_part": {
+    "ko": "씨앗",
+    "en": "seed"
+   },
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   },
+   "reported_as": "L. michauxii"
+  },
+  {
+   "source_key": "b4_PMC7363059",
+   "reported_name": "Ximenia americana",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "section \"Spatial distribution of Cocoplum\"",
+   "plant_part": {
+    "ko": "씨앗",
+    "en": "seed"
+   },
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   },
+   "reported_as": "X. americana"
+  },
+  {
+   "source_key": "b4_b2__africa__tftsg_sulcata_2020",
+   "reported_name": "Leptadenia hastata",
+   "tortoise": "Centrochelys sulcata",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.14",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b2__americas-theses__gtc2021_abstracts",
+   "reported_name": "Croton linearis",
+   "tortoise": "Gopherus polyphemus",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.1",
+   "plant_part": {
+    "ko": "씨앗",
+    "en": "seed"
+   },
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b2__americas-theses__jennings2002_ccb",
+   "reported_name": "Astragalus layneae",
+   "tortoise": "Gopherus agassizii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.3",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b2__americas-theses__jennings2002_ccb",
+   "reported_name": "Camissonia boothii",
+   "tortoise": "Gopherus agassizii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.3",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b2__americas-theses__jennings2002_ccb",
+   "reported_name": "Lotus humistratus",
+   "tortoise": "Gopherus agassizii",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.3",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   },
+   "reported_as": "L.humistratus"
+  },
+  {
+   "source_key": "b4_b2__asia-madagascar__AM-RRJZS-2017-NANDU",
+   "reported_name": "Boerhavia diffusa",
+   "tortoise": "Geochelone elegans",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.6",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b2__forums-zoo__fz_es_vertebrados_tgraeca",
+   "reported_name": "Opuntia ficus-indica",
+   "tortoise": "Testudo graeca",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.1",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "reported_name": "Chaenactis fremontii",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.11",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-009",
+   "reported_name": "Camissonia boothii",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "type": "captive_feeding_record",
+   "verification": "full_text_auto_extracted",
+   "context": "captive",
+   "locator": "PDF p.1",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 개체가 먹었거나 급여받은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by or fed to captive tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-009",
+   "reported_name": "Mirabilis bigelovii",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "type": "captive_feeding_record",
+   "verification": "full_text_auto_extracted",
+   "context": "captive",
+   "locator": "PDF p.1",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 개체가 먹었거나 급여받은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by or fed to captive tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-012",
+   "reported_name": "Sphaeralcea ambigua",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.199",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-016",
+   "reported_name": "Allionia incarnata",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.105",
+   "plant_part": null,
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-016",
+   "reported_name": "Camissonia boothii",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.86",
+   "plant_part": {
+    "ko": "꽃",
+    "en": "flower"
+   },
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-017",
+   "reported_name": "Achnatherum hymenoides",
+   "tortoise": "juvenile desert tortoises (Gopherus agassizii)",
+   "type": "captive_feeding_record",
+   "verification": "full_text_auto_extracted",
+   "context": "captive",
+   "locator": "PDF p.46",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 개체가 먹었거나 급여받은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by or fed to captive tortoises"
+   },
+   "reported_as": "A. hymenoides"
+  },
+  {
+   "source_key": "b4_b3__gopherus__B3-GOPH-017",
+   "reported_name": "Schismus barbatus",
+   "tortoise": "juvenile desert tortoises (Gopherus agassizii)",
+   "type": "captive_feeding_record",
+   "verification": "full_text_auto_extracted",
+   "context": "captive",
+   "locator": "PDF p.46",
+   "plant_part": null,
+   "finding": {
+    "ko": "사육 개체가 먹었거나 급여받은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by or fed to captive tortoises"
+   },
+   "reported_as": "S. barbatus"
+  },
+  {
+   "source_key": "b4_b3__latam__falcon2018_biorxiv_chelonian_frugivory",
+   "reported_name": "Syagrus flexuosa",
+   "tortoise": "Chelonoidis carbonarius",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.26",
+   "plant_part": {
+    "ko": "씨앗",
+    "en": "seed"
+   },
+   "finding": {
+    "ko": "분변 분석에서 먹은 식물로 확인되어 원문에 기록됨",
+    "en": "Recorded in the source as identified in faecal analysis"
+   }
+  },
+  {
+   "source_key": "b4_b3__madagascar_africa_asia__joseph2024_ppp3_aldabrachelys",
+   "reported_name": "Adansonia rubrostipa",
+   "tortoise": "Aldabrachelys gigantea",
+   "type": "wild_feeding_observation",
+   "verification": "full_text_auto_extracted",
+   "context": "wild",
+   "locator": "PDF p.5",
+   "plant_part": {
+    "ko": "열매",
+    "en": "fruit"
+   },
+   "finding": {
+    "ko": "야생 개체가 먹은 식물로 원문에 기록됨",
+    "en": "Recorded in the source as eaten by wild tortoises"
+   }
+  }
+ ],
+ "held_not_linked": [
+  {
+   "reported_name": "Hystrix cristata",
+   "source_key": "b4_PMC10931302",
+   "tortoise": "Geochelone sulcata",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Hystrix cristata",
+   "source_key": "b4_PMC10931302",
+   "tortoise": "Geochelone sulcata",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Casuarina equesitifolia",
+   "source_key": "b4_PMC11573422",
+   "tortoise": "Gopherus polyphemus",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Desmodium triflorum",
+   "source_key": "b4_PMC11573422",
+   "tortoise": "Gopherus polyphemus",
+   "scope": "record",
+   "reason": "name_higher_rank_only"
+  },
+  {
+   "reported_name": "Eustachys petrea",
+   "source_key": "b4_PMC11573422",
+   "tortoise": "Gopherus polyphemus",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Rhynchospora grayii",
+   "source_key": "b4_PMC11573422",
+   "tortoise": "Gopherus polyphemus",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Ipomoea senensis",
+   "source_key": "b4_b2__africa__tftsg_spekii_2021",
+   "tortoise": "Kinixys spekii",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Parinari fruits",
+   "source_key": "b4_b2__africa__tftsg_spekii_2021",
+   "tortoise": "Kinixys spekii",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Stuppy consumidas",
+   "source_key": "b4_b2__americas-theses__nascimento2015_gaia",
+   "tortoise": "Chelonoidis carbonaria",
+   "scope": "record",
+   "reason": "quote_not_refound"
+  },
+  {
+   "reported_name": "Phacelia tanacetifulia",
+   "source_key": "b4_b2__americas-theses__jennings2002_ccb",
+   "tortoise": "Gopherus agassizii",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Mirabilis phenological",
+   "source_key": "b4_b2__americas-theses__jennings2002_ccb",
+   "tortoise": "Gopherus agassizii",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Blepharis maderasapatensis",
+   "source_key": "b4_b2__asia-madagascar__AM-RRJZS-2017-NANDU",
+   "tortoise": "Geochelone elegans",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Blepharis maderasapatensis",
+   "source_key": "b4_b2__asia-madagascar__AM-RRJZS-2017-NANDU",
+   "tortoise": "Geochelone elegans",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Blepharis maderasapatensis",
+   "source_key": "b4_b2__asia-madagascar__AM-RRJZS-2017-NANDU",
+   "tortoise": "Geochelone elegans",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Amaranthus lividus",
+   "source_key": "b4_b2__asia-madagascar__AM-CRM5-096-ELONGATA",
+   "tortoise": "Indotestudo elongata",
+   "scope": "record",
+   "reason": "name_higher_rank_only"
+  },
+  {
+   "reported_name": "Helix aspersa",
+   "source_key": "b4_b2__forums-zoo__fz_es_vertebrados_thermanni",
+   "tortoise": "Testudo hermanni",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Opuntia ficus-hindica",
+   "source_key": "b4_b2__forums-zoo__fz_es_vertebrados_tgraeca",
+   "tortoise": "Testudo graeca",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Astragalus clidyntocarpus",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Lotus their",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Gilia foraging",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Camissonia clavifurmis",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Camissonia clavformis",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Camissonia clavformis",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Schismus calculate",
+   "source_key": "b4_b2__husbandry-nutrition__HN01",
+   "tortoise": "Gopherus agassizii (juveniles)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Helix aspersa",
+   "source_key": "b4_b2__testudo__vertebradosibericos_thermanni",
+   "tortoise": "Testudo hermanni",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Opuntia ficus-hindica",
+   "source_key": "b4_b2__testudo__vertebradosibericos_tgraeca",
+   "tortoise": "Testudo graeca",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Ceratocephalus strictly",
+   "source_key": "b4_b2__testudo__lagarde2003_ecography",
+   "tortoise": "Testudo horsfieldi",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Sapium actually",
+   "source_key": "b4_b3__gopherus__B3-GOPH-011",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Achnatherum hyrnenoides",
+   "source_key": "b4_b3__gopherus__B3-GOPH-017",
+   "tortoise": "juvenile desert tortoises (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Euphorbia stel",
+   "source_key": "b4_b3__grazers__B3G-milton1992phd",
+   "tortoise": "Geochelone pardalis",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Ceratocephalus strictly",
+   "source_key": "b4_b3__testudo__lagarde2003_ecography",
+   "tortoise": "Testudo horsfieldi",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Erodium simply",
+   "source_key": "b4_b3__gopherus__B3-GOPH-016",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Rhea americana",
+   "source_key": "b4_b3__madagascar_africa_asia__joseph2024_ppp3_aldabrachelys",
+   "tortoise": "Aldabrachelys gigantea",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Iris kopetdaghenis",
+   "source_key": "b4_b3__testudo__bailey1986_bcg_testudo",
+   "tortoise": "Agrionemys horsfieldi",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Stipa tenacissima",
+   "source_key": "b4_b3__testudo__haddad_abassi2017_laghouat",
+   "tortoise": "Testudo graeca graeca",
+   "scope": "record",
+   "reason": "name_higher_rank_only"
+  },
+  {
+   "reported_name": "Megastoma pusillumtortues",
+   "source_key": "b4_b3__testudo__aouragh2023_thesis_biskra",
+   "tortoise": "Testudo graeca graeca",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Sonchus oleraceustortues",
+   "source_key": "b4_b3__testudo__aouragh2023_thesis_biskra",
+   "tortoise": "Testudo graeca graeca",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Malva parviflorapopulation",
+   "source_key": "b4_b3__testudo__aouragh2023_thesis_biskra",
+   "tortoise": "Testudo graeca graeca",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Phoenix backyard",
+   "source_key": "b4_b3__gopherus__B3-GOPH-012",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Erioneuron puichellum",
+   "source_key": "b4_b3__gopherus__B3-GOPH-012",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Amsinckia tease",
+   "source_key": "b4_b3__gopherus__B3-GOPH-012",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "name_no_gbif_match"
+  },
+  {
+   "reported_name": "Pennisetum purpureum",
+   "source_key": "b4_PMC8254470",
+   "tortoise": "Chelonoidis chathamensis",
+   "scope": "record",
+   "reason": "reviewer_rejected: farm-fed (semi-captive) tortoises recorded as a wild observation"
+  },
+  {
+   "reported_name": "Cynodon dactylon",
+   "source_key": "b4_b2__africa__mason1999_pardalis_ccb",
+   "tortoise": "Geochelone pardalis",
+   "scope": "record",
+   "reason": "reviewer_rejected: two-column PDF text run together; plant not tied to feeding"
+  },
+  {
+   "reported_name": "Cynodon dactylon",
+   "source_key": "b4_b2__asia-madagascar__AM-RRJZS-2017-NANDU",
+   "tortoise": "Geochelone elegans",
+   "scope": "record",
+   "reason": "reviewer_rejected: diet table run together in the PDF text; the row cannot be read reliably"
+  },
+  {
+   "reported_name": "Chorizanthe brevicornu",
+   "source_key": "b4_b3__gopherus__B3-GOPH-016",
+   "tortoise": "desert tortoise (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "reviewer_rejected: sentence cut by the PDF layout; it is not clear the plant was eaten"
+  },
+  {
+   "reported_name": "Schismus barbatus",
+   "source_key": "b4_b3__gopherus__B3-GOPH-017",
+   "tortoise": "juvenile desert tortoises (Gopherus agassizii)",
+   "scope": "record",
+   "reason": "reviewer_rejected: feeding trial recorded as a wild observation; the captive record from the same study is kept"
+  },
+  {
+   "reported_name": "Ruschia spinosa",
+   "source_key": "b4_b3__grazers__B3G-milton1992phd",
+   "tortoise": "Geochelone pardalis",
+   "scope": "record",
+   "reason": "reviewer_rejected: two-column PDF text run together; plant not tied to feeding"
+  },
+  {
+   "reported_name": "Spondias testudinis",
+   "source_key": "b4_b3__latam__falcon2018_biorxiv_chelonian_frugivory",
+   "tortoise": "Chelonoidis denticulatus",
+   "scope": "record",
+   "reason": "reviewer_rejected: named after the tortoise; the passage does not say the tortoise eats it"
+  },
+  {
+   "reported_name": "Miconia robinsoniana",
+   "source_key": "b4_b3__latam__heleno2013_procb_galapagos_networks",
+   "tortoise": "Chelonoidis nigra (giant tortoise)",
+   "scope": "record",
+   "reason": "reviewer_rejected: seeds from droppings of an introduced bird (Crotophaga ani), not tortoises"
+  },
+  {
+   "reported_name": "Tournefortia psilostachya",
+   "source_key": "b4_b3__latam__heleno2013_procb_galapagos_networks",
+   "tortoise": "Chelonoidis nigra (giant tortoise)",
+   "scope": "record",
+   "reason": "reviewer_rejected: seeds from droppings of an introduced bird (Crotophaga ani), not tortoises"
+  }
+ ],
+ "sources_not_used": [],
+ "reviewed_not_feeding_evidence": [],
+ "counts": {
+  "held_name_not_a_plant_genus": 1169,
+  "held_name_no_gbif_match": 37,
+  "duplicate_of_earlier_batch": 157,
+  "held_name_higher_rank_only": 3,
+  "duplicate_within_batch": 6,
+  "held_quote_not_refound": 1,
+  "linked_records": 26,
+  "held_reviewer_rejected": 9
+ }
+}

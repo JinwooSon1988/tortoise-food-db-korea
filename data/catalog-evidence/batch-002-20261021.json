@@ -99,7 +99,7 @@
    "government": 4
   },
   "leads_not_accessed": 155,
-  "not_accessible": "Reddit (robots.txt disallows all; the API needs OAuth), Instagram and Facebook (login), tortoiseforum.org (bot challenge), The Tortoise Table and testudo-farm.de (terms forbid reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), paywalled journals and pages behind bot challenges. Nothing was bypassed.",
+  "not_accessible": "Reddit (robots.txt disallows all; the API needs OAuth), Instagram and Facebook (login), tortoiseforum.org (bot challenge), The Tortoise Table, testudo-farm.de, zolw.info and schildkroeten-schutz.de (terms limit copying or reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), paywalled journals and pages behind bot challenges. Nothing was bypassed.",
   "screening": "Seven research passes saved every document used as text; each record carries a verbatim quote that a script re-found in the saved text, together with the plant name. Records whose quote or name could not be re-found, names printed only as common names or to genus, and keeper, forum or video posts without a scientific name are held, not linked.",
   "summary": {
    "ko": "동물원·정부·수의학 사육지침, 학위논문, 종 설명서, 영양·독성 자료, 사육자 커뮤니티와 공개 영상 정보를 다국어(영·불·독·서·포·러·중·일·한 등)로 조사해 문서 194건을 저장·확인했습니다. 학명이 원문에 인쇄된 기록만 연결했고, 커뮤니티·영상 자료는 검증 연구와 구분해 참고용으로 표시합니다. 로그인·약관·robots 제한이 있는 Reddit·Instagram·Facebook 등은 수집하지 않았습니다.",
@@ -234,18 +234,6 @@
    "collected_by": "batch-002 africa"
   },
   {
-   "source_key": "bcg_sulcata_caresheet",
-   "citation": "British Chelonia Group. Sulcata or African Giant Spurred Tortoise care sheet (web page, accessed 2026-10-21).",
-   "url": "https://www.britishcheloniagroup.org.uk/caresheets/sulcata",
-   "language": "en",
-   "source_class": "keeper_community",
-   "tortoise_taxon": "Centrochelys sulcata",
-   "context": "keeper",
-   "study_id": "bcg_sulcata_caresheet",
-   "read": "Public web page",
-   "collected_by": "batch-002 africa"
-  },
-  {
    "source_key": "rodrigues2016_unesp_tcc",
    "citation": "Rodrigues, L. L. 2016. Frugivoria e dispersão de sementes pelo jabuti-piranga Chelonoidis carbonaria. Trabalho de Conclusão de Curso (Ecologia), Universidade Estadual Paulista (UNESP), Instituto de Biociências, Rio Claro. Orientador: M. Galetti. 46 f.",
    "url": "https://repositorio.unesp.br/server/api/core/bitstreams/366b79e9-683e-4563-9eda-dbf77dcec1df/content",
@@ -294,23 +282,6 @@
    "collected_by": "batch-002 americas-theses"
   },
   {
-   "source_key": "jennings_berry2023_frontiers",
-   "citation": "Jennings, W. B. & Berry, K. H. (2023) Selection of microhabitats, plants, and plant parts eaten by a threatened tortoise: observations during a superbloom. Frontiers in Amphibian and Reptile Science 1:1283255",
-   "url": "https://doi.org/10.3389/famrs.2023.1283255",
-   "doi": "10.3389/famrs.2023.1283255",
-   "language": "en",
-   "source_class": "peer_reviewed",
-   "tortoise_taxon": "Gopherus agassizii",
-   "context": "wild",
-   "study_id": "jennings_berry_1992_drtna_field",
-   "method": {
-    "ko": "미국 캘리포니아 서부 모하비 사막 Desert Tortoise Research Natural Area에서 1992년 봄 야생 성체의 섭식을 직접 관찰하고 먹은 식물과 부위(꽃·잎·줄기·열매)를 기록 (표 2·3)",
-    "en": "Direct observation of free-ranging adults in the Desert Tortoise Research Natural Area, western Mojave Desert, California, spring 1992, recording plants and the parts eaten (flowers, leaves, stems, fruits; Tables 2-3)"
-   },
-   "read": "open-access PDF; Tables 2 and 3 (two clean Table 4 rows)",
-   "collected_by": "batch-002 americas-theses"
-  },
-  {
    "source_key": "jimenez2022_upse_hoodensis",
    "citation": "Jiménez Aguaisa, M. 2022. Análisis inicial de la dieta de la tortuga gigante Chelonoidis hoodensis, Isla Española, Galápagos, Ecuador, 2021-2022. Trabajo de titulación (Biólogo), Universidad Estatal Península de Santa Elena, Facultad de Ciencias del Mar. Tutor: D. Rodríguez Moreira.",
    "url": "https://repositorio.upse.edu.ec/bitstream/46000/8118/4/UPSE-TBI-2022-0015.pdf",
@@ -356,38 +327,6 @@
     "en": "Food-choice and colour experiments with 21 wild-caught G. berlandieri kept in captivity in summer 1960 (some test foods were dyed red), with care notes for desert tortoises"
    },
    "read": "Biodiversity Heritage Library / BioStor PDF on archive.org",
-   "collected_by": "batch-002 americas-theses"
-  },
-  {
-   "source_key": "asdm_tap_diet",
-   "citation": "Arizona-Sonora Desert Museum, Tortoise Adoption Program. Appendix III: Tortoise Diet ('Care, Husbandry and Diet of the Desert Tortoise'; information provided by Sonora Animal Hospital, Tucson). Web page, retrieved 2026-10-20/21.",
-   "url": "https://www.desertmuseum.org/programs/tap_diet.php?print=y",
-   "language": "en",
-   "source_class": "zoo_guideline",
-   "tortoise_taxon": "Gopherus morafkai / G. agassizii (captive desert tortoises)",
-   "context": "captive",
-   "study_id": "asdm_tortoise_adoption_diet",
-   "method": {
-    "ko": "애리조나-소노라 사막 박물관 거북 입양 프로그램의 사육 사막거북 권장 먹이 목록",
-    "en": "Recommended food list for captive desert tortoises from the Arizona-Sonora Desert Museum Tortoise Adoption Program"
-   },
-   "read": "public web page (print view)",
-   "collected_by": "batch-002 americas-theses"
-  },
-  {
-   "source_key": "asdm_tortcare",
-   "citation": "Arizona-Sonora Desert Museum, Tortoise Adoption Program. Care, Husbandry and Diet of the Sonoran Desert Tortoise. Web page, retrieved 2026-10-21.",
-   "url": "https://www.desertmuseum.org/programs/tap_tortcare.php?print=y",
-   "language": "en",
-   "source_class": "zoo_guideline",
-   "tortoise_taxon": "Gopherus morafkai (captive Sonoran desert tortoises)",
-   "context": "captive",
-   "study_id": "asdm_tortoise_adoption_care",
-   "method": {
-    "ko": "애리조나-소노라 사막 박물관의 소노라 사막거북 사육·급여 안내",
-    "en": "Care and diet guidance for captive Sonoran desert tortoises from the Arizona-Sonora Desert Museum"
-   },
-   "read": "public web page (print view)",
    "collected_by": "batch-002 americas-theses"
   },
   {
@@ -519,18 +458,6 @@
    "collected_by": "batch-002 asia-madagascar"
   },
   {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "citation": "IGSN Schildkrötenschutz. Futterpflanzen (alphabetical list of food and enclosure plants)",
-   "url": "https://www.schildkroeten-schutz.de/futterpflanzen/",
-   "language": "de",
-   "source_class": "keeper_community",
-   "tortoise_taxon": "Schildkröten (European tortoises implied)",
-   "context": "keeper",
-   "study_id": "fz_de_igsn_futterpflanzen",
-   "read": "public web page, robots.txt checked, fetched with curl-like urllib (UA geobukbap-evidence-research/0.2), 2026-10-21",
-   "collected_by": "batch-002 forums-zoo"
-  },
-  {
    "source_key": "fz_de_wettengl_futterpflanzen",
    "citation": "Wettengl W. (2018). Futterpflanzen. Kleintier-, Vogel- und Reptilienpraxis Wolfgang Wettengl, Wenden",
    "url": "http://www.tierezumdoc.de/wissenswertes/reptilien/futterpflanzen.php",
@@ -543,42 +470,6 @@
     "ko": "독일 동물병원(파충류 진료) 누리집의 먹이 식물 안내",
     "en": "Food plant guidance on a German veterinary practice website (reptile medicine)"
    },
-   "read": "public web page, robots.txt checked, fetched with curl-like urllib (UA geobukbap-evidence-research/0.2), 2026-10-21",
-   "collected_by": "batch-002 forums-zoo"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "citation": "Beata (2006). Rośliny polne dla żółwi. zolw.info (Polish tortoise keeper site and forum)",
-   "url": "https://www.zolw.info/hodowla/zywienie/rosliny-polne-dla-zolwi",
-   "language": "pl",
-   "source_class": "keeper_community",
-   "tortoise_taxon": "żółwie lądowe",
-   "context": "keeper",
-   "study_id": "fz_pl_zolwinfo_rosliny",
-   "read": "public web page, robots.txt checked, fetched with curl-like urllib (UA geobukbap-evidence-research/0.2), 2026-10-21",
-   "collected_by": "batch-002 forums-zoo"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "citation": "Beata (2006). Rośliny trujące i szkodliwe dla żółwi. zolw.info",
-   "url": "https://www.zolw.info/hodowla/zywienie/rosliny-trujace-i-szkodliwe-dla-zolwi",
-   "language": "pl",
-   "source_class": "keeper_community",
-   "tortoise_taxon": "żółwie lądowe",
-   "context": "keeper",
-   "study_id": "fz_pl_zolwinfo_trujace",
-   "read": "public web page, robots.txt checked, fetched with curl-like urllib (UA geobukbap-evidence-research/0.2), 2026-10-21",
-   "collected_by": "batch-002 forums-zoo"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_horsfieldii",
-   "citation": "Beata (2007). Warunki środowiskowe ... i odżywianie żółwi stepowych. zolw.info (Polish summary of Lagarde et al.)",
-   "url": "https://www.zolw.info/zolwie-ladowe/zolw-stepowy-testudo-horsfieldii/cykl-zyciowy-i-dieta-w-srodowisku-naturalnym",
-   "language": "pl",
-   "source_class": "keeper_community",
-   "tortoise_taxon": "Testudo horsfieldii",
-   "context": "keeper",
-   "study_id": "fz_pl_zolwinfo_horsfieldii",
    "read": "public web page, robots.txt checked, fetched with curl-like urllib (UA geobukbap-evidence-research/0.2), 2026-10-21",
    "collected_by": "batch-002 forums-zoo"
   },
@@ -747,7 +638,7 @@
   },
   {
    "source_key": "jia2011_azr",
-   "citation": "Jia, F., Li, Z., Jin, X. & Zhang, W. (2011) Analysis on plant species composition and structure in the Testudo horsfieldi reserve, Yili, Xinjiang [贾风勤 등, 新疆伊犁四爪陆龟保护区植物组成及其结构分析]. Arid Zone Research 28(6):1020-1024, doi:10.13866/j.azr.2011.06.015",
+   "citation": "Jia, F., Li, Z., Jin, X. & Zhang, W. (2011) Analysis on plant species composition and structure in the Testudo horsfieldi reserve, Yili, Xinjiang [贾风勤 等, 新疆伊犁四爪陆龟保护区植物组成及其结构分析]. Arid Zone Research 28(6):1020-1024, doi:10.13866/j.azr.2011.06.015",
    "url": "https://doi.org/10.13866/j.azr.2011.06.015",
    "doi": "10.13866/j.azr.2011.06.015",
    "language": "zh",
@@ -1356,40 +1247,6 @@
   },
   {
    "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Ficinia nigrescens",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.144 (PDF p.160), Table 6.5 (site: DI WCNP; family: Cyperaceae)",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Isolepis antarctica",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.144 (PDF p.160), Table 6.5 (site: DI; family: Cyperaceae)",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
    "reported_name": "Aspalathus hispida",
    "tortoise": "Chersina angulata",
    "type": "wild_feeding_observation",
@@ -1679,57 +1536,6 @@
   },
   {
    "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Avena byzantina",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: DI; family: Poaceae)",
-   "plant_part": {
-    "ko": "씨앗",
-    "en": "seeds"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Avena fatua",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Poaceae)",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Avena fatua",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Poaceae)",
-   "plant_part": {
-    "ko": "씨앗",
-    "en": "seeds"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
    "reported_name": "Bromus pectinatus",
    "tortoise": "Chersina angulata",
    "type": "wild_feeding_observation",
@@ -1764,40 +1570,6 @@
   },
   {
    "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Cynodon dactylon",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Poaceae)",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Cynodon dactylon",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Poaceae)",
-   "plant_part": {
-    "ko": "씨앗",
-    "en": "seeds"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
    "reported_name": "Erharta villosa",
    "tortoise": "Chersina angulata",
    "type": "wild_feeding_observation",
@@ -1816,40 +1588,6 @@
   {
    "source_key": "joshua2008_chersina_phd",
    "reported_name": "Erharta villosa",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Poaceae)",
-   "plant_part": {
-    "ko": "씨앗",
-    "en": "seeds"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Lolium perenne",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Poaceae)",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Lolium perenne",
    "tortoise": "Chersina angulata",
    "type": "wild_feeding_observation",
    "verification": "full_text_verified",
@@ -1960,23 +1698,6 @@
    "plant_part": {
     "ko": "꽃",
     "en": "flowers"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "joshua2008_chersina_phd",
-   "reported_name": "Thamnochortus spicigerus",
-   "tortoise": "Chersina angulata",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "Thesis p.145 (PDF p.161), Table 6.5 (site: WCNP; family: Restionaceae)",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
    },
    "finding": {
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
@@ -2933,7 +2654,7 @@
    "type": "wild_feeding_observation",
    "verification": "full_text_verified",
    "context": "wild",
-   "locator": "p.280-281 Table 2 (Occurrence of plant species in the leopard tortoise's diet)",
+   "locator": "p.280-281 Table 2 (Occurrence of plant species in the leopard tortoise's diet) (the source prints 'C. foskalaei Vahl'; read as Commelina forskalaei)",
    "plant_part": null,
    "finding": {
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
@@ -3255,7 +2976,7 @@
    "type": "wild_feeding_observation",
    "verification": "full_text_verified",
    "context": "wild",
-   "locator": "p.280-281 Table 2 (Occurrence of plant species in the leopard tortoise's diet)",
+   "locator": "p.280-281 Table 2 (Occurrence of plant species in the leopard tortoise's diet) (the source prints 'Ipomoea mombassanaVatke'; read as Ipomoea mombassana)",
    "plant_part": null,
    "finding": {
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
@@ -3895,24 +3616,6 @@
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
     "en": "Recorded in the source's table or text as eaten by wild tortoises"
    }
-  },
-  {
-   "source_key": "bcg_sulcata_caresheet",
-   "reported_name": "Meadow hay",
-   "tortoise": "Sulcata (Centrochelys [formerly Geochelone] sulcata)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "FEEDING: Captive (\"The following foods can be tried\")",
-   "plant_part": {
-    "ko": "whole plant (hay)",
-    "en": "whole plant (hay)"
-   },
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source"
   },
   {
    "source_key": "rodrigues2016_unesp_tcc",
@@ -4586,125 +4289,6 @@
    "context": "wild",
    "locator": "p.354, Table 1 (Top 10 preferred species of plants in desert tortoise diet)",
    "plant_part": null,
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Lupinus odoratus",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Cryptantha circumcissa",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "꽃",
-    "en": "flowers"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Cryptantha circumcissa",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Cryptantha circumcissa",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "줄기",
-    "en": "stems"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Tropidocarpus gracile",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Tropidocarpus gracile",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "줄기",
-    "en": "stems"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "jennings_berry2023_frontiers",
-   "reported_name": "Tropidocarpus gracile",
-   "tortoise": "Gopherus agassizii",
-   "type": "wild_feeding_observation",
-   "verification": "full_text_verified",
-   "context": "wild",
-   "locator": "p.6-7, Table 2 (early spring (March-April) 1992), column 'Parts of plants eaten'",
-   "plant_part": {
-    "ko": "열매",
-    "en": "fruit"
-   },
    "finding": {
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
     "en": "Recorded in the source's table or text as eaten by wild tortoises"
@@ -6558,34 +6142,6 @@
    }
   },
   {
-   "source_key": "asdm_tap_diet",
-   "reported_name": "Arizona cottontop",
-   "tortoise": "Desert Tortoise (captive, Arizona)",
-   "type": "husbandry_recommendation",
-   "verification": "guideline_full_text_verified",
-   "context": "captive",
-   "locator": "Appendix III, 'Native Grasses'",
-   "plant_part": null,
-   "finding": {
-    "ko": "출처 자료가 급여 식물로 제시함 (출처의 권장이며 이 사이트의 급여 판정이 아님)",
-    "en": "Listed as a food plant by the source (the source's advice, not this site's feeding verdict)"
-   }
-  },
-  {
-   "source_key": "asdm_tortcare",
-   "reported_name": "Bermuda grass",
-   "tortoise": "Sonoran Desert Tortoise (captive)",
-   "type": "husbandry_recommendation",
-   "verification": "guideline_full_text_verified",
-   "context": "captive",
-   "locator": "Diet section, para. 4",
-   "plant_part": null,
-   "finding": {
-    "ko": "출처 자료가 급여 식물로 제시함 (출처의 권장이며 이 사이트의 급여 판정이 아님)",
-    "en": "Listed as a food plant by the source (the source's advice, not this site's feeding verdict)"
-   }
-  },
-  {
    "source_key": "richard1994_cuadherpetol",
    "reported_name": "Prosopis alpataco",
    "tortoise": "Chelonoidis chilensis",
@@ -6781,7 +6337,7 @@
    "context": "wild",
    "locator": "p.136, Resultados 1.2 Análisis de los Items Tróficos por Grupo, PORTULACACEAE",
    "plant_part": {
-    "ko": "whole plant (aerial parts)",
+    "ko": "식물 전체 (지상부)",
     "en": "whole plant (aerial parts)"
    },
    "finding": {
@@ -6798,7 +6354,7 @@
    "context": "wild",
    "locator": "p.136, Resultados 1.2 Análisis de los Items Tróficos por Grupo, PORTULACACEAE",
    "plant_part": {
-    "ko": "whole plant (aerial parts)",
+    "ko": "식물 전체 (지상부)",
     "en": "whole plant (aerial parts)"
    },
    "finding": {
@@ -6815,7 +6371,7 @@
    "context": "wild",
    "locator": "p.136, Resultados 1.2 Análisis de los Items Tróficos por Grupo, PORTULACACEAE",
    "plant_part": {
-    "ko": "whole plant (aerial parts)",
+    "ko": "식물 전체 (지상부)",
     "en": "whole plant (aerial parts)"
    },
    "finding": {
@@ -8475,40 +8031,6 @@
   },
   {
    "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Dillenia pentagyna",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column",
-   "plant_part": {
-    "ko": "열매",
-    "en": "fruit"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Dillenia pentagyna",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column (faecal analysis of 32 tortoises, Vasudevan et al. 2010)",
-   "plant_part": {
-    "ko": "씨앗",
-    "en": "seeds"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
    "reported_name": "Grewia tilaefolia",
    "tortoise": "Indotestudo travancorica",
    "type": "wild_feeding_observation",
@@ -8518,91 +8040,6 @@
    "plant_part": {
     "ko": "씨앗",
     "en": "seeds"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Ficus virens",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column",
-   "plant_part": {
-    "ko": "열매",
-    "en": "fruit"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Synedrella nodiflora",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Desmodium repandum",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Senecio scandens",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
-    "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "AM-CRM5-054-TRAVANCORICA",
-   "reported_name": "Mimosa pudica",
-   "tortoise": "Indotestudo travancorica",
-   "type": "wild_feeding_observation",
-   "verification": "review_full_text_verified",
-   "context": "wild",
-   "locator": "p. 054.4, Habitat and Ecology (diet paragraph), left column",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
    },
    "finding": {
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
@@ -9015,227 +8452,6 @@
    }
   },
   {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Ranunculus repens",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Malus domesticus",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Corylus avellana",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": {
-    "ko": "잎",
-    "en": "leaves"
-   },
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Allium ursinum",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Hylotelephium spectabile",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Sonchus oleraceus",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Hypochaeris radicata",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Hibiscus syriacus",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Symphytum officinale",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Onobrychis viciifolia",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Galinsoga parviflora",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Blitum bonus-henricus",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper association website"
-  },
-  {
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "reported_name": "Urtica dioica",
-   "tortoise": "Schildkröten",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "alphabetical list 'Futterpflanzen'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper association website"
-  },
-  {
    "source_key": "fz_de_wettengl_futterpflanzen",
    "reported_name": "Sonchus oleraceus",
    "tortoise": "Landschildkröten",
@@ -9303,836 +8519,6 @@
    "identification": "binomial_in_source",
    "outcome": "recommended",
    "platform": "vet practice website"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Plantago lanceolata",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Plantago maior",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Silene latifolia",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Leontodon hispidus",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Cichorium intybus",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Alliaria petiolata",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Allium ursinum",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Campanula rapunculoides",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Stellaria media",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Lamium purpureum",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Calystegia sepium",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Trifolium pratense",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Tragopogon pratensis",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Achillea millefolium",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Lapsana communis",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Malva neglecta",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Sonchus oleraceus",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Taraxacum officinale",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Crepis capillaris",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Potentilla anserina",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Aegopodium podagraria",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Tussilago farfara",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Convolvulus arvensis",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Hypochoeris radicata",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Galium aparine",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Onobrychis viciifolia",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Capsella bursa-pastoris",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Tanacetum vulgare",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Vicia sativa",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_rosliny",
-   "reported_name": "Galinsoga parviflora",
-   "tortoise": "żółwie lądowe",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "table 'Rośliny polne dla żółwi lądowych'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "recommended",
-   "platform": "keeper website/forum (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Nerium oleander",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Buxus sempervirens",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Digitalis purpurea",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Solanum nigrum",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Rheum rhaponticum",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Conium maculatum",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Colchicum autumnale",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Lantana camara",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Solanum tuberosum",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - deadly/strongly toxic list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Glechoma hederacea",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Hypericum perforatum",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Rumex acetosa",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Echium vulgare",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Cytisus scoparious",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Robinia pseudoacacia",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "reported_name": "Laurus nobilis",
-   "tortoise": "żółwie (lądowe)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "keeper",
-   "locator": "'Lista roślin trujących dla żółwi' - toxic or harmful list",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "outcome": "warned_against",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_horsfieldii",
-   "reported_name": "Koelpinia linearis",
-   "tortoise": "żółwie stepowe (Testudo horsfieldi)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "wild",
-   "locator": "section 'Odżywianie i preferencje pokarmowe' table",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_horsfieldii",
-   "reported_name": "Epilasia mirabilis",
-   "tortoise": "żółwie stepowe (Testudo horsfieldi)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "wild",
-   "locator": "section 'Odżywianie i preferencje pokarmowe' table",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper website (zolw.info)"
-  },
-  {
-   "source_key": "fz_pl_zolwinfo_horsfieldii",
-   "reported_name": "Alyssum desertorum",
-   "tortoise": "żółwie stepowe (Testudo horsfieldi)",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "wild",
-   "locator": "section 'Odżywianie i preferencje pokarmowe' table",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source",
-   "platform": "keeper website (zolw.info)"
   },
   {
    "source_key": "fz_it_tartarugando",
@@ -10440,7 +8826,7 @@
    "context": "wild",
    "locator": "p.346 Results (citing Table 4)",
    "plant_part": {
-    "ko": "fruit (immature)",
+    "ko": "열매 (덜 익은)",
     "en": "fruit (immature)"
    },
    "finding": {
@@ -10664,7 +9050,7 @@
    "context": "wild",
    "locator": "p.20 Table 1 (Hoybye-Mortensen 2004, secondary)",
    "plant_part": {
-    "ko": "leaf and petiole",
+    "ko": "잎과 잎자루",
     "en": "leaf and petiole"
    },
    "finding": {
@@ -10681,7 +9067,7 @@
    "context": "wild",
    "locator": "p.20 Table 1 (Hoybye-Mortensen 2004, secondary)",
    "plant_part": {
-    "ko": "flower (as printed)",
+    "ko": "꽃 (원문 표기대로)",
     "en": "flower (as printed)"
    },
    "finding": {
@@ -10715,7 +9101,7 @@
    "context": "wild",
    "locator": "p.20 section 1.6 (Lambert & Howes 1994, secondary)",
    "plant_part": {
-    "ko": "fruit (fallen)",
+    "ko": "열매 (떨어진 것)",
     "en": "fruit (fallen)"
    },
    "finding": {
@@ -10732,7 +9118,7 @@
    "context": "captive",
    "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
    "plant_part": {
-    "ko": "fruit (chopped)",
+    "ko": "열매 (잘게 썬 것)",
     "en": "fruit (chopped)"
    },
    "finding": {
@@ -10749,7 +9135,7 @@
    "context": "captive",
    "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
    "plant_part": {
-    "ko": "fruit (whole)",
+    "ko": "열매 (통째)",
     "en": "fruit (whole)"
    },
    "finding": {
@@ -10766,7 +9152,7 @@
    "context": "captive",
    "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
    "plant_part": {
-    "ko": "fruit (whole)",
+    "ko": "열매 (통째)",
     "en": "fruit (whole)"
    },
    "finding": {
@@ -10783,25 +9169,8 @@
    "context": "captive",
    "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
    "plant_part": {
-    "ko": "fruit (whole)",
+    "ko": "열매 (통째)",
     "en": "fruit (whole)"
-   },
-   "finding": {
-    "ko": "출처 자료가 급여 식물로 제시함 (출처의 권장이며 이 사이트의 급여 판정이 아님)",
-    "en": "Listed as a food plant by the source (the source's advice, not this site's feeding verdict)"
-   }
-  },
-  {
-   "source_key": "HN04",
-   "reported_name": "Sweet potato",
-   "tortoise": "Manouria emys",
-   "type": "husbandry_recommendation",
-   "verification": "guideline_full_text_verified",
-   "context": "captive",
-   "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
-   "plant_part": {
-    "ko": "whole vegetable (as printed)",
-    "en": "whole vegetable (as printed)"
    },
    "finding": {
     "ko": "출처 자료가 급여 식물로 제시함 (출처의 권장이며 이 사이트의 급여 판정이 아님)",
@@ -10834,24 +9203,7 @@
    "context": "captive",
    "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
    "plant_part": {
-    "ko": "hay",
-    "en": "hay"
-   },
-   "finding": {
-    "ko": "출처 자료가 급여 식물로 제시함 (출처의 권장이며 이 사이트의 급여 판정이 아님)",
-    "en": "Listed as a food plant by the source (the source's advice, not this site's feeding verdict)"
-   }
-  },
-  {
-   "source_key": "HN04",
-   "reported_name": "Orchard grass",
-   "tortoise": "Manouria emys",
-   "type": "husbandry_recommendation",
-   "verification": "guideline_full_text_verified",
-   "context": "captive",
-   "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
-   "plant_part": {
-    "ko": "hay",
+    "ko": "건초",
     "en": "hay"
    },
    "finding": {
@@ -10868,7 +9220,7 @@
    "context": "captive",
    "locator": "p.33-34 Table 2 'suitable diet items for M. emys (Brinkman, 2023)'",
    "plant_part": {
-    "ko": "hay",
+    "ko": "건초",
     "en": "hay"
    },
    "finding": {
@@ -11143,21 +9495,6 @@
   },
   {
    "source_key": "HN18",
-   "reported_name": "Wild clematis",
-   "tortoise": "T. hermanni and T. marginata",
-   "type": "community_report",
-   "verification": "community_report_unverified",
-   "context": "wild",
-   "locator": "section 'Also (observed eaten by T. hermanni and T. marginata in Greece)'",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육자·커뮤니티 게시글의 경험담 (검증 연구 아님)",
-    "en": "Experience reported in a keeper or community post (not verified research)"
-   },
-   "identification": "binomial_in_source"
-  },
-  {
-   "source_key": "HN18",
    "reported_name": "Taraxacum officinale",
    "tortoise": "Geochelone pardalis babcocki (also used for all Testudo species and Geochelone sulcata)",
    "type": "community_report",
@@ -11345,7 +9682,7 @@
    "context": "keeper",
    "locator": "section quoting Ashley Woods' 'list of wild food offered'",
    "plant_part": {
-    "ko": "whole plant (young plants)",
+    "ko": "식물 전체 (어린 개체)",
     "en": "whole plant (young plants)"
    },
    "finding": {
@@ -11363,7 +9700,7 @@
    "context": "keeper",
    "locator": "section quoting Ashley Woods' 'list of wild food offered'",
    "plant_part": {
-    "ko": "shoot, leaf (tender) and fruit",
+    "ko": "새순, 연한 잎, 열매",
     "en": "shoot, leaf (tender) and fruit"
    },
    "finding": {
@@ -12315,7 +10652,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -12332,7 +10669,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12349,7 +10686,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12366,7 +10703,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12383,7 +10720,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12400,7 +10737,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12417,7 +10754,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12434,7 +10771,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12451,7 +10788,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12468,7 +10805,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "b (code not defined in legend)",
+    "ko": "b (원문 범례에 정의되지 않은 부호)",
     "en": "b (code not defined in legend)"
    },
    "finding": {
@@ -12485,7 +10822,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -12502,7 +10839,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -12519,7 +10856,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12536,7 +10873,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12553,7 +10890,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12570,7 +10907,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12587,7 +10924,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12604,7 +10941,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12621,7 +10958,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12638,7 +10975,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12655,7 +10992,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -12672,7 +11009,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12689,7 +11026,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12706,7 +11043,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Compuestas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12723,7 +11060,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12740,7 +11077,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12757,7 +11094,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12774,7 +11111,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12791,7 +11128,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12808,7 +11145,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12825,7 +11162,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Leguminosas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12842,7 +11179,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12859,7 +11196,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "stem (ta: tallos)",
+    "ko": "줄기 (원문 부호 ta)",
     "en": "stem (ta: tallos)"
    },
    "finding": {
@@ -12876,7 +11213,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -12893,7 +11230,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12910,7 +11247,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "stem (ta: tallos)",
+    "ko": "줄기 (원문 부호 ta)",
     "en": "stem (ta: tallos)"
    },
    "finding": {
@@ -12927,7 +11264,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -12944,7 +11281,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -12961,7 +11298,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -12978,7 +11315,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -12995,7 +11332,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "stem (ta: tallos)",
+    "ko": "줄기 (원문 부호 ta)",
     "en": "stem (ta: tallos)"
    },
    "finding": {
@@ -13012,7 +11349,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13029,7 +11366,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13046,7 +11383,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "stem (ta: tallos)",
+    "ko": "줄기 (원문 부호 ta)",
     "en": "stem (ta: tallos)"
    },
    "finding": {
@@ -13063,7 +11400,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13080,7 +11417,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13097,7 +11434,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13114,7 +11451,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13131,7 +11468,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13148,7 +11485,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13165,7 +11502,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13182,7 +11519,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13199,7 +11536,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13216,7 +11553,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13233,7 +11570,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Gramíneas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13250,7 +11587,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13267,7 +11604,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "stem (ta: tallos)",
+    "ko": "줄기 (원문 부호 ta)",
     "en": "stem (ta: tallos)"
    },
    "finding": {
@@ -13284,7 +11621,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -13301,7 +11638,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -13318,7 +11655,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13335,7 +11672,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "seed (s: semillas)",
+    "ko": "씨앗 (원문 부호 s)",
     "en": "seed (s: semillas)"
    },
    "finding": {
@@ -13352,7 +11689,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13369,7 +11706,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13386,7 +11723,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "fe (code not defined in legend)",
+    "ko": "fe (원문 범례에 정의되지 않은 부호)",
     "en": "fe (code not defined in legend)"
    },
    "finding": {
@@ -13403,7 +11740,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "seed (s: semillas)",
+    "ko": "씨앗 (원문 부호 s)",
     "en": "seed (s: semillas)"
    },
    "finding": {
@@ -13420,7 +11757,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cariofiláceas",
    "plant_part": {
-    "ko": "seed (s: semillas)",
+    "ko": "씨앗 (원문 부호 s)",
     "en": "seed (s: semillas)"
    },
    "finding": {
@@ -13437,7 +11774,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Poligonáceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13454,7 +11791,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Poligonáceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13471,7 +11808,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Poligonáceas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -13488,7 +11825,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Poligonáceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13505,7 +11842,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Crucíferas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13522,7 +11859,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Liliáceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13539,7 +11876,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Liliáceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13556,7 +11893,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Liliáceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13573,7 +11910,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Liliáceas",
    "plant_part": {
-    "ko": "hs (code not defined in legend)",
+    "ko": "hs (원문 범례에 정의되지 않은 부호)",
     "en": "hs (code not defined in legend)"
    },
    "finding": {
@@ -13590,7 +11927,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Liliáceas",
    "plant_part": {
-    "ko": "stem (ta: tallos)",
+    "ko": "줄기 (원문 부호 ta)",
     "en": "stem (ta: tallos)"
    },
    "finding": {
@@ -13607,7 +11944,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Ranunculáceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13624,7 +11961,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Ranunculáceas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13641,7 +11978,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Ranunculáceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13658,7 +11995,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Primuláceas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -13675,7 +12012,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Lemnáceas",
    "plant_part": {
-    "ko": "t (code not defined in legend)",
+    "ko": "t (원문 범례에 정의되지 않은 부호)",
     "en": "t (code not defined in legend)"
    },
    "finding": {
@@ -13692,7 +12029,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Plumbagináceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13709,7 +12046,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Plumbagináceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13726,7 +12063,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Labiadas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13743,7 +12080,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Labiadas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13760,7 +12097,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cistáceas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13777,7 +12114,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cistáceas",
    "plant_part": {
-    "ko": "b (code not defined in legend)",
+    "ko": "b (원문 범례에 정의되지 않은 부호)",
     "en": "b (code not defined in legend)"
    },
    "finding": {
@@ -13794,7 +12131,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cistáceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13811,7 +12148,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cistáceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13828,7 +12165,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Cistáceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13845,7 +12182,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Dipsáceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13862,7 +12199,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Dipsáceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13879,7 +12216,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Hypolepidáceas",
    "plant_part": {
-    "ko": "leaf (hv: hojas verdes)",
+    "ko": "잎 (원문 부호 hv: 푸른 잎)",
     "en": "leaf (hv: hojas verdes)"
    },
    "finding": {
@@ -13896,7 +12233,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Hypolepidáceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13913,7 +12250,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Orchidáceas",
    "plant_part": {
-    "ko": "f (legend: frondes; possibly flowers - ambiguous)",
+    "ko": "f (원문 범례 'frondes'; 꽃일 수 있으나 불명확)",
     "en": "f (legend: frondes; possibly flowers - ambiguous)"
    },
    "finding": {
@@ -13930,7 +12267,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Fagáceas",
    "plant_part": {
-    "ko": "leaf (h: hojas)",
+    "ko": "잎 (원문 부호 h: hojas)",
     "en": "leaf (h: hojas)"
    },
    "finding": {
@@ -13947,7 +12284,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Juncáceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -13964,7 +12301,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Juncáceas",
    "plant_part": {
-    "ko": "aerial part (pa: parte aérea)",
+    "ko": "지상부 (원문 부호 pa)",
     "en": "aerial part (pa: parte aérea)"
    },
    "finding": {
@@ -13981,7 +12318,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Resedáceas",
    "plant_part": {
-    "ko": "seed (s: semillas)",
+    "ko": "씨앗 (원문 부호 s)",
     "en": "seed (s: semillas)"
    },
    "finding": {
@@ -13998,7 +12335,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Rosáceas",
    "plant_part": {
-    "ko": "seed (s: semillas)",
+    "ko": "씨앗 (원문 부호 s)",
     "en": "seed (s: semillas)"
    },
    "finding": {
@@ -14015,7 +12352,7 @@
    "context": "wild",
    "locator": "Ecología trófica, Tabla 1 (data from Andreu 1987), family Rosáceas",
    "plant_part": {
-    "ko": "fruit (fr: frutos)",
+    "ko": "열매 (원문 부호 fr: frutos)",
     "en": "fruit (fr: frutos)"
    },
    "finding": {
@@ -14032,7 +12369,7 @@
    "context": "wild",
    "locator": "Ecología trófica (text)",
    "plant_part": {
-    "ko": "pad/cladode (hojas)",
+    "ko": "줄기마디(패드) (원문 표기 hojas)",
     "en": "pad/cladode (hojas)"
    },
    "finding": {
@@ -14134,7 +12471,7 @@
    "context": "wild",
    "locator": "Ecología trófica (text)",
    "plant_part": {
-    "ko": "tuber (root)",
+    "ko": "덩이뿌리",
     "en": "tuber (root)"
    },
    "finding": {
@@ -14253,7 +12590,7 @@
    "context": "wild",
    "locator": "Ecología trófica (text)",
    "plant_part": {
-    "ko": "leaf (only when totally dry)",
+    "ko": "잎 (완전히 마른 경우에만)",
     "en": "leaf (only when totally dry)"
    },
    "finding": {
@@ -14270,7 +12607,7 @@
    "context": "wild",
    "locator": "Ecología trófica (text)",
    "plant_part": {
-    "ko": "shoot (new needles)",
+    "ko": "새순 (새 바늘잎)",
     "en": "shoot (new needles)"
    },
    "finding": {
@@ -14932,7 +13269,7 @@
    "context": "wild",
    "locator": "PDF p.3; Discussion",
    "plant_part": {
-    "ko": "leaf (tender)",
+    "ko": "잎 (연한 잎)",
     "en": "leaf (tender)"
    },
    "finding": {
@@ -14949,7 +13286,7 @@
    "context": "wild",
    "locator": "PDF p.3; Discussion",
    "plant_part": {
-    "ko": "leaf (tender)",
+    "ko": "잎 (연한 잎)",
     "en": "leaf (tender)"
    },
    "finding": {
@@ -14983,7 +13320,7 @@
    "context": "wild",
    "locator": "PDF p.3; Discussion",
    "plant_part": {
-    "ko": "leaf (tender)",
+    "ko": "잎 (연한 잎)",
     "en": "leaf (tender)"
    },
    "finding": {
@@ -15000,7 +13337,7 @@
    "context": "wild",
    "locator": "PDF p.3; Discussion",
    "plant_part": {
-    "ko": "needles",
+    "ko": "바늘잎",
     "en": "needles"
    },
    "finding": {
@@ -15031,7 +13368,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15048,7 +13385,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15065,7 +13402,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15082,7 +13419,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15099,7 +13436,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15116,7 +13453,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "fruit (FR = frutti)",
+    "ko": "열매 (원문 부호 FR)",
     "en": "fruit (FR = frutti)"
    },
    "finding": {
@@ -15133,7 +13470,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "fruit (FR = frutti)",
+    "ko": "열매 (원문 부호 FR)",
     "en": "fruit (FR = frutti)"
    },
    "finding": {
@@ -15150,7 +13487,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15167,7 +13504,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15184,7 +13521,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "fruit (FR = frutti)",
+    "ko": "열매 (원문 부호 FR)",
     "en": "fruit (FR = frutti)"
    },
    "finding": {
@@ -15201,7 +13538,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15218,7 +13555,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "fruit (FR = frutti)",
+    "ko": "열매 (원문 부호 FR)",
     "en": "fruit (FR = frutti)"
    },
    "finding": {
@@ -15235,7 +13572,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "seed (SE = semi)",
+    "ko": "씨앗 (원문 부호 SE)",
     "en": "seed (SE = semi)"
    },
    "finding": {
@@ -15252,7 +13589,7 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
@@ -15269,26 +13606,12 @@
    "context": "wild",
    "locator": "PDF p.12; Tab. 5.3 Spettro alimentare, p.102",
    "plant_part": {
-    "ko": "leaf (FO = foglie)",
+    "ko": "잎 (원문 부호 FO)",
     "en": "leaf (FO = foglie)"
    },
    "finding": {
     "ko": "야생 개체가 먹은 식물로 원문 표·본문에 기록됨",
     "en": "Recorded in the source's table or text as eaten by wild tortoises"
-   }
-  },
-  {
-   "source_key": "hetenyi2016_mal",
-   "reported_name": "Fejes sal",
-   "tortoise": "Testudo hermanni (görög teknős)",
-   "type": "captive_feeding_record",
-   "verification": "full_text_verified",
-   "context": "captive",
-   "locator": "PDF p.3; Table 2 (2. TÁBLÁZAT) dry matter intake",
-   "plant_part": null,
-   "finding": {
-    "ko": "사육·급여 실험 환경에서 먹은 기록",
-    "en": "Recorded as eaten in captivity or a feeding trial"
    }
   },
   {
@@ -15714,6 +14037,13 @@
    "source_key": "tftsg_erosa_2014",
    "tortoise": "Kinixys erosa",
    "reason": "no_species_level_scientific_name",
+   "scope": "record"
+  },
+  {
+   "reported_name": "Meadow hay",
+   "source_key": "bcg_sulcata_caresheet",
+   "tortoise": "Sulcata (Centrochelys [formerly Geochelone] sulcata)",
+   "reason": "identification_common_name_only",
    "scope": "record"
   },
   {
@@ -16445,6 +14775,13 @@
    "scope": "record"
   },
   {
+   "reported_name": "Arizona cottontop",
+   "source_key": "asdm_tap_diet",
+   "tortoise": "Desert Tortoise (captive, Arizona)",
+   "reason": "identification_common_name_only",
+   "scope": "record"
+  },
+  {
    "reported_name": "bamboo muhly",
    "source_key": "asdm_tap_diet",
    "tortoise": "Desert Tortoise (captive, Arizona)",
@@ -16680,6 +15017,13 @@
    "source_key": "asdm_tortcare",
    "tortoise": "Sonoran Desert Tortoise (captive)",
    "reason": "no_species_level_scientific_name",
+   "scope": "record"
+  },
+  {
+   "reported_name": "Bermuda grass",
+   "source_key": "asdm_tortcare",
+   "tortoise": "Sonoran Desert Tortoise (captive)",
+   "reason": "identification_common_name_only",
    "scope": "record"
   },
   {
@@ -17232,55 +15576,6 @@
    "reported_name": "Kopfsalat oder Eisbergsalat",
    "source_key": "fz_de_stuttgart_futterpflanzen",
    "tortoise": "Landschildkröten",
-   "reason": "no_species_level_scientific_name",
-   "scope": "record"
-  },
-  {
-   "reported_name": "Aquilegia ssp",
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "tortoise": "Schildkröten",
-   "reason": "identification_uncertain",
-   "scope": "record"
-  },
-  {
-   "reported_name": "Pyrus sp",
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "tortoise": "Schildkröten",
-   "reason": "no_species_level_scientific_name",
-   "scope": "record"
-  },
-  {
-   "reported_name": "Opuntia",
-   "source_key": "fz_de_igsn_futterpflanzen",
-   "tortoise": "Schildkröten",
-   "reason": "no_species_level_scientific_name",
-   "scope": "record"
-  },
-  {
-   "reported_name": "Convallaria",
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "tortoise": "żółwie (lądowe)",
-   "reason": "no_species_level_scientific_name",
-   "scope": "record"
-  },
-  {
-   "reported_name": "Ceratocephalus falcatus",
-   "source_key": "fz_pl_zolwinfo_trujace",
-   "tortoise": "żółwie stepowe",
-   "reason": "gbif_synonym_is_a_homonym: GBIF resolves this name to Achillea falcata (Asteraceae), but the source means the buttercup Ceratocephala falcata (Ranunculaceae)",
-   "scope": "name"
-  },
-  {
-   "reported_name": "Ceratocephalus falcatus",
-   "source_key": "fz_pl_zolwinfo_horsfieldii",
-   "tortoise": "żółwie stepowe (Testudo horsfieldi)",
-   "reason": "gbif_synonym_is_a_homonym: GBIF resolves this name to Achillea falcata (Asteraceae), but the source means the buttercup Ceratocephala falcata (Ranunculaceae)",
-   "scope": "name"
-  },
-  {
-   "reported_name": "makowatych",
-   "source_key": "fz_pl_zolwinfo_horsfieldii",
-   "tortoise": "żółwie stepowe",
    "reason": "no_species_level_scientific_name",
    "scope": "record"
   },
@@ -17922,6 +16217,13 @@
    "scope": "record"
   },
   {
+   "reported_name": "Sweet potato",
+   "source_key": "HN04",
+   "tortoise": "Manouria emys",
+   "reason": "identification_common_name_only",
+   "scope": "record"
+  },
+  {
    "reported_name": "Squash",
    "source_key": "HN04",
    "tortoise": "Manouria emys",
@@ -18003,6 +16305,13 @@
    "source_key": "HN04",
    "tortoise": "Manouria emys",
    "reason": "no_species_level_scientific_name",
+   "scope": "record"
+  },
+  {
+   "reported_name": "Orchard grass",
+   "source_key": "HN04",
+   "tortoise": "Manouria emys",
+   "reason": "identification_common_name_only",
    "scope": "record"
   },
   {
@@ -18514,6 +16823,13 @@
    "source_key": "HN18",
    "tortoise": "T. hermanni and T. marginata",
    "reason": "no_species_level_scientific_name",
+   "scope": "record"
+  },
+  {
+   "reported_name": "Wild clematis",
+   "source_key": "HN18",
+   "tortoise": "T. hermanni and T. marginata",
+   "reason": "identification_common_name_only",
    "scope": "record"
   },
   {
@@ -20503,6 +18819,13 @@
    "tortoise": "Testudo hermanni (görög teknős)",
    "reason": "no_species_level_scientific_name",
    "scope": "record"
+  },
+  {
+   "reported_name": "Fejes saláta",
+   "source_key": "hetenyi2016_mal",
+   "tortoise": "Testudo hermanni (görög teknős)",
+   "reason": "no_species_level_scientific_name",
+   "scope": "record"
   }
  ],
  "sources_not_used": [
@@ -20517,6 +18840,30 @@
    "citation": "Wegehaupt W. (n.d., (c)2020). 'Ernährung im Habitat' / 'The diet in the great outdoors'. testudo-farm.de (keeper/author website)",
    "url": "https://www.testudo-farm.de/ernaerung-im-habitat",
    "reason": "site terms forbid electronic storage or processing (testudo-farm.de)"
+  },
+  {
+   "source_key": "fz_de_igsn_futterpflanzen",
+   "citation": "IGSN Schildkrötenschutz. Futterpflanzen (alphabetical list of food and enclosure plants)",
+   "url": "https://www.schildkroeten-schutz.de/futterpflanzen/",
+   "reason": "site Impressum (schildkroeten-schutz.de) allows downloads and copies for private, non-commercial use only"
+  },
+  {
+   "source_key": "fz_pl_zolwinfo_rosliny",
+   "citation": "Beata (2006). Rośliny polne dla żółwi. zolw.info (Polish tortoise keeper site and forum)",
+   "url": "https://www.zolw.info/hodowla/zywienie/rosliny-polne-dla-zolwi",
+   "reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"
+  },
+  {
+   "source_key": "fz_pl_zolwinfo_trujace",
+   "citation": "Beata (2006). Rośliny trujące i szkodliwe dla żółwi. zolw.info",
+   "url": "https://www.zolw.info/hodowla/zywienie/rosliny-trujace-i-szkodliwe-dla-zolwi",
+   "reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"
+  },
+  {
+   "source_key": "fz_pl_zolwinfo_horsfieldii",
+   "citation": "Beata (2007). Warunki środowiskowe ... i odżywianie żółwi stepowych. zolw.info (Polish summary of Lagarde et al.)",
+   "url": "https://www.zolw.info/zolwie-ladowe/zolw-stepowy-testudo-horsfieldii/cykl-zyciowy-i-dieta-w-srodowisku-naturalnym",
+   "reason": "site rules (zolw.info, section 14) forbid copying or distributing posted articles in any form without the authors' consent"
   },
   {
    "source_key": "fz_ru_cherepahi_rasteniya",
@@ -20553,6 +18900,12 @@
    "citation": "Wegehaupt W. (2020) Ernährung im Habitat. testudo-farm.de",
    "url": "https://www.testudo-farm.de/ernaerung-im-habitat",
    "reason": "site terms forbid electronic storage or processing (testudo-farm.de)"
+  },
+  {
+   "source_key": "jennings_berry2023_frontiers",
+   "citation": "Jennings, W. B. & Berry, K. H. (2023) Selection of microhabitats, plants, and plant parts eaten by a threatened tortoise: observations during a superbloom. Frontiers in Amphibian and Reptile Science 1:1283255",
+   "url": "https://doi.org/10.3389/famrs.2023.1283255",
+   "reason": "every record repeats a plant already linked from the same study in an earlier evidence file"
   }
  ],
  "reviewed_not_feeding_evidence": []
