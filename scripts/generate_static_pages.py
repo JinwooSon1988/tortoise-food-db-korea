@@ -782,7 +782,15 @@ for p in plants:
     title=f"육지거북 {ko} 먹어도 될까? 급여 판정·근거 | 거북밥 DB"; desc=f"육지거북에게 {ko}를 먹여도 되는지 확인한다. {ko}의 급여 판정, 학명·식물동정, 적용 범위, 주의사항과 근거를 한 페이지에서 확인한다."; canonical=f"{SITE_URL}/plant/{pid}/"
     rows=assessments_by_plant.get(pid,[])
     a=representative(rows); g=display(a)
+    # Species-specific husbandry records do not establish a universal A-D grade.
+    # They do establish a feeding-evidence category, consistent with All Plants.
+    species_only=[x for x in rows if x.get("assessment_scope")=="exact_species" and x.get("animal_taxon") and any(evidence_by_id.get(eid,{}).get("source_type") in ("specialist_husbandry","captive_feeding_record","wild_feeding_observation","husbandry_recommendation") for eid in x.get("evidence_ids",[]))]
+    species_evidence_only=(a is None and bool(species_only))
     tone,grade,label,meaning=g["tone"],g["grade"],g["label"],g["meaning"]
+    if species_evidence_only:
+        label="급여 기록 있음 (검증 중)"
+        meaning="특정 육지거북 종의 사육 지침에 급여 후보로 언급된 근거가 있습니다. 전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다."
+
     summary=assessment_copy((a or {}).get("why"), a) or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
     r=retail_by_id.get(pid); aliases=[]
     if r: aliases=list(dict.fromkeys((r.get("retail_terms") or [])+(r.get("aliases") or [])))
@@ -792,6 +800,12 @@ for p in plants:
     identity_warning=bool((r and r.get("mapping_status")=="name_candidate_only") or p.get("identity_status")=="needs_species_level_mapping")
     role=(a or {}).get("role"); limits=[assessment_copy(x, a) for x in ((a or {}).get("limits") or [])]
     linked_evidence=[evidence_by_id[eid] for eid in ((a or {}).get("evidence_ids") or []) if eid in evidence_by_id]
+    if species_evidence_only:
+        linked_evidence=list({e["id"]:e for x in species_only for eid in x.get("evidence_ids",[]) if (e:=evidence_by_id.get(eid))}.values())
+        primary=species_only[0]
+        summary="설카타 등 특정 종에 한정된 급여 근거가 확인되었습니다. "+assessment_copy(primary.get("why") or primary.get("role") or "",primary)
+        role=primary.get("role")
+        limits=[assessment_copy(x,primary) for x in primary.get("limits",[])]
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
     husbandry_count=sum(1 for e in linked_evidence if e.get("directness")=="expert_husbandry")
     indirect_count=len(linked_evidence)-direct_count-husbandry_count
@@ -867,6 +881,8 @@ for p in plants:
         feeding_action="주식으로 쓰지 않는다. 검증된 먹이를 중심으로 구성하고, 필요할 때 소량을 가끔 섞는 정도로 사용한다."
     elif grade=="D":
         feeding_action="평소 식단에는 넣지 않는다. 우발적으로 조금 먹은 상황과 일부러 반복 급여하는 것은 별개의 문제다."
+    elif species_evidence_only:
+        feeding_action="설카타 육지거북의 전문 사육 지침에 먹이 후보로 소개되지만, 안전량과 빈도는 검증되지 않았습니다. 다른 육지거북 종의 급여 안전성으로 확대하지 마세요."
     else:
         feeding_action="안전하다고 가정해 급여하지 않는다. 공개 근거가 보강될 때까지 판정을 보류한다."
     quantified=any(re.search(r"(percentage|percent|%|frequency|daily|weekly|per week|급여량|빈도|비율)", str(e.get("supports") or ""), re.I) for e in linked_evidence)
