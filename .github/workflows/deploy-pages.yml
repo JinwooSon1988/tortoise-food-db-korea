@@ -59,6 +59,19 @@ jobs:
           python scripts/inject_plant_detail_v56.py
           python scripts/generate_guide_hubs.py
           python scripts/generate_en_pages.py
+      - name: Verify uniform plant detail footer
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          page = Path('plant/erodium_botrys/index.html').read_text(encoding='utf-8')
+          taxon = Path('taxon/index.html').read_text(encoding='utf-8')
+          assert '전체 식물 목록</a><a href="../../index.html">먹이 검색</a>' in page
+          assert '전체 먹이 목록 →' not in page and '다른 먹이 검색 →' not in page
+          for rule in ('font:inherit;font-weight:800', 'min-height:36px', 'border:1px solid #c7dece', 'border-radius:9px', 'padding:7px 12px'):
+              assert rule in page, 'Generated plant footer differs: ' + rule
+              assert rule in taxon, 'Taxon footer differs: ' + rule
+          print('Generated plant footer matches compact taxon footer')
+          PY
       - name: Verify English homepage redirects to canonical bilingual home
         run: |
           python - <<'PY'
