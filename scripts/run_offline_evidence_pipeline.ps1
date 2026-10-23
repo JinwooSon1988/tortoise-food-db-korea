@@ -8,8 +8,21 @@ $triage = "worker-output/evidence-triage.json"
 $approved = "worker-output/approved-feeding-records.json"
 
 # A rate limit must not block review of already downloaded bibliography.
-& $python scripts/discover_incremental_literature.py --queries 2 --pages 1
-if ($LASTEXITCODE -ne 0) { Write-Warning "Discovery failed; continuing offline review of existing corpus." }
+$discoveryCooldown = Join-Path (Get-Location) "worker-output\openalex-cooldown.json"
+$runDiscovery = $true
+if (Test-Path $discoveryCooldown) {
+    try {
+        $cooldown = Get-Content $discoveryCooldown -Raw | ConvertFrom-Json
+        if ($cooldown.retry_at_utc -and ([datetime]$cooldown.retry_at_utc).ToUniversalTime() -gt (Get-Date).ToUniversalTime()) {
+            $runDiscovery = $false
+            Write-Host "OpenAlex cooldown active; skipping network discovery and continuing offline."
+        }
+    } catch { Write-Warning "Could not read discovery cooldown; discovery will retry normally." }
+}
+if ($runDiscovery) {
+    & $python scripts/discover_incremental_literature.py --queries 2 --pages 1
+    if ($LASTEXITCODE -ne 0) { Write-Warning "Discovery failed; continuing offline review of existing corpus." }
+}
 
 # Recompute only when source data changed or derived files do not exist.
 $needMatch = !(Test-Path $candidates)
