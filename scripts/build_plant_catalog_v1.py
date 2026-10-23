@@ -42,6 +42,18 @@ EVIDENCE_TYPES = ("wild_feeding_observation", "captive_feeding_record", "husband
 BATCH_DIR = "data/catalog-evidence"
 
 
+def evidence_first_priority(names, evidence_names):
+    """Stable ordering: source-mentioned plants first; taxonomy-only candidates last.
+
+    Names are compared after whitespace/case normalization only. This function
+    never resolves synonyms or creates feeding evidence.
+    """
+    def key(name):
+        return " ".join(str(name).casefold().split())
+    evidence_keys = {key(n) for n in evidence_names}
+    return sorted(names, key=lambda n: (key(n) not in evidence_keys, key(n)))
+
+
 def batch_files():
     """Corpus batch files (batch-NNN-YYYYMMDD.json); other files in the folder, such as a site index, are not batches."""
     return [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
