@@ -2,22 +2,24 @@
 """Checkpointed, bounded-concurrency OpenAlex discovery for tortoise diet plant leads.
 
 This discovers literature CANDIDATES, not feeding evidence or safety grades.
-Uses only Python standard library and a public API; respects HTTP 429 and retries.
+Uses only Python standard library and a public API. Requests go through scripts/polite_http.py (robots.txt, the
+OpenAlex rate limit, Retry-After on 429, retries, and a provenance log next to --output).
 Usage: python scripts/research_bulk_leads.py --workers 8 --limit 22045
 Resume: rerun with the same --output; completed names are skipped.
 """
 import argparse
 import concurrent.futures
 import json
-import random
 import re
 import time
-import urllib.error
+import sys
 import urllib.parse
-import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from polite_http import PoliteClient, FetchError, RobotsDisallowed  # noqa: E402
+CLIENT = None
 SEARCH = 'tortoise diet feeding'
 def load_taxa():
     seen = set()
@@ -35,14 +37,9 @@ def query(taxon, timeout=20):
         'select': 'id,doi,title,publication_year,primary_location,authorships',
     })
     url = 'https://api.openalex.org/works?' + params
-    for attempt in range(4):
+    for attempt in range(1):
         try:
-            req = urllib.request.Request(url, headers={
-                'User-Agent': 'GeobukbapResearch/0.1 (literature lead discovery; contact via repository issues)',
-                'Accept': 'application/json',
-            })
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                raw = json.load(resp)
+            raw, _ = CLIENT.get_json(url, purpose='openalex lead discovery')
             hits = []
             for work in raw.get('results', []):
                 title = work.get('title') or ''
@@ -55,11 +52,8 @@ def query(taxon, timeout=20):
                 })
             return {**taxon, 'status': 'searched', 'query': f'"{name}" {SEARCH}',
                     'hits': hits, 'searched_at_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
-        except (urllib.error.URLError, TimeoutError, ValueError) as exc:
-            if attempt == 3:
-                return {**taxon, 'status': 'retry_needed', 'error': type(exc).__name__,
-                        'hits': []}
-            time.sleep(min(30, 2 ** attempt + random.random()))
+        except (FetchError, RobotsDisallowed, ValueError) as exc:  # the client already retried transient errors
+            return {**taxon, 'status': 'retry_needed', 'error': type(exc).__name__, 'hits': []}
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--workers', type=int, default=6)
@@ -69,6 +63,8 @@ def main():
     if args.workers < 1 or args.workers > 12:
         ap.error('--workers must be between 1 and 12 to avoid API abuse')
     args.output.parent.mkdir(parents=True, exist_ok=True)
+    global CLIENT
+    CLIENT = PoliteClient(provenance=args.output.with_name(args.output.stem + '.requests.jsonl'))
     completed = set()
     if args.output.exists():
         for line in args.output.read_text(encoding='utf-8').splitlines():

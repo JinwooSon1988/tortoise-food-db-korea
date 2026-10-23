@@ -3,11 +3,11 @@
 
 Checks, offline: shard integrity and the shard rule; one entry per GBIF key and per name; required fields;
 taxonomy recorded separately from feeding evidence; no feeding grade and status unassessed on every entry;
-evidence typed, sourced, tied to a study and never from a P1-held name; a link under another name only through a recorded
+evidence typed, sourced, tied to a study and never from a P1-held claim (name and source); a link under another name only through a recorded
 GBIF synonym or spelling variant; a research status on every entry that agrees with its evidence; corpus batch records
 typed and sourced, and their held names never linked; no overlap with the reviewed plants (by name without
 authors and by the stored GBIF keys); the reviewed plants and their grades unchanged; feeding_pending ids still
-listed; the search index and taxon sitemap match the shards; the catalog page, detail page and both home
+listed; the search index and taxon sitemap match the shards and list exactly the published detail pages; Korean names are in Hangul; the catalog page, detail page and both home
 searches load the catalog; data sizes stay small enough for the static site.
 """
 import hashlib, json, re, sys, urllib.parse
@@ -28,7 +28,7 @@ CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_t
 RESEARCH = {"evidence_checked_in_full_text", "evidence_leads_only", "community_reports_only", "reviewed_not_feeding_evidence", "no_record_found"}
 NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
 NAME_BASIS = {"gbif_synonym", "orthographic_variant"}
-P1_HELD = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
+from build_plant_catalog_v1 import P1_HELD_CLAIMS, HANGUL, source_id  # noqa: E402
 errors = []
 load = lambda p: json.loads(Path(p).read_text(encoding="utf-8"))
 
@@ -72,14 +72,16 @@ for r in records:
     for e in r["feeding_evidence"]:
         if e["type"] not in TYPES or e["verification"] not in VERIFICATION or not e.get("source") or not e.get("tortoise"):
             errors.append(f"{r['id']}: evidence item missing type, verification, source or tortoise")
-        if e["reported_name"] in P1_HELD:
-            errors.append(f"{r['id']}: evidence from a P1-held name {e['reported_name']}")
+        if (e["reported_name"], source_id(e.get("url"))) in P1_HELD_CLAIMS:
+            errors.append(f"{r['id']}: evidence from a P1-held claim {e['reported_name']} ({e.get('url')})")
         nr = e.get("name_resolution")
         if e["reported_name"] != r["scientific"] and not (nr and nr.get("basis") in NAME_BASIS and nr.get("reported") == e["reported_name"]
                                                         and nr.get("accepted") == r["scientific"]):
             errors.append(f"{r['id']}: evidence reported as {e['reported_name']} linked to {r['scientific']}")
         if nr and e["reported_name"] == r["scientific"]:
             errors.append(f"{r['id']}: name_resolution on an exact-name link")
+        if re.fullmatch(r"[a-z0-9_]+", e["source"]):
+            errors.append(f"{r['id']}: internal id {e['source']} shown as the source citation")
         if not e.get("study"):
             errors.append(f"{r['id']}: evidence item without a study id")
         if e["type"] == "nutrition" and not ((e.get("nutrition") or {}).get("basis") in NUTRITION_BASIS and e["nutrition"].get("part")):
@@ -97,6 +99,8 @@ for r in records:
         for n in r["common_names"][lang]:
             if not n.get("name") or not n.get("source"):
                 errors.append(f"{r['id']}: common name without source")
+            if lang == "ko" and not HANGUL.search(n.get("name") or ""):
+                errors.append(f"{r['id']}: Korean name not in Hangul: {n.get('name')}")
 
 # Corpus evidence batches: typed, sourced records; held names never reach the catalog; the corpus searched is described.
 linked_reported = {e["reported_name"] for r in records for e in r["feeding_evidence"]}
@@ -158,6 +162,10 @@ published = [r for r in records if r["feeding_evidence"] or r["scientific"].stri
 loc_ids = {urllib.parse.unquote(u.split("?id=", 1)[1]) for u in locs if "?id=" in u}
 if len(locs) != len(published) or len(set(locs)) != len(locs) or len(locs) > 50000:
     errors.append(f"sitemap-taxa.xml has {len(locs)} URLs for {len(published)} published entries")
+# The catalog list (search.json evidence flag), the detail page and the sitemap publish the same entries.
+listed = {row[0] for row in search["rows"] if row[5]}
+if listed != {r["id"] for r in published}:
+    errors.append(f"listed and published detail pages differ: {sorted(listed ^ {r['id'] for r in published})[:10]}")
 if loc_ids != {r["id"] for r in published}:
     errors.append(f"sitemap-taxa.xml differs from the published entries: {sorted(loc_ids ^ {r['id'] for r in published})[:10]}")
 if "sitemap-taxa.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):

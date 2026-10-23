@@ -24,7 +24,7 @@ links keep the printed name and record name_resolution. Every entry records its 
 
 --max caps the number of entries (batches are appended in candidate order; earlier entries are kept).
 """
-import argparse, hashlib, json, re, sys, urllib.parse, urllib.request
+import argparse, hashlib, json, re, sys, urllib.parse
 from collections import Counter
 from pathlib import Path
 
@@ -37,7 +37,34 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from build_bulk_taxon_catalog import bare  # noqa: E402
 
 # El Mouden et al. 2006 names whose catalog linkage is held by the P1 release gate.
-P1_HELD_NAMES = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
+P1_MANIFEST = "data/feeding_p1_blocked_claim_manifest_20261018.json"
+HANGUL = re.compile(r"[가-힣]")
+
+
+def source_id(value):
+    """DOI or host+path of a source, so every spelling of the same source compares equal."""
+    v = str(value or "").strip().lower()
+    for prefix in ("https://doi.org/", "http://doi.org/", "https://dx.doi.org/", "doi:"):
+        if v.startswith(prefix):
+            return "doi:" + v[len(prefix):]
+    if v.startswith("10."):
+        return "doi:" + v
+    u = urllib.parse.urlsplit(v)
+    # publisher pages that carry the DOI in the path (e.g. .../articles/10.3389/x.2023.1/full)
+    d = re.search(r"/(10\.\d{4,9}/[^?#]+?)(?:/(?:full|abstract|pdf))?/?$", u.path) if u.scheme else None
+    if d:
+        return "doi:" + d.group(1)
+    return u.netloc + u.path.rstrip("/") if u.scheme else v
+
+
+def p1_held_claims():
+    """(reported name, source) pairs held by the P1 manifest. The hold covers that source's claim only: the same
+    plant reported by an independent source is linked as usual."""
+    m = json.loads((ROOT / P1_MANIFEST).read_text(encoding="utf-8"))
+    return {(c.get("plant_taxon_reported") or c.get("reported_taxon"), source_id(c["source"])) for c in m["blocked_claims"]}
+
+
+P1_HELD_CLAIMS = p1_held_claims()
 EVIDENCE_TYPES = ("wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity")
 BATCH_DIR = "data/catalog-evidence"
 
@@ -82,11 +109,14 @@ def jsonl(p):
 
 def gbif_match(names, cache_path):
     cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
-    for n in sorted(set(names) - set(cache)):
-        u = "https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": n, "kingdom": "Plantae", "strict": "true"})
-        with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "geobukbap-taxonomy-check/1.0"}), timeout=30) as r:
-            d = json.load(r)
-        cache[n] = {k: d.get(k) for k in ("usageKey", "acceptedUsageKey", "canonicalName", "rank", "status", "matchType", "note")}
+    new = sorted(set(names) - set(cache))
+    if new:
+        from polite_http import PoliteClient  # robots.txt, GBIF request spacing, retries, provenance log
+        client = PoliteClient(provenance=cache_path.parent / "gbif_requests.jsonl")
+        for n in new:
+            u = "https://api.gbif.org/v1/species/match?" + urllib.parse.urlencode({"name": n, "kingdom": "Plantae", "strict": "true"})
+            d, _ = client.get_json(u, purpose="gbif name match")
+            cache[n] = {k: d.get(k) for k in ("usageKey", "acceptedUsageKey", "canonicalName", "rank", "status", "matchType", "note")}
     cache_path.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
     return cache
 
@@ -154,10 +184,20 @@ def evidence_sources():
             kind = r.get("evidence_directness") or ""
             typ = "captive_feeding_record" if "captive" in kind else "wild_feeding_observation"
             for n in names:
-                items.append((n, {"type": typ, "tortoise": r.get("animal_taxon"), "source": r.get("source_title") or r.get("id") or r.get("source_id"),
+                items.append((n, {"type": typ, "tortoise": r.get("animal_taxon"), "source": r.get("source_title"),
                                   "url": r.get("url") or r.get("source_url") or ("https://doi.org/" + r["doi"] if r.get("doi") else None),
                                   "locator": None, "verification": "literature_lead_not_reverified", "context": "wild" if typ.startswith("wild") else "captive",
                                   "plant_part": None, "finding": None, "study": r.get("id") or r.get("source_id") or r.get("doi") or f.stem}))
+    # Leads without a title get the citation of another record from the same source (same DOI or URL), else the DOI or
+    # URL itself, so an internal lead id is never shown as a citation.
+    cited = {}
+    for _, it in items:
+        if it["source"] and it.get("url"):
+            cited.setdefault(source_id(it["url"]), it["source"])
+    for _, it in items:
+        if not it["source"]:
+            sid = source_id(it.get("url"))
+            it["source"] = cited.get(sid) or (("DOI " + sid[4:]) if sid.startswith("doi:") else it.get("url") or it["study"])
     return items
 
 
@@ -235,7 +275,7 @@ def main():
     match = gbif_match({n for n, _ in ev if binomial(n)} | {n for n in rejected_names if binomial(n)}, a.gbif_dir / "evidence_match.json")
     ev_by_key, ev_unlinked, resolved_by = {}, Counter(), Counter()
     for n, item in ev:
-        if n in P1_HELD_NAMES:
+        if (n, source_id(item.get("url"))) in P1_HELD_CLAIMS:
             ev_unlinked["p1_identity_hold"] += 1; continue
         key, basis = resolve(n, match.get(n) or {})
         if key is None:
@@ -295,6 +335,9 @@ def main():
             out = []
             for x in names:
                 v = " ".join(str(x.get("n") or "").split())
+                # Korean names must be written in Hangul; romanized entries (e.g. "gaeyanggwibi") are not shown as Korean.
+                if lang == "kor" and not HANGUL.search(v):
+                    continue
                 if x.get("l") == lang and v and v.casefold() not in {o["name"].casefold() for o in out}:
                     out.append({"name": v[:1].upper() + v[1:] if lang == "eng" else v, "source": x.get("s") or "GBIF"})
             return out[:4]
