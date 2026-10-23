@@ -174,7 +174,7 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  const p=new URLSearchParams(location.search);[['q','q'],['verdict','v'],['category','c'],['family','f'],['nutrition','n']].forEach(([id,k])=>{const v=p.get(k);if(v!=null&&(id==='q'||[...$(id).options].some(o=>o.value===v)))$(id).value=id==='q'?v.slice(0,80):v});
  currentPage=Math.max(1,Math.min(100000,Number.parseInt(p.get('page')||'1',10)||1));const s=(p.get('sort')||'').split(':');if(s[0]&&['ko','verdictRank','confidence','ratio','calcium','fiber'].includes(s[0])){sortKey=s[0];sortDir=s[1]==='-1'?-1:1}
  $('sort').value=sortKey+':'+sortDir;
- render()}
+ localize();render()}
 function refreshCatalogLanguage(){localize();if(rows.length){counts();render()}}
 window.addEventListener('tfdblanguagechange',()=>{
  // The shared translator runs synchronously, but catalog labels are rendered from data.
