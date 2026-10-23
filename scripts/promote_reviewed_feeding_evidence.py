@@ -23,6 +23,8 @@ import argparse
 import hashlib
 import json
 import re
+import os
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -156,7 +158,18 @@ def main():
     if promoted and not rejected:
         import time
         batch["built"] = batch["corpus"]["searched"] = time.strftime("%Y-%m-%d")
-        out.write_text(json.dumps(batch, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        out.parent.mkdir(parents=True, exist_ok=True)
+        fd, tmp = tempfile.mkstemp(prefix=".reviewed-records-", suffix=".json", dir=out.parent)
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as stream:
+                json.dump(batch, stream, ensure_ascii=False, indent=1)
+                stream.write("\n")
+                stream.flush()
+                os.fsync(stream.fileno())
+            os.replace(tmp, out)
+        finally:
+            if os.path.exists(tmp):
+                os.unlink(tmp)
     report = {"promoted": len(promoted) if not rejected else 0, "rejected": len(rejected), "type_names_mapped": mapped_types,
               "atomic": "No records are published when any input record is rejected.",
               "promoted_records": promoted, "rejections": rejected, "output": str(out),
