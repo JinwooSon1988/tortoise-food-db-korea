@@ -48,11 +48,15 @@ def main():
             scientific = str(record["scientific"]).strip()
             if not re.fullmatch(r"[A-Z][a-z-]+ [a-z][a-z-]+", scientific):
                 raise ValueError("exact binomial required")
+            if scientific.lower() not in by_name:
+                raise ValueError("scientific name absent from evidence index; identity resolution required")
             url = str(record["source_url"])
             if not valid_url(url):
                 raise ValueError("HTTPS source URL required")
             if record.get("type") not in ALLOWED:
                 raise ValueError("unsupported evidence type")
+            if record.get("source_class") not in ("peer_reviewed", "thesis", "zoo_guideline", "vet", "government", "keeper_community", "other"):
+                raise ValueError("source_class must be explicit")
             for field in ("citation","tortoise","locator"):
                 if len(str(record.get(field,"")).strip()) < 5:
                     raise ValueError(field + " missing")
