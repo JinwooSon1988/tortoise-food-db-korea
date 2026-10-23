@@ -10,7 +10,7 @@ authors and by the stored GBIF keys); the reviewed plants and their grades uncha
 listed; the search index and taxon sitemap match the shards; the catalog page, detail page and both home
 searches load the catalog; data sizes stay small enough for the static site.
 """
-import hashlib, json, re, sys
+import hashlib, json, re, sys, urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -152,8 +152,14 @@ if search["rows"] != expect:
     errors.append("search.json does not match the shards")
 sitemap = (ROOT / "sitemap-taxa.xml").read_text(encoding="utf-8")
 locs = re.findall(r"<loc>(.*?)</loc>", sitemap)
-if len(locs) != len(records) or len(set(locs)) != len(locs) or len(locs) > 50000:
-    errors.append(f"sitemap-taxa.xml has {len(locs)} URLs for {len(records)} entries")
+# The sitemap lists exactly the published detail pages: entries with linked evidence or a Batch 002 record (taxon/index.html hides the rest).
+b2_names = set(load(ROOT / "data/catalog-evidence/batch-002-site-index.json")["by_scientific_name"])
+published = [r for r in records if r["feeding_evidence"] or r["scientific"].strip().lower() in b2_names]
+loc_ids = {urllib.parse.unquote(u.split("?id=", 1)[1]) for u in locs if "?id=" in u}
+if len(locs) != len(published) or len(set(locs)) != len(locs) or len(locs) > 50000:
+    errors.append(f"sitemap-taxa.xml has {len(locs)} URLs for {len(published)} published entries")
+if loc_ids != {r["id"] for r in published}:
+    errors.append(f"sitemap-taxa.xml differs from the published entries: {sorted(loc_ids ^ {r['id'] for r in published})[:10]}")
 if "sitemap-taxa.xml" not in (ROOT / "robots.txt").read_text(encoding="utf-8"):
     errors.append("robots.txt does not list sitemap-taxa.xml")
 

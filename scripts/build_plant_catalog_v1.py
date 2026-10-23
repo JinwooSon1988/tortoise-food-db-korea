@@ -357,8 +357,14 @@ def main():
     # GBIF matches of the reviewed plants, kept so QA can recheck the overlap offline.
     (OUT / "reviewed_gbif_match.json").write_text(json.dumps(dict(sorted(existing_match.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     base = "https://jinwooson1988.github.io/tortoise-food-db-korea/taxon/?id="
+    # Only entries whose detail page is published (linked feeding evidence, or a Batch 002 record matched by exact name);
+    # taxonomy-only entries are not food profiles, so taxon/index.html hides them and they stay out of the sitemap.
+    b2 = ROOT / BATCH_DIR / "batch-002-site-index.json"
+    b2_names = set(json.loads(b2.read_text(encoding="utf-8"))["by_scientific_name"]) if b2.exists() else set()
     urls = []
     for r in ordered:
+        if not r["feeding_evidence"] and r["scientific"].strip().lower() not in b2_names:
+            continue
         u = base + urllib.parse.quote(r["id"], safe="")
         urls.append('<url><loc>%s</loc><xhtml:link rel="alternate" hreflang="ko" href="%s"/>'
                     '<xhtml:link rel="alternate" hreflang="en" href="%s&amp;lang=en"/></url>\n' % (u, u, u))

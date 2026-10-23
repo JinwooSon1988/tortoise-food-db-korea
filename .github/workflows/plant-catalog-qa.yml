@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'data/plant-catalog/**'
+      - 'data/catalog-evidence/**'
+      - 'scripts/build_plant_catalog_v1.py'
       - 'data/plants.json'
       - 'data/public_assessments.json'
       - 'data/feeding_pending_site_v1.json'
@@ -21,6 +23,8 @@ on:
   push:
     paths:
       - 'data/plant-catalog/**'
+      - 'data/catalog-evidence/**'
+      - 'scripts/build_plant_catalog_v1.py'
       - 'data/plants.json'
       - 'data/public_assessments.json'
       - 'data/feeding_pending_site_v1.json'
