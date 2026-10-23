@@ -12,7 +12,7 @@
   "with_english_name": 8405,
   "with_korean_name": 398,
   "evidence_by_type": {
-   "wild_feeding_observation": 1152,
+   "wild_feeding_observation": 1154,
    "captive_feeding_record": 86,
    "wild_diet_not_detected": 83,
    "offered_not_eaten": 28,
@@ -24,7 +24,7 @@
   },
   "evidence_by_verification": {
    "full_text_verified": 979,
-   "review_full_text_verified": 260,
+   "review_full_text_verified": 262,
    "guideline_full_text_verified": 12,
    "abstract_checked": 34,
    "literature_lead_not_reverified": 50,
@@ -35,7 +35,7 @@
   },
   "evidence_studies": 107,
   "evidence_linked_by_name_resolution": {
-   "gbif_synonym": 175,
+   "gbif_synonym": 176,
    "orthographic_variant": 11
   },
   "research_status": {
@@ -300,6 +300,15 @@
     "en": "Scientific names printed with tortoise feeding wording in sentences or diet tables of saved and newly fetched open full texts, extracted automatically; only records whose quoted passage was re-found are linked. Not yet read by a person."
    },
    "batch": "batch-004"
+  },
+  {
+   "id": "reviewed-records",
+   "searched": "2026-10-23",
+   "summary": {
+    "ko": "검토자가 원문을 읽고 승인한 기록입니다.",
+    "en": "Records approved by a reviewer who read the original."
+   },
+   "batch": "reviewed"
   }
  ],
  "research_status_meaning": {
@@ -474,7 +483,7 @@
   {
    "file": "taxa-32.json",
    "count": 581,
-   "sha256": "d5ce665897363b0b5fb1557bbe59be9c3c9d853bc4afee1affa351ed8faff49f"
+   "sha256": "aaf1aa2bb52ec92bd95c00e3f3941c85c107642e95f0e10c76896eb3e0bf8496"
   },
   {
    "file": "taxa-33.json",
@@ -499,7 +508,7 @@
   {
    "file": "taxa-37.json",
    "count": 623,
-   "sha256": "5a61dd60754124dc688697a3277f97ac709bcc519cb416bcc9f4a66d602680fb"
+   "sha256": "c98aec34d962c48e2a888fe35a3440496d1814d2657213098a3d615fa7881bd7"
   },
   {
    "file": "taxa-38.json",

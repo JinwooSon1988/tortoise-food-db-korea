@@ -29,7 +29,8 @@ TORTOISE_GENERA = ["Testudo", "Agrionemys", "Gopherus", "Xerobates", "Chelonoidi
                    "Astrochelys", "Aldabrachelys", "Dipsochelys", "Kinixys", "Homopus", "Chersobius", "Chersina", "Psammobates",
                    "Indotestudo", "Manouria", "Malacochersus", "Pyxis", "Cylindraspis", "Geochelone"]
 TORT_RE = re.compile(r"\b(" + "|".join(sorted(set(TORTOISE_GENERA))) + r")\s+([a-z]{3,})(?:\s+([a-z]{3,}))?\b")
-TORT_WORD = re.compile(r"\b(tortoises?|testudinid|tortugas?|jabotis?|jabutis?|tortues?|kaplumba[gğ]a)\b", re.I)
+# "tortoise beetles" (Cassidinae) and "tortoiseshell" are insects or butterflies, not tortoises.
+TORT_WORD = re.compile(r"\b(tortoises?(?![\s-]*(?:beetles?|shells?))|testudinid|tortugas?|jabotis?|jabutis?|tortues?|kaplumba[gğ]a)\b", re.I)
 NEG = re.compile(r"\b(not\s+(?:be(?:en)?\s+)?(?:eaten|consumed|ingested|found|detected|recorded|observed)|never\s+(?:eaten|consumed|seen|observed)|"
                  r"avoid\w*|refus\w*|rejected|absent|toxic\w*|\w*toxins?|poison\w*|oxal\w*|alkaloids?|saponins?|sapogenins?|glycosides?|"
                  r"no\s+evidence|unpalatable|not\s+contain\w*|did\s+not|without|n[aã]o\s+(?:foi|foram)\s+consumid\w*|"

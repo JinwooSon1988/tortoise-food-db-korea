@@ -1,0 +1,72 @@
+{
+ "schema_version": "1.0",
+ "batch": "reviewed",
+ "built": "2026-10-23",
+ "corpus": {
+  "id": "reviewed-records",
+  "searched": "2026-10-23",
+  "summary": {
+   "ko": "검토자가 원문을 읽고 승인한 기록입니다.",
+   "en": "Records approved by a reviewer who read the original."
+  }
+ },
+ "scope": "Reviewer-approved feeding, nutrition and toxicity records. A record is not a feeding grade.",
+ "verification_levels": {
+  "reviewed_source_record": "a reviewer read the original and approved the record"
+ },
+ "sources": [
+  {
+   "source_key": "reviewed_52f0429aa7de4c9f",
+   "citation": "Falcón, W., Moll, D. & Hansen, D. M. 2018. Frugivory and seed dispersal by chelonians: a review and synthesis. bioRxiv preprint 379933 (v1, posted 30 July 2018); published 2020 in Biological Reviews 95: 142-166.",
+   "url": "https://www.biorxiv.org/content/10.1101/379933v1.full.pdf",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Aldabrachelys gigantea",
+   "context": "wild",
+   "study_id": "falcon2018_biorxiv_chelonian_frugivory",
+   "read": "reviewer-approved after reading the original",
+   "collected_by": "reviewed-import"
+  }
+ ],
+ "records": [
+  {
+   "source_key": "reviewed_52f0429aa7de4c9f",
+   "reported_name": "Solanum aldabrense",
+   "tortoise": "Aldabrachelys gigantea",
+   "type": "wild_feeding_observation",
+   "verification": "review_full_text_verified",
+   "context": "wild",
+   "locator": "Preprint PDF p. 37, section on seed damage after gut passage (\"virtually all the seeds of Solanum aldabrense were recovered intact from a single Aldabra giant tortoise scat (WF, pers. obs.)\")",
+   "plant_part": {
+    "ko": "씨앗 (열매를 먹은 뒤 분변에서 회수)",
+    "en": "seeds (recovered from scat after the fruit was eaten)"
+   },
+   "finding": {
+    "ko": "알다브라 거북의 분변 한 개에서 씨앗이 거의 모두 온전한 상태로 나왔다고 저자가 직접 관찰해 종설에 보고함",
+    "en": "Almost all seeds were recovered intact from one Aldabra giant tortoise scat (the authors' own observation, reported in the review)"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-23)"
+  },
+  {
+   "source_key": "reviewed_52f0429aa7de4c9f",
+   "reported_name": "Ficus nautarum",
+   "tortoise": "Aldabrachelys gigantea",
+   "type": "wild_feeding_observation",
+   "verification": "review_full_text_verified",
+   "context": "wild",
+   "locator": "Preprint PDF p. 73, Figure 1 caption, panel c (Aldabra giant tortoises \"often been observed eating ripe fruits, while ignoring green ones (e.g., of Ficus nautarum; c)\")",
+   "plant_part": {
+    "ko": "익은 열매",
+    "en": "ripe fruit"
+   },
+   "finding": {
+    "ko": "알다브라 거북이 익은 열매는 먹고 덜 익은 초록 열매는 먹지 않는 모습이 자주 관찰됨",
+    "en": "Often observed eating ripe fruits while ignoring green ones"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-23)"
+  }
+ ],
+ "held_not_linked": [],
+ "sources_not_used": [],
+ "reviewed_not_feeding_evidence": []
+}

@@ -69,9 +69,27 @@ def taxon_index(gbif_cache):
     return idx
 
 
+def squash(s):
+    """First 40 letters/digits of a citation (authors and year), to match one work cited in different styles."""
+    return re.sub(r"[^0-9a-z]", "", str(s or "").lower())[:40]
+
+
 def species_of(t):
-    m = re.match(r"([A-Z][a-z]+ [a-z]{3,})", str(t or ""))
-    return m.group(1).lower() if m else None
+    """Tortoise species key: genus initial + epithet, so "T. graeca" and "Testudo graeca" compare equal."""
+    m = re.search(r"\b([A-Z])(?:[a-z]+|\.)\s*([a-z]{3,})\b", str(t or ""))
+    return (m.group(1) + " " + m.group(2)).lower() if m else None
+
+
+def held_names():
+    """Names held as names in earlier batches (doubtful GBIF synonym or other identity doubt): never linkable here."""
+    out = set()
+    for f in sorted((ROOT / "data/catalog-evidence").glob("batch-*.json")):
+        if "index" in f.name:
+            continue
+        for h in json.loads(f.read_text(encoding="utf-8")).get("held_not_linked", []):
+            if h.get("scope", "name") == "name" or "synonym" in str(h.get("reason")) or "identity" in str(h.get("reason")):
+                out.add(str(h.get("reported_name") or "").strip())
+    return out
 
 
 def classify(text, caption=""):
@@ -121,6 +139,7 @@ def main():
     ap.add_argument("--drafts", default="worker-output/approval-drafts.json")
     a = ap.parse_args()
     idx = taxon_index(a.gbif_cache)
+    held = held_names()
     links, no_evidence = set(), set()
     for f in sorted((ROOT / "data/plant-catalog").glob("taxa-*.json")):
         for r in json.loads(f.read_text(encoding="utf-8"))["records"]:
@@ -128,6 +147,8 @@ def main():
                 no_evidence.add(r["id"])
             for e in r["feeding_evidence"]:
                 links.add((r["id"], species_of(e.get("tortoise")), source_id(e.get("url") or e.get("source"))))
+                # the same work can be cited by DOI in one batch and by its PDF URL in another
+                links.add((r["id"], species_of(e.get("tortoise")), "cite:" + squash(e.get("source"))))
     out, counts, docs_seen = [], Counter(), 0
 
     bib = Path(a.bibliography)
@@ -153,7 +174,7 @@ def main():
             units = ex.jats_units(p) if doc["kind"] == "jats" else ex.txt_units(p)
             whole = norm(" ".join(u["text"] for u in units))
             for c in scan_units(units, doc, idx, full_text=True, tort_hint=doc.get("tortoise_hint")):
-                url = ("https://doi.org/" + doc["doi"]) if doc.get("doi") and doc["kind"] == "jats" else doc.get("url")
+                url = ("https://doi.org/" + doc["doi"]) if doc.get("doi") else doc.get("url")
                 out.append(dict(c, doc_id=doc["doc_id"], citation=doc.get("citation"), url=url, source="full_text",
                                 quote_refound=norm(c["quote"]) in whole))
 
@@ -181,7 +202,10 @@ def main():
             missing.append("quote re-found in the saved text")
         if (c["reported_name"], sid) in P1_HELD_CLAIMS:
             missing.append("P1 identity hold")
-        if (c["target"], species_of(c["tortoise"]), sid) in links:
+        if c["reported_name"] in held:
+            missing.append("name held in an earlier batch (identity doubt)")
+        if ((c["target"], species_of(c["tortoise"]), sid) in links
+                or (c["target"], species_of(c["tortoise"]), "cite:" + squash(c.get("citation"))) in links):
             c["already_linked"] = True
             counts["already_linked"] += 1
             continue

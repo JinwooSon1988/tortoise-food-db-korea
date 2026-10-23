@@ -9,7 +9,8 @@ Input: a JSON file {"records":[{"reviewed":true,"reviewer":"...","original_inspe
 
 Only records a person approved after reading the original are accepted (and a batch with any rejected record
 publishes nothing): reviewed and original_inspected true, a
-reviewer name, an exact binomial already resolved to a catalog or reviewed plant, an explicit source class (keeper or
+reviewer name, the evidence basis (original_study -> reviewed_source_record, review_or_species_account ->
+review_full_text_verified), an exact binomial already resolved to a catalog or reviewed plant, an explicit source class (keeper or
 community sources only as community_report, kept unverified), an http(s) source URL, a tortoise species, a locator, the plant part and the
 finding in Korean and English, and for nutrition / toxicity the basis or test conditions. Record types are the
 site's own (see TYPES); earlier names (captive_feeding_report, husbandry_guidance, nutritional_analysis,
@@ -46,6 +47,8 @@ def known_names():
         names.update(n.casefold() for n in re.findall(r"\b([A-Z][a-z]+ [a-z][a-z-]+)\b", (p.get("scientific") or "") + " " + (p.get("taxonomy_note") or "")))
     return names
 NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
+# What the reviewer read: the study that made the observation, or a review / species account reporting it.
+EVIDENCE_BASIS = {"original_study": "reviewed_source_record", "review_or_species_account": "review_full_text_verified"}
 
 
 def valid_url(url):
@@ -73,6 +76,8 @@ def check(record, names):
         raise ValueError("exact binomial required")
     if scientific.casefold() not in names:
         raise ValueError("scientific name not resolved to a catalog or reviewed plant; identity resolution required")
+    if record.get("evidence_basis") not in EVIDENCE_BASIS:
+        raise ValueError("evidence_basis must be original_study or review_or_species_account")
     if record.get("source_class") not in SOURCE_CLASSES:
         raise ValueError("source_class must be explicit")
     if (record["source_class"] == "keeper_community") != (LEGACY.get(record.get("type"), record.get("type")) == "community_report"):
@@ -135,7 +140,7 @@ def main():
             community = typ == "community_report"
             entry = {"source_key": key, "reported_name": scientific, "tortoise": record["tortoise"], "type": typ,
                      # a keeper report stays a keeper report after review: never "checked in the original"
-                     "verification": "community_report_unverified" if community else "reviewed_source_record",
+                     "verification": "community_report_unverified" if community else EVIDENCE_BASIS[record["evidence_basis"]],
                      "context": record.get("context", "keeper" if community else "wild"),
                      "locator": record["locator"], "plant_part": record["plant_part"], "finding": record["finding"],
                      "reviewer": record["reviewer"]}

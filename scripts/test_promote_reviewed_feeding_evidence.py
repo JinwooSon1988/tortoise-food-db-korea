@@ -15,7 +15,7 @@ SCRIPT = ROOT / "scripts/promote_reviewed_feeding_evidence.py"
 GOOD = {"reviewed": True, "reviewer": "Test Reviewer", "original_inspected": True, "scientific": "Opuntia ficus-indica",
         "source_url": "https://doi.org/10.0000/example", "citation": "Example, A. (2020) Diet of tortoises. J. Test 1:1-9",
         "tortoise": "Testudo graeca", "type": "captive_feeding_report", "locator": "Table 2, p. 4",
-        "plant_part": {"ko": "줄기마디(패드)", "en": "pad"}, "finding": {"ko": "사육 개체가 먹음", "en": "Eaten by captive tortoises"}, "source_class": "peer_reviewed"}
+        "plant_part": {"ko": "줄기마디(패드)", "en": "pad"}, "finding": {"ko": "사육 개체가 먹음", "en": "Eaten by captive tortoises"}, "source_class": "peer_reviewed", "evidence_basis": "original_study"}
 
 
 class PromoteTests(unittest.TestCase):
@@ -42,11 +42,16 @@ class PromoteTests(unittest.TestCase):
         bad = [dict(GOOD, reviewed=False), dict(GOOD, original_inspected=False), dict(GOOD, reviewer=""),
                dict(GOOD, tortoise="tortoise"), dict(GOOD, plant_part={"ko": "", "en": "pad"}), dict(GOOD, source_url="ftp://x/y"),
                dict(GOOD, type="nutritional_analysis"), dict(GOOD, type="safe_to_feed"), dict(GOOD, scientific="Opuntia"),
-               dict(GOOD, scientific="Notaplant inventedii"), dict(GOOD, source_class=None), dict(GOOD, source_class="keeper_community")]
+               dict(GOOD, scientific="Notaplant inventedii"), dict(GOOD, source_class=None), dict(GOOD, source_class="keeper_community"),
+               dict(GOOD, evidence_basis=None)]
         code, report, batch = self.run_with(bad)
         self.assertEqual(code, 2)
         self.assertEqual((report["promoted"], report["rejected"]), (0, len(bad)))
         self.assertIsNone(batch)
+
+    def test_review_basis_is_not_counted_as_the_original(self):
+        code, report, batch = self.run_with([dict(GOOD, evidence_basis="review_or_species_account")])
+        self.assertEqual((code, batch["records"][0]["verification"]), (0, "review_full_text_verified"))
 
     def test_one_rejected_record_publishes_nothing(self):
         code, report, batch = self.run_with([GOOD, dict(GOOD, reviewed=False)])
