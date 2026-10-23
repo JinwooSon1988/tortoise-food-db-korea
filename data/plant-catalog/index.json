@@ -3,47 +3,56 @@
  "generated": "2026-10-20",
  "scope": "Plant taxa confirmed in the GBIF Backbone Taxonomy. A taxon being valid is not feeding evidence; no entry has a feeding grade (feeding_safety_status unassessed = 급여 안전성 미확정).",
  "shard_rule": "taxon_key % 40",
- "count": 22154,
+ "count": 22584,
  "counts": {
-  "entries": 22154,
-  "with_feeding_evidence": 192,
-  "feeding_safety_unassessed": 22154,
+  "entries": 22584,
+  "with_feeding_evidence": 727,
+  "feeding_safety_unassessed": 22584,
   "with_safety_grade": 0,
-  "with_english_name": 8022,
-  "with_korean_name": 398,
+  "with_english_name": 8299,
+  "with_korean_name": 431,
   "evidence_by_type": {
-   "wild_diet_not_detected": 7,
-   "offered_not_eaten": 21,
-   "wild_feeding_observation": 228,
-   "captive_feeding_record": 20,
-   "husbandry_recommendation": 3
+   "captive_feeding_record": 66,
+   "wild_diet_not_detected": 68,
+   "wild_feeding_observation": 760,
+   "offered_not_eaten": 28,
+   "community_report": 74,
+   "husbandry_recommendation": 8,
+   "toxicity": 1,
+   "nutrition": 1,
+   "video_observation": 2
   },
   "evidence_by_verification": {
-   "full_text_verified": 213,
-   "literature_lead_not_reverified": 49,
+   "full_text_verified": 711,
+   "guideline_full_text_verified": 12,
+   "review_full_text_verified": 140,
+   "literature_lead_not_reverified": 50,
+   "abstract_checked": 8,
+   "community_report_unverified": 74,
    "full_text_named_not_extracted": 11,
-   "review_full_text_verified": 6
+   "video_observation_unverified": 2
   },
-  "evidence_studies": 28,
+  "evidence_studies": 66,
   "evidence_linked_by_name_resolution": {
-   "gbif_synonym": 23,
-   "orthographic_variant": 3
+   "gbif_synonym": 110,
+   "orthographic_variant": 9
   },
   "research_status": {
-   "evidence_checked_in_full_text": 183,
-   "evidence_leads_only": 9,
-   "no_record_found": 21958,
+   "evidence_checked_in_full_text": 671,
+   "evidence_leads_only": 10,
+   "community_reports_only": 46,
+   "no_record_found": 21853,
    "reviewed_not_feeding_evidence": 4
   }
  },
  "rejected_in_candidate_order": {
-  "already_in_reviewed_182": 9,
-  "not_species_rank": 6
+  "not_species_rank": 18,
+  "already_in_reviewed_182": 36
  },
  "evidence_names_not_linked": {
-  "p1_identity_hold": 16,
-  "no_exact_accepted_gbif_species": 28,
-  "species_not_in_catalog": 16
+  "p1_identity_hold": 17,
+  "no_exact_accepted_gbif_species": 115,
+  "species_not_in_catalog": 95
  },
  "research_corpus": [
   {
@@ -77,214 +86,320 @@
    "screening": "Tortoise-focused papers (tortoise term in title or abstract, beetle and butterfly homonyms excluded): 389. Machine candidates (plant binomials in diet tables or in feeding sentences that name a tortoise): 688 in 45 papers. Each candidate paper was then read by hand; only records confirmed in the stated table or paragraph are listed here.",
    "not_covered": "Paywalled journals, books, theses not in open repositories, keeper forums and social media. A plant with no record here has not been shown to be safe or unsafe; it has only not been found in this corpus.",
    "batch": "batch-001"
+  },
+  {
+   "id": "corpus-2026-10-21-b2",
+   "searched": "2026-10-21",
+   "searches": [
+    {
+     "area": "African tortoises (sulcata, leopard, Chersina, Kinixys, pancake, Egyptian)",
+     "languages": [
+      "en",
+      "fr",
+      "de"
+     ],
+     "services": "web search; South African, Tanzanian and Dutch university repositories; IUCN TFTSG accounts; chelonian.org"
+    },
+    {
+     "area": "Testudo, priority Russian tortoise",
+     "languages": [
+      "ru",
+      "zh",
+      "de",
+      "fr",
+      "it",
+      "es",
+      "el",
+      "en"
+     ],
+     "services": "web search; cyberleninka; open journal archives; repositories"
+    },
+    {
+     "area": "Radiated, star, Indotestudo, Manouria, Pyxis",
+     "languages": [
+      "en",
+      "fr",
+      "ja",
+      "zh"
+     ],
+     "services": "web search; IUCN TFTSG and Red List accounts; BHL via archive.org; Zoos' Print; EAZA"
+    },
+    {
+     "area": "Zoo, government and veterinary guidelines; nutrition; toxicity; keeper sites",
+     "languages": [
+      "en",
+      "de",
+      "fr",
+      "ja",
+      "ko"
+     ],
+     "services": "web search; EAZA; Merck Veterinary Manual; PubMed E-utilities; keeper society pages"
+    },
+    {
+     "area": "Theses and grey literature in the Americas; Japanese, Korean, Chinese sources",
+     "languages": [
+      "en",
+      "pt",
+      "es",
+      "ja",
+      "ko",
+      "zh"
+     ],
+     "services": "web search; J-STAGE and DOAJ APIs; Brazilian, Argentine, Ecuadorian and US repositories"
+    },
+    {
+     "area": "YouTube, Reddit, Instagram, Facebook, English-language forums",
+     "languages": [
+      "en",
+      "ko",
+      "ja",
+      "zh"
+     ],
+     "services": "web search; YouTube public watch-page metadata and oEmbed only (no video downloaded or watched); forum threads where robots.txt allows"
+    },
+    {
+     "area": "Non-English keeper forums and zoo keeper diaries",
+     "languages": [
+      "de",
+      "fr",
+      "it",
+      "es",
+      "nl",
+      "ru",
+      "ja",
+      "ko",
+      "zh"
+     ],
+     "services": "web search; public pages where robots.txt and site terms allow"
+    }
+   ],
+   "documents_read": 194,
+   "documents_by_class": {
+    "peer_reviewed": 42,
+    "thesis": 6,
+    "keeper_community": 114,
+    "other": 7,
+    "zoo_guideline": 15,
+    "vet": 6,
+    "government": 4
+   },
+   "leads_not_accessed": 155,
+   "not_accessible": "Reddit (robots.txt disallows all; the API needs OAuth), Instagram and Facebook (login), tortoiseforum.org (bot challenge), The Tortoise Table and testudo-farm.de (terms forbid reuse), J-STAGE PDFs and a Chinese wildlife journal (robots.txt), paywalled journals and pages behind bot challenges. Nothing was bypassed.",
+   "screening": "Seven research passes saved every document used as text; each record carries a verbatim quote that a script re-found in the saved text, together with the plant name. Records whose quote or name could not be re-found, names printed only as common names or to genus, and keeper, forum or video posts without a scientific name are held, not linked.",
+   "summary": {
+    "ko": "동물원·정부·수의학 사육지침, 학위논문, 종 설명서, 영양·독성 자료, 사육자 커뮤니티와 공개 영상 정보를 다국어(영·불·독·서·포·러·중·일·한 등)로 조사해 문서 194건을 저장·확인했습니다. 학명이 원문에 인쇄된 기록만 연결했고, 커뮤니티·영상 자료는 검증 연구와 구분해 참고용으로 표시합니다. 로그인·약관·robots 제한이 있는 Reddit·Instagram·Facebook 등은 수집하지 않았습니다.",
+    "en": "Zoo, government and veterinary husbandry guidelines, theses, species accounts, nutrition and toxicity sources, keeper communities and public video metadata were searched in several languages (English, French, German, Spanish, Portuguese, Russian, Chinese, Japanese, Korean and more); 194 documents were saved and checked. Only records whose source prints a scientific name are linked, and community and video reports are shown apart from verified research, for reference only. Reddit, Instagram, Facebook and other sites behind logins, terms or robots.txt limits were not collected."
+   },
+   "batch": "batch-002"
   }
  ],
  "research_status_meaning": {
   "evidence_checked_in_full_text": "at least one feeding record read in a full text (original study, review or species account)",
   "evidence_leads_only": "only literature leads not yet rechecked in the original",
+  "community_reports_only": "only keeper, community or video reports (a reference, not verified research)",
   "reviewed_not_feeding_evidence": "named in a tortoise paper that was read, but not as food (e.g. habitat or plant availability)",
   "no_record_found": "no feeding record found in the searched corpus; this is not a safety or toxicity finding"
  },
  "shards": [
   {
    "file": "taxa-00.json",
-   "count": 547,
-   "sha256": "754ee5f17a15fb6eedbcc9a3e15c841097168d18c3d0db0f551827d919be5a1e"
+   "count": 554,
+   "sha256": "d3fd05cd032cc824b662f1dc0ac4c1b359b913bbd7d88d5a274e6e50b1a60f9d"
   },
   {
    "file": "taxa-01.json",
-   "count": 569,
-   "sha256": "354f70841d7af0c3f36153fde731b4d93547ee7d13f284f032d14aace650b364"
+   "count": 583,
+   "sha256": "f9478be9c5bef5cf757690ef8502ce2ea3334ab1793bb6a0c0e6fe43f801930a"
   },
   {
    "file": "taxa-02.json",
-   "count": 514,
-   "sha256": "7aeb4e80d2075523c47156332d0783848de3664a3b25bac99498dd23f5809087"
+   "count": 523,
+   "sha256": "1b9c533fad498c557564b9ea34d4d81e7227d4255878603b337b97ecbeb4a4d5"
   },
   {
    "file": "taxa-03.json",
-   "count": 553,
-   "sha256": "a68851f399169a715e3fdc3c7e3d8d7a65ebba485c9dd0f4ca9b340a9928757e"
+   "count": 566,
+   "sha256": "50fa303a777018c2deae99601453dcb512a01ff44d35f193b102721763cb2ac6"
   },
   {
    "file": "taxa-04.json",
-   "count": 513,
-   "sha256": "c2953592b9f973a37e0229eaa1f2ac394313a2c85e60b36fe7e8cb61eefdabc2"
+   "count": 526,
+   "sha256": "038ebb8f0bddd0736fbe953eb389bf167740ad980b220c613c81fcdce4a8e7b1"
   },
   {
    "file": "taxa-05.json",
-   "count": 547,
-   "sha256": "2261b7510a42bf4e3bd51cdf3599ea52e9a5d92053159a9c8ab795ae9fc871cc"
+   "count": 553,
+   "sha256": "72def88da8b9c3fd30653d48b85bf069b41ba69dd2ac9ee0560c35d2131c1109"
   },
   {
    "file": "taxa-06.json",
-   "count": 515,
-   "sha256": "4eefdc8f0def3492404cd35dc4431202540123a1b89964c9a8904c0f5bbf0860"
+   "count": 525,
+   "sha256": "43ddcba12aeae1cc8cb07e9beabf449e8d6bc01f693c0546b6990ef6cb884de9"
   },
   {
    "file": "taxa-07.json",
-   "count": 532,
-   "sha256": "5781a21ca18e7bfed0686cbadc2679cf81c1b00a1574006c3d2dd8125415ee36"
+   "count": 546,
+   "sha256": "cef6c7c70095a1e81b3b1f83e385fdb29fcff3cd5a8e369e5082c539e20bfd83"
   },
   {
    "file": "taxa-08.json",
-   "count": 559,
-   "sha256": "7eef1a19411aa415749f1b0176717004ad70aed21cf734dd075736c4152f329f"
+   "count": 567,
+   "sha256": "f11601a24ba52e17a0127170a5d434ba8de09a75e3616ea9de18a6b8fd757e48"
   },
   {
    "file": "taxa-09.json",
-   "count": 536,
-   "sha256": "5dd17088bcebd3972353d4394b2299b3935333446aef71614bc6263e66f4e05e"
+   "count": 544,
+   "sha256": "468e093f032ca6281b1aa9f2eb4309561c393b3c35f85838818b83212a2324fa"
   },
   {
    "file": "taxa-10.json",
-   "count": 566,
-   "sha256": "1eb1e2c130e4a44025fb753eb483f814ccccf3441a61a085e9320add1d04e2f9"
+   "count": 579,
+   "sha256": "c65338bbacc8ef8a54eccfcfcfb2e2f357dbd67abb30c68a0c2b464a0d38ee85"
   },
   {
    "file": "taxa-11.json",
-   "count": 558,
-   "sha256": "932ca119b613671dfdc364fba09671bc4097aac46b729e44538cfbc8a7f8c985"
+   "count": 574,
+   "sha256": "70b75cb81ef14c698d6aeebc45c4b0058967b6e01b702a9f3105debd6745812e"
   },
   {
    "file": "taxa-12.json",
-   "count": 565,
-   "sha256": "0576b7f0bd46b7081b02a35957dce42bb5e9d095b4123733925656aca37ce37a"
+   "count": 574,
+   "sha256": "56bf3a6a67ba9036546947116c69914de10bcadeeb6c3c4e2f63a71689db693c"
   },
   {
    "file": "taxa-13.json",
-   "count": 522,
-   "sha256": "5f7a40d5dcbb46eb8462a4c49cc5718d951cf38762d2c8a4b07f0d26c5e5bc45"
+   "count": 530,
+   "sha256": "4627046d9af5b3928e974bd4c89e9c8d0c0649ed3d91e1a31d4ff6675d08bd67"
   },
   {
    "file": "taxa-14.json",
-   "count": 552,
-   "sha256": "9b78c1025a704849cb094ab59ae32f6a9ef7ad46a8b60f42f2eb10d39317c4c2"
+   "count": 565,
+   "sha256": "511b0b52838ed5bcb771d0e91a6cd612c50a4e52b6f4583119768f750d1201ec"
   },
   {
    "file": "taxa-15.json",
-   "count": 525,
-   "sha256": "f5e0d284c8782cfe05f5fd5dcbab5cf3e311b021eda4b96b7a55a28ebcc130fd"
+   "count": 537,
+   "sha256": "1df116ebf48c4cfc0e549f5e4cfb054ad8261d131398a3de59094a19fb81e719"
   },
   {
    "file": "taxa-16.json",
-   "count": 549,
-   "sha256": "67fbbef146037874af2668631f076798f909995b53670234c66849c2abefda13"
+   "count": 556,
+   "sha256": "36e5ceb00ccaad10b92e504e8134d5ed332c446086452be03800bbe500e6030c"
   },
   {
    "file": "taxa-17.json",
-   "count": 542,
-   "sha256": "884ee30ea67a39d71f49d580f248c8c9c4a6ac4118a268b8e4155602602163cf"
+   "count": 552,
+   "sha256": "3ddb72db3d02756ab17928a303acafd630e8ebba9a954060a779022d1d3b0026"
   },
   {
    "file": "taxa-18.json",
-   "count": 560,
-   "sha256": "fa3f3700d3899400ebace449cdbb57b663baca93bd16348f0288dc97dbc4d6e1"
+   "count": 571,
+   "sha256": "9c5ea475cd30584b29e6fc76858623412d0342f29e4f2e7a7e421b5cdf22e5cd"
   },
   {
    "file": "taxa-19.json",
-   "count": 542,
-   "sha256": "5fc4510cca12d2c70e26f279304b2896547e338a1dc0bad15594e62a7cc033cb"
+   "count": 550,
+   "sha256": "645564666f1f8ec9a08ac3866bcc8466169cec0ff4ddb0dc971bbd28879e8ffc"
   },
   {
    "file": "taxa-20.json",
-   "count": 581,
-   "sha256": "d21f2cd582764c00227f86c56b95ae8259299d3fa9a872bb11bca36eb8fffce8"
+   "count": 592,
+   "sha256": "296d5d870ee674f3f3134b1b088ad98f60205657082356419099edccc2f7d591"
   },
   {
    "file": "taxa-21.json",
-   "count": 546,
-   "sha256": "509259cc0a6fd6dde49bc36eb555b0a44e8506db670bed7b6d211f6bebdcbe48"
+   "count": 559,
+   "sha256": "2d3dbfcc1d7786f1796a91c5a03845dc6bb442f5f540cba01476c612210298ea"
   },
   {
    "file": "taxa-22.json",
-   "count": 548,
-   "sha256": "4be6470acf196d735016b95b5d31bfde3d78c59cb0297c678ac4903966a48d75"
+   "count": 559,
+   "sha256": "74c17ee27cda7cd2d414d7304af6bd5ebf657bab5cad7ad76d6eaad868866bf7"
   },
   {
    "file": "taxa-23.json",
-   "count": 550,
-   "sha256": "61e97d4c5435139993bdfa3399dc169db51b71ff13bba640dc852a6d521f0d88"
+   "count": 561,
+   "sha256": "7d5c7d785cd930c56d39a9daa2e6e53f2ed70f28183bb4928b0a4fa672f4d4c6"
   },
   {
    "file": "taxa-24.json",
-   "count": 560,
-   "sha256": "4b42a1d042fd529cfe262ee781f96c2f9247e63ab763be5c913465db9f7ebf00"
+   "count": 571,
+   "sha256": "1ef45d630ce9eec44056714111baa4e04a0fef779c41c2b71293b99a59481bd1"
   },
   {
    "file": "taxa-25.json",
-   "count": 562,
-   "sha256": "16d65b2861a441d8da33853789f8914c1de2b89cbf2ff908e209f202d94adac7"
+   "count": 566,
+   "sha256": "73ce021bda84bc176e880da14f9187e26fcebd69104469af292b8f43f157ec26"
   },
   {
    "file": "taxa-26.json",
-   "count": 583,
-   "sha256": "a82e0e4cbad303df33648420b07e01bc3cc3f26a22fdf95268694122d1d19d07"
+   "count": 593,
+   "sha256": "55228098b2d04b78281615f16d09158e05eaec0342103322ff914fdb4c89a7f3"
   },
   {
    "file": "taxa-27.json",
-   "count": 540,
-   "sha256": "e6129dd65ad2a3e4d398c7e5af7339a50f282639bfba8edef15638073b791335"
+   "count": 553,
+   "sha256": "f1db8756ad55bbd12ac3d4a55834a591303d0f3d01f33db17f64e0efdc231d39"
   },
   {
    "file": "taxa-28.json",
-   "count": 579,
-   "sha256": "a98470534959a5cc089268205ef5eaa250c9281421776fa93b821e02ec0c01bd"
+   "count": 591,
+   "sha256": "f88b32aa1df32c89a82a290096288ca55f18d8054f11fc1a5a3ea726859f9b8d"
   },
   {
    "file": "taxa-29.json",
-   "count": 560,
-   "sha256": "b8a81bdb5a1d8d2b3a23e7a2a205b88fd99d5a289f99f969f3a606fbb7b2b955"
+   "count": 570,
+   "sha256": "ff6c8e9544383891debbdfd2bad99c427b90ba91e06f1f0e0e8cd0ab6ad6adf1"
   },
   {
    "file": "taxa-30.json",
-   "count": 569,
-   "sha256": "b200d0e727b69ca9e99477b8a5bde09acb509cf8b42f504dbc71c5f0d38f7953"
+   "count": 582,
+   "sha256": "9e49316e5724f2c1a66485577ddcffc8d372bbd1032cf887eaabb79e6c7a2b2c"
   },
   {
    "file": "taxa-31.json",
-   "count": 583,
-   "sha256": "91dc4d939ff940575de52bb0c3524e2910386f0ccdbc0d392bbc96c7f0484c52"
+   "count": 594,
+   "sha256": "bef7b934b4b6275b2d31a28c212f5a123376bf21abe75c72dd8798702195ddb5"
   },
   {
    "file": "taxa-32.json",
-   "count": 571,
-   "sha256": "67288119f3d01753a20720bb4a5f1dec200fb023d7fb69cab79685de6575d42b"
+   "count": 578,
+   "sha256": "f911296411382ff3b2ffc5839fe7e65223c678aeb6f94f1674fc76464bbe136f"
   },
   {
    "file": "taxa-33.json",
-   "count": 545,
-   "sha256": "0b6478844372c0b5b6abcf77be3e78e99ab8f3123c7f4b9818863673aae89ef4"
+   "count": 559,
+   "sha256": "81c7614f2978e9913ae85accff659f58c0dd1387eeafa623b7fb3ddf4526fdf8"
   },
   {
    "file": "taxa-34.json",
-   "count": 561,
-   "sha256": "248214290dc1813821c6e84842e3e547ada39e2407cac3b16721bc56f1a39922"
+   "count": 568,
+   "sha256": "11985ed13cbd49c00cab2a9720d277d7956c9410f0ee2153b60283df0cbe66ee"
   },
   {
    "file": "taxa-35.json",
-   "count": 578,
-   "sha256": "9778f095331c5a2c631b891fdfe5f55a65f37f1cdc07e822acaf172a78491782"
+   "count": 594,
+   "sha256": "b20a81ab7b6f417aa72407ee7561d4d1a924560f75ef94c4f6811ef7a1c101ca"
   },
   {
    "file": "taxa-36.json",
-   "count": 592,
-   "sha256": "c453df923f7429b11f3126a317b111d65a28bb0f57727202cc9e08ff518fd00b"
+   "count": 599,
+   "sha256": "7e11b6d4a7057af1700dc7917c1e04f26e3cdc24989c164a43b13261c1f7f3d7"
   },
   {
    "file": "taxa-37.json",
-   "count": 608,
-   "sha256": "78077824c921a0a8b0972b079fbc6c8e934ee4b816f256881299e5c591050860"
+   "count": 617,
+   "sha256": "ca95734933b3f6642973ccb206d3409f00cda771aec55f7a7b9c6a6e026bcd0b"
   },
   {
    "file": "taxa-38.json",
-   "count": 540,
-   "sha256": "f4b2469241e129dd4dea8ffc3cb9738fa8f63fab56edd8c2fcd199249671cce6"
+   "count": 555,
+   "sha256": "41919a938530be38e6f7a921484d9757ebd53a509edb413e30539b44934ce660"
   },
   {
    "file": "taxa-39.json",
-   "count": 532,
-   "sha256": "b6b95e54316ee1c9826ed7f256b076e372c0e669e773f1ad82289130acc2183f"
+   "count": 548,
+   "sha256": "8de8c9dea8166faa3a70f78f85dcba36e2c6e9a1ee544bc9486c410ac6ee3b9a"
   }
  ]
 }

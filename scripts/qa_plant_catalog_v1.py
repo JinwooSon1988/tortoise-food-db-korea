@@ -20,10 +20,13 @@ from build_bulk_taxon_catalog import bare  # noqa: E402
 
 CAT = ROOT / "data/plant-catalog"
 TYPES = {"wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity", "wild_diet_not_detected",
-         "offered_not_eaten"}
-VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified", "review_full_text_verified"}
-CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified"}
-RESEARCH = {"evidence_checked_in_full_text", "evidence_leads_only", "reviewed_not_feeding_evidence", "no_record_found"}
+         "offered_not_eaten", "community_report", "video_observation"}
+VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literature_lead_not_reverified", "review_full_text_verified",
+                "community_report_unverified", "guideline_full_text_verified", "video_observation_unverified", "abstract_checked"}
+COMMUNITY = {"community_report_unverified", "video_observation_unverified"}
+CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified"}
+RESEARCH = {"evidence_checked_in_full_text", "evidence_leads_only", "community_reports_only", "reviewed_not_feeding_evidence", "no_record_found"}
+NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
 NAME_BASIS = {"gbif_synonym", "orthographic_variant"}
 P1_HELD = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
 errors = []
@@ -79,11 +82,16 @@ for r in records:
             errors.append(f"{r['id']}: name_resolution on an exact-name link")
         if not e.get("study"):
             errors.append(f"{r['id']}: evidence item without a study id")
+        if e["type"] == "nutrition" and not ((e.get("nutrition") or {}).get("basis") in NUTRITION_BASIS and e["nutrition"].get("part")):
+            errors.append(f"{r['id']}: nutrition record without plant part and dry-matter/as-fed basis")
+        if e["type"] == "toxicity" and not ((e.get("toxicity") or {}).get("test_animal") and e["toxicity"].get("conditions")):
+            errors.append(f"{r['id']}: toxicity record without test animal and conditions")
     research = r.get("research") or {}
     expect_status = ("evidence_checked_in_full_text" if any(e["verification"] in CHECKED for e in r["feeding_evidence"])
-                     else "evidence_leads_only" if r["feeding_evidence"] else None)
+                     else "evidence_leads_only" if any(e["verification"] not in COMMUNITY for e in r["feeding_evidence"])
+                     else "community_reports_only" if r["feeding_evidence"] else None)
     if research.get("status") not in RESEARCH or not research.get("corpus") or \
-            (expect_status and research["status"] != expect_status) or (not expect_status and research["status"].startswith("evidence")):
+            (expect_status and research["status"] != expect_status) or (not expect_status and research["status"] in ("evidence_checked_in_full_text", "evidence_leads_only", "community_reports_only")):
         errors.append(f"{r['id']}: research status missing or inconsistent with the evidence")
     for lang in ("en", "ko"):
         for n in r["common_names"][lang]:
@@ -92,7 +100,7 @@ for r in records:
 
 # Corpus evidence batches: typed, sourced records; held names never reach the catalog; the corpus searched is described.
 linked_reported = {e["reported_name"] for r in records for e in r["feeding_evidence"]}
-batch_files = sorted((ROOT / "data/catalog-evidence").glob("batch-*.json"))
+batch_files = [p for p in sorted((ROOT / "data/catalog-evidence").glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]  # not the site index
 for f in batch_files:
     b = load(f)
     src = {s["source_key"]: s for s in b["sources"]}
@@ -102,8 +110,13 @@ for f in batch_files:
             errors.append(f"{f.name}: record {x['reported_name']} lacks a typed, sourced study")
         if not re.fullmatch(r"[A-Z][a-z-]+ [a-z][a-z-]+", x["reported_name"]):
             errors.append(f"{f.name}: record name {x['reported_name']} is not a binomial")
+        if (x["verification"] in COMMUNITY or x["type"] in ("community_report", "video_observation")) and x.get("identification") != "binomial_in_source":
+            errors.append(f"{f.name}: community or video record {x['reported_name']} linked without a scientific name printed in the source")
+        if (x["verification"] in COMMUNITY) != (x["type"] in ("community_report", "video_observation")):
+            errors.append(f"{f.name}: record {x['reported_name']} mixes a community/video type with a research verification level")
     for h in b.get("held_not_linked", []):
-        if h["reported_name"] in linked_reported:
+        # a name held as a name (identity doubt) must never be linked; a record held for its own reasons may share a name linked elsewhere
+        if h.get("scope", "name") == "name" and h["reported_name"] in linked_reported:
             errors.append(f"{f.name}: held name {h['reported_name']} is linked in the catalog")
 if batch_files and [c["id"] for c in index.get("research_corpus", [])] != [load(f)["corpus"]["id"] for f in batch_files]:
     errors.append("index.json research_corpus does not describe the evidence batches")
@@ -152,7 +165,8 @@ pages = {
                          "자료 미확보", "No data found"] + sorted(TYPES | VERIFICATION),
     "taxonomy-home-search.js": ["data/plant-catalog/search.json", "taxon/?id=", "급여 안전성 미확정"],
     "index.html": ["taxonomy-home-search.js"],
-    "en/index.html": ["../taxonomy-home-search.js"],
+    # the English homepage now redirects to the bilingual homepage, which loads the catalog search
+    "en/index.html": ["../?lang=en"],
 }
 for page, needles in pages.items():
     text = (ROOT / page).read_text(encoding="utf-8")

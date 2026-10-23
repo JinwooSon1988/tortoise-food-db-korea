@@ -40,9 +40,18 @@ from build_bulk_taxon_catalog import bare  # noqa: E402
 P1_HELD_NAMES = {"Leontodon saxatilis", "Malva parviflora", "Astragalus cruciatus", "Medicago hispida", "Lotus arenarius"}
 EVIDENCE_TYPES = ("wild_feeding_observation", "captive_feeding_record", "husbandry_recommendation", "nutrition", "toxicity")
 BATCH_DIR = "data/catalog-evidence"
+
+
+def batch_files():
+    """Corpus batch files (batch-NNN-YYYYMMDD.json); other files in the folder, such as a site index, are not batches."""
+    return [p for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json")) if re.fullmatch(r"batch-\d{3}-\d{8}\.json", p.name)]
+
+
 SYNONYM_STATUS = ("SYNONYM", "HOMOTYPIC_SYNONYM", "HETEROTYPIC_SYNONYM")
 # Verification levels where the record was read in a full text (the rest are leads to recheck).
-CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified")
+CHECKED_LEVELS = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified")
+# Keeper experience and uploader-described videos are shown as references only, apart from leads and checked records.
+COMMUNITY_LEVELS = ("community_report_unverified", "video_observation_unverified")
 
 
 def load(p):
@@ -110,16 +119,22 @@ def evidence_sources():
                                   "url": s["url"], "locator": None, "verification": "full_text_named_not_extracted",
                                   "context": s["context"], "plant_part": None, "finding": None, "study": key}))
     # Open-access full texts, keeper database entries and corpus batches (records carry their own verification level).
-    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json"))]:
+    for f in ["data/catalog_feeding_evidence_fulltext_20261020.json"] + [str(p.relative_to(ROOT)) for p in sorted(batch_files())]:
         ft = load(f)
         src = {s["source_key"]: s for s in ft["sources"]}
         for r in ft["records"]:
             s = src[r["source_key"]]
             item = {"type": r["type"], "tortoise": r.get("tortoise") or s["tortoise_taxon"], "source": s["citation"], "url": s["url"],
-                    "locator": r["locator"], "verification": r["verification"], "context": s["context"],
+                    "locator": r["locator"], "verification": r["verification"], "context": r.get("context") or s["context"],
                     "plant_part": r["plant_part"], "finding": r["finding"], "study": s.get("study_id") or r["source_key"]}
             if s.get("method"):
                 item["method"] = s["method"]
+            for k in ("source_class", "language"):
+                if s.get(k):
+                    item[k] = s[k]
+            for k in ("nutrition", "toxicity", "identification", "outcome", "platform"):
+                if r.get(k):
+                    item[k] = r[k]
             items.append((r["reported_name"], item))
     for f in sorted((ROOT / "research/evidence_leads").glob("*.json")):
         for r in json.loads(f.read_text(encoding="utf-8"))["records"]:
@@ -163,8 +178,10 @@ def resolve(n, m):
 def research_status(evidence, rejected):
     if any(e["verification"] in CHECKED_LEVELS for e in evidence):
         return "evidence_checked_in_full_text"
-    if evidence:
+    if any(e["verification"] not in COMMUNITY_LEVELS for e in evidence):
         return "evidence_leads_only"
+    if evidence:
+        return "community_reports_only"
     return "reviewed_not_feeding_evidence" if rejected else "no_record_found"
 
 
@@ -200,7 +217,7 @@ def main():
     # Evidence names resolved by an exact accepted GBIF species match, a GBIF synonym of an accepted species, or an
     # orthographic variant (doubled i, gender ending); the name printed in the source is kept as reported_name.
     ev = evidence_sources()
-    batches = [load(str(p.relative_to(ROOT))) for p in sorted((ROOT / BATCH_DIR).glob("batch-*.json"))]
+    batches = [load(str(p.relative_to(ROOT))) for p in sorted(batch_files())]
     rejected_names = {n for b in batches for x in b.get("reviewed_not_feeding_evidence", []) for n in x["names"]}
     binomial = lambda n: re.fullmatch(r"[A-Z][a-z]+ [a-z][a-z-]+", n)
     match = gbif_match({n for n, _ in ev if binomial(n)} | {n for n in rejected_names if binomial(n)}, a.gbif_dir / "evidence_match.json")
@@ -333,6 +350,7 @@ def main():
              "research_status_meaning": {
                  "evidence_checked_in_full_text": "at least one feeding record read in a full text (original study, review or species account)",
                  "evidence_leads_only": "only literature leads not yet rechecked in the original",
+                 "community_reports_only": "only keeper, community or video reports (a reference, not verified research)",
                  "reviewed_not_feeding_evidence": "named in a tortoise paper that was read, but not as food (e.g. habitat or plant availability)",
                  "no_record_found": "no feeding record found in the searched corpus; this is not a safety or toxicity finding"},
              "shards": meta}
