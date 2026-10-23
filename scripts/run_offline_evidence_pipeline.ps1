@@ -2,6 +2,9 @@
 $ErrorActionPreference = "Stop"
 Set-Location (Split-Path -Parent $PSScriptRoot)
 $python = "python"
+# Collect a small checkpointed batch of NEW bibliography leads each cycle.
+& $python scripts/discover_incremental_literature.py --queries 2 --pages 1
+if ($LASTEXITCODE -ne 0) { throw "Incremental discovery failed" }
 & $python scripts/match_bibliography_taxa_offline.py
 if ($LASTEXITCODE -ne 0) { throw "Bibliography matching failed" }
 & $python scripts/triage_bibliography_evidence_offline.py
