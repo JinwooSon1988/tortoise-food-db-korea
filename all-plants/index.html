@@ -176,11 +176,16 @@ async function boot(){let [plants,nut,rda,evidenceData,publicAssessments,images,
  $('sort').value=sortKey+':'+sortDir;
  render()}
 function refreshCatalogLanguage(){localize();if(rows.length){counts();render()}}
-window.addEventListener('tfdblanguagechange',refreshCatalogLanguage);
+window.addEventListener('tfdblanguagechange',()=>{
+ // The shared translator runs synchronously, but catalog labels are rendered from data.
+ // Refresh after its translation pass and again on the next frame to avoid stale mixed-language text.
+ refreshCatalogLanguage();
+ requestAnimationFrame(refreshCatalogLanguage);
+});
 document.querySelector('.langswitch')?.addEventListener('click',e=>{
  const b=e.target.closest('button[data-lang]');if(!b)return;
  // Run after the shared switch handler updates <html lang>; do not require a reload.
- queueMicrotask(refreshCatalogLanguage);
+ queueMicrotask(()=>{refreshCatalogLanguage();requestAnimationFrame(refreshCatalogLanguage)});
 });
 window.addEventListener('pageshow',e=>{if(e.persisted)refreshCatalogLanguage()});
 document.querySelectorAll('th[data-k]').forEach(th=>th.querySelector('button').onclick=()=>{let k=th.dataset.k;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=['ratio','calcium','phosphorus','fiber'].includes(k)?-1:1}render()});
