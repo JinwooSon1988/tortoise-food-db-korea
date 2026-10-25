@@ -803,7 +803,7 @@ for p in plants:
     if species_evidence_only:
         linked_evidence=list({e["id"]:e for x in species_only for eid in x.get("evidence_ids",[]) if (e:=evidence_by_id.get(eid))}.values())
         primary=species_only[0]
-        summary="설카타 등 특정 종에 한정된 급여 근거가 확인되었습니다. "+assessment_copy(primary.get("why") or primary.get("role") or "",primary)
+        summary="특정 육지거북 종에 한정된 급여 근거가 확인되었습니다. 대상: "+str(primary.get("display_group") or primary.get("animal_taxon") or "종별 자료")+". "+assessment_copy(primary.get("why") or primary.get("role") or "",primary)
         role=primary.get("role")
         limits=[assessment_copy(x,primary) for x in primary.get("limits",[])]
     direct_count=sum(1 for e in linked_evidence if e.get("directness")=="direct")
@@ -882,7 +882,7 @@ for p in plants:
     elif grade=="D":
         feeding_action="평소 식단에는 넣지 않는다. 우발적으로 조금 먹은 상황과 일부러 반복 급여하는 것은 별개의 문제다."
     elif species_evidence_only:
-        feeding_action="설카타 육지거북의 전문 사육 지침에 먹이 후보로 소개되지만, 안전량과 빈도는 검증되지 않았습니다. 다른 육지거북 종의 급여 안전성으로 확대하지 마세요."
+        feeding_action="확인된 특정 육지거북 종의 급여 관련 자료만 있습니다. 다른 종으로 안전성을 확대하거나 정량 근거 없이 급여량과 빈도를 단정하지 마세요."
     else:
         feeding_action="안전하다고 가정해 급여하지 않는다. 공개 근거가 보강될 때까지 판정을 보류한다."
     quantified=any(re.search(r"(percentage|percent|%|frequency|daily|weekly|per week|급여량|빈도|비율)", str(e.get("supports") or ""), re.I) for e in linked_evidence)
