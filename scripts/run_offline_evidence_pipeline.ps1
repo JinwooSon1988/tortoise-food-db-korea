@@ -10,8 +10,20 @@ $approved = "worker-output/approved-feeding-records.json"
 # A rate limit must not block review of already downloaded bibliography.
 # The discovery script itself reads discovery-state.json/cooldown_until before making any request.
 # Do not duplicate the cooldown logic here; always continue offline review.
-& $python scripts/discover_incremental_literature.py --queries 2 --pages 1
+# Each query keeps its own page cursor (no more re-running page 1); the run stops at --max-requests, at the shared
+# OpenAlex budget reserve, or on 429. Metrics per run: worker-output/discovery-metrics.jsonl.
+& $python scripts/discover_incremental_literature.py --max-requests 8 --max-pages 5 --reserve 200
 if ($LASTEXITCODE -ne 0) { Write-Warning "Discovery failed; continuing offline review of existing corpus." }
+
+# Open full texts for tortoise works in the bibliography (free OpenAlex single-work lookups, Europe PMC JATS,
+# open-access PDFs; bounded per run, checkpointed). Lists them as worker-output/docs-fulltext.jsonl for the
+# candidate scan below. Earlier corpora listed in worker-output/known-docs.txt (one docs.jsonl path per line) are skipped.
+$known = @()
+if (Test-Path "worker-output/known-docs.txt") { $known = Get-Content "worker-output/known-docs.txt" | Where-Object { $_ -and (Test-Path $_) } }
+$ftArgs = @("scripts/evidence_corpus/fulltext_from_bibliography.py", "--max-resolve", "100", "--max-downloads", "30")
+if ($known) { $ftArgs += @("--known-docs") + $known }
+& $python @ftArgs
+if ($LASTEXITCODE -ne 0) { Write-Warning "Full-text retrieval failed; continuing with documents already saved." }
 
 # Recompute only when source data changed or derived files do not exist.
 $needMatch = !(Test-Path $candidates)

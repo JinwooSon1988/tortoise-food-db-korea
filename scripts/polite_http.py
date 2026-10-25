@@ -197,6 +197,10 @@ class PoliteClient:
                        "robots": "allowed", "policy": {"min_interval": h.interval, "max_concurrency": h.policy.max_concurrency,
                                                        "terms": h.policy.terms}, "purpose": purpose,
                        "fetched_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(t0))}
+                # Quota headers (e.g. OpenAlex X-RateLimit-Remaining) let callers measure their budget instead of guessing.
+                quota = {k.lower(): v for k, v in hdrs.items() if k.lower().startswith("x-ratelimit-")}
+                if quota:
+                    row["ratelimit"] = quota
                 self._log(row)
                 self.stats["ok"] += 1
                 return body, row

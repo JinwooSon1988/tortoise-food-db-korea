@@ -1,0 +1,28 @@
+name: Bulk research tests
+on:
+  pull_request:
+    paths:
+      - 'scripts/*bulk_leads.py'
+      - 'scripts/*openalex_leads.py'
+      - 'scripts/research_openalex_broad.py'
+      - 'scripts/*discover_incremental_literature.py'
+      - 'scripts/collect_worldwide_tortoise_literature.py'
+      - 'scripts/polite_http.py'
+      - 'scripts/*fulltext_from_bibliography.py'
+      - 'scripts/evidence_corpus/fulltext_from_bibliography.py'
+      - 'scripts/evidence_corpus/batch_004/discover_openalex.py'
+      - '.github/workflows/bulk-research-tests.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s scripts -p 'test_*bulk_leads.py' -v
+      - run: python -m unittest discover -s scripts -p 'test_merge_openalex_leads.py' -v
+      - run: python -m unittest discover -s scripts -p 'test_discover_incremental_literature.py' -v
+      - run: python -m unittest discover -s scripts -p 'test_fulltext_from_bibliography.py' -v
+      - run: python scripts/test_polite_http.py

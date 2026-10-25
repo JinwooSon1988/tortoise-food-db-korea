@@ -79,7 +79,8 @@ def query(taxon, timeout=20):
             if exc.code == 429:
                 _RATE_LIMITED.set()
                 return {**taxon, 'status': 'retry_needed', 'error': 'HTTP_429', 'hits': []}
-            if attempt == 3:
+            # Other 4xx are final for this request (PR #331); only 5xx are retried.
+            if exc.code < 500 or attempt == 3:
                 return {**taxon, 'status': 'retry_needed', 'error': f'HTTP_{exc.code}', 'hits': []}
             time.sleep(min(30, 2 ** attempt + random.random()))
         except (urllib.error.URLError, TimeoutError, ValueError) as exc:
