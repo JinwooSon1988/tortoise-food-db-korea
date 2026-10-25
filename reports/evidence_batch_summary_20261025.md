@@ -98,3 +98,26 @@
 5. OpenAlex 키가 없어 하루 예산(공유 IP 1,000 크레딧 = 검색 100회)이 병목이다. 무료 키를 쓰면 하루 10,000 크레딧이다. 사용자 이메일로 키를 신청하는 일은 사용자가 직접 해야 한다.
 6. Biodiversity Heritage Library 자료 10건(예: 1983 Volcán Alcedo 거북·당나귀 섭식 생태, "Nutritive quality and mineral content of potential desert tortoise food plants")은 BHL robots.txt가 PDF 경로를 막아 받지 않았다. 허용된 경로는 BHL API(OCR 텍스트)이며 무료 API 키가 필요하다. 키 발급은 사용자 몫이다.
 7. 실행 중인 PowerShell 워커(PID 18464)는 건드리지 않았다. 전환 절차는 `PROJECT_HANDOFF.md` 4절.
+
+## 7. 추가 검토: 워커 제목·초록 후보 103건 중 우선순위 24건 (2026-10-25 오후)
+
+대상: `high_context_review` 7, `risk_context_review` 1, `medium_context_review` 16. 워커 파일은 복사본으로만 읽었다.
+원문은 기존 저장본(배치 002·004, 이번 엔진 출력)을 우선 썼고, 없는 5건만 `fulltext_from_bibliography.py`로 시도했다(별도 scratch 폴더).
+
+| 결과 | 건수 | 내용 |
+|---|---:|---|
+| 원문 확인 후 승격 | **0** | 신규 검증 근거 0행, 신규 연결 식물 0종 |
+| 제외: 육지거북이 아닌 동물 | 11 | 새(Hawfinch), 가젤, 갈기늑대(영·포 2판, 4건), 쥐, 북극곰, 도마뱀, 앵무새, 플로리다 상자거북(*Terrapene*, 늪거북과) |
+| 제외: 동물 없음 | 1 | *Oryza rufipogon*: 습지 식물상 목록. "poisonous plants"는 사람의 식물 이용 분류 |
+| 제외: 중복 (원문으로 내용 확인) | 5 | Jennings & Berry 2023(*Erodium* 열매 위주, *Eremothera* 꽃차례 무시), Rogers 2025(*Richardia*·*Paspalum* 섭식, *Fimbristylis* 섭식 관찰 없음). 같은 출처·같은 유형으로 이미 연결됨 |
+| 제외: 2차 인용 | 1 | *Hilaria mutica* "식단의 60%": Becerra-López et al. 2017이 Aguirre et al. 1979를 인용. 원 연구는 이미 연결됨 |
+| 보류: 원문 확보 불가 | 6 | `research/evidence-queue/reviewed-2026-10-25/full-text-needed.jsonl` |
+
+보류 6건의 실패 사유:
+- *Bromus rubens*, *Festuca octoflora*: Drake et al. 2016 *Ecosphere*. Wiley 403이고 다른 공개본이 없다. 초록에 따르면 이 풀만 먹인 사육 사막거북의 체상태가 나빠졌고 *B. rubens* 씨가 입 안 조직에 박혔다. **위해 정보이므로 원문 확인이 우선**이다.
+- *Lantana camara*: Waibel et al. 2013 *J. Plant Ecol.* OUP 403이고, ZORA 저장소 링크는 PDF가 아닌 랜딩 페이지였다. 초록은 *Aldabrachelys gigantea*의 씨앗 섭취 실험이다. 이 식물은 독성 보고가 있다.
+- *Aristida stricta*: Clemson 학위논문. 403이며, 초록에 거북이 명시되어 있지 않다.
+- *Leptaleum filifolium*: *Russian J. Herpetol.* 중앙아시아거북 식이 논문. DOI와 공개본이 없다. 이 식물은 Jia et al.로 이미 연결되어 있다.
+- *Sporobolus virginicus*: Grubb 1971 *Phil. Trans. B*. 공개본이 없다. 이 식물은 다른 원 연구로 이미 연결되어 있다.
+
+교훈: 제목·초록 동시출현 후보(103건)는 대부분 다른 동물이거나 이미 연결된 출처라서 정밀도가 매우 낮다. 원문 표를 읽는 경로(이번 Wagle 2026 사례)가 실제 증가를 만든다.
