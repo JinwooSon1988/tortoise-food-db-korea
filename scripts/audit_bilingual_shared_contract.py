@@ -26,9 +26,11 @@ if "data/i18n/en/catalog_en.json" not in KR:
     errors.append("KR: shared search must load English translations")
 
 DATA = ("plants.json", "public_assessments.json", "verified_plant_images_v56.json")
-for name, html in (("KR", KR), ("EN", EN)):
-    if not re.search(r'<script[^>]+src=["\'](?:\.\./|\./)?verdict-core\.js', html):
-        errors.append(f"{name}: shared verdict-core.js missing")
+# Only the canonical homepage renders the verdict UI. /en/ is a legacy redirect.
+if not re.search(r'<script[^>]+src=["\\'](?:\\./)?verdict-core\\.js', KR):
+    errors.append("KR: shared verdict-core.js missing")
+if 'location.replace("../?lang=en"+location.hash)' not in EN:
+    errors.append("EN: legacy URL must redirect to the canonical language-toggle homepage")
 for name in DATA:
     if name not in KR:
         errors.append(f"KR: {name} not referenced")
