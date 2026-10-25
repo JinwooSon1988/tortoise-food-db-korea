@@ -104,14 +104,15 @@ for i in issues.values():
 
 page = (ROOT / "all-plants/index.html").read_text(encoding="utf-8")
 for needle in ("data/feeding_pending_site_v1.json", "ledger?.site_feeding_pending",
-               "v==='feeding_pending'?r.feedingRecordPending", "feedingRecordPending:feedingIds.has(t.taxon_id)",
+               "effectiveVerdict=r=>r.feedingRecordPending?'feeding_pending':r.verdict", "effectiveVerdict(r)===v", "feedingRecordPending:feedingIds.has(t.taxon_id)",
                "'Feeding records found (under review)'", "'급여 기록 있음 (검증 중)'", "function feedHTML(r)",
                "'원문 보기 ↗'", "'Open the original ↗'"):
     if needle not in page:
         errors.append("all-plants/index.html missing: " + needle)
 f = page[page.index("function feedHTML(r)"):page.index("function emptyHTML(){")]
-ret, body = f[f.index("return '<div class=\"feedrec\""):], f[f.index("const body="):]
-if not (ret.index("feedsum") < ret.index("<details>") < ret.index("+body+") and body.index("<dl>") < body.index("feedsrc")):
+# aa22fcd2 folds the whole block: <details class="feedrec"><summary>..</summary><p class="feedsum">..</p>+body+</details>.
+ret, body = f[f.index("return '<details class=\"feedrec\""):], f[f.index("const body="):]
+if not (ret.index("<summary>") < ret.index("feedsum") < ret.index("+body+") and body.index("<dl>") < body.index("feedsrc")):
     errors.append("feeding record block is not ordered summary -> details -> original link")
 if "plant_feeding_evidence_links.json" in page:
     errors.append("catalog still derives feeding_pending from unverified links")
