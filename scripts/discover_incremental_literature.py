@@ -105,6 +105,7 @@ def run(state, works, client, args, now=time.time):
         left = state.get("remaining_credits") if now() < state.get("credits_valid_until", 0) else None
         if left is not None and left <= args.reserve:
             metrics["stopped"] = "budget_reserve"
+            metrics["remaining_credits"] = left
             break
         q = queries.setdefault(query, {"next_page": 1, "closed": False})
         page = q["next_page"]

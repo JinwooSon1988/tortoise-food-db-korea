@@ -20,9 +20,11 @@ Run (worker root): python -X utf8 scripts/evidence_corpus/fulltext_from_bibliogr
 """
 import argparse
 import json
+import shutil
 import subprocess
 import sys
 import time
+import urllib.parse
 from collections import Counter
 from pathlib import Path
 
@@ -36,6 +38,28 @@ EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 OPENALEX_POLICY = HostPolicy(3.0, 1, "https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication",
                              "3 s between requests, as in scripts/research_bulk_leads.py")
 ACCESS_ORDER = ["already_read", "pmc_open_access", "oa_pdf", "oa_landing_only", "abstract_only", "metadata_only"]
+
+
+def pdf_to_text(pdf, txt):
+    """pdftotext -layout (as batch 004), else PyMuPDF: the PowerShell worker has no pdftotext on PATH
+    (it ships with Git Bash only), and every conversion failed with FileNotFoundError."""
+    exe = shutil.which("pdftotext")
+    if exe:
+        subprocess.run([exe, "-layout", "-enc", "UTF-8", str(pdf), str(txt)], check=True, timeout=120,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return "pdftotext"
+    # Pages end with a form feed, as pdftotext writes them: extract.py numbers "PDF p.N" by splitting on it.
+    try:
+        import pymupdf  # the PDF is untrusted data and is only parsed for text
+        with pymupdf.open(str(pdf)) as d:
+            pages = [page.get_text("text", sort=True) for page in d]
+        how = "pymupdf"
+    except ImportError:
+        from pypdf import PdfReader
+        pages = [page.extract_text() or "" for page in PdfReader(str(pdf)).pages]
+        how = "pypdf"
+    txt.write_text("".join(p + chr(10) + chr(12) for p in pages), encoding="utf-8")
+    return how
 
 
 def bare_doi(doi):
@@ -78,6 +102,16 @@ def access_of(w, known, resolved):
     return "abstract_only" if w.get("abstract") else "metadata_only"
 
 
+def saved_path(work, d):
+    """The saved document of a checkpoint row: its recorded path, else the same file name under this work dir
+    (rows written before paths were absolute, or a worker-output folder copied to another place)."""
+    p = Path(d.get("path") or "")
+    if p.is_file():
+        return p.resolve()
+    q = work / ("xml" if d.get("kind") == "jats" else "txt") / p.name
+    return q if p.name and q.is_file() else None
+
+
 def classify_all(works, known, resolved):
     rows = []
     for w in works:
@@ -109,7 +143,7 @@ def main():
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--offline", action="store_true", help="classify and rebuild the queue only; no network")
     args = ap.parse_args()
-    work = Path(args.work_dir)
+    work = Path(args.work_dir).resolve()  # absolute, so the document list stays valid when worker-output is copied
     for sub in ("xml", "raw", "txt"):
         (work / sub).mkdir(parents=True, exist_ok=True)
     works = json.loads(Path(args.bibliography).read_text(encoding="utf-8")).get("works", [])
@@ -155,19 +189,23 @@ def main():
             except FetchError as e:
                 if not r["pdf_url"]:
                     return ("final" if e.final else "retry"), {"error": str(e)[:200]}
+        pdf, txt = work / "raw" / f"{key}.pdf", work / "txt" / f"{key}.txt"
+        if pdf.is_file() and pdf.read_bytes()[:4] == b"%PDF":
+            # Saved by an earlier attempt whose text conversion failed: convert again, do not download again.
+            how = pdf_to_text(pdf, txt)
+            return "ok", {"kind": "txt", "path": str(txt), "converter": how, "reused_download": True}
         try:
-            body, prov = client.get(r["pdf_url"], purpose="open-access pdf")
+            # Some listed PDF URLs carry spaces or non-ASCII characters; send them percent-encoded.
+            body, prov = client.get(urllib.parse.quote(r["pdf_url"], safe=":/?#[]@!$&'()*+,;=%~"), purpose="open-access pdf")
         except RobotsDisallowed:
             return "final", {"error": "robots.txt disallows"}
         except FetchError as e:
             return ("final" if e.final else "retry"), {"error": str(e)[:200]}
         if not body.startswith(b"%PDF"):
             return "final", {"error": "not a PDF (landing page or login wall)", "content_type": prov.get("content_type")}
-        pdf, txt = work / "raw" / f"{key}.pdf", work / "txt" / f"{key}.txt"
         pdf.write_bytes(body)
-        subprocess.run(["pdftotext", "-layout", "-enc", "UTF-8", str(pdf), str(txt)], check=True, timeout=120,
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        return "ok", {"kind": "txt", "path": str(txt), "sha256": prov["sha256"], "final_url": prov["final_url"]}
+        how = pdf_to_text(pdf, txt)
+        return "ok", {"kind": "txt", "path": str(txt), "converter": how, "sha256": prov["sha256"], "final_url": prov["final_url"]}
     def download_counted(wid):
         # Failures keep their cause and attempt count; after 3 attempts a document is not tried again.
         attempts = dcp.rows.get(wid, {}).get("attempts", 0) + 1
@@ -187,9 +225,12 @@ def main():
     docs = []
     for wid, d in dcp.rows.items():
         r = by_id.get(wid)
-        if d.get("status") != "ok" or not r or not Path(d["path"]).exists():
+        if d.get("status") != "ok" or not r:
             continue
-        docs.append({"doc_id": "wl_" + wid.rsplit("/", 1)[-1], "path": d["path"], "kind": d["kind"], "title": r["title"] or "",
+        path = saved_path(work, d)
+        if not path:
+            continue
+        docs.append({"doc_id": "wl_" + wid.rsplit("/", 1)[-1], "path": str(path), "kind": d["kind"], "title": r["title"] or "",
                      "citation": f"{r['title']} ({r['year']})", "doi": bare_doi(r["doi"]),
                      "url": r["doi"] or (f"https://europepmc.org/article/PMC/{r['pmcid']}" if r["pmcid"] else r["pdf_url"]),
                      "source_class": "peer_reviewed",

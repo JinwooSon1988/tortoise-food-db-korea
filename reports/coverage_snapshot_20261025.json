@@ -1,0 +1,837 @@
+{
+ "snapshot": "2026-10-25",
+ "branch": "feat/evidence-engine-coverage-20261025",
+ "base": "origin/main 0d2caaf5",
+ "catalog_entries": 22765,
+ "target_90_percent": 20489,
+ "before_main_0d2caaf5": {
+  "legacy_rule_linked_species": 952,
+  "new_rule_applied_to_main": {
+   "1_linked_any_record": 952,
+   "2_consumption_supported": 856,
+   "3_consumption_verified_in_full_text": 810,
+   "4_reference_only_no_consumption": 91,
+   "husbandry_recommendation_only": 5,
+   "5_no_evidence": 21813,
+   "consumption_by_best_tier": {
+    "academic_full_text_verified": 810,
+    "auto_extracted_not_reviewed": 5,
+    "community_or_video_unverified": 26,
+    "literature_lead_not_reverified": 6,
+    "abstract_checked": 9
+   },
+   "consumption_verified_percent": 3.56,
+   "remaining_to_target_by_verified_consumption": 19679,
+   "plants_by_evidence_type": {
+    "captive_feeding_record": 73,
+    "community_report": 34,
+    "husbandry_recommendation": 7,
+    "nutrition": 3,
+    "offered_not_eaten": 28,
+    "toxicity": 2,
+    "video_observation": 2,
+    "wild_diet_not_detected": 83,
+    "wild_feeding_observation": 780
+   },
+   "consumption_plants_by_tortoise_taxon_top20": {
+    "Aldabrachelys gigantea": 97,
+    "Chelonoidis darwini": 75,
+    "Geochelone pardalis": 72,
+    "desert tortoise (Gopherus agassizii)": 70,
+    "Gopherus polyphemus": 69,
+    "Chersina angulata": 53,
+    "Testudo graeca graeca": 48,
+    "Gopherus agassizii": 43,
+    "Testudo graeca (tortuga mora, Doñana)": 39,
+    "Chelonoidis chilensis": 35,
+    "Chelonoidis carbonaria": 33,
+    "四爪陆龟 (Testudo horsfieldi)": 29,
+    "Chelonoidis hoodensis": 28,
+    "Geochelone elegans": 27,
+    "Testudo hermanni hermanni (reintroduced, Montsant)": 19,
+    "desert tortoise (Gopherus agassizi)": 15,
+    "Gopherus flavomarginatus": 14,
+    "Testudo hermanni": 14,
+    "desert tortoise (Xerobates agassizii)": 14,
+    "Indotestudo elongata": 14
+   },
+   "legacy_research_status_mismatch": 90
+  },
+  "evidence_rows_by_verification": {
+   "full_text_verified": 979,
+   "review_full_text_verified": 262,
+   "guideline_full_text_verified": 12,
+   "abstract_checked": 34,
+   "literature_lead_not_reverified": 50,
+   "full_text_auto_extracted": 17,
+   "community_report_unverified": 42,
+   "full_text_named_not_extracted": 11,
+   "video_observation_unverified": 2
+  },
+  "research_status": {
+   "evidence_checked_in_full_text": 907,
+   "evidence_leads_only": 15,
+   "community_reports_only": 25,
+   "evidence_auto_extracted": 5,
+   "no_record_found": 21809,
+   "reviewed_not_feeding_evidence": 4
+  }
+ },
+ "after_this_branch": {
+  "counting_rule": {
+   "consumption_types": [
+    "captive_feeding_record",
+    "community_report",
+    "video_observation",
+    "wild_feeding_observation"
+   ],
+   "recommendation_types": [
+    "husbandry_recommendation"
+   ],
+   "non_consumption_types": [
+    "nutrition",
+    "offered_not_eaten",
+    "taxonomy",
+    "toxicity",
+    "wild_diet_not_detected"
+   ],
+   "full_text_verified_levels": [
+    "full_text_verified",
+    "full_text_named_not_extracted",
+    "review_full_text_verified",
+    "guideline_full_text_verified",
+    "reviewed_source_record"
+   ],
+   "tiers": [
+    "academic_full_text_verified",
+    "abstract_checked",
+    "auto_extracted_not_reviewed",
+    "literature_lead_not_reverified",
+    "community_or_video_unverified"
+   ],
+   "note": "wild_diet_not_detected and offered_not_eaten are evidence that the plant was NOT found eaten; they are never counted as consumption. No count here is a safety grade, and a record applies only to its tortoise taxon."
+  },
+  "1_linked_any_record": 954,
+  "2_consumption_supported": 858,
+  "3_consumption_verified_in_full_text": 812,
+  "4_reference_only_no_consumption": 91,
+  "husbandry_recommendation_only": 5,
+  "5_no_evidence": 21811,
+  "consumption_by_best_tier": {
+   "academic_full_text_verified": 812,
+   "auto_extracted_not_reviewed": 5,
+   "community_or_video_unverified": 26,
+   "literature_lead_not_reverified": 6,
+   "abstract_checked": 9
+  },
+  "consumption_verified_percent": 3.57,
+  "remaining_to_target_by_verified_consumption": 19677,
+  "plants_by_evidence_type": {
+   "captive_feeding_record": 77,
+   "community_report": 34,
+   "husbandry_recommendation": 7,
+   "nutrition": 3,
+   "offered_not_eaten": 28,
+   "toxicity": 2,
+   "video_observation": 2,
+   "wild_diet_not_detected": 83,
+   "wild_feeding_observation": 780
+  },
+  "consumption_plants_by_tortoise_taxon_top20": {
+   "Aldabrachelys gigantea": 97,
+   "Chelonoidis darwini": 75,
+   "Geochelone pardalis": 72,
+   "desert tortoise (Gopherus agassizii)": 70,
+   "Gopherus polyphemus": 69,
+   "Chersina angulata": 53,
+   "Testudo graeca graeca": 48,
+   "Gopherus agassizii": 43,
+   "Testudo graeca (tortuga mora, Doñana)": 39,
+   "Chelonoidis chilensis": 35,
+   "Chelonoidis carbonaria": 33,
+   "四爪陆龟 (Testudo horsfieldi)": 29,
+   "Chelonoidis hoodensis": 28,
+   "Geochelone elegans": 27,
+   "Testudo hermanni hermanni (reintroduced, Montsant)": 19,
+   "Indotestudo elongata": 19,
+   "desert tortoise (Gopherus agassizi)": 15,
+   "Gopherus flavomarginatus": 14,
+   "Testudo hermanni": 14,
+   "desert tortoise (Xerobates agassizii)": 14
+  },
+  "legacy_research_status_mismatch": 0,
+  "evidence_rows_by_verification": {
+   "full_text_verified": 979,
+   "review_full_text_verified": 262,
+   "guideline_full_text_verified": 12,
+   "abstract_checked": 34,
+   "literature_lead_not_reverified": 50,
+   "full_text_auto_extracted": 17,
+   "community_report_unverified": 42,
+   "reviewed_source_record": 7,
+   "full_text_named_not_extracted": 11,
+   "video_observation_unverified": 2
+  },
+  "research_status": {
+   "evidence_checked_in_full_text": 818,
+   "reviewed_not_feeding_evidence": 95,
+   "evidence_leads_only": 15,
+   "community_reports_only": 25,
+   "evidence_auto_extracted": 5,
+   "no_record_found": 21807
+  }
+ },
+ "why_the_numbers_differ": [
+  "Counting rule (same data): 'linked' counts any row; the new rule counts consumption separately. On main's catalog the new rule gives 952 linked / 856 consumption / 810 consumption checked in the original / 91 reference only.",
+  "91 taxa are linked only through wild_diet_not_detected / offered_not_eaten / toxicity / nutrition rows (e.g. Anacyclus radiatus, El Mouden et al. 2006: present in habitat, absent from 44 faeces). They do not count as consumption.",
+  "5 taxa are linked only through husbandry recommendations (care-sheet advice, not an observed feeding); counted separately.",
+  "Of the 858 consumption taxa, 46 have no consumption row checked in the original (abstract 9, automatic extraction 5, unverified literature lead 6, community/video 26). 'Checked in the original' is the builder's own set (CHECKED_LEVELS).",
+  "New data in this branch: 7 evidence rows read in the original and promoted (Wagle et al. 2026, 6 rows for Indotestudo elongata; Rodrigues & Oliveira 2016, 1 row for Chelonoidis carbonarius). Two plants gained their first consumption record: Abelmoschus esculentus and Bombax ceiba (captive I. elongata).",
+  "Public research status: reference-only taxa had evidence_checked_in_full_text ('원문으로 확인한 급여 기록 있음'); they now get the existing status reviewed_not_feeding_evidence ('거북 문헌에 이름은 나오지만 먹이 기록은 아님'). evidence_checked_in_full_text 907 -> 818, reviewed_not_feeding_evidence 4 -> 95. Label texts unchanged."
+ ],
+ "target_gap": {
+  "by_legacy_linked": 19535,
+  "by_verified_consumption": 19677
+ },
+ "reference_only_taxa": [
+  {
+   "id": "gbif:3148560",
+   "scientific": "Anacyclus radiatus",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3088400",
+   "scientific": "Bombycilaena discolor",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:2703760",
+   "scientific": "Bromus diandrus",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5361880",
+   "scientific": "Cannabis sativa",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2928400",
+   "scientific": "Convolvulus althaeoides",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3874680",
+   "scientific": "Phylica thunbergiana",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5560681",
+   "scientific": "Lyperia lychnidea",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:7560201",
+   "scientific": "Phylica ericoides",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3045042",
+   "scientific": "Alyssum simplex",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3045082",
+   "scientific": "Alyssum turkestanicum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:12233963",
+   "scientific": "Achnatherum parviflorum",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:3045203",
+   "scientific": "Alyssum linifolium",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:7337805",
+   "scientific": "Felicia hyssopifolia",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5353525",
+   "scientific": "Sphaerophysa salsula",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3115166",
+   "scientific": "Berkheya armata",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2889486",
+   "scientific": "Eriogonum nidularium",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:7314286",
+   "scientific": "Herniaria fontanesii",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:4144406",
+   "scientific": "Perotis indica",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5353606",
+   "scientific": "Rothia indica",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2942127",
+   "scientific": "Crotalaria stipitata",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:11077607",
+   "scientific": "Eryngium ilicifolium",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3120848",
+   "scientific": "Artemisia herba-alba",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:7295249",
+   "scientific": "Arnebia euchroma",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:6026849",
+   "scientific": "Thapsia garganica",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:7950890",
+   "scientific": "Chlorophytum undulatum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3152090",
+   "scientific": "Corchorus tridens",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3102490",
+   "scientific": "Cousinia leiocephala",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3083570",
+   "scientific": "Krascheninnikovia ceratoides",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3757650",
+   "scientific": "Petrosimonia sibirica",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2704651",
+   "scientific": "Lygeum spartum",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:8124412",
+   "scientific": "Aizoon canariense",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:4150293",
+   "scientific": "Andropogon distachyos",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:3884533",
+   "scientific": "Salvia aurea",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:10920214",
+   "scientific": "Papaver pavoninum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:7514615",
+   "scientific": "Cissampelos capensis",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3132215",
+   "scientific": "Syntrichopappus fremontii",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5334216",
+   "scientific": "Fumaria vaillantii",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:7376217",
+   "scientific": "Emilia sonchifolia",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2744738",
+   "scientific": "Moraea flaccida",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3152619",
+   "scientific": "Abutilon hirtum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2927060",
+   "scientific": "Salvia columbariae",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5373140",
+   "scientific": "Strigosella hispida",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3098660",
+   "scientific": "Stylocline micropoides",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3121461",
+   "scientific": "Artemisia campestris",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:5289861",
+   "scientific": "Bouteloua curtipendula",
+   "types": [
+    "nutrition"
+   ]
+  },
+  {
+   "id": "gbif:8048981",
+   "scientific": "Ferula communis",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:3758941",
+   "scientific": "Haloxylon scoparium",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:4217341",
+   "scientific": "Klasea sogdiana",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5403742",
+   "scientific": "Scolymus hispanicus",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2855143",
+   "scientific": "Haemanthus coccineus",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:8358943",
+   "scientific": "Hypecoum parviflorum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:8139063",
+   "scientific": "Malcolmia africana",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3034823",
+   "scientific": "Torilis arvensis",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2732744",
+   "scientific": "Attalea dubia",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:2773545",
+   "scientific": "Ornithogalum thyrsoides",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:8977985",
+   "scientific": "Pleradenophora bilocularis",
+   "types": [
+    "toxicity"
+   ]
+  },
+  {
+   "id": "gbif:2746306",
+   "scientific": "Babiana ringens",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3130466",
+   "scientific": "Eriophyllum pringlei",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3066386",
+   "scientific": "Euphorbia peplus",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:9530226",
+   "scientific": "Pauridia capensis",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2768787",
+   "scientific": "Asparagus rubicundus",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3083667",
+   "scientific": "Atriplex semibaccata",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3987067",
+   "scientific": "Roepera flexuosa",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5334188",
+   "scientific": "Glaucium corniculatum",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:4102909",
+   "scientific": "Lomelosia stellata",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:2927069",
+   "scientific": "Marrubium vulgare",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:7806790",
+   "scientific": "Arnebia decumbens",
+   "types": [
+    "offered_not_eaten",
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3802390",
+   "scientific": "Lycium tetrandrum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3757710",
+   "scientific": "Petrosimonia glaucescens",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2882631",
+   "scientific": "Pieris japonica",
+   "types": [
+    "toxicity"
+   ]
+  },
+  {
+   "id": "gbif:4217191",
+   "scientific": "Psiadia arguta",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:10902071",
+   "scientific": "Urochloa distachyos",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5345712",
+   "scientific": "Astragalus taldycensis",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3189912",
+   "scientific": "Peganum harmala",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:2732793",
+   "scientific": "Attalea geraensis",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:8030513",
+   "scientific": "Marrubium supinum",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:10974033",
+   "scientific": "Ouret lanata",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5384314",
+   "scientific": "Cyathula prostrata",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3640434",
+   "scientific": "Daucus sahariensis",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:3627834",
+   "scientific": "Oxalis obtusa",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2929394",
+   "scientific": "Solanum aculeatissimum",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:7926635",
+   "scientific": "Euphorbia mauritanica",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:4932075",
+   "scientific": "Sehima nervosa",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5293837",
+   "scientific": "Syagrus pseudococos",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:2732758",
+   "scientific": "Attalea phalerata",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:3044318",
+   "scientific": "Descurainia sophia",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:3759078",
+   "scientific": "Haloxylon ammodendron",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:2971159",
+   "scientific": "Ammodendron bifolium",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5398279",
+   "scientific": "Atractylis cancellata",
+   "types": [
+    "offered_not_eaten"
+   ]
+  },
+  {
+   "id": "gbif:3783559",
+   "scientific": "Pharnaceum exiguum",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  },
+  {
+   "id": "gbif:5342239",
+   "scientific": "Tephrosia purpurea",
+   "types": [
+    "wild_diet_not_detected"
+   ]
+  }
+ ],
+ "note": "No count here is a safety grade. A record applies only to the tortoise taxon it names."
+}

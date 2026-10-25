@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Offline tests: access classification of bibliography works (the reviewer queue is tested in test_build_evidence_candidates)."""
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -29,6 +30,17 @@ class AccessTests(unittest.TestCase):
         s = f.summary_of(rows)
         self.assertEqual((s["full_text_obtainable_tortoise"], s["abstract_or_metadata_only_tortoise"]), (1, 1))
         self.assertEqual(s["access_all"]["oa_pdf"], 2)
+
+
+class SavedPathTests(unittest.TestCase):
+    def test_copied_work_dir_recovers_relative_paths(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            work = Path(tmp)
+            (work / "txt").mkdir()
+            (work / "txt" / "W1.txt").write_text("x", encoding="utf-8")
+            row = {"kind": "txt", "path": "..\elsewhere\worker-output\fulltext\txt\W1.txt".replace("\\", "/")}
+            self.assertEqual(f.saved_path(work, row), work / "txt" / "W1.txt")
+            self.assertIsNone(f.saved_path(work, {"kind": "jats", "path": "gone/PMC1.xml"}))
 
 
 if __name__ == "__main__":
