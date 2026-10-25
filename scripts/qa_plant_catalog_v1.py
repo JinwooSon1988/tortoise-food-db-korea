@@ -27,6 +27,7 @@ VERIFICATION = {"full_text_verified", "full_text_named_not_extracted", "literatu
 COMMUNITY = {"community_report_unverified", "video_observation_unverified"}
 CHECKED = {"full_text_verified", "full_text_named_not_extracted", "review_full_text_verified", "guideline_full_text_verified",
            "reviewed_source_record"}
+NOT_FEEDING_TYPES = {"wild_diet_not_detected", "offered_not_eaten", "toxicity", "nutrition", "taxonomy"}
 RESEARCH = {"evidence_checked_in_full_text", "evidence_auto_extracted", "evidence_leads_only", "community_reports_only", "reviewed_not_feeding_evidence", "no_record_found"}
 NUTRITION_BASIS = {"dry_matter", "as_fed", "unstated"}
 NAME_BASIS = {"gbif_synonym", "orthographic_variant"}
@@ -91,10 +92,13 @@ for r in records:
         if e["type"] == "toxicity" and not ((e.get("toxicity") or {}).get("test_animal") and e["toxicity"].get("conditions")):
             errors.append(f"{r['id']}: toxicity record without test animal and conditions")
     research = r.get("research") or {}
-    expect_status = ("evidence_checked_in_full_text" if any(e["verification"] in CHECKED for e in r["feeding_evidence"])
-                     else "evidence_auto_extracted" if any(e["verification"] == "full_text_auto_extracted" for e in r["feeding_evidence"])
-                     else "evidence_leads_only" if any(e["verification"] not in COMMUNITY for e in r["feeding_evidence"])
-                     else "community_reports_only" if r["feeding_evidence"] else None)
+    # Not-eaten / nutrition / toxicity rows are linked but are not feeding records (build_plant_catalog_v1.NOT_FEEDING_TYPES).
+    feeding_rows = [e for e in r["feeding_evidence"] if e["type"] not in NOT_FEEDING_TYPES]
+    expect_status = ("reviewed_not_feeding_evidence" if r["feeding_evidence"] and not feeding_rows
+                     else "evidence_checked_in_full_text" if any(e["verification"] in CHECKED for e in feeding_rows)
+                     else "evidence_auto_extracted" if any(e["verification"] == "full_text_auto_extracted" for e in feeding_rows)
+                     else "evidence_leads_only" if any(e["verification"] not in COMMUNITY for e in feeding_rows)
+                     else "community_reports_only" if feeding_rows else None)
     if research.get("status") not in RESEARCH or not research.get("corpus") or \
             (expect_status and research["status"] != expect_status) or (not expect_status and research["status"] in ("evidence_checked_in_full_text", "evidence_auto_extracted", "evidence_leads_only", "community_reports_only")):
         errors.append(f"{r['id']}: research status missing or inconsistent with the evidence")

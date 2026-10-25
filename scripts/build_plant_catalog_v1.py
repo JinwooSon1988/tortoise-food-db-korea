@@ -233,7 +233,15 @@ def resolve(n, m):
     return None, None
 
 
+# Rows that say the plant was not eaten (or only describe nutrition/toxicity) are linked, but they are not feeding
+# records: they must not earn a "feeding record" research status. Counting rule: scripts/check_evidence_coverage.py.
+NOT_FEEDING_TYPES = {"wild_diet_not_detected", "offered_not_eaten", "toxicity", "nutrition", "taxonomy"}
+
+
 def research_status(evidence, rejected):
+    if evidence and all(e.get("type") in NOT_FEEDING_TYPES for e in evidence):
+        return "reviewed_not_feeding_evidence"
+    evidence = [e for e in evidence if e.get("type") not in NOT_FEEDING_TYPES]
     if any(e["verification"] in CHECKED_LEVELS for e in evidence):
         return "evidence_checked_in_full_text"
     if any(e["verification"] in AUTO_LEVELS for e in evidence):

@@ -26,6 +26,7 @@ on:
       - 'scripts/test_build_bulk_taxon_catalog.py'
       - 'scripts/qa_plant_catalog_v1.py'
       - 'scripts/check_evidence_coverage.py'
+      - 'scripts/test_check_evidence_coverage.py'
       - '.github/workflows/plant-catalog-qa.yml'
   push:
     paths:
@@ -77,4 +78,6 @@ jobs:
       - name: Catalog shards, search index, sitemap, no grades, reviewed plants unchanged
         run: python scripts/qa_plant_catalog_v1.py
       - name: Verify evidence coverage counters against all catalog species
-        run: python scripts/check_evidence_coverage.py
+        run: |
+          python scripts/test_check_evidence_coverage.py
+          python scripts/check_evidence_coverage.py
