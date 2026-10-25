@@ -506,8 +506,9 @@ def write_sitemap():
         rel = l[len(SITE_URL):] if l.startswith(SITE_URL) else None
         if rel is None:
             continue
-        if rel == "/all-plants/":
-            # The English catalog is a noindex redirect, not an indexable translation.
+        if rel in ("/", "/all-plants/"):
+            # Both /en/ and /en/all-plants/ redirect to the shared UI and are noindex.
+            # Never advertise them as indexable hreflang alternatives.
             continue
         if (ROOT / ("en" + rel) / "index.html").exists():
             en_for[l] = SITE_URL + "/en" + rel
