@@ -20,6 +20,7 @@ counted as checked research. Shards are read one at a time.
 """
 import argparse
 import json
+import sys
 from collections import Counter
 from pathlib import Path
 
@@ -90,6 +91,8 @@ def main():
     ap.add_argument("--audit-only", action="store_true", help="report a feeding-record status on reference-only plants instead of failing "
                     "(to measure an older catalog, e.g. main before this rule)")
     args = ap.parse_args()
+    # Taxon names such as "Muñoz" do not fit the Korean Windows code page (cp949) when stdout is a pipe or log file.
+    sys.stdout.reconfigure(encoding="utf-8")
     catalog = Path(args.catalog)
     idx = json.loads((catalog / "index.json").read_text(encoding="utf-8"))
     total = linked = checked = 0

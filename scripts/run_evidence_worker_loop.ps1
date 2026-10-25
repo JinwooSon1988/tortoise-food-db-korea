@@ -24,10 +24,13 @@ while ($true) {
     Set-Content -Path $lock -Value "$PID $($now.ToString('o'))"
     Push-Location $repo
     try {
+      # PowerShell 5.1 turns each stderr line of a redirected native command into an error record; with "Stop" the
+      # first line (e.g. "Traceback ...") ended the cycle and dropped the rest. Keep stderr in the log; judge by exit code.
+      $ErrorActionPreference = "Continue"
       & powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_offline_evidence_pipeline.ps1 *>&1 |
         Tee-Object -FilePath $log
       if ($LASTEXITCODE -ne 0) { Write-Warning "Pipeline exit code: $LASTEXITCODE" }
-    } finally { Pop-Location }
+    } finally { $ErrorActionPreference = "Stop"; Pop-Location }
   } catch {
     Write-Warning $_
     $_ | Out-File -Append -FilePath $log
