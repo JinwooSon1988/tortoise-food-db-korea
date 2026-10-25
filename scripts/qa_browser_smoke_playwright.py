@@ -37,7 +37,9 @@ with sync_playwright() as pw:
         assert not errors, f"JS errors at {width}px: {errors}"
         page.goto(url("all-plants/index.html"), wait_until="load")
         grade_buttons = page.locator(".gradelegend button")
-        assert grade_buttons.count() == 6, "expected A/B/C/D/hold/unassessed filters"
+        # 33e29a21 / d79d9f2f added the "feeding records found (under review)" category next to the grade filters.
+        grades = sorted(grade_buttons.nth(i).get_attribute("data-grade") or "" for i in range(grade_buttons.count()))
+        assert grade_buttons.count() == 7 and "feeding_pending" in grades and {"A", "B", "C", "D", "보류"} <= set(grades),             f"expected A/B/C/D/hold/feeding-record/unassessed filters, got {grades}"
         if width <= 639:
             layout = page.locator(".gradelegend").evaluate("(el) => getComputedStyle(el).display")
             assert layout == "grid", f"mobile grade legend should use grid, got {layout}"
@@ -57,11 +59,13 @@ with sync_playwright() as pw:
         page.wait_for_url("**/taxon/**")
         page.locator("h1").wait_for(timeout=10000)
         assert SAMPLE[1] in page.locator(".sub").inner_text(), "taxon detail shows another plant"
-        assert "급여 안전성 미확정" in page.locator(".status").inner_text()
-        assert page.locator(".verdictbadge").count() == 0, "catalog entry must not show a grade badge"
+        # 087e773a renders the ungraded status in the plant decision-card structure with a neutral "—" badge.
+        assert "급여 안전성 미확정" in page.locator(".decision .verdictlabel").inner_text()
+        badges = [page.locator(".verdictbadge").nth(i).inner_text().strip() for i in range(page.locator(".verdictbadge").count())]
+        assert not set(badges) & {"A", "B", "C", "D"}, f"catalog entry must not show a grade badge, got {badges}"
         page.goto(url("taxon/?id=" + SAMPLE[0] + "&lang=en"), wait_until="load")
-        page.locator(".status").wait_for(timeout=10000)
-        assert "Feeding safety not established" in page.locator(".status").inner_text()
+        page.locator(".decision .verdictlabel").wait_for(timeout=10000)
+        assert "Feeding safety not established" in page.locator(".decision .verdictlabel").inner_text()
         page.goto(url("index.html"), wait_until="load")
         page.locator("#searchInput").fill(SAMPLE[1])
         page.locator("#taxonomy-home-results a").first.wait_for(timeout=10000)
