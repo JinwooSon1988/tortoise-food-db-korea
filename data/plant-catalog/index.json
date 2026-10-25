@@ -6,14 +6,14 @@
  "count": 22765,
  "counts": {
   "entries": 22765,
-  "with_feeding_evidence": 952,
+  "with_feeding_evidence": 954,
   "feeding_safety_unassessed": 22765,
   "with_safety_grade": 0,
   "with_english_name": 8405,
   "with_korean_name": 398,
   "evidence_by_type": {
    "wild_feeding_observation": 1154,
-   "captive_feeding_record": 86,
+   "captive_feeding_record": 93,
    "wild_diet_not_detected": 83,
    "offered_not_eaten": 28,
    "community_report": 42,
@@ -30,21 +30,22 @@
    "literature_lead_not_reverified": 50,
    "full_text_auto_extracted": 17,
    "community_report_unverified": 42,
+   "reviewed_source_record": 7,
    "full_text_named_not_extracted": 11,
    "video_observation_unverified": 2
   },
-  "evidence_studies": 107,
+  "evidence_studies": 109,
   "evidence_linked_by_name_resolution": {
    "gbif_synonym": 176,
    "orthographic_variant": 11
   },
   "research_status": {
-   "evidence_checked_in_full_text": 816,
+   "evidence_checked_in_full_text": 818,
    "reviewed_not_feeding_evidence": 95,
    "evidence_leads_only": 15,
    "community_reports_only": 25,
    "evidence_auto_extracted": 5,
-   "no_record_found": 21809
+   "no_record_found": 21807
   }
  },
  "rejected_in_candidate_order": {
@@ -303,7 +304,7 @@
   },
   {
    "id": "reviewed-records",
-   "searched": "2026-10-23",
+   "searched": "2026-10-25",
    "summary": {
     "ko": "검토자가 원문을 읽고 승인한 기록입니다.",
     "en": "Records approved by a reviewer who read the original."
@@ -413,7 +414,7 @@
   {
    "file": "taxa-18.json",
    "count": 572,
-   "sha256": "9c38e93eff4b728ff870120084264dec2600e2ff29250c77519c5d5ae2ba927f"
+   "sha256": "0f92d494e8f273befc5cb7c58a062bdb0eae0e4e17c109c71cba2d6c9769eb33"
   },
   {
    "file": "taxa-19.json",
@@ -423,7 +424,7 @@
   {
    "file": "taxa-20.json",
    "count": 598,
-   "sha256": "ea88c58b86dfcdda0bcd935aa89bb1e10024ce83b3ca74abb30c01996aed665c"
+   "sha256": "8fa060fbe7a84457aaf2dbb1ae8eb406bff1219135084964b877a0ad691fbe20"
   },
   {
    "file": "taxa-21.json",
@@ -443,7 +444,7 @@
   {
    "file": "taxa-24.json",
    "count": 577,
-   "sha256": "4ca9c22bd5ed8e173fae39e5ff61ff6ed72395842c9466f6e6b13abaa8f50e91"
+   "sha256": "ec4e87f395c4c519b7332a1775506f15ead4a52b2099ac93a4664c0aab18f27f"
   },
   {
    "file": "taxa-25.json",
@@ -453,12 +454,12 @@
   {
    "file": "taxa-26.json",
    "count": 598,
-   "sha256": "b1744eeb3b2b6e013d55f209330854474f5eaf981e64a7548237e155ce4baa9d"
+   "sha256": "e3c58fae5dc78ab9cf7764452abd22342fc6a2ed7d37e3878eb415ca99807848"
   },
   {
    "file": "taxa-27.json",
    "count": 560,
-   "sha256": "58092b527c53f2ae6c8df0b603f4bf3b393ae3c99c82089fc7f1053aebee9172"
+   "sha256": "7a0b6147229be39798ea5db2ccc82307e09677a557545f089b073b597b6ab1e7"
   },
   {
    "file": "taxa-28.json",
@@ -498,7 +499,7 @@
   {
    "file": "taxa-35.json",
    "count": 595,
-   "sha256": "aaf7de189f6af3ce1b5cc56b6cfad18d2664967e902df34dbe82e668d89a6b12"
+   "sha256": "f0016bbb4e46a86211d5092d1e7bc89bb527159d9abc21675f8b3b31c746f847"
   },
   {
    "file": "taxa-36.json",
@@ -513,7 +514,7 @@
   {
    "file": "taxa-38.json",
    "count": 562,
-   "sha256": "b9b9c5d353c0fda9b07f364ee12d2e7e3b1d62f135675338953f25dee01318b7"
+   "sha256": "a66a1f329c30ffa53db6ba70afadcda8610dd8e2071ed595d5747d1351832bd9"
   },
   {
    "file": "taxa-39.json",

@@ -1,10 +1,10 @@
 {
  "schema_version": "1.0",
  "batch": "reviewed",
- "built": "2026-10-23",
+ "built": "2026-10-25",
  "corpus": {
   "id": "reviewed-records",
-  "searched": "2026-10-23",
+  "searched": "2026-10-25",
   "summary": {
    "ko": "검토자가 원문을 읽고 승인한 기록입니다.",
    "en": "Records approved by a reviewer who read the original."
@@ -16,6 +16,18 @@
  },
  "sources": [
   {
+   "source_key": "reviewed_39d7de6c619137cb",
+   "citation": "Rodrigues, J. F. M. & Oliveira, S. P. de (2016) Can tortoises facilitate the germination of plants with dry fruits? A simulation of the effects of Chelonoidis carbonarius (Testudines: Testudinidae) on the germination of Leucaena leucocephala (Fabaceae). Rodriguésia 67(3): 661-666.",
+   "url": "https://doi.org/10.1590/2175-7860201667310",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Chelonoidis carbonarius",
+   "context": "captive",
+   "study_id": "rodrigues_oliveira_2016_rodriguesia_leucaena",
+   "read": "reviewer-approved after reading the original",
+   "collected_by": "reviewed-import"
+  },
+  {
    "source_key": "reviewed_52f0429aa7de4c9f",
    "citation": "Falcón, W., Moll, D. & Hansen, D. M. 2018. Frugivory and seed dispersal by chelonians: a review and synthesis. bioRxiv preprint 379933 (v1, posted 30 July 2018); published 2020 in Biological Reviews 95: 142-166.",
    "url": "https://www.biorxiv.org/content/10.1101/379933v1.full.pdf",
@@ -24,6 +36,18 @@
    "tortoise_taxon": "Aldabrachelys gigantea",
    "context": "wild",
    "study_id": "falcon2018_biorxiv_chelonian_frugivory",
+   "read": "reviewer-approved after reading the original",
+   "collected_by": "reviewed-import"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "citation": "Wagle, R. C., Thapa Chhetry, D., Bist, B. B., Adhikari, R. C., Rai, T. P. & Ranapaheli, A. (2026) Biorhythm, feeding preferences and growth of Indotestudo elongata (Blyth, 1854) in Turtle Rescue and Conservation Centre, Jhapa, Nepal. Published online 26 March 2026.",
+   "url": "https://doi.org/10.31893/wild.2026005",
+   "language": "en",
+   "source_class": "peer_reviewed",
+   "tortoise_taxon": "Indotestudo elongata",
+   "context": "captive",
+   "study_id": "wagle_2026_indotestudo_elongata_trcc_nepal",
    "read": "reviewer-approved after reading the original",
    "collected_by": "reviewed-import"
   }
@@ -64,6 +88,132 @@
     "en": "Often observed eating ripe fruits while ignoring green ones"
    },
    "reviewer": "Claude (AI review requested by the repository owner, 2026-10-23)"
+  },
+  {
+   "source_key": "reviewed_39d7de6c619137cb",
+   "reported_name": "Leucaena leucocephala",
+   "tortoise": "Chelonoidis carbonarius",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 2 (printed p. 662), Introduction, last paragraph (\"In captive conditions, we observed that individuals of C. carbonarius also freely eat many parts of Leucaena leucocephala (Lam.) de Wit, a legume plant that is very common in the area of Ceará ... where these captive tortoises forage\")",
+   "plant_part": {
+    "ko": "여러 부위 (원문에 부위를 특정하지 않음)",
+    "en": "many parts (the source does not name them)"
+   },
+   "finding": {
+    "ko": "브라질 포르탈레자(세아라) 대학 구내의 사육 붉은다리거북이 이 식물의 여러 부위를 자유롭게 먹는 것을 저자들이 직접 관찰함. 실험 자체는 씨앗 발아 시뮬레이션이며 급여량·안전성은 다루지 않음",
+    "en": "The authors observed captive red-footed tortoises at the Federal University of Ceará (Fortaleza, Brazil) freely eating many parts of the plant. The study itself simulates seed germination and does not address amounts or safety"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "reported_name": "Psidium guajava",
+   "tortoise": "Indotestudo elongata",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 15, Table 18 \"Herbivory\" (items provided by the researchers; \"Preferences (%)\" = percentage of the nine tortoises that fed on the item, section 3.2.2; items rejected by all nine were not listed); row \"Guava | Psidium guajava | fruit | 100.0\"",
+   "plant_part": {
+    "ko": "과육 열매",
+    "en": "fruit"
+   },
+   "finding": {
+    "ko": "네팔 TRCC의 사육 개체 9마리에게 제공했을 때 100.0%(9/9마리)가 먹음. 선호도 표이며 급여량·빈도·안전성은 다루지 않음",
+    "en": "Offered to nine captive tortoises at TRCC, Nepal, 100.0% (9 of 9) fed on it. A preference table; it gives no amount, frequency or safety finding"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "reported_name": "Mangifera indica",
+   "tortoise": "Indotestudo elongata",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 15, Table 18 \"Herbivory\" (items provided by the researchers; \"Preferences (%)\" = percentage of the nine tortoises that fed on the item, section 3.2.2; items rejected by all nine were not listed); row \"Mango | Mangifera indica | fruit | 88.88\"",
+   "plant_part": {
+    "ko": "열매",
+    "en": "fruit"
+   },
+   "finding": {
+    "ko": "네팔 TRCC의 사육 개체 9마리에게 제공했을 때 88.88%(8/9마리)가 먹음. 선호도 표이며 급여량·빈도·안전성은 다루지 않음",
+    "en": "Offered to nine captive tortoises at TRCC, Nepal, 88.88% (8 of 9) fed on it. A preference table; it gives no amount, frequency or safety finding"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "reported_name": "Cucurbita maxima",
+   "tortoise": "Indotestudo elongata",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 15, Table 18 \"Herbivory\" (items provided by the researchers; \"Preferences (%)\" = percentage of the nine tortoises that fed on the item, section 3.2.2; items rejected by all nine were not listed); row \"Pumpkin | Cucurbita maxima | fruit | 77.77\"",
+   "plant_part": {
+    "ko": "열매",
+    "en": "fruit"
+   },
+   "finding": {
+    "ko": "네팔 TRCC의 사육 개체 9마리에게 제공했을 때 77.77%(7/9마리)가 먹음. 선호도 표이며 급여량·빈도·안전성은 다루지 않음",
+    "en": "Offered to nine captive tortoises at TRCC, Nepal, 77.77% (7 of 9) fed on it. A preference table; it gives no amount, frequency or safety finding"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "reported_name": "Ficus racemosa",
+   "tortoise": "Indotestudo elongata",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 15, Table 18 \"Herbivory\" (items provided by the researchers; \"Preferences (%)\" = percentage of the nine tortoises that fed on the item, section 3.2.2; items rejected by all nine were not listed); row \"Cluster fig | Ficus racemose | fruit | 66.67\"",
+   "plant_part": {
+    "ko": "열매",
+    "en": "fruit"
+   },
+   "finding": {
+    "ko": "네팔 TRCC의 사육 개체 9마리에게 제공했을 때 66.67%(6/9마리)가 먹음. 선호도 표이며 급여량·빈도·안전성은 다루지 않음",
+    "en": "Offered to nine captive tortoises at TRCC, Nepal, 66.67% (6 of 9) fed on it. A preference table; it gives no amount, frequency or safety finding"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "reported_name": "Abelmoschus esculentus",
+   "tortoise": "Indotestudo elongata",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 15, Table 18 \"Herbivory\" (items provided by the researchers; \"Preferences (%)\" = percentage of the nine tortoises that fed on the item, section 3.2.2; items rejected by all nine were not listed); row \"Lady's finger | Abelmoschus esculentus | fruit | 22.22\"",
+   "plant_part": {
+    "ko": "열매(꼬투리)",
+    "en": "fruit (pod)"
+   },
+   "finding": {
+    "ko": "네팔 TRCC의 사육 개체 9마리에게 제공했을 때 22.22%(2/9마리)가 먹음. 선호도 표이며 급여량·빈도·안전성은 다루지 않음",
+    "en": "Offered to nine captive tortoises at TRCC, Nepal, 22.22% (2 of 9) fed on it. A preference table; it gives no amount, frequency or safety finding"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
+  },
+  {
+   "source_key": "reviewed_d9f7c81686239d40",
+   "reported_name": "Bombax ceiba",
+   "tortoise": "Indotestudo elongata",
+   "type": "captive_feeding_record",
+   "verification": "reviewed_source_record",
+   "context": "captive",
+   "locator": "PDF p. 15, Table 18 \"Herbivory\" (items provided by the researchers; \"Preferences (%)\" = percentage of the nine tortoises that fed on the item, section 3.2.2; items rejected by all nine were not listed); row \"Silk cotton tree | Bombax ceiba | flower | 11.11\"",
+   "plant_part": {
+    "ko": "꽃",
+    "en": "flower"
+   },
+   "finding": {
+    "ko": "네팔 TRCC의 사육 개체 9마리에게 제공했을 때 11.11%(1/9마리)가 먹음. 선호도 표이며 급여량·빈도·안전성은 다루지 않음",
+    "en": "Offered to nine captive tortoises at TRCC, Nepal, 11.11% (1 of 9) fed on it. A preference table; it gives no amount, frequency or safety finding"
+   },
+   "reviewer": "Claude (AI review requested by the repository owner, 2026-10-25)"
   }
  ],
  "held_not_linked": [],

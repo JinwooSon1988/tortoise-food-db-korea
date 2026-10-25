@@ -28,6 +28,8 @@ def check():
     c = classify({"feeding_evidence": [row("community_report", "community_report_unverified"), row("captive_feeding_record")]})
     assert c["tier"] == "academic_full_text_verified" and c["consumption_verified"]
     assert classify({"feeding_evidence": [row("mystery_type")]})["unknown_types"] == ["mystery_type"]
+    # A reviewer-approved original study counts as checked in the original, as on the taxon page.
+    assert classify({"feeding_evidence": [row("captive_feeding_record", "reviewed_source_record")]})["consumption_verified"]
     print("PASS: coverage counting rule separates consumption, verification tiers and not-eaten references")
 
 

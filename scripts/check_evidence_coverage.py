@@ -16,7 +16,7 @@ Consumption plants are also split by their best verification tier (academic full
 extraction > unverified literature lead > community/video report), so community and machine records are never
 counted as checked research. Shards are read one at a time.
 
-  python scripts/check_evidence_coverage.py [--catalog DIR] [--out reports/coverage_snapshot.json]
+  python scripts/check_evidence_coverage.py [--catalog DIR] [--out reports/coverage_snapshot.json] [--audit-only]
 """
 import argparse
 import json
@@ -28,13 +28,15 @@ ROOT = Path(__file__).resolve().parents[1]
 CONSUMPTION_TYPES = {"wild_feeding_observation", "captive_feeding_record", "community_report", "video_observation"}
 RECOMMENDATION_TYPES = {"husbandry_recommendation"}
 NON_CONSUMPTION_TYPES = {"wild_diet_not_detected", "offered_not_eaten", "toxicity", "nutrition", "taxonomy"}
-FULL_TEXT_VERIFIED = ("full_text_verified", "review_full_text_verified", "guideline_full_text_verified")
+# Same set the catalog builder and the taxon page call "checked in the original" (build_plant_catalog_v1.CHECKED_LEVELS).
+FULL_TEXT_VERIFIED = ("full_text_verified", "full_text_named_not_extracted", "review_full_text_verified",
+                      "guideline_full_text_verified", "reviewed_source_record")
 # Best tier first; a plant is counted once, in the best tier any of its consumption rows reaches.
 TIERS = [
     ("academic_full_text_verified", set(FULL_TEXT_VERIFIED)),
     ("abstract_checked", {"abstract_checked"}),
     ("auto_extracted_not_reviewed", {"full_text_auto_extracted"}),
-    ("literature_lead_not_reverified", {"literature_lead_not_reverified", "full_text_named_not_extracted"}),
+    ("literature_lead_not_reverified", {"literature_lead_not_reverified"}),
     ("community_or_video_unverified", {"community_report_unverified", "video_observation_unverified"}),
 ]
 COUNTING_RULE = {
@@ -53,7 +55,7 @@ def tier_of(rows):
     for name, accepted in TIERS:
         if levels & accepted:
             return name
-    return "unclassified_verification"
+    raise AssertionError(f"verification levels without a tier: {sorted(levels)}")
 
 
 def classify(record):
@@ -85,6 +87,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--catalog", default=str(ROOT / "data/plant-catalog"))
     ap.add_argument("--out", help="also write the summary and per-class taxon lists to this JSON file")
+    ap.add_argument("--audit-only", action="store_true", help="report a feeding-record status on reference-only plants instead of failing "
+                    "(to measure an older catalog, e.g. main before this rule)")
     args = ap.parse_args()
     catalog = Path(args.catalog)
     idx = json.loads((catalog / "index.json").read_text(encoding="utf-8"))
@@ -119,7 +123,7 @@ def main():
     assert linked == idx["counts"]["with_feeding_evidence"], (linked, idx["counts"]["with_feeding_evidence"])
     assert sum(classes.values()) == total
     assert not unknown, f"evidence types without a counting rule: {dict(unknown)}"
-    assert not legacy_label_mismatch, f"feeding-record research status on reference-only plants: {legacy_label_mismatch[:5]}"
+    assert args.audit_only or not legacy_label_mismatch, f"feeding-record research status on reference-only plants: {legacy_label_mismatch[:5]}"
     target = (total * 9 + 9) // 10
     consumption = classes["consumption_supported"]
     result = {
