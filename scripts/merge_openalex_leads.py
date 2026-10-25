@@ -62,6 +62,8 @@ def build(input_path, existing_path):
             seen.add(key)
             stats['new_unreviewed_leads'] += 1
         stats['matched_taxa'] += 1
+    # A valid no-op replay must report zero additions rather than omit the metric.
+    stats.setdefault('new_unreviewed_leads', 0)
     base['warning'] = 'Search leads only; not evidence of consumption or feeding safety.'
     return base, dict(stats)
 
