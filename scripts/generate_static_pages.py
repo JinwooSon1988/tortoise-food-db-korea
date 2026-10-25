@@ -788,8 +788,10 @@ for p in plants:
     species_evidence_only=(a is None and bool(species_only))
     tone,grade,label,meaning=g["tone"],g["grade"],g["label"],g["meaning"]
     if species_evidence_only:
-        label="급여 기록 있음 (검증 중)"
-        meaning="특정 육지거북 종의 사육 지침에 급여 후보로 언급된 근거가 있습니다. 전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다."
+        # The public verdict (label, meaning and its "no verdict is not safe" boundary) stays as it is; the species-only
+        # record is added after it, so the card never reads as a positive verdict for tortoises in general.
+        species_names=", ".join(dict.fromkeys(x["animal_taxon"] for x in species_only))
+        meaning=f"{meaning} 다만 {species_names} 등 특정 육지거북 종의 사육 지침에 급여 후보로 언급된 근거가 있습니다(급여 기록 있음, 검증 중). 다른 육지거북 종의 안전성으로 확대하지 마세요."
 
     summary=assessment_copy((a or {}).get("why"), a) or ("지중해 Testudo 또는 육지거북 일반을 대상으로 한 공개 판정이 아직 없다. 아래 종별 특이사항은 해당 종에만 적용된다." if not a else "근거 검토 중이다.")
     r=retail_by_id.get(pid); aliases=[]
