@@ -298,6 +298,19 @@ def render(p):
     summary_ko = assessment_copy((a or {}).get("why"), a)
     summary = T(summary_ko, f"{pid}.why") if summary_ko else ("There is no public assessment for Mediterranean Testudo or tortoises in general yet. The species-specific notes below apply only to those species." if not a else "Evidence review in progress.")
     linked = [evidence_by_id[e] for e in ((a or {}).get("evidence_ids") or []) if e in evidence_by_id]
+    # Same rule as the Korean page (generate_static_pages.py): without a general verdict, species-only husbandry or
+    # feeding records are listed with their sources; the hold verdict and its boundary stay unchanged.
+    species_only = [x for x in rows if x.get("assessment_scope") == "exact_species" and x.get("animal_taxon") and any(
+        evidence_by_id.get(eid, {}).get("source_type") in ("specialist_husbandry", "captive_feeding_record", "wild_feeding_observation", "husbandry_recommendation")
+        for eid in x.get("evidence_ids", []))]
+    if a is None and species_only:
+        linked = list({e["id"]: e for x in species_only for eid in x.get("evidence_ids", []) if (e := evidence_by_id.get(eid))}.values())
+        names = ", ".join(dict.fromkeys(x["animal_taxon"] for x in species_only))
+        meaning = (f"{meaning} Feeding records found (under review): material limited to specific tortoise species ({names}). "
+                   "Observed wild feeding and husbandry recommendations are different kinds of evidence, and no safety grade for tortoises "
+                   "in general has been set. Do not extend this to other tortoise species.")
+        summary = (f"The feeding evidence found so far applies only to specific tortoise species ({names}). It sets no safe amount or frequency "
+                   "and is not a safety grade for tortoises in general; the sources below show the plant part and limits.")
     if a and summary_ko and len(summary_ko) < 55:
         facts = [en_text(e.get("supports"), f"{e['id']}.supports") for e in linked if e.get("supports")]
         fact = facts[0] if facts else ""
