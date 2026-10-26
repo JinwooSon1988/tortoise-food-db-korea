@@ -1,0 +1,2194 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "first_database": "GBIF backbone taxonomy",
+ "second_database": "World Flora Online plant list (matching service)",
+ "resolutions": [
+  {
+   "name_as_printed": "Acacia catechu",
+   "previous_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "decision": "resolved_by_second_database",
+   "resolved_name": "Senegalia catechu",
+   "resolved_family": "Fabaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Acacia catechu (L.f.) Willd.",
+      "accepted_in_wfo": "Senegalia catechu",
+      "family": "Fabaceae"
+     },
+     {
+      "name": "Acacia catechu sensu Griseb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Acacia catechu auct.non Willd.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Acacia catechu auct.non L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Acacia catechu Wight & Arn.",
+      "accepted_in_wfo": "Senegalia catechu",
+      "family": "Fabaceae"
+     },
+     {
+      "name": "Acacia catechu Brandis",
+      "accepted_in_wfo": "Senegalia catechu",
+      "family": "Fabaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "GBIF could not choose among names spelled this way; in World Flora Online every name with this spelling that has a placement leads to the same accepted species, which GBIF also lists for this spelling.",
+   "applies_to_evidence_ids": [
+    "than_aye_platynota_seed_dispersal-03"
+   ]
+  },
+  {
+   "name_as_printed": "Amaranthus lividus",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "resolved_homonym_by_author_printed_in_source",
+   "resolved_name": "Amaranthus blitum",
+   "resolved_family": "Amaranthaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "matched": "Amaranthus lividus L.",
+    "accepted_in_wfo": "Amaranthus blitum",
+    "family": "Amaranthaceae"
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Sriprateep et al. 2013 print 'Amaranthus lividus L.'; the species account that cites them prints no author, so the resolution applies to the name as used by this source and by the account that cites it",
+   "applies_to_evidence_ids": [
+    "crm096_elongata_2016-01",
+    "sriprateep_2013-02"
+   ]
+  },
+  {
+   "name_as_printed": "Asclepiadoideae",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Asclepiadodae Z.H.Feng",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Asclepiadaceae Borkh.",
+      "accepted_in_wfo": "Apocynaceae",
+      "family": "Apocynaceae"
+     },
+     {
+      "name": "Asclepiadeae Duby",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Asclepiadinae ",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Asclepias L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Asclepias subg. Asclepias L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Asclepias sect. Campanulatae ",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Asclepias abyssinica (Decne.) N.E.Br.",
+      "accepted_in_wfo": "Gomphocarpus abyssinicus",
+      "family": "Apocynaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "crm106_elegans_2018-01"
+   ]
+  },
+  {
+   "name_as_printed": "Bagassa guianenesis",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Bagassa guianensis Aubl.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Bagassa sagotiana Bureau ex Benth. & Hook.f.",
+      "accepted_in_wfo": "Bagassa guianensis",
+      "family": "Moraceae"
+     },
+     {
+      "name": "Bagassa tiliifolia (Desv.) Benoist",
+      "accepted_in_wfo": "Bagassa guianensis",
+      "family": "Moraceae"
+     },
+     {
+      "name": "Bagassa Aubl.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Bagalatta Roxb. ex Rchb.",
+      "accepted_in_wfo": "Tiliacora",
+      "family": "Menispermaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Bagassa guianensis"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "delaossa_2009-24"
+   ]
+  },
+  {
+   "name_as_printed": "Casuarina equesitifolia",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Casuarina equisetifolia",
+   "resolved_family": "Casuarinaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Casuarina equisetifolia L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Casuarina equisetifolia subsp. equisetifolia ",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Casuarina equisetifolia var. equisetifolia ",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Casuarina equisetifolia var. incana Benth.",
+      "accepted_in_wfo": "Casuarina equisetifolia",
+      "family": "Casuarinaceae"
+     },
+     {
+      "name": "Casuarina equisetifolia subsp. incana (Benth.) L.A.S.Johnson",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Casuarina equisetifolia var. microcarpa F.Muell.",
+      "accepted_in_wfo": "Casuarina cunninghamiana",
+      "family": "Casuarinaceae"
+     },
+     {
+      "name": "Casuarina equisetifolia var. souderi Fosberg",
+      "accepted_in_wfo": "Casuarina equisetifolia",
+      "family": "Casuarinaceae"
+     },
+     {
+      "name": "Casuarina equisetifolia var. typica Domin",
+      "accepted_in_wfo": "Casuarina equisetifolia",
+      "family": "Casuarinaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Casuarina equisetifolia"
+   },
+   "reason": "The printed name differs from 'Casuarina equisetifolia' by 2 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "figueroa_2024-02"
+   ],
+   "corrected_spelling": "Casuarina equisetifolia"
+  },
+  {
+   "name_as_printed": "Ceratocephalus falcatus",
+   "previous_name_check": "backbone_match_conflicts_with_source_needs_review",
+   "decision": "resolved_by_source_context",
+   "resolved_name": "Ceratocephala falcata",
+   "resolved_family": "Ranunculaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "matched": "Ceratocephala falcata (L.) Pers.",
+    "accepted_in_wfo": "Ranunculus falcatus",
+    "family": "Ranunculaceae"
+   },
+   "gbif_result": {
+    "name_check": "synonym_of_accepted_name",
+    "fuzzy_candidate": null
+   },
+   "reason": "The article spells the genus 'Ceratocephalus' and describes the plant as a close relative of Ranunculus that accumulates ranunculin. 'Ceratocephalus falcatus (L.) Pers.' is, in both GBIF and World Flora Online, a synonym of the composite Achillea falcata; the buttercup is Ceratocephala falcata (L.) Pers. GBIF accepts Ceratocephala falcata; World Flora Online places it under Ranunculus falcatus. The two databases disagree on the genus, so the GBIF name is used for linking and both are recorded.",
+   "applies_to_evidence_ids": [
+    "lagarde_2003_primary-01"
+   ],
+   "intended_name": "Ceratocephala falcata"
+  },
+  {
+   "name_as_printed": "Clematis vitella",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Clematis vitalba L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Clematis vitalba var. acuminatissima Kuntze",
+      "accepted_in_wfo": "Clematis gouriana",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Clematis vitalba var. angustiloba Schur",
+      "accepted_in_wfo": "Clematis vitalba",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Clematis vitalba var. angustisecta Gremli",
+      "accepted_in_wfo": "Clematis vitalba",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Clematis vitalba var. argentilucida H.Lév. & Vaniot",
+      "accepted_in_wfo": "Clematis apiifolia",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Clematis vitalba var. bannatica Wierzb. ex Rchb.",
+      "accepted_in_wfo": "Clematis vitalba",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Clematis vitalba subsp. brevicaudata (DC.) Kuntze",
+      "accepted_in_wfo": "Clematis brevicaudata",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Clematis vitalba var. cordata Schur",
+      "accepted_in_wfo": "Clematis vitalba",
+      "family": "Ranunculaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "meek_2010-03"
+   ]
+  },
+  {
+   "name_as_printed": "Commelina bengalensis",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Commelina benghalensis",
+   "resolved_family": "Commelinaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Commelina benghalensis Forssk.",
+      "accepted_in_wfo": "Commelina africana",
+      "family": "Commelinaceae"
+     },
+     {
+      "name": "Commelina benghalensis L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commelina benghalensis var. benghalensis ",
+      "accepted_in_wfo": "Commelina benghalensis",
+      "family": "Commelinaceae"
+     },
+     {
+      "name": "Commelina benghalensis subsp. hirsuta (C.B.Clarke) J.K.Morton",
+      "accepted_in_wfo": "Commelina benghalensis",
+      "family": "Commelinaceae"
+     },
+     {
+      "name": "Commelina benghalensis var. hirsuta C.B.Clarke",
+      "accepted_in_wfo": "Commelina benghalensis",
+      "family": "Commelinaceae"
+     },
+     {
+      "name": "Commelina beniniensis P.Beauv.",
+      "accepted_in_wfo": "Aneilema bebiniense",
+      "family": "Commelinaceae"
+     },
+     {
+      "name": "Commelina beccariana Martelli",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commelina beddomei Nandikar & Gurav",
+      "accepted_in_wfo": "Commelina hirsuta",
+      "family": "Commelinaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Commelina benghalensis"
+   },
+   "reason": "The printed name differs from 'Commelina benghalensis' by 1 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "crm110_sulcata_2020-02"
+   ],
+   "corrected_spelling": "Commelina benghalensis"
+  },
+  {
+   "name_as_printed": "Commerlina benghalensis",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Commercona Sonn.",
+      "accepted_in_wfo": "Barringtonia",
+      "family": "Lecythidaceae"
+     },
+     {
+      "name": "Commersona speciosa Salisb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commersonara J.M.H.Shaw",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commersonia J.R.Forst. & G.Forst.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commersonia subg. Verticillata Guymer",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commersonia amystia C.F.Wilkins & L.M.Copel.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commersonia apella C.F.Wilkins",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Commersonia argentea Guymer",
+      "accepted_in_wfo": "Androcalva argentea",
+      "family": "Malvaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Commelina benghalensis"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "crm057_platynota_2011-01"
+   ]
+  },
+  {
+   "name_as_printed": "Cryptantha circumcissa",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Greeneocharis circumscissa",
+   "resolved_family": "Boraginaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Cryptantha circumscissa (Hook. & Arn.) I.M.Johnst.",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha circumscissa var. circumscissa ",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha circumscissa subsp. circumscissa ",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha circumscissa var. genuina I.M.Johnst.",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha circumscissa var. hispida (J.F.Macbr.) I.M.Johnst.",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha circumscissa var. rosulata J.T.Howell",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha circumscissa subsp. rosulata (J.T.Howell) K.Mathew & P.H.Raven",
+      "accepted_in_wfo": "Greeneocharis circumscissa",
+      "family": "Boraginaceae"
+     },
+     {
+      "name": "Cryptantha cinerea (Greene) Cronquist",
+      "accepted_in_wfo": "Oreocarya suffruticosa",
+      "family": "Boraginaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Cryptantha circumscissa"
+   },
+   "reason": "The printed name differs from 'Cryptantha circumscissa' by 1 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "jennings_2002-12"
+   ],
+   "corrected_spelling": "Cryptantha circumscissa"
+  },
+  {
+   "name_as_printed": "Crytococcum accrescens",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": []
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Cyrtococcum accrescens"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "crm096_elongata_2016-05"
+   ]
+  },
+  {
+   "name_as_printed": "Cucumis sativu",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Cucumis sativus",
+   "resolved_family": "Cucurbitaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Cucumis sativus L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Cucumis sativus subsp. agrestis Gabaev",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     },
+     {
+      "name": "Cucumis sativus f. albus M.Hiroe",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     },
+     {
+      "name": "Cucumis sativus var. albus Ser.",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     },
+     {
+      "name": "Cucumis sativus var. anatolicus Gabaev",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     },
+     {
+      "name": "Cucumis sativus var. anglicus L.H.Bailey",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     },
+     {
+      "name": "Cucumis sativus var. arakis Forssk.",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     },
+     {
+      "name": "Cucumis sativus f. australis Kitam.",
+      "accepted_in_wfo": "Cucumis sativus",
+      "family": "Cucurbitaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Cucumis sativus"
+   },
+   "reason": "The printed name differs from 'Cucumis sativus' by 1 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "bayley_highfield_1996-16"
+   ],
+   "corrected_spelling": "Cucumis sativus"
+  },
+  {
+   "name_as_printed": "Cynodon sp.",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Cynodon Brid.",
+      "accepted_in_wfo": "Distichium",
+      "family": "Distichiaceae"
+     },
+     {
+      "name": "Cynodon Rich.",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "crm107_tornieri_2018-01",
+    "moll_klemens_1996-01"
+   ]
+  },
+  {
+   "name_as_printed": "Cypreus spp.",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Cyprianthe Spach",
+      "accepted_in_wfo": "Ranunculus",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Cyprianthe anemonoides Spach",
+      "accepted_in_wfo": "Ranunculus asiaticus",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Cyprianthe asiatica (L.) Freyn",
+      "accepted_in_wfo": "Ranunculus asiaticus",
+      "family": "Ranunculaceae"
+     },
+     {
+      "name": "Cypringlea M.T.Strong",
+      "accepted_in_wfo": "Trichophorum",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Cypringlea analecta (Beetle) M.T.Strong",
+      "accepted_in_wfo": "Trichophorum analecta",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Cypringlea coahuilensis (Svenson) M.T.Strong",
+      "accepted_in_wfo": "Trichophorum coahuilense",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Cypringlea evadens (C.D.Adams) Reznicek & S.González",
+      "accepted_in_wfo": "Trichophorum evadens",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Cyprinia Browicz",
+      "accepted_in_wfo": "Periploca",
+      "family": "Apocynaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Cyperus"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "crm096_elongata_2016-07"
+   ]
+  },
+  {
+   "name_as_printed": "Dactyloctenium aegyptum",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Dactyloctenium aegyptium",
+   "resolved_family": "Poaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Dactyloctenium aegyptiacum (L.) Willd.",
+      "accepted_in_wfo": "Dactyloctenium aegyptium",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Dactyloctenium aegyptium (L.) Willd.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Dactyloctenium aegyptium subsp. aristatum (Link) M.Sharma",
+      "accepted_in_wfo": "Dactyloctenium aristatum",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Dactyloctenium aegyptium var. aristatum (Link) A.Chev.",
+      "accepted_in_wfo": "Dactyloctenium aristatum",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Dactyloctenium aegyptium var. mucronatum (Michx.) Schweinf.",
+      "accepted_in_wfo": "Dactyloctenium aegyptium",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Dactyloctenium aegyptium var. radulans (R.Br.) Thell.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Dactyloctenium aegyptium f. viviparum Beetle",
+      "accepted_in_wfo": "Dactyloctenium aegyptium",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Dactyloctenium aegyptius var. mucronatum (Michx.) Lanza & Mattei",
+      "accepted_in_wfo": "Dactyloctenium aegyptium",
+      "family": "Poaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Dactyloctenium aegyptium"
+   },
+   "reason": "The printed name differs from 'Dactyloctenium aegyptium' by 1 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "crm110_sulcata_2020-03"
+   ],
+   "corrected_spelling": "Dactyloctenium aegyptium"
+  },
+  {
+   "name_as_printed": "Desmodium triflorum",
+   "previous_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Desmodium triflorum (L.) DC.",
+      "accepted_in_wfo": "Grona triflora",
+      "family": "Fabaceae"
+     },
+     {
+      "name": "Desmodium triflorum Wall. ex Wight & Arn.",
+      "accepted_in_wfo": "Grona heterophylla",
+      "family": "Fabaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "figueroa_2024-37"
+   ]
+  },
+  {
+   "name_as_printed": "Duquetia surinamensis",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Duquetia scottmorii Maas",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Duquetia antioquensis León & Maas",
+      "accepted_in_wfo": "Duguetia antioquensis",
+      "family": "Annonaceae"
+     },
+     {
+      "name": "Duquetia chrysea Maas",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Duquetia glabra Britton",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Duquetia paraensis R.E.Fr.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Duquetia G.Don",
+      "accepted_in_wfo": "Duguetia",
+      "family": "Annonaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Duguetia surinamensis"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "delaossa_2009-20"
+   ]
+  },
+  {
+   "name_as_printed": "Erythroxylum zambeziacum",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Erythroxylum zambesiacum N.Robson",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Erythroxylum zehntneri Diogo",
+      "accepted_in_wfo": "Erythroxylum macrochaetum",
+      "family": "Erythroxylaceae"
+     },
+     {
+      "name": "Erythroxylum zeylanicum O.E.Schulz",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Erythroxylum zuluense Schönland",
+      "accepted_in_wfo": "Nectaropetalum zuluense",
+      "family": "Erythroxylaceae"
+     },
+     {
+      "name": "Erythroxylum sect. Coelocarpus O.E.Schulz",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Erythroxylum acranthum Hemsl.",
+      "accepted_in_wfo": "Erythroxylum platyclados",
+      "family": "Erythroxylaceae"
+     },
+     {
+      "name": "Erythroxylum acrobeles W.A.Gentner",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Erythroxylum acuminatum Ruiz & Pav.",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Erythroxylum zambesiacum"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "crm115_spekii_2021-09"
+   ]
+  },
+  {
+   "name_as_printed": "Euphorbia cyathophora",
+   "previous_name_check": "synonym_in_backbone_but_source_lists_both_names_kept_separate",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": true,
+    "names": [
+     {
+      "name": "Euphorbia cyathophora Murray",
+      "accepted_in_wfo": "Euphorbia heterophylla",
+      "family": "Euphorbiaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "synonym_of_accepted_name",
+    "fuzzy_candidate": null
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "figueroa_2024-07"
+   ]
+  },
+  {
+   "name_as_printed": "Eustachys petrea",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Eustachys petraea (Sw.) Desv.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Eustachys paranensis A.M.Molina",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Eustachys paspaloides (Vahl) Lanza & Mattei",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Eustachys paspaloides subsp. caribaea (Spreng.) Nowack",
+      "accepted_in_wfo": "Eustachys caribaea",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Eustachys paspaloides subsp. paspaloides ",
+      "accepted_in_wfo": "Eustachys paspaloides",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Eustachys polystachya (Lag.) Kunth",
+      "accepted_in_wfo": "Chloris submutica",
+      "family": "Poaceae"
+     },
+     {
+      "name": "Eustachys pyramidale (L.) Salisb.",
+      "accepted_in_wfo": "Loncomelos pyramidale",
+      "family": "Asparagaceae"
+     },
+     {
+      "name": "Eustachys argentea (Hack.) Herter",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Eustachys petraea"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "figueroa_2024-46"
+   ]
+  },
+  {
+   "name_as_printed": "Grewia tilaefolia",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Grewia tiliifolia",
+   "resolved_family": "Malvaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Grewia tiliaecarpa Baill.",
+      "accepted_in_wfo": "Grewia triflora",
+      "family": "Malvaceae"
+     },
+     {
+      "name": "Grewia tiliifolia Vahl",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Grewia tiliifolia A.Rich.",
+      "accepted_in_wfo": "Grewia amicorum",
+      "family": "Malvaceae"
+     },
+     {
+      "name": "Grewia tiliifolia var. argentea Burret",
+      "accepted_in_wfo": "Grewia tiliifolia",
+      "family": "Malvaceae"
+     },
+     {
+      "name": "Grewia tiliifolia var. leptopetala T.Cooke",
+      "accepted_in_wfo": "Grewia eriocarpa",
+      "family": "Malvaceae"
+     },
+     {
+      "name": "Grewia tahitensis Nadeaud",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Grewia tannifera Hochr.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Grewia tembensis Fresen.",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Grewia tiliifolia"
+   },
+   "reason": "The printed name differs from 'Grewia tiliifolia' by 2 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "crm054_travancorica_2011-09"
+   ],
+   "corrected_spelling": "Grewia tiliifolia"
+  },
+  {
+   "name_as_printed": "Ioxa cocinea",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": []
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "delaossa_2009-03"
+   ]
+  },
+  {
+   "name_as_printed": "Ipomoea senensis",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Ipomoea senegalensis Lam.",
+      "accepted_in_wfo": "Ipomoea cairica",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Ipomoea senegambiae (Spreng.) Choisy",
+      "accepted_in_wfo": "Bonamia thunbergiana",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Ipomoea senegambica A.Chev.",
+      "accepted_in_wfo": "Ipomoea rubens",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Ipomoea seaania Felger & D.F.Austin",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Ipomoea sectifolia Shinners",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Ipomoea secunda G.Don",
+      "accepted_in_wfo": "Bonamia thunbergiana",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Ipomoea seducta House",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Ipomoea seineri Pilg.",
+      "accepted_in_wfo": "Ipomoea oblongata",
+      "family": "Convolvulaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Ipomoea sinensis"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "crm115_spekii_2021-02"
+   ]
+  },
+  {
+   "name_as_printed": "Kyllinga brevifolia",
+   "previous_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Kyllinga brevifolia Rottb.",
+      "accepted_in_wfo": "Cyperus brevifolius",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Kyllinga brevifolia Schult.",
+      "accepted_in_wfo": "Rhynchospora berteroi",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Kyllinga brevifolia Nees",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Kyllinga brevifolia Diels",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "pillajo_2020-71"
+   ]
+  },
+  {
+   "name_as_printed": "Launaea residifolia",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "spelling_variant_identified_accepted_name_not_agreed",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Launaea resedifolia (L.) Kuntze",
+      "accepted_in_wfo": "Podospermum laciniata",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Launaea resedifolia Druce",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Launaea resedifolia subsp. cassiniana (Jaub. & Spach) Le Houér.",
+      "accepted_in_wfo": "Launaea mucronata",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Launaea resedifolia var. dichotoma Pomel",
+      "accepted_in_wfo": "Launaea fragilis",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Launaea resedifolia subsp. longiloba (Boiss. & Reut.) Maire",
+      "accepted_in_wfo": "Launaea fragilis",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Launaea resedifolia subsp. mucronata (Forssk.) Maire",
+      "accepted_in_wfo": "Launaea mucronata",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Launaea resedifolia var. pulchella Pamp.",
+      "accepted_in_wfo": "Launaea mucronata",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Launaea resedifolia var. resedifolia ",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Launaea resedifolia"
+   },
+   "reason": "A close spelling exists in both databases, but they do not give one and the same accepted species (or the difference is more than two letters).",
+   "applies_to_evidence_ids": [
+    "bayley_highfield_1996-06"
+   ],
+   "corrected_spelling": "Launaea resedifolia"
+  },
+  {
+   "name_as_printed": "Linaria incarta",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "spelling_variant_identified_accepted_name_not_agreed",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Linaria incarnata (Vent.) Spreng.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Linaria incarnata var. cossoniana (Braun-Blanq. & Maire) Viano",
+      "accepted_in_wfo": "Linaria cossoniana",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Linaria incarnata var. persicina (Maire) Viano",
+      "accepted_in_wfo": "Linaria cossoniana",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Linaria incana Wall.",
+      "accepted_in_wfo": "Nanorrhinum incanum",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Linaria × incompleta Kuprian.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Linaria incompleta Kuprian.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Linaria indecora Franch.",
+      "accepted_in_wfo": "Nanorrhinum hastatum",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Linaria insularis Rouy",
+      "accepted_in_wfo": "Cymbalaria aequitriloba",
+      "family": "Plantaginaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Linaria incarnata"
+   },
+   "reason": "A close spelling exists in both databases, but they do not give one and the same accepted species (or the difference is more than two letters).",
+   "applies_to_evidence_ids": [
+    "bayley_highfield_1996-08"
+   ],
+   "corrected_spelling": "Linaria incarnata"
+  },
+  {
+   "name_as_printed": "Lycopersicon esculentum",
+   "previous_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "decision": "resolved_by_second_database",
+   "resolved_name": "Solanum lycopersicum",
+   "resolved_family": "Solanaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": true,
+    "names": [
+     {
+      "name": "Lycopersicon esculentum Mill.",
+      "accepted_in_wfo": "Solanum lycopersicum",
+      "family": "Solanaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "GBIF could not choose among names spelled this way; World Flora Online has a single name, and its accepted species is one of those GBIF lists for this spelling.",
+   "applies_to_evidence_ids": [
+    "dlugosz_2015-17"
+   ]
+  },
+  {
+   "name_as_printed": "Lycopersicon lycopersicon",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Solanum lycopersicum",
+   "resolved_family": "Solanaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Lycopersicon lycopersicoides (Dunal) Stank.",
+      "accepted_in_wfo": "Solanum lycopersicoides",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Lycopersicon lycopersicoides (Dunal) A.Child ex J.M.H.Shaw",
+      "accepted_in_wfo": "Solanum lycopersicoides",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Lycopersicon lycopersicoides (Dunal) A.Child ex J.M.H.Shaw",
+      "accepted_in_wfo": "Solanum lycopersicoides",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Lycopersicon lycopersicum Hill",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Lycopersicon lycopersicum (L.) H.Karst.",
+      "accepted_in_wfo": "Solanum lycopersicum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Lycopersicon lycopersicum (L.) Farw.",
+      "accepted_in_wfo": "Solanum lycopersicum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Lycopersicon lycopersicum var. cerasiforme (Dunal) M.R.Almeida",
+      "accepted_in_wfo": "Solanum lycopersicum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Lycopersicon lycopersicum var. commune (L.H.Bailey) Farw.",
+      "accepted_in_wfo": "Solanum lycopersicum",
+      "family": "Solanaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Lycopersicon lycopersicum"
+   },
+   "reason": "The printed name differs from 'Lycopersicon lycopersicum' by 2 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "bayley_highfield_1996-19"
+   ],
+   "corrected_spelling": "Lycopersicon lycopersicum"
+  },
+  {
+   "name_as_printed": "Morinda citriforia",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Morinda citrifolia",
+   "resolved_family": "Rubiaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Morinda citrifolia L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Morinda citrifolia var. bracteata F.M.Bailey",
+      "accepted_in_wfo": "Morinda citrifolia",
+      "family": "Rubiaceae"
+     },
+     {
+      "name": "Morinda citrifolia var. bracteata (Roxb.) Kurz",
+      "accepted_in_wfo": "Morinda bracteata",
+      "family": "Rubiaceae"
+     },
+     {
+      "name": "Morinda citrifolia var. elliptica Hook.f.",
+      "accepted_in_wfo": "Morinda elliptica",
+      "family": "Rubiaceae"
+     },
+     {
+      "name": "Morinda citrifolia var. potteri O.Deg.",
+      "accepted_in_wfo": "Morinda citrifolia",
+      "family": "Rubiaceae"
+     },
+     {
+      "name": "Morinda citrifolia f. potteri (O.Deg.) H.St.John",
+      "accepted_in_wfo": "Morinda citrifolia",
+      "family": "Rubiaceae"
+     },
+     {
+      "name": "Morinda citrifolia var. typica Domin",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Morinda citrina Y.Z.Ruan",
+      "accepted_in_wfo": "Gynochthodes citrina",
+      "family": "Rubiaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Morinda citrifolia"
+   },
+   "reason": "The printed name differs from 'Morinda citrifolia' by 1 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "sriprateep_2013-13"
+   ],
+   "corrected_spelling": "Morinda citrifolia"
+  },
+  {
+   "name_as_printed": "Periskia bleo",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Perisiphorus P.Beauv.",
+      "accepted_in_wfo": "Hedwigia",
+      "family": "Hedwigiaceae"
+     },
+     {
+      "name": "Perisiphorus ciliatus (Hedw.) P.Beauv.",
+      "accepted_in_wfo": "Hedwigia ciliata",
+      "family": "Hedwigiaceae"
+     },
+     {
+      "name": "Perispermum O.Deg.",
+      "accepted_in_wfo": "Bonamia",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Perispermum albiflorum O.Deg.",
+      "accepted_in_wfo": "Bonamia menziesii",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Perispermum menziesii (A.Gray) O.Deg.",
+      "accepted_in_wfo": "Bonamia menziesii",
+      "family": "Convolvulaceae"
+     },
+     {
+      "name": "Perissandra Gagnep.",
+      "accepted_in_wfo": "Vatica",
+      "family": "Dipterocarpaceae"
+     },
+     {
+      "name": "Perissandra laotica Gagnep.",
+      "accepted_in_wfo": "Sunaptea odorata",
+      "family": "Dipterocarpaceae"
+     },
+     {
+      "name": "Perissocarpa Steyerm. & Maguire",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "delaossa_2009-16"
+   ]
+  },
+  {
+   "name_as_printed": "Physalis walterii",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "spelling_variant_identified_accepted_name_not_agreed",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Physalis walteri Nutt.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Physalis walteri var. glabra (Waterf.) D.B.Ward",
+      "accepted_in_wfo": "Physalis elliottii",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Physalis waterfallii O.Vargas, M.Martínez & Dávila",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Physalis wrightii A.Gray",
+      "accepted_in_wfo": "Physalis acutifolia",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Physalis subg. Angulatae Rydb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Physalis sect. Angulatae (Rydb.) M.Y.Menzel",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Physalis sect. Campanulae M.Martínez",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Physalis sect. Capsicophysalis Bitter",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Physalis walteri"
+   },
+   "reason": "A close spelling exists in both databases, but they do not give one and the same accepted species (or the difference is more than two letters).",
+   "applies_to_evidence_ids": [
+    "figueroa_2024-32"
+   ],
+   "corrected_spelling": "Physalis walteri"
+  },
+  {
+   "name_as_printed": "Pictis spp.",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Pictarena Becklund",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictarena rotundata (Wooton) Becklund",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictetia DC.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictetia ser. Fasciculatae Urb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictetia ser. Racemosa Urb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictetia aculeata (Vahl) Urb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictetia angustifolia Griseb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Pictetia arborescens Borhidi",
+      "accepted_in_wfo": "Pictetia sulcata",
+      "family": "Fabaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "tortoise_trust_plant_list-04"
+   ]
+  },
+  {
+   "name_as_printed": "Plantago maior",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Plantago maireana Hassemer",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Plantago macbridei Pilg.",
+      "accepted_in_wfo": "Plantago sericea",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Plantago macrantha Decne. ex Barnéoud",
+      "accepted_in_wfo": "Plantago grandiflora",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Plantago macrantha var. argentea Phil.",
+      "accepted_in_wfo": "Plantago grandiflora",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Plantago macrantha var. hirsuta Phil.",
+      "accepted_in_wfo": "Plantago grandiflora",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Plantago macrantha var. nitidifolia Barnéoud",
+      "accepted_in_wfo": "Plantago grandiflora",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Plantago macro-nipponica Yamam.",
+      "accepted_in_wfo": "Plantago major",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Plantago macrocarpa Cham. & Schltdl.",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Plantago major"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "dlugosz_2015-04"
+   ]
+  },
+  {
+   "name_as_printed": "Prunus dulcis",
+   "previous_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Prunus dulcis (Mill.) Rchb.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Prunus dulcis (Mill.) D.A.Webb",
+      "accepted_in_wfo": "Prunus amygdalus",
+      "family": "Rosaceae"
+     },
+     {
+      "name": "Prunus dulcis Rouchy",
+      "accepted_in_wfo": "Prunus avium",
+      "family": "Rosaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "dlugosz_2015-07"
+   ]
+  },
+  {
+   "name_as_printed": "Rhynchospora grayii",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Rhynchospora grayi Kunth",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Rhynchospora grayi var. culixa (Gale) Kük.",
+      "accepted_in_wfo": "Rhynchospora harveyi",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Rhynchospora grayi var. harveyi (W.Boott) Kük.",
+      "accepted_in_wfo": "Rhynchospora harveyi",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Rhynchospora grayana Chapm. ex M.A.Curtis",
+      "accepted_in_wfo": "Rhynchospora chapmanii",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Rhynchospora gracilenta A.Gray",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Rhynchospora gracilenta var. diversifolia Fernald",
+      "accepted_in_wfo": "Rhynchospora gracilenta",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Rhynchospora gracilis (Spreng.) Kuntze",
+      "accepted_in_wfo": "Rhynchospora tenuis",
+      "family": "Cyperaceae"
+     },
+     {
+      "name": "Rhynchospora gracilis (Sw.) Vahl",
+      "accepted_in_wfo": "Rhynchospora racemosa",
+      "family": "Cyperaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "figueroa_2024-54"
+   ]
+  },
+  {
+   "name_as_printed": "Roemeria sp.",
+   "previous_name_check": "homonyms_in_backbone_author_not_given_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Roemeria Medik.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Roemeria Raddi",
+      "accepted_in_wfo": "Riccardia",
+      "family": "Aneuraceae"
+     },
+     {
+      "name": "Roemeria Dennst.",
+      "accepted_in_wfo": "Scaevola",
+      "family": "Goodeniaceae"
+     },
+     {
+      "name": "Roemeria Thunb.",
+      "accepted_in_wfo": "Heeria",
+      "family": "Anacardiaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "lagarde_2003_primary-04"
+   ]
+  },
+  {
+   "name_as_printed": "Solanum tuberocum",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "resolved_orthographic_variant",
+   "resolved_name": "Solanum tuberosum",
+   "resolved_family": "Solanaceae",
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Solanum tuberosum Poepp. ex Walp.",
+      "accepted_in_wfo": "Solanum maglia",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Solanum tuberosum L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Solanum tuberosum Bertero ex Walp.",
+      "accepted_in_wfo": "Solanum etuberosum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Solanum tuberosum f. acuminatum Bukasov & Lechn.",
+      "accepted_in_wfo": "Solanum tuberosum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Solanum tuberosum var. aethiopicum Alef.",
+      "accepted_in_wfo": "Solanum tuberosum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Solanum tuberosum var. aflorum Danert",
+      "accepted_in_wfo": "Solanum tuberosum",
+      "family": "Solanaceae"
+     },
+     {
+      "name": "Solanum tuberosum var. agrostans Mure",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Solanum tuberosum var. alatum Danert",
+      "accepted_in_wfo": "Solanum tuberosum",
+      "family": "Solanaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Solanum tuberosum"
+   },
+   "reason": "The printed name differs from 'Solanum tuberosum' by 1 letter(s); GBIF and World Flora Online both hold that name and give the same accepted species.",
+   "applies_to_evidence_ids": [
+    "bayley_highfield_1996-23"
+   ],
+   "corrected_spelling": "Solanum tuberosum"
+  },
+  {
+   "name_as_printed": "Spondia lutea",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Spondiantheae G.L.Webster",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Spondianthinae G.L.Webster",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Spondianthus Engl.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Spondianthus glaber Engl.",
+      "accepted_in_wfo": "Spondianthus preussii",
+      "family": "Phyllanthaceae"
+     },
+     {
+      "name": "Spondianthus obovatus Engl.",
+      "accepted_in_wfo": "Protomegabaria stapfiana",
+      "family": "Phyllanthaceae"
+     },
+     {
+      "name": "Spondianthus preussii Engl.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Spondianthus preussii var. genuinus Pax & K.Hoffm.",
+      "accepted_in_wfo": "Spondianthus preussii",
+      "family": "Phyllanthaceae"
+     },
+     {
+      "name": "Spondianthus preussii var. glaber (Engl.) Engl.",
+      "accepted_in_wfo": "Spondianthus preussii",
+      "family": "Phyllanthaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "delaossa_2009-22"
+   ]
+  },
+  {
+   "name_as_printed": "Taraxacum officianale",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "spelling_variant_identified_accepted_name_not_agreed",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Taraxacum officinale F.H.Wigg.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Taraxacum officinale var. albiflorum Makino",
+      "accepted_in_wfo": "Mongolica albidum",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Taraxacum officinale subsp. alpestre Schinz & Thell.",
+      "accepted_in_wfo": "Crocea fontanum",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Taraxacum officinale var. alpinum Porter",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Taraxacum officinale var. alpinum Koch",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Taraxacum officinale subsp. aquilonare (Hand.-Mazz.) Schinz & Thell.",
+      "accepted_in_wfo": "Obliqua aquilonare",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Taraxacum officinale var. boreale Hjelt",
+      "accepted_in_wfo": "Borealia hjeltii",
+      "family": "Asteraceae"
+     },
+     {
+      "name": "Taraxacum officinale subsp. ceratophorum (Ledeb.) Schinz ex Thell.",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Taraxacum officinale"
+   },
+   "reason": "A close spelling exists in both databases, but they do not give one and the same accepted species (or the difference is more than two letters).",
+   "applies_to_evidence_ids": [
+    "tortoise_trust_plant_list-01"
+   ],
+   "corrected_spelling": "Taraxacum officinale"
+  },
+  {
+   "name_as_printed": "Thymus capitatus",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Thymus capitatus (L.) Hoffmanns. & Link",
+      "accepted_in_wfo": "Thymbra capitata",
+      "family": "Lamiaceae"
+     },
+     {
+      "name": "Thymus capitatus Lag.",
+      "accepted_in_wfo": "Thymus martinezii",
+      "family": "Lamiaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "crm122_marginata_2023-18"
+   ]
+  },
+  {
+   "name_as_printed": "Tournefortia rufo-sericea",
+   "previous_name_check": "spelling_differs_from_backbone_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": true,
+    "names": [
+     {
+      "name": "Tournefortia rufo-sericea Hook.f.",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "spelling_differs_from_backbone_needs_review",
+    "fuzzy_candidate": "Tournefortia rufosericea"
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "pillajo_2020-13"
+   ]
+  },
+  {
+   "name_as_printed": "Veronica buabaumii",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Veronica buchananii Hook.f.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Veronica bucharica B.Fedtsch.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Veronica bucharica subsp. ramosissima (Boriss.) Elenevsky",
+      "accepted_in_wfo": "Veronica ramosissima",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Veronica bullii (Eaton) M.M.Mart.Ort. & Albach",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Veronica bungabecca Janka",
+      "accepted_in_wfo": "Veronica serpyllifolia",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Veronica bungei Boiss.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Veronica buxbaumiana Pall. ex M.Bieb.",
+      "accepted_in_wfo": "Veronica gentianoides",
+      "family": "Plantaginaceae"
+     },
+     {
+      "name": "Veronica buxbaumii Ten.",
+      "accepted_in_wfo": "Veronica persica",
+      "family": "Plantaginaceae"
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": "Several plant names are spelled this way and they belong to different accepted species; the source gives no author.",
+   "applies_to_evidence_ids": [
+    "crm054_travancorica_2011-08"
+   ]
+  },
+  {
+   "name_as_printed": "Vicina spp.",
+   "previous_name_check": "not_resolved_needs_review",
+   "decision": "still_unresolved",
+   "resolved_name": null,
+   "resolved_family": null,
+   "second_database": "World Flora Online plant list, name matching service",
+   "second_database_result": {
+    "single_match": false,
+    "names": [
+     {
+      "name": "Vicinia G.L.Nesom",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicinia ciliata (Benth.) G.L.Nesom",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicinia squamifolia (F.Muell.) G.L.Nesom",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicia L.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicia sect. Abacosa (Alef.) Stank.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicia sect. Abbreviatae Stank.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicia sect. Albiflorae Stank.",
+      "accepted_in_wfo": null,
+      "family": null
+     },
+     {
+      "name": "Vicia subsect. Alpestres Radzhi",
+      "accepted_in_wfo": null,
+      "family": null
+     }
+    ]
+   },
+   "gbif_result": {
+    "name_check": "not_resolved_needs_review",
+    "fuzzy_candidate": null
+   },
+   "reason": null,
+   "applies_to_evidence_ids": [
+    "tortoise_trust_plant_list-09"
+   ]
+  }
+ ]
+}
