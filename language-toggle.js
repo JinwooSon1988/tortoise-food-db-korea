@@ -90,7 +90,9 @@ function bindDetailLocaleNavigation(){
 }
 function boot(){
  ensureNav();
- bindDetailLocaleNavigation();
+ // Plant detail pages use detail-locale-history.js as the sole language-link handler.
+ // Keep this handler only for pages without that dedicated navigation script.
+ if(!document.querySelector('script[src*="detail-locale-history.js"]'))bindDetailLocaleNavigation();
  let lang='ko';
  try{lang=localStorage.getItem(K)==='en'?'en':'ko'}catch(e){}const requested=new URLSearchParams(location.search).get('lang');if(requested==='ko'||requested==='en')lang=requested;
  // Legacy plant detail pages have a separately authored full English page.
