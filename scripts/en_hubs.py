@@ -70,26 +70,6 @@ def home(public_count, examples):
             '<script>try{localStorage.setItem("tfdblang","en")}catch(e){}'
             'location.replace("../?lang=en"+location.hash)</script>'
             '</head><body><p><a href="../?lang=en">Open Tortoise Food DB in English</a></p></body></html>')
-    url = SITE_URL + "/en/"
-    title = "Can my tortoise eat this plant? Tortoise food database | Tortoise Food DB"
-    desc = "Search tortoise food plants by English or scientific name and see the feeding grade first, then the reasons, cautions and evidence."
-    schema = {"@context": "https://schema.org", "@type": "WebSite", "name": "Tortoise Food DB", "url": url, "inLanguage": "en", "description": desc,
-              "potentialAction": {"@type": "SearchAction", "target": url + "?q={search_term_string}", "query-input": "required name=search_term_string"}}
-    ex = "".join(f'<button type="button" data-example="{esc(x)}">{esc(x)}</button>' for x in examples)
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#2f6b49">'
-            f'<meta name="robots" content="index,follow"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}">{alternates("/")}{og(title, desc, url)}{ld(schema)}'
-            f'<style>{styles_of("index.html")}{LANG_CSS}.top{{display:flex;align-items:center;gap:10px}}</style></head>'
-            '<body><a class="skiplink" href="#main-content">Skip to content</a><main id="main-content" class="wrap" tabindex="-1">'
-            f'<header class="top"><a class="brand" href="./" aria-label="Tortoise Food DB home"><span>Tortoise Food DB</span></a><div class="topmeta">{lang_switch("../")}</div></header>'
-            '<section class="hero"><div class="eyebrow">Evidence database for tortoise food plants</div><h1>Can my tortoise eat this plant?</h1>'
-            '<p>Search for a plant by name. We show <b>whether it can be fed first</b>, then why, with the papers and original sources there when you need them.</p></section>'
-            '<section class="searchstage" aria-label="Search food plants"><div class="searchrow"><input id="searchInput" type="search" placeholder="e.g. ' + esc(", ".join(examples)) + '" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Search food plants by name" aria-controls="searchResults" aria-describedby="searchHelp" aria-keyshortcuts="/"><button id="searchBtn" type="button" class="primary">Check grade</button></div>'
-            '<div id="searchHelp" class="searchhelp"><span class="helpintro">Search by Korean, English, or scientific name.</span>'
-            '<span class="safetyhint">No search result does not mean a plant is safe.</span></div>'
-            f'<div id="catalogCount" class="catalogcount">Search {public_count} plants with a public assessment.</div><div id="searchResults" role="status" aria-live="polite" aria-atomic="false"></div></section>'
-            '<section class="truststrip" aria-label="Our principles"><div><b>Feeding assessment</b><span>Check whether a plant can be fed</span></div><div><b>Reasons and precautions</b><span>Plant parts, exceptions, and risks</span></div><div><b>Traceable evidence</b><span>Original sources and limitations</span></div></section><section class="belowfold"><div><h2>All plant data</h2><p>Browse all published plants and their feeding assessments without searching.</p></div><nav class="utilitylinks" aria-label="Plant catalog and research method"><a href="../all-plants/?lang=en">View all plants</a><a href="./guides/research-method/">How we review evidence</a></nav></section>'
-            '<footer class="footer">Tortoise Food DB · An evidence-based database of tortoise food plants</footer></main>'
-            f'{tfdb_en()}<script src="../verdict-core.js?v=20261004-2"></script><script src="./search-en.js?v=20261013-2"></script><script src="../taxonomy-home-search.js?v=20261020-1" defer></script></body></html>')
 
 
 def all_plants(public_count):
