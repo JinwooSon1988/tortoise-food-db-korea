@@ -78,6 +78,17 @@ jobs:
           python scripts/qa_public_content_coverage.py
           python scripts/qa_plant_coverage_gap_report_v1.py
           python scripts/build_wild_candidate_research_queue.py
+      - name: Diagnose generated research guide drift
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from difflib import SequenceMatcher
+          a=Path('/tmp/committed-generated/en/guides/research-method/index.html').read_text(encoding='utf-8')
+          b=Path('en/guides/research-method/index.html').read_text(encoding='utf-8')
+          for tag,i,j,k,l in SequenceMatcher(None,a,b,autojunk=False).get_opcodes():
+              if tag != 'equal':
+                  print(f'{tag}: committed[{i}:{j}]={a[i:j][:220]!r}; generated[{k}:{l}]={b[k:l][:220]!r}')
+          PY
       - name: Verify committed plant pages are current
         if: ${{ github.event_name != 'workflow_dispatch' }}
         run: |
