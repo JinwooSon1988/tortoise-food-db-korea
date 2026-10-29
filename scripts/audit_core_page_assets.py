@@ -8,7 +8,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
     "index.html": {"lang": "ko", "search": True, "scripts": {"language-toggle.js", "search-live.js", "verdict-core.js"}},
-    "en/index.html": {"lang": "en", "search": True, "scripts": {"search-en.js", "verdict-core.js"}},
+    "en/index.html": {"lang": "en", "search": False, "scripts": set()},
     "plant/dandelion/index.html": {"lang": "ko", "search": False, "scripts": {"detail-locale-history.js"}},
     "en/plant/dandelion/index.html": {"lang": "en", "search": False, "scripts": {"detail-locale-history.js"}},
     "guides/research-method/index.html": {"lang": "ko", "search": False, "scripts": {"language-toggle.js"}},
@@ -79,8 +79,12 @@ for name, expected in PAGES.items():
         script_names.add(Path(url.path).name)
     for required in expected["scripts"] - script_names:
         errors.append(f"{name}: required script not loaded: {required}")
+    if name == "en/index.html":
+        redirect_html = path.read_text(encoding="utf-8")
+        if "noindex" not in redirect_html or "location.replace" not in redirect_html or "../?lang=en" not in redirect_html:
+            errors.append("en/index.html: legacy English route must redirect to canonical bilingual home and remain noindex")
 
-# Both homepages must use the same verdict implementation, not separate grade rules.
+# The canonical homepage owns the verdict UI; the legacy English URL redirects.
 shared_verdict = ROOT / "verdict-core.js"
 if not shared_verdict.is_file():
     errors.append("Shared verdict engine: verdict-core.js is missing")
