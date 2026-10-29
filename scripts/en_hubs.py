@@ -63,7 +63,7 @@ def tfdb_en():
 
 def home(public_count, examples):
     # One canonical bilingual homepage: never serve a divergent English copy.
-    return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Tortoise Food DB — English Redirect</title>'
             '<meta name="viewport" content="width=device-width,initial-scale=1">'
             '<meta name="robots" content="noindex,follow">'
             '<link rel="canonical" href="../?lang=en">'
