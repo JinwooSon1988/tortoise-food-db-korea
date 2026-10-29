@@ -83,9 +83,9 @@ const server=http.createServer((req,res)=>{
     if(route==='/' || route==='/en/'){
      const dandelion=page.locator('#searchResults .resultcard[data-plant-id="dandelion"] .detailbtn');
      await dandelion.waitFor({state:'visible',timeout:10000});
-     const expectedDetail=route==='/'?'/plant/dandelion/':'/en/plant/dandelion/';
+     const expectedDetail='/plant/dandelion/'; // Both shared home languages use the canonical detail route.
      await Promise.all([
-      page.waitForURL(url=>url.pathname===expectedDetail,{timeout:10000}),
+      page.waitForURL(url=>url.pathname===expectedDetail && (route==='/' || url.searchParams.get('lang')==='en'),{timeout:10000}),
       dandelion.click()
      ]);
      assert.equal(await page.locator('main[data-plant-id="dandelion"]').count(),1,'Search detail link opened wrong plant');
