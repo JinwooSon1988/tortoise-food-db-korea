@@ -55,6 +55,14 @@ def query(taxon, timeout=20):
                 })
             return {**taxon, 'status': 'searched', 'query': f'"{name}" {SEARCH}',
                     'hits': hits, 'searched_at_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
+        except urllib.error.HTTPError as exc:
+            if exc.code in (429, 503) and attempt < 3:
+                retry_after = exc.headers.get('Retry-After', '')
+                delay = int(retry_after) if retry_after.isdigit() else 2 ** (attempt + 2)
+                time.sleep(min(120, max(1, delay)) + random.random())
+                continue
+            return {**taxon, 'status': 'retry_needed',
+                    'error': f'http_{exc.code}', 'hits': []}
         except (urllib.error.URLError, TimeoutError, ValueError) as exc:
             if attempt == 3:
                 return {**taxon, 'status': 'retry_needed', 'error': type(exc).__name__,
@@ -78,19 +86,39 @@ def main():
                     completed.add(row['name'].casefold())
             except (ValueError, KeyError):
                 pass
+    # Deduplicate work within a run and retry only unresolved names.
     taxa = [t for t in load_taxa() if t['name'].casefold() not in completed][:args.limit]
+    print(json.dumps({'catalog_candidates': len(taxa), 'already_searched': len(completed),
+                      'workers': args.workers, 'output': str(args.output)},
+                     ensure_ascii=False), flush=True)
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
+    # Rolling bounded queue: slow requests never hold up the next 4*workers batch.
+    # Only the main thread writes the checkpoint, preserving JSONL integrity.
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        pending = {pool.submit(query, t): t for t in taxa}
+        iterator = iter(taxa)
+        pending = set()
+        def submit_next():
+            try:
+                taxon = next(iterator)
+            except StopIteration:
+                return False
+            pending.add(pool.submit(query, taxon))
+            return True
+        for _ in range(min(len(taxa), args.workers * 4)):
+            submit_next()
         with args.output.open('a', encoding='utf-8') as stream:
-            for future in concurrent.futures.as_completed(pending):
-                row = future.result()
-                stream.write(json.dumps(row, ensure_ascii=False) + '\n')
-                stream.flush()
-                counts[row['status']] += 1
-                counts['hit_leads'] += len(row['hits'])
-                if (counts['searched'] + counts['retry_needed']) % 100 == 0:
-                    print(json.dumps(counts, ensure_ascii=False), flush=True)
+            while pending:
+                done, pending = concurrent.futures.wait(
+                    pending, return_when=concurrent.futures.FIRST_COMPLETED)
+                for future in done:
+                    row = future.result()
+                    stream.write(json.dumps(row, ensure_ascii=False) + '\n')
+                    stream.flush()
+                    counts[row['status']] += 1
+                    counts['hit_leads'] += len(row['hits'])
+                    if (counts['searched'] + counts['retry_needed']) % 100 == 0:
+                        print(json.dumps(counts, ensure_ascii=False), flush=True)
+                    submit_next()
     print(json.dumps({'previously_completed': len(completed), **counts}, ensure_ascii=False))
 if __name__ == '__main__':
     main()

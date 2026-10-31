@@ -23,8 +23,14 @@ en_home_path=ROOT/"en/index.html"
 if not en_home_path.exists(): errors.append("English home en/index.html missing")
 else:
     en_home=en_home_path.read_text(encoding="utf-8")
-    for needle in ('<html lang="en">','hreflang="ko" lang="ko"'):
-        if needle not in en_home: errors.append("English home missing "+needle)
+    if '<html lang="en">' not in en_home:
+        errors.append("English home missing lang=en")
+    # /en/ is a retired compatibility redirect, not a second translated homepage.
+    # It must point to the single bilingual homepage instead of presenting a parallel UI.
+    if 'location.replace("../?lang=en"+location.hash)' not in en_home:
+        errors.append("Legacy English URL must redirect to the shared homepage")
+    if 'hreflang="ko" lang="ko"' in en_home:
+        errors.append("Legacy redirect must not recreate the retired English language switch")
     visible=re.sub(r"<(script|style)[^>]*>.*?</>","",en_home,flags=re.S)
     if re.search(r"[가-힣]",re.sub(r'<a [^>]*lang="ko"[^>]*>.*?</a>','',visible)): errors.append("English home contains Korean text")
 if "MutationObserver" in js and "observe(document.getElementById('searchResults')" in js: errors.append("retired in-page result translation is still active")

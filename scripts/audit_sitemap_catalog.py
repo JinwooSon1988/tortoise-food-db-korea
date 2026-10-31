@@ -11,6 +11,7 @@ urls = [node.text for node in tree.findall(".//sm:url/sm:loc", NS)]
 assert len(urls) == len(set(urls)), "Duplicate sitemap URLs"
 assert BASE + "all-plants/" in urls, "Indexable all-plants catalog missing from sitemap"
 assert BASE + "en/all-plants/" not in urls, "Noindex English redirect included in sitemap"
+assert BASE + "en/" not in urls, "Noindex English homepage redirect included in sitemap"
 assert all(url and url.startswith(BASE) for url in urls), "Unexpected sitemap origin"
 # Validate multilingual alternates on all sitemap entries, not only the catalog.
 XHTML = "{http://www.w3.org/1999/xhtml}link"

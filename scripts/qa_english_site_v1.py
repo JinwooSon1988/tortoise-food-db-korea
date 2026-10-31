@@ -16,14 +16,13 @@ from public_verdict import load_assessments, public_plants, by_plant, representa
 SITE = "https://jinwooson1988.github.io/tortoise-food-db-korea"
 HANGUL = re.compile(r"[가-힣]")
 errors = []
-# Homepage mirrors the Korean search-first layout: three concise trust cards stay, retired example chips and guide blocks must not return.
-_home = (ROOT / "en/index.html").read_text(encoding="utf-8")
-for _obsolete in ('<div class="examples"', '<h2>Guides</h2>'):
-    if _obsolete in _home:
-        errors.append("English homepage regression: obsolete section returned: " + _obsolete)
-for _required in ('href="../all-plants/?lang=en"', 'href="./guides/research-method/"'):
-    if _required not in _home:
-        errors.append("English homepage missing essential navigation: " + _required)
+# /en/ is a noindex redirect; the canonical homepage switches languages in place.
+_home = (ROOT / "index.html").read_text(encoding="utf-8")
+_redirect = (ROOT / "en/index.html").read_text(encoding="utf-8")
+if 'location.replace("../?lang=en"+location.hash)' not in _redirect or 'noindex' not in _redirect:
+    errors.append("Legacy English homepage must redirect to the canonical bilingual homepage and remain noindex")
+if 'language-toggle.js' not in _home:
+    errors.append("Canonical homepage must retain the in-place language toggle")
 
 fail = lambda msg: errors.append(msg)
 read = lambda p: p.read_text(encoding="utf-8")
@@ -218,13 +217,13 @@ pairs += [(ROOT / h / "index.html", ROOT / "en" / h / "index.html") for h in hub
 # Pages whose Korean version switches language in place (buttons, ?lang=en) instead of linking to /en/, and the
 # legacy English URL that only redirects to the shared page in English. Both are the current live design.
 IN_PLACE = {ROOT / "index.html", ROOT / "all-plants/index.html"}
-REDIRECT_STUBS = {ROOT / "en/all-plants/index.html": "../../all-plants/?lang=en"}
+REDIRECT_STUBS = {ROOT / "en/all-plants/index.html": "../../all-plants/?lang=en", ROOT / "en/index.html": "../?lang=en"}
 for kf in IN_PLACE:
     if not re.search(r'<nav class="langswitch"[^>]*>.*?data-lang="en"', read(kf), re.S) and "language-toggle.js" not in read(kf):
         fail(f"{kf.relative_to(ROOT)}: no in-page language switch")
 for ef, target in REDIRECT_STUBS.items():
     doc = read(ef)
-    if f"location.replace('{target}'" not in doc or 'name="robots" content="noindex' not in doc and "noindex" not in doc:
+    if target not in doc or "location.replace" not in doc or "noindex" not in doc:
         fail(f"{ef.relative_to(ROOT)}: legacy English URL must redirect to {target} (and not be indexed)")
 for kf, ef in pairs:
     if not (kf.exists() and ef.exists()) or ef in REDIRECT_STUBS:
