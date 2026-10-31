@@ -24,7 +24,7 @@ main{max-width:850px;margin:auto;padding:28px 20px 70px}header{display:flex;alig
 <script>
 (function(){
 const key='tfdblang',params=new URLSearchParams(location.search);
-const configured={domestic:'',international:''}; // Set only after owner verification of real payment URLs.
+const configured={domestic:'',international:'https://www.buymeacoffee.com/Geobukbap'}; // Official page URL provided by owner; verify checkout activation separately.
 for(const kind of ['domestic','international']){
  const raw=configured[kind];if(!raw)continue;
  try{const url=new URL(raw);if(url.protocol!=='https:')continue;const a=document.getElementById(kind+'-link');a.href=url.href;a.hidden=false;document.getElementById(kind+'-pending').hidden=true}catch(e){}
