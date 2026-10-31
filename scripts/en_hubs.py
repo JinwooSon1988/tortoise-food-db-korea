@@ -155,7 +155,7 @@ def research_page():
         '<section class="hero"><div class="eyebrow">EVIDENCE &amp; REVIEW</div><h1>How does Tortoise Food DB assess a plant?</h1>'
         '<p>The A, B, C and D grades in the search results are not simply a tally of “people online say they feed it”. Before a grade is published we review separately '
         'the exact identity of the plant, the plant part actually covered, the animal group the evidence concerns and the nature of each source.</p></section>'
-        '<section class="grid"><article class="card"><h2>1. Identify the plant exactly</h2><p>The scientific name and taxonomic rank come first. If a source does not reliably identify the plant, it '
+        '<section class="grid"><article class="card"><h2>1. Identify the plant exactly</h2><p>The scientific name and taxonomic rank come first. If a source does not reliably identify the plant, '
         'we do not use it as a photograph or feeding evidence for another species.</p></article>'
         '<article class="card"><h2>2. Check which plant part is involved</h2><p>Leaves, flowers, fruit, roots and seeds are not automatically treated as the same feeding evidence. Where the photo '
         'shows a different part from the one fed, the detail page says so.</p></article>'
