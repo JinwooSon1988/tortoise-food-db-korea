@@ -297,15 +297,7 @@ def render(p):
     # Reason: the same displayed Korean text (assessment_copy) translated; short reasons fall back to the source summary.
     summary_ko = assessment_copy((a or {}).get("why"), a)
     summary = T(summary_ko, f"{pid}.why") if summary_ko else ("There is no public assessment for Mediterranean Testudo or tortoises in general yet. The species-specific notes below apply only to those species." if not a else "Evidence review in progress.")
-    # Include sources from explicitly scoped species assessments without
-    # promoting their grade to the representative (general) verdict.
-    evidence_ids = []
-    for assessment in ([a] if a else []) + species_notes(rows, a):
-        for evidence_id in assessment.get("evidence_ids") or []:
-            if evidence_id in evidence_by_id and evidence_id not in evidence_ids:
-                evidence_ids.append(evidence_id)
-    linked = [evidence_by_id[evidence_id] for evidence_id in evidence_ids]
-    linked.sort(key=lambda record: (0 if str(record.get("source_type") or "").startswith("peer_reviewed") else 1, record.get("id", "")))
+    linked = [evidence_by_id[e] for e in ((a or {}).get("evidence_ids") or []) if e in evidence_by_id]
     if a and summary_ko and len(summary_ko) < 55:
         facts = [en_text(e.get("supports"), f"{e['id']}.supports") for e in linked if e.get("supports")]
         fact = facts[0] if facts else ""
