@@ -305,7 +305,7 @@ def render(p):
             if evidence_id in evidence_by_id and evidence_id not in evidence_ids:
                 evidence_ids.append(evidence_id)
     linked = [evidence_by_id[evidence_id] for evidence_id in evidence_ids]
-    linked.sort(key=lambda record: (0 if record.get("source_type") == "peer_reviewed" else 1, record.get("id", "")))
+    linked.sort(key=lambda record: (0 if str(record.get("source_type") or "").startswith("peer_reviewed") else 1, record.get("id", "")))
     if a and summary_ko and len(summary_ko) < 55:
         facts = [en_text(e.get("supports"), f"{e['id']}.supports") for e in linked if e.get("supports")]
         fact = facts[0] if facts else ""
