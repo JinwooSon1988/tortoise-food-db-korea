@@ -46,11 +46,11 @@ def main():
    records.sort(key=lambda r:(str(r['scientific']).casefold(),str(r.get('id'))))
    filename=f'batch-{idx:03d}.json'
    payload={'schema_version':'1.0','batch_index':idx,'batch_count':a.shards,'target_count':len(records),'feeding_safety_status':'unassessed','records':records}
-   (shard_dir/filename).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+   (shard_dir/filename).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
    manifest.append({'file':filename,'count':len(records)})
   if sum(b['count'] for b in manifest)!=len(chosen):
    raise SystemExit('Batch partition failed: lost or duplicated research candidates')
-  (shard_dir/'manifest.json').write_text(json.dumps({'schema_version':'1.0','source':str(dest),'total':len(chosen),'batch_count':a.shards,'batches':manifest,'safety_grades_assigned':0},ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+  (shard_dir/'manifest.json').write_text(json.dumps({'schema_version':'1.0','source':str(dest),'total':len(chosen),'batch_count':a.shards,'batches':manifest,'safety_grades_assigned':0},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
   print(f'Partitioned {len(chosen)} unique taxa into {a.shards} deterministic research batches: {shard_dir}')
  print(f'Wrote {len(chosen)} research candidates to {dest}; feeding grades assigned: 0')
 if __name__=='__main__':main()
