@@ -412,7 +412,7 @@ def render(p):
                  f'Only verified values are shown, and missing values are never treated as 0.</p></section>')
 
     # Evidence
-    ordered = sorted(linked, key=lambda e: source_kind_en(e)[0])
+    ordered = linked  # Preserve canonical Korean evidence-card ordering; do not re-sort by English labels.
     cards = []
     for e in ordered:
         url = e.get("url") or (f'https://doi.org/{e["doi"]}' if e.get("doi") else (f'https://pubmed.ncbi.nlm.nih.gov/{e["pmid"]}/' if e.get("pmid") else ""))
