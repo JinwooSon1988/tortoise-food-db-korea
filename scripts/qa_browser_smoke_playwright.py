@@ -37,7 +37,9 @@ with sync_playwright() as pw:
         assert not errors, f"JS errors at {width}px: {errors}"
         page.goto(url("all-plants/index.html"), wait_until="load")
         grade_buttons = page.locator(".gradelegend button")
-        assert grade_buttons.count() == 6, "expected A/B/C/D/hold/unassessed filters"
+        expected_grades = ["A", "B", "C", "D", "feeding_pending", "미확정", "보류"]
+        actual_grades = grade_buttons.evaluate_all("(buttons) => buttons.map(b => b.dataset.grade)")
+        assert actual_grades == expected_grades, f"grade filters changed: {actual_grades!r}"
         if width <= 639:
             layout = page.locator(".gradelegend").evaluate("(el) => getComputedStyle(el).display")
             assert layout == "grid", f"mobile grade legend should use grid, got {layout}"
