@@ -540,6 +540,10 @@ def main():
         if COLLECT:
             print(f"collect: {len(I.missing)} untranslated strings written to {out.relative_to(ROOT)}")
             return
+        # Surface every missing source string in CI logs for batch translation,
+        # without publishing untranslated English or weakening the build gate.
+        for missing_key, item in sorted(I.missing.items()):
+            print(f"UNTRANSLATED {missing_key} [{item.get('where', '')}]: {item.get('ko', '')}", file=sys.stderr)
         sys.exit(f"generate_en_pages: {len(I.missing)} Korean source strings have no English entry (see data/i18n/en/_missing.json)")
     if COLLECT:
         pt = ROOT / "data/i18n/en/_passthrough.json"
