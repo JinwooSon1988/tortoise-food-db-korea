@@ -3,13 +3,13 @@ name: Final commit QA
 # Verifies the commit that GitHub Pages actually publishes.
 # "Sync generated plant pages" may push a bot commit with GITHUB_TOKEN; such pushes start no push-triggered
 # workflows, so without this job the published commit would never be checked. workflow_run fires after every
-# completion of the sync workflow (whether or not it committed), checks out the current main and runs the core QA
+# completion of the sync workflow (whether or not it committed), checks out the triggering branch and runs the core QA
 # on it. It only reads the repository: no commit, no deployment, therefore no loop and no duplicate deploy.
 on:
   workflow_run:
     workflows: ["Sync generated plant pages"]
     types: [completed]
-    branches: [main]
+    branches: [main, feat/geobukbap-donations-20261031]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -33,7 +33,7 @@ jobs:
         run: |
           {
             echo "### Final commit QA"
-            echo "- Tested main commit: \`$(git rev-parse HEAD)\` — $(git log -1 --format=%s)"
+            echo "- Tested branch commit: \`$(git rev-parse HEAD)\` — $(git log -1 --format=%s)"
             echo "- Triggered by: ${{ github.event_name }} ${{ github.event.workflow_run.head_sha }}"
             echo "- Sync workflow result: ${{ github.event.workflow_run.conclusion || 'n/a (manual run)' }}"
           } | tee -a "$GITHUB_STEP_SUMMARY"
