@@ -297,7 +297,15 @@ def render(p):
     # Reason: the same displayed Korean text (assessment_copy) translated; short reasons fall back to the source summary.
     summary_ko = assessment_copy((a or {}).get("why"), a)
     summary = T(summary_ko, f"{pid}.why") if summary_ko else ("There is no public assessment for Mediterranean Testudo or tortoises in general yet. The species-specific notes below apply only to those species." if not a else "Evidence review in progress.")
-    linked = [evidence_by_id[e] for e in ((a or {}).get("evidence_ids") or []) if e in evidence_by_id]
+    # The Korean page is generated first from the canonical assessment pipeline.
+    # Mirror its actual evidence cards, including their order and species scope.
+    # Do not union all species assessments: that over-publishes unrelated sources.
+    ko_page = ROOT / "plant" / pid / "index.html"
+    if ko_page.exists():
+        source_ids = re.findall(r'data-evidence-id="([^"]+)"', ko_page.read_text(encoding="utf-8"))
+    else:
+        source_ids = (a or {}).get("evidence_ids") or []
+    linked = [evidence_by_id[eid] for eid in source_ids if eid in evidence_by_id]
     if a and summary_ko and len(summary_ko) < 55:
         facts = [en_text(e.get("supports"), f"{e['id']}.supports") for e in linked if e.get("supports")]
         fact = facts[0] if facts else ""
