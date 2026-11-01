@@ -302,7 +302,7 @@ def render(p):
     # Do not union all species assessments: that over-publishes unrelated sources.
     ko_page = ROOT / "plant" / pid / "index.html"
     if ko_page.exists():
-        source_ids = re.findall(r'<article class="evcard[^"]*"[^>]*data-evidence-id="([^"]+)"', ko_page.read_text(encoding="utf-8"))
+        source_ids = re.findall(r'<article class="evcard" data-evidence-id="([^"]+)"', ko_page.read_text(encoding="utf-8"))
     else:
         source_ids = (a or {}).get("evidence_ids") or []
     linked = [evidence_by_id[eid] for eid in source_ids if eid in evidence_by_id]
