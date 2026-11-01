@@ -18,7 +18,14 @@ for p in plants:
         errors.append(f'{pid}: detail page missing'); continue
     text=path.read_text(encoding='utf-8')
     g=display(representative(rows_by.get(pid,[])))
-    if g['label'] not in text or g['meaning'] not in text: errors.append(f'{pid}: public verdict label/meaning missing')
+    species_only = (representative(rows_by.get(pid, [])) is None
+                    and 'class="verdict">급여 기록 있음 (검증 중)</div>' in text)
+    if species_only:
+        if not ('전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다' in text
+                and '판정이 없다는 것은 안전하다는 뜻이 아니다' in text):
+            errors.append(f'{pid}: species-only feeding record lacks explicit safety boundary')
+    elif g['label'] not in text or g['meaning'] not in text:
+        errors.append(f'{pid}: public verdict label/meaning missing')
     for legacy in ('🟢','🟡','🟠','🔴','⚪','판단보류 / '):
         if legacy in text: errors.append(f'{pid}: legacy verdict marker {legacy}')
     if pid=='mallow':
