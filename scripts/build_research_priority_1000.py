@@ -3,7 +3,8 @@
 import argparse, json, pathlib, hashlib
 from collections import Counter
 def main():
- p=argparse.ArgumentParser();p.add_argument('--catalog',default='data/plant-catalog');p.add_argument('--out',default='data/research_priority_1000.json');p.add_argument('--limit',type=int,default=0,help='0 selects all unique catalog taxa');p.add_argument('--shards',type=int,default=0,help='0 disables sharding; 1..128 produces deterministic parallel research batches');a=p.parse_args()\n if not 0<=a.shards<=128: p.error('--shards must be 0..128')
+ p=argparse.ArgumentParser();p.add_argument('--catalog',default='data/plant-catalog');p.add_argument('--out',default='data/research_priority_1000.json');p.add_argument('--limit',type=int,default=0,help='0 selects all unique catalog taxa');p.add_argument('--shards',type=int,default=0,help='0 disables sharding; 1..128 produces deterministic parallel research batches');a=p.parse_args()
+ if not 0<=a.shards<=128: p.error('--shards must be 0..128')
  root=pathlib.Path(a.catalog); taxa=[]
  for file in sorted(root.glob('taxa-*.json')):
   doc=json.loads(file.read_text(encoding='utf-8'))
