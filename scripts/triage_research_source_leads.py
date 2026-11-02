@@ -10,6 +10,7 @@ from urllib.parse import urlsplit
 
 TORTOISE = re.compile(r'\b(?:tortoises?|testudinidae|testudo|geochelone|centrochelys|chelonoidis|stigmochelys|astrochelys|aldabrachelys|gopherus|kinixys|homopus|psammobates|manouria|indotestudo|malacochersus|agrionemys|pyxis|chersina)\b', re.I)
 FEEDING = re.compile(r'\b(?:diet|dietary|feed(?:ing|s)?|forag(?:e|ing)|graz(?:e|ing)|herbivor(?:e|y)|food|nutrition|consum(?:e|ption)|ingest(?:ion|ed)|browse|gut contents?|stomach contents?)\b', re.I)
+NON_REPTILE_TORTOISE = re.compile(r'\b(?:tortoise beetles?|tortoise-shell beetles?|tortoiseshell butterflies?)\b', re.I)
 PRIORITY = {'both_title_signals': 0, 'one_title_signal': 1, 'no_title_signals': 2, 'community_unassessed': 3}
 
 def run(source, target):
@@ -39,7 +40,7 @@ def run(source, target):
                 if kind == 'community_mentions':
                     priority = 'community_unassessed'
                 else:
-                    signals = int(bool(TORTOISE.search(title))) + int(bool(FEEDING.search(title)))
+                    signals = int(bool(TORTOISE.search(title)) and not bool(NON_REPTILE_TORTOISE.search(title))) + int(bool(FEEDING.search(title)))
                     priority = ('no_title_signals', 'one_title_signal', 'both_title_signals')[signals]
                 counts[priority] += 1
                 records.append({'taxon_id': taxon_id, 'kind': kind, 'source_url': url, 'title': title, 'priority': priority,
