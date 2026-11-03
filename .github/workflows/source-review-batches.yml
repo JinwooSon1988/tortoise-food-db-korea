@@ -47,6 +47,8 @@ jobs:
               for r in rows:
                   assert r['source_url'] not in actual, 'Duplicate source'
                   assert r['source_review_status']=='not_reviewed'
+                  assert r['review_status']=='pending'
+                  assert r['verified_plant_links']==[]
                   assert r['feeding_safety_status']=='unassessed'
                   actual[r['source_url']]=set(r['candidate_taxon_ids'])
           assert len(manifest['batches'])==64
@@ -54,6 +56,20 @@ jobs:
           assert sum(len(v) for v in actual.values())==manifest['total_candidate_links']==1692
           assert len(actual)==manifest['total_sources']==582
           print('PASS: 582 unique sources, 1692 candidate links, 64 review batches, no safety promotion')
+          PY
+      - name: Round-trip merge all 64 generated batches without promoting safety
+        run: |
+          python scripts/merge_source_review_results.py --out /tmp/geobukbap-source-review/merged_pending.json /tmp/geobukbap-source-review/source_review_*.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('/tmp/geobukbap-source-review')
+          merged=json.loads((root/'merged_pending.json').read_text())
+          assert merged['sources_reviewed']==582
+          assert merged['plant_links_verified']==0
+          assert len(merged['records'])==582
+          assert all(r['review_status']=='pending' and r['feeding_safety_status']=='unassessed' for r in merged['records'])
+          print('PASS: all 64 shards round-trip into one 582-source pending-only merge')
           PY
       - name: Upload review batches for independent parallel research
         uses: actions/upload-artifact@v4
