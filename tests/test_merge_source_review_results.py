@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Regression tests for source-review batch merging and fail-closed provenance."""
 import copy
+import json
+import tempfile
+from pathlib import Path
 import unittest
 from scripts.merge_source_review_results import merge
 
@@ -14,7 +17,13 @@ LINK = {"taxon_id": "gbif:1", "verbatim_plant_name": "Plantus example",
 
 class ReviewMergeTests(unittest.TestCase):
     def run_merge(self, *records):
-        return merge(QUEUE, [{"records": [r]} for r in records])
+        with tempfile.TemporaryDirectory() as tmp:
+            paths = []
+            for i, row in enumerate(records):
+                path = Path(tmp) / f"batch_{i}.json"
+                path.write_text(json.dumps({"records": [row]}), encoding="utf-8")
+                paths.append(path)
+            return merge(QUEUE, paths)
 
     def test_pending_is_safe(self):
         result = self.run_merge(copy.deepcopy(BASE))
