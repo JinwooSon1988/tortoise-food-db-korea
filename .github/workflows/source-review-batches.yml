@@ -1,0 +1,53 @@
+name: Source-first research review batches
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/geobukbap-donations-20261031]
+    paths:
+      - 'scripts/build_source_review_shards.py'
+      - 'data/research_unique_source_review_queue.json'
+      - 'data/research_source_title_screening.json'
+      - '.github/workflows/source-review-batches.yml'
+permissions:
+  contents: read
+jobs:
+  source-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate 64 source-first review batches
+        run: python scripts/build_source_review_shards.py --shards 64 --out /tmp/geobukbap-source-review
+      - name: Assert exact lossless source and candidate link coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('/tmp/geobukbap-source-review')
+          manifest=json.loads((root/'manifest.json').read_text())
+          queue=json.loads(Path('data/research_unique_source_review_queue.json').read_text())
+          expected={r['source_url']: set(a['taxon_id'] for a in r['taxon_associations']) for r in queue['records']}
+          actual={}
+          for b in manifest['batches']:
+              rows=json.loads((root/b['file']).read_text())['records']
+              assert len(rows)==b['sources']
+              assert sum(len(r['candidate_taxon_ids']) for r in rows)==b['candidate_links']
+              for r in rows:
+                  assert r['source_url'] not in actual, 'Duplicate source'
+                  assert r['source_review_status']=='not_reviewed'
+                  assert r['feeding_safety_status']=='unassessed'
+                  actual[r['source_url']]=set(r['candidate_taxon_ids'])
+          assert len(manifest['batches'])==64
+          assert actual==expected, 'Lost/changed source-taxon links'
+          assert sum(len(v) for v in actual.values())==manifest['total_candidate_links']==1692
+          assert len(actual)==manifest['total_sources']==582
+          print('PASS: 582 unique sources, 1692 candidate links, 64 review batches, no safety promotion')
+          PY
+      - name: Upload review batches for independent parallel research
+        uses: actions/upload-artifact@v4
+        with:
+          name: geobukbap-source-review-64-batches
+          path: /tmp/geobukbap-source-review/
+          retention-days: 30
