@@ -32,6 +32,8 @@ def partition(queue, screening, shards):
             "source_url": url, "title": source["title"],
             "screening_tier": screen[url]["screening_tier"],
             "source_review_status": "not_reviewed",
+            "review_status": "pending",
+            "verified_plant_links": [],
             "feeding_safety_status": "unassessed",
             "candidate_taxon_ids": [a["taxon_id"] for a in source["taxon_associations"]],
         })
