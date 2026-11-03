@@ -8,6 +8,12 @@ on:
       - 'data/research_unique_source_review_queue.json'
       - 'data/research_source_title_screening.json'
       - '.github/workflows/source-review-batches.yml'
+  pull_request:
+    paths:
+      - 'scripts/build_source_review_shards.py'
+      - 'data/research_unique_source_review_queue.json'
+      - 'data/research_source_title_screening.json'
+      - '.github/workflows/source-review-batches.yml'
 permissions:
   contents: read
 jobs:
