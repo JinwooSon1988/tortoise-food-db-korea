@@ -59,10 +59,12 @@ jobs:
           python scripts/build_mentha_species_v1.py
           python scripts/build_tagetes_patula_species_v1.py
           python scripts/build_academic_flower_nutrition_v1.py
-      - name: Evidence links and certainty wording
+      - name: Evidence links, cross-references and source queue integrity
         run: |
           python scripts/audit_tortoise_table_links_v1.py
           python scripts/qa_evidence_certainty_labels_v1.py
+          python scripts/audit_public_evidence_references.py
+          python scripts/build_unique_source_review_queue.py --check
       - name: Korean copy
         run: python scripts/qa_korean_english_fragments_v1.py
       - name: English site (completeness, ko/en parity, hreflang, sitemap, links)
