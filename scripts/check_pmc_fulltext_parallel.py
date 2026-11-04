@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Parallel PMC full-text availability checks, not plant feeding verification.
 
-Queries NCBI BioC XML for PMC-linked source records and records availability,
+Queries Europe PMC JATS XML for PMC-linked source records and records availability,
 document size, and section counts. Never claims taxon or feeding evidence.
 """
 import argparse
@@ -10,6 +10,7 @@ import json
 import time
 import urllib.error
 import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 def check(record, retries=2, timeout=25):
@@ -29,10 +30,16 @@ def check(record, retries=2, timeout=25):
                 payload = response.read(12_000_001)
             if len(payload) > 12_000_000:
                 return {**base, "status": "size_limit_exceeded"}
-            if b"<article" not in payload[:2000] and b"<article" not in payload[:5000]:
-                return {**base, "status": "unexpected_response"}
+            try:
+                root = ET.fromstring(payload)
+            except ET.ParseError:
+                return {**base, "status": "invalid_xml"}
+            if root.tag.split("}")[-1] != "article":
+                return {**base, "status": "unexpected_xml_root"}
             return {**base, "status": "full_text_xml_available",
-                    "xml_bytes": len(payload)}
+                    "xml_bytes": len(payload),
+                    "article_sections": sum(1 for node in root.iter()
+                                            if node.tag.split("}")[-1] == "sec")}
         except urllib.error.HTTPError as exc:
             if exc.code in (404, 403):
                 return {**base, "status": "full_text_unavailable", "http_status": exc.code}
