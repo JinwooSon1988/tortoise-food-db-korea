@@ -50,8 +50,11 @@ def merge(queue, files):
             if status == "excluded_irrelevant" and verified:
                 raise ValueError("Irrelevant source cannot have verified links: " + url)
             output[url] = row
+    reviewed_count = sum(r["review_status"] != "pending" for r in output.values())
     return {"schema_version": "1.0", "scope": "research review only; no feeding safety decisions",
-            "sources_reviewed": len(output),
+            "sources_in_merge": len(output),
+            "sources_reviewed": reviewed_count,
+            "sources_pending": len(output) - reviewed_count,
             "plant_links_verified": sum(len(r.get("verified_plant_links", [])) for r in output.values()),
             "records": [output[k] for k in sorted(output)]}
 
@@ -63,7 +66,9 @@ def main():
     args = p.parse_args()
     result = merge(load(args.queue), args.reviews)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"sources_reviewed": result["sources_reviewed"],
+    print(json.dumps({"sources_in_merge": result["sources_in_merge"],
+                      "sources_pending": result["sources_pending"],
+                      "sources_reviewed": result["sources_reviewed"],
                       "plant_links_verified": result["plant_links_verified"]}))
 
 if __name__ == "__main__":
