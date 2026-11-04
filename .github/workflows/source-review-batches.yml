@@ -65,7 +65,9 @@ jobs:
           from pathlib import Path
           root=Path('/tmp/geobukbap-source-review')
           merged=json.loads((root/'merged_pending.json').read_text())
-          assert merged['sources_reviewed']==582
+          assert merged['sources_in_merge']==582
+          assert merged['sources_reviewed']==0
+          assert merged['sources_pending']==582
           assert merged['plant_links_verified']==0
           assert len(merged['records'])==582
           assert all(r['review_status']=='pending' and r['feeding_safety_status']=='unassessed' for r in merged['records'])
