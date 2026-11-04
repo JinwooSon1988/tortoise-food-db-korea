@@ -17,6 +17,12 @@ class JatsBotanicalMentionsTests(unittest.TestCase):
         xml=b'<article><body><p>The plant is common. This species is widespread. Mirabilis laevis grows here.</p></body></article>'
         names=[x["candidate_plant_name"] for x in candidates_from_xml(xml,"url","PMC1")]
         self.assertEqual(names,["Mirabilis laevis"])
+    def test_repeated_name_mentions_preserve_distinct_offsets(self):
+        xml=b'<article><body><p id="p2">Mirabilis laevis grows. Mirabilis laevis flowers.</p></body></article>'
+        rows=candidates_from_xml(xml,"url","PMC1")
+        self.assertEqual(len(rows),2)
+        self.assertEqual([r["name_start_offset"] for r in rows],[0,24])
+        self.assertTrue(all(r["feeding_observation_status"]=="not_verified" for r in rows))
     def test_rejects_wrong_root(self):
         with self.assertRaises(ValueError):
             candidates_from_xml(b'<error/>',"url","PMC1")
