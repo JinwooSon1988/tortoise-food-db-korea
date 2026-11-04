@@ -28,10 +28,16 @@ class ReviewMergeTests(unittest.TestCase):
     def test_pending_is_safe(self):
         result = self.run_merge(copy.deepcopy(BASE))
         self.assertEqual(result["plant_links_verified"], 0)
+        self.assertEqual(result["sources_in_merge"], 1)
+        self.assertEqual(result["sources_pending"], 1)
+        self.assertEqual(result["sources_reviewed"], 0)
 
     def test_verified_link_requires_provenance(self):
         row = {**BASE, "review_status": "plant_links_reviewed", "verified_plant_links": [copy.deepcopy(LINK)]}
-        self.assertEqual(self.run_merge(row)["plant_links_verified"], 1)
+        completed = self.run_merge(row)
+        self.assertEqual(completed["plant_links_verified"], 1)
+        self.assertEqual(completed["sources_reviewed"], 1)
+        self.assertEqual(completed["sources_pending"], 0)
         for key in ("verbatim_plant_name", "evidence_locator", "observed_animal_taxon", "observed_plant_part"):
             broken = copy.deepcopy(row)
             broken["verified_plant_links"][0].pop(key)
