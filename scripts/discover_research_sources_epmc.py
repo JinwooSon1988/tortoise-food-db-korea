@@ -25,7 +25,7 @@ def lookup(record, retries=2, timeout=18):
     if not match:
         return {**base, "discovery_status": "non_doi_url"}
     doi = urllib.parse.unquote(match.group(1))
-    query = urllib.parse.urlencode({"query": 'EXT_ID:"' + doi.replace('"', '') + '"',
+    query = urllib.parse.urlencode({"query": 'DOI:"' + doi.replace('"', '') + '"',
                                      "format": "json", "pageSize": "5"})
     endpoint = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?" + query
     for attempt in range(retries + 1):
