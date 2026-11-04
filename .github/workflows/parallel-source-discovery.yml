@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/discover_research_sources_epmc.py'
+      - 'scripts/check_pmc_fulltext_parallel.py'
       - 'data/research_unique_source_review_queue.json'
       - '.github/workflows/parallel-source-discovery.yml'
 permissions:
@@ -54,6 +55,21 @@ jobs:
           assert all(x['feeding_safety_status']=='unassessed' and x['plant_associations_verified']==0 for x in d['records'])
           print('PASS: 582/582 sources represented, no feeding safety promotions')
           PY
+      - name: Check PMC full-text XML availability in 8 bounded workers
+        run: python scripts/check_pmc_fulltext_parallel.py --workers 8 --candidates /tmp/epmc_full_text_candidates.json --out /tmp/epmc_fulltext_availability.json
+      - name: Audit full-text availability coverage and zero safety inference
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          candidates=json.loads(Path('/tmp/epmc_full_text_candidates.json').read_text())
+          checked=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
+          assert checked['total_candidates']==candidates['count']
+          assert {r['source_url'] for r in checked['records']}=={r['source_url'] for r in candidates['records']}
+          assert sum(checked['status_counts'].values())==candidates['count']
+          assert all(r['feeding_safety_status']=='unassessed' and r['plant_associations_verified']==0 for r in checked['records'])
+          print('PASS: full-text availability coverage with no feeding-safety inference')
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: geobukbap-epmc-582-source-metadata
@@ -61,4 +77,5 @@ jobs:
             /tmp/geobukbap-epmc-discovery.json
             /tmp/epmc_unmatched_sources.json
             /tmp/epmc_full_text_candidates.json
+            /tmp/epmc_fulltext_availability.json
           retention-days: 30
