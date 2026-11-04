@@ -37,6 +37,8 @@ def candidates_from_xml(xml, source_url, pmcid):
         if not text:
             continue
         section_id = node.get("id")
+        # Candidate review is bounded per source element, but excerpts preserve
+        # their original offset and never imply feeding or taxonomic validation.
         for match in BINOMIAL.finditer(text):
             name = match.group(1)
             if name.split()[0] in SKIP_GENUS:
