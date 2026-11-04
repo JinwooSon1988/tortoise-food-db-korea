@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/discover_research_sources_epmc.py'
       - 'scripts/check_pmc_fulltext_parallel.py'
+      - 'tests/test_pmc_fulltext_availability.py'
       - 'data/research_unique_source_review_queue.json'
       - '.github/workflows/parallel-source-discovery.yml'
 permissions:
@@ -34,6 +35,8 @@ jobs:
           assert r['plant_associations_verified']==0
           print('PASS: DOI parsing and fail-closed non-DOI handling')
           PY
+      - name: Test JATS XML validation without network
+        run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
       - name: Query Europe PMC for all unique sources with 12 bounded workers
         run: python scripts/discover_research_sources_epmc.py --workers 12 --out /tmp/geobukbap-epmc-discovery.json
       - name: Verify exact coverage and no automatic safety promotion
