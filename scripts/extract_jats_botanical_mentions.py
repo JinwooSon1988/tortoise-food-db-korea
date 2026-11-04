@@ -19,7 +19,6 @@ SKIP_GENUS = {"Table", "Figure", "Supplementary", "Materials", "Results", "Discu
               "South", "United", "New", "Great", "Food", "Plant", "Species",
               "The", "This", "These", "Those", "Some", "Many", "Most", "Each",
               "Their", "There", "They", "Our", "All", "Both", "Other", "Several"}
-MAX_TEXT = 1200
 
 def candidates_from_xml(xml, source_url, pmcid):
     root = ET.fromstring(xml)
@@ -52,7 +51,9 @@ def candidates_from_xml(xml, source_url, pmcid):
                 "candidate_plant_name": name,
                 "source_element": tag, "source_element_id": section_id,
                 "exact_context_excerpt": text[max(0, match.start()-180):min(len(text), match.end()+180)],
-                "context_truncated": len(text) > MAX_TEXT,
+                "name_start_offset": match.start(),
+                "name_end_offset": match.end(),
+                "context_truncated": match.start() > 180 or match.end()+180 < len(text),
                 "identification_status": "unverified_name_mention",
                 "feeding_observation_status": "not_verified",
                 "feeding_safety_status": "unassessed",
