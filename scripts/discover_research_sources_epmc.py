@@ -15,6 +15,9 @@ from pathlib import Path
 
 DOI_RE = re.compile(r"^https?://(?:dx\.)?doi\.org/(10\..+)$", re.I)
 
+def normalize_title(value):
+    return " ".join(re.findall(r"[a-z0-9]+", (value or "").casefold()))
+
 def lookup(record, retries=2, timeout=18):
     url = record["source_url"]
     match = DOI_RE.match(url)
@@ -22,11 +25,13 @@ def lookup(record, retries=2, timeout=18):
             "candidate_taxon_count": len(record["taxon_associations"]),
             "feeding_safety_status": "unassessed",
             "plant_associations_verified": 0}
-    if not match:
-        return {**base, "discovery_status": "non_doi_url"}
-    doi = urllib.parse.unquote(match.group(1))
-    query = urllib.parse.urlencode({"query": 'DOI:"' + doi.replace('"', '') + '"',
-                                     "format": "json", "pageSize": "5"})
+    doi = urllib.parse.unquote(match.group(1)) if match else None
+    title = record["title"].strip()
+    if not doi and not normalize_title(title):
+        return {**base, "discovery_status": "non_doi_no_title"}
+    query_text = ('DOI:"' + doi.replace('"', '') + '"') if doi else ('TITLE:"' + title.replace('"', '') + '"')
+    query = urllib.parse.urlencode({"query": query_text,
+                                     "format": "json", "pageSize": "10"})
     endpoint = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?" + query
     for attempt in range(retries + 1):
         try:
@@ -36,11 +41,15 @@ def lookup(record, retries=2, timeout=18):
             with urllib.request.urlopen(req, timeout=timeout) as response:
                 data = json.load(response)
             hits = data.get("resultList", {}).get("result", [])
-            exact = [x for x in hits if x.get("doi", "").lower() == doi.lower()]
+            exact = ([x for x in hits if (x.get("doi") or "").lower() == doi.lower()]
+                     if doi else [x for x in hits if normalize_title(x.get("title")) == normalize_title(title)])
             if not exact:
-                return {**base, "doi": doi, "discovery_status": "not_found_exact_doi"}
+                return {**base, "doi": doi,
+                        "discovery_status": "not_found_exact_doi" if doi else "not_found_exact_title"}
             x = exact[0]
-            return {**base, "doi": doi, "discovery_status": "metadata_matched",
+            return {**base, "doi": doi or x.get("doi"),
+                    "match_method": "exact_doi" if doi else "normalized_exact_title",
+                    "discovery_status": "metadata_matched",
                     "epmc_id": x.get("id"), "pmid": x.get("pmid"),
                     "pmcid": x.get("pmcid"), "title": x.get("title"),
                     "journal": x.get("journalTitle"), "year": x.get("pubYear"),
