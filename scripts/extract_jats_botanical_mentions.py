@@ -24,7 +24,7 @@ def candidates_from_xml(xml, source_url, pmcid):
     root = ET.fromstring(xml)
     if root.tag.split("}")[-1] != "article":
         raise ValueError("Not JATS article")
-    rows, seen = [], set()
+    rows = []
     for node in root.iter():
         tag = node.tag.split("}")[-1]
         if tag not in ("p", "table-wrap", "caption"):
@@ -36,16 +36,12 @@ def candidates_from_xml(xml, source_url, pmcid):
         if not text:
             continue
         section_id = node.get("id")
-        # Candidate review is bounded per source element, but excerpts preserve
-        # their original offset and never imply feeding or taxonomic validation.
+        # Preserve every occurrence and its original offset. A repeated name
+        # in one paragraph may describe distinct observations or contexts.
         for match in BINOMIAL.finditer(text):
             name = match.group(1)
             if name.split()[0] in SKIP_GENUS:
                 continue
-            key = (section_id or "", tag, name, text[:80])
-            if key in seen:
-                continue
-            seen.add(key)
             rows.append({
                 "source_url": source_url, "pmcid": pmcid,
                 "candidate_plant_name": name,
