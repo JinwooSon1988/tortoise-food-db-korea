@@ -83,8 +83,23 @@ def main():
         statuses[r["discovery_status"]] = statuses.get(r["discovery_status"], 0) + 1
         assert r["feeding_safety_status"] == "unassessed"
         assert r["plant_associations_verified"] == 0
-    payload = {"schema_version": "1.0", "purpose": "source discovery only; no plant feeding validation",
-               "total_sources": len(result), "status_counts": statuses, "records": result}
+    unmatched = [r for r in result if r["discovery_status"] != "metadata_matched"]
+    matched = [r for r in result if r["discovery_status"] == "metadata_matched"]
+    full_text_candidates = [r for r in matched if r.get("pmcid")]
+    payload = {"schema_version": "1.1", "purpose": "source discovery only; no plant feeding validation",
+               "total_sources": len(result), "status_counts": statuses,
+               "matched_sources": len(matched),
+               "pmc_full_text_candidates": len(full_text_candidates),
+               "unmatched_sources": len(unmatched),
+               "records": result}
+    output_path = Path(args.out)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    (output_path.parent / "epmc_unmatched_sources.json").write_text(
+        json.dumps({"count": len(unmatched), "records": unmatched}, ensure_ascii=False, indent=2) + "\\n",
+        encoding="utf-8")
+    (output_path.parent / "epmc_full_text_candidates.json").write_text(
+        json.dumps({"count": len(full_text_candidates), "records": full_text_candidates},
+                   ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"sources": len(result), "statuses": statuses}))
