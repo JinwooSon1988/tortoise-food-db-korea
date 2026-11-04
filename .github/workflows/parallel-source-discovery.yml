@@ -8,6 +8,9 @@ on:
       - 'tests/test_pmc_fulltext_availability.py'
       - 'scripts/extract_jats_botanical_mentions.py'
       - 'tests/test_extract_jats_botanical_mentions.py'
+      - 'scripts/join_botanical_mentions_to_public_plants.py'
+      - 'tests/test_join_botanical_mentions_to_public_plants.py'
+      - 'data/plants.json'
       - 'data/research_unique_source_review_queue.json'
       - '.github/workflows/parallel-source-discovery.yml'
 permissions:
@@ -41,6 +44,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
       - name: Test botanical name extraction without network
         run: python -m unittest discover -s tests -p test_extract_jats_botanical_mentions.py -v
+      - name: Test exact botanical catalog joins without network
+        run: python -m unittest discover -s tests -p test_join_botanical_mentions_to_public_plants.py -v
       - name: Query Europe PMC for all unique sources with 12 bounded workers
         run: python scripts/discover_research_sources_epmc.py --workers 12 --out /tmp/geobukbap-epmc-discovery.json
       - name: Verify exact coverage and no automatic safety promotion
@@ -91,6 +96,20 @@ jobs:
           assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['candidates'])
           print('PASS: botanical name mentions remain unverified, never public safety evidence')
           PY
+      - name: Match all botanical mention candidates to public catalog
+        run: python scripts/join_botanical_mentions_to_public_plants.py --mentions /tmp/epmc_botanical_mentions_unverified.json --plants data/plants.json --out /tmp/epmc_botanical_catalog_review_leads.json
+      - name: Audit exact catalog joins remain unverified
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('/tmp/epmc_botanical_catalog_review_leads.json').read_text())
+          m=json.loads(Path('/tmp/epmc_botanical_mentions_unverified.json').read_text())
+          assert x['total_mentions']==m['candidate_mentions']
+          assert sum(x['match_counts'].values())==x['total_mentions']
+          assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['records'])
+          print('PASS: exact botanical catalog leads are unverified, never feeding evidence')
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: geobukbap-epmc-582-source-metadata
@@ -100,4 +119,5 @@ jobs:
             /tmp/epmc_full_text_candidates.json
             /tmp/epmc_fulltext_availability.json
             /tmp/epmc_botanical_mentions_unverified.json
+            /tmp/epmc_botanical_catalog_review_leads.json
           retention-days: 30
