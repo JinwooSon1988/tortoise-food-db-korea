@@ -13,7 +13,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-DOI_RE = re.compile(r"^https?://(?:dx\\.)?doi\\.org/(10\\..+)$", re.I)
+DOI_RE = re.compile(r"^https?://(?:dx\.)?doi\.org/(10\..+)$", re.I)
 
 def lookup(record, retries=2, timeout=18):
     url = record["source_url"]
