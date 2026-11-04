@@ -8,6 +8,8 @@ class JatsBotanicalMentionsTests(unittest.TestCase):
         self.assertEqual(len(result),1)
         self.assertEqual(result[0]["candidate_plant_name"],"Mirabilis laevis")
         self.assertEqual(result[0]["source_element_id"],"p1")
+        self.assertIn("Mirabilis laevis",result[0]["exact_context_excerpt"])
+        self.assertEqual(result[0]["name_end_offset"]-result[0]["name_start_offset"],len("Mirabilis laevis"))
         self.assertEqual(result[0]["feeding_observation_status"],"not_verified")
         self.assertEqual(result[0]["feeding_safety_status"],"unassessed")
         self.assertEqual(result[0]["verified_plant_links"],[])
