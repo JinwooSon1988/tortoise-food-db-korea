@@ -10,13 +10,18 @@ from collections import defaultdict
 from pathlib import Path
 
 def canonical(name):
-    return " ".join(re.findall(r"[a-z]+", str(name).casefold()))
+    # Preserve token boundaries and require a full binomial match. Removing
+    # punctuation would conflate distinct botanical author/qualifier strings.
+    value = " ".join(str(name).casefold().split())
+    if not re.fullmatch(r"[a-z][a-z-]+ [a-z][a-z-]+", value):
+        return ""
+    return value
 
 def build_index(plants):
     index = defaultdict(list)
     for plant in plants:
         name = plant.get("scientific", "")
-        if name and len(canonical(name).split()) >= 2:
+        if name and canonical(name):
             index[canonical(name)].append(plant["id"])
     return index
 
