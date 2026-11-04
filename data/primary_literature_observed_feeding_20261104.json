@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "scope": "direct wild feeding observations only, NOT captive feeding safety",
+  "source_doi": "https://doi.org/10.1371/journal.pone.0116716",
+  "source_full_text": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+  "extraction_note": "Selected rows manually transcribed from published Table 6 and Table 10; not an exhaustive inventory. Same plant in different seasons remains a distinct observation. Plant parts not resolved; GBIF mappings not established.",
+  "records": [
+    {
+      "verbatim_plant_name": "Mirabilis laevis",
+      "observed_bites": 3638,
+      "table": "Table 6",
+      "period": "early spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Astragalus layneae",
+      "observed_bites": 1704,
+      "table": "Table 6",
+      "period": "early spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Astragalus didymocarpus",
+      "observed_bites": 1509,
+      "table": "Table 6",
+      "period": "early spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Eremothera boothii",
+      "observed_bites": 708,
+      "table": "Table 6",
+      "period": "early spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Phacelia tanacetifolia",
+      "observed_bites": 682,
+      "table": "Table 6",
+      "period": "early spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Chamaesyce albomarginata",
+      "observed_bites": 3601,
+      "table": "Table 10",
+      "period": "late spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Eriastrum eremicum",
+      "observed_bites": 488,
+      "table": "Table 10",
+      "period": "late spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Erodium cicutarium",
+      "observed_bites": 461,
+      "table": "Table 10",
+      "period": "late spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Eremothera boothii",
+      "observed_bites": 366,
+      "table": "Table 10",
+      "period": "late spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "verbatim_plant_name": "Chorizanthe brevicornu",
+      "observed_bites": 257,
+      "table": "Table 10",
+      "period": "late spring",
+      "animal_taxon": "Gopherus agassizii",
+      "plant_part": "not specified by extracted table",
+      "record_type": "direct observed wild feeding",
+      "taxon_id_mapping_status": "unverified",
+      "feeding_safety_status": "unassessed"
+    }
+  ]
+}
