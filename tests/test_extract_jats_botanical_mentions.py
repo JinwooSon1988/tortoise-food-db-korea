@@ -11,6 +11,10 @@ class JatsBotanicalMentionsTests(unittest.TestCase):
         self.assertEqual(result[0]["feeding_observation_status"],"not_verified")
         self.assertEqual(result[0]["feeding_safety_status"],"unassessed")
         self.assertEqual(result[0]["verified_plant_links"],[])
+    def test_sentence_starters_not_botanical_names(self):
+        xml=b'<article><body><p>The plant is common. This species is widespread. Mirabilis laevis grows here.</p></body></article>'
+        names=[x["candidate_plant_name"] for x in candidates_from_xml(xml,"url","PMC1")]
+        self.assertEqual(names,["Mirabilis laevis"])
     def test_rejects_wrong_root(self):
         with self.assertRaises(ValueError):
             candidates_from_xml(b'<error/>',"url","PMC1")
