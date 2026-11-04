@@ -26,8 +26,9 @@ jobs:
           assert m.DOI_RE.match('https://doi.org/10.1371/journal.pone.0116716')
           assert m.DOI_RE.match('https://dx.doi.org/10.1002/ece3.70585')
           assert not m.DOI_RE.match('https://example.com/test')
-          r=m.lookup({'source_url':'https://example.com/test','title':'x','taxon_associations':[]})
-          assert r['discovery_status']=='non_doi_url'
+          assert m.normalize_title('  Desert Tortoises: Food! ')=='desert tortoises food'
+          r=m.lookup({'source_url':'https://example.com/test','title':'','taxon_associations':[]})
+          assert r['discovery_status']=='non_doi_no_title'
           assert r['feeding_safety_status']=='unassessed'
           assert r['plant_associations_verified']==0
           print('PASS: DOI parsing and fail-closed non-DOI handling')
