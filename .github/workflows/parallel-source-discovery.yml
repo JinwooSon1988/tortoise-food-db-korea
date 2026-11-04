@@ -45,11 +45,20 @@ jobs:
           assert d['total_sources']==len(q['records'])==582
           assert {x['source_url'] for x in d['records']}=={x['source_url'] for x in q['records']}
           assert sum(d['status_counts'].values())==582
+          unmatched=json.loads(Path('/tmp/epmc_unmatched_sources.json').read_text())
+          fulltext=json.loads(Path('/tmp/epmc_full_text_candidates.json').read_text())
+          assert d['unmatched_sources']==unmatched['count']==len(unmatched['records'])
+          assert d['pmc_full_text_candidates']==fulltext['count']==len(fulltext['records'])
+          assert d['matched_sources']+d['unmatched_sources']==582
+          assert all(x.get('pmcid') for x in fulltext['records'])
           assert all(x['feeding_safety_status']=='unassessed' and x['plant_associations_verified']==0 for x in d['records'])
           print('PASS: 582/582 sources represented, no feeding safety promotions')
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: geobukbap-epmc-582-source-metadata
-          path: /tmp/geobukbap-epmc-discovery.json
+          path: |
+            /tmp/geobukbap-epmc-discovery.json
+            /tmp/epmc_unmatched_sources.json
+            /tmp/epmc_full_text_candidates.json
           retention-days: 30
