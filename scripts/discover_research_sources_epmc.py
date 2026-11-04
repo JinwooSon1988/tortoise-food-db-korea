@@ -95,11 +95,11 @@ def main():
     output_path = Path(args.out)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     (output_path.parent / "epmc_unmatched_sources.json").write_text(
-        json.dumps({"count": len(unmatched), "records": unmatched}, ensure_ascii=False, indent=2) + "\\n",
+        json.dumps({"count": len(unmatched), "records": unmatched}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8")
     (output_path.parent / "epmc_full_text_candidates.json").write_text(
         json.dumps({"count": len(full_text_candidates), "records": full_text_candidates},
-                   ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"sources": len(result), "statuses": statuses}))
