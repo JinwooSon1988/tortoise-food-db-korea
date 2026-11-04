@@ -6,6 +6,8 @@ on:
     paths:
       - 'scripts/build_source_review_shards.py'
       - 'scripts/merge_source_review_results.py'
+      - 'scripts/audit_primary_literature_observations.py'
+      - 'data/primary_literature_observed_feeding_20261104.json'
       - 'tests/test_merge_source_review_results.py'
       - 'data/research_unique_source_review_queue.json'
       - 'data/research_source_title_screening.json'
@@ -26,6 +28,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Audit published feeding observations and provenance
+        run: python scripts/audit_primary_literature_observations.py
       - name: Regression-test parallel review result merge
         run: python -m unittest discover -s tests -p test_merge_source_review_results.py -v
       - name: Generate 64 source-first review batches
