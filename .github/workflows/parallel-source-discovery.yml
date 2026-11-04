@@ -6,6 +6,8 @@ on:
       - 'scripts/discover_research_sources_epmc.py'
       - 'scripts/check_pmc_fulltext_parallel.py'
       - 'tests/test_pmc_fulltext_availability.py'
+      - 'scripts/extract_jats_botanical_mentions.py'
+      - 'tests/test_extract_jats_botanical_mentions.py'
       - 'data/research_unique_source_review_queue.json'
       - '.github/workflows/parallel-source-discovery.yml'
 permissions:
@@ -37,6 +39,8 @@ jobs:
           PY
       - name: Test JATS XML validation without network
         run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
+      - name: Test botanical name extraction without network
+        run: python -m unittest discover -s tests -p test_extract_jats_botanical_mentions.py -v
       - name: Query Europe PMC for all unique sources with 12 bounded workers
         run: python scripts/discover_research_sources_epmc.py --workers 12 --out /tmp/geobukbap-epmc-discovery.json
       - name: Verify exact coverage and no automatic safety promotion
@@ -73,6 +77,20 @@ jobs:
           assert all(r['feeding_safety_status']=='unassessed' and r['plant_associations_verified']==0 for r in checked['records'])
           print('PASS: full-text availability coverage with no feeding-safety inference')
           PY
+      - name: Extract unverified botanical mentions in 6 bounded workers
+        run: python scripts/extract_jats_botanical_mentions.py --workers 6 --fulltext-availability /tmp/epmc_fulltext_availability.json --out /tmp/epmc_botanical_mentions_unverified.json
+      - name: Audit extracted candidates are not promoted as feeding evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('/tmp/epmc_botanical_mentions_unverified.json').read_text())
+          a=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
+          assert x['sources_attempted']==a['status_counts'].get('full_text_xml_available',0)
+          assert x['candidate_mentions']==len(x['candidates'])
+          assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['candidates'])
+          print('PASS: botanical name mentions remain unverified, never public safety evidence')
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: geobukbap-epmc-582-source-metadata
@@ -81,4 +99,5 @@ jobs:
             /tmp/epmc_unmatched_sources.json
             /tmp/epmc_full_text_candidates.json
             /tmp/epmc_fulltext_availability.json
+            /tmp/epmc_botanical_mentions_unverified.json
           retention-days: 30
