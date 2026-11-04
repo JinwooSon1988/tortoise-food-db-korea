@@ -16,7 +16,9 @@ from pathlib import Path
 BINOMIAL = re.compile(r"\b([A-Z][a-z]{2,}\s+[a-z][a-z-]{2,})\b")
 SKIP_GENUS = {"Table", "Figure", "Supplementary", "Materials", "Results", "Discussion",
               "Methods", "Data", "Desert", "Gopher", "Eastern", "Western", "North",
-              "South", "United", "New", "Great", "Food", "Plant", "Species"}
+              "South", "United", "New", "Great", "Food", "Plant", "Species",
+              "The", "This", "These", "Those", "Some", "Many", "Most", "Each",
+              "Their", "There", "They", "Our", "All", "Both", "Other", "Several"}
 MAX_TEXT = 1200
 
 def candidates_from_xml(xml, source_url, pmcid):
