@@ -26,9 +26,21 @@ def candidates_from_xml(xml, source_url, pmcid):
     if root.tag.split("}")[-1] != "article":
         raise ValueError("Not JATS article")
     rows = []
+    parents = {child: parent for parent in root.iter() for child in parent}
     for node in root.iter():
         tag = node.tag.split("}")[-1]
         if tag not in ("p", "caption", "td", "th"):
+            continue
+        # JATS permits nested paragraphs in captions and table cells. Scan the
+        # outer element once rather than counting the same text twice.
+        parent = parents.get(node)
+        nested_in_scanned_element = False
+        while parent is not None:
+            if parent.tag.split("}")[-1] in ("caption", "td", "th"):
+                nested_in_scanned_element = True
+                break
+            parent = parents.get(parent)
+        if nested_in_scanned_element:
             continue
         text = " ".join(" ".join(node.itertext()).split())
         if not text:
