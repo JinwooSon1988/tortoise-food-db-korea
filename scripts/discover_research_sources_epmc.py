@@ -10,6 +10,7 @@ import json
 import re
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -57,9 +58,12 @@ def lookup(record, retries=2, timeout=18):
                     "has_full_text": x.get("hasTextMinedTerms"),
                     "metadata_only": True}
         except (OSError, ValueError, TimeoutError) as exc:
-            if attempt == retries:
+            http_code = exc.code if isinstance(exc, urllib.error.HTTPError) else None
+            retryable = http_code is None or http_code in (408, 429, 500, 502, 503, 504)
+            if attempt == retries or not retryable:
                 return {**base, "doi": doi, "discovery_status": "lookup_error",
-                        "error_type": type(exc).__name__}
+                        "error_type": type(exc).__name__, "http_status": http_code,
+                        "attempts": attempt + 1}
             time.sleep(0.5 * (2 ** attempt))
 
 def main():
