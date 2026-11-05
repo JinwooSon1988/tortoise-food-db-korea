@@ -10,8 +10,8 @@ from collections import defaultdict
 from pathlib import Path
 
 # Search cues prioritize manual review only; never establish ingestion or safety.
-FEEDING_CUES = re.compile(r"\\b(?:eat|eats|eaten|feeding|fed|forage|foraging|browse|browsing|grazing|ingest|ingested|consume|consumed|consumption|diet|diets|bite|bites)\\b", re.I)
-TORTOISE_CUES = re.compile(r"\\b(?:tortoises?|Testudo|Gopherus|Chelonoidis|Geochelone|Stigmochelys|Centrochelys|Kinixys|Aldabrachelys|Astrochelys|Indotestudo|Manouria|Psammobates|Pyxis|Homopus)\\b", re.I)
+FEEDING_CUES = re.compile(r"\b(?:eat|eats|eaten|feeding|fed|forage|foraging|browse|browsing|grazing|ingest|ingested|consume|consumed|consumption|diet|diets|bite|bites)\b", re.I)
+TORTOISE_CUES = re.compile(r"\b(?:tortoises?|Testudo|Gopherus|Chelonoidis|Geochelone|Stigmochelys|Centrochelys|Kinixys|Aldabrachelys|Astrochelys|Indotestudo|Manouria|Psammobates|Pyxis|Homopus)\b", re.I)
 
 def prioritize(data):
     groups = defaultdict(list)
@@ -25,7 +25,7 @@ def prioritize(data):
         ids = sorted(set(i for r in rows for i in r["public_plant_id_candidates"]))
         contexts = [r["exact_context_excerpt"] for r in rows[:5]]
         feeding_context_count = sum(bool(FEEDING_CUES.search(c)) for c in contexts)
-        tortoise_context_count = sum(bool(TORTOISE_CUES.search(c)) and not re.search(r"\\btortoise beetles?\\b", c, re.I) for c in contexts)
+        tortoise_context_count = sum(bool(TORTOISE_CUES.search(c)) and not re.search(r"\btortoise beetles?\b", c, re.I) for c in contexts)
         output.append({
             "candidate_plant_name": name,
             "source_url": url,
