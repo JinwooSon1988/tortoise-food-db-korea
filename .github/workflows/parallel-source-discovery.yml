@@ -62,9 +62,11 @@ jobs:
           from pathlib import Path
           d=json.loads(Path("/tmp/geobukbap-epmc-discovery.json").read_text())
           errors=d["status_counts"].get("lookup_error",0)
-          assert d["matched_sources"] > 0, "No Europe PMC metadata matches: discovery unavailable; do not report success"
-          assert errors * 2 < d["total_sources"], f"Excessive Europe PMC lookup errors: {errors}/{d['total_sources']}"
-          print(f"PASS: metadata matches={d['matched_sources']}, lookup errors={errors}")
+          matched=d["matched_sources"]
+          total=d["total_sources"]
+          assert matched > 0, "No Europe PMC metadata matches: discovery unavailable; do not report success"
+          assert errors * 2 < total, f"Excessive Europe PMC lookup errors: {errors}/{total}"
+          print(f"PASS: metadata matches={matched}, lookup errors={errors}")
           PY
       - name: Verify exact coverage and no automatic safety promotion
         run: |
