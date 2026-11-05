@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/discover_research_sources_epmc.py'
+      - 'tests/test_epmc_metadata_http_errors.py'
       - 'scripts/check_pmc_fulltext_parallel.py'
       - 'tests/test_pmc_fulltext_availability.py'
       - 'scripts/extract_jats_botanical_mentions.py'
@@ -43,6 +44,8 @@ jobs:
           assert r['plant_associations_verified']==0
           print('PASS: DOI parsing and fail-closed non-DOI handling')
           PY
+      - name: Test Europe PMC HTTP diagnostics and bounded retries without network
+        run: python -m unittest discover -s tests -p test_epmc_metadata_http_errors.py -v
       - name: Test JATS XML validation without network
         run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
       - name: Test botanical name extraction without network
