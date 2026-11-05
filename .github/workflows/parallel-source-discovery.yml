@@ -10,6 +10,8 @@ on:
       - 'tests/test_extract_jats_botanical_mentions.py'
       - 'scripts/join_botanical_mentions_to_public_plants.py'
       - 'tests/test_join_botanical_mentions_to_public_plants.py'
+      - 'scripts/prioritize_botanical_review_leads.py'
+      - 'tests/test_prioritize_botanical_review_leads.py'
       - 'data/plants.json'
       - 'data/research_unique_source_review_queue.json'
       - '.github/workflows/parallel-source-discovery.yml'
@@ -46,6 +48,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_extract_jats_botanical_mentions.py -v
       - name: Test exact botanical catalog joins without network
         run: python -m unittest discover -s tests -p test_join_botanical_mentions_to_public_plants.py -v
+      - name: Test deterministic botanical review prioritization
+        run: python -m unittest discover -s tests -p test_prioritize_botanical_review_leads.py -v
       - name: Query Europe PMC for all unique sources with 12 bounded workers
         run: python scripts/discover_research_sources_epmc.py --workers 12 --out /tmp/geobukbap-epmc-discovery.json
       - name: Verify exact coverage and no automatic safety promotion
@@ -110,6 +114,18 @@ jobs:
           assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['records'])
           print('PASS: exact botanical catalog leads are unverified, never feeding evidence')
           PY
+      - name: Deduplicate catalog-linked botanical source/name review pairs
+        run: python scripts/prioritize_botanical_review_leads.py --joined /tmp/epmc_botanical_catalog_review_leads.json --out /tmp/epmc_botanical_prioritized_review.json
+      - name: Audit review pairs cannot become safety evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('/tmp/epmc_botanical_prioritized_review.json').read_text())
+          assert x['review_pairs']==len(x['records'])
+          assert all(r['review_status']=='not_reviewed' and r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['records'])
+          print('PASS: prioritized source/name review pairs remain unverified')
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: geobukbap-epmc-582-source-metadata
@@ -120,4 +136,5 @@ jobs:
             /tmp/epmc_fulltext_availability.json
             /tmp/epmc_botanical_mentions_unverified.json
             /tmp/epmc_botanical_catalog_review_leads.json
+            /tmp/epmc_botanical_prioritized_review.json
           retention-days: 30
