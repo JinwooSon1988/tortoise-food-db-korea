@@ -28,10 +28,7 @@ def candidates_from_xml(xml, source_url, pmcid):
     rows = []
     for node in root.iter():
         tag = node.tag.split("}")[-1]
-        if tag not in ("p", "table-wrap", "caption"):
-            continue
-        # Avoid duplicating nested caption text in table-wrap.
-        if tag == "table-wrap":
+        if tag not in ("p", "caption", "td", "th"):
             continue
         text = " ".join(" ".join(node.itertext()).split())
         if not text:
