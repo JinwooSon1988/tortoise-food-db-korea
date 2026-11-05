@@ -23,9 +23,22 @@ def prioritize(data):
     output = []
     for (name, url), rows in groups.items():
         ids = sorted(set(i for r in rows for i in r["public_plant_id_candidates"]))
-        contexts = [r["exact_context_excerpt"] for r in rows[:5]]
-        feeding_context_count = sum(bool(FEEDING_CUES.search(c)) for c in contexts)
-        tortoise_context_count = sum(bool(TORTOISE_CUES.search(c)) and not re.search(r"\btortoise beetles?\b", c, re.I) for c in contexts)
+        # Score every mention, not only the first five. Keep the most relevant
+        # excerpts for review and require co-occurrence within one excerpt.
+        def cues(row):
+            context = row["exact_context_excerpt"]
+            feeding = bool(FEEDING_CUES.search(context))
+            tortoise = bool(TORTOISE_CUES.search(context)) and not bool(
+                re.search(r"\btortoise beetles?\b", context, re.I))
+            return feeding, tortoise
+        scored = [(r, *cues(r)) for r in rows]
+        feeding_context_count = sum(feeding for _, feeding, _ in scored)
+        tortoise_context_count = sum(tortoise for _, _, tortoise in scored)
+        combined_context_count = sum(feeding and tortoise for _, feeding, tortoise in scored)
+        ranked = sorted(scored, key=lambda item: (
+            -int(item[1] and item[2]), -int(item[2]), -int(item[1]),
+            str(item[0].get("source_element_id") or ""),
+            int(item[0].get("name_start_offset") or 0)))
         output.append({
             "candidate_plant_name": name,
             "source_url": url,
@@ -35,13 +48,14 @@ def prioritize(data):
             "mention_count": len(rows),
             "feeding_keyword_contexts": feeding_context_count,
             "tortoise_keyword_contexts": tortoise_context_count,
-            "review_priority_signal": "tortoise_and_feeding_keywords" if feeding_context_count and tortoise_context_count else ("tortoise_keyword" if tortoise_context_count else ("feeding_keyword" if feeding_context_count else "no_keyword_signal")),
+            "combined_keyword_contexts": combined_context_count,
+            "review_priority_signal": "tortoise_and_feeding_keywords" if combined_context_count else ("tortoise_keyword" if tortoise_context_count else ("feeding_keyword" if feeding_context_count else "no_keyword_signal")),
             "review_priority_is_evidence": False,
             "contexts": [{
                 "source_element_id": r.get("source_element_id"),
                 "name_start_offset": r.get("name_start_offset"),
                 "exact_context_excerpt": r["exact_context_excerpt"]
-            } for r in rows[:5]],
+            } for r, _, _ in ranked[:5]],
             "contexts_omitted": max(0, len(rows)-5),
             "review_status": "not_reviewed",
             "feeding_observation_status": "not_verified",
