@@ -23,6 +23,14 @@ class JatsBotanicalMentionsTests(unittest.TestCase):
         self.assertEqual(len(rows),2)
         self.assertEqual([r["name_start_offset"] for r in rows],[0,24])
         self.assertTrue(all(r["feeding_observation_status"]=="not_verified" for r in rows))
+    def test_table_cells_extract_without_double_counting(self):
+        xml=b'<article><body><table-wrap><caption><p>Recorded food taxa</p></caption><table><thead><tr><th id="h1">Plant species</th></tr></thead><tbody><tr><td id="c1"><italic>Rumex crispus</italic></td><td id="c2">Plantago major</td></tr></tbody></table></table-wrap></body></article>'
+        rows=candidates_from_xml(xml,"url","PMC1")
+        names=[r["candidate_plant_name"] for r in rows]
+        self.assertEqual(names,["Rumex crispus","Plantago major"])
+        self.assertEqual([r["source_element"] for r in rows],["td","td"])
+        self.assertEqual([r["source_element_id"] for r in rows],["c1","c2"])
+        self.assertTrue(all(r["feeding_observation_status"]=="not_verified" and r["feeding_safety_status"]=="unassessed" for r in rows))
     def test_rejects_wrong_root(self):
         with self.assertRaises(ValueError):
             candidates_from_xml(b'<error/>',"url","PMC1")
