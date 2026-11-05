@@ -8,6 +8,7 @@ import argparse
 import concurrent.futures
 import json
 import re
+import time
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -59,16 +60,28 @@ def candidates_from_xml(xml, source_url, pmcid):
 def scan(record):
     pmcid = record["pmcid"]
     endpoint = "https://www.ebi.ac.uk/europepmc/webservices/rest/" + pmcid + "/fullTextXML"
-    try:
-        req = urllib.request.Request(endpoint, headers={"User-Agent": "GeobukbapResearchReview/1.0"})
-        with urllib.request.urlopen(req, timeout=25) as response:
-            data = response.read(12_000_001)
-        if len(data) > 12_000_000:
-            return {"pmcid": pmcid, "status": "oversize", "candidates": []}
-        return {"pmcid": pmcid, "status": "scanned",
-                "candidates": candidates_from_xml(data, record["source_url"], pmcid)}
-    except (urllib.error.HTTPError, OSError, ET.ParseError, ValueError):
-        return {"pmcid": pmcid, "status": "unavailable_or_invalid", "candidates": []}
+    last_status = "unavailable_or_invalid"
+    for attempt in range(3):
+        try:
+            req = urllib.request.Request(endpoint, headers={"User-Agent": "GeobukbapResearchReview/1.0"})
+            with urllib.request.urlopen(req, timeout=25) as response:
+                data = response.read(12_000_001)
+            if len(data) > 12_000_000:
+                return {"pmcid": pmcid, "status": "oversize", "attempts": attempt + 1, "candidates": []}
+            return {"pmcid": pmcid, "status": "scanned", "attempts": attempt + 1,
+                    "candidates": candidates_from_xml(data, record["source_url"], pmcid)}
+        except urllib.error.HTTPError as exc:
+            last_status = "http_" + str(exc.code)
+            if exc.code not in (408, 429, 500, 502, 503, 504):
+                break
+        except (OSError, TimeoutError):
+            last_status = "network_error"
+        except (ET.ParseError, ValueError):
+            last_status = "invalid_xml"
+            break
+        if attempt < 2:
+            time.sleep(0.5 * (2 ** attempt))
+    return {"pmcid": pmcid, "status": last_status, "attempts": attempt + 1, "candidates": []}
 
 def main():
     p = argparse.ArgumentParser()
@@ -86,10 +99,13 @@ def main():
     assert all(c["feeding_observation_status"] == "not_verified" and
                c["feeding_safety_status"] == "unassessed" and
                c["verified_plant_links"] == [] for c in candidates)
+    failures = [r for r in scanned if r["status"] != "scanned"]
     output = {"schema_version": "1.0",
               "warning": "Automated name mentions only. NOT evidence of ingestion or safety.",
               "sources_attempted": len(records),
               "sources_scanned": sum(r["status"] == "scanned" for r in scanned),
+              "sources_failed": len(failures),
+              "failed_sources": [{"pmcid": r["pmcid"], "status": r["status"], "attempts": r["attempts"]} for r in failures],
               "candidate_mentions": len(candidates),
               "source_results": [{k:v for k,v in r.items() if k != "candidates"} for r in scanned],
               "candidates": candidates}
