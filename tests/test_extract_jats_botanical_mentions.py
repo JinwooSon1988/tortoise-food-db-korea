@@ -31,6 +31,11 @@ class JatsBotanicalMentionsTests(unittest.TestCase):
         self.assertEqual([r["source_element"] for r in rows],["td","td"])
         self.assertEqual([r["source_element_id"] for r in rows],["c1","c2"])
         self.assertTrue(all(r["feeding_observation_status"]=="not_verified" and r["feeding_safety_status"]=="unassessed" for r in rows))
+    def test_nested_paragraphs_are_not_double_counted(self):
+        xml=b'<article><body><table-wrap><caption><p>Rumex crispus list</p></caption><table><tr><td><p>Plantago major</p></td></tr></table></table-wrap></body></article>'
+        rows=candidates_from_xml(xml,"url","PMC1")
+        self.assertEqual([r["candidate_plant_name"] for r in rows],["Rumex crispus","Plantago major"])
+        self.assertEqual([r["source_element"] for r in rows],["caption","td"])
     def test_rejects_wrong_root(self):
         with self.assertRaises(ValueError):
             candidates_from_xml(b'<error/>',"url","PMC1")
