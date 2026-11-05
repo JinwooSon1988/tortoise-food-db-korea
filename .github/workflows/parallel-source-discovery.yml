@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/discover_research_sources_epmc.py'
       - 'tests/test_epmc_metadata_http_errors.py'
+      - 'tests/test_epmc_discovery_circuit_breaker.py'
       - 'scripts/check_pmc_fulltext_parallel.py'
       - 'tests/test_pmc_fulltext_availability.py'
       - 'scripts/extract_jats_botanical_mentions.py'
@@ -46,6 +47,8 @@ jobs:
           PY
       - name: Test Europe PMC HTTP diagnostics and bounded retries without network
         run: python -m unittest discover -s tests -p test_epmc_metadata_http_errors.py -v
+      - name: Test Europe PMC uniform-outage circuit breaker without network
+        run: python -m unittest discover -s tests -p test_epmc_discovery_circuit_breaker.py -v
       - name: Test JATS XML validation without network
         run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
       - name: Test botanical name extraction without network
