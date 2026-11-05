@@ -55,6 +55,17 @@ jobs:
         run: python -m unittest discover -s tests -p test_prioritize_botanical_review_leads.py -v
       - name: Query Europe PMC for all unique sources with 12 bounded workers
         run: python scripts/discover_research_sources_epmc.py --workers 12 --out /tmp/geobukbap-epmc-discovery.json
+      - name: Fail closed when Europe PMC discovery is unavailable
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("/tmp/geobukbap-epmc-discovery.json").read_text())
+          errors=d["status_counts"].get("lookup_error",0)
+          assert d["matched_sources"] > 0, "No Europe PMC metadata matches: discovery unavailable; do not report success"
+          assert errors * 2 < d["total_sources"], f"Excessive Europe PMC lookup errors: {errors}/{d[\'total_sources\']}"
+          print(f"PASS: metadata matches={d[\'matched_sources\']}, lookup errors={errors}")
+          PY
       - name: Verify exact coverage and no automatic safety promotion
         run: |
           python - <<'PY'
@@ -133,6 +144,7 @@ jobs:
           print('PASS: prioritized source/name review pairs remain unverified')
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: geobukbap-epmc-582-source-metadata
           path: |
