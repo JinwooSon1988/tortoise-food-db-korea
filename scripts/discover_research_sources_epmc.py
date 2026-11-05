@@ -78,8 +78,28 @@ def main():
     records = json.loads(Path(args.queue).read_text(encoding="utf-8"))["records"]
     if args.limit:
         records = records[:args.limit]
-    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        result = list(pool.map(lookup, records))
+    # Probe a small batch before launching hundreds of concurrent requests.
+    # A uniform permanent HTTP denial opens the circuit for this run.
+    probe = [lookup(r) for r in records[:3]]
+    denied = len(probe) == 3 and all(
+        r.get("http_status") in (401, 403) and
+        r.get("http_status") == probe[0].get("http_status")
+        for r in probe
+    )
+    if denied:
+        result = probe + [
+            {"source_url": r["source_url"], "queue_title": r["title"],
+             "candidate_taxon_count": len(r["taxon_associations"]),
+             "feeding_safety_status": "unassessed",
+             "plant_associations_verified": 0,
+             "discovery_status": "lookup_error",
+             "error_type": "circuit_open_after_permanent_http_denial",
+             "http_status": probe[0]["http_status"], "attempts": 0}
+            for r in records[3:]
+        ]
+    else:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+            result = probe + list(pool.map(lookup, records[3:]))
     assert len(result) == len(records)
     assert len({r["source_url"] for r in result}) == len(records)
     statuses = {}
