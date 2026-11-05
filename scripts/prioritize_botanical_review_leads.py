@@ -5,8 +5,13 @@ This is a deterministic review queue, NOT a feeding observation or safety claim.
 """
 import argparse
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
+
+# Search cues prioritize manual review only; never establish ingestion or safety.
+FEEDING_CUES = re.compile(r"\\b(?:eat|eats|eaten|feeding|fed|forage|foraging|browse|browsing|grazing|ingest|ingested|consume|consumed|consumption|diet|diets|bite|bites)\\b", re.I)
+TORTOISE_CUES = re.compile(r"\\b(?:tortoises?|Testudo|Gopherus|Chelonoidis|Geochelone|Stigmochelys|Centrochelys|Kinixys|Aldabrachelys|Astrochelys|Indotestudo|Manouria|Psammobates|Pyxis|Homopus)\\b", re.I)
 
 def prioritize(data):
     groups = defaultdict(list)
@@ -18,6 +23,9 @@ def prioritize(data):
     output = []
     for (name, url), rows in groups.items():
         ids = sorted(set(i for r in rows for i in r["public_plant_id_candidates"]))
+        contexts = [r["exact_context_excerpt"] for r in rows[:5]]
+        feeding_context_count = sum(bool(FEEDING_CUES.search(c)) for c in contexts)
+        tortoise_context_count = sum(bool(TORTOISE_CUES.search(c)) and not re.search(r"\\btortoise beetles?\\b", c, re.I) for c in contexts)
         output.append({
             "candidate_plant_name": name,
             "source_url": url,
@@ -25,6 +33,10 @@ def prioritize(data):
             "public_plant_id_candidates": ids,
             "match_status": rows[0]["match_status"],
             "mention_count": len(rows),
+            "feeding_keyword_contexts": feeding_context_count,
+            "tortoise_keyword_contexts": tortoise_context_count,
+            "review_priority_signal": "tortoise_and_feeding_keywords" if feeding_context_count and tortoise_context_count else ("tortoise_keyword" if tortoise_context_count else ("feeding_keyword" if feeding_context_count else "no_keyword_signal")),
+            "review_priority_is_evidence": False,
             "contexts": [{
                 "source_element_id": r.get("source_element_id"),
                 "name_start_offset": r.get("name_start_offset"),
@@ -36,7 +48,8 @@ def prioritize(data):
             "feeding_safety_status": "unassessed",
             "verified_plant_links": []
         })
-    output.sort(key=lambda r: (r["match_status"] != "exact_name_candidate",
+    output.sort(key=lambda r: ({"tortoise_and_feeding_keywords":0, "tortoise_keyword":1, "feeding_keyword":2, "no_keyword_signal":3}[r["review_priority_signal"]],
+                               r["match_status"] != "exact_name_candidate",
                                -r["mention_count"], r["candidate_plant_name"], r["source_url"]))
     return {"schema_version":"1.0",
             "warning":"Source/name review leads only. No ingestion or safety verified.",
