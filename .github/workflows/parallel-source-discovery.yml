@@ -8,6 +8,7 @@ on:
       - 'tests/test_pmc_fulltext_availability.py'
       - 'scripts/extract_jats_botanical_mentions.py'
       - 'tests/test_extract_jats_botanical_mentions.py'
+      - 'tests/test_pmc_extraction_retries.py'
       - 'scripts/join_botanical_mentions_to_public_plants.py'
       - 'tests/test_join_botanical_mentions_to_public_plants.py'
       - 'scripts/prioritize_botanical_review_leads.py'
@@ -46,6 +47,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
       - name: Test botanical name extraction without network
         run: python -m unittest discover -s tests -p test_extract_jats_botanical_mentions.py -v
+      - name: Test bounded transient PMC retries without network
+        run: python -m unittest discover -s tests -p test_pmc_extraction_retries.py -v
       - name: Test exact botanical catalog joins without network
         run: python -m unittest discover -s tests -p test_join_botanical_mentions_to_public_plants.py -v
       - name: Test deterministic botanical review prioritization
@@ -97,6 +100,9 @@ jobs:
           a=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
           assert x['sources_attempted']==a['status_counts'].get('full_text_xml_available',0)
           assert x['candidate_mentions']==len(x['candidates'])
+          assert x['sources_scanned']+x['sources_failed']==x['sources_attempted']
+          assert len(x['failed_sources'])==x['sources_failed']
+          assert all(1 <= r['attempts'] <= 3 for r in x['failed_sources'])
           assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['candidates'])
           print('PASS: botanical name mentions remain unverified, never public safety evidence')
           PY
