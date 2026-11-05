@@ -19,7 +19,8 @@ SKIP_GENUS = {"Table", "Figure", "Supplementary", "Materials", "Results", "Discu
               "Methods", "Data", "Desert", "Gopher", "Eastern", "Western", "North",
               "South", "United", "New", "Great", "Food", "Plant", "Species",
               "The", "This", "These", "Those", "Some", "Many", "Most", "Each",
-              "Their", "There", "They", "Our", "All", "Both", "Other", "Several"}
+              "Their", "There", "They", "Our", "All", "Both", "Other", "Several",
+              "Recorded"}
 
 def candidates_from_xml(xml, source_url, pmcid):
     root = ET.fromstring(xml)
