@@ -35,5 +35,35 @@ class ReviewPriorityTests(unittest.TestCase):
                             r["feeding_safety_status"]=="unassessed" and
                             not r["review_priority_is_evidence"] for r in result["records"]))
 
+    def test_late_relevant_excerpt_is_selected_and_counted(self):
+        def row(context, offset):
+            return {"candidate_plant_name":"Plantago major","source_url":"source",
+                    "pmcid":"PMC1","public_plant_id_candidates":["a"],
+                    "match_status":"exact_name_candidate",
+                    "exact_context_excerpt":context,"name_start_offset":offset}
+        records=[row("Plantago major growth measurements.", i) for i in range(7)]
+        records.append(row("Testudo graeca feeding on Plantago major.", 7))
+        item=prioritize({"total_mentions":8,"records":records})["records"][0]
+        self.assertEqual(item["mention_count"],8)
+        self.assertEqual(item["combined_keyword_contexts"],1)
+        self.assertEqual(item["review_priority_signal"],"tortoise_and_feeding_keywords")
+        self.assertIn("Testudo graeca",item["contexts"][0]["exact_context_excerpt"])
+        self.assertEqual(item["contexts_omitted"],3)
+        self.assertEqual(item["feeding_observation_status"],"not_verified")
+
+    def test_separate_excerpts_do_not_claim_combined_signal(self):
+        def row(context):
+            return {"candidate_plant_name":"Rumex crispus","source_url":"source",
+                    "pmcid":"PMC1","public_plant_id_candidates":["a"],
+                    "match_status":"exact_name_candidate",
+                    "exact_context_excerpt":context,"name_start_offset":0}
+        item=prioritize({"total_mentions":2,"records":[
+            row("Testudo graeca shell measurements."),
+            row("Rumex crispus consumed by insects.")
+        ]})["records"][0]
+        self.assertEqual(item["combined_keyword_contexts"],0)
+        self.assertEqual(item["review_priority_signal"],"tortoise_keyword")
+        self.assertFalse(item["review_priority_is_evidence"])
+
 if __name__=="__main__":
     unittest.main()
