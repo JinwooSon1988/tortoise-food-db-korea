@@ -70,6 +70,17 @@ def candidates_from_xml(xml, source_url, pmcid):
 def scan(record):
     pmcid = record["pmcid"]
     endpoint = "https://www.ebi.ac.uk/europepmc/webservices/rest/" + pmcid + "/fullTextXML"
+    if cache_dir is not None:
+        cached = Path(cache_dir) / (pmcid + ".xml")
+        if cached.is_file():
+            try:
+                data = cached.read_bytes()
+                if len(data) > 12_000_000:
+                    return {"pmcid": pmcid, "status": "oversize", "attempts": 0, "candidates": []}
+                return {"pmcid": pmcid, "status": "scanned", "attempts": 0,
+                        "candidates": candidates_from_xml(data, record["source_url"], pmcid)}
+            except (OSError, ET.ParseError, ValueError):
+                pass  # Fall back to the existing bounded network retrieval.
     last_status = "unavailable_or_invalid"
     for attempt in range(3):
         try:
@@ -98,13 +109,14 @@ def main():
     p.add_argument("--fulltext-availability", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--workers", type=int, default=6)
+    p.add_argument("--cache-dir", help="Reuse validated PMC XML from the availability stage")
     args = p.parse_args()
     if not 1 <= args.workers <= 12:
         p.error("workers must be 1..12")
     data = json.loads(Path(args.fulltext_availability).read_text(encoding="utf-8"))
     records = [r for r in data["records"] if r["status"] == "full_text_xml_available"]
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        scanned = list(pool.map(scan, records))
+        scanned = list(pool.map(lambda record: scan(record, cache_dir=args.cache_dir), records))
     candidates = [c for r in scanned for c in r["candidates"]]
     assert all(c["feeding_observation_status"] == "not_verified" and
                c["feeding_safety_status"] == "unassessed" and
