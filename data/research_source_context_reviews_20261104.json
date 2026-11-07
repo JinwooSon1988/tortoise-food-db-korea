@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Verified article-level context; individual botanical links and suitability remain unverified.",
+  "records": [
+    {
+      "url": "https://doi.org/10.1371/journal.pone.0116716",
+      "species": "Gopherus agassizii",
+      "method": "direct wild feeding observations",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4312072/",
+      "finding": "18 wild adults, 35,388 bites; dietary plant selection changes with flowering phenology",
+      "limit": "No automatic validation of the 38 candidate taxon associations; no captive feeding safety inference",
+      "review_level": "published_full_text_context_reviewed",
+      "plant_associations_verified": 0,
+      "plant_associations_pending": 38,
+      "feeding_safety_status": "unassessed"
+    },
+    {
+      "url": "https://doi.org/10.1002/ece3.70585",
+      "species": "Gopherus polyphemus",
+      "method": "fecal seed / seasonal frugivory analysis",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11573422/",
+      "finding": "Seasonal frugivory associated with precipitation; study lists plant taxa and seed dispersal syndromes",
+      "limit": "Seed presence is not automatically equivalent to measured leaf consumption; 13 candidate taxon associations unverified",
+      "review_level": "published_full_text_context_reviewed",
+      "plant_associations_verified": 0,
+      "plant_associations_pending": 13,
+      "feeding_safety_status": "unassessed"
+    }
+  ]
+}

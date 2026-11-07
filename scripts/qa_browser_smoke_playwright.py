@@ -37,7 +37,9 @@ with sync_playwright() as pw:
         assert not errors, f"JS errors at {width}px: {errors}"
         page.goto(url("all-plants/index.html"), wait_until="load")
         grade_buttons = page.locator(".gradelegend button")
-        assert grade_buttons.count() == 6, "expected A/B/C/D/hold/unassessed filters"
+        expected_grades = ["A", "B", "C", "D", "feeding_pending", "보류", "미확정"]
+        actual_grades = grade_buttons.evaluate_all("(buttons) => buttons.map(b => b.dataset.grade)")
+        assert actual_grades == expected_grades, f"grade filters changed: {actual_grades!r}"
         if width <= 639:
             layout = page.locator(".gradelegend").evaluate("(el) => getComputedStyle(el).display")
             assert layout == "grid", f"mobile grade legend should use grid, got {layout}"
@@ -57,11 +59,11 @@ with sync_playwright() as pw:
         page.wait_for_url("**/taxon/**")
         page.locator("h1").wait_for(timeout=10000)
         assert SAMPLE[1] in page.locator(".sub").inner_text(), "taxon detail shows another plant"
-        assert "급여 안전성 미확정" in page.locator(".status").inner_text()
-        assert page.locator(".verdictbadge").count() == 0, "catalog entry must not show a grade badge"
+        assert "급여 안전성 미확정" in page.locator(".decision .verdictlabel").inner_text()
+        assert page.locator(".decision .verdictbadge").inner_text().strip() == "—", "unassessed taxon must show a dash, never an A-D grade"
         page.goto(url("taxon/?id=" + SAMPLE[0] + "&lang=en"), wait_until="load")
-        page.locator(".status").wait_for(timeout=10000)
-        assert "Feeding safety not established" in page.locator(".status").inner_text()
+        page.locator(".decision .verdictlabel").wait_for(timeout=10000)
+        assert "Feeding safety not established" in page.locator(".decision .verdictlabel").inner_text()
         page.goto(url("index.html"), wait_until="load")
         page.locator("#searchInput").fill(SAMPLE[1])
         page.locator("#taxonomy-home-results a").first.wait_for(timeout=10000)

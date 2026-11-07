@@ -1,0 +1,183 @@
+name: Parallel scholarly metadata discovery
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/discover_research_sources_epmc.py'
+      - 'tests/test_epmc_metadata_http_errors.py'
+      - 'tests/test_epmc_discovery_circuit_breaker.py'
+      - 'scripts/audit_offline_botanical_source_titles.py'
+      - 'tests/test_audit_offline_botanical_source_titles.py'
+      - 'scripts/check_pmc_fulltext_parallel.py'
+      - 'tests/test_pmc_fulltext_availability.py'
+      - 'tests/test_pmc_retry_merge.py'
+      - 'tests/test_pmc_xml_cache.py'
+      - 'scripts/extract_jats_botanical_mentions.py'
+      - 'tests/test_extract_jats_botanical_mentions.py'
+      - 'tests/test_pmc_extraction_retries.py'
+      - 'scripts/join_botanical_mentions_to_public_plants.py'
+      - 'tests/test_join_botanical_mentions_to_public_plants.py'
+      - 'scripts/prioritize_botanical_review_leads.py'
+      - 'tests/test_prioritize_botanical_review_leads.py'
+      - 'data/plants.json'
+      - 'data/research_unique_source_review_queue.json'
+      - '.github/workflows/parallel-source-discovery.yml'
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit-test DOI parsing and no-safety behavior
+        run: |
+          python - <<'PY'
+          import importlib.util
+          spec=importlib.util.spec_from_file_location('d','scripts/discover_research_sources_epmc.py')
+          m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+          assert m.DOI_RE.match('https://doi.org/10.1371/journal.pone.0116716')
+          assert m.DOI_RE.match('https://dx.doi.org/10.1002/ece3.70585')
+          assert not m.DOI_RE.match('https://example.com/test')
+          assert m.normalize_title('  Desert Tortoises: Food! ')=='desert tortoises food'
+          r=m.lookup({'source_url':'https://example.com/test','title':'','taxon_associations':[]})
+          assert r['discovery_status']=='non_doi_no_title'
+          assert r['feeding_safety_status']=='unassessed'
+          assert r['plant_associations_verified']==0
+          print('PASS: DOI parsing and fail-closed non-DOI handling')
+          PY
+      - name: Test Europe PMC HTTP diagnostics and bounded retries without network
+        run: python -m unittest discover -s tests -p test_epmc_metadata_http_errors.py -v
+      - name: Test Europe PMC uniform-outage circuit breaker without network
+        run: python -m unittest discover -s tests -p test_epmc_discovery_circuit_breaker.py -v
+      - name: Test offline title relevance auditing without network
+        run: python -m unittest discover -s tests -p test_audit_offline_botanical_source_titles.py -v
+      - name: Test JATS XML validation without network
+        run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
+      - name: Test selective PMC retry merge without network
+        run: python -m unittest discover -s tests -p test_pmc_retry_merge.py -v
+      - name: Test PMC XML cache reuse without network
+        run: python -m unittest discover -s tests -p test_pmc_xml_cache.py -v
+      - name: Test botanical name extraction without network
+        run: python -m unittest discover -s tests -p test_extract_jats_botanical_mentions.py -v
+      - name: Test bounded transient PMC retries without network
+        run: python -m unittest discover -s tests -p test_pmc_extraction_retries.py -v
+      - name: Test exact botanical catalog joins without network
+        run: python -m unittest discover -s tests -p test_join_botanical_mentions_to_public_plants.py -v
+      - name: Test deterministic botanical review prioritization
+        run: python -m unittest discover -s tests -p test_prioritize_botanical_review_leads.py -v
+      - name: Query Europe PMC for all unique sources with 12 bounded workers
+        run: python scripts/discover_research_sources_epmc.py --workers 12 --out /tmp/geobukbap-epmc-discovery.json
+      - name: Fail closed when Europe PMC discovery is unavailable
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("/tmp/geobukbap-epmc-discovery.json").read_text())
+          errors=d["status_counts"].get("lookup_error",0)
+          matched=d["matched_sources"]
+          total=d["total_sources"]
+          assert matched > 0, "No Europe PMC metadata matches: discovery unavailable; do not report success"
+          assert errors * 2 < total, f"Excessive Europe PMC lookup errors: {errors}/{total}"
+          print(f"PASS: metadata matches={matched}, lookup errors={errors}")
+          PY
+      - name: Verify exact coverage and no automatic safety promotion
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/geobukbap-epmc-discovery.json').read_text())
+          q=json.loads(Path('data/research_unique_source_review_queue.json').read_text())
+          assert d['total_sources']==len(q['records'])==582
+          assert {x['source_url'] for x in d['records']}=={x['source_url'] for x in q['records']}
+          assert sum(d['status_counts'].values())==582
+          unmatched=json.loads(Path('/tmp/epmc_unmatched_sources.json').read_text())
+          fulltext=json.loads(Path('/tmp/epmc_full_text_candidates.json').read_text())
+          assert d['unmatched_sources']==unmatched['count']==len(unmatched['records'])
+          assert d['pmc_full_text_candidates']==fulltext['count']==len(fulltext['records'])
+          assert d['matched_sources']+d['unmatched_sources']==582
+          assert all(x.get('pmcid') for x in fulltext['records'])
+          assert all(x['feeding_safety_status']=='unassessed' and x['plant_associations_verified']==0 for x in d['records'])
+          print('PASS: 582/582 sources represented, no feeding safety promotions')
+          PY
+      - name: Check PMC full-text XML availability in 8 bounded workers
+        run: python scripts/check_pmc_fulltext_parallel.py --workers 8 --cache-dir /tmp/geobukbap-pmc-xml-cache --candidates /tmp/epmc_full_text_candidates.json --out /tmp/epmc_fulltext_availability.json
+      - name: Retry only transient PMC XML failures with 4 workers
+        run: |
+          python scripts/check_pmc_fulltext_parallel.py --workers 4 --cache-dir /tmp/geobukbap-pmc-xml-cache --candidates /tmp/epmc_full_text_candidates.json --retry-errors-from /tmp/epmc_fulltext_availability.json --out /tmp/epmc_fulltext_availability_retried.json
+          mv /tmp/epmc_fulltext_availability_retried.json /tmp/epmc_fulltext_availability.json
+      - name: Audit full-text availability coverage and zero safety inference
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          candidates=json.loads(Path('/tmp/epmc_full_text_candidates.json').read_text())
+          checked=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
+          assert checked['total_candidates']==candidates['count']
+          assert {r['source_url'] for r in checked['records']}=={r['source_url'] for r in candidates['records']}
+          assert sum(checked['status_counts'].values())==candidates['count']
+          assert all(r['feeding_safety_status']=='unassessed' and r['plant_associations_verified']==0 for r in checked['records'])
+          print('PASS: full-text availability coverage with no feeding-safety inference')
+          PY
+      - name: Extract unverified botanical mentions in 6 bounded workers
+        run: python scripts/extract_jats_botanical_mentions.py --workers 6 --cache-dir /tmp/geobukbap-pmc-xml-cache --fulltext-availability /tmp/epmc_fulltext_availability.json --out /tmp/epmc_botanical_mentions_unverified.json
+      - name: Audit extracted candidates are not promoted as feeding evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('/tmp/epmc_botanical_mentions_unverified.json').read_text())
+          a=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
+          assert x['sources_attempted']==a['status_counts'].get('full_text_xml_available',0)
+          assert x['candidate_mentions']==len(x['candidates'])
+          assert x['sources_scanned']+x['sources_failed']==x['sources_attempted']
+          assert len(x['failed_sources'])==x['sources_failed']
+          assert all(1 <= r['attempts'] <= 3 for r in x['failed_sources'])
+          assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['candidates'])
+          print('PASS: botanical name mentions remain unverified, never public safety evidence')
+          PY
+      - name: Match all botanical mention candidates to public catalog
+        run: python scripts/join_botanical_mentions_to_public_plants.py --mentions /tmp/epmc_botanical_mentions_unverified.json --plants data/plants.json --out /tmp/epmc_botanical_catalog_review_leads.json
+      - name: Audit exact catalog joins remain unverified
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('/tmp/epmc_botanical_catalog_review_leads.json').read_text())
+          m=json.loads(Path('/tmp/epmc_botanical_mentions_unverified.json').read_text())
+          assert x['total_mentions']==m['candidate_mentions']
+          assert sum(x['match_counts'].values())==x['total_mentions']
+          assert all(r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['records'])
+          print('PASS: exact botanical catalog leads are unverified, never feeding evidence')
+          PY
+      - name: Deduplicate catalog-linked botanical source/name review pairs
+        run: python scripts/prioritize_botanical_review_leads.py --joined /tmp/epmc_botanical_catalog_review_leads.json --out /tmp/epmc_botanical_prioritized_review.json
+      - name: Audit source-title relevance without promoting feeding evidence
+        run: python scripts/audit_offline_botanical_source_titles.py --discovery /tmp/geobukbap-epmc-discovery.json --prioritized /tmp/epmc_botanical_prioritized_review.json --out /tmp/epmc_botanical_title_review.json
+      - name: Audit review pairs cannot become safety evidence
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path('/tmp/epmc_botanical_prioritized_review.json').read_text())
+          assert x['review_pairs']==len(x['records'])
+          assert all(r['review_status']=='not_reviewed' and r['feeding_observation_status']=='not_verified' and r['feeding_safety_status']=='unassessed' and not r['verified_plant_links'] for r in x['records'])
+          print('PASS: prioritized source/name review pairs remain unverified')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: geobukbap-epmc-582-source-metadata
+          path: |
+            /tmp/geobukbap-epmc-discovery.json
+            /tmp/epmc_unmatched_sources.json
+            /tmp/epmc_full_text_candidates.json
+            /tmp/epmc_fulltext_availability.json
+            /tmp/epmc_botanical_mentions_unverified.json
+            /tmp/epmc_botanical_catalog_review_leads.json
+            /tmp/epmc_botanical_prioritized_review.json
+            /tmp/epmc_botanical_title_review.json
+          retention-days: 30
