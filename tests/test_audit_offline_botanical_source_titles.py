@@ -2,6 +2,14 @@ import unittest
 from scripts.audit_offline_botanical_source_titles import audit
 
 class OfflineTitleAuditTests(unittest.TestCase):
+    def test_tortoise_beetle_is_not_a_tortoise(self):
+        discovery={"records":[{"source_url":"a","title":"Tortoise beetle feeding on plants"}]}
+        prioritized={"records":[{"source_url":"a","candidate_plant_name":"Chenopodium album",
+                                "mention_count":1,"public_plant_id_candidates":["plant"]}]}
+        result=audit(discovery,prioritized)
+        self.assertEqual(result["signal_counts"]["tortoise_diet_title"],0)
+        self.assertEqual(result["signal_counts"]["other_title"],1)
+
     def test_relevance_is_review_only(self):
         discovery={"records":[
             {"source_url":"a","title":"Testudo graeca feeding ecology"},
