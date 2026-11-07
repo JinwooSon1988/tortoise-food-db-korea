@@ -18,7 +18,7 @@ def audit(discovery, prioritized):
     for row in prioritized["records"]:
         meta = metadata.get(row["source_url"], {})
         title = meta.get("title") or meta.get("queue_title") or ""
-        t = bool(TORTOISE.search(title))
+        t = bool(TORTOISE.search(title)) and not bool(re.search(r"\btortoise beetles?\b", title, re.I))
         d = bool(DIET.search(title))
         signal = "tortoise_diet_title" if t and d else "tortoise_title" if t else "other_title"
         rows.append({
