@@ -13,7 +13,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-def check(record, retries=2, timeout=25):
+def check(record, retries=2, timeout=25, cache_dir=None):
     base = {"source_url": record["source_url"], "pmcid": record["pmcid"],
             "feeding_safety_status": "unassessed",
             "plant_associations_verified": 0}
@@ -36,6 +36,13 @@ def check(record, retries=2, timeout=25):
                 return {**base, "status": "invalid_xml"}
             if root.tag.split("}")[-1] != "article":
                 return {**base, "status": "unexpected_xml_root"}
+            if cache_dir is not None:
+                cache = Path(cache_dir)
+                cache.mkdir(parents=True, exist_ok=True)
+                target = cache / (pmcid + ".xml")
+                temporary = cache / (pmcid + ".xml.tmp")
+                temporary.write_bytes(payload)
+                temporary.replace(target)
             return {**base, "status": "full_text_xml_available",
                     "xml_bytes": len(payload),
                     "article_sections": sum(1 for node in root.iter()
@@ -80,6 +87,7 @@ def main():
     p.add_argument("--candidates", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--workers", type=int, default=8)
+    p.add_argument("--cache-dir", help="Save validated XML locally for extraction without a second download")
     p.add_argument("--retry-errors-from", help="Previous availability JSON; recheck only request_error records")
     args = p.parse_args()
     if not 1 <= args.workers <= 16:
@@ -92,7 +100,7 @@ def main():
         assert {r["source_url"] for r in previous["records"]} == {r["source_url"] for r in candidates}
         candidates = [r for r in candidates if r["source_url"] in errors]
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        results = list(pool.map(check, candidates))
+        results = list(pool.map(lambda record: check(record, cache_dir=args.cache_dir), candidates))
     assert len(results) == len(candidates)
     assert len({x["source_url"] for x in results}) == len(results)
     assert all(x["feeding_safety_status"] == "unassessed" and
