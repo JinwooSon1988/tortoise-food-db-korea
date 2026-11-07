@@ -10,6 +10,7 @@ on:
       - 'tests/test_audit_offline_botanical_source_titles.py'
       - 'scripts/check_pmc_fulltext_parallel.py'
       - 'tests/test_pmc_fulltext_availability.py'
+      - 'tests/test_pmc_retry_merge.py'
       - 'scripts/extract_jats_botanical_mentions.py'
       - 'tests/test_extract_jats_botanical_mentions.py'
       - 'tests/test_pmc_extraction_retries.py'
@@ -55,6 +56,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_audit_offline_botanical_source_titles.py -v
       - name: Test JATS XML validation without network
         run: python -m unittest discover -s tests -p test_pmc_fulltext_availability.py -v
+      - name: Test selective PMC retry merge without network
+        run: python -m unittest discover -s tests -p test_pmc_retry_merge.py -v
       - name: Test botanical name extraction without network
         run: python -m unittest discover -s tests -p test_extract_jats_botanical_mentions.py -v
       - name: Test bounded transient PMC retries without network
@@ -99,6 +102,10 @@ jobs:
           PY
       - name: Check PMC full-text XML availability in 8 bounded workers
         run: python scripts/check_pmc_fulltext_parallel.py --workers 8 --candidates /tmp/epmc_full_text_candidates.json --out /tmp/epmc_fulltext_availability.json
+      - name: Retry only transient PMC XML failures with 4 workers
+        run: |
+          python scripts/check_pmc_fulltext_parallel.py --workers 4 --candidates /tmp/epmc_full_text_candidates.json --retry-errors-from /tmp/epmc_fulltext_availability.json --out /tmp/epmc_fulltext_availability_retried.json
+          mv /tmp/epmc_fulltext_availability_retried.json /tmp/epmc_fulltext_availability.json
       - name: Audit full-text availability coverage and zero safety inference
         run: |
           python - <<'PY'
