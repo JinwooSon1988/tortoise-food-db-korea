@@ -30,6 +30,13 @@ jobs:
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
+      - name: Restore validated PMC XML across discovery runs
+        uses: actions/cache@v4
+        with:
+          path: /tmp/geobukbap-pmc-xml-cache
+          key: pmc-xml-v1-${{ hashFiles('data/research_unique_source_review_queue.json') }}-${{ github.run_id }}
+          restore-keys: |
+            pmc-xml-v1-${{ hashFiles('data/research_unique_source_review_queue.json') }}-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
