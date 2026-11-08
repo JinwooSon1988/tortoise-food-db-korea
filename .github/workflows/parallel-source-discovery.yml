@@ -112,6 +112,17 @@ jobs:
           PY
       - name: Check PMC full-text XML availability in 8 bounded workers
         run: python scripts/check_pmc_fulltext_parallel.py --workers 8 --cache-dir /tmp/geobukbap-pmc-xml-cache --candidates /tmp/epmc_full_text_candidates.json --out /tmp/epmc_fulltext_availability.json
+      - name: Report validated PMC XML cache reuse
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
+          hits=sum(bool(r.get('cache_hit')) for r in d['records'])
+          print(f'PMC XML cache hits: {hits}/{d["total_candidates"]}',flush=True)
+          assert all(r['status']=='full_text_xml_available'
+                     for r in d['records'] if r.get('cache_hit'))
+          PY
       - name: Retry only transient PMC XML failures with 4 workers
         run: |
           python scripts/check_pmc_fulltext_parallel.py --workers 4 --cache-dir /tmp/geobukbap-pmc-xml-cache --candidates /tmp/epmc_full_text_candidates.json --retry-errors-from /tmp/epmc_fulltext_availability.json --out /tmp/epmc_fulltext_availability_retried.json
