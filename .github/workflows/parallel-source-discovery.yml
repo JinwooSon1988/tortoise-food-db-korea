@@ -180,6 +180,20 @@ jobs:
         run: python scripts/prioritize_botanical_review_leads.py --joined /tmp/epmc_botanical_catalog_review_leads.json --out /tmp/epmc_botanical_prioritized_review.json
       - name: Audit source-title relevance without promoting feeding evidence
         run: python scripts/audit_offline_botanical_source_titles.py --discovery /tmp/geobukbap-epmc-discovery.json --prioritized /tmp/epmc_botanical_prioritized_review.json --out /tmp/epmc_botanical_title_review.json
+      - name: Report title-relevant tortoise feeding evidence yield
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/epmc_botanical_title_review.json').read_text())
+          counts=d['signal_counts']
+          feeding=counts.get('tortoise_diet_title',0)
+          total=d['review_pairs']
+          print(f'Tortoise feeding/diet title review leads: {feeding}/{total}',flush=True)
+          if feeding==0:
+              print('WARNING: Zero title-relevant feeding studies; botanical co-occurrences must not be reported as diet evidence.',flush=True)
+          assert sum(counts.values())==total
+          PY
       - name: Audit review pairs cannot become safety evidence
         run: |
           python - <<'PY'
