@@ -134,31 +134,6 @@ jobs:
           assert all(r['feeding_safety_status']=='unassessed' and r['plant_associations_verified']==0 for r in checked['records'])
           print('PASS: full-text availability coverage with no feeding-safety inference')
           PY
-      - name: Fail closed on severe PMC availability degradation
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          data=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
-          total=data['total_candidates']
-          available=data['status_counts'].get('full_text_xml_available',0)
-          errors=data['status_counts'].get('request_error',0)
-          from collections import Counter
-          http_codes=Counter(str(r.get('http_status','network_or_unknown'))
-                             for r in data['records'] if r['status']=='request_error')
-          print('PMC XML failure HTTP diagnostics:',dict(sorted(http_codes.items())),flush=True)
-          print('PMC XML retry diagnostics:',{
-              'attempted':data.get('retry_attempted',0),
-              'recovered':data.get('retry_recovered',0),
-              'skipped_http_500':data.get('retry_skipped_http_500',0)
-          },flush=True)
-          assert total > 0, 'No PMC candidates: unavailable provider'
-          assert available * 3 >= total * 2, (
-              f'PMC XML availability degraded: {available}/{total} accessible, '
-              f'{errors} request errors; do not treat this run as a successful corpus refresh'
-          )
-          print(f'PASS: PMC XML accessible {available}/{total}, errors={errors}')
-          PY
       - name: Extract unverified botanical mentions in 6 bounded workers
         run: python scripts/extract_jats_botanical_mentions.py --workers 6 --cache-dir /tmp/geobukbap-pmc-xml-cache --fulltext-availability /tmp/epmc_fulltext_availability.json --out /tmp/epmc_botanical_mentions_unverified.json
       - name: Audit extracted candidates are not promoted as feeding evidence
@@ -218,3 +193,28 @@ jobs:
             /tmp/epmc_botanical_prioritized_review.json
             /tmp/epmc_botanical_title_review.json
           retention-days: 30
+      - name: Fail closed on severe PMC availability degradation
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('/tmp/epmc_fulltext_availability.json').read_text())
+          total=data['total_candidates']
+          available=data['status_counts'].get('full_text_xml_available',0)
+          errors=data['status_counts'].get('request_error',0)
+          from collections import Counter
+          http_codes=Counter(str(r.get('http_status','network_or_unknown'))
+                             for r in data['records'] if r['status']=='request_error')
+          print('PMC XML failure HTTP diagnostics:',dict(sorted(http_codes.items())),flush=True)
+          print('PMC XML retry diagnostics:',{
+              'attempted':data.get('retry_attempted',0),
+              'recovered':data.get('retry_recovered',0),
+              'skipped_http_500':data.get('retry_skipped_http_500',0)
+          },flush=True)
+          assert total > 0, 'No PMC candidates: unavailable provider'
+          assert available * 3 >= total * 2, (
+              f'PMC XML availability degraded: {available}/{total} accessible, '
+              f'{errors} request errors; do not treat this run as a successful corpus refresh'
+          )
+          print(f'PASS: PMC XML accessible {available}/{total}, errors={errors}')
+          PY
