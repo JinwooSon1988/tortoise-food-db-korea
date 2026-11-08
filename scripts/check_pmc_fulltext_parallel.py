@@ -51,10 +51,10 @@ def check(record, retries=2, timeout=25, cache_dir=None):
             if exc.code in (404, 403):
                 return {**base, "status": "full_text_unavailable", "http_status": exc.code}
             if attempt == retries:
-                return {**base, "status": "request_error", "http_status": exc.code}
+                return {**base, "status": "request_error", "http_status": exc.code, "attempts": attempt + 1}
         except (OSError, ValueError, TimeoutError):
             if attempt == retries:
-                return {**base, "status": "request_error"}
+                return {**base, "status": "request_error", "attempts": attempt + 1}
         time.sleep(0.5 * 2 ** attempt)
 
 def eligible_for_second_pass(row):
