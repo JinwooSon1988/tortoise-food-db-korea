@@ -20,6 +20,22 @@ def check(record, retries=2, timeout=25, cache_dir=None):
     pmcid = record["pmcid"]
     if not isinstance(pmcid, str) or not pmcid.startswith("PMC") or not pmcid[3:].isdigit():
         return {**base, "status": "invalid_pmcid"}
+    if cache_dir is not None:
+        cached = Path(cache_dir) / (pmcid + ".xml")
+        if cached.is_file():
+            try:
+                payload = cached.read_bytes()
+                if len(payload) <= 12_000_000:
+                    root = ET.fromstring(payload)
+                    if root.tag.split("}")[-1] == "article":
+                        return {**base, "status": "full_text_xml_available",
+                                "xml_bytes": len(payload),
+                                "article_sections": sum(
+                                    1 for node in root.iter()
+                                    if node.tag.split("}")[-1] == "sec"),
+                                "cache_hit": True}
+            except (OSError, ET.ParseError):
+                pass  # Invalid cache is never trusted; revalidate from the provider.
     endpoint = "https://www.ebi.ac.uk/europepmc/webservices/rest/" + pmcid + "/fullTextXML"
     for attempt in range(retries + 1):
         try:
