@@ -131,6 +131,15 @@ jobs:
           total=data['total_candidates']
           available=data['status_counts'].get('full_text_xml_available',0)
           errors=data['status_counts'].get('request_error',0)
+          from collections import Counter
+          http_codes=Counter(str(r.get('http_status','network_or_unknown'))
+                             for r in data['records'] if r['status']=='request_error')
+          print('PMC XML failure HTTP diagnostics:',dict(sorted(http_codes.items())),flush=True)
+          print('PMC XML retry diagnostics:',{
+              'attempted':data.get('retry_attempted',0),
+              'recovered':data.get('retry_recovered',0),
+              'skipped_http_500':data.get('retry_skipped_http_500',0)
+          },flush=True)
           assert total > 0, 'No PMC candidates: unavailable provider'
           assert available * 3 >= total * 2, (
               f'PMC XML availability degraded: {available}/{total} accessible, '
