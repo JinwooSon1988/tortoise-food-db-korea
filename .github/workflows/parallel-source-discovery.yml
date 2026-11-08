@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Restore validated PMC XML across discovery runs
-        uses: actions/cache@v4
+        uses: actions/cache/restore@v4
         with:
           path: /tmp/geobukbap-pmc-xml-cache
           key: pmc-xml-v1-${{ hashFiles('data/research_unique_source_review_queue.json') }}-${{ github.run_id }}
@@ -116,6 +116,11 @@ jobs:
         run: |
           python scripts/check_pmc_fulltext_parallel.py --workers 4 --cache-dir /tmp/geobukbap-pmc-xml-cache --candidates /tmp/epmc_full_text_candidates.json --retry-errors-from /tmp/epmc_fulltext_availability.json --out /tmp/epmc_fulltext_availability_retried.json
           mv /tmp/epmc_fulltext_availability_retried.json /tmp/epmc_fulltext_availability.json
+      - name: Save validated PMC XML before quality gate
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/geobukbap-pmc-xml-cache
+          key: pmc-xml-v1-${{ hashFiles('data/research_unique_source_review_queue.json') }}-${{ github.run_id }}
       - name: Audit full-text availability coverage and zero safety inference
         run: |
           python - <<'PY'
