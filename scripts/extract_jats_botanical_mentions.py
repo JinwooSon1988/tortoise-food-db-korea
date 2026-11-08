@@ -67,7 +67,7 @@ def candidates_from_xml(xml, source_url, pmcid):
                 "verified_plant_links": []})
     return rows
 
-def scan(record):
+def scan(record, cache_dir=None):
     pmcid = record["pmcid"]
     endpoint = "https://www.ebi.ac.uk/europepmc/webservices/rest/" + pmcid + "/fullTextXML"
     if cache_dir is not None:
