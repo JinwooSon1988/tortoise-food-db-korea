@@ -61,6 +61,39 @@ def title_signal(title):
     return "tortoise_diet_title" if tortoise and diet else (
         "tortoise_title" if tortoise else "other_title")
 
+def crossref_fallback(queries, timeout=15):
+    """Independent metadata fallback. Search leads remain unverified."""
+    results = []
+    for query in queries:
+        # Crossref query.bibliographic is a broad discovery cue, not exact-title evidence.
+        terms = query.replace("TITLE_ABS:", "").replace("(", " ").replace(")", " ")
+        terms = terms.replace(" AND ", " ").replace(" OR ", " ")
+        url = "https://api.crossref.org/works?" + urllib.parse.urlencode({
+            "query.bibliographic": terms, "rows": "20",
+            "select": "DOI,title,published,container-title"})
+        try:
+            req = urllib.request.Request(url, headers={
+                "User-Agent": "GeobukbapResearchDiscovery/1.0 (metadata only)",
+                "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                items = json.load(response).get("message", {}).get("items", [])
+            hits = []
+            for item in items:
+                title = (item.get("title") or [""])[0]
+                if title_signal(title) != "tortoise_diet_title":
+                    continue
+                hits.append({"doi": item.get("DOI"), "title": title,
+                             "journalTitle": (item.get("container-title") or [""])[0],
+                             "source": "CROSSREF", "id": item.get("DOI")})
+            results.append({"query": query, "status": "ok", "provider": "crossref",
+                            "reported_hits": len(items), "records": hits})
+        except (OSError, ValueError, TimeoutError) as exc:
+            results.append({"query": query, "status": "error",
+                            "provider": "crossref",
+                            "http_status": exc.code if isinstance(exc, urllib.error.HTTPError) else None,
+                            "error_type": type(exc).__name__, "records": []})
+    return results
+
 def combine(results):
     records = {}
     for result in results:
@@ -94,6 +127,7 @@ def combine(results):
     return {"schema_version": "1.0", "scope": "unverified literature leads only",
             "queries": len(results), "queries_succeeded": sum(r["status"] == "ok" for r in results),
             "queries_failed": sum(r["status"] != "ok" for r in results),
+            "providers": sorted(set(r.get("provider", "europe_pmc") for r in results)),
             "unique_sources": len(output),
             "title_signal_counts": {
                 key: sum(r["title_review_signal"] == key for r in output)
@@ -126,6 +160,9 @@ def main():
     else:
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
             results = probe + list(pool.map(search, QUERIES[3:]))
+    if uniform_outage:
+        # Try a different metadata provider only after the Europe PMC circuit opens.
+        results = crossref_fallback(QUERIES)
     result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
