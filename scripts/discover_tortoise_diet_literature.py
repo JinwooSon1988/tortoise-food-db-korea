@@ -157,6 +157,18 @@ def uniform_provider_outage(probe):
         and r.get("http_status") == probe[0].get("http_status")
         for r in probe)
 
+def fallback_failed_queries(primary, workers=6):
+    """Try Crossref only for failed queries and retain primary successes."""
+    failed_queries = [r["query"] for r in primary if r["status"] != "ok"]
+    if not failed_queries:
+        return primary
+    fallback = crossref_fallback(failed_queries, workers=workers)
+    fallback_by_query = {r["query"]: r for r in fallback}
+    return [
+        merge_provider_results([r], [fallback_by_query[r["query"]]])[0]
+        if r["query"] in fallback_by_query else r
+        for r in primary]
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--out", required=True)
@@ -176,16 +188,7 @@ def main():
     else:
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
             results = probe + list(pool.map(search, QUERIES[3:]))
-    # Fall back for EVERY failed primary query, not only uniform outages.
-    # Never re-query successful searches, and preserve each provider's diagnostics.
-    failed_queries = [r["query"] for r in results if r["status"] != "ok"]
-    if failed_queries:
-        fallback = crossref_fallback(failed_queries, workers=args.workers)
-        fallback_by_query = {r["query"]: r for r in fallback}
-        results = [
-            merge_provider_results([r], [fallback_by_query[r["query"]]])[0]
-            if r["query"] in fallback_by_query else r
-            for r in results]
+    results = fallback_failed_queries(results, workers=args.workers)
     result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
