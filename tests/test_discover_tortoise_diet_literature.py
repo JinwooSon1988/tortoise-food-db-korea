@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal, crossref_fallback
+from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal, crossref_fallback, merge_provider_results
 
 class TortoiseDietDiscoveryTests(unittest.TestCase):
     def test_query_matrix_covers_tortoise_and_genera(self):
@@ -36,6 +36,19 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(result["title_signal_counts"]["other_title"], 1)
         self.assertTrue(all(r["feeding_safety_status"] == "unassessed"
                             for r in result["records"]))
+
+    def test_provider_merge_preserves_success_and_both_diagnostics(self):
+        primary = [{"query": "a", "status": "ok", "records": [{"doi": "10.1/a"}]},
+                   {"query": "b", "status": "error", "http_status": 503, "records": []}]
+        fallback = [{"query": "a", "status": "error", "http_status": 429, "records": []},
+                    {"query": "b", "status": "ok", "provider": "crossref",
+                     "records": [{"doi": "10.1/b"}]}]
+        result = merge_provider_results(primary, fallback)
+        self.assertEqual(result[0]["records"][0]["doi"], "10.1/a")
+        self.assertEqual(result[1]["records"][0]["doi"], "10.1/b")
+        self.assertEqual(len(result[1]["provider_attempts"]), 2)
+        with self.assertRaises(ValueError):
+            merge_provider_results(primary, fallback[::-1])
 
     def test_crossref_fallback_keeps_only_tortoise_diet_titles(self):
         import io
