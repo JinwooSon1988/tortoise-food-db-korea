@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal
+from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal, crossref_fallback
 
 class TortoiseDietDiscoveryTests(unittest.TestCase):
     def test_query_matrix_covers_tortoise_and_genera(self):
@@ -36,6 +36,24 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(result["title_signal_counts"]["other_title"], 1)
         self.assertTrue(all(r["feeding_safety_status"] == "unassessed"
                             for r in result["records"]))
+
+    def test_crossref_fallback_keeps_only_tortoise_diet_titles(self):
+        import io
+        import json
+        response = {"message": {"items": [
+            {"DOI": "10.1000/a", "title": ["Testudo graeca diet ecology"]},
+            {"DOI": "10.1000/b", "title": ["Tortoise beetle feeding ecology"]}]}}
+        class Response(io.BytesIO):
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                self.close()
+        with patch("scripts.discover_tortoise_diet_literature.urllib.request.urlopen",
+                   side_effect=lambda *a, **k: Response(json.dumps(response).encode())):
+            rows = crossref_fallback(["Testudo diet"], workers=1)
+        self.assertEqual(rows[0]["provider"], "crossref")
+        self.assertEqual(len(rows[0]["records"]), 1)
+        self.assertEqual(rows[0]["records"][0]["doi"], "10.1000/a")
 
     def test_uniform_503_opens_circuit_but_mixed_results_do_not(self):
         errors = [{"status": "error", "http_status": 503}] * 3
