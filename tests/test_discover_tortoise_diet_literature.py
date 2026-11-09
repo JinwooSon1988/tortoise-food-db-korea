@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal, crossref_fallback, merge_provider_results
+from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal, crossref_fallback, merge_provider_results, fallback_failed_queries
 
 class TortoiseDietDiscoveryTests(unittest.TestCase):
     def test_query_matrix_covers_tortoise_and_genera(self):
@@ -36,6 +36,23 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(result["title_signal_counts"]["other_title"], 1)
         self.assertTrue(all(r["feeding_safety_status"] == "unassessed"
                             for r in result["records"]))
+
+    def test_fallback_queries_only_failed_primary_searches(self):
+        primary = [
+            {"query": "ok", "status": "ok", "records": [{"doi": "10.1/ok"}]},
+            {"query": "failed", "status": "error", "http_status": 503, "records": []}]
+        replacement = [{"query": "failed", "status": "ok", "provider": "crossref",
+                        "records": [{"doi": "10.1/recovered"}]}]
+        with patch("scripts.discover_tortoise_diet_literature.crossref_fallback",
+                   return_value=replacement) as fetch:
+            result = fallback_failed_queries(primary, workers=4)
+        fetch.assert_called_once_with(["failed"], workers=4)
+        self.assertEqual(result[0]["records"][0]["doi"], "10.1/ok")
+        self.assertEqual(result[1]["records"][0]["doi"], "10.1/recovered")
+        self.assertEqual(len(result[1]["provider_attempts"]), 2)
+        with patch("scripts.discover_tortoise_diet_literature.crossref_fallback") as fetch:
+            self.assertEqual(fallback_failed_queries(primary[:1]), primary[:1])
+            fetch.assert_not_called()
 
     def test_provider_merge_preserves_success_and_both_diagnostics(self):
         primary = [{"query": "a", "status": "ok", "records": [{"doi": "10.1/a"}]},
