@@ -61,10 +61,9 @@ def title_signal(title):
     return "tortoise_diet_title" if tortoise and diet else (
         "tortoise_title" if tortoise else "other_title")
 
-def crossref_fallback(queries, timeout=15):
+def crossref_fallback(queries, timeout=15, workers=6):
     """Independent metadata fallback. Search leads remain unverified."""
-    results = []
-    for query in queries:
+    def fetch(query):
         # Crossref query.bibliographic is a broad discovery cue, not exact-title evidence.
         terms = query.replace("TITLE_ABS:", "").replace("(", " ").replace(")", " ")
         terms = terms.replace(" AND ", " ").replace(" OR ", " ")
@@ -85,14 +84,15 @@ def crossref_fallback(queries, timeout=15):
                 hits.append({"doi": item.get("DOI"), "title": title,
                              "journalTitle": (item.get("container-title") or [""])[0],
                              "source": "CROSSREF", "id": item.get("DOI")})
-            results.append({"query": query, "status": "ok", "provider": "crossref",
-                            "reported_hits": len(items), "records": hits})
+            return {"query": query, "status": "ok", "provider": "crossref",
+                            "reported_hits": len(items), "records": hits}
         except (OSError, ValueError, TimeoutError) as exc:
-            results.append({"query": query, "status": "error",
+            return {"query": query, "status": "error",
                             "provider": "crossref",
                             "http_status": exc.code if isinstance(exc, urllib.error.HTTPError) else None,
-                            "error_type": type(exc).__name__, "records": []})
-    return results
+                            "error_type": type(exc).__name__, "records": []}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+        return list(pool.map(fetch, queries))
 
 def combine(results):
     records = {}
@@ -162,7 +162,7 @@ def main():
             results = probe + list(pool.map(search, QUERIES[3:]))
     if uniform_outage:
         # Try a different metadata provider only after the Europe PMC circuit opens.
-        results = crossref_fallback(QUERIES)
+        results = crossref_fallback(QUERIES, workers=args.workers)
     result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
