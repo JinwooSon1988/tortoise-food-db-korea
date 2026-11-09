@@ -161,8 +161,17 @@ def main():
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
             results = probe + list(pool.map(search, QUERIES[3:]))
     if uniform_outage:
-        # Try a different metadata provider only after the Europe PMC circuit opens.
-        results = crossref_fallback(QUERIES, workers=args.workers)
+        # Preserve both providers' diagnostics, including all Europe PMC failures.
+        # A successful fallback replaces only the failed query result, never the provenance.
+        primary = results
+        fallback = crossref_fallback(QUERIES, workers=args.workers)
+        results = []
+        for first, second in zip(primary, fallback):
+            selected = dict(second if second["status"] == "ok" else first)
+            selected["provider_attempts"] = [
+                {k: v for k, v in r.items() if k != "records"}
+                for r in (first, second)]
+            results.append(selected)
     result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
