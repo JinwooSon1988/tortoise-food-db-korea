@@ -21,7 +21,10 @@ def audit(discovery, prioritized):
         t = bool(TORTOISE.search(title)) and not bool(re.search(r"\btortoise beetles?\b", title, re.I))
         d = bool(DIET.search(title))
         signal = "tortoise_diet_title" if t and d else "tortoise_title" if t else "other_title"
+        # Context cues are only a review-routing hint; title relevance remains separate.
+        context_signal = row.get("review_priority_signal", "no_keyword_signal")
         rows.append({
+            "context_review_signal": context_signal,
             "candidate_plant_name": row["candidate_plant_name"],
             "source_url": row["source_url"],
             "source_title": title,
@@ -34,12 +37,14 @@ def audit(discovery, prioritized):
             "verified_plant_links": [],
         })
     priority = {"tortoise_diet_title": 0, "tortoise_title": 1, "other_title": 2}
-    rows.sort(key=lambda r: (priority[r["title_review_signal"]], -r["mention_count"],
+    context_priority = {"tortoise_and_feeding_keywords": 0, "tortoise_keyword": 1, "feeding_keyword": 2, "no_keyword_signal": 3}
+    rows.sort(key=lambda r: (priority[r["title_review_signal"]], context_priority.get(r["context_review_signal"], 4), -r["mention_count"],
                              r["candidate_plant_name"], r["source_url"]))
     return {"schema_version": "1.0",
             "warning": "Title signals are unverified review leads, not ingestion or safety evidence.",
             "review_pairs": len(rows),
             "signal_counts": {key: sum(r["title_review_signal"] == key for r in rows) for key in priority},
+            "context_signal_counts": {key: sum(r["context_review_signal"] == key for r in rows) for key in context_priority},
             "records": rows}
 
 def main():
