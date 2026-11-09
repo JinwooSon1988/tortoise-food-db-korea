@@ -176,12 +176,16 @@ def main():
     else:
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
             results = probe + list(pool.map(search, QUERIES[3:]))
-    if uniform_outage:
-        # Preserve both providers' diagnostics, including all Europe PMC failures.
-        # A successful fallback replaces only the failed query result, never the provenance.
-        primary = results
-        fallback = crossref_fallback(QUERIES, workers=args.workers)
-        results = merge_provider_results(primary, fallback)
+    # Fall back for EVERY failed primary query, not only uniform outages.
+    # Never re-query successful searches, and preserve each provider's diagnostics.
+    failed_queries = [r["query"] for r in results if r["status"] != "ok"]
+    if failed_queries:
+        fallback = crossref_fallback(failed_queries, workers=args.workers)
+        fallback_by_query = {r["query"]: r for r in fallback}
+        results = [
+            merge_provider_results([r], [fallback_by_query[r["query"]]])[0]
+            if r["query"] in fallback_by_query else r
+            for r in results]
     result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
