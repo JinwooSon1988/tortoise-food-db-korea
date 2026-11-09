@@ -85,6 +85,29 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(rows[0]["records"]), 1)
         self.assertEqual(rows[0]["records"][0]["doi"], "10.1000/a")
 
+    def test_crossref_429_retry_recovers_without_verifying_feeding(self):
+        import io
+        import json
+        import urllib.error
+        class Response(io.BytesIO):
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                self.close()
+        payload = {"message": {"items": [
+            {"DOI": "10.1000/diet", "title": ["Testudo graeca diet composition"]}]}}
+        throttled = urllib.error.HTTPError(
+            "https://api.crossref.org/works", 429, "rate limited",
+            {"Retry-After": "0.5"}, None)
+        with patch("scripts.discover_tortoise_diet_literature.urllib.request.urlopen",
+                   side_effect=[throttled, Response(json.dumps(payload).encode())]):
+            with patch("scripts.discover_tortoise_diet_literature.time.sleep") as sleep:
+                rows = crossref_fallback(["Testudo diet"], workers=1)
+        self.assertEqual(rows[0]["status"], "ok")
+        self.assertEqual(rows[0]["attempts"], 2)
+        self.assertEqual(len(rows[0]["records"]), 1)
+        sleep.assert_called_once()
+
     def test_uniform_503_opens_circuit_but_mixed_results_do_not(self):
         errors = [{"status": "error", "http_status": 503}] * 3
         self.assertTrue(uniform_provider_outage(errors))
