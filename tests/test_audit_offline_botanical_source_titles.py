@@ -29,5 +29,21 @@ class OfflineTitleAuditTests(unittest.TestCase):
                             and r["feeding_safety_status"]=="unassessed"
                             and not r["verified_plant_links"] for r in result["records"]))
 
+    def test_context_cues_rank_within_same_title_tier_without_promoting_safety(self):
+        discovery={"records":[{"source_url":"a","title":"Plant ecology"},
+                              {"source_url":"b","title":"Plant ecology"}]}
+        prioritized={"records":[
+            {"source_url":"a","candidate_plant_name":"Plantago major",
+             "mention_count":50,"public_plant_id_candidates":["plant"],
+             "review_priority_signal":"no_keyword_signal"},
+            {"source_url":"b","candidate_plant_name":"Poa annua",
+             "mention_count":1,"public_plant_id_candidates":["plant"],
+             "review_priority_signal":"tortoise_and_feeding_keywords"}]}
+        result=audit(discovery,prioritized)
+        self.assertEqual(result["records"][0]["source_url"],"b")
+        self.assertEqual(result["context_signal_counts"]["tortoise_and_feeding_keywords"],1)
+        self.assertTrue(all(r["feeding_safety_status"]=="unassessed"
+                            and not r["verified_plant_links"] for r in result["records"]))
+
 if __name__=="__main__":
     unittest.main()
