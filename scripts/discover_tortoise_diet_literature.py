@@ -3,6 +3,7 @@
 import argparse
 import concurrent.futures
 import json
+import re
 import time
 import urllib.error
 import urllib.parse
@@ -44,6 +45,22 @@ def search(query, retries=2, timeout=20):
                         "error_type": type(exc).__name__, "records": []}
             time.sleep(0.5 * 2 ** attempt)
 
+TORTOISE_TITLE = re.compile(
+    r"\b(?:tortoises?|Testudo|Gopherus|Chelonoidis|Geochelone|Stigmochelys|"
+    r"Centrochelys|Kinixys|Aldabrachelys|Astrochelys|Indotestudo|Manouria|"
+    r"Psammobates|Pyxis|Homopus)\b", re.I)
+DIET_TITLE = re.compile(
+    r"\b(?:diet|diets|food|feeding|forag(?:e|ing)|grazing|browse|"
+    r"consum(?:e|ption)|herbivor(?:e|y|ous)|plant selection)\b", re.I)
+
+def title_signal(title):
+    title = title or ""
+    tortoise = bool(TORTOISE_TITLE.search(title)) and not bool(
+        re.search(r"\btortoise beetles?\b", title, re.I))
+    diet = bool(DIET_TITLE.search(title))
+    return "tortoise_diet_title" if tortoise and diet else (
+        "tortoise_title" if tortoise else "other_title")
+
 def combine(results):
     records = {}
     for result in results:
@@ -64,17 +81,23 @@ def combine(results):
                                 "pmcid": hit.get("pmcid"), "year": hit.get("pubYear"),
                                 "journal": hit.get("journalTitle"),
                                 "matched_queries": [],
+                                "title_review_signal": title_signal(hit.get("title")),
                                 "review_status": "not_reviewed",
                                 "feeding_observation_status": "not_verified",
                                 "feeding_safety_status": "unassessed",
                                 "verified_plant_links": []}
             if result["query"] not in records[key]["matched_queries"]:
                 records[key]["matched_queries"].append(result["query"])
-    output = sorted(records.values(), key=lambda r: (-len(r["matched_queries"]), r["source_key"]))
+    priority = {"tortoise_diet_title": 0, "tortoise_title": 1, "other_title": 2}
+    output = sorted(records.values(), key=lambda r: (
+        priority[r["title_review_signal"]], -len(r["matched_queries"]), r["source_key"]))
     return {"schema_version": "1.0", "scope": "unverified literature leads only",
             "queries": len(results), "queries_succeeded": sum(r["status"] == "ok" for r in results),
             "queries_failed": sum(r["status"] != "ok" for r in results),
             "unique_sources": len(output),
+            "title_signal_counts": {
+                key: sum(r["title_review_signal"] == key for r in output)
+                for key in ("tortoise_diet_title", "tortoise_title", "other_title")},
             "query_diagnostics": [{k: v for k, v in r.items() if k != "records"} for r in results],
             "records": output}
 
