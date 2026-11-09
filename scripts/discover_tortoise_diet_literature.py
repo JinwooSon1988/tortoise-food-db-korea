@@ -85,8 +85,22 @@ def main():
     args = p.parse_args()
     if not 1 <= args.workers <= 12:
         p.error("workers must be between 1 and 12")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        result = combine(list(pool.map(search, QUERIES)))
+    # Probe before fan-out: a uniform provider outage must not trigger 12 full retries.
+    probe = [search(q) for q in QUERIES[:3]]
+    uniform_outage = len(probe) == 3 and all(
+        r["status"] == "error" and r.get("http_status") in (429, 502, 503, 504)
+        and r.get("http_status") == probe[0].get("http_status")
+        for r in probe)
+    if uniform_outage:
+        results = probe + [
+            {"query": q, "status": "error",
+             "http_status": probe[0]["http_status"],
+             "error_type": "circuit_open_after_uniform_http_failure",
+             "records": []} for q in QUERIES[3:]]
+    else:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+            results = probe + list(pool.map(search, QUERIES[3:]))
+    result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
     if result["queries_failed"]:
