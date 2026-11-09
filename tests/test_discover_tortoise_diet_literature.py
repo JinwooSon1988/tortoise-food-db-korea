@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage
+from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage, title_signal
 
 class TortoiseDietDiscoveryTests(unittest.TestCase):
     def test_query_matrix_covers_tortoise_and_genera(self):
@@ -22,6 +22,20 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(row["feeding_safety_status"], "unassessed")
         self.assertEqual(row["feeding_observation_status"], "not_verified")
         self.assertEqual(row["verified_plant_links"], [])
+
+    def test_title_ranking_excludes_tortoise_beetle_false_positive(self):
+        self.assertEqual(title_signal("Tortoise beetle feeding on leaves"), "other_title")
+        self.assertEqual(title_signal("Testudo graeca diet composition"), "tortoise_diet_title")
+        self.assertEqual(title_signal("Gopherus habitat distribution"), "tortoise_title")
+        hits = [
+            {"doi": "10.1000/other", "title": "Tortoise beetle feeding"},
+            {"doi": "10.1000/diet", "title": "Testudo graeca diet composition"}]
+        result = combine([{"query": "q", "status": "ok", "records": hits}])
+        self.assertEqual(result["records"][0]["source_key"], "doi:10.1000/diet")
+        self.assertEqual(result["title_signal_counts"]["tortoise_diet_title"], 1)
+        self.assertEqual(result["title_signal_counts"]["other_title"], 1)
+        self.assertTrue(all(r["feeding_safety_status"] == "unassessed"
+                            for r in result["records"]))
 
     def test_uniform_503_opens_circuit_but_mixed_results_do_not(self):
         errors = [{"status": "error", "http_status": 503}] * 3
