@@ -78,6 +78,12 @@ def combine(results):
             "query_diagnostics": [{k: v for k, v in r.items() if k != "records"} for r in results],
             "records": output}
 
+def uniform_provider_outage(probe):
+    return len(probe) == 3 and all(
+        r["status"] == "error" and r.get("http_status") in (429, 502, 503, 504)
+        and r.get("http_status") == probe[0].get("http_status")
+        for r in probe)
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--out", required=True)
@@ -87,10 +93,7 @@ def main():
         p.error("workers must be between 1 and 12")
     # Probe before fan-out: a uniform provider outage must not trigger 12 full retries.
     probe = [search(q) for q in QUERIES[:3]]
-    uniform_outage = len(probe) == 3 and all(
-        r["status"] == "error" and r.get("http_status") in (429, 502, 503, 504)
-        and r.get("http_status") == probe[0].get("http_status")
-        for r in probe)
+    uniform_outage = uniform_provider_outage(probe)
     if uniform_outage:
         results = probe + [
             {"query": q, "status": "error",
