@@ -94,6 +94,22 @@ def crossref_fallback(queries, timeout=15, workers=6):
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
         return list(pool.map(fetch, queries))
 
+def merge_provider_results(primary, fallback):
+    """Preserve successful primary hits and select successful fallback per query."""
+    if len(primary) != len(fallback):
+        raise ValueError("Provider query counts differ")
+    merged = []
+    for first, second in zip(primary, fallback):
+        if first["query"] != second["query"]:
+            raise ValueError("Provider query order differs")
+        selected = dict(first if first["status"] == "ok" else (
+            second if second["status"] == "ok" else first))
+        selected["provider_attempts"] = [
+            {k: v for k, v in r.items() if k != "records"}
+            for r in (first, second)]
+        merged.append(selected)
+    return merged
+
 def combine(results):
     records = {}
     for result in results:
@@ -165,13 +181,7 @@ def main():
         # A successful fallback replaces only the failed query result, never the provenance.
         primary = results
         fallback = crossref_fallback(QUERIES, workers=args.workers)
-        results = []
-        for first, second in zip(primary, fallback):
-            selected = dict(second if second["status"] == "ok" else first)
-            selected["provider_attempts"] = [
-                {k: v for k, v in r.items() if k != "records"}
-                for r in (first, second)]
-            results.append(selected)
+        results = merge_provider_results(primary, fallback)
     result = combine(results)
     Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: result[k] for k in ("queries", "queries_succeeded", "queries_failed", "unique_sources")}))
