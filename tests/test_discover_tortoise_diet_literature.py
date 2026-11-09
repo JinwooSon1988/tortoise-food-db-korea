@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from scripts.discover_tortoise_diet_literature import combine, search, QUERIES
+from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, uniform_provider_outage
 
 class TortoiseDietDiscoveryTests(unittest.TestCase):
     def test_query_matrix_covers_tortoise_and_genera(self):
@@ -22,6 +22,15 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(row["feeding_safety_status"], "unassessed")
         self.assertEqual(row["feeding_observation_status"], "not_verified")
         self.assertEqual(row["verified_plant_links"], [])
+
+    def test_uniform_503_opens_circuit_but_mixed_results_do_not(self):
+        errors = [{"status": "error", "http_status": 503}] * 3
+        self.assertTrue(uniform_provider_outage(errors))
+        self.assertFalse(uniform_provider_outage(errors[:2]))
+        self.assertFalse(uniform_provider_outage(errors[:2] + [
+            {"status": "ok", "records": []}]))
+        self.assertFalse(uniform_provider_outage(errors[:2] + [
+            {"status": "error", "http_status": 500}]))
 
     def test_failed_provider_is_reported_not_silent(self):
         with patch("scripts.discover_tortoise_diet_literature.urllib.request.urlopen",
