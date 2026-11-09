@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'scripts/discover_research_sources_epmc.py'
+      - 'scripts/discover_tortoise_diet_literature.py'
+      - 'tests/test_discover_tortoise_diet_literature.py'
       - 'tests/test_epmc_metadata_http_errors.py'
       - 'tests/test_epmc_discovery_circuit_breaker.py'
       - 'scripts/audit_offline_botanical_source_titles.py'
@@ -25,6 +27,25 @@ on:
 permissions:
   contents: read
 jobs:
+  diet-literature:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test targeted tortoise diet literature discovery without network
+        run: python -m unittest discover -s tests -p test_discover_tortoise_diet_literature.py -v
+      - name: Search 12 tortoise feeding research queries with 6 bounded workers
+        run: python scripts/discover_tortoise_diet_literature.py --workers 6 --out /tmp/tortoise_diet_literature_unverified.json
+      - name: Preserve unverified diet research leads even on provider errors
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geobukbap-targeted-tortoise-diet-literature
+          path: /tmp/tortoise_diet_literature_unverified.json
+          retention-days: 30
   discover:
     runs-on: ubuntu-latest
     timeout-minutes: 35
