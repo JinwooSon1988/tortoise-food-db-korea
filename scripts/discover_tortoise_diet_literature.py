@@ -61,37 +61,51 @@ def title_signal(title):
     return "tortoise_diet_title" if tortoise and diet else (
         "tortoise_title" if tortoise else "other_title")
 
-def crossref_fallback(queries, timeout=15, workers=6):
-    """Independent metadata fallback. Search leads remain unverified."""
+def crossref_fallback(queries, timeout=20, workers=2, retries=3):
+    """Rate-limited independent metadata fallback; titles are review leads only."""
     def fetch(query):
-        # Crossref query.bibliographic is a broad discovery cue, not exact-title evidence.
-        terms = query.replace("TITLE_ABS:", "").replace("(", " ").replace(")", " ")
-        terms = terms.replace(" AND ", " ").replace(" OR ", " ")
+        # Keep search terms concise; Crossref bibliographic search is not Boolean.
+        terms = re.findall(
+            r"tortoise|Testudo|Gopherus|Chelonoidis|Stigmochelys|Centrochelys|"
+            r"Kinixys|Aldabrachelys|Astrochelys|Manouria|Indotestudo|Psammobates",
+            query, re.I)
+        terms = " ".join(terms[:1]) + " diet feeding foraging"
         url = "https://api.crossref.org/works?" + urllib.parse.urlencode({
-            "query.bibliographic": terms, "rows": "20",
+            "query.bibliographic": terms, "rows": "100",
             "select": "DOI,title,published,container-title"})
-        try:
-            req = urllib.request.Request(url, headers={
-                "User-Agent": "GeobukbapResearchDiscovery/1.0 (metadata only)",
-                "Accept": "application/json"})
-            with urllib.request.urlopen(req, timeout=timeout) as response:
-                items = json.load(response).get("message", {}).get("items", [])
-            hits = []
-            for item in items:
-                title = (item.get("title") or [""])[0]
-                if title_signal(title) != "tortoise_diet_title":
-                    continue
-                hits.append({"doi": item.get("DOI"), "title": title,
-                             "journalTitle": (item.get("container-title") or [""])[0],
-                             "source": "CROSSREF", "id": item.get("DOI")})
-            return {"query": query, "status": "ok", "provider": "crossref",
-                            "reported_hits": len(items), "records": hits}
-        except (OSError, ValueError, TimeoutError) as exc:
-            return {"query": query, "status": "error",
-                            "provider": "crossref",
-                            "http_status": exc.code if isinstance(exc, urllib.error.HTTPError) else None,
-                            "error_type": type(exc).__name__, "records": []}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+        for attempt in range(retries + 1):
+            try:
+                req = urllib.request.Request(url, headers={
+                    "User-Agent": "GeobukbapResearchDiscovery/1.0 (academic metadata; contact: github.com/JinwooSon1988/tortoise-food-db-korea)",
+                    "Accept": "application/json"})
+                with urllib.request.urlopen(req, timeout=timeout) as response:
+                    items = json.load(response).get("message", {}).get("items", [])
+                hits = []
+                for item in items:
+                    title = (item.get("title") or [""])[0]
+                    if title_signal(title) != "tortoise_diet_title":
+                        continue
+                    hits.append({"doi": item.get("DOI"), "title": title,
+                                 "journalTitle": (item.get("container-title") or [""])[0],
+                                 "source": "CROSSREF", "id": item.get("DOI")})
+                return {"query": query, "status": "ok", "provider": "crossref",
+                        "reported_hits": len(items), "records": hits,
+                        "attempts": attempt + 1}
+            except (OSError, ValueError, TimeoutError) as exc:
+                code = exc.code if isinstance(exc, urllib.error.HTTPError) else None
+                retryable = code in (429, 500, 502, 503, 504) or code is None
+                if attempt == retries or not retryable:
+                    return {"query": query, "status": "error", "provider": "crossref",
+                            "http_status": code, "error_type": type(exc).__name__,
+                            "attempts": attempt + 1, "records": []}
+                retry_after = exc.headers.get("Retry-After") if isinstance(exc, urllib.error.HTTPError) else None
+                try:
+                    delay = min(30.0, max(0.5, float(retry_after))) if retry_after else 2 ** (attempt + 1)
+                except (TypeError, ValueError):
+                    delay = 2 ** (attempt + 1)
+                time.sleep(delay)
+    # Crossref returned HTTP 429 at six concurrent workers; cap at two.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=min(workers, 2)) as pool:
         return list(pool.map(fetch, queries))
 
 def merge_provider_results(primary, fallback):
