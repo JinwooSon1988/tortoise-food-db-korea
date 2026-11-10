@@ -11,7 +11,7 @@ ECOLOGY = re.compile(r'\b(?:diet|diets|dietary preference|foraging|feeding behav
 TAXON = re.compile(r'\b(?:Testudo|Gopherus|Chelonoidis|Kinixys|Psammobates|Manouria|Geochelone|Aldabran giant tortoise|tortoises?)\b', re.I)
 
 def normalize_title(title):
-    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', ' ', title or ''))).strip()
+    return re.sub(r'\s+', ' ', re.sub(r'<[^>]*>', ' ', html.unescape(title or ''))).strip()
 
 def triage(payload):
     groups = {'priority_review': [], 'context_review': [], 'exclude_from_feeding_review': []}
