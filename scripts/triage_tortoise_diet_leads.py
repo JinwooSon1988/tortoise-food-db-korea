@@ -30,6 +30,7 @@ def triage(payload):
             category, reason = 'context_review', 'tortoise title without direct diet cue'
         groups[category].append({'title': title, 'doi': item.get('doi'),
             'source_key': item.get('source_key'), 'reason': reason,
+            'abstract': normalize_title(item.get('abstract'))[:20000],
             'feeding_safety_status': 'unassessed', 'verified_plant_links': []})
     return {'input_records': len(payload.get('records', [])),
             'deduplicated_titles': len(seen),
