@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/discover_research_sources_epmc.py'
       - 'scripts/discover_tortoise_diet_literature.py'
+      - 'scripts/triage_tortoise_diet_leads.py'
+      - 'tests/test_triage_tortoise_diet_leads.py'
       - 'tests/test_discover_tortoise_diet_literature.py'
       - 'tests/test_epmc_metadata_http_errors.py'
       - 'tests/test_epmc_discovery_circuit_breaker.py'
@@ -37,14 +39,33 @@ jobs:
           python-version: '3.12'
       - name: Test targeted tortoise diet literature discovery without network
         run: python -m unittest discover -s tests -p test_discover_tortoise_diet_literature.py -v
+      - name: Test bulk title triage without network
+        run: python -m unittest discover -s tests -p test_triage_tortoise_diet_leads.py -v
       - name: Search 12 tortoise feeding research queries with 6 bounded workers
         run: python scripts/discover_tortoise_diet_literature.py --workers 6 --out /tmp/tortoise_diet_literature_unverified.json
+      - name: Deduplicate and triage all discovered diet leads without safety inference
+        if: always()
+        run: |
+          if test -s /tmp/tortoise_diet_literature_unverified.json; then
+            python scripts/triage_tortoise_diet_leads.py --input /tmp/tortoise_diet_literature_unverified.json --output /tmp/tortoise_diet_title_triage.json
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('/tmp/tortoise_diet_title_triage.json').read_text())
+          assert sum(d['counts'].values())==d['deduplicated_titles']
+          assert all(row['feeding_safety_status']=='unassessed' and not row['verified_plant_links']
+                     for group in d['groups'].values() for row in group)
+          print('PASS: title triage preserves unverified status')
+          PY
+          fi
       - name: Preserve unverified diet research leads even on provider errors
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: geobukbap-targeted-tortoise-diet-literature
-          path: /tmp/tortoise_diet_literature_unverified.json
+          path: |
+            /tmp/tortoise_diet_literature_unverified.json
+            /tmp/tortoise_diet_title_triage.json
           retention-days: 30
   discover:
     runs-on: ubuntu-latest
