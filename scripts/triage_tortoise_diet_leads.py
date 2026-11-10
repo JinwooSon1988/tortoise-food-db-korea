@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-NON_TARGET = re.compile(r'\b(?:tortoise[- ]eating|predat(?:or|ion)|golden eagles?|peer review|preprints?)\b', re.I)
+NON_TARGET = re.compile(r'\b(?:tortoise[- ]beetles?|tortoise[- ]eating|predat(?:or|ion)|golden eagles?|peer review|preprints?)\b', re.I)
 ECOLOGY = re.compile(r'\b(?:diet|diets|dietary preference|foraging|feeding behaviour|feeding behavior|mycophagy|feeding preferences|grazing)\b', re.I)
 TAXON = re.compile(r'\b(?:Testudo|Gopherus|Chelonoidis|Kinixys|Psammobates|Manouria|Geochelone|Aldabran giant tortoise|tortoises?)\b', re.I)
 
