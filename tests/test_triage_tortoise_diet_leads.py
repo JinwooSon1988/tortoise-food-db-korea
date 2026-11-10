@@ -5,6 +5,14 @@ class TortoiseDietLeadTriageTests(unittest.TestCase):
     def test_title_normalization(self):
         self.assertEqual(normalize_title("Testudo <i>graeca</i>  diet &amp; ecology"), "Testudo graeca diet & ecology")
 
+    def test_html_entities_and_adjacent_tags_preserve_word_boundaries(self):
+        self.assertEqual(
+            normalize_title("The tortoise<i>Kinixys spekii</i>in relation to diet"),
+            "The tortoise Kinixys spekii in relation to diet")
+        self.assertEqual(
+            normalize_title("Testudo &lt;i&gt;graeca&lt;/i&gt; diet"),
+            "Testudo graeca diet")
+
     def test_deduplication_and_no_safety_promotion(self):
         data = {"records": [
             {"title": "Testudo <i>graeca</i> diet", "doi": "10.1/a", "source_key": "doi:10.1/a"},
