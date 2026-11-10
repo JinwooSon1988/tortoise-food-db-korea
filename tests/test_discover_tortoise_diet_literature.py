@@ -4,7 +4,9 @@ from scripts.discover_tortoise_diet_literature import combine, search, QUERIES, 
 
 class TortoiseDietDiscoveryTests(unittest.TestCase):
     def test_query_matrix_covers_tortoise_and_genera(self):
-        self.assertGreaterEqual(len(QUERIES), 10)
+        self.assertGreaterEqual(len(QUERIES), 18)
+        self.assertTrue(any("food plants" in q for q in QUERIES))
+        self.assertTrue(any("Chersina" in q for q in QUERIES))
         self.assertTrue(any("Testudo" in q for q in QUERIES))
         self.assertTrue(any("Gopherus" in q for q in QUERIES))
 
