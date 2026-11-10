@@ -45,7 +45,7 @@ jobs:
         run: python -m unittest discover -s tests -p test_triage_tortoise_diet_leads.py -v
       - name: Test batch botanical title-to-catalog joins without network
         run: python -m unittest discover -s tests -p test_match_diet_titles_to_plant_catalog.py -v
-      - name: Search 12 tortoise feeding research queries with 6 bounded workers
+      - name: Search 18 tortoise feeding research queries with 6 bounded workers
         run: python scripts/discover_tortoise_diet_literature.py --workers 6 --out /tmp/tortoise_diet_literature_unverified.json
       - name: Deduplicate and triage all discovered diet leads without safety inference
         if: always()
