@@ -4,7 +4,10 @@ import argparse
 import json
 import re
 from pathlib import Path
-from scripts.join_botanical_mentions_to_public_plants import build_index, canonical
+try:
+    from scripts.join_botanical_mentions_to_public_plants import build_index, canonical
+except ModuleNotFoundError:
+    from join_botanical_mentions_to_public_plants import build_index, canonical
 
 BINOMIAL = re.compile(r"\b([A-Z][a-z-]+\s+[a-z][a-z-]+)\b")
 
