@@ -24,6 +24,12 @@ QUERIES = (
     'TITLE_ABS:(Manouria AND (diet OR feeding OR food))',
     'TITLE_ABS:(Indotestudo AND (diet OR feeding OR food))',
     'TITLE_ABS:(Psammobates AND (diet OR feeding OR food))',
+    'TITLE_ABS:(Pyxis AND (diet OR feeding OR food OR plants))',
+    'TITLE_ABS:(Homopus AND (diet OR feeding OR forage OR plants))',
+    'TITLE_ABS:(Chersina AND (diet OR feeding OR plants))',
+    'TITLE_ABS:(Malacochersus AND (diet OR feeding OR plants))',
+    'TITLE_ABS:(tortoise AND (botanical composition OR food plants OR plant species))',
+    'TITLE_ABS:(Testudo AND (plant species OR vegetation OR dietary composition))',
 )
 
 def search(query, retries=2, timeout=20):
@@ -49,7 +55,7 @@ def search(query, retries=2, timeout=20):
 TORTOISE_TITLE = re.compile(
     r"\b(?:tortoises?|Testudo|Gopherus|Chelonoidis|Geochelone|Stigmochelys|"
     r"Centrochelys|Kinixys|Aldabrachelys|Astrochelys|Indotestudo|Manouria|"
-    r"Psammobates|Pyxis|Homopus)\b", re.I)
+    r"Psammobates|Pyxis|Homopus|Chersina|Malacochersus)\b", re.I)
 DIET_TITLE = re.compile(
     r"\b(?:diet|diets|food|feeding|forag(?:e|ing)|grazing|browse|"
     r"consum(?:e|ption)|herbivor(?:e|y|ous)|plant selection)\b", re.I)
@@ -68,7 +74,8 @@ def crossref_fallback(queries, timeout=20, workers=2, retries=3):
         # Keep search terms concise; Crossref bibliographic search is not Boolean.
         terms = re.findall(
             r"tortoise|Testudo|Gopherus|Chelonoidis|Stigmochelys|Centrochelys|"
-            r"Kinixys|Aldabrachelys|Astrochelys|Manouria|Indotestudo|Psammobates",
+            r"Kinixys|Aldabrachelys|Astrochelys|Manouria|Indotestudo|Psammobates|"
+            r"Pyxis|Homopus|Chersina|Malacochersus",
             query, re.I)
         terms = " ".join(terms[:1]) + " diet feeding foraging"
         url = "https://api.crossref.org/works?" + urllib.parse.urlencode({
@@ -197,7 +204,7 @@ def main():
     args = p.parse_args()
     if not 1 <= args.workers <= 12:
         p.error("workers must be between 1 and 12")
-    # Probe before fan-out: a uniform provider outage must not trigger 12 full retries.
+    # Probe before fan-out: a uniform provider outage must not trigger full retries.
     probe = [search(q) for q in QUERIES[:3]]
     uniform_outage = uniform_provider_outage(probe)
     if uniform_outage:
