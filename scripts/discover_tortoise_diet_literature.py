@@ -73,7 +73,7 @@ def crossref_fallback(queries, timeout=20, workers=2, retries=3):
         terms = " ".join(terms[:1]) + " diet feeding foraging"
         url = "https://api.crossref.org/works?" + urllib.parse.urlencode({
             "query.bibliographic": terms, "rows": "100",
-            "select": "DOI,title,published,container-title"})
+            "select": "DOI,title,published,container-title,abstract"})
         for attempt in range(retries + 1):
             try:
                 req = urllib.request.Request(url, headers={
@@ -91,6 +91,7 @@ def crossref_fallback(queries, timeout=20, workers=2, retries=3):
                     hits.append({"doi": item.get("DOI"), "title": title,
                                  "pubYear": year,
                                  "journalTitle": (item.get("container-title") or [""])[0],
+                                 "abstractText": item.get("abstract") or "",
                                  "source": "CROSSREF", "id": item.get("DOI")})
                 return {"query": query, "status": "ok", "provider": "crossref",
                         "reported_hits": len(items), "records": hits,
@@ -147,6 +148,7 @@ def combine(results):
                                 "doi": hit.get("doi"), "pmid": hit.get("pmid"),
                                 "pmcid": hit.get("pmcid"), "year": hit.get("pubYear"),
                                 "journal": hit.get("journalTitle"),
+                                "abstract": hit.get("abstractText") or "",
                                 "metadata_provider": result.get("provider", "europe_pmc"),
                                 "matched_queries": [],
                                 "title_review_signal": title_signal(hit.get("title")),
