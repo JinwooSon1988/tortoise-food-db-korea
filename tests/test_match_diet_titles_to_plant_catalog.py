@@ -19,6 +19,19 @@ class TitleCatalogJoinTests(unittest.TestCase):
             and r["feeding_observation_status"]=="not_verified"
             and not r["verified_plant_links"] for r in result["records"]))
 
+    def test_abstract_matching_and_field_provenance(self):
+        plants = [{"id":"plantago","scientific":"Plantago major"}]
+        triage = {"groups":{"priority_review":[
+            {"title":"Testudo diet ecology",
+             "abstract":"Testudo graeca ate <i>Plantago major</i> during observations."}]}}
+        result = match_titles(triage, plants)
+        self.assertEqual(result["candidate_matches"], 1)
+        row = result["records"][0]
+        self.assertEqual(row["mention_fields"], ["abstract"])
+        self.assertEqual(row["public_plant_id_candidates"], ["plantago"])
+        self.assertEqual(row["feeding_observation_status"], "not_verified")
+        self.assertEqual(row["feeding_safety_status"], "unassessed")
+
     def test_ambiguous_catalog_identity_is_not_silently_resolved(self):
         plants = [{"id":"a","scientific":"Plantago major"},
                   {"id":"b","scientific":"Plantago major"}]
