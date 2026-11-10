@@ -8,7 +8,7 @@ from pathlib import Path
 
 NON_TARGET = re.compile(r'\b(?:tortoise[- ]beetles?|tortoise[- ]eating|predat(?:or|ion)|golden eagles?|peer review|preprints?)\b', re.I)
 ECOLOGY = re.compile(r'\b(?:diet|diets|dietary preference|foraging|feeding behaviour|feeding behavior|mycophagy|feeding preferences|grazing)\b', re.I)
-TAXON = re.compile(r'\b(?:Testudo|Gopherus|Chelonoidis|Kinixys|Psammobates|Manouria|Geochelone|Aldabran giant tortoise|tortoises?)\b', re.I)
+TAXON = re.compile(r'\b(?:Testudo|Gopherus|Chelonoidis|Kinixys|Psammobates|Manouria|Geochelone|Stigmochelys|Centrochelys|Aldabrachelys|Astrochelys|Indotestudo|Pyxis|Homopus|Chersina|Malacochersus|Aldabran giant tortoise|tortoises?)\b', re.I)
 
 def normalize_title(title):
     return re.sub(r'\s+', ' ', re.sub(r'<[^>]*>', ' ', html.unescape(title or ''))).strip()
