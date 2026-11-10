@@ -108,6 +108,25 @@ class TortoiseDietDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(rows[0]["records"]), 1)
         sleep.assert_called_once()
 
+    def test_html_title_and_crossref_year_provenance(self):
+        import io
+        import json
+        class Response(io.BytesIO):
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                self.close()
+        payload = {"message": {"items": [{
+            "DOI": "10.1000/html", "title": ["Foraging of <i>Testudo graeca</i>"],
+            "published": {"date-parts": [[2023, 4]]},
+            "container-title": ["Ecology Journal"]}]}}
+        with patch("scripts.discover_tortoise_diet_literature.urllib.request.urlopen",
+                   return_value=Response(json.dumps(payload).encode())):
+            result = combine(crossref_fallback(["Testudo diet"], workers=1))
+        self.assertEqual(result["unique_sources"], 1)
+        self.assertEqual(result["records"][0]["year"], 2023)
+        self.assertEqual(result["records"][0]["metadata_provider"], "crossref")
+
     def test_uniform_503_opens_circuit_but_mixed_results_do_not(self):
         errors = [{"status": "error", "http_status": 503}] * 3
         self.assertTrue(uniform_provider_outage(errors))
