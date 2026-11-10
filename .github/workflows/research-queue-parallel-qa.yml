@@ -1,0 +1,48 @@
+name: Research queue parallel QA
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/geobukbap-donations-20261031]
+    paths:
+      - 'scripts/build_research_priority_1000.py'
+      - 'data/plant-catalog/**'
+      - '.github/workflows/research-queue-parallel-qa.yml'
+permissions:
+  contents: read
+jobs:
+  partition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate complete research queue in 64 batches
+        run: python scripts/build_research_priority_1000.py --limit 0 --shards 64 --out /tmp/rees-research/priority.json
+      - name: Validate complete lossless partition and safety boundaries
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('/tmp/rees-research')
+          master=json.loads((root/'priority.json').read_text(encoding='utf-8'))['records']
+          shard=root/'priority_shards'
+          manifest=json.loads((shard/'manifest.json').read_text(encoding='utf-8'))
+          assert len(manifest['batches'])==64
+          combined=[]
+          for b in manifest['batches']:
+              records=json.loads((shard/b['file']).read_text(encoding='utf-8'))['records']
+              assert len(records)==b['count']
+              combined.extend(records)
+          assert len(combined)==len(master)==manifest['total']
+          keys=lambda rows:[str(r.get('id') or r['scientific']) for r in rows]
+          assert len(set(keys(master)))==len(master), 'Duplicate taxon identity'
+          assert sorted(keys(master))==sorted(keys(combined)), 'Lost or duplicated research taxon'
+          assert all(r['feeding_safety_status']=='unassessed' and r['review_status']=='research_required' for r in combined)
+          print('PASS:',len(master),'unique research taxa in 64 batches; 0 inferred safety grades')
+          PY
+      - name: Upload complete research batches
+        uses: actions/upload-artifact@v4
+        with:
+          name: rees-research-64-batches
+          path: /tmp/rees-research/
+          retention-days: 30

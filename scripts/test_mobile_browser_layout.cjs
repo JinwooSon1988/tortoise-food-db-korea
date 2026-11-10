@@ -103,7 +103,7 @@ const server=http.createServer((req,res)=>{
    const page=await browser.newPage({viewport:{width,height:812},deviceScaleFactor:1,isMobile:true,hasTouch:true});
    try{
     await page.goto('http://127.0.0.1:'+port+'/all-plants/',{waitUntil:'domcontentloaded'});
-    await page.waitForFunction(()=>document.getElementById('summary')?.textContent.includes('종 중'),{timeout:12000});
+    await page.waitForFunction(()=>{const summary=document.getElementById('summary')?.textContent||'';return summary.length>0&&!summary.includes('불러오는 중')&&document.querySelectorAll('#mobilecards .mcard').length>0},{timeout:12000});
     await page.locator('#q').fill('미나리');
     await page.waitForFunction(()=>{const cards=[...document.querySelectorAll('#mobilecards .mcard')];return cards.some(c=>c.textContent.includes('Oenanthe javanica'))},{timeout:10000});
      const cardInfo=await page.locator('#mobilecards .mcard').allTextContents();

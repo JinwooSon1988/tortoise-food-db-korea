@@ -147,6 +147,8 @@ for p in public:
     rows = rows_by.get(pid, [])
     a = representative(rows)
     g = display(a)
+    species_only_label = a is None and 'class="verdict">급여 기록 있음 (검증 중)</div>' in text
+    expected_label = "급여 기록 있음 (검증 중)" if species_only_label else g["label"]
     m = re.search(r'class="card [a-z]+ decision" data-grade="([^"]+)" data-verdict="([^"]+)"', text)
     if not m:
         errors.append(f"{pid}: decision card missing")
@@ -159,7 +161,7 @@ for p in public:
     decision_start = text.find(' decision" data-grade=')
     decision_end = text.find('</section>', decision_start)
     decision_text = text[decision_start:decision_end] if decision_start >= 0 and decision_end >= 0 else ""
-    expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(g["label"]), quote=True)}"'
+    expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(expected_label), quote=True)}"'
     if expected_aria not in decision_text:
         errors.append(f"{pid}: decision card must expose grade and verdict label to assistive technology")
     if g["grade"] == "보류":
@@ -170,7 +172,10 @@ for p in public:
             errors.append(f"{pid}: D verdict must preserve explicit do-not-feed meaning")
     elif g["grade"] in ("A", "B", "C") and "판정 보류" in text.split('<section class="card practical"',1)[0]:
         errors.append(f"{pid}: graded verdict must not look like a hold state")
-    if g["label"] not in text or g["meaning"] not in text:
+    if species_only_label:
+        if not ("전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다" in decision_text and "판정이 없다는 것은 안전하다는 뜻이 아니다" in decision_text):
+            errors.append(f"{pid}: species-only evidence must retain explicit general-safety boundary")
+    elif g["label"] not in text or g["meaning"] not in text:
         errors.append(f"{pid}: grade label/meaning missing")
     if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나</b>' not in decision_text):
         errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
