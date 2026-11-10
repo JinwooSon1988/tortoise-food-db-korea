@@ -17,16 +17,19 @@ def match_titles(triage, plants):
     for group in ("priority_review", "context_review"):
         for paper in triage.get("groups", {}).get(group, []):
             title = paper.get("title") or ""
-            found = set()
-            for name in BINOMIAL.findall(title):
-                key = canonical(name)
-                if not key or key not in index:
-                    continue
-                found.add((key, tuple(sorted(set(index[key])))))
-            for name, ids in sorted(found):
+            found = {}
+            for field in ("title", "abstract"):
+                for name in BINOMIAL.findall(paper.get(field) or ""):
+                    key = canonical(name)
+                    if not key or key not in index:
+                        continue
+                    found.setdefault(key, set()).add(field)
+            for name, fields in sorted(found.items()):
+                ids = tuple(sorted(set(index[name])))
                 rows.append({"title": title, "doi": paper.get("doi"),
                              "source_key": paper.get("source_key"),
                              "candidate_plant_name": name,
+                             "mention_fields": sorted(fields),
                              "public_plant_id_candidates": list(ids),
                              "match_status": "exact_name_candidate" if len(ids) == 1 else "ambiguous_name",
                              "feeding_observation_status": "not_verified",
@@ -35,7 +38,7 @@ def match_titles(triage, plants):
     return {"title_leads_scanned": sum(len(triage.get("groups", {}).get(k, []))
             for k in ("priority_review", "context_review")),
             "candidate_matches": len(rows), "records": rows,
-            "warning": "Title-only name co-occurrence; no evidence of ingestion or safety."}
+            "warning": "Title/abstract name co-occurrence; no evidence of ingestion or safety."}
 
 def main():
     p = argparse.ArgumentParser()
