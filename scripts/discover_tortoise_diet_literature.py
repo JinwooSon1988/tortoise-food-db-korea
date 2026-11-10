@@ -3,6 +3,7 @@
 import argparse
 import concurrent.futures
 import json
+import html
 import re
 import time
 import urllib.error
@@ -54,7 +55,7 @@ DIET_TITLE = re.compile(
     r"consum(?:e|ption)|herbivor(?:e|y|ous)|plant selection)\b", re.I)
 
 def title_signal(title):
-    title = title or ""
+    title = html.unescape(re.sub(r"<[^>]+>", " ", title or ""))
     tortoise = bool(TORTOISE_TITLE.search(title)) and not bool(
         re.search(r"\btortoise beetles?\b", title, re.I))
     diet = bool(DIET_TITLE.search(title))
@@ -85,7 +86,10 @@ def crossref_fallback(queries, timeout=20, workers=2, retries=3):
                     title = (item.get("title") or [""])[0]
                     if title_signal(title) != "tortoise_diet_title":
                         continue
+                    parts = (item.get("published") or {}).get("date-parts") or []
+                    year = parts[0][0] if parts and parts[0] else None
                     hits.append({"doi": item.get("DOI"), "title": title,
+                                 "pubYear": year,
                                  "journalTitle": (item.get("container-title") or [""])[0],
                                  "source": "CROSSREF", "id": item.get("DOI")})
                 return {"query": query, "status": "ok", "provider": "crossref",
@@ -143,6 +147,7 @@ def combine(results):
                                 "doi": hit.get("doi"), "pmid": hit.get("pmid"),
                                 "pmcid": hit.get("pmcid"), "year": hit.get("pubYear"),
                                 "journal": hit.get("journalTitle"),
+                                "metadata_provider": result.get("provider", "europe_pmc"),
                                 "matched_queries": [],
                                 "title_review_signal": title_signal(hit.get("title")),
                                 "review_status": "not_reviewed",
