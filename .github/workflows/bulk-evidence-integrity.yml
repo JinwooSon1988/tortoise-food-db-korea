@@ -1,0 +1,35 @@
+name: Bulk evidence integrity
+
+on:
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'scripts/audit_bulk_integrity.py'
+      - 'tests/test_bulk_integrity.py'
+      - '.github/workflows/bulk-evidence-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -p 'test_bulk_integrity.py'
+      - name: Run bulk integrity audit
+        run: |
+          python scripts/audit_bulk_integrity.py --output bulk-audit.json
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bulk-integrity-report
+          path: bulk-audit.json
+          if-no-files-found: warn
