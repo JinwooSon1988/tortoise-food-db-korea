@@ -59,6 +59,8 @@ def audit(root):
     plant_ids = unique(plants, "id", "plants")
     evidence_ids = unique(evidence, "id", "evidence")
     evidence_plant_map = {}
+    source_keys = {}
+    duplicate_source_pairs = []
     for record in evidence:
         eid = record.get("id")
         linked_plants = record.get("plant_ids", [])
@@ -66,6 +68,17 @@ def audit(root):
             errors.append({"code": "invalid_plant_ids", "evidence_id": eid})
             linked_plants = []
         evidence_plant_map[eid] = set(linked_plants)
+        # Same canonical source for the same plant may indicate redundant records.
+        # Never merge automatically: distinct claims or plant parts can be legitimate.
+        url = record.get("url")
+        if isinstance(url, str) and url.strip():
+            for pid in linked_plants:
+                if not isinstance(pid, str):
+                    continue
+                key = (pid, url.strip().rstrip("/"))
+                prior = source_keys.setdefault(key, eid)
+                if prior != eid:
+                    duplicate_source_pairs.append((pid, prior, eid))
         for pid in linked_plants:
             if pid not in plant_ids:
                 errors.append({"code": "unknown_evidence_plant", "evidence_id": eid, "plant_id": pid})
@@ -100,6 +113,8 @@ def audit(root):
         if count > 1:
             errors.append({"code": "duplicate_assessment", "plant_id": pid, "species_group": group, "count": count})
 
+    for pid, prior, eid in sorted(duplicate_source_pairs):
+        warnings.append({"code": "same_source_same_plant", "plant_id": pid, "evidence_ids": [prior, eid]})
     orphan_evidence = sorted(evidence_ids - referenced_evidence)
     for eid in orphan_evidence:
         warnings.append({"code": "unreferenced_evidence", "evidence_id": eid})
@@ -113,6 +128,7 @@ def audit(root):
             "plants_without_assessments": len(plant_ids - assessed_plants),
             "evidence_referenced": len(referenced_evidence),
             "evidence_unreferenced": len(orphan_evidence),
+            "same_source_same_plant_pairs": len(duplicate_source_pairs),
         },
         "passed": not errors,
         "errors": sorted(errors, key=lambda x: json.dumps(x, ensure_ascii=False, sort_keys=True)),
