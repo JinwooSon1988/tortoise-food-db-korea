@@ -53,6 +53,32 @@ class BulkAuditTests(unittest.TestCase):
         self.write("public_assessments.json", [row, row])
         self.assertIn("duplicate_assessment", {e["code"] for e in audit(self.root)["errors"]})
 
+    def test_invalid_reference_types(self):
+        self.write("public_evidence_records.json", {"records": [
+            {"id": "source1", "plant_ids": "a", "source_title": "Source", "url": "https://example.org/source"}
+        ]})
+        self.write("public_assessments.json", [
+            {"plant_id": "a", "species_group": "Testudo", "verdict": "supported_mixed_diet", "evidence_ids": "source1"}
+        ])
+        codes = {e["code"] for e in audit(self.root)["errors"]}
+        self.assertIn("invalid_plant_ids", codes)
+        self.assertIn("invalid_evidence_ids", codes)
+
+    def test_large_batch_without_false_duplicates(self):
+        count = 25000
+        self.write("plants.json", [{"id": f"p{i:05d}"} for i in range(count)])
+        self.write("public_evidence_records.json", {"records": [
+            {"id": f"e{i:05d}", "plant_ids": [f"p{i:05d}"], "source_title": "Fixture only", "url": "https://example.org/fixture"}
+            for i in range(count)
+        ]})
+        self.write("public_assessments.json", [
+            {"plant_id": f"p{i:05d}", "species_group": "Testudo", "verdict": "hold", "evidence_ids": [f"e{i:05d}"]}
+            for i in range(count)
+        ])
+        report = audit(self.root)
+        self.assertTrue(report["passed"], report["errors"][:3])
+        self.assertEqual(report["counts"]["plants"], count)
+
 
 if __name__ == "__main__":
     unittest.main()
