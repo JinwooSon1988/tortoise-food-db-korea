@@ -58,12 +58,14 @@ def audit(root):
 
     plant_ids = unique(plants, "id", "plants")
     evidence_ids = unique(evidence, "id", "evidence")
+    evidence_plant_map = {}
     for record in evidence:
         eid = record.get("id")
         linked_plants = record.get("plant_ids", [])
         if not isinstance(linked_plants, list):
             errors.append({"code": "invalid_plant_ids", "evidence_id": eid})
             linked_plants = []
+        evidence_plant_map[eid] = set(linked_plants)
         for pid in linked_plants:
             if pid not in plant_ids:
                 errors.append({"code": "unknown_evidence_plant", "evidence_id": eid, "plant_id": pid})
@@ -84,6 +86,8 @@ def audit(root):
         for eid in linked_evidence:
             if eid not in evidence_ids:
                 errors.append({"code": "unknown_assessment_evidence", "plant_id": pid, "evidence_id": eid})
+            elif pid not in evidence_plant_map.get(eid, set()):
+                errors.append({"code": "evidence_not_linked_to_assessed_plant", "plant_id": pid, "evidence_id": eid})
         if record.get("verdict") in ("supported_mixed_diet", "limited_mixed_diet") and not linked_evidence:
             errors.append({"code": "positive_verdict_without_evidence", "plant_id": pid})
     for (pid, group), count in sorted(keys.items()):
