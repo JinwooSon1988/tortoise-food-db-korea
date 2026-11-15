@@ -63,13 +63,16 @@ def normalize(row):
 
 
 def stage(input_path, output_path, report_path):
-    if input_path.resolve() == output_path.resolve():
-        raise ValueError("input and output must differ")
+    resolved = [input_path.resolve(), output_path.resolve(), report_path.resolve()]
+    if len(set(resolved)) != 3:
+        raise ValueError("input, output and report must be distinct files")
     seen = {}
     counts = Counter()
     errors = []
     # A temporary output avoids publishing a partial staging file on validation failure.
     temporary = output_path.with_name(output_path.name + ".tmp")
+    if temporary.resolve() in resolved:
+        raise ValueError("temporary output conflicts with input or report")
     output_path.parent.mkdir(parents=True, exist_ok=True)
     try:
         with input_path.open(encoding="utf-8") as source, temporary.open("w", encoding="utf-8") as target:
