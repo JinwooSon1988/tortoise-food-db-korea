@@ -86,6 +86,14 @@ class BulkAuditTests(unittest.TestCase):
         codes = {e["code"] for e in audit(self.root)["errors"]}
         self.assertIn("evidence_not_linked_to_assessed_plant", codes)
 
+    def test_coverage_metrics_and_orphan_warning(self):
+        self.write("public_assessments.json", [])
+        report = audit(self.root)
+        self.assertTrue(report["passed"])
+        self.assertEqual(report["counts"]["plants_without_assessments"], 2)
+        self.assertEqual(report["counts"]["evidence_unreferenced"], 1)
+        self.assertIn("unreferenced_evidence", {w["code"] for w in report["warnings"]})
+
 
 if __name__ == "__main__":
     unittest.main()
