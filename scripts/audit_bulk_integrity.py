@@ -51,11 +51,20 @@ def audit(root):
                 errors.append({"code": "missing_id", "dataset": name, "index": index})
         return {v for v in values if isinstance(v, str) and v.strip()}
 
+    for name, items in (("plants", plants), ("assessments", assessments), ("evidence", evidence)):
+        for index, item in enumerate(items):
+            if not isinstance(item, dict):
+                raise ValueError(f"{name}[{index}] must be an object")
+
     plant_ids = unique(plants, "id", "plants")
     evidence_ids = unique(evidence, "id", "evidence")
     for record in evidence:
         eid = record.get("id")
-        for pid in record.get("plant_ids", []):
+        linked_plants = record.get("plant_ids", [])
+        if not isinstance(linked_plants, list):
+            errors.append({"code": "invalid_plant_ids", "evidence_id": eid})
+            linked_plants = []
+        for pid in linked_plants:
             if pid not in plant_ids:
                 errors.append({"code": "unknown_evidence_plant", "evidence_id": eid, "plant_id": pid})
         if not record.get("source_title") or not (record.get("url") or record.get("doi") or record.get("pmid")):
@@ -68,10 +77,14 @@ def audit(root):
         keys[(str(pid), str(group))] += 1
         if pid not in plant_ids:
             errors.append({"code": "unknown_assessment_plant", "plant_id": pid})
-        for eid in record.get("evidence_ids", []):
+        linked_evidence = record.get("evidence_ids", [])
+        if not isinstance(linked_evidence, list):
+            errors.append({"code": "invalid_evidence_ids", "plant_id": pid})
+            linked_evidence = []
+        for eid in linked_evidence:
             if eid not in evidence_ids:
                 errors.append({"code": "unknown_assessment_evidence", "plant_id": pid, "evidence_id": eid})
-        if record.get("verdict") in ("supported_mixed_diet", "limited_mixed_diet") and not record.get("evidence_ids"):
+        if record.get("verdict") in ("supported_mixed_diet", "limited_mixed_diet") and not linked_evidence:
             errors.append({"code": "positive_verdict_without_evidence", "plant_id": pid})
     for (pid, group), count in sorted(keys.items()):
         if count > 1:
