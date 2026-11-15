@@ -17,7 +17,7 @@ from urllib.parse import urlsplit
 def clean(value):
     if not isinstance(value, str):
         return ""
-    return re.sub(r"\\s+", " ", unicodedata.normalize("NFKC", value)).strip()
+    return re.sub(r"\s+", " ", unicodedata.normalize("NFKC", value)).strip()
 
 
 def normalize(row):
@@ -33,7 +33,7 @@ def normalize(row):
     parsed = urlsplit(url)
     if parsed.scheme not in ("http", "https") or not parsed.netloc:
         raise ValueError("source_url must be an absolute HTTP(S) URL")
-    if not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", observed):
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", observed):
         raise ValueError("observed_at must be YYYY-MM-DD")
     # The same source record must never be silently assigned conflicting taxon names.
     key = (source.casefold(), (source_record or name).casefold())
@@ -75,7 +75,7 @@ def stage(input_path, output_path, report_path):
                         counts["duplicates"] += 1
                         continue
                     seen[key] = item["canonical_scientific_name"].casefold()
-                    target.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\\n")
+                    target.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
                     counts["staged"] += 1
                 except (ValueError, TypeError, json.JSONDecodeError) as exc:
                     counts["rejected"] += 1
@@ -94,7 +94,7 @@ def stage(input_path, output_path, report_path):
         "note": "Taxonomic identity candidates only; no tortoise feeding-safety inference.",
     }
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return report
 
 
