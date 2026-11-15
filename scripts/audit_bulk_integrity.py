@@ -73,9 +73,13 @@ def audit(root):
             warnings.append({"code": "incomplete_citation", "evidence_id": eid})
 
     keys = Counter()
+    referenced_evidence = set()
+    assessed_plants = set()
     for record in assessments:
         pid = record.get("plant_id")
         group = record.get("species_group", "")
+        if isinstance(pid, str) and pid in plant_ids:
+            assessed_plants.add(pid)
         keys[(str(pid), str(group))] += 1
         if pid not in plant_ids:
             errors.append({"code": "unknown_assessment_plant", "plant_id": pid})
@@ -84,6 +88,8 @@ def audit(root):
             errors.append({"code": "invalid_evidence_ids", "plant_id": pid})
             linked_evidence = []
         for eid in linked_evidence:
+            if isinstance(eid, str) and eid in evidence_ids:
+                referenced_evidence.add(eid)
             if eid not in evidence_ids:
                 errors.append({"code": "unknown_assessment_evidence", "plant_id": pid, "evidence_id": eid})
             elif pid not in evidence_plant_map.get(eid, set()):
@@ -94,9 +100,20 @@ def audit(root):
         if count > 1:
             errors.append({"code": "duplicate_assessment", "plant_id": pid, "species_group": group, "count": count})
 
+    orphan_evidence = sorted(evidence_ids - referenced_evidence)
+    for eid in orphan_evidence:
+        warnings.append({"code": "unreferenced_evidence", "evidence_id": eid})
     return {
         "schema_version": 1,
-        "counts": {"plants": len(plants), "assessments": len(assessments), "evidence": len(evidence)},
+        "counts": {
+            "plants": len(plants),
+            "assessments": len(assessments),
+            "evidence": len(evidence),
+            "plants_with_assessments": len(assessed_plants),
+            "plants_without_assessments": len(plant_ids - assessed_plants),
+            "evidence_referenced": len(referenced_evidence),
+            "evidence_unreferenced": len(orphan_evidence),
+        },
         "passed": not errors,
         "errors": sorted(errors, key=lambda x: json.dumps(x, ensure_ascii=False, sort_keys=True)),
         "warnings": sorted(warnings, key=lambda x: json.dumps(x, ensure_ascii=False, sort_keys=True)),
