@@ -65,6 +65,18 @@ class BulkStageTests(unittest.TestCase):
             self.assertEqual(result["counts"]["rejected"], 2)
             self.assertFalse(out.exists())
 
+    def test_empty_input_preserves_existing_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            src, out, report = (root / name for name in ("in.jsonl", "out.jsonl", "report.json"))
+            src.write_text("\\n   \\n", encoding="utf-8")
+            out.write_text("existing validated candidates\\n", encoding="utf-8")
+            result = stage(src, out, report)
+            self.assertFalse(result["passed"])
+            self.assertEqual(out.read_text(encoding="utf-8"), "existing validated candidates\\n")
+            self.assertEqual(result["counts"]["rejected"], 1)
+            self.assertIn("empty input", result["errors"][0]["reason"])
+
     def test_refuses_path_collisions_without_modifying_input(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
