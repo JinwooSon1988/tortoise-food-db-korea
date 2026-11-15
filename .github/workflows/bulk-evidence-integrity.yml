@@ -6,8 +6,10 @@ on:
       - 'data/**'
       - 'scripts/audit_bulk_integrity.py'
       - 'scripts/stage_plant_bulk_stream.py'
+      - 'scripts/shard_plant_candidates.py'
       - 'tests/test_bulk_integrity.py'
       - 'tests/test_bulk_stage_stream.py'
+      - 'tests/test_plant_candidate_sharding.py'
       - '.github/workflows/bulk-evidence-integrity.yml'
   workflow_dispatch:
 
@@ -27,6 +29,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_bulk_integrity.py'
       - name: Run 25k-row streaming staging regression
         run: python -m unittest discover -s tests -p 'test_bulk_stage_stream.py'
+      - name: Run 32-worker queue partition regression
+        run: python -m unittest discover -s tests -p 'test_plant_candidate_sharding.py'
       - name: Run bulk integrity audit
         run: |
           python scripts/audit_bulk_integrity.py --output bulk-audit.json
