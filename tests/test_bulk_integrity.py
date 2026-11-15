@@ -94,6 +94,16 @@ class BulkAuditTests(unittest.TestCase):
         self.assertEqual(report["counts"]["evidence_unreferenced"], 1)
         self.assertIn("unreferenced_evidence", {w["code"] for w in report["warnings"]})
 
+    def test_duplicate_source_warning_preserves_records(self):
+        self.write("public_evidence_records.json", {"records": [
+            {"id": "source1", "plant_ids": ["a"], "source_title": "Study", "url": "https://example.org/study"},
+            {"id": "source2", "plant_ids": ["a"], "source_title": "Study", "url": "https://example.org/study/"},
+        ]})
+        report = audit(self.root)
+        self.assertTrue(report["passed"])
+        self.assertEqual(report["counts"]["same_source_same_plant_pairs"], 1)
+        self.assertIn("same_source_same_plant", {w["code"] for w in report["warnings"]})
+
 
 if __name__ == "__main__":
     unittest.main()
