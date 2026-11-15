@@ -69,11 +69,11 @@ class BulkStageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             src, out, report = (root / name for name in ("in.jsonl", "out.jsonl", "report.json"))
-            src.write_text("\\n   \\n", encoding="utf-8")
-            out.write_text("existing validated candidates\\n", encoding="utf-8")
+            src.write_text("\n   \n", encoding="utf-8")
+            out.write_text("existing validated candidates\n", encoding="utf-8")
             result = stage(src, out, report)
             self.assertFalse(result["passed"])
-            self.assertEqual(out.read_text(encoding="utf-8"), "existing validated candidates\\n")
+            self.assertEqual(out.read_text(encoding="utf-8"), "existing validated candidates\n")
             self.assertEqual(result["counts"]["rejected"], 1)
             self.assertIn("empty input", result["errors"][0]["reason"])
 
