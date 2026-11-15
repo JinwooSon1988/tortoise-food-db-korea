@@ -65,6 +65,21 @@ class BulkStageTests(unittest.TestCase):
             self.assertEqual(result["counts"]["rejected"], 2)
             self.assertFalse(out.exists())
 
+    def test_refuses_path_collisions_without_modifying_input(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            src, out = root / "input.jsonl", root / "output.jsonl"
+            src.write_text("source data", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                stage(src, out, src)
+            with self.assertRaises(ValueError):
+                stage(src, src, root / "report.json")
+            with self.assertRaises(ValueError):
+                stage(src, out, out)
+            with self.assertRaises(ValueError):
+                stage(src, out, root / "output.jsonl.tmp")
+            self.assertEqual(src.read_text(encoding="utf-8"), "source data")
+
 
 if __name__ == "__main__":
     unittest.main()
