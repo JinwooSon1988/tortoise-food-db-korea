@@ -1,6 +1,17 @@
 name: Bulk evidence integrity
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'scripts/audit_bulk_integrity.py'
+      - 'scripts/stage_plant_bulk_stream.py'
+      - 'scripts/shard_plant_candidates.py'
+      - 'tests/test_bulk_integrity.py'
+      - 'tests/test_bulk_stage_stream.py'
+      - 'tests/test_plant_candidate_sharding.py'
+      - '.github/workflows/bulk-evidence-integrity.yml'
   pull_request:
     paths:
       - 'data/**'
