@@ -95,6 +95,9 @@ def stage(input_path, output_path, report_path):
                     counts["rejected"] += 1
                     if len(errors) < 100:
                         errors.append({"line": line_number, "reason": str(exc)})
+        if not counts["read"]:
+            counts["rejected"] += 1
+            errors.append({"line": 0, "reason": "empty input: refusing to overwrite existing staged candidates"})
         if counts["rejected"]:
             temporary.unlink(missing_ok=True)
         else:
