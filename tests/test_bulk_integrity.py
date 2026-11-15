@@ -79,6 +79,13 @@ class BulkAuditTests(unittest.TestCase):
         self.assertTrue(report["passed"], report["errors"][:3])
         self.assertEqual(report["counts"]["plants"], count)
 
+    def test_cross_plant_evidence_rejected(self):
+        self.write("public_assessments.json", [
+            {"plant_id": "b", "species_group": "Testudo", "verdict": "supported_mixed_diet", "evidence_ids": ["source1"]}
+        ])
+        codes = {e["code"] for e in audit(self.root)["errors"]}
+        self.assertIn("evidence_not_linked_to_assessed_plant", codes)
+
 
 if __name__ == "__main__":
     unittest.main()
