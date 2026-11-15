@@ -10,6 +10,7 @@ import json
 import re
 import unicodedata
 from collections import Counter
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -23,6 +24,9 @@ def clean(value):
 def normalize(row):
     if not isinstance(row, dict):
         raise ValueError("row must be an object")
+    forbidden = {"verdict", "safe", "feeding_verdict", "feed_assessment"}
+    if forbidden.intersection(row):
+        raise ValueError("feeding safety claims are forbidden in identity staging")
     name = clean(row.get("canonical_scientific_name") or row.get("scientific_name"))
     source = clean(row.get("source_id"))
     url = clean(row.get("source_url"))
@@ -35,13 +39,20 @@ def normalize(row):
         raise ValueError("source_url must be an absolute HTTP(S) URL")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", observed):
         raise ValueError("observed_at must be YYYY-MM-DD")
+    try:
+        date.fromisoformat(observed)
+    except ValueError as exc:
+        raise ValueError("observed_at is not a valid calendar date") from exc
+    status = clean(row.get("taxonomic_status")) or "unresolved"
+    if status not in {"accepted", "synonym", "unplaced", "unresolved"}:
+        raise ValueError("unsupported taxonomic_status")
     # The same source record must never be silently assigned conflicting taxon names.
     key = (source.casefold(), (source_record or name).casefold())
     return key, {
         "candidate_id": source.casefold() + ":" + (source_record or name).casefold(),
         "canonical_scientific_name": name,
         "family": clean(row.get("family")) or None,
-        "taxonomic_status": clean(row.get("taxonomic_status")) or "unresolved",
+        "taxonomic_status": status,
         "source_id": source,
         "source_url": url,
         "source_record_id": source_record or None,
@@ -70,11 +81,11 @@ def stage(input_path, output_path, report_path):
                     key, item = normalize(json.loads(line))
                     prior = seen.get(key)
                     if prior is not None:
-                        if prior != item["canonical_scientific_name"].casefold():
-                            raise ValueError("conflicting scientific name for same source record")
+                        if prior != (item["canonical_scientific_name"].casefold(), item["source_url"], item["taxonomic_status"]):
+                            raise ValueError("conflicting identity, URL or taxonomic status for same source record")
                         counts["duplicates"] += 1
                         continue
-                    seen[key] = item["canonical_scientific_name"].casefold()
+                    seen[key] = (item["canonical_scientific_name"].casefold(), item["source_url"], item["taxonomic_status"])
                     target.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
                     counts["staged"] += 1
                 except (ValueError, TypeError, json.JSONDecodeError) as exc:
