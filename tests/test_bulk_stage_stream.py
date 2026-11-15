@@ -37,6 +37,34 @@ class BulkStageTests(unittest.TestCase):
             self.assertEqual(out.read_text(encoding="utf-8"), "existing")
             self.assertEqual(result["counts"]["rejected"], 1)
 
+    def test_rejects_conflicting_source_record(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            src, out, report = (root / name for name in ("in.jsonl", "out.jsonl", "report.json"))
+            row = {"scientific_name": "Plantus one", "source_id": "WCVP",
+                   "source_record_id": "123", "source_url": "https://example.org/123",
+                   "observed_at": "2026-11-15"}
+            other = dict(row, scientific_name="Plantus two")
+            src.write_text(json.dumps(row) + "\n" + json.dumps(other) + "\n", encoding="utf-8")
+            result = stage(src, out, report)
+            self.assertFalse(result["passed"])
+            self.assertEqual(result["counts"]["rejected"], 1)
+            self.assertFalse(out.exists())
+
+    def test_rejects_invalid_dates_and_feeding_claims(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            src, out, report = (root / name for name in ("in.jsonl", "out.jsonl", "report.json"))
+            row = {"scientific_name": "Plantus one", "source_id": "WCVP",
+                   "source_record_id": "123", "source_url": "https://example.org/123",
+                   "observed_at": "2026-02-30"}
+            unsafe = dict(row, observed_at="2026-11-15", verdict="safe")
+            src.write_text(json.dumps(row) + "\n" + json.dumps(unsafe) + "\n", encoding="utf-8")
+            result = stage(src, out, report)
+            self.assertFalse(result["passed"])
+            self.assertEqual(result["counts"]["rejected"], 2)
+            self.assertFalse(out.exists())
+
 
 if __name__ == "__main__":
     unittest.main()
