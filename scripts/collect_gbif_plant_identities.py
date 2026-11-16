@@ -23,14 +23,14 @@ def fetch_page(offset, limit, opener=urlopen):
                                   "limit": limit, "offset": offset})
     request = Request(url, headers={"User-Agent": "GeobukbapResearch/1.0 (https://github.com/JinwooSon1988/tortoise-food-db-korea)",
                                     "Accept": "application/json"})
-    for attempt in range(4):
+    for attempt in range(2):
         try:
-            with opener(request, timeout=45) as response:
+            with opener(request, timeout=12) as response:
                 return json.load(response)
         except (HTTPError, URLError, TimeoutError):
-            if attempt == 3:
+            if attempt == 1:
                 raise
-            time.sleep(min(2 ** attempt, 8))
+            time.sleep(1)
 
 
 def collect(output, pages=25, page_size=1000, fetcher=fetch_page):
