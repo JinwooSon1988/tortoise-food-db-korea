@@ -11,7 +11,7 @@ class EuropePMCTests(unittest.TestCase):
             root = Path(folder)
             def fetcher(query, size):
                 return [{"source": "MED", "id": "123", "title": "Tortoise dietary study",
-                         "doi": "10.1000/example", "pubYear": "2024",
+                         "doi": "10.1000/example", "pmcid": "PMC123456", "pubYear": "2024",
                          "abstractText": "Observed wild feeding; plant identification requires review."}]
             counts = collect(root / "leads.jsonl", root / "report.json", fetcher=fetcher)
             self.assertEqual(counts["raw_hits"], len(QUERIES))
@@ -19,6 +19,7 @@ class EuropePMCTests(unittest.TestCase):
             self.assertEqual(counts["with_abstract"], 1)
             row = json.loads((root / "leads.jsonl").read_text())
             self.assertEqual(len(row["matching_queries"]), len(QUERIES))
+            self.assertEqual(row["pmcid"], "PMC123456")
             self.assertIsNone(row["plant_scientific_name"])
             self.assertIsNone(row["feeding_verdict"])
             self.assertIn("plant identification requires review", row["abstract_text"])

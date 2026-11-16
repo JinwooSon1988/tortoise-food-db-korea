@@ -51,15 +51,16 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
             if not all(key) or key in seen:
                 raise ValueError("duplicate/missing publication identity")
             seen.add(key)
-            if key[0] == "PMC" and re.fullmatch(r"PMC[0-9]+", key[1]):
-                items.append(row)
+            pmcid = row.get("pmcid") or (key[1] if key[0] == "PMC" else None)
+            if isinstance(pmcid, str) and re.fullmatch(r"PMC[0-9]+", pmcid):
+                items.append((row, pmcid))
     if not seen:
         raise ValueError("empty corpus")
     results = []
     counts = Counter({"total_publications": len(seen), "pmc_candidates": len(items)})
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(fetcher, row["source_record_id"]) for row in items]
-        for row, future in zip(items, futures):
+        futures = [pool.submit(fetcher, pmcid) for row, pmcid in items]
+        for (row, pmcid), future in zip(items, futures):
             try:
                 text = future.result()
             except Exception:
@@ -70,6 +71,7 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
                 continue
             results.append({"source_database": row["source_database"],
                             "source_record_id": row["source_record_id"],
+                            "pmcid": pmcid,
                             "source_url": row["source_url"],
                             "source_title": row.get("title"),
                             "fulltext_excerpt": text,
