@@ -18,6 +18,12 @@ QUERIES = (
     '("Aldabrachelys gigantea" OR "Chelonoidis") AND (diet OR feeding OR vegetation)',
     '("Testudo marginata" OR "Agrionemys horsfieldii") AND (diet OR forage OR vegetation)',
     '(tortoise OR tortoises) AND ("food plants" OR "diet composition" OR "feeding ecology")',
+    '("Testudo ibera" OR "Testudo kleinmanni") AND (diet OR feeding OR vegetation)',
+    '("Stigmochelys pardalis" OR "Geochelone pardalis") AND (diet OR forage OR plants)',
+    '("Astrochelys radiata" OR "Pyxis arachnoides") AND (diet OR forage OR feeding)',
+    '("Kinixys" OR "Malacochersus") AND (diet OR forage OR feeding)',
+    '("Manouria emys" OR "Indotestudo elongata") AND (diet OR plants OR feeding)',
+    '("Homopus" OR "Chersobius" OR "Psammobates") AND (diet OR plants OR feeding)',
 )
 
 
@@ -34,7 +40,7 @@ def fetch(query, page_size, opener=urlopen):
     return rows
 
 
-def collect(output, report, workers=6, page_size=100, fetcher=fetch):
+def collect(output, report, workers=12, page_size=100, fetcher=fetch):
     if not 1 <= workers <= 12 or not 1 <= page_size <= 1000:
         raise ValueError("invalid concurrency or page size")
     if output.resolve() == report.resolve() or output.exists() or report.exists():
@@ -106,7 +112,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
-    parser.add_argument("--workers", type=int, default=6)
+    parser.add_argument("--workers", type=int, default=12)
     parser.add_argument("--page-size", type=int, default=100)
     args = parser.parse_args()
     print(json.dumps(collect(args.output, args.report, args.workers, args.page_size), sort_keys=True))
