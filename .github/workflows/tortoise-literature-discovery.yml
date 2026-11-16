@@ -13,6 +13,8 @@ on:
       - 'tests/test_reviewed_literature_import.py'
       - 'scripts/link_plant_abstract_mentions.py'
       - 'scripts/export_site_plant_binomials.py'
+      - 'scripts/collect_tortoise_open_fulltext.py'
+      - 'tests/test_tortoise_open_fulltext.py'
       - 'tests/test_export_site_plant_binomials.py'
       - 'data/plants.json'
       - 'tests/test_link_plant_abstract_mentions.py'
@@ -43,8 +45,12 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_link_plant_abstract_mentions.py'
       - name: Test site catalog taxonomic normalization
         run: python -m unittest discover -s tests -p 'test_export_site_plant_binomials.py'
+      - name: Test open access full-text collection safeguards
+        run: python -m unittest discover -s tests -p 'test_tortoise_open_fulltext.py'
       - name: Query twelve independent tortoise diet research searches in parallel
         run: python scripts/collect_tortoise_literature_epmc.py --output epmc-literature-leads.jsonl --report epmc-literature-report.json --workers 12 --page-size 100
+      - name: Fetch open-access PMC full texts concurrently
+        run: python scripts/collect_tortoise_open_fulltext.py epmc-literature-leads.jsonl --output epmc-open-fulltexts-review.jsonl --report epmc-open-fulltexts-report.json --workers 12
       - name: Screen every retrieved abstract in one batch
         run: python scripts/triage_tortoise_abstracts.py epmc-literature-leads.jsonl --output epmc-abstract-screening.jsonl --report epmc-abstract-screening-report.json
       - name: Export prioritized review CSV for all literature candidates
@@ -59,6 +65,8 @@ jobs:
           name: tortoise-literature-review-only
           path: |
             epmc-literature-leads.jsonl
+            epmc-open-fulltexts-review.jsonl
+            epmc-open-fulltexts-report.json
             epmc-literature-report.json
             epmc-abstract-screening.jsonl
             epmc-abstract-screening-report.json
