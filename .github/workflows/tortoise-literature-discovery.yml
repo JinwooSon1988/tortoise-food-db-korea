@@ -8,6 +8,7 @@ on:
       - 'scripts/triage_tortoise_abstracts.py'
       - 'tests/test_tortoise_abstract_triage.py'
       - 'scripts/export_tortoise_literature_review_csv.py'
+      - 'tests/test_tortoise_review_csv.py'
       - '.github/workflows/tortoise-literature-discovery.yml'
   workflow_dispatch:
 
@@ -27,6 +28,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_tortoise_literature_epmc.py'
       - name: Test abstract screening safeguards
         run: python -m unittest discover -s tests -p 'test_tortoise_abstract_triage.py'
+      - name: Test literature review CSV export
+        run: python -m unittest discover -s tests -p 'test_tortoise_review_csv.py'
       - name: Query twelve independent tortoise diet research searches in parallel
         run: python scripts/collect_tortoise_literature_epmc.py --output epmc-literature-leads.jsonl --report epmc-literature-report.json --workers 12 --page-size 100
       - name: Screen every retrieved abstract in one batch
