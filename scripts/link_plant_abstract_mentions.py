@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+"""Batch link exact plant binomials to Europe PMC abstracts for manual review only."""
+import argparse
+import csv
+import json
+import re
+from collections import Counter
+from pathlib import Path
+
+BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
+MAX_TERMS = 100000
+
+
+def load_taxa(path):
+    taxa = set()
+    with path.open(encoding="utf-8-sig", newline="") as stream:
+        for number, row in enumerate(csv.DictReader(stream), 2):
+            name = (row.get("plant_scientific_name") or "").strip()
+            if not BINOMIAL.fullmatch(name):
+                raise ValueError(f"invalid binomial in taxonomy row {number}")
+            taxa.add(name)
+            if len(taxa) > MAX_TERMS:
+                raise ValueError("taxonomy limit exceeded")
+    if not taxa:
+        raise ValueError("empty taxonomy")
+    return taxa
+
+
+def link(abstract_path, taxonomy_path, output_path, report_path):
+    paths = [abstract_path, taxonomy_path, output_path, report_path]
+    if len({x.resolve() for x in paths}) != 4 or output_path.exists() or report_path.exists():
+        raise ValueError("paths must be distinct and outputs new")
+    taxa = load_taxa(taxonomy_path)
+    # A single compiled alternation scans each abstract once rather than one search per plant.
+    pattern = re.compile(r"(?<![A-Za-z])(?:" + "|".join(re.escape(x) for x in sorted(taxa, key=lambda x: (-len(x), x))) + r")(?![A-Za-z])")
+    results = []
+    counts = Counter()
+    seen = set()
+    with abstract_path.open(encoding="utf-8") as stream:
+        for number, line in enumerate(stream, 1):
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            if record.get("review_status") != "unmatched_literature_lead" or record.get("feeding_verdict") is not None:
+                raise ValueError(f"invalid literature record at line {number}")
+            identity = (record.get("source_database"), str(record.get("source_record_id") or ""))
+            if not all(identity) or identity in seen:
+                raise ValueError(f"duplicate/missing publication identity at line {number}")
+            seen.add(identity)
+            abstract = record.get("abstract_text") or ""
+            if not isinstance(abstract, str):
+                raise ValueError(f"invalid abstract at line {number}")
+            mentions = sorted(set(pattern.findall(re.sub(r"<[^>]*>", " ", abstract))))
+            counts["publications_screened"] += 1
+            if mentions:
+                counts["publications_with_exact_plant_mentions"] += 1
+            for plant in mentions:
+                results.append({
+                    "plant_scientific_name": plant,
+                    "source_database": identity[0], "source_record_id": identity[1],
+                    "source_title": record.get("title"), "source_url": record.get("source_url"),
+                    "doi": record.get("doi"), "review_status": "unverified_abstract_mention",
+                    "tortoise_scientific_name": None, "plant_part": None,
+                    "feeding_verdict": None,
+                    "note": "Exact taxon mention in abstract only; NOT evidence of consumption or safety."})
+                counts["unverified_plant_publication_links"] += 1
+    if not seen:
+        raise ValueError("empty literature corpus")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("x", encoding="utf-8") as stream:
+        for item in results:
+            stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
+    with report_path.open("x", encoding="utf-8") as stream:
+        json.dump({"counts": dict(counts), "taxonomy_species": len(taxa),
+                   "status": "unverified_abstract_mentions_only"}, stream, indent=2)
+        stream.write("\n")
+    return dict(counts)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("literature", type=Path)
+    parser.add_argument("--taxonomy", required=True, type=Path,
+                        help="CSV with plant_scientific_name column; accepted identities only")
+    parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--report", required=True, type=Path)
+    args = parser.parse_args()
+    print(json.dumps(link(args.literature, args.taxonomy, args.output, args.report), sort_keys=True))
