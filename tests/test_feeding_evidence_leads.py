@@ -25,6 +25,18 @@ class LeadTests(unittest.TestCase):
             self.assertEqual(row["tortoise_scientific_name"], "Testudo graeca")
             self.assertIsNone(row["feeding_verdict"])
 
+    def test_conflicting_duplicate_rejected_without_partial_output(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            a = root / "a.jsonl"
+            first = lead()
+            conflicting = dict(first, source_title="Contradictory metadata")
+            a.write_text(json.dumps(first) + "\n" + json.dumps(conflicting) + "\n")
+            with self.assertRaisesRegex(ValueError, "conflicting metadata"):
+                process([a], root / "out.jsonl", root / "report.json")
+            self.assertFalse((root / "out.jsonl").exists())
+            self.assertFalse((root / "report.json").exists())
+
     def test_reject_verdict_without_partial_output(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
