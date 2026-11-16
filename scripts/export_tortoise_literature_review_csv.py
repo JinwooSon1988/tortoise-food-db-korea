@@ -5,11 +5,11 @@ import csv
 import json
 from pathlib import Path
 
-COLUMNS = ("source_database", "source_record_id", "doi", "source_url",
+COLUMNS = ("source_database", "source_record_id", "doi", "source_url", "source_title",
            "review_priority", "plant_diet_context_excerpts", "unverified_binomial_strings",
            "review_status", "verified_plant_scientific_name",
            "verified_tortoise_scientific_name", "verified_plant_part",
-           "observation_type", "reviewer_notes")
+           "observation_type", "reviewer_notes", "reviewed_at", "evidence_quote")
 
 
 def export_queue(input_path, output_path):
@@ -35,12 +35,14 @@ def export_queue(input_path, output_path):
             rows.append({
                 "source_database": key[0], "source_record_id": key[1],
                 "doi": row.get("doi") or "", "source_url": row.get("source_url") or "",
+                "source_title": row.get("source_title") or "",
                 "review_priority": row.get("review_priority") or "",
                 "plant_diet_context_excerpts": " | ".join(row.get("plant_diet_context_excerpts") or []),
                 "unverified_binomial_strings": " | ".join(row.get("unverified_binomial_strings") or []),
                 "review_status": "manual_validation_required",
                 "verified_plant_scientific_name": "", "verified_tortoise_scientific_name": "",
-                "verified_plant_part": "", "observation_type": "", "reviewer_notes": ""})
+                "verified_plant_part": "", "observation_type": "", "reviewer_notes": "",
+                "reviewed_at": "", "evidence_quote": ""})
     if not rows:
         raise ValueError("no records to export")
     rows.sort(key=lambda x: (x["review_priority"] != "abstract_review",
