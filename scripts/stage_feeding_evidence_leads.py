@@ -57,7 +57,7 @@ def process(inputs, output, report):
     if output.exists() or report.exists():
         raise FileExistsError("existing output must not be overwritten")
     counts = Counter()
-    seen = set()
+    seen = {}
     output.parent.mkdir(parents=True, exist_ok=True)
     fd, temporary = tempfile.mkstemp(prefix=".evidence-leads-", dir=output.parent)
     try:
@@ -75,9 +75,11 @@ def process(inputs, output, report):
                         key = (item["plant_scientific_name"].casefold(), item["plant_part"],
                                item["tortoise_scientific_name"], item["source_url"], item["source_identifier"])
                         if key in seen:
+                            if seen[key] != item:
+                                raise ValueError(f"{source}:{number}: conflicting metadata for same literature lead")
                             counts["duplicate"] += 1
                             continue
-                        seen.add(key)
+                        seen[key] = item
                         target.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
                         counts["leads"] += 1
         if not counts["leads"]:
