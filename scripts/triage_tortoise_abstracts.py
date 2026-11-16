@@ -53,6 +53,7 @@ def screen(input_path, output_path, report_path):
             rows.append({"source_record_id": item["source_record_id"],
                          "source_database": item["source_database"],
                          "source_url": item["source_url"], "doi": item.get("doi"),
+                         "source_title": item.get("title") or item.get("source_title") or "",
                          "review_priority": priority, "signals": flags,
                          "unverified_binomial_strings": candidates,
                          "plant_diet_context_excerpts": excerpts,
