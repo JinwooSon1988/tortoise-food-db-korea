@@ -63,10 +63,12 @@ def collect(output, report, workers=12, page_size=100, fetcher=fetch):
                 continue
             key = (source, identifier)
             doi = article.get("doi")
+            abstract = article.get("abstractText")
+            abstract = abstract.strip() if isinstance(abstract, str) else None
             item = {"source": "Europe PMC", "source_database": source, "source_record_id": identifier,
                     "source_url": "https://europepmc.org/article/" + source + "/" + identifier,
                     "doi": doi if isinstance(doi, str) else None,
-                    "title": title, "journal": article.get("journalTitle"),
+                    "title": title, "abstract_text": abstract, "journal": article.get("journalTitle"),
                     "publication_year": article.get("pubYear"),
                     "observed_at": date.today().isoformat(),
                     "matching_queries": [],
@@ -75,13 +77,17 @@ def collect(output, report, workers=12, page_size=100, fetcher=fetch):
                     "tortoise_scientific_name": None, "feeding_verdict": None}
             if key in unique:
                 prior = unique[key]
-                if prior["title"] != title or prior["doi"] != item["doi"]:
+                if (prior["title"] != title or prior["doi"] != item["doi"]
+                        or (prior["abstract_text"] and abstract and prior["abstract_text"] != abstract)):
                     raise ValueError(f"conflicting publication metadata: {key}")
+                if not prior["abstract_text"] and abstract:
+                    prior["abstract_text"] = abstract
             else:
                 unique[key] = item
             unique[key]["matching_queries"].append(query)
     if not unique:
         raise ValueError("zero publications: refusing empty output")
+    abstract_count = sum(bool(item["abstract_text"]) for item in unique.values())
     output.parent.mkdir(parents=True, exist_ok=True)
     report.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(prefix=".epmc-", dir=output.parent)
@@ -92,7 +98,7 @@ def collect(output, report, workers=12, page_size=100, fetcher=fetch):
         fd2, tmp2 = tempfile.mkstemp(prefix=".epmc-report-", dir=report.parent)
         try:
             with os.fdopen(fd2, "w", encoding="utf-8") as stream:
-                json.dump({"queries": len(QUERIES), "raw_hits": occurrences, "unique_publications": len(unique),
+                json.dump({"queries": len(QUERIES), "raw_hits": occurrences, "unique_publications": len(unique), "with_abstract": abstract_count,
                            "status": "unmatched_literature_leads_only",
                            "note": "No plant, tortoise species or feeding verdict inferred from search results."},
                           stream, indent=2)
@@ -105,7 +111,8 @@ def collect(output, report, workers=12, page_size=100, fetcher=fetch):
     finally:
         if os.path.exists(tmp):
             os.unlink(tmp)
-    return {"queries": len(QUERIES), "raw_hits": occurrences, "unique_publications": len(unique)}
+    return {"queries": len(QUERIES), "raw_hits": occurrences, "unique_publications": len(unique),
+            "with_abstract": abstract_count}
 
 
 if __name__ == "__main__":

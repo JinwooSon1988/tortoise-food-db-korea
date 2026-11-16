@@ -11,14 +11,17 @@ class EuropePMCTests(unittest.TestCase):
             root = Path(folder)
             def fetcher(query, size):
                 return [{"source": "MED", "id": "123", "title": "Tortoise dietary study",
-                         "doi": "10.1000/example", "pubYear": "2024"}]
+                         "doi": "10.1000/example", "pubYear": "2024",
+                         "abstractText": "Observed wild feeding; plant identification requires review."}]
             counts = collect(root / "leads.jsonl", root / "report.json", fetcher=fetcher)
             self.assertEqual(counts["raw_hits"], len(QUERIES))
             self.assertEqual(counts["unique_publications"], 1)
+            self.assertEqual(counts["with_abstract"], 1)
             row = json.loads((root / "leads.jsonl").read_text())
             self.assertEqual(len(row["matching_queries"]), len(QUERIES))
             self.assertIsNone(row["plant_scientific_name"])
             self.assertIsNone(row["feeding_verdict"])
+            self.assertIn("plant identification requires review", row["abstract_text"])
 
     def test_failed_query_does_not_publish_partial_output(self):
         with tempfile.TemporaryDirectory() as folder:
