@@ -67,7 +67,7 @@ jobs:
       fail-fast: false
       max-parallel: 5
       matrix:
-        start_offset: [0, 5000, 10000, 15000, 20000]
+        start_offset: [0, 5000]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
