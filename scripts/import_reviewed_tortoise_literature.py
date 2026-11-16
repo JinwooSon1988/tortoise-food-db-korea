@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-from stage_feeding_evidence_leads import validate
+from scripts.stage_feeding_evidence_leads import validate
 
 BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+(?: [a-z][a-z-]+)?$")
 ALLOWED_OBSERVATIONS = {"observed_ingestion", "dietary_analysis", "feeding_trial"}
