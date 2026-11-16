@@ -42,7 +42,7 @@ def export_queue(input_path, output_path):
                 "review_status": "manual_validation_required",
                 "verified_plant_scientific_name": "", "verified_tortoise_scientific_name": "",
                 "verified_plant_part": "", "observation_type": "", "reviewer_notes": "",
-                "reviewed_at": "", "evidence_quote": ""}
+                "reviewed_at": "", "evidence_quote": ""})
     if not rows:
         raise ValueError("no records to export")
     rows.sort(key=lambda x: (x["review_priority"] != "abstract_review",
