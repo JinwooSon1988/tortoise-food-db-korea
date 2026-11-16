@@ -14,6 +14,7 @@ on:
       - 'scripts/link_plant_abstract_mentions.py'
       - 'scripts/export_site_plant_binomials.py'
       - 'scripts/collect_tortoise_open_fulltext.py'
+      - 'scripts/prepare_fulltext_plant_matching.py'
       - 'tests/test_tortoise_open_fulltext.py'
       - 'tests/test_export_site_plant_binomials.py'
       - 'data/plants.json'
@@ -59,6 +60,10 @@ jobs:
         run: python scripts/export_site_plant_binomials.py data/plants.json --output site-plant-binomial-taxonomy.csv
       - name: Batch link real site plant taxa to all discovered abstracts
         run: python scripts/link_plant_abstract_mentions.py epmc-literature-leads.jsonl --taxonomy site-plant-binomial-taxonomy.csv --output site-plant-literature-mentions.jsonl --report site-plant-literature-mentions-report.json
+      - name: Prepare retrieved full texts for exact botanical matching
+        run: python scripts/prepare_fulltext_plant_matching.py epmc-open-fulltexts-review.jsonl --output epmc-fulltext-match-input.jsonl
+      - name: Match catalog taxa against actual retrieved full texts
+        run: python scripts/link_plant_abstract_mentions.py epmc-fulltext-match-input.jsonl --taxonomy site-plant-binomial-taxonomy.csv --output site-plant-fulltext-mentions.jsonl --report site-plant-fulltext-mentions-report.json
       - name: Upload real unmatched literature candidates for review
         uses: actions/upload-artifact@v4
         with:
@@ -67,6 +72,9 @@ jobs:
             epmc-literature-leads.jsonl
             epmc-open-fulltexts-review.jsonl
             epmc-open-fulltexts-report.json
+            epmc-fulltext-match-input.jsonl
+            site-plant-fulltext-mentions.jsonl
+            site-plant-fulltext-mentions-report.json
             epmc-literature-report.json
             epmc-abstract-screening.jsonl
             epmc-abstract-screening-report.json
