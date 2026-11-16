@@ -12,8 +12,29 @@ BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+(?: [a-z][a-z-]+)?$")
 ALLOWED_OBSERVATIONS = {"observed_ingestion", "dietary_analysis", "feeding_trial"}
 
 
-def convert(input_path, output_path):
-    if input_path.resolve() == output_path.resolve() or output_path.exists():
+def load_source_corpus(path):
+    corpus = {}
+    with path.open(encoding="utf-8") as stream:
+        for number, line in enumerate(stream, 1):
+            if not line.strip():
+                continue
+            item = json.loads(line)
+            key = (item.get("source_database"), str(item.get("source_record_id") or ""))
+            if not all(key) or key in corpus:
+                raise ValueError(f"source corpus duplicate/missing identity at line {number}")
+            corpus[key] = item
+    if not corpus:
+        raise ValueError("empty source corpus")
+    return corpus
+
+
+def normalize_quote(value):
+    return " ".join(re.sub(r"<[^>]*>", " ", value).split()).casefold()
+
+
+def convert(input_path, output_path, source_corpus_path):
+    corpus = load_source_corpus(source_corpus_path)
+    if len({p.resolve() for p in (input_path, output_path, source_corpus_path)}) != 3 or output_path.exists():
         raise ValueError("output must be new and distinct")
     converted = []
     seen = set()
@@ -35,6 +56,14 @@ def convert(input_path, output_path):
             database = (row.get("source_database") or "").strip()
             if not source_id or not database:
                 raise ValueError(f"row {number}: missing literature identity")
+            original = corpus.get((database, source_id))
+            if not original:
+                raise ValueError(f"row {number}: publication not found in source corpus")
+            abstract = original.get("abstract_text") or ""
+            if not isinstance(abstract, str) or normalize_quote(quote) not in normalize_quote(abstract):
+                raise ValueError(f"row {number}: evidence quote absent from source abstract")
+            if title != original.get("title") or row.get("source_url") != original.get("source_url"):
+                raise ValueError(f"row {number}: publication title or URL differs from source")
             item = validate({
                 "plant_scientific_name": plant,
                 "plant_part": (row.get("verified_plant_part") or "").strip() or None,
@@ -66,5 +95,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("input", type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--source-corpus", required=True, type=Path)
     args = parser.parse_args()
-    print(json.dumps(convert(args.input, args.output), sort_keys=True))
+    print(json.dumps(convert(args.input, args.output, args.source_corpus), sort_keys=True))
