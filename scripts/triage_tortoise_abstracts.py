@@ -19,6 +19,13 @@ EXCLUDE_GENERA = {"The", "This", "These", "Those", "There", "However", "Although
                   "Homopus", "Chersobius", "Psammobates", "Malacochersus"}
 
 
+def contextual_excerpts(abstract, limit=5):
+    """Return short review excerpts with both plant and diet terms, without asserting feeding."""
+    sentences = re.split(r"(?<=[.!?])\\s+", re.sub(r"<[^>]+>", " ", abstract))
+    return [sentence.strip()[:600] for sentence in sentences
+            if SIGNALS["plant_context"].search(sentence) and SIGNALS["diet_context"].search(sentence)][:limit]
+
+
 def screen(input_path, output_path, report_path):
     if len({p.resolve() for p in (input_path, output_path, report_path)}) != 3:
         raise ValueError("paths must be distinct")
@@ -40,6 +47,7 @@ def screen(input_path, output_path, report_path):
             flags = {name: bool(pattern.search(abstract)) for name, pattern in SIGNALS.items()}
             candidates = sorted({f"{genus} {species}" for genus, species in LATIN_BINOMIAL.findall(abstract)
                                  if genus not in EXCLUDE_GENERA})
+            excerpts = contextual_excerpts(abstract)
             # Latin-shaped phrases are only screening hints, NOT verified plant identities.
             priority = "abstract_review" if flags["plant_context"] and flags["diet_context"] else "manual_screen"
             rows.append({"source_record_id": item["source_record_id"],
@@ -47,6 +55,7 @@ def screen(input_path, output_path, report_path):
                          "source_url": item["source_url"], "doi": item.get("doi"),
                          "review_priority": priority, "signals": flags,
                          "unverified_binomial_strings": candidates,
+                         "plant_diet_context_excerpts": excerpts,
                          "review_status": "manual_validation_required",
                          "feeding_verdict": None})
             totals["publications"] += 1
