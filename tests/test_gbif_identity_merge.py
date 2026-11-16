@@ -34,8 +34,8 @@ class MergeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             base = Path(directory)
             a = base / "a.jsonl"
-            a.write_text(json.dumps(row(1, "Plantus alpha")) + "\\n" +
-                         json.dumps(row(2, "Plantus beta")) + "\\n")
+            a.write_text(json.dumps(row(1, "Plantus alpha")) + "\n" +
+                         json.dumps(row(2, "Plantus beta")) + "\n")
             result = merge([a], base / "merged.jsonl", base / "report.json")
             self.assertEqual(result["distinct_canonical_names"], 2)
             self.assertEqual(result["canonical_name_collision_groups"], 0)
