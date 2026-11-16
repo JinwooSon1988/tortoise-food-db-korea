@@ -63,11 +63,15 @@ def collect(output, report, workers=12, page_size=100, fetcher=fetch):
                 continue
             key = (source, identifier)
             doi = article.get("doi")
+            pmcid = article.get("pmcid")
+            pmcid = pmcid.strip() if isinstance(pmcid, str) else None
+            if pmcid and not (pmcid.startswith("PMC") and pmcid[3:].isdigit()):
+                pmcid = None
             abstract = article.get("abstractText")
             abstract = abstract.strip() if isinstance(abstract, str) else None
             item = {"source": "Europe PMC", "source_database": source, "source_record_id": identifier,
                     "source_url": "https://europepmc.org/article/" + source + "/" + identifier,
-                    "doi": doi if isinstance(doi, str) else None,
+                    "doi": doi if isinstance(doi, str) else None, "pmcid": pmcid,
                     "title": title, "abstract_text": abstract, "journal": article.get("journalTitle"),
                     "publication_year": article.get("pubYear"),
                     "observed_at": date.today().isoformat(),
@@ -78,8 +82,11 @@ def collect(output, report, workers=12, page_size=100, fetcher=fetch):
             if key in unique:
                 prior = unique[key]
                 if (prior["title"] != title or prior["doi"] != item["doi"]
+                        or (prior["pmcid"] and pmcid and prior["pmcid"] != pmcid)
                         or (prior["abstract_text"] and abstract and prior["abstract_text"] != abstract)):
                     raise ValueError(f"conflicting publication metadata: {key}")
+                if not prior["pmcid"] and pmcid:
+                    prior["pmcid"] = pmcid
                 if not prior["abstract_text"] and abstract:
                     prior["abstract_text"] = abstract
             else:
