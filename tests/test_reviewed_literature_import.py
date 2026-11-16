@@ -12,12 +12,22 @@ class ReviewedImportTests(unittest.TestCase):
             writer.writeheader()
             writer.writerows(rows)
 
+    def write_corpus(self, path):
+        import json
+        path.write_text(json.dumps({
+            "source_database": "MED", "source_record_id": "123",
+            "title": "Diet observation",
+            "source_url": "https://europepmc.org/article/MED/123",
+            "abstract_text": "Tortoises were observed eating the leaves of this species."
+        }) + "\\n")
+
     def test_unreviewed_cannot_be_imported(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             self.write_csv(root / "input.csv", [{"review_status": "manual_validation_required"}])
+            self.write_corpus(root / "corpus.jsonl")
             with self.assertRaises(ValueError):
-                convert(root / "input.csv", root / "out.jsonl")
+                convert(root / "input.csv", root / "out.jsonl", root / "corpus.jsonl")
             self.assertFalse((root / "out.jsonl").exists())
 
     def test_reviewed_observation_remains_unpublished(self):
@@ -34,7 +44,8 @@ class ReviewedImportTests(unittest.TestCase):
                 "source_record_id": "123", "source_database": "MED",
                 "source_url": "https://europepmc.org/article/MED/123",
                 "reviewed_at": "2026-11-16"}])
-            self.assertEqual(convert(root / "input.csv", root / "out.jsonl")["public_feeding_verdicts"], 0)
+            self.write_corpus(root / "corpus.jsonl")
+            self.assertEqual(convert(root / "input.csv", root / "out.jsonl", root / "corpus.jsonl")["public_feeding_verdicts"], 0)
             import json
             row = json.loads((root / "out.jsonl").read_text())
             self.assertIsNone(row["feeding_verdict"])
