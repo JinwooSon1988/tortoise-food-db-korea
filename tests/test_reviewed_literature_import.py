@@ -30,6 +30,23 @@ class ReviewedImportTests(unittest.TestCase):
                 convert(root / "input.csv", root / "out.jsonl", root / "corpus.jsonl")
             self.assertFalse((root / "out.jsonl").exists())
 
+    def test_quote_must_be_in_source_abstract(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.write_corpus(root / "corpus.jsonl")
+            self.write_csv(root / "input.csv", [{
+                "review_status": "reviewed_observation",
+                "verified_plant_scientific_name": "Taraxacum officinale",
+                "verified_tortoise_scientific_name": "Testudo graeca",
+                "observation_type": "observed_ingestion",
+                "evidence_quote": "This sentence was not found in the original abstract.",
+                "source_title": "Diet observation", "reviewer_notes": "Checked primary paper",
+                "source_record_id": "123", "source_database": "MED",
+                "source_url": "https://europepmc.org/article/MED/123",
+                "reviewed_at": "2026-11-16"}])
+            with self.assertRaisesRegex(ValueError, "quote absent"):
+                convert(root / "input.csv", root / "out.jsonl", root / "corpus.jsonl")
+
     def test_reviewed_observation_remains_unpublished(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
