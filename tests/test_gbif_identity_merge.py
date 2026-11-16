@@ -22,8 +22,23 @@ class MergeTests(unittest.TestCase):
             a.write_text("\n".join(json.dumps(row(i)) for i in (1, 2)) + "\n")
             b.write_text("\n".join(json.dumps(row(i)) for i in (2, 3)) + "\n")
             result = merge([a, b], base / "merged.jsonl", base / "report.json")
-            self.assertEqual(result, {"read": 4, "unique": 3, "duplicate": 1, "conflicts": 0})
+            self.assertEqual(result["read"], 4)
+            self.assertEqual(result["unique"], 3)
+            self.assertEqual(result["duplicate"], 1)
+            self.assertEqual(result["conflicts"], 0)
+            self.assertEqual(result["canonical_name_collision_groups"], 1)
+            self.assertEqual(result["canonical_name_collision_records"], 3)
             self.assertEqual(len((base / "merged.jsonl").read_text().splitlines()), 3)
+
+    def test_distinct_names_no_collision(self):
+        with tempfile.TemporaryDirectory() as directory:
+            base = Path(directory)
+            a = base / "a.jsonl"
+            a.write_text(json.dumps(row(1, "Plantus alpha")) + "\\n" +
+                         json.dumps(row(2, "Plantus beta")) + "\\n")
+            result = merge([a], base / "merged.jsonl", base / "report.json")
+            self.assertEqual(result["distinct_canonical_names"], 2)
+            self.assertEqual(result["canonical_name_collision_groups"], 0)
 
     def test_conflict_fails_closed(self):
         with tempfile.TemporaryDirectory() as directory:
