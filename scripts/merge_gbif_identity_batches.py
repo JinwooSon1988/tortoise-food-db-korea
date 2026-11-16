@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import tempfile
+import unicodedata
 from pathlib import Path
 
 
@@ -15,6 +16,7 @@ def merge(inputs, output, report):
     if output.exists() or report.exists():
         raise FileExistsError("refusing to overwrite prior results")
     seen = {}
+    names = {}
     counts = {"read": 0, "unique": 0, "duplicate": 0, "conflicts": 0}
     output.parent.mkdir(parents=True, exist_ok=True)
     fd, temporary = tempfile.mkstemp(prefix=".gbif-merge-", dir=output.parent)
@@ -45,8 +47,14 @@ def merge(inputs, output, report):
                             counts["duplicate"] += 1
                             continue
                         seen[key] = identity
+                        canonical = unicodedata.normalize('NFKC', identity[0]).casefold().strip()
+                        names.setdefault(canonical, []).append(key[1])
                         dest.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
                         counts["unique"] += 1
+        collisions = {name: ids for name, ids in names.items() if len(ids) > 1}
+        counts["canonical_name_collision_groups"] = len(collisions)
+        counts["canonical_name_collision_records"] = sum(len(ids) for ids in collisions.values())
+        counts["distinct_canonical_names"] = len(names)
         if not counts["unique"]:
             raise ValueError("zero candidates: refusing empty merge")
         # Write report before publishing merged data; fail closed on errors.
@@ -55,6 +63,8 @@ def merge(inputs, output, report):
         try:
             with os.fdopen(fd_report, "w", encoding="utf-8") as target:
                 json.dump({"counts": counts, "input_files": len(inputs), "status": "identity_only",
+                           "canonical_name_collisions": [{"name": name, "gbif_keys": ids} for name, ids in sorted(collisions.items())],
+                           "name_collision_policy": "flag for taxonomic review; never merge distinct GBIF keys automatically",
                            "note": "Taxonomic identity only; not feeding safety evidence"}, target, indent=2)
                 target.write("\n")
             os.replace(temporary, output)
