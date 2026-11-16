@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
+BINOMIAL = re.compile(r"^([A-Z][a-z]+ [a-z][a-z-]+)(?: (?:var\.|subsp\.|ssp\.) [a-z][a-z-]+)?$")
 
 
 def export(catalog, output):
@@ -17,10 +17,13 @@ def export(catalog, output):
         raise ValueError("catalog must be a list")
     names = set()
     skipped = 0
+    normalized_infraspecific = 0
     for record in records:
         name = record.get("scientific") if isinstance(record, dict) else None
-        if isinstance(name, str) and BINOMIAL.fullmatch(name.strip()):
-            names.add(name.strip())
+        match = BINOMIAL.fullmatch(name.strip()) if isinstance(name, str) else None
+        if match:
+            names.add(match.group(1))
+            normalized_infraspecific += name.strip() != match.group(1)
         else:
             skipped += 1
     if not names:
@@ -31,7 +34,8 @@ def export(catalog, output):
         writer.writerow(["plant_scientific_name"])
         writer.writerows([[name] for name in sorted(names)])
     return {"catalog_records": len(records), "unique_valid_binomials": len(names),
-            "skipped_non_binomials": skipped}
+            "skipped_non_binomials": skipped,
+            "normalized_infraspecific_records": normalized_infraspecific}
 
 
 if __name__ == "__main__":
