@@ -19,6 +19,8 @@ class AbstractTriageTests(unittest.TestCase):
             row = json.loads((root / "out.jsonl").read_text())
             self.assertIn("Taraxacum officinale", row["unverified_binomial_strings"])
             self.assertIsNone(row["feeding_verdict"])
+            self.assertEqual(len(row["plant_diet_context_excerpts"]), 1)
+            self.assertIn("Taraxacum officinale", row["plant_diet_context_excerpts"][0])
             self.assertEqual(row["review_status"], "manual_validation_required")
 
     def test_bad_input_fails(self):
