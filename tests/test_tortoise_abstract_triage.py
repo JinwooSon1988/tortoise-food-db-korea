@@ -2,7 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.triage_tortoise_abstracts import screen
+from scripts.triage_tortoise_abstracts import screen, contextual_excerpts
 
 
 class AbstractTriageTests(unittest.TestCase):
@@ -22,6 +22,10 @@ class AbstractTriageTests(unittest.TestCase):
             self.assertEqual(len(row["plant_diet_context_excerpts"]), 1)
             self.assertIn("Taraxacum officinale", row["plant_diet_context_excerpts"][0])
             self.assertEqual(row["review_status"], "manual_validation_required")
+
+    def test_excerpts_do_not_merge_unrelated_sentences(self):
+        abstract = "Plant diversity was measured. Tortoises were feeding. No diet data."
+        self.assertEqual(contextual_excerpts(abstract), [])
 
     def test_bad_input_fails(self):
         with tempfile.TemporaryDirectory() as folder:
