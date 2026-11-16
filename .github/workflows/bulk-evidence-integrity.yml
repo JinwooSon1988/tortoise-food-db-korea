@@ -8,9 +8,11 @@ on:
       - 'scripts/audit_bulk_integrity.py'
       - 'scripts/stage_plant_bulk_stream.py'
       - 'scripts/shard_plant_candidates.py'
+      - 'scripts/collect_gbif_plant_identities.py'
       - 'tests/test_bulk_integrity.py'
       - 'tests/test_bulk_stage_stream.py'
       - 'tests/test_plant_candidate_sharding.py'
+      - 'tests/test_gbif_plant_identities.py'
       - '.github/workflows/bulk-evidence-integrity.yml'
   pull_request:
     paths:
@@ -18,9 +20,11 @@ on:
       - 'scripts/audit_bulk_integrity.py'
       - 'scripts/stage_plant_bulk_stream.py'
       - 'scripts/shard_plant_candidates.py'
+      - 'scripts/collect_gbif_plant_identities.py'
       - 'tests/test_bulk_integrity.py'
       - 'tests/test_bulk_stage_stream.py'
       - 'tests/test_plant_candidate_sharding.py'
+      - 'tests/test_gbif_plant_identities.py'
       - '.github/workflows/bulk-evidence-integrity.yml'
   workflow_dispatch:
 
@@ -42,6 +46,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_bulk_stage_stream.py'
       - name: Run 32-worker queue partition regression
         run: python -m unittest discover -s tests -p 'test_plant_candidate_sharding.py'
+      - name: Run GBIF identity intake regression
+        run: python -m unittest discover -s tests -p 'test_gbif_plant_identities.py'
       - name: Run bulk integrity audit
         run: |
           python scripts/audit_bulk_integrity.py --output bulk-audit.json
@@ -52,3 +58,29 @@ jobs:
           name: bulk-integrity-report
           path: bulk-audit.json
           if-no-files-found: warn
+
+  gbif_identity_intake:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect up to 5k real GBIF plant identity candidates
+        run: |
+          python scripts/collect_gbif_plant_identities.py --output gbif-plant-raw.jsonl --pages 5 --page-size 1000
+          python scripts/stage_plant_bulk_stream.py gbif-plant-raw.jsonl --output gbif-plant-staged.jsonl --report gbif-plant-report.json
+          python scripts/shard_plant_candidates.py gbif-plant-staged.jsonl --output-dir gbif-queues --shards 32
+      - name: Archive identity-only candidates and audit manifest
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbif-plant-identity-review-only
+          path: |
+            gbif-plant-raw.jsonl
+            gbif-plant-staged.jsonl
+            gbif-plant-report.json
+            gbif-queues/manifest.json
+          retention-days: 30
