@@ -21,7 +21,7 @@ EXCLUDE_GENERA = {"The", "This", "These", "Those", "There", "However", "Although
 
 def contextual_excerpts(abstract, limit=5):
     """Return short review excerpts with both plant and diet terms, without asserting feeding."""
-    sentences = re.split(r"(?<=[.!?])\\s+", re.sub(r"<[^>]+>", " ", abstract))
+    sentences = re.split(r"(?<=[.!?])\s+", re.sub(r"<[^>]+>", " ", abstract))
     return [sentence.strip()[:600] for sentence in sentences
             if SIGNALS["plant_context"].search(sentence) and SIGNALS["diet_context"].search(sentence)][:limit]
 
