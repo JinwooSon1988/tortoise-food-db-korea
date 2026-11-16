@@ -9,6 +9,8 @@ on:
       - 'scripts/stage_plant_bulk_stream.py'
       - 'scripts/shard_plant_candidates.py'
       - 'scripts/collect_gbif_plant_identities.py'
+      - 'scripts/merge_gbif_identity_batches.py'
+      - 'tests/test_gbif_identity_merge.py'
       - 'tests/test_bulk_integrity.py'
       - 'tests/test_bulk_stage_stream.py'
       - 'tests/test_plant_candidate_sharding.py'
@@ -88,4 +90,33 @@ jobs:
             gbif-plant-staged.jsonl
             gbif-plant-report.json
             gbif-queues/manifest.json
+          retention-days: 30
+
+  gbif_identity_merge:
+    if: github.event_name == 'pull_request'
+    needs: gbif_identity_intake
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: gbif-plant-identity-review-only-*
+          path: gbif-batches
+          merge-multiple: false
+      - name: Verify and deduplicate every batch
+        run: |
+          python -m unittest discover -s tests -p 'test_gbif_identity_merge.py'
+          python scripts/merge_gbif_identity_batches.py gbif-batches/*/gbif-plant-staged.jsonl --output gbif-global-unique.jsonl --report gbif-global-report.json
+          python scripts/shard_plant_candidates.py gbif-global-unique.jsonl --output-dir gbif-global-queues --shards 32
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gbif-globally-deduplicated-review-only
+          path: |
+            gbif-global-unique.jsonl
+            gbif-global-report.json
+            gbif-global-queues/manifest.json
           retention-days: 30
