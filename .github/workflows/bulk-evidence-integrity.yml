@@ -63,21 +63,26 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        start_offset: [0, 5000]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Collect up to 5k real GBIF plant identity candidates
+      - name: Collect up to 5k GBIF identities per independent offset batch
         run: |
-          python scripts/collect_gbif_plant_identities.py --output gbif-plant-raw.jsonl --pages 5 --page-size 1000
+          python scripts/collect_gbif_plant_identities.py --output gbif-plant-raw.jsonl --pages 5 --page-size 1000 --start-offset ${{ matrix.start_offset }}
           python scripts/stage_plant_bulk_stream.py gbif-plant-raw.jsonl --output gbif-plant-staged.jsonl --report gbif-plant-report.json
           python scripts/shard_plant_candidates.py gbif-plant-staged.jsonl --output-dir gbif-queues --shards 32
       - name: Archive identity-only candidates and audit manifest
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: gbif-plant-identity-review-only
+          name: gbif-plant-identity-review-only-${{ matrix.start_offset }}
           path: |
             gbif-plant-raw.jsonl
             gbif-plant-staged.jsonl

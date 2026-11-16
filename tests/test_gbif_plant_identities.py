@@ -24,6 +24,22 @@ class GbifCollectorTests(unittest.TestCase):
             self.assertTrue(all(x["source_id"] == "GBIF" for x in records))
             self.assertTrue(all("verdict" not in x for x in records))
 
+    def test_disjoint_offsets_and_invalid_alignment(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "offset.jsonl"
+            requested = []
+            def fetch(offset, limit):
+                requested.append((offset, limit))
+                return {"results": [{"key": offset + 1, "canonicalName": f"Plantus {offset}",
+                                    "kingdom": "Plantae", "rank": "SPECIES",
+                                    "taxonomicStatus": "ACCEPTED"}]}
+            result = collect(out, pages=3, page_size=100, fetcher=fetch, start_offset=500)
+            self.assertEqual(result["candidates"], 3)
+            self.assertEqual(requested, [(500, 100), (600, 100), (700, 100)])
+            with self.assertRaises(ValueError):
+                collect(Path(directory) / "invalid.jsonl", pages=1, page_size=100,
+                        fetcher=fetch, start_offset=550)
+
     def test_empty_and_failure_never_publish(self):
         with tempfile.TemporaryDirectory() as directory:
             out = Path(directory) / "gbif.jsonl"
