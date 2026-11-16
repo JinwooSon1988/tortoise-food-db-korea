@@ -33,9 +33,11 @@ def fetch_page(offset, limit, opener=urlopen):
             time.sleep(1)
 
 
-def collect(output, pages=25, page_size=1000, fetcher=fetch_page):
+def collect(output, pages=25, page_size=1000, fetcher=fetch_page, start_offset=0):
     if not 1 <= pages <= 100 or not 1 <= page_size <= 1000:
         raise ValueError("pages must be 1..100 and page_size 1..1000")
+    if start_offset < 0 or start_offset % page_size != 0:
+        raise ValueError("start_offset must be a nonnegative multiple of page_size")
     if output.exists():
         raise FileExistsError("use a new output path; never overwrite collected candidates")
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -45,7 +47,7 @@ def collect(output, pages=25, page_size=1000, fetcher=fetch_page):
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as stream:
             for page in range(pages):
-                payload = fetcher(page * page_size, page_size)
+                payload = fetcher(start_offset + page * page_size, page_size)
                 if not isinstance(payload, dict) or not isinstance(payload.get("results"), list):
                     raise ValueError("unexpected GBIF API response")
                 for taxon in payload["results"]:
@@ -83,8 +85,9 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--pages", type=int, default=25)
     parser.add_argument("--page-size", type=int, default=1000)
+    parser.add_argument("--start-offset", type=int, default=0)
     args = parser.parse_args()
-    print(json.dumps(collect(args.output, args.pages, args.page_size), ensure_ascii=False))
+    print(json.dumps(collect(args.output, args.pages, args.page_size, start_offset=args.start_offset), ensure_ascii=False))
 
 
 if __name__ == "__main__":
