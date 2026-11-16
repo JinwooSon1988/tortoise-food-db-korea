@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-BINOMIAL = re.compile(r"^([A-Z][a-z]+ [a-z][a-z-]+)(?: (?:var\\.|subsp\\.|ssp\\.) [a-z][a-z-]+)?$")
+BINOMIAL = re.compile(r"^([A-Z][a-z]+ [a-z][a-z-]+)(?: (?:var\.|subsp\.|ssp\.) [a-z][a-z-]+)?$")
 
 
 def export(catalog, output):
