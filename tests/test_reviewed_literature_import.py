@@ -19,7 +19,7 @@ class ReviewedImportTests(unittest.TestCase):
             "title": "Diet observation",
             "source_url": "https://europepmc.org/article/MED/123",
             "abstract_text": "Tortoises were observed eating the leaves of this species."
-        }) + "\\n")
+        }) + "\n")
 
     def test_unreviewed_cannot_be_imported(self):
         with tempfile.TemporaryDirectory() as directory:
