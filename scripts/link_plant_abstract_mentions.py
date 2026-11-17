@@ -96,5 +96,6 @@ if __name__ == "__main__":
                         help="CSV with plant_scientific_name column; accepted identities only")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--report", required=True, type=Path)
+    parser.add_argument("--source-scope", choices=("abstract", "fulltext"), default="abstract")
     args = parser.parse_args()
-    print(json.dumps(link(args.literature, args.taxonomy, args.output, args.report), sort_keys=True))
+    print(json.dumps(link(args.literature, args.taxonomy, args.output, args.report, args.source_scope), sort_keys=True))
