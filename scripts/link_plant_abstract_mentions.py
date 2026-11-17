@@ -26,7 +26,9 @@ def load_taxa(path):
     return taxa
 
 
-def link(abstract_path, taxonomy_path, output_path, report_path):
+def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="abstract"):
+    if source_scope not in ("abstract", "fulltext"):
+        raise ValueError("source_scope must be abstract or fulltext")
     paths = [abstract_path, taxonomy_path, output_path, report_path]
     if len({x.resolve() for x in paths}) != 4 or output_path.exists() or report_path.exists():
         raise ValueError("paths must be distinct and outputs new")
@@ -50,7 +52,15 @@ def link(abstract_path, taxonomy_path, output_path, report_path):
             abstract = record.get("abstract_text") or ""
             if not isinstance(abstract, str):
                 raise ValueError(f"invalid abstract at line {number}")
-            mentions = sorted(set(pattern.findall(re.sub(r"<[^>]*>", " ", abstract))))
+            normalized = re.sub(r"<[^>]*>", " ", abstract)
+            matches = {}
+            for match in pattern.finditer(normalized):
+                plant = match.group(0)
+                if plant not in matches:
+                    left = max(0, match.start() - 180)
+                    right = min(len(normalized), match.end() + 180)
+                    matches[plant] = " ".join(normalized[left:right].split())
+            mentions = sorted(matches)
             counts["publications_screened"] += 1
             if mentions:
                 counts["publications_with_exact_plant_mentions"] += 1
@@ -59,10 +69,11 @@ def link(abstract_path, taxonomy_path, output_path, report_path):
                     "plant_scientific_name": plant,
                     "source_database": identity[0], "source_record_id": identity[1],
                     "source_title": record.get("title"), "source_url": record.get("source_url"),
-                    "doi": record.get("doi"), "review_status": "unverified_abstract_mention",
+                    "doi": record.get("doi"), "review_status": "unverified_" + source_scope + "_mention",
+                    "source_scope": source_scope, "mention_context": matches[plant],
                     "tortoise_scientific_name": None, "plant_part": None,
                     "feeding_verdict": None,
-                    "note": "Exact taxon mention in abstract only; NOT evidence of consumption or safety."})
+                    "note": "Exact taxon mention in " + source_scope + " only; NOT evidence of consumption or safety."})
                 counts["unverified_plant_publication_links"] += 1
     if not seen:
         raise ValueError("empty literature corpus")
@@ -73,7 +84,7 @@ def link(abstract_path, taxonomy_path, output_path, report_path):
             stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
     with report_path.open("x", encoding="utf-8") as stream:
         json.dump({"counts": dict(counts), "taxonomy_species": len(taxa),
-                   "status": "unverified_abstract_mentions_only"}, stream, indent=2)
+                   "status": "unverified_" + source_scope + "_mentions_only"}, stream, indent=2)
         stream.write("\n")
     return dict(counts)
 
@@ -85,5 +96,6 @@ if __name__ == "__main__":
                         help="CSV with plant_scientific_name column; accepted identities only")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--report", required=True, type=Path)
+    parser.add_argument("--source-scope", choices=("abstract", "fulltext"), default="abstract")
     args = parser.parse_args()
-    print(json.dumps(link(args.literature, args.taxonomy, args.output, args.report), sort_keys=True))
+    print(json.dumps(link(args.literature, args.taxonomy, args.output, args.report, args.source_scope), sort_keys=True))

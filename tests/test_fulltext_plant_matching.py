@@ -20,11 +20,13 @@ class FulltextPlantMatchingTests(unittest.TestCase):
             self.assertEqual(convert(root / "fulltexts.jsonl", root / "match.jsonl")["fulltexts_prepared"], 1)
             (root / "taxa.csv").write_text("plant_scientific_name\nPlantago major\n")
             result = link(root / "match.jsonl", root / "taxa.csv",
-                          root / "mentions.jsonl", root / "report.json")
+                          root / "mentions.jsonl", root / "report.json", source_scope="fulltext")
             self.assertEqual(result["unverified_plant_publication_links"], 1)
             row = json.loads((root / "mentions.jsonl").read_text())
             self.assertIsNone(row["feeding_verdict"])
-            self.assertEqual(row["review_status"], "unverified_abstract_mention")
+            self.assertEqual(row["review_status"], "unverified_fulltext_mention")
+            self.assertEqual(row["source_scope"], "fulltext")
+            self.assertIn("Plantago major", row["mention_context"])
 
 
 if __name__ == "__main__":

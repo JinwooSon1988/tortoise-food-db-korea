@@ -66,7 +66,7 @@ jobs:
       - name: Prepare retrieved full texts for exact botanical matching
         run: python scripts/prepare_fulltext_plant_matching.py epmc-open-fulltexts-review.jsonl --output epmc-fulltext-match-input.jsonl
       - name: Match catalog taxa against actual retrieved full texts
-        run: python scripts/link_plant_abstract_mentions.py epmc-fulltext-match-input.jsonl --taxonomy site-plant-binomial-taxonomy.csv --output site-plant-fulltext-mentions.jsonl --report site-plant-fulltext-mentions-report.json
+        run: python scripts/link_plant_abstract_mentions.py epmc-fulltext-match-input.jsonl --taxonomy site-plant-binomial-taxonomy.csv --source-scope fulltext --output site-plant-fulltext-mentions.jsonl --report site-plant-fulltext-mentions-report.json
       - name: Upload real unmatched literature candidates for review
         uses: actions/upload-artifact@v4
         with:
