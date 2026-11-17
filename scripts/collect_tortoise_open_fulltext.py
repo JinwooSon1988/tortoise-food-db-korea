@@ -14,6 +14,34 @@ BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 MAX_CHARS = 250000
 
 
+
+BLOCK_TAGS = {"p", "title", "sec", "tr", "table-wrap", "list-item", "caption"}
+
+
+def extract_structured_body(body):
+    """Retain JATS paragraph/table-row boundaries; never join separate cells into a taxon."""
+    chunks = []
+
+    def walk(node):
+        tag = node.tag.rsplit("}", 1)[-1] if isinstance(node.tag, str) else ""
+        if tag in BLOCK_TAGS:
+            chunks.append("\n")
+        if node.text:
+            chunks.append(node.text)
+        for child in node:
+            walk(child)
+            if child.tail:
+                chunks.append(child.tail)
+        if tag in BLOCK_TAGS:
+            chunks.append("\n")
+        elif tag in {"td", "th"}:
+            chunks.append(" | ")
+
+    walk(body)
+    lines = [" ".join(line.split()) for line in "".join(chunks).splitlines()]
+    return "\n".join(line for line in lines if line)
+
+
 def retrieve(pmcid, opener=urlopen):
     if not re.fullmatch(r"PMC[0-9]+", pmcid):
         raise ValueError("invalid PMC identifier")
@@ -31,7 +59,7 @@ def retrieve(pmcid, opener=urlopen):
     body = root.find(".//body")
     if body is None:
         return None
-    text = " ".join(" ".join(body.itertext()).split())
+    text = extract_structured_body(body)
     return text[:MAX_CHARS] if text else None
 
 

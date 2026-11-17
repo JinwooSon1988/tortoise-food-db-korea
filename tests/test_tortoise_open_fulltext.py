@@ -2,10 +2,27 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.collect_tortoise_open_fulltext import enrich
+from scripts.collect_tortoise_open_fulltext import enrich, extract_structured_body
 
 
 class OpenFulltextTests(unittest.TestCase):
+
+
+    def test_jats_paragraphs_and_table_rows_remain_separate(self):
+        import xml.etree.ElementTree as ET
+        body = ET.fromstring(
+            "<body><sec><title>Diet</title><p>Testudo graeca ate "
+            "<italic>Plantago major</italic>.</p>"
+            "<table-wrap><table><tbody><tr><td>Plantago</td><td>major</td></tr>"
+            "<tr><td>Taraxacum officinale</td><td>leaf</td></tr>"
+            "</tbody></table></table-wrap></sec></body>"
+        )
+        text = extract_structured_body(body)
+        self.assertIn("Testudo graeca ate Plantago major.", text)
+        self.assertIn("Plantago | major", text)
+        self.assertNotIn("Plantago major\\nTaraxacum", text)
+        self.assertIn("Taraxacum officinale", text)
+        self.assertGreater(len(text.splitlines()), 2)
 
     def test_same_pmcid_fetched_once_but_both_publications_preserved(self):
         with tempfile.TemporaryDirectory() as directory:
