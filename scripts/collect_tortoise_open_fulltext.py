@@ -58,9 +58,13 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
         raise ValueError("empty corpus")
     results = []
     counts = Counter({"total_publications": len(seen), "pmc_candidates": len(items)})
+    unique_pmcids = sorted({pmcid for _, pmcid in items})
+    counts["unique_pmc_requests"] = len(unique_pmcids)
+    counts["duplicate_pmc_requests_avoided"] = len(items) - len(unique_pmcids)
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(fetcher, pmcid) for row, pmcid in items]
-        for (row, pmcid), future in zip(items, futures):
+        futures = {pmcid: pool.submit(fetcher, pmcid) for pmcid in unique_pmcids}
+        for row, pmcid in items:
+            future = futures[pmcid]
             try:
                 text = future.result()
             except Exception:
