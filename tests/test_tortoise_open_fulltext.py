@@ -22,7 +22,7 @@ class OpenFulltextTests(unittest.TestCase):
         self.assertIn("Plantago | major", text)
         self.assertNotIn("Plantago major\\nTaraxacum", text)
         self.assertIn("Taraxacum officinale", text)
-        self.assertIn("\\n", text)
+        self.assertGreater(len(text.splitlines()), 2)
 
     def test_same_pmcid_fetched_once_but_both_publications_preserved(self):
         with tempfile.TemporaryDirectory() as directory:
