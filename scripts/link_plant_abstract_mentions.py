@@ -26,7 +26,9 @@ def load_taxa(path):
     return taxa
 
 
-def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="abstract"):\n    if source_scope not in ("abstract", "fulltext"):\n        raise ValueError("source_scope must be abstract or fulltext")
+def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="abstract"):
+    if source_scope not in ("abstract", "fulltext"):
+        raise ValueError("source_scope must be abstract or fulltext")
     paths = [abstract_path, taxonomy_path, output_path, report_path]
     if len({x.resolve() for x in paths}) != 4 or output_path.exists() or report_path.exists():
         raise ValueError("paths must be distinct and outputs new")
@@ -50,7 +52,15 @@ def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="a
             abstract = record.get("abstract_text") or ""
             if not isinstance(abstract, str):
                 raise ValueError(f"invalid abstract at line {number}")
-            normalized = re.sub(r"<[^>]*>", " ", abstract)\n            matches = {}\n            for match in pattern.finditer(normalized):\n                plant = match.group(0)\n                if plant not in matches:\n                    left = max(0, match.start() - 180)\n                    right = min(len(normalized), match.end() + 180)\n                    matches[plant] = " ".join(normalized[left:right].split())\n            mentions = sorted(matches)
+            normalized = re.sub(r"<[^>]*>", " ", abstract)
+            matches = {}
+            for match in pattern.finditer(normalized):
+                plant = match.group(0)
+                if plant not in matches:
+                    left = max(0, match.start() - 180)
+                    right = min(len(normalized), match.end() + 180)
+                    matches[plant] = " ".join(normalized[left:right].split())
+            mentions = sorted(matches)
             counts["publications_screened"] += 1
             if mentions:
                 counts["publications_with_exact_plant_mentions"] += 1
@@ -59,7 +69,8 @@ def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="a
                     "plant_scientific_name": plant,
                     "source_database": identity[0], "source_record_id": identity[1],
                     "source_title": record.get("title"), "source_url": record.get("source_url"),
-                    "doi": record.get("doi"), "review_status": "unverified_" + source_scope + "_mention",\n                    "source_scope": source_scope, "mention_context": matches[plant],
+                    "doi": record.get("doi"), "review_status": "unverified_" + source_scope + "_mention",
+                    "source_scope": source_scope, "mention_context": matches[plant],
                     "tortoise_scientific_name": None, "plant_part": None,
                     "feeding_verdict": None,
                     "note": "Exact taxon mention in " + source_scope + " only; NOT evidence of consumption or safety."})
@@ -70,11 +81,13 @@ def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="a
     report_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("x", encoding="utf-8") as stream:
         for item in results:
-            stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
+            stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "
+")
     with report_path.open("x", encoding="utf-8") as stream:
         json.dump({"counts": dict(counts), "taxonomy_species": len(taxa),
                    "status": "unverified_" + source_scope + "_mentions_only"}, stream, indent=2)
-        stream.write("\n")
+        stream.write("
+")
     return dict(counts)
 
 
