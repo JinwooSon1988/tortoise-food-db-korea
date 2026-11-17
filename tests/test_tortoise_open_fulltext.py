@@ -6,6 +6,32 @@ from scripts.collect_tortoise_open_fulltext import enrich
 
 
 class OpenFulltextTests(unittest.TestCase):
+
+    def test_same_pmcid_fetched_once_but_both_publications_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            rows = [
+                {"source_database": "MED", "source_record_id": "123", "pmcid": "PMC999",
+                 "source_url": "https://europepmc.org/article/MED/123"},
+                {"source_database": "PMC", "source_record_id": "PMC999",
+                 "source_url": "https://europepmc.org/article/PMC/PMC999"},
+            ]
+            (root / "input.jsonl").write_text("".join(json.dumps(x) + "\n" for x in rows))
+            calls = []
+            def fetcher(pmcid):
+                calls.append(pmcid)
+                return "Testudo graeca consumed Plantago major."
+            counts = enrich(root / "input.jsonl", root / "out.jsonl", root / "report.json",
+                            fetcher=fetcher)
+            self.assertEqual(calls, ["PMC999"])
+            self.assertEqual(counts["pmc_candidates"], 2)
+            self.assertEqual(counts["unique_pmc_requests"], 1)
+            self.assertEqual(counts["duplicate_pmc_requests_avoided"], 1)
+            output = [json.loads(line) for line in (root / "out.jsonl").read_text().splitlines()]
+            self.assertEqual(len(output), 2)
+            self.assertEqual({r["source_database"] for r in output}, {"MED", "PMC"})
+            self.assertTrue(all(r["feeding_verdict"] is None for r in output))
+
     def test_parallel_review_only_and_missing_fulltext(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
