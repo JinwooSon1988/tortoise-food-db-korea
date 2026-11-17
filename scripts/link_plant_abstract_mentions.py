@@ -81,13 +81,11 @@ def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="a
     report_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("x", encoding="utf-8") as stream:
         for item in results:
-            stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "
-")
+            stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
     with report_path.open("x", encoding="utf-8") as stream:
         json.dump({"counts": dict(counts), "taxonomy_species": len(taxa),
                    "status": "unverified_" + source_scope + "_mentions_only"}, stream, indent=2)
-        stream.write("
-")
+        stream.write("\n")
     return dict(counts)
 
 
