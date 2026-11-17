@@ -40,11 +40,45 @@ def fetch(query, page_size, opener=urlopen):
     return rows
 
 
-def collect(output, report, workers=12, page_size=100, fetcher=fetch):
-    if not 1 <= workers <= 12 or not 1 <= page_size <= 1000:
+
+def fetch_pages(query, page_size, max_pages=3, opener=urlopen):
+    """Fetch bounded Europe PMC cursor pages, preserving all returned records."""
+    if not 1 <= max_pages <= 10:
+        raise ValueError("max_pages must be 1..10")
+    rows = []
+    cursor = "*"
+    seen_cursors = set()
+    for _ in range(max_pages):
+        if cursor in seen_cursors:
+            raise ValueError("repeated Europe PMC cursor")
+        seen_cursors.add(cursor)
+        url = API + "?" + urlencode({"query": query, "format": "json",
+                                      "pageSize": page_size, "resultType": "core",
+                                      "cursorMark": cursor})
+        req = Request(url, headers={"Accept": "application/json",
+                                     "User-Agent": "GeobukbapResearch/1.0"})
+        with opener(req, timeout=25) as response:
+            payload = json.load(response)
+        batch = payload.get("resultList", {}).get("result")
+        if not isinstance(batch, list):
+            raise ValueError("invalid Europe PMC search response")
+        rows.extend(batch)
+        next_cursor = payload.get("nextCursorMark")
+        if len(batch) < page_size or not next_cursor or next_cursor == cursor:
+            break
+        if not isinstance(next_cursor, str):
+            raise ValueError("invalid Europe PMC cursor")
+        cursor = next_cursor
+    return rows
+
+
+def collect(output, report, workers=12, page_size=100, fetcher=None, max_pages=3):
+    if not 1 <= workers <= 12 or not 1 <= page_size <= 1000 or not 1 <= max_pages <= 10:
         raise ValueError("invalid concurrency or page size")
     if output.resolve() == report.resolve() or output.exists() or report.exists():
         raise ValueError("distinct new output and report paths required")
+    if fetcher is None:
+        fetcher = lambda query, size: fetch_pages(query, size, max_pages=max_pages)
     # Fail closed: all searches must succeed before publishing anything.
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
         futures = [pool.submit(fetcher, query, page_size) for query in QUERIES]
@@ -127,6 +161,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--workers", type=int, default=12)
+    parser.add_argument("--max-pages", type=int, default=3)
     parser.add_argument("--page-size", type=int, default=100)
     args = parser.parse_args()
-    print(json.dumps(collect(args.output, args.report, args.workers, args.page_size), sort_keys=True))
+    print(json.dumps(collect(args.output, args.report, args.workers, args.page_size, max_pages=args.max_pages), sort_keys=True))
