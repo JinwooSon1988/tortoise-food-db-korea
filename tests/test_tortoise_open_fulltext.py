@@ -2,11 +2,25 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.collect_tortoise_open_fulltext import enrich, extract_structured_body
+from scripts.collect_tortoise_open_fulltext import enrich, extract_structured_body, retrieve
 
 
 class OpenFulltextTests(unittest.TestCase):
 
+
+
+    def test_namespaced_jats_body_is_extracted(self):
+        from io import BytesIO
+        xml = (b'<article xmlns="http://jats.nlm.nih.gov">'
+               b'<body><sec><p>Testudo graeca consumed Plantago major.</p>'
+               b'</sec></body></article>')
+        class Response(BytesIO):
+            def __enter__(self):
+                return self
+            def __exit__(self, *args):
+                self.close()
+        result = retrieve("PMC123456", opener=lambda request, timeout: Response(xml))
+        self.assertIn("Testudo graeca consumed Plantago major.", result)
 
     def test_jats_paragraphs_and_table_rows_remain_separate(self):
         import xml.etree.ElementTree as ET
