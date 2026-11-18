@@ -56,7 +56,7 @@ def retrieve(pmcid, opener=urlopen):
         root = ET.fromstring(raw)
     except ET.ParseError:
         return None
-    body = root.find(".//body")
+    body = root.find(".//{*}body")
     if body is None:
         return None
     text = extract_structured_body(body)
