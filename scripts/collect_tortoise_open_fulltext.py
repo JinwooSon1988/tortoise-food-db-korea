@@ -4,6 +4,7 @@ import argparse
 import concurrent.futures
 import json
 import re
+import time
 import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
@@ -42,15 +43,25 @@ def extract_structured_body(body):
     return "\n".join(line for line in lines if line)
 
 
-def retrieve(pmcid, opener=urlopen):
+def retrieve(pmcid, opener=urlopen, sleeper=time.sleep):
     if not re.fullmatch(r"PMC[0-9]+", pmcid):
         raise ValueError("invalid PMC identifier")
     req = Request(BASE + pmcid + "/fullTextXML",
                   headers={"User-Agent": "GeobukbapResearch/1.0"})
-    try:
-        with opener(req, timeout=18) as response:
-            raw = response.read(3000000)
-    except (HTTPError, URLError, TimeoutError):
+    raw = None
+    for attempt in range(3):
+        try:
+            with opener(req, timeout=18) as response:
+                raw = response.read(3000000)
+            break
+        except HTTPError as error:
+            if error.code not in (429, 500, 502, 503, 504):
+                return None
+        except (URLError, TimeoutError):
+            pass
+        if attempt < 2:
+            sleeper(0.5 * (2 ** attempt))
+    if raw is None:
         return None
     try:
         root = ET.fromstring(raw)
