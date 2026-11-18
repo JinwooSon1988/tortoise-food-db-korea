@@ -9,6 +9,29 @@ class OpenFulltextTests(unittest.TestCase):
 
 
 
+    def test_transient_http_failure_retries_but_404_does_not(self):
+        from io import BytesIO
+        from urllib.error import HTTPError
+        xml = b"<article><body><p>Plantago major.</p></body></article>"
+        calls = []
+        delays = []
+        def opener(req, timeout):
+            calls.append(timeout)
+            if len(calls) == 1:
+                raise HTTPError(req.full_url, 503, "busy", {}, None)
+            return BytesIO(xml)
+        self.assertIn("Plantago major.", retrieve("PMC123", opener=opener,
+                                                 sleeper=delays.append))
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(delays, [0.5])
+        missing_calls = []
+        def missing(req, timeout):
+            missing_calls.append(1)
+            raise HTTPError(req.full_url, 404, "not found", {}, None)
+        self.assertIsNone(retrieve("PMC123", opener=missing,
+                                   sleeper=lambda delay: self.fail("unexpected retry")))
+        self.assertEqual(len(missing_calls), 1)
+
     def test_namespaced_jats_body_is_extracted(self):
         from io import BytesIO
         xml = (b'<article xmlns="http://jats.nlm.nih.gov">'
