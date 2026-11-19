@@ -2,10 +2,37 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from scripts.collect_tortoise_literature_epmc import QUERIES, collect, fetch_pages
+from scripts.collect_tortoise_literature_epmc import QUERIES, collect, fetch_pages, request_json_with_retry
 
 
 class EuropePMCTests(unittest.TestCase):
+    def test_search_page_retries_transient_error_and_preserves_payload(self):
+        from io import BytesIO
+        from urllib.error import HTTPError
+        calls = []
+        delays = []
+        def opener(req, timeout):
+            calls.append(timeout)
+            if len(calls) == 1:
+                raise HTTPError(req.full_url, 503, "busy", {}, None)
+            return BytesIO(b'{"resultList": {"result": []}}')
+        result = request_json_with_retry(type("Request", (), {"full_url": "https://example.org"})(),
+                                         opener=opener, sleeper=delays.append)
+        self.assertEqual(result["resultList"]["result"], [])
+        self.assertEqual(calls, [25, 25])
+        self.assertEqual(delays, [0.5])
+
+    def test_search_page_does_not_retry_permanent_http_error(self):
+        from urllib.error import HTTPError
+        calls = []
+        def opener(req, timeout):
+            calls.append(1)
+            raise HTTPError(req.full_url, 404, "not found", {}, None)
+        with self.assertRaises(HTTPError):
+            request_json_with_retry(type("Request", (), {"full_url": "https://example.org"})(),
+                                    opener=opener, sleeper=lambda _: self.fail("retry"))
+        self.assertEqual(len(calls), 1)
+
     def test_parallel_results_deduplicate_and_preserve_unmatched_scope(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
