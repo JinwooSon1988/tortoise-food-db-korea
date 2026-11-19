@@ -9,6 +9,8 @@ from pathlib import Path
 
 BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
 MAX_TERMS = 100000
+# Fixed-size candidate recognizer: taxonomy size does not inflate the regex.
+CANDIDATE_BINOMIAL = re.compile(r"(?<![A-Za-z])([A-Z][a-z]+ [a-z][a-z-]+)(?![A-Za-z])")
 
 
 def load_taxa(path):
@@ -33,8 +35,8 @@ def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="a
     if len({x.resolve() for x in paths}) != 4 or output_path.exists() or report_path.exists():
         raise ValueError("paths must be distinct and outputs new")
     taxa = load_taxa(taxonomy_path)
-    # A single compiled alternation scans each abstract once rather than one search per plant.
-    pattern = re.compile(r"(?<![A-Za-z])(?:" + "|".join(re.escape(x) for x in sorted(taxa, key=lambda x: (-len(x), x))) + r")(?![A-Za-z])")
+    # Scan each document once and resolve candidates against the accepted-name set.
+    # This avoids compiling a potentially 100,000-term alternation.
     results = []
     counts = Counter()
     seen = set()
@@ -54,8 +56,10 @@ def link(abstract_path, taxonomy_path, output_path, report_path, source_scope="a
                 raise ValueError(f"invalid abstract at line {number}")
             normalized = re.sub(r"<[^>]*>", " ", abstract)
             matches = {}
-            for match in pattern.finditer(normalized):
-                plant = match.group(0)
+            for match in CANDIDATE_BINOMIAL.finditer(normalized):
+                plant = match.group(1)
+                if plant not in taxa:
+                    continue
                 if plant not in matches:
                     left = max(0, match.start() - 180)
                     right = min(len(normalized), match.end() + 180)
