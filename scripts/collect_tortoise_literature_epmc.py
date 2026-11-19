@@ -30,19 +30,21 @@ QUERIES = (
 
 
 def request_json_with_retry(req, opener=urlopen, sleeper=time.sleep):
-    """Retry transient Europe PMC search failures without silently dropping a page."""
-    for attempt in range(3):
+    """Retry temporary upstream failures; fail closed with the original exception."""
+    for attempt in range(6):
         try:
             with opener(req, timeout=25) as response:
                 return json.load(response)
         except HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504):
                 raise
+            if attempt == 5:
+                raise
         except (URLError, TimeoutError):
-            pass
-        if attempt < 2:
-            sleeper(0.5 * (2 ** attempt))
-    raise RuntimeError("Europe PMC search exhausted transient retries")
+            if attempt == 5:
+                raise
+        sleeper(min(8.0, 0.5 * (2 ** attempt)))
+
 
 def fetch(query, page_size, opener=urlopen):
     url = API + "?" + urlencode({"query": query, "format": "json", "pageSize": page_size,
