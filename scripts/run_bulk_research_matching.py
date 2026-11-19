@@ -4,6 +4,7 @@
 All matching outputs remain unverified; this command never publishes feeding verdicts.
 """
 import argparse
+import concurrent.futures
 import json
 from pathlib import Path
 
@@ -35,12 +36,18 @@ def run(catalog, accepted, abstracts, fulltexts, output_dir):
     taxonomy = output_dir / "research-binomial-taxonomy.csv"
     export(catalog, site)
     taxonomy_counts = build(site, accepted, taxonomy, output_dir / "taxonomy-report.json")
-    abstract_counts = link(abstracts, taxonomy, output_dir / "abstract-mentions.jsonl",
-                           output_dir / "abstract-report.json")
-    fulltext_counts = None
-    if fulltexts:
-        fulltext_counts = link(fulltexts, taxonomy, output_dir / "fulltext-mentions.jsonl",
-                               output_dir / "fulltext-report.json", source_scope="fulltext")
+    # Abstract and full-text corpora are independent: scan them concurrently.
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+        abstract_future = pool.submit(
+            link, abstracts, taxonomy, output_dir / "abstract-mentions.jsonl",
+            output_dir / "abstract-report.json")
+        fulltext_future = None
+        if fulltexts:
+            fulltext_future = pool.submit(
+                link, fulltexts, taxonomy, output_dir / "fulltext-mentions.jsonl",
+                output_dir / "fulltext-report.json", source_scope="fulltext")
+        abstract_counts = abstract_future.result()
+        fulltext_counts = fulltext_future.result() if fulltext_future else None
     report = {"taxonomy": taxonomy_counts, "abstracts": abstract_counts,
               "fulltexts": fulltext_counts, "status": "research_only_unverified_mentions",
               "feeding_verdict": None}
