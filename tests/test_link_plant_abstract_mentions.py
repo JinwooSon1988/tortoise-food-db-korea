@@ -45,7 +45,7 @@ class BulkPlantAbstractTests(unittest.TestCase):
                 "source_database": "MED", "source_record_id": "bulk",
                 "review_status": "unmatched_literature_lead", "feeding_verdict": None,
                 "abstract_text": "Plantago majoris; Plantago major; Taraxacum officinale. Genus abcde."
-            }) + "\\n")
+            }) + "\n")
             counts = link(root / "papers.jsonl", root / "taxa.csv",
                           root / "links.jsonl", root / "report.json")
             self.assertEqual(counts["unverified_plant_publication_links"], 2)
