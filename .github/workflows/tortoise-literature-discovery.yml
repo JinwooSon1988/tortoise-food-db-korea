@@ -14,6 +14,8 @@ on:
       - 'scripts/link_plant_abstract_mentions.py'
       - 'scripts/export_site_plant_binomials.py'
       - 'scripts/collect_tortoise_open_fulltext.py'
+      - 'scripts/build_research_taxonomy_index.py'
+      - 'tests/test_research_taxonomy_index.py'
       - 'scripts/prepare_fulltext_plant_matching.py'
       - 'scripts/triage_fulltext_plant_mentions.py'
       - 'tests/test_triage_fulltext_plant_mentions.py'
@@ -49,6 +51,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_link_plant_abstract_mentions.py'
       - name: Test site catalog taxonomic normalization
         run: python -m unittest discover -s tests -p 'test_export_site_plant_binomials.py'
+      - name: Test large research-only taxonomy index safeguards
+        run: python -m unittest discover -s tests -p 'test_research_taxonomy_index.py'
       - name: Test open access full-text collection safeguards
         run: python -m unittest discover -s tests -p 'test_tortoise_open_fulltext.py'
       - name: Test full-text to plant matching integration
