@@ -6,6 +6,7 @@ import json
 import os
 import tempfile
 import time
+import threading
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlencode
@@ -13,6 +14,8 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
 API = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+# Bound simultaneous HTTP calls even when all twelve query tasks run concurrently.
+SEARCH_HTTP_SLOTS = threading.BoundedSemaphore(3)
 QUERIES = (
     '("Testudo graeca" OR "Testudo hermanni") AND (diet OR feeding OR forage)',
     '("Centrochelys sulcata" OR "Geochelone sulcata") AND (diet OR feeding OR plants)',
@@ -31,19 +34,20 @@ QUERIES = (
 
 def request_json_with_retry(req, opener=urlopen, sleeper=time.sleep):
     """Retry temporary upstream failures; fail closed with the original exception."""
-    for attempt in range(6):
+    for attempt in range(8):
         try:
-            with opener(req, timeout=25) as response:
-                return json.load(response)
+            with SEARCH_HTTP_SLOTS:
+                with opener(req, timeout=25) as response:
+                    return json.load(response)
         except HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504):
                 raise
-            if attempt == 5:
+            if attempt == 7:
                 raise
         except (URLError, TimeoutError):
             if attempt == 5:
                 raise
-        sleeper(min(8.0, 0.5 * (2 ** attempt)))
+        sleeper(min(16.0, 0.5 * (2 ** attempt)))
 
 
 def fetch(query, page_size, opener=urlopen):
