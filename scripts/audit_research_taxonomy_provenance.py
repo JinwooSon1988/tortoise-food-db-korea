@@ -6,7 +6,10 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from build_research_taxonomy_index import BINOMIAL
+try:
+    from scripts.build_research_taxonomy_index import BINOMIAL
+except ModuleNotFoundError:
+    from build_research_taxonomy_index import BINOMIAL
 
 
 def audit(accepted, output, report):
