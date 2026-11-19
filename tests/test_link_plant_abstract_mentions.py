@@ -28,6 +28,32 @@ class BulkPlantAbstractTests(unittest.TestCase):
             self.assertTrue(all(x["tortoise_scientific_name"] is None for x in rows))
             self.assertTrue(all(x["review_status"] == "unverified_abstract_mention" for x in rows))
 
+    def test_large_taxonomy_single_pass_exact_membership(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            # Large accepted-name input must not expand the regular expression.
+            with (root / "taxa.csv").open("w", newline="") as stream:
+                writer = csv.DictWriter(stream, fieldnames=["plant_scientific_name"])
+                writer.writeheader()
+                writer.writerow({"plant_scientific_name": "Plantago major"})
+                writer.writerow({"plant_scientific_name": "Taraxacum officinale"})
+                for first in "abcdefghijklmnopqrstuvwxyz":
+                    for second in "abcdefghijklmnopqrstuvwxyz":
+                        for third in "abcdefghijklmnopqrstuvwxyz":
+                            writer.writerow({"plant_scientific_name": f"Genus {first}{second}{third}"})
+            (root / "papers.jsonl").write_text(json.dumps({
+                "source_database": "MED", "source_record_id": "bulk",
+                "review_status": "unmatched_literature_lead", "feeding_verdict": None,
+                "abstract_text": "Plantago majoris; Plantago major; Taraxacum officinale. Genus abcde."
+            }) + "\n")
+            counts = link(root / "papers.jsonl", root / "taxa.csv",
+                          root / "links.jsonl", root / "report.json")
+            self.assertEqual(counts["unverified_plant_publication_links"], 2)
+            rows = [json.loads(x) for x in (root / "links.jsonl").read_text().splitlines()]
+            self.assertEqual({x["plant_scientific_name"] for x in rows},
+                             {"Plantago major", "Taraxacum officinale"})
+            self.assertTrue(all(x["feeding_verdict"] is None for x in rows))
+
     def test_no_partial_match(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
