@@ -5,12 +5,17 @@ import concurrent.futures
 import json
 import os
 import tempfile
+import time
+import threading
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 
 API = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+# Bound simultaneous HTTP calls even when all twelve query tasks run concurrently.
+SEARCH_HTTP_SLOTS = threading.BoundedSemaphore(3)
 QUERIES = (
     '("Testudo graeca" OR "Testudo hermanni") AND (diet OR feeding OR forage)',
     '("Centrochelys sulcata" OR "Geochelone sulcata") AND (diet OR feeding OR plants)',
@@ -27,13 +32,30 @@ QUERIES = (
 )
 
 
+def request_json_with_retry(req, opener=urlopen, sleeper=time.sleep):
+    """Retry temporary upstream failures; fail closed with the original exception."""
+    for attempt in range(8):
+        try:
+            with SEARCH_HTTP_SLOTS:
+                with opener(req, timeout=25) as response:
+                    return json.load(response)
+        except HTTPError as error:
+            if error.code not in (429, 500, 502, 503, 504):
+                raise
+            if attempt == 7:
+                raise
+        except (URLError, TimeoutError):
+            if attempt == 5:
+                raise
+        sleeper(min(16.0, 0.5 * (2 ** attempt)))
+
+
 def fetch(query, page_size, opener=urlopen):
     url = API + "?" + urlencode({"query": query, "format": "json", "pageSize": page_size,
                                   "resultType": "core"})
     req = Request(url, headers={"Accept": "application/json",
                                  "User-Agent": "GeobukbapResearch/1.0"})
-    with opener(req, timeout=25) as response:
-        payload = json.load(response)
+    payload = request_json_with_retry(req, opener=opener)
     rows = payload.get("resultList", {}).get("result")
     if not isinstance(rows, list):
         raise ValueError("invalid Europe PMC search response")
@@ -57,8 +79,7 @@ def fetch_pages(query, page_size, max_pages=3, opener=urlopen):
                                       "cursorMark": cursor})
         req = Request(url, headers={"Accept": "application/json",
                                      "User-Agent": "GeobukbapResearch/1.0"})
-        with opener(req, timeout=25) as response:
-            payload = json.load(response)
+        payload = request_json_with_retry(req, opener=opener)
         batch = payload.get("resultList", {}).get("result")
         if not isinstance(batch, list):
             raise ValueError("invalid Europe PMC search response")
