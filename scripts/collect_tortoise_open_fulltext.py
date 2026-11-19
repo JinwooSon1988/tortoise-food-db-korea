@@ -4,6 +4,7 @@ import argparse
 import concurrent.futures
 import json
 import re
+import threading
 import time
 import xml.etree.ElementTree as ET
 from collections import Counter
@@ -13,6 +14,9 @@ from urllib.request import Request, urlopen
 
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 MAX_CHARS = 250000
+# Bound concurrent requests independently of the number of parsing workers.
+PMC_REQUEST_SLOTS = threading.BoundedSemaphore(8)
+RETRY_ATTEMPTS = 3
 
 
 
@@ -49,18 +53,19 @@ def retrieve(pmcid, opener=urlopen, sleeper=time.sleep):
     req = Request(BASE + pmcid + "/fullTextXML",
                   headers={"User-Agent": "GeobukbapResearch/1.0"})
     raw = None
-    for attempt in range(3):
+    for attempt in range(RETRY_ATTEMPTS):
         try:
-            with opener(req, timeout=18) as response:
-                raw = response.read(3000000)
+            with PMC_REQUEST_SLOTS:
+                with opener(req, timeout=18) as response:
+                    raw = response.read(3000000)
             break
         except HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504):
                 return None
         except (URLError, TimeoutError):
             pass
-        if attempt < 2:
-            sleeper(0.5 * (2 ** attempt))
+        if attempt < RETRY_ATTEMPTS - 1:
+            sleeper(min(4.0, 0.5 * (2 ** attempt)))
     if raw is None:
         return None
     try:
