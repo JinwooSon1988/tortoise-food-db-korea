@@ -33,6 +33,20 @@ class EuropePMCTests(unittest.TestCase):
                                     opener=opener, sleeper=lambda _: self.fail("retry"))
         self.assertEqual(len(calls), 1)
 
+    def test_transient_search_exhaustion_preserves_http_error(self):
+        from urllib.error import HTTPError
+        calls = []
+        delays = []
+        def opener(req, timeout):
+            calls.append(1)
+            raise HTTPError(req.full_url, 429, "rate limited", {}, None)
+        with self.assertRaises(HTTPError) as caught:
+            request_json_with_retry(type("Request", (), {"full_url": "https://example.org"})(),
+                                    opener=opener, sleeper=delays.append)
+        self.assertEqual(caught.exception.code, 429)
+        self.assertEqual(len(calls), 6)
+        self.assertEqual(delays, [0.5, 1.0, 2.0, 4.0, 8.0])
+
     def test_parallel_results_deduplicate_and_preserve_unmatched_scope(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
