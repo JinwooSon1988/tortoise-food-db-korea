@@ -19,13 +19,16 @@ class ResearchTaxonomyIndexTests(unittest.TestCase):
                 writer = csv.writer(stream)
                 writer.writerow(["plant_scientific_name", "taxonomic_status", "source_reference"])
                 writer.writerow(["Plantago major", "accepted", "source-1"])
-                for n in range(26 * 26):
-                    genus = "A" + chr(97 + n // 26) + chr(97 + n % 26)
+                for n in range(22765):
+                    genus = ("A" if n < 17576 else "B") + "".join(
+                        chr(97 + digit) for digit in ((n % 17576) // 676,
+                                                      ((n % 17576) // 26) % 26,
+                                                      n % 26))
                     writer.writerow([genus + " officinale", "accepted", "source-1"])
             counts = build(catalog, accepted, output, report)
-            self.assertEqual(counts["unique_binomials"], 677)
+            self.assertEqual(counts["unique_binomials"], 22766)
             self.assertEqual(counts["duplicates"], 1)
-            self.assertEqual(len(output.read_text().splitlines()), 678)
+            self.assertEqual(len(output.read_text().splitlines()), 22767)
             self.assertIsNone(json.loads(report.read_text())["feeding_verdict"])
 
     def test_rejects_unaccepted_or_untraceable_taxa(self):
