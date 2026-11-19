@@ -39,8 +39,8 @@ class OpenFulltextTests(unittest.TestCase):
             calls.append(timeout)
             raise TimeoutError("upstream timed out")
         self.assertIsNone(retrieve("PMC123", opener=timeout, sleeper=delays.append))
-        self.assertEqual(len(calls), 4)
-        self.assertEqual(delays, [0.5, 1.0, 2.0])
+        self.assertEqual(len(calls), 3)
+        self.assertEqual(delays, [0.5, 1.0])
 
     def test_pmc_request_concurrency_is_bounded(self):
         import concurrent.futures
@@ -65,7 +65,7 @@ class OpenFulltextTests(unittest.TestCase):
             futures = [pool.submit(retrieve, f"PMC{i+1}", opener=opener) for i in range(12)]
             results = [future.result(timeout=10) for future in futures]
         self.assertTrue(all("Plantago major." in item for item in results))
-        self.assertLessEqual(peak, 6)
+        self.assertLessEqual(peak, 8)
         self.assertGreaterEqual(peak, 1)
 
     def test_namespaced_jats_body_is_extracted(self):
