@@ -44,8 +44,8 @@ class EuropePMCTests(unittest.TestCase):
             request_json_with_retry(type("Request", (), {"full_url": "https://example.org"})(),
                                     opener=opener, sleeper=delays.append)
         self.assertEqual(caught.exception.code, 429)
-        self.assertEqual(len(calls), 6)
-        self.assertEqual(delays, [0.5, 1.0, 2.0, 4.0, 8.0])
+        self.assertEqual(len(calls), 8)
+        self.assertEqual(delays, [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 16.0])
 
     def test_parallel_results_deduplicate_and_preserve_unmatched_scope(self):
         with tempfile.TemporaryDirectory() as folder:
