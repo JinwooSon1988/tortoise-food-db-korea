@@ -11,10 +11,12 @@ from pathlib import Path
 try:
     from scripts.export_site_plant_binomials import export
     from scripts.build_research_taxonomy_index import build
+    from scripts.audit_research_taxonomy_provenance import audit
     from scripts.link_plant_abstract_mentions import link
 except ModuleNotFoundError:
     from export_site_plant_binomials import export
     from build_research_taxonomy_index import build
+    from audit_research_taxonomy_provenance import audit
     from link_plant_abstract_mentions import link
 
 
@@ -36,6 +38,8 @@ def run(catalog, accepted, abstracts, fulltexts, output_dir):
     taxonomy = output_dir / "research-binomial-taxonomy.csv"
     export(catalog, site)
     taxonomy_counts = build(site, accepted, taxonomy, output_dir / "taxonomy-report.json")
+    provenance_counts = audit(accepted, output_dir / "accepted-name-provenance.csv",
+                              output_dir / "accepted-name-provenance-report.json")
     # Abstract and full-text corpora are independent: scan them concurrently.
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
         abstract_future = pool.submit(
@@ -48,7 +52,8 @@ def run(catalog, accepted, abstracts, fulltexts, output_dir):
                 output_dir / "fulltext-report.json", source_scope="fulltext")
         abstract_counts = abstract_future.result()
         fulltext_counts = fulltext_future.result() if fulltext_future else None
-    report = {"taxonomy": taxonomy_counts, "abstracts": abstract_counts,
+    report = {"taxonomy": taxonomy_counts, "provenance": provenance_counts,
+              "abstracts": abstract_counts,
               "fulltexts": fulltext_counts, "status": "research_only_unverified_mentions",
               "feeding_verdict": None}
     (output_dir / "batch-report.json").write_text(
