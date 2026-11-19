@@ -32,6 +32,42 @@ class OpenFulltextTests(unittest.TestCase):
                                    sleeper=lambda delay: self.fail("unexpected retry")))
         self.assertEqual(len(missing_calls), 1)
 
+    def test_persistent_transient_timeout_is_bounded(self):
+        calls = []
+        delays = []
+        def timeout(request, timeout):
+            calls.append(timeout)
+            raise TimeoutError("upstream timed out")
+        self.assertIsNone(retrieve("PMC123", opener=timeout, sleeper=delays.append))
+        self.assertEqual(len(calls), 4)
+        self.assertEqual(delays, [0.5, 1.0, 2.0])
+
+    def test_pmc_request_concurrency_is_bounded(self):
+        import concurrent.futures
+        import threading
+        from io import BytesIO
+        from scripts.collect_tortoise_open_fulltext import PMC_REQUEST_SLOTS
+        active = 0
+        peak = 0
+        lock = threading.Lock()
+        release = threading.Event()
+        xml = b"<article><body><p>Plantago major.</p></body></article>"
+        def opener(request, timeout):
+            nonlocal active, peak
+            with lock:
+                active += 1
+                peak = max(peak, active)
+            release.wait(0.15)
+            with lock:
+                active -= 1
+            return BytesIO(xml)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
+            futures = [pool.submit(retrieve, f"PMC{i+1}", opener=opener) for i in range(12)]
+            results = [future.result(timeout=10) for future in futures]
+        self.assertTrue(all("Plantago major." in item for item in results))
+        self.assertLessEqual(peak, 6)
+        self.assertGreaterEqual(peak, 1)
+
     def test_namespaced_jats_body_is_extracted(self):
         from io import BytesIO
         xml = (b'<article xmlns="http://jats.nlm.nih.gov">'
