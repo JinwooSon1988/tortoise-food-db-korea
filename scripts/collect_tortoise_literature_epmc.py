@@ -5,10 +5,12 @@ import concurrent.futures
 import json
 import os
 import tempfile
+import time
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.error import HTTPError, URLError
 
 API = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
 QUERIES = (
@@ -27,13 +29,27 @@ QUERIES = (
 )
 
 
+def request_json_with_retry(req, opener=urlopen, sleeper=time.sleep):
+    """Retry transient Europe PMC search failures without silently dropping a page."""
+    for attempt in range(3):
+        try:
+            with opener(req, timeout=25) as response:
+                return json.load(response)
+        except HTTPError as error:
+            if error.code not in (429, 500, 502, 503, 504):
+                raise
+        except (URLError, TimeoutError):
+            pass
+        if attempt < 2:
+            sleeper(0.5 * (2 ** attempt))
+    raise RuntimeError("Europe PMC search exhausted transient retries")
+
 def fetch(query, page_size, opener=urlopen):
     url = API + "?" + urlencode({"query": query, "format": "json", "pageSize": page_size,
                                   "resultType": "core"})
     req = Request(url, headers={"Accept": "application/json",
                                  "User-Agent": "GeobukbapResearch/1.0"})
-    with opener(req, timeout=25) as response:
-        payload = json.load(response)
+    payload = request_json_with_retry(req, opener=opener)
     rows = payload.get("resultList", {}).get("result")
     if not isinstance(rows, list):
         raise ValueError("invalid Europe PMC search response")
@@ -57,8 +73,7 @@ def fetch_pages(query, page_size, max_pages=3, opener=urlopen):
                                       "cursorMark": cursor})
         req = Request(url, headers={"Accept": "application/json",
                                      "User-Agent": "GeobukbapResearch/1.0"})
-        with opener(req, timeout=25) as response:
-            payload = json.load(response)
+        payload = request_json_with_retry(req, opener=opener)
         batch = payload.get("resultList", {}).get("result")
         if not isinstance(batch, list):
             raise ValueError("invalid Europe PMC search response")
