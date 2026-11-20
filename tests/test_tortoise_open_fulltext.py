@@ -68,6 +68,21 @@ class OpenFulltextTests(unittest.TestCase):
         self.assertLessEqual(peak, 8)
         self.assertGreaterEqual(peak, 1)
 
+    def test_large_pmc_xml_beyond_previous_three_mb_limit(self):
+        from io import BytesIO
+        # Large supplementary material can precede the actual article body.
+        xml = (b"<article><front><notes>" + b"x" * 3_100_000 +
+               b"</notes></front><body><p>Plantago major consumed.</p></body></article>")
+        result = retrieve("PMC123456", opener=lambda request, timeout: BytesIO(xml))
+        self.assertIn("Plantago major consumed.", result)
+
+    def test_oversized_xml_is_rejected_without_partial_parsing(self):
+        from io import BytesIO
+        from scripts.collect_tortoise_open_fulltext import MAX_XML_BYTES
+        xml = b"<article><body><p>" + b"x" * MAX_XML_BYTES + b"</p></body></article>"
+        self.assertIsNone(retrieve("PMC123456",
+                                   opener=lambda request, timeout: BytesIO(xml)))
+
     def test_namespaced_jats_body_is_extracted(self):
         from io import BytesIO
         xml = (b'<article xmlns="http://jats.nlm.nih.gov">'

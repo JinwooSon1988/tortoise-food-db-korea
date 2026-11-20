@@ -15,6 +15,7 @@ from urllib.request import Request, urlopen
 
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 MAX_CHARS = 250000
+MAX_XML_BYTES = 12_000_000
 # Bound concurrent requests independently of the number of parsing workers.
 PMC_REQUEST_SLOTS = threading.BoundedSemaphore(8)
 RETRY_ATTEMPTS = 3
@@ -58,7 +59,7 @@ def retrieve(pmcid, opener=urlopen, sleeper=time.sleep):
         try:
             with PMC_REQUEST_SLOTS:
                 with opener(req, timeout=18) as response:
-                    raw = response.read(3000000)
+                    raw = response.read(MAX_XML_BYTES + 1)
             break
         except HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504):
@@ -67,7 +68,8 @@ def retrieve(pmcid, opener=urlopen, sleeper=time.sleep):
             pass
         if attempt < RETRY_ATTEMPTS - 1:
             sleeper(min(4.0, 0.5 * (2 ** attempt)))
-    if raw is None:
+    if raw is None or len(raw) > MAX_XML_BYTES:
+        # Do not parse a silently truncated XML document as if it were complete.
         return None
     try:
         root = ET.fromstring(raw)
