@@ -58,7 +58,11 @@ def export(index_path, site_csv, output, report, diverse_path=None):
             name = record.get("scientific_name")
             if not isinstance(name, str) or not BINOMIAL.fullmatch(name):
                 raise ValueError(f"invalid diverse binomial at row {row_number}")
-            if (record.get("safety_grade") not in (None, "")
+            if (record.get("source_scope") != "taxonomy_only"
+                    or record.get("identity_status") != "taxonomy_candidate"
+                    or not isinstance(record.get("source_taxon_url"), str)
+                    or not record["source_taxon_url"].startswith("https://www.gbif.org/species/")
+                    or record.get("safety_grade") not in (None, "")
                     or record.get("feeding_safety_status") not in (None, "not_assessed")
                     or record.get("feeding_record_status") in ("verified", "confirmed", "feeding_pending")):
                 raise ValueError(f"unsafe diverse taxonomy assertion at row {row_number}")
