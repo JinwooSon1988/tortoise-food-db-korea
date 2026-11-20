@@ -44,6 +44,11 @@ on:
 permissions:
   contents: read
 
+# Prevent simultaneous nightly/manual harvests from competing for API quotas.
+concurrency:
+  group: tortoise-literature-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -119,7 +124,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: python scripts/triage_fulltext_plant_mentions.py site-plant-fulltext-mentions.jsonl --output site-plant-fulltext-review-priority.jsonl --report site-plant-fulltext-review-priority-report.json
       - name: Upload real unmatched literature candidates for review
-        if: github.event_name != 'pull_request'
+        if: always() && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: tortoise-literature-review-only
@@ -142,5 +147,5 @@ jobs:
             site-plant-binomial-taxonomy.csv
             site-plant-literature-mentions.jsonl
             site-plant-literature-mentions-report.json
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 90
