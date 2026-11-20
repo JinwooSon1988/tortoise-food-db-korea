@@ -13,6 +13,8 @@ on:
       - 'tests/test_reviewed_literature_import.py'
       - 'scripts/link_plant_abstract_mentions.py'
       - 'scripts/export_site_plant_binomials.py'
+      - 'scripts/audit_catalog_identity_collisions.py'
+      - 'tests/test_catalog_identity_collisions.py'
       - 'scripts/collect_tortoise_open_fulltext.py'
       - 'scripts/build_research_taxonomy_index.py'
       - 'scripts/run_bulk_research_matching.py'
@@ -57,6 +59,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_reviewed_literature_import.py'
       - name: Test exact plant name bulk matching
         run: python -m unittest discover -s tests -p 'test_link_plant_abstract_mentions.py'
+      - name: Test catalog identity collision audit
+        run: python -m unittest discover -s tests -p 'test_catalog_identity_collisions.py'
       - name: Test site catalog taxonomic normalization
         run: python -m unittest discover -s tests -p 'test_export_site_plant_binomials.py'
       - name: Test large research-only taxonomy index safeguards
@@ -85,6 +89,9 @@ jobs:
       - name: Export prioritized review CSV for all literature candidates
         if: github.event_name != 'pull_request'
         run: python scripts/export_tortoise_literature_review_csv.py epmc-abstract-screening.jsonl --output epmc-literature-review.csv
+      - name: Audit real published catalog identity collisions
+        if: github.event_name != 'pull_request'
+        run: python scripts/audit_catalog_identity_collisions.py data/plants.json --report site-catalog-identity-audit.json
       - name: Export real published plant catalog names
         if: github.event_name != 'pull_request'
         run: python scripts/export_site_plant_binomials.py data/plants.json --output site-plant-binomial-taxonomy.csv
@@ -123,6 +130,7 @@ jobs:
             epmc-abstract-screening.jsonl
             epmc-abstract-screening-report.json
             epmc-literature-review.csv
+            site-catalog-identity-audit.json
             site-plant-binomial-taxonomy.csv
             site-plant-literature-mentions.jsonl
             site-plant-literature-mentions-report.json
