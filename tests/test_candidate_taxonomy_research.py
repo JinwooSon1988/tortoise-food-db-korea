@@ -37,7 +37,7 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
             (root / "index.json").write_text(json.dumps({
                 "count": 1, "shards": [{"file": source.name, "count": 1,
                 "sha256": hashlib.sha256(raw).hexdigest()}]}))
-            (root / "site.csv").write_text("plant_scientific_name\\nPlantago major\n")
+            (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
             (root / "diverse.json").write_text(json.dumps({"record_count": 2, "records": [
                 {"scientific_name": "Taraxacum officinale", "safety_grade": None,
                  "feeding_safety_status": "not_assessed"},
@@ -62,7 +62,7 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
             (root / "index.json").write_text(json.dumps({
                 "count": 1, "shards": [{"file": source.name, "count": 1,
                 "sha256": hashlib.sha256(raw).hexdigest()}]}))
-            (root / "site.csv").write_text("plant_scientific_name\\nPlantago major\n")
+            (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
             (root / "diverse.json").write_text(json.dumps({"record_count": 1, "records": [
                 {"scientific_name": "Taraxacum officinale", "safety_grade": "A",
                  "feeding_safety_status": "safe"}]}))
