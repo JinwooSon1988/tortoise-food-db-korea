@@ -3,6 +3,7 @@
 import argparse
 import concurrent.futures
 import json
+import tempfile
 import re
 import threading
 import time
@@ -100,42 +101,48 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
                 items.append((row, pmcid))
     if not seen:
         raise ValueError("empty corpus")
-    results = []
     counts = Counter({"total_publications": len(seen), "pmc_candidates": len(items)})
     unique_pmcids = sorted({pmcid for _, pmcid in items})
     counts["unique_pmc_requests"] = len(unique_pmcids)
     counts["duplicate_pmc_requests_avoided"] = len(items) - len(unique_pmcids)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pmcid: pool.submit(fetcher, pmcid) for pmcid in unique_pmcids}
-        for row, pmcid in items:
-            future = futures[pmcid]
-            try:
-                text = future.result()
-            except Exception:
-                counts["retrieval_errors"] += 1
-                continue
-            if not text:
-                counts["unavailable_fulltext"] += 1
-                continue
-            results.append({"source_database": row["source_database"],
-                            "source_record_id": row["source_record_id"],
-                            "pmcid": pmcid,
-                            "source_url": row["source_url"],
-                            "source_title": row.get("title"),
-                            "fulltext_excerpt": text,
-                            "truncated": len(text) == MAX_CHARS,
-                            "review_status": "unverified_fulltext_for_manual_review",
-                            "feeding_verdict": None})
-            counts["fulltexts_retrieved"] += 1
-    output.parent.mkdir(parents=True, exist_ok=True)
-    report.parent.mkdir(parents=True, exist_ok=True)
-    with output.open("x", encoding="utf-8") as stream:
-        for row in results:
-            stream.write(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n")
-    with report.open("x", encoding="utf-8") as stream:
-        json.dump({"counts": dict(counts), "status": "review_only_no_feeding_verdicts"},
-                  stream, indent=2)
-        stream.write("\n")
+    # Spool full texts incrementally; avoid retaining thousands of 250KB bodies in RAM.
+    # The pool remains bounded at 12 workers and HTTP requests at eight slots.
+    with tempfile.TemporaryDirectory(prefix=".pmc-fulltexts-") as scratch:
+        spool_path = Path(scratch) / "fulltexts.jsonl"
+        with spool_path.open("w", encoding="utf-8") as spool:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
+                futures = {pmcid: pool.submit(fetcher, pmcid) for pmcid in unique_pmcids}
+                for row, pmcid in items:
+                    future = futures[pmcid]
+                    try:
+                        text = future.result()
+                    except Exception:
+                        counts["retrieval_errors"] += 1
+                        continue
+                    if not text:
+                        counts["unavailable_fulltext"] += 1
+                        continue
+                    spool.write(json.dumps({
+                        "source_database": row["source_database"],
+                        "source_record_id": row["source_record_id"],
+                        "pmcid": pmcid,
+                        "source_url": row["source_url"],
+                        "source_title": row.get("title"),
+                        "fulltext_excerpt": text,
+                        "truncated": len(text) == MAX_CHARS,
+                        "review_status": "unverified_fulltext_for_manual_review",
+                        "feeding_verdict": None
+                    }, ensure_ascii=False, sort_keys=True) + "\n")
+                    counts["fulltexts_retrieved"] += 1
+        output.parent.mkdir(parents=True, exist_ok=True)
+        report.parent.mkdir(parents=True, exist_ok=True)
+        with output.open("x", encoding="utf-8") as destination, spool_path.open(encoding="utf-8") as source:
+            for chunk in iter(lambda: source.read(1024 * 1024), ""):
+                destination.write(chunk)
+        with report.open("x", encoding="utf-8") as stream:
+            json.dump({"counts": dict(counts), "status": "review_only_no_feeding_verdicts"},
+                      stream, indent=2)
+            stream.write("\n")
     return dict(counts)
 
 
