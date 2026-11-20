@@ -14,7 +14,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
-MAX_CHARS = 250000
+MAX_CHARS = 1_000_000
 MAX_XML_BYTES = 12_000_000
 # Bound concurrent requests independently of the number of parsing workers.
 PMC_REQUEST_SLOTS = threading.BoundedSemaphore(8)
