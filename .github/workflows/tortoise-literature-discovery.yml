@@ -13,6 +13,7 @@ on:
       - 'scripts/export_candidate_taxonomy_for_research.py'
       - 'tests/test_candidate_taxonomy_research.py'
       - 'data/taxonomy-shards/**'
+      - 'data/diverse_taxonomy_candidates.json'
       - 'data/plants.json'
       - 'data/taxonomy-shards/**'
   pull_request:
@@ -104,7 +105,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_candidate_taxonomy_research.py'
       - name: Validate and export real 9995 GBIF candidate names in CI
         run: |
-          python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site ci-site-binomial-taxonomy.csv --output ci-research-candidate-taxonomy.csv --report ci-research-candidate-report.json
+          python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --diverse data/diverse_taxonomy_candidates.json --site ci-site-binomial-taxonomy.csv --output ci-research-candidate-taxonomy.csv --report ci-research-candidate-report.json
       - name: Query twelve independent tortoise diet research searches in parallel
         if: github.event_name != 'pull_request'
         run: python scripts/collect_tortoise_literature_epmc.py --output epmc-literature-leads.jsonl --report epmc-literature-report.json --workers 12 --page-size 100 --max-pages 6
@@ -125,7 +126,7 @@ jobs:
         run: python scripts/export_site_plant_binomials.py data/plants.json --output site-plant-binomial-taxonomy.csv
       - name: Combine 9995 real taxonomy candidates with published site taxa for research only
         if: github.event_name != 'pull_request'
-        run: python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site site-plant-binomial-taxonomy.csv --output research-candidate-taxonomy.csv --report research-candidate-taxonomy-report.json
+        run: python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --diverse data/diverse_taxonomy_candidates.json --site site-plant-binomial-taxonomy.csv --output research-candidate-taxonomy.csv --report research-candidate-taxonomy-report.json
       - name: Batch link real site plant taxa to all discovered abstracts
         if: github.event_name != 'pull_request'
         run: python scripts/link_plant_abstract_mentions.py epmc-literature-leads.jsonl --taxonomy research-candidate-taxonomy.csv --output site-plant-literature-mentions.jsonl --report site-plant-literature-mentions-report.json
