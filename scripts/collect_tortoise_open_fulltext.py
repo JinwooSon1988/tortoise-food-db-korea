@@ -153,7 +153,7 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
                         "truncated": len(body) == MAX_CHARS,
                         "review_status": "unverified_fulltext_for_manual_review",
                         "feeding_verdict": None
-                    }, ensure_ascii=False, sort_keys=True) + "\\n")
+                    }, ensure_ascii=False, sort_keys=True) + "\n")
                     counts["fulltexts_retrieved"] += 1
         output.parent.mkdir(parents=True, exist_ok=True)
         report.parent.mkdir(parents=True, exist_ok=True)
