@@ -12,7 +12,7 @@ BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
 
 def export(index_path, site_csv, output, report, diverse_path=None):
     paths = [index_path, site_csv, output, report] + ([diverse_path] if diverse_path else [])
-    if len({p.resolve() for p in paths}) != 4 or output.exists() or report.exists():
+    if len({p.resolve() for p in paths}) != len(paths) or output.exists() or report.exists():
         raise ValueError("paths must be distinct and outputs new")
     index = json.loads(index_path.read_text(encoding="utf-8"))
     shards = index.get("shards")
