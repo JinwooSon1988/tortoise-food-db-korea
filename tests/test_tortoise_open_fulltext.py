@@ -154,6 +154,58 @@ class OpenFulltextTests(unittest.TestCase):
             self.assertEqual({r["source_database"] for r in output}, {"MED", "PMC"})
             self.assertTrue(all(r["feeding_verdict"] is None for r in output))
 
+    def test_windowed_retrieval_bounds_pending_work_and_preserves_duplicates(self):
+        import threading
+        from unittest.mock import patch
+        import scripts.collect_tortoise_open_fulltext as collector
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            rows = [
+                {"source_database": "PMC", "source_record_id": f"PMC{i}",
+                 "source_url": f"https://europepmc.org/article/PMC/PMC{i}"}
+                for i in range(1, 102)
+            ]
+            rows.append({"source_database": "MED", "source_record_id": "99",
+                         "pmcid": "PMC1", "source_url": "https://europepmc.org/article/MED/99"})
+            (root / "input.jsonl").write_text(
+                "".join(json.dumps(row) + "\n" for row in rows))
+            active = 0
+            peak = 0
+            lock = threading.Lock()
+            calls = []
+            def fetcher(pmcid):
+                nonlocal active, peak
+                with lock:
+                    active += 1
+                    peak = max(peak, active)
+                    calls.append(pmcid)
+                with lock:
+                    active -= 1
+                return "Testudo graeca ate Plantago major."
+            original_pool = collector.concurrent.futures.ThreadPoolExecutor
+            submitted = []
+            class CountingPool(original_pool):
+                def submit(self, fn, *args, **kwargs):
+                    future = super().submit(fn, *args, **kwargs)
+                    submitted.append(future)
+                    self.assert_pending()
+                    return future
+                def assert_pending(self):
+                    self_pending = sum(not future.done() for future in submitted)
+                    if self_pending > 24:
+                        raise AssertionError("unbounded queued requests")
+            with patch.object(collector.concurrent.futures, "ThreadPoolExecutor", CountingPool):
+                result = enrich(root / "input.jsonl", root / "out.jsonl",
+                                root / "report.json", workers=12, fetcher=fetcher)
+            self.assertEqual(result["unique_pmc_requests"], 101)
+            self.assertEqual(result["duplicate_pmc_requests_avoided"], 1)
+            self.assertEqual(len(calls), 101)
+            self.assertLessEqual(peak, 12)
+            output = [json.loads(line) for line in (root / "out.jsonl").read_text().splitlines()]
+            self.assertEqual(len(output), 102)
+            self.assertEqual(output[-1]["source_record_id"], "99")
+            self.assertTrue(all(row["feeding_verdict"] is None for row in output))
+
     def test_large_parallel_fulltext_spool_preserves_all_records(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
