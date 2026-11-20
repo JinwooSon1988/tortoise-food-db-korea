@@ -102,8 +102,6 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_triage_fulltext_plant_mentions.py'
       - name: Test 9995 candidate-taxonomy shard research exporter
         run: python -m unittest discover -s tests -p 'test_candidate_taxonomy_research.py'
-      - name: Export site binomials for candidate taxonomy CI
-        run: python scripts/export_site_plant_binomials.py data/plants.json --output ci-site-binomial-taxonomy.csv
       - name: Validate and export real 9995 GBIF candidate names in CI
         run: |
           python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site ci-site-binomial-taxonomy.csv --output ci-research-candidate-taxonomy.csv --report ci-research-candidate-report.json
