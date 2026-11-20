@@ -10,8 +10,8 @@ from pathlib import Path
 BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
 
 
-def export(index_path, site_csv, output, report):
-    paths = [index_path, site_csv, output, report]
+def export(index_path, site_csv, output, report, diverse_path=None):
+    paths = [index_path, site_csv, output, report] + ([diverse_path] if diverse_path else [])
     if len({p.resolve() for p in paths}) != 4 or output.exists() or report.exists():
         raise ValueError("paths must be distinct and outputs new")
     index = json.loads(index_path.read_text(encoding="utf-8"))
@@ -46,6 +46,24 @@ def export(index_path, site_csv, output, report):
                 names.add(name)
     if source_count != index.get("count"):
         raise ValueError("taxonomy index count mismatch")
+    diverse_count = 0
+    if diverse_path is not None:
+        diverse = json.loads(diverse_path.read_text(encoding="utf-8"))
+        records = diverse.get("records")
+        if (not isinstance(records, list)
+                or diverse.get("record_count") != len(records)
+                or not records):
+            raise ValueError("diverse taxonomy record count mismatch")
+        for row_number, record in enumerate(records, 1):
+            name = record.get("scientific_name")
+            if not isinstance(name, str) or not BINOMIAL.fullmatch(name):
+                raise ValueError(f"invalid diverse binomial at row {row_number}")
+            if (record.get("safety_grade") not in (None, "")
+                    or record.get("feeding_safety_status") not in (None, "not_assessed")
+                    or record.get("feeding_record_status") in ("verified", "confirmed", "feeding_pending")):
+                raise ValueError(f"unsafe diverse taxonomy assertion at row {row_number}")
+            names.add(name)
+            diverse_count += 1
     with site_csv.open(encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
         if not reader.fieldnames or "plant_scientific_name" not in reader.fieldnames:
@@ -62,6 +80,7 @@ def export(index_path, site_csv, output, report):
         writer.writerow(["plant_scientific_name"])
         writer.writerows((name,) for name in sorted(names))
     summary = {"taxonomy_candidate_records": source_count,
+               "diverse_taxonomy_candidate_records": diverse_count,
                "unique_matching_binomials": len(names),
                "scope": "research_only_taxonomy_candidates_not_accepted_or_feeding_evidence",
                "feeding_verdict": None}
@@ -75,7 +94,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("index", type=Path)
     parser.add_argument("--site", type=Path, required=True)
+    parser.add_argument("--diverse", type=Path, help="Optional reviewed-structure diverse taxonomy candidates")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
-    print(json.dumps(export(args.index, args.site, args.output, args.report), sort_keys=True))
+    print(json.dumps(export(args.index, args.site, args.output, args.report, args.diverse), sort_keys=True))
