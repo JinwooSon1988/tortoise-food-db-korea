@@ -13,7 +13,7 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             site = root / "site.csv"
-            site.write_text("plant_scientific_name\\nPlantago major\\n", encoding="utf-8")
+            site.write_text("plant_scientific_name\nPlantago major\n", encoding="utf-8")
             result = export(Path("data/taxonomy-shards/index.json"), site,
                             root / "taxa.csv", root / "report.json")
             self.assertEqual(result["taxonomy_candidate_records"], 9995)
@@ -35,7 +35,7 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
             (root / "index.json").write_text(json.dumps({
                 "count": 1, "shards": [{"file": "taxa-01.json", "count": 1,
                                         "sha256": "0" * 64}]}))
-            (root / "site.csv").write_text("plant_scientific_name\\nPlantago major\\n")
+            (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
             with self.assertRaisesRegex(ValueError, "checksum mismatch"):
                 export(root / "index.json", root / "site.csv",
                        root / "out.csv", root / "report.json")
@@ -54,7 +54,7 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
             (root / "index.json").write_text(json.dumps({
                 "count": 1, "shards": [{"file": "taxa-01.json", "count": 1,
                                         "sha256": hashlib.sha256(raw).hexdigest()}]}))
-            (root / "site.csv").write_text("plant_scientific_name\\nPlantago major\\n")
+            (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
             with self.assertRaisesRegex(ValueError, "unsafe/unverified"):
                 export(root / "index.json", root / "site.csv",
                        root / "out.csv", root / "report.json")
