@@ -83,7 +83,7 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_triage_fulltext_plant_mentions.py'
       - name: Query twelve independent tortoise diet research searches in parallel
         if: github.event_name != 'pull_request'
-        run: python scripts/collect_tortoise_literature_epmc.py --output epmc-literature-leads.jsonl --report epmc-literature-report.json --workers 12 --page-size 100 --max-pages 3
+        run: python scripts/collect_tortoise_literature_epmc.py --output epmc-literature-leads.jsonl --report epmc-literature-report.json --workers 12 --page-size 100 --max-pages 6
       - name: Fetch open-access PMC full texts concurrently
         if: github.event_name != 'pull_request'
         run: python scripts/collect_tortoise_open_fulltext.py epmc-literature-leads.jsonl --output epmc-open-fulltexts-review.jsonl --report epmc-open-fulltexts-report.json --workers 12
