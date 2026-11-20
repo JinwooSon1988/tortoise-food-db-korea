@@ -10,7 +10,11 @@ on:
       - 'scripts/link_plant_abstract_mentions.py'
       - 'scripts/prepare_fulltext_plant_matching.py'
       - 'scripts/report_research_taxonomy_coverage.py'
+      - 'scripts/export_candidate_taxonomy_for_research.py'
+      - 'tests/test_candidate_taxonomy_research.py'
+      - 'data/taxonomy-shards/**'
       - 'data/plants.json'
+      - 'data/taxonomy-shards/**'
   pull_request:
     paths:
       - 'scripts/collect_tortoise_literature_epmc.py'
@@ -96,6 +100,11 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_fulltext_plant_matching.py'
       - name: Test full-text mention review triage safeguards
         run: python -m unittest discover -s tests -p 'test_triage_fulltext_plant_mentions.py'
+      - name: Test 9995 candidate-taxonomy shard research exporter
+        run: python -m unittest discover -s tests -p 'test_candidate_taxonomy_research.py'
+      - name: Validate and export real 9995 GBIF candidate names in CI
+        run: |
+          python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site ci-site-binomial-taxonomy.csv --output ci-research-candidate-taxonomy.csv --report ci-research-candidate-report.json
       - name: Query twelve independent tortoise diet research searches in parallel
         if: github.event_name != 'pull_request'
         run: python scripts/collect_tortoise_literature_epmc.py --output epmc-literature-leads.jsonl --report epmc-literature-report.json --workers 12 --page-size 100 --max-pages 6
@@ -114,18 +123,21 @@ jobs:
       - name: Export real published plant catalog names
         if: github.event_name != 'pull_request'
         run: python scripts/export_site_plant_binomials.py data/plants.json --output site-plant-binomial-taxonomy.csv
+      - name: Combine 9995 real taxonomy candidates with published site taxa for research only
+        if: github.event_name != 'pull_request'
+        run: python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site site-plant-binomial-taxonomy.csv --output research-candidate-taxonomy.csv --report research-candidate-taxonomy-report.json
       - name: Batch link real site plant taxa to all discovered abstracts
         if: github.event_name != 'pull_request'
-        run: python scripts/link_plant_abstract_mentions.py epmc-literature-leads.jsonl --taxonomy site-plant-binomial-taxonomy.csv --output site-plant-literature-mentions.jsonl --report site-plant-literature-mentions-report.json
+        run: python scripts/link_plant_abstract_mentions.py epmc-literature-leads.jsonl --taxonomy research-candidate-taxonomy.csv --output site-plant-literature-mentions.jsonl --report site-plant-literature-mentions-report.json
       - name: Prepare retrieved full texts for exact botanical matching
         if: github.event_name != 'pull_request'
         run: python scripts/prepare_fulltext_plant_matching.py epmc-open-fulltexts-review.jsonl --output epmc-fulltext-match-input.jsonl
       - name: Match catalog taxa against actual retrieved full texts
         if: github.event_name != 'pull_request'
-        run: python scripts/link_plant_abstract_mentions.py epmc-fulltext-match-input.jsonl --taxonomy site-plant-binomial-taxonomy.csv --source-scope fulltext --output site-plant-fulltext-mentions.jsonl --report site-plant-fulltext-mentions-report.json
+        run: python scripts/link_plant_abstract_mentions.py epmc-fulltext-match-input.jsonl --taxonomy research-candidate-taxonomy.csv --source-scope fulltext --output site-plant-fulltext-mentions.jsonl --report site-plant-fulltext-mentions-report.json
       - name: Report whole-site plant research mention coverage
         if: github.event_name != 'pull_request'
-        run: python scripts/report_research_taxonomy_coverage.py --taxonomy site-plant-binomial-taxonomy.csv --abstracts site-plant-literature-mentions.jsonl --fulltexts site-plant-fulltext-mentions.jsonl --output site-plant-coverage.csv --report site-plant-coverage-report.json
+        run: python scripts/report_research_taxonomy_coverage.py --taxonomy research-candidate-taxonomy.csv --abstracts site-plant-literature-mentions.jsonl --fulltexts site-plant-fulltext-mentions.jsonl --output site-plant-coverage.csv --report site-plant-coverage-report.json
       - name: Prioritize full-text plant candidates for human review
         if: github.event_name != 'pull_request'
         run: python scripts/triage_fulltext_plant_mentions.py site-plant-fulltext-mentions.jsonl --output site-plant-fulltext-review-priority.jsonl --report site-plant-fulltext-review-priority-report.json
@@ -151,6 +163,8 @@ jobs:
             epmc-literature-review.csv
             site-catalog-identity-audit.json
             site-plant-binomial-taxonomy.csv
+            research-candidate-taxonomy.csv
+            research-candidate-taxonomy-report.json
             site-plant-literature-mentions.jsonl
             site-plant-literature-mentions-report.json
           if-no-files-found: warn
