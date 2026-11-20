@@ -68,6 +68,23 @@ class OpenFulltextTests(unittest.TestCase):
         self.assertLessEqual(peak, 8)
         self.assertGreaterEqual(peak, 1)
 
+    def test_fulltext_scan_preserves_late_diet_mention_after_250k(self):
+        from io import BytesIO
+        from scripts.collect_tortoise_open_fulltext import MAX_CHARS
+        self.assertEqual(MAX_CHARS, 1_000_000)
+        xml = (b"<article><body><p>" + b"x" * 300_000 +
+               b" Testudo graeca consumed Plantago major." +
+               b"</p></body></article>")
+        result = retrieve("PMC123456", opener=lambda request, timeout: BytesIO(xml))
+        self.assertIn("Testudo graeca consumed Plantago major.", result)
+
+    def test_extracted_text_is_still_bounded_at_one_million(self):
+        from io import BytesIO
+        from scripts.collect_tortoise_open_fulltext import MAX_CHARS
+        xml = b"<article><body><p>" + b"x" * (MAX_CHARS + 100) + b"</p></body></article>"
+        result = retrieve("PMC123456", opener=lambda request, timeout: BytesIO(xml))
+        self.assertEqual(len(result), MAX_CHARS)
+
     def test_large_pmc_xml_beyond_previous_three_mb_limit(self):
         from io import BytesIO
         # Large supplementary material can precede the actual article body.
