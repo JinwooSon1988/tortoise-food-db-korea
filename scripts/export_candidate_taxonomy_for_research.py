@@ -67,7 +67,7 @@ def export(index_path, site_csv, output, report):
                "feeding_verdict": None}
     with report.open("x", encoding="utf-8") as stream:
         json.dump(summary, stream, indent=2)
-        stream.write("\\n")
+        stream.write("\n")
     return summary
 
 
