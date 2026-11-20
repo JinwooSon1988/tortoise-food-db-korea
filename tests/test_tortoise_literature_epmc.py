@@ -47,6 +47,18 @@ class EuropePMCTests(unittest.TestCase):
         self.assertEqual(len(calls), 8)
         self.assertEqual(delays, [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 16.0])
 
+    def test_network_timeouts_use_full_bounded_retry_budget(self):
+        calls = []
+        delays = []
+        def opener(req, timeout):
+            calls.append(timeout)
+            raise TimeoutError("temporary Europe PMC outage")
+        with self.assertRaises(TimeoutError):
+            request_json_with_retry(type("Request", (), {"full_url": "https://example.org"})(),
+                                    opener=opener, sleeper=delays.append)
+        self.assertEqual(len(calls), 8)
+        self.assertEqual(delays, [0.5, 1.0, 2.0, 4.0, 8.0, 16.0, 16.0])
+
     def test_parallel_results_deduplicate_and_preserve_unmatched_scope(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

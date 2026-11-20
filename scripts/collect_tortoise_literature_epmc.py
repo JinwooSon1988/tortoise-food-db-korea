@@ -45,7 +45,7 @@ def request_json_with_retry(req, opener=urlopen, sleeper=time.sleep):
             if attempt == 7:
                 raise
         except (URLError, TimeoutError):
-            if attempt == 5:
+            if attempt == 7:
                 raise
         sleeper(min(16.0, 0.5 * (2 ** attempt)))
 
