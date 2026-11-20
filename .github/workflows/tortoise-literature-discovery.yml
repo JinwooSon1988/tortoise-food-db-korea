@@ -1,6 +1,10 @@
 name: Tortoise literature discovery
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tortoise-literature-discovery.yml'
   pull_request:
     paths:
       - 'scripts/collect_tortoise_literature_epmc.py'
