@@ -43,8 +43,8 @@ class BulkResearchMatchingTests(unittest.TestCase):
             accepted = root / "accepted.csv"
             abstracts = root / "abstracts.jsonl"
             catalog.write_text(json.dumps([{"scientific": "Plantago major"}]))
-            accepted.write_text("plant_scientific_name,taxonomic_status,source_reference\\n"
-                                "Taraxacum officinale,accepted,source-1\\n".replace("\\n", "\n"))
+            accepted.write_text("plant_scientific_name,taxonomic_status,source_reference\n"
+                                "Taraxacum officinale,accepted,source-1\n")
             abstracts.write_text(json.dumps({
                 "source_database": "MED", "source_record_id": "1",
                 "review_status": "invalid_status", "feeding_verdict": None,
