@@ -97,6 +97,9 @@ jobs:
       - name: Match catalog taxa against actual retrieved full texts
         if: github.event_name != 'pull_request'
         run: python scripts/link_plant_abstract_mentions.py epmc-fulltext-match-input.jsonl --taxonomy site-plant-binomial-taxonomy.csv --source-scope fulltext --output site-plant-fulltext-mentions.jsonl --report site-plant-fulltext-mentions-report.json
+      - name: Report whole-site plant research mention coverage
+        if: github.event_name != 'pull_request'
+        run: python scripts/report_research_taxonomy_coverage.py --taxonomy site-plant-binomial-taxonomy.csv --abstracts site-plant-literature-mentions.jsonl --fulltexts site-plant-fulltext-mentions.jsonl --output site-plant-coverage.csv --report site-plant-coverage-report.json
       - name: Prioritize full-text plant candidates for human review
         if: github.event_name != 'pull_request'
         run: python scripts/triage_fulltext_plant_mentions.py site-plant-fulltext-mentions.jsonl --output site-plant-fulltext-review-priority.jsonl --report site-plant-fulltext-review-priority-report.json
@@ -112,6 +115,8 @@ jobs:
             epmc-fulltext-match-input.jsonl
             site-plant-fulltext-mentions.jsonl
             site-plant-fulltext-mentions-report.json
+            site-plant-coverage.csv
+            site-plant-coverage-report.json
             site-plant-fulltext-review-priority.jsonl
             site-plant-fulltext-review-priority-report.json
             epmc-literature-report.json
