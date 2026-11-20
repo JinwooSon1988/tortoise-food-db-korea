@@ -5,6 +5,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/tortoise-literature-discovery.yml'
+      - 'scripts/collect_tortoise_literature_epmc.py'
+      - 'scripts/collect_tortoise_open_fulltext.py'
+      - 'scripts/link_plant_abstract_mentions.py'
+      - 'scripts/prepare_fulltext_plant_matching.py'
+      - 'scripts/report_research_taxonomy_coverage.py'
+      - 'data/plants.json'
   pull_request:
     paths:
       - 'scripts/collect_tortoise_literature_epmc.py'
