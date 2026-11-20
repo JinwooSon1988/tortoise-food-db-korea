@@ -36,6 +36,24 @@ class BulkResearchMatchingTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 run(catalog, accepted, abstracts, fulltexts, root / "output")
 
+    def test_invalid_literature_rolls_back_every_output(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            catalog = root / "plants.json"
+            accepted = root / "accepted.csv"
+            abstracts = root / "abstracts.jsonl"
+            catalog.write_text(json.dumps([{"scientific": "Plantago major"}]))
+            accepted.write_text("plant_scientific_name,taxonomic_status,source_reference\\n"
+                                "Taraxacum officinale,accepted,source-1\\n".replace("\\n", "\n"))
+            abstracts.write_text(json.dumps({
+                "source_database": "MED", "source_record_id": "1",
+                "review_status": "invalid_status", "feeding_verdict": None,
+                "abstract_text": "Plantago major"}) + "\n")
+            with self.assertRaises(ValueError):
+                run(catalog, accepted, abstracts, None, root / "output")
+            self.assertFalse((root / "output").exists())
+            self.assertEqual(list(root.glob(".research-batch-*")), [])
+
     def test_missing_input_does_not_create_output(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
