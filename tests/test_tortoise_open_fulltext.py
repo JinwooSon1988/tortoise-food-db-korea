@@ -122,6 +122,28 @@ class OpenFulltextTests(unittest.TestCase):
             self.assertEqual({r["source_database"] for r in output}, {"MED", "PMC"})
             self.assertTrue(all(r["feeding_verdict"] is None for r in output))
 
+    def test_large_parallel_fulltext_spool_preserves_all_records(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            rows = [
+                {"source_database": "PMC", "source_record_id": f"PMC{i}",
+                 "source_url": f"https://europepmc.org/article/PMC/PMC{i}",
+                 "title": f"Study {i}"} for i in range(1, 121)
+            ]
+            (root / "input.jsonl").write_text(
+                "".join(json.dumps(row) + "\n" for row in rows), encoding="utf-8")
+            counts = enrich(root / "input.jsonl", root / "out.jsonl",
+                            root / "report.json", workers=12,
+                            fetcher=lambda pmcid: "Plantago major " * 2000)
+            self.assertEqual(counts["fulltexts_retrieved"], 120)
+            self.assertEqual(counts["unique_pmc_requests"], 120)
+            output = [json.loads(line) for line in
+                      (root / "out.jsonl").read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(len(output), 120)
+            self.assertEqual(output[0]["source_record_id"], "PMC1")
+            self.assertEqual(output[-1]["source_record_id"], "PMC120")
+            self.assertTrue(all(item["feeding_verdict"] is None for item in output))
+
     def test_parallel_review_only_and_missing_fulltext(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
