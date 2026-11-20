@@ -17,6 +17,8 @@ on:
       - 'scripts/build_research_taxonomy_index.py'
       - 'scripts/run_bulk_research_matching.py'
       - 'scripts/audit_research_taxonomy_provenance.py'
+      - 'scripts/report_research_taxonomy_coverage.py'
+      - 'tests/test_research_taxonomy_coverage.py'
       - 'tests/test_research_taxonomy_provenance.py'
       - 'tests/test_bulk_research_matching.py'
       - 'tests/test_research_taxonomy_index.py'
@@ -61,6 +63,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_research_taxonomy_index.py'
       - name: Test accepted-name source provenance audit
         run: python -m unittest discover -s tests -p 'test_research_taxonomy_provenance.py'
+      - name: Test research-only taxon coverage reporting
+        run: python -m unittest discover -s tests -p 'test_research_taxonomy_coverage.py'
       - name: Test end-to-end bulk research-only matching
         run: python -m unittest discover -s tests -p 'test_bulk_research_matching.py'
       - name: Test open access full-text collection safeguards

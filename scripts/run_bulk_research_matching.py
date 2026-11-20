@@ -12,11 +12,13 @@ try:
     from scripts.export_site_plant_binomials import export
     from scripts.build_research_taxonomy_index import build
     from scripts.audit_research_taxonomy_provenance import audit
+    from scripts.report_research_taxonomy_coverage import coverage
     from scripts.link_plant_abstract_mentions import link
 except ModuleNotFoundError:
     from export_site_plant_binomials import export
     from build_research_taxonomy_index import build
     from audit_research_taxonomy_provenance import audit
+    from report_research_taxonomy_coverage import coverage
     from link_plant_abstract_mentions import link
 
 
@@ -52,7 +54,12 @@ def run(catalog, accepted, abstracts, fulltexts, output_dir):
                 output_dir / "fulltext-report.json", source_scope="fulltext")
         abstract_counts = abstract_future.result()
         fulltext_counts = fulltext_future.result() if fulltext_future else None
+    coverage_counts = coverage(taxonomy, output_dir / "abstract-mentions.jsonl",
+                               output_dir / "fulltext-mentions.jsonl" if fulltexts else None,
+                               output_dir / "taxon-coverage.csv",
+                               output_dir / "taxon-coverage-report.json")
     report = {"taxonomy": taxonomy_counts, "provenance": provenance_counts,
+              "coverage": coverage_counts,
               "abstracts": abstract_counts,
               "fulltexts": fulltext_counts, "status": "research_only_unverified_mentions",
               "feeding_verdict": None}
