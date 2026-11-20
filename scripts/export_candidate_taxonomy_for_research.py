@@ -22,7 +22,7 @@ def export(index_path, site_csv, output, report):
     source_count = 0
     for shard in shards:
         filename = shard.get("file")
-        if not isinstance(filename, str) or not re.fullmatch(r"taxa-[0-9]+\\.json", filename):
+        if not isinstance(filename, str) or not re.fullmatch("taxa-[0-9]+[.]json", filename):
             raise ValueError("invalid shard filename")
         path = index_path.parent / filename
         raw = path.read_bytes()
