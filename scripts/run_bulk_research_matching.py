@@ -6,6 +6,7 @@ All matching outputs remain unverified; this command never publishes feeding ver
 import argparse
 import concurrent.futures
 import json
+import tempfile
 from pathlib import Path
 
 try:
@@ -22,7 +23,7 @@ except ModuleNotFoundError:
     from link_plant_abstract_mentions import link
 
 
-def run(catalog, accepted, abstracts, fulltexts, output_dir):
+def _run_into(catalog, accepted, abstracts, fulltexts, output_dir):
     inputs = [catalog, accepted, abstracts] + ([fulltexts] if fulltexts else [])
     if len({p.resolve() for p in inputs}) != len(inputs):
         raise ValueError("inputs must be distinct")
@@ -66,6 +67,28 @@ def run(catalog, accepted, abstracts, fulltexts, output_dir):
     (output_dir / "batch-report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return report
+
+
+def run(catalog, accepted, abstracts, fulltexts, output_dir):
+    """Publish only a complete, validated batch; discard partial failures."""
+    inputs = [catalog, accepted, abstracts] + ([fulltexts] if fulltexts else [])
+    if output_dir.exists():
+        raise ValueError("output directory must be new (no overwrites)")
+    if any(not path.is_file() for path in inputs):
+        raise FileNotFoundError("one or more input files do not exist")
+    if len({p.resolve() for p in inputs}) != len(inputs):
+        raise ValueError("inputs must be distinct")
+    if any(output_dir.resolve() == p.resolve() or output_dir.resolve() in p.resolve().parents
+           for p in inputs):
+        raise ValueError("output directory cannot contain an input")
+    output_dir.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".research-batch-", dir=output_dir.parent) as temporary:
+        staging = Path(temporary) / "complete"
+        report = _run_into(catalog, accepted, abstracts, fulltexts, staging)
+        if output_dir.exists():
+            raise ValueError("output directory appeared during processing")
+        staging.rename(output_dir)
+        return report
 
 
 if __name__ == "__main__":
