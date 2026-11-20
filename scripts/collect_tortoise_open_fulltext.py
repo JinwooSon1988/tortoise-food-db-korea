@@ -5,6 +5,7 @@ import concurrent.futures
 import json
 import tempfile
 import re
+import sqlite3
 import threading
 import time
 import xml.etree.ElementTree as ET
@@ -111,17 +112,35 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
     # The pool remains bounded at 12 workers and HTTP requests at eight slots.
     with tempfile.TemporaryDirectory(prefix=".pmc-fulltexts-") as scratch:
         spool_path = Path(scratch) / "fulltexts.jsonl"
-        with spool_path.open("w", encoding="utf-8") as spool:
+        # Store completed responses on disk instead of retaining every future result.
+        # Submit at most two worker-windows at a time, regardless of corpus size.
+        cache_path = Path(scratch) / "responses.sqlite3"
+        with sqlite3.connect(cache_path) as cache:
+            cache.execute("CREATE TABLE responses (pmcid TEXT PRIMARY KEY, body TEXT, failed INTEGER)")
             with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
-                futures = {pmcid: pool.submit(fetcher, pmcid) for pmcid in unique_pmcids}
+                window_size = workers * 2
+                for offset in range(0, len(unique_pmcids), window_size):
+                    batch = unique_pmcids[offset:offset + window_size]
+                    futures = {pmcid: pool.submit(fetcher, pmcid) for pmcid in batch}
+                    for pmcid, future in futures.items():
+                        try:
+                            body = future.result()
+                            failed = 0
+                        except Exception:
+                            body = None
+                            failed = 1
+                        cache.execute("INSERT INTO responses VALUES (?, ?, ?)",
+                                      (pmcid, body, failed))
+                    cache.commit()
+            with spool_path.open("w", encoding="utf-8") as spool:
                 for row, pmcid in items:
-                    future = futures[pmcid]
-                    try:
-                        text = future.result()
-                    except Exception:
+                    body, failed = cache.execute(
+                        "SELECT body, failed FROM responses WHERE pmcid = ?", (pmcid,)
+                    ).fetchone()
+                    if failed:
                         counts["retrieval_errors"] += 1
                         continue
-                    if not text:
+                    if not body:
                         counts["unavailable_fulltext"] += 1
                         continue
                     spool.write(json.dumps({
@@ -130,11 +149,11 @@ def enrich(corpus, output, report, workers=12, fetcher=retrieve):
                         "pmcid": pmcid,
                         "source_url": row["source_url"],
                         "source_title": row.get("title"),
-                        "fulltext_excerpt": text,
-                        "truncated": len(text) == MAX_CHARS,
+                        "fulltext_excerpt": body,
+                        "truncated": len(body) == MAX_CHARS,
                         "review_status": "unverified_fulltext_for_manual_review",
                         "feeding_verdict": None
-                    }, ensure_ascii=False, sort_keys=True) + "\n")
+                    }, ensure_ascii=False, sort_keys=True) + "\\n")
                     counts["fulltexts_retrieved"] += 1
         output.parent.mkdir(parents=True, exist_ok=True)
         report.parent.mkdir(parents=True, exist_ok=True)
