@@ -168,7 +168,7 @@ class OpenFulltextTests(unittest.TestCase):
             rows.append({"source_database": "MED", "source_record_id": "99",
                          "pmcid": "PMC1", "source_url": "https://europepmc.org/article/MED/99"})
             (root / "input.jsonl").write_text(
-                "".join(json.dumps(row) + "\\n" for row in rows))
+                "".join(json.dumps(row) + "\n" for row in rows))
             active = 0
             peak = 0
             lock = threading.Lock()
