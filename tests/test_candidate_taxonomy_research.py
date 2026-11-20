@@ -24,6 +24,53 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
             self.assertIn("Plantago major", names)
             self.assertIn("Abies alba", names)
 
+    def test_diverse_candidate_batch_preserves_research_only(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "taxa-01.json"
+            raw = json.dumps({"records": [{
+                "scientific_name": "Abies alba", "source_scope": "taxonomy_only",
+                "identity_status": "taxonomy_candidate",
+                "feeding_safety_status": "not_assessed", "safety_grade": None,
+                "source_taxon_url": "https://www.gbif.org/species/123"}]}).encode()
+            source.write_bytes(raw)
+            (root / "index.json").write_text(json.dumps({
+                "count": 1, "shards": [{"file": source.name, "count": 1,
+                "sha256": hashlib.sha256(raw).hexdigest()}]}))
+            (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
+            (root / "diverse.json").write_text(json.dumps({"record_count": 2, "records": [
+                {"scientific_name": "Taraxacum officinale", "safety_grade": None,
+                 "feeding_safety_status": "not_assessed"},
+                {"scientific_name": "Abies alba", "safety_grade": None,
+                 "feeding_safety_status": "not_assessed"}]}))
+            result = export(root / "index.json", root / "site.csv",
+                            root / "out.csv", root / "report.json", root / "diverse.json")
+            self.assertEqual(result["diverse_taxonomy_candidate_records"], 2)
+            self.assertEqual(result["unique_matching_binomials"], 3)
+            self.assertIsNone(result["feeding_verdict"])
+
+    def test_diverse_unsafe_record_rejected_before_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "taxa-01.json"
+            raw = json.dumps({"records": [{
+                "scientific_name": "Abies alba", "source_scope": "taxonomy_only",
+                "identity_status": "taxonomy_candidate",
+                "feeding_safety_status": "not_assessed", "safety_grade": None,
+                "source_taxon_url": "https://www.gbif.org/species/123"}]}).encode()
+            source.write_bytes(raw)
+            (root / "index.json").write_text(json.dumps({
+                "count": 1, "shards": [{"file": source.name, "count": 1,
+                "sha256": hashlib.sha256(raw).hexdigest()}]}))
+            (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
+            (root / "diverse.json").write_text(json.dumps({"record_count": 1, "records": [
+                {"scientific_name": "Taraxacum officinale", "safety_grade": "A",
+                 "feeding_safety_status": "safe"}]}))
+            with self.assertRaisesRegex(ValueError, "unsafe diverse"):
+                export(root / "index.json", root / "site.csv",
+                       root / "out.csv", root / "report.json", root / "diverse.json")
+            self.assertFalse((root / "out.csv").exists())
+
     def test_corrupt_shard_rejected_without_publishing(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
