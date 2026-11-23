@@ -1,0 +1,33 @@
+{
+  "batch": "openalex-research-batch-45103017324",
+  "run_id": 45103017324,
+  "source_artifact_id": 14785969456,
+  "source_commit": "e3ade3c4d04a2b04e96a055eb09740ec047ee8f3",
+  "scope": "research_only_unreviewed",
+  "searched_taxa": 100,
+  "taxa_with_hits": 22,
+  "hit_occurrences": 49,
+  "unique_works": 43,
+  "title_mentions_tortoise_or_testudo": 2,
+  "title_mentions_tortoise_and_diet_terms": 0,
+  "feeding_verdicts_confirmed": 0,
+  "limitations": "Title-only conservative screening; no abstract/full text verification, and title matches do not prove plant ingestion. Do not promote any leads to feeding evidence.",
+  "tortoise_title_leads": [
+    {
+      "openalex_id": "https://openalex.org/W4387913188",
+      "title": "Testudo marginata Schoepff 1793 – Marginated Tortoise, Kraspedochelóna, Breshka Malore, Testuggine MarginataTestudo marginata Schoepff 1793 – Marginated Tortoise, Kraspedochelóna, Breshka Malore, Testuggine Marginata",
+      "query_plant_names": [
+        "Abies cephalonica"
+      ],
+      "feeding_confirmed": false
+    },
+    {
+      "openalex_id": "https://openalex.org/W4413258309",
+      "title": "Assessment of Chlorella vulgaris as a biological control agent against tortoise tick Hyalomma aegyptium (Acari: Ixodidae) in Egypt",
+      "query_plant_names": [
+        "Adiantum capillus-veneris"
+      ],
+      "feeding_confirmed": false
+    }
+  ]
+}
