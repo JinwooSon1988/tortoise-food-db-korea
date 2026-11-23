@@ -1,0 +1,43 @@
+name: OpenAlex bounded real discovery batch
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/openalex-real-discovery-batch.yml'
+permissions:
+  contents: read
+concurrency:
+  group: openalex-real-discovery-batch
+  cancel-in-progress: false
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build research-only verified taxonomy CSV
+        run: |
+          mkdir -p "$RUNNER_TEMP/gb-research"
+          printf 'plant_scientific_name\n' > "$RUNNER_TEMP/gb-research/site.csv"
+          python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site "$RUNNER_TEMP/gb-research/site.csv" --output "$RUNNER_TEMP/gb-research/candidates.csv" --report "$RUNNER_TEMP/gb-research/taxonomy-report.json"
+      - name: Discover 100 research-only literature candidates with bounded API rate
+        run: |
+          python scripts/research_bulk_leads.py --taxa-csv "$RUNNER_TEMP/gb-research/candidates.csv" --workers 4 --request-interval 3 --limit 100 --output "$RUNNER_TEMP/gb-research/openalex-leads.jsonl"
+      - name: Measure actual results and retry backlog
+        if: always()
+        run: |
+          if test -s "$RUNNER_TEMP/gb-research/openalex-leads.jsonl"; then
+            python scripts/audit_openalex_bulk_leads.py "$RUNNER_TEMP/gb-research/openalex-leads.jsonl" --report "$RUNNER_TEMP/gb-research/coverage-report.json"
+          fi
+      - name: Upload research-only evidence leads and metrics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openalex-research-batch-${{ github.run_id }}
+          path: ${{ runner.temp }}/gb-research/
+          retention-days: 30
+          if-no-files-found: error
