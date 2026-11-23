@@ -29,6 +29,9 @@ def build_queue(rows):
         try:
             if int(row["feeding_keyword_windows"]) > 0:
                 entry["keyword_papers"].add(paper)
+                # Prefer an evidence-bearing context over an arbitrary first paper.
+                if row["sample_context"].strip() and not entry.get("keyword_context"):
+                    entry["keyword_context"] = row["sample_context"].strip()
         except ValueError:
             pass
     result = []
@@ -37,7 +40,7 @@ def build_queue(rows):
             "unique_papers": len(entry["papers"]),
             "feeding_keyword_papers": len(entry["keyword_papers"]),
             "openalex_papers": " | ".join(sorted(entry["papers"])),
-            "sample_context": entry["sample_context"],
+            "sample_context": entry.get("keyword_context", entry["sample_context"]),
             "full_text_checked": "no",
             "feeding_confirmed": "unverified",
             "safety_verdict": "not_assessed"})
