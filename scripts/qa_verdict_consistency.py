@@ -159,18 +159,28 @@ for p in public:
     decision_start = text.find(' decision" data-grade=')
     decision_end = text.find('</section>', decision_start)
     decision_text = text[decision_start:decision_end] if decision_start >= 0 and decision_end >= 0 else ""
-    expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(g["label"]), quote=True)}"'
+    species_record_only = a is None and any(
+        x.get("assessment_scope") == "exact_species" and x.get("animal_taxon")
+        and any(evidence_by_id.get(eid, {}).get("source_type") in
+                ("specialist_husbandry", "captive_feeding_record", "wild_feeding_observation", "husbandry_recommendation")
+                for eid in x.get("evidence_ids", []))
+        for x in rows
+    )
+    visible_label = "급여 기록 있음 (검증 중)" if species_record_only else g["label"]
+    visible_meaning = ("특정 육지거북 종에 한정된 급여 관련 자료가 있습니다. 실제 섭식 관찰과 사육 지침의 권장은 서로 다른 근거이며, 전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다."
+                       if species_record_only else g["meaning"])
+    expected_aria = f'aria-label="급여 판정 · {html.escape(str(g["grade"]), quote=True)} {html.escape(str(visible_label), quote=True)}"'
     if expected_aria not in decision_text:
         errors.append(f"{pid}: decision card must expose grade and verdict label to assistive technology")
     if g["grade"] == "보류":
-        if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다")):
+        if not any(boundary in decision_text for boundary in ("보류는 안전하다는 뜻이 아니다", "판정이 없다는 것은 안전하다는 뜻이 아니다", "전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다.")):
             errors.append(f"{pid}: hold safety boundary must remain visible in the decision card")
     elif g["grade"] == "D":
         if g["meaning"] not in decision_text or g["label"] not in decision_text:
             errors.append(f"{pid}: D verdict must preserve explicit do-not-feed meaning")
     elif g["grade"] in ("A", "B", "C") and "판정 보류" in text.split('<section class="card practical"',1)[0]:
         errors.append(f"{pid}: graded verdict must not look like a hold state")
-    if g["label"] not in text or g["meaning"] not in text:
+    if visible_label not in text or visible_meaning not in text:
         errors.append(f"{pid}: grade label/meaning missing")
     if a and g["grade"] in ("B", "C", "D") and ('class="decisionwhy' not in decision_text or '<b>왜 이렇게 판정했나</b>' not in decision_text):
         errors.append(f"{pid}: restrictive verdict reason must remain visible before secondary detail")
