@@ -75,6 +75,52 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
                        root / "out.csv", root / "report.json", root / "diverse.json")
             self.assertFalse((root / "out.csv").exists())
 
+    def test_rejects_malformed_gbif_urls_in_both_sources(self):
+        bad_urls = (
+            "https://www.gbif.org/species/",
+            "https://www.gbif.org/species/not-a-number",
+            "https://www.gbif.org/species/123/extra",
+            "https://www.gbif.org/species/123?redirect=1",
+            "https://www.gbif.org/species/123.evil.example",
+        )
+        for bad_url in bad_urls:
+            for in_diverse in (False, True):
+                with self.subTest(url=bad_url, diverse=in_diverse):
+                    with tempfile.TemporaryDirectory() as directory:
+                        root = Path(directory)
+                        record = {
+                            "scientific_name": "Abies alba",
+                            "source_scope": "taxonomy_only",
+                            "identity_status": "taxonomy_candidate",
+                            "feeding_safety_status": "not_assessed",
+                            "safety_grade": None,
+                            "source_taxon_url": "https://www.gbif.org/species/123",
+                        }
+                        shard_record = dict(record)
+                        diverse_record = dict(record)
+                        if in_diverse:
+                            diverse_record["source_taxon_url"] = bad_url
+                        else:
+                            shard_record["source_taxon_url"] = bad_url
+                        raw = json.dumps({"records": [shard_record]}).encode()
+                        (root / "taxa-01.json").write_bytes(raw)
+                        (root / "index.json").write_text(json.dumps({
+                            "count": 1,
+                            "shards": [{"file": "taxa-01.json", "count": 1,
+                                        "sha256": hashlib.sha256(raw).hexdigest()}],
+                        }))
+                        (root / "site.csv").write_text("plant_scientific_name\\nPlantago major\\n")
+                        if in_diverse:
+                            (root / "diverse.json").write_text(json.dumps({
+                                "record_count": 1, "records": [diverse_record],
+                            }))
+                        with self.assertRaisesRegex(ValueError, "unsafe"):
+                            export(root / "index.json", root / "site.csv",
+                                   root / "out.csv", root / "report.json",
+                                   root / "diverse.json" if in_diverse else None)
+                        self.assertFalse((root / "out.csv").exists())
+                        self.assertFalse((root / "report.json").exists())
+
     def test_corrupt_shard_rejected_without_publishing(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
