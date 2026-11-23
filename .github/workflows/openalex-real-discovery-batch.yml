@@ -33,6 +33,12 @@ jobs:
           if test -s "$RUNNER_TEMP/gb-research/openalex-leads.jsonl"; then
             python scripts/audit_openalex_bulk_leads.py "$RUNNER_TEMP/gb-research/openalex-leads.jsonl" --report "$RUNNER_TEMP/gb-research/coverage-report.json"
           fi
+      - name: Screen title-only tortoise relevance without promoting feeding verdicts
+        if: always()
+        run: |
+          if test -s "$RUNNER_TEMP/gb-research/openalex-leads.jsonl"; then
+            python scripts/screen_openalex_tortoise_titles.py "$RUNNER_TEMP/gb-research/openalex-leads.jsonl" --output "$RUNNER_TEMP/gb-research/title-screening-report.json"
+          fi
       - name: Upload research-only evidence leads and metrics
         if: always()
         uses: actions/upload-artifact@v4
