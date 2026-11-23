@@ -4,10 +4,19 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.research_bulk_leads import load_completed_checkpoint
+from scripts.research_bulk_leads import load_completed_checkpoint, select_taxa
 
 
 class OpenAlexCheckpointTests(unittest.TestCase):
+    def test_offset_windows_remain_disjoint_with_completed_rows(self):
+        source = [{'name': f'Plant {i}'} for i in range(12)]
+        first = select_taxa(iter(source), {'plant 2'}, 0, 5)
+        second = select_taxa(iter(source), {'plant 7'}, 5, 5)
+        self.assertEqual([x['name'] for x in first], ['Plant 0', 'Plant 1', 'Plant 3', 'Plant 4'])
+        self.assertEqual([x['name'] for x in second], ['Plant 5', 'Plant 6', 'Plant 8', 'Plant 9'])
+        self.assertFalse({x['name'] for x in first} & {x['name'] for x in second})
+
+
     def test_completed_only_and_retryable(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "leads.jsonl"
