@@ -298,6 +298,22 @@ def render(p):
     summary_ko = assessment_copy((a or {}).get("why"), a)
     summary = T(summary_ko, f"{pid}.why") if summary_ko else ("There is no public assessment for Mediterranean Testudo or tortoises in general yet. The species-specific notes below apply only to those species." if not a else "Evidence review in progress.")
     linked = [evidence_by_id[e] for e in ((a or {}).get("evidence_ids") or []) if e in evidence_by_id]
+    # Match Korean detail rendering: species-only husbandry is evidence, not a universal safety grade.
+    species_only = [x for x in rows if x.get("assessment_scope") == "exact_species" and x.get("animal_taxon")
+                    and any(evidence_by_id.get(eid, {}).get("source_type") in
+                            ("specialist_husbandry", "captive_feeding_record", "wild_feeding_observation", "husbandry_recommendation")
+                            for eid in x.get("evidence_ids", []))]
+    species_evidence_only = a is None and bool(species_only)
+    if species_evidence_only:
+        label = "Feeding record available (under review)"
+        meaning = ("Feeding-related sources apply to specific tortoise species only. Observed consumption and "
+                   "husbandry recommendations are different evidence types; no general safety grade is established.")
+        primary = species_only[0]
+        summary = ("Species-specific feeding evidence exists for " +
+                   str(primary.get("animal_taxon") or "a tortoise species") + ". " +
+                   "The cited husbandry source lists this plant as a possible dietary component; this does not establish a safe dose, feeding frequency, or applicability to other tortoise species.")
+        linked = list({e["id"]: e for x in species_only for eid in x.get("evidence_ids", [])
+                       if (e := evidence_by_id.get(eid))}.values())
     if a and summary_ko and len(summary_ko) < 55:
         facts = [en_text(e.get("supports"), f"{e['id']}.supports") for e in linked if e.get("supports")]
         fact = facts[0] if facts else ""

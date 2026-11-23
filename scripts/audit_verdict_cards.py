@@ -8,6 +8,7 @@ ROOT=Path(__file__).resolve().parents[1]
 all_plants=json.loads((ROOT/'data/plants.json').read_text(encoding='utf-8'))
 assessments=load_assessments()
 rows_by=by_plant(assessments)
+evidence_by_id={e['id']:e for e in json.loads((ROOT/'data/public_evidence_records.json').read_text(encoding='utf-8')).get('records',[])}
 plants=public_plants(all_plants,assessments)
 errors=[]
 
@@ -18,7 +19,16 @@ for p in plants:
         errors.append(f'{pid}: detail page missing'); continue
     text=path.read_text(encoding='utf-8')
     g=display(representative(rows_by.get(pid,[])))
-    if g['label'] not in text or g['meaning'] not in text: errors.append(f'{pid}: public verdict label/meaning missing')
+    species_only=[a for a in rows_by.get(pid,[]) if a.get('assessment_scope')=='exact_species' and a.get('animal_taxon') and any(evidence_by_id.get(eid,{}).get('source_type') in ('specialist_husbandry','captive_feeding_record','wild_feeding_observation','husbandry_recommendation') for eid in a.get('evidence_ids',[]))]
+    if representative(rows_by.get(pid,[])) is None and species_only:
+        label='급여 기록 있음 (검증 중)'
+        meaning='특정 육지거북 종에 한정된 급여 관련 자료가 있습니다. 실제 섭식 관찰과 사육 지침의 권장은 서로 다른 근거이며, 전체 육지거북에 대한 안전성 등급은 확정되지 않았습니다.'
+        if label not in text or meaning not in text:
+            errors.append(f'{pid}: species-only feeding record label/meaning missing')
+        if 'data-grade="보류"' not in text or 'data-verdict="none"' not in text:
+            errors.append(f'{pid}: species-only evidence must remain ungraded')
+    elif g['label'] not in text or g['meaning'] not in text:
+        errors.append(f'{pid}: public verdict label/meaning missing')
     for legacy in ('🟢','🟡','🟠','🔴','⚪','판단보류 / '):
         if legacy in text: errors.append(f'{pid}: legacy verdict marker {legacy}')
     if pid=='mallow':
