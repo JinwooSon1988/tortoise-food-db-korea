@@ -39,9 +39,13 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
                 "sha256": hashlib.sha256(raw).hexdigest()}]}))
             (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
             (root / "diverse.json").write_text(json.dumps({"record_count": 2, "records": [
-                {"scientific_name": "Taraxacum officinale", "safety_grade": None,
+                {"scientific_name": "Taraxacum officinale", "safety_grade": None, "source_scope": "taxonomy_only",
+                 "identity_status": "taxonomy_candidate",
+                 "source_taxon_url": "https://www.gbif.org/species/123",
                  "feeding_safety_status": "not_assessed"},
-                {"scientific_name": "Abies alba", "safety_grade": None,
+                {"scientific_name": "Abies alba", "safety_grade": None, "source_scope": "taxonomy_only",
+                 "identity_status": "taxonomy_candidate",
+                 "source_taxon_url": "https://www.gbif.org/species/123",
                  "feeding_safety_status": "not_assessed"}]}))
             result = export(root / "index.json", root / "site.csv",
                             root / "out.csv", root / "report.json", root / "diverse.json")
