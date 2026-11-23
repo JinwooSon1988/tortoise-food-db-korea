@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run offline evidence-boundary regression tests
-        run: python -m unittest discover -s tests -p 'test_literature_first*.py' -v\n          python -m unittest discover -s tests -p 'test_literature_first_screening.py' -v
+        run: |\n          python -m unittest discover -s tests -p 'test_literature_first_discovery.py' -v\n          python -m unittest discover -s tests -p 'test_literature_first_screening.py' -v
       - name: Validate fixed query window
         env:
           START: ${{ inputs.start || '8' }}
