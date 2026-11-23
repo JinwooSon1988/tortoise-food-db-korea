@@ -109,7 +109,7 @@ class CandidateTaxonomyResearchTests(unittest.TestCase):
                             "shards": [{"file": "taxa-01.json", "count": 1,
                                         "sha256": hashlib.sha256(raw).hexdigest()}],
                         }))
-                        (root / "site.csv").write_text("plant_scientific_name\\nPlantago major\\n")
+                        (root / "site.csv").write_text("plant_scientific_name\nPlantago major\n")
                         if in_diverse:
                             (root / "diverse.json").write_text(json.dumps({
                                 "record_count": 1, "records": [diverse_record],
