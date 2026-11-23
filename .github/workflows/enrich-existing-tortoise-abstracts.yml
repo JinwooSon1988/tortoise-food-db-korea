@@ -1,0 +1,68 @@
+name: Enrich existing tortoise literature abstracts
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/enrich-existing-tortoise-abstracts.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: tortoise-existing-abstract-enrichment
+  cancel-in-progress: false
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download both previously completed literature research artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/batch1" "$RUNNER_TEMP/batch2" "$RUNNER_TEMP/enriched"
+          gh run download 45116937957 --name tortoise-literature-first-45116937957 --dir "$RUNNER_TEMP/batch1"
+          gh run download 45120001454 --name tortoise-literature-first-45120001454 --dir "$RUNNER_TEMP/batch2"
+      - name: Merge unique OpenAlex IDs without re-searching literature
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path(os.environ['RUNNER_TEMP'])
+          works = {}
+          for folder in ('batch1', 'batch2'):
+              source = json.loads((root / folder / 'leads.json').read_text(encoding='utf-8'))
+              if source.get('scope') != 'literature_first_unreviewed_not_feeding_evidence':
+                  raise SystemExit('Unexpected research evidence scope')
+              for work in source['works']:
+                  if work.get('feeding_confirmed') is not False:
+                      raise SystemExit('Unsafe feeding evidence status')
+                  key = work['openalex_id']
+                  if key not in works:
+                      works[key] = work
+                  else:
+                      matches = works[key].setdefault('query_matches', [])
+                      for match in work.get('query_matches', []):
+                          if match not in matches:
+                              matches.append(match)
+          output = {'scope': 'literature_first_unreviewed_not_feeding_evidence',
+                    'works': sorted(works.values(), key=lambda x: x['openalex_id'])}
+          (root / 'enriched' / 'merged-leads.json').write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('Unique works:', len(works))
+          PY
+      - name: Retrieve abstracts in bounded batches
+        run: |
+          python scripts/enrich_openalex_abstracts.py "$RUNNER_TEMP/enriched/merged-leads.json" --output "$RUNNER_TEMP/enriched/abstracts.json" --batch-size 25
+      - name: Upload merged research and abstract results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tortoise-existing-abstracts-${{ github.run_id }}
+          path: ${{ runner.temp }}/enriched/
+          retention-days: 30
+          if-no-files-found: error
