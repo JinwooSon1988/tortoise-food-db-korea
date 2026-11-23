@@ -1,6 +1,17 @@
 name: OpenAlex bounded real discovery batch
 on:
   workflow_dispatch:
+    inputs:
+      offset:
+        description: 'Zero-based start index in sorted unique taxonomy candidates'
+        required: false
+        default: '100'
+        type: string
+      limit:
+        description: 'Number of taxa to query (1-200)'
+        required: false
+        default: '100'
+        type: string
   push:
     branches: [main]
     paths:
@@ -24,9 +35,16 @@ jobs:
           mkdir -p "$RUNNER_TEMP/gb-research"
           printf 'plant_scientific_name\n' > "$RUNNER_TEMP/gb-research/site.csv"
           python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site "$RUNNER_TEMP/gb-research/site.csv" --output "$RUNNER_TEMP/gb-research/candidates.csv" --report "$RUNNER_TEMP/gb-research/taxonomy-report.json"
-      - name: Discover 100 research-only literature candidates with bounded API rate
+      - name: Discover next nonoverlapping research batch with bounded API rate
+        env:
+          BATCH_OFFSET: ${{ inputs.offset || '100' }}
+          BATCH_LIMIT: ${{ inputs.limit || '100' }}
         run: |
-          python scripts/research_bulk_leads.py --taxa-csv "$RUNNER_TEMP/gb-research/candidates.csv" --workers 4 --request-interval 3 --limit 100 --output "$RUNNER_TEMP/gb-research/openalex-leads.jsonl"
+          if ! [[ "$BATCH_OFFSET" =~ ^[0-9]+$ ]] || ! [[ "$BATCH_LIMIT" =~ ^[0-9]+$ ]] || (( BATCH_LIMIT < 1 || BATCH_LIMIT > 200 )); then
+            echo 'Invalid batch offset or limit' >&2
+            exit 1
+          fi
+          python scripts/research_bulk_leads.py --taxa-csv "$RUNNER_TEMP/gb-research/candidates.csv" --workers 4 --request-interval 3 --offset "$BATCH_OFFSET" --limit "$BATCH_LIMIT" --output "$RUNNER_TEMP/gb-research/openalex-leads.jsonl"
       - name: Measure actual results and retry backlog
         if: always()
         run: |
