@@ -16,6 +16,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/openalex-real-discovery-batch.yml'
+      - 'scripts/research_bulk_leads.py'
+      - 'scripts/screen_openalex_tortoise_titles.py'
+      - 'scripts/audit_openalex_bulk_leads.py'
 permissions:
   contents: read
 concurrency:
@@ -35,6 +38,12 @@ jobs:
           mkdir -p "$RUNNER_TEMP/gb-research"
           printf 'plant_scientific_name\n' > "$RUNNER_TEMP/gb-research/site.csv"
           python scripts/export_candidate_taxonomy_for_research.py data/taxonomy-shards/index.json --site "$RUNNER_TEMP/gb-research/site.csv" --output "$RUNNER_TEMP/gb-research/candidates.csv" --report "$RUNNER_TEMP/gb-research/taxonomy-report.json"
+      - name: Record immutable batch scope and provenance
+        env:
+          BATCH_OFFSET: ${{ inputs.offset || '100' }}
+          BATCH_LIMIT: ${{ inputs.limit || '100' }}
+        run: |
+          printf '{"offset":%s,"limit":%s,"commit":"%s","run_id":"%s","evidence_status":"unreviewed_research_only"}\n' "$BATCH_OFFSET" "$BATCH_LIMIT" "$GITHUB_SHA" "$GITHUB_RUN_ID" > "$RUNNER_TEMP/gb-research/batch-manifest.json"
       - name: Discover next nonoverlapping research batch with bounded API rate
         env:
           BATCH_OFFSET: ${{ inputs.offset || '100' }}
