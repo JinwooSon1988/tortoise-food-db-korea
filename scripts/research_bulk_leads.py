@@ -77,7 +77,7 @@ def load_completed_checkpoint(path):
             if not line:
                 break
             line_number += 1
-            if not line.endswith(b'\\n'):
+            if not line.endswith(b'\n'):
                 # An interrupted write cannot be resumed by appending to a partial row.
                 stream.truncate(offset)
                 break
