@@ -1,0 +1,472 @@
+{
+ "schema_version": "2.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v2.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v2.json",
+ "extends": "the v1 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "sources": [
+  {
+   "source_id": "lagarde_2003_primary",
+   "citation": "Lagarde, F., Bonnet, X., Corbin, J., Henen, B., Nagy, K., Mardonov, B., Naulleau, G. 2003. Foraging behaviour and diet of an ectothermic herbivore: Testudo horsfieldi. Ecography 26:236-242.",
+   "url": "https://cebc.cnrs.fr/wp-content/uploads/publipdf/2003/LEco26.PDF",
+   "doi": null,
+   "year": 2003,
+   "language": "en",
+   "study_country": "Uzbekistan",
+   "publisher_country": "Denmark",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "continuous focal observation of 7 wild tortoises per period; plant availability from 17 (mating period) and 10 (post-mating period) quadrats",
+   "access": "full_text_read",
+   "what_was_read": "whole article from the authors' institute copy; Tables 1-2 on p. 240. The text layer prints table columns out of order, so a percentage is transcribed only where Hunter's index (diet share / availability) fixes which number is which",
+   "plant_record_count": 10,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "moll_klemens_1996",
+   "citation": "Moll, D., Klemens, M.W. 1996. Ecological Characteristics of the Pancake Tortoise, Malacochersus tornieri, in Tanzania. Chelonian Conservation and Biology 2(1):26-35.",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB%20Vol%202%20No%201%20(1996)/Moll_and_Klemens_1996.pdf",
+   "doi": null,
+   "year": 1996,
+   "language": "en",
+   "study_country": "Tanzania",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "analysis of fecal material from occupied crevices and newly caught tortoises, and direct observation of foraging animals",
+   "access": "full_text_read",
+   "what_was_read": "abstract, methods and the 'Diet and Access to Water' section on pp. 31-32, read from the scanned page image",
+   "plant_record_count": 7,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "bayley_highfield_1996",
+   "citation": "Bayley, J.R., Highfield, A.C. 1996. Observations on Ecological Changes Threatening a Population of Testudo graeca graeca in the Souss Valley, Southern Morocco. Chelonian Conservation and Biology 2(1):36-42.",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB%20Vol%202%20No%201%20(1996)/Bayley_and_Highfield_1996.pdf",
+   "doi": null,
+   "year": 1996,
+   "language": "en",
+   "study_country": "Morocco",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "field visits from 1992; Table 1 lists plants seen in the habitat that the authors call known to be palatable, from observation of grazing wild tortoises and of captive tortoises in Morocco; farmers' reports for crops",
+   "access": "full_text_read",
+   "what_was_read": "the 'Dietary Modifications' section and Table 1 on pp. 40-41, read from the scanned page image; the page range is inferred from the printed page numbers of a 7-page PDF",
+   "plant_record_count": 24,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "lambert_1993",
+   "citation": "Lambert, M.R.K. 1993. On Growth, Sexual Dimorphism, and the General Ecology of the African Spurred Tortoise, Geochelone sulcata, in Mali. Chelonian Conservation and Biology 1(1):37-46.",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB%20Vol%201%20No%201%20(1993)/Lambert_1993.pdf",
+   "doi": null,
+   "year": 1993,
+   "language": "en",
+   "study_country": "Mali",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "field visits and measurement of confiscated and village-held tortoises, October-November 1991",
+   "access": "full_text_read",
+   "what_was_read": "habitat and discussion passages on feeding, pp. 41 and 44; the page range is inferred from the printed page numbers of a 10-page PDF",
+   "plant_record_count": 1,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "platt_2001_shwe_settaw",
+   "citation": "Platt, S.G., Saw Tun Khaing, Win Ko Ko, Kalyar. 2001. A Tortoise Survey of Shwe Settaw Wildlife Sanctuary, Myanmar, with Notes on the Ecology of Geochelone platynota and Indotestudo elongata. Chelonian Conservation and Biology 4(1), Notes and Field Reports.",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Platt_etal_2001b.pdf",
+   "doi": null,
+   "year": 2001,
+   "language": "en",
+   "study_country": "Myanmar",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "local_knowledge",
+   "method": "field survey in August 1999 with hunter interviews; two scats examined",
+   "access": "full_text_read",
+   "what_was_read": "the food-habits paragraph on the fourth page of the PDF; the journal page numbers were not confirmed",
+   "plant_record_count": 12,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "oftedal_2002",
+   "citation": "Oftedal, O.T., Hillard, S., Morafka, D.J. 2002. Selective Spring Foraging by Juvenile Desert Tortoises (Gopherus agassizii) in the Mojave Desert: Evidence of an Adaptive Nutritional Strategy. Chelonian Conservation and Biology 4(2):341-352.",
+   "url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "doi": null,
+   "year": 2002,
+   "language": "en",
+   "study_country": "USA",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "semi_wild_feeding_study",
+   "method": "bite counts on 15 juvenile tortoises foraging on natural vegetation inside the FISS enclosure, 24 April - 1 May 1998; laboratory analysis of the plant parts eaten",
+   "access": "full_text_read",
+   "what_was_read": "Tables 3, 4 and 6 on pp. 345 and 347, read from the scanned page images; the page range is inferred from the printed page numbers of a 12-page PDF",
+   "plant_record_count": 16,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "pillajo_2020",
+   "citation": "Pillajo Montesdeoca, P.S. 2020. Descripción inicial de la dieta de la tortuga gigante de la Isla Santiago (Chelonoidis darwini), Galápagos, Ecuador. Disertación de Licenciatura, Pontificia Universidad Católica del Ecuador, Quito.",
+   "url": "https://repositorio.puce.edu.ec/bitstreams/e7f4bf11-06f2-43ee-be39-23a31992f176/download",
+   "doi": null,
+   "year": 2020,
+   "language": "es",
+   "study_country": "Ecuador",
+   "publisher_country": "Ecuador",
+   "source_type": "university_thesis_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "seeds and plant remains separated from 18 feces samples collected in the dry season in the arid and humid zones; plants identified mainly from seeds",
+   "access": "full_text_read",
+   "what_was_read": "abstract, results pp. 15-21 and Anexos 9-10 (pp. 55-59 of the thesis). The annex rows were taken from the PDF text layer by a script and the row counts (75 arid, 34 humid) were checked against the thesis",
+   "plant_record_count": 90,
+   "verification_status": "verified_primary_source_thesis",
+   "rows_not_transcribed": "19 morphotype rows without a genus or species name ('Tipo ...')"
+  },
+  {
+   "source_id": "moorhouse_gann_2022",
+   "citation": "Moorhouse-Gann, R.J., Vaughan, I.P., Cole, N.C. et al. 2022. Impacts of herbivory by ecological replacements on an island ecosystem. Journal of Applied Ecology 59(9):2245-2261.",
+   "url": "https://eprints.whiterose.ac.uk/id/eprint/184306/",
+   "doi": "10.1111/1365-2664.14096",
+   "year": 2022,
+   "language": "en",
+   "study_country": "Mauritius",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "DNA metabarcoding of 80 dung samples (March-July 2015), morphological examination of 50 dung samples and 212 feeding observations of Aldabra giant tortoises introduced on Round Island",
+   "access": "full_text_read",
+   "what_was_read": "abstract, methods, results and Table 3 (pp. 10-11 of the article). Table 3 was taken from the PDF text layer by a script; each count was assigned to its column by checking count / sample size against the printed frequency. The author list is given as printed on the repository cover page",
+   "plant_record_count": 53,
+   "verification_status": "verified_primary_source",
+   "column_totals_checked": {
+    "printed_in_table": {
+     "metabarcoding_tortoise": 47,
+     "morphology_tortoise": 21,
+     "observation_tortoise": 24
+    },
+    "counted_from_parsed_rows": {
+     "metabarcoding_tortoise": 47,
+     "morphology_tortoise": 23,
+     "observation_tortoise": 24
+    },
+    "discrepancy_note": "The metabarcoding and observation columns match the printed totals. The dung-morphology column gives 23 taxa here against 21 printed; the cause was not found, so the dung-morphology counts are less certain than the others."
+   }
+  },
+  {
+   "source_id": "ellis_soto_2017",
+   "citation": "Ellis-Soto, D., Blake, S., Soultan, A., Guézou, A., Cabrera, F., Lötters, S. 2017. Plant species dispersed by Galapagos tortoises surf the wave of habitat suitability under anthropogenic climate change. PLoS ONE 12(7):e0181333.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5519159/",
+   "doi": "10.1371/journal.pone.0181333",
+   "year": 2017,
+   "language": "en",
+   "study_country": "Ecuador",
+   "publisher_country": "USA",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "seed counts in 222 tortoise dung piles (159 La Reserva, 63 Cerro Fatal) collected 2009-2013 along two elevation gradients",
+   "access": "full_text_read",
+   "what_was_read": "abstract, methods and results of the open-access article",
+   "plant_record_count": 2,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "figueroa_2024",
+   "citation": "Figueroa, A., Chernyavskiy, P., Greenacre, M., Herrera, A., Cuni, L., Villate, J., Galetti, M., Liu, H., Whitfield, S. 2024. Precipitation Drives Frugivory in a Subtropical Generalist Herbivore, the Gopher Tortoise, and Alters Its Functional Role as a Seed Disperser. Ecology and Evolution 14(11):e70585.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11573422/",
+   "doi": "10.1002/ece3.70585",
+   "year": 2024,
+   "language": "en",
+   "study_country": "USA",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "intact seeds identified in 207 fecal samples",
+   "access": "full_text_read",
+   "what_was_read": "abstract, methods, Table 2 and discussion of the open-access article. Table 2 was taken from the page text by a script",
+   "plant_record_count": 62,
+   "verification_status": "verified_primary_source",
+   "rows_transcribed_from_table_2": 62
+  },
+  {
+   "source_id": "delaossa_2009",
+   "citation": "De la Ossa V., J., Guevara-Riaño, L., Horta-Orozco, L.D., Martínez-Mendoza, D. 2009. Influencia del color en el comportamiento alimentario de Geochelone (Chelonoidis) carbonaria (Spix 1824) en cautiverio. Revista Colombiana de Ciencia Animal 1(2):157-167.",
+   "url": "https://revistas.unisucre.edu.co/index.php/recia/article/download/350/392",
+   "doi": null,
+   "year": 2009,
+   "language": "es",
+   "study_country": "Colombia",
+   "publisher_country": "Colombia",
+   "source_type": "peer_reviewed_captive_trial",
+   "evidence_class": "captive_feeding_trial",
+   "method": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "access": "full_text_read",
+   "what_was_read": "whole article",
+   "plant_record_count": 24,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "dlugosz_2015",
+   "citation": "Długosz, J., Rawski, M., Kierończyk, B., Józefiak, D. 2015. Wstępne badanie preferencji żywieniowych żółwi stepowych (Testudo horsfieldii) w warunkach chowu terraryjnego. Nauka Przyroda Technologie 9(4):#60.",
+   "url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "doi": "10.17306/J.NPT.2015.4.60",
+   "year": 2015,
+   "language": "pl",
+   "study_country": "Poland",
+   "publisher_country": "Poland",
+   "source_type": "peer_reviewed_captive_trial",
+   "evidence_class": "captive_feeding_trial",
+   "method": "free-choice feeding of eight adult tortoises in a terrarium for six weeks: six herbs, six fruits and six vegetables, two weeks each; refusals weighed",
+   "access": "full_text_read",
+   "what_was_read": "whole article, Tables 1 and 2",
+   "plant_record_count": 18,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "sriprateep_2013",
+   "citation": "Sriprateep, K., Aranyavalai, V., Aowphol, A., Thirakhupt, K. 2013. Population Structure and Reproduction of the Elongated Tortoise Indotestudo elongata (Blyth, 1853) at Ban Kok Village, Northeastern Thailand. Tropical Natural History 13(1):21-37.",
+   "url": "https://li01.tci-thaijo.org/index.php/tnh/article/view/103039",
+   "doi": "10.58837/tnh.13.1.103039",
+   "year": 2013,
+   "language": "en",
+   "study_country": "Thailand",
+   "publisher_country": "Thailand",
+   "source_type": "peer_reviewed_field_study",
+   "evidence_class": "wild_feeding_study",
+   "method": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "access": "full_text_read",
+   "what_was_read": "the 'Diets' paragraph on pp. 28-29; the DOI is taken from a search result and was not seen on the article page",
+   "plant_record_count": 22,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "pna_hermann_2018",
+   "citation": "Ministère de la Transition écologique et solidaire. 2018. Plan national d'actions en faveur de la Tortue d'Hermann (Testudo hermanni hermanni) 2018-2027.",
+   "url": "https://www.dre.paca.developpement-durable.gouv.fr/IMG/pdf/pna_tortue_d_hermann_2018_2027.pdf",
+   "doi": null,
+   "year": 2018,
+   "language": "fr",
+   "study_country": "France",
+   "publisher_country": "France",
+   "source_type": "government_conservation_plan",
+   "evidence_class": "conservation_plan_review",
+   "method": "summary of knowledge in a national conservation plan; the paragraph gives no reference for individual plants",
+   "access": "full_text_read",
+   "what_was_read": "section I.2.3 'Régime alimentaire', p. 22",
+   "plant_record_count": 16,
+   "verification_status": "verified_review_document"
+  }
+ ],
+ "cited_primary_status": [
+  {
+   "cited_as": "Moll and Klemens 1996",
+   "status": "obtained_and_read",
+   "source_id": "moll_klemens_1996"
+  },
+  {
+   "cited_as": "Platt et al. 2001a",
+   "status": "obtained_and_read",
+   "source_id": "platt_2001_shwe_settaw"
+  },
+  {
+   "cited_as": "Bailey and Highfield 1996",
+   "status": "obtained_and_read",
+   "source_id": "bayley_highfield_1996",
+   "note": "printed as Bayley in the article itself"
+  },
+  {
+   "cited_as": "Lambert 1993",
+   "status": "obtained_and_read",
+   "source_id": "lambert_1993"
+  },
+  {
+   "cited_as": "El Mouden et al. 2006",
+   "status": "searched_no_open_full_text_found",
+   "note": "Journal of Arid Environments article; one web search, no open copy returned"
+  },
+  {
+   "cited_as": "Cobo and Andreu 1988",
+   "status": "not_searched_in_this_unit",
+   "note": "Oikos 51(3):267-273, as cited by Bayley and Highfield 1996"
+  },
+  {
+   "cited_as": "Vetter 2005",
+   "status": "not_searched_in_this_unit",
+   "note": "book"
+  },
+  {
+   "cited_as": "Thanda Swe 2004",
+   "status": "not_searched_in_this_unit",
+   "note": "thesis"
+  },
+  {
+   "cited_as": "Alagar Rajan and Balasubramanian 1991",
+   "status": "blocked_http_403_in_unit_1",
+   "note": "Biodiversity Heritage Library part 156673"
+  },
+  {
+   "cited_as": "Bringsøe et al. 2001",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Di Nicola and Mezzadri 2018",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Longepierre and Grenot 1999",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "López-Jurado et al. 1979",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Biswas et al. 1978",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "van Dijk 1998; Sriprateep et al. 2013; Ihlow pers. obs.",
+   "status": "partly_obtained_and_read",
+   "source_id": "sriprateep_2013",
+   "note": "Sriprateep et al. 2013 read; van Dijk 1998 (thesis) not searched; a personal observation cannot be checked"
+  },
+  {
+   "cited_as": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Hailey et al. 2001",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Hailey et al. 1997, 2001",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Lambiris et al. 1989",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Loveridge and Williams 1957",
+   "status": "not_searched_in_this_unit",
+   "note": "repeated by Moll and Klemens 1996, which is a second citation and not the original"
+  },
+  {
+   "cited_as": "Wanchai 2008",
+   "status": "located_download_failed",
+   "note": "thesis listed in the Chulalongkorn University repository; the download timed out"
+  },
+  {
+   "cited_as": "Prose and Wilshire 2000",
+   "status": "not_searched_in_this_unit"
+  },
+  {
+   "cited_as": "Woodbury and Hardy 1948",
+   "status": "searched_no_open_full_text_found",
+   "note": "Ecological Monographs 18:145-200; one web search"
+  }
+ ],
+ "holds_resolved_from_v1": [
+  {
+   "v1_hold_id": "oftedal_2002",
+   "result": "read from page images; Tables 4 and 6 transcribed; Table 5 (whole plants encountered) not transcribed"
+  },
+  {
+   "v1_hold_id": "pmc11573422",
+   "result": "read; Table 2 transcribed as figueroa_2024"
+  },
+  {
+   "v1_hold_id": "pmc6386306",
+   "result": "read; it names no food plant species, so it adds no record"
+  },
+  {
+   "v1_hold_id": "lagarde_2003 (four records on hold)",
+   "result": "article read in full; see lagarde_2003_primary"
+  }
+ ],
+ "on_hold": [
+  {
+   "id": "milton_1992",
+   "url": "https://www.ajol.info/index.php/az/article/view/154181",
+   "reason": "The journal page returned an empty response to two fetch attempts; still abstract only."
+  },
+  {
+   "id": "gibson_hamilton_1983",
+   "url": "https://doi.org/10.1007/BF00378221",
+   "reason": "Not open access. A search summary quotes the abstract (tortoise turf 61% of feeding observations), which was not read on the publisher page, so no record was made."
+  },
+  {
+   "id": "del_vecchio_2011",
+   "url": "https://doi.org/10.1655/HERPETOLOGICA-D-10-00064.1",
+   "reason": "Testudo hermanni diet, central Italy. Publisher page behind a paywall and the repository page returned HTTP 403; seen only in search summaries (Ruscus aculeatus, Conyza canadensis), so no record was made."
+  },
+  {
+   "id": "blake_2015",
+   "url": "https://doi.org/10.1111/btp.12195",
+   "reason": "Not attempted again in this unit."
+  },
+  {
+   "id": "moskovits_bjorndal_1990",
+   "url": null,
+   "reason": "Not located as open full text."
+  },
+  {
+   "id": "soler_2012",
+   "url": null,
+   "reason": "Bull. Soc. Herp. Fr. 142-143:79-88, Testudo hermanni diet at Garraf, cited in the French action plan; no open copy found in one search."
+  },
+  {
+   "id": "richard_1994",
+   "url": null,
+   "reason": "Chelonoidis chilensis trophic spectrum, Mendoza (Cuadernos de Herpetología); seen only in a search summary."
+  },
+  {
+   "id": "rodrigues_galetti_univap",
+   "url": "https://revista.univap.br/index.php/revistaunivap/article/download/515/380/4763",
+   "reason": "Portuguese article on Chelonoidis carbonaria fruit ingestion; HTTP 403."
+  },
+  {
+   "id": "strong_fragoso_2006",
+   "url": null,
+   "reason": "Biotropica 38(5):683-686; known only from citations in other articles."
+  },
+  {
+   "id": "jerozolimski_2009",
+   "url": "https://doi.org/10.1007/s00442-009-1396-8",
+   "reason": "Chelonoidis denticulatus seed dispersal; repository link returned HTTP 404."
+  },
+  {
+   "id": "sanchez_thesis_chilensis",
+   "url": "http://sedici.unlp.edu.ar/handle/10915/35313",
+   "reason": "Spanish thesis on Chelonoidis chilensis downloaded and searched; it has no diet section with plant names."
+  },
+  {
+   "id": "nature_seychelles_diet_note",
+   "url": "https://natureseychelles.org/news/latest-news/the-diet-of-the-tortoise/",
+   "reason": "NGO news note on Aldabra tortoise diet; downloaded, not read closely, no record made."
+  }
+ ],
+ "seed_mixtures_on_hold": [
+  {
+   "name": "Mélange de graines bio à semer, pour tortue, 25 g (Truffaut)",
+   "country": "France",
+   "url": "https://www.truffaut.com/melange-graines-bio-semer-pour-tortue-25g-1037491.html",
+   "reason": "HTTP 403 again; the percentages appear only in a search summary and were not transcribed."
+  },
+  {
+   "name": "Kiepenkerl Schildkrötenmischung Grünfutter-Pflanzen",
+   "country": "Germany",
+   "url": "https://www.bauhaus.at/gruenduengungssaatgut/kiepenkerl-saatgut-schildkroetenmischung-gruenfutter-pflanzen/p/33403021",
+   "reason": "Retail listings give no species list ('Mischung' only), according to search summaries; pages not opened."
+  },
+  {
+   "name": "Testumix",
+   "country": "Italy",
+   "url": null,
+   "reason": "Component names appear only in a search summary of a question-and-answer site; no supplier page found."
+  }
+ ]
+}

@@ -1,0 +1,1034 @@
+{
+ "schema_version": "1.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v1.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v1.json",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "records": [
+  {
+   "record_id": "feedipedia-12130",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12130",
+   "source_url": "https://www.feedipedia.org/node/12130",
+   "table_title_as_printed": "Goose grass (Eleusine indica), aerial part, fresh",
+   "table_note_on_page": null,
+   "datasheet": "Goose grass (Eleusine indica)",
+   "analyzed_taxon": "Eleusine indica",
+   "analyzed_taxon_accepted_name": "Eleusine indica",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 27.0,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 10.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 22
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 29.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 11.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "total sugars",
+     "nutrient_value": 6.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 5.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 14
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 14
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 3.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 18.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.26,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12067",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12067",
+   "source_url": "https://www.feedipedia.org/node/12067",
+   "table_title_as_printed": "Egyptian crowfoot grass (Dactyloctenium aegyptium), aerial part, fresh",
+   "table_note_on_page": null,
+   "datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium)",
+   "analyzed_taxon": "Dactyloctenium aegyptium",
+   "analyzed_taxon_accepted_name": "Dactyloctenium aegyptium",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 30.3,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 8.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 27
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 33.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 26
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 24
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 27
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 6.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 20
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 20
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 21.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 19
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 3.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 15
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12068",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12068",
+   "source_url": "https://www.feedipedia.org/node/12068",
+   "table_title_as_printed": "Egyptian crowfoot grass (Dactyloctenium aegyptium), aerial part, dry",
+   "table_note_on_page": "Include hay samples",
+   "datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium)",
+   "analyzed_taxon": "Dactyloctenium aegyptium",
+   "analyzed_taxon_accepted_name": "Dactyloctenium aegyptium",
+   "analyzed_part": "aerial part, dry",
+   "preparation_state": "dried",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 92.8,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 6.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 42.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 7.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 0.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 2.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 0.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-16877",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "16877",
+   "source_url": "https://www.feedipedia.org/node/16877",
+   "table_title_as_printed": "Egyptian crowfoot grass (Dactyloctenium aegyptium), straw",
+   "table_note_on_page": null,
+   "datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium)",
+   "analyzed_taxon": "Dactyloctenium aegyptium",
+   "analyzed_taxon_accepted_name": "Dactyloctenium aegyptium",
+   "analyzed_part": "straw",
+   "preparation_state": "crop_residue",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 94.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 4.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 38.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 0.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 14.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 4.1,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 0.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 6.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11595",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11595",
+   "source_url": "https://www.feedipedia.org/node/11595",
+   "table_title_as_printed": "Prickly pear, cladodes, fresh",
+   "table_note_on_page": null,
+   "datasheet": "Prickly pear (Opuntia ficus-indica)",
+   "analyzed_taxon": "Opuntia ficus-indica",
+   "analyzed_taxon_accepted_name": "Opuntia ficus-indica",
+   "analyzed_part": "cladodes, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 9.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 6.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 19
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 14.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 25.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 9
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 14.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 2.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 19.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 38.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 48.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 10.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11596",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11596",
+   "source_url": "https://www.feedipedia.org/node/11596",
+   "table_title_as_printed": "Prickly pear, fruit pulp, dehydrated",
+   "table_note_on_page": null,
+   "datasheet": "Prickly pear (Opuntia ficus-indica)",
+   "analyzed_taxon": "Opuntia ficus-indica",
+   "analyzed_taxon_accepted_name": "Opuntia ficus-indica",
+   "analyzed_part": "fruit pulp, dehydrated",
+   "preparation_state": "dried",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 84.7,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 4.5,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 19.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 18.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12035",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12035",
+   "source_url": "https://www.feedipedia.org/node/12035",
+   "table_title_as_printed": "Crimson clover (Trifolium incarnatum), aerial part, fresh",
+   "table_note_on_page": null,
+   "datasheet": "Crimson clover (Trifolium incarnatum)",
+   "analyzed_taxon": "Trifolium incarnatum",
+   "analyzed_taxon_accepted_name": "Trifolium incarnatum",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 25.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 15.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 36
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 19.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 37.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 30.8,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 28
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 14.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 11
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-12450",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "12450",
+   "source_url": "https://www.feedipedia.org/node/12450",
+   "table_title_as_printed": "Persian clover (Trifolium resupinatum), aerial part, fresh",
+   "table_note_on_page": null,
+   "datasheet": "Persian clover (Trifolium resupinatum)",
+   "analyzed_taxon": "Trifolium resupinatum",
+   "analyzed_taxon_accepted_name": "Trifolium resupinatum",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 11.6,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 57
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 21.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 93
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 28.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 70
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 21.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 70
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 61
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 3.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 14.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 78
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_value": 7.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 21.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 3.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 14.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 4.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 9.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-14968",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "14968",
+   "source_url": "https://www.feedipedia.org/node/14968",
+   "table_title_as_printed": "Persian clover (Trifolium resupinatum), hay",
+   "table_note_on_page": null,
+   "datasheet": "Persian clover (Trifolium resupinatum)",
+   "analyzed_taxon": "Trifolium resupinatum",
+   "analyzed_taxon_accepted_name": "Trifolium resupinatum",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 14.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 43.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 37.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 6.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 2.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_value": 2.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 14.9,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 1.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 18.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "sodium",
+     "nutrient_value": 1.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 2.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-11855",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "11855",
+   "source_url": "https://www.feedipedia.org/node/11855",
+   "table_title_as_printed": "Birdsfoot trefoil (Lotus corniculatus), aerial part, fresh",
+   "table_note_on_page": null,
+   "datasheet": "Birdsfoot trefoil (Lotus corniculatus)",
+   "analyzed_taxon": "Lotus corniculatus",
+   "analyzed_taxon_accepted_name": "Lotus corniculatus",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 23.1,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 7
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 21.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 26.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 38.3,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 18
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 28.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 17
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 9.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 15
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 4.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 3
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 9.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 14
+    },
+    {
+     "nutrient_name": "water-soluble carbohydrates",
+     "nutrient_value": 6.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 11.3,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 4
+    },
+    {
+     "nutrient_name": "tannins, condensed (eq. catechin)",
+     "nutrient_value": 49.6,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 8
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  },
+  {
+   "record_id": "feedipedia-19966",
+   "source_name": "Feedipedia (INRAE, CIRAD, AFZ, FAO)",
+   "source_id": "19966",
+   "source_url": "https://www.feedipedia.org/node/19966",
+   "table_title_as_printed": "Birdsfoot trefoil (Lotus corniculatus), aerial part, hay",
+   "table_note_on_page": null,
+   "datasheet": "Birdsfoot trefoil (Lotus corniculatus)",
+   "analyzed_taxon": "Lotus corniculatus",
+   "analyzed_taxon_accepted_name": "Lotus corniculatus",
+   "analyzed_part": "aerial part, hay",
+   "preparation_state": "hay",
+   "analytical_method": "compiled feed table; average of the samples counted in sample_count",
+   "values": [
+    {
+     "nutrient_name": "dry matter",
+     "nutrient_value": 91.2,
+     "nutrient_unit": "% as fed",
+     "measurement_basis": "as fed",
+     "sample_count": 5
+    },
+    {
+     "nutrient_name": "crude protein",
+     "nutrient_value": 19.2,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "crude fibre",
+     "nutrient_value": 30.4,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ndf",
+     "nutrient_value": 41.1,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "adf",
+     "nutrient_value": 33.9,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 16
+    },
+    {
+     "nutrient_name": "lignin",
+     "nutrient_value": 9.6,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 12
+    },
+    {
+     "nutrient_name": "ether extract",
+     "nutrient_value": 1.7,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "ash",
+     "nutrient_value": 11.0,
+     "nutrient_unit": "% DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 6
+    },
+    {
+     "nutrient_name": "calcium",
+     "nutrient_value": 13.4,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "phosphorus",
+     "nutrient_value": 2.7,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 2
+    },
+    {
+     "nutrient_name": "potassium",
+     "nutrient_value": 34.0,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "magnesium",
+     "nutrient_value": 3.8,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 1
+    },
+    {
+     "nutrient_name": "tannins, condensed (eq. catechin)",
+     "nutrient_value": 17.2,
+     "nutrient_unit": "g/kg DM",
+     "measurement_basis": "dry matter",
+     "sample_count": 13
+    }
+   ],
+   "excluded_from_this_record": "values the source marks as calculated (*), and all ruminant, pig, poultry or rabbit energy and digestibility values",
+   "use_limits": "Livestock feed table. Not a tortoise digestibility or safety value. Fresh and hay tables come from different samples and must not be subtracted to estimate drying losses.",
+   "verification_status": "transcribed_by_parser_from_cached_source_page",
+   "feeding_verdict_use": false
+  }
+ ]
+}

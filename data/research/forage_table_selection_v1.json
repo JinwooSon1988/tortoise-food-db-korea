@@ -1,0 +1,106 @@
+{
+ "schema_version": "1.0",
+ "purpose": "Feedipedia nutrient tables selected for plants named at species level in the evidence or seed-mixture records. Only tables whose taxon is the same species are selected; silage tables are left out.",
+ "selection_rule": "same species as a transcribed plant name; fresh, hay or dried material",
+ "not_selected": [
+  {
+   "taxon": "Hibiscus sabdariffa",
+   "reason": "the source names only \"Roselle (Malvaceae)\""
+  },
+  {
+   "taxon": "Ipomoea aquatica",
+   "reason": "the source names only \"water bindweed (Ipomoea sp.)\""
+  },
+  {
+   "taxon": "Bambusa vulgaris / Bambusa bambos",
+   "reason": "the source names only the genus Bambusa"
+  }
+ ],
+ "no_datasheet_found": [
+  "Digitaria ciliaris",
+  "Portulaca oleracea",
+  "Commelina benghalensis",
+  "Leptadenia hastata",
+  "Senna obtusifolia",
+  "Erodium cicutarium",
+  "Arachis hypogaea",
+  "Zornia glochidiata",
+  "Festuca pratensis",
+  "Coccinia grandis",
+  "Chromolaena odorata",
+  "Sida acuta",
+  "Cichorium intybus",
+  "Plantago major",
+  "Sonchus oleraceus",
+  "Malva sylvestris",
+  "Bromus tectorum"
+ ],
+ "tables": [
+  {
+   "taxon": "Eleusine indica",
+   "node": 12130,
+   "table_name_in_datasheet": "Goose grass (Eleusine indica), aerial part, fresh",
+   "datasheet": "Goose grass (Eleusine indica)"
+  },
+  {
+   "taxon": "Dactyloctenium aegyptium",
+   "node": 12067,
+   "table_name_in_datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium), aerial part, fresh",
+   "datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium)"
+  },
+  {
+   "taxon": "Dactyloctenium aegyptium",
+   "node": 12068,
+   "table_name_in_datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium), aerial part, dry",
+   "datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium)"
+  },
+  {
+   "taxon": "Dactyloctenium aegyptium",
+   "node": 16877,
+   "table_name_in_datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium), straw",
+   "datasheet": "Egyptian crowfoot grass (Dactyloctenium aegyptium)"
+  },
+  {
+   "taxon": "Opuntia ficus-indica",
+   "node": 11595,
+   "table_name_in_datasheet": "Prickly pear, cladodes, fresh",
+   "datasheet": "Prickly pear (Opuntia ficus-indica)"
+  },
+  {
+   "taxon": "Opuntia ficus-indica",
+   "node": 11596,
+   "table_name_in_datasheet": "Prickly pear, fruit pulp, dehydrated",
+   "datasheet": "Prickly pear (Opuntia ficus-indica)"
+  },
+  {
+   "taxon": "Trifolium incarnatum",
+   "node": 12035,
+   "table_name_in_datasheet": "Crimson clover (Trifolium incarnatum), aerial part, fresh",
+   "datasheet": "Crimson clover (Trifolium incarnatum)"
+  },
+  {
+   "taxon": "Trifolium resupinatum",
+   "node": 12450,
+   "table_name_in_datasheet": "Persian clover (Trifolium resupinatum), aerial part, fresh",
+   "datasheet": "Persian clover (Trifolium resupinatum)"
+  },
+  {
+   "taxon": "Trifolium resupinatum",
+   "node": 14968,
+   "table_name_in_datasheet": "Persian clover (Trifolium resupinatum), hay",
+   "datasheet": "Persian clover (Trifolium resupinatum)"
+  },
+  {
+   "taxon": "Lotus corniculatus",
+   "node": 11855,
+   "table_name_in_datasheet": "Birdsfoot trefoil (Lotus corniculatus), aerial part, fresh",
+   "datasheet": "Birdsfoot trefoil (Lotus corniculatus)"
+  },
+  {
+   "taxon": "Lotus corniculatus",
+   "node": 19966,
+   "table_name_in_datasheet": "Birdsfoot trefoil (Lotus corniculatus), aerial part, hay",
+   "datasheet": "Birdsfoot trefoil (Lotus corniculatus)"
+  }
+ ]
+}

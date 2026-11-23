@@ -1,0 +1,3039 @@
+{
+ "schema_version": 1,
+ "description": "Reviewed corrections to unit-2 evidence records that were first made directly in tortoise_plant_evidence_v2.json (unit-2 branch, commits 661ede05..82b383e5). build_global_plant_evidence_research_v2.py applies them after building the records from the transcription, so a rebuild reproduces the reviewed file instead of reverting it.",
+ "rule": "A correction is applied only while the value built from the transcription still equals built_value. If the transcription has changed, the build stops so the correction is reviewed again; it is never applied over a different value.",
+ "corrections": [
+  {
+   "evidence_id": "lagarde_2003_primary-01",
+   "field": "plant_family",
+   "built_value": "Asteraceae",
+   "corrected_value": null,
+   "commit": "92114f34",
+   "commit_subject": "research: remove rejected GBIF family from unresolved Ceratocephalus record"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_plant_fragment_identification",
+   "commit": "88a26dc1",
+   "commit_subject": "research: classify four Moll-Klemens fecal fragment records separately from observed foraging"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-02",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_plant_fragment_identification",
+   "commit": "88a26dc1",
+   "commit_subject": "research: classify four Moll-Klemens fecal fragment records separately from observed foraging"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-03",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_plant_fragment_identification",
+   "commit": "88a26dc1",
+   "commit_subject": "research: classify four Moll-Klemens fecal fragment records separately from observed foraging"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-04",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_plant_fragment_identification",
+   "commit": "88a26dc1",
+   "commit_subject": "research: classify four Moll-Klemens fecal fragment records separately from observed foraging"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-07",
+   "field": "study_method",
+   "built_value": "analysis of fecal material from occupied crevices and newly caught tortoises, and direct observation of foraging animals",
+   "corrected_value": "Secondary citation in Moll and Klemens (1996) to Loveridge and Williams (1957), reporting unidentified dry grass; original 1957 study not read. The 1996 fecal analysis and direct foraging observations do not independently verify this cited record.",
+   "commit": "4bfeec1a",
+   "commit_subject": "research: correct inherited direct-observation method on unread Loveridge citation"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-07",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "secondary_citation_of_species_diet",
+   "commit": "b91e94e5",
+   "commit_subject": "research: mark six unread primary records as secondary citation evidence type"
+  },
+  {
+   "evidence_id": "moll_klemens_1996-07",
+   "field": "verification_status",
+   "built_value": "verified_primary_source",
+   "corrected_value": "secondary_source_checked_primary_unread",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-01",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-01",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-02",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-02",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-02",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-03",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-03",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-03",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-04",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-04",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-04",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-05",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-05",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-05",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-06",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-06",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-06",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Spelling as printed.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-07",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-07",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-07",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-08",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-08",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-08",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Spelling as printed.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-09",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-09",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-09",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-10",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-10",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-10",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-11",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-11",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-11",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-12",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-12",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-12",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-13",
+   "field": "observed_consumption",
+   "built_value": "listed as a wild food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-13",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-13",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-14",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-14",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-14",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Farmers report cauliflower and cabbage being eaten; the authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-15",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-15",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-15",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-16",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-16",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-16",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Spelling as printed; the authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-17",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-17",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-17",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Farmers report zucchini being eaten; the authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-18",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-18",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-18",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-19",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-19",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-19",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-20",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-20",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-20",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-21",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-21",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-21",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The text says a high proportion of the diet near fields now consists of Opuntia cacti and crops; the authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-22",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-22",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-22",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-23",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-23",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-23",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Spelling as printed; the authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-24",
+   "field": "observed_consumption",
+   "built_value": "listed as a cultivated food plant in the diet",
+   "corrected_value": "Listed as palatable in a compiled habitat plant table; taxon-specific wild feeding observation not established",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-24",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "field_study_compiled_palatable_plant_list",
+   "commit": "c29fcec3",
+   "commit_subject": "fix(unit2): retain established compiled-list evidence type while clarifying Bayley-Highfield limitations"
+  },
+  {
+   "evidence_id": "bayley_highfield_1996-24",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. The authors warn that pesticide residues on crops are ingested by grazing tortoises.",
+   "corrected_value": "The source combines wild and captive feeding observations with farmers' crop reports; the evidence channel for this individual plant is not separately identified. Presence in habitat or inclusion in a palatable list does not prove direct wild consumption, safety, safe amounts, long-term outcomes, or suitability for other tortoise species.",
+   "commit": "92fd2feb",
+   "commit_subject": "research(unit2): distinguish compiled palatability from taxon-specific wild feeding observations"
+  },
+  {
+   "evidence_id": "lambert_1993-01",
+   "field": "wild_or_captive",
+   "built_value": "wild",
+   "corrected_value": "previously captive; temporarily free-ranging",
+   "commit": "c28d984f",
+   "commit_subject": "research(unit2): clarify previously captive origin of Lambert sulcata feeding observation"
+  },
+  {
+   "evidence_id": "lambert_1993-01",
+   "field": "study_method",
+   "built_value": "field visits and measurement of confiscated and village-held tortoises, October-November 1991",
+   "corrected_value": "Single feeding observation of a previously captive female allowed to roam beside agricultural land near Mourdiah; the broader paper also reports field visits and measurements of confiscated and village-held tortoises (October-November 1991).",
+   "commit": "c28d984f",
+   "commit_subject": "research(unit2): clarify previously captive origin of Lambert sulcata feeding observation"
+  },
+  {
+   "evidence_id": "lambert_1993-01",
+   "field": "evidence_class",
+   "built_value": "wild_feeding_study",
+   "corrected_value": "field_observation_of_previously_captive_tortoise",
+   "commit": "c28d984f",
+   "commit_subject": "research(unit2): clarify previously captive origin of Lambert sulcata feeding observation"
+  },
+  {
+   "evidence_id": "lambert_1993-01",
+   "field": "evidence_class_ko",
+   "built_value": "야생 섭식 연구",
+   "corrected_value": "기존 사육 개체의 야외 섭식 관찰",
+   "commit": "c28d984f",
+   "commit_subject": "research(unit2): clarify previously captive origin of Lambert sulcata feeding observation"
+  },
+  {
+   "evidence_id": "lambert_1993-01",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. A previously captive female collected nearby, allowed to roam freely beside agricultural land; a single observation.",
+   "corrected_value": "A single observed feeding event by a previously captive female temporarily allowed to roam near agricultural land. This is not an observation of an independently wild tortoise or evidence of population-wide natural diet. It does not establish safety, suitable quantities, long-term outcomes, or applicability to other tortoise species.",
+   "commit": "c28d984f",
+   "commit_subject": "research(unit2): clarify previously captive origin of Lambert sulcata feeding observation"
+  },
+  {
+   "evidence_id": "pillajo_2020-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-02",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-03",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-04",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-05",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-06",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-07",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-08",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-09",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-10",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-11",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-12",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-13",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-14",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-15",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-16",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-17",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-18",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-19",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-20",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-21",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-22",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-23",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-24",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-25",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-26",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-27",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-28",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-29",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-30",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-31",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-32",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-33",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-34",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-35",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-36",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-37",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-38",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-39",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-40",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-41",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-42",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-43",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-44",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-45",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-46",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-47",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-48",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-49",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-50",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-51",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-52",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-53",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-54",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-55",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-56",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-57",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-58",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-59",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-60",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-61",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-62",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-63",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-64",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-65",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-66",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-67",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-68",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-69",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-70",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-71",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-72",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-73",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-74",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-75",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-76",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-77",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-78",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-79",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-80",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-81",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-82",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-83",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-84",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-85",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-86",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-87",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-88",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-89",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "pillajo_2020-90",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-01",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-02",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-03",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-03",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-04",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-05",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-06",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-06",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-07",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-08",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-09",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-09",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-10",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-10",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-11",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-12",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-13",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-14",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-15",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-16",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-17",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-18",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-18",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-19",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-19",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-20",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-20",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-21",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-22",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-22",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-23",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-24",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-24",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-25",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-25",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-26",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-26",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-27",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-27",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-28",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-29",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-30",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-30",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-31",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "seed dispersal by tortoises stated in article text; taxon-specific dung detection count and direct feeding observation not established",
+   "commit": "82b383e5",
+   "commit_subject": "research(unit2): apply Unit 3 Table 3 corrections to two uncertain Moorhouse-Gann records"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-31",
+   "field": "quantity_as_reported",
+   "built_value": "dung morphology count 2 (frequency not legible in the text layer); DNA metabarcoding 0 of 80",
+   "corrected_value": "DNA metabarcoding 0 of 80; dung-morphology value not determinable from the published table; seed dispersal by tortoises is stated in the article text",
+   "commit": "82b383e5",
+   "commit_subject": "research(unit2): apply Unit 3 Table 3 corrections to two uncertain Moorhouse-Gann records"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-31",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-31",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Life-form Palmoid; the article states tortoises disperse the seeds; not fruiting during the metabarcoding sampling.",
+   "corrected_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Life-form Palmoid; the article states tortoises disperse the seeds; not fruiting during the metabarcoding sampling. Unit 3 Table 3 recheck withdrew the earlier morphology count of 2: the printed table cell is not determinable; seed dispersal statement does not establish a taxon-specific direct feeding observation.",
+   "commit": "82b383e5",
+   "commit_subject": "research(unit2): apply Unit 3 Table 3 corrections to two uncertain Moorhouse-Gann records"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-32",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-32",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-33",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-33",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-34",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-35",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-36",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-36",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-37",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-38",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-39",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-39",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-40",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "on hold: published Table 3 cells cannot establish tortoise detection; DNA metabarcoding 0 of 80",
+   "commit": "82b383e5",
+   "commit_subject": "research(unit2): apply Unit 3 Table 3 corrections to two uncertain Moorhouse-Gann records"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-40",
+   "field": "quantity_as_reported",
+   "built_value": "dung morphology 2 of 50 (4%)",
+   "corrected_value": null,
+   "commit": "82b383e5",
+   "commit_subject": "research(unit2): apply Unit 3 Table 3 corrections to two uncertain Moorhouse-Gann records"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-40",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-40",
+   "field": "limitations",
+   "built_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Life-form Woody/Semi-woody.",
+   "corrected_value": "Records what this tortoise taxon was reported to eat or be fed. It does not establish safe amounts, long-term outcomes or suitability for other tortoise species. Life-form Woody/Semi-woody. Unit 3 Table 3 recheck places this record on hold: displaced table cells cannot establish tortoise dung detection; do not count as positive feeding evidence.",
+   "commit": "82b383e5",
+   "commit_subject": "research(unit2): apply Unit 3 Table 3 corrections to two uncertain Moorhouse-Gann records"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-41",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-41",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-42",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-42",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-43",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-44",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-44",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-45",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-45",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-46",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-46",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-47",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-47",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-48",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-49",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-49",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-50",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-51",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung and directly observed eaten (taxon-specific feeding observation reported)",
+   "commit": "a81443b8",
+   "commit_subject": "research: distinguish 24 Round Island taxa with direct feeding observations from dung-only taxa"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-52",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-52",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-53",
+   "field": "observed_consumption",
+   "built_value": "detected in dung or seen eaten",
+   "corrected_value": "detected in dung; no taxon-specific feeding observation reported in this record",
+   "commit": "d7d11e26",
+   "commit_subject": "research: distinguish 29 dung-only taxa from directly observed feeding in mixed-method study"
+  },
+  {
+   "evidence_id": "moorhouse_gann_2022-53",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_taxon_detection_without_observed_feeding",
+   "commit": "c9216521",
+   "commit_subject": "research: label 29 Round Island dung-only taxa by evidence method"
+  },
+  {
+   "evidence_id": "ellis_soto_2017-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "ellis_soto_2017-02",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-02",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-03",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-04",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-05",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-06",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-07",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-08",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-09",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-10",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-11",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-12",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-13",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-14",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-15",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-16",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-17",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-18",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-19",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-20",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-21",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-22",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-23",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-24",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-25",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-26",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-27",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-28",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-29",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-30",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-31",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-32",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-33",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-34",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-35",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-36",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-37",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-38",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-39",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-40",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-41",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-42",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-43",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-44",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-45",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-46",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-47",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-48",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-49",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-50",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-51",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-52",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-53",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-54",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-55",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-56",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-57",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-58",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-59",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-60",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-61",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "figueroa_2024-62",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "primary_fecal_seed_identification",
+   "commit": "727d9ff3",
+   "commit_subject": "research: distinguish 154 primary fecal seed records from directly observed feeding"
+  },
+  {
+   "evidence_id": "delaossa_2009-11",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-12",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-13",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-14",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-15",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-16",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-17",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-18",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-19",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Description of routine captive feeding practice on p. 160 of De la Ossa et al. (2009); these food items were not individual treatments in the fresh-versus-dried flower preference trial.",
+   "commit": "b47c722f",
+   "commit_subject": "research: distinguish nine routine captive foods from flower preference trial methods"
+  },
+  {
+   "evidence_id": "delaossa_2009-20",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Secondary background citation in De la Ossa et al. (2009), p. 158, attributing wild diet plant names to Moskovits (1981); original cited field study not read. The 2009 captive flower-color trial did not directly test this plant.",
+   "commit": "661ede05",
+   "commit_subject": "research: correct two De la Ossa records falsely inheriting captive trial method and primary verification"
+  },
+  {
+   "evidence_id": "delaossa_2009-20",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "secondary_citation_of_species_diet",
+   "commit": "b91e94e5",
+   "commit_subject": "research: mark six unread primary records as secondary citation evidence type"
+  },
+  {
+   "evidence_id": "delaossa_2009-20",
+   "field": "verification_status",
+   "built_value": "verified_primary_source",
+   "corrected_value": "secondary_source_checked_primary_unread",
+   "commit": "661ede05",
+   "commit_subject": "research: correct two De la Ossa records falsely inheriting captive trial method and primary verification"
+  },
+  {
+   "evidence_id": "delaossa_2009-21",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Secondary background citation in De la Ossa et al. (2009), p. 158, attributed to Moskovits (1981); original wild-diet primary study not read.",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "delaossa_2009-21",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "secondary_citation_of_species_diet",
+   "commit": "b91e94e5",
+   "commit_subject": "research: mark six unread primary records as secondary citation evidence type"
+  },
+  {
+   "evidence_id": "delaossa_2009-21",
+   "field": "verification_status",
+   "built_value": "verified_primary_source",
+   "corrected_value": "secondary_source_checked_primary_unread",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "delaossa_2009-22",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Secondary background citation in De la Ossa et al. (2009), p. 158, attributed to Moskovits (1981); original wild-diet primary study not read.",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "delaossa_2009-22",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "secondary_citation_of_species_diet",
+   "commit": "b91e94e5",
+   "commit_subject": "research: mark six unread primary records as secondary citation evidence type"
+  },
+  {
+   "evidence_id": "delaossa_2009-22",
+   "field": "verification_status",
+   "built_value": "verified_primary_source",
+   "corrected_value": "secondary_source_checked_primary_unread",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "delaossa_2009-23",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Secondary background citation in De la Ossa et al. (2009), p. 158, attributed to Moskovits (1981); original wild-diet primary study not read.",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "delaossa_2009-23",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "secondary_citation_of_species_diet",
+   "commit": "b91e94e5",
+   "commit_subject": "research: mark six unread primary records as secondary citation evidence type"
+  },
+  {
+   "evidence_id": "delaossa_2009-23",
+   "field": "verification_status",
+   "built_value": "verified_primary_source",
+   "corrected_value": "secondary_source_checked_primary_unread",
+   "commit": "43ace858",
+   "commit_subject": "research: correct four additional secondary citations misclassified as primary verified"
+  },
+  {
+   "evidence_id": "delaossa_2009-24",
+   "field": "study_method",
+   "built_value": "20 captive adults in two enclosures; flowers of ten plants offered fresh to one group and dried to the other at 2% of live weight every three days; time to reach and time to consume recorded",
+   "corrected_value": "Secondary background citation in De la Ossa et al. (2009), p. 158, attributing wild diet plant names to Moskovits (1981); original cited field study not read. The 2009 captive flower-color trial did not directly test this plant.",
+   "commit": "661ede05",
+   "commit_subject": "research: correct two De la Ossa records falsely inheriting captive trial method and primary verification"
+  },
+  {
+   "evidence_id": "delaossa_2009-24",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "secondary_citation_of_species_diet",
+   "commit": "b91e94e5",
+   "commit_subject": "research: mark six unread primary records as secondary citation evidence type"
+  },
+  {
+   "evidence_id": "delaossa_2009-24",
+   "field": "verification_status",
+   "built_value": "verified_primary_source",
+   "corrected_value": "secondary_source_checked_primary_unread",
+   "commit": "661ede05",
+   "commit_subject": "research: correct two De la Ossa records falsely inheriting captive trial method and primary verification"
+  },
+  {
+   "evidence_id": "sriprateep_2013-09",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-10",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-11",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-12",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-13",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-14",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-15",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-16",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-17",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-18",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-19",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-20",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-21",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "sriprateep_2013-22",
+   "field": "study_method",
+   "built_value": "direct observation of free-living tortoises in and around a village, May 2007 - August 2009",
+   "corrected_value": "Village-based field observations, May 2007 - August 2009; these plants are listed as foods provided by local people to free-living tortoises. This record does not independently establish direct observation of ingestion of each listed plant.",
+   "commit": "93edcbf0",
+   "commit_subject": "research: distinguish fourteen village-provided foods from directly witnessed ingestion"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-01",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-02",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-03",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-04",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-05",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-06",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-07",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-08",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-09",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-10",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-11",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-12",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-13",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-14",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-15",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  },
+  {
+   "evidence_id": "pna_hermann_2018-16",
+   "field": "evidence_type",
+   "built_value": "direct_study_of_this_tortoise_species",
+   "corrected_value": "conservation_plan_secondary_summary",
+   "commit": "9307090a",
+   "commit_subject": "research: classify sixteen conservation-plan summaries as secondary rather than direct studies"
+  }
+ ]
+}

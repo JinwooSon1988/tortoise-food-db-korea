@@ -1,0 +1,95 @@
+{
+ "schema_version": "5.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v5.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v5.json",
+ "extends": "the v1-v4 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "sources": [
+  {
+   "source_id": "ritz_2010_sulcata_growth",
+   "citation": "Ritz, J., Griebeler, E.M., Huber, R., Clauss, M. 2010. Body size development of captive and free-ranging African spurred tortoises (Geochelone sulcata): high plasticity in reptilian growth rates. Herpetological Journal 20:213-216.",
+   "url": "https://thebhs.org/publications/the-herpetological-journal/volume-20-number-3-july-2010/592-13-body-size-development-of-captive-and-free-ranging-african-spurred-tortoises-i-geochelone-sulcata-i-high-plasticity-in-reptilian-growth-rates",
+   "doi": null,
+   "year": 2010,
+   "language": "en",
+   "study_country": "Switzerland (captive animals)",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_captive_study",
+   "evidence_class": "captive_feeding_trial",
+   "method": "growth records of three captive-bred animals weighed over almost 18 years at a private breeding facility; the diet is described in the methods, not measured",
+   "access": "full_text_read",
+   "what_was_read": "whole article (open access PDF from the society)",
+   "plant_record_count": 4,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "mahmoud_elnaiem_1988_sulcata_sudan",
+   "citation": "Mahmoud, Z.N., El Naiem, D.A. 1988. Studies on the growth of the desert tortoise (Testudo sulcata) in Sudan: changes in morphometrics and body weight from hatching to one year (0+). Herpetological Journal 1:280-284.",
+   "url": "https://thebhs.org/publications/the-herpetological-journal/volume-1-number-7-december-1988/1189-06-studies-on-the-growth-of-the-desert-tortoise-testudo-sulcata-in-sudan-changes-in-morphometrics-and-body-weight-from-hatching-to-one-year-0",
+   "doi": null,
+   "year": 1988,
+   "language": "en",
+   "study_country": "Sudan",
+   "publisher_country": "United Kingdom",
+   "source_type": "peer_reviewed_captive_study",
+   "evidence_class": "captive_feeding_trial",
+   "method": "16 hatchlings from one clutch kept in an enclosure for a year and measured; food offered every other day",
+   "access": "full_text_read",
+   "what_was_read": "methods paragraph in the PDF text layer. The scanned page image is too faint to read, so the two plant names are given as the text layer prints them and were not checked against the image",
+   "plant_record_count": 2,
+   "verification_status": "verified_primary_source"
+  },
+  {
+   "source_id": "salisbury_zoo_sulcata_page",
+   "citation": "Salisbury Zoo. African Sulcata (Spurred) Tortoise, Centrochelys sulcata (animal information page).",
+   "url": "https://salisburyzoo.org/habitats/african-sulcata-spurred-tortoise-centrochelys-sulcata/",
+   "doi": null,
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (zoo information page, USA)",
+   "publisher_country": "USA",
+   "source_type": "zoo_information_page",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "public information page of a zoo; no references",
+   "access": "full_text_read",
+   "what_was_read": "whole web page; no publication year on the page",
+   "plant_record_count": 5,
+   "verification_status": "verified_zoo_statement"
+  },
+  {
+   "source_id": "exmoor_zoo_sulcata_page",
+   "citation": "Exmoor Zoo. African spurred tortoise, Centrochelys sulcata (animal information page).",
+   "url": "https://exmoorzoo.co.uk/animals/african-spur-thigh-tortoise",
+   "doi": null,
+   "year": null,
+   "language": "en",
+   "study_country": "not applicable (zoo information page, United Kingdom)",
+   "publisher_country": "United Kingdom",
+   "source_type": "zoo_information_page",
+   "evidence_class": "institutional_husbandry_guideline",
+   "method": "public education page of a zoo; no references",
+   "access": "full_text_read",
+   "what_was_read": "the Diet paragraph of the web page; no publication year on the page; the page does not say whether the diet described is wild or captive",
+   "plant_record_count": 6,
+   "verification_status": "verified_zoo_statement"
+  }
+ ],
+ "sources_read_without_records": [
+  {
+   "id": "petrozzi_2017_oryx",
+   "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/79FF1948C3DED7A4482CCBF7A7B244DE/S0030605316001125a.pdf/exploring-the-main-threats-to-the-threatened-african-spurred-tortoise-centrochelys-sulcata-in-the-west-african-sahel.pdf",
+   "reason": "Threats to the species in the Sahel (cattle density, fire, trade); names no food plant."
+  }
+ ],
+ "searches_without_a_usable_result": [
+  {
+   "query": "French: régime alimentaire tortue sillonnée Centrochelys sulcata milieu naturel Sénégal Ferlo",
+   "result": "only general pages and reintroduction news; no field diet study"
+  },
+  {
+   "query": "sulcata wild diet Sahel field observations Chad/Niger/Sudan/Ethiopia",
+   "result": "pet-care pages without sources; Lambert 1993 (already in unit 2); Petrozzi et al. 2017 (Oryx) on threats, read, names no food plant"
+  }
+ ]
+}

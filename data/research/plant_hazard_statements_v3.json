@@ -1,0 +1,249 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "note": "Statements made by sources that were read. They are not toxicity findings for tortoises.",
+ "statements": [
+  {
+   "hazard_id": "hz3-01",
+   "plant_as_printed": "Clematis vitella",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "listed among food plants containing toxins; compound: alkaloids",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "meek_2010-03"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-02",
+   "plant_as_printed": "Clematis",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "listed among food plants containing toxins; compound: alkaloids",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "meek_2010-04"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-03",
+   "plant_as_printed": "Ranunculus acris",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "listed among food plants containing toxins; compound: alkaloids",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "meek_2010-05"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-04",
+   "plant_as_printed": "Arum",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "listed among food plants containing toxins; compound: alkaloids",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "meek_2010-06"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-05",
+   "plant_as_printed": "Hedera helix",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "listed among food plants containing toxins; compound: saponins",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "meek_2010-07"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-06",
+   "plant_as_printed": "Chenopodium",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "potentially damaging compound: high nitrate concentrations in leaves",
+   "hazard_kind": "antinutrient_or_nitrate_named_by_source",
+   "evidence_ids": [
+    "meek_2010-08"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-07",
+   "plant_as_printed": "Aristolochia",
+   "tortoise_key": "hermanni",
+   "source_id": "meek_2010",
+   "location": "Table 1",
+   "statement": "potentially damaging compound: acids that may cause renal failure and cancers in humans",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "meek_2010-09"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-08",
+   "plant_as_printed": "Papaver pavoninum",
+   "tortoise_key": "horsfieldii",
+   "source_id": "lagarde_2003_primary",
+   "location": "p. 241, Discussion",
+   "statement": "contains alkaloids that can be poisonous to many mammals; intoxication documented in ungulates that ate closely related species",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "lagarde_2003_primary-02"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-09",
+   "plant_as_printed": "Koelpinia linearis",
+   "tortoise_key": "horsfieldii",
+   "source_id": "lagarde_2003_primary",
+   "location": "p. 241, Discussion",
+   "statement": "contains terpenoids (Koelpinin-A, B and C) potentially toxic for mammalian herbivores",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "lagarde_2003_primary-03"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-10",
+   "plant_as_printed": "Ceratocephalus falcatus",
+   "tortoise_key": "horsfieldii",
+   "source_id": "lagarde_2003_primary",
+   "location": "p. 241, Discussion",
+   "statement": "the genus accumulates ranunculin, which crushing turns into the irritant protoanemonin; the article gives a sheep LD-50 of 10.9 g fresh plant per kg",
+   "hazard_kind": "toxic_compound_named_by_source",
+   "evidence_ids": [
+    "lagarde_2003_primary-01"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-11",
+   "plant_as_printed": "Drimia maritima",
+   "tortoise_key": "marginata",
+   "source_id": "crm122_marginata_2023",
+   "location": "p. 17",
+   "statement": "the account states the plant is toxic to mammals, including humans",
+   "hazard_kind": "toxicity_to_mammals_stated_by_source",
+   "evidence_ids": [
+    "crm122_marginata_2023-16"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-12",
+   "plant_as_printed": "Tamus communis",
+   "tortoise_key": "hermanni",
+   "source_id": "crm059_hermanni_2011",
+   "location": "p. 10",
+   "statement": "listed by the account among plants toxic to mammals that the tortoise seeks",
+   "hazard_kind": "toxicity_to_mammals_stated_by_source",
+   "evidence_ids": [
+    "crm059_hermanni_2011-01"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-13",
+   "plant_as_printed": "Arum sp.",
+   "tortoise_key": "hermanni",
+   "source_id": "crm059_hermanni_2011",
+   "location": "p. 10",
+   "statement": "listed by the account among plants toxic to mammals",
+   "hazard_kind": "toxicity_to_mammals_stated_by_source",
+   "evidence_ids": [
+    "crm059_hermanni_2011-02"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-14",
+   "plant_as_printed": "Ranunculus sp.",
+   "tortoise_key": "hermanni",
+   "source_id": "crm059_hermanni_2011",
+   "location": "p. 10",
+   "statement": "listed by the account among plants toxic to mammals",
+   "hazard_kind": "toxicity_to_mammals_stated_by_source",
+   "evidence_ids": [
+    "crm059_hermanni_2011-03"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-15",
+   "plant_as_printed": "Digitalis sp.",
+   "tortoise_key": "hermanni",
+   "source_id": "crm059_hermanni_2011",
+   "location": "p. 10",
+   "statement": "listed by the account among plants toxic to mammals",
+   "hazard_kind": "toxicity_to_mammals_stated_by_source",
+   "evidence_ids": [
+    "crm059_hermanni_2011-04"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-16",
+   "plant_as_printed": "Opuntia spp.",
+   "tortoise_key": "graeca_west",
+   "source_id": "bayley_highfield_1996",
+   "location": "p. 41",
+   "statement": "the authors warn that pesticide residues stay on crop foliage in this dry region and are ingested by grazing tortoises (stated for the cultivated food plants as a group)",
+   "hazard_kind": "contaminant_risk_stated_by_source",
+   "evidence_ids": [
+    "bayley_highfield_1996-21"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  },
+  {
+   "hazard_id": "hz3-17",
+   "plant_as_printed": "fruits",
+   "tortoise_key": "kleinmanni",
+   "source_id": "eaza_kleinmanni_2019",
+   "location": "p. 21",
+   "statement": "the guideline says fruits and animal matter should be avoided",
+   "hazard_kind": "husbandry_guideline_advises_against",
+   "evidence_ids": [
+    "eaza_kleinmanni_2019-09"
+   ],
+   "tested_in_tortoises_by_this_source": false,
+   "what_it_does_not_establish": "It does not show that the plant harms tortoises: the same source records tortoises eating it, and it reports no feeding trial or health outcome. It also does not show that the plant is safe."
+  }
+ ]
+}

@@ -1,0 +1,1404 @@
+{
+ "schema_version": "6.0",
+ "generated_by": "scripts/build_primary_verification_queue_v6.py",
+ "derived_from": [
+  "data/research/research_gap_register_v6.json",
+  "data/research/evidence_index_v5.json"
+ ],
+ "rules": [
+  "A verification status changes only after the original itself is obtained and read; a search, an abstract or another secondary account does not change it.",
+  "Reading the original never raises the account's record: it stays a secondary citation. What the original shows is recorded as a new record from the original, with its own method and tier.",
+  "If the original is read and does not contain the statement, the account's record is put on hold (as for crm109_agassizii_2019-05/06), not deleted.",
+  "Personal observations and unpublished reports that cannot be obtained stay in the queue with that reason; they are never confirmed.",
+  "Nothing here is a feeding grade or a safety statement."
+ ],
+ "allowed_verification_status": [
+  "awaiting_original"
+ ],
+ "not_in_queue": {
+  "cited_source_read_does_not_support_the_statement": [
+   "crm109_agassizii_2019-05",
+   "crm109_agassizii_2019-06"
+  ],
+  "note": "the cited source was read and does not support the statement; these records are on hold (review_queue_v4 records_on_hold)"
+ },
+ "queue": [
+  {
+   "cited_as": "Bringsøe et al. 2001",
+   "register_section": "unit_1_citations_not_read",
+   "records": 17,
+   "cited_by_sources": [
+    "crm122_marginata_2023"
+   ],
+   "tortoise_species": [
+    "Testudo marginata"
+   ],
+   "bibliographic_note": "handbook chapter",
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 17,
+   "evidence_records": [
+    {
+     "evidence_id": "crm122_marginata_2023-01",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Dianthus multipunctatus",
+     "plant_accepted_name": "Dianthus strictus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-02",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Anemone coronaria",
+     "plant_accepted_name": "Anemone coronaria",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-03",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Medicago orbicularis",
+     "plant_accepted_name": "Medicago orbicularis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-04",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Trifolium stellatum",
+     "plant_accepted_name": "Trifolium stellatum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-05",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Anagallis arvensis",
+     "plant_accepted_name": "Lysimachia arvensis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-06",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Cyclamen persicum",
+     "plant_accepted_name": "Cyclamen persicum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-07",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Plantago lagopus",
+     "plant_accepted_name": "Plantago lagopus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-08",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Anthemis spp.",
+     "plant_accepted_name": "Anthemis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-09",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Calendula arvensis",
+     "plant_accepted_name": "Calendula arvensis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-10",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Leontodon tuberosus",
+     "plant_accepted_name": "Leontodon tuberosus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-11",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Sonchus spp.",
+     "plant_accepted_name": "Sonchus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-12",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Taraxacum officinale",
+     "plant_accepted_name": "Taraxacum officinale",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-13",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Muscari parviflorum",
+     "plant_accepted_name": "Muscari parviflorum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-14",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Ornithogalum tenuifolium",
+     "plant_accepted_name": "Ornithogalum tenuifolium",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-15",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Asphodelus spp.",
+     "plant_accepted_name": "Asphodelus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-16",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Drimia maritima",
+     "plant_accepted_name": "Drimia maritima",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm122_marginata_2023-18",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Thymus capitatus",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 1
+  },
+  {
+   "cited_as": "Hailey et al. 2001",
+   "register_section": "unit_1_citations_not_read",
+   "records": 8,
+   "cited_by_sources": [
+    "crm115_spekii_2021"
+   ],
+   "tortoise_species": [
+    "Kinixys spekii"
+   ],
+   "bibliographic_note": "African Journal of Ecology 39:10-17; one web search",
+   "search_status": "searched_no_open_full_text_found",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "obtain the full text through a library or interlibrary loan; no open copy was found",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 8,
+   "evidence_records": [
+    {
+     "evidence_id": "crm115_spekii_2021-01",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Brachiaria nigropedata",
+     "plant_accepted_name": "Urochloa nigropedata",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-02",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Ipomoea senensis",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-03",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Rhinacanthus gracilis",
+     "plant_accepted_name": "Rhinacanthus gracilis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-04",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Duosperma crenatum",
+     "plant_accepted_name": "Duosperma crenatum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-05",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Cyphostemma lovemorei",
+     "plant_accepted_name": "Cyphostemma lovemorei",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-06",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Zornia glochidiata",
+     "plant_accepted_name": "Zornia glochidiata",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-07",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Chlorophytum colubrinum",
+     "plant_accepted_name": "Chlorophytum colubrinum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm115_spekii_2021-10",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Cucurbita pepo",
+     "plant_accepted_name": "Cucurbita pepo",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 2
+  },
+  {
+   "cited_as": "Vijaya 1983; Ramesh and Parthasarathy 2006; Vasudevan et al. 2010",
+   "register_section": "unit_1_citations_not_read",
+   "records": 8,
+   "cited_by_sources": [
+    "crm054_travancorica_2011"
+   ],
+   "tortoise_species": [
+    "Indotestudo travancorica"
+   ],
+   "bibliographic_note": null,
+   "search_status": "searched_unit_6_no_copy_found",
+   "unit_6_search": "one web search for Vijaya 1983: cited elsewhere as Hamadryad 8(3):11-13; the article itself was not found",
+   "audit_document": null,
+   "next_step": "request the original through a library; the unit-6 web search found no copy",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 8,
+   "evidence_records": [
+    {
+     "evidence_id": "crm054_travancorica_2011-01",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Artocarpus spp.",
+     "plant_accepted_name": "Artocarpus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-02",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Dillenia pentagyna",
+     "plant_accepted_name": "Dillenia pentagyna",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-03",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Ficus virens",
+     "plant_accepted_name": "Ficus virens",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-04",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Synedrella nodiflora",
+     "plant_accepted_name": "Synedrella nodiflora",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-05",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Desmodium repandum",
+     "plant_accepted_name": "Hylodesmum repandum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-06",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Senecio scandens",
+     "plant_accepted_name": "Senecio scandens",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-07",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Mimosa pudica",
+     "plant_accepted_name": "Mimosa pudica",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm054_travancorica_2011-08",
+     "unit": 1,
+     "source_id": "crm054_travancorica_2011",
+     "tortoise": "Indotestudo travancorica",
+     "plant_as_printed": "Veronica buabaumii",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 3
+  },
+  {
+   "cited_as": "Vetter 2005",
+   "register_section": "unit_1_citations_not_read",
+   "records": 7,
+   "cited_by_sources": [
+    "crm110_sulcata_2020"
+   ],
+   "tortoise_species": [
+    "Centrochelys sulcata"
+   ],
+   "bibliographic_note": "printed book (Edition Chimaira)",
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 7,
+   "evidence_records": [
+    {
+     "evidence_id": "crm110_sulcata_2020-01",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Cassia obtusifolia",
+     "plant_accepted_name": "Senna obtusifolia",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm110_sulcata_2020-02",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Commelina bengalensis",
+     "plant_accepted_name": "Commelina benghalensis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm110_sulcata_2020-03",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Dactyloctenium aegyptum",
+     "plant_accepted_name": "Dactyloctenium aegyptium",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm110_sulcata_2020-04",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Digitaria ciliaris",
+     "plant_accepted_name": "Digitaria ciliaris",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm110_sulcata_2020-06",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Eragrostis tenella",
+     "plant_accepted_name": "Eragrostis tenella",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm110_sulcata_2020-07",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Portulaca oleracea",
+     "plant_accepted_name": "Portulaca oleracea",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm110_sulcata_2020-08",
+     "unit": 1,
+     "source_id": "crm110_sulcata_2020",
+     "tortoise": "Centrochelys sulcata",
+     "plant_as_printed": "Leptadenia hastata",
+     "plant_accepted_name": "Leptadenia lanceolata",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 4
+  },
+  {
+   "cited_as": "Alagar Rajan and Balasubramanian 1991",
+   "register_section": "unit_1_citations_not_read",
+   "records": 6,
+   "cited_by_sources": [
+    "crm106_elegans_2018"
+   ],
+   "tortoise_species": [
+    "Geochelone elegans"
+   ],
+   "bibliographic_note": "Biodiversity Heritage Library part 156673: HTTP 403 for the PDF and 401 for the API without a key; not worked around",
+   "search_status": "blocked_by_host",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "request a copy from the host or a library; the host refused automated access",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 6,
+   "evidence_records": [
+    {
+     "evidence_id": "crm106_elegans_2018-01",
+     "unit": 1,
+     "source_id": "crm106_elegans_2018",
+     "tortoise": "Geochelone elegans",
+     "plant_as_printed": "Asclepiadoideae",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm106_elegans_2018-02",
+     "unit": 1,
+     "source_id": "crm106_elegans_2018",
+     "tortoise": "Geochelone elegans",
+     "plant_as_printed": "Convolvulaceae",
+     "plant_accepted_name": "Convolvulaceae",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm106_elegans_2018-03",
+     "unit": 1,
+     "source_id": "crm106_elegans_2018",
+     "tortoise": "Geochelone elegans",
+     "plant_as_printed": "Cyperaceae",
+     "plant_accepted_name": "Cyperaceae",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm106_elegans_2018-04",
+     "unit": 1,
+     "source_id": "crm106_elegans_2018",
+     "tortoise": "Geochelone elegans",
+     "plant_as_printed": "Euphorbiaceae",
+     "plant_accepted_name": "Euphorbiaceae",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm106_elegans_2018-05",
+     "unit": 1,
+     "source_id": "crm106_elegans_2018",
+     "tortoise": "Geochelone elegans",
+     "plant_as_printed": "Papilionaceae",
+     "plant_accepted_name": "Fabaceae",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm106_elegans_2018-06",
+     "unit": 1,
+     "source_id": "crm106_elegans_2018",
+     "tortoise": "Geochelone elegans",
+     "plant_as_printed": "Poaceae",
+     "plant_accepted_name": "Poaceae",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 5
+  },
+  {
+   "cited_as": "Moskovits 1981",
+   "register_section": "other_citations_not_read",
+   "records": 5,
+   "cited_by_sources": [
+    "delaossa_2009"
+   ],
+   "tortoise_species": [
+    "Chelonoidis carbonarius"
+   ],
+   "bibliographic_note": null,
+   "search_status": "secondary_citation_primary_not_read",
+   "unit_6_search": null,
+   "audit_document": "docs/GLOBAL_RESEARCH_UNIT2_MOSKOVITS_CITATION_AUDIT_20261014.md",
+   "next_step": "search for the original",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 5,
+   "evidence_records": [
+    {
+     "evidence_id": "delaossa_2009-20",
+     "unit": 2,
+     "source_id": "delaossa_2009",
+     "tortoise": "Chelonoidis carbonarius",
+     "plant_as_printed": "Duquetia surinamensis",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_source_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "delaossa_2009-21",
+     "unit": 2,
+     "source_id": "delaossa_2009",
+     "tortoise": "Chelonoidis carbonarius",
+     "plant_as_printed": "Annona sp.",
+     "plant_accepted_name": "Annona",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_source_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "delaossa_2009-22",
+     "unit": 2,
+     "source_id": "delaossa_2009",
+     "tortoise": "Chelonoidis carbonarius",
+     "plant_as_printed": "Spondia lutea",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_source_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "delaossa_2009-23",
+     "unit": 2,
+     "source_id": "delaossa_2009",
+     "tortoise": "Chelonoidis carbonarius",
+     "plant_as_printed": "Genipa americana",
+     "plant_accepted_name": "Genipa americana",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_source_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "delaossa_2009-24",
+     "unit": 2,
+     "source_id": "delaossa_2009",
+     "tortoise": "Chelonoidis carbonarius",
+     "plant_as_printed": "Bagassa guianenesis",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_source_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 6
+  },
+  {
+   "cited_as": "van Dijk 1998; Sriprateep et al. 2013; Ihlow pers. obs.",
+   "register_section": "other_citations_not_read",
+   "records": 5,
+   "cited_by_sources": [
+    "crm096_elongata_2016"
+   ],
+   "tortoise_species": [
+    "Indotestudo elongata"
+   ],
+   "bibliographic_note": "Chromolaena odorata is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read; Crytococcum accrescens is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read; Cyanotis cristata is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read; Dillenia spp. is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read; Ficus racemosa is not named in Sriprateep et al. 2013; it must come from van Dijk 1998 or the account author's own observation, neither of which was read",
+   "search_status": "not_in_the_cited_source_read_other_cited_sources_unread",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "read the other cited sources; the one that was read does not name the plant",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 5,
+   "evidence_records": [
+    {
+     "evidence_id": "crm096_elongata_2016-03",
+     "unit": 1,
+     "source_id": "crm096_elongata_2016",
+     "tortoise": "Indotestudo elongata",
+     "plant_as_printed": "Chromolaena odorata",
+     "plant_accepted_name": "Chromolaena odorata",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm096_elongata_2016-05",
+     "unit": 1,
+     "source_id": "crm096_elongata_2016",
+     "tortoise": "Indotestudo elongata",
+     "plant_as_printed": "Crytococcum accrescens",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm096_elongata_2016-06",
+     "unit": 1,
+     "source_id": "crm096_elongata_2016",
+     "tortoise": "Indotestudo elongata",
+     "plant_as_printed": "Cyanotis cristata",
+     "plant_accepted_name": "Cyanotis cristata",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm096_elongata_2016-08",
+     "unit": 1,
+     "source_id": "crm096_elongata_2016",
+     "tortoise": "Indotestudo elongata",
+     "plant_as_printed": "Dillenia spp.",
+     "plant_accepted_name": "Dillenia",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm096_elongata_2016-09",
+     "unit": 1,
+     "source_id": "crm096_elongata_2016",
+     "tortoise": "Indotestudo elongata",
+     "plant_as_printed": "Ficus racemosa",
+     "plant_accepted_name": "Ficus racemosa",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 7
+  },
+  {
+   "cited_as": "López-Jurado et al. 1979",
+   "register_section": "unit_1_citations_not_read",
+   "records": 4,
+   "cited_by_sources": [
+    "crm117_graeca_west_2022"
+   ],
+   "tortoise_species": [
+    "Testudo graeca"
+   ],
+   "bibliographic_note": "printed monograph (Naturalia Hispanica 17)",
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 4,
+   "evidence_records": [
+    {
+     "evidence_id": "crm117_graeca_west_2022-09",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Pistacia lentiscus",
+     "plant_accepted_name": "Pistacia lentiscus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-10",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Cistus albidus",
+     "plant_accepted_name": "Cistus albidus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-11",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Ceratonia",
+     "plant_accepted_name": "Ceratonia",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-12",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Chamaerops",
+     "plant_accepted_name": "Chamaerops",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 8
+  },
+  {
+   "cited_as": "El Mouden et al. 2006",
+   "register_section": "unit_1_citations_not_read",
+   "records": 5,
+   "cited_by_sources": [
+    "crm117_graeca_west_2022"
+   ],
+   "tortoise_species": [
+    "Testudo graeca"
+   ],
+   "bibliographic_note": "two web searches (units 2 and 3); the journal article is not open and no author copy was returned",
+   "search_status": "searched_no_open_full_text_found",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "obtain the full text through a library or interlibrary loan; no open copy was found",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 3,
+   "evidence_records": [
+    {
+     "evidence_id": "crm117_graeca_west_2022-01",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Astragalus",
+     "plant_accepted_name": "Astragalus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-02",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Leontodon",
+     "plant_accepted_name": "Leontodon",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": [
+      "bayley_highfield_1996-07"
+     ]
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-03",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Lotus",
+     "plant_accepted_name": "Lotus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-04",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Malva",
+     "plant_accepted_name": "Malva",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": [
+      "bayley_highfield_1996-09"
+     ]
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-05",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Medicago",
+     "plant_accepted_name": "Medicago",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 9
+  },
+  {
+   "cited_as": "Longepierre and Grenot 1999",
+   "register_section": "unit_1_citations_not_read",
+   "records": 4,
+   "cited_by_sources": [
+    "crm059_hermanni_2011"
+   ],
+   "tortoise_species": [
+    "Testudo hermanni"
+   ],
+   "bibliographic_note": null,
+   "search_status": "searched_unit_6_no_copy_found",
+   "unit_6_search": "one web search (French terms, Revue d'Ecologie / Persee); no copy of the article found",
+   "audit_document": null,
+   "next_step": "request the original through a library; the unit-6 web search found no copy",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 3,
+   "evidence_records": [
+    {
+     "evidence_id": "crm059_hermanni_2011-01",
+     "unit": 1,
+     "source_id": "crm059_hermanni_2011",
+     "tortoise": "Testudo hermanni",
+     "plant_as_printed": "Tamus communis",
+     "plant_accepted_name": "Dioscorea communis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm059_hermanni_2011-02",
+     "unit": 1,
+     "source_id": "crm059_hermanni_2011",
+     "tortoise": "Testudo hermanni",
+     "plant_as_printed": "Arum sp.",
+     "plant_accepted_name": "Arum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": [
+      "meek_2010-06"
+     ]
+    },
+    {
+     "evidence_id": "crm059_hermanni_2011-03",
+     "unit": 1,
+     "source_id": "crm059_hermanni_2011",
+     "tortoise": "Testudo hermanni",
+     "plant_as_printed": "Ranunculus sp.",
+     "plant_accepted_name": "Ranunculus",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm059_hermanni_2011-04",
+     "unit": 1,
+     "source_id": "crm059_hermanni_2011",
+     "tortoise": "Testudo hermanni",
+     "plant_as_printed": "Digitalis sp.",
+     "plant_accepted_name": "Digitalis",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 10
+  },
+  {
+   "cited_as": "Woodbury and Hardy 1948",
+   "register_section": "unit_1_citations_not_read",
+   "records": 4,
+   "cited_by_sources": [
+    "crm109_agassizii_2019"
+   ],
+   "tortoise_species": [
+    "Gopherus agassizii"
+   ],
+   "bibliographic_note": "Ecological Monographs 18:145-200; one web search",
+   "search_status": "searched_no_open_full_text_found",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "obtain the full text through a library or interlibrary loan; no open copy was found",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 3,
+   "evidence_records": [
+    {
+     "evidence_id": "crm109_agassizii_2019-01",
+     "unit": 1,
+     "source_id": "crm109_agassizii_2019",
+     "tortoise": "Gopherus agassizii",
+     "plant_as_printed": "Muhlenbergia porteri",
+     "plant_accepted_name": "Muhlenbergia porteri",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm109_agassizii_2019-02",
+     "unit": 1,
+     "source_id": "crm109_agassizii_2019",
+     "tortoise": "Gopherus agassizii",
+     "plant_as_printed": "Bromus madritensis ssp. rubens",
+     "plant_accepted_name": "Bromus rubens",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm109_agassizii_2019-03",
+     "unit": 1,
+     "source_id": "crm109_agassizii_2019",
+     "tortoise": "Gopherus agassizii",
+     "plant_as_printed": "Bromus tectorum",
+     "plant_accepted_name": "Bromus tectorum",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm109_agassizii_2019-04",
+     "unit": 1,
+     "source_id": "crm109_agassizii_2019",
+     "tortoise": "Gopherus agassizii",
+     "plant_as_printed": "Erodium cicutarium",
+     "plant_accepted_name": "Erodium cicutarium",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": [
+      "jennings_2002-08",
+      "oftedal_2002-03"
+     ]
+    }
+   ],
+   "queue_position": 11
+  },
+  {
+   "cited_as": "Thanda Swe 2004",
+   "register_section": "unit_1_citations_not_read",
+   "records": 3,
+   "cited_by_sources": [
+    "crm057_platynota_2011"
+   ],
+   "tortoise_species": [
+    "Geochelone platynota"
+   ],
+   "bibliographic_note": "thesis",
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 3,
+   "evidence_records": [
+    {
+     "evidence_id": "crm057_platynota_2011-01",
+     "unit": 1,
+     "source_id": "crm057_platynota_2011",
+     "tortoise": "Geochelone platynota",
+     "plant_as_printed": "Commerlina benghalensis",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm057_platynota_2011-02",
+     "unit": 1,
+     "source_id": "crm057_platynota_2011",
+     "tortoise": "Geochelone platynota",
+     "plant_as_printed": "Terminalia oliveri",
+     "plant_accepted_name": "Terminalia oliveri",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm057_platynota_2011-03",
+     "unit": 1,
+     "source_id": "crm057_platynota_2011",
+     "tortoise": "Geochelone platynota",
+     "plant_as_printed": "Cyanotis axillaris",
+     "plant_accepted_name": "Cyanotis axillaris",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 12
+  },
+  {
+   "cited_as": "Cobo and Andreu 1988",
+   "register_section": "unit_1_citations_not_read",
+   "records": 2,
+   "cited_by_sources": [
+    "crm117_graeca_west_2022"
+   ],
+   "tortoise_species": [
+    "Testudo graeca"
+   ],
+   "bibliographic_note": "the CSIC repository search sits behind an automated-visitor check, which was not bypassed; the journal copy (Oikos) is not open",
+   "search_status": "blocked_by_host",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "request a copy from the host or a library; the host refused automated access",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 2,
+   "evidence_records": [
+    {
+     "evidence_id": "crm117_graeca_west_2022-07",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Lavandula stoechas",
+     "plant_accepted_name": "Lavandula stoechas",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm117_graeca_west_2022-08",
+     "unit": 1,
+     "source_id": "crm117_graeca_west_2022",
+     "tortoise": "Testudo graeca",
+     "plant_as_printed": "Hypochaeris glabra",
+     "plant_accepted_name": "Hypochaeris glabra",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 13
+  },
+  {
+   "cited_as": "Wanchai 2008",
+   "register_section": "unit_1_citations_not_read",
+   "records": 2,
+   "cited_by_sources": [
+    "crm086_emys_2015"
+   ],
+   "tortoise_species": [
+    "Manouria emys"
+   ],
+   "bibliographic_note": "thesis in the Chulalongkorn University repository; the download timed out in units 2 and 3",
+   "search_status": "located_download_failed",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "retry the download of the located copy",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 2,
+   "evidence_records": [
+    {
+     "evidence_id": "crm086_emys_2015-01",
+     "unit": 1,
+     "source_id": "crm086_emys_2015",
+     "tortoise": "Manouria emys",
+     "plant_as_printed": "Bambusa",
+     "plant_accepted_name": "Bambusa",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    },
+    {
+     "evidence_id": "crm086_emys_2015-02",
+     "unit": 1,
+     "source_id": "crm086_emys_2015",
+     "tortoise": "Manouria emys",
+     "plant_as_printed": "Zingiber sp.",
+     "plant_accepted_name": "Zingiber",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 14
+  },
+  {
+   "cited_as": "Biswas et al. 1978",
+   "register_section": "unit_1_citations_not_read",
+   "records": 1,
+   "cited_by_sources": [
+    "crm096_elongata_2016"
+   ],
+   "tortoise_species": [
+    "Indotestudo elongata"
+   ],
+   "bibliographic_note": null,
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 1,
+   "evidence_records": [
+    {
+     "evidence_id": "crm096_elongata_2016-14",
+     "unit": 1,
+     "source_id": "crm096_elongata_2016",
+     "tortoise": "Indotestudo elongata",
+     "plant_as_printed": "Shorea robusta",
+     "plant_accepted_name": "Shorea robusta",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 15
+  },
+  {
+   "cited_as": "Di Nicola and Mezzadri 2018",
+   "register_section": "unit_1_citations_not_read",
+   "records": 1,
+   "cited_by_sources": [
+    "crm122_marginata_2023"
+   ],
+   "tortoise_species": [
+    "Testudo marginata"
+   ],
+   "bibliographic_note": "printed field guide",
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 1,
+   "evidence_records": [
+    {
+     "evidence_id": "crm122_marginata_2023-17",
+     "unit": 1,
+     "source_id": "crm122_marginata_2023",
+     "tortoise": "Testudo marginata",
+     "plant_as_printed": "Opuntia",
+     "plant_accepted_name": "Opuntia",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 16
+  },
+  {
+   "cited_as": "Hailey et al. 1997, 2001",
+   "register_section": "unit_1_citations_not_read",
+   "records": 1,
+   "cited_by_sources": [
+    "crm115_spekii_2021"
+   ],
+   "tortoise_species": [
+    "Kinixys spekii"
+   ],
+   "bibliographic_note": "the 1997 Journal of Tropical Ecology note is behind the publisher's paywall; the 2001 African Journal of Ecology paper was not found open",
+   "search_status": "searched_paywalled",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "obtain the licensed full text through a library",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 1,
+   "evidence_records": [
+    {
+     "evidence_id": "crm115_spekii_2021-09",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Erythroxylum zambeziacum",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 17
+  },
+  {
+   "cited_as": "Lambiris et al. 1989",
+   "register_section": "unit_1_citations_not_read",
+   "records": 1,
+   "cited_by_sources": [
+    "crm115_spekii_2021"
+   ],
+   "tortoise_species": [
+    "Kinixys spekii"
+   ],
+   "bibliographic_note": null,
+   "search_status": "not_searched",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original (bibliographic databases, publisher site, library catalogues)",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 1,
+   "evidence_records": [
+    {
+     "evidence_id": "crm115_spekii_2021-08",
+     "unit": 1,
+     "source_id": "crm115_spekii_2021",
+     "tortoise": "Kinixys spekii",
+     "plant_as_printed": "Uapaca kirkiana",
+     "plant_accepted_name": "Uapaca kirkiana",
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_account_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 18
+  },
+  {
+   "cited_as": "Loveridge and Williams 1957",
+   "register_section": "other_citations_not_read",
+   "records": 1,
+   "cited_by_sources": [
+    "moll_klemens_1996"
+   ],
+   "tortoise_species": [
+    "Malacochersus tornieri"
+   ],
+   "bibliographic_note": null,
+   "search_status": "secondary_citation_primary_not_read",
+   "unit_6_search": null,
+   "audit_document": null,
+   "next_step": "search for the original",
+   "verification_status": "awaiting_original",
+   "evidence_level_now": "secondary citation only; not a confirmed observation",
+   "records_without_an_independent_primary_record": 1,
+   "evidence_records": [
+    {
+     "evidence_id": "moll_klemens_1996-07",
+     "unit": 2,
+     "source_id": "moll_klemens_1996",
+     "tortoise": "Malacochersus tornieri",
+     "plant_as_printed": "dry grass (unidentified)",
+     "plant_accepted_name": null,
+     "evidence_tier_now": "8_secondary_citation_primary_not_read",
+     "evidence_directness_now": "reported_in_source_primary_not_read",
+     "independent_primary_records_same_tortoise_and_plant": []
+    }
+   ],
+   "queue_position": 19
+  }
+ ],
+ "totals": {
+  "citations": 19,
+  "records": 85,
+  "records_without_an_independent_primary_record": 81,
+  "by_search_status": {
+   "blocked_by_host": 2,
+   "located_download_failed": 1,
+   "not_in_the_cited_source_read_other_cited_sources_unread": 1,
+   "not_searched": 7,
+   "searched_no_open_full_text_found": 3,
+   "searched_paywalled": 1,
+   "searched_unit_6_no_copy_found": 2,
+   "secondary_citation_primary_not_read": 2
+  }
+ }
+}

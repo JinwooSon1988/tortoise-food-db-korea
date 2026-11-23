@@ -1,0 +1,283 @@
+{
+ "schema_version": "1.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v1.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v1.json",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "name_authority": "GBIF backbone taxonomy, species/match API",
+ "species": [
+  {
+   "tortoise_key": "sulcata",
+   "scientific_name": "Centrochelys sulcata",
+   "common_name_ko": "설카타 육지거북",
+   "common_name_en": "African spurred tortoise",
+   "names_in_sources": [
+    "Geochelone sulcata"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441533,
+   "gbif_accepted_name": "Centrochelys sulcata",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "pardalis",
+   "scientific_name": "Stigmochelys pardalis",
+   "common_name_ko": "표범육지거북",
+   "common_name_en": "Leopard tortoise",
+   "names_in_sources": [
+    "Geochelone pardalis"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441757,
+   "gbif_accepted_name": "Stigmochelys pardalis",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "platynota",
+   "scientific_name": "Geochelone platynota",
+   "common_name_ko": "버마별거북",
+   "common_name_en": "Burmese star tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441526,
+   "gbif_accepted_name": "Geochelone platynota",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "elegans",
+   "scientific_name": "Geochelone elegans",
+   "common_name_ko": "인도별거북",
+   "common_name_en": "Indian star tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441535,
+   "gbif_accepted_name": "Geochelone elegans",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "marginata",
+   "scientific_name": "Testudo marginata",
+   "common_name_ko": "마지네이티드육지거북",
+   "common_name_en": "Marginated tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441502,
+   "gbif_accepted_name": "Testudo marginata",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "hermanni",
+   "scientific_name": "Testudo hermanni",
+   "common_name_ko": "헤르만육지거북",
+   "common_name_en": "Hermann's tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441454,
+   "gbif_accepted_name": "Testudo hermanni",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "graeca_west",
+   "scientific_name": "Testudo graeca",
+   "common_name_ko": "그리스육지거북 (서부 아종군)",
+   "common_name_en": "Spur-thighed tortoise (western subspecies clade)",
+   "names_in_sources": [
+    "Testudo graeca graeca",
+    "Testudo graeca nabeulensis",
+    "Testudo graeca whitei"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441461,
+   "gbif_accepted_name": "Testudo graeca",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "horsfieldii",
+   "scientific_name": "Testudo horsfieldii",
+   "common_name_ko": "러시아육지거북",
+   "common_name_en": "Russian (steppe) tortoise",
+   "names_in_sources": [
+    "Testudo horsfieldi",
+    "Agrionemys horsfieldii"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441514,
+   "gbif_accepted_name": "Testudo horsfieldii",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "elongata",
+   "scientific_name": "Indotestudo elongata",
+   "common_name_ko": "노란머리육지거북",
+   "common_name_en": "Elongated tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 8539576,
+   "gbif_accepted_name": "Indotestudo elongata",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "travancorica",
+   "scientific_name": "Indotestudo travancorica",
+   "common_name_ko": "트라방코르육지거북",
+   "common_name_en": "Travancore tortoise",
+   "names_in_sources": [
+    "Geochelone travancorica"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441445,
+   "gbif_accepted_name": "Indotestudo travancorica",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "spekii",
+   "scientific_name": "Kinixys spekii",
+   "common_name_ko": "스피크경첩거북",
+   "common_name_en": "Speke's hinge-back tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441685,
+   "gbif_accepted_name": "Kinixys spekii",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "tornieri",
+   "scientific_name": "Malacochersus tornieri",
+   "common_name_ko": "팬케이크육지거북",
+   "common_name_en": "Pancake tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441842,
+   "gbif_accepted_name": "Malacochersus tornieri",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "emys",
+   "scientific_name": "Manouria emys",
+   "common_name_ko": "아시아숲거북",
+   "common_name_en": "Asian giant tortoise",
+   "names_in_sources": [
+    "Manouria emys phayrei"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441830,
+   "gbif_accepted_name": "Manouria emys",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "agassizii",
+   "scientific_name": "Gopherus agassizii",
+   "common_name_ko": "모하비사막거북",
+   "common_name_en": "Mojave desert tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 2441814,
+   "gbif_accepted_name": "Gopherus agassizii",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "carbonarius",
+   "scientific_name": "Chelonoidis carbonarius",
+   "common_name_ko": "붉은발육지거북",
+   "common_name_en": "Red-footed tortoise",
+   "names_in_sources": [
+    "Chelonoidis carbonaria",
+    "Geochelone carbonaria"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 9533689,
+   "gbif_accepted_name": "Chelonoidis carbonarius",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "angulata",
+   "scientific_name": "Chersina angulata",
+   "common_name_ko": "앵귤레이트육지거북",
+   "common_name_en": "Angulate tortoise",
+   "names_in_sources": [],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 5220285,
+   "gbif_accepted_name": "Chersina angulata",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "denticulatus",
+   "scientific_name": "Chelonoidis denticulatus",
+   "common_name_ko": "노란발육지거북",
+   "common_name_en": "Yellow-footed tortoise",
+   "names_in_sources": [
+    "Chelonoidis denticulata",
+    "Geochelone denticulata"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 5220281,
+   "gbif_accepted_name": "Chelonoidis denticulatus",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "gigantea",
+   "scientific_name": "Aldabrachelys gigantea",
+   "common_name_ko": "알다브라 코끼리거북",
+   "common_name_en": "Aldabra giant tortoise",
+   "names_in_sources": [
+    "Geochelone gigantea"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 7696021,
+   "gbif_accepted_name": "Aldabrachelys gigantea",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  },
+  {
+   "tortoise_key": "niger",
+   "scientific_name": "Chelonoidis niger",
+   "common_name_ko": "갈라파고스 코끼리거북류",
+   "common_name_en": "Galapagos giant tortoises",
+   "names_in_sources": [
+    "Chelonoidis nigra",
+    "Chelonoidis porteri"
+   ],
+   "gbif_match_type": "EXACT",
+   "gbif_status": "ACCEPTED",
+   "gbif_usage_key": 9527499,
+   "gbif_accepted_name": "Chelonoidis niger",
+   "family": "Testudinidae",
+   "name_check": "accepted"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "schema_version": "4.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v4.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v4.json",
+ "extends": "the v1, v2 and v3 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "species_added": [],
+ "groups_not_species_specific": [
+  {
+   "tortoise_key": "giant_tortoises_named_as_examples",
+   "label": "'Larger tortoises, such as Aldabra or Galapagos tortoises' (veterinary text; examples, not a species list)",
+   "label_ko": "대형 육지거북(수의 매뉴얼이 알다브라·갈라파고스를 예로 듦)",
+   "member_tortoise_keys": [],
+   "species_named_by_source": false
+  },
+  {
+   "tortoise_key": "tortoises_general_unspecified",
+   "label": "Tortoises in general (veterinary text; no species named)",
+   "label_ko": "육지거북 일반(대상 종 미확인)",
+   "member_tortoise_keys": [],
+   "species_named_by_source": false
+  }
+ ]
+}

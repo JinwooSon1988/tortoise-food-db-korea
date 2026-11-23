@@ -1,0 +1,891 @@
+{
+ "schema_version": "3.0",
+ "generated_by": "scripts/build_global_plant_evidence_research_v3.py",
+ "generated_from": "data/research/global_plant_evidence_transcription_v3.json",
+ "extends": "the v1 and v2 research files, which are not modified",
+ "layer": "research_only_not_published",
+ "grade_policy": "No feeding grade is assigned in the research layer. A record here is not a statement that the plant is safe to feed.",
+ "note": "A layout of values already in the v1 and v2 nutrition files. 4 records hold a tannin, oxalate or nitrate value (Feedipedia livestock feed tables; not tortoise measurements). A nutrient value is not a safety statement.",
+ "records": [
+  {
+   "record_id": "feedipedia-12130",
+   "analyzed_taxon": "Eleusine indica",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/12130",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 5.3,
+    "phosphorus [g/kg DM, dry matter]": 2.6,
+    "crude fibre [% DM, dry matter]": 29.0,
+    "crude protein [% DM, dry matter]": 10.9,
+    "potassium [g/kg DM, dry matter]": 18.2
+   },
+   "calcium_to_phosphorus": {
+    "value": 2.04,
+    "derived_by_this_layer": true,
+    "from": "calcium 5.3 and phosphorus 2.6 g/kg DM (means over 14 and 14 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-12067",
+   "analyzed_taxon": "Dactyloctenium aegyptium",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/12067",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 6.1,
+    "phosphorus [g/kg DM, dry matter]": 2.3,
+    "crude fibre [% DM, dry matter]": 33.4,
+    "crude protein [% DM, dry matter]": 8.3,
+    "potassium [g/kg DM, dry matter]": 21.3
+   },
+   "calcium_to_phosphorus": {
+    "value": 2.65,
+    "derived_by_this_layer": true,
+    "from": "calcium 6.1 and phosphorus 2.3 g/kg DM (means over 20 and 20 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-12068",
+   "analyzed_taxon": "Dactyloctenium aegyptium",
+   "analyzed_part": "aerial part, dry",
+   "preparation_state": "dried",
+   "source_url": "https://www.feedipedia.org/node/12068",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 2.2,
+    "phosphorus [g/kg DM, dry matter]": 0.4,
+    "crude fibre [% DM, dry matter]": 42.0,
+    "crude protein [% DM, dry matter]": 6.0,
+    "potassium [g/kg DM, dry matter]": 2.6
+   },
+   "calcium_to_phosphorus": {
+    "value": 5.5,
+    "derived_by_this_layer": true,
+    "from": "calcium 2.2 and phosphorus 0.4 g/kg DM (means over 3 and 3 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-16877",
+   "analyzed_taxon": "Dactyloctenium aegyptium",
+   "analyzed_part": "straw",
+   "preparation_state": "crop_residue",
+   "source_url": "https://www.feedipedia.org/node/16877",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 4.1,
+    "phosphorus [g/kg DM, dry matter]": 0.6,
+    "crude fibre [% DM, dry matter]": 38.2,
+    "crude protein [% DM, dry matter]": 4.5,
+    "potassium [g/kg DM, dry matter]": 6.2
+   },
+   "calcium_to_phosphorus": {
+    "value": 6.83,
+    "derived_by_this_layer": true,
+    "from": "calcium 4.1 and phosphorus 0.6 g/kg DM (means over 6 and 6 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-11595",
+   "analyzed_taxon": "Opuntia ficus-indica",
+   "analyzed_part": "cladodes, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/11595",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 38.8,
+    "phosphorus [g/kg DM, dry matter]": 2.0,
+    "crude fibre [% DM, dry matter]": 14.6,
+    "ndf [% DM, dry matter]": 25.5,
+    "adf [% DM, dry matter]": 14.5,
+    "lignin [% DM, dry matter]": 2.6,
+    "crude protein [% DM, dry matter]": 6.9,
+    "potassium [g/kg DM, dry matter]": 48.0
+   },
+   "calcium_to_phosphorus": {
+    "value": 19.4,
+    "derived_by_this_layer": true,
+    "from": "calcium 38.8 and phosphorus 2.0 g/kg DM (means over 11 and 12 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-11596",
+   "analyzed_taxon": "Opuntia ficus-indica",
+   "analyzed_part": "fruit pulp, dehydrated",
+   "preparation_state": "dried",
+   "source_url": "https://www.feedipedia.org/node/11596",
+   "match_to_candidate": "same_species",
+   "values": {
+    "crude fibre [% DM, dry matter]": 19.8,
+    "crude protein [% DM, dry matter]": 4.5
+   }
+  },
+  {
+   "record_id": "feedipedia-12035",
+   "analyzed_taxon": "Trifolium incarnatum",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/12035",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 14.6,
+    "phosphorus [g/kg DM, dry matter]": 3.3,
+    "crude fibre [% DM, dry matter]": 19.9,
+    "ndf [% DM, dry matter]": 37.2,
+    "adf [% DM, dry matter]": 30.8,
+    "crude protein [% DM, dry matter]": 15.9
+   },
+   "calcium_to_phosphorus": {
+    "value": 4.42,
+    "derived_by_this_layer": true,
+    "from": "calcium 14.6 and phosphorus 3.3 g/kg DM (means over 11 and 11 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-12450",
+   "analyzed_taxon": "Trifolium resupinatum",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/12450",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 21.9,
+    "phosphorus [g/kg DM, dry matter]": 3.9,
+    "ndf [% DM, dry matter]": 28.2,
+    "adf [% DM, dry matter]": 21.2,
+    "lignin [% DM, dry matter]": 2.7,
+    "crude protein [% DM, dry matter]": 21.6,
+    "potassium [g/kg DM, dry matter]": 14.6
+   },
+   "calcium_to_phosphorus": {
+    "value": 5.62,
+    "derived_by_this_layer": true,
+    "from": "calcium 21.9 and phosphorus 3.9 g/kg DM (means over 16 and 16 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-14968",
+   "analyzed_taxon": "Trifolium resupinatum",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "source_url": "https://www.feedipedia.org/node/14968",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 14.9,
+    "phosphorus [g/kg DM, dry matter]": 1.8,
+    "ndf [% DM, dry matter]": 43.1,
+    "adf [% DM, dry matter]": 37.1,
+    "lignin [% DM, dry matter]": 6.6,
+    "crude protein [% DM, dry matter]": 14.0,
+    "potassium [g/kg DM, dry matter]": 18.3
+   },
+   "calcium_to_phosphorus": {
+    "value": 8.28,
+    "derived_by_this_layer": true,
+    "from": "calcium 14.9 and phosphorus 1.8 g/kg DM (means over 2 and 2 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-11855",
+   "analyzed_taxon": "Lotus corniculatus",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/11855",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 11.3,
+    "phosphorus [g/kg DM, dry matter]": 2.6,
+    "crude fibre [% DM, dry matter]": 26.4,
+    "ndf [% DM, dry matter]": 38.3,
+    "adf [% DM, dry matter]": 28.2,
+    "lignin [% DM, dry matter]": 9.9,
+    "crude protein [% DM, dry matter]": 21.1
+   },
+   "calcium_to_phosphorus": {
+    "value": 4.35,
+    "derived_by_this_layer": true,
+    "from": "calcium 11.3 and phosphorus 2.6 g/kg DM (means over 1 and 4 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-19966",
+   "analyzed_taxon": "Lotus corniculatus",
+   "analyzed_part": "aerial part, hay",
+   "preparation_state": "hay",
+   "source_url": "https://www.feedipedia.org/node/19966",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 13.4,
+    "phosphorus [g/kg DM, dry matter]": 2.7,
+    "crude fibre [% DM, dry matter]": 30.4,
+    "ndf [% DM, dry matter]": 41.1,
+    "adf [% DM, dry matter]": 33.9,
+    "lignin [% DM, dry matter]": 9.6,
+    "crude protein [% DM, dry matter]": 19.2,
+    "potassium [g/kg DM, dry matter]": 34.0
+   },
+   "calcium_to_phosphorus": {
+    "value": 4.96,
+    "derived_by_this_layer": true,
+    "from": "calcium 13.4 and phosphorus 2.7 g/kg DM (means over 2 and 2 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_01",
+   "analyzed_taxon": "Camissonia claviformis",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 11.72,
+    "potassium [% DM, dry matter]": 1.37
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_02",
+   "analyzed_taxon": "Camissonia claviformis",
+   "analyzed_part": "young stems",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 8.0,
+    "potassium [% DM, dry matter]": 1.73
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_03",
+   "analyzed_taxon": "Plantago ovata",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 8.95,
+    "potassium [% DM, dry matter]": 0.89
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_04",
+   "analyzed_taxon": "Plantago ovata",
+   "analyzed_part": "immature fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 8.33,
+    "potassium [% DM, dry matter]": 0.82
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_05",
+   "analyzed_taxon": "Erodium cicutarium",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 14.35,
+    "potassium [% DM, dry matter]": 1.51
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_06",
+   "analyzed_taxon": "Erodium cicutarium",
+   "analyzed_part": "flowers and immature fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 13.46,
+    "potassium [% DM, dry matter]": 1.61
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_07",
+   "analyzed_taxon": "Malacothrix glabrata",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 5.94,
+    "potassium [% DM, dry matter]": 1.13
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_08",
+   "analyzed_taxon": "Cryptantha angustifolia",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 11.49,
+    "potassium [% DM, dry matter]": 3.74
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_09",
+   "analyzed_taxon": "Cryptantha angustifolia",
+   "analyzed_part": "flowers and immature fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 14.05,
+    "potassium [% DM, dry matter]": 3.9
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_10",
+   "analyzed_taxon": "Schismus spp.",
+   "analyzed_part": "immature fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 7.71,
+    "potassium [% DM, dry matter]": 0.71
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_11",
+   "analyzed_taxon": "Chaenactis fremontii",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 4.18,
+    "potassium [% DM, dry matter]": 1.51
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_12",
+   "analyzed_taxon": "Loeseliastrum matthewsii",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 8.04,
+    "potassium [% DM, dry matter]": 2.03
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_13",
+   "analyzed_taxon": "Oenothera primiveris",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 6.17,
+    "potassium [% DM, dry matter]": 2.22
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_14",
+   "analyzed_taxon": "Phacelia crenulata",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 7.78,
+    "potassium [% DM, dry matter]": 1.7
+   }
+  },
+  {
+   "record_id": "oftedal_2002_t6_15",
+   "analyzed_taxon": "Eriogonum inflatum",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://chelonian.org/wp-content/uploads/file/CCB_Vol_4_Nos1-4(2001-2005)/Oftedal_etal_2002.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude protein [% DM, dry matter]": 9.53,
+    "potassium [% DM, dry matter]": 1.74
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_01",
+   "analyzed_taxon": "Achillea millefolium",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 12.8,
+    "crude protein [%, not stated in the table]": 3.18
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_02",
+   "analyzed_taxon": "Urtica dioica",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 7.37,
+    "crude protein [%, not stated in the table]": 3.07
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_03",
+   "analyzed_taxon": "Plantago lanceolata",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 6.58,
+    "crude protein [%, not stated in the table]": 1.13
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_04",
+   "analyzed_taxon": "Plantago maior",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 2.76,
+    "crude protein [%, not stated in the table]": 3.04
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_05",
+   "analyzed_taxon": "Trifolium pratense",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 5.51,
+    "crude protein [%, not stated in the table]": 3.76
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_06",
+   "analyzed_taxon": "Taraxacum officinale",
+   "analyzed_part": "whole above-ground parts",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 2.11,
+    "crude protein [%, not stated in the table]": 2.78
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_07",
+   "analyzed_taxon": "Prunus dulcis",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 1.6,
+    "crude protein [%, not stated in the table]": 0.6
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_08",
+   "analyzed_taxon": "Malus sylvestris",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 2.0,
+    "crude protein [%, not stated in the table]": 0.3
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_09",
+   "analyzed_taxon": "Cucumis melo",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 0.7,
+    "crude protein [%, not stated in the table]": 0.9
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_10",
+   "analyzed_taxon": "Musa paradisiaca",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 1.8,
+    "crude protein [%, not stated in the table]": 1.1
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_11",
+   "analyzed_taxon": "Persica vulgaris",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 1.9,
+    "crude protein [%, not stated in the table]": 0.7
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_12",
+   "analyzed_taxon": "Citrullus lanatus",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 0.2,
+    "crude protein [%, not stated in the table]": 0.6
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_13",
+   "analyzed_taxon": "Cucurbita pepo",
+   "analyzed_part": "fruit, peeled",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 1.1,
+    "crude protein [%, not stated in the table]": 1.6
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_14",
+   "analyzed_taxon": "Cucumis sativus",
+   "analyzed_part": "fruit, peeled",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 0.5,
+    "crude protein [%, not stated in the table]": 0.6
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_15",
+   "analyzed_taxon": "Capsicum annuum",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 3.6,
+    "crude protein [%, not stated in the table]": 1.2
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_16",
+   "analyzed_taxon": "Daucus carota",
+   "analyzed_part": "root, peeled",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 3.4,
+    "crude protein [%, not stated in the table]": 1.1
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_17",
+   "analyzed_taxon": "Lycopersicon esculentum",
+   "analyzed_part": "fruit",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 1.0,
+    "crude protein [%, not stated in the table]": 1.0
+   }
+  },
+  {
+   "record_id": "dlugosz_2015_t2_18",
+   "analyzed_taxon": "Cichorium endivia",
+   "analyzed_part": "leaves",
+   "preparation_state": "fresh",
+   "source_url": "https://www.npt.up-poznan.net/pub/art_9_60.pdf",
+   "match_to_candidate": "same_taxon_name_as_an_evidence_record",
+   "values": {
+    "crude fibre [%, not stated in the table]": 1.3,
+    "crude protein [%, not stated in the table]": 1.3
+   }
+  },
+  {
+   "record_id": "feedipedia-11897",
+   "analyzed_taxon": "Paspalum conjugatum",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/11897",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 3.6,
+    "phosphorus [g/kg DM, dry matter]": 3.0,
+    "crude fibre [% DM, dry matter]": 30.2,
+    "crude protein [% DM, dry matter]": 11.5,
+    "potassium [g/kg DM, dry matter]": 24.2
+   },
+   "calcium_to_phosphorus": {
+    "value": 1.2,
+    "derived_by_this_layer": true,
+    "from": "calcium 3.6 and phosphorus 3.0 g/kg DM (means over 6 and 6 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-11723",
+   "analyzed_taxon": "Achyranthes aspera",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/11723",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 14.5,
+    "phosphorus [g/kg DM, dry matter]": 2.7,
+    "crude fibre [% DM, dry matter]": 26.8,
+    "crude protein [% DM, dry matter]": 20.5,
+    "potassium [g/kg DM, dry matter]": 46.2,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 50.0
+   },
+   "calcium_to_phosphorus": {
+    "value": 5.37,
+    "derived_by_this_layer": true,
+    "from": "calcium 14.5 and phosphorus 2.7 g/kg DM (means over 4 and 4 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-11650",
+   "analyzed_taxon": "Leucaena leucocephala",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/11650",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 10.7,
+    "phosphorus [g/kg DM, dry matter]": 2.1,
+    "crude fibre [% DM, dry matter]": 19.9,
+    "ndf [% DM, dry matter]": 40.9,
+    "adf [% DM, dry matter]": 25.4,
+    "lignin [% DM, dry matter]": 10.8,
+    "crude protein [% DM, dry matter]": 23.3,
+    "potassium [g/kg DM, dry matter]": 18.9,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 23.8
+   },
+   "calcium_to_phosphorus": {
+    "value": 5.1,
+    "derived_by_this_layer": true,
+    "from": "calcium 10.7 and phosphorus 2.1 g/kg DM (means over 121 and 249 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-12513",
+   "analyzed_taxon": "Themeda triandra",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/12513",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 2.7,
+    "phosphorus [g/kg DM, dry matter]": 0.9,
+    "crude fibre [% DM, dry matter]": 33.7,
+    "crude protein [% DM, dry matter]": 5.7,
+    "potassium [g/kg DM, dry matter]": 6.9
+   },
+   "calcium_to_phosphorus": {
+    "value": 3.0,
+    "derived_by_this_layer": true,
+    "from": "calcium 2.7 and phosphorus 0.9 g/kg DM (means over 23 and 23 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-12881",
+   "analyzed_taxon": "Themeda triandra",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "source_url": "https://www.feedipedia.org/node/12881",
+   "match_to_candidate": "same_species",
+   "values": {
+    "crude fibre [% DM, dry matter]": 40.4,
+    "crude protein [% DM, dry matter]": 4.4
+   }
+  },
+  {
+   "record_id": "feedipedia-11865",
+   "analyzed_taxon": "Medicago lupulina",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/11865",
+   "match_to_candidate": "same_species",
+   "values": {
+    "phosphorus [g/kg DM, dry matter]": 3.1,
+    "lignin [% DM, dry matter]": 4.5,
+    "crude protein [% DM, dry matter]": 21.8,
+    "potassium [g/kg DM, dry matter]": 15.8
+   }
+  },
+  {
+   "record_id": "feedipedia-15787",
+   "analyzed_taxon": "Tithonia diversifolia",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/15787",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 21.4,
+    "phosphorus [g/kg DM, dry matter]": 3.6,
+    "crude fibre [% DM, dry matter]": 20.2,
+    "ndf [% DM, dry matter]": 44.7,
+    "adf [% DM, dry matter]": 35.3,
+    "lignin [% DM, dry matter]": 9.2,
+    "crude protein [% DM, dry matter]": 21.2,
+    "potassium [g/kg DM, dry matter]": 39.8
+   },
+   "calcium_to_phosphorus": {
+    "value": 5.94,
+    "derived_by_this_layer": true,
+    "from": "calcium 21.4 and phosphorus 3.6 g/kg DM (means over 6 and 6 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-19894",
+   "analyzed_taxon": "Tithonia diversifolia",
+   "analyzed_part": "aerial part, dried",
+   "preparation_state": "dried",
+   "source_url": "https://www.feedipedia.org/node/19894",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 18.4,
+    "phosphorus [g/kg DM, dry matter]": 4.3,
+    "crude fibre [% DM, dry matter]": 14.9,
+    "ndf [% DM, dry matter]": 39.4,
+    "adf [% DM, dry matter]": 31.7,
+    "lignin [% DM, dry matter]": 6.5,
+    "crude protein [% DM, dry matter]": 21.3
+   },
+   "calcium_to_phosphorus": {
+    "value": 4.28,
+    "derived_by_this_layer": true,
+    "from": "calcium 18.4 and phosphorus 4.3 g/kg DM (means over 1 and 1 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-12063",
+   "analyzed_taxon": "Desmanthus virgatus",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/12063",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 16.5,
+    "phosphorus [g/kg DM, dry matter]": 3.3,
+    "crude fibre [% DM, dry matter]": 34.0,
+    "ndf [% DM, dry matter]": 46.7,
+    "adf [% DM, dry matter]": 37.0,
+    "lignin [% DM, dry matter]": 13.1,
+    "crude protein [% DM, dry matter]": 15.8,
+    "potassium [g/kg DM, dry matter]": 19.9,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 73.5
+   },
+   "calcium_to_phosphorus": {
+    "value": 5.0,
+    "derived_by_this_layer": true,
+    "from": "calcium 16.5 and phosphorus 3.3 g/kg DM (means over 8 and 3 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-19702",
+   "analyzed_taxon": "Vicia faba",
+   "analyzed_part": "aerial part, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/19702",
+   "match_to_candidate": "same_species",
+   "values": {
+    "crude fibre [% DM, dry matter]": 26.0,
+    "crude protein [% DM, dry matter]": 17.8
+   }
+  },
+  {
+   "record_id": "feedipedia-19703",
+   "analyzed_taxon": "Vicia faba",
+   "analyzed_part": "aerial part, straw",
+   "preparation_state": "crop_residue",
+   "source_url": "https://www.feedipedia.org/node/19703",
+   "match_to_candidate": "same_species",
+   "values": {
+    "calcium [g/kg DM, dry matter]": 11.1,
+    "phosphorus [g/kg DM, dry matter]": 1.1,
+    "crude fibre [% DM, dry matter]": 39.2,
+    "ndf [% DM, dry matter]": 59.6,
+    "adf [% DM, dry matter]": 51.5,
+    "lignin [% DM, dry matter]": 10.3,
+    "crude protein [% DM, dry matter]": 7.4,
+    "tannins (eq. tannic acid) [g/kg DM, dry matter]": 37.4
+   },
+   "calcium_to_phosphorus": {
+    "value": 10.09,
+    "derived_by_this_layer": true,
+    "from": "calcium 11.1 and phosphorus 1.1 g/kg DM (means over 3 and 3 samples)",
+    "caution": "A quotient of two table means from different numbers of samples, computed here and not printed by the source. It describes this feed table only and is not a feeding rule."
+   }
+  },
+  {
+   "record_id": "feedipedia-20402",
+   "analyzed_taxon": "Psidium guajava",
+   "analyzed_part": "fruit, fresh",
+   "preparation_state": "fresh",
+   "source_url": "https://www.feedipedia.org/node/20402",
+   "match_to_candidate": "same_species",
+   "values": {
+    "crude fibre [% DM, dry matter]": 15.4,
+    "ndf [% DM, dry matter]": 49.9,
+    "adf [% DM, dry matter]": 44.4,
+    "crude protein [% DM, dry matter]": 6.2
+   }
+  },
+  {
+   "record_id": "feedipedia-12640",
+   "analyzed_taxon": "Stenotaphrum secundatum",
+   "analyzed_part": "hay",
+   "preparation_state": "hay",
+   "source_url": "https://www.feedipedia.org/node/12640",
+   "match_to_candidate": "same_genus_different_species_reference_only",
+   "values": {
+    "crude fibre [% DM, dry matter]": 32.5,
+    "crude protein [% DM, dry matter]": 6.7
+   }
+  }
+ ]
+}
