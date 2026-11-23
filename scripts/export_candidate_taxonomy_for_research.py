@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 
 BINOMIAL = re.compile(r"^[A-Z][a-z]+ [a-z][a-z-]+$")
+GBIF_SPECIES_URL = re.compile(r"^https://www[.]gbif[.]org/species/[0-9]+$")
 
 
 def export(index_path, site_csv, output, report, diverse_path=None):
@@ -39,7 +40,7 @@ def export(index_path, site_csv, output, report, diverse_path=None):
                     or record.get("feeding_safety_status") != "not_assessed"
                     or record.get("safety_grade") is not None
                     or not isinstance(record.get("source_taxon_url"), str)
-                    or not record["source_taxon_url"].startswith("https://www.gbif.org/species/")):
+                    or not GBIF_SPECIES_URL.fullmatch(record["source_taxon_url"])):
                 raise ValueError(f"unsafe/unverified taxonomy status in {filename}")
             source_count += 1
             if isinstance(name, str) and BINOMIAL.fullmatch(name):
@@ -61,7 +62,7 @@ def export(index_path, site_csv, output, report, diverse_path=None):
             if (record.get("source_scope") != "taxonomy_only"
                     or record.get("identity_status") != "taxonomy_candidate"
                     or not isinstance(record.get("source_taxon_url"), str)
-                    or not record["source_taxon_url"].startswith("https://www.gbif.org/species/")
+                    or not GBIF_SPECIES_URL.fullmatch(record["source_taxon_url"])
                     or record.get("safety_grade") not in (None, "")
                     or record.get("feeding_safety_status") not in (None, "not_assessed")
                     or record.get("feeding_record_status") in ("verified", "confirmed", "feeding_pending")):
