@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "source_branch": "main",
+  "scope": "research_only",
+  "notes": "Not nutrition evidence, not feeding suitability. Resolve species and plant-part matching before publishing.",
+  "record_count": 69,
+  "records": [
+    {
+      "plant_id": "hibiscusleaf",
+      "ko": "무궁화잎",
+      "scientific": "Hibiscus syriacus",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hibiscusflower",
+      "ko": "무궁화꽃",
+      "scientific": "Hibiscus syriacus",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "bellpepper",
+      "ko": "파프리카",
+      "scientific": "Capsicum annuum",
+      "category": "fruit_veg",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "violet",
+      "ko": "제비꽃",
+      "scientific": "Viola spp.",
+      "category": "wild",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "geranium",
+      "ko": "제라늄",
+      "scientific": "Pelargonium spp.",
+      "category": "ornamental",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "marshmallow",
+      "ko": "마시멜로우",
+      "scientific": "Althaea officinalis",
+      "category": "herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hollyhock",
+      "ko": "접시꽃",
+      "scientific": "Alcea rosea",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "grapehyacinth",
+      "ko": "무스카리",
+      "scientific": "Muscari armeniacum",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "lemonbalm",
+      "ko": "레몬밤",
+      "scientific": "Melissa officinalis",
+      "category": "herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "sage",
+      "ko": "세이지",
+      "scientific": "Salvia officinalis",
+      "category": "herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "oregano",
+      "ko": "오레가노",
+      "scientific": "Origanum vulgare",
+      "category": "herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "lavender",
+      "ko": "라벤더",
+      "scientific": "Lavandula angustifolia",
+      "category": "herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "chamomile",
+      "ko": "캐모마일",
+      "scientific": "Matricaria chamomilla",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "echinacea",
+      "ko": "에키네시아",
+      "scientific": "Echinacea purpurea",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "yarrow",
+      "ko": "서양톱풀",
+      "scientific": "Achillea millefolium",
+      "category": "wild",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "sunflowerpetal",
+      "ko": "해바라기꽃잎",
+      "scientific": "Helianthus annuus",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "strawberryleaf",
+      "ko": "딸기잎",
+      "scientific": "Fragaria × ananassa",
+      "category": "leafy",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "raspberryleaf",
+      "ko": "라즈베리잎",
+      "scientific": "Rubus idaeus",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "blackberryleaf",
+      "ko": "블랙베리잎",
+      "scientific": "Rubus fruticosus agg.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "appleleaf",
+      "ko": "사과나무잎",
+      "scientific": "Malus domestica",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "pearleaf",
+      "ko": "배나무잎",
+      "scientific": "Pyrus pyrifolia",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "plumleaf",
+      "ko": "자두나무잎",
+      "scientific": "Prunus salicina",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "peachleaf",
+      "ko": "복숭아나무잎",
+      "scientific": "Prunus persica",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "violetleaf",
+      "ko": "제비꽃잎",
+      "scientific": "Viola mandshurica",
+      "category": "wild",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "geraniumleaf",
+      "ko": "제라늄잎",
+      "scientific": "Pelargonium spp.",
+      "category": "leafy",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "cosmos",
+      "ko": "코스모스",
+      "scientific": "Cosmos bipinnatus",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "beanleaf",
+      "ko": "강낭콩잎",
+      "scientific": "Phaseolus vulgaris",
+      "category": "leafy",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "cucumberleaf",
+      "ko": "오이잎",
+      "scientific": "Cucumis sativus",
+      "category": "leafy",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "kiwileaf",
+      "ko": "키위잎",
+      "scientific": "Actinidia deliciosa",
+      "category": "vine_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "meadowgrass",
+      "ko": "왕포아풀",
+      "scientific": "Poa pratensis",
+      "category": "grass",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "fescue",
+      "ko": "톨페스큐",
+      "scientific": "Schedonorus arundinaceus",
+      "category": "grass",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "lindenleaf",
+      "ko": "피나무잎",
+      "scientific": "Tilia spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hazelleaf",
+      "ko": "개암나무잎",
+      "scientific": "Corylus spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "birchleaf",
+      "ko": "자작나무잎",
+      "scientific": "Betula spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "willowleaf",
+      "ko": "버드나무잎",
+      "scientific": "Salix spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "poplarleaf",
+      "ko": "포플러잎",
+      "scientific": "Populus spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "elmleaf",
+      "ko": "느릅나무잎",
+      "scientific": "Ulmus spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "mapleleaf",
+      "ko": "단풍나무잎",
+      "scientific": "Acer spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "ginkgoleaf",
+      "ko": "은행잎",
+      "scientific": "Ginkgo biloba",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "daisy",
+      "ko": "데이지",
+      "scientific": "Bellis perennis",
+      "category": "flower",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "eveningprimrose",
+      "ko": "달맞이꽃",
+      "scientific": "Oenothera spp.",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "milkthistle",
+      "ko": "밀크시슬",
+      "scientific": "Silybum marianum",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hawthorn",
+      "ko": "산사나무속 잎",
+      "scientific": "Crataegus spp.",
+      "category": "tree_leaf",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "henbit",
+      "ko": "광대나물",
+      "scientific": "Lamium amplexicaule",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "houseleek",
+      "ko": "셈페르비붐",
+      "scientific": "Sempervivum spp.",
+      "category": "succulent",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "echeveria",
+      "ko": "에케베리아",
+      "scientific": "Echeveria spp.",
+      "category": "succulent",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "salsify",
+      "ko": "살시피류",
+      "scientific": "Tragopogon spp.",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hawksbeard",
+      "ko": "씀바귀아재비류",
+      "scientific": "Crepis spp.",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hawkbit",
+      "ko": "민들레아재비류",
+      "scientific": "Leontodon spp.",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "catsear",
+      "ko": "서양금혼초",
+      "scientific": "Hypochaeris radicata",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hawkweed",
+      "ko": "조밥나물류",
+      "scientific": "Hieracium spp.",
+      "category": "wild_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "petunia",
+      "ko": "페튜니아",
+      "scientific": "Petunia spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "dahlia",
+      "ko": "달리아",
+      "scientific": "Dahlia spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "gerbera",
+      "ko": "거베라",
+      "scientific": "Gerbera spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "zinnia",
+      "ko": "백일홍",
+      "scientific": "Zinnia spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "mexicanpetunia",
+      "ko": "멕시칸페튜니아",
+      "scientific": "Ruellia spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "coreopsis",
+      "ko": "금계국속",
+      "scientific": "Coreopsis spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "astilbe",
+      "ko": "아스틸베",
+      "scientific": "Astilbe spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "primula",
+      "ko": "프리뮬라속",
+      "scientific": "Primula spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "monarda",
+      "ko": "모나르다속",
+      "scientific": "Monarda spp.",
+      "category": "garden_plant",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "conyzacanadensis",
+      "ko": "망초",
+      "scientific": "Erigeron canadensis L.",
+      "category": "wild_herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "ruscus_aculeatus",
+      "ko": "부처스브룸",
+      "scientific": "Ruscus aculeatus L.",
+      "category": "wild_herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "hedgemustard",
+      "ko": "헤지머스터드",
+      "scientific": "Sisymbrium officinale (L.) Scop.",
+      "category": "wild_herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "harebell",
+      "ko": "헤어벨",
+      "scientific": "Campanula rotundifolia L.",
+      "category": "wild_herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "lamium_album",
+      "ko": "흰광대나물",
+      "scientific": "Lamium album L.",
+      "category": "wild_herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "dichondra_micrantha",
+      "ko": "아욱메풀",
+      "scientific": "Dichondra micrantha Urb.",
+      "category": "wild_herb",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "abutilon_indicum",
+      "ko": "인도아부틸론",
+      "scientific": "Abutilon indicum (L.) Sweet",
+      "category": "shrub",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "aeonium_arboreum",
+      "ko": "에오니움 아르보레움",
+      "scientific": "Aeonium arboreum (L.) Webb & Berthel.",
+      "category": "succulent",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    },
+    {
+      "plant_id": "buddleja_davidii",
+      "ko": "부들레야",
+      "scientific": "Buddleja davidii Franch.",
+      "category": "shrub",
+      "source_state": "NOT_LINKED",
+      "nutrition_verified": false,
+      "feeding_grade_change": false,
+      "plant_part_check_required": true
+    }
+  ]
+}
