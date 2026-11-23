@@ -77,14 +77,19 @@ def load_completed_checkpoint(path):
             if not line:
                 break
             line_number += 1
-            if not line.endswith(b'\n'):
-                # An interrupted write cannot be resumed by appending to a partial row.
-                stream.truncate(offset)
-                break
+            complete_line = line.endswith(b'\n')
             try:
                 row = json.loads(line)
             except (UnicodeDecodeError, ValueError) as exc:
+                if not complete_line:
+                    # Only an invalid unterminated tail may be discarded.
+                    stream.truncate(offset)
+                    break
                 raise ValueError(f'corrupt completed checkpoint line {line_number}') from exc
+            if not complete_line:
+                # A valid final JSON object is durable; retain it and make appends safe.
+                stream.seek(0, 2)
+                stream.write(b'\n')
             if not isinstance(row, dict) or row.get('status') not in ('searched', 'retry_needed'):
                 raise ValueError(f'invalid checkpoint status on line {line_number}')
             name = row.get('name')

@@ -31,6 +31,22 @@ class OpenAlexCheckpointTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "corrupt completed checkpoint line 2"):
                 load_completed_checkpoint(path)
 
+    def test_valid_final_row_without_newline_is_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "leads.jsonl"
+            row = json.dumps({"name": "Plantago major", "status": "searched"}).encode()
+            path.write_bytes(row)
+            self.assertEqual(load_completed_checkpoint(path), {"plantago major"})
+            self.assertEqual(path.read_bytes(), row + b'\n')
+            self.assertEqual(load_completed_checkpoint(path), {"plantago major"})
+
+    def test_invalid_final_tail_still_truncates(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "leads.jsonl"
+            path.write_bytes(b'{"name":"Plantago major","status":"sear')
+            self.assertEqual(load_completed_checkpoint(path), set())
+            self.assertEqual(path.read_bytes(), b'')
+
     def test_missing_name_fails_closed(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "leads.jsonl"
