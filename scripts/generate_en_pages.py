@@ -311,7 +311,7 @@ def render(p):
         primary = species_only[0]
         summary = ("Species-specific feeding evidence exists for " +
                    str(primary.get("animal_taxon") or "a tortoise species") + ". " +
-                   en_text(primary.get("why") or primary.get("role") or "", f"{pid}.species_only_why"))
+                   "The cited husbandry source lists this plant as a possible dietary component; this does not establish a safe dose, feeding frequency, or applicability to other tortoise species.")
         linked = list({e["id"]: e for x in species_only for eid in x.get("evidence_ids", [])
                        if (e := evidence_by_id.get(eid))}.values())
     if a and summary_ko and len(summary_ko) < 55:
