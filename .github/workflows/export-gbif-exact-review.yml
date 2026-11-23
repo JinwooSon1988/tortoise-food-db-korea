@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/export_gbif_exact_plant_queue.py'
       - 'tests/test_export_gbif_exact_plant_queue.py'
+      - 'scripts/test_export_gbif_exact_queue_regression.py'
       - '.github/workflows/export-gbif-exact-review.yml'
 permissions:
   contents: read
@@ -20,7 +21,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run regression tests
-        run: python -m unittest discover -s tests -p 'test_export_gbif_exact_plant_queue.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_export_gbif_exact_plant_queue.py' -v
+          python scripts/test_export_gbif_exact_queue_regression.py
       - name: Download completed GBIF batch
         env:
           GH_TOKEN: ${{ github.token }}
