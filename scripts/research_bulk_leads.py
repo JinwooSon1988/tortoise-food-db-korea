@@ -64,6 +64,37 @@ def load_candidate_csv(path):
                 yield {'name': name, 'taxon_id': None}
 
 
+def load_completed_checkpoint(path):
+    """Read durable JSONL rows; repair only a truncated final row after interruption."""
+    completed = set()
+    if not path.exists():
+        return completed
+    with path.open('rb+') as stream:
+        line_number = 0
+        while True:
+            offset = stream.tell()
+            line = stream.readline()
+            if not line:
+                break
+            line_number += 1
+            if not line.endswith(b'\\n'):
+                # An interrupted write cannot be resumed by appending to a partial row.
+                stream.truncate(offset)
+                break
+            try:
+                row = json.loads(line)
+            except (UnicodeDecodeError, ValueError) as exc:
+                raise ValueError(f'corrupt completed checkpoint line {line_number}') from exc
+            if not isinstance(row, dict) or row.get('status') not in ('searched', 'retry_needed'):
+                raise ValueError(f'invalid checkpoint status on line {line_number}')
+            name = row.get('name')
+            if not isinstance(name, str) or not name.strip():
+                raise ValueError(f'missing checkpoint taxon on line {line_number}')
+            if row['status'] == 'searched':
+                completed.add(name.casefold())
+    return completed
+
+
 def query(taxon, timeout=20):
     name = taxon['name']
     params = urllib.parse.urlencode({
@@ -122,15 +153,7 @@ def main():
     if args.workers < 1 or args.workers > 12:
         ap.error('--workers must be between 1 and 12 to avoid API abuse')
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    completed = set()
-    if args.output.exists():
-        for line in args.output.read_text(encoding='utf-8').splitlines():
-            try:
-                row = json.loads(line)
-                if row.get('status') == 'searched':
-                    completed.add(row['name'].casefold())
-            except (ValueError, KeyError):
-                pass
+    completed = load_completed_checkpoint(args.output)
     if args.limit > 500:
         print('WARNING: limit above 500 may exhaust OpenAlex quota; prefer literature-first extraction.', flush=True)
     source_taxa = load_candidate_csv(args.taxa_csv) if args.taxa_csv else load_taxa()
