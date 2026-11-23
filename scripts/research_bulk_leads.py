@@ -142,6 +142,7 @@ def main():
     ap.add_argument('--taxa-csv', type=Path, help='Research-only candidate CSV from export_candidate_taxonomy_for_research.py')
     ap.add_argument('--request-interval', type=float, default=3.0)
     ap.add_argument('--limit', type=int, default=22045)
+    ap.add_argument('--offset', type=int, default=0, help='Skip this many unique source taxa before applying limit')
     ap.add_argument('--output', type=Path, default=ROOT / 'data/research/openalex-tortoise-leads.jsonl')
     args = ap.parse_args()
     global _REQUEST_INTERVAL
@@ -150,6 +151,8 @@ def main():
     _REQUEST_INTERVAL = args.request_interval
     if args.limit < 1:
         ap.error('--limit must be positive')
+    if args.offset < 0:
+        ap.error('--offset must be nonnegative')
     if args.workers < 1 or args.workers > 12:
         ap.error('--workers must be between 1 and 12 to avoid API abuse')
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -158,7 +161,9 @@ def main():
         print('WARNING: limit above 500 may exhaust OpenAlex quota; prefer literature-first extraction.', flush=True)
     source_taxa = load_candidate_csv(args.taxa_csv) if args.taxa_csv else load_taxa()
     taxa = []
-    for t in source_taxa:
+    for index, t in enumerate(source_taxa):
+        if index < args.offset:
+            continue
         if t['name'].casefold() not in completed:
             taxa.append(t)
             if len(taxa) >= args.limit:
