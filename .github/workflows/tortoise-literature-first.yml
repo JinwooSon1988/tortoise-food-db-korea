@@ -31,7 +31,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run offline evidence-boundary regression tests
-        run: |\n          python -m unittest discover -s tests -p 'test_literature_first_discovery.py' -v\n          python -m unittest discover -s tests -p 'test_literature_first_screening.py' -v
+        run: |
+          python -m unittest discover -s tests -p 'test_literature_first_discovery.py' -v
+          python -m unittest discover -s tests -p 'test_literature_first_screening.py' -v
       - name: Validate fixed query window
         env:
           START: ${{ inputs.start || '8' }}
@@ -43,7 +45,10 @@ jobs:
           fi
           mkdir -p "$RUNNER_TEMP/literature"
           python scripts/discover_tortoise_diet_literature.py --start "$START" --limit "$LIMIT" --interval 3 --output "$RUNNER_TEMP/literature/leads.json"
-      - name: Screen literature title candidates without feeding verdicts\n        run: |\n          python scripts/screen_literature_first_titles.py "$RUNNER_TEMP/literature/leads.json" --output "$RUNNER_TEMP/literature/title-candidates.json"\n      - name: Upload research-only literature leads
+      - name: Screen literature title candidates without feeding verdicts
+        run: |
+          python scripts/screen_literature_first_titles.py "$RUNNER_TEMP/literature/leads.json" --output "$RUNNER_TEMP/literature/title-candidates.json"
+      - name: Upload research-only literature leads
         if: always()
         uses: actions/upload-artifact@v4
         with:
