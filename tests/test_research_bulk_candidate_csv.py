@@ -26,7 +26,7 @@ class BulkCandidateCsvTests(unittest.TestCase):
             for contents in (
                 "name\nPlantago major\n",
                 "plant_scientific_name\nPlantago major; DROP TABLE\n",
-                "plant_scientific_name\n\n",
+                "plant_scientific_name\n123 invalid\n",
             ):
                 with self.subTest(contents=contents):
                     path.write_text(contents, encoding="utf-8")
