@@ -8,6 +8,8 @@ on:
       - 'tests/test_research_bulk_candidate_csv.py'
       - 'tests/test_openalex_checkpoint_integrity.py'
       - 'tests/test_audit_openalex_bulk_leads.py'
+      - 'tests/test_screen_openalex_tortoise_titles.py'
+      - 'scripts/screen_openalex_tortoise_titles.py'
       - 'tests/test_candidate_taxonomy_research.py'
       - '.github/workflows/openalex-bulk-research-regression.yml'
   push:
@@ -19,6 +21,8 @@ on:
       - 'tests/test_research_bulk_candidate_csv.py'
       - 'tests/test_openalex_checkpoint_integrity.py'
       - 'tests/test_audit_openalex_bulk_leads.py'
+      - 'tests/test_screen_openalex_tortoise_titles.py'
+      - 'scripts/screen_openalex_tortoise_titles.py'
       - 'tests/test_candidate_taxonomy_research.py'
       - '.github/workflows/openalex-bulk-research-regression.yml'
   workflow_dispatch:
@@ -32,6 +36,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile research scripts and tests
-        run: python -m compileall -q scripts/research_bulk_leads.py scripts/audit_openalex_bulk_leads.py scripts/export_candidate_taxonomy_for_research.py tests/test_research_bulk_candidate_csv.py tests/test_openalex_checkpoint_integrity.py tests/test_audit_openalex_bulk_leads.py tests/test_candidate_taxonomy_research.py
+        run: python -m compileall -q scripts/research_bulk_leads.py scripts/audit_openalex_bulk_leads.py scripts/export_candidate_taxonomy_for_research.py tests/test_research_bulk_candidate_csv.py tests/test_openalex_checkpoint_integrity.py tests/test_audit_openalex_bulk_leads.py tests/test_candidate_taxonomy_research.py scripts/screen_openalex_tortoise_titles.py tests/test_screen_openalex_tortoise_titles.py
       - name: Run offline research regression suite
-        run: python -m unittest discover -s tests -p 'test_*bulk*py' -v && python -m unittest discover -s tests -p 'test_openalex_checkpoint_integrity.py' -v && python -m unittest discover -s tests -p 'test_candidate_taxonomy_research.py' -v
+        run: python -m unittest discover -s tests -p 'test_*bulk*py' -v && python -m unittest discover -s tests -p 'test_openalex_checkpoint_integrity.py' -v && python -m unittest discover -s tests -p 'test_candidate_taxonomy_research.py' -v && python -m unittest discover -s tests -p 'test_screen_openalex_tortoise_titles.py' -v
