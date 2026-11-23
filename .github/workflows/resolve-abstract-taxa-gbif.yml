@@ -1,0 +1,39 @@
+name: Resolve abstract taxa against GBIF
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/resolve-abstract-taxa-gbif.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download completed context artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/source" "$RUNNER_TEMP/output"
+          gh run download 45169038587 --name tortoise-abstract-review-contexts-45169038587 --dir "$RUNNER_TEMP/source"
+      - name: Deduplicate publication candidate pairs
+        run: |
+          python scripts/dedup_abstract_review_queue.py "$RUNNER_TEMP/source/abstract-review-contexts.csv" --output "$RUNNER_TEMP/output/deduplicated-review-queue.csv"
+      - name: Resolve unique strings against GBIF
+        run: |
+          python scripts/resolve_abstract_taxa_gbif.py "$RUNNER_TEMP/output/deduplicated-review-queue.csv" --output "$RUNNER_TEMP/output/gbif-taxonomy-review.csv" --workers 6
+      - name: Upload research-only results
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbif-abstract-taxonomy-review-${{ github.run_id }}
+          path: ${{ runner.temp }}/output/
+          retention-days: 30
+          if-no-files-found: error
