@@ -1,0 +1,40 @@
+name: Export GBIF exact plant review queue
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/export_gbif_exact_plant_queue.py'
+      - 'tests/test_export_gbif_exact_plant_queue.py'
+      - '.github/workflows/export-gbif-exact-review.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -p 'test_export_gbif_exact_plant_queue.py' -v
+      - name: Download completed GBIF batch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/source" "$RUNNER_TEMP/output"
+          gh run download 45182965507 --name gbif-abstract-taxonomy-review-45182965507 --dir "$RUNNER_TEMP/source"
+      - name: Export research-only plant queue
+        run: |
+          python scripts/export_gbif_exact_plant_queue.py "$RUNNER_TEMP/source/gbif-taxonomy-review.csv" --output "$RUNNER_TEMP/output/exact-plant-review-queue.csv"
+      - name: Upload review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: exact-plant-review-queue-${{ github.run_id }}
+          path: ${{ runner.temp }}/output/exact-plant-review-queue.csv
+          retention-days: 30
+          if-no-files-found: error
