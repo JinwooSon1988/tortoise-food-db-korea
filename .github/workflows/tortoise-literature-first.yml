@@ -5,12 +5,12 @@ on:
       start:
         description: 'Fixed query offset (0-31)'
         required: false
-        default: '0'
+        default: '8'
         type: string
       limit:
         description: 'Number of research queries (1-32)'
         required: false
-        default: '8'
+        default: '24'
         type: string
   push:
     branches: [main]
@@ -31,11 +31,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run offline evidence-boundary regression tests
-        run: python -m unittest discover -s tests -p 'test_literature_first_discovery.py' -v
+        run: python -m unittest discover -s tests -p 'test_literature_first*.py' -v\n          python -m unittest discover -s tests -p 'test_literature_first_screening.py' -v
       - name: Validate fixed query window
         env:
-          START: ${{ inputs.start || '0' }}
-          LIMIT: ${{ inputs.limit || '8' }}
+          START: ${{ inputs.start || '8' }}
+          LIMIT: ${{ inputs.limit || '24' }}
         run: |
           if ! [[ "$START" =~ ^[0-9]+$ ]] || ! [[ "$LIMIT" =~ ^[0-9]+$ ]] || (( LIMIT < 1 || START + LIMIT > 32 )); then
             echo 'Invalid query window' >&2
@@ -43,7 +43,7 @@ jobs:
           fi
           mkdir -p "$RUNNER_TEMP/literature"
           python scripts/discover_tortoise_diet_literature.py --start "$START" --limit "$LIMIT" --interval 3 --output "$RUNNER_TEMP/literature/leads.json"
-      - name: Upload research-only literature leads
+      - name: Screen literature title candidates without feeding verdicts\n        run: |\n          python scripts/screen_literature_first_titles.py "$RUNNER_TEMP/literature/leads.json" --output "$RUNNER_TEMP/literature/title-candidates.json"\n      - name: Upload research-only literature leads
         if: always()
         uses: actions/upload-artifact@v4
         with:
