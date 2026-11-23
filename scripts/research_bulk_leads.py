@@ -7,6 +7,7 @@ Usage: python scripts/research_bulk_leads.py --workers 8 --limit 22045
 Resume: rerun with the same --output; completed names are skipped.
 """
 import argparse
+import csv
 import concurrent.futures
 import json
 import random
@@ -45,6 +46,23 @@ def load_taxa():
             if name and name.casefold() not in seen:
                 seen.add(name.casefold())
                 yield {'name': name, 'taxon_id': p['id']}
+
+def load_candidate_csv(path):
+    """Stream the research-only taxonomy export without treating names as feeding evidence."""
+    seen = set()
+    with path.open(encoding='utf-8-sig', newline='') as stream:
+        reader = csv.DictReader(stream)
+        if not reader.fieldnames or 'plant_scientific_name' not in reader.fieldnames:
+            raise ValueError('candidate CSV missing plant_scientific_name')
+        for row in reader:
+            name = (row.get('plant_scientific_name') or '').strip()
+            if not re.fullmatch(r'[A-Z][a-z]+ [a-z][a-z-]+', name):
+                raise ValueError(f'invalid research candidate binomial: {name!r}')
+            key = name.casefold()
+            if key not in seen:
+                seen.add(key)
+                yield {'name': name, 'taxon_id': None}
+
 
 def query(taxon, timeout=20):
     name = taxon['name']
@@ -90,6 +108,7 @@ def query(taxon, timeout=20):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--workers', type=int, default=1)
+    ap.add_argument('--taxa-csv', type=Path, help='Research-only candidate CSV from export_candidate_taxonomy_for_research.py')
     ap.add_argument('--request-interval', type=float, default=3.0)
     ap.add_argument('--limit', type=int, default=22045)
     ap.add_argument('--output', type=Path, default=ROOT / 'data/research/openalex-tortoise-leads.jsonl')
@@ -98,6 +117,8 @@ def main():
     if args.request_interval < 1.0:
         ap.error('--request-interval must be at least 1 second')
     _REQUEST_INTERVAL = args.request_interval
+    if args.limit < 1:
+        ap.error('--limit must be positive')
     if args.workers < 1 or args.workers > 12:
         ap.error('--workers must be between 1 and 12 to avoid API abuse')
     args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -112,7 +133,13 @@ def main():
                 pass
     if args.limit > 500:
         print('WARNING: limit above 500 may exhaust OpenAlex quota; prefer literature-first extraction.', flush=True)
-    taxa = [t for t in load_taxa() if t['name'].casefold() not in completed][:args.limit]
+    source_taxa = load_candidate_csv(args.taxa_csv) if args.taxa_csv else load_taxa()
+    taxa = []
+    for t in source_taxa:
+        if t['name'].casefold() not in completed:
+            taxa.append(t)
+            if len(taxa) >= args.limit:
+                break
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
     # Bounded submissions: never queue all 22k requests before the first result.
     # Once OpenAlex returns 429, stop scheduling and leave the rest for a later run.
