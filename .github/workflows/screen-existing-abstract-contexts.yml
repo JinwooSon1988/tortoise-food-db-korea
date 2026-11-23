@@ -1,0 +1,36 @@
+name: Screen existing abstract contexts
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/screen-existing-abstract-contexts.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download previously completed abstract batch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/source" "$RUNNER_TEMP/review"
+          gh run download 45127491409 --name tortoise-existing-abstracts-45127491409 --dir "$RUNNER_TEMP/source"
+      - name: Extract conservative review contexts
+        run: |
+          python scripts/extract_abstract_review_contexts.py "$RUNNER_TEMP/source/abstracts.json" --output "$RUNNER_TEMP/review/abstract-review-contexts.csv"
+      - name: Upload review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: tortoise-abstract-review-contexts-${{ github.run_id }}
+          path: ${{ runner.temp }}/review/
+          retention-days: 30
+          if-no-files-found: error
