@@ -141,6 +141,19 @@ def query(taxon, timeout=20):
                 return {**taxon, 'status': 'retry_needed', 'error': type(exc).__name__,
                         'hits': []}
             time.sleep(min(30, 2 ** attempt + random.random()))
+def select_taxa(source_taxa, completed, offset, limit):
+    """Select a deterministic disjoint candidate window; completed taxa do not shift it."""
+    taxa = []
+    for index, taxon in enumerate(source_taxa):
+        if index < offset:
+            continue
+        if index >= offset + limit:
+            break
+        if taxon['name'].casefold() not in completed:
+            taxa.append(taxon)
+    return taxa
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--workers', type=int, default=1)
@@ -165,14 +178,7 @@ def main():
     if args.limit > 500:
         print('WARNING: limit above 500 may exhaust OpenAlex quota; prefer literature-first extraction.', flush=True)
     source_taxa = load_candidate_csv(args.taxa_csv) if args.taxa_csv else load_taxa()
-    taxa = []
-    for index, t in enumerate(source_taxa):
-        if index < args.offset:
-            continue
-        if t['name'].casefold() not in completed:
-            taxa.append(t)
-            if len(taxa) >= args.limit:
-                break
+    taxa = select_taxa(source_taxa, completed, args.offset, args.limit)
     counts = {'searched': 0, 'retry_needed': 0, 'hit_leads': 0}
     # Bounded submissions: never queue all 22k requests before the first result.
     # Once OpenAlex returns 429, stop scheduling and leave the rest for a later run.
