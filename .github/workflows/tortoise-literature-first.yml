@@ -1,0 +1,53 @@
+name: Tortoise diet literature-first research
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: 'Fixed query offset (0-31)'
+        required: false
+        default: '0'
+        type: string
+      limit:
+        description: 'Number of research queries (1-32)'
+        required: false
+        default: '8'
+        type: string
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/tortoise-literature-first.yml'
+permissions:
+  contents: read
+concurrency:
+  group: tortoise-literature-first-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline evidence-boundary regression tests
+        run: python -m unittest discover -s tests -p 'test_literature_first_discovery.py' -v
+      - name: Validate fixed query window
+        env:
+          START: ${{ inputs.start || '0' }}
+          LIMIT: ${{ inputs.limit || '8' }}
+        run: |
+          if ! [[ "$START" =~ ^[0-9]+$ ]] || ! [[ "$LIMIT" =~ ^[0-9]+$ ]] || (( LIMIT < 1 || START + LIMIT > 32 )); then
+            echo 'Invalid query window' >&2
+            exit 1
+          fi
+          mkdir -p "$RUNNER_TEMP/literature"
+          python scripts/discover_tortoise_diet_literature.py --start "$START" --limit "$LIMIT" --interval 3 --output "$RUNNER_TEMP/literature/leads.json"
+      - name: Upload research-only literature leads
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tortoise-literature-first-${{ github.run_id }}
+          path: ${{ runner.temp }}/literature/
+          retention-days: 30
+          if-no-files-found: warn
