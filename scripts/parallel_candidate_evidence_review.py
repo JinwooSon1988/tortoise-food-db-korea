@@ -123,7 +123,8 @@ def main():
     source_plant_pairs={(entry["plant_id"],e.get("source_id")) for entry in links["records"] for e in entry["evidence"] if e.get("source_id")}
     diagnostics["global_unique_source_urls"]=len(set(all_source_urls))
     diagnostics["global_unique_source_plant_pairs"]=len(source_plant_pairs)
-    diagnostics["global_reused_source_urls_across_plants"]=len({url for url in set(all_source_urls) if len({pid for pid,u in source_plant_pairs if u==url})>1})
+    url_plant_counts=Counter(url for _,url in source_plant_pairs)
+    diagnostics["global_reused_source_urls_across_plants"]=sum(count>1 for count in url_plant_counts.values())
     diagnostics["global_duplicate_source_url_records"]=len(all_source_urls)-len(source_plant_pairs)
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
