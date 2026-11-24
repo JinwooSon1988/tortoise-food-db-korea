@@ -35,7 +35,10 @@ def discover(row,timeout):
             result.update(status="lookup_failed",error="HTTP "+str(exc.code))
             return result
         except Exception as exc:
-            if attempt<2:\n                time.sleep(2*(attempt+1));continue\n            result.update(status="lookup_failed",error=str(exc)[:200])\n            return result
+            if attempt<2:
+                time.sleep(2*(attempt+1));continue
+            result.update(status="lookup_failed",error=str(exc)[:200])
+            return result
     return result
 
 def main():
