@@ -89,6 +89,8 @@ def main():
         "evidence_linked_public_plant_ids":len(evidence),
         "overlap_with_linked_evidence":sum(any(pid in evidence for pid in reviewed[name]) for name in overlap),
         "explanation":"Review candidate taxonomy and public plant catalogs may be disjoint; zero matches must not be described as zero existing evidence."}
+    if not overlap and evidence:
+        diagnostics["join_warning"]="ZERO_CATALOG_OVERLAP: taxonomy candidates and published plants are disjoint; do not interpret as absence of feeding literature"
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
     audit={"schema_version":"1.0","scope":"review-only; NOT safe-to-feed approval",
