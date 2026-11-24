@@ -1,14 +1,29 @@
 #!/usr/bin/env python3
 """Discover DOI-matched Europe PMC records in parallel; no full-text or feeding claims."""
-import argparse,concurrent.futures,json,time,urllib.error,urllib.parse,urllib.request
+import argparse,concurrent.futures,json,re,time,urllib.error,urllib.parse,urllib.request
 from pathlib import Path
 
-def discover(row,timeout):
+def screen_abstract(abstract, plant_ids, names):
+    # Exact binomial mentions are leads only, not evidence of consumption.
+    plain=re.sub(r"<[^>]*>", " ", abstract or "")
+    plain=" ".join(plain.split())
+    output=[]
+    for pid in sorted(set(plant_ids)):
+        name=names.get(pid,"")
+        parts=name.split()
+        binomial=" ".join(parts[:2]) if len(parts)>=2 else ""
+        matched=bool(binomial and re.search(r"(?<!\w)"+re.escape(binomial)+r"(?!\w)",plain,re.I))
+        output.append({"plant_id":pid,"binomial":binomial,
+            "status":"abstract_unavailable" if not plain else "name_unavailable" if not binomial else "exact_name_mentioned" if matched else "exact_name_not_found",
+            "content_verified":False,"feeding_safety_status":"not_assessed"})
+    return output
+
+def discover(row,timeout,names):
     doi=row.get("doi")
     result={"source_url":row["source_url"],"doi":doi,
             "linked_plant_ids":row["linked_plant_ids"],"status":"not_checked",
             "pmid":None,"pmcid":None,"is_open_access":None,
-            "abstract_available":False,"error":None,
+            "abstract_available":False,"abstract_taxon_screen":[],"error":None,
             "content_verified":False,"feeding_safety_status":"not_assessed"}
     if row.get("metadata_status")!="found" or not doi:return result
     query='DOI:"'+doi.replace('"','')+'"'
@@ -27,7 +42,8 @@ def discover(row,timeout):
                 match=matches[0]
                 result.update(status="exact_doi_match",pmid=match.get("id") if match.get("source")=="MED" else match.get("pmid"),
                     pmcid=match.get("pmcid"),is_open_access=match.get("isOpenAccess"),
-                    abstract_available=bool(match.get("abstractText")))
+                    abstract_available=bool(match.get("abstractText")),
+                    abstract_taxon_screen=screen_abstract(match.get("abstractText"),row["linked_plant_ids"],names))
             return result
         except urllib.error.HTTPError as exc:
             if exc.code in (429,500,502,503,504) and attempt<2:
@@ -50,8 +66,10 @@ def main():
     args=ap.parse_args()
     if not 1<=args.workers<=8 or not 1<=args.timeout<=30:ap.error("invalid limits")
     source=json.loads(Path(args.input).read_text(encoding="utf-8"))
+    plants=json.loads(Path("data/plant_feeding_evidence_links.json").read_text(encoding="utf-8"))
+    names={r["plant_id"]:r.get("scientific_name","") for r in plants["records"]}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        records=list(pool.map(lambda row:discover(row,args.timeout),source["records"]))
+        records=list(pool.map(lambda row:discover(row,args.timeout,names),source["records"]))
     if len(records)!=source["count"]:raise SystemExit("source count mismatch")
     statuses=("exact_doi_match","no_exact_doi_match","lookup_failed","not_checked")
     summary={s:sum(r["status"]==s for r in records) for s in statuses}
@@ -59,6 +77,8 @@ def main():
             "count":len(records),"summary":summary,
             "abstract_available_count":sum(r["abstract_available"] for r in records),
             "open_access_record_count":sum(r["is_open_access"]=="Y" for r in records),
+            "abstract_taxon_screen_count":sum(len(r["abstract_taxon_screen"]) for r in records),
+            "abstract_exact_name_mentions":sum(x["status"]=="exact_name_mentioned" for r in records for x in r["abstract_taxon_screen"]),
             "records":records}
     path=Path(args.output);path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
