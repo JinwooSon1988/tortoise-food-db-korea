@@ -1,6 +1,11 @@
 name: Live evidence source URL audit (research only)
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_live_evidence_sources.py'
+      - '.github/workflows/live-evidence-source-url-audit.yml'
 permissions:
   contents: read
 jobs:
