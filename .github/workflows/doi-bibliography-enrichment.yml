@@ -9,6 +9,9 @@ on:
       - 'scripts/discover_europepmc_doi.py'
       - 'scripts/triage_published_feeding_evidence.py'
       - '.github/workflows/doi-bibliography-enrichment.yml'
+concurrency:
+  group: doi-bibliography-enrichment-main
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
