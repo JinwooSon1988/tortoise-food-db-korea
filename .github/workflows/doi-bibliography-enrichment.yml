@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/audit_doi_metadata.py'
       - 'scripts/join_plant_bibliography_leads.py'
+      - 'scripts/discover_europepmc_doi.py'
       - '.github/workflows/doi-bibliography-enrichment.yml'
 permissions:
   contents: read
@@ -21,6 +22,7 @@ jobs:
       - run: python scripts/parallel_candidate_evidence_review.py --workers 20
       - run: python scripts/audit_doi_metadata.py --workers 2 --timeout 8
       - run: python scripts/join_plant_bibliography_leads.py
+      - run: python scripts/discover_europepmc_doi.py --workers 4 --timeout 10
       - name: Check metadata integrity and unverified status
         run: |
           python - <<'PY'
@@ -38,6 +40,11 @@ jobs:
           assert leads['plant_source_links']==sum(len(r['bibliography_leads']) for r in leads['records'])
           assert len({r['plant_id'] for r in leads['records']})==leads['plant_count']
           assert all(x['content_verified'] is False and x['feeding_safety_status']=='not_assessed' for r in leads['records'] for x in r['bibliography_leads'])
+          epmc=json.loads((folder/'europepmc-doi-discovery.json').read_text())
+          assert epmc['count']==audit['count']
+          assert sum(epmc['summary'].values())==epmc['count']
+          assert all(r['content_verified'] is False and r['feeding_safety_status']=='not_assessed' for r in epmc['records'])
+          assert all(r['status']!='exact_doi_match' or r['doi'] for r in epmc['records'])
           batches=json.loads((folder/'bibliography-review-batches.json').read_text())
           assert batches['source_count']==audit['summary']['found']
           assert sum(b['source_count'] for b in batches['batches'])==batches['source_count']
@@ -53,5 +60,6 @@ jobs:
             data/evidence-review-shards/doi-metadata-audit.json
             data/evidence-review-shards/plant-bibliography-leads.json
             data/evidence-review-shards/bibliography-review-batches.json
+            data/evidence-review-shards/europepmc-doi-discovery.json
           retention-days: 30
           if-no-files-found: error
