@@ -24,7 +24,7 @@ jobs:
       - run: python scripts/audit_doi_metadata.py --workers 2 --timeout 8
       - run: python scripts/join_plant_bibliography_leads.py
       - run: python scripts/triage_published_feeding_evidence.py
-      - run: python scripts/discover_europepmc_doi.py --workers 4 --timeout 10
+      - run: python scripts/discover_europepmc_doi.py --workers 2 --timeout 15
       - name: Check metadata integrity and unverified status
         run: |
           python - <<'PY'
