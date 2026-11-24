@@ -78,10 +78,22 @@ def main():
         reports=list(pool.map(process,jobs))
     totals=Counter()
     for r in reports:totals.update(r["stats"])
+    # A zero-match run must be visibly diagnosed, not mistaken for no published evidence.
+    candidate_names={norm(rec.get("scientific_name")) for _,records in jobs for rec in records}
+    candidate_names.discard(None)
+    reviewed_names=set(reviewed)
+    overlap=candidate_names & reviewed_names
+    diagnostics={"candidate_unique_binomials":len(candidate_names),
+        "reviewed_unique_binomials":len(reviewed_names),
+        "candidate_reviewed_overlap":len(overlap),
+        "evidence_linked_public_plant_ids":len(evidence),
+        "overlap_with_linked_evidence":sum(any(pid in evidence for pid in reviewed[name]) for name in overlap),
+        "explanation":"Review candidate taxonomy and public plant catalogs may be disjoint; zero matches must not be described as zero existing evidence."}
+    print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
     audit={"schema_version":"1.0","scope":"review-only; NOT safe-to-feed approval",
         "input_legacy":9995,"input_diverse":len(rows),"workers":args.workers,
-        "shards":reports,"totals":dict(totals),"safety_grades_assigned":0}
+        "shards":reports,"totals":dict(totals),"join_diagnostics":diagnostics,"safety_grades_assigned":0}
     (out/"index.json").write_text(json.dumps(audit,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(audit["totals"],ensure_ascii=False))
 if __name__=="__main__":main()
