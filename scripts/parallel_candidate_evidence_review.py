@@ -107,7 +107,7 @@ def main():
     public_audit.sort(key=lambda r:r["plant_id"])
     (out/"public-evidence-coverage.json").write_text(json.dumps({
         "schema_version":"1.0","scope":"public catalog source coverage, not safety verdict",
-        "count":len(public_audit),"records":public_audit},ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+        "count":len(public_audit),"records":public_audit},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     diagnostics["public_catalog_rows_audited"]=len(public_audit)
     diagnostics["public_catalog_rows_with_sources"]=sum(r["source_records"]>0 for r in public_audit)
     diagnostics["public_catalog_total_source_records"]=sum(r["source_records"] for r in public_audit)
