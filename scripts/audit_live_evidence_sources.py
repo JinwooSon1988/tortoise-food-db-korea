@@ -7,7 +7,7 @@ def check(row,timeout):
     url=row["source_url"]
     result={"source_url":url,"linked_plant_ids":row["linked_plant_ids"],
             "status":"unreachable","http_status":None,"final_url":None,
-            "content_type":None,"error":None,"review_status":"not_verified"}
+            "content_type":None,"error":None,"review_status":"not_verified","method":"HEAD"}
     try:
         parsed=urllib.parse.urlsplit(url)
         if parsed.scheme not in ("http","https") or not parsed.hostname:
@@ -22,6 +22,14 @@ def check(row,timeout):
             response=opener.open(req,timeout=timeout)
         except urllib.error.HTTPError as e:
             response=e
+        if response.status in (403,405,501):
+            response.close()
+            result["method"]="GET"
+            req=urllib.request.Request(url,headers={"User-Agent":"GeobukbapEvidenceAudit/1.0 (research-only)","Accept":"text/html,application/pdf,*/*;q=0.1","Range":"bytes=0-0"},method="GET")
+            try:
+                response=opener.open(req,timeout=timeout)
+            except urllib.error.HTTPError as e:
+                response=e
         with response:
             result["http_status"]=response.status
             result["content_type"]=response.headers.get("Content-Type")
