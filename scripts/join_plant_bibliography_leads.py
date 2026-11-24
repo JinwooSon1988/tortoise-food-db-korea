@@ -44,6 +44,29 @@ def main():
          "plant_count":len(records),
          "plant_source_links":sum(r["bibliography_lead_count"] for r in records),
          "records":records}
+    # Group leads into deterministic review batches. Source reuse improves review efficiency,
+    # but does not imply direct feeding evidence or a safety recommendation.
+    review_sources=[]
+    audit_by_source={x["source_url"]:x for x in audit["records"]}
+    for source_url,src in sources.items():
+        meta=audit_by_source.get(source_url)
+        if not meta or meta["metadata_status"]!="found":continue
+        review_sources.append({"source_url":source_url,"doi":meta.get("doi"),
+            "title":meta.get("title"),"linked_plant_ids":src["linked_plant_ids"],
+            "linked_plant_count":len(src["linked_plant_ids"]),
+            "directness_types":src.get("directness_types",[]),
+            "tortoise_taxa_reported":src.get("tortoise_taxa_reported",[]),
+            "review_status":"needs_full_text_and_taxon_verification"})
+    review_sources.sort(key=lambda x:(-x["linked_plant_count"],x["source_url"]))
+    batches=[{"batch_id":f"bibliography-review-{i//25+1:03d}",
+              "source_count":len(review_sources[i:i+25]),
+              "records":review_sources[i:i+25]} for i in range(0,len(review_sources),25)]
+    review_out={"scope":"bibliographic leads only; no full-text or feeding safety verification",
+                "source_count":len(review_sources),"batch_count":len(batches),
+                "batches":batches}
+    review_path=Path(args.output).with_name("bibliography-review-batches.json")
+    review_path.parent.mkdir(parents=True,exist_ok=True)
+    review_path.write_text(json.dumps(review_out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     path=Path(args.output);path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({k:v for k,v in out.items() if k!="records"},ensure_ascii=False))

@@ -38,6 +38,11 @@ jobs:
           assert leads['plant_source_links']==sum(len(r['bibliography_leads']) for r in leads['records'])
           assert len({r['plant_id'] for r in leads['records']})==leads['plant_count']
           assert all(x['content_verified'] is False and x['feeding_safety_status']=='not_assessed' for r in leads['records'] for x in r['bibliography_leads'])
+          batches=json.loads((folder/'bibliography-review-batches.json').read_text())
+          assert batches['source_count']==audit['summary']['found']
+          assert sum(b['source_count'] for b in batches['batches'])==batches['source_count']
+          assert all(1<=b['source_count']<=25 for b in batches['batches'])
+          assert len({x['source_url'] for b in batches['batches'] for x in b['records']})==batches['source_count']
           print(audit['summary'])
           print({'plants_with_bibliography':leads['plant_count'],'plant_source_links':leads['plant_source_links']})
           PY
@@ -47,5 +52,6 @@ jobs:
           path: |
             data/evidence-review-shards/doi-metadata-audit.json
             data/evidence-review-shards/plant-bibliography-leads.json
+            data/evidence-review-shards/bibliography-review-batches.json
           retention-days: 30
           if-no-files-found: error
