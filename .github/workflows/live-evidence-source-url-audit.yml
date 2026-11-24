@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/audit_live_evidence_sources.py'
+      - 'scripts/parallel_candidate_evidence_review.py'
       - '.github/workflows/live-evidence-source-url-audit.yml'
 permissions:
   contents: read
@@ -33,7 +34,8 @@ jobs:
           assert {r['source_url'] for r in audit['records']}=={r['source_url'] for r in queue['records']}
           assert sum(audit['summary'].values())==audit['count']
           doi={r['source_url'] for r in queue['records'] if r['identifier_type']=='doi'}
-          assert doi, 'expected DOI identifiers in source queue'
+          assert len(doi)==91, f'unexpected DOI identifier count: {len(doi)}'
+          assert all(r['identifier_type'] in ('url','doi','other_identifier') for r in queue['records'])
           assert all(r['status']=='not_applicable_doi' and r['method'] is None for r in audit['records'] if r['source_url'] in doi)
           assert audit['summary']['not_applicable_doi']==len(doi)
           assert all(r['review_status']=='not_verified' for r in audit['records'])
