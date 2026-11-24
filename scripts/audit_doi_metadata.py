@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bulk Crossref DOI metadata enrichment, without claiming source-content verification."""
-import argparse,concurrent.futures,json,re,urllib.parse,urllib.request,urllib.error
+import argparse,concurrent.futures,json,re,time,urllib.parse,urllib.request,urllib.error
 from pathlib import Path
 
 DOI_RE=re.compile(r"10\.\d{4,9}/[^\s?#]+",re.I)
@@ -23,9 +23,15 @@ def lookup(row,timeout):
     if not doi:return result
     endpoint="https://api.crossref.org/works/"+urllib.parse.quote(doi,safe="")
     try:
-        req=urllib.request.Request(endpoint,headers={"User-Agent":"GeobukbapResearch/1.0 (DOI metadata lookup)","Accept":"application/json"})
-        with urllib.request.urlopen(req,timeout=timeout) as resp:
-            payload=json.load(resp)["message"]
+        req=urllib.request.Request(endpoint,headers={"User-Agent":"GeobukbapResearch/1.0 (DOI metadata lookup; contact: repository maintainer via GitHub)","Accept":"application/json"})
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(req,timeout=timeout) as resp:
+                    payload=json.load(resp)["message"]
+                break
+            except urllib.error.HTTPError as exc:
+                if exc.code!=429 or attempt==2:raise
+                time.sleep(min(20,4*(attempt+1)))
         dates=payload.get("published",{}).get("date-parts",[])
         result.update(metadata_status="found",title=(payload.get("title") or [None])[0],
             publication_year=dates[0][0] if dates and dates[0] else None,
@@ -44,7 +50,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--input",default="data/evidence-review-shards/global-source-review-queue.json")
     p.add_argument("--output",default="data/evidence-review-shards/doi-metadata-audit.json")
-    p.add_argument("--workers",type=int,default=12)
+    p.add_argument("--workers",type=int,default=2)
     p.add_argument("--timeout",type=float,default=8)
     a=p.parse_args()
     if not 1<=a.workers<=20 or not 1<=a.timeout<=30:p.error("invalid limits")

@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/parallel_candidate_evidence_review.py --workers 20
-      - run: python scripts/audit_doi_metadata.py --workers 12 --timeout 8
+      - run: python scripts/audit_doi_metadata.py --workers 2 --timeout 8
       - name: Check metadata integrity and unverified status
         run: |
           python - <<'PY'
