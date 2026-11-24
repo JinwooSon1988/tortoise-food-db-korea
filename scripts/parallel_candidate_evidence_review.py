@@ -4,7 +4,7 @@
 No network calls; no grade promotion. Outputs review-only evidence shards.
 Run: python scripts/parallel_candidate_evidence_review.py --workers 12
 """
-import argparse,concurrent.futures,hashlib,json,re
+import argparse,concurrent.futures,hashlib,json,re,urllib.parse
 from collections import Counter,defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -141,7 +141,12 @@ def main():
             url_to_directness[url].add(e.get("directness","unspecified"))
             if e.get("tortoise_taxon"):url_to_tortoises[url].add(str(e["tortoise_taxon"]))
             url_to_record_count[url]+=1
-    source_review=[{"source_url":url,"linked_plant_count":len(pids),
+    def identifier_type(value):
+        parsed=urllib.parse.urlsplit(value)
+        if parsed.scheme in ("http","https") and parsed.hostname:return "url"
+        if re.fullmatch(r"10\\.\\d{4,9}/\\S+",value,re.I):return "doi"
+        return "other_identifier"
+    source_review=[{"source_url":url,"identifier_type":identifier_type(url),"linked_plant_count":len(pids),
         "linked_plant_ids":sorted(pids),"source_types":sorted(url_to_types[url]),
         "directness_types":sorted(url_to_directness[url]),
         "tortoise_taxa_reported":sorted(url_to_tortoises[url]),
@@ -153,6 +158,7 @@ def main():
         "schema_version":"1.0","scope":"source URL reuse triage; not evidence verification",
         "count":len(source_review),"records":source_review},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     diagnostics["global_source_review_queue_count"]=len(source_review)
+    diagnostics["source_identifier_types"]=dict(sorted(Counter(row["identifier_type"] for row in source_review).items()))
     diagnostics["global_source_review_queue_record_count"]=sum(r["source_record_count"] for r in source_review)
     # Deterministic batches for concurrent source-level verification. No
     # automated assertion of article contents, plant suitability or safety.

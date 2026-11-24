@@ -50,7 +50,7 @@ def main():
     rows=json.loads(Path(a.input).read_text(encoding="utf-8"))["records"]
     with concurrent.futures.ThreadPoolExecutor(max_workers=a.workers) as pool:
         results=list(pool.map(lambda row:check(row,a.timeout),rows))
-    summary={status:sum(r["status"]==status for r in results) for status in ("reachable","redirect_needs_review","http_error","unreachable")}
+    summary={status:sum(r["status"]==status for r in results) for status in ("reachable","redirect_needs_review","http_error","unreachable","not_applicable_doi")}
     output={"schema_version":"1.0","scope":"URL reachability only; not content or feeding-safety verification",
             "count":len(results),"summary":summary,"records":results}
     dest=Path(a.output);dest.parent.mkdir(parents=True,exist_ok=True)
