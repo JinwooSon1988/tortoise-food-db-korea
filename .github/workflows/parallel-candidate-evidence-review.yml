@@ -46,6 +46,10 @@ jobs:
           assert sum(row['unique_source_urls'] for row in public['records'])==manifest['join_diagnostics']['public_catalog_unique_source_url_plant_pairs']
           assert sum(row['duplicate_evidence_ids'] for row in public['records'])==manifest['join_diagnostics']['public_catalog_duplicate_evidence_ids']
           assert all(row['unique_source_urls']<=row['source_records'] for row in public['records'])
+          assert manifest['join_diagnostics']['global_unique_source_urls']<=manifest['join_diagnostics']['global_unique_source_plant_pairs']
+          assert manifest['join_diagnostics']['global_unique_source_plant_pairs']<=manifest['join_diagnostics']['public_catalog_total_source_records']
+          print('globally unique source URLs:',manifest['join_diagnostics']['global_unique_source_urls'])
+          print('sources reused across plants:',manifest['join_diagnostics']['global_reused_source_urls_across_plants'])
           print('public plants audited:',public['count'])
           print('public plants with source records:',manifest['join_diagnostics']['public_catalog_rows_with_sources'])
           print('review-only candidates:',manifest['totals']['candidates'])
