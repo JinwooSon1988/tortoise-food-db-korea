@@ -32,7 +32,12 @@ def lookup(row,timeout):
             journal=(payload.get("container-title") or [None])[0],
             publisher=payload.get("publisher"),crossref_type=payload.get("type"),
             crossref_url=payload.get("URL"))
-    except Exception as exc:result["error"]=str(exc)[:200]
+    except urllib.error.HTTPError as exc:
+        result["error"]=f"HTTP {exc.code}"
+        result["failure_category"]="not_found" if exc.code==404 else ("rate_limited" if exc.code==429 else "http_error")
+    except Exception as exc:
+        result["error"]=str(exc)[:200]
+        result["failure_category"]="network_or_parse_error"
     return result
 
 def main():
@@ -47,9 +52,10 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=a.workers) as pool:
         results=list(pool.map(lambda r:lookup(r,a.timeout),records))
     counts={k:sum(r["metadata_status"]==k for r in results) for k in ("found","no_doi","lookup_failed")}
+    failures={k:sum(r.get("failure_category")==k for r in results) for k in ("not_found","rate_limited","http_error","network_or_parse_error")}
     data={"scope":"bibliographic metadata only; not full-text or feeding safety verification",
-          "count":len(results),"summary":counts,"records":results}
+          "count":len(results),"summary":counts,"failure_summary":failures,"records":results}
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(json.dumps({"count":len(results),"summary":counts}))
+    print(json.dumps({"count":len(results),"summary":counts,"failure_summary":failures}))
 if __name__=="__main__":main()
