@@ -35,16 +35,15 @@ def discover(row,timeout):
             result.update(status="lookup_failed",error="HTTP "+str(exc.code))
             return result
         except Exception as exc:
-            result.update(status="lookup_failed",error=str(exc)[:200])
-            return result
+            if attempt<2:\n                time.sleep(2*(attempt+1));continue\n            result.update(status="lookup_failed",error=str(exc)[:200])\n            return result
     return result
 
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--input",default="data/evidence-review-shards/doi-metadata-audit.json")
     ap.add_argument("--output",default="data/evidence-review-shards/europepmc-doi-discovery.json")
-    ap.add_argument("--workers",type=int,default=4)
-    ap.add_argument("--timeout",type=float,default=10)
+    ap.add_argument("--workers",type=int,default=2)
+    ap.add_argument("--timeout",type=float,default=15)
     args=ap.parse_args()
     if not 1<=args.workers<=8 or not 1<=args.timeout<=30:ap.error("invalid limits")
     source=json.loads(Path(args.input).read_text(encoding="utf-8"))
