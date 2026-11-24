@@ -119,6 +119,12 @@ def main():
     diagnostics["public_catalog_unique_source_url_plant_pairs"]=sum(r["unique_source_urls"] for r in public_audit)
     diagnostics["public_catalog_missing_source_urls"]=sum(r["missing_source_urls"] for r in public_audit)
     diagnostics["public_catalog_duplicate_evidence_ids"]=sum(r["duplicate_evidence_ids"] for r in public_audit)
+    all_source_urls=[e.get("source_id") for entry in links["records"] for e in entry["evidence"] if e.get("source_id")]
+    source_plant_pairs={(entry["plant_id"],e.get("source_id")) for entry in links["records"] for e in entry["evidence"] if e.get("source_id")}
+    diagnostics["global_unique_source_urls"]=len(set(all_source_urls))
+    diagnostics["global_unique_source_plant_pairs"]=len(source_plant_pairs)
+    diagnostics["global_reused_source_urls_across_plants"]=len({url for url in set(all_source_urls) if len({pid for pid,u in source_plant_pairs if u==url})>1})
+    diagnostics["global_duplicate_source_url_records"]=len(all_source_urls)-len(source_plant_pairs)
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
     audit={"schema_version":"1.0","scope":"review-only; NOT safe-to-feed approval",
