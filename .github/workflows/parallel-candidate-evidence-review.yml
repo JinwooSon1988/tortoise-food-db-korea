@@ -50,6 +50,9 @@ jobs:
           assert queue['count']==len(queue['records'])==manifest['join_diagnostics']['global_unique_source_urls']
           assert all(row['review_status']=='not_verified' and row['feeding_safety_status']=='not_assessed' for row in queue['records'])
           assert len({row['source_url'] for row in queue['records']})==queue['count']
+          assert sum(row['source_record_count'] for row in queue['records'])==manifest['join_diagnostics']['public_catalog_total_source_records']
+          assert all(row['source_record_count']>=row['linked_plant_count']>=1 for row in queue['records'])
+          assert all(isinstance(row['directness_types'],list) and isinstance(row['tortoise_taxa_reported'],list) for row in queue['records'])
           assert manifest['join_diagnostics']['global_unique_source_urls']<=manifest['join_diagnostics']['global_unique_source_plant_pairs']
           assert manifest['join_diagnostics']['global_unique_source_plant_pairs']<=manifest['join_diagnostics']['public_catalog_total_source_records']
           print('globally unique source URLs:',manifest['join_diagnostics']['global_unique_source_urls'])
