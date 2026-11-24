@@ -8,6 +8,10 @@ def check(row,timeout):
     result={"source_url":url,"linked_plant_ids":row["linked_plant_ids"],
             "status":"unreachable","http_status":None,"final_url":None,
             "content_type":None,"error":None,"review_status":"not_verified","method":"HEAD"}
+    if row.get("identifier_type")=="doi" or (url.startswith("10.") and "://" not in url):
+        result["status"]="not_applicable_doi"
+        result["method"]=None
+        return result
     try:
         parsed=urllib.parse.urlsplit(url)
         if parsed.scheme not in ("http","https") or not parsed.hostname:
