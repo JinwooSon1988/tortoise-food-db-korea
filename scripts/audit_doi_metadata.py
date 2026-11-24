@@ -53,9 +53,16 @@ def main():
         results=list(pool.map(lambda r:lookup(r,a.timeout),records))
     counts={k:sum(r["metadata_status"]==k for r in results) for k in ("found","no_doi","lookup_failed")}
     failures={k:sum(r.get("failure_category")==k for r in results) for k in ("not_found","rate_limited","http_error","network_or_parse_error")}
+    hosts={}
+    for row in results:
+        host=(urllib.parse.urlsplit(row["source_url"]).hostname or "").lower()
+        entry=hosts.setdefault(host,{"total":0,"found":0,"no_doi":0,"lookup_failed":0})
+        entry["total"]+=1
+        entry[row["metadata_status"]]+=1
+    host_summary=[{"host":host,**values} for host,values in sorted(hosts.items(),key=lambda x:(-x[1]["total"],x[0]))]
     data={"scope":"bibliographic metadata only; not full-text or feeding safety verification",
-          "count":len(results),"summary":counts,"failure_summary":failures,"records":results}
+          "count":len(results),"summary":counts,"failure_summary":failures,"host_summary":host_summary,"records":results}
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(json.dumps({"count":len(results),"summary":counts,"failure_summary":failures}))
+    print(json.dumps({"count":len(results),"summary":counts,"failure_summary":failures,"top_hosts":host_summary[:12]}))
 if __name__=="__main__":main()
