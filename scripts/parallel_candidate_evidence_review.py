@@ -91,6 +91,26 @@ def main():
         "explanation":"Review candidate taxonomy and public plant catalogs may be disjoint; zero matches must not be described as zero existing evidence."}
     if not overlap and evidence:
         diagnostics["join_warning"]="ZERO_CATALOG_OVERLAP: taxonomy candidates and published plants are disjoint; do not interpret as absence of feeding literature"
+    # Audit the public evidence catalog independently: the 22k taxonomy-only
+    # candidates have no exact overlap with the already published plant catalog.
+    public_audit=[]
+    for plant in plants:
+        refs=evidence.get(plant["id"],[])
+        public_audit.append({"plant_id":plant["id"],
+            "scientific_name":plant.get("scientific"),
+            "source_records":len(refs),
+            "source_types":dict(sorted(Counter(e.get("type","unspecified") for e in refs).items())),
+            "wild_feeding_record_leads":sum(e.get("type")=="wild_feeding" for e in refs),
+            "safety_grade":None,
+            "feeding_safety_status":"not_assessed",
+            "note":"Source coverage only; not an assessment of feeding safety."})
+    public_audit.sort(key=lambda r:r["plant_id"])
+    (out/"public-evidence-coverage.json").write_text(json.dumps({
+        "schema_version":"1.0","scope":"public catalog source coverage, not safety verdict",
+        "count":len(public_audit),"records":public_audit},ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    diagnostics["public_catalog_rows_audited"]=len(public_audit)
+    diagnostics["public_catalog_rows_with_sources"]=sum(r["source_records"]>0 for r in public_audit)
+    diagnostics["public_catalog_total_source_records"]=sum(r["source_records"] for r in public_audit)
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
     audit={"schema_version":"1.0","scope":"review-only; NOT safe-to-feed approval",
