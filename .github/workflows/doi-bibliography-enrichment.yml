@@ -7,6 +7,7 @@ on:
       - 'scripts/audit_doi_metadata.py'
       - 'scripts/join_plant_bibliography_leads.py'
       - 'scripts/discover_europepmc_doi.py'
+      - 'scripts/triage_published_feeding_evidence.py'
       - '.github/workflows/doi-bibliography-enrichment.yml'
 permissions:
   contents: read
@@ -22,6 +23,7 @@ jobs:
       - run: python scripts/parallel_candidate_evidence_review.py --workers 20
       - run: python scripts/audit_doi_metadata.py --workers 2 --timeout 8
       - run: python scripts/join_plant_bibliography_leads.py
+      - run: python scripts/triage_published_feeding_evidence.py
       - run: python scripts/discover_europepmc_doi.py --workers 4 --timeout 10
       - name: Check metadata integrity and unverified status
         run: |
@@ -40,6 +42,11 @@ jobs:
           assert leads['plant_source_links']==sum(len(r['bibliography_leads']) for r in leads['records'])
           assert len({r['plant_id'] for r in leads['records']})==leads['plant_count']
           assert all(x['content_verified'] is False and x['feeding_safety_status']=='not_assessed' for r in leads['records'] for x in r['bibliography_leads'])
+          triage=json.loads((folder/'feeding-evidence-triage.json').read_text())
+          assert triage['evidence_count']==sum(triage['queue_counts'].values())
+          assert triage['evidence_count']==sum(b['evidence_count'] for b in triage['source_batches'])
+          assert triage['unique_sources']==sum(b['source_count'] for b in triage['source_batches'])
+          assert all(x['content_verified'] is False and x['feeding_safety_status']=='not_assessed' for x in triage['records'])
           epmc=json.loads((folder/'europepmc-doi-discovery.json').read_text())
           assert epmc['count']==audit['count']
           assert sum(epmc['summary'].values())==epmc['count']
@@ -61,5 +68,6 @@ jobs:
             data/evidence-review-shards/plant-bibliography-leads.json
             data/evidence-review-shards/bibliography-review-batches.json
             data/evidence-review-shards/europepmc-doi-discovery.json
+            data/evidence-review-shards/feeding-evidence-triage.json
           retention-days: 30
           if-no-files-found: error
