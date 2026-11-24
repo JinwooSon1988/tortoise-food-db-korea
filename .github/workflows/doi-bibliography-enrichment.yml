@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/audit_doi_metadata.py'
+      - 'scripts/join_plant_bibliography_leads.py'
       - '.github/workflows/doi-bibliography-enrichment.yml'
 permissions:
   contents: read
@@ -19,6 +20,7 @@ jobs:
           python-version: '3.12'
       - run: python scripts/parallel_candidate_evidence_review.py --workers 20
       - run: python scripts/audit_doi_metadata.py --workers 2 --timeout 8
+      - run: python scripts/join_plant_bibliography_leads.py
       - name: Check metadata integrity and unverified status
         run: |
           python - <<'PY'
@@ -31,11 +33,19 @@ jobs:
           assert [r['source_url'] for r in audit['records']]==[r['source_url'] for r in queue['records']]
           assert sum(audit['summary'].values())==audit['count']
           assert all(r['content_verified'] is False and r['feeding_safety_status']=='not_assessed' for r in audit['records'])
+          leads=json.loads((folder/'plant-bibliography-leads.json').read_text())
+          assert leads['metadata_found_sources']==audit['summary']['found']
+          assert leads['plant_source_links']==sum(len(r['bibliography_leads']) for r in leads['records'])
+          assert len({r['plant_id'] for r in leads['records']})==leads['plant_count']
+          assert all(x['content_verified'] is False and x['feeding_safety_status']=='not_assessed' for r in leads['records'] for x in r['bibliography_leads'])
           print(audit['summary'])
+          print({'plants_with_bibliography':leads['plant_count'],'plant_source_links':leads['plant_source_links']})
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: doi-bibliography-${{ github.run_id }}
-          path: data/evidence-review-shards/doi-metadata-audit.json
+          path: |
+            data/evidence-review-shards/doi-metadata-audit.json
+            data/evidence-review-shards/plant-bibliography-leads.json
           retention-days: 30
           if-no-files-found: error
