@@ -37,7 +37,9 @@ jobs:
               assert data['count']==len(data['records'])==shard['count']
               assert all(row['safety_grade'] is None and row['feeding_safety_status']=='not_assessed'
                          for row in data['records'])
-          print('verified candidates:',manifest['totals']['candidates'])
+          print('review-only candidates:',manifest['totals']['candidates'])
+          print('catalog overlap:',manifest['join_diagnostics']['candidate_reviewed_overlap'])
+          print('join warning:',manifest['join_diagnostics'].get('join_warning','none'))
           print('shards:',len(manifest['shards']))
           print('reference matched:',manifest['totals'].get('with_any_reference',0))
           PY
