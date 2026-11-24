@@ -154,6 +154,22 @@ def main():
         "count":len(source_review),"records":source_review},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     diagnostics["global_source_review_queue_count"]=len(source_review)
     diagnostics["global_source_review_queue_record_count"]=sum(r["source_record_count"] for r in source_review)
+    # Deterministic batches for concurrent source-level verification. No
+    # automated assertion of article contents, plant suitability or safety.
+    review_batches=[]
+    for start in range(0,len(source_review),25):
+        batch=source_review[start:start+25]
+        review_batches.append({"batch_id":f"source-batch-{start//25+1:03d}",
+            "source_count":len(batch),"source_urls":[row["source_url"] for row in batch],
+            "linked_plant_ids":sorted({pid for row in batch for pid in row["linked_plant_ids"]}),
+            "source_record_count":sum(row["source_record_count"] for row in batch),
+            "review_status":"pending_manual_source_verification"})
+    (out/"source-review-batches.json").write_text(json.dumps({
+        "schema_version":"1.0","scope":"concurrent review scheduling only; not evidence validation",
+        "batch_size":25,"source_count":len(source_review),"batch_count":len(review_batches),
+        "batches":review_batches},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    diagnostics["source_review_batch_count"]=len(review_batches)
+
 
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
