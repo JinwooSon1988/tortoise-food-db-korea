@@ -33,6 +33,13 @@ jobs:
               path = Path('scripts') / name
               ast.parse(path.read_text(encoding='utf-8'), filename=str(path))
           print(f'Validated Python syntax for {len(scripts)} scripts')
+          import sys
+          sys.path.insert(0, 'scripts')
+          from discover_europepmc_doi import screen_abstract
+          names={'a':'Plantago major L.','b':'Plantago minor'}
+          rows=screen_abstract('<i>Plantago major</i> and Plantago minorensis', ['a','b'], names)
+          assert [r['status'] for r in rows]==['exact_name_mentioned','exact_name_not_found']
+          assert screen_abstract('', ['a'], names)[0]['status']=='abstract_unavailable'
           PY
       - run: python scripts/parallel_candidate_evidence_review.py --workers 20
       - run: python scripts/audit_doi_metadata.py --workers 2 --timeout 8
@@ -66,6 +73,10 @@ jobs:
           assert sum(epmc['summary'].values())==epmc['count']
           assert all(r['content_verified'] is False and r['feeding_safety_status']=='not_assessed' for r in epmc['records'])
           assert all(r['status']!='exact_doi_match' or r['doi'] for r in epmc['records'])
+          screens=[x for r in epmc['records'] for x in r['abstract_taxon_screen']]
+          assert len(screens)==epmc['abstract_taxon_screen_count']
+          assert all(x['content_verified'] is False and x['feeding_safety_status']=='not_assessed' for x in screens)
+          assert all(set(x['plant_id'] for x in r['abstract_taxon_screen'])==set(r['linked_plant_ids']) for r in epmc['records'] if r['status']=='exact_doi_match')
           batches=json.loads((folder/'bibliography-review-batches.json').read_text())
           assert batches['source_count']==audit['summary']['found']
           assert sum(b['source_count'] for b in batches['batches'])==batches['source_count']
