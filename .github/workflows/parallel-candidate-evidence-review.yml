@@ -37,6 +37,13 @@ jobs:
               assert data['count']==len(data['records'])==shard['count']
               assert all(row['safety_grade'] is None and row['feeding_safety_status']=='not_assessed'
                          for row in data['records'])
+          public=json.loads((folder/'public-evidence-coverage.json').read_text(encoding='utf-8'))
+          assert public['count']==len(public['records'])
+          assert all(row['safety_grade'] is None and row['feeding_safety_status']=='not_assessed'
+                     for row in public['records'])
+          assert manifest['join_diagnostics']['public_catalog_rows_audited']==public['count']
+          print('public plants audited:',public['count'])
+          print('public plants with source records:',manifest['join_diagnostics']['public_catalog_rows_with_sources'])
           print('review-only candidates:',manifest['totals']['candidates'])
           print('catalog overlap:',manifest['join_diagnostics']['candidate_reviewed_overlap'])
           print('join warning:',manifest['join_diagnostics'].get('join_warning','none'))
