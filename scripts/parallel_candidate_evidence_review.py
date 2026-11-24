@@ -99,7 +99,12 @@ def main():
         public_audit.append({"plant_id":plant["id"],
             "scientific_name":plant.get("scientific"),
             "source_records":len(refs),
+            "unique_source_urls":len({e.get("source_id") for e in refs if e.get("source_id")}),
+            "missing_source_urls":sum(not e.get("source_id") for e in refs),
+            "duplicate_evidence_ids":len([e.get("evidence_id") for e in refs if e.get("evidence_id")])-len({e.get("evidence_id") for e in refs if e.get("evidence_id")}),
             "source_types":dict(sorted(Counter(e.get("type","unspecified") for e in refs).items())),
+            "directness_types":dict(sorted(Counter(e.get("directness","unspecified") for e in refs).items())),
+            "tortoise_taxa_reported":sorted({str(e.get("tortoise_taxon")) for e in refs if e.get("tortoise_taxon")}),
             "wild_feeding_record_leads":sum(e.get("type")=="wild_feeding" for e in refs),
             "safety_grade":None,
             "feeding_safety_status":"not_assessed",
@@ -111,6 +116,9 @@ def main():
     diagnostics["public_catalog_rows_audited"]=len(public_audit)
     diagnostics["public_catalog_rows_with_sources"]=sum(r["source_records"]>0 for r in public_audit)
     diagnostics["public_catalog_total_source_records"]=sum(r["source_records"] for r in public_audit)
+    diagnostics["public_catalog_unique_source_url_plant_pairs"]=sum(r["unique_source_urls"] for r in public_audit)
+    diagnostics["public_catalog_missing_source_urls"]=sum(r["missing_source_urls"] for r in public_audit)
+    diagnostics["public_catalog_duplicate_evidence_ids"]=sum(r["duplicate_evidence_ids"] for r in public_audit)
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
     audit={"schema_version":"1.0","scope":"review-only; NOT safe-to-feed approval",
