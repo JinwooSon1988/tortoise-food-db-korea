@@ -129,14 +129,23 @@ def main():
     # Actionable source-level review queue: retain attribution to every linked plant.
     url_to_plants=defaultdict(set)
     url_to_types=defaultdict(set)
+    url_to_directness=defaultdict(set)
+    url_to_tortoises=defaultdict(set)
+    url_to_record_count=Counter()
     for entry in links["records"]:
         for e in entry["evidence"]:
             url=e.get("source_id")
             if not url:continue
             url_to_plants[url].add(entry["plant_id"])
             url_to_types[url].add(e.get("type","unspecified"))
+            url_to_directness[url].add(e.get("directness","unspecified"))
+            if e.get("tortoise_taxon"):url_to_tortoises[url].add(str(e["tortoise_taxon"]))
+            url_to_record_count[url]+=1
     source_review=[{"source_url":url,"linked_plant_count":len(pids),
         "linked_plant_ids":sorted(pids),"source_types":sorted(url_to_types[url]),
+        "directness_types":sorted(url_to_directness[url]),
+        "tortoise_taxa_reported":sorted(url_to_tortoises[url]),
+        "source_record_count":url_to_record_count[url],
         "review_status":"not_verified","feeding_safety_status":"not_assessed"}
         for url,pids in url_to_plants.items()]
     source_review.sort(key=lambda row:(-row["linked_plant_count"],row["source_url"]))
@@ -144,6 +153,7 @@ def main():
         "schema_version":"1.0","scope":"source URL reuse triage; not evidence verification",
         "count":len(source_review),"records":source_review},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     diagnostics["global_source_review_queue_count"]=len(source_review)
+    diagnostics["global_source_review_queue_record_count"]=sum(r["source_record_count"] for r in source_review)
 
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
