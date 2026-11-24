@@ -1,0 +1,38 @@
+name: Live evidence source URL audit (research only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build deduplicated source review queue
+        run: python scripts/parallel_candidate_evidence_review.py --workers 20
+      - name: Audit source URL reachability with bounded concurrency
+        run: python scripts/audit_live_evidence_sources.py --workers 20 --timeout 8
+      - name: Verify URL audit completeness and no feeding approval
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('data/evidence-review-shards')
+          queue=json.loads((root/'global-source-review-queue.json').read_text())
+          audit=json.loads((root/'live-source-url-audit.json').read_text())
+          assert audit['count']==queue['count']==len(audit['records'])
+          assert {r['source_url'] for r in audit['records']}=={r['source_url'] for r in queue['records']}
+          assert sum(audit['summary'].values())==audit['count']
+          assert all(r['review_status']=='not_verified' for r in audit['records'])
+          print(audit['summary'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-source-url-audit-${{ github.run_id }}
+          path: data/evidence-review-shards/live-source-url-audit.json
+          retention-days: 30
+          if-no-files-found: error
