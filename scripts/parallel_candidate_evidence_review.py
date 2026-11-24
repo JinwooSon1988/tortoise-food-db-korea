@@ -144,7 +144,7 @@ def main():
     def identifier_type(value):
         parsed=urllib.parse.urlsplit(value)
         if parsed.scheme in ("http","https") and parsed.hostname:return "url"
-        if re.fullmatch(r"10\\.\\d{4,9}/\\S+",value,re.I):return "doi"
+        if re.fullmatch(r"10\.\d{4,9}/\S+",value,re.I):return "doi"
         return "other_identifier"
     source_review=[{"source_url":url,"identifier_type":identifier_type(url),"linked_plant_count":len(pids),
         "linked_plant_ids":sorted(pids),"source_types":sorted(url_to_types[url]),
