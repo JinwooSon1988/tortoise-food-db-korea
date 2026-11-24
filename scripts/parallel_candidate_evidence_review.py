@@ -126,6 +126,25 @@ def main():
     url_plant_counts=Counter(url for _,url in source_plant_pairs)
     diagnostics["global_reused_source_urls_across_plants"]=sum(count>1 for count in url_plant_counts.values())
     diagnostics["global_duplicate_source_url_records"]=len(all_source_urls)-len(source_plant_pairs)
+    # Actionable source-level review queue: retain attribution to every linked plant.
+    url_to_plants=defaultdict(set)
+    url_to_types=defaultdict(set)
+    for entry in links["records"]:
+        for e in entry["evidence"]:
+            url=e.get("source_id")
+            if not url:continue
+            url_to_plants[url].add(entry["plant_id"])
+            url_to_types[url].add(e.get("type","unspecified"))
+    source_review=[{"source_url":url,"linked_plant_count":len(pids),
+        "linked_plant_ids":sorted(pids),"source_types":sorted(url_to_types[url]),
+        "review_status":"not_verified","feeding_safety_status":"not_assessed"}
+        for url,pids in url_to_plants.items()]
+    source_review.sort(key=lambda row:(-row["linked_plant_count"],row["source_url"]))
+    (out/"global-source-review-queue.json").write_text(json.dumps({
+        "schema_version":"1.0","scope":"source URL reuse triage; not evidence verification",
+        "count":len(source_review),"records":source_review},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    diagnostics["global_source_review_queue_count"]=len(source_review)
+
     print(json.dumps({"join_diagnostics":diagnostics},ensure_ascii=False))
     if totals["candidates"]!=9995+len(rows):raise SystemExit("candidate count failed; do not publish")
     audit={"schema_version":"1.0","scope":"review-only; NOT safe-to-feed approval",
