@@ -1,0 +1,41 @@
+name: DOI bibliography enrichment (research only)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_doi_metadata.py'
+      - '.github/workflows/doi-bibliography-enrichment.yml'
+permissions:
+  contents: read
+jobs:
+  bibliography:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/parallel_candidate_evidence_review.py --workers 20
+      - run: python scripts/audit_doi_metadata.py --workers 12 --timeout 8
+      - name: Check metadata integrity and unverified status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          folder=Path('data/evidence-review-shards')
+          queue=json.loads((folder/'global-source-review-queue.json').read_text())
+          audit=json.loads((folder/'doi-metadata-audit.json').read_text())
+          assert audit['count']==queue['count']==len(audit['records'])
+          assert [r['source_url'] for r in audit['records']]==[r['source_url'] for r in queue['records']]
+          assert sum(audit['summary'].values())==audit['count']
+          assert all(r['content_verified'] is False and r['feeding_safety_status']=='not_assessed' for r in audit['records'])
+          print(audit['summary'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: doi-bibliography-${{ github.run_id }}
+          path: data/evidence-review-shards/doi-metadata-audit.json
+          retention-days: 30
+          if-no-files-found: error
